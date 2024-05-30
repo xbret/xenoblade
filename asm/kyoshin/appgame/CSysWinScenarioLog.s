@@ -50,7 +50,7 @@
 /* 8027E560 00247B20  90 1D 00 70 */	stw r0, 0x70(r29)
 /* 8027E564 00247B24  93 FD 00 74 */	stw r31, 0x74(r29)
 /* 8027E568 00247B28  93 FD 00 78 */	stw r31, 0x78(r29)
-/* 8027E56C 00247B2C  48 1E 0F F9 */	bl __ct__UnkClass_8045F564
+/* 8027E56C 00247B2C  48 1E 0F F9 */	bl __ct__17UnkClass_8045F564Fv
 /* 8027E570 00247B30  93 DD 00 8C */	stw r30, 0x8c(r29)
 /* 8027E574 00247B34  38 60 00 01 */	li r3, 1
 /* 8027E578 00247B38  9B FD 00 90 */	stb r31, 0x90(r29)
@@ -70,7 +70,7 @@
 /* 8027E5B0 00247B70  4E 80 00 20 */	blr
 .endfn __ct__CSysWinScenarioLog
 
-.fn __dt__CSysWinScenarioLog, global
+.fn __dt__18CSysWinScenarioLogFv, global
 /* 8027E5B4 00247B74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E5B8 00247B78  7C 08 02 A6 */	mflr r0
 /* 8027E5BC 00247B7C  2C 03 00 00 */	cmpwi r3, 0
@@ -82,13 +82,13 @@
 /* 8027E5D4 00247B94  41 82 00 38 */	beq .L_8027E60C
 /* 8027E5D8 00247B98  38 80 FF FF */	li r4, -1
 /* 8027E5DC 00247B9C  38 63 00 7C */	addi r3, r3, 0x7c
-/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl __dt__UnkClass_8045F564
+/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl __dt__17UnkClass_8045F564Fv
 /* 8027E5E4 00247BA4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8027E5E8 00247BA8  41 82 00 14 */	beq .L_8027E5FC
 /* 8027E5EC 00247BAC  41 82 00 10 */	beq .L_8027E5FC
 /* 8027E5F0 00247BB0  7F C3 F3 78 */	mr r3, r30
 /* 8027E5F4 00247BB4  38 80 00 00 */	li r4, 0
-/* 8027E5F8 00247BB8  48 1C 65 41 */	bl __dt__CProcess
+/* 8027E5F8 00247BB8  48 1C 65 41 */	bl __dt__8CProcessFv
 .L_8027E5FC:
 /* 8027E5FC 00247BBC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8027E600 00247BC0  40 81 00 0C */	ble .L_8027E60C
@@ -102,7 +102,7 @@
 /* 8027E61C 00247BDC  7C 08 03 A6 */	mtlr r0
 /* 8027E620 00247BE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E624 00247BE4  4E 80 00 20 */	blr 
-.endfn __dt__CSysWinScenarioLog
+.endfn __dt__18CSysWinScenarioLogFv
 
 .fn func_8027E628, global
 /* 8027E628 00247BE8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -131,7 +131,7 @@
 /* 8027E67C 00247C3C  38 84 A4 A8 */	addi r4, r4, CSysWinScenarioLog_strpool@l
 /* 8027E680 00247C40  38 C0 00 00 */	li r6, 0
 /* 8027E684 00247C44  38 E0 00 00 */	li r7, 0
-/* 8027E688 00247C48  48 1D 01 0D */	bl CDeviceFile_openFile1
+/* 8027E688 00247C48  48 1D 01 0D */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8027E68C 00247C4C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8027E690 00247C50  90 7E 00 74 */	stw r3, 0x74(r30)
 /* 8027E694 00247C54  7F DF F3 78 */	mr r31, r30
@@ -162,11 +162,11 @@
 /* 8027E6E8 00247CA8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027E6EC 00247CAC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027E6F0 00247CB0  7C 7E 1B 78 */	mr r30, r3
-/* 8027E6F4 00247CB4  48 1C A3 51 */	bl func_80448A44
+/* 8027E6F4 00247CB4  48 1C A3 51 */	bl func_80448A44__Fv
 /* 8027E6F8 00247CB8  38 7E 00 74 */	addi r3, r30, 0x74
-/* 8027E6FC 00247CBC  4B EB A9 E5 */	bl func_801390E0
+/* 8027E6FC 00247CBC  4B EB A9 E5 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8027E700 00247CC0  38 7E 00 78 */	addi r3, r30, 0x78
-/* 8027E704 00247CC4  4B EB A9 DD */	bl func_801390E0
+/* 8027E704 00247CC4  4B EB A9 DD */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8027E708 00247CC8  38 60 00 02 */	li r3, 2
 /* 8027E70C 00247CCC  4B DB C3 81 */	bl func_8003AA8C
 /* 8027E710 00247CD0  80 7E 00 9C */	lwz r3, 0x9c(r30)
@@ -196,12 +196,12 @@
 /* 8027E764 00247D24  90 1E 00 94 */	stw r0, 0x94(r30)
 .L_8027E768:
 /* 8027E768 00247D28  80 7E 00 98 */	lwz r3, 0x98(r30)
-/* 8027E76C 00247D2C  4B EB A9 B9 */	bl func_80139124
+/* 8027E76C 00247D2C  4B EB A9 B9 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 8027E770 00247D30  3B E0 00 00 */	li r31, 0
 /* 8027E774 00247D34  93 FE 00 98 */	stw r31, 0x98(r30)
 /* 8027E778 00247D38  38 7E 00 7C */	addi r3, r30, 0x7c
 /* 8027E77C 00247D3C  93 ED B0 7C */	stw r31, lbl_806671FC@sda21(r13)
-/* 8027E780 00247D40  48 1E 0F F9 */	bl func_8045F778
+/* 8027E780 00247D40  48 1E 0F F9 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8027E784 00247D44  2C 1E 00 00 */	cmpwi r30, 0
 /* 8027E788 00247D48  93 ED B0 78 */	stw r31, lbl_806671F8@sda21(r13)
 /* 8027E78C 00247D4C  7F C4 F3 78 */	mr r4, r30
@@ -364,7 +364,7 @@
 /* 8027E9B8 00247F78  38 81 00 08 */	addi r4, r1, 8
 /* 8027E9BC 00247F7C  38 A0 00 00 */	li r5, 0
 /* 8027E9C0 00247F80  38 C0 00 01 */	li r6, 1
-/* 8027E9C4 00247F84  4B EB 86 75 */	bl func_80137038
+/* 8027E9C4 00247F84  4B EB 86 75 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8027E9C8 00247F88  38 61 00 08 */	addi r3, r1, 8
 /* 8027E9CC 00247F8C  38 80 FF FF */	li r4, -1
 /* 8027E9D0 00247F90  48 18 9D 0D */	bl __dt__Q34nw4r3lyt8DrawInfoFv
@@ -390,7 +390,7 @@
 /* 8027EA10 00247FD0  38 60 00 00 */	li r3, 0
 /* 8027EA14 00247FD4  48 00 00 38 */	b .L_8027EA4C
 .L_8027EA18:
-/* 8027EA18 00247FD8  48 1B 8B 9D */	bl getHeapIndex
+/* 8027EA18 00247FD8  48 1B 8B 9D */	bl getHeapIndex__Fv
 /* 8027EA1C 00247FDC  7C 64 1B 78 */	mr r4, r3
 /* 8027EA20 00247FE0  38 60 00 A4 */	li r3, 0xa4
 /* 8027EA24 00247FE4  48 1B 60 39 */	bl heap_malloc
@@ -581,16 +581,16 @@
 /* 8027ECC4 00248284  38 A5 80 00 */	addi r5, r5, -0x8000
 /* 8027ECC8 00248288  38 C6 00 97 */	addi r6, r6, 0x97
 /* 8027ECCC 0024828C  38 E0 00 00 */	li r7, 0
-/* 8027ECD0 00248290  48 1E 09 B1 */	bl func_8045F680
+/* 8027ECD0 00248290  48 1E 09 B1 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8027ECD4 00248294  38 61 00 08 */	addi r3, r1, 8
 /* 8027ECD8 00248298  38 9D 00 7C */	addi r4, r29, 0x7c
-/* 8027ECDC 0024829C  48 1E 0B 7D */	bl __ct__Class_8045F858
+/* 8027ECDC 0024829C  48 1E 0B 7D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8027ECE0 002482A0  80 9D 00 74 */	lwz r4, 0x74(r29)
 /* 8027ECE4 002482A4  38 00 00 00 */	li r0, 0
 /* 8027ECE8 002482A8  38 60 00 00 */	li r3, 0
 /* 8027ECEC 002482AC  83 C4 00 04 */	lwz r30, 4(r4)
 /* 8027ECF0 002482B0  90 04 00 04 */	stw r0, 4(r4)
-/* 8027ECF4 002482B4  48 1B 5D 59 */	bl func_80434A4C
+/* 8027ECF4 002482B4  48 1B 5D 59 */	bl MemManager_80434A4C__FUc
 /* 8027ECF8 002482B8  48 1E 03 C9 */	bl func_8045F0C0
 /* 8027ECFC 002482BC  7C 64 1B 78 */	mr r4, r3
 /* 8027ED00 002482C0  38 60 08 58 */	li r3, 0x858
@@ -600,7 +600,7 @@
 /* 8027ED10 002482D0  4B EA 73 75 */	bl __ct__CTagProcessor
 .L_8027ED14:
 /* 8027ED14 002482D4  90 7D 00 94 */	stw r3, 0x94(r29)
-/* 8027ED18 002482D8  48 1E 04 9D */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8027ED18 002482D8  48 1E 04 9D */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8027ED1C 002482DC  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027ED20 002482E0  90 7D 00 98 */	stw r3, 0x98(r29)
 /* 8027ED24 002482E4  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l
@@ -610,7 +610,7 @@
 /* 8027ED34 002482F4  80 9D 00 98 */	lwz r4, 0x98(r29)
 /* 8027ED38 002482F8  38 7D 00 9C */	addi r3, r29, 0x9c
 /* 8027ED3C 002482FC  38 BF 00 AE */	addi r5, r31, 0xae
-/* 8027ED40 00248300  4B EB 81 45 */	bl func_80136E84
+/* 8027ED40 00248300  4B EB 81 45 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8027ED44 00248304  80 7D 00 9C */	lwz r3, 0x9c(r29)
 /* 8027ED48 00248308  38 9D 00 A0 */	addi r4, r29, 0xa0
 /* 8027ED4C 0024830C  80 BD 00 98 */	lwz r5, 0x98(r29)
@@ -653,10 +653,10 @@
 /* 8027EDE0 002483A0  90 83 00 F8 */	stw r4, 0xf8(r3)
 /* 8027EDE4 002483A4  38 7D 00 7C */	addi r3, r29, 0x7c
 /* 8027EDE8 002483A8  90 1D 00 74 */	stw r0, 0x74(r29)
-/* 8027EDEC 002483AC  48 1E 0A 25 */	bl func_8045F810
+/* 8027EDEC 002483AC  48 1E 0A 25 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8027EDF0 002483B0  38 61 00 08 */	addi r3, r1, 8
 /* 8027EDF4 002483B4  38 80 FF FF */	li r4, -1
-/* 8027EDF8 002483B8  48 1E 0A D1 */	bl __dt__Class_8045F858
+/* 8027EDF8 002483B8  48 1E 0A D1 */	bl __dt__14Class_8045F858Fv
 /* 8027EDFC 002483BC  38 60 00 01 */	li r3, 1
 /* 8027EE00 002483C0  48 00 00 4C */	b .L_8027EE4C
 .L_8027EE04:
@@ -696,7 +696,7 @@
 
 .fn func_8027EE70, global
 /* 8027EE70 00248430  38 63 FF 94 */	addi r3, r3, -108
-/* 8027EE74 00248434  4B FF F7 40 */	b __dt__CSysWinScenarioLog
+/* 8027EE74 00248434  4B FF F7 40 */	b __dt__18CSysWinScenarioLogFv
 .endfn func_8027EE70
 
 .fn func_8027EE78, global
@@ -706,7 +706,7 @@
 
 .fn func_8027EE80, global
 /* 8027EE80 00248440  38 63 FF 90 */	addi r3, r3, -112
-/* 8027EE84 00248444  4B FF F7 30 */	b __dt__CSysWinScenarioLog
+/* 8027EE84 00248444  4B FF F7 30 */	b __dt__18CSysWinScenarioLogFv
 .endfn func_8027EE80
 
 .fn func_8027EE88, global
@@ -3420,47 +3420,47 @@
 .obj __vt__18CSysWinScenarioLog, global
 	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0
-	.4byte __dt__CSysWinScenarioLog
-	.4byte CChildListNode_Reset
+	.4byte __dt__18CSysWinScenarioLogFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8027E628
 	.4byte func_8027E6DC
 	.4byte func_8027E7D0
-	.4byte func_80124584
-	.4byte CProcess_func_80043F20
+	.4byte "func_80124584__18CTTask<9IUIWindow>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0xFFFFFF94
 	.4byte func_8027EE70
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CSysWinScenarioLog_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0xFFFFFF90
 	.4byte func_8027EE80
@@ -3567,16 +3567,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x0000007C
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001D
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001D
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__IUIWindow
+	.4byte __dt__9IUIWindowFv
 .endobj "@etb_80018ACC"
 
 .obj "@etb_80018B14", local
@@ -3587,13 +3587,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000007C
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80018B14"
 
 .obj "@etb_80018B48", local
@@ -3643,7 +3643,7 @@
 	.4byte 0x003E0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_80018B88"
 
 .obj "@etb_80018BA0", local
@@ -3791,7 +3791,7 @@
 
 .obj "@eti_80031100", local
 .hidden "@eti_80031100"
-	.4byte __dt__CSysWinScenarioLog
+	.4byte __dt__18CSysWinScenarioLogFv
 	.4byte 0x00000074
 	.4byte "@etb_80018B14"
 .endobj "@eti_80031100"

@@ -5139,12 +5139,12 @@
 
 .fn func_800CA4DC, global
 /* 800CA4DC 00093A9C  38 63 FF F4 */	addi r3, r3, -12
-/* 800CA4E0 00093AA0  4B FB 61 20 */	b __dt__cf_CfObjectImplPc
+/* 800CA4E0 00093AA0  4B FB 61 20 */	b __dt__Q22cf14CfObjectImplPcFv
 .endfn func_800CA4DC
 
 .fn func_800CA4E4, global
 /* 800CA4E4 00093AA4  38 63 FF F0 */	addi r3, r3, -16
-/* 800CA4E8 00093AA8  4B FB 61 18 */	b __dt__cf_CfObjectImplPc
+/* 800CA4E8 00093AA8  4B FB 61 18 */	b __dt__Q22cf14CfObjectImplPcFv
 .endfn func_800CA4E4
 
 
@@ -5289,7 +5289,7 @@
 .obj __vt__Q22cf14CfObjectImplPc, global
 	.4byte __RTTI__Q22cf14CfObjectImplPc
 	.4byte 0
-	.4byte __dt__cf_CfObjectImplPc
+	.4byte __dt__Q22cf14CfObjectImplPcFv
 	.4byte func_800C6F30
 	.4byte func_800CC5DC
 	.4byte func_800C70BC

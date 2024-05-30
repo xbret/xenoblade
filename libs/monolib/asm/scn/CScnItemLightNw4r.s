@@ -90,7 +90,7 @@
 .obj __vt__17CScnItemLightNw4r, global
 	.4byte __RTTI__17CScnItemLightNw4r
 	.4byte 0
-	.4byte __dt__CScnItemLightNw4r
+	.4byte __dt__17CScnItemLightNw4rFv
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482400

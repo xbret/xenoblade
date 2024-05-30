@@ -719,10 +719,10 @@
 /* 8006934C 0003290C  3F E0 80 57 */	lis r31, lbl_80574110@ha
 /* 80069350 00032910  3C 80 80 07 */	lis r4, __ct__cf_CfScript@ha
 /* 80069354 00032914  3B FF 41 10 */	addi r31, r31, lbl_80574110@l
-/* 80069358 00032918  3C A0 80 07 */	lis r5, __dt__cf_CfScript@ha
+/* 80069358 00032918  3C A0 80 07 */	lis r5, __dt__Q22cf8CfScriptFv@ha
 /* 8006935C 0003291C  7F E3 FB 78 */	mr r3, r31
 /* 80069360 00032920  38 84 93 A0 */	addi r4, r4, __ct__cf_CfScript@l
-/* 80069364 00032924  38 A5 93 CC */	addi r5, r5, __dt__cf_CfScript@l
+/* 80069364 00032924  38 A5 93 CC */	addi r5, r5, __dt__Q22cf8CfScriptFv@l
 /* 80069368 00032928  38 C0 00 58 */	li r6, 0x58
 /* 8006936C 0003292C  38 E0 00 03 */	li r7, 3
 /* 80069370 00032930  48 25 07 91 */	bl __construct_array
@@ -754,7 +754,7 @@
 /* 800693C8 00032988  4E 80 00 20 */	blr
 .endfn __ct__cf_CfScript
 
-.fn __dt__cf_CfScript, global
+.fn __dt__Q22cf8CfScriptFv, global
 /* 800693CC 0003298C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800693D0 00032990  7C 08 02 A6 */	mflr r0
 /* 800693D4 00032994  2C 03 00 00 */	cmpwi r3, 0
@@ -772,7 +772,7 @@
 /* 80069400 000329C0  7C 08 03 A6 */	mtlr r0
 /* 80069404 000329C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069408 000329C8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfScript
+.endfn __dt__Q22cf8CfScriptFv
 
 .fn func_8006940C, global
 /* 8006940C 000329CC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1018,38 +1018,38 @@
 .obj __vt__Q22cf8CfScript, global
 	.4byte __RTTI__Q22cf8CfScript
 	.4byte 0
-	.4byte __dt__cf_CfScript
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q22cf8CfScriptFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CfScript_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q22cf8CfScript
 
 .obj cf_CfScript_hierarchy, global
@@ -1257,7 +1257,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000003
 	.4byte 0x00000058
-	.4byte __dt__cf_CfScript
+	.4byte __dt__Q22cf8CfScriptFv
 .endobj "@etb_80007ED4"
 
 .obj "@etb_80007EF8", local
@@ -1456,7 +1456,7 @@
 
 .obj "@eti_80023180", local
 .hidden "@eti_80023180"
-	.4byte __dt__cf_CfScript
+	.4byte __dt__Q22cf8CfScriptFv
 	.4byte 0x00000040
 	.4byte "@etb_80007EF8"
 .endobj "@eti_80023180"

@@ -67,10 +67,10 @@
 /* 80491F68 0045B528  38 60 20 10 */	li r3, 0x2010
 /* 80491F6C 0045B52C  4B FA 2B 15 */	bl heap_malloc_1
 /* 80491F70 0045B530  3C 80 80 4C */	lis r4, __ct__6CLightFv@ha
-/* 80491F74 0045B534  3C A0 80 49 */	lis r5, __dt__CLight@ha
+/* 80491F74 0045B534  3C A0 80 49 */	lis r5, __dt__6CLightFv@ha
 /* 80491F78 0045B538  38 84 02 80 */	addi r4, r4, __ct__6CLightFv@l
 /* 80491F7C 0045B53C  38 C0 00 40 */	li r6, 0x40
-/* 80491F80 0045B540  38 A5 20 34 */	addi r5, r5, __dt__CLight@l
+/* 80491F80 0045B540  38 A5 20 34 */	addi r5, r5, __dt__6CLightFv@l
 /* 80491F84 0045B544  38 E0 00 80 */	li r7, 0x80
 /* 80491F88 0045B548  4B E2 79 B9 */	bl __construct_new_array
 /* 80491F8C 0045B54C  90 7C 00 C0 */	stw r3, 0xc0(r28)
@@ -102,7 +102,7 @@
 /* 80491FF0 0045B5B0  80 7C 00 08 */	lwz r3, 8(r28)
 /* 80491FF4 0045B5B4  38 80 02 00 */	li r4, 0x200
 /* 80491FF8 0045B5B8  38 A0 00 04 */	li r5, 4
-/* 80491FFC 0045B5BC  4B FA 24 31 */	bl func_8043442C
+/* 80491FFC 0045B5BC  4B FA 24 31 */	bl MemManager_8043442C
 /* 80492000 0045B5C0  90 7C 00 C4 */	stw r3, 0xc4(r28)
 /* 80492004 0045B5C4  7F 83 E3 78 */	mr r3, r28
 /* 80492008 0045B5C8  48 00 0B 39 */	bl func_80492B40
@@ -121,7 +121,7 @@
 /* 80492030 0045B5F0  4E 80 00 20 */	blr
 .endfn func_80492030
 
-.fn __dt__CLight, global
+.fn __dt__6CLightFv, global
 /* 80492034 0045B5F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80492038 0045B5F8  7C 08 02 A6 */	mflr r0
 /* 8049203C 0045B5FC  2C 03 00 00 */	cmpwi r3, 0
@@ -139,7 +139,7 @@
 /* 80492068 0045B628  7C 08 03 A6 */	mtlr r0
 /* 8049206C 0045B62C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80492070 0045B630  4E 80 00 20 */	blr 
-.endfn __dt__CLight
+.endfn __dt__6CLightFv
 
 .fn __ct__80492074, global
 /* 80492074 0045B634  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -306,7 +306,7 @@
 /* 80492294 0045B854  4E 80 00 20 */	blr 
 .endfn func_8049216C
 
-.fn __dt__CScnVirtualLight, global
+.fn __dt__16CScnVirtualLightFv, global
 /* 80492298 0045B858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049229C 0045B85C  7C 08 02 A6 */	mflr r0
 /* 804922A0 0045B860  2C 03 00 00 */	cmpwi r3, 0
@@ -332,8 +332,8 @@
 /* 804922F0 0045B8B0  80 7E 00 C0 */	lwz r3, 0xc0(r30)
 /* 804922F4 0045B8B4  2C 03 00 00 */	cmpwi r3, 0
 /* 804922F8 0045B8B8  41 82 00 18 */	beq .L_80492310
-/* 804922FC 0045B8BC  3C 80 80 49 */	lis r4, __dt__CLight@ha
-/* 80492300 0045B8C0  38 84 20 34 */	addi r4, r4, __dt__CLight@l
+/* 804922FC 0045B8BC  3C 80 80 49 */	lis r4, __dt__6CLightFv@ha
+/* 80492300 0045B8C0  38 84 20 34 */	addi r4, r4, __dt__6CLightFv@l
 /* 80492304 0045B8C4  4B E2 79 6D */	bl __destroy_new_array
 /* 80492308 0045B8C8  38 00 00 00 */	li r0, 0
 /* 8049230C 0045B8CC  90 1E 00 C0 */	stw r0, 0xc0(r30)
@@ -348,9 +348,9 @@
 /* 8049232C 0045B8EC  90 1E 00 C8 */	stw r0, 0xc8(r30)
 .L_80492330:
 /* 80492330 0045B8F0  80 7E 00 C4 */	lwz r3, 0xc4(r30)
-/* 80492334 0045B8F4  4B FA 21 A5 */	bl func_804344D8
+/* 80492334 0045B8F4  4B FA 21 A5 */	bl MemManager_804344D8
 /* 80492338 0045B8F8  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8049233C 0045B8FC  4B FA 20 75 */	bl func_804343B0
+/* 8049233C 0045B8FC  4B FA 20 75 */	bl MemManager_804343B0
 /* 80492340 0045B900  38 7E 00 6C */	addi r3, r30, 0x6c
 /* 80492344 0045B904  38 80 FF FF */	li r4, -1
 /* 80492348 0045B908  4B BC 7D E9 */	bl __dt__reslist_CVirtualLightObj
@@ -375,7 +375,7 @@
 /* 80492390 0045B950  7C 08 03 A6 */	mtlr r0
 /* 80492394 0045B954  38 21 00 10 */	addi r1, r1, 0x10
 /* 80492398 0045B958  4E 80 00 20 */	blr 
-.endfn __dt__CScnVirtualLight
+.endfn __dt__16CScnVirtualLightFv
 
 .fn func_8049239C, global
 /* 8049239C 0045B95C  48 00 00 04 */	b __dt__804923A0
@@ -793,7 +793,7 @@
 /* 8049297C 0045BF3C  4E 80 00 20 */	blr 
 .endfn func_804923F8
 
-.fn __dt__CVirtualLightObj, global
+.fn __dt__16CVirtualLightObjFv, global
 /* 80492980 0045BF40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80492984 0045BF44  7C 08 02 A6 */	mflr r0
 /* 80492988 0045BF48  2C 03 00 00 */	cmpwi r3, 0
@@ -811,7 +811,7 @@
 /* 804929B4 0045BF74  7C 08 03 A6 */	mtlr r0
 /* 804929B8 0045BF78  38 21 00 10 */	addi r1, r1, 0x10
 /* 804929BC 0045BF7C  4E 80 00 20 */	blr 
-.endfn __dt__CVirtualLightObj
+.endfn __dt__16CVirtualLightObjFv
 
 .fn func_804929C0, global
 /* 804929C0 0045BF80  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2739,7 +2739,7 @@
 .obj __vt__16CScnVirtualLight, global
 	.4byte __RTTI__16CScnVirtualLight
 	.4byte 0
-	.4byte __dt__CScnVirtualLight
+	.4byte __dt__16CScnVirtualLightFv
 	.4byte 0
 .endobj __vt__16CScnVirtualLight
 
@@ -3130,7 +3130,7 @@
 
 .obj "@eti_80036950", local
 .hidden "@eti_80036950"
-	.4byte __dt__CLight
+	.4byte __dt__6CLightFv
 	.4byte 0x00000040
 	.4byte "@etb_8001ED84"
 .endobj "@eti_80036950"
@@ -3158,7 +3158,7 @@
 
 .obj "@eti_80036980", local
 .hidden "@eti_80036980"
-	.4byte __dt__CScnVirtualLight
+	.4byte __dt__16CScnVirtualLightFv
 	.4byte 0x00000104
 	.4byte "@etb_8001EDA4"
 .endobj "@eti_80036980"
@@ -3179,7 +3179,7 @@
 
 .obj "@eti_800369A4", local
 .hidden "@eti_800369A4"
-	.4byte __dt__CVirtualLightObj
+	.4byte __dt__16CVirtualLightObjFv
 	.4byte 0x00000040
 	.4byte "@etb_8001EE54"
 .endobj "@eti_800369A4"

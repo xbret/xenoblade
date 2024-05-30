@@ -2,7 +2,7 @@
 #define _NEW
 
 #include <exception>
-
+#include <stddef.h>
 
 namespace std{
     class bad_alloc : public exception {
@@ -13,6 +13,8 @@ namespace std{
         }
     };
 }
+
+void* operator new(size_t size, void* ptr);
 
 
 #endif

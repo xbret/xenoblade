@@ -20,7 +20,7 @@
 
 .fn func_80450B4C, global
 /* 80450B4C 0041A10C  38 63 FE 3C */	addi r3, r3, -452
-/* 80450B50 0041A110  4B FF EB 4C */	b __dt__CDeviceFileCri
+/* 80450B50 0041A110  4B FF EB 4C */	b __dt__14CDeviceFileCriFv
 .endfn func_80450B4C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00

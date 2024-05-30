@@ -17,7 +17,7 @@
 /* 80223D6C 001ED32C  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffStart
 
-.fn __dt__CMCEffStart, global
+.fn __dt__11CMCEffStartFv, global
 /* 80223D70 001ED330  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80223D74 001ED334  7C 08 02 A6 */	mflr r0
 /* 80223D78 001ED338  2C 03 00 00 */	cmpwi r3, 0
@@ -35,7 +35,7 @@
 /* 80223DA4 001ED364  7C 08 03 A6 */	mtlr r0
 /* 80223DA8 001ED368  38 21 00 10 */	addi r1, r1, 0x10
 /* 80223DAC 001ED36C  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffStart
+.endfn __dt__11CMCEffStartFv
 
 .fn func_80223DB0, global
 /* 80223DB0 001ED370  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,7 +47,7 @@
 /* 80223DC8 001ED388  38 BF 4C FC */	addi r5, r31, CMCEffCrystal_strpool@l
 /* 80223DCC 001ED38C  80 83 00 08 */	lwz r4, 8(r3)
 /* 80223DD0 001ED390  38 63 00 0C */	addi r3, r3, 0xc
-/* 80223DD4 001ED394  4B F1 30 B1 */	bl func_80136E84
+/* 80223DD4 001ED394  4B F1 30 B1 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80223DD8 001ED398  38 DF 4C FC */	addi r6, r31, CMCEffCrystal_strpool@l
 /* 80223DDC 001ED39C  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80223DE0 001ED3A0  80 BE 00 08 */	lwz r5, 8(r30)
@@ -111,7 +111,7 @@
 /* 80223EA8 001ED468  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80223EAC 001ED46C  38 A0 00 00 */	li r5, 0
 /* 80223EB0 001ED470  38 C0 00 01 */	li r6, 1
-/* 80223EB4 001ED474  4B F1 31 84 */	b func_80137038
+/* 80223EB4 001ED474  4B F1 31 84 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80223EB8 001ED478  4E 80 00 20 */	blr 
 .endfn func_80223E9C
 
@@ -203,7 +203,7 @@
 /* 80223FC8 001ED588  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffUpRed
 
-.fn __dt__CMCEffUpRed, global
+.fn __dt__11CMCEffUpRedFv, global
 /* 80223FCC 001ED58C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80223FD0 001ED590  7C 08 02 A6 */	mflr r0
 /* 80223FD4 001ED594  2C 03 00 00 */	cmpwi r3, 0
@@ -221,7 +221,7 @@
 /* 80224000 001ED5C0  7C 08 03 A6 */	mtlr r0
 /* 80224004 001ED5C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224008 001ED5C8  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffUpRed
+.endfn __dt__11CMCEffUpRedFv
 
 .fn func_8022400C, global
 /* 8022400C 001ED5CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -234,7 +234,7 @@
 /* 80224028 001ED5E8  38 BF 00 31 */	addi r5, r31, 0x31
 /* 8022402C 001ED5EC  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224030 001ED5F0  38 63 00 0C */	addi r3, r3, 0xc
-/* 80224034 001ED5F4  4B F1 2E 51 */	bl func_80136E84
+/* 80224034 001ED5F4  4B F1 2E 51 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80224038 001ED5F8  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8022403C 001ED5FC  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80224040 001ED600  80 BE 00 08 */	lwz r5, 8(r30)
@@ -295,7 +295,7 @@
 /* 802240FC 001ED6BC  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffUpBlue
 
-.fn __dt__CMCEffUpBlue, global
+.fn __dt__12CMCEffUpBlueFv, global
 /* 80224100 001ED6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224104 001ED6C4  7C 08 02 A6 */	mflr r0
 /* 80224108 001ED6C8  2C 03 00 00 */	cmpwi r3, 0
@@ -313,7 +313,7 @@
 /* 80224134 001ED6F4  7C 08 03 A6 */	mtlr r0
 /* 80224138 001ED6F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022413C 001ED6FC  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffUpBlue
+.endfn __dt__12CMCEffUpBlueFv
 
 .fn func_80224140, global
 /* 80224140 001ED700  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -326,7 +326,7 @@
 /* 8022415C 001ED71C  38 BF 00 62 */	addi r5, r31, 0x62
 /* 80224160 001ED720  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224164 001ED724  38 63 00 0C */	addi r3, r3, 0xc
-/* 80224168 001ED728  4B F1 2D 1D */	bl func_80136E84
+/* 80224168 001ED728  4B F1 2D 1D */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8022416C 001ED72C  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80224170 001ED730  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80224174 001ED734  80 BE 00 08 */	lwz r5, 8(r30)
@@ -388,7 +388,7 @@
 /* 80224230 001ED7F0  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffUpGreen
 
-.fn __dt__CMCEffUpGreen, global
+.fn __dt__13CMCEffUpGreenFv, global
 /* 80224234 001ED7F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224238 001ED7F8  7C 08 02 A6 */	mflr r0
 /* 8022423C 001ED7FC  2C 03 00 00 */	cmpwi r3, 0
@@ -406,7 +406,7 @@
 /* 80224268 001ED828  7C 08 03 A6 */	mtlr r0
 /* 8022426C 001ED82C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224270 001ED830  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffUpGreen
+.endfn __dt__13CMCEffUpGreenFv
 
 .fn func_80224274, global
 /* 80224274 001ED834  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -419,7 +419,7 @@
 /* 80224290 001ED850  38 BF 00 93 */	addi r5, r31, 0x93
 /* 80224294 001ED854  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224298 001ED858  38 63 00 0C */	addi r3, r3, 0xc
-/* 8022429C 001ED85C  4B F1 2B E9 */	bl func_80136E84
+/* 8022429C 001ED85C  4B F1 2B E9 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 802242A0 001ED860  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 802242A4 001ED864  38 9E 00 10 */	addi r4, r30, 0x10
 /* 802242A8 001ED868  80 BE 00 08 */	lwz r5, 8(r30)
@@ -484,7 +484,7 @@
 /* 80224370 001ED930  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffUpPrm
 
-.fn __dt__CMCEffUpPrm, global
+.fn __dt__11CMCEffUpPrmFv, global
 /* 80224374 001ED934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224378 001ED938  7C 08 02 A6 */	mflr r0
 /* 8022437C 001ED93C  2C 03 00 00 */	cmpwi r3, 0
@@ -502,7 +502,7 @@
 /* 802243A8 001ED968  7C 08 03 A6 */	mtlr r0
 /* 802243AC 001ED96C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802243B0 001ED970  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffUpPrm
+.endfn __dt__11CMCEffUpPrmFv
 
 .fn func_802243B4, global
 /* 802243B4 001ED974  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -521,7 +521,7 @@
 /* 802243E4 001ED9A4  7C 7B 02 14 */	add r3, r27, r0
 /* 802243E8 001ED9A8  3B 83 00 0C */	addi r28, r3, 0xc
 /* 802243EC 001ED9AC  7F 83 E3 78 */	mr r3, r28
-/* 802243F0 001ED9B0  4B F1 2A 95 */	bl func_80136E84
+/* 802243F0 001ED9B0  4B F1 2A 95 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 802243F4 001ED9B4  80 7C 00 00 */	lwz r3, 0(r28)
 /* 802243F8 001ED9B8  38 9C 00 04 */	addi r4, r28, 4
 /* 802243FC 001ED9BC  80 BB 00 08 */	lwz r5, 8(r27)
@@ -621,7 +621,7 @@
 /* 8022454C 001EDB0C  38 C0 00 01 */	li r6, 1
 /* 80224550 001EDB10  7C 7D 02 14 */	add r3, r29, r0
 /* 80224554 001EDB14  80 63 00 0C */	lwz r3, 0xc(r3)
-/* 80224558 001EDB18  4B F1 2A E1 */	bl func_80137038
+/* 80224558 001EDB18  4B F1 2A E1 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8022455C 001EDB1C  3B FF 00 01 */	addi r31, r31, 1
 /* 80224560 001EDB20  28 1F 00 08 */	cmplwi r31, 8
 /* 80224564 001EDB24  41 80 FF D8 */	blt .L_8022453C
@@ -760,7 +760,7 @@
 /* 8022471C 001EDCDC  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffSuccess
 
-.fn __dt__CMCEffSuccess, global
+.fn __dt__13CMCEffSuccessFv, global
 /* 80224720 001EDCE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224724 001EDCE4  7C 08 02 A6 */	mflr r0
 /* 80224728 001EDCE8  2C 03 00 00 */	cmpwi r3, 0
@@ -778,7 +778,7 @@
 /* 80224754 001EDD14  7C 08 03 A6 */	mtlr r0
 /* 80224758 001EDD18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022475C 001EDD1C  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffSuccess
+.endfn __dt__13CMCEffSuccessFv
 
 .fn func_80224760, global
 /* 80224760 001EDD20  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -791,7 +791,7 @@
 /* 8022477C 001EDD3C  38 BF 00 FD */	addi r5, r31, 0xfd
 /* 80224780 001EDD40  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224784 001EDD44  38 63 00 0C */	addi r3, r3, 0xc
-/* 80224788 001EDD48  4B F1 26 FD */	bl func_80136E84
+/* 80224788 001EDD48  4B F1 26 FD */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8022478C 001EDD4C  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80224790 001EDD50  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80224794 001EDD54  80 BE 00 08 */	lwz r5, 8(r30)
@@ -861,7 +861,7 @@
 /* 8022486C 001EDE2C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80224870 001EDE30  38 A0 00 00 */	li r5, 0
 /* 80224874 001EDE34  38 C0 00 01 */	li r6, 1
-/* 80224878 001EDE38  4B F1 27 C0 */	b func_80137038
+/* 80224878 001EDE38  4B F1 27 C0 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8022487C 001EDE3C  4E 80 00 20 */	blr 
 .endfn func_80224860
 
@@ -1092,7 +1092,7 @@
 /* 80224B78 001EE138  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffFailure
 
-.fn __dt__CMCEffFailure, global
+.fn __dt__13CMCEffFailureFv, global
 /* 80224B7C 001EE13C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224B80 001EE140  7C 08 02 A6 */	mflr r0
 /* 80224B84 001EE144  2C 03 00 00 */	cmpwi r3, 0
@@ -1110,7 +1110,7 @@
 /* 80224BB0 001EE170  7C 08 03 A6 */	mtlr r0
 /* 80224BB4 001EE174  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224BB8 001EE178  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffFailure
+.endfn __dt__13CMCEffFailureFv
 
 .fn func_80224BBC, global
 /* 80224BBC 001EE17C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1123,7 +1123,7 @@
 /* 80224BD8 001EE198  38 BF 01 46 */	addi r5, r31, 0x146
 /* 80224BDC 001EE19C  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224BE0 001EE1A0  38 63 00 0C */	addi r3, r3, 0xc
-/* 80224BE4 001EE1A4  4B F1 22 A1 */	bl func_80136E84
+/* 80224BE4 001EE1A4  4B F1 22 A1 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80224BE8 001EE1A8  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80224BEC 001EE1AC  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80224BF0 001EE1B0  80 BE 00 08 */	lwz r5, 8(r30)
@@ -1179,7 +1179,7 @@
 /* 80224CA0 001EE260  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffCrystal
 
-.fn __dt__CMCEffCrystal, global
+.fn __dt__13CMCEffCrystalFv, global
 /* 80224CA4 001EE264  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224CA8 001EE268  7C 08 02 A6 */	mflr r0
 /* 80224CAC 001EE26C  2C 03 00 00 */	cmpwi r3, 0
@@ -1197,7 +1197,7 @@
 /* 80224CD8 001EE298  7C 08 03 A6 */	mtlr r0
 /* 80224CDC 001EE29C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224CE0 001EE2A0  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffCrystal
+.endfn __dt__13CMCEffCrystalFv
 
 .fn func_80224CE4, global
 /* 80224CE4 001EE2A4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1210,7 +1210,7 @@
 /* 80224D00 001EE2C0  38 BF 01 75 */	addi r5, r31, 0x175
 /* 80224D04 001EE2C4  80 83 00 08 */	lwz r4, 8(r3)
 /* 80224D08 001EE2C8  38 63 00 0C */	addi r3, r3, 0xc
-/* 80224D0C 001EE2CC  4B F1 21 79 */	bl func_80136E84
+/* 80224D0C 001EE2CC  4B F1 21 79 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80224D10 001EE2D0  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 80224D14 001EE2D4  38 9D 00 10 */	addi r4, r29, 0x10
 /* 80224D18 001EE2D8  80 BD 00 08 */	lwz r5, 8(r29)
@@ -1224,7 +1224,7 @@
 /* 80224D38 001EE2F8  80 9D 00 08 */	lwz r4, 8(r29)
 /* 80224D3C 001EE2FC  38 7D 00 18 */	addi r3, r29, 0x18
 /* 80224D40 001EE300  38 BF 01 BB */	addi r5, r31, 0x1bb
-/* 80224D44 001EE304  4B F1 21 41 */	bl func_80136E84
+/* 80224D44 001EE304  4B F1 21 41 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80224D48 001EE308  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 80224D4C 001EE30C  38 9D 00 1C */	addi r4, r29, 0x1c
 /* 80224D50 001EE310  80 BD 00 08 */	lwz r5, 8(r29)
@@ -1259,7 +1259,7 @@
 /* 80224DC4 001EE384  80 9D 00 08 */	lwz r4, 8(r29)
 /* 80224DC8 001EE388  38 7D 00 2C */	addi r3, r29, 0x2c
 /* 80224DCC 001EE38C  38 BF 02 3B */	addi r5, r31, 0x23b
-/* 80224DD0 001EE390  4B F1 20 B5 */	bl func_80136E84
+/* 80224DD0 001EE390  4B F1 20 B5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80224DD4 001EE394  80 7D 00 2C */	lwz r3, 0x2c(r29)
 /* 80224DD8 001EE398  38 9D 00 30 */	addi r4, r29, 0x30
 /* 80224DDC 001EE39C  80 BD 00 08 */	lwz r5, 8(r29)
@@ -1358,12 +1358,12 @@
 /* 80224F1C 001EE4DC  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80224F20 001EE4E0  38 A0 00 00 */	li r5, 0
 /* 80224F24 001EE4E4  38 C0 00 01 */	li r6, 1
-/* 80224F28 001EE4E8  4B F1 21 11 */	bl func_80137038
+/* 80224F28 001EE4E8  4B F1 21 11 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80224F2C 001EE4EC  80 7E 00 18 */	lwz r3, 0x18(r30)
 /* 80224F30 001EE4F0  7F E4 FB 78 */	mr r4, r31
 /* 80224F34 001EE4F4  38 A0 00 00 */	li r5, 0
 /* 80224F38 001EE4F8  38 C0 00 01 */	li r6, 1
-/* 80224F3C 001EE4FC  4B F1 20 FD */	bl func_80137038
+/* 80224F3C 001EE4FC  4B F1 20 FD */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80224F40 001EE500  88 1E 00 04 */	lbz r0, 4(r30)
 /* 80224F44 001EE504  28 00 00 02 */	cmplwi r0, 2
 /* 80224F48 001EE508  41 82 00 14 */	beq .L_80224F5C
@@ -1376,7 +1376,7 @@
 /* 80224F60 001EE520  7F E4 FB 78 */	mr r4, r31
 /* 80224F64 001EE524  38 A0 00 00 */	li r5, 0
 /* 80224F68 001EE528  38 C0 00 01 */	li r6, 1
-/* 80224F6C 001EE52C  4B F1 20 CD */	bl func_80137038
+/* 80224F6C 001EE52C  4B F1 20 CD */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_80224F70:
 /* 80224F70 001EE530  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80224F74 001EE534  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2202,7 +2202,7 @@
 /* 80225AD0 001EF090  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffUpRank
 
-.fn __dt__CMCEffUpRank, global
+.fn __dt__12CMCEffUpRankFv, global
 /* 80225AD4 001EF094  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225AD8 001EF098  7C 08 02 A6 */	mflr r0
 /* 80225ADC 001EF09C  2C 03 00 00 */	cmpwi r3, 0
@@ -2220,7 +2220,7 @@
 /* 80225B08 001EF0C8  7C 08 03 A6 */	mtlr r0
 /* 80225B0C 001EF0CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80225B10 001EF0D0  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffUpRank
+.endfn __dt__12CMCEffUpRankFv
 
 .fn func_80225B14, global
 /* 80225B14 001EF0D4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2233,7 +2233,7 @@
 /* 80225B30 001EF0F0  38 BF 03 48 */	addi r5, r31, 0x348
 /* 80225B34 001EF0F4  80 83 00 08 */	lwz r4, 8(r3)
 /* 80225B38 001EF0F8  38 63 00 0C */	addi r3, r3, 0xc
-/* 80225B3C 001EF0FC  4B F1 13 49 */	bl func_80136E84
+/* 80225B3C 001EF0FC  4B F1 13 49 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80225B40 001EF100  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80225B44 001EF104  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80225B48 001EF108  80 BE 00 08 */	lwz r5, 8(r30)
@@ -2295,7 +2295,7 @@
 /* 80225C04 001EF1C4  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffDivide
 
-.fn __dt__CMCEffDivide, global
+.fn __dt__12CMCEffDivideFv, global
 /* 80225C08 001EF1C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225C0C 001EF1CC  7C 08 02 A6 */	mflr r0
 /* 80225C10 001EF1D0  2C 03 00 00 */	cmpwi r3, 0
@@ -2313,7 +2313,7 @@
 /* 80225C3C 001EF1FC  7C 08 03 A6 */	mtlr r0
 /* 80225C40 001EF200  38 21 00 10 */	addi r1, r1, 0x10
 /* 80225C44 001EF204  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffDivide
+.endfn __dt__12CMCEffDivideFv
 
 .fn func_80225C48, global
 /* 80225C48 001EF208  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2326,7 +2326,7 @@
 /* 80225C64 001EF224  38 BF 03 77 */	addi r5, r31, 0x377
 /* 80225C68 001EF228  80 83 00 08 */	lwz r4, 8(r3)
 /* 80225C6C 001EF22C  38 63 00 0C */	addi r3, r3, 0xc
-/* 80225C70 001EF230  4B F1 12 15 */	bl func_80136E84
+/* 80225C70 001EF230  4B F1 12 15 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80225C74 001EF234  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80225C78 001EF238  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80225C7C 001EF23C  80 BE 00 08 */	lwz r5, 8(r30)
@@ -2387,7 +2387,7 @@
 /* 80225D34 001EF2F4  4E 80 00 20 */	blr 
 .endfn __ct__CMCEffCylinder
 
-.fn __dt__CMCEffCylinder, global
+.fn __dt__14CMCEffCylinderFv, global
 /* 80225D38 001EF2F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225D3C 001EF2FC  7C 08 02 A6 */	mflr r0
 /* 80225D40 001EF300  2C 03 00 00 */	cmpwi r3, 0
@@ -2405,7 +2405,7 @@
 /* 80225D6C 001EF32C  7C 08 03 A6 */	mtlr r0
 /* 80225D70 001EF330  38 21 00 10 */	addi r1, r1, 0x10
 /* 80225D74 001EF334  4E 80 00 20 */	blr 
-.endfn __dt__CMCEffCylinder
+.endfn __dt__14CMCEffCylinderFv
 
 .fn func_80225D78, global
 /* 80225D78 001EF338  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2418,7 +2418,7 @@
 /* 80225D94 001EF354  38 BF 03 A4 */	addi r5, r31, 0x3a4
 /* 80225D98 001EF358  80 83 00 08 */	lwz r4, 8(r3)
 /* 80225D9C 001EF35C  38 63 00 0C */	addi r3, r3, 0xc
-/* 80225DA0 001EF360  4B F1 10 E5 */	bl func_80136E84
+/* 80225DA0 001EF360  4B F1 10 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80225DA4 001EF364  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80225DA8 001EF368  38 9E 00 10 */	addi r4, r30, 0x10
 /* 80225DAC 001EF36C  80 BE 00 08 */	lwz r5, 8(r30)
@@ -2500,7 +2500,7 @@
 /* 80225EAC 001EF46C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80225EB0 001EF470  38 A0 00 00 */	li r5, 0
 /* 80225EB4 001EF474  38 C0 00 01 */	li r6, 1
-/* 80225EB8 001EF478  4B F1 11 80 */	b func_80137038
+/* 80225EB8 001EF478  4B F1 11 80 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80225EBC 001EF47C  4E 80 00 20 */	blr 
 .endfn func_80225EA0
 
@@ -2923,7 +2923,7 @@
 .obj __vt__14CMCEffCylinder, global
 	.4byte __RTTI__14CMCEffCylinder
 	.4byte 0
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte func_80225D78
 .endobj __vt__14CMCEffCylinder
 
@@ -2931,7 +2931,7 @@
 .obj __vt__12CMCEffDivide, global
 	.4byte __RTTI__12CMCEffDivide
 	.4byte 0
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte func_80225C48
 	.4byte func_80225CD8
 .endobj __vt__12CMCEffDivide
@@ -2946,7 +2946,7 @@
 .obj __vt__12CMCEffUpRank, global
 	.4byte __RTTI__12CMCEffUpRank
 	.4byte 0
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte func_80225B14
 	.4byte func_80225BA4
 .endobj __vt__12CMCEffUpRank
@@ -2961,7 +2961,7 @@
 .obj __vt__13CMCEffCrystal, global
 	.4byte __RTTI__13CMCEffCrystal
 	.4byte 0
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte func_80224CE4
 .endobj __vt__13CMCEffCrystal
 
@@ -2969,7 +2969,7 @@
 .obj __vt__13CMCEffFailure, global
 	.4byte __RTTI__13CMCEffFailure
 	.4byte 0
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte func_80224BBC
 	.4byte func_80223F24
 .endobj __vt__13CMCEffFailure
@@ -2984,7 +2984,7 @@
 .obj __vt__13CMCEffSuccess, global
 	.4byte __RTTI__13CMCEffSuccess
 	.4byte 0
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte func_80224760
 .endobj __vt__13CMCEffSuccess
 
@@ -2992,14 +2992,14 @@
 .obj __vt__11CMCEffUpPrm, global
 	.4byte __RTTI__11CMCEffUpPrm
 	.4byte 0
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 .endobj __vt__11CMCEffUpPrm
 
 
 .obj __vt__13CMCEffUpGreen, global
 	.4byte __RTTI__13CMCEffUpGreen
 	.4byte 0
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte func_80224274
 	.4byte func_80224304
 .endobj __vt__13CMCEffUpGreen
@@ -3014,7 +3014,7 @@
 .obj __vt__12CMCEffUpBlue, global
 	.4byte __RTTI__12CMCEffUpBlue
 	.4byte 0
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte func_80224140
 	.4byte func_802241D0
 .endobj __vt__12CMCEffUpBlue
@@ -3029,7 +3029,7 @@
 .obj __vt__11CMCEffUpRed, global
 	.4byte __RTTI__11CMCEffUpRed
 	.4byte 0
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte func_8022400C
 	.4byte func_8022409C
 .endobj __vt__11CMCEffUpRed
@@ -3044,7 +3044,7 @@
 .obj __vt__11CMCEffStart, global
 	.4byte __RTTI__11CMCEffStart
 	.4byte 0
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte func_80223DB0
 	.4byte func_80223F24
 .endobj __vt__11CMCEffStart
@@ -3632,7 +3632,7 @@
 
 .obj "@eti_8002DE00", local
 .hidden "@eti_8002DE00"
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x00000040
 	.4byte "@etb_80014F8C"
 .endobj "@eti_8002DE00"
@@ -3674,7 +3674,7 @@
 
 .obj "@eti_8002DE48", local
 .hidden "@eti_8002DE48"
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x00000040
 	.4byte "@etb_80014FBC"
 .endobj "@eti_8002DE48"
@@ -3702,7 +3702,7 @@
 
 .obj "@eti_8002DE78", local
 .hidden "@eti_8002DE78"
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x00000040
 	.4byte "@etb_80014FDC"
 .endobj "@eti_8002DE78"
@@ -3730,7 +3730,7 @@
 
 .obj "@eti_8002DEA8", local
 .hidden "@eti_8002DEA8"
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x00000040
 	.4byte "@etb_80014FFC"
 .endobj "@eti_8002DEA8"
@@ -3751,7 +3751,7 @@
 
 .obj "@eti_8002DECC", local
 .hidden "@eti_8002DECC"
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x00000040
 	.4byte "@etb_80015014"
 .endobj "@eti_8002DECC"
@@ -3793,7 +3793,7 @@
 
 .obj "@eti_8002DF14", local
 .hidden "@eti_8002DF14"
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x00000040
 	.4byte "@etb_80015044"
 .endobj "@eti_8002DF14"
@@ -3870,7 +3870,7 @@
 
 .obj "@eti_8002DF98", local
 .hidden "@eti_8002DF98"
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x00000040
 	.4byte "@etb_8001509C"
 .endobj "@eti_8002DF98"
@@ -3885,7 +3885,7 @@
 
 .obj "@eti_8002DFB0", local
 .hidden "@eti_8002DFB0"
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x00000040
 	.4byte "@etb_800150AC"
 .endobj "@eti_8002DFB0"
@@ -4054,7 +4054,7 @@
 
 .obj "@eti_8002E0D0", local
 .hidden "@eti_8002E0D0"
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x00000040
 	.4byte "@etb_8001516C"
 .endobj "@eti_8002E0D0"
@@ -4083,7 +4083,7 @@
 
 .obj "@eti_8002E100", local
 .hidden "@eti_8002E100"
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x00000040
 	.4byte "@etb_8001518C"
 .endobj "@eti_8002E100"
@@ -4105,7 +4105,7 @@
 
 .obj "@eti_8002E124", local
 .hidden "@eti_8002E124"
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x00000040
 	.4byte "@etb_800151A4"
 .endobj "@eti_8002E124"

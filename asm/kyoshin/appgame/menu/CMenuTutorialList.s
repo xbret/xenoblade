@@ -64,7 +64,7 @@
 /* 802ABE98 00275458  4E 80 00 20 */	blr
 .endfn __ct__CMenuTutorialList
 
-.fn __dt__CMenuTutorialList, global
+.fn __dt__17CMenuTutorialListFv, global
 /* 802ABE9C 0027545C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ABEA0 00275460  7C 08 02 A6 */	mflr r0
 /* 802ABEA4 00275464  2C 03 00 00 */	cmpwi r3, 0
@@ -75,16 +75,16 @@
 /* 802ABEB8 00275478  41 82 00 50 */	beq .L_802ABF08
 /* 802ABEBC 0027547C  38 80 FF FF */	li r4, -1
 /* 802ABEC0 00275480  38 63 03 40 */	addi r3, r3, 0x340
-/* 802ABEC4 00275484  4B FE EB 11 */	bl __dt__CTutorial
+/* 802ABEC4 00275484  4B FE EB 11 */	bl __dt__9CTutorialFv
 /* 802ABEC8 00275488  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 802ABECC 0027548C  38 80 FF FF */	li r4, -1
-/* 802ABED0 00275490  48 00 11 19 */	bl __dt__CTutorialList
+/* 802ABED0 00275490  48 00 11 19 */	bl __dt__13CTutorialListFv
 /* 802ABED4 00275494  38 7E 00 80 */	addi r3, r30, 0x80
 /* 802ABED8 00275498  38 80 FF FF */	li r4, -1
-/* 802ABEDC 0027549C  4B F1 80 75 */	bl __dt__CTitleAHelp
+/* 802ABEDC 0027549C  4B F1 80 75 */	bl __dt__11CTitleAHelpFv
 /* 802ABEE0 002754A0  38 7E 00 60 */	addi r3, r30, 0x60
 /* 802ABEE4 002754A4  38 80 FF FF */	li r4, -1
-/* 802ABEE8 002754A8  4B F1 7A E9 */	bl __dt__CBgTex
+/* 802ABEE8 002754A8  4B F1 7A E9 */	bl __dt__6CBgTexFv
 /* 802ABEEC 002754AC  7F C3 F3 78 */	mr r3, r30
 /* 802ABEF0 002754B0  38 80 00 00 */	li r4, 0
 /* 802ABEF4 002754B4  4B E5 2E 19 */	bl __dt__800FED0C
@@ -99,7 +99,7 @@
 /* 802ABF14 002754D4  7C 08 03 A6 */	mtlr r0
 /* 802ABF18 002754D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ABF1C 002754DC  4E 80 00 20 */	blr 
-.endfn __dt__CMenuTutorialList
+.endfn __dt__17CMenuTutorialListFv
 
 .fn func_802ABF20, global
 /* 802ABF20 002754E0  94 21 FD 10 */	stwu r1, -0x2f0(r1)
@@ -128,7 +128,7 @@
 /* 802ABF7C 0027553C  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 802ABF80 00275540  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 802ABF84 00275544  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 802ABF88 00275548  4B F1 7A 49 */	bl __dt__CBgTex
+/* 802ABF88 00275548  4B F1 7A 49 */	bl __dt__6CBgTexFv
 /* 802ABF8C 0027554C  38 7F 00 60 */	addi r3, r31, 0x60
 /* 802ABF90 00275550  4B F1 7C 85 */	bl func_801C3C14
 /* 802ABF94 00275554  3C 60 80 51 */	lis r3, CMenuTutorialList_strpool@ha
@@ -169,7 +169,7 @@
 /* 802AC020 002755E0  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 802AC024 002755E4  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 802AC028 002755E8  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 802AC02C 002755EC  4B F1 7F 25 */	bl __dt__CTitleAHelp
+/* 802AC02C 002755EC  4B F1 7F 25 */	bl __dt__11CTitleAHelpFv
 /* 802AC030 002755F0  38 7F 00 80 */	addi r3, r31, 0x80
 /* 802AC034 002755F4  4B F1 7F 71 */	bl CTitleAHelp_load
 /* 802AC038 002755F8  A0 9F 03 9A */	lhz r4, 0x39a(r31)
@@ -279,7 +279,7 @@
 /* 802AC1D0 00275790  B0 1F 03 3A */	sth r0, 0x33a(r31)
 /* 802AC1D4 00275794  A8 01 02 E4 */	lha r0, 0x2e4(r1)
 /* 802AC1D8 00275798  B0 1F 03 3C */	sth r0, 0x33c(r31)
-/* 802AC1DC 0027579C  48 00 0E 0D */	bl __dt__CTutorialList
+/* 802AC1DC 0027579C  48 00 0E 0D */	bl __dt__13CTutorialListFv
 /* 802AC1E0 002757A0  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802AC1E4 002757A4  48 00 0E 7D */	bl func_802AD060
 /* 802AC1E8 002757A8  2C 1F 00 00 */	cmpwi r31, 0
@@ -304,7 +304,7 @@
 /* 802AC224 002757E4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802AC228 002757E8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802AC22C 002757EC  7C 7F 1B 78 */	mr r31, r3
-/* 802AC230 002757F0  48 19 C8 15 */	bl func_80448A44
+/* 802AC230 002757F0  48 19 C8 15 */	bl func_80448A44__Fv
 /* 802AC234 002757F4  2C 1F 00 00 */	cmpwi r31, 0
 /* 802AC238 002757F8  7F E4 FB 78 */	mr r4, r31
 /* 802AC23C 002757FC  41 82 00 08 */	beq .L_802AC244
@@ -498,7 +498,7 @@
 /* 802AC4BC 00275A7C  38 60 00 00 */	li r3, 0
 /* 802AC4C0 00275A80  48 00 00 3C */	b .L_802AC4FC
 .L_802AC4C4:
-/* 802AC4C4 00275A84  48 18 B0 F1 */	bl getHeapIndex
+/* 802AC4C4 00275A84  48 18 B0 F1 */	bl getHeapIndex__Fv
 /* 802AC4C8 00275A88  7C 64 1B 78 */	mr r4, r3
 /* 802AC4CC 00275A8C  38 60 03 9C */	li r3, 0x39c
 /* 802AC4D0 00275A90  48 18 85 8D */	bl heap_malloc
@@ -709,7 +709,7 @@
 /* 802AC7B4 00275D74  98 1F 03 92 */	stb r0, 0x392(r31)
 /* 802AC7B8 00275D78  88 01 00 5B */	lbz r0, 0x5b(r1)
 /* 802AC7BC 00275D7C  98 1F 03 93 */	stb r0, 0x393(r31)
-/* 802AC7C0 00275D80  4B FE E2 15 */	bl __dt__CTutorial
+/* 802AC7C0 00275D80  4B FE E2 15 */	bl __dt__9CTutorialFv
 /* 802AC7C4 00275D84  38 7F 03 40 */	addi r3, r31, 0x340
 /* 802AC7C8 00275D88  4B FE E2 6D */	bl func_8029AA34
 /* 802AC7CC 00275D8C  48 00 00 A8 */	b .L_802AC874
@@ -1018,7 +1018,7 @@
 
 .fn func_802ACBD4, global
 /* 802ACBD4 00276194  38 63 FF A8 */	addi r3, r3, -88
-/* 802ACBD8 00276198  4B FF F2 C4 */	b __dt__CMenuTutorialList
+/* 802ACBD8 00276198  4B FF F2 C4 */	b __dt__17CMenuTutorialListFv
 .endfn func_802ACBD4
 
 
@@ -1060,13 +1060,13 @@
 .obj __vt__17CMenuTutorialList, global
 	.4byte __RTTI__17CMenuTutorialList
 	.4byte 0
-	.4byte __dt__CMenuTutorialList
-	.4byte CChildListNode_Reset
+	.4byte __dt__17CMenuTutorialListFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_802ABF20
 	.4byte func_802AC21C
 	.4byte func_802AC2A0
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__17CMenuTutorialList
 	.4byte 0xFFFFFFA8
 	.4byte func_802ACBD4
@@ -1146,16 +1146,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x000000B8
-	.4byte __dt__CTutorialList
+	.4byte __dt__13CTutorialListFv
 	.4byte 0x0780001C
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001C
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1175,37 +1175,37 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000340
-	.4byte __dt__CTutorial
+	.4byte __dt__9CTutorialFv
 	.4byte 0x0780001E
 	.4byte 0x00000340
-	.4byte __dt__CTutorial
+	.4byte __dt__9CTutorialFv
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CTutorialList
+	.4byte __dt__13CTutorialListFv
 	.4byte 0x0780001E
 	.4byte 0x00000340
-	.4byte __dt__CTutorial
+	.4byte __dt__9CTutorialFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CTutorialList
+	.4byte __dt__13CTutorialListFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000340
-	.4byte __dt__CTutorial
+	.4byte __dt__9CTutorialFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CTutorialList
+	.4byte __dt__13CTutorialListFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001B19C"
 
 .obj "@etb_8001B248", local
@@ -1303,7 +1303,7 @@
 
 .obj "@eti_80032F54", local
 .hidden "@eti_80032F54"
-	.4byte __dt__CMenuTutorialList
+	.4byte __dt__17CMenuTutorialListFv
 	.4byte 0x00000084
 	.4byte "@etb_8001B19C"
 .endobj "@eti_80032F54"

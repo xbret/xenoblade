@@ -20,7 +20,7 @@
 /* 80449014 004125D4  4E 80 00 20 */	blr 
 .endfn __ct__CFontLayer
 
-.fn __dt__CFontLayer, global
+.fn __dt__10CFontLayerFv, global
 /* 80449018 004125D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044901C 004125DC  7C 08 02 A6 */	mflr r0
 /* 80449020 004125E0  2C 03 00 00 */	cmpwi r3, 0
@@ -46,7 +46,7 @@
 /* 8044906C 0041262C  7C 08 03 A6 */	mtlr r0
 /* 80449070 00412630  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449074 00412634  4E 80 00 20 */	blr 
-.endfn __dt__CFontLayer
+.endfn __dt__10CFontLayerFv
 
 .fn func_80449078, global
 /* 80449078 00412638  94 21 FD 70 */	stwu r1, -0x290(r1)
@@ -140,7 +140,7 @@
 .obj __vt__10CFontLayer, global
 	.4byte __RTTI__10CFontLayer
 	.4byte 0
-	.4byte __dt__CFontLayer
+	.4byte __dt__10CFontLayerFv
 	.4byte 0
 .endobj __vt__10CFontLayer
 
@@ -179,7 +179,7 @@
 
 .obj "@eti_80034784", local
 .hidden "@eti_80034784"
-	.4byte __dt__CFontLayer
+	.4byte __dt__10CFontLayerFv
 	.4byte 0x00000060
 	.4byte "@etb_8001CB80"
 .endobj "@eti_80034784"

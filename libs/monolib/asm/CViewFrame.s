@@ -4,7 +4,7 @@
 
 .fn func_8043FBC4, global
 /* 8043FBC4 00409184  38 63 FE 3C */	addi r3, r3, -452
-/* 8043FBC8 00409188  4B FF CC 18 */	b __dt__CView
+/* 8043FBC8 00409188  4B FF CC 18 */	b __dt__5CViewFv
 .endfn func_8043FBC4
 
 .fn __ct__CViewFrame, global
@@ -2564,7 +2564,7 @@
 /* 804420CC 0040B68C  4E 80 00 20 */	blr 
 .endfn __dt__80442084
 
-.fn __dt__CViewRoot, global
+.fn __dt__9CViewRootFv, global
 /* 804420D0 0040B690  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804420D4 0040B694  7C 08 02 A6 */	mflr r0
 /* 804420D8 0040B698  2C 03 00 00 */	cmpwi r3, 0
@@ -2627,7 +2627,7 @@
 .L_804421A8:
 /* 804421A8 0040B768  7F C3 F3 78 */	mr r3, r30
 /* 804421AC 0040B76C  38 80 00 00 */	li r4, 0
-/* 804421B0 0040B770  4B FF 59 19 */	bl __dt__CWorkThread
+/* 804421B0 0040B770  4B FF 59 19 */	bl __dt__11CWorkThreadFv
 /* 804421B4 0040B774  2C 1F 00 00 */	cmpwi r31, 0
 /* 804421B8 0040B778  40 81 00 0C */	ble .L_804421C4
 /* 804421BC 0040B77C  7F C3 F3 78 */	mr r3, r30
@@ -2641,7 +2641,7 @@
 /* 804421D8 0040B798  7C 08 03 A6 */	mtlr r0
 /* 804421DC 0040B79C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804421E0 0040B7A0  4E 80 00 20 */	blr 
-.endfn __dt__CViewRoot
+.endfn __dt__9CViewRootFv
 
 .fn func_804421E4, global
 /* 804421E4 0040B7A4  80 6D BD 30 */	lwz r3, lbl_80667EB0@sda21(r13)
@@ -3804,7 +3804,7 @@
 .obj __vt__10CViewFrame, global
 	.4byte __RTTI__10CViewFrame
 	.4byte 0
-	.4byte __dt__CViewFrame
+	.4byte __dt__10CViewFrameFv
 	.4byte 0
 .endobj __vt__10CViewFrame
 
@@ -4098,7 +4098,7 @@
 
 .obj "@eti_8003425C", local
 .hidden "@eti_8003425C"
-	.4byte __dt__CViewRoot
+	.4byte __dt__9CViewRootFv
 	.4byte 0x00000114
 	.4byte "@etb_8001C638"
 .endobj "@eti_8003425C"

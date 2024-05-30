@@ -587,7 +587,7 @@
 /* 80125A64 000EF024  4E 80 00 20 */	blr 
 .endfn func_80125A2C
 
-.fn __dt__CTagProcessorBase, global
+.fn __dt__17CTagProcessorBaseFv, global
 /* 80125A68 000EF028  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80125A6C 000EF02C  7C 08 02 A6 */	mflr r0
 /* 80125A70 000EF030  2C 03 00 00 */	cmpwi r3, 0
@@ -609,7 +609,7 @@
 /* 80125AAC 000EF06C  7C 08 03 A6 */	mtlr r0
 /* 80125AB0 000EF070  38 21 00 10 */	addi r1, r1, 0x10
 /* 80125AB4 000EF074  4E 80 00 20 */	blr 
-.endfn __dt__CTagProcessorBase
+.endfn __dt__17CTagProcessorBaseFv
 
 .fn func_80125AB8, global
 /* 80125AB8 000EF078  3C E0 80 53 */	lis r7, lbl_80530C48@ha
@@ -1081,7 +1081,7 @@
 /* 80126108 000EF6C8  4E 80 00 20 */	blr 
 .endfn __ct__CTagProcessor
 
-.fn __dt__CTagProcessor, global
+.fn __dt__13CTagProcessorFv, global
 /* 8012610C 000EF6CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80126110 000EF6D0  7C 08 02 A6 */	mflr r0
 /* 80126114 000EF6D4  2C 03 00 00 */	cmpwi r3, 0
@@ -1091,7 +1091,7 @@
 /* 80126124 000EF6E4  7C 9F 23 78 */	mr r31, r4
 /* 80126128 000EF6E8  41 82 00 1C */	beq .L_80126144
 /* 8012612C 000EF6EC  38 80 00 00 */	li r4, 0
-/* 80126130 000EF6F0  4B FF F9 39 */	bl __dt__CTagProcessorBase
+/* 80126130 000EF6F0  4B FF F9 39 */	bl __dt__17CTagProcessorBaseFv
 /* 80126134 000EF6F4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80126138 000EF6F8  40 81 00 0C */	ble .L_80126144
 /* 8012613C 000EF6FC  7F C3 F3 78 */	mr r3, r30
@@ -1103,7 +1103,7 @@
 /* 80126150 000EF710  7C 08 03 A6 */	mtlr r0
 /* 80126154 000EF714  38 21 00 10 */	addi r1, r1, 0x10
 /* 80126158 000EF718  4E 80 00 20 */	blr 
-.endfn __dt__CTagProcessor
+.endfn __dt__13CTagProcessorFv
 
 .fn func_8012615C, global
 /* 8012615C 000EF71C  94 21 F3 40 */	stwu r1, -0xcc0(r1)
@@ -3234,7 +3234,7 @@
 /* 80127F60 000F1520  4E 80 00 20 */	blr 
 .endfn __ct__CTagProcessorSE
 
-.fn __dt__CTagProcessorSE, global
+.fn __dt__15CTagProcessorSEFv, global
 /* 80127F64 000F1524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80127F68 000F1528  7C 08 02 A6 */	mflr r0
 /* 80127F6C 000F152C  2C 03 00 00 */	cmpwi r3, 0
@@ -3244,7 +3244,7 @@
 /* 80127F7C 000F153C  7C 9F 23 78 */	mr r31, r4
 /* 80127F80 000F1540  41 82 00 1C */	beq .L_80127F9C
 /* 80127F84 000F1544  38 80 00 00 */	li r4, 0
-/* 80127F88 000F1548  4B FF DA E1 */	bl __dt__CTagProcessorBase
+/* 80127F88 000F1548  4B FF DA E1 */	bl __dt__17CTagProcessorBaseFv
 /* 80127F8C 000F154C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80127F90 000F1550  40 81 00 0C */	ble .L_80127F9C
 /* 80127F94 000F1554  7F C3 F3 78 */	mr r3, r30
@@ -3256,7 +3256,7 @@
 /* 80127FA8 000F1568  7C 08 03 A6 */	mtlr r0
 /* 80127FAC 000F156C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80127FB0 000F1570  4E 80 00 20 */	blr 
-.endfn __dt__CTagProcessorSE
+.endfn __dt__15CTagProcessorSEFv
 
 .fn func_80127FB4, global
 /* 80127FB4 000F1574  94 21 FC D0 */	stwu r1, -0x330(r1)
@@ -9395,7 +9395,7 @@
 .obj __vt__15CTagProcessorSE, global
 	.4byte __RTTI__15CTagProcessorSE
 	.4byte 0
-	.4byte __dt__CTagProcessorSE
+	.4byte __dt__15CTagProcessorSEFv
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
@@ -9414,7 +9414,7 @@
 .obj __vt__13CTagProcessor, global
 	.4byte __RTTI__13CTagProcessor
 	.4byte 0
-	.4byte __dt__CTagProcessor
+	.4byte __dt__13CTagProcessorFv
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
@@ -9433,7 +9433,7 @@
 .obj __vt__17CTagProcessorBase, global
 	.4byte __RTTI__17CTagProcessorBase
 	.4byte 0
-	.4byte __dt__CTagProcessorBase
+	.4byte __dt__17CTagProcessorBaseFv
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
@@ -10945,7 +10945,7 @@
 
 .obj "@eti_80027248", local
 .hidden "@eti_80027248"
-	.4byte __dt__CTagProcessorBase
+	.4byte __dt__17CTagProcessorBaseFv
 	.4byte 0x00000050
 	.4byte "@etb_8000C000"
 .endobj "@eti_80027248"
@@ -10973,7 +10973,7 @@
 
 .obj "@eti_80027278", local
 .hidden "@eti_80027278"
-	.4byte __dt__CTagProcessor
+	.4byte __dt__13CTagProcessorFv
 	.4byte 0x00000050
 	.4byte "@etb_8000C034"
 .endobj "@eti_80027278"
@@ -11036,7 +11036,7 @@
 
 .obj "@eti_800272E4", local
 .hidden "@eti_800272E4"
-	.4byte __dt__CTagProcessorSE
+	.4byte __dt__15CTagProcessorSEFv
 	.4byte 0x00000050
 	.4byte "@etb_8000C07C"
 .endobj "@eti_800272E4"

@@ -30,7 +30,7 @@
 /* 80058474 00021A34  4E 80 00 20 */	blr 
 .endfn __ct__CMcaFile
 
-.fn __dt__CMcaFile, global
+.fn __dt__8CMcaFileFv, global
 /* 80058478 00021A38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005847C 00021A3C  7C 08 02 A6 */	mflr r0
 /* 80058480 00021A40  2C 03 00 00 */	cmpwi r3, 0
@@ -48,7 +48,7 @@
 /* 800584AC 00021A6C  7C 08 03 A6 */	mtlr r0
 /* 800584B0 00021A70  38 21 00 10 */	addi r1, r1, 0x10
 /* 800584B4 00021A74  4E 80 00 20 */	blr 
-.endfn __dt__CMcaFile
+.endfn __dt__8CMcaFileFv
 
 .fn func_800584B8, global
 /* 800584B8 00021A78  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -113,7 +113,7 @@
 .obj __vt__8CMcaFile, global
 	.4byte __RTTI__8CMcaFile
 	.4byte 0
-	.4byte __dt__CMcaFile
+	.4byte __dt__8CMcaFileFv
 .endobj __vt__8CMcaFile
 
 
@@ -171,7 +171,7 @@
 
 .obj "@eti_800226C4", local
 .hidden "@eti_800226C4"
-	.4byte __dt__CMcaFile
+	.4byte __dt__8CMcaFileFv
 	.4byte 0x00000040
 	.4byte "@etb_80007704"
 .endobj "@eti_800226C4"

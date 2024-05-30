@@ -24,7 +24,7 @@ struct StaticArcFile{
 
 extern "C"{
 extern void func_80057CDC();
-extern void SetArenaMemorySize(u32, u32);
+extern void MemManager_setArenaMemorySize(u32, u32);
 extern void CWorkRoot_Run();
 extern void func_80448E78(u32);
 extern void func_804559A8(u32, u32);

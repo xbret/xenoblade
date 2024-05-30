@@ -1366,7 +1366,7 @@
 .obj __vt__Q22cf19CfObjectSelectorObj, global
 	.4byte __RTTI__Q22cf19CfObjectSelectorObj
 	.4byte 0
-	.4byte __dt__cf_CfObjectSelectorObj
+	.4byte __dt__Q22cf19CfObjectSelectorObjFv
 	.4byte 0
 .endobj __vt__Q22cf19CfObjectSelectorObj
 
@@ -1451,13 +1451,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000060A0
-	.4byte __dt__cf_CfObjectSelectorObj
+	.4byte __dt__Q22cf19CfObjectSelectorObjFv
 	.4byte 0x0780001D
 	.4byte 0x00003040
-	.4byte __dt__cf_CfObjEnumList
+	.4byte __dt__Q22cf13CfObjEnumListFv
 	.4byte 0x8780001D
 	.4byte 0x00000000
-	.4byte __dt__cf_CfObjEnumList
+	.4byte __dt__Q22cf13CfObjEnumListFv
 .endobj "@etb_8000ACF4"
 
 .obj "@etb_8000AD38", local

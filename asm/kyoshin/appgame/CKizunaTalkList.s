@@ -732,7 +732,7 @@
 /* 8027313C 0023C6FC  7C 7E 1B 78 */	mr r30, r3
 /* 80273140 0023C700  90 83 00 00 */	stw r4, 0(r3)
 /* 80273144 0023C704  38 63 00 04 */	addi r3, r3, 4
-/* 80273148 0023C708  48 1E C4 1D */	bl __ct__UnkClass_8045F564
+/* 80273148 0023C708  48 1E C4 1D */	bl __ct__17UnkClass_8045F564Fv
 /* 8027314C 0023C70C  3B E0 00 00 */	li r31, 0
 /* 80273150 0023C710  93 FE 00 14 */	stw r31, 0x14(r30)
 /* 80273154 0023C714  38 7E 00 2C */	addi r3, r30, 0x2c
@@ -797,7 +797,7 @@
 /* 80273240 0023C800  D0 1E 00 7C */	stfs f0, 0x7c(r30)
 /* 80273244 0023C804  88 01 00 44 */	lbz r0, 0x44(r1)
 /* 80273248 0023C808  98 1E 00 80 */	stb r0, 0x80(r30)
-/* 8027324C 0023C80C  4B F8 02 55 */	bl __dt__CScrollBar
+/* 8027324C 0023C80C  4B F8 02 55 */	bl __dt__10CScrollBarFv
 /* 80273250 0023C810  7F C3 F3 78 */	mr r3, r30
 /* 80273254 0023C814  83 E1 00 4C */	lwz r31, 0x4c(r1)
 /* 80273258 0023C818  83 C1 00 48 */	lwz r30, 0x48(r1)
@@ -807,7 +807,7 @@
 /* 80273268 0023C828  4E 80 00 20 */	blr 
 .endfn __ct__CKizunaTalkList
 
-.fn __dt__CKizunaTalkList, global
+.fn __dt__15CKizunaTalkListFv, global
 /* 8027326C 0023C82C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273270 0023C830  7C 08 02 A6 */	mflr r0
 /* 80273274 0023C834  2C 03 00 00 */	cmpwi r3, 0
@@ -826,13 +826,13 @@
 .L_802732A8:
 /* 802732A8 0023C868  38 7E 00 44 */	addi r3, r30, 0x44
 /* 802732AC 0023C86C  38 80 FF FF */	li r4, -1
-/* 802732B0 0023C870  4B F8 01 F1 */	bl __dt__CScrollBar
+/* 802732B0 0023C870  4B F8 01 F1 */	bl __dt__10CScrollBarFv
 /* 802732B4 0023C874  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 802732B8 0023C878  38 80 FF FF */	li r4, -1
-/* 802732BC 0023C87C  4B F5 F7 7D */	bl __dt__CCur18
+/* 802732BC 0023C87C  4B F5 F7 7D */	bl __dt__6CCur18Fv
 /* 802732C0 0023C880  38 7E 00 04 */	addi r3, r30, 4
 /* 802732C4 0023C884  38 80 FF FF */	li r4, -1
-/* 802732C8 0023C888  48 1E C2 B9 */	bl __dt__UnkClass_8045F564
+/* 802732C8 0023C888  48 1E C2 B9 */	bl __dt__17UnkClass_8045F564Fv
 /* 802732CC 0023C88C  2C 1F 00 00 */	cmpwi r31, 0
 /* 802732D0 0023C890  40 81 00 0C */	ble .L_802732DC
 /* 802732D4 0023C894  7F C3 F3 78 */	mr r3, r30
@@ -844,7 +844,7 @@
 /* 802732E8 0023C8A8  7C 08 03 A6 */	mtlr r0
 /* 802732EC 0023C8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802732F0 0023C8B0  4E 80 00 20 */	blr 
-.endfn __dt__CKizunaTalkList
+.endfn __dt__15CKizunaTalkListFv
 
 .fn func_802732F4, global
 /* 802732F4 0023C8B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -859,7 +859,7 @@
 /* 80273318 0023C8D8  38 C0 00 00 */	li r6, 0
 /* 8027331C 0023C8DC  38 9F 00 67 */	addi r4, r31, 0x67
 /* 80273320 0023C8E0  38 E0 00 00 */	li r7, 0
-/* 80273324 0023C8E4  48 1D B4 71 */	bl CDeviceFile_openFile1
+/* 80273324 0023C8E4  48 1D B4 71 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80273328 0023C8E8  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 8027332C 0023C8EC  4B E3 6A 65 */	bl func_800A9D90
 /* 80273330 0023C8F0  7F C5 F3 78 */	mr r5, r30
@@ -941,7 +941,7 @@
 /* 80273430 0023C9F0  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80273434 0023C9F4  38 A0 00 00 */	li r5, 0
 /* 80273438 0023C9F8  38 C0 00 01 */	li r6, 1
-/* 8027343C 0023C9FC  4B EC 3B FD */	bl func_80137038
+/* 8027343C 0023C9FC  4B EC 3B FD */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80273440 0023CA00  7F E4 FB 78 */	mr r4, r31
 /* 80273444 0023CA04  38 7E 00 44 */	addi r3, r30, 0x44
 /* 80273448 0023CA08  4B F8 01 69 */	bl func_801F35B0
@@ -965,9 +965,9 @@
 /* 80273480 0023CA40  38 60 00 02 */	li r3, 2
 /* 80273484 0023CA44  4B DC 76 09 */	bl func_8003AA8C
 /* 80273488 0023CA48  38 7E 00 14 */	addi r3, r30, 0x14
-/* 8027348C 0023CA4C  4B EC 5C 55 */	bl func_801390E0
+/* 8027348C 0023CA4C  4B EC 5C 55 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80273490 0023CA50  38 7E 00 18 */	addi r3, r30, 0x18
-/* 80273494 0023CA54  4B EC 5C 4D */	bl func_801390E0
+/* 80273494 0023CA54  4B EC 5C 4D */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80273498 0023CA58  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 8027349C 0023CA5C  38 00 00 00 */	li r0, 0
 /* 802734A0 0023CA60  98 1E 00 84 */	stb r0, 0x84(r30)
@@ -984,7 +984,7 @@
 /* 802734C8 0023CA88  90 1E 00 20 */	stw r0, 0x20(r30)
 .L_802734CC:
 /* 802734CC 0023CA8C  80 7E 00 1C */	lwz r3, 0x1c(r30)
-/* 802734D0 0023CA90  4B EC 5C 55 */	bl func_80139124
+/* 802734D0 0023CA90  4B EC 5C 55 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 802734D4 0023CA94  3B E0 00 00 */	li r31, 0
 /* 802734D8 0023CA98  93 FE 00 1C */	stw r31, 0x1c(r30)
 /* 802734DC 0023CA9C  38 7E 00 2C */	addi r3, r30, 0x2c
@@ -995,7 +995,7 @@
 /* 802734F0 0023CAB0  38 7E 00 44 */	addi r3, r30, 0x44
 /* 802734F4 0023CAB4  4B F8 00 E9 */	bl func_801F35DC
 /* 802734F8 0023CAB8  38 7E 00 04 */	addi r3, r30, 4
-/* 802734FC 0023CABC  48 1E C2 7D */	bl func_8045F778
+/* 802734FC 0023CABC  48 1E C2 7D */	bl func_8045F778__FP17UnkClass_8045F564
 /* 80273500 0023CAC0  93 ED B0 28 */	stw r31, lbl_806671A8@sda21(r13)
 /* 80273504 0023CAC4  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80273508 0023CAC8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1964,17 +1964,17 @@
 /* 802742A0 0023D860  38 DD 01 B2 */	addi r6, r29, 0x1b2
 /* 802742A4 0023D864  3C A0 00 01 */	lis r5, 1
 /* 802742A8 0023D868  38 E0 00 00 */	li r7, 0
-/* 802742AC 0023D86C  48 1E B3 D5 */	bl func_8045F680
+/* 802742AC 0023D86C  48 1E B3 D5 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 802742B0 0023D870  38 61 00 08 */	addi r3, r1, 8
 /* 802742B4 0023D874  38 9F 00 04 */	addi r4, r31, 4
-/* 802742B8 0023D878  48 1E B5 A1 */	bl __ct__Class_8045F858
+/* 802742B8 0023D878  48 1E B5 A1 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 802742BC 0023D87C  80 9F 00 14 */	lwz r4, 0x14(r31)
 /* 802742C0 0023D880  3B C0 00 00 */	li r30, 0
 /* 802742C4 0023D884  38 60 00 00 */	li r3, 0
 /* 802742C8 0023D888  83 84 00 04 */	lwz r28, 4(r4)
 /* 802742CC 0023D88C  93 C4 00 04 */	stw r30, 4(r4)
-/* 802742D0 0023D890  48 1C 07 7D */	bl func_80434A4C
-/* 802742D4 0023D894  48 1E AE E1 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 802742D0 0023D890  48 1C 07 7D */	bl MemManager_80434A4C__FUc
+/* 802742D4 0023D894  48 1E AE E1 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 802742D8 0023D898  90 7F 00 1C */	stw r3, 0x1c(r31)
 /* 802742DC 0023D89C  7F 84 E3 78 */	mr r4, r28
 /* 802742E0 0023D8A0  38 BD 01 C2 */	addi r5, r29, 0x1c2
@@ -1982,7 +1982,7 @@
 /* 802742E8 0023D8A8  80 9F 00 1C */	lwz r4, 0x1c(r31)
 /* 802742EC 0023D8AC  38 7F 00 20 */	addi r3, r31, 0x20
 /* 802742F0 0023D8B0  38 BD 01 C6 */	addi r5, r29, 0x1c6
-/* 802742F4 0023D8B4  4B EC 2B 91 */	bl func_80136E84
+/* 802742F4 0023D8B4  4B EC 2B 91 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 802742F8 0023D8B8  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802742FC 0023D8BC  38 9F 00 24 */	addi r4, r31, 0x24
 /* 80274300 0023D8C0  80 BF 00 1C */	lwz r5, 0x1c(r31)
@@ -2030,7 +2030,7 @@
 /* 802743A8 0023D968  98 1F 00 40 */	stb r0, 0x40(r31)
 /* 802743AC 0023D96C  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 802743B0 0023D970  98 1F 00 41 */	stb r0, 0x41(r31)
-/* 802743B4 0023D974  4B F5 E6 85 */	bl __dt__CCur18
+/* 802743B4 0023D974  4B F5 E6 85 */	bl __dt__6CCur18Fv
 /* 802743B8 0023D978  81 9F 00 2C */	lwz r12, 0x2c(r31)
 /* 802743BC 0023D97C  38 7F 00 2C */	addi r3, r31, 0x2c
 /* 802743C0 0023D980  81 8C 00 08 */	lwz r12, 8(r12)
@@ -2040,10 +2040,10 @@
 /* 802743D0 0023D990  4B FF FD E1 */	bl func_802741B0
 /* 802743D4 0023D994  93 DF 00 14 */	stw r30, 0x14(r31)
 /* 802743D8 0023D998  38 7F 00 04 */	addi r3, r31, 4
-/* 802743DC 0023D99C  48 1E B4 35 */	bl func_8045F810
+/* 802743DC 0023D99C  48 1E B4 35 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 802743E0 0023D9A0  38 61 00 08 */	addi r3, r1, 8
 /* 802743E4 0023D9A4  38 80 FF FF */	li r4, -1
-/* 802743E8 0023D9A8  48 1E B4 E1 */	bl __dt__Class_8045F858
+/* 802743E8 0023D9A8  48 1E B4 E1 */	bl __dt__14Class_8045F858Fv
 /* 802743EC 0023D9AC  38 60 00 01 */	li r3, 1
 /* 802743F0 0023D9B0  48 00 00 54 */	b .L_80274444
 .L_802743F4:
@@ -2172,38 +2172,38 @@
 .obj __vt__15CKizunaTalkList, global
 	.4byte __RTTI__15CKizunaTalkList
 	.4byte 0
-	.4byte __dt__CKizunaTalkList
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__15CKizunaTalkListFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CKizunaTalkList_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__15CKizunaTalkList
 
 .obj CKizunaTalkList_hierarchy, global
@@ -2324,16 +2324,16 @@
 	.4byte __dt__802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x0000002C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80018278"
 
 .obj "@etb_800182E4", local
@@ -2354,16 +2354,16 @@
 	.4byte __dt__802727B4
 	.4byte 0x8780001E
 	.4byte 0x00000044
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x0000008C
 	.4byte __dt__802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 .endobj "@etb_800182E4"
 
 .obj "@etb_8001834C", local
@@ -2493,7 +2493,7 @@
 	.4byte 0x00430010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_800183EC"
 
 .obj "@etb_80018404", local
@@ -2550,7 +2550,7 @@
 
 .obj "@eti_80030974", local
 .hidden "@eti_80030974"
-	.4byte __dt__CKizunaTalkList
+	.4byte __dt__15CKizunaTalkListFv
 	.4byte 0x00000088
 	.4byte "@etb_800182E4"
 .endobj "@eti_80030974"

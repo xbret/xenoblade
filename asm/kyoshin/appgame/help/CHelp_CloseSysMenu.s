@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B7E7C, global
+.fn func_802B7E7C__Q22cf18CHelp_CloseSysMenuFv, global
 /* 802B7E7C 0028143C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B7E80 00281440  7C 08 02 A6 */	mflr r0
 /* 802B7E84 00281444  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,7 +21,7 @@
 /* 802B7EB8 00281478  7C 08 03 A6 */	mtlr r0
 /* 802B7EBC 0028147C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B7EC0 00281480  4E 80 00 20 */	blr 
-.endfn func_802B7E7C
+.endfn func_802B7E7C__Q22cf18CHelp_CloseSysMenuFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -39,7 +39,7 @@
 
 .obj "@eti_800338FC", local
 .hidden "@eti_800338FC"
-	.4byte func_802B7E7C
+	.4byte func_802B7E7C__Q22cf18CHelp_CloseSysMenuFv
 	.4byte 0x00000048
 	.4byte "@etb_8001BD78"
 .endobj "@eti_800338FC"

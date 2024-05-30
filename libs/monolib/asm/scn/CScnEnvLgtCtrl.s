@@ -2365,7 +2365,7 @@
 /* 804C2CAC 0048C26C  4B F7 16 ED */	bl Heap_getRegionIndex1
 /* 804C2CB0 0048C270  7F E4 FB 78 */	mr r4, r31
 /* 804C2CB4 0048C274  38 A0 00 20 */	li r5, 0x20
-/* 804C2CB8 0048C278  4B F7 17 75 */	bl func_8043442C
+/* 804C2CB8 0048C278  4B F7 17 75 */	bl MemManager_8043442C
 /* 804C2CBC 0048C27C  90 76 00 08 */	stw r3, 8(r22)
 .L_804C2CC0:
 /* 804C2CC0 0048C280  2C 1E 00 00 */	cmpwi r30, 0
@@ -2634,7 +2634,7 @@
 /* 804C3068 0048C628  4E 80 00 20 */	blr 
 .endfn __ct__CScnEnvLgtCtrl
 
-.fn __dt__CScnEnvLgtCtrl, global
+.fn __dt__14CScnEnvLgtCtrlFv, global
 /* 804C306C 0048C62C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C3070 0048C630  7C 08 02 A6 */	mflr r0
 /* 804C3074 0048C634  2C 03 00 00 */	cmpwi r3, 0
@@ -2652,7 +2652,7 @@
 /* 804C30A4 0048C664  41 82 00 18 */	beq .L_804C30BC
 /* 804C30A8 0048C668  41 82 00 14 */	beq .L_804C30BC
 /* 804C30AC 0048C66C  7C 03 03 78 */	mr r3, r0
-/* 804C30B0 0048C670  4B F7 14 29 */	bl func_804344D8
+/* 804C30B0 0048C670  4B F7 14 29 */	bl MemManager_804344D8
 /* 804C30B4 0048C674  38 00 00 00 */	li r0, 0
 /* 804C30B8 0048C678  90 1E 00 08 */	stw r0, 8(r30)
 .L_804C30BC:
@@ -2668,7 +2668,7 @@
 /* 804C30DC 0048C69C  7C 08 03 A6 */	mtlr r0
 /* 804C30E0 0048C6A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804C30E4 0048C6A4  4E 80 00 20 */	blr 
-.endfn __dt__CScnEnvLgtCtrl
+.endfn __dt__14CScnEnvLgtCtrlFv
 
 .fn func_804C30E8, global
 /* 804C30E8 0048C6A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -8908,7 +8908,7 @@
 .obj __vt__14CScnEnvLgtCtrl, global
 	.4byte __RTTI__14CScnEnvLgtCtrl
 	.4byte 0
-	.4byte __dt__CScnEnvLgtCtrl
+	.4byte __dt__14CScnEnvLgtCtrlFv
 	.4byte func_804C30E8
 	.4byte func_804C31C8
 	.4byte func_804C6BA0
@@ -9957,7 +9957,7 @@
 
 .obj "@eti_80037EEC", local
 .hidden "@eti_80037EEC"
-	.4byte __dt__CScnEnvLgtCtrl
+	.4byte __dt__14CScnEnvLgtCtrlFv
 	.4byte 0x0000007C
 	.4byte "@etb_80020164"
 .endobj "@eti_80037EEC"

@@ -71,7 +71,7 @@
 /* 80447ED0 00411490  7C 64 1B 78 */	mr r4, r3
 /* 80447ED4 00411494  38 65 C0 00 */	addi r3, r5, 0x0012C000@l
 /* 80447ED8 00411498  38 A0 00 20 */	li r5, 0x20
-/* 80447EDC 0041149C  4B FE CC 89 */	bl func_80434B64
+/* 80447EDC 0041149C  4B FE CC 89 */	bl MemManager_80434B64
 /* 80447EE0 004114A0  90 7F 02 80 */	stw r3, 0x280(r31)
 /* 80447EE4 004114A4  3C 80 80 55 */	lis r4, GXNtsc480Int@ha
 /* 80447EE8 004114A8  38 7F 02 00 */	addi r3, r31, 0x200
@@ -263,7 +263,7 @@
 /* 80448184 00411744  4E 80 00 20 */	blr
 .endfn __dt__reslist_CDeviceVICb
 
-.fn __dt__CDeviceVI, global
+.fn __dt__9CDeviceVIFv, global
 /* 80448188 00411748  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044818C 0041174C  7C 08 02 A6 */	mflr r0
 /* 80448190 00411750  2C 03 00 00 */	cmpwi r3, 0
@@ -328,7 +328,7 @@
 /* 80448268 00411828  41 82 00 10 */	beq .L_80448278
 /* 8044826C 0041182C  7F A3 EB 78 */	mr r3, r29
 /* 80448270 00411830  38 80 00 00 */	li r4, 0
-/* 80448274 00411834  4B FE F8 55 */	bl __dt__CWorkThread
+/* 80448274 00411834  4B FE F8 55 */	bl __dt__11CWorkThreadFv
 .L_80448278:
 /* 80448278 00411838  2C 1E 00 00 */	cmpwi r30, 0
 /* 8044827C 0041183C  40 81 00 0C */	ble .L_80448288
@@ -343,7 +343,7 @@
 /* 8044829C 0041185C  7C 08 03 A6 */	mtlr r0
 /* 804482A0 00411860  38 21 00 20 */	addi r1, r1, 0x20
 /* 804482A4 00411864  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceVI
+.endfn __dt__9CDeviceVIFv
 
 .fn func_804482A8, global
 /* 804482A8 00411868  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
@@ -948,11 +948,11 @@
 /* 80448A3C 00411FFC  4E 80 00 20 */	blr 
 .endfn func_80448878
 
-.fn func_80448A40, global
+.fn func_80448A40__11CDeviceVICbFv, global
 /* 80448A40 00412000  4E 80 00 20 */	blr 
-.endfn func_80448A40
+.endfn func_80448A40__11CDeviceVICbFv
 
-.fn func_80448A44, global
+.fn func_80448A44__Fv, global
 /* 80448A44 00412004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448A48 00412008  7C 08 02 A6 */	mflr r0
 /* 80448A4C 0041200C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -972,7 +972,7 @@
 /* 80448A78 00412038  7C 08 03 A6 */	mtlr r0
 /* 80448A7C 0041203C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448A80 00412040  4E 80 00 20 */	blr 
-.endfn func_80448A44
+.endfn func_80448A44__Fv
 
 .fn func_80448A84, global
 /* 80448A84 00412044  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1224,7 +1224,7 @@
 /* 80448DC8 00412388  38 60 00 00 */	li r3, 0
 /* 80448DCC 0041238C  4B F1 F7 05 */	bl VISetTrapFilter
 /* 80448DD0 00412390  7F E3 FB 78 */	mr r3, r31
-/* 80448DD4 00412394  4B FE FC 25 */	bl CWorkThread_WorkThreadEvent4
+/* 80448DD4 00412394  4B FE FC 25 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80448DD8 00412398  48 00 00 08 */	b .L_80448DE0
 .L_80448DDC:
 /* 80448DDC 0041239C  38 60 00 00 */	li r3, 0
@@ -1262,7 +1262,7 @@
 /* 80448E4C 0041240C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E50 00412410  40 82 00 10 */	bne .L_80448E60
 /* 80448E54 00412414  7F E3 FB 78 */	mr r3, r31
-/* 80448E58 00412418  4B FE FB CD */	bl CWorkThread_WorkThreadEvent5
+/* 80448E58 00412418  4B FE FB CD */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 80448E5C 0041241C  48 00 00 08 */	b .L_80448E64
 .L_80448E60:
 /* 80448E60 00412420  38 60 00 00 */	li r3, 0
@@ -1420,44 +1420,44 @@
 .obj __vt__9CDeviceVI, global
 	.4byte __RTTI__9CDeviceVI
 	.4byte 0
-	.4byte __dt__CDeviceVI
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__9CDeviceVIFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceVI_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceVI_WorkThreadEvent4
 	.4byte CDeviceVI_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__9CDeviceVI
 	.4byte 0xFFFFFE38
 	.4byte func_80448F38
@@ -1577,7 +1577,7 @@
 	.4byte __dt__80447FDC
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001CA70"
 
 .obj "@etb_8001CAA4", local
@@ -1614,7 +1614,7 @@
 	.4byte __dt__80447FDC
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 	.4byte 0x0780001D
 	.4byte 0x000001D0
 	.4byte __dt__reslist_CDeviceVICb
@@ -1723,7 +1723,7 @@
 
 .obj "@eti_800346D0", local
 .hidden "@eti_800346D0"
-	.4byte __dt__CDeviceVI
+	.4byte __dt__9CDeviceVIFv
 	.4byte 0x00000120
 	.4byte "@etb_8001CABC"
 .endobj "@eti_800346D0"
@@ -1779,7 +1779,7 @@
 
 .obj "@eti_80034730", local
 .hidden "@eti_80034730"
-	.4byte func_80448A44
+	.4byte func_80448A44__Fv
 	.4byte 0x00000040
 	.4byte "@etb_8001CB48"
 .endobj "@eti_80034730"

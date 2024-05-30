@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CScnTexWorkMan, global
+.fn __ct__14CScnTexWorkManFv, global
 /* 804900BC 0045967C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804900C0 00459680  7C 08 02 A6 */	mflr r0
 /* 804900C4 00459684  90 01 00 24 */	stw r0, 0x24(r1)
@@ -33,10 +33,10 @@
 /* 80490128 004596E8  4B FA 3F 19 */	bl heap_createRegion
 /* 8049012C 004596EC  90 6D A1 48 */	stw r3, lbl_806662C8@sda21(r13)
 /* 80490130 004596F0  93 CD A1 4C */	stw r30, lbl_806662CC@sda21(r13)
-/* 80490134 004596F4  4B FA 46 3D */	bl func_80434770
+/* 80490134 004596F4  4B FA 46 3D */	bl MemManager_80434770
 /* 80490138 004596F8  90 6D C0 4C */	stw r3, lbl_806681CC@sda21(r13)
 /* 8049013C 004596FC  80 6D A1 48 */	lwz r3, lbl_806662C8@sda21(r13)
-/* 80490140 00459700  4B FA 46 99 */	bl func_804347D8
+/* 80490140 00459700  4B FA 46 99 */	bl MemManager_804347D8
 /* 80490144 00459704  90 6D C0 44 */	stw r3, lbl_806681C4@sda21(r13)
 /* 80490148 00459708  90 6D C0 48 */	stw r3, lbl_806681C8@sda21(r13)
 /* 8049014C 0045970C  7F 83 E3 78 */	mr r3, r28
@@ -51,9 +51,9 @@
 /* 8049016C 0045972C  7C 08 03 A6 */	mtlr r0
 /* 80490170 00459730  38 21 00 20 */	addi r1, r1, 0x20
 /* 80490174 00459734  4E 80 00 20 */	blr 
-.endfn __ct__CScnTexWorkMan
+.endfn __ct__14CScnTexWorkManFv
 
-.fn __dt__CScnTexWorkMan, global
+.fn __dt__14CScnTexWorkManFv, global
 /* 80490178 00459738  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049017C 0045973C  7C 08 02 A6 */	mflr r0
 /* 80490180 00459740  2C 03 00 00 */	cmpwi r3, 0
@@ -71,7 +71,7 @@
 /* 804901B0 00459770  90 0D C0 40 */	stw r0, lbl_806681C0@sda21(r13)
 /* 804901B4 00459774  41 81 00 1C */	bgt .L_804901D0
 /* 804901B8 00459778  80 6D A1 48 */	lwz r3, lbl_806662C8@sda21(r13)
-/* 804901BC 0045977C  4B FA 41 F5 */	bl func_804343B0
+/* 804901BC 0045977C  4B FA 41 F5 */	bl MemManager_804343B0
 /* 804901C0 00459780  38 00 FF FF */	li r0, -1
 /* 804901C4 00459784  90 0D A1 48 */	stw r0, lbl_806662C8@sda21(r13)
 /* 804901C8 00459788  7F C3 F3 78 */	mr r3, r30
@@ -79,7 +79,7 @@
 .L_804901D0:
 /* 804901D0 00459790  7F C3 F3 78 */	mr r3, r30
 /* 804901D4 00459794  38 80 00 00 */	li r4, 0
-/* 804901D8 00459798  4B FB 8D A5 */	bl __dt__CDeviceVICb
+/* 804901D8 00459798  4B FB 8D A5 */	bl __dt__11CDeviceVICbFv
 /* 804901DC 0045979C  2C 1F 00 00 */	cmpwi r31, 0
 /* 804901E0 004597A0  40 81 00 0C */	ble .L_804901EC
 /* 804901E4 004597A4  7F C3 F3 78 */	mr r3, r30
@@ -92,7 +92,7 @@
 /* 804901FC 004597BC  7C 08 03 A6 */	mtlr r0
 /* 80490200 004597C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80490204 004597C4  4E 80 00 20 */	blr 
-.endfn __dt__CScnTexWorkMan
+.endfn __dt__14CScnTexWorkManFv
 
 .fn func_80490208, global
 /* 80490208 004597C8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -132,7 +132,7 @@
 /* 80490288 00459848  38 60 00 00 */	li r3, 0
 /* 8049028C 0045984C  48 00 00 38 */	b .L_804902C4
 .L_80490290:
-/* 80490290 00459850  4B FA 73 25 */	bl getHeapIndex
+/* 80490290 00459850  4B FA 73 25 */	bl getHeapIndex__Fv
 /* 80490294 00459854  7C 64 1B 78 */	mr r4, r3
 /* 80490298 00459858  38 60 00 2C */	li r3, 0x2c
 /* 8049029C 0045985C  4B FA 47 C1 */	bl heap_malloc
@@ -172,9 +172,9 @@
 /* 8049030C 004598CC  4E 80 00 20 */	blr 
 .endfn func_804902D8
 
-.fn func_80490310, global
+.fn func_80490310__14CScnTexWorkManFv, global
 /* 80490310 004598D0  4E 80 00 20 */	blr 
-.endfn func_80490310
+.endfn func_80490310__14CScnTexWorkManFv
 
 .fn func_80490314, global
 /* 80490314 004598D4  80 0D C0 54 */	lwz r0, lbl_806681D4@sda21(r13)
@@ -2130,10 +2130,10 @@
 .obj __vt__14CScnTexWorkMan, global
 	.4byte __RTTI__14CScnTexWorkMan
 	.4byte 0
-	.4byte __dt__CScnTexWorkMan
-	.4byte func_80166630
-	.4byte func_80490310
-	.4byte func_80448A40
+	.4byte __dt__14CScnTexWorkManFv
+	.4byte func_80166630__11CDeviceVICbFv
+	.4byte func_80490310__14CScnTexWorkManFv
+	.4byte func_80448A40__11CDeviceVICbFv
 .endobj __vt__14CScnTexWorkMan
 
 .obj CScnTexWorkMan_hierarchy, global
@@ -2261,7 +2261,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 .endobj "@etb_8001ECBC"
 
 .obj "@etb_8001ECD8", local
@@ -2272,7 +2272,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 .endobj "@etb_8001ECD8"
 
 .obj "@etb_8001ECF4", local
@@ -2341,14 +2341,14 @@
 
 .obj "@eti_800368B4", local
 .hidden "@eti_800368B4"
-	.4byte __ct__CScnTexWorkMan
+	.4byte __ct__14CScnTexWorkManFv
 	.4byte 0x000000BC
 	.4byte "@etb_8001ECBC"
 .endobj "@eti_800368B4"
 
 .obj "@eti_800368C0", local
 .hidden "@eti_800368C0"
-	.4byte __dt__CScnTexWorkMan
+	.4byte __dt__14CScnTexWorkManFv
 	.4byte 0x00000090
 	.4byte "@etb_8001ECD8"
 .endobj "@eti_800368C0"

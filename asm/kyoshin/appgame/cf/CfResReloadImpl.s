@@ -751,7 +751,7 @@
 /* 8016D7FC 00136DBC  38 60 00 00 */	li r3, 0
 /* 8016D800 00136DC0  38 04 00 01 */	addi r0, r4, 1
 /* 8016D804 00136DC4  B0 1E 00 08 */	sth r0, 8(r30)
-/* 8016D808 00136DC8  48 2C 72 45 */	bl func_80434A4C
+/* 8016D808 00136DC8  48 2C 72 45 */	bl MemManager_80434A4C__FUc
 /* 8016D80C 00136DCC  80 7E 00 00 */	lwz r3, 0(r30)
 /* 8016D810 00136DD0  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 8016D814 00136DD4  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
@@ -836,7 +836,7 @@
 /* 8016D944 00136F04  90 03 06 E0 */	stw r0, 0x6e0(r3)
 .L_8016D948:
 /* 8016D948 00136F08  38 60 00 01 */	li r3, 1
-/* 8016D94C 00136F0C  48 2C 71 01 */	bl func_80434A4C
+/* 8016D94C 00136F0C  48 2C 71 01 */	bl MemManager_80434A4C__FUc
 /* 8016D950 00136F10  80 7E 00 00 */	lwz r3, 0(r30)
 /* 8016D954 00136F14  80 03 00 68 */	lwz r0, 0x68(r3)
 /* 8016D958 00136F18  54 1D 67 FF */	rlwinm. r29, r0, 0xc, 0x1f, 0x1f
@@ -1249,7 +1249,7 @@
 /* 8016DEE8 001374A8  4E 80 00 20 */	blr 
 .endfn func_8016DED4
 
-.fn __dt__cf_CfResReloadImpl, global
+.fn __dt__Q22cf15CfResReloadImplFv, global
 /* 8016DEEC 001374AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016DEF0 001374B0  7C 08 02 A6 */	mflr r0
 /* 8016DEF4 001374B4  2C 03 00 00 */	cmpwi r3, 0
@@ -1267,7 +1267,7 @@
 /* 8016DF20 001374E0  7C 08 03 A6 */	mtlr r0
 /* 8016DF24 001374E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016DF28 001374E8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfResReloadImpl
+.endfn __dt__Q22cf15CfResReloadImplFv
 
 .fn func_8016DF2C, global
 /* 8016DF2C 001374EC  A0 6D A9 E8 */	lhz r3, lbl_80666B68@sda21(r13)
@@ -2374,7 +2374,7 @@
 .obj __vt__Q22cf15CfResReloadImpl, global
 	.4byte __RTTI__Q22cf15CfResReloadImpl
 	.4byte 0
-	.4byte __dt__cf_CfResReloadImpl
+	.4byte __dt__Q22cf15CfResReloadImplFv
 	.4byte func_8016DE8C
 	.4byte func_8016D240
 	.4byte func_8016CE3C
@@ -2834,7 +2834,7 @@
 
 .obj "@eti_800290FC", local
 .hidden "@eti_800290FC"
-	.4byte __dt__cf_CfResReloadImpl
+	.4byte __dt__Q22cf15CfResReloadImplFv
 	.4byte 0x00000040
 	.4byte "@etb_8000E0F8"
 .endobj "@eti_800290FC"

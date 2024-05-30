@@ -848,7 +848,7 @@
 .obj __vt__9CNRequest, global
 	.4byte __RTTI__9CNRequest
 	.4byte 0
-	.4byte __dt__CNRequest
+	.4byte __dt__9CNRequestFv
 	.4byte 0
 .endobj __vt__9CNRequest
 

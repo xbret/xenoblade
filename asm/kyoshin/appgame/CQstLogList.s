@@ -13,7 +13,7 @@
 /* 80227768 001F0D28  7C 9A 23 78 */	mr r26, r4
 /* 8022776C 001F0D2C  90 A3 00 00 */	stw r5, 0(r3)
 /* 80227770 001F0D30  38 63 00 04 */	addi r3, r3, 4
-/* 80227774 001F0D34  48 23 7D F1 */	bl __ct__UnkClass_8045F564
+/* 80227774 001F0D34  48 23 7D F1 */	bl __ct__17UnkClass_8045F564Fv
 /* 80227778 001F0D38  3B 60 00 00 */	li r27, 0
 /* 8022777C 001F0D3C  93 7F 00 14 */	stw r27, 0x14(r31)
 /* 80227780 001F0D40  38 7F 00 28 */	addi r3, r31, 0x28
@@ -73,7 +73,7 @@
 /* 80227854 001F0E14  4B EF 51 45 */	bl func_8011C998
 /* 80227858 001F0E18  38 61 00 08 */	addi r3, r1, 8
 /* 8022785C 001F0E1C  38 80 FF FF */	li r4, -1
-/* 80227860 001F0E20  4B FC BC 41 */	bl __dt__CScrollBar
+/* 80227860 001F0E20  4B FC BC 41 */	bl __dt__10CScrollBarFv
 /* 80227864 001F0E24  38 61 00 70 */	addi r3, r1, 0x70
 /* 80227868 001F0E28  4B FA B7 19 */	bl __ct__CSortMenu
 /* 8022786C 001F0E2C  38 7F 00 84 */	addi r3, r31, 0x84
@@ -118,7 +118,7 @@
 /* 80227904 001F0EC4  98 1F 01 6D */	stb r0, 0x16d(r31)
 /* 80227908 001F0EC8  88 01 01 5E */	lbz r0, 0x15e(r1)
 /* 8022790C 001F0ECC  98 1F 01 6E */	stb r0, 0x16e(r31)
-/* 80227910 001F0ED0  4B FA B6 F5 */	bl __dt__CSortMenu
+/* 80227910 001F0ED0  4B FA B6 F5 */	bl __dt__9CSortMenuFv
 /* 80227914 001F0ED4  38 61 01 60 */	addi r3, r1, 0x160
 /* 80227918 001F0ED8  4B FF F6 95 */	bl func_80226FAC
 /* 8022791C 001F0EDC  3B 9F 01 82 */	addi r28, r31, 0x182
@@ -172,7 +172,7 @@
 /* 802279C8 001F0F88  4E 80 00 20 */	blr 
 .endfn func_80227994
 
-.fn __dt__CQstLogList, global
+.fn __dt__11CQstLogListFv, global
 /* 802279CC 001F0F8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802279D0 001F0F90  7C 08 02 A6 */	mflr r0
 /* 802279D4 001F0F94  2C 03 00 00 */	cmpwi r3, 0
@@ -191,16 +191,16 @@
 .L_80227A08:
 /* 80227A08 001F0FC8  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80227A0C 001F0FCC  38 80 FF FF */	li r4, -1
-/* 80227A10 001F0FD0  4B FA B5 F5 */	bl __dt__CSortMenu
+/* 80227A10 001F0FD0  4B FA B5 F5 */	bl __dt__9CSortMenuFv
 /* 80227A14 001F0FD4  38 7E 00 40 */	addi r3, r30, 0x40
 /* 80227A18 001F0FD8  38 80 FF FF */	li r4, -1
-/* 80227A1C 001F0FDC  4B FC BA 85 */	bl __dt__CScrollBar
+/* 80227A1C 001F0FDC  4B FC BA 85 */	bl __dt__10CScrollBarFv
 /* 80227A20 001F0FE0  38 7E 00 28 */	addi r3, r30, 0x28
 /* 80227A24 001F0FE4  38 80 FF FF */	li r4, -1
-/* 80227A28 001F0FE8  4B FA B0 11 */	bl __dt__CCur18
+/* 80227A28 001F0FE8  4B FA B0 11 */	bl __dt__6CCur18Fv
 /* 80227A2C 001F0FEC  38 7E 00 04 */	addi r3, r30, 4
 /* 80227A30 001F0FF0  38 80 FF FF */	li r4, -1
-/* 80227A34 001F0FF4  48 23 7B 4D */	bl __dt__UnkClass_8045F564
+/* 80227A34 001F0FF4  48 23 7B 4D */	bl __dt__17UnkClass_8045F564Fv
 /* 80227A38 001F0FF8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80227A3C 001F0FFC  40 81 00 0C */	ble .L_80227A48
 /* 80227A40 001F1000  7F C3 F3 78 */	mr r3, r30
@@ -212,7 +212,7 @@
 /* 80227A54 001F1014  7C 08 03 A6 */	mtlr r0
 /* 80227A58 001F1018  38 21 00 10 */	addi r1, r1, 0x10
 /* 80227A5C 001F101C  4E 80 00 20 */	blr 
-.endfn __dt__CQstLogList
+.endfn __dt__11CQstLogListFv
 
 .fn func_80227A60, global
 /* 80227A60 001F1020  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -227,7 +227,7 @@
 /* 80227A84 001F1044  38 C0 00 00 */	li r6, 0
 /* 80227A88 001F1048  38 84 00 13 */	addi r4, r4, 0x13
 /* 80227A8C 001F104C  38 E0 00 00 */	li r7, 0
-/* 80227A90 001F1050  48 22 6D 05 */	bl CDeviceFile_openFile1
+/* 80227A90 001F1050  48 22 6D 05 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80227A94 001F1054  90 7F 00 14 */	stw r3, 0x14(r31)
 /* 80227A98 001F1058  38 7F 00 40 */	addi r3, r31, 0x40
 /* 80227A9C 001F105C  4B FC BA 59 */	bl func_801F34F4
@@ -306,7 +306,7 @@
 /* 80227B90 001F1150  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 80227B94 001F1154  38 A0 00 00 */	li r5, 0
 /* 80227B98 001F1158  38 C0 00 01 */	li r6, 1
-/* 80227B9C 001F115C  4B F0 F4 9D */	bl func_80137038
+/* 80227B9C 001F115C  4B F0 F4 9D */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80227BA0 001F1160  7F E4 FB 78 */	mr r4, r31
 /* 80227BA4 001F1164  38 7E 00 40 */	addi r3, r30, 0x40
 /* 80227BA8 001F1168  4B FC BA 09 */	bl func_801F35B0
@@ -331,7 +331,7 @@
 /* 80227BE4 001F11A4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80227BE8 001F11A8  7C 7F 1B 78 */	mr r31, r3
 /* 80227BEC 001F11AC  38 63 00 14 */	addi r3, r3, 0x14
-/* 80227BF0 001F11B0  4B F1 14 F1 */	bl func_801390E0
+/* 80227BF0 001F11B0  4B F1 14 F1 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80227BF4 001F11B4  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 80227BF8 001F11B8  38 00 00 00 */	li r0, 0
 /* 80227BFC 001F11BC  98 1F 01 70 */	stb r0, 0x170(r31)
@@ -348,7 +348,7 @@
 /* 80227C24 001F11E4  90 1F 00 1C */	stw r0, 0x1c(r31)
 .L_80227C28:
 /* 80227C28 001F11E8  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 80227C2C 001F11EC  4B F1 14 F9 */	bl func_80139124
+/* 80227C2C 001F11EC  4B F1 14 F9 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 80227C30 001F11F0  81 9F 00 28 */	lwz r12, 0x28(r31)
 /* 80227C34 001F11F4  38 7F 00 28 */	addi r3, r31, 0x28
 /* 80227C38 001F11F8  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -359,7 +359,7 @@
 /* 80227C4C 001F120C  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80227C50 001F1210  4B FA B6 09 */	bl func_801D3258
 /* 80227C54 001F1214  38 7F 00 04 */	addi r3, r31, 4
-/* 80227C58 001F1218  48 23 7B 21 */	bl func_8045F778
+/* 80227C58 001F1218  48 23 7B 21 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 80227C5C 001F121C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80227C60 001F1220  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80227C64 001F1224  7C 08 03 A6 */	mtlr r0
@@ -1565,17 +1565,17 @@
 /* 80228D14 001F22D4  38 DE 01 10 */	addi r6, r30, 0x110
 /* 80228D18 001F22D8  3C A0 00 01 */	lis r5, 1
 /* 80228D1C 001F22DC  38 E0 00 00 */	li r7, 0
-/* 80228D20 001F22E0  48 23 69 61 */	bl func_8045F680
+/* 80228D20 001F22E0  48 23 69 61 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 80228D24 001F22E4  38 61 00 0C */	addi r3, r1, 0xc
 /* 80228D28 001F22E8  38 95 00 04 */	addi r4, r21, 4
-/* 80228D2C 001F22EC  48 23 6B 2D */	bl __ct__Class_8045F858
+/* 80228D2C 001F22EC  48 23 6B 2D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 80228D30 001F22F0  80 95 00 14 */	lwz r4, 0x14(r21)
 /* 80228D34 001F22F4  3A 80 00 00 */	li r20, 0
 /* 80228D38 001F22F8  38 60 00 00 */	li r3, 0
 /* 80228D3C 001F22FC  82 C4 00 04 */	lwz r22, 4(r4)
 /* 80228D40 001F2300  92 84 00 04 */	stw r20, 4(r4)
-/* 80228D44 001F2304  48 20 BD 09 */	bl func_80434A4C
-/* 80228D48 001F2308  48 23 64 6D */	bl CLibLayout_getArcResourceAccessorInstance
+/* 80228D44 001F2304  48 20 BD 09 */	bl MemManager_80434A4C__FUc
+/* 80228D48 001F2308  48 23 64 6D */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 80228D4C 001F230C  90 75 00 18 */	stw r3, 0x18(r21)
 /* 80228D50 001F2310  7E C4 B3 78 */	mr r4, r22
 /* 80228D54 001F2314  38 BE 01 1C */	addi r5, r30, 0x11c
@@ -1583,7 +1583,7 @@
 /* 80228D5C 001F231C  80 95 00 18 */	lwz r4, 0x18(r21)
 /* 80228D60 001F2320  38 75 00 1C */	addi r3, r21, 0x1c
 /* 80228D64 001F2324  38 BE 01 20 */	addi r5, r30, 0x120
-/* 80228D68 001F2328  4B F0 E1 1D */	bl func_80136E84
+/* 80228D68 001F2328  4B F0 E1 1D */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80228D6C 001F232C  80 75 00 1C */	lwz r3, 0x1c(r21)
 /* 80228D70 001F2330  38 95 00 20 */	addi r4, r21, 0x20
 /* 80228D74 001F2334  80 B5 00 18 */	lwz r5, 0x18(r21)
@@ -1631,7 +1631,7 @@
 /* 80228E1C 001F23DC  98 15 00 3C */	stb r0, 0x3c(r21)
 /* 80228E20 001F23E0  88 01 00 2D */	lbz r0, 0x2d(r1)
 /* 80228E24 001F23E4  98 15 00 3D */	stb r0, 0x3d(r21)
-/* 80228E28 001F23E8  4B FA 9C 11 */	bl __dt__CCur18
+/* 80228E28 001F23E8  4B FA 9C 11 */	bl __dt__6CCur18Fv
 /* 80228E2C 001F23EC  81 95 00 28 */	lwz r12, 0x28(r21)
 /* 80228E30 001F23F0  38 75 00 28 */	addi r3, r21, 0x28
 /* 80228E34 001F23F4  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1976,10 +1976,10 @@
 /* 80229338 001F28F8  38 75 00 04 */	addi r3, r21, 4
 /* 8022933C 001F28FC  98 95 01 70 */	stb r4, 0x170(r21)
 /* 80229340 001F2900  90 15 00 14 */	stw r0, 0x14(r21)
-/* 80229344 001F2904  48 23 64 CD */	bl func_8045F810
+/* 80229344 001F2904  48 23 64 CD */	bl func_8045F810__FP17UnkClass_8045F564
 /* 80229348 001F2908  38 61 00 0C */	addi r3, r1, 0xc
 /* 8022934C 001F290C  38 80 FF FF */	li r4, -1
-/* 80229350 001F2910  48 23 65 79 */	bl __dt__Class_8045F858
+/* 80229350 001F2910  48 23 65 79 */	bl __dt__14Class_8045F858Fv
 /* 80229354 001F2914  38 60 00 01 */	li r3, 1
 /* 80229358 001F2918  48 00 00 08 */	b .L_80229360
 .L_8022935C:
@@ -2120,38 +2120,38 @@
 .obj __vt__11CQstLogList, global
 	.4byte __RTTI__11CQstLogList
 	.4byte 0
-	.4byte __dt__CQstLogList
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__11CQstLogListFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CQstLogList_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__11CQstLogList
 
 .obj CQstLogList_hierarchy, global
@@ -2260,19 +2260,19 @@
 	.4byte __dt__80227070
 	.4byte 0x0780001F
 	.4byte 0x00000080
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001F
 	.4byte 0x00000040
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001F
 	.4byte 0x00000028
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001F
 	.4byte 0x00000004
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80015304"
 
 .obj "@etb_80015384", local
@@ -2295,28 +2295,28 @@
 	.4byte __dt__80227070
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x00000182
 	.4byte __dt__80227070
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x8780001E
 	.4byte 0x00000040
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000182
 	.4byte __dt__80227070
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x00000040
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x8780001E
 	.4byte 0x00000028
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 .endobj "@etb_80015384"
 
 .obj "@etb_80015424", local
@@ -2476,7 +2476,7 @@
 	.4byte 0x01800010
 	.4byte 0x00000000
 	.4byte 0x8200000C
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_800154EC"
 
 .obj "@etb_80015504", local
@@ -2498,7 +2498,7 @@
 
 .obj "@eti_8002E28C", local
 .hidden "@eti_8002E28C"
-	.4byte __dt__CQstLogList
+	.4byte __dt__11CQstLogListFv
 	.4byte 0x00000094
 	.4byte "@etb_80015384"
 .endobj "@eti_8002E28C"

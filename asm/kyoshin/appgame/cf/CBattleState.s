@@ -659,11 +659,11 @@
 /* 801463A0 0010F960  4E 80 00 20 */	blr 
 .endfn func_80146384
 
-.fn func_801463A4, global
+.fn func_801463A4__Q22cf12CBattleStateFv, global
 /* 801463A4 0010F964  4E 80 00 20 */	blr 
-.endfn func_801463A4
+.endfn func_801463A4__Q22cf12CBattleStateFv
 
-.fn func_801463A8, global
+.fn func_801463A8__Q22cf12CBattleStateFv, global
 /* 801463A8 0010F968  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801463AC 0010F96C  7C 08 02 A6 */	mflr r0
 /* 801463B0 0010F970  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2117,18 +2117,18 @@
 /* 80147778 00110D38  7C 08 03 A6 */	mtlr r0
 /* 8014777C 00110D3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80147780 00110D40  4E 80 00 20 */	blr 
-.endfn func_801463A8
+.endfn func_801463A8__Q22cf12CBattleStateFv
 
-.fn func_80147784, global
+.fn func_80147784__Q22cf12CBattleStateFv, global
 /* 80147784 00110D44  38 60 00 00 */	li r3, 0
 /* 80147788 00110D48  4E 80 00 20 */	blr 
-.endfn func_80147784
+.endfn func_80147784__Q22cf12CBattleStateFv
 
-.fn func_8014778C, global
+.fn func_8014778C__Q22cf12CBattleStateFv, global
 /* 8014778C 00110D4C  4E 80 00 20 */	blr 
-.endfn func_8014778C
+.endfn func_8014778C__Q22cf12CBattleStateFv
 
-.fn func_80147790, global
+.fn func_80147790__Q22cf12CBattleStateFv, global
 /* 80147790 00110D50  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80147794 00110D54  7C 08 02 A6 */	mflr r0
 /* 80147798 00110D58  28 04 01 2F */	cmplwi r4, 0x12f
@@ -2161,9 +2161,9 @@
 /* 80147800 00110DC0  7C 08 03 A6 */	mtlr r0
 /* 80147804 00110DC4  38 21 00 50 */	addi r1, r1, 0x50
 /* 80147808 00110DC8  4E 80 00 20 */	blr 
-.endfn func_80147790
+.endfn func_80147790__Q22cf12CBattleStateFv
 
-.fn func_8014780C, global
+.fn func_8014780C__Q22cf12CBattleStateFv, global
 /* 8014780C 00110DCC  A0 C4 00 0C */	lhz r6, 0xc(r4)
 /* 80147810 00110DD0  38 E0 00 01 */	li r7, 1
 /* 80147814 00110DD4  38 A3 13 88 */	addi r5, r3, 0x1388
@@ -2255,9 +2255,9 @@
 /* 80147954 00110F14  38 A5 00 34 */	addi r5, r5, 0x34
 /* 80147958 00110F18  42 00 FF 4C */	bdnz .L_801478A4
 /* 8014795C 00110F1C  4E 80 00 20 */	blr 
-.endfn func_8014780C
+.endfn func_8014780C__Q22cf12CBattleStateFv
 
-.fn func_80147960, global
+.fn func_80147960__Q22cf12CBattleStateFv, global
 /* 80147960 00110F20  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80147964 00110F24  7C 08 02 A6 */	mflr r0
 /* 80147968 00110F28  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2338,9 +2338,9 @@
 /* 80147A80 00111040  7C 08 03 A6 */	mtlr r0
 /* 80147A84 00111044  38 21 00 60 */	addi r1, r1, 0x60
 /* 80147A88 00111048  4E 80 00 20 */	blr 
-.endfn func_80147960
+.endfn func_80147960__Q22cf12CBattleStateFv
 
-.fn func_80147A8C, global
+.fn func_80147A8C__Q22cf12CBattleStateFv, global
 /* 80147A8C 0011104C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80147A90 00111050  7C 08 02 A6 */	mflr r0
 /* 80147A94 00111054  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2441,9 +2441,9 @@
 /* 80147BDC 0011119C  7C 08 03 A6 */	mtlr r0
 /* 80147BE0 001111A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80147BE4 001111A4  4E 80 00 20 */	blr 
-.endfn func_80147A8C
+.endfn func_80147A8C__Q22cf12CBattleStateFv
 
-.fn func_80147BE8, global
+.fn func_80147BE8__Q22cf12CBattleStateFv, global
 /* 80147BE8 001111A8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80147BEC 001111AC  7C 08 02 A6 */	mflr r0
 /* 80147BF0 001111B0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2747,13 +2747,13 @@
 /* 80148004 001115C4  7C 08 03 A6 */	mtlr r0
 /* 80148008 001115C8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8014800C 001115CC  4E 80 00 20 */	blr 
-.endfn func_80147BE8
+.endfn func_80147BE8__Q22cf12CBattleStateFv
 
-.fn func_80148010, global
+.fn func_80148010__Q22cf12CBattleStateFv, global
 /* 80148010 001115D0  4E 80 00 20 */	blr 
-.endfn func_80148010
+.endfn func_80148010__Q22cf12CBattleStateFv
 
-.fn func_80148014, global
+.fn func_80148014__Q22cf12CBattleStateFv, global
 /* 80148014 001115D4  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80148018 001115D8  7C 08 02 A6 */	mflr r0
 /* 8014801C 001115DC  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -3064,9 +3064,9 @@
 /* 8014844C 00111A0C  7C 08 03 A6 */	mtlr r0
 /* 80148450 00111A10  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80148454 00111A14  4E 80 00 20 */	blr 
-.endfn func_80148014
+.endfn func_80148014__Q22cf12CBattleStateFv
 
-.fn func_80148458, global
+.fn func_80148458__Q22cf12CBattleStateFv, global
 /* 80148458 00111A18  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8014845C 00111A1C  7C 08 02 A6 */	mflr r0
 /* 80148460 00111A20  90 01 00 44 */	stw r0, 0x44(r1)
@@ -3107,9 +3107,9 @@
 /* 801484EC 00111AAC  7C 08 03 A6 */	mtlr r0
 /* 801484F0 00111AB0  38 21 00 40 */	addi r1, r1, 0x40
 /* 801484F4 00111AB4  4E 80 00 20 */	blr 
-.endfn func_80148458
+.endfn func_80148458__Q22cf12CBattleStateFv
 
-.fn func_801484F8, global
+.fn func_801484F8__Q22cf12CBattleStateFv, global
 /* 801484F8 00111AB8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801484FC 00111ABC  7C 08 02 A6 */	mflr r0
 /* 80148500 00111AC0  28 04 01 2F */	cmplwi r4, 0x12f
@@ -3146,9 +3146,9 @@
 /* 80148578 00111B38  7C 08 03 A6 */	mtlr r0
 /* 8014857C 00111B3C  38 21 00 50 */	addi r1, r1, 0x50
 /* 80148580 00111B40  4E 80 00 20 */	blr 
-.endfn func_801484F8
+.endfn func_801484F8__Q22cf12CBattleStateFv
 
-.fn func_80148584, global
+.fn func_80148584__Q22cf12CBattleStateFv, global
 /* 80148584 00111B44  28 04 01 2F */	cmplwi r4, 0x12f
 /* 80148588 00111B48  4C 80 00 20 */	bgelr 
 /* 8014858C 00111B4C  2C 04 00 00 */	cmpwi r4, 0
@@ -3167,9 +3167,9 @@
 /* 801485B8 00111B78  38 63 00 34 */	addi r3, r3, 0x34
 /* 801485BC 00111B7C  42 00 FF E4 */	bdnz .L_801485A0
 /* 801485C0 00111B80  4E 80 00 20 */	blr 
-.endfn func_80148584
+.endfn func_80148584__Q22cf12CBattleStateFv
 
-.fn func_801485C4, global
+.fn func_801485C4__Q22cf12CBattleStateFv, global
 /* 801485C4 00111B84  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801485C8 00111B88  7C 08 02 A6 */	mflr r0
 /* 801485CC 00111B8C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3276,35 +3276,35 @@
 /* 8014872C 00111CEC  7C 08 03 A6 */	mtlr r0
 /* 80148730 00111CF0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80148734 00111CF4  4E 80 00 20 */	blr 
-.endfn func_801485C4
+.endfn func_801485C4__Q22cf12CBattleStateFv
 
-.fn func_80148738, global
+.fn func_80148738__Q22cf12CBattleStateFv, global
 /* 80148738 00111CF8  1C 04 00 34 */	mulli r0, r4, 0x34
 /* 8014873C 00111CFC  7C 63 02 14 */	add r3, r3, r0
 /* 80148740 00111D00  38 63 00 08 */	addi r3, r3, 8
 /* 80148744 00111D04  4E 80 00 20 */	blr 
-.endfn func_80148738
+.endfn func_80148738__Q22cf12CBattleStateFv
 
-.fn func_80148748, global
+.fn func_80148748__Q22cf12CBattleStateFv, global
 /* 80148748 00111D08  1C 04 00 34 */	mulli r0, r4, 0x34
 /* 8014874C 00111D0C  7C 63 02 14 */	add r3, r3, r0
 /* 80148750 00111D10  38 63 00 08 */	addi r3, r3, 8
 /* 80148754 00111D14  4E 80 00 20 */	blr 
-.endfn func_80148748
+.endfn func_80148748__Q22cf12CBattleStateFv
 
-.fn func_80148758, global
+.fn func_80148758__Q22cf12CBattleStateFv, global
 /* 80148758 00111D18  1C 04 00 34 */	mulli r0, r4, 0x34
 /* 8014875C 00111D1C  7C 63 02 14 */	add r3, r3, r0
 /* 80148760 00111D20  38 63 06 88 */	addi r3, r3, 0x688
 /* 80148764 00111D24  4E 80 00 20 */	blr 
-.endfn func_80148758
+.endfn func_80148758__Q22cf12CBattleStateFv
 
-.fn func_80148768, global
+.fn func_80148768__Q22cf12CBattleStateFv, global
 /* 80148768 00111D28  1C 04 00 34 */	mulli r0, r4, 0x34
 /* 8014876C 00111D2C  7C 63 02 14 */	add r3, r3, r0
 /* 80148770 00111D30  38 63 0D 08 */	addi r3, r3, 0xd08
 /* 80148774 00111D34  4E 80 00 20 */	blr 
-.endfn func_80148768
+.endfn func_80148768__Q22cf12CBattleStateFv
 
 .fn func_80148778, global
 /* 80148778 00111D38  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -4298,14 +4298,14 @@
 /* 8014948C 00112A4C  4E 80 00 20 */	blr 
 .endfn func_80149330
 
-.fn func_80149490, global
+.fn func_80149490__Q22cf12CBattleStateFv, global
 /* 80149490 00112A50  A0 03 00 04 */	lhz r0, 4(r3)
 /* 80149494 00112A54  7C 00 23 78 */	or r0, r0, r4
 /* 80149498 00112A58  B0 03 00 04 */	sth r0, 4(r3)
 /* 8014949C 00112A5C  4E 80 00 20 */	blr 
-.endfn func_80149490
+.endfn func_80149490__Q22cf12CBattleStateFv
 
-.fn func_801494A0, global
+.fn func_801494A0__Q22cf12CBattleStateFv, global
 /* 801494A0 00112A60  28 04 01 2F */	cmplwi r4, 0x12f
 /* 801494A4 00112A64  41 80 00 0C */	blt .L_801494B0
 /* 801494A8 00112A68  38 60 00 00 */	li r3, 0
@@ -4418,16 +4418,16 @@
 /* 801495F4 00112BB4  7C 00 1B 78 */	or r0, r0, r3
 /* 801495F8 00112BB8  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 801495FC 00112BBC  4E 80 00 20 */	blr 
-.endfn func_801494A0
+.endfn func_801494A0__Q22cf12CBattleStateFv
 
-.fn func_80149600, global
+.fn func_80149600__Q22cf12CBattleStateFv, global
 /* 80149600 00112BC0  A0 03 00 06 */	lhz r0, 6(r3)
 /* 80149604 00112BC4  7C 00 23 78 */	or r0, r0, r4
 /* 80149608 00112BC8  B0 03 00 06 */	sth r0, 6(r3)
 /* 8014960C 00112BCC  4E 80 00 20 */	blr 
-.endfn func_80149600
+.endfn func_80149600__Q22cf12CBattleStateFv
 
-.fn func_80149610, global
+.fn func_80149610__Q22cf12CBattleStateFv, global
 /* 80149610 00112BD0  28 04 01 2F */	cmplwi r4, 0x12f
 /* 80149614 00112BD4  41 80 00 0C */	blt .L_80149620
 /* 80149618 00112BD8  38 60 00 00 */	li r3, 0
@@ -4540,17 +4540,17 @@
 /* 80149764 00112D24  7C 00 1B 78 */	or r0, r0, r3
 /* 80149768 00112D28  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8014976C 00112D2C  4E 80 00 20 */	blr 
-.endfn func_80149610
+.endfn func_80149610__Q22cf12CBattleStateFv
 
-.fn func_80149770, global
+.fn func_80149770__Q22cf12CBattleStateFv, global
 /* 80149770 00112D30  38 6D 89 C0 */	addi r3, r13, lbl_80664B40@sda21
 /* 80149774 00112D34  4E 80 00 20 */	blr 
-.endfn func_80149770
+.endfn func_80149770__Q22cf12CBattleStateFv
 
-.fn func_80149778, global
+.fn func_80149778__Q22cf12CBattleStateFv, global
 /* 80149778 00112D38  38 60 00 00 */	li r3, 0
 /* 8014977C 00112D3C  4E 80 00 20 */	blr 
-.endfn func_80149778
+.endfn func_80149778__Q22cf12CBattleStateFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -4571,39 +4571,39 @@
 .obj __vt__Q22cf12CBattleState, global
 	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0
-	.4byte func_80147784
-	.4byte func_80149778
-	.4byte func_80149770
-	.4byte func_80147790
-	.4byte func_801463A8
-	.4byte func_8014780C
-	.4byte func_801484F8
-	.4byte func_80147BE8
-	.4byte func_80148458
-	.4byte func_80148014
-	.4byte func_801485C4
-	.4byte func_80148584
-	.4byte func_80148738
-	.4byte func_80148748
-	.4byte func_80148758
-	.4byte func_80148768
-	.4byte func_8014778C
-	.4byte func_80148010
-	.4byte func_801463A4
-	.4byte func_800AFB90
-	.4byte func_800AFB80
-	.4byte func_800AFB70
-	.4byte func_800AFB60
-	.4byte func_800AFB38
-	.4byte func_800AFB30
-	.4byte func_80147960
-	.4byte func_800AFB28
-	.4byte func_800AFB18
-	.4byte func_80147A8C
-	.4byte func_80149490
-	.4byte func_801494A0
-	.4byte func_80149600
-	.4byte func_80149610
+	.4byte func_80147784__Q22cf12CBattleStateFv
+	.4byte func_80149778__Q22cf12CBattleStateFv
+	.4byte func_80149770__Q22cf12CBattleStateFv
+	.4byte func_80147790__Q22cf12CBattleStateFv
+	.4byte func_801463A8__Q22cf12CBattleStateFv
+	.4byte func_8014780C__Q22cf12CBattleStateFv
+	.4byte func_801484F8__Q22cf12CBattleStateFv
+	.4byte func_80147BE8__Q22cf12CBattleStateFv
+	.4byte func_80148458__Q22cf12CBattleStateFv
+	.4byte func_80148014__Q22cf12CBattleStateFv
+	.4byte func_801485C4__Q22cf12CBattleStateFv
+	.4byte func_80148584__Q22cf12CBattleStateFv
+	.4byte func_80148738__Q22cf12CBattleStateFv
+	.4byte func_80148748__Q22cf12CBattleStateFv
+	.4byte func_80148758__Q22cf12CBattleStateFv
+	.4byte func_80148768__Q22cf12CBattleStateFv
+	.4byte func_8014778C__Q22cf12CBattleStateFv
+	.4byte func_80148010__Q22cf12CBattleStateFv
+	.4byte func_801463A4__Q22cf12CBattleStateFv
+	.4byte func_800AFB90__Q22cf12CBattleStateFv
+	.4byte func_800AFB80__Q22cf12CBattleStateFv
+	.4byte func_800AFB70__Q22cf12CBattleStateFv
+	.4byte func_800AFB60__Q22cf12CBattleStateFv
+	.4byte func_800AFB38__Q22cf12CBattleStateFv
+	.4byte func_800AFB30__Q22cf12CBattleStateFv
+	.4byte func_80147960__Q22cf12CBattleStateFv
+	.4byte func_800AFB28__Q22cf12CBattleStateFv
+	.4byte func_800AFB18__Q22cf12CBattleStateFv
+	.4byte func_80147A8C__Q22cf12CBattleStateFv
+	.4byte func_80149490__Q22cf12CBattleStateFv
+	.4byte func_801494A0__Q22cf12CBattleStateFv
+	.4byte func_80149600__Q22cf12CBattleStateFv
+	.4byte func_80149610__Q22cf12CBattleStateFv
 	.4byte 0
 .endobj __vt__Q22cf12CBattleState
 
@@ -4754,63 +4754,63 @@
 
 .obj "@eti_800282E0", local
 .hidden "@eti_800282E0"
-	.4byte func_801463A8
+	.4byte func_801463A8__Q22cf12CBattleStateFv
 	.4byte 0x000013DC
 	.4byte "@etb_8000CFFC"
 .endobj "@eti_800282E0"
 
 .obj "@eti_800282EC", local
 .hidden "@eti_800282EC"
-	.4byte func_80147790
+	.4byte func_80147790__Q22cf12CBattleStateFv
 	.4byte 0x0000007C
 	.4byte "@etb_8000D004"
 .endobj "@eti_800282EC"
 
 .obj "@eti_800282F8", local
 .hidden "@eti_800282F8"
-	.4byte func_80147960
+	.4byte func_80147960__Q22cf12CBattleStateFv
 	.4byte 0x0000012C
 	.4byte "@etb_8000D00C"
 .endobj "@eti_800282F8"
 
 .obj "@eti_80028304", local
 .hidden "@eti_80028304"
-	.4byte func_80147A8C
+	.4byte func_80147A8C__Q22cf12CBattleStateFv
 	.4byte 0x0000015C
 	.4byte "@etb_8000D014"
 .endobj "@eti_80028304"
 
 .obj "@eti_80028310", local
 .hidden "@eti_80028310"
-	.4byte func_80147BE8
+	.4byte func_80147BE8__Q22cf12CBattleStateFv
 	.4byte 0x00000428
 	.4byte "@etb_8000D01C"
 .endobj "@eti_80028310"
 
 .obj "@eti_8002831C", local
 .hidden "@eti_8002831C"
-	.4byte func_80148014
+	.4byte func_80148014__Q22cf12CBattleStateFv
 	.4byte 0x00000444
 	.4byte "@etb_8000D024"
 .endobj "@eti_8002831C"
 
 .obj "@eti_80028328", local
 .hidden "@eti_80028328"
-	.4byte func_80148458
+	.4byte func_80148458__Q22cf12CBattleStateFv
 	.4byte 0x000000A0
 	.4byte "@etb_8000D02C"
 .endobj "@eti_80028328"
 
 .obj "@eti_80028334", local
 .hidden "@eti_80028334"
-	.4byte func_801484F8
+	.4byte func_801484F8__Q22cf12CBattleStateFv
 	.4byte 0x0000008C
 	.4byte "@etb_8000D034"
 .endobj "@eti_80028334"
 
 .obj "@eti_80028340", local
 .hidden "@eti_80028340"
-	.4byte func_801485C4
+	.4byte func_801485C4__Q22cf12CBattleStateFv
 	.4byte 0x00000174
 	.4byte "@etb_8000D03C"
 .endobj "@eti_80028340"

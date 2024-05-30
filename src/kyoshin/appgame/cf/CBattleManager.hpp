@@ -1,5 +1,7 @@
+#pragma once
 
-class CBattleManager{
-public:
-	
-};
+namespace cf{
+	class CBattleManager{
+
+	};
+}

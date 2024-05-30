@@ -22,11 +22,11 @@
 /* 801FF5A4 001C8B64  38 7D 00 0C */	addi r3, r29, 0xc
 /* 801FF5A8 001C8B68  4B E5 AE C5 */	bl __ct__cf_CActParamAnimGame
 /* 801FF5AC 001C8B6C  3C 80 80 06 */	lis r4, __ct__cf_CActParamAnimGame@ha
-/* 801FF5B0 001C8B70  3C A0 80 06 */	lis r5, __dt__cf_CActParamAnimGame@ha
+/* 801FF5B0 001C8B70  3C A0 80 06 */	lis r5, __dt__Q22cf17CActParamAnimGameFv@ha
 /* 801FF5B4 001C8B74  38 7D 05 50 */	addi r3, r29, 0x550
 /* 801FF5B8 001C8B78  38 C0 05 3C */	li r6, 0x53c
 /* 801FF5BC 001C8B7C  38 84 A4 6C */	addi r4, r4, __ct__cf_CActParamAnimGame@l
-/* 801FF5C0 001C8B80  38 A5 A4 CC */	addi r5, r5, __dt__cf_CActParamAnimGame@l
+/* 801FF5C0 001C8B80  38 A5 A4 CC */	addi r5, r5, __dt__Q22cf17CActParamAnimGameFv@l
 /* 801FF5C4 001C8B84  38 E0 00 02 */	li r7, 2
 /* 801FF5C8 001C8B88  48 0B A5 39 */	bl __construct_array
 /* 801FF5CC 001C8B8C  C0 22 A7 B0 */	lfs f1, float_8066AB30@sda21(r2)
@@ -120,15 +120,15 @@
 /* 801FF704 001C8CC4  7C 7E 1B 78 */	mr r30, r3
 /* 801FF708 001C8CC8  7C 9F 23 78 */	mr r31, r4
 /* 801FF70C 001C8CCC  41 82 00 38 */	beq .L_801FF744
-/* 801FF710 001C8CD0  3C 80 80 06 */	lis r4, __dt__cf_CActParamAnimGame@ha
+/* 801FF710 001C8CD0  3C 80 80 06 */	lis r4, __dt__Q22cf17CActParamAnimGameFv@ha
 /* 801FF714 001C8CD4  38 A0 05 3C */	li r5, 0x53c
-/* 801FF718 001C8CD8  38 84 A4 CC */	addi r4, r4, __dt__cf_CActParamAnimGame@l
+/* 801FF718 001C8CD8  38 84 A4 CC */	addi r4, r4, __dt__Q22cf17CActParamAnimGameFv@l
 /* 801FF71C 001C8CDC  38 C0 00 02 */	li r6, 2
 /* 801FF720 001C8CE0  38 63 05 50 */	addi r3, r3, 0x550
 /* 801FF724 001C8CE4  48 0B A4 D5 */	bl __destroy_arr
 /* 801FF728 001C8CE8  38 7E 00 0C */	addi r3, r30, 0xc
 /* 801FF72C 001C8CEC  38 80 FF FF */	li r4, -1
-/* 801FF730 001C8CF0  4B E5 AD 9D */	bl __dt__cf_CActParamAnimGame
+/* 801FF730 001C8CF0  4B E5 AD 9D */	bl __dt__Q22cf17CActParamAnimGameFv
 /* 801FF734 001C8CF4  2C 1F 00 00 */	cmpwi r31, 0
 /* 801FF738 001C8CF8  40 81 00 0C */	ble .L_801FF744
 /* 801FF73C 001C8CFC  7F C3 F3 78 */	mr r3, r30
@@ -142,7 +142,7 @@
 /* 801FF758 001C8D18  4E 80 00 20 */	blr 
 .endfn __dt__801FF6F0
 
-.fn __dt__CModelDispEquip, global
+.fn __dt__15CModelDispEquipFv, global
 /* 801FF75C 001C8D1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF760 001C8D20  7C 08 02 A6 */	mflr r0
 /* 801FF764 001C8D24  2C 03 00 00 */	cmpwi r3, 0
@@ -165,7 +165,7 @@
 /* 801FF7A4 001C8D64  7C 08 03 A6 */	mtlr r0
 /* 801FF7A8 001C8D68  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FF7AC 001C8D6C  4E 80 00 20 */	blr 
-.endfn __dt__CModelDispEquip
+.endfn __dt__15CModelDispEquipFv
 
 .fn func_801FF7B0, global
 /* 801FF7B0 001C8D70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -232,14 +232,14 @@
 /* 801FF87C 001C8E3C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 801FF880 001C8E40  BF 81 00 10 */	stmw r28, 0x10(r1)
 /* 801FF884 001C8E44  7C 7C 1B 78 */	mr r28, r3
-/* 801FF888 001C8E48  48 24 91 BD */	bl func_80448A44
+/* 801FF888 001C8E48  48 24 91 BD */	bl func_80448A44__Fv
 /* 801FF88C 001C8E4C  3B C0 00 00 */	li r30, 0
 .L_801FF890:
 /* 801FF890 001C8E50  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 801FF894 001C8E54  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 801FF898 001C8E58  7C 7C 02 14 */	add r3, r28, r0
 /* 801FF89C 001C8E5C  38 63 10 24 */	addi r3, r3, 0x1024
-/* 801FF8A0 001C8E60  4B F3 98 41 */	bl func_801390E0
+/* 801FF8A0 001C8E60  4B F3 98 41 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 801FF8A4 001C8E64  3B DE 00 01 */	addi r30, r30, 1
 /* 801FF8A8 001C8E68  28 1E 00 09 */	cmplwi r30, 9
 /* 801FF8AC 001C8E6C  41 80 FF E4 */	blt .L_801FF890
@@ -262,14 +262,14 @@
 /* 801FF8E8 001C8EA8  80 7E 10 28 */	lwz r3, 0x1028(r30)
 /* 801FF8EC 001C8EAC  2C 03 00 00 */	cmpwi r3, 0
 /* 801FF8F0 001C8EB0  41 82 00 0C */	beq .L_801FF8FC
-/* 801FF8F4 001C8EB4  48 23 4B E5 */	bl func_804344D8
+/* 801FF8F4 001C8EB4  48 23 4B E5 */	bl MemManager_804344D8
 /* 801FF8F8 001C8EB8  93 FE 10 28 */	stw r31, 0x1028(r30)
 .L_801FF8FC:
 /* 801FF8FC 001C8EBC  3B BD 00 01 */	addi r29, r29, 1
 /* 801FF900 001C8EC0  28 1D 00 09 */	cmplwi r29, 9
 /* 801FF904 001C8EC4  41 80 FF C0 */	blt .L_801FF8C4
 /* 801FF908 001C8EC8  38 7C 10 90 */	addi r3, r28, 0x1090
-/* 801FF90C 001C8ECC  4B F3 97 D5 */	bl func_801390E0
+/* 801FF90C 001C8ECC  4B F3 97 D5 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 801FF910 001C8ED0  80 9C 10 94 */	lwz r4, 0x1094(r28)
 /* 801FF914 001C8ED4  2C 04 00 00 */	cmpwi r4, 0
 /* 801FF918 001C8ED8  41 82 00 28 */	beq .L_801FF940
@@ -279,7 +279,7 @@
 /* 801FF928 001C8EE8  80 7C 10 94 */	lwz r3, 0x1094(r28)
 /* 801FF92C 001C8EEC  2C 03 00 00 */	cmpwi r3, 0
 /* 801FF930 001C8EF0  41 82 00 10 */	beq .L_801FF940
-/* 801FF934 001C8EF4  48 23 4B A5 */	bl func_804344D8
+/* 801FF934 001C8EF4  48 23 4B A5 */	bl MemManager_804344D8
 /* 801FF938 001C8EF8  38 00 00 00 */	li r0, 0
 /* 801FF93C 001C8EFC  90 1C 10 94 */	stw r0, 0x1094(r28)
 .L_801FF940:
@@ -490,7 +490,7 @@
 /* 801FFBD0 001C9190  BF 61 00 0C */	stmw r27, 0xc(r1)
 /* 801FFBD4 001C9194  7C 7E 1B 78 */	mr r30, r3
 /* 801FFBD8 001C9198  7C 9F 23 78 */	mr r31, r4
-/* 801FFBDC 001C919C  48 24 8E 69 */	bl func_80448A44
+/* 801FFBDC 001C919C  48 24 8E 69 */	bl func_80448A44__Fv
 /* 801FFBE0 001C91A0  80 1F 00 00 */	lwz r0, 0(r31)
 /* 801FFBE4 001C91A4  2C 00 00 00 */	cmpwi r0, 0
 /* 801FFBE8 001C91A8  41 82 01 B4 */	beq .L_801FFD9C
@@ -592,14 +592,14 @@
 /* 801FFD44 001C9304  80 7C 10 28 */	lwz r3, 0x1028(r28)
 /* 801FFD48 001C9308  2C 03 00 00 */	cmpwi r3, 0
 /* 801FFD4C 001C930C  41 82 00 0C */	beq .L_801FFD58
-/* 801FFD50 001C9310  48 23 47 89 */	bl func_804344D8
+/* 801FFD50 001C9310  48 23 47 89 */	bl MemManager_804344D8
 /* 801FFD54 001C9314  93 BC 10 28 */	stw r29, 0x1028(r28)
 .L_801FFD58:
 /* 801FFD58 001C9318  3B 7B 00 01 */	addi r27, r27, 1
 /* 801FFD5C 001C931C  28 1B 00 09 */	cmplwi r27, 9
 /* 801FFD60 001C9320  41 80 FF C0 */	blt .L_801FFD20
 /* 801FFD64 001C9324  38 7E 10 90 */	addi r3, r30, 0x1090
-/* 801FFD68 001C9328  4B F3 93 79 */	bl func_801390E0
+/* 801FFD68 001C9328  4B F3 93 79 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 801FFD6C 001C932C  80 9E 10 94 */	lwz r4, 0x1094(r30)
 /* 801FFD70 001C9330  2C 04 00 00 */	cmpwi r4, 0
 /* 801FFD74 001C9334  41 82 00 28 */	beq .L_801FFD9C
@@ -609,7 +609,7 @@
 /* 801FFD84 001C9344  80 7E 10 94 */	lwz r3, 0x1094(r30)
 /* 801FFD88 001C9348  2C 03 00 00 */	cmpwi r3, 0
 /* 801FFD8C 001C934C  41 82 00 10 */	beq .L_801FFD9C
-/* 801FFD90 001C9350  48 23 47 49 */	bl func_804344D8
+/* 801FFD90 001C9350  48 23 47 49 */	bl MemManager_804344D8
 /* 801FFD94 001C9354  38 00 00 00 */	li r0, 0
 /* 801FFD98 001C9358  90 1E 10 94 */	stw r0, 0x1094(r30)
 .L_801FFD9C:
@@ -1134,7 +1134,7 @@
 /* 80200530 001C9AF0  38 81 00 80 */	addi r4, r1, 0x80
 /* 80200534 001C9AF4  38 C0 00 00 */	li r6, 0
 /* 80200538 001C9AF8  38 E0 00 00 */	li r7, 0
-/* 8020053C 001C9AFC  48 24 E2 59 */	bl CDeviceFile_openFile1
+/* 8020053C 001C9AFC  48 24 E2 59 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80200540 001C9B00  90 7C 10 6C */	stw r3, 0x106c(r28)
 /* 80200544 001C9B04  48 24 EE C1 */	bl func_8044F404
 .L_80200548:
@@ -1187,7 +1187,7 @@
 /* 802005F0 001C9BB0  38 81 00 60 */	addi r4, r1, 0x60
 /* 802005F4 001C9BB4  38 C0 00 00 */	li r6, 0
 /* 802005F8 001C9BB8  38 E0 00 00 */	li r7, 0
-/* 802005FC 001C9BBC  48 24 E1 99 */	bl CDeviceFile_openFile1
+/* 802005FC 001C9BBC  48 24 E1 99 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80200600 001C9BC0  90 7C 10 78 */	stw r3, 0x1078(r28)
 /* 80200604 001C9BC4  48 24 EE 01 */	bl func_8044F404
 .L_80200608:
@@ -1252,7 +1252,7 @@
 /* 802006DC 001C9C9C  38 81 00 40 */	addi r4, r1, 0x40
 /* 802006E0 001C9CA0  38 C0 00 00 */	li r6, 0
 /* 802006E4 001C9CA4  38 E0 00 00 */	li r7, 0
-/* 802006E8 001C9CA8  48 24 E0 AD */	bl CDeviceFile_openFile1
+/* 802006E8 001C9CA8  48 24 E0 AD */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 802006EC 001C9CAC  90 7C 10 84 */	stw r3, 0x1084(r28)
 /* 802006F0 001C9CB0  48 24 ED 15 */	bl func_8044F404
 .L_802006F4:
@@ -1298,7 +1298,7 @@
 /* 80200788 001C9D48  38 81 00 A0 */	addi r4, r1, 0xa0
 /* 8020078C 001C9D4C  38 C0 00 00 */	li r6, 0
 /* 80200790 001C9D50  38 E0 00 00 */	li r7, 0
-/* 80200794 001C9D54  48 24 E0 01 */	bl CDeviceFile_openFile1
+/* 80200794 001C9D54  48 24 E0 01 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80200798 001C9D58  90 78 10 24 */	stw r3, 0x1024(r24)
 /* 8020079C 001C9D5C  48 24 EC 69 */	bl func_8044F404
 /* 802007A0 001C9D60  48 00 00 30 */	b .L_802007D0
@@ -1648,7 +1648,7 @@
 /* 80200CB8 001CA278  38 81 00 10 */	addi r4, r1, 0x10
 /* 80200CBC 001CA27C  38 C0 00 00 */	li r6, 0
 /* 80200CC0 001CA280  38 E0 00 00 */	li r7, 0
-/* 80200CC4 001CA284  48 24 DA D1 */	bl CDeviceFile_openFile1
+/* 80200CC4 001CA284  48 24 DA D1 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80200CC8 001CA288  90 7E 10 90 */	stw r3, 0x1090(r30)
 /* 80200CCC 001CA28C  48 24 E7 39 */	bl func_8044F404
 .L_80200CD0:
@@ -2676,7 +2676,7 @@
 
 .fn func_80201A6C, global
 /* 80201A6C 001CB02C  38 63 FF FC */	addi r3, r3, -4
-/* 80201A70 001CB030  4B FF DC EC */	b __dt__CModelDispEquip
+/* 80201A70 001CB030  4B FF DC EC */	b __dt__15CModelDispEquipFv
 .endfn func_80201A6C
 
 .fn func_80201A74, global
@@ -2686,7 +2686,7 @@
 
 .fn func_80201A7C, global
 /* 80201A7C 001CB03C  38 63 FF F8 */	addi r3, r3, -8
-/* 80201A80 001CB040  4B FF DC DC */	b __dt__CModelDispEquip
+/* 80201A80 001CB040  4B FF DC DC */	b __dt__15CModelDispEquipFv
 .endfn func_80201A7C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -2738,38 +2738,38 @@
 .obj __vt__15CModelDispEquip, global
 	.4byte __RTTI__15CModelDispEquip
 	.4byte 0
-	.4byte __dt__CModelDispEquip
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__15CModelDispEquipFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CModelDispEquip_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__15CModelDispEquip
 	.4byte 0xFFFFFFFC
 	.4byte func_80201A6C
@@ -2902,7 +2902,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x0000000C
-	.4byte __dt__cf_CActParamAnimGame
+	.4byte __dt__Q22cf17CActParamAnimGameFv
 	.4byte 0x0680001F
 	.4byte 0x00000008
 	.4byte __dt__80081C20
@@ -2911,7 +2911,7 @@
 	.4byte __dt__80080400
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80012960"
 
 .obj "@etb_800129A8", local
@@ -2924,7 +2924,7 @@
 	.4byte 0x00000550
 	.4byte 0x00000002
 	.4byte 0x0000053C
-	.4byte __dt__cf_CActParamAnimGame
+	.4byte __dt__Q22cf17CActParamAnimGameFv
 .endobj "@etb_800129A8"
 
 .obj "@etb_800129CC", local
@@ -3129,7 +3129,7 @@
 
 .obj "@eti_8002CA08", local
 .hidden "@eti_8002CA08"
-	.4byte __dt__CModelDispEquip
+	.4byte __dt__15CModelDispEquipFv
 	.4byte 0x00000054
 	.4byte "@etb_800129CC"
 .endobj "@eti_8002CA08"

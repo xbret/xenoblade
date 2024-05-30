@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B84EC, global
+.fn func_802B84EC__Q22cf19CHelp_OpenPartyMenuFv, global
 /* 802B84EC 00281AAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B84F0 00281AB0  7C 08 02 A6 */	mflr r0
 /* 802B84F4 00281AB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,9 +23,9 @@
 /* 802B8528 00281AE8  7C 08 03 A6 */	mtlr r0
 /* 802B852C 00281AEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B8530 00281AF0  4E 80 00 20 */	blr 
-.endfn func_802B84EC
+.endfn func_802B84EC__Q22cf19CHelp_OpenPartyMenuFv
 
-.fn func_802B8534, global
+.fn func_802B8534__Q22cf20CHelp_ClosePartyMenuFv, global
 /* 802B8534 00281AF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B8538 00281AF8  7C 08 02 A6 */	mflr r0
 /* 802B853C 00281AFC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -53,7 +53,7 @@
 /* 802B8590 00281B50  7C 08 03 A6 */	mtlr r0
 /* 802B8594 00281B54  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B8598 00281B58  4E 80 00 20 */	blr 
-.endfn func_802B8534
+.endfn func_802B8534__Q22cf20CHelp_ClosePartyMenuFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -77,14 +77,14 @@
 
 .obj "@eti_80033980", local
 .hidden "@eti_80033980"
-	.4byte func_802B84EC
+	.4byte func_802B84EC__Q22cf19CHelp_OpenPartyMenuFv
 	.4byte 0x00000048
 	.4byte "@etb_8001BDF8"
 .endobj "@eti_80033980"
 
 .obj "@eti_8003398C", local
 .hidden "@eti_8003398C"
-	.4byte func_802B8534
+	.4byte func_802B8534__Q22cf20CHelp_ClosePartyMenuFv
 	.4byte 0x00000068
 	.4byte "@etb_8001BE00"
 .endobj "@eti_8003398C"

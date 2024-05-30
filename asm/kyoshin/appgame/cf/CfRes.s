@@ -3024,7 +3024,7 @@
 /* 80063EC8 0002D488  2C 1C 00 04 */	cmpwi r28, 4
 /* 80063ECC 0002D48C  41 82 00 0C */	beq .L_80063ED8
 /* 80063ED0 0002D490  7F 84 E3 78 */	mr r4, r28
-/* 80063ED4 0002D494  48 3E B2 81 */	bl func_8044F154
+/* 80063ED4 0002D494  48 3E B2 81 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 .L_80063ED8:
 /* 80063ED8 0002D498  7F 63 DB 78 */	mr r3, r27
 /* 80063EDC 0002D49C  7F 44 D3 78 */	mr r4, r26
@@ -3675,7 +3675,7 @@
 /* 80064734 0002DCF4  7C 7E 1B 78 */	mr r30, r3
 .L_80064738:
 /* 80064738 0002DCF8  7F C3 F3 78 */	mr r3, r30
-/* 8006473C 0002DCFC  48 3D 00 35 */	bl func_80434770
+/* 8006473C 0002DCFC  48 3D 00 35 */	bl MemManager_80434770
 /* 80064740 0002DD00  7C 17 18 40 */	cmplw r23, r3
 /* 80064744 0002DD04  41 81 00 4C */	bgt .L_80064790
 /* 80064748 0002DD08  2C 18 00 00 */	cmpwi r24, 0
@@ -3683,13 +3683,13 @@
 /* 80064750 0002DD10  7F C3 F3 78 */	mr r3, r30
 /* 80064754 0002DD14  7E E4 BB 78 */	mr r4, r23
 /* 80064758 0002DD18  38 A0 00 20 */	li r5, 0x20
-/* 8006475C 0002DD1C  48 3C FC F5 */	bl func_80434450
+/* 8006475C 0002DD1C  48 3C FC F5 */	bl MemManager_80434450
 /* 80064760 0002DD20  48 00 00 14 */	b .L_80064774
 .L_80064764:
 /* 80064764 0002DD24  7F C3 F3 78 */	mr r3, r30
 /* 80064768 0002DD28  7E E4 BB 78 */	mr r4, r23
 /* 8006476C 0002DD2C  38 A0 00 20 */	li r5, 0x20
-/* 80064770 0002DD30  48 3C FC BD */	bl func_8043442C
+/* 80064770 0002DD30  48 3C FC BD */	bl MemManager_8043442C
 .L_80064774:
 /* 80064774 0002DD34  2C 03 00 00 */	cmpwi r3, 0
 /* 80064778 0002DD38  7C 79 1B 78 */	mr r25, r3
@@ -4977,7 +4977,7 @@
 /* 80065844 0002EE04  4E 80 00 20 */	blr 
 .endfn func_80065834
 
-.fn __dt__CTTask_cf_CfResTask, global
+.fn "__dt__23CTTask<Q22cf9CfResTask>Fv", global
 /* 80065848 0002EE08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006584C 0002EE0C  7C 08 02 A6 */	mflr r0
 /* 80065850 0002EE10  2C 03 00 00 */	cmpwi r3, 0
@@ -4988,7 +4988,7 @@
 /* 80065864 0002EE24  7C 7E 1B 78 */	mr r30, r3
 /* 80065868 0002EE28  41 82 00 1C */	beq .L_80065884
 /* 8006586C 0002EE2C  38 80 00 00 */	li r4, 0
-/* 80065870 0002EE30  48 3D F2 C9 */	bl __dt__CProcess
+/* 80065870 0002EE30  48 3D F2 C9 */	bl __dt__8CProcessFv
 /* 80065874 0002EE34  2C 1F 00 00 */	cmpwi r31, 0
 /* 80065878 0002EE38  40 81 00 0C */	ble .L_80065884
 /* 8006587C 0002EE3C  7F C3 F3 78 */	mr r3, r30
@@ -5001,9 +5001,9 @@
 /* 80065894 0002EE54  7C 08 03 A6 */	mtlr r0
 /* 80065898 0002EE58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006589C 0002EE5C  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_cf_CfResTask
+.endfn "__dt__23CTTask<Q22cf9CfResTask>Fv"
 
-.fn __dt__cf_CfRes, global
+.fn __dt__Q22cf5CfResFv, global
 /* 800658A0 0002EE60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800658A4 0002EE64  7C 08 02 A6 */	mflr r0
 /* 800658A8 0002EE68  2C 03 00 00 */	cmpwi r3, 0
@@ -5028,9 +5028,9 @@
 /* 800658F0 0002EEB0  7C 08 03 A6 */	mtlr r0
 /* 800658F4 0002EEB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800658F8 0002EEB8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfRes
+.endfn __dt__Q22cf5CfResFv
 
-.fn __dt__cf_CfResTask, global
+.fn __dt__Q22cf9CfResTaskFv, global
 /* 800658FC 0002EEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80065900 0002EEC0  7C 08 02 A6 */	mflr r0
 /* 80065904 0002EEC4  2C 03 00 00 */	cmpwi r3, 0
@@ -5050,7 +5050,7 @@
 /* 80065938 0002EEF8  41 82 00 10 */	beq .L_80065948
 /* 8006593C 0002EEFC  7F C3 F3 78 */	mr r3, r30
 /* 80065940 0002EF00  38 80 00 00 */	li r4, 0
-/* 80065944 0002EF04  48 3D F1 F5 */	bl __dt__CProcess
+/* 80065944 0002EF04  48 3D F1 F5 */	bl __dt__8CProcessFv
 .L_80065948:
 /* 80065948 0002EF08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006594C 0002EF0C  40 81 00 0C */	ble .L_80065958
@@ -5064,7 +5064,7 @@
 /* 80065968 0002EF28  7C 08 03 A6 */	mtlr r0
 /* 8006596C 0002EF2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80065970 0002EF30  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfResTask
+.endfn __dt__Q22cf9CfResTaskFv
 
 .fn func_80065974, global
 /* 80065974 0002EF34  4E 80 00 20 */	blr 
@@ -5095,7 +5095,7 @@
 /* 800659C0 0002EF80  4E 80 00 20 */	blr 
 .endfn func_800659C0
 
-.fn __ct__cf_CfRes, global
+.fn __ct__Q22cf5CfResFv, global
 /* 800659C4 0002EF84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800659C8 0002EF88  7C 08 02 A6 */	mflr r0
 /* 800659CC 0002EF8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5105,7 +5105,7 @@
 /* 800659DC 0002EF9C  7C 9D 23 78 */	mr r29, r4
 /* 800659E0 0002EFA0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 800659E4 0002EFA4  7C 7C 1B 78 */	mr r28, r3
-/* 800659E8 0002EFA8  48 3D 1B CD */	bl getHeapIndex
+/* 800659E8 0002EFA8  48 3D 1B CD */	bl getHeapIndex__Fv
 /* 800659EC 0002EFAC  7C 64 1B 78 */	mr r4, r3
 /* 800659F0 0002EFB0  38 60 1F 64 */	li r3, 0x1f64
 /* 800659F4 0002EFB4  48 3C F0 69 */	bl heap_malloc
@@ -5200,13 +5200,13 @@
 /* 80065B44 0002F104  7C 08 03 A6 */	mtlr r0
 /* 80065B48 0002F108  38 21 00 20 */	addi r1, r1, 0x20
 /* 80065B4C 0002F10C  4E 80 00 20 */	blr 
-.endfn __ct__cf_CfRes
+.endfn __ct__Q22cf5CfResFv
 
 .fn func_80065B50, global
 /* 80065B50 0002F110  4E 80 00 20 */	blr 
 .endfn func_80065B50
 
-.fn func_80065B54, global
+.fn "func_80065B54__23CTTask<Q22cf9CfResTask>Fv", global
 /* 80065B54 0002F114  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80065B58 0002F118  7C 08 02 A6 */	mflr r0
 /* 80065B5C 0002F11C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5226,9 +5226,9 @@
 /* 80065B90 0002F150  7C 08 03 A6 */	mtlr r0
 /* 80065B94 0002F154  38 21 00 10 */	addi r1, r1, 0x10
 /* 80065B98 0002F158  4E 80 00 20 */	blr 
-.endfn func_80065B54
+.endfn "func_80065B54__23CTTask<Q22cf9CfResTask>Fv"
 
-.fn func_80065B9C, global
+.fn "func_80065B9C__23CTTask<Q22cf9CfResTask>Fv", global
 /* 80065B9C 0002F15C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80065BA0 0002F160  7C 08 02 A6 */	mflr r0
 /* 80065BA4 0002F164  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5248,7 +5248,7 @@
 /* 80065BD8 0002F198  7C 08 03 A6 */	mtlr r0
 /* 80065BDC 0002F19C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80065BE0 0002F1A0  4E 80 00 20 */	blr 
-.endfn func_80065B9C
+.endfn "func_80065B9C__23CTTask<Q22cf9CfResTask>Fv"
 
 .fn func_80065BE4, global
 /* 80065BE4 0002F1A4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -5626,13 +5626,13 @@
 .obj __vt__Q22cf9CfResTask, global
 	.4byte __RTTI__Q22cf9CfResTask
 	.4byte 0
-	.4byte __dt__cf_CfResTask
-	.4byte CChildListNode_Reset
+	.4byte __dt__Q22cf9CfResTaskFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80065974
 	.4byte func_80065978
 	.4byte func_800659C0
 	.4byte func_80065B50
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 .endobj __vt__Q22cf9CfResTask
 
 .obj cf_CfResTask_hierarchy, global
@@ -5651,13 +5651,13 @@
 .obj "__vt__23CTTask<Q22cf9CfResTask>", global
 	.4byte "__RTTI__23CTTask<Q22cf9CfResTask>"
 	.4byte 0
-	.4byte __dt__CTTask_cf_CfResTask
-	.4byte CChildListNode_Reset
+	.4byte "__dt__23CTTask<Q22cf9CfResTask>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80065B54
-	.4byte func_80065B9C
-	.4byte CProcess_func_80043F20
+	.4byte "func_80065B54__23CTTask<Q22cf9CfResTask>Fv"
+	.4byte "func_80065B9C__23CTTask<Q22cf9CfResTask>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__23CTTask<Q22cf9CfResTask>"
 
 .obj CTTask_cf_CfResTask_hierarchy, global
@@ -5675,38 +5675,38 @@
 .obj __vt__Q22cf5CfRes, global
 	.4byte __RTTI__Q22cf5CfRes
 	.4byte 0
-	.4byte __dt__cf_CfRes
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q22cf5CfResFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CfRes_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q22cf5CfRes
 
 .obj cf_CfRes_hierarchy, global
@@ -6316,7 +6316,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000054
-	.4byte __dt__cf_CfRes
+	.4byte __dt__Q22cf5CfResFv
 .endobj "@etb_80007C54"
 
 .obj "@etb_80007C70", local
@@ -6335,16 +6335,16 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CfResTask
+	.4byte "__dt__23CTTask<Q22cf9CfResTask>Fv"
 	.4byte 0x0780001F
 	.4byte 0x00000054
-	.4byte __dt__cf_CfRes
+	.4byte __dt__Q22cf5CfResFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CfResTask
+	.4byte "__dt__23CTTask<Q22cf9CfResTask>Fv"
 .endobj "@etb_80007C78"
 
 .obj "@etb_80007CC0", local
@@ -6950,21 +6950,21 @@
 
 .obj "@eti_80022E38", local
 .hidden "@eti_80022E38"
-	.4byte __dt__CTTask_cf_CfResTask
+	.4byte "__dt__23CTTask<Q22cf9CfResTask>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_80007C44"
 .endobj "@eti_80022E38"
 
 .obj "@eti_80022E44", local
 .hidden "@eti_80022E44"
-	.4byte __dt__cf_CfRes
+	.4byte __dt__Q22cf5CfResFv
 	.4byte 0x0000005C
 	.4byte "@etb_80007C4C"
 .endobj "@eti_80022E44"
 
 .obj "@eti_80022E50", local
 .hidden "@eti_80022E50"
-	.4byte __dt__cf_CfResTask
+	.4byte __dt__Q22cf9CfResTaskFv
 	.4byte 0x00000078
 	.4byte "@etb_80007C54"
 .endobj "@eti_80022E50"
@@ -6978,21 +6978,21 @@
 
 .obj "@eti_80022E68", local
 .hidden "@eti_80022E68"
-	.4byte __ct__cf_CfRes
+	.4byte __ct__Q22cf5CfResFv
 	.4byte 0x0000018C
 	.4byte "@etb_80007C78"
 .endobj "@eti_80022E68"
 
 .obj "@eti_80022E74", local
 .hidden "@eti_80022E74"
-	.4byte func_80065B54
+	.4byte "func_80065B54__23CTTask<Q22cf9CfResTask>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80007CC0"
 .endobj "@eti_80022E74"
 
 .obj "@eti_80022E80", local
 .hidden "@eti_80022E80"
-	.4byte func_80065B9C
+	.4byte "func_80065B9C__23CTTask<Q22cf9CfResTask>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80007CC8"
 .endobj "@eti_80022E80"

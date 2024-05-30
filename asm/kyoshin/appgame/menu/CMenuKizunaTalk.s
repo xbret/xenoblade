@@ -48,7 +48,7 @@
 /* 801BCAE0 001860A0  90 9B 00 6C */	stw r4, 0x6c(r27)
 /* 801BCAE4 001860A4  90 1B 00 70 */	stw r0, 0x70(r27)
 /* 801BCAE8 001860A8  93 9B 00 74 */	stw r28, 0x74(r27)
-/* 801BCAEC 001860AC  48 2A 2A 79 */	bl __ct__UnkClass_8045F564
+/* 801BCAEC 001860AC  48 2A 2A 79 */	bl __ct__17UnkClass_8045F564Fv
 /* 801BCAF0 001860B0  93 DB 00 88 */	stw r30, 0x88(r27)
 /* 801BCAF4 001860B4  38 7B 00 A8 */	addi r3, r27, 0xa8
 /* 801BCAF8 001860B8  38 80 00 00 */	li r4, 0
@@ -71,7 +71,7 @@
 /* 801BCB3C 001860FC  4E 80 00 20 */	blr
 .endfn __ct__CMenuKizunaTalk
 
-.fn __dt__CMenuKizunaTalk, global
+.fn __dt__15CMenuKizunaTalkFv, global
 /* 801BCB40 00186100  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801BCB44 00186104  7C 08 02 A6 */	mflr r0
 /* 801BCB48 00186108  2C 03 00 00 */	cmpwi r3, 0
@@ -82,16 +82,16 @@
 /* 801BCB5C 0018611C  41 82 00 44 */	beq .L_801BCBA0
 /* 801BCB60 00186120  38 80 FF FF */	li r4, -1
 /* 801BCB64 00186124  38 63 00 C0 */	addi r3, r3, 0xc0
-/* 801BCB68 00186128  48 06 EB 39 */	bl __dt__CSysWin
+/* 801BCB68 00186128  48 06 EB 39 */	bl __dt__7CSysWinFv
 /* 801BCB6C 0018612C  38 7E 00 A8 */	addi r3, r30, 0xa8
 /* 801BCB70 00186130  38 80 FF FF */	li r4, -1
-/* 801BCB74 00186134  48 01 5E C5 */	bl __dt__CCur18
+/* 801BCB74 00186134  48 01 5E C5 */	bl __dt__6CCur18Fv
 /* 801BCB78 00186138  38 7E 00 78 */	addi r3, r30, 0x78
 /* 801BCB7C 0018613C  38 80 FF FF */	li r4, -1
-/* 801BCB80 00186140  48 2A 2A 01 */	bl __dt__UnkClass_8045F564
+/* 801BCB80 00186140  48 2A 2A 01 */	bl __dt__17UnkClass_8045F564Fv
 /* 801BCB84 00186144  7F C3 F3 78 */	mr r3, r30
 /* 801BCB88 00186148  38 80 00 00 */	li r4, 0
-/* 801BCB8C 0018614C  4B F6 57 D1 */	bl __dt__IUIWindow
+/* 801BCB8C 0018614C  4B F6 57 D1 */	bl __dt__9IUIWindowFv
 /* 801BCB90 00186150  2C 1F 00 00 */	cmpwi r31, 0
 /* 801BCB94 00186154  40 81 00 0C */	ble .L_801BCBA0
 /* 801BCB98 00186158  7F C3 F3 78 */	mr r3, r30
@@ -103,7 +103,7 @@
 /* 801BCBAC 0018616C  7C 08 03 A6 */	mtlr r0
 /* 801BCBB0 00186170  38 21 00 10 */	addi r1, r1, 0x10
 /* 801BCBB4 00186174  4E 80 00 20 */	blr 
-.endfn __dt__CMenuKizunaTalk
+.endfn __dt__15CMenuKizunaTalkFv
 
 .fn func_801BCBB8, global
 /* 801BCBB8 00186178  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -141,13 +141,13 @@
 /* 801BCC28 001861E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801BCC2C 001861EC  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801BCC30 001861F0  7C 7E 1B 78 */	mr r30, r3
-/* 801BCC34 001861F4  48 28 BE 11 */	bl func_80448A44
+/* 801BCC34 001861F4  48 28 BE 11 */	bl func_80448A44__Fv
 /* 801BCC38 001861F8  38 60 00 02 */	li r3, 2
 /* 801BCC3C 001861FC  4B E7 DE 51 */	bl func_8003AA8C
 /* 801BCC40 00186200  38 7E 00 88 */	addi r3, r30, 0x88
-/* 801BCC44 00186204  4B F7 C4 9D */	bl func_801390E0
+/* 801BCC44 00186204  4B F7 C4 9D */	bl func_801390E0__FPP17UnkClass_80451720
 /* 801BCC48 00186208  38 7E 00 8C */	addi r3, r30, 0x8c
-/* 801BCC4C 0018620C  4B F7 C4 95 */	bl func_801390E0
+/* 801BCC4C 0018620C  4B F7 C4 95 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 801BCC50 00186210  2C 1E 00 00 */	cmpwi r30, 0
 /* 801BCC54 00186214  7F C4 F3 78 */	mr r4, r30
 /* 801BCC58 00186218  41 82 00 08 */	beq .L_801BCC60
@@ -169,7 +169,7 @@
 /* 801BCC90 00186250  90 1E 00 54 */	stw r0, 0x54(r30)
 .L_801BCC94:
 /* 801BCC94 00186254  80 7E 00 90 */	lwz r3, 0x90(r30)
-/* 801BCC98 00186258  4B F7 C4 8D */	bl func_80139124
+/* 801BCC98 00186258  4B F7 C4 8D */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 801BCC9C 0018625C  3B E0 00 00 */	li r31, 0
 /* 801BCCA0 00186260  93 FE 00 90 */	stw r31, 0x90(r30)
 /* 801BCCA4 00186264  38 7E 00 C0 */	addi r3, r30, 0xc0
@@ -181,7 +181,7 @@
 /* 801BCCBC 0018627C  4E 80 04 21 */	bctrl 
 /* 801BCCC0 00186280  93 ED AB 94 */	stw r31, lbl_80666D14@sda21(r13)
 /* 801BCCC4 00186284  38 7E 00 78 */	addi r3, r30, 0x78
-/* 801BCCC8 00186288  48 2A 2A B1 */	bl func_8045F778
+/* 801BCCC8 00186288  48 2A 2A B1 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 801BCCCC 0018628C  93 ED AB 90 */	stw r31, lbl_80666D10@sda21(r13)
 /* 801BCCD0 00186290  BB C1 00 08 */	lmw r30, 8(r1)
 /* 801BCCD4 00186294  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -300,7 +300,7 @@
 /* 801BCE58 00186418  38 81 00 08 */	addi r4, r1, 8
 /* 801BCE5C 0018641C  38 A0 00 00 */	li r5, 0
 /* 801BCE60 00186420  38 C0 00 01 */	li r6, 1
-/* 801BCE64 00186424  4B F7 A1 D5 */	bl func_80137038
+/* 801BCE64 00186424  4B F7 A1 D5 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 801BCE68 00186428  48 00 00 34 */	b .L_801BCE9C
 .L_801BCE6C:
 /* 801BCE6C 0018642C  38 7F 00 C0 */	addi r3, r31, 0xc0
@@ -341,7 +341,7 @@
 /* 801BCEE4 001864A4  38 60 00 00 */	li r3, 0
 /* 801BCEE8 001864A8  48 00 00 3C */	b .L_801BCF24
 .L_801BCEEC:
-/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getHeapIndex
+/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getHeapIndex__Fv
 /* 801BCEF0 001864B0  7C 64 1B 78 */	mr r4, r3
 /* 801BCEF4 001864B4  38 60 00 FC */	li r3, 0xfc
 /* 801BCEF8 001864B8  48 27 7B 65 */	bl heap_malloc
@@ -400,7 +400,7 @@
 /* 801BCFA8 00186568  4B FA A4 85 */	bl func_8016742C
 /* 801BCFAC 0018656C  38 61 00 5C */	addi r3, r1, 0x5c
 /* 801BCFB0 00186570  38 80 FF FF */	li r4, -1
-/* 801BCFB4 00186574  48 06 E6 ED */	bl __dt__CSysWin
+/* 801BCFB4 00186574  48 06 E6 ED */	bl __dt__7CSysWinFv
 /* 801BCFB8 00186578  81 9E 00 C0 */	lwz r12, 0xc0(r30)
 /* 801BCFBC 0018657C  38 7E 00 C0 */	addi r3, r30, 0xc0
 /* 801BCFC0 00186580  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -420,7 +420,7 @@
 /* 801BCFF0 001865B0  38 C0 00 00 */	li r6, 0
 /* 801BCFF4 001865B4  38 84 00 17 */	addi r4, r4, 0x17
 /* 801BCFF8 001865B8  38 E0 00 00 */	li r7, 0
-/* 801BCFFC 001865BC  48 29 17 99 */	bl CDeviceFile_openFile1
+/* 801BCFFC 001865BC  48 29 17 99 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 801BD000 001865C0  90 7E 00 88 */	stw r3, 0x88(r30)
 /* 801BD004 001865C4  48 00 00 9C */	b .L_801BD0A0
 .L_801BD008:
@@ -432,7 +432,7 @@
 /* 801BD01C 001865DC  4B FA A4 11 */	bl func_8016742C
 /* 801BD020 001865E0  38 61 00 20 */	addi r3, r1, 0x20
 /* 801BD024 001865E4  38 80 FF FF */	li r4, -1
-/* 801BD028 001865E8  48 06 E6 79 */	bl __dt__CSysWin
+/* 801BD028 001865E8  48 06 E6 79 */	bl __dt__7CSysWinFv
 /* 801BD02C 001865EC  81 9E 00 C0 */	lwz r12, 0xc0(r30)
 /* 801BD030 001865F0  38 7E 00 C0 */	addi r3, r30, 0xc0
 /* 801BD034 001865F4  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -456,7 +456,7 @@
 /* 801BD07C 0018663C  98 1E 00 BC */	stb r0, 0xbc(r30)
 /* 801BD080 00186640  88 01 00 1D */	lbz r0, 0x1d(r1)
 /* 801BD084 00186644  98 1E 00 BD */	stb r0, 0xbd(r30)
-/* 801BD088 00186648  48 01 59 B1 */	bl __dt__CCur18
+/* 801BD088 00186648  48 01 59 B1 */	bl __dt__6CCur18Fv
 /* 801BD08C 0018664C  81 9E 00 A8 */	lwz r12, 0xa8(r30)
 /* 801BD090 00186650  38 7E 00 A8 */	addi r3, r30, 0xa8
 /* 801BD094 00186654  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1001,17 +1001,17 @@
 /* 801BD814 00186DD4  38 DA 00 67 */	addi r6, r26, 0x67
 /* 801BD818 00186DD8  38 A0 20 00 */	li r5, 0x2000
 /* 801BD81C 00186DDC  38 E0 00 00 */	li r7, 0
-/* 801BD820 00186DE0  48 2A 1E 61 */	bl func_8045F680
+/* 801BD820 00186DE0  48 2A 1E 61 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 801BD824 00186DE4  38 61 00 08 */	addi r3, r1, 8
 /* 801BD828 00186DE8  38 9F 00 78 */	addi r4, r31, 0x78
-/* 801BD82C 00186DEC  48 2A 20 2D */	bl __ct__Class_8045F858
+/* 801BD82C 00186DEC  48 2A 20 2D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 801BD830 00186DF0  80 9F 00 88 */	lwz r4, 0x88(r31)
 /* 801BD834 00186DF4  38 00 00 00 */	li r0, 0
 /* 801BD838 00186DF8  38 60 00 00 */	li r3, 0
 /* 801BD83C 00186DFC  83 64 00 04 */	lwz r27, 4(r4)
 /* 801BD840 00186E00  90 04 00 04 */	stw r0, 4(r4)
-/* 801BD844 00186E04  48 27 72 09 */	bl func_80434A4C
-/* 801BD848 00186E08  48 2A 19 6D */	bl CLibLayout_getArcResourceAccessorInstance
+/* 801BD844 00186E04  48 27 72 09 */	bl MemManager_80434A4C__FUc
+/* 801BD848 00186E08  48 2A 19 6D */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 801BD84C 00186E0C  90 7F 00 90 */	stw r3, 0x90(r31)
 /* 801BD850 00186E10  7F 64 DB 78 */	mr r4, r27
 /* 801BD854 00186E14  38 BA 00 77 */	addi r5, r26, 0x77
@@ -1019,7 +1019,7 @@
 /* 801BD85C 00186E1C  80 9F 00 90 */	lwz r4, 0x90(r31)
 /* 801BD860 00186E20  38 7F 00 54 */	addi r3, r31, 0x54
 /* 801BD864 00186E24  38 BA 00 7B */	addi r5, r26, 0x7b
-/* 801BD868 00186E28  4B F7 96 1D */	bl func_80136E84
+/* 801BD868 00186E28  4B F7 96 1D */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801BD86C 00186E2C  80 7F 00 54 */	lwz r3, 0x54(r31)
 /* 801BD870 00186E30  38 9F 00 94 */	addi r4, r31, 0x94
 /* 801BD874 00186E34  80 BF 00 90 */	lwz r5, 0x90(r31)
@@ -1331,10 +1331,10 @@
 /* 801BDD00 001872C0  38 00 00 00 */	li r0, 0
 /* 801BDD04 001872C4  90 1F 00 88 */	stw r0, 0x88(r31)
 /* 801BDD08 001872C8  38 7F 00 78 */	addi r3, r31, 0x78
-/* 801BDD0C 001872CC  48 2A 1B 05 */	bl func_8045F810
+/* 801BDD0C 001872CC  48 2A 1B 05 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 801BDD10 001872D0  38 61 00 08 */	addi r3, r1, 8
 /* 801BDD14 001872D4  38 80 FF FF */	li r4, -1
-/* 801BDD18 001872D8  48 2A 1B B1 */	bl __dt__Class_8045F858
+/* 801BDD18 001872D8  48 2A 1B B1 */	bl __dt__14Class_8045F858Fv
 /* 801BDD1C 001872DC  38 60 00 01 */	li r3, 1
 /* 801BDD20 001872E0  48 00 00 4C */	b .L_801BDD6C
 .L_801BDD24:
@@ -1373,7 +1373,7 @@
 
 .fn func_801BDD8C, global
 /* 801BDD8C 0018734C  38 63 FF 94 */	addi r3, r3, -108
-/* 801BDD90 00187350  4B FF ED B0 */	b __dt__CMenuKizunaTalk
+/* 801BDD90 00187350  4B FF ED B0 */	b __dt__15CMenuKizunaTalkFv
 .endfn func_801BDD8C
 
 .fn func_801BDD94, global
@@ -1383,7 +1383,7 @@
 
 .fn func_801BDD9C, global
 /* 801BDD9C 0018735C  38 63 FF 90 */	addi r3, r3, -112
-/* 801BDDA0 00187360  4B FF ED A0 */	b __dt__CMenuKizunaTalk
+/* 801BDDA0 00187360  4B FF ED A0 */	b __dt__15CMenuKizunaTalkFv
 .endfn func_801BDD9C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1441,47 +1441,47 @@
 .obj __vt__15CMenuKizunaTalk, global
 	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0
-	.4byte __dt__CMenuKizunaTalk
-	.4byte CChildListNode_Reset
+	.4byte __dt__15CMenuKizunaTalkFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_801BCBB8
 	.4byte func_801BCC20
 	.4byte func_801BCCE4
-	.4byte func_80124584
-	.4byte CProcess_func_80043F20
+	.4byte "func_80124584__18CTTask<9IUIWindow>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0xFFFFFF94
 	.4byte func_801BDD8C
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CMenuKizunaTalk_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0xFFFFFF90
 	.4byte func_801BDD9C
@@ -1564,19 +1564,19 @@
 	.4byte 0x00000000
 	.4byte 0x0780001B
 	.4byte 0x000000A8
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001B
 	.4byte 0x00000078
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__IUIWindow
+	.4byte __dt__9IUIWindowFv
 .endobj "@etb_800100D8"
 
 .obj "@etb_80010134", local
@@ -1591,28 +1591,28 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000C0
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x8780001E
 	.4byte 0x000000A8
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x000000A8
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80010134"
 
 .obj "@etb_800101B4", local
@@ -1692,7 +1692,7 @@
 	.4byte 0x01320010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8001021C"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -1708,7 +1708,7 @@
 
 .obj "@eti_8002ACC8", local
 .hidden "@eti_8002ACC8"
-	.4byte __dt__CMenuKizunaTalk
+	.4byte __dt__15CMenuKizunaTalkFv
 	.4byte 0x00000078
 	.4byte "@etb_80010134"
 .endobj "@eti_8002ACC8"

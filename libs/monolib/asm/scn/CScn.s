@@ -82,7 +82,7 @@
 /* 80495D5C 0045F31C  4E 80 00 20 */	blr 
 .endfn __ct__CScn
 
-.fn __dt__CTTask_CScn, global
+.fn "__dt__13CTTask<4CScn>Fv", global
 /* 80495D60 0045F320  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80495D64 0045F324  7C 08 02 A6 */	mflr r0
 /* 80495D68 0045F328  2C 03 00 00 */	cmpwi r3, 0
@@ -93,7 +93,7 @@
 /* 80495D7C 0045F33C  7C 7E 1B 78 */	mr r30, r3
 /* 80495D80 0045F340  41 82 00 1C */	beq .L_80495D9C
 /* 80495D84 0045F344  38 80 00 00 */	li r4, 0
-/* 80495D88 0045F348  4B FA ED B1 */	bl __dt__CProcess
+/* 80495D88 0045F348  4B FA ED B1 */	bl __dt__8CProcessFv
 /* 80495D8C 0045F34C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80495D90 0045F350  40 81 00 0C */	ble .L_80495D9C
 /* 80495D94 0045F354  7F C3 F3 78 */	mr r3, r30
@@ -106,9 +106,9 @@
 /* 80495DAC 0045F36C  7C 08 03 A6 */	mtlr r0
 /* 80495DB0 0045F370  38 21 00 10 */	addi r1, r1, 0x10
 /* 80495DB4 0045F374  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_CScn
+.endfn "__dt__13CTTask<4CScn>Fv"
 
-.fn __dt__CScn, global
+.fn __dt__4CScnFv, global
 /* 80495DB8 0045F378  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80495DBC 0045F37C  7C 08 02 A6 */	mflr r0
 /* 80495DC0 0045F380  2C 03 00 00 */	cmpwi r3, 0
@@ -141,7 +141,7 @@
 /* 80495E24 0045F3E4  41 82 00 10 */	beq .L_80495E34
 /* 80495E28 0045F3E8  7F C3 F3 78 */	mr r3, r30
 /* 80495E2C 0045F3EC  38 80 00 00 */	li r4, 0
-/* 80495E30 0045F3F0  4B FA ED 09 */	bl __dt__CProcess
+/* 80495E30 0045F3F0  4B FA ED 09 */	bl __dt__8CProcessFv
 .L_80495E34:
 /* 80495E34 0045F3F4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80495E38 0045F3F8  40 81 00 0C */	ble .L_80495E44
@@ -155,7 +155,7 @@
 /* 80495E54 0045F414  7C 08 03 A6 */	mtlr r0
 /* 80495E58 0045F418  38 21 00 10 */	addi r1, r1, 0x10
 /* 80495E5C 0045F41C  4E 80 00 20 */	blr 
-.endfn __dt__CScn
+.endfn __dt__4CScnFv
 
 .fn func_80495E60, global
 /* 80495E60 0045F420  2C 03 00 00 */	cmpwi r3, 0
@@ -607,11 +607,11 @@
 /* 804963A4 0045F964  7F 43 D3 78 */	mr r3, r26
 /* 804963A8 0045F968  7F 84 E3 78 */	mr r4, r28
 /* 804963AC 0045F96C  7F 66 DB 78 */	mr r6, r27
-/* 804963B0 0045F970  4B FF 9D 0D */	bl __ct__CScnTexWorkMan
+/* 804963B0 0045F970  4B FF 9D 0D */	bl __ct__14CScnTexWorkManFv
 /* 804963B4 0045F974  7C 7A 1B 78 */	mr r26, r3
 .L_804963B8:
 /* 804963B8 0045F978  93 5C 00 6C */	stw r26, 0x6c(r28)
-/* 804963BC 0045F97C  4B FA 11 F9 */	bl getHeapIndex
+/* 804963BC 0045F97C  4B FA 11 F9 */	bl getHeapIndex__Fv
 /* 804963C0 0045F980  7C 64 1B 78 */	mr r4, r3
 /* 804963C4 0045F984  38 60 00 10 */	li r3, 0x10
 /* 804963C8 0045F988  4B F9 E6 95 */	bl heap_malloc
@@ -1094,7 +1094,7 @@
 /* 80496A08 0045FFC8  4B F9 D9 91 */	bl Heap_getRegionIndex1
 /* 80496A0C 0045FFCC  7C 7D 1B 78 */	mr r29, r3
 .L_80496A10:
-/* 80496A10 0045FFD0  4B FA 0B A5 */	bl getHeapIndex
+/* 80496A10 0045FFD0  4B FA 0B A5 */	bl getHeapIndex__Fv
 /* 80496A14 0045FFD4  7C 64 1B 78 */	mr r4, r3
 /* 80496A18 0045FFD8  38 60 03 EC */	li r3, 0x3ec
 /* 80496A1C 0045FFDC  4B F9 E0 41 */	bl heap_malloc
@@ -1122,7 +1122,7 @@
 /* 80496A70 00460030  4E 80 00 20 */	blr 
 .endfn func_804969B0
 
-.fn func_80496A74, global
+.fn "func_80496A74__13CTTask<4CScn>Fv", global
 /* 80496A74 00460034  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80496A78 00460038  7C 08 02 A6 */	mflr r0
 /* 80496A7C 0046003C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1142,9 +1142,9 @@
 /* 80496AB0 00460070  7C 08 03 A6 */	mtlr r0
 /* 80496AB4 00460074  38 21 00 10 */	addi r1, r1, 0x10
 /* 80496AB8 00460078  4E 80 00 20 */	blr 
-.endfn func_80496A74
+.endfn "func_80496A74__13CTTask<4CScn>Fv"
 
-.fn func_80496ABC, global
+.fn "func_80496ABC__13CTTask<4CScn>Fv", global
 /* 80496ABC 0046007C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80496AC0 00460080  7C 08 02 A6 */	mflr r0
 /* 80496AC4 00460084  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1164,11 +1164,11 @@
 /* 80496AF8 004600B8  7C 08 03 A6 */	mtlr r0
 /* 80496AFC 004600BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80496B00 004600C0  4E 80 00 20 */	blr 
-.endfn func_80496ABC
+.endfn "func_80496ABC__13CTTask<4CScn>Fv"
 
 .fn func_80496B04, global
 /* 80496B04 004600C4  38 63 FF AC */	addi r3, r3, -84
-/* 80496B08 004600C8  4B FF F2 B0 */	b __dt__CScn
+/* 80496B08 004600C8  4B FF F2 B0 */	b __dt__4CScnFv
 .endfn func_80496B04
 
 
@@ -1189,47 +1189,47 @@
 .obj __vt__4CScn, global
 	.4byte __RTTI__4CScn
 	.4byte 0
-	.4byte __dt__CScn
-	.4byte CChildListNode_Reset
+	.4byte __dt__4CScnFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80496580
 	.4byte func_80496584
 	.4byte func_804967B0
 	.4byte func_8049683C
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__4CScn
 	.4byte 0xFFFFFFAC
 	.4byte func_80496B04
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
 	.4byte CScn_WorkEvent3
 	.4byte CScn_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte func_80496970
 	.4byte func_8049695C
 .endobj __vt__4CScn
@@ -1238,13 +1238,13 @@
 .obj "__vt__13CTTask<4CScn>", global
 	.4byte "__RTTI__13CTTask<4CScn>"
 	.4byte 0
-	.4byte __dt__CTTask_CScn
-	.4byte CChildListNode_Reset
+	.4byte "__dt__13CTTask<4CScn>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80496A74
-	.4byte func_80496ABC
-	.4byte CProcess_func_80043F20
+	.4byte "func_80496A74__13CTTask<4CScn>Fv"
+	.4byte "func_80496ABC__13CTTask<4CScn>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__13CTTask<4CScn>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1300,13 +1300,13 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CTTask_CScn
+	.4byte "__dt__13CTTask<4CScn>Fv"
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001F178"
 
 .obj "@etb_8001F1B4", local
@@ -1395,14 +1395,14 @@
 
 .obj "@eti_80036BC0", local
 .hidden "@eti_80036BC0"
-	.4byte __dt__CTTask_CScn
+	.4byte "__dt__13CTTask<4CScn>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001F170"
 .endobj "@eti_80036BC0"
 
 .obj "@eti_80036BCC", local
 .hidden "@eti_80036BCC"
-	.4byte __dt__CScn
+	.4byte __dt__4CScnFv
 	.4byte 0x000000A8
 	.4byte "@etb_8001F178"
 .endobj "@eti_80036BCC"
@@ -1479,14 +1479,14 @@
 
 .obj "@eti_80036C50", local
 .hidden "@eti_80036C50"
-	.4byte func_80496A74
+	.4byte "func_80496A74__13CTTask<4CScn>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001F204"
 .endobj "@eti_80036C50"
 
 .obj "@eti_80036C5C", local
 .hidden "@eti_80036C5C"
-	.4byte func_80496ABC
+	.4byte "func_80496ABC__13CTTask<4CScn>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001F20C"
 .endobj "@eti_80036C5C"

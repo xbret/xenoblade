@@ -42,7 +42,7 @@
 /* 80455174 0041E734  7C 64 1B 78 */	mr r4, r3
 /* 80455178 0041E738  80 6D 9E F8 */	lwz r3, lbl_80666078@sda21(r13)
 /* 8045517C 0041E73C  38 A0 00 20 */	li r5, 0x20
-/* 80455180 0041E740  4B FD F9 E5 */	bl func_80434B64
+/* 80455180 0041E740  4B FD F9 E5 */	bl MemManager_80434B64
 /* 80455184 0041E744  90 7E 02 50 */	stw r3, 0x250(r30)
 /* 80455188 0041E748  80 0D 9E F8 */	lwz r0, lbl_80666078@sda21(r13)
 /* 8045518C 0041E74C  7C 03 02 14 */	add r0, r3, r0
@@ -76,7 +76,7 @@
 /* 804551F4 0041E7B4  4E 80 00 20 */	blr
 .endfn __ct__CDeviceGX
 
-.fn __dt__CDeviceGX, global
+.fn __dt__9CDeviceGXFv, global
 /* 804551F8 0041E7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804551FC 0041E7BC  7C 08 02 A6 */	mflr r0
 /* 80455200 0041E7C0  2C 03 00 00 */	cmpwi r3, 0
@@ -103,15 +103,15 @@
 /* 80455250 0041E810  90 0D BD F8 */	stw r0, lbl_80667F78@sda21(r13)
 /* 80455254 0041E814  38 7E 02 7C */	addi r3, r30, 0x27c
 /* 80455258 0041E818  38 80 FF FF */	li r4, -1
-/* 8045525C 0041E81C  4B FF 4A A9 */	bl __dt__CGXCache
+/* 8045525C 0041E81C  4B FF 4A A9 */	bl __dt__8CGXCacheFv
 /* 80455260 0041E820  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 80455264 0041E824  38 80 00 00 */	li r4, 0
-/* 80455268 0041E828  4B FF 3D 15 */	bl __dt__CDeviceVICb
+/* 80455268 0041E828  4B FF 3D 15 */	bl __dt__11CDeviceVICbFv
 /* 8045526C 0041E82C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80455270 0041E830  41 82 00 10 */	beq .L_80455280
 /* 80455274 0041E834  7F C3 F3 78 */	mr r3, r30
 /* 80455278 0041E838  38 80 00 00 */	li r4, 0
-/* 8045527C 0041E83C  4B FE 28 4D */	bl __dt__CWorkThread
+/* 8045527C 0041E83C  4B FE 28 4D */	bl __dt__11CWorkThreadFv
 .L_80455280:
 /* 80455280 0041E840  2C 1F 00 00 */	cmpwi r31, 0
 /* 80455284 0041E844  40 81 00 0C */	ble .L_80455290
@@ -125,7 +125,7 @@
 /* 804552A0 0041E860  7C 08 03 A6 */	mtlr r0
 /* 804552A4 0041E864  38 21 00 10 */	addi r1, r1, 0x10
 /* 804552A8 0041E868  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceGX
+.endfn __dt__9CDeviceGXFv
 
 .fn func_804552AC, global
 /* 804552AC 0041E86C  80 6D BD F8 */	lwz r3, lbl_80667F78@sda21(r13)
@@ -556,7 +556,7 @@
 /* 80455880 0041EE40  4B EC 4C C1 */	bl GXSetDrawSyncCallback
 .L_80455884:
 /* 80455884 0041EE44  7F E3 FB 78 */	mr r3, r31
-/* 80455888 0041EE48  4B FE 31 71 */	bl CWorkThread_WorkThreadEvent4
+/* 80455888 0041EE48  4B FE 31 71 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8045588C 0041EE4C  48 00 00 08 */	b .L_80455894
 .L_80455890:
 /* 80455890 0041EE50  38 60 00 00 */	li r3, 0
@@ -595,7 +595,7 @@
 /* 80455900 0041EEC0  2C 03 00 00 */	cmpwi r3, 0
 /* 80455904 0041EEC4  40 82 00 10 */	bne .L_80455914
 /* 80455908 0041EEC8  7F E3 FB 78 */	mr r3, r31
-/* 8045590C 0041EECC  4B FE 31 19 */	bl CWorkThread_WorkThreadEvent5
+/* 8045590C 0041EECC  4B FE 31 19 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 80455910 0041EED0  48 00 00 08 */	b .L_80455918
 .L_80455914:
 /* 80455914 0041EED4  38 60 00 00 */	li r3, 0
@@ -661,7 +661,7 @@
 
 .fn func_804559C4, global
 /* 804559C4 0041EF84  38 63 FE 38 */	addi r3, r3, -456
-/* 804559C8 0041EF88  4B FF F8 30 */	b __dt__CDeviceGX
+/* 804559C8 0041EF88  4B FF F8 30 */	b __dt__9CDeviceGXFv
 .endfn func_804559C4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -682,48 +682,48 @@
 .obj __vt__9CDeviceGX, global
 	.4byte __RTTI__9CDeviceGX
 	.4byte 0
-	.4byte __dt__CDeviceGX
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__9CDeviceGXFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceGX_WorkThreadEvent4
 	.4byte CDeviceGX_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__9CDeviceGX
 	.4byte 0xFFFFFE38
 	.4byte func_804559C4
-	.4byte func_80166630
+	.4byte func_80166630__11CDeviceVICbFv
 	.4byte func_804559BC
 	.4byte func_804559B4
 	.4byte func_80455498
@@ -833,13 +833,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000027C
-	.4byte __dt__CGXCache
+	.4byte __dt__8CGXCacheFv
 	.4byte 0x0680001E
 	.4byte 0x000001C8
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001D224"
 
 .obj "@etb_8001D268", local
@@ -852,13 +852,13 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000027C
-	.4byte __dt__CGXCache
+	.4byte __dt__8CGXCacheFv
 	.4byte 0x0780001E
 	.4byte 0x0000027C
-	.4byte __dt__CGXCache
+	.4byte __dt__8CGXCacheFv
 	.4byte 0x8680001E
 	.4byte 0x000001C8
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 .endobj "@etb_8001D268"
 
 .obj "@etb_8001D2A4", local
@@ -914,7 +914,7 @@
 
 .obj "@eti_80034EC8", local
 .hidden "@eti_80034EC8"
-	.4byte __dt__CDeviceGX
+	.4byte __dt__9CDeviceGXFv
 	.4byte 0x000000B4
 	.4byte "@etb_8001D268"
 .endobj "@eti_80034EC8"

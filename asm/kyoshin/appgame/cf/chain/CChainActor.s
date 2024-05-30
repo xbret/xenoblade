@@ -4570,7 +4570,7 @@
 /* 8027AA0C 00243FCC  4E 80 00 20 */	blr 
 .endfn func_8027AA0C
 
-.fn __dt__cf_CChainActor, global
+.fn __dt__Q22cf11CChainActorFv, global
 /* 8027AA10 00243FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AA14 00243FD4  7C 08 02 A6 */	mflr r0
 /* 8027AA18 00243FD8  2C 03 00 00 */	cmpwi r3, 0
@@ -4588,7 +4588,7 @@
 /* 8027AA44 00244004  7C 08 03 A6 */	mtlr r0
 /* 8027AA48 00244008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AA4C 0024400C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CChainActor
+.endfn __dt__Q22cf11CChainActorFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -4674,28 +4674,28 @@
 .obj __vt__Q22cf12CChainChance, global
 	.4byte __RTTI__Q22cf12CChainChance
 	.4byte 0
-	.4byte __dt__cf_CChainChance
+	.4byte __dt__Q22cf12CChainChanceFv
 .endobj __vt__Q22cf12CChainChance
 
 
 .obj __vt__Q22cf11CChainTimer, global
 	.4byte __RTTI__Q22cf11CChainTimer
 	.4byte 0
-	.4byte __dt__cf_CChainTimer
+	.4byte __dt__Q22cf11CChainTimerFv
 .endobj __vt__Q22cf11CChainTimer
 
 
 .obj __vt__Q22cf12CChainMember, global
 	.4byte __RTTI__Q22cf12CChainMember
 	.4byte 0
-	.4byte __dt__cf_CChainMember
+	.4byte __dt__Q22cf12CChainMemberFv
 .endobj __vt__Q22cf12CChainMember
 
 
 .obj __vt__Q22cf11CChainActor, global
 	.4byte __RTTI__Q22cf11CChainActor
 	.4byte 0
-	.4byte __dt__cf_CChainActor
+	.4byte __dt__Q22cf11CChainActorFv
 	.4byte func_80279B24
 	.4byte func_80279B34
 	.4byte func_80279DC0
@@ -4903,22 +4903,22 @@
 	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x0780001D
 	.4byte 0x00001EDC
-	.4byte __dt__cf_CChainChance
+	.4byte __dt__Q22cf12CChainChanceFv
 	.4byte 0x0780001D
 	.4byte 0x00001EC4
-	.4byte __dt__cf_CChainTime
+	.4byte __dt__Q22cf10CChainTimeFv
 	.4byte 0x0780001D
 	.4byte 0x00001EBC
-	.4byte __dt__cf_CChainTimer
+	.4byte __dt__Q22cf11CChainTimerFv
 	.4byte 0x0780001D
 	.4byte 0x00001EB4
-	.4byte __dt__cf_CChainTimer
+	.4byte __dt__Q22cf11CChainTimerFv
 	.4byte 0x0780001D
 	.4byte 0x00001DC8
-	.4byte __dt__cf_CChainMember
+	.4byte __dt__Q22cf12CChainMemberFv
 	.4byte 0x8780001D
 	.4byte 0x00000018
-	.4byte __dt__cf_CChainActorList
+	.4byte __dt__Q22cf15CChainActorListFv
 .endobj "@etb_800186D8"
 
 .obj "@etb_80018754", local
@@ -5287,7 +5287,7 @@
 
 .obj "@eti_80030E78", local
 .hidden "@eti_80030E78"
-	.4byte __dt__cf_CChainActor
+	.4byte __dt__Q22cf11CChainActorFv
 	.4byte 0x00000040
 	.4byte "@etb_80018814"
 .endobj "@eti_80030E78"

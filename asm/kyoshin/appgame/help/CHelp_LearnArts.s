@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B8398, global
+.fn func_802B8398__Q22cf15CHelp_LearnArtsFv, global
 /* 802B8398 00281958  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B839C 0028195C  7C 08 02 A6 */	mflr r0
 /* 802B83A0 00281960  90 01 00 34 */	stw r0, 0x34(r1)
@@ -97,13 +97,13 @@
 /* 802B84D4 00281A94  7C 08 03 A6 */	mtlr r0
 /* 802B84D8 00281A98  38 21 00 30 */	addi r1, r1, 0x30
 /* 802B84DC 00281A9C  4E 80 00 20 */	blr 
-.endfn func_802B8398
+.endfn func_802B8398__Q22cf15CHelp_LearnArtsFv
 
-.fn func_802B84E0, global
+.fn func_802B84E0__Q22cf15CHelp_LearnArtsFv, global
 /* 802B84E0 00281AA0  38 00 00 00 */	li r0, 0
 /* 802B84E4 00281AA4  98 03 00 0E */	stb r0, 0xe(r3)
 /* 802B84E8 00281AA8  4E 80 00 20 */	blr 
-.endfn func_802B84E0
+.endfn func_802B84E0__Q22cf15CHelp_LearnArtsFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -121,7 +121,7 @@
 
 .obj "@eti_80033974", local
 .hidden "@eti_80033974"
-	.4byte func_802B8398
+	.4byte func_802B8398__Q22cf15CHelp_LearnArtsFv
 	.4byte 0x00000148
 	.4byte "@etb_8001BDF0"
 .endobj "@eti_80033974"

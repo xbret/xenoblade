@@ -875,7 +875,7 @@
 .obj __vt__Q22cf10CfCamEvent, global
 	.4byte __RTTI__Q22cf10CfCamEvent
 	.4byte 0
-	.4byte __dt__cf_CfCamEvent
+	.4byte __dt__Q22cf10CfCamEventFv
 	.4byte func_8006A8C4
 	.4byte func_8006B6B8
 	.4byte func_8006AA34
@@ -1161,7 +1161,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__cf_CfCamFollow
+	.4byte __dt__Q22cf11CfCamFollowFv
 .endobj "@etb_8000806C"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

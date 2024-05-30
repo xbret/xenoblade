@@ -57,7 +57,7 @@
 /* 8025270C 0021BCCC  4E 80 00 20 */	blr
 .endfn __ct__CMenuCollepedia
 
-.fn __dt__CMenuCollepedia, global
+.fn __dt__15CMenuCollepediaFv, global
 /* 80252710 0021BCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80252714 0021BCD4  7C 08 02 A6 */	mflr r0
 /* 80252718 0021BCD8  2C 03 00 00 */	cmpwi r3, 0
@@ -68,13 +68,13 @@
 /* 8025272C 0021BCEC  41 82 00 44 */	beq .L_80252770
 /* 80252730 0021BCF0  38 80 FF FF */	li r4, -1
 /* 80252734 0021BCF4  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80252738 0021BCF8  48 00 21 71 */	bl __dt__CCollepedia
+/* 80252738 0021BCF8  48 00 21 71 */	bl __dt__11CCollepediaFv
 /* 8025273C 0021BCFC  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80252740 0021BD00  38 80 FF FF */	li r4, -1
-/* 80252744 0021BD04  4B F7 18 0D */	bl __dt__CTitleAHelp
+/* 80252744 0021BD04  4B F7 18 0D */	bl __dt__11CTitleAHelpFv
 /* 80252748 0021BD08  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8025274C 0021BD0C  38 80 FF FF */	li r4, -1
-/* 80252750 0021BD10  4B F7 12 81 */	bl __dt__CBgTex
+/* 80252750 0021BD10  4B F7 12 81 */	bl __dt__6CBgTexFv
 /* 80252754 0021BD14  7F C3 F3 78 */	mr r3, r30
 /* 80252758 0021BD18  38 80 00 00 */	li r4, 0
 /* 8025275C 0021BD1C  4B EA C5 B1 */	bl __dt__800FED0C
@@ -89,7 +89,7 @@
 /* 8025277C 0021BD3C  7C 08 03 A6 */	mtlr r0
 /* 80252780 0021BD40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80252784 0021BD44  4E 80 00 20 */	blr 
-.endfn __dt__CMenuCollepedia
+.endfn __dt__15CMenuCollepediaFv
 
 .fn func_80252788, global
 /* 80252788 0021BD48  94 21 D6 90 */	stwu r1, -0x2970(r1)
@@ -117,7 +117,7 @@
 /* 802527E0 0021BDA0  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 802527E4 0021BDA4  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 802527E8 0021BDA8  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 802527EC 0021BDAC  4B F7 11 E5 */	bl __dt__CBgTex
+/* 802527EC 0021BDAC  4B F7 11 E5 */	bl __dt__6CBgTexFv
 /* 802527F0 0021BDB0  38 7F 00 60 */	addi r3, r31, 0x60
 /* 802527F4 0021BDB4  4B F7 14 21 */	bl func_801C3C14
 /* 802527F8 0021BDB8  3C 60 80 50 */	lis r3, lbl_80507D18@ha
@@ -158,7 +158,7 @@
 /* 80252884 0021BE44  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 80252888 0021BE48  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8025288C 0021BE4C  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 80252890 0021BE50  4B F7 16 C1 */	bl __dt__CTitleAHelp
+/* 80252890 0021BE50  4B F7 16 C1 */	bl __dt__11CTitleAHelpFv
 /* 80252894 0021BE54  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80252898 0021BE58  4B F7 17 0D */	bl CTitleAHelp_load
 /* 8025289C 0021BE5C  38 61 00 60 */	addi r3, r1, 0x60
@@ -286,7 +286,7 @@
 /* 80252A80 0021C040  98 1F 29 B1 */	stb r0, 0x29b1(r31)
 /* 80252A84 0021C044  88 01 29 5A */	lbz r0, 0x295a(r1)
 /* 80252A88 0021C048  98 1F 29 B2 */	stb r0, 0x29b2(r31)
-/* 80252A8C 0021C04C  48 00 1E 1D */	bl __dt__CCollepedia
+/* 80252A8C 0021C04C  48 00 1E 1D */	bl __dt__11CCollepediaFv
 /* 80252A90 0021C050  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 80252A94 0021C054  48 00 1E 99 */	bl func_8025492C
 /* 80252A98 0021C058  2C 1F 00 00 */	cmpwi r31, 0
@@ -311,7 +311,7 @@
 /* 80252AD4 0021C094  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80252AD8 0021C098  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80252ADC 0021C09C  7C 7F 1B 78 */	mr r31, r3
-/* 80252AE0 0021C0A0  48 1F 5F 65 */	bl func_80448A44
+/* 80252AE0 0021C0A0  48 1F 5F 65 */	bl func_80448A44__Fv
 /* 80252AE4 0021C0A4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80252AE8 0021C0A8  7F E4 FB 78 */	mr r4, r31
 /* 80252AEC 0021C0AC  41 82 00 08 */	beq .L_80252AF4
@@ -436,7 +436,7 @@
 /* 80252C84 0021C244  38 60 00 00 */	li r3, 0
 /* 80252C88 0021C248  48 00 00 38 */	b .L_80252CC0
 .L_80252C8C:
-/* 80252C8C 0021C24C  48 1E 49 29 */	bl getHeapIndex
+/* 80252C8C 0021C24C  48 1E 49 29 */	bl getHeapIndex__Fv
 /* 80252C90 0021C250  7C 64 1B 78 */	mr r4, r3
 /* 80252C94 0021C254  38 60 29 BC */	li r3, 0x29bc
 /* 80252C98 0021C258  48 1E 1D C5 */	bl heap_malloc
@@ -820,7 +820,7 @@
 
 .fn func_80253190, global
 /* 80253190 0021C750  38 63 FF A8 */	addi r3, r3, -88
-/* 80253194 0021C754  4B FF F5 7C */	b __dt__CMenuCollepedia
+/* 80253194 0021C754  4B FF F5 7C */	b __dt__15CMenuCollepediaFv
 .endfn func_80253190
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -846,13 +846,13 @@
 .obj __vt__15CMenuCollepedia, global
 	.4byte __RTTI__15CMenuCollepedia
 	.4byte 0
-	.4byte __dt__CMenuCollepedia
-	.4byte CChildListNode_Reset
+	.4byte __dt__15CMenuCollepediaFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80252788
 	.4byte func_80252ACC
 	.4byte func_80252B38
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__15CMenuCollepedia
 	.4byte 0xFFFFFFA8
 	.4byte func_80253190
@@ -939,13 +939,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -963,25 +963,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CCollepedia
+	.4byte __dt__11CCollepediaFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CCollepedia
+	.4byte __dt__11CCollepediaFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CCollepedia
+	.4byte __dt__11CCollepediaFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_80016C9C"
 
 .obj "@etb_80016D10", local
@@ -1067,7 +1067,7 @@
 
 .obj "@eti_8002F714", local
 .hidden "@eti_8002F714"
-	.4byte __dt__CMenuCollepedia
+	.4byte __dt__15CMenuCollepediaFv
 	.4byte 0x00000078
 	.4byte "@etb_80016C9C"
 .endobj "@eti_8002F714"

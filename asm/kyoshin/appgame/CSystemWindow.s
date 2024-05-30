@@ -82,7 +82,7 @@
 /* 8012470C 000EDCCC  4E 80 00 20 */	blr
 .endfn __ct__CSystemWindow
 
-.fn __dt__CSystemWindow, global
+.fn __dt__13CSystemWindowFv, global
 /* 80124710 000EDCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80124714 000EDCD4  7C 08 02 A6 */	mflr r0
 /* 80124718 000EDCD8  2C 03 00 00 */	cmpwi r3, 0
@@ -94,13 +94,13 @@
 /* 80124730 000EDCF0  41 82 00 38 */	beq .L_80124768
 /* 80124734 000EDCF4  38 80 FF FF */	li r4, -1
 /* 80124738 000EDCF8  38 63 00 78 */	addi r3, r3, 0x78
-/* 8012473C 000EDCFC  48 10 6F 65 */	bl __dt__CSysWin
+/* 8012473C 000EDCFC  48 10 6F 65 */	bl __dt__7CSysWinFv
 /* 80124740 000EDD00  2C 1E 00 00 */	cmpwi r30, 0
 /* 80124744 000EDD04  41 82 00 14 */	beq .L_80124758
 /* 80124748 000EDD08  41 82 00 10 */	beq .L_80124758
 /* 8012474C 000EDD0C  7F C3 F3 78 */	mr r3, r30
 /* 80124750 000EDD10  38 80 00 00 */	li r4, 0
-/* 80124754 000EDD14  48 32 03 E5 */	bl __dt__CProcess
+/* 80124754 000EDD14  48 32 03 E5 */	bl __dt__8CProcessFv
 .L_80124758:
 /* 80124758 000EDD18  2C 1F 00 00 */	cmpwi r31, 0
 /* 8012475C 000EDD1C  40 81 00 0C */	ble .L_80124768
@@ -114,7 +114,7 @@
 /* 80124778 000EDD38  7C 08 03 A6 */	mtlr r0
 /* 8012477C 000EDD3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80124780 000EDD40  4E 80 00 20 */	blr 
-.endfn __dt__CSystemWindow
+.endfn __dt__13CSystemWindowFv
 
 .fn func_80124784, global
 /* 80124784 000EDD44  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -179,7 +179,7 @@
 /* 80124868 000EDE28  98 1F 00 B0 */	stb r0, 0xb0(r31)
 /* 8012486C 000EDE2C  88 01 00 41 */	lbz r0, 0x41(r1)
 /* 80124870 000EDE30  98 1F 00 B1 */	stb r0, 0xb1(r31)
-/* 80124874 000EDE34  48 10 6E 2D */	bl __dt__CSysWin
+/* 80124874 000EDE34  48 10 6E 2D */	bl __dt__7CSysWinFv
 /* 80124878 000EDE38  81 9F 00 78 */	lwz r12, 0x78(r31)
 /* 8012487C 000EDE3C  38 7F 00 78 */	addi r3, r31, 0x78
 /* 80124880 000EDE40  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -198,7 +198,7 @@
 /* 801248A8 000EDE68  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801248AC 000EDE6C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801248B0 000EDE70  7C 7F 1B 78 */	mr r31, r3
-/* 801248B4 000EDE74  48 32 41 91 */	bl func_80448A44
+/* 801248B4 000EDE74  48 32 41 91 */	bl func_80448A44__Fv
 /* 801248B8 000EDE78  38 7F 00 78 */	addi r3, r31, 0x78
 /* 801248BC 000EDE7C  48 10 6F 39 */	bl func_8022B7F4
 /* 801248C0 000EDE80  2C 1F 00 00 */	cmpwi r31, 0
@@ -377,7 +377,7 @@
 /* 80124B1C 000EE0DC  38 60 00 00 */	li r3, 0
 /* 80124B20 000EE0E0  48 00 00 44 */	b .L_80124B64
 .L_80124B24:
-/* 80124B24 000EE0E4  48 31 2A 91 */	bl getHeapIndex
+/* 80124B24 000EE0E4  48 31 2A 91 */	bl getHeapIndex__Fv
 /* 80124B28 000EE0E8  7C 64 1B 78 */	mr r4, r3
 /* 80124B2C 000EE0EC  38 60 01 B8 */	li r3, 0x1b8
 /* 80124B30 000EE0F0  48 30 FF 2D */	bl heap_malloc
@@ -429,47 +429,47 @@
 .obj __vt__13CSysWinSelect, global
 	.4byte __RTTI__13CSysWinSelect
 	.4byte 0
-	.4byte __dt__CSysWinSelect
-	.4byte CChildListNode_Reset
+	.4byte __dt__13CSysWinSelectFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80124D50
 	.4byte func_80124E0C
 	.4byte func_80124E74
-	.4byte func_80124584
-	.4byte CProcess_func_80043F20
+	.4byte "func_80124584__18CTTask<9IUIWindow>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__13CSysWinSelect
 	.4byte 0xFFFFFF94
 	.4byte func_801252B8
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__13CSysWinSelect
 	.4byte 0xFFFFFF90
 	.4byte func_801252C8
@@ -500,47 +500,47 @@
 .obj __vt__13CSystemWindow, global
 	.4byte __RTTI__13CSystemWindow
 	.4byte 0
-	.4byte __dt__CSystemWindow
-	.4byte CChildListNode_Reset
+	.4byte __dt__13CSystemWindowFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80124784
 	.4byte func_801248A0
 	.4byte func_80124908
-	.4byte func_80124584
-	.4byte CProcess_func_80043F20
+	.4byte "func_80124584__18CTTask<9IUIWindow>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__13CSystemWindow
 	.4byte 0xFFFFFF94
 	.4byte func_801252A0
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__13CSystemWindow
 	.4byte 0xFFFFFF90
 	.4byte func_801252B0
@@ -605,13 +605,13 @@
 	.4byte 0x00000000
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__IUIWindow
+	.4byte __dt__9IUIWindowFv
 .endobj "@etb_8000BDB4"
 
 .obj "@etb_8000BDE8", local
@@ -622,13 +622,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000BDE8"
 
 .obj "@etb_8000BE1C", local
@@ -678,7 +678,7 @@
 
 .obj "@eti_80027068", local
 .hidden "@eti_80027068"
-	.4byte __dt__CSystemWindow
+	.4byte __dt__13CSystemWindowFv
 	.4byte 0x00000074
 	.4byte "@etb_8000BDE8"
 .endobj "@eti_80027068"

@@ -41,7 +41,7 @@
 /* 80212590 001DBB50  4E 80 00 20 */	blr 
 .endfn __ct__CMakeCrystalWin
 
-.fn __dt__CMakeCrystalWin, global
+.fn __dt__15CMakeCrystalWinFv, global
 /* 80212594 001DBB54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80212598 001DBB58  7C 08 02 A6 */	mflr r0
 /* 8021259C 001DBB5C  2C 03 00 00 */	cmpwi r3, 0
@@ -52,16 +52,16 @@
 /* 802125B0 001DBB70  41 82 00 44 */	beq .L_802125F4
 /* 802125B4 001DBB74  38 80 FF FF */	li r4, -1
 /* 802125B8 001DBB78  38 63 43 10 */	addi r3, r3, 0x4310
-/* 802125BC 001DBB7C  48 09 BE F9 */	bl __dt__CLoad
+/* 802125BC 001DBB7C  48 09 BE F9 */	bl __dt__5CLoadFv
 /* 802125C0 001DBB80  38 7E 2E 08 */	addi r3, r30, 0x2e08
 /* 802125C4 001DBB84  38 80 FF FF */	li r4, -1
-/* 802125C8 001DBB88  48 00 19 45 */	bl __dt__CMCCrystalBox
+/* 802125C8 001DBB88  48 00 19 45 */	bl __dt__13CMCCrystalBoxFv
 /* 802125CC 001DBB8C  38 7E 00 50 */	addi r3, r30, 0x50
 /* 802125D0 001DBB90  38 80 FF FF */	li r4, -1
-/* 802125D4 001DBB94  48 00 9F C1 */	bl __dt__CModelDispMakeCrystal
+/* 802125D4 001DBB94  48 00 9F C1 */	bl __dt__21CModelDispMakeCrystalFv
 /* 802125D8 001DBB98  38 7E 00 18 */	addi r3, r30, 0x18
 /* 802125DC 001DBB9C  38 80 FF FF */	li r4, -1
-/* 802125E0 001DBBA0  4B FB 19 71 */	bl __dt__CTitleAHelp
+/* 802125E0 001DBBA0  4B FB 19 71 */	bl __dt__11CTitleAHelpFv
 /* 802125E4 001DBBA4  2C 1F 00 00 */	cmpwi r31, 0
 /* 802125E8 001DBBA8  40 81 00 0C */	ble .L_802125F4
 /* 802125EC 001DBBAC  7F C3 F3 78 */	mr r3, r30
@@ -73,7 +73,7 @@
 /* 80212600 001DBBC0  7C 08 03 A6 */	mtlr r0
 /* 80212604 001DBBC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80212608 001DBBC8  4E 80 00 20 */	blr 
-.endfn __dt__CMakeCrystalWin
+.endfn __dt__15CMakeCrystalWinFv
 
 .fn func_8021260C, global
 /* 8021260C 001DBBCC  94 21 BC 50 */	stwu r1, -0x43b0(r1)
@@ -234,7 +234,7 @@
 /* 80212870 001DBE30  98 1F 00 4E */	stb r0, 0x4e(r31)
 /* 80212874 001DBE34  88 01 00 B7 */	lbz r0, 0xb7(r1)
 /* 80212878 001DBE38  98 1F 00 4F */	stb r0, 0x4f(r31)
-/* 8021287C 001DBE3C  4B FB 16 D5 */	bl __dt__CTitleAHelp
+/* 8021287C 001DBE3C  4B FB 16 D5 */	bl __dt__11CTitleAHelpFv
 /* 80212880 001DBE40  38 7F 00 18 */	addi r3, r31, 0x18
 /* 80212884 001DBE44  4B FB 17 21 */	bl CTitleAHelp_load
 /* 80212888 001DBE48  38 61 2E 98 */	addi r3, r1, 0x2e98
@@ -245,7 +245,7 @@
 /* 8021289C 001DBE5C  4B FF F4 51 */	bl func_80211CEC
 /* 802128A0 001DBE60  38 61 2E 98 */	addi r3, r1, 0x2e98
 /* 802128A4 001DBE64  38 80 FF FF */	li r4, -1
-/* 802128A8 001DBE68  48 00 16 65 */	bl __dt__CMCCrystalBox
+/* 802128A8 001DBE68  48 00 16 65 */	bl __dt__13CMCCrystalBoxFv
 /* 802128AC 001DBE6C  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 802128B0 001DBE70  48 00 17 35 */	bl func_80213FE4
 /* 802128B4 001DBE74  80 9F 00 10 */	lwz r4, 0x10(r31)
@@ -256,7 +256,7 @@
 /* 802128C8 001DBE88  4B FF E5 D5 */	bl func_80210E9C
 /* 802128CC 001DBE8C  38 61 00 E0 */	addi r3, r1, 0xe0
 /* 802128D0 001DBE90  38 80 FF FF */	li r4, -1
-/* 802128D4 001DBE94  48 00 9C C1 */	bl __dt__CModelDispMakeCrystal
+/* 802128D4 001DBE94  48 00 9C C1 */	bl __dt__21CModelDispMakeCrystalFv
 /* 802128D8 001DBE98  38 7F 00 50 */	addi r3, r31, 0x50
 /* 802128DC 001DBE9C  48 00 9E 09 */	bl func_8021C6E4
 /* 802128E0 001DBEA0  38 61 00 50 */	addi r3, r1, 0x50
@@ -289,7 +289,7 @@
 /* 8021294C 001DBF0C  98 1F 43 3C */	stb r0, 0x433c(r31)
 /* 80212950 001DBF10  88 01 00 7D */	lbz r0, 0x7d(r1)
 /* 80212954 001DBF14  98 1F 43 3D */	stb r0, 0x433d(r31)
-/* 80212958 001DBF18  48 09 BB 5D */	bl __dt__CLoad
+/* 80212958 001DBF18  48 09 BB 5D */	bl __dt__5CLoadFv
 /* 8021295C 001DBF1C  38 7F 43 10 */	addi r3, r31, 0x4310
 /* 80212960 001DBF20  48 09 BB A9 */	bl func_802AE508
 /* 80212964 001DBF24  2C 1F 00 00 */	cmpwi r31, 0
@@ -315,7 +315,7 @@
 /* 802129A4 001DBF64  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802129A8 001DBF68  BF C1 00 08 */	stmw r30, 8(r1)
 /* 802129AC 001DBF6C  7C 7E 1B 78 */	mr r30, r3
-/* 802129B0 001DBF70  48 23 60 95 */	bl func_80448A44
+/* 802129B0 001DBF70  48 23 60 95 */	bl func_80448A44__Fv
 /* 802129B4 001DBF74  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 802129B8 001DBF78  2C 03 00 00 */	cmpwi r3, 0
 /* 802129BC 001DBF7C  41 82 00 18 */	beq .L_802129D4
@@ -1037,7 +1037,7 @@
 /* 80213358 001DC918  4B FF E9 95 */	bl func_80211CEC
 /* 8021335C 001DC91C  38 61 2D C0 */	addi r3, r1, 0x2dc0
 /* 80213360 001DC920  38 80 FF FF */	li r4, -1
-/* 80213364 001DC924  48 00 0B A9 */	bl __dt__CMCCrystalBox
+/* 80213364 001DC924  48 00 0B A9 */	bl __dt__13CMCCrystalBoxFv
 /* 80213368 001DC928  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 8021336C 001DC92C  48 00 0C 79 */	bl func_80213FE4
 /* 80213370 001DC930  80 9F 00 10 */	lwz r4, 0x10(r31)
@@ -1048,7 +1048,7 @@
 /* 80213384 001DC944  4B FF DB 19 */	bl func_80210E9C
 /* 80213388 001DC948  38 61 00 08 */	addi r3, r1, 8
 /* 8021338C 001DC94C  38 80 FF FF */	li r4, -1
-/* 80213390 001DC950  48 00 92 05 */	bl __dt__CModelDispMakeCrystal
+/* 80213390 001DC950  48 00 92 05 */	bl __dt__21CModelDispMakeCrystalFv
 /* 80213394 001DC954  38 7F 00 50 */	addi r3, r31, 0x50
 /* 80213398 001DC958  48 00 93 4D */	bl func_8021C6E4
 /* 8021339C 001DC95C  38 7F 00 18 */	addi r3, r31, 0x18
@@ -1122,7 +1122,7 @@
 
 .fn func_80213480, global
 /* 80213480 001DCA40  38 63 FF FC */	addi r3, r3, -4
-/* 80213484 001DCA44  4B FF F1 10 */	b __dt__CMakeCrystalWin
+/* 80213484 001DCA44  4B FF F1 10 */	b __dt__15CMakeCrystalWinFv
 .endfn func_80213480
 
 
@@ -1168,38 +1168,38 @@
 .obj __vt__15CMakeCrystalWin, global
 	.4byte __RTTI__15CMakeCrystalWin
 	.4byte 0
-	.4byte __dt__CMakeCrystalWin
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__15CMakeCrystalWinFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__15CMakeCrystalWin
 	.4byte 0xFFFFFFFC
 	.4byte func_80213480
@@ -1256,19 +1256,19 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00002E08
-	.4byte __dt__CMCCrystalBox
+	.4byte __dt__13CMCCrystalBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000050
-	.4byte __dt__CModelDispMakeCrystal
+	.4byte __dt__21CModelDispMakeCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000018
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0680001E
 	.4byte 0x00000004
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_800133E8"
 
 .obj "@etb_8001344C", local
@@ -1283,22 +1283,22 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00004310
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001E
 	.4byte 0x00004310
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x8780001E
 	.4byte 0x00002E08
-	.4byte __dt__CMCCrystalBox
+	.4byte __dt__13CMCCrystalBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00004310
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001E
 	.4byte 0x00002E08
-	.4byte __dt__CMCCrystalBox
+	.4byte __dt__13CMCCrystalBoxFv
 	.4byte 0x8780001E
 	.4byte 0x00000050
-	.4byte __dt__CModelDispMakeCrystal
+	.4byte __dt__21CModelDispMakeCrystalFv
 .endobj "@etb_8001344C"
 
 .obj "@etb_800134B4", local
@@ -1308,7 +1308,7 @@
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x820000E0
-	.4byte __dt__CModelDispMakeCrystal
+	.4byte __dt__21CModelDispMakeCrystalFv
 .endobj "@etb_800134B4"
 
 .obj "@etb_800134CC", local
@@ -1402,7 +1402,7 @@
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__CModelDispMakeCrystal
+	.4byte __dt__21CModelDispMakeCrystalFv
 .endobj "@etb_8001353C"
 
 .obj "@etb_80013554", local
@@ -1428,7 +1428,7 @@
 
 .obj "@eti_8002D32C", local
 .hidden "@eti_8002D32C"
-	.4byte __dt__CMakeCrystalWin
+	.4byte __dt__15CMakeCrystalWinFv
 	.4byte 0x00000078
 	.4byte "@etb_8001344C"
 .endobj "@eti_8002D32C"

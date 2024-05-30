@@ -200,7 +200,7 @@
 /* 8044DDF4 004173B4  4E 80 00 20 */	blr 
 .endfn __dt__reslist_IDeviceClockFrame
 
-.fn __dt__CDeviceClock, global
+.fn __dt__12CDeviceClockFv, global
 /* 8044DDF8 004173B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044DDFC 004173BC  7C 08 02 A6 */	mflr r0
 /* 8044DE00 004173C0  2C 03 00 00 */	cmpwi r3, 0
@@ -247,7 +247,7 @@
 /* 8044DE98 00417458  41 82 00 10 */	beq .L_8044DEA8
 /* 8044DE9C 0041745C  7F A3 EB 78 */	mr r3, r29
 /* 8044DEA0 00417460  38 80 00 00 */	li r4, 0
-/* 8044DEA4 00417464  4B FE 9C 25 */	bl __dt__CWorkThread
+/* 8044DEA4 00417464  4B FE 9C 25 */	bl __dt__11CWorkThreadFv
 .L_8044DEA8:
 /* 8044DEA8 00417468  2C 1E 00 00 */	cmpwi r30, 0
 /* 8044DEAC 0041746C  40 81 00 0C */	ble .L_8044DEB8
@@ -262,7 +262,7 @@
 /* 8044DECC 0041748C  7C 08 03 A6 */	mtlr r0
 /* 8044DED0 00417490  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044DED4 00417494  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceClock
+.endfn __dt__12CDeviceClockFv
 
 .fn func_8044DED8, global
 /* 8044DED8 00417498  80 6D BD B8 */	lwz r3, lbl_80667F38@sda21(r13)
@@ -417,7 +417,7 @@
 /* 8044E0B8 00417678  7C 7F 1B 78 */	mr r31, r3
 /* 8044E0BC 0041767C  4B FF 94 DD */	bl func_80447598
 /* 8044E0C0 00417680  7F E3 FB 78 */	mr r3, r31
-/* 8044E0C4 00417684  4B FE A9 35 */	bl CWorkThread_WorkThreadEvent4
+/* 8044E0C4 00417684  4B FE A9 35 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8044E0C8 00417688  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8044E0CC 0041768C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8044E0D0 00417690  7C 08 03 A6 */	mtlr r0
@@ -445,7 +445,7 @@
 /* 8044E11C 004176DC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044E120 004176E0  40 82 00 10 */	bne .L_8044E130
 /* 8044E124 004176E4  7F E3 FB 78 */	mr r3, r31
-/* 8044E128 004176E8  4B FE A8 FD */	bl CWorkThread_WorkThreadEvent5
+/* 8044E128 004176E8  4B FE A8 FD */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8044E12C 004176EC  48 00 00 08 */	b .L_8044E134
 .L_8044E130:
 /* 8044E130 004176F0  38 60 00 00 */	li r3, 0
@@ -484,44 +484,44 @@
 .obj __vt__12CDeviceClock, global
 	.4byte __RTTI__12CDeviceClock
 	.4byte 0
-	.4byte __dt__CDeviceClock
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__12CDeviceClockFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceClock_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceClock_WorkThreadEvent4
 	.4byte CDeviceClock_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__12CDeviceClock
 
 .obj CDeviceClock_hierarchy, global
@@ -597,7 +597,7 @@
 	.4byte __dt__reslist_IDeviceClockFrame
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001CD08"
 
 .obj "@etb_8001CD30", local
@@ -680,7 +680,7 @@
 
 .obj "@eti_800349C4", local
 .hidden "@eti_800349C4"
-	.4byte __dt__CDeviceClock
+	.4byte __dt__12CDeviceClockFv
 	.4byte 0x000000E0
 	.4byte "@etb_8001CD40"
 .endobj "@eti_800349C4"

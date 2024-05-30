@@ -40,7 +40,7 @@
 /* 80108CE0 000D22A0  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 80108CE4 000D22A4  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 80108CE8 000D22A8  93 BF 00 60 */	stw r29, 0x60(r31)
-/* 80108CEC 000D22AC  48 35 68 79 */	bl __ct__UnkClass_8045F564
+/* 80108CEC 000D22AC  48 35 68 79 */	bl __ct__17UnkClass_8045F564Fv
 /* 80108CF0 000D22B0  C0 02 94 B0 */	lfs f0, float_80669830@sda21(r2)
 /* 80108CF4 000D22B4  38 7F 00 74 */	addi r3, r31, 0x74
 /* 80108CF8 000D22B8  38 1F 07 74 */	addi r0, r31, 0x774
@@ -123,7 +123,7 @@
 /* 80108E24 000D23E4  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleDamage
 
-.fn __dt__CMenuBattleDamage, global
+.fn __dt__17CMenuBattleDamageFv, global
 /* 80108E28 000D23E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80108E2C 000D23EC  7C 08 02 A6 */	mflr r0
 /* 80108E30 000D23F0  2C 03 00 00 */	cmpwi r3, 0
@@ -135,13 +135,13 @@
 /* 80108E48 000D2408  41 82 00 38 */	beq .L_80108E80
 /* 80108E4C 000D240C  38 80 FF FF */	li r4, -1
 /* 80108E50 000D2410  38 63 00 64 */	addi r3, r3, 0x64
-/* 80108E54 000D2414  48 35 67 2D */	bl __dt__UnkClass_8045F564
+/* 80108E54 000D2414  48 35 67 2D */	bl __dt__17UnkClass_8045F564Fv
 /* 80108E58 000D2418  2C 1E 00 00 */	cmpwi r30, 0
 /* 80108E5C 000D241C  41 82 00 14 */	beq .L_80108E70
 /* 80108E60 000D2420  41 82 00 10 */	beq .L_80108E70
 /* 80108E64 000D2424  7F C3 F3 78 */	mr r3, r30
 /* 80108E68 000D2428  38 80 00 00 */	li r4, 0
-/* 80108E6C 000D242C  48 33 BC CD */	bl __dt__CProcess
+/* 80108E6C 000D242C  48 33 BC CD */	bl __dt__8CProcessFv
 .L_80108E70:
 /* 80108E70 000D2430  2C 1F 00 00 */	cmpwi r31, 0
 /* 80108E74 000D2434  40 81 00 0C */	ble .L_80108E80
@@ -155,7 +155,7 @@
 /* 80108E90 000D2450  7C 08 03 A6 */	mtlr r0
 /* 80108E94 000D2454  38 21 00 10 */	addi r1, r1, 0x10
 /* 80108E98 000D2458  4E 80 00 20 */	blr 
-.endfn __dt__CMenuBattleDamage
+.endfn __dt__17CMenuBattleDamageFv
 
 .fn func_80108E9C, global
 /* 80108E9C 000D245C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -174,10 +174,10 @@
 /* 80108ED0 000D2490  38 A5 10 00 */	addi r5, r5, 0x00051000@l
 /* 80108ED4 000D2494  38 DF 8D 44 */	addi r6, r31, CMenuBattleDamage_strpool@l
 /* 80108ED8 000D2498  38 E0 00 00 */	li r7, 0
-/* 80108EDC 000D249C  48 35 67 A5 */	bl func_8045F680
+/* 80108EDC 000D249C  48 35 67 A5 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 80108EE0 000D24A0  38 61 00 08 */	addi r3, r1, 8
 /* 80108EE4 000D24A4  38 9B 00 64 */	addi r4, r27, 0x64
-/* 80108EE8 000D24A8  48 35 69 71 */	bl __ct__Class_8045F858
+/* 80108EE8 000D24A8  48 35 69 71 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 80108EEC 000D24AC  C3 E2 94 B0 */	lfs f31, float_80669830@sda21(r2)
 /* 80108EF0 000D24B0  3B FF 8D 44 */	addi r31, r31, CMenuBattleDamage_strpool@l
 /* 80108EF4 000D24B4  3B A0 00 00 */	li r29, 0
@@ -190,7 +190,7 @@
 /* 80108F0C 000D24CC  7C 64 1B 78 */	mr r4, r3
 /* 80108F10 000D24D0  7F 83 E3 78 */	mr r3, r28
 /* 80108F14 000D24D4  38 BF 00 12 */	addi r5, r31, 0x12
-/* 80108F18 000D24D8  48 02 DF 6D */	bl func_80136E84
+/* 80108F18 000D24D8  48 02 DF 6D */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80108F1C 000D24DC  48 02 C6 D9 */	bl func_801355F4
 /* 80108F20 000D24E0  7C 65 1B 78 */	mr r5, r3
 /* 80108F24 000D24E4  80 7C 00 00 */	lwz r3, 0(r28)
@@ -224,7 +224,7 @@
 /* 80108F94 000D2554  7C 64 1B 78 */	mr r4, r3
 /* 80108F98 000D2558  38 7C 00 14 */	addi r3, r28, 0x14
 /* 80108F9C 000D255C  38 BF 00 8A */	addi r5, r31, 0x8a
-/* 80108FA0 000D2560  48 02 DE E5 */	bl func_80136E84
+/* 80108FA0 000D2560  48 02 DE E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80108FA4 000D2564  48 02 C6 51 */	bl func_801355F4
 /* 80108FA8 000D2568  7C 65 1B 78 */	mr r5, r3
 /* 80108FAC 000D256C  80 7C 00 14 */	lwz r3, 0x14(r28)
@@ -270,10 +270,10 @@
 /* 80109048 000D2608  38 C0 00 00 */	li r6, 0
 /* 8010904C 000D260C  48 38 CE 69 */	bl func_80495EB4
 /* 80109050 000D2610  38 7B 00 64 */	addi r3, r27, 0x64
-/* 80109054 000D2614  48 35 67 BD */	bl func_8045F810
+/* 80109054 000D2614  48 35 67 BD */	bl func_8045F810__FP17UnkClass_8045F564
 /* 80109058 000D2618  38 61 00 08 */	addi r3, r1, 8
 /* 8010905C 000D261C  38 80 FF FF */	li r4, -1
-/* 80109060 000D2620  48 35 68 69 */	bl __dt__Class_8045F858
+/* 80109060 000D2620  48 35 68 69 */	bl __dt__14Class_8045F858Fv
 /* 80109064 000D2624  39 61 00 30 */	addi r11, r1, 0x30
 /* 80109068 000D2628  E3 E1 00 38 */	psq_l f31, 56(r1), 0, qr0
 /* 8010906C 000D262C  CB E1 00 30 */	lfd f31, 0x30(r1)
@@ -293,7 +293,7 @@
 /* 80109098 000D2658  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8010909C 000D265C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 801090A0 000D2660  7C 7C 1B 78 */	mr r28, r3
-/* 801090A4 000D2664  48 33 F9 A1 */	bl func_80448A44
+/* 801090A4 000D2664  48 33 F9 A1 */	bl func_80448A44__Fv
 /* 801090A8 000D2668  2C 1C 00 00 */	cmpwi r28, 0
 /* 801090AC 000D266C  7F 84 E3 78 */	mr r4, r28
 /* 801090B0 000D2670  41 82 00 08 */	beq .L_801090B8
@@ -335,7 +335,7 @@
 /* 80109128 000D26E8  28 1D 00 20 */	cmplwi r29, 0x20
 /* 8010912C 000D26EC  41 80 FF 9C */	blt .L_801090C8
 /* 80109130 000D26F0  38 7C 00 64 */	addi r3, r28, 0x64
-/* 80109134 000D26F4  48 35 66 45 */	bl func_8045F778
+/* 80109134 000D26F4  48 35 66 45 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 80109138 000D26F8  38 00 00 00 */	li r0, 0
 /* 8010913C 000D26FC  90 0D A6 A0 */	stw r0, lbl_80666820@sda21(r13)
 /* 80109140 000D2700  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -706,7 +706,7 @@
 /* 80109674 000D2C34  38 81 00 28 */	addi r4, r1, 0x28
 /* 80109678 000D2C38  38 A0 00 00 */	li r5, 0
 /* 8010967C 000D2C3C  38 C0 00 01 */	li r6, 1
-/* 80109680 000D2C40  48 02 D9 B9 */	bl func_80137038
+/* 80109680 000D2C40  48 02 D9 B9 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80109684 000D2C44  3B BD 00 01 */	addi r29, r29, 1
 /* 80109688 000D2C48  28 1D 00 20 */	cmplwi r29, 0x20
 /* 8010968C 000D2C4C  41 80 FF B4 */	blt .L_80109640
@@ -738,7 +738,7 @@
 /* 801096E0 000D2CA0  38 60 00 00 */	li r3, 0
 /* 801096E4 000D2CA4  48 00 00 38 */	b .L_8010971C
 .L_801096E8:
-/* 801096E8 000D2CA8  48 32 DE CD */	bl getHeapIndex
+/* 801096E8 000D2CA8  48 32 DE CD */	bl getHeapIndex__Fv
 /* 801096EC 000D2CAC  7C 64 1B 78 */	mr r4, r3
 /* 801096F0 000D2CB0  38 60 07 7C */	li r3, 0x77c
 /* 801096F4 000D2CB4  48 32 B3 69 */	bl heap_malloc
@@ -1839,7 +1839,7 @@
 
 .fn func_8010A67C, global
 /* 8010A67C 000D3C3C  38 63 FF A8 */	addi r3, r3, -88
-/* 8010A680 000D3C40  4B FF E7 A8 */	b __dt__CMenuBattleDamage
+/* 8010A680 000D3C40  4B FF E7 A8 */	b __dt__17CMenuBattleDamageFv
 .endfn func_8010A67C
 
 .fn func_8010A684, global
@@ -1849,10 +1849,10 @@
 
 .fn func_8010A68C, global
 /* 8010A68C 000D3C4C  38 63 FF A4 */	addi r3, r3, -92
-/* 8010A690 000D3C50  4B FF E7 98 */	b __dt__CMenuBattleDamage
+/* 8010A690 000D3C50  4B FF E7 98 */	b __dt__17CMenuBattleDamageFv
 .endfn func_8010A68C
 
-.fn __dt__CPcSelectCursor01, global
+.fn __dt__17CPcSelectCursor01Fv, global
 /* 8010A694 000D3C54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010A698 000D3C58  7C 08 02 A6 */	mflr r0
 /* 8010A69C 000D3C5C  2C 03 00 00 */	cmpwi r3, 0
@@ -1864,7 +1864,7 @@
 /* 8010A6B4 000D3C74  41 82 00 20 */	beq .L_8010A6D4
 /* 8010A6B8 000D3C78  38 80 FF FF */	li r4, -1
 /* 8010A6BC 000D3C7C  38 63 00 04 */	addi r3, r3, 4
-/* 8010A6C0 000D3C80  48 35 4E C1 */	bl __dt__UnkClass_8045F564
+/* 8010A6C0 000D3C80  48 35 4E C1 */	bl __dt__17UnkClass_8045F564Fv
 /* 8010A6C4 000D3C84  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010A6C8 000D3C88  40 81 00 0C */	ble .L_8010A6D4
 /* 8010A6CC 000D3C8C  7F C3 F3 78 */	mr r3, r30
@@ -1877,7 +1877,7 @@
 /* 8010A6E4 000D3CA4  7C 08 03 A6 */	mtlr r0
 /* 8010A6E8 000D3CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010A6EC 000D3CAC  4E 80 00 20 */	blr 
-.endfn __dt__CPcSelectCursor01
+.endfn __dt__17CPcSelectCursor01Fv
 
 .fn func_8010A6F0, global
 /* 8010A6F0 000D3CB0  80 03 00 2C */	lwz r0, 0x2c(r3)
@@ -2450,47 +2450,47 @@
 .obj __vt__17CMenuBattleDamage, global
 	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0
-	.4byte __dt__CMenuBattleDamage
-	.4byte CChildListNode_Reset
+	.4byte __dt__17CMenuBattleDamageFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80108E9C
 	.4byte func_80109084
 	.4byte func_80109160
-	.4byte func_80108BE8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80108BE8__18CTTask<9IUIBattle>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0xFFFFFFA8
 	.4byte func_8010A67C
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0xFFFFFFA4
 	.4byte func_8010A68C
@@ -2591,10 +2591,10 @@
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__80102300
@@ -2608,13 +2608,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000B0E0"
 
 .obj "@etb_8000B114", local
@@ -2624,7 +2624,7 @@
 	.4byte 0x00530010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8000B114"
 
 .obj "@etb_8000B12C", local
@@ -2722,7 +2722,7 @@
 
 .obj "@eti_800268DC", local
 .hidden "@eti_800268DC"
-	.4byte __dt__CMenuBattleDamage
+	.4byte __dt__17CMenuBattleDamageFv
 	.4byte 0x00000074
 	.4byte "@etb_8000B0E0"
 .endobj "@eti_800268DC"
@@ -2778,7 +2778,7 @@
 
 .obj "@eti_8002693C", local
 .hidden "@eti_8002693C"
-	.4byte __dt__CPcSelectCursor01
+	.4byte __dt__17CPcSelectCursor01Fv
 	.4byte 0x0000005C
 	.4byte "@etb_8000B16C"
 .endobj "@eti_8002693C"

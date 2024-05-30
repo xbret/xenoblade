@@ -95,7 +95,7 @@
 /* 80124CCC 000EE28C  4E 80 00 20 */	blr
 .endfn __ct__CSysWinSelect
 
-.fn __dt__CSysWinSelect, global
+.fn __dt__13CSysWinSelectFv, global
 /* 80124CD0 000EE290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80124CD4 000EE294  7C 08 02 A6 */	mflr r0
 /* 80124CD8 000EE298  2C 03 00 00 */	cmpwi r3, 0
@@ -107,16 +107,16 @@
 /* 80124CF0 000EE2B0  41 82 00 44 */	beq .L_80124D34
 /* 80124CF4 000EE2B4  38 80 FF FF */	li r4, -1
 /* 80124CF8 000EE2B8  38 63 00 B4 */	addi r3, r3, 0xb4
-/* 80124CFC 000EE2BC  48 0A DD 3D */	bl __dt__CCur18
+/* 80124CFC 000EE2BC  48 0A DD 3D */	bl __dt__6CCur18Fv
 /* 80124D00 000EE2C0  38 7E 00 78 */	addi r3, r30, 0x78
 /* 80124D04 000EE2C4  38 80 FF FF */	li r4, -1
-/* 80124D08 000EE2C8  48 10 69 99 */	bl __dt__CSysWin
+/* 80124D08 000EE2C8  48 10 69 99 */	bl __dt__7CSysWinFv
 /* 80124D0C 000EE2CC  2C 1E 00 00 */	cmpwi r30, 0
 /* 80124D10 000EE2D0  41 82 00 14 */	beq .L_80124D24
 /* 80124D14 000EE2D4  41 82 00 10 */	beq .L_80124D24
 /* 80124D18 000EE2D8  7F C3 F3 78 */	mr r3, r30
 /* 80124D1C 000EE2DC  38 80 00 00 */	li r4, 0
-/* 80124D20 000EE2E0  48 31 FE 19 */	bl __dt__CProcess
+/* 80124D20 000EE2E0  48 31 FE 19 */	bl __dt__8CProcessFv
 .L_80124D24:
 /* 80124D24 000EE2E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80124D28 000EE2E8  40 81 00 0C */	ble .L_80124D34
@@ -130,7 +130,7 @@
 /* 80124D44 000EE304  7C 08 03 A6 */	mtlr r0
 /* 80124D48 000EE308  38 21 00 10 */	addi r1, r1, 0x10
 /* 80124D4C 000EE30C  4E 80 00 20 */	blr 
-.endfn __dt__CSysWinSelect
+.endfn __dt__13CSysWinSelectFv
 
 .fn func_80124D50, global
 /* 80124D50 000EE310  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -170,7 +170,7 @@
 /* 80124DD4 000EE394  98 1F 00 C8 */	stb r0, 0xc8(r31)
 /* 80124DD8 000EE398  88 01 00 1D */	lbz r0, 0x1d(r1)
 /* 80124DDC 000EE39C  98 1F 00 C9 */	stb r0, 0xc9(r31)
-/* 80124DE0 000EE3A0  48 0A DC 59 */	bl __dt__CCur18
+/* 80124DE0 000EE3A0  48 0A DC 59 */	bl __dt__6CCur18Fv
 /* 80124DE4 000EE3A4  81 9F 00 B4 */	lwz r12, 0xb4(r31)
 /* 80124DE8 000EE3A8  38 7F 00 B4 */	addi r3, r31, 0xb4
 /* 80124DEC 000EE3AC  81 8C 00 08 */	lwz r12, 8(r12)
@@ -189,7 +189,7 @@
 /* 80124E14 000EE3D4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80124E18 000EE3D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80124E1C 000EE3DC  7C 7F 1B 78 */	mr r31, r3
-/* 80124E20 000EE3E0  48 32 3C 25 */	bl func_80448A44
+/* 80124E20 000EE3E0  48 32 3C 25 */	bl func_80448A44__Fv
 /* 80124E24 000EE3E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80124E28 000EE3E8  7F E4 FB 78 */	mr r4, r31
 /* 80124E2C 000EE3EC  41 82 00 08 */	beq .L_80124E34
@@ -371,7 +371,7 @@
 /* 801250A0 000EE660  38 60 00 00 */	li r3, 0
 /* 801250A4 000EE664  48 00 00 44 */	b .L_801250E8
 .L_801250A8:
-/* 801250A8 000EE668  48 31 25 0D */	bl getHeapIndex
+/* 801250A8 000EE668  48 31 25 0D */	bl getHeapIndex__Fv
 /* 801250AC 000EE66C  7C 64 1B 78 */	mr r4, r3
 /* 801250B0 000EE670  38 60 02 50 */	li r3, 0x250
 /* 801250B4 000EE674  48 30 F9 A9 */	bl heap_malloc
@@ -513,7 +513,7 @@
 
 .fn func_801252A0, global
 /* 801252A0 000EE860  38 63 FF 94 */	addi r3, r3, -108
-/* 801252A4 000EE864  4B FF F4 6C */	b __dt__CSystemWindow
+/* 801252A4 000EE864  4B FF F4 6C */	b __dt__13CSystemWindowFv
 .endfn func_801252A0
 
 .fn func_801252A8, global
@@ -523,12 +523,12 @@
 
 .fn func_801252B0, global
 /* 801252B0 000EE870  38 63 FF 90 */	addi r3, r3, -112
-/* 801252B4 000EE874  4B FF F4 5C */	b __dt__CSystemWindow
+/* 801252B4 000EE874  4B FF F4 5C */	b __dt__13CSystemWindowFv
 .endfn func_801252B0
 
 .fn func_801252B8, global
 /* 801252B8 000EE878  38 63 FF 94 */	addi r3, r3, -108
-/* 801252BC 000EE87C  4B FF FA 14 */	b __dt__CSysWinSelect
+/* 801252BC 000EE87C  4B FF FA 14 */	b __dt__13CSysWinSelectFv
 .endfn func_801252B8
 
 .fn func_801252C0, global
@@ -538,7 +538,7 @@
 
 .fn func_801252C8, global
 /* 801252C8 000EE888  38 63 FF 90 */	addi r3, r3, -112
-/* 801252CC 000EE88C  4B FF FA 04 */	b __dt__CSysWinSelect
+/* 801252CC 000EE88C  4B FF FA 04 */	b __dt__13CSysWinSelectFv
 .endfn func_801252C8
 
 #__dt__Q34nw4r2ut5ColorFv duplicate
@@ -576,16 +576,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001B
 	.4byte 0x00000078
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__IUIWindow
+	.4byte __dt__9IUIWindowFv
 .endobj "@etb_8000BE54"
 
 .obj "@etb_8000BE9C", local
@@ -598,19 +598,19 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000BE9C"
 
 .obj "@etb_8000BEF0", local
@@ -672,7 +672,7 @@
 
 .obj "@eti_800270BC", local
 .hidden "@eti_800270BC"
-	.4byte __dt__CSysWinSelect
+	.4byte __dt__13CSysWinSelectFv
 	.4byte 0x00000080
 	.4byte "@etb_8000BE9C"
 .endobj "@eti_800270BC"

@@ -21,7 +21,7 @@
 /* 80257AB8 00221078  4E 80 00 20 */	blr 
 .endfn __ct__CKizunaRadar
 
-.fn __dt__CKizunaRadar, global
+.fn __dt__12CKizunaRadarFv, global
 /* 80257ABC 0022107C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80257AC0 00221080  7C 08 02 A6 */	mflr r0
 /* 80257AC4 00221084  2C 03 00 00 */	cmpwi r3, 0
@@ -39,7 +39,7 @@
 /* 80257AF0 002210B0  7C 08 03 A6 */	mtlr r0
 /* 80257AF4 002210B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80257AF8 002210B8  4E 80 00 20 */	blr 
-.endfn __dt__CKizunaRadar
+.endfn __dt__12CKizunaRadarFv
 
 .fn func_80257AFC, global
 /* 80257AFC 002210BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -51,7 +51,7 @@
 /* 80257B14 002210D4  38 BF 81 A8 */	addi r5, r31, CKizunagram_strpool@l
 /* 80257B18 002210D8  80 83 00 04 */	lwz r4, 4(r3)
 /* 80257B1C 002210DC  38 63 00 08 */	addi r3, r3, 8
-/* 80257B20 002210E0  4B ED F3 65 */	bl func_80136E84
+/* 80257B20 002210E0  4B ED F3 65 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80257B24 002210E4  80 DE 00 08 */	lwz r6, 8(r30)
 /* 80257B28 002210E8  38 7F 81 A8 */	addi r3, r31, CKizunagram_strpool@l
 /* 80257B2C 002210EC  38 83 00 13 */	addi r4, r3, 0x13
@@ -259,7 +259,7 @@
 /* 80257E14 002213D4  4E 80 00 20 */	blr 
 .endfn __ct__CKizunaCur
 
-.fn __dt__CKizunaCur, global
+.fn __dt__10CKizunaCurFv, global
 /* 80257E18 002213D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80257E1C 002213DC  7C 08 02 A6 */	mflr r0
 /* 80257E20 002213E0  2C 03 00 00 */	cmpwi r3, 0
@@ -277,7 +277,7 @@
 /* 80257E4C 0022140C  7C 08 03 A6 */	mtlr r0
 /* 80257E50 00221410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80257E54 00221414  4E 80 00 20 */	blr 
-.endfn __dt__CKizunaCur
+.endfn __dt__10CKizunaCurFv
 
 .fn func_80257E58, global
 /* 80257E58 00221418  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -290,7 +290,7 @@
 /* 80257E74 00221434  38 BF 00 27 */	addi r5, r31, 0x27
 /* 80257E78 00221438  80 83 00 04 */	lwz r4, 4(r3)
 /* 80257E7C 0022143C  38 63 00 08 */	addi r3, r3, 8
-/* 80257E80 00221440  4B ED F0 05 */	bl func_80136E84
+/* 80257E80 00221440  4B ED F0 05 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80257E84 00221444  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80257E88 00221448  38 9E 00 0C */	addi r4, r30, 0xc
 /* 80257E8C 0022144C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -442,7 +442,7 @@
 /* 80258088 00221648  4E 80 00 20 */	blr 
 .endfn __ct__CKizunaLine
 
-.fn __dt__CKizunaLine, global
+.fn __dt__11CKizunaLineFv, global
 /* 8025808C 0022164C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80258090 00221650  7C 08 02 A6 */	mflr r0
 /* 80258094 00221654  2C 03 00 00 */	cmpwi r3, 0
@@ -460,7 +460,7 @@
 /* 802580C0 00221680  7C 08 03 A6 */	mtlr r0
 /* 802580C4 00221684  38 21 00 10 */	addi r1, r1, 0x10
 /* 802580C8 00221688  4E 80 00 20 */	blr 
-.endfn __dt__CKizunaLine
+.endfn __dt__11CKizunaLineFv
 
 .fn func_802580CC, global
 /* 802580CC 0022168C  94 21 FE F0 */	stwu r1, -0x110(r1)
@@ -477,7 +477,7 @@
 /* 802580F8 002216B8  90 01 00 E0 */	stw r0, 0xe0(r1)
 /* 802580FC 002216BC  38 BA 00 5C */	addi r5, r26, 0x5c
 /* 80258100 002216C0  38 63 00 0C */	addi r3, r3, 0xc
-/* 80258104 002216C4  4B ED ED 81 */	bl func_80136E84
+/* 80258104 002216C4  4B ED ED 81 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80258108 002216C8  80 7C 00 0C */	lwz r3, 0xc(r28)
 /* 8025810C 002216CC  38 9C 00 10 */	addi r4, r28, 0x10
 /* 80258110 002216D0  80 BC 00 04 */	lwz r5, 4(r28)
@@ -4167,7 +4167,7 @@
 /* 8025B62C 00224BEC  4E 80 00 20 */	blr 
 .endfn __ct__CKizunaInfo
 
-.fn __dt__CKizunaInfo, global
+.fn __dt__11CKizunaInfoFv, global
 /* 8025B630 00224BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025B634 00224BF4  7C 08 02 A6 */	mflr r0
 /* 8025B638 00224BF8  2C 03 00 00 */	cmpwi r3, 0
@@ -4185,7 +4185,7 @@
 /* 8025B664 00224C24  7C 08 03 A6 */	mtlr r0
 /* 8025B668 00224C28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8025B66C 00224C2C  4E 80 00 20 */	blr 
-.endfn __dt__CKizunaInfo
+.endfn __dt__11CKizunaInfoFv
 
 .fn func_8025B670, global
 /* 8025B670 00224C30  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4198,7 +4198,7 @@
 /* 8025B68C 00224C4C  38 BF 0B 19 */	addi r5, r31, 0xb19
 /* 8025B690 00224C50  80 83 00 04 */	lwz r4, 4(r3)
 /* 8025B694 00224C54  38 63 00 08 */	addi r3, r3, 8
-/* 8025B698 00224C58  4B ED B7 ED */	bl func_80136E84
+/* 8025B698 00224C58  4B ED B7 ED */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8025B69C 00224C5C  80 7D 00 08 */	lwz r3, 8(r29)
 /* 8025B6A0 00224C60  38 9D 00 0C */	addi r4, r29, 0xc
 /* 8025B6A4 00224C64  80 BD 00 04 */	lwz r5, 4(r29)
@@ -5137,9 +5137,9 @@
 /* 8025C3FC 002259BC  90 A3 00 00 */	stw r5, 0(r3)
 /* 8025C400 002259C0  7C 9D 23 78 */	mr r29, r4
 /* 8025C404 002259C4  38 63 00 08 */	addi r3, r3, 8
-/* 8025C408 002259C8  48 20 31 5D */	bl __ct__UnkClass_8045F564
+/* 8025C408 002259C8  48 20 31 5D */	bl __ct__17UnkClass_8045F564Fv
 /* 8025C40C 002259CC  38 7C 00 18 */	addi r3, r28, 0x18
-/* 8025C410 002259D0  48 20 31 55 */	bl __ct__UnkClass_8045F564
+/* 8025C410 002259D0  48 20 31 55 */	bl __ct__17UnkClass_8045F564Fv
 /* 8025C414 002259D4  C0 02 AD 58 */	lfs f0, float_8066B0D8@sda21(r2)
 /* 8025C418 002259D8  3B C0 00 00 */	li r30, 0
 /* 8025C41C 002259DC  3B E0 00 01 */	li r31, 1
@@ -5181,7 +5181,7 @@
 /* 8025C4AC 00225A6C  4E 80 00 20 */	blr 
 .endfn __ct__CKizunagram
 
-.fn __dt__CKizunagram, global
+.fn __dt__11CKizunagramFv, global
 /* 8025C4B0 00225A70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025C4B4 00225A74  7C 08 02 A6 */	mflr r0
 /* 8025C4B8 00225A78  2C 03 00 00 */	cmpwi r3, 0
@@ -5192,10 +5192,10 @@
 /* 8025C4CC 00225A8C  41 82 00 2C */	beq .L_8025C4F8
 /* 8025C4D0 00225A90  38 80 FF FF */	li r4, -1
 /* 8025C4D4 00225A94  38 63 00 18 */	addi r3, r3, 0x18
-/* 8025C4D8 00225A98  48 20 30 A9 */	bl __dt__UnkClass_8045F564
+/* 8025C4D8 00225A98  48 20 30 A9 */	bl __dt__17UnkClass_8045F564Fv
 /* 8025C4DC 00225A9C  38 7E 00 08 */	addi r3, r30, 8
 /* 8025C4E0 00225AA0  38 80 FF FF */	li r4, -1
-/* 8025C4E4 00225AA4  48 20 30 9D */	bl __dt__UnkClass_8045F564
+/* 8025C4E4 00225AA4  48 20 30 9D */	bl __dt__17UnkClass_8045F564Fv
 /* 8025C4E8 00225AA8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8025C4EC 00225AAC  40 81 00 0C */	ble .L_8025C4F8
 /* 8025C4F0 00225AB0  7F C3 F3 78 */	mr r3, r30
@@ -5207,7 +5207,7 @@
 /* 8025C504 00225AC4  7C 08 03 A6 */	mtlr r0
 /* 8025C508 00225AC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8025C50C 00225ACC  4E 80 00 20 */	blr 
-.endfn __dt__CKizunagram
+.endfn __dt__11CKizunagramFv
 
 .fn func_8025C510, global
 /* 8025C510 00225AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5222,17 +5222,17 @@
 /* 8025C534 00225AF4  38 C0 00 00 */	li r6, 0
 /* 8025C538 00225AF8  38 9F 0C E5 */	addi r4, r31, 0xce5
 /* 8025C53C 00225AFC  38 E0 00 00 */	li r7, 0
-/* 8025C540 00225B00  48 1F 22 55 */	bl CDeviceFile_openFile1
+/* 8025C540 00225B00  48 1F 22 55 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8025C544 00225B04  90 7E 00 2C */	stw r3, 0x2c(r30)
-/* 8025C548 00225B08  48 1F 2E CD */	bl func_8044F414
+/* 8025C548 00225B08  48 1F 2E CD */	bl CDeviceFile_8044F414__FP17UnkClass_80451720
 /* 8025C54C 00225B0C  48 1D 7E 55 */	bl Heap_getRegionIndex2
 /* 8025C550 00225B10  7F C5 F3 78 */	mr r5, r30
 /* 8025C554 00225B14  38 9F 0D 02 */	addi r4, r31, 0xd02
 /* 8025C558 00225B18  38 C0 00 00 */	li r6, 0
 /* 8025C55C 00225B1C  38 E0 00 00 */	li r7, 0
-/* 8025C560 00225B20  48 1F 22 35 */	bl CDeviceFile_openFile1
+/* 8025C560 00225B20  48 1F 22 35 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8025C564 00225B24  90 7E 00 28 */	stw r3, 0x28(r30)
-/* 8025C568 00225B28  48 1F 2E AD */	bl func_8044F414
+/* 8025C568 00225B28  48 1F 2E AD */	bl CDeviceFile_8044F414__FP17UnkClass_80451720
 /* 8025C56C 00225B2C  BB C1 00 08 */	lmw r30, 8(r1)
 /* 8025C570 00225B30  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8025C574 00225B34  7C 08 03 A6 */	mtlr r0
@@ -5301,7 +5301,7 @@
 /* 8025C640 00225C00  7C 03 03 78 */	mr r3, r0
 /* 8025C644 00225C04  38 A0 00 00 */	li r5, 0
 /* 8025C648 00225C08  38 C0 00 01 */	li r6, 1
-/* 8025C64C 00225C0C  4B ED A9 ED */	bl func_80137038
+/* 8025C64C 00225C0C  4B ED A9 ED */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_8025C650:
 /* 8025C650 00225C10  88 1E 00 38 */	lbz r0, 0x38(r30)
 /* 8025C654 00225C14  2C 00 00 00 */	cmpwi r0, 0
@@ -5324,7 +5324,7 @@
 /* 8025C694 00225C54  7F E4 FB 78 */	mr r4, r31
 /* 8025C698 00225C58  38 A0 00 00 */	li r5, 0
 /* 8025C69C 00225C5C  38 C0 00 01 */	li r6, 1
-/* 8025C6A0 00225C60  4B ED A9 99 */	bl func_80137038
+/* 8025C6A0 00225C60  4B ED A9 99 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_8025C6A4:
 /* 8025C6A4 00225C64  80 7E 00 B4 */	lwz r3, 0xb4(r30)
 /* 8025C6A8 00225C68  2C 03 00 00 */	cmpwi r3, 0
@@ -5332,7 +5332,7 @@
 /* 8025C6B0 00225C70  7F E4 FB 78 */	mr r4, r31
 /* 8025C6B4 00225C74  38 A0 00 00 */	li r5, 0
 /* 8025C6B8 00225C78  38 C0 00 01 */	li r6, 1
-/* 8025C6BC 00225C7C  4B ED A9 7D */	bl func_80137038
+/* 8025C6BC 00225C7C  4B ED A9 7D */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_8025C6C0:
 /* 8025C6C0 00225C80  80 7E 00 C8 */	lwz r3, 0xc8(r30)
 /* 8025C6C4 00225C84  2C 03 00 00 */	cmpwi r3, 0
@@ -5340,7 +5340,7 @@
 /* 8025C6CC 00225C8C  7F E4 FB 78 */	mr r4, r31
 /* 8025C6D0 00225C90  38 A0 00 00 */	li r5, 0
 /* 8025C6D4 00225C94  38 C0 00 01 */	li r6, 1
-/* 8025C6D8 00225C98  4B ED A9 61 */	bl func_80137038
+/* 8025C6D8 00225C98  4B ED A9 61 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_8025C6DC:
 /* 8025C6DC 00225C9C  BB C1 00 08 */	lmw r30, 8(r1)
 /* 8025C6E0 00225CA0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -5356,9 +5356,9 @@
 /* 8025C6FC 00225CBC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8025C700 00225CC0  7C 7F 1B 78 */	mr r31, r3
 /* 8025C704 00225CC4  38 63 00 28 */	addi r3, r3, 0x28
-/* 8025C708 00225CC8  4B ED C9 D9 */	bl func_801390E0
+/* 8025C708 00225CC8  4B ED C9 D9 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8025C70C 00225CCC  38 7F 00 2C */	addi r3, r31, 0x2c
-/* 8025C710 00225CD0  4B ED C9 D1 */	bl func_801390E0
+/* 8025C710 00225CD0  4B ED C9 D1 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8025C714 00225CD4  38 00 00 00 */	li r0, 0
 /* 8025C718 00225CD8  98 1F 00 38 */	stb r0, 0x38(r31)
 /* 8025C71C 00225CDC  38 7F 00 4C */	addi r3, r31, 0x4c
@@ -5370,13 +5370,13 @@
 /* 8025C734 00225CF4  38 7F 00 C0 */	addi r3, r31, 0xc0
 /* 8025C738 00225CF8  4B FF B6 59 */	bl func_80257D90
 /* 8025C73C 00225CFC  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 8025C740 00225D00  4B ED C9 E5 */	bl func_80139124
+/* 8025C740 00225D00  4B ED C9 E5 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 8025C744 00225D04  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 8025C748 00225D08  4B ED C9 DD */	bl func_80139124
+/* 8025C748 00225D08  4B ED C9 DD */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 8025C74C 00225D0C  38 7F 00 08 */	addi r3, r31, 8
-/* 8025C750 00225D10  48 20 30 29 */	bl func_8045F778
+/* 8025C750 00225D10  48 20 30 29 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8025C754 00225D14  38 7F 00 18 */	addi r3, r31, 0x18
-/* 8025C758 00225D18  48 20 30 21 */	bl func_8045F778
+/* 8025C758 00225D18  48 20 30 21 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8025C75C 00225D1C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8025C760 00225D20  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8025C764 00225D24  7C 08 03 A6 */	mtlr r0
@@ -6086,17 +6086,17 @@
 /* 8025D0E0 002266A0  38 DD 0D 17 */	addi r6, r29, 0xd17
 /* 8025D0E4 002266A4  3C A0 00 04 */	lis r5, 4
 /* 8025D0E8 002266A8  38 E0 00 00 */	li r7, 0
-/* 8025D0EC 002266AC  48 20 25 95 */	bl func_8045F680
+/* 8025D0EC 002266AC  48 20 25 95 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8025D0F0 002266B0  38 61 00 0C */	addi r3, r1, 0xc
 /* 8025D0F4 002266B4  38 9F 00 08 */	addi r4, r31, 8
-/* 8025D0F8 002266B8  48 20 27 61 */	bl __ct__Class_8045F858
+/* 8025D0F8 002266B8  48 20 27 61 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8025D0FC 002266BC  80 9F 00 28 */	lwz r4, 0x28(r31)
 /* 8025D100 002266C0  38 00 00 00 */	li r0, 0
 /* 8025D104 002266C4  38 60 00 00 */	li r3, 0
 /* 8025D108 002266C8  83 C4 00 04 */	lwz r30, 4(r4)
 /* 8025D10C 002266CC  90 04 00 04 */	stw r0, 4(r4)
-/* 8025D110 002266D0  48 1D 79 3D */	bl func_80434A4C
-/* 8025D114 002266D4  48 20 20 A1 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8025D110 002266D0  48 1D 79 3D */	bl MemManager_80434A4C__FUc
+/* 8025D114 002266D4  48 20 20 A1 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8025D118 002266D8  90 7F 00 30 */	stw r3, 0x30(r31)
 /* 8025D11C 002266DC  7F C4 F3 78 */	mr r4, r30
 /* 8025D120 002266E0  38 BD 0D 23 */	addi r5, r29, 0xd23
@@ -6174,10 +6174,10 @@
 /* 8025D238 002267F8  38 00 00 00 */	li r0, 0
 /* 8025D23C 002267FC  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 8025D240 00226800  38 7F 00 08 */	addi r3, r31, 8
-/* 8025D244 00226804  48 20 25 CD */	bl func_8045F810
+/* 8025D244 00226804  48 20 25 CD */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8025D248 00226808  38 61 00 0C */	addi r3, r1, 0xc
 /* 8025D24C 0022680C  38 80 FF FF */	li r4, -1
-/* 8025D250 00226810  48 20 26 79 */	bl __dt__Class_8045F858
+/* 8025D250 00226810  48 20 26 79 */	bl __dt__14Class_8045F858Fv
 /* 8025D254 00226814  38 60 00 01 */	li r3, 1
 /* 8025D258 00226818  48 00 00 98 */	b .L_8025D2F0
 .L_8025D25C:
@@ -6192,17 +6192,17 @@
 /* 8025D27C 0022683C  38 DD 0D 27 */	addi r6, r29, 0xd27
 /* 8025D280 00226840  38 A0 01 00 */	li r5, 0x100
 /* 8025D284 00226844  38 E0 00 00 */	li r7, 0
-/* 8025D288 00226848  48 20 23 F9 */	bl func_8045F680
+/* 8025D288 00226848  48 20 23 F9 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8025D28C 0022684C  38 61 00 08 */	addi r3, r1, 8
 /* 8025D290 00226850  38 9F 00 08 */	addi r4, r31, 8
-/* 8025D294 00226854  48 20 25 C5 */	bl __ct__Class_8045F858
+/* 8025D294 00226854  48 20 25 C5 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8025D298 00226858  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 8025D29C 0022685C  3B C0 00 00 */	li r30, 0
 /* 8025D2A0 00226860  38 60 00 00 */	li r3, 0
 /* 8025D2A4 00226864  83 84 00 04 */	lwz r28, 4(r4)
 /* 8025D2A8 00226868  93 C4 00 04 */	stw r30, 4(r4)
-/* 8025D2AC 0022686C  48 1D 77 A1 */	bl func_80434A4C
-/* 8025D2B0 00226870  48 20 1F 05 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8025D2AC 0022686C  48 1D 77 A1 */	bl MemManager_80434A4C__FUc
+/* 8025D2B0 00226870  48 20 1F 05 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8025D2B4 00226874  90 7F 00 34 */	stw r3, 0x34(r31)
 /* 8025D2B8 00226878  7F 84 E3 78 */	mr r4, r28
 /* 8025D2BC 0022687C  38 BD 0D 23 */	addi r5, r29, 0xd23
@@ -6211,10 +6211,10 @@
 /* 8025D2C8 00226888  4B FF FC 79 */	bl func_8025CF40
 /* 8025D2CC 0022688C  93 DF 00 2C */	stw r30, 0x2c(r31)
 /* 8025D2D0 00226890  38 7F 00 18 */	addi r3, r31, 0x18
-/* 8025D2D4 00226894  48 20 25 3D */	bl func_8045F810
+/* 8025D2D4 00226894  48 20 25 3D */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8025D2D8 00226898  38 61 00 08 */	addi r3, r1, 8
 /* 8025D2DC 0022689C  38 80 FF FF */	li r4, -1
-/* 8025D2E0 002268A0  48 20 25 E9 */	bl __dt__Class_8045F858
+/* 8025D2E0 002268A0  48 20 25 E9 */	bl __dt__14Class_8045F858Fv
 /* 8025D2E4 002268A4  38 60 00 01 */	li r3, 1
 /* 8025D2E8 002268A8  48 00 00 08 */	b .L_8025D2F0
 .L_8025D2EC:
@@ -6572,38 +6572,38 @@
 .obj __vt__11CKizunagram, global
 	.4byte __RTTI__11CKizunagram
 	.4byte 0
-	.4byte __dt__CKizunagram
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__11CKizunagramFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CKizunagram_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__11CKizunagram
 
 .obj CKizunagram_hierarchy, global
@@ -6616,28 +6616,28 @@
 .obj __vt__11CKizunaInfo, global
 	.4byte __RTTI__11CKizunaInfo
 	.4byte 0
-	.4byte __dt__CKizunaInfo
+	.4byte __dt__11CKizunaInfoFv
 .endobj __vt__11CKizunaInfo
 
 
 .obj __vt__11CKizunaLine, global
 	.4byte __RTTI__11CKizunaLine
 	.4byte 0
-	.4byte __dt__CKizunaLine
+	.4byte __dt__11CKizunaLineFv
 .endobj __vt__11CKizunaLine
 
 
 .obj __vt__10CKizunaCur, global
 	.4byte __RTTI__10CKizunaCur
 	.4byte 0
-	.4byte __dt__CKizunaCur
+	.4byte __dt__10CKizunaCurFv
 .endobj __vt__10CKizunaCur
 
 
 .obj __vt__12CKizunaRadar, global
 	.4byte __RTTI__12CKizunaRadar
 	.4byte 0
-	.4byte __dt__CKizunaRadar
+	.4byte __dt__12CKizunaRadarFv
 	.4byte 0
 .endobj __vt__12CKizunaRadar
 
@@ -7086,10 +7086,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x00000008
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001747C"
 
 .obj "@etb_800174AC", local
@@ -7102,31 +7102,31 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CKizunaRadar
+	.4byte __dt__12CKizunaRadarFv
 	.4byte 0x0780001E
 	.4byte 0x000000AC
-	.4byte __dt__CKizunaCur
+	.4byte __dt__10CKizunaCurFv
 	.4byte 0x0780001E
 	.4byte 0x00000068
-	.4byte __dt__CKizunaLine
+	.4byte __dt__11CKizunaLineFv
 	.4byte 0x8780001E
 	.4byte 0x0000004C
-	.4byte __dt__CKizunaInfo
+	.4byte __dt__11CKizunaInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CKizunaRadar
+	.4byte __dt__12CKizunaRadarFv
 	.4byte 0x0780001E
 	.4byte 0x000000AC
-	.4byte __dt__CKizunaCur
+	.4byte __dt__10CKizunaCurFv
 	.4byte 0x0780001E
 	.4byte 0x00000068
-	.4byte __dt__CKizunaLine
+	.4byte __dt__11CKizunaLineFv
 	.4byte 0x0780001E
 	.4byte 0x0000004C
-	.4byte __dt__CKizunaInfo
+	.4byte __dt__11CKizunaInfoFv
 	.4byte 0x8780001E
 	.4byte 0x00000018
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 .endobj "@etb_800174AC"
 
 .obj "@etb_80017530", local
@@ -7234,9 +7234,9 @@
 	.4byte 0x000A0020
 	.4byte 0x00000000
 	.4byte 0x8200000C
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_800175B0"
 
 .obj "@etb_800175D8", local
@@ -7253,7 +7253,7 @@
 
 .obj "@eti_8002FB1C", local
 .hidden "@eti_8002FB1C"
-	.4byte __dt__CKizunaRadar
+	.4byte __dt__12CKizunaRadarFv
 	.4byte 0x00000040
 	.4byte "@etb_8001733C"
 .endobj "@eti_8002FB1C"
@@ -7281,7 +7281,7 @@
 
 .obj "@eti_8002FB4C", local
 .hidden "@eti_8002FB4C"
-	.4byte __dt__CKizunaCur
+	.4byte __dt__10CKizunaCurFv
 	.4byte 0x00000040
 	.4byte "@etb_8001735C"
 .endobj "@eti_8002FB4C"
@@ -7316,7 +7316,7 @@
 
 .obj "@eti_8002FB88", local
 .hidden "@eti_8002FB88"
-	.4byte __dt__CKizunaLine
+	.4byte __dt__11CKizunaLineFv
 	.4byte 0x00000040
 	.4byte "@etb_80017384"
 .endobj "@eti_8002FB88"
@@ -7456,7 +7456,7 @@
 
 .obj "@eti_8002FC78", local
 .hidden "@eti_8002FC78"
-	.4byte __dt__CKizunaInfo
+	.4byte __dt__11CKizunaInfoFv
 	.4byte 0x00000040
 	.4byte "@etb_80017424"
 .endobj "@eti_8002FC78"
@@ -7540,7 +7540,7 @@
 
 .obj "@eti_8002FD08", local
 .hidden "@eti_8002FD08"
-	.4byte __dt__CKizunagram
+	.4byte __dt__11CKizunagramFv
 	.4byte 0x00000060
 	.4byte "@etb_800174AC"
 .endobj "@eti_8002FD08"

@@ -2953,7 +2953,7 @@
 .obj __vt__Q22cf12CSuddenCommu, global
 	.4byte __RTTI__Q22cf12CSuddenCommu
 	.4byte 0
-	.4byte __dt__cf_CSuddenCommu
+	.4byte __dt__Q22cf12CSuddenCommuFv
 	.4byte func_801BA250
 .endobj __vt__Q22cf12CSuddenCommu
 

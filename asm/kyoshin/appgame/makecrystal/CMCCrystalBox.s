@@ -249,9 +249,9 @@
 /* 80213C0C 001DD1CC  7C 9D 23 78 */	mr r29, r4
 /* 80213C10 001DD1D0  90 A3 00 00 */	stw r5, 0(r3)
 /* 80213C14 001DD1D4  38 63 00 04 */	addi r3, r3, 4
-/* 80213C18 001DD1D8  48 24 B9 4D */	bl __ct__UnkClass_8045F564
+/* 80213C18 001DD1D8  48 24 B9 4D */	bl __ct__17UnkClass_8045F564Fv
 /* 80213C1C 001DD1DC  38 7C 00 14 */	addi r3, r28, 0x14
-/* 80213C20 001DD1E0  48 24 B9 45 */	bl __ct__UnkClass_8045F564
+/* 80213C20 001DD1E0  48 24 B9 45 */	bl __ct__17UnkClass_8045F564Fv
 /* 80213C24 001DD1E4  3B C0 00 00 */	li r30, 0
 /* 80213C28 001DD1E8  3B E0 00 01 */	li r31, 1
 /* 80213C2C 001DD1EC  93 DC 00 24 */	stw r30, 0x24(r28)
@@ -463,7 +463,7 @@
 /* 80213F08 001DD4C8  4E 80 00 20 */	blr 
 .endfn __dt__80213ECC
 
-.fn __dt__CMCCrystalBox, global
+.fn __dt__13CMCCrystalBoxFv, global
 /* 80213F0C 001DD4CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80213F10 001DD4D0  7C 08 02 A6 */	mflr r0
 /* 80213F14 001DD4D4  2C 03 00 00 */	cmpwi r3, 0
@@ -474,40 +474,40 @@
 /* 80213F28 001DD4E8  41 82 00 A4 */	beq .L_80213FCC
 /* 80213F2C 001DD4EC  38 80 FF FF */	li r4, -1
 /* 80213F30 001DD4F0  38 63 02 90 */	addi r3, r3, 0x290
-/* 80213F34 001DD4F4  48 01 77 6D */	bl __dt__CSysWin
+/* 80213F34 001DD4F4  48 01 77 6D */	bl __dt__7CSysWinFv
 /* 80213F38 001DD4F8  38 7E 02 50 */	addi r3, r30, 0x250
 /* 80213F3C 001DD4FC  38 80 FF FF */	li r4, -1
-/* 80213F40 001DD500  4B FD F5 61 */	bl __dt__CScrollBar
+/* 80213F40 001DD500  4B FD F5 61 */	bl __dt__10CScrollBarFv
 /* 80213F44 001DD504  38 7E 01 EC */	addi r3, r30, 0x1ec
 /* 80213F48 001DD508  38 80 FF FF */	li r4, -1
-/* 80213F4C 001DD50C  48 00 67 6D */	bl __dt__CMCCrystalInfo
+/* 80213F4C 001DD50C  48 00 67 6D */	bl __dt__14CMCCrystalInfoFv
 /* 80213F50 001DD510  38 7E 00 FC */	addi r3, r30, 0xfc
 /* 80213F54 001DD514  38 80 FF FF */	li r4, -1
-/* 80213F58 001DD518  4B FB F0 AD */	bl __dt__CSortMenu
+/* 80213F58 001DD518  4B FB F0 AD */	bl __dt__9CSortMenuFv
 /* 80213F5C 001DD51C  38 7E 00 E4 */	addi r3, r30, 0xe4
 /* 80213F60 001DD520  38 80 FF FF */	li r4, -1
-/* 80213F64 001DD524  4B FB EA D5 */	bl __dt__CCur18
+/* 80213F64 001DD524  4B FB EA D5 */	bl __dt__6CCur18Fv
 /* 80213F68 001DD528  38 7E 00 CC */	addi r3, r30, 0xcc
 /* 80213F6C 001DD52C  38 80 FF FF */	li r4, -1
-/* 80213F70 001DD530  4B FB E9 C9 */	bl __dt__CCur16
+/* 80213F70 001DD530  4B FB E9 C9 */	bl __dt__6CCur16Fv
 /* 80213F74 001DD534  38 7E 00 B4 */	addi r3, r30, 0xb4
 /* 80213F78 001DD538  38 80 FF FF */	li r4, -1
-/* 80213F7C 001DD53C  4B FB E6 31 */	bl __dt__CCur11
+/* 80213F7C 001DD53C  4B FB E6 31 */	bl __dt__6CCur11Fv
 /* 80213F80 001DD540  38 7E 00 9C */	addi r3, r30, 0x9c
 /* 80213F84 001DD544  38 80 FF FF */	li r4, -1
-/* 80213F88 001DD548  4B FB EA B1 */	bl __dt__CCur18
+/* 80213F88 001DD548  4B FB EA B1 */	bl __dt__6CCur18Fv
 /* 80213F8C 001DD54C  38 7E 00 84 */	addi r3, r30, 0x84
 /* 80213F90 001DD550  38 80 FF FF */	li r4, -1
-/* 80213F94 001DD554  4B FB E4 A5 */	bl __dt__CCur09
+/* 80213F94 001DD554  4B FB E4 A5 */	bl __dt__6CCur09Fv
 /* 80213F98 001DD558  38 7E 00 6C */	addi r3, r30, 0x6c
 /* 80213F9C 001DD55C  38 80 FF FF */	li r4, -1
-/* 80213FA0 001DD560  4B FB E3 99 */	bl __dt__CCur07
+/* 80213FA0 001DD560  4B FB E3 99 */	bl __dt__6CCur07Fv
 /* 80213FA4 001DD564  38 7E 00 14 */	addi r3, r30, 0x14
 /* 80213FA8 001DD568  38 80 FF FF */	li r4, -1
-/* 80213FAC 001DD56C  48 24 B5 D5 */	bl __dt__UnkClass_8045F564
+/* 80213FAC 001DD56C  48 24 B5 D5 */	bl __dt__17UnkClass_8045F564Fv
 /* 80213FB0 001DD570  38 7E 00 04 */	addi r3, r30, 4
 /* 80213FB4 001DD574  38 80 FF FF */	li r4, -1
-/* 80213FB8 001DD578  48 24 B5 C9 */	bl __dt__UnkClass_8045F564
+/* 80213FB8 001DD578  48 24 B5 C9 */	bl __dt__17UnkClass_8045F564Fv
 /* 80213FBC 001DD57C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80213FC0 001DD580  40 81 00 0C */	ble .L_80213FCC
 /* 80213FC4 001DD584  7F C3 F3 78 */	mr r3, r30
@@ -519,7 +519,7 @@
 /* 80213FD8 001DD598  7C 08 03 A6 */	mtlr r0
 /* 80213FDC 001DD59C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80213FE0 001DD5A0  4E 80 00 20 */	blr 
-.endfn __dt__CMCCrystalBox
+.endfn __dt__13CMCCrystalBoxFv
 
 .fn func_80213FE4, global
 /* 80213FE4 001DD5A4  94 21 FE 10 */	stwu r1, -0x1f0(r1)
@@ -534,14 +534,14 @@
 /* 80214008 001DD5C8  38 C0 00 00 */	li r6, 0
 /* 8021400C 001DD5CC  38 9E 00 0C */	addi r4, r30, 0xc
 /* 80214010 001DD5D0  38 E0 00 00 */	li r7, 0
-/* 80214014 001DD5D4  48 23 A7 81 */	bl CDeviceFile_openFile1
+/* 80214014 001DD5D4  48 23 A7 81 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80214018 001DD5D8  90 7F 00 24 */	stw r3, 0x24(r31)
 /* 8021401C 001DD5DC  48 22 03 85 */	bl Heap_getRegionIndex2
 /* 80214020 001DD5E0  7F E5 FB 78 */	mr r5, r31
 /* 80214024 001DD5E4  38 9E 00 23 */	addi r4, r30, 0x23
 /* 80214028 001DD5E8  38 C0 00 00 */	li r6, 0
 /* 8021402C 001DD5EC  38 E0 00 00 */	li r7, 0
-/* 80214030 001DD5F0  48 23 A7 65 */	bl CDeviceFile_openFile1
+/* 80214030 001DD5F0  48 23 A7 65 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80214034 001DD5F4  90 7F 00 28 */	stw r3, 0x28(r31)
 /* 80214038 001DD5F8  4B E9 5D 59 */	bl func_800A9D90
 /* 8021403C 001DD5FC  7F E5 FB 78 */	mr r5, r31
@@ -594,7 +594,7 @@
 /* 802140F4 001DD6B4  98 1F 01 E9 */	stb r0, 0x1e9(r31)
 /* 802140F8 001DD6B8  88 01 01 DE */	lbz r0, 0x1de(r1)
 /* 802140FC 001DD6BC  98 1F 01 EA */	stb r0, 0x1ea(r31)
-/* 80214100 001DD6C0  4B FB EF 05 */	bl __dt__CSortMenu
+/* 80214100 001DD6C0  4B FB EF 05 */	bl __dt__9CSortMenuFv
 /* 80214104 001DD6C4  38 61 00 88 */	addi r3, r1, 0x88
 /* 80214108 001DD6C8  48 00 65 2D */	bl __ct__CMCCrystalInfo
 /* 8021410C 001DD6CC  38 7F 01 F0 */	addi r3, r31, 0x1f0
@@ -639,7 +639,7 @@
 /* 802141A8 001DD768  80 01 00 E6 */	lwz r0, 0xe6(r1)
 /* 802141AC 001DD76C  90 1F 02 4A */	stw r0, 0x24a(r31)
 /* 802141B0 001DD770  90 BF 02 46 */	stw r5, 0x246(r31)
-/* 802141B4 001DD774  48 00 65 05 */	bl __dt__CMCCrystalInfo
+/* 802141B4 001DD774  48 00 65 05 */	bl __dt__14CMCCrystalInfoFv
 /* 802141B8 001DD778  38 61 00 48 */	addi r3, r1, 0x48
 /* 802141BC 001DD77C  38 80 00 00 */	li r4, 0
 /* 802141C0 001DD780  4B FD F2 51 */	bl __ct__CScrollBar
@@ -648,7 +648,7 @@
 /* 802141CC 001DD78C  4B F0 87 CD */	bl func_8011C998
 /* 802141D0 001DD790  38 61 00 48 */	addi r3, r1, 0x48
 /* 802141D4 001DD794  38 80 FF FF */	li r4, -1
-/* 802141D8 001DD798  4B FD F2 C9 */	bl __dt__CScrollBar
+/* 802141D8 001DD798  4B FD F2 C9 */	bl __dt__10CScrollBarFv
 /* 802141DC 001DD79C  38 61 00 08 */	addi r3, r1, 8
 /* 802141E0 001DD7A0  38 80 00 00 */	li r4, 0
 /* 802141E4 001DD7A4  48 01 74 35 */	bl __ct__CSysWin
@@ -685,7 +685,7 @@
 /* 80214260 001DD820  98 1F 02 C8 */	stb r0, 0x2c8(r31)
 /* 80214264 001DD824  88 01 00 41 */	lbz r0, 0x41(r1)
 /* 80214268 001DD828  98 1F 02 C9 */	stb r0, 0x2c9(r31)
-/* 8021426C 001DD82C  48 01 74 35 */	bl __dt__CSysWin
+/* 8021426C 001DD82C  48 01 74 35 */	bl __dt__7CSysWinFv
 /* 80214270 001DD830  38 7F 00 FC */	addi r3, r31, 0xfc
 /* 80214274 001DD834  4B FB ED F1 */	bl func_801D3064
 /* 80214278 001DD838  38 7F 01 EC */	addi r3, r31, 0x1ec
@@ -825,7 +825,7 @@
 /* 80214438 001DD9F8  80 63 00 38 */	lwz r3, 0x38(r3)
 /* 8021443C 001DD9FC  38 A0 00 00 */	li r5, 0
 /* 80214440 001DDA00  38 C0 00 01 */	li r6, 1
-/* 80214444 001DDA04  4B F2 2B F5 */	bl func_80137038
+/* 80214444 001DDA04  4B F2 2B F5 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80214448 001DDA08  7F E4 FB 78 */	mr r4, r31
 /* 8021444C 001DDA0C  38 7E 01 EC */	addi r3, r30, 0x1ec
 /* 80214450 001DDA10  48 00 63 F1 */	bl func_8021A840
@@ -883,11 +883,11 @@
 /* 80214508 001DDAC8  38 60 00 02 */	li r3, 2
 /* 8021450C 001DDACC  4B E2 65 81 */	bl func_8003AA8C
 /* 80214510 001DDAD0  38 7F 00 24 */	addi r3, r31, 0x24
-/* 80214514 001DDAD4  4B F2 4B CD */	bl func_801390E0
+/* 80214514 001DDAD4  4B F2 4B CD */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80214518 001DDAD8  38 7F 00 28 */	addi r3, r31, 0x28
-/* 8021451C 001DDADC  4B F2 4B C5 */	bl func_801390E0
+/* 8021451C 001DDADC  4B F2 4B C5 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80214520 001DDAE0  38 7F 00 2C */	addi r3, r31, 0x2c
-/* 80214524 001DDAE4  4B F2 4B BD */	bl func_801390E0
+/* 80214524 001DDAE4  4B F2 4B BD */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80214528 001DDAE8  88 1F 00 60 */	lbz r0, 0x60(r31)
 /* 8021452C 001DDAEC  2C 00 00 00 */	cmpwi r0, 0
 /* 80214530 001DDAF0  41 82 00 F0 */	beq .L_80214620
@@ -907,13 +907,13 @@
 /* 80214564 001DDB24  90 1F 00 38 */	stw r0, 0x38(r31)
 .L_80214568:
 /* 80214568 001DDB28  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 8021456C 001DDB2C  4B F2 4B B9 */	bl func_80139124
+/* 8021456C 001DDB2C  4B F2 4B B9 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 80214570 001DDB30  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 80214574 001DDB34  4B F2 4B B1 */	bl func_80139124
+/* 80214574 001DDB34  4B F2 4B B1 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 80214578 001DDB38  38 7F 00 04 */	addi r3, r31, 4
-/* 8021457C 001DDB3C  48 24 B1 FD */	bl func_8045F778
+/* 8021457C 001DDB3C  48 24 B1 FD */	bl func_8045F778__FP17UnkClass_8045F564
 /* 80214580 001DDB40  38 7F 00 14 */	addi r3, r31, 0x14
-/* 80214584 001DDB44  48 24 B1 F5 */	bl func_8045F778
+/* 80214584 001DDB44  48 24 B1 F5 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 80214588 001DDB48  38 7F 00 FC */	addi r3, r31, 0xfc
 /* 8021458C 001DDB4C  4B FB EC CD */	bl func_801D3258
 /* 80214590 001DDB50  38 7F 01 EC */	addi r3, r31, 0x1ec
@@ -7157,17 +7157,17 @@
 /* 80219D60 001E3320  38 DD 03 68 */	addi r6, r29, 0x368
 /* 80219D64 001E3324  3C A0 00 04 */	lis r5, 4
 /* 80219D68 001E3328  38 E0 00 00 */	li r7, 0
-/* 80219D6C 001E332C  48 24 59 15 */	bl func_8045F680
+/* 80219D6C 001E332C  48 24 59 15 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 80219D70 001E3330  38 61 00 0C */	addi r3, r1, 0xc
 /* 80219D74 001E3334  38 9F 00 04 */	addi r4, r31, 4
-/* 80219D78 001E3338  48 24 5A E1 */	bl __ct__Class_8045F858
+/* 80219D78 001E3338  48 24 5A E1 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 80219D7C 001E333C  80 9F 00 24 */	lwz r4, 0x24(r31)
 /* 80219D80 001E3340  38 00 00 00 */	li r0, 0
 /* 80219D84 001E3344  38 60 00 00 */	li r3, 0
 /* 80219D88 001E3348  83 C4 00 04 */	lwz r30, 4(r4)
 /* 80219D8C 001E334C  90 04 00 04 */	stw r0, 4(r4)
-/* 80219D90 001E3350  48 21 AC BD */	bl func_80434A4C
-/* 80219D94 001E3354  48 24 54 21 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 80219D90 001E3350  48 21 AC BD */	bl MemManager_80434A4C__FUc
+/* 80219D94 001E3354  48 24 54 21 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 80219D98 001E3358  90 7F 00 30 */	stw r3, 0x30(r31)
 /* 80219D9C 001E335C  7F C4 F3 78 */	mr r4, r30
 /* 80219DA0 001E3360  38 BD 03 76 */	addi r5, r29, 0x376
@@ -7175,7 +7175,7 @@
 /* 80219DA8 001E3368  80 9F 00 30 */	lwz r4, 0x30(r31)
 /* 80219DAC 001E336C  38 7F 00 38 */	addi r3, r31, 0x38
 /* 80219DB0 001E3370  38 BD 03 7A */	addi r5, r29, 0x37a
-/* 80219DB4 001E3374  4B F1 D0 D1 */	bl func_80136E84
+/* 80219DB4 001E3374  4B F1 D0 D1 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80219DB8 001E3378  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 80219DBC 001E337C  38 9F 00 3C */	addi r4, r31, 0x3c
 /* 80219DC0 001E3380  80 BF 00 30 */	lwz r5, 0x30(r31)
@@ -7540,7 +7540,7 @@
 /* 8021A340 001E3900  4B F7 0D BD */	bl func_8018B0FC
 /* 8021A344 001E3904  38 61 00 C0 */	addi r3, r1, 0xc0
 /* 8021A348 001E3908  38 80 FF FF */	li r4, -1
-/* 8021A34C 001E390C  4B FB 7F ED */	bl __dt__CCur07
+/* 8021A34C 001E390C  4B FB 7F ED */	bl __dt__6CCur07Fv
 /* 8021A350 001E3910  81 9F 00 6C */	lwz r12, 0x6c(r31)
 /* 8021A354 001E3914  38 7F 00 6C */	addi r3, r31, 0x6c
 /* 8021A358 001E3918  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7554,7 +7554,7 @@
 /* 8021A378 001E3938  4B F7 0D 85 */	bl func_8018B0FC
 /* 8021A37C 001E393C  38 61 00 A8 */	addi r3, r1, 0xa8
 /* 8021A380 001E3940  38 80 FF FF */	li r4, -1
-/* 8021A384 001E3944  4B FB 80 B5 */	bl __dt__CCur09
+/* 8021A384 001E3944  4B FB 80 B5 */	bl __dt__6CCur09Fv
 /* 8021A388 001E3948  81 9F 00 84 */	lwz r12, 0x84(r31)
 /* 8021A38C 001E394C  38 7F 00 84 */	addi r3, r31, 0x84
 /* 8021A390 001E3950  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7595,7 +7595,7 @@
 /* 8021A41C 001E39DC  4B F7 0C E1 */	bl func_8018B0FC
 /* 8021A420 001E39E0  38 61 00 90 */	addi r3, r1, 0x90
 /* 8021A424 001E39E4  38 80 FF FF */	li r4, -1
-/* 8021A428 001E39E8  4B FB 86 11 */	bl __dt__CCur18
+/* 8021A428 001E39E8  4B FB 86 11 */	bl __dt__6CCur18Fv
 /* 8021A42C 001E39EC  81 9F 00 9C */	lwz r12, 0x9c(r31)
 /* 8021A430 001E39F0  38 7F 00 9C */	addi r3, r31, 0x9c
 /* 8021A434 001E39F4  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7609,7 +7609,7 @@
 /* 8021A454 001E3A14  4B F7 0C A9 */	bl func_8018B0FC
 /* 8021A458 001E3A18  38 61 00 78 */	addi r3, r1, 0x78
 /* 8021A45C 001E3A1C  38 80 FF FF */	li r4, -1
-/* 8021A460 001E3A20  4B FB 81 4D */	bl __dt__CCur11
+/* 8021A460 001E3A20  4B FB 81 4D */	bl __dt__6CCur11Fv
 /* 8021A464 001E3A24  81 9F 00 B4 */	lwz r12, 0xb4(r31)
 /* 8021A468 001E3A28  38 7F 00 B4 */	addi r3, r31, 0xb4
 /* 8021A46C 001E3A2C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7623,7 +7623,7 @@
 /* 8021A48C 001E3A4C  4B F7 0C 71 */	bl func_8018B0FC
 /* 8021A490 001E3A50  38 61 00 60 */	addi r3, r1, 0x60
 /* 8021A494 001E3A54  38 80 FF FF */	li r4, -1
-/* 8021A498 001E3A58  4B FB 84 A1 */	bl __dt__CCur16
+/* 8021A498 001E3A58  4B FB 84 A1 */	bl __dt__6CCur16Fv
 /* 8021A49C 001E3A5C  81 9F 00 CC */	lwz r12, 0xcc(r31)
 /* 8021A4A0 001E3A60  38 7F 00 CC */	addi r3, r31, 0xcc
 /* 8021A4A4 001E3A64  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7638,7 +7638,7 @@
 /* 8021A4C8 001E3A88  4B F7 0C 35 */	bl func_8018B0FC
 /* 8021A4CC 001E3A8C  38 61 00 48 */	addi r3, r1, 0x48
 /* 8021A4D0 001E3A90  38 80 FF FF */	li r4, -1
-/* 8021A4D4 001E3A94  4B FB 85 65 */	bl __dt__CCur18
+/* 8021A4D4 001E3A94  4B FB 85 65 */	bl __dt__6CCur18Fv
 /* 8021A4D8 001E3A98  81 9F 00 E4 */	lwz r12, 0xe4(r31)
 /* 8021A4DC 001E3A9C  38 7F 00 E4 */	addi r3, r31, 0xe4
 /* 8021A4E0 001E3AA0  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7649,10 +7649,10 @@
 /* 8021A4F4 001E3AB4  38 00 00 00 */	li r0, 0
 /* 8021A4F8 001E3AB8  90 1F 00 24 */	stw r0, 0x24(r31)
 /* 8021A4FC 001E3ABC  38 7F 00 04 */	addi r3, r31, 4
-/* 8021A500 001E3AC0  48 24 53 11 */	bl func_8045F810
+/* 8021A500 001E3AC0  48 24 53 11 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8021A504 001E3AC4  38 61 00 0C */	addi r3, r1, 0xc
 /* 8021A508 001E3AC8  38 80 FF FF */	li r4, -1
-/* 8021A50C 001E3ACC  48 24 53 BD */	bl __dt__Class_8045F858
+/* 8021A50C 001E3ACC  48 24 53 BD */	bl __dt__14Class_8045F858Fv
 /* 8021A510 001E3AD0  38 60 00 01 */	li r3, 1
 /* 8021A514 001E3AD4  48 00 01 08 */	b .L_8021A61C
 .L_8021A518:
@@ -7667,17 +7667,17 @@
 /* 8021A538 001E3AF8  38 DD 05 27 */	addi r6, r29, 0x527
 /* 8021A53C 001E3AFC  38 A0 01 00 */	li r5, 0x100
 /* 8021A540 001E3B00  38 E0 00 00 */	li r7, 0
-/* 8021A544 001E3B04  48 24 51 3D */	bl func_8045F680
+/* 8021A544 001E3B04  48 24 51 3D */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8021A548 001E3B08  38 61 00 08 */	addi r3, r1, 8
 /* 8021A54C 001E3B0C  38 9F 00 14 */	addi r4, r31, 0x14
-/* 8021A550 001E3B10  48 24 53 09 */	bl __ct__Class_8045F858
+/* 8021A550 001E3B10  48 24 53 09 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8021A554 001E3B14  80 9F 00 28 */	lwz r4, 0x28(r31)
 /* 8021A558 001E3B18  3B C0 00 00 */	li r30, 0
 /* 8021A55C 001E3B1C  38 60 00 00 */	li r3, 0
 /* 8021A560 001E3B20  83 84 00 04 */	lwz r28, 4(r4)
 /* 8021A564 001E3B24  93 C4 00 04 */	stw r30, 4(r4)
-/* 8021A568 001E3B28  48 21 A4 E5 */	bl func_80434A4C
-/* 8021A56C 001E3B2C  48 24 4C 49 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8021A568 001E3B28  48 21 A4 E5 */	bl MemManager_80434A4C__FUc
+/* 8021A56C 001E3B2C  48 24 4C 49 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8021A570 001E3B30  90 7F 00 34 */	stw r3, 0x34(r31)
 /* 8021A574 001E3B34  7F 84 E3 78 */	mr r4, r28
 /* 8021A578 001E3B38  38 BD 03 76 */	addi r5, r29, 0x376
@@ -7686,10 +7686,10 @@
 /* 8021A584 001E3B44  4B FF CA 09 */	bl func_80216F8C
 /* 8021A588 001E3B48  93 DF 00 28 */	stw r30, 0x28(r31)
 /* 8021A58C 001E3B4C  38 7F 00 14 */	addi r3, r31, 0x14
-/* 8021A590 001E3B50  48 24 52 81 */	bl func_8045F810
+/* 8021A590 001E3B50  48 24 52 81 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8021A594 001E3B54  38 61 00 08 */	addi r3, r1, 8
 /* 8021A598 001E3B58  38 80 FF FF */	li r4, -1
-/* 8021A59C 001E3B5C  48 24 53 2D */	bl __dt__Class_8045F858
+/* 8021A59C 001E3B5C  48 24 53 2D */	bl __dt__14Class_8045F858Fv
 /* 8021A5A0 001E3B60  38 60 00 01 */	li r3, 1
 /* 8021A5A4 001E3B64  48 00 00 78 */	b .L_8021A61C
 .L_8021A5A8:
@@ -7871,38 +7871,38 @@
 .obj __vt__13CMCCrystalBox, global
 	.4byte __RTTI__13CMCCrystalBox
 	.4byte 0
-	.4byte __dt__CMCCrystalBox
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__13CMCCrystalBoxFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CMCCrystalBox_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__13CMCCrystalBox
 
 .obj CMCCrystalBox_hierarchy, global
@@ -8031,40 +8031,40 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001C
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001C
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001C
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001C
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001C
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x0780001C
 	.4byte 0x0000009C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001C
 	.4byte 0x00000084
-	.4byte __dt__CCur09
+	.4byte __dt__6CCur09Fv
 	.4byte 0x0780001C
 	.4byte 0x0000006C
-	.4byte __dt__CCur07
+	.4byte __dt__6CCur07Fv
 	.4byte 0x0780001C
 	.4byte 0x00000014
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0780001C
 	.4byte 0x00000004
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_800135AC"
 
 .obj "@etb_800136A4", local
@@ -8133,7 +8133,7 @@
 	.4byte __dt__80213E4C
 	.4byte 0x8780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8145,10 +8145,10 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x8780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8160,13 +8160,13 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x8780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8178,16 +8178,16 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x8780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8199,19 +8199,19 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x8780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8223,22 +8223,22 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x8780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8250,25 +8250,25 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x8780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8280,28 +8280,28 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x8780001E
 	.4byte 0x0000009C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8313,31 +8313,31 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x8780001E
 	.4byte 0x00000084
-	.4byte __dt__CCur09
+	.4byte __dt__6CCur09Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8349,34 +8349,34 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__CCur09
+	.4byte __dt__6CCur09Fv
 	.4byte 0x8780001E
 	.4byte 0x0000006C
-	.4byte __dt__CCur07
+	.4byte __dt__6CCur07Fv
 	.4byte 0x0780001E
 	.4byte 0x00001480
 	.4byte __dt__80213ECC
@@ -8388,37 +8388,37 @@
 	.4byte __dt__80213E4C
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000250
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x000001EC
-	.4byte __dt__CMCCrystalInfo
+	.4byte __dt__14CMCCrystalInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000FC
-	.4byte __dt__CSortMenu
+	.4byte __dt__9CSortMenuFv
 	.4byte 0x0780001E
 	.4byte 0x000000E4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x000000CC
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__CCur09
+	.4byte __dt__6CCur09Fv
 	.4byte 0x0780001E
 	.4byte 0x0000006C
-	.4byte __dt__CCur07
+	.4byte __dt__6CCur07Fv
 	.4byte 0x8780001E
 	.4byte 0x00000014
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 .endobj "@etb_800136BC"
 
 .obj "@etb_80013BEC", local
@@ -8808,9 +8808,9 @@
 	.4byte 0x000A0020
 	.4byte 0x00000000
 	.4byte 0x8200000C
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_80013DE4"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -8868,7 +8868,7 @@
 
 .obj "@eti_8002D494", local
 .hidden "@eti_8002D494"
-	.4byte __dt__CMCCrystalBox
+	.4byte __dt__13CMCCrystalBoxFv
 	.4byte 0x000000D8
 	.4byte "@etb_800136BC"
 .endobj "@eti_8002D494"

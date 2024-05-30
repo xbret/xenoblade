@@ -23,7 +23,7 @@
 /* 804E6588 004AFB48  4E 80 00 20 */	blr 
 .endfn __ct__CMdlMouth
 
-.fn __dt__CMdlMouth, global
+.fn __dt__9CMdlMouthFv, global
 /* 804E658C 004AFB4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E6590 004AFB50  7C 08 02 A6 */	mflr r0
 /* 804E6594 004AFB54  2C 03 00 00 */	cmpwi r3, 0
@@ -41,7 +41,7 @@
 /* 804E65C0 004AFB80  7C 08 03 A6 */	mtlr r0
 /* 804E65C4 004AFB84  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E65C8 004AFB88  4E 80 00 20 */	blr 
-.endfn __dt__CMdlMouth
+.endfn __dt__9CMdlMouthFv
 
 .fn func_804E65CC, global
 /* 804E65CC 004AFB8C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -515,7 +515,7 @@
 .obj __vt__9CMdlMouth, global
 	.4byte __RTTI__9CMdlMouth
 	.4byte 0
-	.4byte __dt__CMdlMouth
+	.4byte __dt__9CMdlMouthFv
 	.4byte 0
 .endobj __vt__9CMdlMouth
 
@@ -643,7 +643,7 @@
 
 .obj "@eti_80038DF8", local
 .hidden "@eti_80038DF8"
-	.4byte __dt__CMdlMouth
+	.4byte __dt__9CMdlMouthFv
 	.4byte 0x00000040
 	.4byte "@etb_80020CD0"
 .endobj "@eti_80038DF8"

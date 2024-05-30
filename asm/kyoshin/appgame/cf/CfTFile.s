@@ -184,7 +184,7 @@
 /* 80069BC4 00033184  48 3E 4F A1 */	bl CDeviceFile_openFile2
 /* 80069BC8 00033188  90 7E 08 28 */	stw r3, 0x828(r30)
 /* 80069BCC 0003318C  38 80 00 03 */	li r4, 3
-/* 80069BD0 00033190  48 3E 55 85 */	bl func_8044F154
+/* 80069BD0 00033190  48 3E 55 85 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 /* 80069BD4 00033194  80 1E 08 28 */	lwz r0, 0x828(r30)
 /* 80069BD8 00033198  2C 00 00 00 */	cmpwi r0, 0
 /* 80069BDC 0003319C  40 82 00 18 */	bne .L_80069BF4
@@ -385,7 +385,7 @@
 /* 80069E5C 0003341C  4E 80 00 20 */	blr 
 .endfn CfTFile_OnFileEvent
 
-.fn __dt__cf_CfTFile, global
+.fn __dt__Q22cf7CfTFileFv, global
 /* 80069E60 00033420  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069E64 00033424  7C 08 02 A6 */	mflr r0
 /* 80069E68 00033428  2C 03 00 00 */	cmpwi r3, 0
@@ -403,7 +403,7 @@
 /* 80069E94 00033454  7C 08 03 A6 */	mtlr r0
 /* 80069E98 00033458  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069E9C 0003345C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfTFile
+.endfn __dt__Q22cf7CfTFileFv
 
 .fn func_80069EA0, global
 /* 80069EA0 00033460  C0 2D 82 68 */	lfs f1, float_806643E8@sda21(r13)
@@ -1153,38 +1153,38 @@
 .obj __vt__Q22cf7CfTFile, global
 	.4byte __RTTI__Q22cf7CfTFile
 	.4byte 0
-	.4byte __dt__cf_CfTFile
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q22cf7CfTFileFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CfTFile_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q22cf7CfTFile
 
 .obj cf_CfTFile_hierarchy, global
@@ -1503,7 +1503,7 @@
 
 .obj "@eti_8002324C", local
 .hidden "@eti_8002324C"
-	.4byte __dt__cf_CfTFile
+	.4byte __dt__Q22cf7CfTFileFv
 	.4byte 0x00000040
 	.4byte "@etb_80007F94"
 .endobj "@eti_8002324C"

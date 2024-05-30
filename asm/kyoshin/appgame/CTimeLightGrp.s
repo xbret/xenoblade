@@ -228,7 +228,7 @@
 /* 8005A1E4 000237A4  4E 80 00 20 */	blr 
 .endfn __dt__reslist_CVirtualLightObj
 
-.fn __dt__CTimeLightGrp, global
+.fn __dt__13CTimeLightGrpFv, global
 /* 8005A1E8 000237A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A1EC 000237AC  7C 08 02 A6 */	mflr r0
 /* 8005A1F0 000237B0  2C 03 00 00 */	cmpwi r3, 0
@@ -301,7 +301,7 @@
 /* 8005A2E4 000238A4  7C 08 03 A6 */	mtlr r0
 /* 8005A2E8 000238A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8005A2EC 000238AC  4E 80 00 20 */	blr 
-.endfn __dt__CTimeLightGrp
+.endfn __dt__13CTimeLightGrpFv
 
 .fn func_8005A2F0, global
 /* 8005A2F0 000238B0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -391,7 +391,7 @@
 .obj __vt__13CTimeLightGrp, global
 	.4byte __RTTI__13CTimeLightGrp
 	.4byte 0
-	.4byte __dt__CTimeLightGrp
+	.4byte __dt__13CTimeLightGrpFv
 .endobj __vt__13CTimeLightGrp
 
 .obj CTimeLightGrp_hierarchy, global
@@ -567,7 +567,7 @@
 
 .obj "@eti_800227CC", local
 .hidden "@eti_800227CC"
-	.4byte __dt__CTimeLightGrp
+	.4byte __dt__13CTimeLightGrpFv
 	.4byte 0x00000108
 	.4byte "@etb_800077D4"
 .endobj "@eti_800227CC"

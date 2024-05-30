@@ -24,7 +24,7 @@
 /* 80443A14 0040CFD4  4E 80 00 20 */	blr 
 .endfn __ct__CWorkFlowSetup
 
-.fn __dt__CWorkFlowSetup, global
+.fn __dt__14CWorkFlowSetupFv, global
 /* 80443A18 0040CFD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443A1C 0040CFDC  7C 08 02 A6 */	mflr r0
 /* 80443A20 0040CFE0  2C 03 00 00 */	cmpwi r3, 0
@@ -36,7 +36,7 @@
 /* 80443A38 0040CFF8  38 00 00 00 */	li r0, 0
 /* 80443A3C 0040CFFC  90 0D BD 40 */	stw r0, lbl_80667EC0@sda21(r13)
 /* 80443A40 0040D000  38 80 00 00 */	li r4, 0
-/* 80443A44 0040D004  4B FF 40 85 */	bl __dt__CWorkThread
+/* 80443A44 0040D004  4B FF 40 85 */	bl __dt__11CWorkThreadFv
 /* 80443A48 0040D008  2C 1F 00 00 */	cmpwi r31, 0
 /* 80443A4C 0040D00C  40 81 00 0C */	ble .L_80443A58
 /* 80443A50 0040D010  7F C3 F3 78 */	mr r3, r30
@@ -48,7 +48,7 @@
 /* 80443A64 0040D024  7C 08 03 A6 */	mtlr r0
 /* 80443A68 0040D028  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443A6C 0040D02C  4E 80 00 20 */	blr 
-.endfn __dt__CWorkFlowSetup
+.endfn __dt__14CWorkFlowSetupFv
 
 .fn func_80443A70, global
 /* 80443A70 0040D030  80 6D BD 40 */	lwz r3, lbl_80667EC0@sda21(r13)
@@ -68,7 +68,7 @@
 /* 80443A9C 0040D05C  38 80 00 00 */	li r4, 0
 /* 80443AA0 0040D060  4B FF 44 51 */	bl func_80437EF0
 /* 80443AA4 0040D064  7F E3 FB 78 */	mr r3, r31
-/* 80443AA8 0040D068  4B FF 4F 51 */	bl CWorkThread_WorkThreadEvent4
+/* 80443AA8 0040D068  4B FF 4F 51 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80443AAC 0040D06C  48 00 00 08 */	b .L_80443AB4
 .L_80443AB0:
 /* 80443AB0 0040D070  38 60 00 00 */	li r3, 0
@@ -88,7 +88,7 @@
 /* 80443AD8 0040D098  38 60 00 00 */	li r3, 0
 /* 80443ADC 0040D09C  4E 80 00 20 */	blr
 .L_80443AE0:
-/* 80443AE0 0040D0A0  4B FF 4F 44 */	b CWorkThread_WorkThreadEvent5
+/* 80443AE0 0040D0A0  4B FF 4F 44 */	b WorkThreadEvent5__11CWorkThreadFv
 /* 80443AE4 0040D0A4  4E 80 00 20 */	blr 
 .endfn CWorkFlowSetup_WorkThreadEvent5
 
@@ -130,44 +130,44 @@
 .obj __vt__14CWorkFlowSetup, global
 	.4byte __RTTI__14CWorkFlowSetup
 	.4byte 0
-	.4byte __dt__CWorkFlowSetup
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__14CWorkFlowSetupFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CWorkFlowSetup_WorkThreadEvent4
 	.4byte CWorkFlowSetup_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__14CWorkFlowSetup
 
 .obj CWorkFlowSetup_hierarchy, global
@@ -247,7 +247,7 @@
 
 .obj "@eti_80034364", local
 .hidden "@eti_80034364"
-	.4byte __dt__CWorkFlowSetup
+	.4byte __dt__14CWorkFlowSetupFv
 	.4byte 0x00000058
 	.4byte "@etb_8001C764"
 .endobj "@eti_80034364"

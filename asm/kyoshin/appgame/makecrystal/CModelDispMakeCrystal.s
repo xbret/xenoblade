@@ -26,7 +26,7 @@
 /* 8021BCC0 001E5280  92 E3 00 24 */	stw r23, 0x24(r3)
 /* 8021BCC4 001E5284  92 E3 00 28 */	stw r23, 0x28(r3)
 /* 8021BCC8 001E5288  38 63 00 2C */	addi r3, r3, 0x2c
-/* 8021BCCC 001E528C  48 24 38 99 */	bl __ct__UnkClass_8045F564
+/* 8021BCCC 001E528C  48 24 38 99 */	bl __ct__17UnkClass_8045F564Fv
 /* 8021BCD0 001E5290  3C 80 80 22 */	lis r4, func_8021C4F0@ha
 /* 8021BCD4 001E5294  3C A0 80 22 */	lis r5, __dt__8021C540@ha
 /* 8021BCD8 001E5298  92 FB 00 3C */	stw r23, 0x3c(r27)
@@ -251,7 +251,7 @@
 /* 8021C034 001E55F4  98 1B 0C 6E */	stb r0, 0xc6e(r27)
 /* 8021C038 001E55F8  88 01 01 1F */	lbz r0, 0x11f(r1)
 /* 8021C03C 001E55FC  98 1B 0C 6F */	stb r0, 0xc6f(r27)
-/* 8021C040 001E5600  48 00 67 A9 */	bl __dt__CMCCrystalList
+/* 8021C040 001E5600  48 00 67 A9 */	bl __dt__14CMCCrystalListFv
 /* 8021C044 001E5604  38 61 00 88 */	addi r3, r1, 0x88
 /* 8021C048 001E5608  38 80 00 00 */	li r4, 0
 /* 8021C04C 001E560C  4B FD 73 C5 */	bl __ct__CScrollBar
@@ -288,7 +288,7 @@
 /* 8021C0C8 001E5688  D0 1B 0E 70 */	stfs f0, 0xe70(r27)
 /* 8021C0CC 001E568C  88 01 00 C4 */	lbz r0, 0xc4(r1)
 /* 8021C0D0 001E5690  98 1B 0E 74 */	stb r0, 0xe74(r27)
-/* 8021C0D4 001E5694  4B FD 73 CD */	bl __dt__CScrollBar
+/* 8021C0D4 001E5694  4B FD 73 CD */	bl __dt__10CScrollBarFv
 /* 8021C0D8 001E5698  38 61 00 48 */	addi r3, r1, 0x48
 /* 8021C0DC 001E569C  38 80 00 02 */	li r4, 2
 /* 8021C0E0 001E56A0  48 00 F5 39 */	bl __ct__CSysWin
@@ -297,7 +297,7 @@
 /* 8021C0EC 001E56AC  4B F4 B3 41 */	bl func_8016742C
 /* 8021C0F0 001E56B0  38 61 00 48 */	addi r3, r1, 0x48
 /* 8021C0F4 001E56B4  38 80 FF FF */	li r4, -1
-/* 8021C0F8 001E56B8  48 00 F5 A9 */	bl __dt__CSysWin
+/* 8021C0F8 001E56B8  48 00 F5 A9 */	bl __dt__7CSysWinFv
 /* 8021C0FC 001E56BC  38 61 01 20 */	addi r3, r1, 0x120
 /* 8021C100 001E56C0  48 07 B3 31 */	bl __ct__CMCGetItemBox
 /* 8021C104 001E56C4  38 7B 0E D0 */	addi r3, r27, 0xed0
@@ -543,7 +543,7 @@
 /* 8021C4B0 001E5A70  38 80 FF FF */	li r4, -1
 /* 8021C4B4 001E5A74  88 01 05 E8 */	lbz r0, 0x5e8(r1)
 /* 8021C4B8 001E5A78  98 1B 13 94 */	stb r0, 0x1394(r27)
-/* 8021C4BC 001E5A7C  48 07 B3 C5 */	bl __dt__CMCGetItemBox
+/* 8021C4BC 001E5A7C  48 07 B3 C5 */	bl __dt__13CMCGetItemBoxFv
 /* 8021C4C0 001E5A80  39 61 06 20 */	addi r11, r1, 0x620
 /* 8021C4C4 001E5A84  7F 63 DB 78 */	mr r3, r27
 /* 8021C4C8 001E5A88  48 09 DC C5 */	bl _restgpr_22
@@ -596,7 +596,7 @@
 /* 8021C55C 001E5B1C  41 82 00 20 */	beq .L_8021C57C
 /* 8021C560 001E5B20  38 80 FF FF */	li r4, -1
 /* 8021C564 001E5B24  38 63 00 08 */	addi r3, r3, 8
-/* 8021C568 001E5B28  4B E3 DF 65 */	bl __dt__cf_CActParamAnimGame
+/* 8021C568 001E5B28  4B E3 DF 65 */	bl __dt__Q22cf17CActParamAnimGameFv
 /* 8021C56C 001E5B2C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8021C570 001E5B30  40 81 00 0C */	ble .L_8021C57C
 /* 8021C574 001E5B34  7F C3 F3 78 */	mr r3, r30
@@ -610,7 +610,7 @@
 /* 8021C590 001E5B50  4E 80 00 20 */	blr 
 .endfn __dt__8021C540
 
-.fn __dt__CModelDispMakeCrystal, global
+.fn __dt__21CModelDispMakeCrystalFv, global
 /* 8021C594 001E5B54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8021C598 001E5B58  7C 08 02 A6 */	mflr r0
 /* 8021C59C 001E5B5C  2C 03 00 00 */	cmpwi r3, 0
@@ -621,61 +621,61 @@
 /* 8021C5B0 001E5B70  41 82 01 1C */	beq .L_8021C6CC
 /* 8021C5B4 001E5B74  38 80 FF FF */	li r4, -1
 /* 8021C5B8 001E5B78  38 63 0E CC */	addi r3, r3, 0xecc
-/* 8021C5BC 001E5B7C  48 07 B2 C5 */	bl __dt__CMCGetItemBox
+/* 8021C5BC 001E5B7C  48 07 B2 C5 */	bl __dt__13CMCGetItemBoxFv
 /* 8021C5C0 001E5B80  38 7E 0E B4 */	addi r3, r30, 0xeb4
 /* 8021C5C4 001E5B84  38 80 FF FF */	li r4, -1
-/* 8021C5C8 001E5B88  4B FB 64 71 */	bl __dt__CCur18
+/* 8021C5C8 001E5B88  4B FB 64 71 */	bl __dt__6CCur18Fv
 /* 8021C5CC 001E5B8C  38 7E 0E 78 */	addi r3, r30, 0xe78
 /* 8021C5D0 001E5B90  38 80 FF FF */	li r4, -1
-/* 8021C5D4 001E5B94  48 00 F0 CD */	bl __dt__CSysWin
+/* 8021C5D4 001E5B94  48 00 F0 CD */	bl __dt__7CSysWinFv
 /* 8021C5D8 001E5B98  38 7E 0E 38 */	addi r3, r30, 0xe38
 /* 8021C5DC 001E5B9C  38 80 FF FF */	li r4, -1
-/* 8021C5E0 001E5BA0  4B FD 6E C1 */	bl __dt__CScrollBar
+/* 8021C5E0 001E5BA0  4B FD 6E C1 */	bl __dt__10CScrollBarFv
 /* 8021C5E4 001E5BA4  38 7E 0E 20 */	addi r3, r30, 0xe20
 /* 8021C5E8 001E5BA8  38 80 FF FF */	li r4, -1
-/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl __dt__CCur18
+/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl __dt__6CCur18Fv
 /* 8021C5F0 001E5BB0  38 7E 0D FC */	addi r3, r30, 0xdfc
 /* 8021C5F4 001E5BB4  38 80 FF FF */	li r4, -1
-/* 8021C5F8 001E5BB8  48 00 97 41 */	bl __dt__CMCEffCylinder
+/* 8021C5F8 001E5BB8  48 00 97 41 */	bl __dt__14CMCEffCylinderFv
 /* 8021C5FC 001E5BBC  38 7E 0D E4 */	addi r3, r30, 0xde4
 /* 8021C600 001E5BC0  38 80 FF FF */	li r4, -1
-/* 8021C604 001E5BC4  48 00 96 05 */	bl __dt__CMCEffDivide
+/* 8021C604 001E5BC4  48 00 96 05 */	bl __dt__12CMCEffDivideFv
 /* 8021C608 001E5BC8  38 7E 0D CC */	addi r3, r30, 0xdcc
 /* 8021C60C 001E5BCC  38 80 FF FF */	li r4, -1
-/* 8021C610 001E5BD0  48 00 94 C5 */	bl __dt__CMCEffUpRank
+/* 8021C610 001E5BD0  48 00 94 C5 */	bl __dt__12CMCEffUpRankFv
 /* 8021C614 001E5BD4  38 7E 0D 90 */	addi r3, r30, 0xd90
 /* 8021C618 001E5BD8  38 80 FF FF */	li r4, -1
-/* 8021C61C 001E5BDC  48 00 86 89 */	bl __dt__CMCEffCrystal
+/* 8021C61C 001E5BDC  48 00 86 89 */	bl __dt__13CMCEffCrystalFv
 /* 8021C620 001E5BE0  38 7E 0D 78 */	addi r3, r30, 0xd78
 /* 8021C624 001E5BE4  38 80 FF FF */	li r4, -1
-/* 8021C628 001E5BE8  48 00 85 55 */	bl __dt__CMCEffFailure
+/* 8021C628 001E5BE8  48 00 85 55 */	bl __dt__13CMCEffFailureFv
 /* 8021C62C 001E5BEC  38 7E 0D 5C */	addi r3, r30, 0xd5c
 /* 8021C630 001E5BF0  38 80 FF FF */	li r4, -1
-/* 8021C634 001E5BF4  48 00 80 ED */	bl __dt__CMCEffSuccess
+/* 8021C634 001E5BF4  48 00 80 ED */	bl __dt__13CMCEffSuccessFv
 /* 8021C638 001E5BF8  38 7E 0C EC */	addi r3, r30, 0xcec
 /* 8021C63C 001E5BFC  38 80 FF FF */	li r4, -1
-/* 8021C640 001E5C00  48 00 7D 35 */	bl __dt__CMCEffUpPrm
+/* 8021C640 001E5C00  48 00 7D 35 */	bl __dt__11CMCEffUpPrmFv
 /* 8021C644 001E5C04  38 7E 0C D4 */	addi r3, r30, 0xcd4
 /* 8021C648 001E5C08  38 80 FF FF */	li r4, -1
-/* 8021C64C 001E5C0C  48 00 7B E9 */	bl __dt__CMCEffUpGreen
+/* 8021C64C 001E5C0C  48 00 7B E9 */	bl __dt__13CMCEffUpGreenFv
 /* 8021C650 001E5C10  38 7E 0C BC */	addi r3, r30, 0xcbc
 /* 8021C654 001E5C14  38 80 FF FF */	li r4, -1
-/* 8021C658 001E5C18  48 00 7A A9 */	bl __dt__CMCEffUpBlue
+/* 8021C658 001E5C18  48 00 7A A9 */	bl __dt__12CMCEffUpBlueFv
 /* 8021C65C 001E5C1C  38 7E 0C A4 */	addi r3, r30, 0xca4
 /* 8021C660 001E5C20  38 80 FF FF */	li r4, -1
-/* 8021C664 001E5C24  48 00 79 69 */	bl __dt__CMCEffUpRed
+/* 8021C664 001E5C24  48 00 79 69 */	bl __dt__11CMCEffUpRedFv
 /* 8021C668 001E5C28  38 7E 0C 8C */	addi r3, r30, 0xc8c
 /* 8021C66C 001E5C2C  38 80 FF FF */	li r4, -1
-/* 8021C670 001E5C30  48 00 77 01 */	bl __dt__CMCEffStart
+/* 8021C670 001E5C30  48 00 77 01 */	bl __dt__11CMCEffStartFv
 /* 8021C674 001E5C34  38 7E 0C 70 */	addi r3, r30, 0xc70
 /* 8021C678 001E5C38  38 80 FF FF */	li r4, -1
-/* 8021C67C 001E5C3C  48 01 22 3D */	bl __dt__CMCCrystalSupport
+/* 8021C67C 001E5C3C  48 01 22 3D */	bl __dt__17CMCCrystalSupportFv
 /* 8021C680 001E5C40  38 7E 0C 18 */	addi r3, r30, 0xc18
 /* 8021C684 001E5C44  38 80 FF FF */	li r4, -1
-/* 8021C688 001E5C48  48 00 61 61 */	bl __dt__CMCCrystalList
+/* 8021C688 001E5C48  48 00 61 61 */	bl __dt__14CMCCrystalListFv
 /* 8021C68C 001E5C4C  38 7E 0B EC */	addi r3, r30, 0xbec
 /* 8021C690 001E5C50  38 80 FF FF */	li r4, -1
-/* 8021C694 001E5C54  48 00 58 21 */	bl __dt__CMCCylinderGauge
+/* 8021C694 001E5C54  48 00 58 21 */	bl __dt__16CMCCylinderGaugeFv
 /* 8021C698 001E5C58  3C 80 80 22 */	lis r4, __dt__8021C540@ha
 /* 8021C69C 001E5C5C  38 7E 00 44 */	addi r3, r30, 0x44
 /* 8021C6A0 001E5C60  38 84 C5 40 */	addi r4, r4, __dt__8021C540@l
@@ -684,7 +684,7 @@
 /* 8021C6AC 001E5C6C  48 09 D5 4D */	bl __destroy_arr
 /* 8021C6B0 001E5C70  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 8021C6B4 001E5C74  38 80 FF FF */	li r4, -1
-/* 8021C6B8 001E5C78  48 24 2E C9 */	bl __dt__UnkClass_8045F564
+/* 8021C6B8 001E5C78  48 24 2E C9 */	bl __dt__17UnkClass_8045F564Fv
 /* 8021C6BC 001E5C7C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8021C6C0 001E5C80  40 81 00 0C */	ble .L_8021C6CC
 /* 8021C6C4 001E5C84  7F C3 F3 78 */	mr r3, r30
@@ -696,7 +696,7 @@
 /* 8021C6D8 001E5C98  7C 08 03 A6 */	mtlr r0
 /* 8021C6DC 001E5C9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8021C6E0 001E5CA0  4E 80 00 20 */	blr 
-.endfn __dt__CModelDispMakeCrystal
+.endfn __dt__21CModelDispMakeCrystalFv
 
 .fn func_8021C6E4, global
 /* 8021C6E4 001E5CA4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -710,7 +710,7 @@
 /* 8021C704 001E5CC4  38 9F 48 14 */	addi r4, r31, CModelDispMakeCrystal_strpool@l
 /* 8021C708 001E5CC8  38 C0 00 00 */	li r6, 0
 /* 8021C70C 001E5CCC  38 E0 00 00 */	li r7, 0
-/* 8021C710 001E5CD0  48 23 20 85 */	bl CDeviceFile_openFile1
+/* 8021C710 001E5CD0  48 23 20 85 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8021C714 001E5CD4  90 7E 00 24 */	stw r3, 0x24(r30)
 /* 8021C718 001E5CD8  48 21 7C 89 */	bl Heap_getRegionIndex2
 /* 8021C71C 001E5CDC  3B FF 48 14 */	addi r31, r31, CModelDispMakeCrystal_strpool@l
@@ -718,14 +718,14 @@
 /* 8021C724 001E5CE4  38 9F 00 11 */	addi r4, r31, 0x11
 /* 8021C728 001E5CE8  38 C0 00 00 */	li r6, 0
 /* 8021C72C 001E5CEC  38 E0 00 00 */	li r7, 0
-/* 8021C730 001E5CF0  48 23 20 65 */	bl CDeviceFile_openFile1
+/* 8021C730 001E5CF0  48 23 20 65 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8021C734 001E5CF4  90 7E 00 18 */	stw r3, 0x18(r30)
 /* 8021C738 001E5CF8  48 21 7C 69 */	bl Heap_getRegionIndex2
 /* 8021C73C 001E5CFC  7F C5 F3 78 */	mr r5, r30
 /* 8021C740 001E5D00  38 9F 00 25 */	addi r4, r31, 0x25
 /* 8021C744 001E5D04  38 C0 00 00 */	li r6, 0
 /* 8021C748 001E5D08  38 E0 00 00 */	li r7, 0
-/* 8021C74C 001E5D0C  48 23 20 49 */	bl CDeviceFile_openFile1
+/* 8021C74C 001E5D0C  48 23 20 49 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8021C750 001E5D10  90 7E 00 3C */	stw r3, 0x3c(r30)
 /* 8021C754 001E5D14  38 7E 0C 18 */	addi r3, r30, 0xc18
 /* 8021C758 001E5D18  48 00 60 F1 */	bl func_80222848
@@ -830,7 +830,7 @@
 /* 8021C8B8 001E5E78  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8021C8BC 001E5E7C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8021C8C0 001E5E80  7C 7F 1B 78 */	mr r31, r3
-/* 8021C8C4 001E5E84  48 22 C1 81 */	bl func_80448A44
+/* 8021C8C4 001E5E84  48 22 C1 81 */	bl func_80448A44__Fv
 /* 8021C8C8 001E5E88  7F E3 FB 78 */	mr r3, r31
 /* 8021C8CC 001E5E8C  48 00 3E B1 */	bl func_8022077C
 /* 8021C8D0 001E5E90  38 7F 0E 78 */	addi r3, r31, 0xe78
@@ -843,13 +843,13 @@
 /* 8021C8EC 001E5EAC  38 7F 0E CC */	addi r3, r31, 0xecc
 /* 8021C8F0 001E5EB0  48 07 B2 79 */	bl func_80297B68
 /* 8021C8F4 001E5EB4  38 7F 00 3C */	addi r3, r31, 0x3c
-/* 8021C8F8 001E5EB8  4B F1 C7 E9 */	bl func_801390E0
+/* 8021C8F8 001E5EB8  4B F1 C7 E9 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8021C8FC 001E5EBC  80 7F 00 40 */	lwz r3, 0x40(r31)
-/* 8021C900 001E5EC0  4B F1 C8 25 */	bl func_80139124
+/* 8021C900 001E5EC0  4B F1 C8 25 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 8021C904 001E5EC4  38 00 00 00 */	li r0, 0
 /* 8021C908 001E5EC8  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8021C90C 001E5ECC  38 7F 00 2C */	addi r3, r31, 0x2c
-/* 8021C910 001E5ED0  48 24 2E 69 */	bl func_8045F778
+/* 8021C910 001E5ED0  48 24 2E 69 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8021C914 001E5ED4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8021C918 001E5ED8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8021C91C 001E5EDC  7C 08 03 A6 */	mtlr r0
@@ -4448,7 +4448,7 @@
 /* 8021FB70 001E9130  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8021FB74 001E9134  BF 81 00 10 */	stmw r28, 0x10(r1)
 /* 8021FB78 001E9138  7C 9C 23 78 */	mr r28, r4
-/* 8021FB7C 001E913C  48 22 8E C9 */	bl func_80448A44
+/* 8021FB7C 001E913C  48 22 8E C9 */	bl func_80448A44__Fv
 /* 8021FB80 001E9140  80 1C 00 00 */	lwz r0, 0(r28)
 /* 8021FB84 001E9144  2C 00 00 00 */	cmpwi r0, 0
 /* 8021FB88 001E9148  41 82 00 8C */	beq .L_8021FC14
@@ -4481,7 +4481,7 @@
 /* 8021FBEC 001E91AC  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 8021FBF0 001E91B0  2C 03 00 00 */	cmpwi r3, 0
 /* 8021FBF4 001E91B4  41 82 00 0C */	beq .L_8021FC00
-/* 8021FBF8 001E91B8  48 21 48 E1 */	bl func_804344D8
+/* 8021FBF8 001E91B8  48 21 48 E1 */	bl MemManager_804344D8
 /* 8021FBFC 001E91BC  93 FE 05 68 */	stw r31, 0x568(r30)
 .L_8021FC00:
 /* 8021FC00 001E91C0  3B BD 00 01 */	addi r29, r29, 1
@@ -5338,11 +5338,11 @@
 /* 80220790 001E9D50  88 03 2D B4 */	lbz r0, 0x2db4(r3)
 /* 80220794 001E9D54  2C 00 00 00 */	cmpwi r0, 0
 /* 80220798 001E9D58  40 82 01 A8 */	bne .L_80220940
-/* 8022079C 001E9D5C  48 22 82 A9 */	bl func_80448A44
+/* 8022079C 001E9D5C  48 22 82 A9 */	bl func_80448A44__Fv
 /* 802207A0 001E9D60  38 7F 00 18 */	addi r3, r31, 0x18
-/* 802207A4 001E9D64  4B F1 89 3D */	bl func_801390E0
+/* 802207A4 001E9D64  4B F1 89 3D */	bl func_801390E0__FPP17UnkClass_80451720
 /* 802207A8 001E9D68  38 7F 00 24 */	addi r3, r31, 0x24
-/* 802207AC 001E9D6C  4B F1 89 35 */	bl func_801390E0
+/* 802207AC 001E9D6C  4B F1 89 35 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 802207B0 001E9D70  3C 00 80 66 */	lis r0, lbl_806624D8@ha
 /* 802207B4 001E9D74  37 C0 24 D8 */	addic. r30, r0, lbl_806624D8@l
 /* 802207B8 001E9D78  41 82 00 38 */	beq .L_802207F0
@@ -5368,7 +5368,7 @@
 /* 802207FC 001E9DBC  2C 03 00 00 */	cmpwi r3, 0
 /* 80220800 001E9DC0  93 DF 00 14 */	stw r30, 0x14(r31)
 /* 80220804 001E9DC4  41 82 00 0C */	beq .L_80220810
-/* 80220808 001E9DC8  48 21 3C D1 */	bl func_804344D8
+/* 80220808 001E9DC8  48 21 3C D1 */	bl MemManager_804344D8
 /* 8022080C 001E9DCC  93 DF 00 1C */	stw r30, 0x1c(r31)
 .L_80220810:
 /* 80220810 001E9DD0  80 7F 00 20 */	lwz r3, 0x20(r31)
@@ -5381,7 +5381,7 @@
 /* 80220828 001E9DE8  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 8022082C 001E9DEC  2C 03 00 00 */	cmpwi r3, 0
 /* 80220830 001E9DF0  41 82 00 10 */	beq .L_80220840
-/* 80220834 001E9DF4  48 21 3C A5 */	bl func_804344D8
+/* 80220834 001E9DF4  48 21 3C A5 */	bl MemManager_804344D8
 /* 80220838 001E9DF8  38 00 00 00 */	li r0, 0
 /* 8022083C 001E9DFC  90 1F 00 28 */	stw r0, 0x28(r31)
 .L_80220840:
@@ -5397,7 +5397,7 @@
 /* 8022085C 001E9E1C  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 80220860 001E9E20  7C 7D 02 14 */	add r3, r29, r0
 /* 80220864 001E9E24  38 63 05 64 */	addi r3, r3, 0x564
-/* 80220868 001E9E28  4B F1 88 79 */	bl func_801390E0
+/* 80220868 001E9E28  4B F1 88 79 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8022086C 001E9E2C  3B 9C 00 01 */	addi r28, r28, 1
 /* 80220870 001E9E30  28 1C 00 06 */	cmplwi r28, 6
 /* 80220874 001E9E34  41 80 FF E4 */	blt .L_80220858
@@ -5885,7 +5885,7 @@
 /* 80220F78 001EA538  38 81 00 20 */	addi r4, r1, 0x20
 /* 80220F7C 001EA53C  38 C0 00 00 */	li r6, 0
 /* 80220F80 001EA540  38 E0 00 00 */	li r7, 0
-/* 80220F84 001EA544  48 22 D8 11 */	bl CDeviceFile_openFile1
+/* 80220F84 001EA544  48 22 D8 11 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80220F88 001EA548  90 7F 05 A0 */	stw r3, 0x5a0(r31)
 .L_80220F8C:
 /* 80220F8C 001EA54C  3B A0 00 00 */	li r29, 0
@@ -6164,7 +6164,7 @@
 /* 80221398 001EA958  38 81 00 10 */	addi r4, r1, 0x10
 /* 8022139C 001EA95C  38 C0 00 00 */	li r6, 0
 /* 802213A0 001EA960  38 E0 00 00 */	li r7, 0
-/* 802213A4 001EA964  48 22 D3 F1 */	bl CDeviceFile_openFile1
+/* 802213A4 001EA964  48 22 D3 F1 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 802213A8 001EA968  90 7E 05 A0 */	stw r3, 0x5a0(r30)
 .L_802213AC:
 /* 802213AC 001EA96C  3A E0 00 00 */	li r23, 0
@@ -6326,17 +6326,17 @@
 /* 802215F4 001EABB4  38 A5 F0 00 */	addi r5, r5, 0x0002F000@l
 /* 802215F8 001EABB8  38 DE 00 ED */	addi r6, r30, 0xed
 /* 802215FC 001EABBC  38 E0 00 00 */	li r7, 0
-/* 80221600 001EABC0  48 23 E0 81 */	bl func_8045F680
+/* 80221600 001EABC0  48 23 E0 81 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 80221604 001EABC4  38 61 00 08 */	addi r3, r1, 8
 /* 80221608 001EABC8  38 9F 00 2C */	addi r4, r31, 0x2c
-/* 8022160C 001EABCC  48 23 E2 4D */	bl __ct__Class_8045F858
+/* 8022160C 001EABCC  48 23 E2 4D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 80221610 001EABD0  80 9F 00 3C */	lwz r4, 0x3c(r31)
 /* 80221614 001EABD4  38 00 00 00 */	li r0, 0
 /* 80221618 001EABD8  38 60 00 00 */	li r3, 0
 /* 8022161C 001EABDC  83 A4 00 04 */	lwz r29, 4(r4)
 /* 80221620 001EABE0  90 04 00 04 */	stw r0, 4(r4)
-/* 80221624 001EABE4  48 21 34 29 */	bl func_80434A4C
-/* 80221628 001EABE8  48 23 DB 8D */	bl CLibLayout_getArcResourceAccessorInstance
+/* 80221624 001EABE4  48 21 34 29 */	bl MemManager_80434A4C__FUc
+/* 80221628 001EABE8  48 23 DB 8D */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8022162C 001EABEC  90 7F 00 40 */	stw r3, 0x40(r31)
 /* 80221630 001EABF0  7F A4 EB 78 */	mr r4, r29
 /* 80221634 001EABF4  38 BE 01 03 */	addi r5, r30, 0x103
@@ -6368,7 +6368,7 @@
 /* 8022169C 001EAC5C  98 1F 0C 11 */	stb r0, 0xc11(r31)
 /* 802216A0 001EAC60  C0 01 01 A8 */	lfs f0, 0x1a8(r1)
 /* 802216A4 001EAC64  D0 1F 0C 14 */	stfs f0, 0xc14(r31)
-/* 802216A8 001EAC68  48 00 08 0D */	bl __dt__CMCCylinderGauge
+/* 802216A8 001EAC68  48 00 08 0D */	bl __dt__16CMCCylinderGaugeFv
 /* 802216AC 001EAC6C  38 7F 0B EC */	addi r3, r31, 0xbec
 /* 802216B0 001EAC70  48 00 08 45 */	bl func_80221EF4
 /* 802216B4 001EAC74  80 9F 00 40 */	lwz r4, 0x40(r31)
@@ -6390,7 +6390,7 @@
 /* 802216F4 001EACB4  98 1F 0C 88 */	stb r0, 0xc88(r31)
 /* 802216F8 001EACB8  88 01 01 41 */	lbz r0, 0x141(r1)
 /* 802216FC 001EACBC  98 1F 0C 89 */	stb r0, 0xc89(r31)
-/* 80221700 001EACC0  48 00 D1 B9 */	bl __dt__CMCCrystalSupport
+/* 80221700 001EACC0  48 00 D1 B9 */	bl __dt__17CMCCrystalSupportFv
 /* 80221704 001EACC4  38 7F 0C 70 */	addi r3, r31, 0xc70
 /* 80221708 001EACC8  48 00 D1 F1 */	bl func_8022E8F8
 /* 8022170C 001EACCC  80 9F 00 40 */	lwz r4, 0x40(r31)
@@ -6401,7 +6401,7 @@
 /* 80221720 001EACE0  4B FF 05 99 */	bl func_80211CB8
 /* 80221724 001EACE4  38 61 01 10 */	addi r3, r1, 0x110
 /* 80221728 001EACE8  38 80 FF FF */	li r4, -1
-/* 8022172C 001EACEC  48 00 26 45 */	bl __dt__CMCEffStart
+/* 8022172C 001EACEC  48 00 26 45 */	bl __dt__11CMCEffStartFv
 /* 80221730 001EACF0  81 9F 0C 8C */	lwz r12, 0xc8c(r31)
 /* 80221734 001EACF4  38 7F 0C 8C */	addi r3, r31, 0xc8c
 /* 80221738 001EACF8  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6415,7 +6415,7 @@
 /* 80221758 001EAD18  4B FF 05 61 */	bl func_80211CB8
 /* 8022175C 001EAD1C  38 61 00 F8 */	addi r3, r1, 0xf8
 /* 80221760 001EAD20  38 80 FF FF */	li r4, -1
-/* 80221764 001EAD24  48 00 28 69 */	bl __dt__CMCEffUpRed
+/* 80221764 001EAD24  48 00 28 69 */	bl __dt__11CMCEffUpRedFv
 /* 80221768 001EAD28  81 9F 0C A4 */	lwz r12, 0xca4(r31)
 /* 8022176C 001EAD2C  38 7F 0C A4 */	addi r3, r31, 0xca4
 /* 80221770 001EAD30  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6429,7 +6429,7 @@
 /* 80221790 001EAD50  4B FF 05 29 */	bl func_80211CB8
 /* 80221794 001EAD54  38 61 00 E0 */	addi r3, r1, 0xe0
 /* 80221798 001EAD58  38 80 FF FF */	li r4, -1
-/* 8022179C 001EAD5C  48 00 29 65 */	bl __dt__CMCEffUpBlue
+/* 8022179C 001EAD5C  48 00 29 65 */	bl __dt__12CMCEffUpBlueFv
 /* 802217A0 001EAD60  81 9F 0C BC */	lwz r12, 0xcbc(r31)
 /* 802217A4 001EAD64  38 7F 0C BC */	addi r3, r31, 0xcbc
 /* 802217A8 001EAD68  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6443,7 +6443,7 @@
 /* 802217C8 001EAD88  4B FF 04 F1 */	bl func_80211CB8
 /* 802217CC 001EAD8C  38 61 00 C8 */	addi r3, r1, 0xc8
 /* 802217D0 001EAD90  38 80 FF FF */	li r4, -1
-/* 802217D4 001EAD94  48 00 2A 61 */	bl __dt__CMCEffUpGreen
+/* 802217D4 001EAD94  48 00 2A 61 */	bl __dt__13CMCEffUpGreenFv
 /* 802217D8 001EAD98  81 9F 0C D4 */	lwz r12, 0xcd4(r31)
 /* 802217DC 001EAD9C  38 7F 0C D4 */	addi r3, r31, 0xcd4
 /* 802217E0 001EADA0  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6470,7 +6470,7 @@
 /* 80221830 001EADF0  38 61 01 B0 */	addi r3, r1, 0x1b0
 /* 80221834 001EADF4  98 1F 0D 58 */	stb r0, 0xd58(r31)
 /* 80221838 001EADF8  38 80 FF FF */	li r4, -1
-/* 8022183C 001EADFC  48 00 2B 39 */	bl __dt__CMCEffUpPrm
+/* 8022183C 001EADFC  48 00 2B 39 */	bl __dt__11CMCEffUpPrmFv
 /* 80221840 001EAE00  38 7F 0C EC */	addi r3, r31, 0xcec
 /* 80221844 001EAE04  48 00 2B 71 */	bl func_802243B4
 /* 80221848 001EAE08  80 9F 00 40 */	lwz r4, 0x40(r31)
@@ -6492,7 +6492,7 @@
 /* 80221888 001EAE48  90 1F 0D 70 */	stw r0, 0xd70(r31)
 /* 8022188C 001EAE4C  88 01 00 C0 */	lbz r0, 0xc0(r1)
 /* 80221890 001EAE50  98 1F 0D 74 */	stb r0, 0xd74(r31)
-/* 80221894 001EAE54  48 00 2E 8D */	bl __dt__CMCEffSuccess
+/* 80221894 001EAE54  48 00 2E 8D */	bl __dt__13CMCEffSuccessFv
 /* 80221898 001EAE58  81 9F 0D 5C */	lwz r12, 0xd5c(r31)
 /* 8022189C 001EAE5C  38 7F 0D 5C */	addi r3, r31, 0xd5c
 /* 802218A0 001EAE60  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6506,7 +6506,7 @@
 /* 802218C0 001EAE80  4B FF 03 F9 */	bl func_80211CB8
 /* 802218C4 001EAE84  38 61 00 90 */	addi r3, r1, 0x90
 /* 802218C8 001EAE88  38 80 FF FF */	li r4, -1
-/* 802218CC 001EAE8C  48 00 32 B1 */	bl __dt__CMCEffFailure
+/* 802218CC 001EAE8C  48 00 32 B1 */	bl __dt__13CMCEffFailureFv
 /* 802218D0 001EAE90  81 9F 0D 78 */	lwz r12, 0xd78(r31)
 /* 802218D4 001EAE94  38 7F 0D 78 */	addi r3, r31, 0xd78
 /* 802218D8 001EAE98  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6549,7 +6549,7 @@
 /* 8022196C 001EAF2C  B0 1F 0D C6 */	sth r0, 0xdc6(r31)
 /* 80221970 001EAF30  88 01 01 7C */	lbz r0, 0x17c(r1)
 /* 80221974 001EAF34  98 1F 0D C8 */	stb r0, 0xdc8(r31)
-/* 80221978 001EAF38  48 00 33 2D */	bl __dt__CMCEffCrystal
+/* 80221978 001EAF38  48 00 33 2D */	bl __dt__13CMCEffCrystalFv
 /* 8022197C 001EAF3C  81 9F 0D 90 */	lwz r12, 0xd90(r31)
 /* 80221980 001EAF40  38 7F 0D 90 */	addi r3, r31, 0xd90
 /* 80221984 001EAF44  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6563,7 +6563,7 @@
 /* 802219A4 001EAF64  4B FF 03 15 */	bl func_80211CB8
 /* 802219A8 001EAF68  38 61 00 78 */	addi r3, r1, 0x78
 /* 802219AC 001EAF6C  38 80 FF FF */	li r4, -1
-/* 802219B0 001EAF70  48 00 41 25 */	bl __dt__CMCEffUpRank
+/* 802219B0 001EAF70  48 00 41 25 */	bl __dt__12CMCEffUpRankFv
 /* 802219B4 001EAF74  81 9F 0D CC */	lwz r12, 0xdcc(r31)
 /* 802219B8 001EAF78  38 7F 0D CC */	addi r3, r31, 0xdcc
 /* 802219BC 001EAF7C  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6577,7 +6577,7 @@
 /* 802219DC 001EAF9C  4B FF 02 DD */	bl func_80211CB8
 /* 802219E0 001EAFA0  38 61 00 60 */	addi r3, r1, 0x60
 /* 802219E4 001EAFA4  38 80 FF FF */	li r4, -1
-/* 802219E8 001EAFA8  48 00 42 21 */	bl __dt__CMCEffDivide
+/* 802219E8 001EAFA8  48 00 42 21 */	bl __dt__12CMCEffDivideFv
 /* 802219EC 001EAFAC  81 9F 0D E4 */	lwz r12, 0xde4(r31)
 /* 802219F0 001EAFB0  38 7F 0D E4 */	addi r3, r31, 0xde4
 /* 802219F4 001EAFB4  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6604,7 +6604,7 @@
 /* 80221A48 001EB008  90 1F 0E 14 */	stw r0, 0xe14(r31)
 /* 80221A4C 001EB00C  88 01 00 5C */	lbz r0, 0x5c(r1)
 /* 80221A50 001EB010  98 1F 0E 18 */	stb r0, 0xe18(r31)
-/* 80221A54 001EB014  48 00 42 E5 */	bl __dt__CMCEffCylinder
+/* 80221A54 001EB014  48 00 42 E5 */	bl __dt__14CMCEffCylinderFv
 /* 80221A58 001EB018  81 9F 0D FC */	lwz r12, 0xdfc(r31)
 /* 80221A5C 001EB01C  38 7F 0D FC */	addi r3, r31, 0xdfc
 /* 80221A60 001EB020  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -6619,7 +6619,7 @@
 /* 80221A84 001EB044  4B F6 96 79 */	bl func_8018B0FC
 /* 80221A88 001EB048  38 61 00 28 */	addi r3, r1, 0x28
 /* 80221A8C 001EB04C  38 80 FF FF */	li r4, -1
-/* 80221A90 001EB050  4B FB 0F A9 */	bl __dt__CCur18
+/* 80221A90 001EB050  4B FB 0F A9 */	bl __dt__6CCur18Fv
 /* 80221A94 001EB054  81 9F 0E 20 */	lwz r12, 0xe20(r31)
 /* 80221A98 001EB058  38 7F 0E 20 */	addi r3, r31, 0xe20
 /* 80221A9C 001EB05C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -6634,7 +6634,7 @@
 /* 80221AC0 001EB080  4B F6 96 3D */	bl func_8018B0FC
 /* 80221AC4 001EB084  38 61 00 10 */	addi r3, r1, 0x10
 /* 80221AC8 001EB088  38 80 FF FF */	li r4, -1
-/* 80221ACC 001EB08C  4B FB 0F 6D */	bl __dt__CCur18
+/* 80221ACC 001EB08C  4B FB 0F 6D */	bl __dt__6CCur18Fv
 /* 80221AD0 001EB090  81 9F 0E B4 */	lwz r12, 0xeb4(r31)
 /* 80221AD4 001EB094  38 7F 0E B4 */	addi r3, r31, 0xeb4
 /* 80221AD8 001EB098  81 8C 00 08 */	lwz r12, 8(r12)
@@ -6643,10 +6643,10 @@
 /* 80221AE4 001EB0A4  38 00 00 00 */	li r0, 0
 /* 80221AE8 001EB0A8  90 1F 00 3C */	stw r0, 0x3c(r31)
 /* 80221AEC 001EB0AC  38 7F 00 2C */	addi r3, r31, 0x2c
-/* 80221AF0 001EB0B0  48 23 DD 21 */	bl func_8045F810
+/* 80221AF0 001EB0B0  48 23 DD 21 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 80221AF4 001EB0B4  38 61 00 08 */	addi r3, r1, 8
 /* 80221AF8 001EB0B8  38 80 FF FF */	li r4, -1
-/* 80221AFC 001EB0BC  48 23 DD CD */	bl __dt__Class_8045F858
+/* 80221AFC 001EB0BC  48 23 DD CD */	bl __dt__14Class_8045F858Fv
 /* 80221B00 001EB0C0  38 60 00 01 */	li r3, 1
 /* 80221B04 001EB0C4  48 00 00 74 */	b .L_80221B78
 .L_80221B08:
@@ -6733,7 +6733,7 @@
 /* 80221C24 001EB1E4  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 80221C28 001EB1E8  7C 7C 02 14 */	add r3, r28, r0
 /* 80221C2C 001EB1EC  38 63 05 64 */	addi r3, r3, 0x564
-/* 80221C30 001EB1F0  4B F1 74 B1 */	bl func_801390E0
+/* 80221C30 001EB1F0  4B F1 74 B1 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 80221C34 001EB1F4  3B 5A 00 01 */	addi r26, r26, 1
 /* 80221C38 001EB1F8  28 1A 00 06 */	cmplwi r26, 6
 /* 80221C3C 001EB1FC  41 80 FF E4 */	blt .L_80221C20
@@ -6899,7 +6899,7 @@
 
 .fn func_80221E54, global
 /* 80221E54 001EB414  38 63 FF FC */	addi r3, r3, -4
-/* 80221E58 001EB418  4B FF A7 3C */	b __dt__CModelDispMakeCrystal
+/* 80221E58 001EB418  4B FF A7 3C */	b __dt__21CModelDispMakeCrystalFv
 .endfn func_80221E54
 
 .fn func_80221E5C, global
@@ -6909,7 +6909,7 @@
 
 .fn func_80221E64, global
 /* 80221E64 001EB424  38 63 FF F8 */	addi r3, r3, -8
-/* 80221E68 001EB428  4B FF A7 2C */	b __dt__CModelDispMakeCrystal
+/* 80221E68 001EB428  4B FF A7 2C */	b __dt__21CModelDispMakeCrystalFv
 .endfn func_80221E64
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -7040,38 +7040,38 @@
 .obj __vt__21CModelDispMakeCrystal, global
 	.4byte __RTTI__21CModelDispMakeCrystal
 	.4byte 0
-	.4byte __dt__CModelDispMakeCrystal
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__21CModelDispMakeCrystalFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CModelDispMakeCrystal_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__21CModelDispMakeCrystal
 	.4byte 0xFFFFFFFC
 	.4byte func_80221E54
@@ -7328,61 +7328,61 @@
 	.4byte 0x00000000
 	.4byte 0x0780001B
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001B
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001B
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001B
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001B
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001B
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001B
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001B
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001B
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001B
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001B
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001B
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001B
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001B
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001B
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001B
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x0780001B
 	.4byte 0x00000C70
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x0780001B
 	.4byte 0x00000C18
-	.4byte __dt__CMCCrystalList
+	.4byte __dt__14CMCCrystalListFv
 	.4byte 0x0780001B
 	.4byte 0x00000BEC
-	.4byte __dt__CMCCylinderGauge
+	.4byte __dt__16CMCCylinderGaugeFv
 	.4byte 0x0980001B
 	.4byte 0x00000044
 	.4byte 0x00000002
@@ -7390,7 +7390,7 @@
 	.4byte __dt__8021C540
 	.4byte 0x0780001B
 	.4byte 0x0000002C
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001B
 	.4byte 0x00000008
 	.4byte __dt__80081C20
@@ -7399,7 +7399,7 @@
 	.4byte __dt__80080400
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80013F30"
 
 .obj "@etb_80014110", local
@@ -7460,631 +7460,631 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x8780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x8780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x8780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x8780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x8780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x8780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x8780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x8780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x8780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x8780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x8780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x8780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x8780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x8780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x8780001E
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001E
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x8780001E
 	.4byte 0x00000C70
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001E
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x0780001E
 	.4byte 0x00000C70
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x8780001E
 	.4byte 0x00000C18
-	.4byte __dt__CMCCrystalList
+	.4byte __dt__14CMCCrystalListFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001E
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x0780001E
 	.4byte 0x00000C70
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x0780001E
 	.4byte 0x00000C18
-	.4byte __dt__CMCCrystalList
+	.4byte __dt__14CMCCrystalListFv
 	.4byte 0x8780001E
 	.4byte 0x00000BEC
-	.4byte __dt__CMCCylinderGauge
+	.4byte __dt__16CMCCylinderGaugeFv
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
-	.4byte __dt__CMCGetItemBox
+	.4byte __dt__13CMCGetItemBoxFv
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte __dt__CScrollBar
+	.4byte __dt__10CScrollBarFv
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
-	.4byte __dt__CMCEffCylinder
+	.4byte __dt__14CMCEffCylinderFv
 	.4byte 0x0780001E
 	.4byte 0x00000DE4
-	.4byte __dt__CMCEffDivide
+	.4byte __dt__12CMCEffDivideFv
 	.4byte 0x0780001E
 	.4byte 0x00000DCC
-	.4byte __dt__CMCEffUpRank
+	.4byte __dt__12CMCEffUpRankFv
 	.4byte 0x0780001E
 	.4byte 0x00000D90
-	.4byte __dt__CMCEffCrystal
+	.4byte __dt__13CMCEffCrystalFv
 	.4byte 0x0780001E
 	.4byte 0x00000D78
-	.4byte __dt__CMCEffFailure
+	.4byte __dt__13CMCEffFailureFv
 	.4byte 0x0780001E
 	.4byte 0x00000D5C
-	.4byte __dt__CMCEffSuccess
+	.4byte __dt__13CMCEffSuccessFv
 	.4byte 0x0780001E
 	.4byte 0x00000CEC
-	.4byte __dt__CMCEffUpPrm
+	.4byte __dt__11CMCEffUpPrmFv
 	.4byte 0x0780001E
 	.4byte 0x00000CD4
-	.4byte __dt__CMCEffUpGreen
+	.4byte __dt__13CMCEffUpGreenFv
 	.4byte 0x0780001E
 	.4byte 0x00000CBC
-	.4byte __dt__CMCEffUpBlue
+	.4byte __dt__12CMCEffUpBlueFv
 	.4byte 0x0780001E
 	.4byte 0x00000CA4
-	.4byte __dt__CMCEffUpRed
+	.4byte __dt__11CMCEffUpRedFv
 	.4byte 0x0780001E
 	.4byte 0x00000C8C
-	.4byte __dt__CMCEffStart
+	.4byte __dt__11CMCEffStartFv
 	.4byte 0x0780001E
 	.4byte 0x00000C70
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x0780001E
 	.4byte 0x00000C18
-	.4byte __dt__CMCCrystalList
+	.4byte __dt__14CMCCrystalListFv
 	.4byte 0x0780001E
 	.4byte 0x00000BEC
-	.4byte __dt__CMCCylinderGauge
+	.4byte __dt__16CMCCylinderGaugeFv
 	.4byte 0x8980001E
 	.4byte 0x00000044
 	.4byte 0x00000002
@@ -8473,7 +8473,7 @@
 	.4byte 0x01330010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_80014DB0"
 
 .obj "@etb_80014DC8", local
@@ -8527,7 +8527,7 @@
 
 .obj "@eti_8002D8F0", local
 .hidden "@eti_8002D8F0"
-	.4byte __dt__CModelDispMakeCrystal
+	.4byte __dt__21CModelDispMakeCrystalFv
 	.4byte 0x00000150
 	.4byte "@etb_80014120"
 .endobj "@eti_8002D8F0"

@@ -30,7 +30,7 @@
 /* 80444478 0040DA38  4E 80 00 20 */	blr 
 .endfn __ct__CWorkSystem
 
-.fn __dt__CWorkSystem, global
+.fn __dt__11CWorkSystemFv, global
 /* 8044447C 0040DA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444480 0040DA40  7C 08 02 A6 */	mflr r0
 /* 80444484 0040DA44  2C 03 00 00 */	cmpwi r3, 0
@@ -42,7 +42,7 @@
 /* 8044449C 0040DA5C  38 00 00 00 */	li r0, 0
 /* 804444A0 0040DA60  90 0D BD 7C */	stw r0, lbl_80667EFC@sda21(r13)
 /* 804444A4 0040DA64  38 80 00 00 */	li r4, 0
-/* 804444A8 0040DA68  4B FF 36 21 */	bl __dt__CWorkThread
+/* 804444A8 0040DA68  4B FF 36 21 */	bl __dt__11CWorkThreadFv
 /* 804444AC 0040DA6C  2C 1F 00 00 */	cmpwi r31, 0
 /* 804444B0 0040DA70  40 81 00 0C */	ble .L_804444BC
 /* 804444B4 0040DA74  7F C3 F3 78 */	mr r3, r30
@@ -54,7 +54,7 @@
 /* 804444C8 0040DA88  7C 08 03 A6 */	mtlr r0
 /* 804444CC 0040DA8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804444D0 0040DA90  4E 80 00 20 */	blr 
-.endfn __dt__CWorkSystem
+.endfn __dt__11CWorkSystemFv
 
 .fn func_804444D4, global
 /* 804444D4 0040DA94  80 6D BD 7C */	lwz r3, lbl_80667EFC@sda21(r13)
@@ -175,7 +175,7 @@
 /* 80444650 0040DC10  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 80444654 0040DC14  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 80444658 0040DC18  3B E3 00 24 */	addi r31, r3, 0x24
-/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getHeapIndex
+/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getHeapIndex__Fv
 /* 80444660 0040DC20  7C 64 1B 78 */	mr r4, r3
 /* 80444664 0040DC24  38 60 01 C8 */	li r3, 0x1c8
 /* 80444668 0040DC28  4B FF 03 F5 */	bl heap_malloc
@@ -193,7 +193,7 @@
 /* 80444694 0040DC54  90 7E 01 C4 */	stw r3, 0x1c4(r30)
 /* 80444698 0040DC58  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044469C 0040DC5C  3B E4 00 33 */	addi r31, r4, 0x33
-/* 804446A0 0040DC60  4B FF 2F 15 */	bl getHeapIndex
+/* 804446A0 0040DC60  4B FF 2F 15 */	bl getHeapIndex__Fv
 /* 804446A4 0040DC64  7C 64 1B 78 */	mr r4, r3
 /* 804446A8 0040DC68  38 60 01 E8 */	li r3, 0x1e8
 /* 804446AC 0040DC6C  4B FF 03 B1 */	bl heap_malloc
@@ -209,7 +209,7 @@
 /* 804446D0 0040DC90  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 804446D4 0040DC94  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 804446D8 0040DC98  3B E3 00 44 */	addi r31, r3, 0x44
-/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getHeapIndex
+/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getHeapIndex__Fv
 /* 804446E0 0040DCA0  7C 64 1B 78 */	mr r4, r3
 /* 804446E4 0040DCA4  38 60 02 08 */	li r3, 0x208
 /* 804446E8 0040DCA8  4B FF 03 75 */	bl heap_malloc
@@ -240,7 +240,7 @@
 /* 80444748 0040DD08  38 80 00 00 */	li r4, 0
 /* 8044474C 0040DD0C  48 07 82 A9 */	bl func_804BC9F4
 /* 80444750 0040DD10  7F C3 F3 78 */	mr r3, r30
-/* 80444754 0040DD14  4B FF 42 A5 */	bl CWorkThread_WorkThreadEvent4
+/* 80444754 0040DD14  4B FF 42 A5 */	bl WorkThreadEvent4__11CWorkThreadFv
 .L_80444758:
 /* 80444758 0040DD18  BB C1 00 08 */	lmw r30, 8(r1)
 /* 8044475C 0040DD1C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -279,7 +279,7 @@
 /* 804447D0 0040DD90  38 00 FF FF */	li r0, -1
 /* 804447D4 0040DD94  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 804447D8 0040DD98  7F E3 FB 78 */	mr r3, r31
-/* 804447DC 0040DD9C  4B FF 42 49 */	bl CWorkThread_WorkThreadEvent5
+/* 804447DC 0040DD9C  4B FF 42 49 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804447E0 0040DDA0  48 00 00 08 */	b .L_804447E8
 .L_804447E4:
 /* 804447E4 0040DDA4  38 60 00 00 */	li r3, 0
@@ -301,7 +301,7 @@
 /* 80444814 0040DDD4  7C 7E 1B 78 */	mr r30, r3
 /* 80444818 0040DDD8  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044481C 0040DDDC  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 80444820 0040DDE0  4B FF 2D 95 */	bl getHeapIndex
+/* 80444820 0040DDE0  4B FF 2D 95 */	bl getHeapIndex__Fv
 /* 80444824 0040DDE4  7C 64 1B 78 */	mr r4, r3
 /* 80444828 0040DDE8  38 60 01 D0 */	li r3, 0x1d0
 /* 8044482C 0040DDEC  4B FF 02 31 */	bl heap_malloc
@@ -384,44 +384,44 @@
 .obj __vt__11CWorkSystem, global
 	.4byte __RTTI__11CWorkSystem
 	.4byte 0
-	.4byte __dt__CWorkSystem
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__11CWorkSystemFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CWorkSystem_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CWorkSystem_WorkThreadEvent4
 	.4byte CWorkSystem_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CWorkSystem
 
 .obj CWorkSystem_hierarchy, global
@@ -514,7 +514,7 @@
 
 .obj "@eti_8003443C", local
 .hidden "@eti_8003443C"
-	.4byte __dt__CWorkSystem
+	.4byte __dt__11CWorkSystemFv
 	.4byte 0x00000058
 	.4byte "@etb_8001C840"
 .endobj "@eti_8003443C"

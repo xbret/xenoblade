@@ -44,7 +44,7 @@
 /* 8049DE24 004673E4  4E 80 00 20 */	blr 
 .endfn __ct__CScnFogMan
 
-.fn __dt__CScnFogMan, global
+.fn __dt__10CScnFogManFv, global
 /* 8049DE28 004673E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049DE2C 004673EC  7C 08 02 A6 */	mflr r0
 /* 8049DE30 004673F0  2C 03 00 00 */	cmpwi r3, 0
@@ -62,7 +62,7 @@
 /* 8049DE5C 0046741C  7C 08 03 A6 */	mtlr r0
 /* 8049DE60 00467420  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049DE64 00467424  4E 80 00 20 */	blr 
-.endfn __dt__CScnFogMan
+.endfn __dt__10CScnFogManFv
 
 .fn func_8049DE68, global
 /* 8049DE68 00467428  90 83 00 08 */	stw r4, 8(r3)
@@ -448,7 +448,7 @@
 .obj __vt__10CScnFogMan, global
 	.4byte __RTTI__10CScnFogMan
 	.4byte 0
-	.4byte __dt__CScnFogMan
+	.4byte __dt__10CScnFogManFv
 	.4byte 0
 .endobj __vt__10CScnFogMan
 
@@ -573,7 +573,7 @@
 
 .obj "@eti_80037160", local
 .hidden "@eti_80037160"
-	.4byte __dt__CScnFogMan
+	.4byte __dt__10CScnFogManFv
 	.4byte 0x00000040
 	.4byte "@etb_8001F698"
 .endobj "@eti_80037160"

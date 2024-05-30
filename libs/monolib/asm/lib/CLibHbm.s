@@ -45,7 +45,7 @@
 /* 8045D3F0 004269B0  4E 80 00 20 */	blr 
 .endfn __ct__CLibHbm
 
-.fn __dt__CLibHbm, global
+.fn __dt__7CLibHbmFv, global
 /* 8045D3F4 004269B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D3F8 004269B8  7C 08 02 A6 */	mflr r0
 /* 8045D3FC 004269BC  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +58,7 @@
 /* 8045D418 004269D8  38 00 00 00 */	li r0, 0
 /* 8045D41C 004269DC  90 0D BE 50 */	stw r0, lbl_80667FD0@sda21(r13)
 /* 8045D420 004269E0  38 80 00 00 */	li r4, 0
-/* 8045D424 004269E4  4B FD A6 A5 */	bl __dt__CWorkThread
+/* 8045D424 004269E4  4B FD A6 A5 */	bl __dt__11CWorkThreadFv
 /* 8045D428 004269E8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045D42C 004269EC  40 81 00 0C */	ble .L_8045D438
 /* 8045D430 004269F0  7F C3 F3 78 */	mr r3, r30
@@ -71,7 +71,7 @@
 /* 8045D448 00426A08  7C 08 03 A6 */	mtlr r0
 /* 8045D44C 00426A0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045D450 00426A10  4E 80 00 20 */	blr 
-.endfn __dt__CLibHbm
+.endfn __dt__7CLibHbmFv
 
 .fn func_8045D454, global
 /* 8045D454 00426A14  80 6D BE 50 */	lwz r3, lbl_80667FD0@sda21(r13)
@@ -135,7 +135,7 @@
 /* 8045D4FC 00426ABC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D500 00426AC0  7C 08 02 A6 */	mflr r0
 /* 8045D504 00426AC4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8045D508 00426AC8  4B FE B5 3D */	bl func_80448A44
+/* 8045D508 00426AC8  4B FE B5 3D */	bl func_80448A44__Fv
 /* 8045D50C 00426ACC  38 00 00 00 */	li r0, 0
 /* 8045D510 00426AD0  90 0D BE 58 */	stw r0, lbl_80667FD8@sda21(r13)
 /* 8045D514 00426AD4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -207,7 +207,7 @@
 /* 8045D5DC 00426B9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045D5E0 00426BA0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045D5E4 00426BA4  7C 7E 1B 78 */	mr r30, r3
-/* 8045D5E8 00426BA8  4B FE B4 5D */	bl func_80448A44
+/* 8045D5E8 00426BA8  4B FE B4 5D */	bl func_80448A44__Fv
 /* 8045D5EC 00426BAC  80 7E 02 30 */	lwz r3, 0x230(r30)
 /* 8045D5F0 00426BB0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045D5F4 00426BB4  41 82 00 10 */	beq .L_8045D604
@@ -218,14 +218,14 @@
 /* 8045D604 00426BC4  80 7E 01 E4 */	lwz r3, 0x1e4(r30)
 /* 8045D608 00426BC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045D60C 00426BCC  41 82 00 10 */	beq .L_8045D61C
-/* 8045D610 00426BD0  4B FD 6E C9 */	bl func_804344D8
+/* 8045D610 00426BD0  4B FD 6E C9 */	bl MemManager_804344D8
 /* 8045D614 00426BD4  38 00 00 00 */	li r0, 0
 /* 8045D618 00426BD8  90 1E 01 E4 */	stw r0, 0x1e4(r30)
 .L_8045D61C:
 /* 8045D61C 00426BDC  80 7E 01 E8 */	lwz r3, 0x1e8(r30)
 /* 8045D620 00426BE0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045D624 00426BE4  41 82 00 10 */	beq .L_8045D634
-/* 8045D628 00426BE8  4B FD 6E B1 */	bl func_804344D8
+/* 8045D628 00426BE8  4B FD 6E B1 */	bl MemManager_804344D8
 /* 8045D62C 00426BEC  38 00 00 00 */	li r0, 0
 /* 8045D630 00426BF0  90 1E 01 E8 */	stw r0, 0x1e8(r30)
 .L_8045D634:
@@ -238,7 +238,7 @@
 /* 8045D64C 00426C0C  93 FE 01 CC */	stw r31, 0x1cc(r30)
 /* 8045D650 00426C10  93 FE 01 D4 */	stw r31, 0x1d4(r30)
 /* 8045D654 00426C14  41 82 00 0C */	beq .L_8045D660
-/* 8045D658 00426C18  4B FD 6E 81 */	bl func_804344D8
+/* 8045D658 00426C18  4B FD 6E 81 */	bl MemManager_804344D8
 /* 8045D65C 00426C1C  93 FE 01 E0 */	stw r31, 0x1e0(r30)
 .L_8045D660:
 /* 8045D660 00426C20  A0 1E 02 2C */	lhz r0, 0x22c(r30)
@@ -288,7 +288,7 @@
 /* 8045D6E8 00426CA8  A0 03 02 2C */	lhz r0, 0x22c(r3)
 /* 8045D6EC 00426CAC  70 00 FF BF */	andi. r0, r0, 0xffbf
 /* 8045D6F0 00426CB0  B0 03 02 2C */	sth r0, 0x22c(r3)
-/* 8045D6F4 00426CB4  4B FE B3 51 */	bl func_80448A44
+/* 8045D6F4 00426CB4  4B FE B3 51 */	bl func_80448A44__Fv
 /* 8045D6F8 00426CB8  38 60 00 01 */	li r3, 1
 /* 8045D6FC 00426CBC  48 03 29 A5 */	bl func_804900A0
 /* 8045D700 00426CC0  80 6D BE 50 */	lwz r3, lbl_80667FD0@sda21(r13)
@@ -317,13 +317,13 @@
 /* 8045D758 00426D18  38 C0 00 00 */	li r6, 0
 /* 8045D75C 00426D1C  38 E0 00 00 */	li r7, 0
 /* 8045D760 00426D20  80 65 01 C4 */	lwz r3, 0x1c4(r5)
-/* 8045D764 00426D24  4B FF 10 31 */	bl CDeviceFile_openFile1
+/* 8045D764 00426D24  4B FF 10 31 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8045D768 00426D28  80 AD BE 50 */	lwz r5, lbl_80667FD0@sda21(r13)
 /* 8045D76C 00426D2C  38 80 00 00 */	li r4, 0
 /* 8045D770 00426D30  90 65 02 30 */	stw r3, 0x230(r5)
 /* 8045D774 00426D34  80 6D BE 50 */	lwz r3, lbl_80667FD0@sda21(r13)
 /* 8045D778 00426D38  80 63 02 30 */	lwz r3, 0x230(r3)
-/* 8045D77C 00426D3C  4B FF 19 D9 */	bl func_8044F154
+/* 8045D77C 00426D3C  4B FF 19 D9 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 .L_8045D780:
 /* 8045D780 00426D40  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045D784 00426D44  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -824,7 +824,7 @@
 /* 8045DE3C 004273FC  48 00 00 14 */	b .L_8045DE50
 .L_8045DE40:
 /* 8045DE40 00427400  7F E3 FB 78 */	mr r3, r31
-/* 8045DE44 00427404  4B FD AB B5 */	bl CWorkThread_WorkThreadEvent4
+/* 8045DE44 00427404  4B FD AB B5 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8045DE48 00427408  48 00 00 08 */	b .L_8045DE50
 .L_8045DE4C:
 /* 8045DE4C 0042740C  38 60 00 00 */	li r3, 0
@@ -852,7 +852,7 @@
 /* 8045DE94 00427454  7F E3 FB 78 */	mr r3, r31
 /* 8045DE98 00427458  4B FF F7 39 */	bl func_8045D5D0
 /* 8045DE9C 0042745C  7F E3 FB 78 */	mr r3, r31
-/* 8045DEA0 00427460  4B FD AB 85 */	bl CWorkThread_WorkThreadEvent5
+/* 8045DEA0 00427460  4B FD AB 85 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8045DEA4 00427464  48 00 00 08 */	b .L_8045DEAC
 .L_8045DEA8:
 /* 8045DEA8 00427468  38 60 00 00 */	li r3, 0
@@ -990,13 +990,13 @@
 /* 8045E088 00427648  80 7F 01 C4 */	lwz r3, 0x1c4(r31)
 /* 8045E08C 0042764C  3C 80 00 08 */	lis r4, 8
 /* 8045E090 00427650  38 A0 00 20 */	li r5, 0x20
-/* 8045E094 00427654  4B FD 63 99 */	bl func_8043442C
+/* 8045E094 00427654  4B FD 63 99 */	bl MemManager_8043442C
 /* 8045E098 00427658  90 7F 01 E0 */	stw r3, 0x1e0(r31)
 /* 8045E09C 0042765C  3C 80 00 02 */	lis r4, 0x00018700@ha
 /* 8045E0A0 00427660  80 7F 01 C4 */	lwz r3, 0x1c4(r31)
 /* 8045E0A4 00427664  38 84 87 00 */	addi r4, r4, 0x00018700@l
 /* 8045E0A8 00427668  38 A0 00 20 */	li r5, 0x20
-/* 8045E0AC 0042766C  4B FD 63 81 */	bl func_8043442C
+/* 8045E0AC 0042766C  4B FD 63 81 */	bl MemManager_8043442C
 /* 8045E0B0 00427670  90 7F 01 E4 */	stw r3, 0x1e4(r31)
 .L_8045E0B4:
 /* 8045E0B4 00427674  38 60 00 01 */	li r3, 1
@@ -1275,7 +1275,7 @@
 /* 8045E4C4 00427A84  4E 80 00 20 */	blr 
 .endfn func_8045E0CC
 
-.fn __dt__CLibHbmControl, global
+.fn __dt__14CLibHbmControlFv, global
 /* 8045E4C8 00427A88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045E4CC 00427A8C  7C 08 02 A6 */	mflr r0
 /* 8045E4D0 00427A90  2C 03 00 00 */	cmpwi r3, 0
@@ -1288,7 +1288,7 @@
 /* 8045E4EC 00427AAC  38 00 00 00 */	li r0, 0
 /* 8045E4F0 00427AB0  90 0D BE 60 */	stw r0, lbl_80667FE0@sda21(r13)
 /* 8045E4F4 00427AB4  38 80 00 00 */	li r4, 0
-/* 8045E4F8 00427AB8  4B FD A9 D1 */	bl __dt__CProc
+/* 8045E4F8 00427AB8  4B FD A9 D1 */	bl __dt__5CProcFv
 /* 8045E4FC 00427ABC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045E500 00427AC0  40 81 00 0C */	ble .L_8045E50C
 /* 8045E504 00427AC4  7F C3 F3 78 */	mr r3, r30
@@ -1301,7 +1301,7 @@
 /* 8045E51C 00427ADC  7C 08 03 A6 */	mtlr r0
 /* 8045E520 00427AE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045E524 00427AE4  4E 80 00 20 */	blr 
-.endfn __dt__CLibHbmControl
+.endfn __dt__14CLibHbmControlFv
 
 .fn func_8045E528, global
 /* 8045E528 00427AE8  80 6D BE 60 */	lwz r3, lbl_80667FE0@sda21(r13)
@@ -1346,44 +1346,44 @@
 .obj __vt__7CLibHbm, global
 	.4byte __RTTI__7CLibHbm
 	.4byte 0
-	.4byte __dt__CLibHbm
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__7CLibHbmFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CLibHbm_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CLibHbm_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CLibHbm_WorkThreadEvent4
 	.4byte CLibHbm_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__7CLibHbm
 
 .obj CLibHbm_hierarchy, global
@@ -1621,7 +1621,7 @@
 
 .obj "@eti_800352F4", local
 .hidden "@eti_800352F4"
-	.4byte __dt__CLibHbm
+	.4byte __dt__7CLibHbmFv
 	.4byte 0x00000060
 	.4byte "@etb_8001D708"
 .endobj "@eti_800352F4"
@@ -1712,7 +1712,7 @@
 
 .obj "@eti_80035390", local
 .hidden "@eti_80035390"
-	.4byte __dt__CLibHbmControl
+	.4byte __dt__14CLibHbmControlFv
 	.4byte 0x00000060
 	.4byte "@etb_8001D780"
 .endobj "@eti_80035390"

@@ -190,7 +190,7 @@
 /* 8044335C 0040C91C  48 00 7F 3D */	bl func_8044B298
 .L_80443360:
 /* 80443360 0040C920  7F E3 FB 78 */	mr r3, r31
-/* 80443364 0040C924  4B FF 56 95 */	bl CWorkThread_WorkThreadEvent4
+/* 80443364 0040C924  4B FF 56 95 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80443368 0040C928  48 00 00 08 */	b .L_80443370
 .L_8044336C:
 /* 8044336C 0040C92C  38 60 00 00 */	li r3, 0
@@ -291,7 +291,7 @@
 /* 804434CC 0040CA8C  48 00 7D CD */	bl func_8044B298
 .L_804434D0:
 /* 804434D0 0040CA90  7F E3 FB 78 */	mr r3, r31
-/* 804434D4 0040CA94  4B FF 55 51 */	bl CWorkThread_WorkThreadEvent5
+/* 804434D4 0040CA94  4B FF 55 51 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804434D8 0040CA98  48 00 00 08 */	b .L_804434E0
 .L_804434DC:
 /* 804434DC 0040CA9C  38 60 00 00 */	li r3, 0
@@ -315,7 +315,7 @@
 /* 80443514 0040CAD4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80443518 0040CAD8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044351C 0040CADC  7C 7D 1B 78 */	mr r29, r3
-/* 80443520 0040CAE0  4B FF 40 95 */	bl getHeapIndex
+/* 80443520 0040CAE0  4B FF 40 95 */	bl getHeapIndex__Fv
 /* 80443524 0040CAE4  7C 64 1B 78 */	mr r4, r3
 /* 80443528 0040CAE8  38 60 05 20 */	li r3, 0x520
 /* 8044352C 0040CAEC  4B FF 15 31 */	bl heap_malloc
@@ -469,44 +469,44 @@
 .obj __vt__9CViewRoot, global
 	.4byte __RTTI__9CViewRoot
 	.4byte 0
-	.4byte __dt__CViewRoot
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__9CViewRootFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CViewRoot_WorkThreadEvent4
 	.4byte CViewRoot_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CViewRoot
 
 .obj CViewRoot_hierarchy, global
@@ -570,7 +570,7 @@
 	.4byte __dt__80442084
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001C6D8"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

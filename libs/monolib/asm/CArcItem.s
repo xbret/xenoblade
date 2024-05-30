@@ -25,7 +25,7 @@
 /* 804DEB60 004A8120  7F C5 F3 78 */	mr r5, r30
 /* 804DEB64 004A8124  38 C0 00 00 */	li r6, 0
 /* 804DEB68 004A8128  38 E0 00 00 */	li r7, 0
-/* 804DEB6C 004A812C  4B F6 FC 29 */	bl CDeviceFile_openFile1
+/* 804DEB6C 004A812C  4B F6 FC 29 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 804DEB70 004A8130  90 7E 00 28 */	stw r3, 0x28(r30)
 /* 804DEB74 004A8134  7F E4 FB 78 */	mr r4, r31
 /* 804DEB78 004A8138  38 61 00 08 */	addi r3, r1, 8
@@ -44,7 +44,7 @@
 /* 804DEBAC 004A816C  4E 80 00 20 */	blr 
 .endfn __ct__CArcItem
 
-.fn __dt__CArcItem, global
+.fn __dt__8CArcItemFv, global
 /* 804DEBB0 004A8170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DEBB4 004A8174  7C 08 02 A6 */	mflr r0
 /* 804DEBB8 004A8178  2C 03 00 00 */	cmpwi r3, 0
@@ -65,7 +65,7 @@
 /* 804DEBF0 004A81B0  80 7E 00 38 */	lwz r3, 0x38(r30)
 /* 804DEBF4 004A81B4  2C 03 00 00 */	cmpwi r3, 0
 /* 804DEBF8 004A81B8  41 82 00 10 */	beq .L_804DEC08
-/* 804DEBFC 004A81BC  4B F5 58 DD */	bl func_804344D8
+/* 804DEBFC 004A81BC  4B F5 58 DD */	bl MemManager_804344D8
 /* 804DEC00 004A81C0  38 00 00 00 */	li r0, 0
 /* 804DEC04 004A81C4  90 1E 00 38 */	stw r0, 0x38(r30)
 .L_804DEC08:
@@ -80,7 +80,7 @@
 /* 804DEC24 004A81E4  7C 08 03 A6 */	mtlr r0
 /* 804DEC28 004A81E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DEC2C 004A81EC  4E 80 00 20 */	blr 
-.endfn __dt__CArcItem
+.endfn __dt__8CArcItemFv
 
 .fn func_804DEC30, global
 /* 804DEC30 004A81F0  80 03 00 2C */	lwz r0, 0x2c(r3)
@@ -221,38 +221,38 @@
 .obj __vt__8CArcItem, global
 	.4byte __RTTI__8CArcItem
 	.4byte 0
-	.4byte __dt__CArcItem
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__8CArcItemFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CArcItem_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__8CArcItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -276,7 +276,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80020938"
 
 .obj "@etb_80020954", local
@@ -287,7 +287,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80020954"
 
 .obj "@etb_80020970", local
@@ -315,7 +315,7 @@
 
 .obj "@eti_8003899C", local
 .hidden "@eti_8003899C"
-	.4byte __dt__CArcItem
+	.4byte __dt__8CArcItemFv
 	.4byte 0x00000080
 	.4byte "@etb_80020954"
 .endobj "@eti_8003899C"

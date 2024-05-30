@@ -433,7 +433,7 @@
 .obj __vt__Q22cf14CCharEffectEne, global
 	.4byte __RTTI__Q22cf14CCharEffectEne
 	.4byte 0
-	.4byte __dt__cf_CCharEffectEne
+	.4byte __dt__Q22cf14CCharEffectEneFv
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C
@@ -452,7 +452,7 @@
 .obj __vt__Q22cf14CCharEffectNpc, global
 	.4byte __RTTI__Q22cf14CCharEffectNpc
 	.4byte 0
-	.4byte __dt__cf_CCharEffectNpc
+	.4byte __dt__Q22cf14CCharEffectNpcFv
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C
@@ -471,7 +471,7 @@
 .obj __vt__Q22cf14CCharEffectObj, global
 	.4byte __RTTI__Q22cf14CCharEffectObj
 	.4byte 0
-	.4byte __dt__cf_CCharEffectObj
+	.4byte __dt__Q22cf14CCharEffectObjFv
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C
@@ -490,7 +490,7 @@
 .obj __vt__Q22cf13CCharEffectPc, global
 	.4byte __RTTI__Q22cf13CCharEffectPc
 	.4byte 0
-	.4byte __dt__cf_CCharEffectPc
+	.4byte __dt__Q22cf13CCharEffectPcFv
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C

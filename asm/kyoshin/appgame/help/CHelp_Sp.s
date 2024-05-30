@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B8654, global
+.fn func_802B8654__Q22cf8CHelp_SpFv, global
 /* 802B8654 00281C14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B8658 00281C18  7C 08 02 A6 */	mflr r0
 /* 802B865C 00281C1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -31,7 +31,7 @@
 /* 802B86B0 00281C70  7C 08 03 A6 */	mtlr r0
 /* 802B86B4 00281C74  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B86B8 00281C78  4E 80 00 20 */	blr 
-.endfn func_802B8654
+.endfn func_802B8654__Q22cf8CHelp_SpFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -49,7 +49,7 @@
 
 .obj "@eti_800339B0", local
 .hidden "@eti_800339B0"
-	.4byte func_802B8654
+	.4byte func_802B8654__Q22cf8CHelp_SpFv
 	.4byte 0x00000068
 	.4byte "@etb_8001BE18"
 .endobj "@eti_800339B0"

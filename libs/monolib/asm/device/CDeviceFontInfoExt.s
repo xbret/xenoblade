@@ -30,7 +30,7 @@
 /* 80453334 0041C8F4  4B FF 9D 2D */	bl func_8044D060
 /* 80453338 0041C8F8  7F C4 F3 78 */	mr r4, r30
 /* 8045333C 0041C8FC  38 A0 00 20 */	li r5, 0x20
-/* 80453340 0041C900  4B FE 10 ED */	bl func_8043442C
+/* 80453340 0041C900  4B FE 10 ED */	bl MemManager_8043442C
 /* 80453344 0041C904  7C 7D 1B 78 */	mr r29, r3
 /* 80453348 0041C908  80 DC 00 18 */	lwz r6, 0x18(r28)
 /* 8045334C 0041C90C  7F A4 EB 78 */	mr r4, r29
@@ -41,7 +41,7 @@
 /* 80453360 0041C920  80 7C 00 18 */	lwz r3, 0x18(r28)
 /* 80453364 0041C924  2C 03 00 00 */	cmpwi r3, 0
 /* 80453368 0041C928  41 82 00 0C */	beq .L_80453374
-/* 8045336C 0041C92C  4B FE 11 6D */	bl func_804344D8
+/* 8045336C 0041C92C  4B FE 11 6D */	bl MemManager_804344D8
 /* 80453370 0041C930  93 FC 00 18 */	stw r31, 0x18(r28)
 .L_80453374:
 /* 80453374 0041C934  93 BC 00 18 */	stw r29, 0x18(r28)
@@ -73,7 +73,7 @@
 /* 804533DC 0041C99C  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFontInfoExt
 
-.fn __dt__CDeviceFontInfoExt, global
+.fn __dt__18CDeviceFontInfoExtFv, global
 /* 804533E0 0041C9A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804533E4 0041C9A4  7C 08 02 A6 */	mflr r0
 /* 804533E8 0041C9A8  2C 03 00 00 */	cmpwi r3, 0
@@ -91,7 +91,7 @@
 /* 80453418 0041C9D8  80 7E 00 18 */	lwz r3, 0x18(r30)
 /* 8045341C 0041C9DC  2C 03 00 00 */	cmpwi r3, 0
 /* 80453420 0041C9E0  41 82 00 10 */	beq .L_80453430
-/* 80453424 0041C9E4  4B FE 10 B5 */	bl func_804344D8
+/* 80453424 0041C9E4  4B FE 10 B5 */	bl MemManager_804344D8
 /* 80453428 0041C9E8  38 00 00 00 */	li r0, 0
 /* 8045342C 0041C9EC  90 1E 00 18 */	stw r0, 0x18(r30)
 .L_80453430:
@@ -110,7 +110,7 @@
 /* 8045345C 0041CA1C  7C 08 03 A6 */	mtlr r0
 /* 80453460 0041CA20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453464 0041CA24  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFontInfoExt
+.endfn __dt__18CDeviceFontInfoExtFv
 
 .fn func_80453468, global
 /* 80453468 0041CA28  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -302,7 +302,7 @@
 .obj __vt__18CDeviceFontInfoExt, global
 	.4byte __RTTI__18CDeviceFontInfoExt
 	.4byte 0
-	.4byte __dt__CDeviceFontInfoExt
+	.4byte __dt__18CDeviceFontInfoExtFv
 	.4byte func_80453654
 	.4byte func_8045364C
 	.4byte func_80453644
@@ -416,7 +416,7 @@
 
 .obj "@eti_80034D78", local
 .hidden "@eti_80034D78"
-	.4byte __dt__CDeviceFontInfoExt
+	.4byte __dt__18CDeviceFontInfoExtFv
 	.4byte 0x00000088
 	.4byte "@etb_8001D0B0"
 .endobj "@eti_80034D78"

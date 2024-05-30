@@ -23,7 +23,7 @@
 /* 80207F84 001D1544  4E 80 00 20 */	blr 
 .endfn __ct__CItemBoxGridSubMenu
 
-.fn __dt__CItemBoxGridSubMenu, global
+.fn __dt__19CItemBoxGridSubMenuFv, global
 /* 80207F88 001D1548  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80207F8C 001D154C  7C 08 02 A6 */	mflr r0
 /* 80207F90 001D1550  2C 03 00 00 */	cmpwi r3, 0
@@ -41,7 +41,7 @@
 /* 80207FBC 001D157C  7C 08 03 A6 */	mtlr r0
 /* 80207FC0 001D1580  38 21 00 10 */	addi r1, r1, 0x10
 /* 80207FC4 001D1584  4E 80 00 20 */	blr 
-.endfn __dt__CItemBoxGridSubMenu
+.endfn __dt__19CItemBoxGridSubMenuFv
 
 .fn func_80207FC8, global
 /* 80207FC8 001D1588  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -54,7 +54,7 @@
 /* 80207FE4 001D15A4  7C 7D 1B 78 */	mr r29, r3
 /* 80207FE8 001D15A8  38 63 00 08 */	addi r3, r3, 8
 /* 80207FEC 001D15AC  38 BF 3B DC */	addi r5, r31, CItemBoxGridSubMenu_strpool@l
-/* 80207FF0 001D15B0  4B F2 EE 95 */	bl func_80136E84
+/* 80207FF0 001D15B0  4B F2 EE 95 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80207FF4 001D15B4  3B FF 3B DC */	addi r31, r31, CItemBoxGridSubMenu_strpool@l
 /* 80207FF8 001D15B8  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80207FFC 001D15BC  80 BD 00 04 */	lwz r5, 4(r29)
@@ -256,7 +256,7 @@
 /* 802082DC 001D189C  80 63 00 08 */	lwz r3, 8(r3)
 /* 802082E0 001D18A0  38 A0 00 00 */	li r5, 0
 /* 802082E4 001D18A4  38 C0 00 01 */	li r6, 1
-/* 802082E8 001D18A8  4B F2 ED 50 */	b func_80137038
+/* 802082E8 001D18A8  4B F2 ED 50 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 802082EC 001D18AC  4E 80 00 20 */	blr 
 .endfn func_802082D0
 
@@ -745,38 +745,38 @@
 .obj __vt__19CItemBoxGridSubMenu, global
 	.4byte __RTTI__19CItemBoxGridSubMenu
 	.4byte 0
-	.4byte __dt__CItemBoxGridSubMenu
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__19CItemBoxGridSubMenuFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__19CItemBoxGridSubMenu
 
 .obj CItemBoxGridSubMenu_hierarchy, global
@@ -901,7 +901,7 @@
 
 .obj "@eti_8002CE1C", local
 .hidden "@eti_8002CE1C"
-	.4byte __dt__CItemBoxGridSubMenu
+	.4byte __dt__19CItemBoxGridSubMenuFv
 	.4byte 0x00000040
 	.4byte "@etb_80012EC0"
 .endobj "@eti_8002CE1C"

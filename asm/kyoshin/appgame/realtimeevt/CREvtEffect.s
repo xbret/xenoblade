@@ -129,7 +129,7 @@
 .L_80184CE0:
 /* 80184CE0 0014E2A0  7F C3 F3 78 */	mr r3, r30
 /* 80184CE4 0014E2A4  38 80 00 00 */	li r4, 0
-/* 80184CE8 0014E2A8  48 00 09 D9 */	bl __dt__801856C0
+/* 80184CE8 0014E2A8  48 00 09 D9 */	bl __dt__Q22cf8CREvtObjFv
 /* 80184CEC 0014E2AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80184CF0 0014E2B0  40 81 00 0C */	ble .L_80184CFC
 /* 80184CF4 0014E2B4  7F C3 F3 78 */	mr r3, r30
@@ -968,7 +968,7 @@
 	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801856C0
+	.4byte __dt__Q22cf8CREvtObjFv
 .endobj "@etb_8000E8E8"
 
 .obj "@etb_8000E910", local
@@ -984,7 +984,7 @@
 	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801856C0
+	.4byte __dt__Q22cf8CREvtObjFv
 	.4byte 0x8680001E
 	.4byte 0x00000014
 	.4byte __dt__80081C20

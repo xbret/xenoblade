@@ -64,7 +64,7 @@
 /* 80459D78 00423338  4E 80 00 20 */	blr
 .endfn __ct__CLibCriMoviePlay
 
-.fn __dt__CLibCriMoviePlay, global
+.fn __dt__16CLibCriMoviePlayFv, global
 /* 80459D7C 0042333C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459D80 00423340  7C 08 02 A6 */	mflr r0
 /* 80459D84 00423344  2C 03 00 00 */	cmpwi r3, 0
@@ -78,10 +78,10 @@
 /* 80459DA4 00423364  90 0D BE 38 */	stw r0, lbl_80667FB8@sda21(r13)
 /* 80459DA8 00423368  38 80 00 00 */	li r4, 0
 /* 80459DAC 0042336C  38 63 01 C4 */	addi r3, r3, 0x1c4
-/* 80459DB0 00423370  4B FE F1 CD */	bl __dt__CDeviceVICb
+/* 80459DB0 00423370  4B FE F1 CD */	bl __dt__11CDeviceVICbFv
 /* 80459DB4 00423374  7F C3 F3 78 */	mr r3, r30
 /* 80459DB8 00423378  38 80 00 00 */	li r4, 0
-/* 80459DBC 0042337C  4B FD DD 0D */	bl __dt__CWorkThread
+/* 80459DBC 0042337C  4B FD DD 0D */	bl __dt__11CWorkThreadFv
 /* 80459DC0 00423380  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459DC4 00423384  40 81 00 0C */	ble .L_80459DD0
 /* 80459DC8 00423388  7F C3 F3 78 */	mr r3, r30
@@ -94,7 +94,7 @@
 /* 80459DE0 004233A0  7C 08 03 A6 */	mtlr r0
 /* 80459DE4 004233A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459DE8 004233A8  4E 80 00 20 */	blr 
-.endfn __dt__CLibCriMoviePlay
+.endfn __dt__16CLibCriMoviePlayFv
 
 .fn func_80459DEC, global
 /* 80459DEC 004233AC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -436,7 +436,7 @@
 /* 8045A2F8 004238B8  7C 64 1B 78 */	mr r4, r3
 /* 8045A2FC 004238BC  7F 23 CB 78 */	mr r3, r25
 /* 8045A300 004238C0  38 A0 00 20 */	li r5, 0x20
-/* 8045A304 004238C4  4B FD A1 4D */	bl func_80434450
+/* 8045A304 004238C4  4B FD A1 4D */	bl MemManager_80434450
 /* 8045A308 004238C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045A30C 004238CC  90 7F 00 20 */	stw r3, 0x20(r31)
 /* 8045A310 004238D0  40 82 00 18 */	bne .L_8045A328
@@ -619,7 +619,7 @@
 /* 8045A570 00423B30  2C 00 00 00 */	cmpwi r0, 0
 /* 8045A574 00423B34  41 82 00 B0 */	beq .L_8045A624
 /* 8045A578 00423B38  38 60 00 00 */	li r3, 0
-/* 8045A57C 00423B3C  4B FD A4 D1 */	bl func_80434A4C
+/* 8045A57C 00423B3C  4B FD A4 D1 */	bl MemManager_80434A4C__FUc
 /* 8045A580 00423B40  80 6D BE 38 */	lwz r3, lbl_80667FB8@sda21(r13)
 /* 8045A584 00423B44  3B A0 00 00 */	li r29, 0
 /* 8045A588 00423B48  3B E0 00 00 */	li r31, 0
@@ -645,7 +645,7 @@
 /* 8045A5C8 00423B88  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 8045A5CC 00423B8C  2C 03 00 00 */	cmpwi r3, 0
 /* 8045A5D0 00423B90  41 82 00 0C */	beq .L_8045A5DC
-/* 8045A5D4 00423B94  4B FD 9F 05 */	bl func_804344D8
+/* 8045A5D4 00423B94  4B FD 9F 05 */	bl MemManager_804344D8
 /* 8045A5D8 00423B98  93 FE 00 20 */	stw r31, 0x20(r30)
 .L_8045A5DC:
 /* 8045A5DC 00423B9C  80 1E 00 94 */	lwz r0, 0x94(r30)
@@ -659,7 +659,7 @@
 /* 8045A5F8 00423BB8  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 8045A5FC 00423BBC  2C 03 00 00 */	cmpwi r3, 0
 /* 8045A600 00423BC0  41 82 00 0C */	beq .L_8045A60C
-/* 8045A604 00423BC4  4B FD 9E D5 */	bl func_804344D8
+/* 8045A604 00423BC4  4B FD 9E D5 */	bl MemManager_804344D8
 /* 8045A608 00423BC8  93 FE 00 20 */	stw r31, 0x20(r30)
 .L_8045A60C:
 /* 8045A60C 00423BCC  3B BD 00 01 */	addi r29, r29, 1
@@ -667,7 +667,7 @@
 /* 8045A614 00423BD4  28 1D 00 04 */	cmplwi r29, 4
 /* 8045A618 00423BD8  41 80 FF 78 */	blt .L_8045A590
 /* 8045A61C 00423BDC  38 60 00 01 */	li r3, 1
-/* 8045A620 00423BE0  4B FD A4 2D */	bl func_80434A4C
+/* 8045A620 00423BE0  4B FD A4 2D */	bl MemManager_80434A4C__FUc
 .L_8045A624:
 /* 8045A624 00423BE4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8045A628 00423BE8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -1034,7 +1034,7 @@
 /* 8045AB38 004240F8  4E 80 00 20 */	blr 
 .endfn func_8045A8C8
 
-.fn CLibCriMoviePlay_wkUpdate, global
+.fn wkUpdate__16CLibCriMoviePlayFv, global
 /* 8045AB3C 004240FC  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8045AB40 00424100  7C 08 02 A6 */	mflr r0
 /* 8045AB44 00424104  3C 80 80 52 */	lis r4, lbl_8052693C@ha
@@ -1052,21 +1052,21 @@
 /* 8045AB70 00424130  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AB74 00424134  40 82 00 40 */	bne .L_8045ABB4
 /* 8045AB78 00424138  38 60 00 00 */	li r3, 0
-/* 8045AB7C 0042413C  4B FD 9E D1 */	bl func_80434A4C
+/* 8045AB7C 0042413C  4B FD 9E D1 */	bl MemManager_80434A4C__FUc
 /* 8045AB80 00424140  80 7A 01 0C */	lwz r3, 0x10c(r26)
 /* 8045AB84 00424144  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AB88 00424148  41 82 00 0C */	beq .L_8045AB94
-/* 8045AB8C 0042414C  4B FD 99 4D */	bl func_804344D8
+/* 8045AB8C 0042414C  4B FD 99 4D */	bl MemManager_804344D8
 /* 8045AB90 00424150  93 DA 01 0C */	stw r30, 0x10c(r26)
 .L_8045AB94:
 /* 8045AB94 00424154  80 7A 01 10 */	lwz r3, 0x110(r26)
 /* 8045AB98 00424158  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AB9C 0042415C  41 82 00 0C */	beq .L_8045ABA8
-/* 8045ABA0 00424160  4B FD 99 39 */	bl func_804344D8
+/* 8045ABA0 00424160  4B FD 99 39 */	bl MemManager_804344D8
 /* 8045ABA4 00424164  93 DA 01 10 */	stw r30, 0x110(r26)
 .L_8045ABA8:
 /* 8045ABA8 00424168  38 60 00 01 */	li r3, 1
-/* 8045ABAC 0042416C  4B FD 9E A1 */	bl func_80434A4C
+/* 8045ABAC 0042416C  4B FD 9E A1 */	bl MemManager_80434A4C__FUc
 /* 8045ABB0 00424170  48 00 01 2C */	b .L_8045ACDC
 .L_8045ABB4:
 /* 8045ABB4 00424174  4B F4 72 B1 */	bl mwPlyGetStat
@@ -1162,9 +1162,9 @@
 /* 8045ACF8 004242B8  7C 08 03 A6 */	mtlr r0
 /* 8045ACFC 004242BC  38 21 00 70 */	addi r1, r1, 0x70
 /* 8045AD00 004242C0  4E 80 00 20 */	blr 
-.endfn CLibCriMoviePlay_wkUpdate
+.endfn wkUpdate__16CLibCriMoviePlayFv
 
-.fn CLibCriMoviePlay_WorkThreadEvent4, global
+.fn WorkThreadEvent4__16CLibCriMoviePlayFv, global
 /* 8045AD04 004242C4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8045AD08 004242C8  7C 08 02 A6 */	mflr r0
 /* 8045AD0C 004242CC  38 80 00 00 */	li r4, 0
@@ -1181,15 +1181,15 @@
 /* 8045AD38 004242F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045AD3C 004242FC  4B F4 5F 3D */	bl mwPlyInitSfdFx
 /* 8045AD40 00424300  7F E3 FB 78 */	mr r3, r31
-/* 8045AD44 00424304  4B FD DC B5 */	bl CWorkThread_WorkThreadEvent4
+/* 8045AD44 00424304  4B FD DC B5 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8045AD48 00424308  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8045AD4C 0042430C  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 8045AD50 00424310  7C 08 03 A6 */	mtlr r0
 /* 8045AD54 00424314  38 21 00 30 */	addi r1, r1, 0x30
 /* 8045AD58 00424318  4E 80 00 20 */	blr 
-.endfn CLibCriMoviePlay_WorkThreadEvent4
+.endfn WorkThreadEvent4__16CLibCriMoviePlayFv
 
-.fn CLibCriMoviePlay_WorkThreadEvent5, global
+.fn WorkThreadEvent5__16CLibCriMoviePlayFv, global
 /* 8045AD5C 0042431C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045AD60 00424320  7C 08 02 A6 */	mflr r0
 /* 8045AD64 00424324  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1242,27 +1242,27 @@
 /* 8045AE08 004243C8  3B E0 00 00 */	li r31, 0
 .L_8045AE0C:
 /* 8045AE0C 004243CC  38 60 00 00 */	li r3, 0
-/* 8045AE10 004243D0  4B FD 9C 3D */	bl func_80434A4C
+/* 8045AE10 004243D0  4B FD 9C 3D */	bl MemManager_80434A4C__FUc
 /* 8045AE14 004243D4  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 8045AE18 004243D8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AE1C 004243DC  41 82 00 0C */	beq .L_8045AE28
-/* 8045AE20 004243E0  4B FD 96 B9 */	bl func_804344D8
+/* 8045AE20 004243E0  4B FD 96 B9 */	bl MemManager_804344D8
 /* 8045AE24 004243E4  93 FE 01 0C */	stw r31, 0x10c(r30)
 .L_8045AE28:
 /* 8045AE28 004243E8  80 7E 01 10 */	lwz r3, 0x110(r30)
 /* 8045AE2C 004243EC  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AE30 004243F0  41 82 00 0C */	beq .L_8045AE3C
-/* 8045AE34 004243F4  4B FD 96 A5 */	bl func_804344D8
+/* 8045AE34 004243F4  4B FD 96 A5 */	bl MemManager_804344D8
 /* 8045AE38 004243F8  93 FE 01 10 */	stw r31, 0x110(r30)
 .L_8045AE3C:
 /* 8045AE3C 004243FC  38 60 00 01 */	li r3, 1
-/* 8045AE40 00424400  4B FD 9C 0D */	bl func_80434A4C
+/* 8045AE40 00424400  4B FD 9C 0D */	bl MemManager_80434A4C__FUc
 /* 8045AE44 00424404  3B BD 00 01 */	addi r29, r29, 1
 /* 8045AE48 00424408  3B DE 01 14 */	addi r30, r30, 0x114
 /* 8045AE4C 0042440C  28 1D 00 04 */	cmplwi r29, 4
 /* 8045AE50 00424410  41 80 FF BC */	blt .L_8045AE0C
 /* 8045AE54 00424414  7F 83 E3 78 */	mr r3, r28
-/* 8045AE58 00424418  4B FD DB CD */	bl CWorkThread_WorkThreadEvent5
+/* 8045AE58 00424418  4B FD DB CD */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8045AE5C 0042441C  48 00 00 08 */	b .L_8045AE64
 .L_8045AE60:
 /* 8045AE60 00424420  38 60 00 00 */	li r3, 0
@@ -1275,9 +1275,9 @@
 /* 8045AE78 00424438  7C 08 03 A6 */	mtlr r0
 /* 8045AE7C 0042443C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045AE80 00424440  4E 80 00 20 */	blr
-.endfn CLibCriMoviePlay_WorkThreadEvent5
+.endfn WorkThreadEvent5__16CLibCriMoviePlayFv
 
-.fn func_8045AE84, global
+.fn func_8045AE84__16CLibCriMoviePlayFv, global
 /* 8045AE84 00424444  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8045AE88 00424448  7C 08 02 A6 */	mflr r0
 /* 8045AE8C 0042444C  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1345,29 +1345,29 @@
 /* 8045AF74 00424534  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 8045AF78 00424538  38 A0 00 20 */	li r5, 0x20
 /* 8045AF7C 0042453C  80 9F 00 98 */	lwz r4, 0x98(r31)
-/* 8045AF80 00424540  4B FD 94 D1 */	bl func_80434450
+/* 8045AF80 00424540  4B FD 94 D1 */	bl MemManager_80434450
 /* 8045AF84 00424544  90 7F 00 94 */	stw r3, 0x94(r31)
 /* 8045AF88 00424548  48 00 00 70 */	b .L_8045AFF8
 .L_8045AF8C:
 /* 8045AF8C 0042454C  2C 00 00 03 */	cmpwi r0, 3
 /* 8045AF90 00424550  40 82 00 48 */	bne .L_8045AFD8
 /* 8045AF94 00424554  38 60 00 01 */	li r3, 1
-/* 8045AF98 00424558  4B FD 9A BD */	bl func_80434A54
+/* 8045AF98 00424558  4B FD 9A BD */	bl MemManager_80434A54
 /* 8045AF9C 0042455C  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 8045AFA0 00424560  38 A0 00 20 */	li r5, 0x20
 /* 8045AFA4 00424564  80 9F 00 98 */	lwz r4, 0x98(r31)
-/* 8045AFA8 00424568  4B FD 94 85 */	bl func_8043442C
+/* 8045AFA8 00424568  4B FD 94 85 */	bl MemManager_8043442C
 /* 8045AFAC 0042456C  2C 03 00 00 */	cmpwi r3, 0
 /* 8045AFB0 00424570  90 7F 00 94 */	stw r3, 0x94(r31)
 /* 8045AFB4 00424574  40 82 00 18 */	bne .L_8045AFCC
 /* 8045AFB8 00424578  4B FD 93 E9 */	bl Heap_getRegionIndex2
 /* 8045AFBC 0042457C  80 9F 00 98 */	lwz r4, 0x98(r31)
 /* 8045AFC0 00424580  38 A0 00 20 */	li r5, 0x20
-/* 8045AFC4 00424584  4B FD 94 69 */	bl func_8043442C
+/* 8045AFC4 00424584  4B FD 94 69 */	bl MemManager_8043442C
 /* 8045AFC8 00424588  90 7F 00 94 */	stw r3, 0x94(r31)
 .L_8045AFCC:
 /* 8045AFCC 0042458C  38 60 00 00 */	li r3, 0
-/* 8045AFD0 00424590  4B FD 9A 85 */	bl func_80434A54
+/* 8045AFD0 00424590  4B FD 9A 85 */	bl MemManager_80434A54
 /* 8045AFD4 00424594  48 00 00 24 */	b .L_8045AFF8
 .L_8045AFD8:
 /* 8045AFD8 00424598  80 7F 00 F0 */	lwz r3, 0xf0(r31)
@@ -1416,29 +1416,29 @@
 /* 8045B078 00424638  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 8045B07C 0042463C  38 A0 00 20 */	li r5, 0x20
 /* 8045B080 00424640  80 9F 00 A0 */	lwz r4, 0xa0(r31)
-/* 8045B084 00424644  4B FD 93 CD */	bl func_80434450
+/* 8045B084 00424644  4B FD 93 CD */	bl MemManager_80434450
 /* 8045B088 00424648  90 7F 00 9C */	stw r3, 0x9c(r31)
 /* 8045B08C 0042464C  48 00 00 78 */	b .L_8045B104
 .L_8045B090:
 /* 8045B090 00424650  2C 00 00 03 */	cmpwi r0, 3
 /* 8045B094 00424654  40 82 00 48 */	bne .L_8045B0DC
 /* 8045B098 00424658  38 60 00 01 */	li r3, 1
-/* 8045B09C 0042465C  4B FD 99 B9 */	bl func_80434A54
+/* 8045B09C 0042465C  4B FD 99 B9 */	bl MemManager_80434A54
 /* 8045B0A0 00424660  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 8045B0A4 00424664  38 A0 00 20 */	li r5, 0x20
 /* 8045B0A8 00424668  80 9F 00 A0 */	lwz r4, 0xa0(r31)
-/* 8045B0AC 0042466C  4B FD 93 81 */	bl func_8043442C
+/* 8045B0AC 0042466C  4B FD 93 81 */	bl MemManager_8043442C
 /* 8045B0B0 00424670  2C 03 00 00 */	cmpwi r3, 0
 /* 8045B0B4 00424674  90 7F 00 9C */	stw r3, 0x9c(r31)
 /* 8045B0B8 00424678  40 82 00 18 */	bne .L_8045B0D0
 /* 8045B0BC 0042467C  4B FD 92 E5 */	bl Heap_getRegionIndex2
 /* 8045B0C0 00424680  80 9F 00 A0 */	lwz r4, 0xa0(r31)
 /* 8045B0C4 00424684  38 A0 00 20 */	li r5, 0x20
-/* 8045B0C8 00424688  4B FD 93 65 */	bl func_8043442C
+/* 8045B0C8 00424688  4B FD 93 65 */	bl MemManager_8043442C
 /* 8045B0CC 0042468C  90 7F 00 9C */	stw r3, 0x9c(r31)
 .L_8045B0D0:
 /* 8045B0D0 00424690  38 60 00 00 */	li r3, 0
-/* 8045B0D4 00424694  4B FD 99 81 */	bl func_80434A54
+/* 8045B0D4 00424694  4B FD 99 81 */	bl MemManager_80434A54
 /* 8045B0D8 00424698  48 00 00 2C */	b .L_8045B104
 .L_8045B0DC:
 /* 8045B0DC 0042469C  80 7F 00 94 */	lwz r3, 0x94(r31)
@@ -1509,11 +1509,11 @@
 /* 8045B1D0 00424790  7C 08 03 A6 */	mtlr r0
 /* 8045B1D4 00424794  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8045B1D8 00424798  4E 80 00 20 */	blr
-.endfn func_8045AE84
+.endfn func_8045AE84__16CLibCriMoviePlayFv
 
-.fn func_8045B1DC, global
+.fn func_8045B1DC__16CLibCriMoviePlayFv, global
 /* 8045B1DC 0042479C  4E 80 00 20 */	blr
-.endfn func_8045B1DC
+.endfn func_8045B1DC__16CLibCriMoviePlayFv
 
 .fn func_8045B1E0, global
 /* 8045B1E0 004247A0  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -1546,7 +1546,7 @@
 /* 8045B24C 0042480C  4E 80 00 20 */	blr 
 .endfn func_8045B1E0
 
-.fn CLibCriMoviePlay_WorkEvent5, global
+.fn WorkEvent5__16CLibCriMoviePlayFv, global
 /* 8045B250 00424810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045B254 00424814  7C 08 02 A6 */	mflr r0
 /* 8045B258 00424818  2C 04 00 00 */	cmpwi r4, 0
@@ -1602,7 +1602,7 @@
 /* 8045B304 004248C4  7C 08 03 A6 */	mtlr r0
 /* 8045B308 004248C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045B30C 004248CC  4E 80 00 20 */	blr
-.endfn CLibCriMoviePlay_WorkEvent5
+.endfn WorkEvent5__16CLibCriMoviePlayFv
 
 .fn func_8045B310, global
 /* 8045B310 004248D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1662,20 +1662,20 @@
 /* 8045B3D0 00424990  4E 80 00 20 */	blr 
 .endfn func_8045B310
 
-.fn func_8045B3D4, global
+.fn func_8045B3D4__16CLibCriMoviePlayFv, global
 /* 8045B3D4 00424994  38 63 FE 3C */	addi r3, r3, -452
-/* 8045B3D8 00424998  4B FF FE 04 */	b func_8045B1DC
-.endfn func_8045B3D4
+/* 8045B3D8 00424998  4B FF FE 04 */	b func_8045B1DC__16CLibCriMoviePlayFv
+.endfn func_8045B3D4__16CLibCriMoviePlayFv
 
-.fn func_8045B3DC, global
+.fn func_8045B3DC__16CLibCriMoviePlayFv, global
 /* 8045B3DC 0042499C  38 63 FE 3C */	addi r3, r3, -452
-/* 8045B3E0 004249A0  4B FF FA A4 */	b func_8045AE84
-.endfn func_8045B3DC
+/* 8045B3E0 004249A0  4B FF FA A4 */	b func_8045AE84__16CLibCriMoviePlayFv
+.endfn func_8045B3DC__16CLibCriMoviePlayFv
 
-.fn func_8045B3E4, global
+.fn func_8045B3E4__16CLibCriMoviePlayFv, global
 /* 8045B3E4 004249A4  38 63 FE 3C */	addi r3, r3, -452
-/* 8045B3E8 004249A8  4B FF E9 94 */	b __dt__CLibCriMoviePlay
-.endfn func_8045B3E4
+/* 8045B3E8 004249A8  4B FF E9 94 */	b __dt__16CLibCriMoviePlayFv
+.endfn func_8045B3E4__16CLibCriMoviePlayFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1726,52 +1726,52 @@
 .obj __vt__16CLibCriMoviePlay, global
 	.4byte __RTTI__16CLibCriMoviePlay
 	.4byte 0
-	.4byte __dt__CLibCriMoviePlay
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte CLibCriMoviePlay_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CLibCriMoviePlay_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
-	.4byte CLibCriMoviePlay_WorkThreadEvent4
-	.4byte CLibCriMoviePlay_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte __dt__16CLibCriMoviePlayFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__16CLibCriMoviePlayFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__16CLibCriMoviePlayFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
+	.4byte WorkThreadEvent4__16CLibCriMoviePlayFv
+	.4byte WorkThreadEvent5__16CLibCriMoviePlayFv
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__16CLibCriMoviePlay
 	.4byte 0xFFFFFE3C
-	.4byte func_8045B3E4
-	.4byte func_8045B3DC
-	.4byte func_8045B3D4
-	.4byte func_80448A40
-	.4byte func_8045AE84
-	.4byte func_8045B1DC
+	.4byte func_8045B3E4__16CLibCriMoviePlayFv
+	.4byte func_8045B3DC__16CLibCriMoviePlayFv
+	.4byte func_8045B3D4__16CLibCriMoviePlayFv
+	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte func_8045AE84__16CLibCriMoviePlayFv
+	.4byte func_8045B1DC__16CLibCriMoviePlayFv
 .endobj __vt__16CLibCriMoviePlay
 
 .obj CLibCriMoviePlay_hierarchy, global
@@ -1863,7 +1863,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001D564"
 
 .obj "@etb_8001D580", local
@@ -1874,7 +1874,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 .endobj "@etb_8001D580"
 
 .obj "@etb_8001D59C", local
@@ -1972,7 +1972,7 @@
 
 .obj "@eti_8003515C", local
 .hidden "@eti_8003515C"
-	.4byte __dt__CLibCriMoviePlay
+	.4byte __dt__16CLibCriMoviePlayFv
 	.4byte 0x00000070
 	.4byte "@etb_8001D580"
 .endobj "@eti_8003515C"
@@ -2021,28 +2021,28 @@
 
 .obj "@eti_800351B0", local
 .hidden "@eti_800351B0"
-	.4byte CLibCriMoviePlay_wkUpdate
+	.4byte wkUpdate__16CLibCriMoviePlayFv
 	.4byte 0x000001C8
 	.4byte "@etb_8001D5DC"
 .endobj "@eti_800351B0"
 
 .obj "@eti_800351BC", local
 .hidden "@eti_800351BC"
-	.4byte CLibCriMoviePlay_WorkThreadEvent4
+	.4byte WorkThreadEvent4__16CLibCriMoviePlayFv
 	.4byte 0x00000058
 	.4byte "@etb_8001D5E4"
 .endobj "@eti_800351BC"
 
 .obj "@eti_800351C8", local
 .hidden "@eti_800351C8"
-	.4byte CLibCriMoviePlay_WorkThreadEvent5
+	.4byte WorkThreadEvent5__16CLibCriMoviePlayFv
 	.4byte 0x00000128
 	.4byte "@etb_8001D5EC"
 .endobj "@eti_800351C8"
 
 .obj "@eti_800351D4", local
 .hidden "@eti_800351D4"
-	.4byte func_8045AE84
+	.4byte func_8045AE84__16CLibCriMoviePlayFv
 	.4byte 0x00000358
 	.4byte "@etb_8001D5F4"
 .endobj "@eti_800351D4"
@@ -2056,7 +2056,7 @@
 
 .obj "@eti_800351EC", local
 .hidden "@eti_800351EC"
-	.4byte CLibCriMoviePlay_WorkEvent5
+	.4byte WorkEvent5__16CLibCriMoviePlayFv
 	.4byte 0x000000C0
 	.4byte "@etb_8001D604"
 .endobj "@eti_800351EC"

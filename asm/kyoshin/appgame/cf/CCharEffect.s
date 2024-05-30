@@ -1420,7 +1420,7 @@
 .obj __vt__Q22cf11CCharEffect, global
 	.4byte __RTTI__Q22cf11CCharEffect
 	.4byte 0
-	.4byte __dt__cf_CCharEffect
+	.4byte __dt__Q22cf11CCharEffectFv
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C

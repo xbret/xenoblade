@@ -35,7 +35,7 @@
 /* 804E7AF4 004B10B4  4E 80 00 20 */	blr 
 .endfn __ct__CMdlLook
 
-.fn __dt__CMdlLook, global
+.fn __dt__8CMdlLookFv, global
 /* 804E7AF8 004B10B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E7AFC 004B10BC  7C 08 02 A6 */	mflr r0
 /* 804E7B00 004B10C0  2C 03 00 00 */	cmpwi r3, 0
@@ -53,7 +53,7 @@
 /* 804E7B2C 004B10EC  7C 08 03 A6 */	mtlr r0
 /* 804E7B30 004B10F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E7B34 004B10F4  4E 80 00 20 */	blr 
-.endfn __dt__CMdlLook
+.endfn __dt__8CMdlLookFv
 
 .fn func_804E7B38, global
 /* 804E7B38 004B10F8  94 21 FE 00 */	stwu r1, -0x200(r1)
@@ -1808,7 +1808,7 @@
 .obj __vt__8CMdlLook, global
 	.4byte __RTTI__8CMdlLook
 	.4byte 0
-	.4byte __dt__CMdlLook
+	.4byte __dt__8CMdlLookFv
 	.4byte 0
 .endobj __vt__8CMdlLook
 
@@ -1977,7 +1977,7 @@
 
 .obj "@eti_80038E7C", local
 .hidden "@eti_80038E7C"
-	.4byte __dt__CMdlLook
+	.4byte __dt__8CMdlLookFv
 	.4byte 0x00000040
 	.4byte "@etb_80020D28"
 .endobj "@eti_80038E7C"

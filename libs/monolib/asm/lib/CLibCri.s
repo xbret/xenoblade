@@ -36,7 +36,7 @@
 /* 804598D8 00422E98  4E 80 00 20 */	blr
 .endfn __ct__CLibCri
 
-.fn __dt__CLibCri, global
+.fn __dt__7CLibCriFv, global
 /* 804598DC 00422E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804598E0 00422EA0  7C 08 02 A6 */	mflr r0
 /* 804598E4 00422EA4  2C 03 00 00 */	cmpwi r3, 0
@@ -63,10 +63,10 @@
 /* 80459934 00422EF4  90 0D BE 30 */	stw r0, lbl_80667FB0@sda21(r13)
 /* 80459938 00422EF8  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8045993C 00422EFC  38 80 00 00 */	li r4, 0
-/* 80459940 00422F00  4B FE F6 3D */	bl __dt__CDeviceVICb
+/* 80459940 00422F00  4B FE F6 3D */	bl __dt__11CDeviceVICbFv
 /* 80459944 00422F04  7F C3 F3 78 */	mr r3, r30
 /* 80459948 00422F08  38 80 00 00 */	li r4, 0
-/* 8045994C 00422F0C  4B FD E1 7D */	bl __dt__CWorkThread
+/* 8045994C 00422F0C  4B FD E1 7D */	bl __dt__11CWorkThreadFv
 /* 80459950 00422F10  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459954 00422F14  40 81 00 0C */	ble .L_80459960
 /* 80459958 00422F18  7F C3 F3 78 */	mr r3, r30
@@ -79,7 +79,7 @@
 /* 80459970 00422F30  7C 08 03 A6 */	mtlr r0
 /* 80459974 00422F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459978 00422F38  4E 80 00 20 */	blr 
-.endfn __dt__CLibCri
+.endfn __dt__7CLibCriFv
 
 .fn func_8045997C, global
 /* 8045997C 00422F3C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -234,20 +234,20 @@
 /* 80459AD0 00423090  48 00 17 10 */	b func_8045B1E0
 .endfn func_80459AD0
 
-.fn CLibCri_wkUpdate, global
+.fn wkUpdate__7CLibCriFv, global
 /* 80459AD4 00423094  4E 80 00 20 */	blr
-.endfn CLibCri_wkUpdate
+.endfn wkUpdate__7CLibCriFv
 
-.fn func_80459AD8, global
+.fn func_80459AD8__7CLibCriFv, global
 /* 80459AD8 00423098  4B F4 0F 44 */	b ADXM_ExecMain
-.endfn func_80459AD8
+.endfn func_80459AD8__7CLibCriFv
 
 .fn func_80459ADC, global
 /* 80459ADC 0042309C  80 6D BE 30 */	lwz r3, lbl_80667FB0@sda21(r13)
 /* 80459AE0 004230A0  4E 80 00 20 */	blr 
 .endfn func_80459ADC
 
-.fn CLibCri_WorkThreadEvent4, global
+.fn WorkThreadEvent4__7CLibCriFv, global
 /* 80459AE4 004230A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459AE8 004230A8  7C 08 02 A6 */	mflr r0
 /* 80459AEC 004230AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -278,7 +278,7 @@
 /* 80459B50 00423110  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B54 00423114  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B58 00423118  3B E3 00 05 */	addi r31, r3, 5
-/* 80459B5C 0042311C  4B FD DA 59 */	bl getHeapIndex
+/* 80459B5C 0042311C  4B FD DA 59 */	bl getHeapIndex__Fv
 /* 80459B60 00423120  7C 64 1B 78 */	mr r4, r3
 /* 80459B64 00423124  38 60 06 28 */	li r3, 0x628
 /* 80459B68 00423128  4B FD AE F5 */	bl heap_malloc
@@ -294,7 +294,7 @@
 /* 80459B8C 0042314C  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B90 00423150  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B94 00423154  3B E3 00 16 */	addi r31, r3, 0x16
-/* 80459B98 00423158  4B FD DA 1D */	bl getHeapIndex
+/* 80459B98 00423158  4B FD DA 1D */	bl getHeapIndex__Fv
 /* 80459B9C 0042315C  7C 64 1B 78 */	mr r4, r3
 /* 80459BA0 00423160  38 60 04 B8 */	li r3, 0x4b8
 /* 80459BA4 00423164  4B FD AE B9 */	bl heap_malloc
@@ -308,7 +308,7 @@
 /* 80459BC0 00423180  38 A0 00 00 */	li r5, 0
 /* 80459BC4 00423184  4B FD F0 15 */	bl func_80438BD8
 /* 80459BC8 00423188  7F C3 F3 78 */	mr r3, r30
-/* 80459BCC 0042318C  4B FD EE 2D */	bl CWorkThread_WorkThreadEvent4
+/* 80459BCC 0042318C  4B FD EE 2D */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80459BD0 00423190  48 00 00 08 */	b .L_80459BD8
 .L_80459BD4:
 /* 80459BD4 00423194  38 60 00 00 */	li r3, 0
@@ -319,9 +319,9 @@
 /* 80459BE4 004231A4  7C 08 03 A6 */	mtlr r0
 /* 80459BE8 004231A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459BEC 004231AC  4E 80 00 20 */	blr 
-.endfn CLibCri_WorkThreadEvent4
+.endfn WorkThreadEvent4__7CLibCriFv
 
-.fn CLibCri_WorkThreadEvent5, global
+.fn WorkThreadEvent5__7CLibCriFv, global
 /* 80459BF0 004231B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459BF4 004231B4  7C 08 02 A6 */	mflr r0
 /* 80459BF8 004231B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -347,7 +347,7 @@
 /* 80459C44 00423204  4B EF 01 CD */	bl MIXQuit
 /* 80459C48 00423208  4B E7 84 69 */	bl AXQuit
 /* 80459C4C 0042320C  7F E3 FB 78 */	mr r3, r31
-/* 80459C50 00423210  4B FD ED D5 */	bl CWorkThread_WorkThreadEvent5
+/* 80459C50 00423210  4B FD ED D5 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 80459C54 00423214  48 00 00 08 */	b .L_80459C5C
 .L_80459C58:
 /* 80459C58 00423218  38 60 00 00 */	li r3, 0
@@ -357,35 +357,35 @@
 /* 80459C64 00423224  7C 08 03 A6 */	mtlr r0
 /* 80459C68 00423228  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459C6C 0042322C  4E 80 00 20 */	blr
-.endfn CLibCri_WorkThreadEvent5
+.endfn WorkThreadEvent5__7CLibCriFv
 
 .fn func_80459C70, global
 /* 80459C70 00423230  4E 80 00 20 */	blr
 .endfn func_80459C70
 
-.fn func_80459C74, global
+.fn func_80459C74__7CLibCriFv, global
 /* 80459C74 00423234  48 00 1F 2C */	b func_8045BBA0
-.endfn func_80459C74
+.endfn func_80459C74__7CLibCriFv
 
-.fn func_80459C78, global
+.fn func_80459C78__7CLibCriFv, global
 /* 80459C78 00423238  38 63 FE 3C */	addi r3, r3, -452
-/* 80459C7C 0042323C  4B FF FE 5C */	b func_80459AD8
-.endfn func_80459C78
+/* 80459C7C 0042323C  4B FF FE 5C */	b func_80459AD8__7CLibCriFv
+.endfn func_80459C78__7CLibCriFv
 
-.fn func_80459C80, global
+.fn func_80459C80__7CLibCriFv, global
 /* 80459C80 00423240  38 63 FE 3C */	addi r3, r3, -452
-/* 80459C84 00423244  4B FF FC 58 */	b __dt__CLibCri
-.endfn func_80459C80
+/* 80459C84 00423244  4B FF FC 58 */	b __dt__7CLibCriFv
+.endfn func_80459C80__7CLibCriFv
 
-.fn func_80459C88, global
+.fn func_80459C88__7CLibCriFv, global
 /* 80459C88 00423248  38 63 FE 38 */	addi r3, r3, -456
-/* 80459C8C 0042324C  4B FF FF E8 */	b func_80459C74
-.endfn func_80459C88
+/* 80459C8C 0042324C  4B FF FF E8 */	b func_80459C74__7CLibCriFv
+.endfn func_80459C88__7CLibCriFv
 
-.fn func_80459C90, global
+.fn func_80459C90__7CLibCriFv, global
 /* 80459C90 00423250  38 63 FE 38 */	addi r3, r3, -456
-/* 80459C94 00423254  4B FF FC 48 */	b __dt__CLibCri
-.endfn func_80459C90
+/* 80459C94 00423254  4B FF FC 48 */	b __dt__7CLibCriFv
+.endfn func_80459C90__7CLibCriFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -407,56 +407,56 @@
 .obj __vt__7CLibCri, global
 	.4byte __RTTI__7CLibCri
 	.4byte 0
-	.4byte __dt__CLibCri
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CLibCri_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
-	.4byte CLibCri_WorkThreadEvent4
-	.4byte CLibCri_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte __dt__7CLibCriFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__7CLibCriFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
+	.4byte WorkThreadEvent4__7CLibCriFv
+	.4byte WorkThreadEvent5__7CLibCriFv
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__7CLibCri
 	.4byte 0xFFFFFE3C
-	.4byte func_80459C80
-	.4byte func_80459C78
-	.4byte func_8016662C
-	.4byte func_80448A40
+	.4byte func_80459C80__7CLibCriFv
+	.4byte func_80459C78__7CLibCriFv
+	.4byte func_8016662C__11CDeviceVICbFv
+	.4byte func_80448A40__11CDeviceVICbFv
 	.4byte __RTTI__7CLibCri
 	.4byte 0xFFFFFE38
-	.4byte func_80459C90
-	.4byte func_80459C88
-	.4byte func_80459AD8
-	.4byte func_80459C74
+	.4byte func_80459C90__7CLibCriFv
+	.4byte func_80459C88__7CLibCriFv
+	.4byte func_80459AD8__7CLibCriFv
+	.4byte func_80459C74__7CLibCriFv
 .endobj __vt__7CLibCri
 
 .obj CLibCri_hierarchy, global
@@ -518,10 +518,10 @@
 	.4byte __dt__80447FDC
 	.4byte 0x0680001F
 	.4byte 0x000001C4
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001D4A8"
 
 .obj "@etb_8001D4E4", local
@@ -539,10 +539,10 @@
 	.4byte __dt__80447FDC
 	.4byte 0x0680001E
 	.4byte 0x000001C4
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 	.4byte 0x8680001E
 	.4byte 0x000001C8
 	.4byte __dt__80447FDC
@@ -551,7 +551,7 @@
 	.4byte __dt__80447FDC
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 .endobj "@etb_8001D4E4"
 
 .obj "@etb_8001D54C", local
@@ -585,7 +585,7 @@
 
 .obj "@eti_80035120", local
 .hidden "@eti_80035120"
-	.4byte __dt__CLibCri
+	.4byte __dt__7CLibCriFv
 	.4byte 0x000000A0
 	.4byte "@etb_8001D4E4"
 .endobj "@eti_80035120"
@@ -599,14 +599,14 @@
 
 .obj "@eti_80035138", local
 .hidden "@eti_80035138"
-	.4byte CLibCri_WorkThreadEvent4
+	.4byte WorkThreadEvent4__7CLibCriFv
 	.4byte 0x0000010C
 	.4byte "@etb_8001D554"
 .endobj "@eti_80035138"
 
 .obj "@eti_80035144", local
 .hidden "@eti_80035144"
-	.4byte CLibCri_WorkThreadEvent5
+	.4byte WorkThreadEvent5__7CLibCriFv
 	.4byte 0x00000080
 	.4byte "@etb_8001D55C"
 .endobj "@eti_80035144"

@@ -18,7 +18,7 @@
 /* 8010EA88 000D8048  90 83 00 00 */	stw r4, 0(r3)
 /* 8010EA8C 000D804C  93 E3 00 04 */	stw r31, 4(r3)
 /* 8010EA90 000D8050  38 63 00 08 */	addi r3, r3, 8
-/* 8010EA94 000D8054  48 35 0A D1 */	bl __ct__UnkClass_8045F564
+/* 8010EA94 000D8054  48 35 0A D1 */	bl __ct__17UnkClass_8045F564Fv
 /* 8010EA98 000D8058  38 00 00 01 */	li r0, 1
 /* 8010EA9C 000D805C  93 FE 00 18 */	stw r31, 0x18(r30)
 /* 8010EAA0 000D8060  7F C3 F3 78 */	mr r3, r30
@@ -41,7 +41,7 @@
 /* 8010EAE4 000D80A4  4E 80 00 20 */	blr 
 .endfn __ct__CPcSelectCursor
 
-.fn __dt__CPcSelectCursor, global
+.fn __dt__15CPcSelectCursorFv, global
 /* 8010EAE8 000D80A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EAEC 000D80AC  7C 08 02 A6 */	mflr r0
 /* 8010EAF0 000D80B0  2C 03 00 00 */	cmpwi r3, 0
@@ -53,7 +53,7 @@
 /* 8010EB08 000D80C8  41 82 00 20 */	beq .L_8010EB28
 /* 8010EB0C 000D80CC  38 80 FF FF */	li r4, -1
 /* 8010EB10 000D80D0  38 63 00 08 */	addi r3, r3, 8
-/* 8010EB14 000D80D4  48 35 0A 6D */	bl __dt__UnkClass_8045F564
+/* 8010EB14 000D80D4  48 35 0A 6D */	bl __dt__17UnkClass_8045F564Fv
 /* 8010EB18 000D80D8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010EB1C 000D80DC  40 81 00 0C */	ble .L_8010EB28
 /* 8010EB20 000D80E0  7F C3 F3 78 */	mr r3, r30
@@ -66,7 +66,7 @@
 /* 8010EB38 000D80F8  7C 08 03 A6 */	mtlr r0
 /* 8010EB3C 000D80FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010EB40 000D8100  4E 80 00 20 */	blr 
-.endfn __dt__CPcSelectCursor
+.endfn __dt__15CPcSelectCursorFv
 
 .fn func_8010EB44, global
 /* 8010EB44 000D8104  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -82,17 +82,17 @@
 /* 8010EB6C 000D812C  38 A0 20 00 */	li r5, 0x2000
 /* 8010EB70 000D8130  38 DF 94 40 */	addi r6, r31, CMenuEnemyState_strpool@l
 /* 8010EB74 000D8134  38 E0 00 00 */	li r7, 0
-/* 8010EB78 000D8138  48 35 0B 09 */	bl func_8045F680
+/* 8010EB78 000D8138  48 35 0B 09 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8010EB7C 000D813C  38 61 00 08 */	addi r3, r1, 8
 /* 8010EB80 000D8140  38 9E 00 08 */	addi r4, r30, 8
-/* 8010EB84 000D8144  48 35 0C D5 */	bl __ct__Class_8045F858
+/* 8010EB84 000D8144  48 35 0C D5 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8010EB88 000D8148  38 60 00 00 */	li r3, 0
-/* 8010EB8C 000D814C  48 32 5E C1 */	bl func_80434A4C
+/* 8010EB8C 000D814C  48 32 5E C1 */	bl MemManager_80434A4C__FUc
 /* 8010EB90 000D8150  3B FF 94 40 */	addi r31, r31, CMenuEnemyState_strpool@l
 /* 8010EB94 000D8154  80 9E 00 18 */	lwz r4, 0x18(r30)
 /* 8010EB98 000D8158  38 7E 00 1C */	addi r3, r30, 0x1c
 /* 8010EB9C 000D815C  38 BF 00 10 */	addi r5, r31, 0x10
-/* 8010EBA0 000D8160  48 02 82 E5 */	bl func_80136E84
+/* 8010EBA0 000D8160  48 02 82 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8010EBA4 000D8164  80 7E 00 1C */	lwz r3, 0x1c(r30)
 /* 8010EBA8 000D8168  38 9E 00 20 */	addi r4, r30, 0x20
 /* 8010EBAC 000D816C  80 BE 00 18 */	lwz r5, 0x18(r30)
@@ -179,7 +179,7 @@
 /* 8010ECF0 000D82B0  4E 80 04 21 */	bctrl 
 /* 8010ECF4 000D82B4  38 61 00 08 */	addi r3, r1, 8
 /* 8010ECF8 000D82B8  38 80 FF FF */	li r4, -1
-/* 8010ECFC 000D82BC  48 35 0B CD */	bl __dt__Class_8045F858
+/* 8010ECFC 000D82BC  48 35 0B CD */	bl __dt__14Class_8045F858Fv
 /* 8010ED00 000D82C0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8010ED04 000D82C4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8010ED08 000D82C8  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -542,7 +542,7 @@
 /* 8010F1F8 000D87B8  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 8010F1FC 000D87BC  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 8010F200 000D87C0  93 BF 00 60 */	stw r29, 0x60(r31)
-/* 8010F204 000D87C4  48 35 03 61 */	bl __ct__UnkClass_8045F564
+/* 8010F204 000D87C4  48 35 03 61 */	bl __ct__17UnkClass_8045F564Fv
 /* 8010F208 000D87C8  93 DF 00 74 */	stw r30, 0x74(r31)
 /* 8010F20C 000D87CC  38 9F 00 A4 */	addi r4, r31, 0xa4
 /* 8010F210 000D87D0  C0 02 95 34 */	lfs f0, float_806698B4@sda21(r2)
@@ -645,7 +645,7 @@
 /* 8010F390 000D8950  98 1F 08 25 */	stb r0, 0x825(r31)
 /* 8010F394 000D8954  80 01 00 4C */	lwz r0, 0x4c(r1)
 /* 8010F398 000D8958  90 1F 08 28 */	stw r0, 0x828(r31)
-/* 8010F39C 000D895C  48 35 01 E5 */	bl __dt__UnkClass_8045F564
+/* 8010F39C 000D895C  48 35 01 E5 */	bl __dt__17UnkClass_8045F564Fv
 /* 8010F3A0 000D8960  7F E3 FB 78 */	mr r3, r31
 /* 8010F3A4 000D8964  83 E1 00 5C */	lwz r31, 0x5c(r1)
 /* 8010F3A8 000D8968  83 C1 00 58 */	lwz r30, 0x58(r1)
@@ -656,7 +656,7 @@
 /* 8010F3BC 000D897C  4E 80 00 20 */	blr
 .endfn __ct__CMenuEnemyState
 
-.fn __dt__CMenuEnemyState, global
+.fn __dt__15CMenuEnemyStateFv, global
 /* 8010F3C0 000D8980  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010F3C4 000D8984  7C 08 02 A6 */	mflr r0
 /* 8010F3C8 000D8988  2C 03 00 00 */	cmpwi r3, 0
@@ -670,17 +670,17 @@
 /* 8010F3E8 000D89A8  41 82 00 10 */	beq .L_8010F3F8
 /* 8010F3EC 000D89AC  38 63 00 08 */	addi r3, r3, 8
 /* 8010F3F0 000D89B0  38 80 FF FF */	li r4, -1
-/* 8010F3F4 000D89B4  48 35 01 8D */	bl __dt__UnkClass_8045F564
+/* 8010F3F4 000D89B4  48 35 01 8D */	bl __dt__17UnkClass_8045F564Fv
 .L_8010F3F8:
 /* 8010F3F8 000D89B8  38 7E 00 64 */	addi r3, r30, 0x64
 /* 8010F3FC 000D89BC  38 80 FF FF */	li r4, -1
-/* 8010F400 000D89C0  48 35 01 81 */	bl __dt__UnkClass_8045F564
+/* 8010F400 000D89C0  48 35 01 81 */	bl __dt__17UnkClass_8045F564Fv
 /* 8010F404 000D89C4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8010F408 000D89C8  41 82 00 14 */	beq .L_8010F41C
 /* 8010F40C 000D89CC  41 82 00 10 */	beq .L_8010F41C
 /* 8010F410 000D89D0  7F C3 F3 78 */	mr r3, r30
 /* 8010F414 000D89D4  38 80 00 00 */	li r4, 0
-/* 8010F418 000D89D8  48 33 57 21 */	bl __dt__CProcess
+/* 8010F418 000D89D8  48 33 57 21 */	bl __dt__8CProcessFv
 .L_8010F41C:
 /* 8010F41C 000D89DC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010F420 000D89E0  40 81 00 0C */	ble .L_8010F42C
@@ -694,7 +694,7 @@
 /* 8010F43C 000D89FC  7C 08 03 A6 */	mtlr r0
 /* 8010F440 000D8A00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010F444 000D8A04  4E 80 00 20 */	blr 
-.endfn __dt__CMenuEnemyState
+.endfn __dt__15CMenuEnemyStateFv
 
 .fn func_8010F448, global
 /* 8010F448 000D8A08  94 21 FF 20 */	stwu r1, -0xe0(r1)
@@ -716,10 +716,10 @@
 /* 8010F488 000D8A48  38 6F 00 64 */	addi r3, r15, 0x64
 /* 8010F48C 000D8A4C  38 A5 EC 00 */	addi r5, r5, 0x0003EC00@l
 /* 8010F490 000D8A50  38 D3 00 A8 */	addi r6, r19, 0xa8
-/* 8010F494 000D8A54  48 35 01 ED */	bl func_8045F680
+/* 8010F494 000D8A54  48 35 01 ED */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8010F498 000D8A58  38 61 00 08 */	addi r3, r1, 8
 /* 8010F49C 000D8A5C  38 8F 00 64 */	addi r4, r15, 0x64
-/* 8010F4A0 000D8A60  48 35 03 B9 */	bl __ct__Class_8045F858
+/* 8010F4A0 000D8A60  48 35 03 B9 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8010F4A4 000D8A64  C3 C2 95 34 */	lfs f30, float_806698B4@sda21(r2)
 /* 8010F4A8 000D8A68  3A 20 00 00 */	li r17, 0
 /* 8010F4AC 000D8A6C  C3 E2 95 50 */	lfs f31, float_806698D0@sda21(r2)
@@ -796,7 +796,7 @@
 /* 8010F5C4 000D8B84  7C 64 1B 78 */	mr r4, r3
 /* 8010F5C8 000D8B88  7E 03 83 78 */	mr r3, r16
 /* 8010F5CC 000D8B8C  38 B3 00 B8 */	addi r5, r19, 0xb8
-/* 8010F5D0 000D8B90  48 02 78 B5 */	bl func_80136E84
+/* 8010F5D0 000D8B90  48 02 78 B5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8010F5D4 000D8B94  80 70 00 00 */	lwz r3, 0(r16)
 /* 8010F5D8 000D8B98  38 93 00 D3 */	addi r4, r19, 0xd3
 /* 8010F5DC 000D8B9C  38 B7 FD FF */	addi r5, r23, -513
@@ -949,7 +949,7 @@
 /* 8010F824 000D8DE4  7C 64 1B 78 */	mr r4, r3
 /* 8010F828 000D8DE8  7E 43 93 78 */	mr r3, r18
 /* 8010F82C 000D8DEC  38 B3 01 2E */	addi r5, r19, 0x12e
-/* 8010F830 000D8DF0  48 02 76 55 */	bl func_80136E84
+/* 8010F830 000D8DF0  48 02 76 55 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8010F834 000D8DF4  56 20 06 3F */	clrlwi. r0, r17, 0x18
 /* 8010F838 000D8DF8  40 82 00 A8 */	bne .L_8010F8E0
 /* 8010F83C 000D8DFC  80 72 00 00 */	lwz r3, 0(r18)
@@ -1057,7 +1057,7 @@
 /* 8010F9D0 000D8F90  39 CE 94 40 */	addi r14, r14, CMenuEnemyState_strpool@l
 /* 8010F9D4 000D8F94  38 6F 00 74 */	addi r3, r15, 0x74
 /* 8010F9D8 000D8F98  38 AE 01 73 */	addi r5, r14, 0x173
-/* 8010F9DC 000D8F9C  48 02 74 A9 */	bl func_80136E84
+/* 8010F9DC 000D8F9C  48 02 74 A9 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8010F9E0 000D8FA0  48 02 5C 15 */	bl func_801355F4
 /* 8010F9E4 000D8FA4  7C 65 1B 78 */	mr r5, r3
 /* 8010F9E8 000D8FA8  80 6F 00 74 */	lwz r3, 0x74(r15)
@@ -1209,10 +1209,10 @@
 /* 8010FC2C 000D91EC  38 C0 00 00 */	li r6, 0
 /* 8010FC30 000D91F0  48 38 62 85 */	bl func_80495EB4
 /* 8010FC34 000D91F4  38 6F 00 64 */	addi r3, r15, 0x64
-/* 8010FC38 000D91F8  48 34 FB D9 */	bl func_8045F810
+/* 8010FC38 000D91F8  48 34 FB D9 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8010FC3C 000D91FC  38 61 00 08 */	addi r3, r1, 8
 /* 8010FC40 000D9200  38 80 FF FF */	li r4, -1
-/* 8010FC44 000D9204  48 34 FC 85 */	bl __dt__Class_8045F858
+/* 8010FC44 000D9204  48 34 FC 85 */	bl __dt__14Class_8045F858Fv
 /* 8010FC48 000D9208  39 61 00 C0 */	addi r11, r1, 0xc0
 /* 8010FC4C 000D920C  E3 E1 00 D8 */	psq_l f31, 216(r1), 0, qr0
 /* 8010FC50 000D9210  CB E1 00 D0 */	lfd f31, 0xd0(r1)
@@ -1234,7 +1234,7 @@
 /* 8010FC84 000D9244  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8010FC88 000D9248  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8010FC8C 000D924C  7C 7C 1B 78 */	mr r28, r3
-/* 8010FC90 000D9250  48 33 8D B5 */	bl func_80448A44
+/* 8010FC90 000D9250  48 33 8D B5 */	bl func_80448A44__Fv
 /* 8010FC94 000D9254  2C 1C 00 00 */	cmpwi r28, 0
 /* 8010FC98 000D9258  7F 84 E3 78 */	mr r4, r28
 /* 8010FC9C 000D925C  41 82 00 08 */	beq .L_8010FCA4
@@ -1302,9 +1302,9 @@
 /* 8010FD70 000D9330  90 1C 08 00 */	stw r0, 0x800(r28)
 .L_8010FD74:
 /* 8010FD74 000D9334  38 7C 07 EC */	addi r3, r28, 0x7ec
-/* 8010FD78 000D9338  48 34 FA 01 */	bl func_8045F778
+/* 8010FD78 000D9338  48 34 FA 01 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8010FD7C 000D933C  38 7C 00 64 */	addi r3, r28, 0x64
-/* 8010FD80 000D9340  48 34 F9 F9 */	bl func_8045F778
+/* 8010FD80 000D9340  48 34 F9 F9 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8010FD84 000D9344  38 00 00 00 */	li r0, 0
 /* 8010FD88 000D9348  90 0D A6 C8 */	stw r0, lbl_80666848@sda21(r13)
 /* 8010FD8C 000D934C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -2113,7 +2113,7 @@
 /* 80110934 000D9EF4  38 81 00 68 */	addi r4, r1, 0x68
 /* 80110938 000D9EF8  38 A0 00 00 */	li r5, 0
 /* 8011093C 000D9EFC  38 C0 00 01 */	li r6, 1
-/* 80110940 000D9F00  48 02 66 F9 */	bl func_80137038
+/* 80110940 000D9F00  48 02 66 F9 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_80110944:
 /* 80110944 000D9F04  88 1E 00 CC */	lbz r0, 0xcc(r30)
 /* 80110948 000D9F08  38 81 00 68 */	addi r4, r1, 0x68
@@ -2121,7 +2121,7 @@
 /* 80110950 000D9F10  38 C0 00 01 */	li r6, 1
 /* 80110954 000D9F14  7C 00 00 34 */	cntlzw r0, r0
 /* 80110958 000D9F18  54 05 D9 7E */	srwi r5, r0, 5
-/* 8011095C 000D9F1C  48 02 66 DD */	bl func_80137038
+/* 8011095C 000D9F1C  48 02 66 DD */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80110960 000D9F20  88 1E 00 B8 */	lbz r0, 0xb8(r30)
 /* 80110964 000D9F24  2C 00 00 00 */	cmpwi r0, 0
 /* 80110968 000D9F28  40 82 00 18 */	bne .L_80110980
@@ -2129,7 +2129,7 @@
 /* 80110970 000D9F30  38 81 00 68 */	addi r4, r1, 0x68
 /* 80110974 000D9F34  38 A0 00 00 */	li r5, 0
 /* 80110978 000D9F38  38 C0 00 01 */	li r6, 1
-/* 8011097C 000D9F3C  48 02 66 BD */	bl func_80137038
+/* 8011097C 000D9F3C  48 02 66 BD */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_80110980:
 /* 80110980 000D9F40  3B 9C 00 01 */	addi r28, r28, 1
 /* 80110984 000D9F44  28 1C 00 18 */	cmplwi r28, 0x18
@@ -2141,7 +2141,7 @@
 /* 8011099C 000D9F5C  38 81 00 68 */	addi r4, r1, 0x68
 /* 801109A0 000D9F60  38 A0 00 00 */	li r5, 0
 /* 801109A4 000D9F64  38 C0 00 01 */	li r6, 1
-/* 801109A8 000D9F68  48 02 66 91 */	bl func_80137038
+/* 801109A8 000D9F68  48 02 66 91 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_801109AC:
 /* 801109AC 000D9F6C  38 61 00 68 */	addi r3, r1, 0x68
 /* 801109B0 000D9F70  38 80 FF FF */	li r4, -1
@@ -2174,7 +2174,7 @@
 /* 80110A0C 000D9FCC  38 60 00 00 */	li r3, 0
 /* 80110A10 000D9FD0  48 00 00 48 */	b .L_80110A58
 .L_80110A14:
-/* 80110A14 000D9FD4  48 32 6B A1 */	bl getHeapIndex
+/* 80110A14 000D9FD4  48 32 6B A1 */	bl getHeapIndex__Fv
 /* 80110A18 000D9FD8  7C 64 1B 78 */	mr r4, r3
 /* 80110A1C 000D9FDC  38 60 08 3C */	li r3, 0x83c
 /* 80110A20 000D9FE0  48 32 40 3D */	bl heap_malloc
@@ -5174,7 +5174,7 @@
 
 .fn func_801135C8, global
 /* 801135C8 000DCB88  38 63 FF A8 */	addi r3, r3, -88
-/* 801135CC 000DCB8C  4B FF BD F4 */	b __dt__CMenuEnemyState
+/* 801135CC 000DCB8C  4B FF BD F4 */	b __dt__15CMenuEnemyStateFv
 .endfn func_801135C8
 
 .fn func_801135D0, global
@@ -5184,7 +5184,7 @@
 
 .fn func_801135D8, global
 /* 801135D8 000DCB98  38 63 FF A4 */	addi r3, r3, -92
-/* 801135DC 000DCB9C  4B FF BD E4 */	b __dt__CMenuEnemyState
+/* 801135DC 000DCB9C  4B FF BD E4 */	b __dt__15CMenuEnemyStateFv
 .endfn func_801135D8
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -5295,47 +5295,47 @@
 .obj __vt__15CMenuEnemyState, global
 	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0
-	.4byte __dt__CMenuEnemyState
-	.4byte CChildListNode_Reset
+	.4byte __dt__15CMenuEnemyStateFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8010F448
 	.4byte func_8010FC70
 	.4byte func_8010FDAC
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0xFFFFFFA8
 	.4byte func_801135C8
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0xFFFFFFA4
 	.4byte func_801135D8
@@ -5365,7 +5365,7 @@
 .obj __vt__15CPcSelectCursor, global
 	.4byte __RTTI__15CPcSelectCursor
 	.4byte 0
-	.4byte __dt__CPcSelectCursor
+	.4byte __dt__15CPcSelectCursorFv
 .endobj __vt__15CPcSelectCursor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -5609,7 +5609,7 @@
 	.4byte 0x00590010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8000B340"
 
 .obj "@etb_8000B358", local
@@ -5642,16 +5642,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000007E4
-	.4byte __dt__CPcSelectCursor
+	.4byte __dt__15CPcSelectCursorFv
 	.4byte 0x0780001F
 	.4byte 0x00000064
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001F
 	.4byte 0x00000058
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -5667,19 +5667,19 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000007E4
-	.4byte __dt__CPcSelectCursor
+	.4byte __dt__15CPcSelectCursorFv
 	.4byte 0x0780001E
 	.4byte 0x000007E4
-	.4byte __dt__CPcSelectCursor
+	.4byte __dt__15CPcSelectCursorFv
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000B3CC"
 
 .obj "@etb_8000B420", local
@@ -5689,7 +5689,7 @@
 	.4byte 0x019E0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8000B420"
 
 .obj "@etb_8000B438", local
@@ -5800,7 +5800,7 @@
 
 .obj "@eti_80026A44", local
 .hidden "@eti_80026A44"
-	.4byte __dt__CPcSelectCursor
+	.4byte __dt__15CPcSelectCursorFv
 	.4byte 0x0000005C
 	.4byte "@etb_8000B338"
 .endobj "@eti_80026A44"
@@ -5842,7 +5842,7 @@
 
 .obj "@eti_80026A8C", local
 .hidden "@eti_80026A8C"
-	.4byte __dt__CMenuEnemyState
+	.4byte __dt__15CMenuEnemyStateFv
 	.4byte 0x00000088
 	.4byte "@etb_8000B3CC"
 .endobj "@eti_80026A8C"

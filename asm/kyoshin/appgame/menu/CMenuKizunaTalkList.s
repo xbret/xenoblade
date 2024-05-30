@@ -54,7 +54,7 @@
 /* 80271E94 0023B454  4E 80 00 20 */	blr
 .endfn __ct__CMenuKizunaTalkList
 
-.fn __dt__CMenuKizunaTalkList, global
+.fn __dt__19CMenuKizunaTalkListFv, global
 /* 80271E98 0023B458  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80271E9C 0023B45C  7C 08 02 A6 */	mflr r0
 /* 80271EA0 0023B460  2C 03 00 00 */	cmpwi r3, 0
@@ -65,13 +65,13 @@
 /* 80271EB4 0023B474  41 82 00 44 */	beq .L_80271EF8
 /* 80271EB8 0023B478  38 80 FF FF */	li r4, -1
 /* 80271EBC 0023B47C  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80271EC0 0023B480  48 00 13 AD */	bl __dt__CKizunaTalkList
+/* 80271EC0 0023B480  48 00 13 AD */	bl __dt__15CKizunaTalkListFv
 /* 80271EC4 0023B484  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80271EC8 0023B488  38 80 FF FF */	li r4, -1
-/* 80271ECC 0023B48C  4B F5 20 85 */	bl __dt__CTitleAHelp
+/* 80271ECC 0023B48C  4B F5 20 85 */	bl __dt__11CTitleAHelpFv
 /* 80271ED0 0023B490  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80271ED4 0023B494  38 80 FF FF */	li r4, -1
-/* 80271ED8 0023B498  4B F5 1A F9 */	bl __dt__CBgTex
+/* 80271ED8 0023B498  4B F5 1A F9 */	bl __dt__6CBgTexFv
 /* 80271EDC 0023B49C  7F C3 F3 78 */	mr r3, r30
 /* 80271EE0 0023B4A0  38 80 00 00 */	li r4, 0
 /* 80271EE4 0023B4A4  4B E8 CE 29 */	bl __dt__800FED0C
@@ -86,7 +86,7 @@
 /* 80271F04 0023B4C4  7C 08 03 A6 */	mtlr r0
 /* 80271F08 0023B4C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80271F0C 0023B4CC  4E 80 00 20 */	blr 
-.endfn __dt__CMenuKizunaTalkList
+.endfn __dt__19CMenuKizunaTalkListFv
 
 .fn func_80271F10, global
 /* 80271F10 0023B4D0  94 21 EB 00 */	stwu r1, -0x1500(r1)
@@ -114,7 +114,7 @@
 /* 80271F68 0023B528  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 80271F6C 0023B52C  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 80271F70 0023B530  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 80271F74 0023B534  4B F5 1A 5D */	bl __dt__CBgTex
+/* 80271F74 0023B534  4B F5 1A 5D */	bl __dt__6CBgTexFv
 /* 80271F78 0023B538  38 7F 00 60 */	addi r3, r31, 0x60
 /* 80271F7C 0023B53C  4B F5 1C 99 */	bl func_801C3C14
 /* 80271F80 0023B540  3C 60 80 51 */	lis r3, lbl_80509FF8@ha
@@ -155,7 +155,7 @@
 /* 8027200C 0023B5CC  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 80272010 0023B5D0  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 80272014 0023B5D4  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 80272018 0023B5D8  4B F5 1F 39 */	bl __dt__CTitleAHelp
+/* 80272018 0023B5D8  4B F5 1F 39 */	bl __dt__11CTitleAHelpFv
 /* 8027201C 0023B5DC  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80272020 0023B5E0  4B F5 1F 85 */	bl CTitleAHelp_load
 /* 80272024 0023B5E4  38 61 00 60 */	addi r3, r1, 0x60
@@ -259,7 +259,7 @@
 /* 802721A8 0023B768  38 80 FF FF */	li r4, -1
 /* 802721AC 0023B76C  80 01 14 F0 */	lwz r0, 0x14f0(r1)
 /* 802721B0 0023B770  90 1F 15 48 */	stw r0, 0x1548(r31)
-/* 802721B4 0023B774  48 00 10 B9 */	bl __dt__CKizunaTalkList
+/* 802721B4 0023B774  48 00 10 B9 */	bl __dt__15CKizunaTalkListFv
 /* 802721B8 0023B778  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802721BC 0023B77C  48 00 11 39 */	bl func_802732F4
 /* 802721C0 0023B780  2C 1F 00 00 */	cmpwi r31, 0
@@ -284,7 +284,7 @@
 /* 802721FC 0023B7BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272200 0023B7C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80272204 0023B7C4  7C 7F 1B 78 */	mr r31, r3
-/* 80272208 0023B7C8  48 1D 68 3D */	bl func_80448A44
+/* 80272208 0023B7C8  48 1D 68 3D */	bl func_80448A44__Fv
 /* 8027220C 0023B7CC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80272210 0023B7D0  7F E4 FB 78 */	mr r4, r31
 /* 80272214 0023B7D4  41 82 00 08 */	beq .L_8027221C
@@ -450,7 +450,7 @@
 /* 80272438 0023B9F8  38 60 00 00 */	li r3, 0
 /* 8027243C 0023B9FC  48 00 00 38 */	b .L_80272474
 .L_80272440:
-/* 80272440 0023BA00  48 1C 51 75 */	bl getHeapIndex
+/* 80272440 0023BA00  48 1C 51 75 */	bl getHeapIndex__Fv
 /* 80272444 0023BA04  7C 64 1B 78 */	mr r4, r3
 /* 80272448 0023BA08  38 60 15 50 */	li r3, 0x1550
 /* 8027244C 0023BA0C  48 1C 26 11 */	bl heap_malloc
@@ -655,7 +655,7 @@
 
 .fn func_802726EC, global
 /* 802726EC 0023BCAC  38 63 FF A8 */	addi r3, r3, -88
-/* 802726F0 0023BCB0  4B FF F7 A8 */	b __dt__CMenuKizunaTalkList
+/* 802726F0 0023BCB0  4B FF F7 A8 */	b __dt__19CMenuKizunaTalkListFv
 .endfn func_802726EC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -680,13 +680,13 @@
 .obj __vt__19CMenuKizunaTalkList, global
 	.4byte __RTTI__19CMenuKizunaTalkList
 	.4byte 0
-	.4byte __dt__CMenuKizunaTalkList
-	.4byte CChildListNode_Reset
+	.4byte __dt__19CMenuKizunaTalkListFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80271F10
 	.4byte func_802721F4
 	.4byte func_80272260
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__19CMenuKizunaTalkList
 	.4byte 0xFFFFFFA8
 	.4byte func_802726EC
@@ -745,13 +745,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -769,25 +769,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CKizunaTalkList
+	.4byte __dt__15CKizunaTalkListFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CKizunaTalkList
+	.4byte __dt__15CKizunaTalkListFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CKizunaTalkList
+	.4byte __dt__15CKizunaTalkListFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_80018184"
 
 .obj "@etb_800181F8", local
@@ -861,7 +861,7 @@
 
 .obj "@eti_800308B4", local
 .hidden "@eti_800308B4"
-	.4byte __dt__CMenuKizunaTalkList
+	.4byte __dt__19CMenuKizunaTalkListFv
 	.4byte 0x00000078
 	.4byte "@etb_80018184"
 .endobj "@eti_800308B4"

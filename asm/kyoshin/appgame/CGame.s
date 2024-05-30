@@ -44,7 +44,7 @@
 /* 800392B8 00002878  4E 80 00 20 */	blr 
 .endfn __ct__CGame
 
-.fn __dt__CGame, global
+.fn __dt__5CGameFv, global
 /* 800392BC 0000287C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800392C0 00002880  7C 08 02 A6 */	mflr r0
 /* 800392C4 00002884  2C 03 00 00 */	cmpwi r3, 0
@@ -64,7 +64,7 @@
 /* 800392FC 000028BC  90 0D A4 80 */	stw r0, lbl_80666600@sda21(r13)
 /* 80039300 000028C0  7F C3 F3 78 */	mr r3, r30
 /* 80039304 000028C4  38 80 00 00 */	li r4, 0
-/* 80039308 000028C8  48 3F FB C1 */	bl __dt__CProc
+/* 80039308 000028C8  48 3F FB C1 */	bl __dt__5CProcFv
 /* 8003930C 000028CC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80039310 000028D0  40 81 00 0C */	ble .L_8003931C
 /* 80039314 000028D4  7F C3 F3 78 */	mr r3, r30
@@ -76,7 +76,7 @@
 /* 80039328 000028E8  7C 08 03 A6 */	mtlr r0
 /* 8003932C 000028EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039330 000028F0  4E 80 00 20 */	blr 
-.endfn __dt__CGame
+.endfn __dt__5CGameFv
 
 .fn func_80039334, global
 /* 80039334 000028F4  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
@@ -115,7 +115,7 @@
 /* 80039398 00002958  3F E0 80 4F */	lis r31, CGame_strpool@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
 /* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
-/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex
+/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__Fv
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
 /* 800393B0 00002970  48 3F B6 AD */	bl heap_malloc
@@ -271,7 +271,7 @@
 /* 800395C0 00002B80  38 81 00 08 */	addi r4, r1, 8
 /* 800395C4 00002B84  38 A0 00 00 */	li r5, 0
 /* 800395C8 00002B88  38 C0 00 01 */	li r6, 1
-/* 800395CC 00002B8C  48 0F DA 6D */	bl func_80137038
+/* 800395CC 00002B8C  48 0F DA 6D */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 800395D0 00002B90  48 40 97 D9 */	bl func_80442DA8
 /* 800395D4 00002B94  38 61 00 08 */	addi r3, r1, 8
 /* 800395D8 00002B98  38 80 FF FF */	li r4, -1
@@ -447,7 +447,7 @@
 /* 80039840 00002E00  48 42 63 79 */	bl func_8045FBB8
 /* 80039844 00002E04  2C 03 00 00 */	cmpwi r3, 0
 /* 80039848 00002E08  41 82 00 28 */	beq .L_80039870
-/* 8003984C 00002E0C  48 42 59 69 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8003984C 00002E0C  48 42 59 69 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 80039850 00002E10  90 6D A4 88 */	stw r3, lbl_80666608@sda21(r13)
 /* 80039854 00002E14  38 BF 00 11 */	addi r5, r31, 0x11
 /* 80039858 00002E18  80 81 00 08 */	lwz r4, 8(r1)
@@ -455,7 +455,7 @@
 /* 80039860 00002E20  80 8D A4 88 */	lwz r4, lbl_80666608@sda21(r13)
 /* 80039864 00002E24  38 BF 00 15 */	addi r5, r31, 0x15
 /* 80039868 00002E28  38 6D A4 84 */	addi r3, r13, lbl_80666604@sda21
-/* 8003986C 00002E2C  48 0F D6 19 */	bl func_80136E84
+/* 8003986C 00002E2C  48 0F D6 19 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 .L_80039870:
 /* 80039870 00002E30  7F A3 EB 78 */	mr r3, r29
 /* 80039874 00002E34  48 3F FE 2D */	bl CProc_WorkThreadEvent4
@@ -612,7 +612,7 @@
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
 /* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, CGame_strpool@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
-/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex
+/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__Fv
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
 /* 80039A78 00003038  38 60 02 30 */	li r3, 0x230
 /* 80039A7C 0000303C  48 3F AF E1 */	bl heap_malloc
@@ -827,171 +827,171 @@
 
 #weak funcs from IWorkEvent/CWorkThread
 
-.fn IWorkEvent_WorkEvent31, weak
+.fn WorkEvent31__10IWorkEventFv, weak
 /* 80039D40 00003300  4E 80 00 20 */	blr
-.endfn IWorkEvent_WorkEvent31
+.endfn WorkEvent31__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent30, weak
+.fn WorkEvent30__10IWorkEventFv, weak
 /* 80039D44 00003304  38 60 00 00 */	li r3, 0
 /* 80039D48 00003308  4E 80 00 20 */	blr
-.endfn IWorkEvent_WorkEvent30
+.endfn WorkEvent30__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent29, weak
+.fn WorkEvent29__10IWorkEventFv, weak
 /* 80039D4C 0000330C  38 60 00 00 */	li r3, 0
 /* 80039D50 00003310  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent29
+.endfn WorkEvent29__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent28, weak
+.fn WorkEvent28__10IWorkEventFv, weak
 /* 80039D54 00003314  38 60 00 00 */	li r3, 0
 /* 80039D58 00003318  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent28
+.endfn WorkEvent28__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent27, weak
+.fn WorkEvent27__10IWorkEventFv, weak
 /* 80039D5C 0000331C  38 60 00 00 */	li r3, 0
 /* 80039D60 00003320  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent27
+.endfn WorkEvent27__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent26, weak
+.fn WorkEvent26__10IWorkEventFv, weak
 /* 80039D64 00003324  38 60 00 00 */	li r3, 0
 /* 80039D68 00003328  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent26
+.endfn WorkEvent26__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent25, weak
+.fn WorkEvent25__10IWorkEventFv, weak
 /* 80039D6C 0000332C  38 60 00 00 */	li r3, 0
 /* 80039D70 00003330  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent25
+.endfn WorkEvent25__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent24, weak
+.fn WorkEvent24__10IWorkEventFv, weak
 /* 80039D74 00003334  38 60 00 00 */	li r3, 0
 /* 80039D78 00003338  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent24
+.endfn WorkEvent24__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent23, weak
+.fn WorkEvent23__10IWorkEventFv, weak
 /* 80039D7C 0000333C  38 60 00 00 */	li r3, 0
 /* 80039D80 00003340  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent23
+.endfn WorkEvent23__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent22, weak
+.fn WorkEvent22__10IWorkEventFv, weak
 /* 80039D84 00003344  38 60 00 00 */	li r3, 0
 /* 80039D88 00003348  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent22
+.endfn WorkEvent22__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent21, weak
+.fn WorkEvent21__10IWorkEventFv, weak
 /* 80039D8C 0000334C  38 60 00 00 */	li r3, 0
 /* 80039D90 00003350  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent21
+.endfn WorkEvent21__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent20, weak
+.fn WorkEvent20__10IWorkEventFv, weak
 /* 80039D94 00003354  38 60 00 00 */	li r3, 0
 /* 80039D98 00003358  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent20
+.endfn WorkEvent20__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent19, weak
+.fn WorkEvent19__10IWorkEventFv, weak
 /* 80039D9C 0000335C  38 60 00 00 */	li r3, 0
 /* 80039DA0 00003360  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent19
+.endfn WorkEvent19__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent18, weak
+.fn WorkEvent18__10IWorkEventFv, weak
 /* 80039DA4 00003364  38 60 00 00 */	li r3, 0
 /* 80039DA8 00003368  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent18
+.endfn WorkEvent18__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent17, weak
+.fn WorkEvent17__10IWorkEventFv, weak
 /* 80039DAC 0000336C  38 60 00 00 */	li r3, 0
 /* 80039DB0 00003370  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent17
+.endfn WorkEvent17__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent16, weak
+.fn WorkEvent16__10IWorkEventFv, weak
 /* 80039DB4 00003374  38 60 00 00 */	li r3, 0
 /* 80039DB8 00003378  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent16
+.endfn WorkEvent16__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent15, weak
+.fn WorkEvent15__10IWorkEventFv, weak
 /* 80039DBC 0000337C  38 60 00 00 */	li r3, 0
 /* 80039DC0 00003380  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent15
+.endfn WorkEvent15__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent14, weak
+.fn WorkEvent14__10IWorkEventFv, weak
 /* 80039DC4 00003384  38 60 00 00 */	li r3, 0
 /* 80039DC8 00003388  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent14
+.endfn WorkEvent14__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent13, weak
+.fn WorkEvent13__10IWorkEventFv, weak
 /* 80039DCC 0000338C  38 60 00 00 */	li r3, 0
 /* 80039DD0 00003390  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent13
+.endfn WorkEvent13__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent12, weak
+.fn WorkEvent12__10IWorkEventFv, weak
 /* 80039DD4 00003394  38 60 00 00 */	li r3, 0
 /* 80039DD8 00003398  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent12
+.endfn WorkEvent12__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent11, weak
+.fn WorkEvent11__10IWorkEventFv, weak
 /* 80039DDC 0000339C  38 60 00 00 */	li r3, 0
 /* 80039DE0 000033A0  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent11
+.endfn WorkEvent11__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent10, weak
+.fn WorkEvent10__10IWorkEventFv, weak
 /* 80039DE4 000033A4  38 60 00 00 */	li r3, 0
 /* 80039DE8 000033A8  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent10
+.endfn WorkEvent10__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent9, weak
+.fn WorkEvent9__10IWorkEventFv, weak
 /* 80039DEC 000033AC  38 60 00 00 */	li r3, 0
 /* 80039DF0 000033B0  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent9
+.endfn WorkEvent9__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent8, weak
+.fn WorkEvent8__10IWorkEventFv, weak
 /* 80039DF4 000033B4  38 60 00 00 */	li r3, 0
 /* 80039DF8 000033B8  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent8
+.endfn WorkEvent8__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent7, weak
+.fn WorkEvent7__10IWorkEventFv, weak
 /* 80039DFC 000033BC  38 60 00 00 */	li r3, 0
 /* 80039E00 000033C0  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent7
+.endfn WorkEvent7__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent6, weak
+.fn WorkEvent6__10IWorkEventFv, weak
 /* 80039E04 000033C4  38 60 00 00 */	li r3, 0
 /* 80039E08 000033C8  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent6
+.endfn WorkEvent6__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent5, weak
+.fn WorkEvent5__10IWorkEventFv, weak
 /* 80039E0C 000033CC  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent5
+.endfn WorkEvent5__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent4, weak
+.fn WorkEvent4__10IWorkEventFv, weak
 /* 80039E10 000033D0  38 60 00 00 */	li r3, 0
 /* 80039E14 000033D4  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent4
+.endfn WorkEvent4__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent3, weak
+.fn WorkEvent3__10IWorkEventFv, weak
 /* 80039E18 000033D8  38 60 00 00 */	li r3, 0
 /* 80039E1C 000033DC  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent3
+.endfn WorkEvent3__10IWorkEventFv
 
-.fn IWorkEvent_OnFileEvent, weak
+.fn OnFileEvent__10IWorkEventFv, weak
 /* 80039E20 000033E0  38 60 00 00 */	li r3, 0
 /* 80039E24 000033E4  4E 80 00 20 */	blr 
-.endfn IWorkEvent_OnFileEvent
+.endfn OnFileEvent__10IWorkEventFv
 
-.fn IWorkEvent_WorkEvent1, weak
+.fn WorkEvent1__10IWorkEventFv, weak
 /* 80039E28 000033E8  38 60 00 00 */	li r3, 0
 /* 80039E2C 000033EC  4E 80 00 20 */	blr 
-.endfn IWorkEvent_WorkEvent1
+.endfn WorkEvent1__10IWorkEventFv
 
-.fn CWorkThread_WorkThreadEvent6, weak
+.fn WorkThreadEvent6__11CWorkThreadFv, weak
 /* 80039E30 000033F0  38 60 00 01 */	li r3, 1
 /* 80039E34 000033F4  4E 80 00 20 */	blr 
-.endfn CWorkThread_WorkThreadEvent6
+.endfn WorkThreadEvent6__11CWorkThreadFv
 
-.fn CWorkThread_WorkThreadEvent3, weak
+.fn WorkThreadEvent3__11CWorkThreadFv, weak
 /* 80039E38 000033F8  4E 80 00 20 */	blr 
-.endfn CWorkThread_WorkThreadEvent3
+.endfn WorkThreadEvent3__11CWorkThreadFv
 
-.fn CWorkThread_WorkThreadEvent2, weak
+.fn WorkThreadEvent2__11CWorkThreadFv, weak
 /* 80039E3C 000033FC  4E 80 00 20 */	blr 
-.endfn CWorkThread_WorkThreadEvent2
+.endfn WorkThreadEvent2__11CWorkThreadFv
 
 #CGameRestart
 
@@ -1029,7 +1029,7 @@
 /* 80039EA8 00003468  7C 9F 23 78 */	mr r31, r4
 /* 80039EAC 0000346C  41 82 00 1C */	beq .L_80039EC8
 /* 80039EB0 00003470  38 80 00 00 */	li r4, 0
-/* 80039EB4 00003474  48 3F F0 15 */	bl __dt__CProc
+/* 80039EB4 00003474  48 3F F0 15 */	bl __dt__5CProcFv
 /* 80039EB8 00003478  2C 1F 00 00 */	cmpwi r31, 0
 /* 80039EBC 0000347C  40 81 00 0C */	ble .L_80039EC8
 /* 80039EC0 00003480  7F C3 F3 78 */	mr r3, r30
@@ -1101,43 +1101,43 @@
 	.4byte "__RTTI__Q219@unnamed@CGame_cpp@12CGameRestart"
 	.4byte 0
 	.4byte __dt___unnamed_CGame_cpp_CGameRestart
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CGameRestart_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CProc_WorkThreadEvent4
 	.4byte CProc_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q219@unnamed@CGame_cpp@12CGameRestart"
 
 
@@ -1156,41 +1156,41 @@
 .obj __vt__5CGame, global
 	.4byte __RTTI__5CGame
 	.4byte 0
-	.4byte __dt__CGame
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
+	.4byte __dt__5CGameFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
 	.4byte CGame_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CGame_wkUpdate
 	.4byte CGame_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CGame_WorkThreadEvent4
 	.4byte CGame_WorkThreadEvent5
 	.4byte CGame_WorkThreadEvent6
@@ -1330,7 +1330,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CProc
+	.4byte __dt__5CProcFv
 .endobj "@etb_800066E0"
 
 .obj "@etb_800066FC", local
@@ -1341,7 +1341,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CProc
+	.4byte __dt__5CProcFv
 .endobj "@etb_800066FC"
 
 .obj "@etb_80006718", local
@@ -1468,7 +1468,7 @@
 
 .obj "@eti_8002102C", local
 .hidden "@eti_8002102C"
-	.4byte __dt__CGame
+	.4byte __dt__5CGameFv
 	.4byte 0x00000078
 	.4byte "@etb_800066FC"
 .endobj "@eti_8002102C"

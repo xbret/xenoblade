@@ -18,7 +18,7 @@
 /* 804E5474 004AEA34  4E 80 00 20 */	blr 
 .endfn __ct__CMdlMaterial
 
-.fn __dt__CMdlMaterial, global
+.fn __dt__12CMdlMaterialFv, global
 /* 804E5478 004AEA38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E547C 004AEA3C  7C 08 02 A6 */	mflr r0
 /* 804E5480 004AEA40  2C 03 00 00 */	cmpwi r3, 0
@@ -36,7 +36,7 @@
 /* 804E54AC 004AEA6C  7C 08 03 A6 */	mtlr r0
 /* 804E54B0 004AEA70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E54B4 004AEA74  4E 80 00 20 */	blr 
-.endfn __dt__CMdlMaterial
+.endfn __dt__12CMdlMaterialFv
 
 .fn func_804E54B8, global
 /* 804E54B8 004AEA78  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -1238,7 +1238,7 @@
 .obj __vt__12CMdlMaterial, global
 	.4byte __RTTI__12CMdlMaterial
 	.4byte 0
-	.4byte __dt__CMdlMaterial
+	.4byte __dt__12CMdlMaterialFv
 .endobj __vt__12CMdlMaterial
 
 .obj lbl_8057392C, global
@@ -1407,7 +1407,7 @@
 
 .obj "@eti_80038D8C", local
 .hidden "@eti_80038D8C"
-	.4byte __dt__CMdlMaterial
+	.4byte __dt__12CMdlMaterialFv
 	.4byte 0x00000040
 	.4byte "@etb_80020C88"
 .endobj "@eti_80038D8C"

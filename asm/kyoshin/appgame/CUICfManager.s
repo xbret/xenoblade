@@ -2402,7 +2402,7 @@
 /* 8013212C 000FB6EC  4E 80 00 20 */	blr 
 .endfn __dt__801320F0
 
-.fn __dt__CTTask_CUICfManager, global
+.fn "__dt__22CTTask<12CUICfManager>Fv", global
 /* 80132130 000FB6F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80132134 000FB6F4  7C 08 02 A6 */	mflr r0
 /* 80132138 000FB6F8  2C 03 00 00 */	cmpwi r3, 0
@@ -2413,7 +2413,7 @@
 /* 8013214C 000FB70C  7C 7E 1B 78 */	mr r30, r3
 /* 80132150 000FB710  41 82 00 1C */	beq .L_8013216C
 /* 80132154 000FB714  38 80 00 00 */	li r4, 0
-/* 80132158 000FB718  48 31 29 E1 */	bl __dt__CProcess
+/* 80132158 000FB718  48 31 29 E1 */	bl __dt__8CProcessFv
 /* 8013215C 000FB71C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80132160 000FB720  40 81 00 0C */	ble .L_8013216C
 /* 80132164 000FB724  7F C3 F3 78 */	mr r3, r30
@@ -2426,7 +2426,7 @@
 /* 8013217C 000FB73C  7C 08 03 A6 */	mtlr r0
 /* 80132180 000FB740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80132184 000FB744  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_CUICfManager
+.endfn "__dt__22CTTask<12CUICfManager>Fv"
 
 .fn __dt___reslist_base_IUICf, global
 /* 80132188 000FB748  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2533,7 +2533,7 @@
 /* 801322F0 000FB8B0  4E 80 00 20 */	blr
 .endfn __dt__reslist_IUICf
 
-.fn __dt__CUICfManager, global
+.fn __dt__12CUICfManagerFv, global
 /* 801322F4 000FB8B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801322F8 000FB8B8  7C 08 02 A6 */	mflr r0
 /* 801322FC 000FB8BC  2C 03 00 00 */	cmpwi r3, 0
@@ -2588,7 +2588,7 @@
 /* 801323B4 000FB974  41 82 00 10 */	beq .L_801323C4
 /* 801323B8 000FB978  7F A3 EB 78 */	mr r3, r29
 /* 801323BC 000FB97C  38 80 00 00 */	li r4, 0
-/* 801323C0 000FB980  48 31 27 79 */	bl __dt__CProcess
+/* 801323C0 000FB980  48 31 27 79 */	bl __dt__8CProcessFv
 .L_801323C4:
 /* 801323C4 000FB984  2C 1E 00 00 */	cmpwi r30, 0
 /* 801323C8 000FB988  40 81 00 0C */	ble .L_801323D4
@@ -2603,7 +2603,7 @@
 /* 801323E8 000FB9A8  7C 08 03 A6 */	mtlr r0
 /* 801323EC 000FB9AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 801323F0 000FB9B0  4E 80 00 20 */	blr 
-.endfn __dt__CUICfManager
+.endfn __dt__12CUICfManagerFv
 
 .fn __ct__801323F4, global
 /* 801323F4 000FB9B4  94 21 FE 60 */	stwu r1, -0x1a0(r1)
@@ -2620,11 +2620,11 @@
 /* 8013241C 000FB9DC  38 C0 00 00 */	li r6, 0
 /* 80132420 000FB9E0  80 8D 89 20 */	lwz r4, lbl_80664AA0@sda21(r13)
 /* 80132424 000FB9E4  38 E0 00 00 */	li r7, 0
-/* 80132428 000FB9E8  48 31 C3 6D */	bl CDeviceFile_openFile1
+/* 80132428 000FB9E8  48 31 C3 6D */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8013242C 000FB9EC  90 77 01 14 */	stw r3, 0x114(r23)
 /* 80132430 000FB9F0  38 80 00 03 */	li r4, 3
-/* 80132434 000FB9F4  48 31 CD 21 */	bl func_8044F154
-/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex
+/* 80132434 000FB9F4  48 31 CD 21 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
+/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex__Fv
 /* 8013243C 000FB9FC  7C 64 1B 78 */	mr r4, r3
 /* 80132440 000FBA00  38 60 00 54 */	li r3, 0x54
 /* 80132444 000FBA04  48 30 26 19 */	bl heap_malloc
@@ -2797,7 +2797,7 @@
 /* 801326D0 000FBC90  4E 80 00 20 */	blr 
 .endfn __ct__801323F4
 
-.fn __dt__CTTask_CUICfManager_CTest, global
+.fn "__dt__30CTTask<Q212CUICfManager5CTest>Fv", global
 /* 801326D4 000FBC94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801326D8 000FBC98  7C 08 02 A6 */	mflr r0
 /* 801326DC 000FBC9C  2C 03 00 00 */	cmpwi r3, 0
@@ -2808,7 +2808,7 @@
 /* 801326F0 000FBCB0  7C 7E 1B 78 */	mr r30, r3
 /* 801326F4 000FBCB4  41 82 00 1C */	beq .L_80132710
 /* 801326F8 000FBCB8  38 80 00 00 */	li r4, 0
-/* 801326FC 000FBCBC  48 31 24 3D */	bl __dt__CProcess
+/* 801326FC 000FBCBC  48 31 24 3D */	bl __dt__8CProcessFv
 /* 80132700 000FBCC0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80132704 000FBCC4  40 81 00 0C */	ble .L_80132710
 /* 80132708 000FBCC8  7F C3 F3 78 */	mr r3, r30
@@ -2821,7 +2821,7 @@
 /* 80132720 000FBCE0  7C 08 03 A6 */	mtlr r0
 /* 80132724 000FBCE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80132728 000FBCE8  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_CUICfManager_CTest
+.endfn "__dt__30CTTask<Q212CUICfManager5CTest>Fv"
 
 .fn func_8013272C, global
 /* 8013272C 000FBCEC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2831,18 +2831,18 @@
 /* 8013273C 000FBCFC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80132740 000FBD00  7C 7E 1B 78 */	mr r30, r3
 /* 80132744 000FBD04  38 63 01 14 */	addi r3, r3, 0x114
-/* 80132748 000FBD08  48 00 69 99 */	bl func_801390E0
+/* 80132748 000FBD08  48 00 69 99 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8013274C 000FBD0C  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80132750 000FBD10  48 2F B9 C9 */	bl Destroy__Q34nw4r2ut10PackedFontFv
-/* 80132754 000FBD14  48 30 1D 85 */	bl func_804344D8
+/* 80132754 000FBD14  48 30 1D 85 */	bl MemManager_804344D8
 /* 80132758 000FBD18  38 7E 00 9C */	addi r3, r30, 0x9c
 /* 8013275C 000FBD1C  48 2F B9 BD */	bl Destroy__Q34nw4r2ut10PackedFontFv
-/* 80132760 000FBD20  48 30 1D 79 */	bl func_804344D8
+/* 80132760 000FBD20  48 30 1D 79 */	bl MemManager_804344D8
 /* 80132764 000FBD24  38 7E 00 D8 */	addi r3, r30, 0xd8
 /* 80132768 000FBD28  48 2F B9 B1 */	bl Destroy__Q34nw4r2ut10PackedFontFv
-/* 8013276C 000FBD2C  48 30 1D 6D */	bl func_804344D8
+/* 8013276C 000FBD2C  48 30 1D 6D */	bl MemManager_804344D8
 /* 80132770 000FBD30  80 7E 00 5C */	lwz r3, 0x5c(r30)
-/* 80132774 000FBD34  48 00 69 B1 */	bl func_80139124
+/* 80132774 000FBD34  48 00 69 B1 */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 80132778 000FBD38  2C 1E 00 00 */	cmpwi r30, 0
 /* 8013277C 000FBD3C  38 60 00 00 */	li r3, 0
 /* 80132780 000FBD40  38 00 FF FF */	li r0, -1
@@ -3404,7 +3404,7 @@
 .L_80132F6C:
 /* 80132F6C 000FC52C  2C 06 00 00 */	cmpwi r6, 0
 /* 80132F70 000FC530  41 82 00 0C */	beq .L_80132F7C
-/* 80132F74 000FC534  48 31 5A D1 */	bl func_80448A44
+/* 80132F74 000FC534  48 31 5A D1 */	bl func_80448A44__Fv
 /* 80132F78 000FC538  38 C0 00 00 */	li r6, 0
 .L_80132F7C:
 /* 80132F7C 000FC53C  80 7C 00 08 */	lwz r3, 8(r28)
@@ -3567,7 +3567,7 @@
 /* 801331A4 000FC764  83 E5 00 04 */	lwz r31, 4(r5)
 /* 801331A8 000FC768  3B A0 00 00 */	li r29, 0
 /* 801331AC 000FC76C  93 A5 00 04 */	stw r29, 4(r5)
-/* 801331B0 000FC770  48 32 C0 05 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 801331B0 000FC770  48 32 C0 05 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 801331B4 000FC774  3F C0 80 50 */	lis r30, strpool_804FB8E0@ha
 /* 801331B8 000FC778  90 7A 00 5C */	stw r3, 0x5c(r26)
 /* 801331BC 000FC77C  3B DE B8 E0 */	addi r30, r30, strpool_804FB8E0@l
@@ -3591,7 +3591,7 @@
 /* 80133204 000FC7C4  48 31 9E 5D */	bl func_8044D060
 /* 80133208 000FC7C8  7F 84 E3 78 */	mr r4, r28
 /* 8013320C 000FC7CC  38 A0 00 20 */	li r5, 0x20
-/* 80133210 000FC7D0  48 30 12 1D */	bl func_8043442C
+/* 80133210 000FC7D0  48 30 12 1D */	bl MemManager_8043442C
 /* 80133214 000FC7D4  7C 64 1B 78 */	mr r4, r3
 /* 80133218 000FC7D8  7F 85 E3 78 */	mr r5, r28
 /* 8013321C 000FC7DC  7F 66 DB 78 */	mr r6, r27
@@ -3614,7 +3614,7 @@
 /* 80133260 000FC820  48 31 9E 01 */	bl func_8044D060
 /* 80133264 000FC824  7F 84 E3 78 */	mr r4, r28
 /* 80133268 000FC828  38 A0 00 20 */	li r5, 0x20
-/* 8013326C 000FC82C  48 30 11 C1 */	bl func_8043442C
+/* 8013326C 000FC82C  48 30 11 C1 */	bl MemManager_8043442C
 /* 80133270 000FC830  7C 64 1B 78 */	mr r4, r3
 /* 80133274 000FC834  7F 85 E3 78 */	mr r5, r28
 /* 80133278 000FC838  7F 66 DB 78 */	mr r6, r27
@@ -3637,7 +3637,7 @@
 /* 801332BC 000FC87C  48 31 9D A5 */	bl func_8044D060
 /* 801332C0 000FC880  7F 84 E3 78 */	mr r4, r28
 /* 801332C4 000FC884  38 A0 00 20 */	li r5, 0x20
-/* 801332C8 000FC888  48 30 11 65 */	bl func_8043442C
+/* 801332C8 000FC888  48 30 11 65 */	bl MemManager_8043442C
 /* 801332CC 000FC88C  7C 64 1B 78 */	mr r4, r3
 /* 801332D0 000FC890  7F 85 E3 78 */	mr r5, r28
 /* 801332D4 000FC894  7F 66 DB 78 */	mr r6, r27
@@ -3951,7 +3951,7 @@
 /* 80133714 000FCCD4  48 30 0C 8D */	bl Heap_getRegionIndex2
 /* 80133718 000FCCD8  7C 7F 1B 78 */	mr r31, r3
 .L_8013371C:
-/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex
+/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex__Fv
 /* 80133720 000FCCE0  7C 64 1B 78 */	mr r4, r3
 /* 80133724 000FCCE4  38 60 0C 94 */	li r3, 0xc94
 /* 80133728 000FCCE8  48 30 13 35 */	bl heap_malloc
@@ -6948,7 +6948,7 @@
 /* 80135E3C 000FF3FC  4E 80 00 20 */	blr 
 .endfn func_80135E3C
 
-.fn func_80135E40, global
+.fn "func_80135E40__30CTTask<Q212CUICfManager5CTest>Fv", global
 /* 80135E40 000FF400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80135E44 000FF404  7C 08 02 A6 */	mflr r0
 /* 80135E48 000FF408  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6968,9 +6968,9 @@
 /* 80135E7C 000FF43C  7C 08 03 A6 */	mtlr r0
 /* 80135E80 000FF440  38 21 00 10 */	addi r1, r1, 0x10
 /* 80135E84 000FF444  4E 80 00 20 */	blr 
-.endfn func_80135E40
+.endfn "func_80135E40__30CTTask<Q212CUICfManager5CTest>Fv"
 
-.fn func_80135E88, global
+.fn "func_80135E88__30CTTask<Q212CUICfManager5CTest>Fv", global
 /* 80135E88 000FF448  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80135E8C 000FF44C  7C 08 02 A6 */	mflr r0
 /* 80135E90 000FF450  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6990,9 +6990,9 @@
 /* 80135EC4 000FF484  7C 08 03 A6 */	mtlr r0
 /* 80135EC8 000FF488  38 21 00 10 */	addi r1, r1, 0x10
 /* 80135ECC 000FF48C  4E 80 00 20 */	blr 
-.endfn func_80135E88
+.endfn "func_80135E88__30CTTask<Q212CUICfManager5CTest>Fv"
 
-.fn func_80135ED0, global
+.fn "func_80135ED0__22CTTask<12CUICfManager>Fv", global
 /* 80135ED0 000FF490  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80135ED4 000FF494  7C 08 02 A6 */	mflr r0
 /* 80135ED8 000FF498  90 01 00 14 */	stw r0, 0x14(r1)
@@ -7012,9 +7012,9 @@
 /* 80135F0C 000FF4CC  7C 08 03 A6 */	mtlr r0
 /* 80135F10 000FF4D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80135F14 000FF4D4  4E 80 00 20 */	blr 
-.endfn func_80135ED0
+.endfn "func_80135ED0__22CTTask<12CUICfManager>Fv"
 
-.fn func_80135F18, global
+.fn "func_80135F18__22CTTask<12CUICfManager>Fv", global
 /* 80135F18 000FF4D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80135F1C 000FF4DC  7C 08 02 A6 */	mflr r0
 /* 80135F20 000FF4E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -7034,9 +7034,9 @@
 /* 80135F54 000FF514  7C 08 03 A6 */	mtlr r0
 /* 80135F58 000FF518  38 21 00 10 */	addi r1, r1, 0x10
 /* 80135F5C 000FF51C  4E 80 00 20 */	blr 
-.endfn func_80135F18
+.endfn "func_80135F18__22CTTask<12CUICfManager>Fv"
 
-.fn __dt__CUICfManager_CTest, global
+.fn __dt__Q212CUICfManager5CTestFv, global
 /* 80135F60 000FF520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80135F64 000FF524  7C 08 02 A6 */	mflr r0
 /* 80135F68 000FF528  2C 03 00 00 */	cmpwi r3, 0
@@ -7048,7 +7048,7 @@
 /* 80135F80 000FF540  41 82 00 20 */	beq .L_80135FA0
 /* 80135F84 000FF544  41 82 00 0C */	beq .L_80135F90
 /* 80135F88 000FF548  38 80 00 00 */	li r4, 0
-/* 80135F8C 000FF54C  48 30 EB AD */	bl __dt__CProcess
+/* 80135F8C 000FF54C  48 30 EB AD */	bl __dt__8CProcessFv
 .L_80135F90:
 /* 80135F90 000FF550  2C 1F 00 00 */	cmpwi r31, 0
 /* 80135F94 000FF554  40 81 00 0C */	ble .L_80135FA0
@@ -7062,7 +7062,7 @@
 /* 80135FB0 000FF570  7C 08 03 A6 */	mtlr r0
 /* 80135FB4 000FF574  38 21 00 10 */	addi r1, r1, 0x10
 /* 80135FB8 000FF578  4E 80 00 20 */	blr 
-.endfn __dt__CUICfManager_CTest
+.endfn __dt__Q212CUICfManager5CTestFv
 
 .fn CUICfManager_OnFileEvent, global
 /* 80135FBC 000FF57C  38 63 FF AC */	addi r3, r3, -84
@@ -7071,7 +7071,7 @@
 
 .fn func_80135FC4, global
 /* 80135FC4 000FF584  38 63 FF AC */	addi r3, r3, -84
-/* 80135FC8 000FF588  4B FF C3 2C */	b __dt__CUICfManager
+/* 80135FC8 000FF588  4B FF C3 2C */	b __dt__12CUICfManagerFv
 .endfn func_80135FC4
 
 .fn func_80135FCC, global
@@ -7081,7 +7081,7 @@
 
 .fn func_80135FD4, global
 /* 80135FD4 000FF594  38 63 FF A8 */	addi r3, r3, -88
-/* 80135FD8 000FF598  4B FF C3 1C */	b __dt__CUICfManager
+/* 80135FD8 000FF598  4B FF C3 1C */	b __dt__12CUICfManagerFv
 .endfn func_80135FD4
 
 .fn func_80135FDC, global
@@ -8171,7 +8171,7 @@
 .endfn func_80136D74
 
 #gets a resource from an arc file using the given ArcResourceAccessor and the filename?
-.fn func_80136E84, global
+.fn func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc, global
 /* 80136E84 00100444  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80136E88 00100448  7C 08 02 A6 */	mflr r0
 /* 80136E8C 0010044C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -8205,7 +8205,7 @@
 /* 80136EFC 001004BC  7C 08 03 A6 */	mtlr r0
 /* 80136F00 001004C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80136F04 001004C4  4E 80 00 20 */	blr 
-.endfn func_80136E84
+.endfn func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 
 .fn func_80136F08, global
 /* 80136F08 001004C8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -8290,7 +8290,7 @@
 /* 80137034 001005F4  4E 80 00 20 */	blr 
 .endfn func_80136FA0
 
-.fn func_80137038, global
+.fn func_80137038__FPQ34nw4r3lyt6LayoutPvii, global
 /* 80137038 001005F8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8013703C 001005FC  7C 08 02 A6 */	mflr r0
 /* 80137040 00100600  2C 03 00 00 */	cmpwi r3, 0
@@ -8429,7 +8429,7 @@
 /* 80137244 00100804  7C 08 03 A6 */	mtlr r0
 /* 80137248 00100808  38 21 00 70 */	addi r1, r1, 0x70
 /* 8013724C 0010080C  4E 80 00 20 */	blr 
-.endfn func_80137038
+.endfn func_80137038__FPQ34nw4r3lyt6LayoutPvii
 
 .fn func_80137250, global
 /* 80137250 00100810  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -10669,7 +10669,7 @@
 /* 801390DC 0010269C  4E 80 00 20 */	blr 
 .endfn func_8013902C
 
-.fn func_801390E0, global
+.fn func_801390E0__FPP17UnkClass_80451720, global
 /* 801390E0 001026A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801390E4 001026A4  7C 08 02 A6 */	mflr r0
 /* 801390E8 001026A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -10688,9 +10688,9 @@
 /* 80139118 001026D8  7C 08 03 A6 */	mtlr r0
 /* 8013911C 001026DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80139120 001026E0  4E 80 00 20 */	blr 
-.endfn func_801390E0
+.endfn func_801390E0__FPP17UnkClass_80451720
 
-.fn func_80139124, global
+.fn func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor, global
 /* 80139124 001026E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80139128 001026E8  7C 08 02 A6 */	mflr r0
 /* 8013912C 001026EC  2C 03 00 00 */	cmpwi r3, 0
@@ -10714,7 +10714,7 @@
 /* 80139170 00102730  2C 1F 00 00 */	cmpwi r31, 0
 /* 80139174 00102734  41 82 00 0C */	beq .L_80139180
 /* 80139178 00102738  7F E3 FB 78 */	mr r3, r31
-/* 8013917C 0010273C  48 2F B3 5D */	bl func_804344D8
+/* 8013917C 0010273C  48 2F B3 5D */	bl MemManager_804344D8
 .L_80139180:
 /* 80139180 00102740  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80139184 00102744  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -10722,7 +10722,7 @@
 /* 8013918C 0010274C  7C 08 03 A6 */	mtlr r0
 /* 80139190 00102750  38 21 00 10 */	addi r1, r1, 0x10
 /* 80139194 00102754  4E 80 00 20 */	blr 
-.endfn func_80139124
+.endfn func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 
 .fn func_80139198, global
 /* 80139198 00102758  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -14743,47 +14743,47 @@
 .obj __vt__12CUICfManager, global
 	.4byte __RTTI__12CUICfManager
 	.4byte 0
-	.4byte __dt__CUICfManager
-	.4byte CChildListNode_Reset
+	.4byte __dt__12CUICfManagerFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte __ct__801323F4
 	.4byte func_8013272C
 	.4byte func_801327D0
-	.4byte func_80135F18
-	.4byte CProcess_func_80043F20
+	.4byte "func_80135F18__22CTTask<12CUICfManager>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__12CUICfManager
 	.4byte 0xFFFFFFAC
 	.4byte func_80135FC4
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CUICfManager_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__12CUICfManager
 	.4byte 0xFFFFFFA8
 	.4byte func_80135FD4
@@ -14832,13 +14832,13 @@
 .obj __vt__Q212CUICfManager5CTest, global
 	.4byte __RTTI__Q212CUICfManager5CTest
 	.4byte 0
-	.4byte __dt__CUICfManager_CTest
-	.4byte CChildListNode_Reset
+	.4byte __dt__Q212CUICfManager5CTestFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80135E3C
 	.4byte func_80135E38
 	.4byte func_80135E34
 	.4byte func_80135E30
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 .endobj __vt__Q212CUICfManager5CTest
 
 .obj CUICfManager_CTest_hierarchy, global
@@ -14857,13 +14857,13 @@
 .obj "__vt__30CTTask<Q212CUICfManager5CTest>", global
 	.4byte "__RTTI__30CTTask<Q212CUICfManager5CTest>"
 	.4byte 0
-	.4byte __dt__CTTask_CUICfManager_CTest
-	.4byte CChildListNode_Reset
+	.4byte "__dt__30CTTask<Q212CUICfManager5CTest>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80135E40
-	.4byte func_80135E88
-	.4byte CProcess_func_80043F20
+	.4byte "func_80135E40__30CTTask<Q212CUICfManager5CTest>Fv"
+	.4byte "func_80135E88__30CTTask<Q212CUICfManager5CTest>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__30CTTask<Q212CUICfManager5CTest>"
 
 .obj CTTask_CUICfManager_CTest_hierarchy, global
@@ -14880,13 +14880,13 @@
 .obj "__vt__22CTTask<12CUICfManager>", global
 	.4byte "__RTTI__22CTTask<12CUICfManager>"
 	.4byte 0
-	.4byte __dt__CTTask_CUICfManager
-	.4byte CChildListNode_Reset
+	.4byte "__dt__22CTTask<12CUICfManager>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80135ED0
-	.4byte func_80135F18
-	.4byte CProcess_func_80043F20
+	.4byte "func_80135ED0__22CTTask<12CUICfManager>Fv"
+	.4byte "func_80135F18__22CTTask<12CUICfManager>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__22CTTask<12CUICfManager>"
 
 .obj CTTask_CUICfManager_hierarchy, global
@@ -15373,10 +15373,10 @@
 	.4byte __dt__801320F0
 	.4byte 0x0680001D
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__CTTask_CUICfManager
+	.4byte "__dt__22CTTask<12CUICfManager>Fv"
 .endobj "@etb_8000C450"
 
 .obj "@etb_8000C4D8", local
@@ -15462,7 +15462,7 @@
 	.4byte __dt__801320F0
 	.4byte 0x8680001D
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000C4F8"
 
 .obj "@etb_8000C5E0", local
@@ -16463,7 +16463,7 @@
 
 .obj "@eti_80027734", local
 .hidden "@eti_80027734"
-	.4byte __dt__CTTask_CUICfManager
+	.4byte "__dt__22CTTask<12CUICfManager>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8000C4E0"
 .endobj "@eti_80027734"
@@ -16484,7 +16484,7 @@
 
 .obj "@eti_80027758", local
 .hidden "@eti_80027758"
-	.4byte __dt__CUICfManager
+	.4byte __dt__12CUICfManagerFv
 	.4byte 0x00000100
 	.4byte "@etb_8000C4F8"
 .endobj "@eti_80027758"
@@ -16498,7 +16498,7 @@
 
 .obj "@eti_80027770", local
 .hidden "@eti_80027770"
-	.4byte __dt__CTTask_CUICfManager_CTest
+	.4byte "__dt__30CTTask<Q212CUICfManager5CTest>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8000C5E8"
 .endobj "@eti_80027770"
@@ -16785,35 +16785,35 @@
 
 .obj "@eti_8002795C", local
 .hidden "@eti_8002795C"
-	.4byte func_80135E40
+	.4byte "func_80135E40__30CTTask<Q212CUICfManager5CTest>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000C750"
 .endobj "@eti_8002795C"
 
 .obj "@eti_80027968", local
 .hidden "@eti_80027968"
-	.4byte func_80135E88
+	.4byte "func_80135E88__30CTTask<Q212CUICfManager5CTest>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000C758"
 .endobj "@eti_80027968"
 
 .obj "@eti_80027974", local
 .hidden "@eti_80027974"
-	.4byte func_80135ED0
+	.4byte "func_80135ED0__22CTTask<12CUICfManager>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000C760"
 .endobj "@eti_80027974"
 
 .obj "@eti_80027980", local
 .hidden "@eti_80027980"
-	.4byte func_80135F18
+	.4byte "func_80135F18__22CTTask<12CUICfManager>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000C768"
 .endobj "@eti_80027980"
 
 .obj "@eti_8002798C", local
 .hidden "@eti_8002798C"
-	.4byte __dt__CUICfManager_CTest
+	.4byte __dt__Q212CUICfManager5CTestFv
 	.4byte 0x0000005C
 	.4byte "@etb_8000C770"
 .endobj "@eti_8002798C"
@@ -16967,7 +16967,7 @@
 
 .obj "@eti_80027A94", local
 .hidden "@eti_80027A94"
-	.4byte func_80136E84
+	.4byte func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 	.4byte 0x00000084
 	.4byte "@etb_8000C820"
 .endobj "@eti_80027A94"
@@ -16988,7 +16988,7 @@
 
 .obj "@eti_80027AB8", local
 .hidden "@eti_80027AB8"
-	.4byte func_80137038
+	.4byte func_80137038__FPQ34nw4r3lyt6LayoutPvii
 	.4byte 0x00000218
 	.4byte "@etb_8000C838"
 .endobj "@eti_80027AB8"
@@ -17149,14 +17149,14 @@
 
 .obj "@eti_80027BCC", local
 .hidden "@eti_80027BCC"
-	.4byte func_801390E0
+	.4byte func_801390E0__FPP17UnkClass_80451720
 	.4byte 0x00000044
 	.4byte "@etb_8000C9F0"
 .endobj "@eti_80027BCC"
 
 .obj "@eti_80027BD8", local
 .hidden "@eti_80027BD8"
-	.4byte func_80139124
+	.4byte func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 	.4byte 0x00000074
 	.4byte "@etb_8000C9F8"
 .endobj "@eti_80027BD8"

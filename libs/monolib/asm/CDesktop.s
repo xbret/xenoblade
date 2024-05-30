@@ -34,7 +34,7 @@
 /* 80455A3C 0041EFFC  4E 80 00 20 */	blr 
 .endfn __ct__CDesktop
 
-.fn __dt__CDesktop, global
+.fn __dt__8CDesktopFv, global
 /* 80455A40 0041F000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455A44 0041F004  7C 08 02 A6 */	mflr r0
 /* 80455A48 0041F008  2C 03 00 00 */	cmpwi r3, 0
@@ -46,7 +46,7 @@
 /* 80455A60 0041F020  38 00 00 00 */	li r0, 0
 /* 80455A64 0041F024  90 0D BE 04 */	stw r0, lbl_80667F84@sda21(r13)
 /* 80455A68 0041F028  38 80 00 00 */	li r4, 0
-/* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__CProc
+/* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__5CProcFv
 /* 80455A70 0041F030  2C 1F 00 00 */	cmpwi r31, 0
 /* 80455A74 0041F034  40 81 00 0C */	ble .L_80455A80
 /* 80455A78 0041F038  7F C3 F3 78 */	mr r3, r30
@@ -58,7 +58,7 @@
 /* 80455A8C 0041F04C  7C 08 03 A6 */	mtlr r0
 /* 80455A90 0041F050  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455A94 0041F054  4E 80 00 20 */	blr 
-.endfn __dt__CDesktop
+.endfn __dt__8CDesktopFv
 
 .fn func_80455A98, global
 /* 80455A98 0041F058  80 6D BE 04 */	lwz r3, lbl_80667F84@sda21(r13)
@@ -229,7 +229,7 @@
 /* 80455CD0 0041F290  3F C0 80 52 */	lis r30, lbl_8052685C@ha
 /* 80455CD4 0041F294  7C 7D 1B 78 */	mr r29, r3
 /* 80455CD8 0041F298  3B DE 68 5C */	addi r30, r30, lbl_8052685C@l
-/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getHeapIndex
+/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getHeapIndex__Fv
 /* 80455CE0 0041F2A0  7C 64 1B 78 */	mr r4, r3
 /* 80455CE4 0041F2A4  38 60 01 F0 */	li r3, 0x1f0
 /* 80455CE8 0041F2A8  4B FD ED 75 */	bl heap_malloc
@@ -257,7 +257,7 @@
 /* 80455D3C 0041F2FC  7C 7D 1B 78 */	mr r29, r3
 /* 80455D40 0041F300  38 84 68 5C */	addi r4, r4, lbl_8052685C@l
 /* 80455D44 0041F304  3B 84 00 13 */	addi r28, r4, 0x13
-/* 80455D48 0041F308  4B FE 18 6D */	bl getHeapIndex
+/* 80455D48 0041F308  4B FE 18 6D */	bl getHeapIndex__Fv
 /* 80455D4C 0041F30C  7C 64 1B 78 */	mr r4, r3
 /* 80455D50 0041F310  38 60 01 F0 */	li r3, 0x1f0
 /* 80455D54 0041F314  4B FD ED 09 */	bl heap_malloc
@@ -482,7 +482,7 @@
 /* 8045601C 0041F5DC  38 00 00 00 */	li r0, 0
 /* 80456020 0041F5E0  90 0D BE 0C */	stw r0, lbl_80667F8C@sda21(r13)
 /* 80456024 0041F5E4  38 80 00 00 */	li r4, 0
-/* 80456028 0041F5E8  4B FE 2E A1 */	bl __dt__CProc
+/* 80456028 0041F5E8  4B FE 2E A1 */	bl __dt__5CProcFv
 /* 8045602C 0041F5EC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80456030 0041F5F0  40 81 00 0C */	ble .L_8045603C
 /* 80456034 0041F5F4  7F C3 F3 78 */	mr r3, r30
@@ -508,7 +508,7 @@
 /* 80456074 0041F634  38 00 00 00 */	li r0, 0
 /* 80456078 0041F638  90 0D BE 10 */	stw r0, lbl_80667F90@sda21(r13)
 /* 8045607C 0041F63C  38 80 00 00 */	li r4, 0
-/* 80456080 0041F640  4B FE 2E 49 */	bl __dt__CProc
+/* 80456080 0041F640  4B FE 2E 49 */	bl __dt__5CProcFv
 /* 80456084 0041F644  2C 1F 00 00 */	cmpwi r31, 0
 /* 80456088 0041F648  40 81 00 0C */	ble .L_80456094
 /* 8045608C 0041F64C  7F C3 F3 78 */	mr r3, r30
@@ -603,43 +603,43 @@
 	.4byte "__RTTI__Q222@unnamed@CDesktop_cpp@17CDesktopException"
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CProc_WorkThreadEvent4
 	.4byte CDesktop_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"
 
 .obj _unnamed_CDesktop_cpp_CDesktopException_hierarchy, global
@@ -658,43 +658,43 @@
 	.4byte "__RTTI__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CProc_WorkThreadEvent4
 	.4byte func_804560F0
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"
 
 .obj _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy, global
@@ -712,44 +712,44 @@
 .obj __vt__8CDesktop, global
 	.4byte __RTTI__8CDesktop
 	.4byte 0
-	.4byte __dt__CDesktop
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__8CDesktopFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CDesktop_OnFileEvent
 	.4byte CDesktop_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte func_80455AD8
 	.4byte func_80455AF8
 	.4byte func_80455B34
 	.4byte __ct__80455B38
 	.4byte func_80455DF4
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__8CDesktop
 
 .obj CDesktop_hierarchy, global
@@ -850,7 +850,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CProc
+	.4byte __dt__5CProcFv
 .endobj "@etb_8001D2E4"
 
 .obj "@etb_8001D300", local
@@ -938,7 +938,7 @@
 
 .obj "@eti_80034F28", local
 .hidden "@eti_80034F28"
-	.4byte __dt__CDesktop
+	.4byte __dt__8CDesktopFv
 	.4byte 0x00000058
 	.4byte "@etb_8001D300"
 .endobj "@eti_80034F28"

@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B86BC, global
+.fn func_802B86BC__Q22cf10CHelp_TalkFv, global
 /* 802B86BC 00281C7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B86C0 00281C80  7C 08 02 A6 */	mflr r0
 /* 802B86C4 00281C84  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B86C8 00281C88  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B86CC 00281C8C  7C 7F 1B 78 */	mr r31, r3
-/* 802B86D0 00281C90  4B FF F5 E1 */	bl func_802B7CB0
+/* 802B86D0 00281C90  4B FF F5 E1 */	bl func_802B7CB0__Q22cf11CHelpSwitchFv
 /* 802B86D4 00281C94  38 00 00 00 */	li r0, 0
 /* 802B86D8 00281C98  98 1F 00 16 */	stb r0, 0x16(r31)
 /* 802B86DC 00281C9C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -16,9 +16,9 @@
 /* 802B86E4 00281CA4  7C 08 03 A6 */	mtlr r0
 /* 802B86E8 00281CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B86EC 00281CAC  4E 80 00 20 */	blr 
-.endfn func_802B86BC
+.endfn func_802B86BC__Q22cf10CHelp_TalkFv
 
-.fn func_802B86F0, global
+.fn func_802B86F0__Q22cf10CHelp_TalkFv, global
 /* 802B86F0 00281CB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B86F4 00281CB4  7C 08 02 A6 */	mflr r0
 /* 802B86F8 00281CB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -149,7 +149,7 @@
 /* 802B88BC 00281E7C  7C 08 03 A6 */	mtlr r0
 /* 802B88C0 00281E80  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B88C4 00281E84  4E 80 00 20 */	blr 
-.endfn func_802B86F0
+.endfn func_802B86F0__Q22cf10CHelp_TalkFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -173,14 +173,14 @@
 
 .obj "@eti_800339BC", local
 .hidden "@eti_800339BC"
-	.4byte func_802B86BC
+	.4byte func_802B86BC__Q22cf10CHelp_TalkFv
 	.4byte 0x00000034
 	.4byte "@etb_8001BE20"
 .endobj "@eti_800339BC"
 
 .obj "@eti_800339C8", local
 .hidden "@eti_800339C8"
-	.4byte func_802B86F0
+	.4byte func_802B86F0__Q22cf10CHelp_TalkFv
 	.4byte 0x000001D8
 	.4byte "@etb_8001BE28"
 .endobj "@eti_800339C8"

@@ -1490,10 +1490,10 @@
 /* 8009A1D0 00063790  4E 80 00 20 */	blr 
 .endfn func_80098EF8
 
-.fn func_8009A1D4, global
+.fn func_8009A1D4__Q22cf11CActorParamFv, global
 /* 8009A1D4 00063794  C0 23 18 40 */	lfs f1, 0x1840(r3)
 /* 8009A1D8 00063798  4E 80 00 20 */	blr 
-.endfn func_8009A1D4
+.endfn func_8009A1D4__Q22cf11CActorParamFv
 
 .fn func_8009A1DC, global
 /* 8009A1DC 0006379C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -4233,7 +4233,7 @@
 /* 8009C914 00065ED4  4B FC 56 D5 */	bl func_80061FE8
 /* 8009C918 00065ED8  7F E4 FB 78 */	mr r4, r31
 /* 8009C91C 00065EDC  38 A0 00 04 */	li r5, 4
-/* 8009C920 00065EE0  48 39 7B 0D */	bl func_8043442C
+/* 8009C920 00065EE0  48 39 7B 0D */	bl MemManager_8043442C
 /* 8009C924 00065EE4  2C 03 00 00 */	cmpwi r3, 0
 /* 8009C928 00065EE8  7C 7E 1B 78 */	mr r30, r3
 /* 8009C92C 00065EEC  41 82 00 18 */	beq .L_8009C944
@@ -4248,7 +4248,7 @@
 /* 8009C94C 00065F0C  48 39 7A 55 */	bl Heap_getRegionIndex2
 /* 8009C950 00065F10  7F E4 FB 78 */	mr r4, r31
 /* 8009C954 00065F14  38 A0 00 04 */	li r5, 4
-/* 8009C958 00065F18  48 39 7A D5 */	bl func_8043442C
+/* 8009C958 00065F18  48 39 7A D5 */	bl MemManager_8043442C
 /* 8009C95C 00065F1C  7C 7E 1B 78 */	mr r30, r3
 .L_8009C960:
 /* 8009C960 00065F20  7F C3 F3 78 */	mr r3, r30
@@ -4270,7 +4270,7 @@
 /* 8009C994 00065F54  7C 7F 1B 78 */	mr r31, r3
 /* 8009C998 00065F58  41 82 00 0C */	beq .L_8009C9A4
 /* 8009C99C 00065F5C  7C 83 23 78 */	mr r3, r4
-/* 8009C9A0 00065F60  48 39 7B 39 */	bl func_804344D8
+/* 8009C9A0 00065F60  48 39 7B 39 */	bl MemManager_804344D8
 .L_8009C9A4:
 /* 8009C9A4 00065F64  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8009C9A8 00065F68  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -5195,7 +5195,7 @@
 .obj __vt__Q22cf10CtrlRemote, global
 	.4byte __RTTI__Q22cf10CtrlRemote
 	.4byte 0
-	.4byte __dt__cf_CtrlRemote
+	.4byte __dt__Q22cf10CtrlRemoteFv
 	.4byte func_80098CB8
 	.4byte func_8009C860
 	.4byte func_8009C87C
@@ -5409,7 +5409,7 @@
 	.byte 0x80
 	.2byte 0x001F
 	.4byte 0x00000000
-	.4byte __dt__cf_CtrlPc
+	.4byte __dt__Q22cf6CtrlPcFv
 .endobj "@etb_80008EA0"
 
 .obj "@etb_80008EBC", local

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __dt__CDeviceFontInfoRom, global
+.fn __dt__18CDeviceFontInfoRomFv, global
 /* 8045365C 0041CC1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80453660 0041CC20  7C 08 02 A6 */	mflr r0
 /* 80453664 0041CC24  2C 03 00 00 */	cmpwi r3, 0
@@ -19,7 +19,7 @@
 /* 80453690 0041CC50  2C 00 00 00 */	cmpwi r0, 0
 /* 80453694 0041CC54  41 82 00 14 */	beq .L_804536A8
 /* 80453698 0041CC58  7C 03 03 78 */	mr r3, r0
-/* 8045369C 0041CC5C  4B FE 0E 3D */	bl func_804344D8
+/* 8045369C 0041CC5C  4B FE 0E 3D */	bl MemManager_804344D8
 /* 804536A0 0041CC60  38 00 00 00 */	li r0, 0
 /* 804536A4 0041CC64  90 1E 00 08 */	stw r0, 8(r30)
 .L_804536A8:
@@ -37,7 +37,7 @@
 /* 804536D0 0041CC90  7C 08 03 A6 */	mtlr r0
 /* 804536D4 0041CC94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804536D8 0041CC98  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFontInfoRom
+.endfn __dt__18CDeviceFontInfoRomFv
 
 .fn func_804536DC, global
 /* 804536DC 0041CC9C  7C 83 23 78 */	mr r3, r4
@@ -73,7 +73,7 @@
 /* 80453748 0041CD08  3C 80 00 14 */	lis r4, 0x00145000@ha
 /* 8045374C 0041CD0C  38 A0 00 20 */	li r5, 0x20
 /* 80453750 0041CD10  38 84 50 00 */	addi r4, r4, 0x00145000@l
-/* 80453754 0041CD14  4B FE 0C FD */	bl func_80434450
+/* 80453754 0041CD14  4B FE 0C FD */	bl MemManager_80434450
 /* 80453758 0041CD18  90 7F 00 08 */	stw r3, 8(r31)
 /* 8045375C 0041CD1C  4B F0 4F 25 */	bl OSInitFont
 /* 80453760 0041CD20  2C 03 00 00 */	cmpwi r3, 0
@@ -185,7 +185,7 @@
 .obj __vt__18CDeviceFontInfoRom, global
 	.4byte __RTTI__18CDeviceFontInfoRom
 	.4byte 0
-	.4byte __dt__CDeviceFontInfoRom
+	.4byte __dt__18CDeviceFontInfoRomFv
 	.4byte func_80453830
 	.4byte func_80453824
 	.4byte func_80453818
@@ -257,7 +257,7 @@
 
 .obj "@eti_80034D9C", local
 .hidden "@eti_80034D9C"
-	.4byte __dt__CDeviceFontInfoRom
+	.4byte __dt__18CDeviceFontInfoRomFv
 	.4byte 0x00000080
 	.4byte "@etb_8001D0E8"
 .endobj "@eti_80034D9C"

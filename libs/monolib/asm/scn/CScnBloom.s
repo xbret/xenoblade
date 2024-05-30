@@ -24,7 +24,7 @@
 /* 80499220 004627E0  4E 80 00 20 */	blr
 .endfn __ct__CScnBloom
 
-.fn __dt__80499224, global
+.fn __dt__9CScnBloomFv, global
 /* 80499224 004627E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80499228 004627E8  7C 08 02 A6 */	mflr r0
 /* 8049922C 004627EC  2C 03 00 00 */	cmpwi r3, 0
@@ -36,7 +36,7 @@
 /* 80499244 00462804  41 82 00 2C */	beq .L_80499270
 /* 80499248 00462808  38 80 00 00 */	li r4, 0
 /* 8049924C 0046280C  38 63 00 48 */	addi r3, r3, 0x48
-/* 80499250 00462810  48 00 35 D9 */	bl __dt__CScnFilter
+/* 80499250 00462810  48 00 35 D9 */	bl __dt__10CScnFilterFv
 /* 80499254 00462814  7F C3 F3 78 */	mr r3, r30
 /* 80499258 00462818  38 80 00 00 */	li r4, 0
 /* 8049925C 0046281C  48 00 05 75 */	bl __dt__804997D0
@@ -52,7 +52,7 @@
 /* 80499280 00462840  7C 08 03 A6 */	mtlr r0
 /* 80499284 00462844  38 21 00 10 */	addi r1, r1, 0x10
 /* 80499288 00462848  4E 80 00 20 */	blr
-.endfn __dt__80499224
+.endfn __dt__9CScnBloomFv
 
 .fn func_8049928C, global
 /* 8049928C 0046284C  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -347,7 +347,7 @@
 
 .fn func_804996E0, global
 /* 804996E0 00462CA0  38 63 FF B8 */	addi r3, r3, -72
-/* 804996E4 00462CA4  4B FF FB 40 */	b __dt__80499224
+/* 804996E4 00462CA4  4B FF FB 40 */	b __dt__9CScnBloomFv
 .endfn func_804996E0
 
 .fn func_804996E8, global
@@ -1864,14 +1864,14 @@
 	.4byte func_804996E0
 	.4byte func_8049C868
 	.4byte func_804996D8
-	.4byte __dt__80499224
+	.4byte __dt__9CScnBloomFv
 	.4byte func_8049928C
 .endobj __vt__9CScnBloom
 
 .obj CScnBloom_hierarchy, global
 	.4byte __RTTI__10CScnFilter
 	.4byte 0x00000048
-	.4byte __RTTI__9CScnBloomBase
+	.4byte __RTTI__13CScnBloomBase
 	.4byte 0
 	.4byte 0
 .endobj CScnBloom_hierarchy
@@ -1886,10 +1886,10 @@
 	.4byte CScnBloom_hierarchy
 .endobj __RTTI__9CScnBloom
 
-.obj __RTTI__9CScnBloomBase, global
+.obj __RTTI__13CScnBloomBase, global
 	.4byte CScnBloomBase_typestr
 	.4byte 0
-.endobj __RTTI__9CScnBloomBase
+.endobj __RTTI__13CScnBloomBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
@@ -1991,7 +1991,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000048
-	.4byte __dt__CScnFilter
+	.4byte __dt__10CScnFilterFv
 .endobj "@etb_8001F300"
 
 .obj "@etb_8001F31C", local
@@ -2073,7 +2073,7 @@
 
 .obj "@eti_80036D70", local
 .hidden "@eti_80036D70"
-	.4byte __dt__80499224
+	.4byte __dt__9CScnBloomFv
 	.4byte 0x00000068
 	.4byte "@etb_8001F300"
 .endobj "@eti_80036D70"

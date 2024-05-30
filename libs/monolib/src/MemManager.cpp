@@ -95,14 +95,14 @@ static inline MemBlock* unkInline1(Heap* heap, MemBlock* entry){
     return entry->next;
 }
 
-void SetArenaMemorySize(u32 val, bool b){
+void MemManager_setArenaMemorySize(u32 val, bool b){
     arenaMemorySize = val;
     lbl_80667E58 = b;
 }
 
 
 //requires func_align 4
-MemBlock* func_804339B8(Heap* heap, MemBlock* arg1) {
+MemBlock* MemManager_804339B8(Heap* heap, MemBlock* arg1) {
     MemBlock* entryTemp = arg1;
     MemBlock* tempEntry1 = entryTemp->unk8;
     
@@ -153,7 +153,7 @@ MemBlock* func_804339B8(Heap* heap, MemBlock* arg1) {
 }
 
 
-MemBlock* func_80433AA8(Heap* heap, MemBlock* entry) {
+MemBlock* MemManager_80433AA8(Heap* heap, MemBlock* entry) {
 
     MemBlock* temp_r6 = entry->prev;
 
@@ -195,7 +195,7 @@ MemBlock* func_80433AA8(Heap* heap, MemBlock* entry) {
         var_r5 = var_r5->next;
         
         if (var_r5 != nullptr) {
-            var_r5 = func_80433AA8(heap, var_r5);
+            var_r5 = MemManager_80433AA8(heap, var_r5);
         }
     }
     
@@ -232,7 +232,7 @@ static inline u32 unkInline(u32 var_r5){
 }
 
 //requires func_align 4
-u32 func_804348C0(u8* arg0, u32 arg1) {
+u32 MemManager_804348C0(u8* arg0, u32 arg1) {
     if (arg0 == NULL) {
         return 0xFFFF;
     }
@@ -296,14 +296,14 @@ static inline void deallocate(void* p){
                 heap->unkC = entryToDelete->prev;
             }
         
-            MemBlock* entry = func_804339B8(heap, entryToDelete);
+            MemBlock* entry = MemManager_804339B8(heap, entryToDelete);
             entry = unkInline1(heap, entry);
         
             if (entry != nullptr) {
                 entry = unkInline1(heap, entry);
             
                 if (entry != NULL) {
-                    func_80433AA8(heap, entry);
+                    MemManager_80433AA8(heap, entry);
                 }
             }
             

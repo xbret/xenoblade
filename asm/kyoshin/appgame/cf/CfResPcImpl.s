@@ -44,7 +44,7 @@
 /* 8018CA58 00156018  4E 80 00 20 */	blr 
 .endfn __ct__cf_CfResPcImpl
 
-.fn __dt__cf_CfResPcImpl, global
+.fn __dt__Q22cf11CfResPcImplFv, global
 /* 8018CA5C 0015601C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8018CA60 00156020  7C 08 02 A6 */	mflr r0
 /* 8018CA64 00156024  2C 03 00 00 */	cmpwi r3, 0
@@ -94,7 +94,7 @@
 /* 8018CB08 001560C8  7C 08 03 A6 */	mtlr r0
 /* 8018CB0C 001560CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8018CB10 001560D0  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfResPcImpl
+.endfn __dt__Q22cf11CfResPcImplFv
 
 .fn func_8018CB14, global
 /* 8018CB14 001560D4  A0 83 00 08 */	lhz r4, 8(r3)
@@ -1756,7 +1756,7 @@
 /* 8018E284 00157844  38 60 00 00 */	li r3, 0
 /* 8018E288 00157848  38 04 00 01 */	addi r0, r4, 1
 /* 8018E28C 0015784C  B0 17 00 08 */	sth r0, 8(r23)
-/* 8018E290 00157850  48 2A 67 BD */	bl func_80434A4C
+/* 8018E290 00157850  48 2A 67 BD */	bl MemManager_80434A4C__FUc
 /* 8018E294 00157854  80 77 00 00 */	lwz r3, 0(r23)
 /* 8018E298 00157858  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 8018E29C 0015785C  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
@@ -1941,7 +1941,7 @@
 /* 8018E548 00157B08  90 04 06 E0 */	stw r0, 0x6e0(r4)
 .L_8018E54C:
 /* 8018E54C 00157B0C  38 60 00 01 */	li r3, 1
-/* 8018E550 00157B10  48 2A 64 FD */	bl func_80434A4C
+/* 8018E550 00157B10  48 2A 64 FD */	bl MemManager_80434A4C__FUc
 /* 8018E554 00157B14  80 77 00 00 */	lwz r3, 0(r23)
 /* 8018E558 00157B18  80 03 00 68 */	lwz r0, 0x68(r3)
 /* 8018E55C 00157B1C  54 04 02 D7 */	rlwinm. r4, r0, 0, 0xb, 0xb
@@ -2231,7 +2231,7 @@
 /* 8018E96C 00157F2C  7D 89 03 A6 */	mtctr r12
 /* 8018E970 00157F30  4E 80 04 21 */	bctrl 
 /* 8018E974 00157F34  38 60 00 00 */	li r3, 0
-/* 8018E978 00157F38  48 2A 60 D5 */	bl func_80434A4C
+/* 8018E978 00157F38  48 2A 60 D5 */	bl MemManager_80434A4C__FUc
 /* 8018E97C 00157F3C  80 7A 00 00 */	lwz r3, 0(r26)
 /* 8018E980 00157F40  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 8018E984 00157F44  83 63 00 98 */	lwz r27, 0x98(r3)
@@ -2528,7 +2528,7 @@
 /* 8018EDD4 00158394  41 80 FF D8 */	blt .L_8018EDAC
 .L_8018EDD8:
 /* 8018EDD8 00158398  38 60 00 01 */	li r3, 1
-/* 8018EDDC 0015839C  48 2A 5C 71 */	bl func_80434A4C
+/* 8018EDDC 0015839C  48 2A 5C 71 */	bl MemManager_80434A4C__FUc
 /* 8018EDE0 001583A0  80 7A 00 00 */	lwz r3, 0(r26)
 /* 8018EDE4 001583A4  80 63 00 38 */	lwz r3, 0x38(r3)
 /* 8018EDE8 001583A8  2C 03 00 00 */	cmpwi r3, 0
@@ -3421,7 +3421,7 @@
 .obj __vt__Q22cf11CfResPcImpl, global
 	.4byte __RTTI__Q22cf11CfResPcImpl
 	.4byte 0
-	.4byte __dt__cf_CfResPcImpl
+	.4byte __dt__Q22cf11CfResPcImplFv
 	.4byte func_8018EEF0
 	.4byte func_8018D570
 	.4byte func_8018CB14
@@ -3796,7 +3796,7 @@
 
 .obj "@eti_80029D98", local
 .hidden "@eti_80029D98"
-	.4byte __dt__cf_CfResPcImpl
+	.4byte __dt__Q22cf11CfResPcImplFv
 	.4byte 0x000000B8
 	.4byte "@etb_8000EFE8"
 .endobj "@eti_80029D98"

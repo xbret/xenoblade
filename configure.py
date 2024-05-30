@@ -4,7 +4,7 @@ LIBS = [
         "mw_console": "Wii",
         "mw_version": "1.1",
         "root_dir": "",
-        "cflags": "$cflags_base -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS",
+        "cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS",
         "host": True,
         "objects": [
             ["kyoshin/appgame/CGame", False],
@@ -324,7 +324,11 @@ LIBS = [
             ["kyoshin/appgame/help/CHelp_Talk", False],
             ["kyoshin/appgame/help/CHelp_Target", False],
             ["kyoshin/appgame/plugin/pluginVoice", False],
-            ["kyoshin/appgame/CBattery", False],
+            [
+				"kyoshin/appgame/CBattery", 
+				False,
+				{"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s"},
+			],
         ],
     },
     {

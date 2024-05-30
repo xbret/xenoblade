@@ -871,7 +871,7 @@
 .obj __vt__Q22cf13CChainActorPc, global
 	.4byte __RTTI__Q22cf13CChainActorPc
 	.4byte 0
-	.4byte __dt__cf_CChainActorPc
+	.4byte __dt__Q22cf13CChainActorPcFv
 	.4byte func_80281924
 	.4byte func_80281958
 	.4byte func_80281CB8

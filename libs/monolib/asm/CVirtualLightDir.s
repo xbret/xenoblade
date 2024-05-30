@@ -31,7 +31,7 @@
 /* 80494754 0045DD14  4E 80 00 20 */	blr 
 .endfn func_8049474C
 
-.fn __dt__CVirtualLightDir, global
+.fn __dt__16CVirtualLightDirFv, global
 /* 80494758 0045DD18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049475C 0045DD1C  7C 08 02 A6 */	mflr r0
 /* 80494760 0045DD20  2C 03 00 00 */	cmpwi r3, 0
@@ -49,7 +49,7 @@
 /* 8049478C 0045DD4C  7C 08 03 A6 */	mtlr r0
 /* 80494790 0045DD50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80494794 0045DD54  4E 80 00 20 */	blr 
-.endfn __dt__CVirtualLightDir
+.endfn __dt__16CVirtualLightDirFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -58,7 +58,7 @@
 .obj __vt__16CVirtualLightDir, global
 	.4byte __RTTI__16CVirtualLightDir
 	.4byte 0
-	.4byte __dt__CVirtualLightDir
+	.4byte __dt__16CVirtualLightDirFv
 	.4byte func_804947EC
 	.4byte func_8049488C
 .endobj __vt__16CVirtualLightDir
@@ -122,7 +122,7 @@
 
 .obj "@eti_80036AE8", local
 .hidden "@eti_80036AE8"
-	.4byte __dt__CVirtualLightDir
+	.4byte __dt__16CVirtualLightDirFv
 	.4byte 0x00000040
 	.4byte "@etb_8001EF2C"
 .endobj "@eti_80036AE8"

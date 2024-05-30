@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CBaseCur, global
+.fn __ct__8CBaseCurFv, global
 /* 801D1FC0 0019B580  3C A0 80 54 */	lis r5, __vt__8CBaseCur@ha
 /* 801D1FC4 0019B584  38 00 00 00 */	li r0, 0
 /* 801D1FC8 0019B588  38 A5 81 58 */	addi r5, r5, __vt__8CBaseCur@l
@@ -14,9 +14,9 @@
 /* 801D1FE0 0019B5A0  98 03 00 14 */	stb r0, 0x14(r3)
 /* 801D1FE4 0019B5A4  98 03 00 15 */	stb r0, 0x15(r3)
 /* 801D1FE8 0019B5A8  4E 80 00 20 */	blr 
-.endfn __ct__CBaseCur
+.endfn __ct__8CBaseCurFv
 
-.fn __dt__CBaseCur, global
+.fn __dt__8CBaseCurFv, global
 /* 801D1FEC 0019B5AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D1FF0 0019B5B0  7C 08 02 A6 */	mflr r0
 /* 801D1FF4 0019B5B4  2C 03 00 00 */	cmpwi r3, 0
@@ -34,7 +34,7 @@
 /* 801D2020 0019B5E0  7C 08 03 A6 */	mtlr r0
 /* 801D2024 0019B5E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2028 0019B5E8  4E 80 00 20 */	blr 
-.endfn __dt__CBaseCur
+.endfn __dt__8CBaseCurFv
 
 .fn func_801D202C, global
 /* 801D202C 0019B5EC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -86,11 +86,11 @@
 /* 801D20C8 0019B688  7C A3 2B 78 */	mr r3, r5
 /* 801D20CC 0019B68C  38 A0 00 00 */	li r5, 0
 /* 801D20D0 0019B690  38 C0 00 01 */	li r6, 1
-/* 801D20D4 0019B694  4B F6 4F 64 */	b func_80137038
+/* 801D20D4 0019B694  4B F6 4F 64 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 801D20D8 0019B698  4E 80 00 20 */	blr 
 .endfn func_801D20B0
 
-.fn func_801D20DC, global
+.fn func_801D20DC__8CBaseCurFv, global
 /* 801D20DC 0019B69C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D20E0 0019B6A0  7C 08 02 A6 */	mflr r0
 /* 801D20E4 0019B6A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -119,13 +119,13 @@
 /* 801D2138 0019B6F8  7C 08 03 A6 */	mtlr r0
 /* 801D213C 0019B6FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2140 0019B700  4E 80 00 20 */	blr 
-.endfn func_801D20DC
+.endfn func_801D20DC__8CBaseCurFv
 
-.fn func_801D2144, global
+.fn func_801D2144__8CBaseCurFv, global
 /* 801D2144 0019B704  80 63 00 08 */	lwz r3, 8(r3)
 /* 801D2148 0019B708  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 801D214C 0019B70C  48 00 00 04 */	b func_801D2150
-.endfn func_801D2144
+.endfn func_801D2144__8CBaseCurFv
 
 .fn func_801D2150, global
 /* 801D2150 0019B710  C0 44 00 00 */	lfs f2, 0(r4)
@@ -148,7 +148,7 @@
 /* 801D217C 0019B73C  48 00 00 E8 */	b func_801D2264
 .endfn func_801D2174
 
-.fn func_801D2180, global
+.fn func_801D2180__8CBaseCurFv, global
 /* 801D2180 0019B740  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2184 0019B744  7C 08 02 A6 */	mflr r0
 /* 801D2188 0019B748  C0 22 A4 E0 */	lfs f1, float_8066A860@sda21(r2)
@@ -169,7 +169,7 @@
 /* 801D21C0 0019B780  7C 08 03 A6 */	mtlr r0
 /* 801D21C4 0019B784  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D21C8 0019B788  4E 80 00 20 */	blr 
-.endfn func_801D2180
+.endfn func_801D2180__8CBaseCurFv
 
 .fn func_801D21CC, global
 /* 801D21CC 0019B78C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -259,7 +259,7 @@
 /* 801D2304 0019B8C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2308 0019B8C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D230C 0019B8CC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2310 0019B8D0  4B FF FC B1 */	bl __ct__CBaseCur
+/* 801D2310 0019B8D0  4B FF FC B1 */	bl __ct__8CBaseCurFv
 /* 801D2314 0019B8D4  3C 80 80 54 */	lis r4, __vt__6CCur07@ha
 /* 801D2318 0019B8D8  7F E3 FB 78 */	mr r3, r31
 /* 801D231C 0019B8DC  38 84 81 30 */	addi r4, r4, __vt__6CCur07@l
@@ -271,7 +271,7 @@
 /* 801D2334 0019B8F4  4E 80 00 20 */	blr 
 .endfn __ct__CCur07
 
-.fn __dt__CCur07, global
+.fn __dt__6CCur07Fv, global
 /* 801D2338 0019B8F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D233C 0019B8FC  7C 08 02 A6 */	mflr r0
 /* 801D2340 0019B900  2C 03 00 00 */	cmpwi r3, 0
@@ -289,9 +289,9 @@
 /* 801D236C 0019B92C  7C 08 03 A6 */	mtlr r0
 /* 801D2370 0019B930  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2374 0019B934  4E 80 00 20 */	blr 
-.endfn __dt__CCur07
+.endfn __dt__6CCur07Fv
 
-.fn func_801D2378, global
+.fn func_801D2378__6CCur07Fv, global
 /* 801D2378 0019B938  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D237C 0019B93C  7C 08 02 A6 */	mflr r0
 /* 801D2380 0019B940  90 01 00 14 */	stw r0, 0x14(r1)
@@ -302,7 +302,7 @@
 /* 801D2394 0019B954  38 BF 00 50 */	addi r5, r31, 0x50
 /* 801D2398 0019B958  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D239C 0019B95C  38 63 00 08 */	addi r3, r3, 8
-/* 801D23A0 0019B960  4B F6 4A E5 */	bl func_80136E84
+/* 801D23A0 0019B960  4B F6 4A E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D23A4 0019B964  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D23A8 0019B968  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D23AC 0019B96C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -325,7 +325,7 @@
 /* 801D23F0 0019B9B0  7C 08 03 A6 */	mtlr r0
 /* 801D23F4 0019B9B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D23F8 0019B9B8  4E 80 00 20 */	blr 
-.endfn func_801D2378
+.endfn func_801D2378__6CCur07Fv
 
 .fn __ct__CCur09, global
 /* 801D23FC 0019B9BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -333,7 +333,7 @@
 /* 801D2404 0019B9C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2408 0019B9C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D240C 0019B9CC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2410 0019B9D0  4B FF FB B1 */	bl __ct__CBaseCur
+/* 801D2410 0019B9D0  4B FF FB B1 */	bl __ct__8CBaseCurFv
 /* 801D2414 0019B9D4  3C 80 80 54 */	lis r4, __vt__6CCur09@ha
 /* 801D2418 0019B9D8  7F E3 FB 78 */	mr r3, r31
 /* 801D241C 0019B9DC  38 84 81 08 */	addi r4, r4, __vt__6CCur09@l
@@ -345,7 +345,7 @@
 /* 801D2434 0019B9F4  4E 80 00 20 */	blr 
 .endfn __ct__CCur09
 
-.fn __dt__CCur09, global
+.fn __dt__6CCur09Fv, global
 /* 801D2438 0019B9F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D243C 0019B9FC  7C 08 02 A6 */	mflr r0
 /* 801D2440 0019BA00  2C 03 00 00 */	cmpwi r3, 0
@@ -363,9 +363,9 @@
 /* 801D246C 0019BA2C  7C 08 03 A6 */	mtlr r0
 /* 801D2470 0019BA30  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2474 0019BA34  4E 80 00 20 */	blr 
-.endfn __dt__CCur09
+.endfn __dt__6CCur09Fv
 
-.fn func_801D2478, global
+.fn func_801D2478__6CCur09Fv, global
 /* 801D2478 0019BA38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D247C 0019BA3C  7C 08 02 A6 */	mflr r0
 /* 801D2480 0019BA40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -376,7 +376,7 @@
 /* 801D2494 0019BA54  38 BF 00 A0 */	addi r5, r31, 0xa0
 /* 801D2498 0019BA58  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D249C 0019BA5C  38 63 00 08 */	addi r3, r3, 8
-/* 801D24A0 0019BA60  4B F6 49 E5 */	bl func_80136E84
+/* 801D24A0 0019BA60  4B F6 49 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D24A4 0019BA64  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D24A8 0019BA68  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D24AC 0019BA6C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -394,7 +394,7 @@
 /* 801D24DC 0019BA9C  7C 08 03 A6 */	mtlr r0
 /* 801D24E0 0019BAA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D24E4 0019BAA4  4E 80 00 20 */	blr 
-.endfn func_801D2478
+.endfn func_801D2478__6CCur09Fv
 
 .fn func_801D24E8, global
 /* 801D24E8 0019BAA8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -439,7 +439,7 @@
 /* 801D2578 0019BB38  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D257C 0019BB3C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2580 0019BB40  7C 7F 1B 78 */	mr r31, r3
-/* 801D2584 0019BB44  4B FF FA 3D */	bl __ct__CBaseCur
+/* 801D2584 0019BB44  4B FF FA 3D */	bl __ct__8CBaseCurFv
 /* 801D2588 0019BB48  3C 80 80 54 */	lis r4, __vt__6CCur11@ha
 /* 801D258C 0019BB4C  7F E3 FB 78 */	mr r3, r31
 /* 801D2590 0019BB50  38 84 80 E0 */	addi r4, r4, __vt__6CCur11@l
@@ -451,7 +451,7 @@
 /* 801D25A8 0019BB68  4E 80 00 20 */	blr 
 .endfn __ct__CCur11
 
-.fn __dt__CCur11, global
+.fn __dt__6CCur11Fv, global
 /* 801D25AC 0019BB6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D25B0 0019BB70  7C 08 02 A6 */	mflr r0
 /* 801D25B4 0019BB74  2C 03 00 00 */	cmpwi r3, 0
@@ -469,9 +469,9 @@
 /* 801D25E0 0019BBA0  7C 08 03 A6 */	mtlr r0
 /* 801D25E4 0019BBA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D25E8 0019BBA8  4E 80 00 20 */	blr 
-.endfn __dt__CCur11
+.endfn __dt__6CCur11Fv
 
-.fn func_801D25EC, global
+.fn func_801D25EC__6CCur11Fv, global
 /* 801D25EC 0019BBAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D25F0 0019BBB0  7C 08 02 A6 */	mflr r0
 /* 801D25F4 0019BBB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -482,7 +482,7 @@
 /* 801D2608 0019BBC8  38 BF 00 ED */	addi r5, r31, 0xed
 /* 801D260C 0019BBCC  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D2610 0019BBD0  38 63 00 08 */	addi r3, r3, 8
-/* 801D2614 0019BBD4  4B F6 48 71 */	bl func_80136E84
+/* 801D2614 0019BBD4  4B F6 48 71 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D2618 0019BBD8  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D261C 0019BBDC  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D2620 0019BBE0  80 BE 00 04 */	lwz r5, 4(r30)
@@ -505,7 +505,7 @@
 /* 801D2664 0019BC24  7C 08 03 A6 */	mtlr r0
 /* 801D2668 0019BC28  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D266C 0019BC2C  4E 80 00 20 */	blr 
-.endfn func_801D25EC
+.endfn func_801D25EC__6CCur11Fv
 
 .fn func_801D2670, global
 /* 801D2670 0019BC30  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -552,7 +552,7 @@
 /* 801D2704 0019BCC4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2708 0019BCC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D270C 0019BCCC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2710 0019BCD0  4B FF F8 B1 */	bl __ct__CBaseCur
+/* 801D2710 0019BCD0  4B FF F8 B1 */	bl __ct__8CBaseCurFv
 /* 801D2714 0019BCD4  3C 80 80 54 */	lis r4, __vt__6CCur14@ha
 /* 801D2718 0019BCD8  7F E3 FB 78 */	mr r3, r31
 /* 801D271C 0019BCDC  38 84 80 B8 */	addi r4, r4, __vt__6CCur14@l
@@ -564,7 +564,7 @@
 /* 801D2734 0019BCF4  4E 80 00 20 */	blr 
 .endfn __ct__CCur14
 
-.fn __dt__CCur14, global
+.fn __dt__6CCur14Fv, global
 /* 801D2738 0019BCF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D273C 0019BCFC  7C 08 02 A6 */	mflr r0
 /* 801D2740 0019BD00  2C 03 00 00 */	cmpwi r3, 0
@@ -582,9 +582,9 @@
 /* 801D276C 0019BD2C  7C 08 03 A6 */	mtlr r0
 /* 801D2770 0019BD30  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2774 0019BD34  4E 80 00 20 */	blr 
-.endfn __dt__CCur14
+.endfn __dt__6CCur14Fv
 
-.fn func_801D2778, global
+.fn func_801D2778__6CCur14Fv, global
 /* 801D2778 0019BD38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D277C 0019BD3C  7C 08 02 A6 */	mflr r0
 /* 801D2780 0019BD40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -595,7 +595,7 @@
 /* 801D2794 0019BD54  38 BF 01 5D */	addi r5, r31, 0x15d
 /* 801D2798 0019BD58  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D279C 0019BD5C  38 63 00 08 */	addi r3, r3, 8
-/* 801D27A0 0019BD60  4B F6 46 E5 */	bl func_80136E84
+/* 801D27A0 0019BD60  4B F6 46 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D27A4 0019BD64  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D27A8 0019BD68  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D27AC 0019BD6C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -618,7 +618,7 @@
 /* 801D27F0 0019BDB0  7C 08 03 A6 */	mtlr r0
 /* 801D27F4 0019BDB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D27F8 0019BDB8  4E 80 00 20 */	blr 
-.endfn func_801D2778
+.endfn func_801D2778__6CCur14Fv
 
 .fn __ct__CCur15, global
 /* 801D27FC 0019BDBC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -626,7 +626,7 @@
 /* 801D2804 0019BDC4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2808 0019BDC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D280C 0019BDCC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2810 0019BDD0  4B FF F7 B1 */	bl __ct__CBaseCur
+/* 801D2810 0019BDD0  4B FF F7 B1 */	bl __ct__8CBaseCurFv
 /* 801D2814 0019BDD4  3C 80 80 54 */	lis r4, __vt__6CCur15@ha
 /* 801D2818 0019BDD8  7F E3 FB 78 */	mr r3, r31
 /* 801D281C 0019BDDC  38 84 80 90 */	addi r4, r4, __vt__6CCur15@l
@@ -638,7 +638,7 @@
 /* 801D2834 0019BDF4  4E 80 00 20 */	blr 
 .endfn __ct__CCur15
 
-.fn __dt__CCur15, global
+.fn __dt__6CCur15Fv, global
 /* 801D2838 0019BDF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D283C 0019BDFC  7C 08 02 A6 */	mflr r0
 /* 801D2840 0019BE00  2C 03 00 00 */	cmpwi r3, 0
@@ -656,9 +656,9 @@
 /* 801D286C 0019BE2C  7C 08 03 A6 */	mtlr r0
 /* 801D2870 0019BE30  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2874 0019BE34  4E 80 00 20 */	blr 
-.endfn __dt__CCur15
+.endfn __dt__6CCur15Fv
 
-.fn func_801D2878, global
+.fn func_801D2878__6CCur15Fv, global
 /* 801D2878 0019BE38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D287C 0019BE3C  7C 08 02 A6 */	mflr r0
 /* 801D2880 0019BE40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -669,7 +669,7 @@
 /* 801D2894 0019BE54  38 BF 01 AD */	addi r5, r31, 0x1ad
 /* 801D2898 0019BE58  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D289C 0019BE5C  38 63 00 08 */	addi r3, r3, 8
-/* 801D28A0 0019BE60  4B F6 45 E5 */	bl func_80136E84
+/* 801D28A0 0019BE60  4B F6 45 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D28A4 0019BE64  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D28A8 0019BE68  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D28AC 0019BE6C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -692,7 +692,7 @@
 /* 801D28F0 0019BEB0  7C 08 03 A6 */	mtlr r0
 /* 801D28F4 0019BEB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D28F8 0019BEB8  4E 80 00 20 */	blr 
-.endfn func_801D2878
+.endfn func_801D2878__6CCur15Fv
 
 .fn __ct__CCur16, global
 /* 801D28FC 0019BEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -700,7 +700,7 @@
 /* 801D2904 0019BEC4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2908 0019BEC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D290C 0019BECC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2910 0019BED0  4B FF F6 B1 */	bl __ct__CBaseCur
+/* 801D2910 0019BED0  4B FF F6 B1 */	bl __ct__8CBaseCurFv
 /* 801D2914 0019BED4  3C 80 80 54 */	lis r4, __vt__6CCur16@ha
 /* 801D2918 0019BED8  7F E3 FB 78 */	mr r3, r31
 /* 801D291C 0019BEDC  38 84 80 68 */	addi r4, r4, __vt__6CCur16@l
@@ -712,7 +712,7 @@
 /* 801D2934 0019BEF4  4E 80 00 20 */	blr 
 .endfn __ct__CCur16
 
-.fn __dt__CCur16, global
+.fn __dt__6CCur16Fv, global
 /* 801D2938 0019BEF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D293C 0019BEFC  7C 08 02 A6 */	mflr r0
 /* 801D2940 0019BF00  2C 03 00 00 */	cmpwi r3, 0
@@ -730,9 +730,9 @@
 /* 801D296C 0019BF2C  7C 08 03 A6 */	mtlr r0
 /* 801D2970 0019BF30  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2974 0019BF34  4E 80 00 20 */	blr 
-.endfn __dt__CCur16
+.endfn __dt__6CCur16Fv
 
-.fn func_801D2978, global
+.fn func_801D2978__6CCur16Fv, global
 /* 801D2978 0019BF38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D297C 0019BF3C  7C 08 02 A6 */	mflr r0
 /* 801D2980 0019BF40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -743,7 +743,7 @@
 /* 801D2994 0019BF54  38 BF 01 FD */	addi r5, r31, 0x1fd
 /* 801D2998 0019BF58  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D299C 0019BF5C  38 63 00 08 */	addi r3, r3, 8
-/* 801D29A0 0019BF60  4B F6 44 E5 */	bl func_80136E84
+/* 801D29A0 0019BF60  4B F6 44 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D29A4 0019BF64  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D29A8 0019BF68  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D29AC 0019BF6C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -766,7 +766,7 @@
 /* 801D29F0 0019BFB0  7C 08 03 A6 */	mtlr r0
 /* 801D29F4 0019BFB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D29F8 0019BFB8  4E 80 00 20 */	blr 
-.endfn func_801D2978
+.endfn func_801D2978__6CCur16Fv
 
 .fn __ct__CCur18, global
 /* 801D29FC 0019BFBC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -774,7 +774,7 @@
 /* 801D2A04 0019BFC4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2A08 0019BFC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2A0C 0019BFCC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2A10 0019BFD0  4B FF F5 B1 */	bl __ct__CBaseCur
+/* 801D2A10 0019BFD0  4B FF F5 B1 */	bl __ct__8CBaseCurFv
 /* 801D2A14 0019BFD4  3C 80 80 54 */	lis r4, __vt__6CCur18@ha
 /* 801D2A18 0019BFD8  7F E3 FB 78 */	mr r3, r31
 /* 801D2A1C 0019BFDC  38 84 80 3C */	addi r4, r4, __vt__6CCur18@l
@@ -786,7 +786,7 @@
 /* 801D2A34 0019BFF4  4E 80 00 20 */	blr 
 .endfn __ct__CCur18
 
-.fn __dt__CCur18, global
+.fn __dt__6CCur18Fv, global
 /* 801D2A38 0019BFF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2A3C 0019BFFC  7C 08 02 A6 */	mflr r0
 /* 801D2A40 0019C000  2C 03 00 00 */	cmpwi r3, 0
@@ -804,9 +804,9 @@
 /* 801D2A6C 0019C02C  7C 08 03 A6 */	mtlr r0
 /* 801D2A70 0019C030  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2A74 0019C034  4E 80 00 20 */	blr 
-.endfn __dt__CCur18
+.endfn __dt__6CCur18Fv
 
-.fn func_801D2A78, global
+.fn func_801D2A78__6CCur18Fv, global
 /* 801D2A78 0019C038  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2A7C 0019C03C  7C 08 02 A6 */	mflr r0
 /* 801D2A80 0019C040  90 01 00 14 */	stw r0, 0x14(r1)
@@ -817,7 +817,7 @@
 /* 801D2A94 0019C054  38 BF 02 9D */	addi r5, r31, 0x29d
 /* 801D2A98 0019C058  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D2A9C 0019C05C  38 63 00 08 */	addi r3, r3, 8
-/* 801D2AA0 0019C060  4B F6 43 E5 */	bl func_80136E84
+/* 801D2AA0 0019C060  4B F6 43 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D2AA4 0019C064  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D2AA8 0019C068  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D2AAC 0019C06C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -840,7 +840,7 @@
 /* 801D2AF0 0019C0B0  7C 08 03 A6 */	mtlr r0
 /* 801D2AF4 0019C0B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2AF8 0019C0B8  4E 80 00 20 */	blr 
-.endfn func_801D2A78
+.endfn func_801D2A78__6CCur18Fv
 
 .fn __ct__CCur22, global
 /* 801D2AFC 0019C0BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -848,7 +848,7 @@
 /* 801D2B04 0019C0C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2B08 0019C0C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2B0C 0019C0CC  7C 7F 1B 78 */	mr r31, r3
-/* 801D2B10 0019C0D0  4B FF F4 B1 */	bl __ct__CBaseCur
+/* 801D2B10 0019C0D0  4B FF F4 B1 */	bl __ct__8CBaseCurFv
 /* 801D2B14 0019C0D4  3C 80 80 54 */	lis r4, __vt__6CCur22@ha
 /* 801D2B18 0019C0D8  7F E3 FB 78 */	mr r3, r31
 /* 801D2B1C 0019C0DC  38 84 80 14 */	addi r4, r4, __vt__6CCur22@l
@@ -860,7 +860,7 @@
 /* 801D2B34 0019C0F4  4E 80 00 20 */	blr 
 .endfn __ct__CCur22
 
-.fn __dt__801D2B38, global
+.fn __dt__6CCur22Fv, global
 /* 801D2B38 0019C0F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2B3C 0019C0FC  7C 08 02 A6 */	mflr r0
 /* 801D2B40 0019C100  2C 03 00 00 */	cmpwi r3, 0
@@ -878,9 +878,9 @@
 /* 801D2B6C 0019C12C  7C 08 03 A6 */	mtlr r0
 /* 801D2B70 0019C130  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2B74 0019C134  4E 80 00 20 */	blr 
-.endfn __dt__801D2B38
+.endfn __dt__6CCur22Fv
 
-.fn func_801D2B78, global
+.fn func_801D2B78__6CCur22Fv, global
 /* 801D2B78 0019C138  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2B7C 0019C13C  7C 08 02 A6 */	mflr r0
 /* 801D2B80 0019C140  90 01 00 14 */	stw r0, 0x14(r1)
@@ -891,7 +891,7 @@
 /* 801D2B94 0019C154  38 BF 03 3D */	addi r5, r31, 0x33d
 /* 801D2B98 0019C158  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D2B9C 0019C15C  38 63 00 08 */	addi r3, r3, 8
-/* 801D2BA0 0019C160  4B F6 42 E5 */	bl func_80136E84
+/* 801D2BA0 0019C160  4B F6 42 E5 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D2BA4 0019C164  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D2BA8 0019C168  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D2BAC 0019C16C  80 BE 00 04 */	lwz r5, 4(r30)
@@ -914,7 +914,7 @@
 /* 801D2BF0 0019C1B0  7C 08 03 A6 */	mtlr r0
 /* 801D2BF4 0019C1B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2BF8 0019C1B8  4E 80 00 20 */	blr 
-.endfn func_801D2B78
+.endfn func_801D2B78__6CCur22Fv
 
 .fn func_801D2BFC, global
 /* 801D2BFC 0019C1BC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1020,7 +1020,7 @@
 /* 801D2D54 0019C314  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801D2D58 0019C318  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2D5C 0019C31C  7C 7F 1B 78 */	mr r31, r3
-/* 801D2D60 0019C320  4B FF F2 61 */	bl __ct__CBaseCur
+/* 801D2D60 0019C320  4B FF F2 61 */	bl __ct__8CBaseCurFv
 /* 801D2D64 0019C324  3C 80 80 53 */	lis r4, __vt__7CSubCur@ha
 /* 801D2D68 0019C328  7F E3 FB 78 */	mr r3, r31
 /* 801D2D6C 0019C32C  38 84 7F F0 */	addi r4, r4, __vt__7CSubCur@l
@@ -1032,7 +1032,7 @@
 /* 801D2D84 0019C344  4E 80 00 20 */	blr 
 .endfn __ct__CSubCur
 
-.fn __dt__CSubCur, global
+.fn __dt__7CSubCurFv, global
 /* 801D2D88 0019C348  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2D8C 0019C34C  7C 08 02 A6 */	mflr r0
 /* 801D2D90 0019C350  2C 03 00 00 */	cmpwi r3, 0
@@ -1050,9 +1050,9 @@
 /* 801D2DBC 0019C37C  7C 08 03 A6 */	mtlr r0
 /* 801D2DC0 0019C380  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2DC4 0019C384  4E 80 00 20 */	blr 
-.endfn __dt__CSubCur
+.endfn __dt__7CSubCurFv
 
-.fn func_801D2DC8, global
+.fn func_801D2DC8__7CSubCurFv, global
 /* 801D2DC8 0019C388  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2DCC 0019C38C  7C 08 02 A6 */	mflr r0
 /* 801D2DD0 0019C390  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1063,7 +1063,7 @@
 /* 801D2DE4 0019C3A4  38 BF 03 8D */	addi r5, r31, 0x38d
 /* 801D2DE8 0019C3A8  80 83 00 04 */	lwz r4, 4(r3)
 /* 801D2DEC 0019C3AC  38 63 00 08 */	addi r3, r3, 8
-/* 801D2DF0 0019C3B0  4B F6 40 95 */	bl func_80136E84
+/* 801D2DF0 0019C3B0  4B F6 40 95 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801D2DF4 0019C3B4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801D2DF8 0019C3B8  38 9E 00 0C */	addi r4, r30, 0xc
 /* 801D2DFC 0019C3BC  80 BE 00 04 */	lwz r5, 4(r30)
@@ -1086,7 +1086,7 @@
 /* 801D2E40 0019C400  7C 08 03 A6 */	mtlr r0
 /* 801D2E44 0019C404  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D2E48 0019C408  4E 80 00 20 */	blr 
-.endfn func_801D2DC8
+.endfn func_801D2DC8__7CSubCurFv
 
 .fn func_801D2E4C, global
 /* 801D2E4C 0019C40C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1257,10 +1257,10 @@
 .obj __vt__7CSubCur, global
 	.4byte __RTTI__7CSubCur
 	.4byte 0
-	.4byte func_801D2DC8
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2DC8__7CSubCurFv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__7CSubCur
 
 .obj CSubCur_hierarchy, global
@@ -1273,11 +1273,11 @@
 .obj __vt__6CCur22, global
 	.4byte __RTTI__6CCur22
 	.4byte 0
-	.4byte func_801D2B78
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
-	.4byte __dt__801D2B38
+	.4byte func_801D2B78__6CCur22Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
+	.4byte __dt__6CCur22Fv
 .endobj __vt__6CCur22
 
 .obj CCur22_hierarchy, global
@@ -1290,11 +1290,11 @@
 .obj __vt__6CCur18, global
 	.4byte __RTTI__6CCur18
 	.4byte 0
-	.4byte func_801D2A78
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
-	.4byte __dt__CCur18
+	.4byte func_801D2A78__6CCur18Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
+	.4byte __dt__6CCur18Fv
 .endobj __vt__6CCur18
 
 .obj CCur18_hierarchy, global
@@ -1308,10 +1308,10 @@
 .obj __vt__6CCur16, global
 	.4byte __RTTI__6CCur16
 	.4byte 0
-	.4byte func_801D2978
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2978__6CCur16Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur16
 
 .obj CCur16_hierarchy, global
@@ -1325,10 +1325,10 @@
 .obj __vt__6CCur15, global
 	.4byte __RTTI__6CCur15
 	.4byte 0
-	.4byte func_801D2878
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2878__6CCur15Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur15
 
 .obj CCur15_hierarchy, global
@@ -1342,10 +1342,10 @@
 .obj __vt__6CCur14, global
 	.4byte __RTTI__6CCur14
 	.4byte 0
-	.4byte func_801D2778
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2778__6CCur14Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur14
 
 .obj CCur14_hierarchy, global
@@ -1359,10 +1359,10 @@
 .obj __vt__6CCur11, global
 	.4byte __RTTI__6CCur11
 	.4byte 0
-	.4byte func_801D25EC
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D25EC__6CCur11Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur11
 
 .obj CCur11_hierarchy, global
@@ -1376,10 +1376,10 @@
 .obj __vt__6CCur09, global
 	.4byte __RTTI__6CCur09
 	.4byte 0
-	.4byte func_801D2478
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2478__6CCur09Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur09
 
 .obj CCur09_hierarchy, global
@@ -1393,10 +1393,10 @@
 .obj __vt__6CCur07, global
 	.4byte __RTTI__6CCur07
 	.4byte 0
-	.4byte func_801D2378
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D2378__6CCur07Fv
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__6CCur07
 
 .obj CCur07_hierarchy, global
@@ -1411,9 +1411,9 @@
 	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
-	.4byte func_801D20DC
-	.4byte func_801D2144
-	.4byte func_801D2180
+	.4byte func_801D20DC__8CBaseCurFv
+	.4byte func_801D2144__8CBaseCurFv
+	.4byte func_801D2180__8CBaseCurFv
 .endobj __vt__8CBaseCur
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1772,7 +1772,7 @@
 
 .obj "@eti_8002B814", local
 .hidden "@eti_8002B814"
-	.4byte __dt__CBaseCur
+	.4byte __dt__8CBaseCurFv
 	.4byte 0x00000040
 	.4byte "@etb_800114EC"
 .endobj "@eti_8002B814"
@@ -1786,14 +1786,14 @@
 
 .obj "@eti_8002B82C", local
 .hidden "@eti_8002B82C"
-	.4byte func_801D20DC
+	.4byte func_801D20DC__8CBaseCurFv
 	.4byte 0x00000068
 	.4byte "@etb_800114FC"
 .endobj "@eti_8002B82C"
 
 .obj "@eti_8002B838", local
 .hidden "@eti_8002B838"
-	.4byte func_801D2180
+	.4byte func_801D2180__8CBaseCurFv
 	.4byte 0x0000004C
 	.4byte "@etb_80011504"
 .endobj "@eti_8002B838"
@@ -1821,14 +1821,14 @@
 
 .obj "@eti_8002B868", local
 .hidden "@eti_8002B868"
-	.4byte __dt__CCur07
+	.4byte __dt__6CCur07Fv
 	.4byte 0x00000040
 	.4byte "@etb_80011524"
 .endobj "@eti_8002B868"
 
 .obj "@eti_8002B874", local
 .hidden "@eti_8002B874"
-	.4byte func_801D2378
+	.4byte func_801D2378__6CCur07Fv
 	.4byte 0x00000084
 	.4byte "@etb_8001152C"
 .endobj "@eti_8002B874"
@@ -1842,14 +1842,14 @@
 
 .obj "@eti_8002B88C", local
 .hidden "@eti_8002B88C"
-	.4byte __dt__CCur09
+	.4byte __dt__6CCur09Fv
 	.4byte 0x00000040
 	.4byte "@etb_8001153C"
 .endobj "@eti_8002B88C"
 
 .obj "@eti_8002B898", local
 .hidden "@eti_8002B898"
-	.4byte func_801D2478
+	.4byte func_801D2478__6CCur09Fv
 	.4byte 0x00000070
 	.4byte "@etb_80011544"
 .endobj "@eti_8002B898"
@@ -1870,14 +1870,14 @@
 
 .obj "@eti_8002B8BC", local
 .hidden "@eti_8002B8BC"
-	.4byte __dt__CCur11
+	.4byte __dt__6CCur11Fv
 	.4byte 0x00000040
 	.4byte "@etb_8001155C"
 .endobj "@eti_8002B8BC"
 
 .obj "@eti_8002B8C8", local
 .hidden "@eti_8002B8C8"
-	.4byte func_801D25EC
+	.4byte func_801D25EC__6CCur11Fv
 	.4byte 0x00000084
 	.4byte "@etb_80011564"
 .endobj "@eti_8002B8C8"
@@ -1898,14 +1898,14 @@
 
 .obj "@eti_8002B8EC", local
 .hidden "@eti_8002B8EC"
-	.4byte __dt__CCur14
+	.4byte __dt__6CCur14Fv
 	.4byte 0x00000040
 	.4byte "@etb_8001157C"
 .endobj "@eti_8002B8EC"
 
 .obj "@eti_8002B8F8", local
 .hidden "@eti_8002B8F8"
-	.4byte func_801D2778
+	.4byte func_801D2778__6CCur14Fv
 	.4byte 0x00000084
 	.4byte "@etb_80011584"
 .endobj "@eti_8002B8F8"
@@ -1919,14 +1919,14 @@
 
 .obj "@eti_8002B910", local
 .hidden "@eti_8002B910"
-	.4byte __dt__CCur15
+	.4byte __dt__6CCur15Fv
 	.4byte 0x00000040
 	.4byte "@etb_80011594"
 .endobj "@eti_8002B910"
 
 .obj "@eti_8002B91C", local
 .hidden "@eti_8002B91C"
-	.4byte func_801D2878
+	.4byte func_801D2878__6CCur15Fv
 	.4byte 0x00000084
 	.4byte "@etb_8001159C"
 .endobj "@eti_8002B91C"
@@ -1940,14 +1940,14 @@
 
 .obj "@eti_8002B934", local
 .hidden "@eti_8002B934"
-	.4byte __dt__CCur16
+	.4byte __dt__6CCur16Fv
 	.4byte 0x00000040
 	.4byte "@etb_800115AC"
 .endobj "@eti_8002B934"
 
 .obj "@eti_8002B940", local
 .hidden "@eti_8002B940"
-	.4byte func_801D2978
+	.4byte func_801D2978__6CCur16Fv
 	.4byte 0x00000084
 	.4byte "@etb_800115B4"
 .endobj "@eti_8002B940"
@@ -1961,14 +1961,14 @@
 
 .obj "@eti_8002B958", local
 .hidden "@eti_8002B958"
-	.4byte __dt__CCur18
+	.4byte __dt__6CCur18Fv
 	.4byte 0x00000040
 	.4byte "@etb_800115C4"
 .endobj "@eti_8002B958"
 
 .obj "@eti_8002B964", local
 .hidden "@eti_8002B964"
-	.4byte func_801D2A78
+	.4byte func_801D2A78__6CCur18Fv
 	.4byte 0x00000084
 	.4byte "@etb_800115CC"
 .endobj "@eti_8002B964"
@@ -1982,14 +1982,14 @@
 
 .obj "@eti_8002B97C", local
 .hidden "@eti_8002B97C"
-	.4byte __dt__801D2B38
+	.4byte __dt__6CCur22Fv
 	.4byte 0x00000040
 	.4byte "@etb_800115DC"
 .endobj "@eti_8002B97C"
 
 .obj "@eti_8002B988", local
 .hidden "@eti_8002B988"
-	.4byte func_801D2B78
+	.4byte func_801D2B78__6CCur22Fv
 	.4byte 0x00000084
 	.4byte "@etb_800115E4"
 .endobj "@eti_8002B988"
@@ -2024,14 +2024,14 @@
 
 .obj "@eti_8002B9C4", local
 .hidden "@eti_8002B9C4"
-	.4byte __dt__CSubCur
+	.4byte __dt__7CSubCurFv
 	.4byte 0x00000040
 	.4byte "@etb_8001160C"
 .endobj "@eti_8002B9C4"
 
 .obj "@eti_8002B9D0", local
 .hidden "@eti_8002B9D0"
-	.4byte func_801D2DC8
+	.4byte func_801D2DC8__7CSubCurFv
 	.4byte 0x00000084
 	.4byte "@etb_80011614"
 .endobj "@eti_8002B9D0"

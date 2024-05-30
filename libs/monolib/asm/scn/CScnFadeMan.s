@@ -42,7 +42,7 @@
 /* 8049C4C8 00465A88  4E 80 00 20 */	blr 
 .endfn __ct__CScnFadeMan
 
-.fn __dt__CScnFadeMan, global
+.fn __dt__11CScnFadeManFv, global
 /* 8049C4CC 00465A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C4D0 00465A90  7C 08 02 A6 */	mflr r0
 /* 8049C4D4 00465A94  2C 03 00 00 */	cmpwi r3, 0
@@ -70,7 +70,7 @@
 /* 8049C528 00465AE8  7C 08 03 A6 */	mtlr r0
 /* 8049C52C 00465AEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049C530 00465AF0  4E 80 00 20 */	blr 
-.endfn __dt__CScnFadeMan
+.endfn __dt__11CScnFadeManFv
 
 .fn func_8049C534, global
 /* 8049C534 00465AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -290,7 +290,7 @@
 .obj __vt__11CScnFadeMan, global
 	.4byte __RTTI__11CScnFadeMan
 	.4byte 0
-	.4byte __dt__CScnFadeMan
+	.4byte __dt__11CScnFadeManFv
 	.4byte func_8049C678
 .endobj __vt__11CScnFadeMan
 
@@ -340,7 +340,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001F48C"
 
 .obj "@etb_8001F4A8", local
@@ -351,7 +351,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001F4A8"
 
 .obj "@etb_8001F4C4", local
@@ -383,7 +383,7 @@
 
 .obj "@eti_80036F50", local
 .hidden "@eti_80036F50"
-	.4byte __dt__CScnFadeMan
+	.4byte __dt__11CScnFadeManFv
 	.4byte 0x00000068
 	.4byte "@etb_8001F4A8"
 .endobj "@eti_80036F50"

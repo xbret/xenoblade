@@ -22,7 +22,7 @@
 /* 80451F60 0041B520  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFileJobReadDvd
 
-.fn __dt__CDeviceFileJobReadDvd, global
+.fn __dt__21CDeviceFileJobReadDvdFv, global
 /* 80451F64 0041B524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451F68 0041B528  7C 08 02 A6 */	mflr r0
 /* 80451F6C 0041B52C  2C 03 00 00 */	cmpwi r3, 0
@@ -34,7 +34,7 @@
 /* 80451F84 0041B544  41 82 00 20 */	beq .L_80451FA4
 /* 80451F88 0041B548  41 82 00 0C */	beq .L_80451F94
 /* 80451F8C 0041B54C  38 80 00 00 */	li r4, 0
-/* 80451F90 0041B550  4B FE 5B 39 */	bl __dt__CWorkThread
+/* 80451F90 0041B550  4B FE 5B 39 */	bl __dt__11CWorkThreadFv
 .L_80451F94:
 /* 80451F94 0041B554  2C 1F 00 00 */	cmpwi r31, 0
 /* 80451F98 0041B558  40 81 00 0C */	ble .L_80451FA4
@@ -48,7 +48,7 @@
 /* 80451FB4 0041B574  7C 08 03 A6 */	mtlr r0
 /* 80451FB8 0041B578  38 21 00 10 */	addi r1, r1, 0x10
 /* 80451FBC 0041B57C  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFileJobReadDvd
+.endfn __dt__21CDeviceFileJobReadDvdFv
 
 .fn func_80451FC0, global
 /* 80451FC0 0041B580  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -202,7 +202,7 @@
 /* 804521B0 0041B770  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 804521B4 0041B774  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 804521B8 0041B778  41 82 00 0C */	beq .L_804521C4
-/* 804521BC 0041B77C  4B FE 68 3D */	bl CWorkThread_WorkThreadEvent4
+/* 804521BC 0041B77C  4B FE 68 3D */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 804521C0 0041B780  48 00 00 3C */	b .L_804521FC
 .L_804521C4:
 /* 804521C4 0041B784  4B FE 63 B5 */	bl func_80438578
@@ -217,7 +217,7 @@
 /* 804521E8 0041B7A8  4B FF CE 49 */	bl func_8044F030
 .L_804521EC:
 /* 804521EC 0041B7AC  7F E3 FB 78 */	mr r3, r31
-/* 804521F0 0041B7B0  4B FE 68 09 */	bl CWorkThread_WorkThreadEvent4
+/* 804521F0 0041B7B0  4B FE 68 09 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 804521F4 0041B7B4  48 00 00 08 */	b .L_804521FC
 .L_804521F8:
 /* 804521F8 0041B7B8  38 60 00 00 */	li r3, 0
@@ -243,7 +243,7 @@
 /* 80452238 0041B7F8  38 60 00 00 */	li r3, 0
 /* 8045223C 0041B7FC  48 00 00 08 */	b .L_80452244
 .L_80452240:
-/* 80452240 0041B800  4B FE 67 E5 */	bl CWorkThread_WorkThreadEvent5
+/* 80452240 0041B800  4B FE 67 E5 */	bl WorkThreadEvent5__11CWorkThreadFv
 .L_80452244:
 /* 80452244 0041B804  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80452248 0041B808  7C 08 03 A6 */	mtlr r0
@@ -290,44 +290,44 @@
 .obj __vt__21CDeviceFileJobReadDvd, global
 	.4byte __RTTI__21CDeviceFileJobReadDvd
 	.4byte 0
-	.4byte __dt__CDeviceFileJobReadDvd
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__21CDeviceFileJobReadDvdFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceFileJobReadDvd_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFileJobReadDvd_WorkThreadEvent4
 	.4byte CDeviceFileJobReadDvd_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte func_80451EC0
 	.4byte func_80451FC0
 	.4byte func_80452054
@@ -418,7 +418,7 @@
 
 .obj "@eti_80034C88", local
 .hidden "@eti_80034C88"
-	.4byte __dt__CDeviceFileJobReadDvd
+	.4byte __dt__21CDeviceFileJobReadDvdFv
 	.4byte 0x0000005C
 	.4byte "@etb_8001CFB4"
 .endobj "@eti_80034C88"

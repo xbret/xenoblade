@@ -207,7 +207,7 @@
 /* 8043C5D8 00405B98  4E 80 00 20 */	blr 
 .endfn __dt__8043C59C
 
-.fn __dt__CViewFrame, global
+.fn __dt__10CViewFrameFv, global
 /* 8043C5DC 00405B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C5E0 00405BA0  7C 08 02 A6 */	mflr r0
 /* 8043C5E4 00405BA4  2C 03 00 00 */	cmpwi r3, 0
@@ -225,7 +225,7 @@
 /* 8043C610 00405BD0  7C 08 03 A6 */	mtlr r0
 /* 8043C614 00405BD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C618 00405BD8  4E 80 00 20 */	blr 
-.endfn __dt__CViewFrame
+.endfn __dt__10CViewFrameFv
 
 .fn __dt___reslist_base_IWorkEvent, global
 /* 8043C61C 00405BDC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -359,7 +359,7 @@
 /* 8043C7DC 00405D9C  4E 80 00 20 */	blr
 .endfn __dt__CMsgParam_10
 
-.fn __dt__CView, global
+.fn __dt__5CViewFv, global
 /* 8043C7E0 00405DA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043C7E4 00405DA4  7C 08 02 A6 */	mflr r0
 /* 8043C7E8 00405DA8  2C 03 00 00 */	cmpwi r3, 0
@@ -463,10 +463,10 @@
 .L_8043C948:
 /* 8043C948 00405F08  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8043C94C 00405F0C  38 80 00 00 */	li r4, 0
-/* 8043C950 00405F10  48 00 C6 C9 */	bl __dt__CFontLayer
+/* 8043C950 00405F10  48 00 C6 C9 */	bl __dt__10CFontLayerFv
 /* 8043C954 00405F14  7F C3 F3 78 */	mr r3, r30
 /* 8043C958 00405F18  38 80 00 00 */	li r4, 0
-/* 8043C95C 00405F1C  4B FF B1 6D */	bl __dt__CWorkThread
+/* 8043C95C 00405F1C  4B FF B1 6D */	bl __dt__11CWorkThreadFv
 /* 8043C960 00405F20  2C 1F 00 00 */	cmpwi r31, 0
 /* 8043C964 00405F24  40 81 00 0C */	ble .L_8043C970
 /* 8043C968 00405F28  7F C3 F3 78 */	mr r3, r30
@@ -480,7 +480,7 @@
 /* 8043C984 00405F44  7C 08 03 A6 */	mtlr r0
 /* 8043C988 00405F48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043C98C 00405F4C  4E 80 00 20 */	blr 
-.endfn __dt__CView
+.endfn __dt__5CViewFv
 
 .fn func_8043C990, global
 /* 8043C990 00405F50  80 C3 00 00 */	lwz r6, 0(r3)
@@ -4014,7 +4014,7 @@
 /* 8043F9B0 00408F70  90 1F 03 FC */	stw r0, 0x3fc(r31)
 .L_8043F9B4:
 /* 8043F9B4 00408F74  7F E3 FB 78 */	mr r3, r31
-/* 8043F9B8 00408F78  4B FF 90 41 */	bl CWorkThread_WorkThreadEvent4
+/* 8043F9B8 00408F78  4B FF 90 41 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8043F9BC 00408F7C  48 00 00 08 */	b .L_8043F9C4
 .L_8043F9C0:
 /* 8043F9C0 00408F80  38 60 00 00 */	li r3, 0
@@ -4123,7 +4123,7 @@
 /* 8043FB24 004090E4  7F E3 FB 78 */	mr r3, r31
 /* 8043FB28 004090E8  48 00 29 C5 */	bl func_804424EC
 /* 8043FB2C 004090EC  7F E3 FB 78 */	mr r3, r31
-/* 8043FB30 004090F0  4B FF 8E F5 */	bl CWorkThread_WorkThreadEvent5
+/* 8043FB30 004090F0  4B FF 8E F5 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8043FB34 004090F4  48 00 00 08 */	b .L_8043FB3C
 .L_8043FB38:
 /* 8043FB38 004090F8  38 60 00 00 */	li r3, 0
@@ -4244,44 +4244,44 @@
 .obj __vt__5CView, global
 	.4byte __RTTI__5CView
 	.4byte 0
-	.4byte __dt__CView
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__5CViewFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CView_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CView_WorkThreadEvent4
 	.4byte CView_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__5CView
 	.4byte 0xFFFFFE3C
 	.4byte func_8043FBC4
@@ -4439,16 +4439,16 @@
 	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__CViewFrame
+	.4byte __dt__10CViewFrameFv
 	.4byte 0x0780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
 	.4byte 0x0680001E
 	.4byte 0x000001C4
-	.4byte __dt__CFontLayer
+	.4byte __dt__10CFontLayerFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001C3C0"
 
 .obj "@etb_8001C43C", local
@@ -4500,7 +4500,7 @@
 	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__CViewFrame
+	.4byte __dt__10CViewFrameFv
 	.4byte 0x8780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
@@ -4515,13 +4515,13 @@
 	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__CViewFrame
+	.4byte __dt__10CViewFrameFv
 	.4byte 0x0780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__CFontLayer
+	.4byte __dt__10CFontLayerFv
 .endobj "@etb_8001C464"
 
 .obj "@etb_8001C500", local
@@ -4704,7 +4704,7 @@
 
 .obj "@eti_8003407C", local
 .hidden "@eti_8003407C"
-	.4byte __dt__CViewFrame
+	.4byte __dt__10CViewFrameFv
 	.4byte 0x00000040
 	.4byte "@etb_8001C444"
 .endobj "@eti_8003407C"
@@ -4732,7 +4732,7 @@
 
 .obj "@eti_800340AC", local
 .hidden "@eti_800340AC"
-	.4byte __dt__CView
+	.4byte __dt__5CViewFv
 	.4byte 0x000001B0
 	.4byte "@etb_8001C464"
 .endobj "@eti_800340AC"

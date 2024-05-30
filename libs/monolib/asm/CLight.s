@@ -672,7 +672,7 @@
 .obj __vt__6CLight, global
 	.4byte __RTTI__6CLight
 	.4byte 0
-	.4byte __dt__CLight
+	.4byte __dt__6CLightFv
 	.4byte 0
 .endobj __vt__6CLight
 

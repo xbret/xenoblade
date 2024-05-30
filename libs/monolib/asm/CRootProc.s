@@ -11,7 +11,7 @@
 /* 8043BC90 00405250  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8043BC94 00405254  48 00 91 61 */	bl func_80444DF4
 /* 8043BC98 00405258  48 00 92 25 */	bl func_80444EBC
-/* 8043BC9C 0040525C  4B FF B9 19 */	bl getHeapIndex
+/* 8043BC9C 0040525C  4B FF B9 19 */	bl getHeapIndex__Fv
 /* 8043BCA0 00405260  7C 64 1B 78 */	mr r4, r3
 /* 8043BCA4 00405264  38 60 00 54 */	li r3, 0x54
 /* 8043BCA8 00405268  4B FF 8D B5 */	bl heap_malloc
@@ -45,7 +45,7 @@
 /* 8043BD14 004052D4  38 80 00 00 */	li r4, 0
 /* 8043BD18 004052D8  38 A0 00 00 */	li r5, 0
 /* 8043BD1C 004052DC  48 00 8F 59 */	bl func_80444C74
-/* 8043BD20 004052E0  4B FF B8 95 */	bl getHeapIndex
+/* 8043BD20 004052E0  4B FF B8 95 */	bl getHeapIndex__Fv
 /* 8043BD24 004052E4  7C 64 1B 78 */	mr r4, r3
 /* 8043BD28 004052E8  38 60 00 54 */	li r3, 0x54
 /* 8043BD2C 004052EC  4B FF 8D 31 */	bl heap_malloc
@@ -79,7 +79,7 @@
 /* 8043BD98 00405358  38 80 00 00 */	li r4, 0
 /* 8043BD9C 0040535C  38 A0 00 00 */	li r5, 0
 /* 8043BDA0 00405360  48 00 8E D5 */	bl func_80444C74
-/* 8043BDA4 00405364  4B FF B8 11 */	bl getHeapIndex
+/* 8043BDA4 00405364  4B FF B8 11 */	bl getHeapIndex__Fv
 /* 8043BDA8 00405368  7C 64 1B 78 */	mr r4, r3
 /* 8043BDAC 0040536C  38 60 00 54 */	li r3, 0x54
 /* 8043BDB0 00405370  4B FF 8C AD */	bl heap_malloc
@@ -113,7 +113,7 @@
 /* 8043BE1C 004053DC  38 80 00 00 */	li r4, 0
 /* 8043BE20 004053E0  38 A0 00 00 */	li r5, 0
 /* 8043BE24 004053E4  48 00 8E 51 */	bl func_80444C74
-/* 8043BE28 004053E8  4B FF B7 8D */	bl getHeapIndex
+/* 8043BE28 004053E8  4B FF B7 8D */	bl getHeapIndex__Fv
 /* 8043BE2C 004053EC  7C 64 1B 78 */	mr r4, r3
 /* 8043BE30 004053F0  38 60 00 54 */	li r3, 0x54
 /* 8043BE34 004053F4  4B FF 8C 29 */	bl heap_malloc
@@ -154,7 +154,7 @@
 /* 8043BEBC 0040547C  4E 80 00 20 */	blr 
 .endfn __ct__CRootProc
 
-.fn __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc, global
+.fn "__dt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv", global
 /* 8043BEC0 00405480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043BEC4 00405484  7C 08 02 A6 */	mflr r0
 /* 8043BEC8 00405488  2C 03 00 00 */	cmpwi r3, 0
@@ -165,7 +165,7 @@
 /* 8043BEDC 0040549C  7C 7E 1B 78 */	mr r30, r3
 /* 8043BEE0 004054A0  41 82 00 1C */	beq .L_8043BEFC
 /* 8043BEE4 004054A4  38 80 00 00 */	li r4, 0
-/* 8043BEE8 004054A8  48 00 8C 51 */	bl __dt__CProcess
+/* 8043BEE8 004054A8  48 00 8C 51 */	bl __dt__8CProcessFv
 /* 8043BEEC 004054AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8043BEF0 004054B0  40 81 00 0C */	ble .L_8043BEFC
 /* 8043BEF4 004054B4  7F C3 F3 78 */	mr r3, r30
@@ -178,7 +178,7 @@
 /* 8043BF0C 004054CC  7C 08 03 A6 */	mtlr r0
 /* 8043BF10 004054D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043BF14 004054D4  4E 80 00 20 */	blr
-.endfn __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc
+.endfn "__dt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 
 .fn func_8043BF18, global
 /* 8043BF18 004054D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -217,9 +217,9 @@
 /* 8043BF78 00405538  7C 08 02 A6 */	mflr r0
 /* 8043BF7C 0040553C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8043BF80 00405540  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8043BF84 00405544  48 00 CA C1 */	bl func_80448A44
+/* 8043BF84 00405544  48 00 CA C1 */	bl func_80448A44__Fv
 /* 8043BF88 00405548  48 00 8F 35 */	bl func_80444EBC
-/* 8043BF8C 0040554C  4B FF B6 29 */	bl getHeapIndex
+/* 8043BF8C 0040554C  4B FF B6 29 */	bl getHeapIndex__Fv
 /* 8043BF90 00405550  7C 64 1B 78 */	mr r4, r3
 /* 8043BF94 00405554  38 60 00 54 */	li r3, 0x54
 /* 8043BF98 00405558  4B FF 8A C5 */	bl heap_malloc
@@ -253,7 +253,7 @@
 /* 8043C004 004055C4  38 80 00 00 */	li r4, 0
 /* 8043C008 004055C8  38 A0 00 00 */	li r5, 0
 /* 8043C00C 004055CC  48 00 8C 69 */	bl func_80444C74
-/* 8043C010 004055D0  4B FF B5 A5 */	bl getHeapIndex
+/* 8043C010 004055D0  4B FF B5 A5 */	bl getHeapIndex__Fv
 /* 8043C014 004055D4  7C 64 1B 78 */	mr r4, r3
 /* 8043C018 004055D8  38 60 00 54 */	li r3, 0x54
 /* 8043C01C 004055DC  4B FF 8A 41 */	bl heap_malloc
@@ -287,7 +287,7 @@
 /* 8043C088 00405648  38 80 00 00 */	li r4, 0
 /* 8043C08C 0040564C  38 A0 00 00 */	li r5, 0
 /* 8043C090 00405650  48 00 8B E5 */	bl func_80444C74
-/* 8043C094 00405654  4B FF B5 21 */	bl getHeapIndex
+/* 8043C094 00405654  4B FF B5 21 */	bl getHeapIndex__Fv
 /* 8043C098 00405658  7C 64 1B 78 */	mr r4, r3
 /* 8043C09C 0040565C  38 60 00 54 */	li r3, 0x54
 /* 8043C0A0 00405660  4B FF 89 BD */	bl heap_malloc
@@ -321,7 +321,7 @@
 /* 8043C10C 004056CC  38 80 00 00 */	li r4, 0
 /* 8043C110 004056D0  38 A0 00 00 */	li r5, 0
 /* 8043C114 004056D4  48 00 8B 61 */	bl func_80444C74
-/* 8043C118 004056D8  4B FF B4 9D */	bl getHeapIndex
+/* 8043C118 004056D8  4B FF B4 9D */	bl getHeapIndex__Fv
 /* 8043C11C 004056DC  7C 64 1B 78 */	mr r4, r3
 /* 8043C120 004056E0  38 60 00 54 */	li r3, 0x54
 /* 8043C124 004056E4  4B FF 89 39 */	bl heap_malloc
@@ -393,7 +393,7 @@
 /* 8043C1D4 00405794  4E 80 00 20 */	blr 
 .endfn func_8043C1D4
 
-.fn func_8043C1D8, global
+.fn "func_8043C1D8__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv", global
 /* 8043C1D8 00405798  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C1DC 0040579C  7C 08 02 A6 */	mflr r0
 /* 8043C1E0 004057A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -413,9 +413,9 @@
 /* 8043C214 004057D4  7C 08 03 A6 */	mtlr r0
 /* 8043C218 004057D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C21C 004057DC  4E 80 00 20 */	blr 
-.endfn func_8043C1D8
+.endfn "func_8043C1D8__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 
-.fn func_8043C220, global
+.fn "func_8043C220__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv", global
 /* 8043C220 004057E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C224 004057E4  7C 08 02 A6 */	mflr r0
 /* 8043C228 004057E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -435,7 +435,7 @@
 /* 8043C25C 0040581C  7C 08 03 A6 */	mtlr r0
 /* 8043C260 00405820  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C264 00405824  4E 80 00 20 */	blr 
-.endfn func_8043C220
+.endfn "func_8043C220__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 
 .fn __dt___unnamed_CTaskManager_cpp_CRootProc, global
 /* 8043C268 00405828  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -449,7 +449,7 @@
 /* 8043C288 00405848  41 82 00 20 */	beq .L_8043C2A8
 /* 8043C28C 0040584C  41 82 00 0C */	beq .L_8043C298
 /* 8043C290 00405850  38 80 00 00 */	li r4, 0
-/* 8043C294 00405854  48 00 88 A5 */	bl __dt__CProcess
+/* 8043C294 00405854  48 00 88 A5 */	bl __dt__8CProcessFv
 .L_8043C298:
 /* 8043C298 00405858  2C 1F 00 00 */	cmpwi r31, 0
 /* 8043C29C 0040585C  40 81 00 0C */	ble .L_8043C2A8
@@ -488,12 +488,12 @@
 	.4byte "__RTTI__Q226@unnamed@CTaskManager_cpp@9CRootProc"
 	.4byte 0
 	.4byte __dt___unnamed_CTaskManager_cpp_CRootProc
-	.4byte CChildListNode_Reset
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8043C1D4
 	.4byte func_8043C1D0
 	.4byte func_8043C1CC
 	.4byte func_8043C1C8
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"
 
 .obj _unnamed_CTaskManager_cpp_CRootProc_hierarchy, global
@@ -512,13 +512,13 @@
 .obj "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>", global
 	.4byte "__RTTI__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 	.4byte 0
-	.4byte __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc
-	.4byte CChildListNode_Reset
+	.4byte "__dt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_8043C1D8
-	.4byte func_8043C220
-	.4byte CProcess_func_80043F20
+	.4byte "func_8043C1D8__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
+	.4byte "func_8043C220__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 
 .obj CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy, global
@@ -632,7 +632,7 @@
 
 .obj "@eti_80034010", local
 .hidden "@eti_80034010"
-	.4byte __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc
+	.4byte "__dt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001C388"
 .endobj "@eti_80034010"
@@ -660,14 +660,14 @@
 
 .obj "@eti_80034040", local
 .hidden "@eti_80034040"
-	.4byte func_8043C1D8
+	.4byte "func_8043C1D8__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001C3A8"
 .endobj "@eti_80034040"
 
 .obj "@eti_8003404C", local
 .hidden "@eti_8003404C"
-	.4byte func_8043C220
+	.4byte "func_8043C220__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001C3B0"
 .endobj "@eti_8003404C"

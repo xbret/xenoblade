@@ -7385,7 +7385,7 @@
 .obj __vt__Q22cf7CtrlAct, global
 	.4byte __RTTI__Q22cf7CtrlAct
 	.4byte 0
-	.4byte __dt__cf_CtrlAct
+	.4byte __dt__Q22cf7CtrlActFv
 	.4byte 0
 	.4byte func_80096854
 	.4byte func_800D5860
@@ -7706,7 +7706,7 @@
 	.4byte __dt__80087688
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__cf_CtrlBase
+	.4byte __dt__Q22cf8CtrlBaseFv
 .endobj "@etb_8000A4FC"
 
 .obj "@etb_8000A52C", local

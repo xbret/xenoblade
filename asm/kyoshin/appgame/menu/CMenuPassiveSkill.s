@@ -57,7 +57,7 @@
 /* 80263224 0022C7E4  4E 80 00 20 */	blr
 .endfn __ct__CMenuPassiveSkill
 
-.fn __dt__CMenuPassiveSkill, global
+.fn __dt__17CMenuPassiveSkillFv, global
 /* 80263228 0022C7E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026322C 0022C7EC  7C 08 02 A6 */	mflr r0
 /* 80263230 0022C7F0  2C 03 00 00 */	cmpwi r3, 0
@@ -68,13 +68,13 @@
 /* 80263244 0022C804  41 82 00 44 */	beq .L_80263288
 /* 80263248 0022C808  38 80 FF FF */	li r4, -1
 /* 8026324C 0022C80C  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80263250 0022C810  48 00 A2 ED */	bl __dt__UI_CPassiveSkill
+/* 80263250 0022C810  48 00 A2 ED */	bl __dt__Q22UI13CPassiveSkillFv
 /* 80263254 0022C814  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80263258 0022C818  38 80 FF FF */	li r4, -1
-/* 8026325C 0022C81C  4B F6 0C F5 */	bl __dt__CTitleAHelp
+/* 8026325C 0022C81C  4B F6 0C F5 */	bl __dt__11CTitleAHelpFv
 /* 80263260 0022C820  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80263264 0022C824  38 80 FF FF */	li r4, -1
-/* 80263268 0022C828  4B F6 07 69 */	bl __dt__CBgTex
+/* 80263268 0022C828  4B F6 07 69 */	bl __dt__6CBgTexFv
 /* 8026326C 0022C82C  7F C3 F3 78 */	mr r3, r30
 /* 80263270 0022C830  38 80 00 00 */	li r4, 0
 /* 80263274 0022C834  4B E9 BA 99 */	bl __dt__800FED0C
@@ -89,7 +89,7 @@
 /* 80263294 0022C854  7C 08 03 A6 */	mtlr r0
 /* 80263298 0022C858  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026329C 0022C85C  4E 80 00 20 */	blr 
-.endfn __dt__CMenuPassiveSkill
+.endfn __dt__17CMenuPassiveSkillFv
 
 .fn func_802632A0, global
 /* 802632A0 0022C860  94 21 FD A0 */	stwu r1, -0x260(r1)
@@ -117,7 +117,7 @@
 /* 802632F8 0022C8B8  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 802632FC 0022C8BC  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 80263300 0022C8C0  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 80263304 0022C8C4  4B F6 06 CD */	bl __dt__CBgTex
+/* 80263304 0022C8C4  4B F6 06 CD */	bl __dt__6CBgTexFv
 /* 80263308 0022C8C8  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8026330C 0022C8CC  4B F6 09 09 */	bl func_801C3C14
 /* 80263310 0022C8D0  3C 60 80 51 */	lis r3, lbl_805091E4@ha
@@ -158,7 +158,7 @@
 /* 8026339C 0022C95C  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 802633A0 0022C960  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 802633A4 0022C964  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 802633A8 0022C968  4B F6 0B A9 */	bl __dt__CTitleAHelp
+/* 802633A8 0022C968  4B F6 0B A9 */	bl __dt__11CTitleAHelpFv
 /* 802633AC 0022C96C  38 7F 00 80 */	addi r3, r31, 0x80
 /* 802633B0 0022C970  4B F6 0B F5 */	bl CTitleAHelp_load
 /* 802633B4 0022C974  38 61 00 60 */	addi r3, r1, 0x60
@@ -361,7 +361,7 @@
 /* 802636C0 0022CC80  98 1F 02 A8 */	stb r0, 0x2a8(r31)
 /* 802636C4 0022CC84  88 01 02 51 */	lbz r0, 0x251(r1)
 /* 802636C8 0022CC88  98 1F 02 A9 */	stb r0, 0x2a9(r31)
-/* 802636CC 0022CC8C  48 00 9E 71 */	bl __dt__UI_CPassiveSkill
+/* 802636CC 0022CC8C  48 00 9E 71 */	bl __dt__Q22UI13CPassiveSkillFv
 /* 802636D0 0022CC90  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802636D4 0022CC94  48 00 9E D5 */	bl func_8026D5A8
 /* 802636D8 0022CC98  2C 1F 00 00 */	cmpwi r31, 0
@@ -386,7 +386,7 @@
 /* 80263714 0022CCD4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80263718 0022CCD8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8026371C 0022CCDC  7C 7F 1B 78 */	mr r31, r3
-/* 80263720 0022CCE0  48 1E 53 25 */	bl func_80448A44
+/* 80263720 0022CCE0  48 1E 53 25 */	bl func_80448A44__Fv
 /* 80263724 0022CCE4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80263728 0022CCE8  7F E4 FB 78 */	mr r4, r31
 /* 8026372C 0022CCEC  41 82 00 08 */	beq .L_80263734
@@ -525,7 +525,7 @@
 /* 802638F4 0022CEB4  38 60 00 00 */	li r3, 0
 /* 802638F8 0022CEB8  48 00 00 38 */	b .L_80263930
 .L_802638FC:
-/* 802638FC 0022CEBC  48 1D 3C B9 */	bl getHeapIndex
+/* 802638FC 0022CEBC  48 1D 3C B9 */	bl getHeapIndex__Fv
 /* 80263900 0022CEC0  7C 64 1B 78 */	mr r4, r3
 /* 80263904 0022CEC4  38 60 02 B4 */	li r3, 0x2b4
 /* 80263908 0022CEC8  48 1D 11 55 */	bl heap_malloc
@@ -959,7 +959,7 @@
 
 .fn func_80263EB4, global
 /* 80263EB4 0022D474  38 63 FF A8 */	addi r3, r3, -88
-/* 80263EB8 0022D478  4B FF F3 70 */	b __dt__CMenuPassiveSkill
+/* 80263EB8 0022D478  4B FF F3 70 */	b __dt__17CMenuPassiveSkillFv
 .endfn func_80263EB4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -985,13 +985,13 @@
 .obj __vt__17CMenuPassiveSkill, global
 	.4byte __RTTI__17CMenuPassiveSkill
 	.4byte 0
-	.4byte __dt__CMenuPassiveSkill
-	.4byte CChildListNode_Reset
+	.4byte __dt__17CMenuPassiveSkillFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_802632A0
 	.4byte func_8026370C
 	.4byte func_80263778
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__17CMenuPassiveSkill
 	.4byte 0xFFFFFFA8
 	.4byte func_80263EB4
@@ -1068,13 +1068,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1092,25 +1092,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__UI_CPassiveSkill
+	.4byte __dt__Q22UI13CPassiveSkillFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__UI_CPassiveSkill
+	.4byte __dt__Q22UI13CPassiveSkillFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__UI_CPassiveSkill
+	.4byte __dt__Q22UI13CPassiveSkillFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_80017838"
 
 .obj "@etb_800178AC", local
@@ -1202,7 +1202,7 @@
 
 .obj "@eti_80030044", local
 .hidden "@eti_80030044"
-	.4byte __dt__CMenuPassiveSkill
+	.4byte __dt__17CMenuPassiveSkillFv
 	.4byte 0x00000078
 	.4byte "@etb_80017838"
 .endobj "@eti_80030044"

@@ -17,7 +17,7 @@
 /* 8016791C 00130EDC  38 60 00 00 */	li r3, 0
 /* 80167920 00130EE0  48 00 00 E4 */	b .L_80167A04
 .L_80167924:
-/* 80167924 00130EE4  48 2C FC 91 */	bl getHeapIndex
+/* 80167924 00130EE4  48 2C FC 91 */	bl getHeapIndex__Fv
 /* 80167928 00130EE8  7C 64 1B 78 */	mr r4, r3
 /* 8016792C 00130EEC  38 60 4A C8 */	li r3, 0x4ac8
 /* 80167930 00130EF0  48 2C D1 2D */	bl heap_malloc
@@ -241,7 +241,7 @@
 
 .fn func_80167C38, global
 /* 80167C38 001311F8  38 63 FF A8 */	addi r3, r3, -88
-/* 80167C3C 001311FC  4B FF EB FC */	b __dt__CMenuItem
+/* 80167C3C 001311FC  4B FF EB FC */	b __dt__9CMenuItemFv
 .endfn func_80167C38
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -268,13 +268,13 @@
 .obj __vt__9CMenuItem, global
 	.4byte __RTTI__9CMenuItem
 	.4byte 0
-	.4byte __dt__CMenuItem
-	.4byte CChildListNode_Reset
+	.4byte __dt__9CMenuItemFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_801668C4
 	.4byte func_80167624
 	.4byte func_8016769C
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__9CMenuItem
 	.4byte 0xFFFFFFA8
 	.4byte func_80167C38
@@ -332,13 +332,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

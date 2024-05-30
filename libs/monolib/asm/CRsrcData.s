@@ -37,7 +37,7 @@
 /* 80439D30 004032F0  4E 80 00 20 */	blr 
 .endfn __ct__CRsrcData
 
-.fn __dt__CRsrcData, global
+.fn __dt__9CRsrcDataFv, global
 /* 80439D34 004032F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80439D38 004032F8  7C 08 02 A6 */	mflr r0
 /* 80439D3C 004032FC  2C 03 00 00 */	cmpwi r3, 0
@@ -53,13 +53,13 @@
 /* 80439D64 00403324  2C 00 00 00 */	cmpwi r0, 0
 /* 80439D68 00403328  41 82 00 14 */	beq .L_80439D7C
 /* 80439D6C 0040332C  7C 03 03 78 */	mr r3, r0
-/* 80439D70 00403330  4B FF A7 69 */	bl func_804344D8
+/* 80439D70 00403330  4B FF A7 69 */	bl MemManager_804344D8
 /* 80439D74 00403334  38 00 00 00 */	li r0, 0
 /* 80439D78 00403338  90 1E 04 D0 */	stw r0, 0x4d0(r30)
 .L_80439D7C:
 /* 80439D7C 0040333C  7F C3 F3 78 */	mr r3, r30
 /* 80439D80 00403340  38 80 00 00 */	li r4, 0
-/* 80439D84 00403344  4B FF DD 45 */	bl __dt__CWorkThread
+/* 80439D84 00403344  4B FF DD 45 */	bl __dt__11CWorkThreadFv
 /* 80439D88 00403348  2C 1F 00 00 */	cmpwi r31, 0
 /* 80439D8C 0040334C  40 81 00 0C */	ble .L_80439D98
 /* 80439D90 00403350  7F C3 F3 78 */	mr r3, r30
@@ -71,7 +71,7 @@
 /* 80439DA4 00403364  7C 08 03 A6 */	mtlr r0
 /* 80439DA8 00403368  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439DAC 0040336C  4E 80 00 20 */	blr
-.endfn __dt__CRsrcData
+.endfn __dt__9CRsrcDataFv
 
 .fn func_80439DB0, global
 /* 80439DB0 00403370  80 A3 04 D8 */	lwz r5, 0x4d8(r3)
@@ -185,7 +185,7 @@
 /* 80439F24 004034E4  7C FC 3B 78 */	mr r28, r7
 /* 80439F28 004034E8  7D 1D 43 78 */	mr r29, r8
 /* 80439F2C 004034EC  3B FF 5E 4C */	addi r31, r31, lbl_80525E4C@l
-/* 80439F30 004034F0  4B FF D6 85 */	bl getHeapIndex
+/* 80439F30 004034F0  4B FF D6 85 */	bl getHeapIndex__Fv
 /* 80439F34 004034F4  7C 64 1B 78 */	mr r4, r3
 /* 80439F38 004034F8  38 60 04 E8 */	li r3, 0x4e8
 /* 80439F3C 004034FC  4B FF AB 21 */	bl heap_malloc
@@ -272,7 +272,7 @@
 /* 8043A050 00403610  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 8043A054 00403614  41 82 00 10 */	beq .L_8043A064
 /* 8043A058 00403618  7F E3 FB 78 */	mr r3, r31
-/* 8043A05C 0040361C  4B FF E9 9D */	bl CWorkThread_WorkThreadEvent4
+/* 8043A05C 0040361C  4B FF E9 9D */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8043A060 00403620  48 00 00 08 */	b .L_8043A068
 .L_8043A064:
 /* 8043A064 00403624  38 60 00 00 */	li r3, 0
@@ -304,7 +304,7 @@
 /* 8043A0B8 00403678  41 82 00 10 */	beq .L_8043A0C8
 .L_8043A0BC:
 /* 8043A0BC 0040367C  7F E3 FB 78 */	mr r3, r31
-/* 8043A0C0 00403680  4B FF E9 65 */	bl CWorkThread_WorkThreadEvent5
+/* 8043A0C0 00403680  4B FF E9 65 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8043A0C4 00403684  48 00 00 08 */	b .L_8043A0CC
 .L_8043A0C8:
 /* 8043A0C8 00403688  38 60 00 00 */	li r3, 0
@@ -339,44 +339,44 @@
 .obj __vt__9CRsrcData, global
 	.4byte __RTTI__9CRsrcData
 	.4byte 0
-	.4byte __dt__CRsrcData
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__9CRsrcDataFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CRsrcData_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CRsrcData_WorkThreadEvent4
 	.4byte CRsrcData_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CRsrcData
 
 .obj CRsrcData_hierarchy, global
@@ -415,7 +415,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001C280"
 
 .obj "@etb_8001C29C", local
@@ -467,7 +467,7 @@
 
 .obj "@eti_80033EFC", local
 .hidden "@eti_80033EFC"
-	.4byte __dt__CRsrcData
+	.4byte __dt__9CRsrcDataFv
 	.4byte 0x0000007C
 	.4byte "@etb_8001C280"
 .endobj "@eti_80033EFC"

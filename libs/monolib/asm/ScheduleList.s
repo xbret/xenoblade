@@ -107,7 +107,7 @@
 /* 804E449C 004ADA5C  4E 80 00 20 */	blr 
 .endfn __dt__reslist_CSchedule
 
-.fn __dt__ScheduleList, global
+.fn __dt__12ScheduleListFv, global
 /* 804E44A0 004ADA60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E44A4 004ADA64  7C 08 02 A6 */	mflr r0
 /* 804E44A8 004ADA68  2C 03 00 00 */	cmpwi r3, 0
@@ -203,7 +203,7 @@
 /* 804E45E8 004ADBA8  7C 08 03 A6 */	mtlr r0
 /* 804E45EC 004ADBAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E45F0 004ADBB0  4E 80 00 20 */	blr 
-.endfn __dt__ScheduleList
+.endfn __dt__12ScheduleListFv
 
 .fn func_804E45F4, global
 /* 804E45F4 004ADBB4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -397,7 +397,7 @@
 /* 804E4860 004ADE20  7D 1B 43 78 */	mr r27, r8
 /* 804E4864 004ADE24  7D 3C 4B 78 */	mr r28, r9
 /* 804E4868 004ADE28  80 7D 00 04 */	lwz r3, 4(r29)
-/* 804E486C 004ADE2C  4B F4 FF 05 */	bl func_80434770
+/* 804E486C 004ADE2C  4B F4 FF 05 */	bl MemManager_80434770
 /* 804E4870 004ADE30  28 03 00 F0 */	cmplwi r3, 0xf0
 /* 804E4874 004ADE34  41 80 00 24 */	blt .L_804E4898
 /* 804E4878 004ADE38  80 9D 00 04 */	lwz r4, 4(r29)
@@ -646,7 +646,7 @@
 /* 804E4B84 004AE144  3F 80 80 66 */	lis r28, lbl_806624D8@ha
 /* 804E4B88 004AE148  3B 9C 24 D8 */	addi r28, r28, lbl_806624D8@l
 /* 804E4B8C 004AE14C  80 7C 00 04 */	lwz r3, 4(r28)
-/* 804E4B90 004AE150  4B F4 FB E1 */	bl func_80434770
+/* 804E4B90 004AE150  4B F4 FB E1 */	bl MemManager_80434770
 /* 804E4B94 004AE154  28 03 00 24 */	cmplwi r3, 0x24
 /* 804E4B98 004AE158  41 80 01 84 */	blt .L_804E4D1C
 /* 804E4B9C 004AE15C  80 9C 00 04 */	lwz r4, 4(r28)
@@ -965,7 +965,7 @@
 /* 804E4FE0 004AE5A0  3F A0 80 66 */	lis r29, lbl_806624D8@ha
 /* 804E4FE4 004AE5A4  3B BD 24 D8 */	addi r29, r29, lbl_806624D8@l
 /* 804E4FE8 004AE5A8  80 7D 00 04 */	lwz r3, 4(r29)
-/* 804E4FEC 004AE5AC  4B F4 F7 85 */	bl func_80434770
+/* 804E4FEC 004AE5AC  4B F4 F7 85 */	bl MemManager_80434770
 /* 804E4FF0 004AE5B0  28 03 00 24 */	cmplwi r3, 0x24
 /* 804E4FF4 004AE5B4  41 80 01 84 */	blt .L_804E5178
 /* 804E4FF8 004AE5B8  80 9D 00 04 */	lwz r4, 4(r29)
@@ -1088,7 +1088,7 @@
 /* 804E51B0 004AE770  3F A0 80 66 */	lis r29, lbl_806624D8@ha
 /* 804E51B4 004AE774  3B BD 24 D8 */	addi r29, r29, lbl_806624D8@l
 /* 804E51B8 004AE778  80 7D 00 04 */	lwz r3, 4(r29)
-/* 804E51BC 004AE77C  4B F4 F5 B5 */	bl func_80434770
+/* 804E51BC 004AE77C  4B F4 F5 B5 */	bl MemManager_80434770
 /* 804E51C0 004AE780  28 03 00 24 */	cmplwi r3, 0x24
 /* 804E51C4 004AE784  41 80 01 84 */	blt .L_804E5348
 /* 804E51C8 004AE788  80 9D 00 04 */	lwz r4, 4(r29)
@@ -1300,7 +1300,7 @@
 .obj __vt__12ScheduleList, global
 	.4byte __RTTI__12ScheduleList
 	.4byte 0
-	.4byte __dt__ScheduleList
+	.4byte __dt__12ScheduleListFv
 	.4byte func_804E45F4
 	.4byte func_804E4718
 	.4byte func_804E479C
@@ -1539,7 +1539,7 @@
 
 .obj "@eti_80038CCC", local
 .hidden "@eti_80038CCC"
-	.4byte __dt__ScheduleList
+	.4byte __dt__12ScheduleListFv
 	.4byte 0x00000154
 	.4byte "@etb_80020B88"
 .endobj "@eti_80038CCC"

@@ -17,7 +17,7 @@
 /* 8022E8B4 001F7E74  4E 80 00 20 */	blr 
 .endfn __ct__CMCCrystalSupport
 
-.fn __dt__CMCCrystalSupport, global
+.fn __dt__17CMCCrystalSupportFv, global
 /* 8022E8B8 001F7E78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022E8BC 001F7E7C  7C 08 02 A6 */	mflr r0
 /* 8022E8C0 001F7E80  2C 03 00 00 */	cmpwi r3, 0
@@ -35,7 +35,7 @@
 /* 8022E8EC 001F7EAC  7C 08 03 A6 */	mtlr r0
 /* 8022E8F0 001F7EB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022E8F4 001F7EB4  4E 80 00 20 */	blr 
-.endfn __dt__CMCCrystalSupport
+.endfn __dt__17CMCCrystalSupportFv
 
 .fn func_8022E8F8, global
 /* 8022E8F8 001F7EB8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,7 +47,7 @@
 /* 8022E910 001F7ED0  38 BF 61 3C */	addi r5, r31, CMCCrystalSupport_strpool@l
 /* 8022E914 001F7ED4  80 83 00 04 */	lwz r4, 4(r3)
 /* 8022E918 001F7ED8  38 63 00 08 */	addi r3, r3, 8
-/* 8022E91C 001F7EDC  4B F0 85 69 */	bl func_80136E84
+/* 8022E91C 001F7EDC  4B F0 85 69 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8022E920 001F7EE0  38 DF 61 3C */	addi r6, r31, CMCCrystalSupport_strpool@l
 /* 8022E924 001F7EE4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8022E928 001F7EE8  80 BE 00 04 */	lwz r5, 4(r30)
@@ -111,7 +111,7 @@
 /* 8022E9F0 001F7FB0  80 63 00 08 */	lwz r3, 8(r3)
 /* 8022E9F4 001F7FB4  38 A0 00 00 */	li r5, 0
 /* 8022E9F8 001F7FB8  38 C0 00 01 */	li r6, 1
-/* 8022E9FC 001F7FBC  4B F0 86 3C */	b func_80137038
+/* 8022E9FC 001F7FBC  4B F0 86 3C */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8022EA00 001F7FC0  4E 80 00 20 */	blr 
 .endfn func_8022E9E4
 
@@ -216,7 +216,7 @@
 /* 8022EB54 001F8114  4E 80 00 20 */	blr
 .endfn func_8022EB0C
 
-.fn __dt__CMenuArtsSet, global
+.fn __dt__12CMenuArtsSetFv, global
 /* 8022EB58 001F8118  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022EB5C 001F811C  7C 08 02 A6 */	mflr r0
 /* 8022EB60 001F8120  2C 03 00 00 */	cmpwi r3, 0
@@ -228,19 +228,19 @@
 /* 8022EB78 001F8138  41 82 00 50 */	beq .L_8022EBC8
 /* 8022EB7C 001F813C  38 80 FF FF */	li r4, -1
 /* 8022EB80 001F8140  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8022EB84 001F8144  48 00 49 31 */	bl __dt__CArtsList
+/* 8022EB84 001F8144  48 00 49 31 */	bl __dt__9CArtsListFv
 /* 8022EB88 001F8148  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8022EB8C 001F814C  38 80 FF FF */	li r4, -1
-/* 8022EB90 001F8150  4B F9 53 C1 */	bl __dt__CTitleAHelp
+/* 8022EB90 001F8150  4B F9 53 C1 */	bl __dt__11CTitleAHelpFv
 /* 8022EB94 001F8154  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8022EB98 001F8158  38 80 FF FF */	li r4, -1
-/* 8022EB9C 001F815C  4B F9 4E 35 */	bl __dt__CBgTex
+/* 8022EB9C 001F815C  4B F9 4E 35 */	bl __dt__6CBgTexFv
 /* 8022EBA0 001F8160  2C 1E 00 00 */	cmpwi r30, 0
 /* 8022EBA4 001F8164  41 82 00 14 */	beq .L_8022EBB8
 /* 8022EBA8 001F8168  41 82 00 10 */	beq .L_8022EBB8
 /* 8022EBAC 001F816C  7F C3 F3 78 */	mr r3, r30
 /* 8022EBB0 001F8170  38 80 00 00 */	li r4, 0
-/* 8022EBB4 001F8174  48 21 5F 85 */	bl __dt__CProcess
+/* 8022EBB4 001F8174  48 21 5F 85 */	bl __dt__8CProcessFv
 .L_8022EBB8:
 /* 8022EBB8 001F8178  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022EBBC 001F817C  40 81 00 0C */	ble .L_8022EBC8
@@ -254,7 +254,7 @@
 /* 8022EBD8 001F8198  7C 08 03 A6 */	mtlr r0
 /* 8022EBDC 001F819C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022EBE0 001F81A0  4E 80 00 20 */	blr 
-.endfn __dt__CMenuArtsSet
+.endfn __dt__12CMenuArtsSetFv
 
 .fn func_8022EBE4, global
 /* 8022EBE4 001F81A4  94 21 FC F0 */	stwu r1, -0x310(r1)
@@ -287,7 +287,7 @@
 /* 8022EC50 001F8210  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8022EC54 001F8214  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8022EC58 001F8218  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8022EC5C 001F821C  4B F9 4D 75 */	bl __dt__CBgTex
+/* 8022EC5C 001F821C  4B F9 4D 75 */	bl __dt__6CBgTexFv
 /* 8022EC60 001F8220  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8022EC64 001F8224  4B F9 4F B1 */	bl func_801C3C14
 /* 8022EC68 001F8228  3C 60 80 50 */	lis r3, lbl_80506198@ha
@@ -333,7 +333,7 @@
 /* 8022ED08 001F82C8  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8022ED0C 001F82CC  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8022ED10 001F82D0  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8022ED14 001F82D4  4B F9 52 3D */	bl __dt__CTitleAHelp
+/* 8022ED14 001F82D4  4B F9 52 3D */	bl __dt__11CTitleAHelpFv
 /* 8022ED18 001F82D8  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8022ED1C 001F82DC  4B F9 52 89 */	bl CTitleAHelp_load
 /* 8022ED20 001F82E0  38 61 00 60 */	addi r3, r1, 0x60
@@ -616,7 +616,7 @@
 /* 8022F170 001F8730  98 1F 03 5D */	stb r0, 0x35d(r31)
 /* 8022F174 001F8734  88 01 03 06 */	lbz r0, 0x306(r1)
 /* 8022F178 001F8738  98 1F 03 5E */	stb r0, 0x35e(r31)
-/* 8022F17C 001F873C  48 00 43 39 */	bl __dt__CArtsList
+/* 8022F17C 001F873C  48 00 43 39 */	bl __dt__9CArtsListFv
 /* 8022F180 001F8740  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8022F184 001F8744  48 00 43 A9 */	bl func_8023352C
 /* 8022F188 001F8748  2C 1F 00 00 */	cmpwi r31, 0
@@ -641,7 +641,7 @@
 /* 8022F1C4 001F8784  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022F1C8 001F8788  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022F1CC 001F878C  7C 7F 1B 78 */	mr r31, r3
-/* 8022F1D0 001F8790  48 21 98 75 */	bl func_80448A44
+/* 8022F1D0 001F8790  48 21 98 75 */	bl func_80448A44__Fv
 /* 8022F1D4 001F8794  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022F1D8 001F8798  7F E4 FB 78 */	mr r4, r31
 /* 8022F1DC 001F879C  41 82 00 08 */	beq .L_8022F1E4
@@ -828,38 +828,38 @@
 .obj __vt__17CMCCrystalSupport, global
 	.4byte __RTTI__17CMCCrystalSupport
 	.4byte 0
-	.4byte __dt__CMCCrystalSupport
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__17CMCCrystalSupportFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__17CMCCrystalSupport
 
 .obj CMCCrystalSupport_hierarchy, global
@@ -944,25 +944,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CArtsList
+	.4byte __dt__9CArtsListFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CArtsList
+	.4byte __dt__9CArtsListFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CArtsList
+	.4byte __dt__9CArtsListFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_80015804"
 
 .obj "@etb_80015878", local
@@ -999,7 +999,7 @@
 
 .obj "@eti_8002E730", local
 .hidden "@eti_8002E730"
-	.4byte __dt__CMCCrystalSupport
+	.4byte __dt__17CMCCrystalSupportFv
 	.4byte 0x00000040
 	.4byte "@etb_800157D4"
 .endobj "@eti_8002E730"
@@ -1041,7 +1041,7 @@
 
 .obj "@eti_8002E778", local
 .hidden "@eti_8002E778"
-	.4byte __dt__CMenuArtsSet
+	.4byte __dt__12CMenuArtsSetFv
 	.4byte 0x0000008C
 	.4byte "@etb_80015804"
 .endobj "@eti_8002E778"

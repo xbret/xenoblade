@@ -25,7 +25,7 @@
 /* 8045F97C 00428F3C  80 7E 00 54 */	lwz r3, 0x54(r30)
 /* 8045F980 00428F40  90 1E 00 50 */	stw r0, 0x50(r30)
 /* 8045F984 00428F44  90 7E 01 D4 */	stw r3, 0x1d4(r30)
-/* 8045F988 00428F48  4B FD 4A A5 */	bl func_8043442C
+/* 8045F988 00428F48  4B FD 4A A5 */	bl MemManager_8043442C
 /* 8045F98C 00428F4C  90 7E 01 C8 */	stw r3, 0x1c8(r30)
 /* 8045F990 00428F50  38 00 00 10 */	li r0, 0x10
 /* 8045F994 00428F54  7F C3 F3 78 */	mr r3, r30
@@ -59,7 +59,7 @@
 /* 8045F9F8 00428FB8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8045F9FC 00428FBC  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FA00 00428FC0  41 82 00 0C */	beq .L_8045FA0C
-/* 8045FA04 00428FC4  4B FD 4A D5 */	bl func_804344D8
+/* 8045FA04 00428FC4  4B FD 4A D5 */	bl MemManager_804344D8
 /* 8045FA08 00428FC8  93 FD 00 00 */	stw r31, 0(r29)
 .L_8045FA0C:
 /* 8045FA0C 00428FCC  2C 1E 00 00 */	cmpwi r30, 0
@@ -82,7 +82,7 @@
 /* 8045FA4C 0042900C  4E 80 00 20 */	blr 
 .endfn __dt__8045F9B8
 
-.fn __dt__CLibStaticData, global
+.fn __dt__14CLibStaticDataFv, global
 /* 8045FA50 00429010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045FA54 00429014  7C 08 02 A6 */	mflr r0
 /* 8045FA58 00429018  2C 03 00 00 */	cmpwi r3, 0
@@ -105,7 +105,7 @@
 /* 8045FA9C 0042905C  80 63 01 C8 */	lwz r3, 0x1c8(r3)
 /* 8045FAA0 00429060  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FAA4 00429064  41 82 00 0C */	beq .L_8045FAB0
-/* 8045FAA8 00429068  4B FD 4A 31 */	bl func_804344D8
+/* 8045FAA8 00429068  4B FD 4A 31 */	bl MemManager_804344D8
 /* 8045FAAC 0042906C  93 FD 01 C8 */	stw r31, 0x1c8(r29)
 .L_8045FAB0:
 /* 8045FAB0 00429070  38 60 00 00 */	li r3, 0
@@ -116,7 +116,7 @@
 .L_8045FAC4:
 /* 8045FAC4 00429084  7F A3 EB 78 */	mr r3, r29
 /* 8045FAC8 00429088  38 80 00 00 */	li r4, 0
-/* 8045FACC 0042908C  4B FD 7F FD */	bl __dt__CWorkThread
+/* 8045FACC 0042908C  4B FD 7F FD */	bl __dt__11CWorkThreadFv
 /* 8045FAD0 00429090  2C 1E 00 00 */	cmpwi r30, 0
 /* 8045FAD4 00429094  40 81 00 0C */	ble .L_8045FAE0
 /* 8045FAD8 00429098  7F A3 EB 78 */	mr r3, r29
@@ -130,7 +130,7 @@
 /* 8045FAF4 004290B4  7C 08 03 A6 */	mtlr r0
 /* 8045FAF8 004290B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045FAFC 004290BC  4E 80 00 20 */	blr 
-.endfn __dt__CLibStaticData
+.endfn __dt__14CLibStaticDataFv
 
 .fn func_8045FB00, global
 /* 8045FB00 004290C0  80 6D BE 70 */	lwz r3, lbl_80667FF0@sda21(r13)
@@ -265,7 +265,7 @@
 /* 8045FC9C 0042925C  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 8045FCA0 00429260  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8045FCA4 00429264  41 82 00 0C */	beq .L_8045FCB0
-/* 8045FCA8 00429268  4B FD 8D 51 */	bl CWorkThread_WorkThreadEvent4
+/* 8045FCA8 00429268  4B FD 8D 51 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8045FCAC 0042926C  48 00 00 F4 */	b .L_8045FDA0
 .L_8045FCB0:
 /* 8045FCB0 00429270  48 07 E3 DD */	bl func_804DE08C
@@ -292,7 +292,7 @@
 /* 8045FCF8 004292B8  41 82 00 50 */	beq .L_8045FD48
 /* 8045FCFC 004292BC  48 00 00 40 */	b .L_8045FD3C
 .L_8045FD00:
-/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex
+/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex__Fv
 /* 8045FD04 004292C4  7C 64 1B 78 */	mr r4, r3
 /* 8045FD08 004292C8  38 60 00 18 */	li r3, 0x18
 /* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc
@@ -339,7 +339,7 @@
 /* 8045FD94 00429354  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 .L_8045FD98:
 /* 8045FD98 00429358  7F E3 FB 78 */	mr r3, r31
-/* 8045FD9C 0042935C  4B FD 8C 5D */	bl CWorkThread_WorkThreadEvent4
+/* 8045FD9C 0042935C  4B FD 8C 5D */	bl WorkThreadEvent4__11CWorkThreadFv
 .L_8045FDA0:
 /* 8045FDA0 00429360  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045FDA4 00429364  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -396,7 +396,7 @@
 /* 8045FE54 00429414  41 82 00 14 */	beq .L_8045FE68
 /* 8045FE58 00429418  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FE5C 0042941C  41 82 00 0C */	beq .L_8045FE68
-/* 8045FE60 00429420  4B FD 46 79 */	bl func_804344D8
+/* 8045FE60 00429420  4B FD 46 79 */	bl MemManager_804344D8
 /* 8045FE64 00429424  93 FD 01 C8 */	stw r31, 0x1c8(r29)
 .L_8045FE68:
 /* 8045FE68 00429428  38 80 00 00 */	li r4, 0
@@ -405,7 +405,7 @@
 /* 8045FE74 00429434  7F A3 EB 78 */	mr r3, r29
 /* 8045FE78 00429438  90 9D 01 D0 */	stw r4, 0x1d0(r29)
 /* 8045FE7C 0042943C  90 1D 01 D4 */	stw r0, 0x1d4(r29)
-/* 8045FE80 00429440  4B FD 8B A5 */	bl CWorkThread_WorkThreadEvent5
+/* 8045FE80 00429440  4B FD 8B A5 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8045FE84 00429444  48 00 00 08 */	b .L_8045FE8C
 .L_8045FE88:
 /* 8045FE88 00429448  38 60 00 00 */	li r3, 0
@@ -475,7 +475,7 @@
 /* 8045FF68 00429528  7F A5 EB 78 */	mr r5, r29
 /* 8045FF6C 0042952C  38 C0 00 00 */	li r6, 0
 /* 8045FF70 00429530  38 E0 00 00 */	li r7, 0
-/* 8045FF74 00429534  4B FE E8 21 */	bl CDeviceFile_openFile1
+/* 8045FF74 00429534  4B FE E8 21 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8045FF78 00429538  90 7D 00 08 */	stw r3, 8(r29)
 .L_8045FF7C:
 /* 8045FF7C 0042953C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -488,7 +488,7 @@
 /* 8045FF98 00429558  4E 80 00 20 */	blr 
 .endfn __ct__CLibStaticData_CItem
 
-.fn __dt__CLibStaticData_CItem, global
+.fn __dt__Q214CLibStaticData5CItemFv, global
 /* 8045FF9C 0042955C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045FFA0 00429560  7C 08 02 A6 */	mflr r0
 /* 8045FFA4 00429564  2C 03 00 00 */	cmpwi r3, 0
@@ -527,7 +527,7 @@
 /* 8046001C 004295DC  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80460020 004295E0  2C 03 00 00 */	cmpwi r3, 0
 /* 80460024 004295E4  41 82 00 10 */	beq .L_80460034
-/* 80460028 004295E8  4B FD 44 B1 */	bl func_804344D8
+/* 80460028 004295E8  4B FD 44 B1 */	bl MemManager_804344D8
 /* 8046002C 004295EC  38 00 00 00 */	li r0, 0
 /* 80460030 004295F0  90 1E 00 0C */	stw r0, 0xc(r30)
 .L_80460034:
@@ -543,7 +543,7 @@
 /* 80460054 00429614  7C 08 03 A6 */	mtlr r0
 /* 80460058 00429618  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046005C 0042961C  4E 80 00 20 */	blr 
-.endfn __dt__CLibStaticData_CItem
+.endfn __dt__Q214CLibStaticData5CItemFv
 
 .fn CLibStaticData_OnFileEvent, global
 /* 80460060 00429620  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -605,44 +605,44 @@
 .obj __vt__14CLibStaticData, global
 	.4byte __RTTI__14CLibStaticData
 	.4byte 0
-	.4byte __dt__CLibStaticData
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__14CLibStaticDataFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CLibStaticData_WorkThreadEvent4
 	.4byte CLibStaticData_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__14CLibStaticData
 
 .obj CLibStaticData_hierarchy, global
@@ -658,38 +658,38 @@
 .obj __vt__Q214CLibStaticData5CItem, global
 	.4byte __RTTI__Q214CLibStaticData5CItem
 	.4byte 0
-	.4byte __dt__CLibStaticData_CItem
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q214CLibStaticData5CItemFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CLibStaticData_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q214CLibStaticData5CItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -734,7 +734,7 @@
 	.4byte __dt__8045F9B8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001D89C"
 
 .obj "@etb_8001D8C4", local
@@ -780,7 +780,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001D900"
 
 .obj "@etb_8001D91C", local
@@ -791,7 +791,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001D91C"
 
 .obj "@etb_8001D938", local
@@ -820,7 +820,7 @@
 
 .obj "@eti_800354B0", local
 .hidden "@eti_800354B0"
-	.4byte __dt__CLibStaticData
+	.4byte __dt__14CLibStaticDataFv
 	.4byte 0x000000B0
 	.4byte "@etb_8001D8CC"
 .endobj "@eti_800354B0"
@@ -855,7 +855,7 @@
 
 .obj "@eti_800354EC", local
 .hidden "@eti_800354EC"
-	.4byte __dt__CLibStaticData_CItem
+	.4byte __dt__Q214CLibStaticData5CItemFv
 	.4byte 0x000000C4
 	.4byte "@etb_8001D91C"
 .endobj "@eti_800354EC"

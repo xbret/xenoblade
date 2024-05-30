@@ -62,7 +62,7 @@
 /* 8045B4C4 00424A84  3C 80 00 01 */	lis r4, 0x0000A000@ha
 /* 8045B4C8 00424A88  38 A0 00 04 */	li r5, 4
 /* 8045B4CC 00424A8C  38 84 A0 00 */	addi r4, r4, 0x0000A000@l
-/* 8045B4D0 00424A90  4B FD 8F 5D */	bl func_8043442C
+/* 8045B4D0 00424A90  4B FD 8F 5D */	bl MemManager_8043442C
 /* 8045B4D4 00424A94  2C 1E 00 00 */	cmpwi r30, 0
 /* 8045B4D8 00424A98  90 6D BE 44 */	stw r3, lbl_80667FC4@sda21(r13)
 /* 8045B4DC 00424A9C  7F C3 F3 78 */	mr r3, r30
@@ -79,7 +79,7 @@
 /* 8045B504 00424AC4  4E 80 00 20 */	blr
 .endfn __ct__CLibCriStreamingPlay
 
-.fn __dt__CLibCriStreamingPlay, global
+.fn __dt__20CLibCriStreamingPlayFv, global
 /* 8045B508 00424AC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045B50C 00424ACC  7C 08 02 A6 */	mflr r0
 /* 8045B510 00424AD0  2C 03 00 00 */	cmpwi r3, 0
@@ -103,7 +103,7 @@
 /* 8045B554 00424B14  80 6D BE 44 */	lwz r3, lbl_80667FC4@sda21(r13)
 /* 8045B558 00424B18  2C 03 00 00 */	cmpwi r3, 0
 /* 8045B55C 00424B1C  41 82 00 10 */	beq .L_8045B56C
-/* 8045B560 00424B20  4B FD 8F 79 */	bl func_804344D8
+/* 8045B560 00424B20  4B FD 8F 79 */	bl MemManager_804344D8
 /* 8045B564 00424B24  38 00 00 00 */	li r0, 0
 /* 8045B568 00424B28  90 0D BE 44 */	stw r0, lbl_80667FC4@sda21(r13)
 .L_8045B56C:
@@ -111,7 +111,7 @@
 /* 8045B570 00424B30  90 0D BE 40 */	stw r0, lbl_80667FC0@sda21(r13)
 /* 8045B574 00424B34  7F C3 F3 78 */	mr r3, r30
 /* 8045B578 00424B38  38 80 00 00 */	li r4, 0
-/* 8045B57C 00424B3C  4B FD C5 4D */	bl __dt__CWorkThread
+/* 8045B57C 00424B3C  4B FD C5 4D */	bl __dt__11CWorkThreadFv
 /* 8045B580 00424B40  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045B584 00424B44  40 81 00 0C */	ble .L_8045B590
 /* 8045B588 00424B48  7F C3 F3 78 */	mr r3, r30
@@ -124,7 +124,7 @@
 /* 8045B5A0 00424B60  7C 08 03 A6 */	mtlr r0
 /* 8045B5A4 00424B64  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045B5A8 00424B68  4E 80 00 20 */	blr 
-.endfn __dt__CLibCriStreamingPlay
+.endfn __dt__20CLibCriStreamingPlayFv
 
 .fn func_8045B5AC, global
 /* 8045B5AC 00424B6C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -257,7 +257,7 @@
 /* 8045B770 00424D30  7C 80 32 14 */	add r4, r0, r6
 /* 8045B774 00424D34  38 84 00 64 */	addi r4, r4, 0x64
 /* 8045B778 00424D38  90 9F 00 14 */	stw r4, 0x14(r31)
-/* 8045B77C 00424D3C  4B FD 8C D5 */	bl func_80434450
+/* 8045B77C 00424D3C  4B FD 8C D5 */	bl MemManager_80434450
 /* 8045B780 00424D40  2C 03 00 00 */	cmpwi r3, 0
 /* 8045B784 00424D44  90 7F 00 18 */	stw r3, 0x18(r31)
 /* 8045B788 00424D48  40 82 00 68 */	bne .L_8045B7F0
@@ -279,7 +279,7 @@
 /* 8045B7C0 00424D80  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8045B7C4 00424D84  2C 03 00 00 */	cmpwi r3, 0
 /* 8045B7C8 00424D88  41 82 00 10 */	beq .L_8045B7D8
-/* 8045B7CC 00424D8C  4B FD 8D 0D */	bl func_804344D8
+/* 8045B7CC 00424D8C  4B FD 8D 0D */	bl MemManager_804344D8
 /* 8045B7D0 00424D90  38 00 00 00 */	li r0, 0
 /* 8045B7D4 00424D94  90 1F 00 18 */	stw r0, 0x18(r31)
 .L_8045B7D8:
@@ -549,7 +549,7 @@
 /* 8045BB64 00425124  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8045BB68 00425128  2C 03 00 00 */	cmpwi r3, 0
 /* 8045BB6C 0042512C  41 82 00 10 */	beq .L_8045BB7C
-/* 8045BB70 00425130  4B FD 89 69 */	bl func_804344D8
+/* 8045BB70 00425130  4B FD 89 69 */	bl MemManager_804344D8
 /* 8045BB74 00425134  38 00 00 00 */	li r0, 0
 /* 8045BB78 00425138  90 1F 00 18 */	stw r0, 0x18(r31)
 .L_8045BB7C:
@@ -596,7 +596,7 @@
 /* 8045BC00 004251C0  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8045BC04 004251C4  2C 03 00 00 */	cmpwi r3, 0
 /* 8045BC08 004251C8  41 82 00 0C */	beq .L_8045BC14
-/* 8045BC0C 004251CC  4B FD 88 CD */	bl func_804344D8
+/* 8045BC0C 004251CC  4B FD 88 CD */	bl MemManager_804344D8
 /* 8045BC10 004251D0  93 DD 00 18 */	stw r30, 0x18(r29)
 .L_8045BC14:
 /* 8045BC14 004251D4  93 FD 00 04 */	stw r31, 4(r29)
@@ -899,7 +899,7 @@
 /* 8045C028 004255E8  80 7C 00 18 */	lwz r3, 0x18(r28)
 /* 8045C02C 004255EC  2C 03 00 00 */	cmpwi r3, 0
 /* 8045C030 004255F0  41 82 00 0C */	beq .L_8045C03C
-/* 8045C034 004255F4  4B FD 84 A5 */	bl func_804344D8
+/* 8045C034 004255F4  4B FD 84 A5 */	bl MemManager_804344D8
 /* 8045C038 004255F8  93 DC 00 18 */	stw r30, 0x18(r28)
 .L_8045C03C:
 /* 8045C03C 004255FC  93 1C 00 04 */	stw r24, 4(r28)
@@ -1042,7 +1042,7 @@
 /* 8045C230 004257F0  80 7C 00 18 */	lwz r3, 0x18(r28)
 /* 8045C234 004257F4  2C 03 00 00 */	cmpwi r3, 0
 /* 8045C238 004257F8  41 82 00 0C */	beq .L_8045C244
-/* 8045C23C 004257FC  4B FD 82 9D */	bl func_804344D8
+/* 8045C23C 004257FC  4B FD 82 9D */	bl MemManager_804344D8
 /* 8045C240 00425800  93 DC 00 18 */	stw r30, 0x18(r28)
 .L_8045C244:
 /* 8045C244 00425804  93 1C 00 04 */	stw r24, 4(r28)
@@ -1162,7 +1162,7 @@
 .endfn CLibCriStreamingPlay_wkUpdate
 
 .fn CLibCriStreamingPlay_WorkThreadEvent4, global
-/* 8045C3E4 004259A4  4B FD C6 14 */	b CWorkThread_WorkThreadEvent4
+/* 8045C3E4 004259A4  4B FD C6 14 */	b WorkThreadEvent4__11CWorkThreadFv
 .endfn CLibCriStreamingPlay_WorkThreadEvent4
 
 .fn CLibCriStreamingPlay_WorkThreadEvent5, global
@@ -1198,7 +1198,7 @@
 /* 8045C450 00425A10  80 7C 00 18 */	lwz r3, 0x18(r28)
 /* 8045C454 00425A14  2C 03 00 00 */	cmpwi r3, 0
 /* 8045C458 00425A18  41 82 00 0C */	beq .L_8045C464
-/* 8045C45C 00425A1C  4B FD 80 7D */	bl func_804344D8
+/* 8045C45C 00425A1C  4B FD 80 7D */	bl MemManager_804344D8
 /* 8045C460 00425A20  93 DC 00 18 */	stw r30, 0x18(r28)
 .L_8045C464:
 /* 8045C464 00425A24  93 FC 00 04 */	stw r31, 4(r28)
@@ -1209,7 +1209,7 @@
 /* 8045C474 00425A34  28 1D 00 05 */	cmplwi r29, 5
 /* 8045C478 00425A38  41 80 FF A8 */	blt .L_8045C420
 /* 8045C47C 00425A3C  7F 63 DB 78 */	mr r3, r27
-/* 8045C480 00425A40  4B FD C5 A5 */	bl CWorkThread_WorkThreadEvent5
+/* 8045C480 00425A40  4B FD C5 A5 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8045C484 00425A44  48 00 00 08 */	b .L_8045C48C
 .L_8045C488:
 /* 8045C488 00425A48  38 60 00 00 */	li r3, 0
@@ -2027,7 +2027,7 @@
 /* 8045CF90 00426550  80 7C 00 18 */	lwz r3, 0x18(r28)
 /* 8045CF94 00426554  2C 03 00 00 */	cmpwi r3, 0
 /* 8045CF98 00426558  41 82 00 0C */	beq .L_8045CFA4
-/* 8045CF9C 0042655C  4B FD 75 3D */	bl func_804344D8
+/* 8045CF9C 0042655C  4B FD 75 3D */	bl MemManager_804344D8
 /* 8045CFA0 00426560  93 DC 00 18 */	stw r30, 0x18(r28)
 .L_8045CFA4:
 /* 8045CFA4 00426564  93 FC 00 04 */	stw r31, 4(r28)
@@ -2159,7 +2159,7 @@
 
 .fn func_8045D148, global
 /* 8045D148 00426708  38 63 FE 3C */	addi r3, r3, -452
-/* 8045D14C 0042670C  4B FF E3 BC */	b __dt__CLibCriStreamingPlay
+/* 8045D14C 0042670C  4B FF E3 BC */	b __dt__20CLibCriStreamingPlayFv
 .endfn func_8045D148
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -2252,44 +2252,44 @@
 .obj __vt__20CLibCriStreamingPlay, global
 	.4byte __RTTI__20CLibCriStreamingPlay
 	.4byte 0
-	.4byte __dt__CLibCriStreamingPlay
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
+	.4byte __dt__20CLibCriStreamingPlayFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
 	.4byte CLibCriStreamingPlay_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CLibCriStreamingPlay_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CLibCriStreamingPlay_WorkThreadEvent4
 	.4byte CLibCriStreamingPlay_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__20CLibCriStreamingPlay
 	.4byte 0xFFFFFE3C
 	.4byte func_8045D148
@@ -2387,7 +2387,7 @@
 	.4byte __dt__8044F65C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001D614"
 
 .obj "@etb_8001D63C", local
@@ -2403,7 +2403,7 @@
 	.4byte __dt__8044F65C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 	.4byte 0x8680001E
 	.4byte 0x000001C4
 	.4byte __dt__8044F65C
@@ -2500,7 +2500,7 @@
 
 .obj "@eti_80035210", local
 .hidden "@eti_80035210"
-	.4byte __dt__CLibCriStreamingPlay
+	.4byte __dt__20CLibCriStreamingPlayFv
 	.4byte 0x000000A4
 	.4byte "@etb_8001D63C"
 .endobj "@eti_80035210"

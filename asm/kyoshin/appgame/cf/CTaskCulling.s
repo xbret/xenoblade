@@ -56,7 +56,7 @@
 /* 801A2A90 0016C050  48 29 19 11 */	bl Heap_getRegionIndex2
 /* 801A2A94 0016C054  38 80 10 00 */	li r4, 0x1000
 /* 801A2A98 0016C058  38 A0 00 04 */	li r5, 4
-/* 801A2A9C 0016C05C  48 29 19 91 */	bl func_8043442C
+/* 801A2A9C 0016C05C  48 29 19 91 */	bl MemManager_8043442C
 /* 801A2AA0 0016C060  90 7E 00 94 */	stw r3, 0x94(r30)
 /* 801A2AA4 0016C064  7F C3 F3 78 */	mr r3, r30
 /* 801A2AA8 0016C068  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -87,7 +87,7 @@
 /* 801A2AFC 0016C0BC  4E 80 00 20 */	blr 
 .endfn __dt__801A2AC0
 
-.fn __dt__CTTask_cf_CTaskCulling, global
+.fn "__dt__27CTTask<Q22cf12CTaskCulling>Fv", global
 /* 801A2B00 0016C0C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2B04 0016C0C4  7C 08 02 A6 */	mflr r0
 /* 801A2B08 0016C0C8  2C 03 00 00 */	cmpwi r3, 0
@@ -98,7 +98,7 @@
 /* 801A2B1C 0016C0DC  7C 7E 1B 78 */	mr r30, r3
 /* 801A2B20 0016C0E0  41 82 00 1C */	beq .L_801A2B3C
 /* 801A2B24 0016C0E4  38 80 00 00 */	li r4, 0
-/* 801A2B28 0016C0E8  48 2A 20 11 */	bl __dt__CProcess
+/* 801A2B28 0016C0E8  48 2A 20 11 */	bl __dt__8CProcessFv
 /* 801A2B2C 0016C0EC  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A2B30 0016C0F0  40 81 00 0C */	ble .L_801A2B3C
 /* 801A2B34 0016C0F4  7F C3 F3 78 */	mr r3, r30
@@ -111,9 +111,9 @@
 /* 801A2B4C 0016C10C  7C 08 03 A6 */	mtlr r0
 /* 801A2B50 0016C110  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2B54 0016C114  4E 80 00 20 */	blr
-.endfn __dt__CTTask_cf_CTaskCulling
+.endfn "__dt__27CTTask<Q22cf12CTaskCulling>Fv"
 
-.fn __dt__cf_CTaskCulling, global
+.fn __dt__Q22cf12CTaskCullingFv, global
 /* 801A2B58 0016C118  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2B5C 0016C11C  7C 08 02 A6 */	mflr r0
 /* 801A2B60 0016C120  2C 03 00 00 */	cmpwi r3, 0
@@ -127,12 +127,12 @@
 /* 801A2B80 0016C140  90 0D AA 98 */	stw r0, lbl_80666C18@sda21(r13)
 /* 801A2B84 0016C144  38 80 FF FF */	li r4, -1
 /* 801A2B88 0016C148  38 63 00 60 */	addi r3, r3, 0x60
-/* 801A2B8C 0016C14C  4B FF D9 F5 */	bl __dt__COccCulling
+/* 801A2B8C 0016C14C  4B FF D9 F5 */	bl __dt__11COccCullingFv
 /* 801A2B90 0016C150  2C 1E 00 00 */	cmpwi r30, 0
 /* 801A2B94 0016C154  41 82 00 10 */	beq .L_801A2BA4
 /* 801A2B98 0016C158  7F C3 F3 78 */	mr r3, r30
 /* 801A2B9C 0016C15C  38 80 00 00 */	li r4, 0
-/* 801A2BA0 0016C160  48 2A 1F 99 */	bl __dt__CProcess
+/* 801A2BA0 0016C160  48 2A 1F 99 */	bl __dt__8CProcessFv
 .L_801A2BA4:
 /* 801A2BA4 0016C164  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A2BA8 0016C168  40 81 00 0C */	ble .L_801A2BB4
@@ -146,7 +146,7 @@
 /* 801A2BC4 0016C184  7C 08 03 A6 */	mtlr r0
 /* 801A2BC8 0016C188  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2BCC 0016C18C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CTaskCulling
+.endfn __dt__Q22cf12CTaskCullingFv
 
 .fn func_801A2BD0, global
 /* 801A2BD0 0016C190  80 8D AA 98 */	lwz r4, lbl_80666C18@sda21(r13)
@@ -402,7 +402,7 @@
 /* 801A2EF8 0016C4B8  80 7F 00 94 */	lwz r3, 0x94(r31)
 /* 801A2EFC 0016C4BC  2C 03 00 00 */	cmpwi r3, 0
 /* 801A2F00 0016C4C0  41 82 00 10 */	beq .L_801A2F10
-/* 801A2F04 0016C4C4  48 29 15 D5 */	bl func_804344D8
+/* 801A2F04 0016C4C4  48 29 15 D5 */	bl MemManager_804344D8
 /* 801A2F08 0016C4C8  38 00 00 00 */	li r0, 0
 /* 801A2F0C 0016C4CC  90 1F 00 94 */	stw r0, 0x94(r31)
 .L_801A2F10:
@@ -434,7 +434,7 @@
 /* 801A2F44 0016C504  7C 9E 23 78 */	mr r30, r4
 /* 801A2F48 0016C508  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 801A2F4C 0016C50C  7C 7D 1B 78 */	mr r29, r3
-/* 801A2F50 0016C510  48 29 46 65 */	bl getHeapIndex
+/* 801A2F50 0016C510  48 29 46 65 */	bl getHeapIndex__Fv
 /* 801A2F54 0016C514  7C 64 1B 78 */	mr r4, r3
 /* 801A2F58 0016C518  38 60 01 24 */	li r3, 0x124
 /* 801A2F5C 0016C51C  48 29 1B 01 */	bl heap_malloc
@@ -459,7 +459,7 @@
 /* 801A2FA4 0016C564  4E 80 00 20 */	blr 
 .endfn func_801A2F30
 
-.fn func_801A2FA8, global
+.fn "func_801A2FA8__27CTTask<Q22cf12CTaskCulling>Fv", global
 /* 801A2FA8 0016C568  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2FAC 0016C56C  7C 08 02 A6 */	mflr r0
 /* 801A2FB0 0016C570  90 01 00 14 */	stw r0, 0x14(r1)
@@ -479,9 +479,9 @@
 /* 801A2FE4 0016C5A4  7C 08 03 A6 */	mtlr r0
 /* 801A2FE8 0016C5A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2FEC 0016C5AC  4E 80 00 20 */	blr 
-.endfn func_801A2FA8
+.endfn "func_801A2FA8__27CTTask<Q22cf12CTaskCulling>Fv"
 
-.fn func_801A2FF0, global
+.fn "func_801A2FF0__27CTTask<Q22cf12CTaskCulling>Fv", global
 /* 801A2FF0 0016C5B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2FF4 0016C5B4  7C 08 02 A6 */	mflr r0
 /* 801A2FF8 0016C5B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -501,7 +501,7 @@
 /* 801A302C 0016C5EC  7C 08 03 A6 */	mtlr r0
 /* 801A3030 0016C5F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A3034 0016C5F4  4E 80 00 20 */	blr
-.endfn func_801A2FF0
+.endfn "func_801A2FF0__27CTTask<Q22cf12CTaskCulling>Fv"
 
 .fn sinit_801A3038, local
 /* 801A3038 0016C5F8  3C E0 80 58 */	lis r7, lbl_80579018@ha
@@ -534,7 +534,7 @@
 
 .fn func_801A30A0, global
 /* 801A30A0 0016C660  38 63 FF AC */	addi r3, r3, -84
-/* 801A30A4 0016C664  4B FF FA B4 */	b __dt__cf_CTaskCulling
+/* 801A30A4 0016C664  4B FF FA B4 */	b __dt__Q22cf12CTaskCullingFv
 .endfn func_801A30A0
 
 .fn func_801A30A8, global
@@ -544,7 +544,7 @@
 
 .fn func_801A30B0, global
 /* 801A30B0 0016C670  38 63 FF A8 */	addi r3, r3, -88
-/* 801A30B4 0016C674  4B FF FA A4 */	b __dt__cf_CTaskCulling
+/* 801A30B4 0016C674  4B FF FA A4 */	b __dt__Q22cf12CTaskCullingFv
 .endfn func_801A30B0
 
 .fn func_801A30B8, global
@@ -564,7 +564,7 @@
 
 .fn func_801A30D0, global
 /* 801A30D0 0016C690  38 63 FF A4 */	addi r3, r3, -92
-/* 801A30D4 0016C694  4B FF FA 84 */	b __dt__cf_CTaskCulling
+/* 801A30D4 0016C694  4B FF FA 84 */	b __dt__Q22cf12CTaskCullingFv
 .endfn func_801A30D0
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -601,47 +601,47 @@
 .obj __vt__Q22cf12CTaskCulling, global
 	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0
-	.4byte __dt__cf_CTaskCulling
-	.4byte CChildListNode_Reset
+	.4byte __dt__Q22cf12CTaskCullingFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_801A2E40
 	.4byte func_801A2EA0
 	.4byte func_801A2F24
 	.4byte func_801A2F28
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0xFFFFFFAC
 	.4byte func_801A30A0
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0xFFFFFFA8
 	.4byte func_801A30B0
@@ -674,13 +674,13 @@
 .obj "__vt__27CTTask<Q22cf12CTaskCulling>", global
 	.4byte "__RTTI__27CTTask<Q22cf12CTaskCulling>"
 	.4byte 0
-	.4byte __dt__CTTask_cf_CTaskCulling
-	.4byte CChildListNode_Reset
+	.4byte "__dt__27CTTask<Q22cf12CTaskCulling>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_801A2FA8
-	.4byte func_801A2FF0
-	.4byte CProcess_func_80043F20
+	.4byte "func_801A2FA8__27CTTask<Q22cf12CTaskCulling>Fv"
+	.4byte "func_801A2FF0__27CTTask<Q22cf12CTaskCulling>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__27CTTask<Q22cf12CTaskCulling>"
 
 .obj CTTask_cf_CTaskCulling_hierarchy, global
@@ -770,19 +770,19 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__COccCulling
+	.4byte __dt__11COccCullingFv
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__801A2AC0
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CTaskCulling
+	.4byte "__dt__27CTTask<Q22cf12CTaskCulling>Fv"
 .endobj "@etb_8000F790"
 
 .obj "@etb_8000F7E4", local
@@ -805,16 +805,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__COccCulling
+	.4byte __dt__11COccCullingFv
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__801A2AC0
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000F7F4"
 
 .obj "@etb_8000F834", local
@@ -873,14 +873,14 @@
 
 .obj "@eti_8002A5A8", local
 .hidden "@eti_8002A5A8"
-	.4byte __dt__CTTask_cf_CTaskCulling
+	.4byte "__dt__27CTTask<Q22cf12CTaskCulling>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8000F7EC"
 .endobj "@eti_8002A5A8"
 
 .obj "@eti_8002A5B4", local
 .hidden "@eti_8002A5B4"
-	.4byte __dt__cf_CTaskCulling
+	.4byte __dt__Q22cf12CTaskCullingFv
 	.4byte 0x00000078
 	.4byte "@etb_8000F7F4"
 .endobj "@eti_8002A5B4"
@@ -915,14 +915,14 @@
 
 .obj "@eti_8002A5F0", local
 .hidden "@eti_8002A5F0"
-	.4byte func_801A2FA8
+	.4byte "func_801A2FA8__27CTTask<Q22cf12CTaskCulling>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000F854"
 .endobj "@eti_8002A5F0"
 
 .obj "@eti_8002A5FC", local
 .hidden "@eti_8002A5FC"
-	.4byte func_801A2FF0
+	.4byte "func_801A2FF0__27CTTask<Q22cf12CTaskCulling>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000F85C"
 .endobj "@eti_8002A5FC"

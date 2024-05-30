@@ -23,7 +23,7 @@
 /* 80221EB0 001EB470  4E 80 00 20 */	blr 
 .endfn __ct__CMCCylinderGauge
 
-.fn __dt__CMCCylinderGauge, global
+.fn __dt__16CMCCylinderGaugeFv, global
 /* 80221EB4 001EB474  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80221EB8 001EB478  7C 08 02 A6 */	mflr r0
 /* 80221EBC 001EB47C  2C 03 00 00 */	cmpwi r3, 0
@@ -41,7 +41,7 @@
 /* 80221EE8 001EB4A8  7C 08 03 A6 */	mtlr r0
 /* 80221EEC 001EB4AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80221EF0 001EB4B0  4E 80 00 20 */	blr 
-.endfn __dt__CMCCylinderGauge
+.endfn __dt__16CMCCylinderGaugeFv
 
 .fn func_80221EF4, global
 /* 80221EF4 001EB4B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -54,7 +54,7 @@
 /* 80221F10 001EB4D0  7C 7E 1B 78 */	mr r30, r3
 /* 80221F14 001EB4D4  80 83 00 04 */	lwz r4, 4(r3)
 /* 80221F18 001EB4D8  38 63 00 08 */	addi r3, r3, 8
-/* 80221F1C 001EB4DC  4B F1 4F 69 */	bl func_80136E84
+/* 80221F1C 001EB4DC  4B F1 4F 69 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80221F20 001EB4E0  3B FF 49 34 */	addi r31, r31, CMCCylinderGauge_strpool@l
 /* 80221F24 001EB4E4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80221F28 001EB4E8  80 BE 00 04 */	lwz r5, 4(r30)
@@ -157,7 +157,7 @@
 /* 8022207C 001EB63C  80 63 00 08 */	lwz r3, 8(r3)
 /* 80222080 001EB640  38 A0 00 00 */	li r5, 0
 /* 80222084 001EB644  38 C0 00 01 */	li r6, 1
-/* 80222088 001EB648  4B F1 4F B0 */	b func_80137038
+/* 80222088 001EB648  4B F1 4F B0 */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8022208C 001EB64C  4E 80 00 20 */	blr 
 .endfn func_80222070
 
@@ -677,7 +677,7 @@
 .obj __vt__16CMCCylinderGauge, global
 	.4byte __RTTI__16CMCCylinderGauge
 	.4byte 0
-	.4byte __dt__CMCCylinderGauge
+	.4byte __dt__16CMCCylinderGaugeFv
 	.4byte 0
 .endobj __vt__16CMCCylinderGauge
 
@@ -823,7 +823,7 @@
 
 .obj "@eti_8002DC14", local
 .hidden "@eti_8002DC14"
-	.4byte __dt__CMCCylinderGauge
+	.4byte __dt__16CMCCylinderGaugeFv
 	.4byte 0x00000040
 	.4byte "@etb_80014DE8"
 .endobj "@eti_8002DC14"

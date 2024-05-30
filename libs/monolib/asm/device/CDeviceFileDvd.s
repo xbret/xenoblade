@@ -29,7 +29,7 @@
 /* 80450BB0 0041A170  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFileDvd
 
-.fn __dt__CDeviceFileDvd, global
+.fn __dt__14CDeviceFileDvdFv, global
 /* 80450BB4 0041A174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80450BB8 0041A178  7C 08 02 A6 */	mflr r0
 /* 80450BBC 0041A17C  2C 03 00 00 */	cmpwi r3, 0
@@ -42,7 +42,7 @@
 /* 80450BD8 0041A198  38 00 00 00 */	li r0, 0
 /* 80450BDC 0041A19C  90 0D BD D0 */	stw r0, lbl_80667F50@sda21(r13)
 /* 80450BE0 0041A1A0  38 80 00 00 */	li r4, 0
-/* 80450BE4 0041A1A4  4B FE 6E E5 */	bl __dt__CWorkThread
+/* 80450BE4 0041A1A4  4B FE 6E E5 */	bl __dt__11CWorkThreadFv
 /* 80450BE8 0041A1A8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80450BEC 0041A1AC  40 81 00 0C */	ble .L_80450BF8
 /* 80450BF0 0041A1B0  7F C3 F3 78 */	mr r3, r30
@@ -55,7 +55,7 @@
 /* 80450C08 0041A1C8  7C 08 03 A6 */	mtlr r0
 /* 80450C0C 0041A1CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450C10 0041A1D0  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFileDvd
+.endfn __dt__14CDeviceFileDvdFv
 
 .fn func_80450C14, global
 /* 80450C14 0041A1D4  80 6D BD D0 */	lwz r3, lbl_80667F50@sda21(r13)
@@ -822,7 +822,7 @@
 /* 80451648 0041AC08  7C 7F 1B 78 */	mr r31, r3
 /* 8045164C 0041AC0C  4B EB 93 25 */	bl DVDInit
 /* 80451650 0041AC10  7F E3 FB 78 */	mr r3, r31
-/* 80451654 0041AC14  4B FE 73 A5 */	bl CWorkThread_WorkThreadEvent4
+/* 80451654 0041AC14  4B FE 73 A5 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80451658 0041AC18  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045165C 0041AC1C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80451660 0041AC20  7C 08 03 A6 */	mtlr r0
@@ -847,7 +847,7 @@
 /* 804516A0 0041AC60  2C 03 00 00 */	cmpwi r3, 0
 /* 804516A4 0041AC64  40 82 00 10 */	bne .L_804516B4
 /* 804516A8 0041AC68  7F E3 FB 78 */	mr r3, r31
-/* 804516AC 0041AC6C  4B FE 73 79 */	bl CWorkThread_WorkThreadEvent5
+/* 804516AC 0041AC6C  4B FE 73 79 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804516B0 0041AC70  48 00 00 08 */	b .L_804516B8
 .L_804516B4:
 /* 804516B4 0041AC74  38 60 00 00 */	li r3, 0
@@ -886,7 +886,7 @@
 /* 8045171C 0041ACDC  4E 80 00 20 */	blr 
 .endfn CDeviceFileDvd_WorkThreadEvent6
 
-.fn __ct__80451720, global
+.fn __ct__17UnkClass_80451720Fv, global
 /* 80451720 0041ACE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80451724 0041ACE4  7C 08 02 A6 */	mflr r0
 /* 80451728 0041ACE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -925,7 +925,7 @@
 /* 804517AC 0041AD6C  7C 08 03 A6 */	mtlr r0
 /* 804517B0 0041AD70  38 21 00 20 */	addi r1, r1, 0x20
 /* 804517B4 0041AD74  4E 80 00 20 */	blr 
-.endfn __ct__80451720
+.endfn __ct__17UnkClass_80451720Fv
 
 .fn func_804517B8, global
 /* 804517B8 0041AD78  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1124,7 +1124,7 @@
 .L_80451A6C:
 /* 80451A6C 0041B02C  83 FB 00 14 */	lwz r31, 0x14(r27)
 /* 80451A70 0041B030  7F E3 FB 78 */	mr r3, r31
-/* 80451A74 0041B034  4B FE 2C FD */	bl func_80434770
+/* 80451A74 0041B034  4B FE 2C FD */	bl MemManager_80434770
 /* 80451A78 0041B038  3B 5C 01 00 */	addi r26, r28, 0x100
 /* 80451A7C 0041B03C  7C 03 D0 40 */	cmplw r3, r26
 /* 80451A80 0041B040  41 81 00 50 */	bgt .L_80451AD0
@@ -1136,7 +1136,7 @@
 /* 80451A94 0041B054  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80451A98 0041B058  41 82 00 14 */	beq .L_80451AAC
 /* 80451A9C 0041B05C  7F E3 FB 78 */	mr r3, r31
-/* 80451AA0 0041B060  4B FE 2C D1 */	bl func_80434770
+/* 80451AA0 0041B060  4B FE 2C D1 */	bl MemManager_80434770
 /* 80451AA4 0041B064  7C 03 D0 40 */	cmplw r3, r26
 /* 80451AA8 0041B068  41 81 00 14 */	bgt .L_80451ABC
 .L_80451AAC:
@@ -1153,7 +1153,7 @@
 .L_80451AD0:
 /* 80451AD0 0041B090  80 1B 00 58 */	lwz r0, 0x58(r27)
 /* 80451AD4 0041B094  54 03 F7 FE */	rlwinm r3, r0, 0x1e, 0x1f, 0x1f
-/* 80451AD8 0041B098  4B FE 2F 7D */	bl func_80434A54
+/* 80451AD8 0041B098  4B FE 2F 7D */	bl MemManager_80434A54
 /* 80451ADC 0041B09C  80 1B 00 58 */	lwz r0, 0x58(r27)
 /* 80451AE0 0041B0A0  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80451AE4 0041B0A4  41 82 00 54 */	beq .L_80451B38
@@ -1173,7 +1173,7 @@
 .L_80451B18:
 /* 80451B18 0041B0D8  7F E3 FB 78 */	mr r3, r31
 /* 80451B1C 0041B0DC  7F A5 EB 78 */	mr r5, r29
-/* 80451B20 0041B0E0  4B FE 29 31 */	bl func_80434450
+/* 80451B20 0041B0E0  4B FE 29 31 */	bl MemManager_80434450
 /* 80451B24 0041B0E4  93 9B 00 3C */	stw r28, 0x3c(r27)
 /* 80451B28 0041B0E8  90 7B 00 04 */	stw r3, 4(r27)
 /* 80451B2C 0041B0EC  90 7B 00 08 */	stw r3, 8(r27)
@@ -1196,7 +1196,7 @@
 .L_80451B68:
 /* 80451B68 0041B128  7F E3 FB 78 */	mr r3, r31
 /* 80451B6C 0041B12C  7F A5 EB 78 */	mr r5, r29
-/* 80451B70 0041B130  4B FE 28 BD */	bl func_8043442C
+/* 80451B70 0041B130  4B FE 28 BD */	bl MemManager_8043442C
 /* 80451B74 0041B134  93 9B 00 3C */	stw r28, 0x3c(r27)
 /* 80451B78 0041B138  90 7B 00 04 */	stw r3, 4(r27)
 /* 80451B7C 0041B13C  90 7B 00 08 */	stw r3, 8(r27)
@@ -1215,12 +1215,12 @@
 /* 80451BA8 0041B168  90 1B 00 58 */	stw r0, 0x58(r27)
 .L_80451BAC:
 /* 80451BAC 0041B16C  38 60 00 00 */	li r3, 0
-/* 80451BB0 0041B170  4B FE 2E A5 */	bl func_80434A54
+/* 80451BB0 0041B170  4B FE 2E A5 */	bl MemManager_80434A54
 /* 80451BB4 0041B174  48 00 00 F4 */	b .L_80451CA8
 .L_80451BB8:
 /* 80451BB8 0041B178  80 03 00 58 */	lwz r0, 0x58(r3)
 /* 80451BBC 0041B17C  54 03 F7 FE */	rlwinm r3, r0, 0x1e, 0x1f, 0x1f
-/* 80451BC0 0041B180  4B FE 2E 95 */	bl func_80434A54
+/* 80451BC0 0041B180  4B FE 2E 95 */	bl MemManager_80434A54
 /* 80451BC4 0041B184  80 1B 00 58 */	lwz r0, 0x58(r27)
 /* 80451BC8 0041B188  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80451BCC 0041B18C  41 82 00 54 */	beq .L_80451C20
@@ -1240,7 +1240,7 @@
 .L_80451C00:
 /* 80451C00 0041B1C0  80 7B 00 14 */	lwz r3, 0x14(r27)
 /* 80451C04 0041B1C4  7F A5 EB 78 */	mr r5, r29
-/* 80451C08 0041B1C8  4B FE 28 49 */	bl func_80434450
+/* 80451C08 0041B1C8  4B FE 28 49 */	bl MemManager_80434450
 /* 80451C0C 0041B1CC  93 9B 00 3C */	stw r28, 0x3c(r27)
 /* 80451C10 0041B1D0  90 7B 00 04 */	stw r3, 4(r27)
 /* 80451C14 0041B1D4  90 7B 00 08 */	stw r3, 8(r27)
@@ -1263,7 +1263,7 @@
 .L_80451C50:
 /* 80451C50 0041B210  80 7B 00 14 */	lwz r3, 0x14(r27)
 /* 80451C54 0041B214  7F A5 EB 78 */	mr r5, r29
-/* 80451C58 0041B218  4B FE 27 D5 */	bl func_8043442C
+/* 80451C58 0041B218  4B FE 27 D5 */	bl MemManager_8043442C
 /* 80451C5C 0041B21C  93 9B 00 3C */	stw r28, 0x3c(r27)
 /* 80451C60 0041B220  90 7B 00 04 */	stw r3, 4(r27)
 /* 80451C64 0041B224  90 7B 00 08 */	stw r3, 8(r27)
@@ -1282,7 +1282,7 @@
 /* 80451C90 0041B250  90 1B 00 58 */	stw r0, 0x58(r27)
 .L_80451C94:
 /* 80451C94 0041B254  38 60 00 00 */	li r3, 0
-/* 80451C98 0041B258  4B FE 2D BD */	bl func_80434A54
+/* 80451C98 0041B258  4B FE 2D BD */	bl MemManager_80434A54
 /* 80451C9C 0041B25C  48 00 00 0C */	b .L_80451CA8
 .L_80451CA0:
 /* 80451CA0 0041B260  90 83 00 3C */	stw r4, 0x3c(r3)
@@ -1489,41 +1489,41 @@
 .obj __vt__14CDeviceFileDvd, global
 	.4byte __RTTI__14CDeviceFileDvd
 	.4byte 0
-	.4byte __dt__CDeviceFileDvd
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__14CDeviceFileDvdFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceFileDvd_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFileDvd_WorkThreadEvent4
 	.4byte CDeviceFileDvd_WorkThreadEvent5
 	.4byte CDeviceFileDvd_WorkThreadEvent6
@@ -1674,7 +1674,7 @@
 
 .obj "@eti_80034BA4", local
 .hidden "@eti_80034BA4"
-	.4byte __dt__CDeviceFileDvd
+	.4byte __dt__14CDeviceFileDvdFv
 	.4byte 0x00000060
 	.4byte "@etb_8001CF1C"
 .endobj "@eti_80034BA4"
@@ -1744,7 +1744,7 @@
 
 .obj "@eti_80034C1C", local
 .hidden "@eti_80034C1C"
-	.4byte __ct__80451720
+	.4byte __ct__17UnkClass_80451720Fv
 	.4byte 0x00000098
 	.4byte "@etb_8001CF6C"
 .endobj "@eti_80034C1C"

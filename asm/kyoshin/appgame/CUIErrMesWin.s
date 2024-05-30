@@ -249,7 +249,7 @@
 /* 802B4BD0 0027E190  4E 80 00 20 */	blr 
 .endfn func_802B4B84
 
-.fn __dt__CTTask_CUIErrMesWin, global
+.fn "__dt__22CTTask<12CUIErrMesWin>Fv", global
 /* 802B4BD4 0027E194  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B4BD8 0027E198  7C 08 02 A6 */	mflr r0
 /* 802B4BDC 0027E19C  2C 03 00 00 */	cmpwi r3, 0
@@ -260,7 +260,7 @@
 /* 802B4BF0 0027E1B0  7C 7E 1B 78 */	mr r30, r3
 /* 802B4BF4 0027E1B4  41 82 00 1C */	beq .L_802B4C10
 /* 802B4BF8 0027E1B8  38 80 00 00 */	li r4, 0
-/* 802B4BFC 0027E1BC  48 18 FF 3D */	bl __dt__CProcess
+/* 802B4BFC 0027E1BC  48 18 FF 3D */	bl __dt__8CProcessFv
 /* 802B4C00 0027E1C0  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B4C04 0027E1C4  40 81 00 0C */	ble .L_802B4C10
 /* 802B4C08 0027E1C8  7F C3 F3 78 */	mr r3, r30
@@ -273,9 +273,9 @@
 /* 802B4C20 0027E1E0  7C 08 03 A6 */	mtlr r0
 /* 802B4C24 0027E1E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B4C28 0027E1E8  4E 80 00 20 */	blr
-.endfn __dt__CTTask_CUIErrMesWin
+.endfn "__dt__22CTTask<12CUIErrMesWin>Fv"
 
-.fn __dt__CUIErrMesWin, global
+.fn __dt__12CUIErrMesWinFv, global
 /* 802B4C2C 0027E1EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B4C30 0027E1F0  7C 08 02 A6 */	mflr r0
 /* 802B4C34 0027E1F4  2C 03 00 00 */	cmpwi r3, 0
@@ -287,12 +287,12 @@
 /* 802B4C4C 0027E20C  41 82 00 34 */	beq .L_802B4C80
 /* 802B4C50 0027E210  38 80 FF FF */	li r4, -1
 /* 802B4C54 0027E214  38 63 00 60 */	addi r3, r3, 0x60
-/* 802B4C58 0027E218  4B F7 6A 49 */	bl __dt__CSysWin
+/* 802B4C58 0027E218  4B F7 6A 49 */	bl __dt__7CSysWinFv
 /* 802B4C5C 0027E21C  2C 1E 00 00 */	cmpwi r30, 0
 /* 802B4C60 0027E220  41 82 00 10 */	beq .L_802B4C70
 /* 802B4C64 0027E224  7F C3 F3 78 */	mr r3, r30
 /* 802B4C68 0027E228  38 80 00 00 */	li r4, 0
-/* 802B4C6C 0027E22C  48 18 FE CD */	bl __dt__CProcess
+/* 802B4C6C 0027E22C  48 18 FE CD */	bl __dt__8CProcessFv
 .L_802B4C70:
 /* 802B4C70 0027E230  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B4C74 0027E234  40 81 00 0C */	ble .L_802B4C80
@@ -306,7 +306,7 @@
 /* 802B4C90 0027E250  7C 08 03 A6 */	mtlr r0
 /* 802B4C94 0027E254  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B4C98 0027E258  4E 80 00 20 */	blr 
-.endfn __dt__CUIErrMesWin
+.endfn __dt__12CUIErrMesWinFv
 
 .fn func_802B4C9C, global
 /* 802B4C9C 0027E25C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -423,7 +423,7 @@
 /* 802B4E20 0027E3E0  38 60 00 00 */	li r3, 0
 /* 802B4E24 0027E3E4  48 00 00 BC */	b .L_802B4EE0
 .L_802B4E28:
-/* 802B4E28 0027E3E8  48 18 27 8D */	bl getHeapIndex
+/* 802B4E28 0027E3E8  48 18 27 8D */	bl getHeapIndex__Fv
 /* 802B4E2C 0027E3EC  7C 64 1B 78 */	mr r4, r3
 /* 802B4E30 0027E3F0  38 60 00 A4 */	li r3, 0xa4
 /* 802B4E34 0027E3F4  48 17 FC 29 */	bl heap_malloc
@@ -611,7 +611,7 @@
 /* 802B509C 0027E65C  4E 80 00 20 */	blr 
 .endfn func_802B5094
 
-.fn func_802B50A0, global
+.fn "func_802B50A0__22CTTask<12CUIErrMesWin>Fv", global
 /* 802B50A0 0027E660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B50A4 0027E664  7C 08 02 A6 */	mflr r0
 /* 802B50A8 0027E668  90 01 00 14 */	stw r0, 0x14(r1)
@@ -631,9 +631,9 @@
 /* 802B50DC 0027E69C  7C 08 03 A6 */	mtlr r0
 /* 802B50E0 0027E6A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B50E4 0027E6A4  4E 80 00 20 */	blr 
-.endfn func_802B50A0
+.endfn "func_802B50A0__22CTTask<12CUIErrMesWin>Fv"
 
-.fn func_802B50E8, global
+.fn "func_802B50E8__22CTTask<12CUIErrMesWin>Fv", global
 /* 802B50E8 0027E6A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B50EC 0027E6AC  7C 08 02 A6 */	mflr r0
 /* 802B50F0 0027E6B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -653,11 +653,11 @@
 /* 802B5124 0027E6E4  7C 08 03 A6 */	mtlr r0
 /* 802B5128 0027E6E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B512C 0027E6EC  4E 80 00 20 */	blr 
-.endfn func_802B50E8
+.endfn "func_802B50E8__22CTTask<12CUIErrMesWin>Fv"
 
 .fn func_802B5130, global
 /* 802B5130 0027E6F0  38 63 FF AC */	addi r3, r3, -84
-/* 802B5134 0027E6F4  4B FF FA F8 */	b __dt__CUIErrMesWin
+/* 802B5134 0027E6F4  4B FF FA F8 */	b __dt__12CUIErrMesWinFv
 .endfn func_802B5130
 
 .fn func_802B5138, global
@@ -667,7 +667,7 @@
 
 .fn func_802B5140, global
 /* 802B5140 0027E700  38 63 FF A8 */	addi r3, r3, -88
-/* 802B5144 0027E704  4B FF FA E8 */	b __dt__CUIErrMesWin
+/* 802B5144 0027E704  4B FF FA E8 */	b __dt__12CUIErrMesWinFv
 .endfn func_802B5140
 
 .fn func_802B5148, global
@@ -1412,7 +1412,7 @@
 /* 802B5BC4 0027F184  4E 80 00 20 */	blr 
 .endfn func_802B5AC8
 
-.fn __dt__CTTask_CMenuTitle, global
+.fn "__dt__20CTTask<10CMenuTitle>Fv", global
 /* 802B5BC8 0027F188  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B5BCC 0027F18C  7C 08 02 A6 */	mflr r0
 /* 802B5BD0 0027F190  2C 03 00 00 */	cmpwi r3, 0
@@ -1423,7 +1423,7 @@
 /* 802B5BE4 0027F1A4  7C 7E 1B 78 */	mr r30, r3
 /* 802B5BE8 0027F1A8  41 82 00 1C */	beq .L_802B5C04
 /* 802B5BEC 0027F1AC  38 80 00 00 */	li r4, 0
-/* 802B5BF0 0027F1B0  48 18 EF 49 */	bl __dt__CProcess
+/* 802B5BF0 0027F1B0  48 18 EF 49 */	bl __dt__8CProcessFv
 /* 802B5BF4 0027F1B4  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B5BF8 0027F1B8  40 81 00 0C */	ble .L_802B5C04
 /* 802B5BFC 0027F1BC  7F C3 F3 78 */	mr r3, r30
@@ -1436,9 +1436,9 @@
 /* 802B5C14 0027F1D4  7C 08 03 A6 */	mtlr r0
 /* 802B5C18 0027F1D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B5C1C 0027F1DC  4E 80 00 20 */	blr
-.endfn __dt__CTTask_CMenuTitle
+.endfn "__dt__20CTTask<10CMenuTitle>Fv"
 
-.fn __dt__CMenuTitle, global
+.fn __dt__10CMenuTitleFv, global
 /* 802B5C20 0027F1E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B5C24 0027F1E4  7C 08 02 A6 */	mflr r0
 /* 802B5C28 0027F1E8  2C 03 00 00 */	cmpwi r3, 0
@@ -1450,12 +1450,12 @@
 /* 802B5C40 0027F200  41 82 00 34 */	beq .L_802B5C74
 /* 802B5C44 0027F204  38 80 FF FF */	li r4, -1
 /* 802B5C48 0027F208  38 63 00 60 */	addi r3, r3, 0x60
-/* 802B5C4C 0027F20C  48 00 17 29 */	bl __dt__CTitle
+/* 802B5C4C 0027F20C  48 00 17 29 */	bl __dt__6CTitleFv
 /* 802B5C50 0027F210  2C 1E 00 00 */	cmpwi r30, 0
 /* 802B5C54 0027F214  41 82 00 10 */	beq .L_802B5C64
 /* 802B5C58 0027F218  7F C3 F3 78 */	mr r3, r30
 /* 802B5C5C 0027F21C  38 80 00 00 */	li r4, 0
-/* 802B5C60 0027F220  48 18 EE D9 */	bl __dt__CProcess
+/* 802B5C60 0027F220  48 18 EE D9 */	bl __dt__8CProcessFv
 .L_802B5C64:
 /* 802B5C64 0027F224  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B5C68 0027F228  40 81 00 0C */	ble .L_802B5C74
@@ -1469,7 +1469,7 @@
 /* 802B5C84 0027F244  7C 08 03 A6 */	mtlr r0
 /* 802B5C88 0027F248  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B5C8C 0027F24C  4E 80 00 20 */	blr 
-.endfn __dt__CMenuTitle
+.endfn __dt__10CMenuTitleFv
 
 .fn func_802B5C90, global
 /* 802B5C90 0027F250  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1501,7 +1501,7 @@
 /* 802B5CE8 0027F2A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B5CEC 0027F2AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B5CF0 0027F2B0  7C 7F 1B 78 */	mr r31, r3
-/* 802B5CF4 0027F2B4  48 19 2D 51 */	bl func_80448A44
+/* 802B5CF4 0027F2B4  48 19 2D 51 */	bl func_80448A44__Fv
 /* 802B5CF8 0027F2B8  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B5CFC 0027F2BC  7F E4 FB 78 */	mr r4, r31
 /* 802B5D00 0027F2C0  41 82 00 08 */	beq .L_802B5D08
@@ -1626,47 +1626,47 @@
 .obj __vt__12CUIErrMesWin, global
 	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0
-	.4byte __dt__CUIErrMesWin
-	.4byte CChildListNode_Reset
+	.4byte __dt__12CUIErrMesWinFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_802B4C9C
 	.4byte func_802B4CF8
 	.4byte func_802B4D48
-	.4byte func_802B50E8
-	.4byte CProcess_func_80043F20
+	.4byte "func_802B50E8__22CTTask<12CUIErrMesWin>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0xFFFFFFAC
 	.4byte func_802B5130
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0xFFFFFFA8
 	.4byte func_802B5140
@@ -1694,13 +1694,13 @@
 .obj "__vt__22CTTask<12CUIErrMesWin>", global
 	.4byte "__RTTI__22CTTask<12CUIErrMesWin>"
 	.4byte 0
-	.4byte __dt__CTTask_CUIErrMesWin
-	.4byte CChildListNode_Reset
+	.4byte "__dt__22CTTask<12CUIErrMesWin>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_802B50A0
-	.4byte func_802B50E8
-	.4byte CProcess_func_80043F20
+	.4byte "func_802B50A0__22CTTask<12CUIErrMesWin>Fv"
+	.4byte "func_802B50E8__22CTTask<12CUIErrMesWin>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__22CTTask<12CUIErrMesWin>"
 
 .obj CTTask_CUIErrMesWin_hierarchy, global
@@ -1835,13 +1835,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001B974"
 
 .obj "@etb_8001B9A8", local
@@ -1880,13 +1880,13 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CTTask_CUIErrMesWin
+	.4byte "__dt__22CTTask<12CUIErrMesWin>Fv"
 .endobj "@etb_8001B9D8"
 
 .obj "@etb_8001BA0C", local
@@ -1975,13 +1975,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CTitle
+	.4byte __dt__6CTitleFv
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001BA74"
 
 .obj "@etb_8001BAA8", local
@@ -2039,14 +2039,14 @@
 
 .obj "@eti_800334DC", local
 .hidden "@eti_800334DC"
-	.4byte __dt__CTTask_CUIErrMesWin
+	.4byte "__dt__22CTTask<12CUIErrMesWin>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001B96C"
 .endobj "@eti_800334DC"
 
 .obj "@eti_800334E8", local
 .hidden "@eti_800334E8"
-	.4byte __dt__CUIErrMesWin
+	.4byte __dt__12CUIErrMesWinFv
 	.4byte 0x00000070
 	.4byte "@etb_8001B974"
 .endobj "@eti_800334E8"
@@ -2123,14 +2123,14 @@
 
 .obj "@eti_8003356C", local
 .hidden "@eti_8003356C"
-	.4byte func_802B50A0
+	.4byte "func_802B50A0__22CTTask<12CUIErrMesWin>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001BA34"
 .endobj "@eti_8003356C"
 
 .obj "@eti_80033578", local
 .hidden "@eti_80033578"
-	.4byte func_802B50E8
+	.4byte "func_802B50E8__22CTTask<12CUIErrMesWin>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001BA3C"
 .endobj "@eti_80033578"
@@ -2172,14 +2172,14 @@
 
 .obj "@eti_800335C0", local
 .hidden "@eti_800335C0"
-	.4byte __dt__CTTask_CMenuTitle
+	.4byte "__dt__20CTTask<10CMenuTitle>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001BA6C"
 .endobj "@eti_800335C0"
 
 .obj "@eti_800335CC", local
 .hidden "@eti_800335CC"
-	.4byte __dt__CMenuTitle
+	.4byte __dt__10CMenuTitleFv
 	.4byte 0x00000070
 	.4byte "@etb_8001BA74"
 .endobj "@eti_800335CC"

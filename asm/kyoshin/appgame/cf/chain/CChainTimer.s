@@ -1494,13 +1494,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte __dt__cf_CChainTimer
+	.4byte __dt__Q22cf11CChainTimerFv
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__cf_CChainTime
+	.4byte __dt__Q22cf10CChainTimeFv
 	.4byte 0x0780001E
 	.4byte 0x0000001C
-	.4byte __dt__cf_CChainTemp
+	.4byte __dt__Q22cf10CChainTempFv
 	.4byte 0x8780001E
 	.4byte 0x00000010
 	.4byte __dt__cf_Flusher_cf_CfObjectActor

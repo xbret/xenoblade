@@ -142,7 +142,7 @@
 /* 80168250 00131810  4E 80 00 20 */	blr 
 .endfn __ct__cf_CTaskREvtSequence
 
-.fn __dt__CTTask_cf_CTaskREvtSequence, global
+.fn "__dt__32CTTask<Q22cf17CTaskREvtSequence>Fv", global
 /* 80168254 00131814  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80168258 00131818  7C 08 02 A6 */	mflr r0
 /* 8016825C 0013181C  2C 03 00 00 */	cmpwi r3, 0
@@ -153,7 +153,7 @@
 /* 80168270 00131830  7C 7E 1B 78 */	mr r30, r3
 /* 80168274 00131834  41 82 00 1C */	beq .L_80168290
 /* 80168278 00131838  38 80 00 00 */	li r4, 0
-/* 8016827C 0013183C  48 2D C8 BD */	bl __dt__CProcess
+/* 8016827C 0013183C  48 2D C8 BD */	bl __dt__8CProcessFv
 /* 80168280 00131840  2C 1F 00 00 */	cmpwi r31, 0
 /* 80168284 00131844  40 81 00 0C */	ble .L_80168290
 /* 80168288 00131848  7F C3 F3 78 */	mr r3, r30
@@ -166,7 +166,7 @@
 /* 801682A0 00131860  7C 08 03 A6 */	mtlr r0
 /* 801682A4 00131864  38 21 00 10 */	addi r1, r1, 0x10
 /* 801682A8 00131868  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_cf_CTaskREvtSequence
+.endfn "__dt__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 
 .fn __dt__801682AC, global
 /* 801682AC 0013186C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -188,7 +188,7 @@
 /* 801682EC 001318AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 801682F0 001318B0  2C 03 00 00 */	cmpwi r3, 0
 /* 801682F4 001318B4  41 82 00 0C */	beq .L_80168300
-/* 801682F8 001318B8  48 2C C1 E1 */	bl func_804344D8
+/* 801682F8 001318B8  48 2C C1 E1 */	bl MemManager_804344D8
 /* 801682FC 001318BC  93 FD 00 00 */	stw r31, 0(r29)
 .L_80168300:
 /* 80168300 001318C0  2C 1E 00 00 */	cmpwi r30, 0
@@ -211,7 +211,7 @@
 /* 80168340 00131900  4E 80 00 20 */	blr
 .endfn __dt__801682AC
 
-.fn __dt__cf_CTaskREvtSequence, global
+.fn __dt__Q22cf17CTaskREvtSequenceFv, global
 /* 80168344 00131904  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80168348 00131908  7C 08 02 A6 */	mflr r0
 /* 8016834C 0013190C  2C 03 00 00 */	cmpwi r3, 0
@@ -234,7 +234,7 @@
 /* 80168390 00131950  80 63 00 A4 */	lwz r3, 0xa4(r3)
 /* 80168394 00131954  2C 03 00 00 */	cmpwi r3, 0
 /* 80168398 00131958  41 82 00 0C */	beq .L_801683A4
-/* 8016839C 0013195C  48 2C C1 3D */	bl func_804344D8
+/* 8016839C 0013195C  48 2C C1 3D */	bl MemManager_804344D8
 /* 801683A0 00131960  93 FD 00 A4 */	stw r31, 0xa4(r29)
 .L_801683A4:
 /* 801683A4 00131964  38 60 00 00 */	li r3, 0
@@ -247,7 +247,7 @@
 /* 801683BC 0013197C  41 82 00 10 */	beq .L_801683CC
 /* 801683C0 00131980  7F A3 EB 78 */	mr r3, r29
 /* 801683C4 00131984  38 80 00 00 */	li r4, 0
-/* 801683C8 00131988  48 2D C7 71 */	bl __dt__CProcess
+/* 801683C8 00131988  48 2D C7 71 */	bl __dt__8CProcessFv
 .L_801683CC:
 /* 801683CC 0013198C  2C 1E 00 00 */	cmpwi r30, 0
 /* 801683D0 00131990  40 81 00 0C */	ble .L_801683DC
@@ -262,7 +262,7 @@
 /* 801683F0 001319B0  7C 08 03 A6 */	mtlr r0
 /* 801683F4 001319B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 801683F8 001319B8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CTaskREvtSequence
+.endfn __dt__Q22cf17CTaskREvtSequenceFv
 
 .fn func_801683FC, global
 /* 801683FC 001319BC  80 6D A9 D8 */	lwz r3, lbl_80666B58@sda21(r13)
@@ -496,7 +496,7 @@
 /* 801686E4 00131CA4  38 9E 00 60 */	addi r4, r30, 0x60
 /* 801686E8 00131CA8  38 C0 00 00 */	li r6, 0
 /* 801686EC 00131CAC  38 E0 08 00 */	li r7, 0x800
-/* 801686F0 00131CB0  48 2E 60 A5 */	bl CDeviceFile_openFile1
+/* 801686F0 00131CB0  48 2E 60 A5 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 801686F4 00131CB4  90 7E 00 B8 */	stw r3, 0xb8(r30)
 /* 801686F8 00131CB8  3C 80 80 53 */	lis r4, lbl_8053421C@ha
 /* 801686FC 00131CBC  84 64 42 1C */	lwzu r3, lbl_8053421C@l(r4)
@@ -534,7 +534,7 @@
 /* 80168770 00131D30  2C 00 00 00 */	cmpwi r0, 0
 /* 80168774 00131D34  41 82 00 14 */	beq .L_80168788
 /* 80168778 00131D38  7C 03 03 78 */	mr r3, r0
-/* 8016877C 00131D3C  48 2C BD 5D */	bl func_804344D8
+/* 8016877C 00131D3C  48 2C BD 5D */	bl MemManager_804344D8
 /* 80168780 00131D40  38 00 00 00 */	li r0, 0
 /* 80168784 00131D44  90 1E 00 C0 */	stw r0, 0xc0(r30)
 .L_80168788:
@@ -555,7 +555,7 @@
 /* 801687BC 00131D7C  48 2E 63 A9 */	bl CDeviceFile_openFile2
 /* 801687C0 00131D80  90 7E 00 BC */	stw r3, 0xbc(r30)
 /* 801687C4 00131D84  38 80 00 03 */	li r4, 3
-/* 801687C8 00131D88  48 2E 69 8D */	bl func_8044F154
+/* 801687C8 00131D88  48 2E 69 8D */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 /* 801687CC 00131D8C  3C 80 80 53 */	lis r4, lbl_80534228@ha
 /* 801687D0 00131D90  84 64 42 28 */	lwzu r3, lbl_80534228@l(r4)
 /* 801687D4 00131D94  80 04 00 04 */	lwz r0, 4(r4)
@@ -602,7 +602,7 @@
 /* 80168858 00131E18  48 2C BB 49 */	bl Heap_getRegionIndex2
 /* 8016885C 00131E1C  38 80 04 00 */	li r4, 0x400
 /* 80168860 00131E20  38 A0 00 04 */	li r5, 4
-/* 80168864 00131E24  48 2C BB C9 */	bl func_8043442C
+/* 80168864 00131E24  48 2C BB C9 */	bl MemManager_8043442C
 /* 80168868 00131E28  90 7F 01 0C */	stw r3, 0x10c(r31)
 /* 8016886C 00131E2C  80 7F 00 C4 */	lwz r3, 0xc4(r31)
 /* 80168870 00131E30  80 03 00 08 */	lwz r0, 8(r3)
@@ -810,7 +810,7 @@
 /* 80168AEC 001320AC  90 7F 00 B0 */	stw r3, 0xb0(r31)
 /* 80168AF0 001320B0  57 64 10 3A */	slwi r4, r27, 2
 /* 80168AF4 001320B4  38 A0 00 04 */	li r5, 4
-/* 80168AF8 001320B8  48 2C B9 35 */	bl func_8043442C
+/* 80168AF8 001320B8  48 2C B9 35 */	bl MemManager_8043442C
 /* 80168AFC 001320BC  80 1F 00 DC */	lwz r0, 0xdc(r31)
 /* 80168B00 001320C0  38 80 00 00 */	li r4, 0
 /* 80168B04 001320C4  90 7F 00 A4 */	stw r3, 0xa4(r31)
@@ -2239,7 +2239,7 @@
 /* 80169EA4 00133464  48 2E 4C C1 */	bl CDeviceFile_openFile2
 /* 80169EA8 00133468  90 7E 00 FC */	stw r3, 0xfc(r30)
 /* 80169EAC 0013346C  38 80 00 03 */	li r4, 3
-/* 80169EB0 00133470  48 2E 52 A5 */	bl func_8044F154
+/* 80169EB0 00133470  48 2E 52 A5 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 .L_80169EB4:
 /* 80169EB4 00133474  2C 1F 00 00 */	cmpwi r31, 0
 /* 80169EB8 00133478  41 82 00 50 */	beq .L_80169F08
@@ -2693,7 +2693,7 @@
 /* 8016A494 00133A54  F3 E1 00 38 */	psq_st f31, 56(r1), 0, qr0
 /* 8016A498 00133A58  48 14 FC BD */	bl _savegpr_27
 /* 8016A49C 00133A5C  7C 7C 1B 78 */	mr r28, r3
-/* 8016A4A0 00133A60  48 2D E5 A5 */	bl func_80448A44
+/* 8016A4A0 00133A60  48 2D E5 A5 */	bl func_80448A44__Fv
 /* 8016A4A4 00133A64  38 00 00 01 */	li r0, 1
 /* 8016A4A8 00133A68  98 1C 01 15 */	stb r0, 0x115(r28)
 /* 8016A4AC 00133A6C  4B FF A4 65 */	bl func_80164910
@@ -2710,7 +2710,7 @@
 /* 8016A4D4 00133A94  80 7C 01 0C */	lwz r3, 0x10c(r28)
 /* 8016A4D8 00133A98  2C 03 00 00 */	cmpwi r3, 0
 /* 8016A4DC 00133A9C  41 82 00 10 */	beq .L_8016A4EC
-/* 8016A4E0 00133AA0  48 2C 9F F9 */	bl func_804344D8
+/* 8016A4E0 00133AA0  48 2C 9F F9 */	bl MemManager_804344D8
 /* 8016A4E4 00133AA4  38 00 00 00 */	li r0, 0
 /* 8016A4E8 00133AA8  90 1C 01 0C */	stw r0, 0x10c(r28)
 .L_8016A4EC:
@@ -3121,7 +3121,7 @@
 /* 8016AA60 00134020  80 7C 00 C0 */	lwz r3, 0xc0(r28)
 /* 8016AA64 00134024  2C 03 00 00 */	cmpwi r3, 0
 /* 8016AA68 00134028  41 82 00 10 */	beq .L_8016AA78
-/* 8016AA6C 0013402C  48 2C 9A 6D */	bl func_804344D8
+/* 8016AA6C 0013402C  48 2C 9A 6D */	bl MemManager_804344D8
 /* 8016AA70 00134030  38 00 00 00 */	li r0, 0
 /* 8016AA74 00134034  90 1C 00 C0 */	stw r0, 0xc0(r28)
 .L_8016AA78:
@@ -3456,7 +3456,7 @@
 /* 8016AEE8 001344A8  7C 9E 23 78 */	mr r30, r4
 /* 8016AEEC 001344AC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8016AEF0 001344B0  7C 7D 1B 78 */	mr r29, r3
-/* 8016AEF4 001344B4  48 2C C6 C1 */	bl getHeapIndex
+/* 8016AEF4 001344B4  48 2C C6 C1 */	bl getHeapIndex__Fv
 /* 8016AEF8 001344B8  7C 64 1B 78 */	mr r4, r3
 /* 8016AEFC 001344BC  38 60 0A F8 */	li r3, 0xaf8
 /* 8016AF00 001344C0  48 2C 9B 5D */	bl heap_malloc
@@ -5250,7 +5250,7 @@
 /* 8016C73C 00135CFC  4E 80 00 20 */	blr 
 .endfn func_8016C720
 
-.fn func_8016C740, global
+.fn "func_8016C740__32CTTask<Q22cf17CTaskREvtSequence>Fv", global
 /* 8016C740 00135D00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016C744 00135D04  7C 08 02 A6 */	mflr r0
 /* 8016C748 00135D08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5270,9 +5270,9 @@
 /* 8016C77C 00135D3C  7C 08 03 A6 */	mtlr r0
 /* 8016C780 00135D40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016C784 00135D44  4E 80 00 20 */	blr 
-.endfn func_8016C740
+.endfn "func_8016C740__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 
-.fn func_8016C788, global
+.fn "func_8016C788__32CTTask<Q22cf17CTaskREvtSequence>Fv", global
 /* 8016C788 00135D48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016C78C 00135D4C  7C 08 02 A6 */	mflr r0
 /* 8016C790 00135D50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5292,7 +5292,7 @@
 /* 8016C7C4 00135D84  7C 08 03 A6 */	mtlr r0
 /* 8016C7C8 00135D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016C7CC 00135D8C  4E 80 00 20 */	blr 
-.endfn func_8016C788
+.endfn "func_8016C788__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 
 .fn CTaskREvtSequence_OnFileEvent, global
 /* 8016C7D0 00135D90  38 63 FF AC */	addi r3, r3, -84
@@ -5301,7 +5301,7 @@
 
 .fn func_8016C7D8, global
 /* 8016C7D8 00135D98  38 63 FF AC */	addi r3, r3, -84
-/* 8016C7DC 00135D9C  4B FF BB 68 */	b __dt__cf_CTaskREvtSequence
+/* 8016C7DC 00135D9C  4B FF BB 68 */	b __dt__Q22cf17CTaskREvtSequenceFv
 .endfn func_8016C7D8
 
 .fn func_8016C7E0, global
@@ -5311,7 +5311,7 @@
 
 .fn func_8016C7E8, global
 /* 8016C7E8 00135DA8  38 63 FF A8 */	addi r3, r3, -88
-/* 8016C7EC 00135DAC  4B FF BB 58 */	b __dt__cf_CTaskREvtSequence
+/* 8016C7EC 00135DAC  4B FF BB 58 */	b __dt__Q22cf17CTaskREvtSequenceFv
 .endfn func_8016C7E8
 
 
@@ -5445,47 +5445,47 @@
 .obj __vt__Q22cf17CTaskREvtSequence, global
 	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0
-	.4byte __dt__cf_CTaskREvtSequence
-	.4byte CChildListNode_Reset
+	.4byte __dt__Q22cf17CTaskREvtSequenceFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8016A3E0
 	.4byte func_8016A42C
-	.4byte func_8016C740
+	.4byte "func_8016C740__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 	.4byte func_8016ABA4
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0xFFFFFFAC
 	.4byte func_8016C7D8
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CTaskREvtSequence_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0xFFFFFFA8
 	.4byte func_8016C7E8
@@ -5510,13 +5510,13 @@
 .obj "__vt__32CTTask<Q22cf17CTaskREvtSequence>", global
 	.4byte "__RTTI__32CTTask<Q22cf17CTaskREvtSequence>"
 	.4byte 0
-	.4byte __dt__CTTask_cf_CTaskREvtSequence
-	.4byte CChildListNode_Reset
+	.4byte "__dt__32CTTask<Q22cf17CTaskREvtSequence>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_8016C740
-	.4byte func_8016C788
-	.4byte CProcess_func_80043F20
+	.4byte "func_8016C740__32CTTask<Q22cf17CTaskREvtSequence>Fv"
+	.4byte "func_8016C788__32CTTask<Q22cf17CTaskREvtSequence>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__32CTTask<Q22cf17CTaskREvtSequence>"
 
 .obj CTTask_cf_CTaskREvtSequence_hierarchy, global
@@ -5696,13 +5696,13 @@
 	.4byte __dt__801682AC
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CTaskREvtSequence
+	.4byte "__dt__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 .endobj "@etb_8000DE54"
 
 .obj "@etb_8000DE94", local
@@ -5728,10 +5728,10 @@
 	.4byte __dt__801682AC
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000DEA4"
 
 .obj "@etb_8000DED8", local
@@ -5991,7 +5991,7 @@
 
 .obj "@eti_80028E08", local
 .hidden "@eti_80028E08"
-	.4byte __dt__CTTask_cf_CTaskREvtSequence
+	.4byte "__dt__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8000DE94"
 .endobj "@eti_80028E08"
@@ -6005,7 +6005,7 @@
 
 .obj "@eti_80028E20", local
 .hidden "@eti_80028E20"
-	.4byte __dt__cf_CTaskREvtSequence
+	.4byte __dt__Q22cf17CTaskREvtSequenceFv
 	.4byte 0x000000B8
 	.4byte "@etb_8000DEA4"
 .endobj "@eti_80028E20"
@@ -6264,14 +6264,14 @@
 
 .obj "@eti_80028FDC", local
 .hidden "@eti_80028FDC"
-	.4byte func_8016C740
+	.4byte "func_8016C740__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000E038"
 .endobj "@eti_80028FDC"
 
 .obj "@eti_80028FE8", local
 .hidden "@eti_80028FE8"
-	.4byte func_8016C788
+	.4byte "func_8016C788__32CTTask<Q22cf17CTaskREvtSequence>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000E040"
 .endobj "@eti_80028FE8"

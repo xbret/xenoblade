@@ -58,7 +58,7 @@
 /* 80498D3C 004622FC  4E 80 00 20 */	blr 
 .endfn __ct__CScnBlend
 
-.fn __dt__CScnBlend, global
+.fn __dt__9CScnBlendFv, global
 /* 80498D40 00462300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80498D44 00462304  7C 08 02 A6 */	mflr r0
 /* 80498D48 00462308  2C 03 00 00 */	cmpwi r3, 0
@@ -69,7 +69,7 @@
 /* 80498D5C 0046231C  7C 7E 1B 78 */	mr r30, r3
 /* 80498D60 00462320  41 82 00 1C */	beq .L_80498D7C
 /* 80498D64 00462324  38 80 00 00 */	li r4, 0
-/* 80498D68 00462328  48 00 3A C1 */	bl __dt__CScnFilter
+/* 80498D68 00462328  48 00 3A C1 */	bl __dt__10CScnFilterFv
 /* 80498D6C 0046232C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80498D70 00462330  40 81 00 0C */	ble .L_80498D7C
 /* 80498D74 00462334  7F C3 F3 78 */	mr r3, r30
@@ -82,7 +82,7 @@
 /* 80498D8C 0046234C  7C 08 03 A6 */	mtlr r0
 /* 80498D90 00462350  38 21 00 10 */	addi r1, r1, 0x10
 /* 80498D94 00462354  4E 80 00 20 */	blr 
-.endfn __dt__CScnBlend
+.endfn __dt__9CScnBlendFv
 
 .fn func_80498D98, global
 /* 80498D98 00462358  2C 04 00 00 */	cmpwi r4, 0
@@ -397,7 +397,7 @@
 .obj __vt__9CScnBlend, global
 	.4byte __RTTI__9CScnBlend
 	.4byte 0
-	.4byte __dt__CScnBlend
+	.4byte __dt__9CScnBlendFv
 	.4byte func_8049C868
 	.4byte func_80498DE8
 .endobj __vt__9CScnBlend
@@ -481,7 +481,7 @@
 
 .obj "@eti_80036D4C", local
 .hidden "@eti_80036D4C"
-	.4byte __dt__CScnBlend
+	.4byte __dt__9CScnBlendFv
 	.4byte 0x00000058
 	.4byte "@etb_8001F2D4"
 .endobj "@eti_80036D4C"

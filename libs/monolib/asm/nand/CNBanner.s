@@ -58,7 +58,7 @@
 /* 804F5220 004BE7E0  4E 80 00 20 */	blr 
 .endfn __ct__CNBanner
 
-.fn __dt__CNBanner, global
+.fn __dt__8CNBannerFv, global
 /* 804F5224 004BE7E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804F5228 004BE7E8  7C 08 02 A6 */	mflr r0
 /* 804F522C 004BE7EC  2C 03 00 00 */	cmpwi r3, 0
@@ -118,7 +118,7 @@
 /* 804F52EC 004BE8AC  7C 08 03 A6 */	mtlr r0
 /* 804F52F0 004BE8B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804F52F4 004BE8B4  4E 80 00 20 */	blr 
-.endfn __dt__CNBanner
+.endfn __dt__8CNBannerFv
 
 .fn func_804F52F8, global
 /* 804F52F8 004BE8B8  4C C6 31 82 */	crclr 6
@@ -209,7 +209,7 @@
 /* 804F540C 004BE9CC  7C 64 1B 78 */	mr r4, r3
 /* 804F5410 004BE9D0  38 65 F0 A0 */	addi r3, r5, 0x0000F0A0@l
 /* 804F5414 004BE9D4  38 A0 00 20 */	li r5, 0x20
-/* 804F5418 004BE9D8  4B F3 F6 8D */	bl func_80434AA4
+/* 804F5418 004BE9D8  4B F3 F6 8D */	bl MemManager_80434AA4
 /* 804F541C 004BE9DC  2C 03 00 00 */	cmpwi r3, 0
 /* 804F5420 004BE9E0  90 7F 00 04 */	stw r3, 4(r31)
 /* 804F5424 004BE9E4  40 82 00 0C */	bne .L_804F5430
@@ -573,38 +573,38 @@
 .obj __vt__8CNBanner, global
 	.4byte __RTTI__8CNBanner
 	.4byte 0
-	.4byte __dt__CNBanner
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__8CNBannerFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CNBanner_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__8CNBanner
 
 .obj CNBanner_hierarchy, global
@@ -640,7 +640,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80020FDC"
 
 .obj "@etb_80020FF8", local
@@ -680,7 +680,7 @@
 
 .obj "@eti_800391C4", local
 .hidden "@eti_800391C4"
-	.4byte __dt__CNBanner
+	.4byte __dt__8CNBannerFv
 	.4byte 0x000000D4
 	.4byte "@etb_80020FDC"
 .endobj "@eti_800391C4"

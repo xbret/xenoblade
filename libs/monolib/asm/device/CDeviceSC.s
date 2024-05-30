@@ -32,7 +32,7 @@
 /* 80447BB8 00411178  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceSC
 
-.fn __dt__CDeviceSC, global
+.fn __dt__9CDeviceSCFv, global
 /* 80447BBC 0041117C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447BC0 00411180  7C 08 02 A6 */	mflr r0
 /* 80447BC4 00411184  2C 03 00 00 */	cmpwi r3, 0
@@ -46,7 +46,7 @@
 /* 80447BE4 004111A4  90 0D BD A0 */	stw r0, lbl_80667F20@sda21(r13)
 /* 80447BE8 004111A8  41 82 00 0C */	beq .L_80447BF4
 /* 80447BEC 004111AC  38 80 00 00 */	li r4, 0
-/* 80447BF0 004111B0  4B FE FE D9 */	bl __dt__CWorkThread
+/* 80447BF0 004111B0  4B FE FE D9 */	bl __dt__11CWorkThreadFv
 .L_80447BF4:
 /* 80447BF4 004111B4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80447BF8 004111B8  40 81 00 0C */	ble .L_80447C04
@@ -60,7 +60,7 @@
 /* 80447C14 004111D4  7C 08 03 A6 */	mtlr r0
 /* 80447C18 004111D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447C1C 004111DC  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceSC
+.endfn __dt__9CDeviceSCFv
 
 .fn func_80447C20, global
 /* 80447C20 004111E0  80 6D BD A0 */	lwz r3, lbl_80667F20@sda21(r13)
@@ -165,7 +165,7 @@
 /* 80447D54 00411314  4B F1 93 ED */	bl SCGetSoundMode
 /* 80447D58 00411318  98 7F 01 CC */	stb r3, 0x1cc(r31)
 /* 80447D5C 0041131C  7F E3 FB 78 */	mr r3, r31
-/* 80447D60 00411320  4B FF 0C 99 */	bl CWorkThread_WorkThreadEvent4
+/* 80447D60 00411320  4B FF 0C 99 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80447D64 00411324  48 00 00 08 */	b .L_80447D6C
 .L_80447D68:
 /* 80447D68 00411328  38 60 00 00 */	li r3, 0
@@ -191,7 +191,7 @@
 /* 80447DA8 00411368  2C 03 00 00 */	cmpwi r3, 0
 /* 80447DAC 0041136C  40 82 00 10 */	bne .L_80447DBC
 /* 80447DB0 00411370  7F E3 FB 78 */	mr r3, r31
-/* 80447DB4 00411374  4B FF 0C 71 */	bl CWorkThread_WorkThreadEvent5
+/* 80447DB4 00411374  4B FF 0C 71 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 80447DB8 00411378  48 00 00 08 */	b .L_80447DC0
 .L_80447DBC:
 /* 80447DBC 0041137C  38 60 00 00 */	li r3, 0
@@ -221,44 +221,44 @@
 .obj __vt__9CDeviceSC, global
 	.4byte __RTTI__9CDeviceSC
 	.4byte 0
-	.4byte __dt__CDeviceSC
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__9CDeviceSCFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceSC_WorkThreadEvent4
 	.4byte CDeviceSC_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CDeviceSC
 
 .obj CDeviceSC_hierarchy, global
@@ -301,7 +301,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001CA3C"
 
 .obj "@etb_8001CA58", local
@@ -335,7 +335,7 @@
 
 .obj "@eti_8003467C", local
 .hidden "@eti_8003467C"
-	.4byte __dt__CDeviceSC
+	.4byte __dt__9CDeviceSCFv
 	.4byte 0x00000064
 	.4byte "@etb_8001CA58"
 .endobj "@eti_8003467C"

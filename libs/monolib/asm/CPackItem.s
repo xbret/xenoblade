@@ -56,7 +56,7 @@
 /* 804DE44C 004A7A0C  4E 80 00 20 */	blr 
 .endfn __ct__CPackItem
 
-.fn __dt__CPackItem, global
+.fn __dt__9CPackItemFv, global
 /* 804DE450 004A7A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE454 004A7A14  7C 08 02 A6 */	mflr r0
 /* 804DE458 004A7A18  2C 03 00 00 */	cmpwi r3, 0
@@ -83,14 +83,14 @@
 /* 804DE4A4 004A7A64  80 7E 00 50 */	lwz r3, 0x50(r30)
 /* 804DE4A8 004A7A68  2C 03 00 00 */	cmpwi r3, 0
 /* 804DE4AC 004A7A6C  41 82 00 10 */	beq .L_804DE4BC
-/* 804DE4B0 004A7A70  4B F5 60 29 */	bl func_804344D8
+/* 804DE4B0 004A7A70  4B F5 60 29 */	bl MemManager_804344D8
 /* 804DE4B4 004A7A74  38 00 00 00 */	li r0, 0
 /* 804DE4B8 004A7A78  90 1E 00 50 */	stw r0, 0x50(r30)
 .L_804DE4BC:
 /* 804DE4BC 004A7A7C  80 7E 00 68 */	lwz r3, 0x68(r30)
 /* 804DE4C0 004A7A80  2C 03 00 00 */	cmpwi r3, 0
 /* 804DE4C4 004A7A84  41 82 00 10 */	beq .L_804DE4D4
-/* 804DE4C8 004A7A88  4B F5 60 11 */	bl func_804344D8
+/* 804DE4C8 004A7A88  4B F5 60 11 */	bl MemManager_804344D8
 /* 804DE4CC 004A7A8C  38 00 00 00 */	li r0, 0
 /* 804DE4D0 004A7A90  90 1E 00 68 */	stw r0, 0x68(r30)
 .L_804DE4D4:
@@ -105,7 +105,7 @@
 /* 804DE4F0 004A7AB0  7C 08 03 A6 */	mtlr r0
 /* 804DE4F4 004A7AB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DE4F8 004A7AB8  4E 80 00 20 */	blr 
-.endfn __dt__CPackItem
+.endfn __dt__9CPackItemFv
 
 .fn func_804DE4FC, global
 /* 804DE4FC 004A7ABC  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -138,7 +138,7 @@
 /* 804DE564 004A7B24  7F E5 FB 78 */	mr r5, r31
 /* 804DE568 004A7B28  38 C0 00 00 */	li r6, 0
 /* 804DE56C 004A7B2C  38 E0 00 00 */	li r7, 0
-/* 804DE570 004A7B30  4B F7 02 25 */	bl CDeviceFile_openFile1
+/* 804DE570 004A7B30  4B F7 02 25 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 804DE574 004A7B34  90 7F 00 4C */	stw r3, 0x4c(r31)
 .L_804DE578:
 /* 804DE578 004A7B38  80 9F 00 84 */	lwz r4, 0x84(r31)
@@ -258,7 +258,7 @@
 /* 804DE718 004A7CD8  54 04 08 3C */	slwi r4, r0, 1
 /* 804DE71C 004A7CDC  38 04 01 1A */	addi r0, r4, 0x11a
 /* 804DE720 004A7CE0  54 04 00 3A */	rlwinm r4, r0, 0, 0, 0x1d
-/* 804DE724 004A7CE4  4B F5 5D 09 */	bl func_8043442C
+/* 804DE724 004A7CE4  4B F5 5D 09 */	bl MemManager_8043442C
 /* 804DE728 004A7CE8  7C 66 1B 78 */	mr r6, r3
 /* 804DE72C 004A7CEC  90 7F 00 68 */	stw r3, 0x68(r31)
 /* 804DE730 004A7CF0  80 7F 00 64 */	lwz r3, 0x64(r31)
@@ -568,38 +568,38 @@
 .obj __vt__9CPackItem, global
 	.4byte __RTTI__9CPackItem
 	.4byte 0
-	.4byte __dt__CPackItem
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__9CPackItemFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CPackItem_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__9CPackItem
 
 
@@ -630,7 +630,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_800208FC"
 
 .obj "@etb_80020918", local
@@ -670,7 +670,7 @@
 
 .obj "@eti_80038954", local
 .hidden "@eti_80038954"
-	.4byte __dt__CPackItem
+	.4byte __dt__9CPackItemFv
 	.4byte 0x000000AC
 	.4byte "@etb_800208FC"
 .endobj "@eti_80038954"

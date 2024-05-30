@@ -114,7 +114,7 @@
 /* 804826CC 0044BC8C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804826D0 0044BC90  2C 03 00 00 */	cmpwi r3, 0
 /* 804826D4 0044BC94  41 82 00 0C */	beq .L_804826E0
-/* 804826D8 0044BC98  4B FB 1E 01 */	bl func_804344D8
+/* 804826D8 0044BC98  4B FB 1E 01 */	bl MemManager_804344D8
 /* 804826DC 0044BC9C  93 FD 00 00 */	stw r31, 0(r29)
 .L_804826E0:
 /* 804826E0 0044BCA0  2C 1E 00 00 */	cmpwi r30, 0
@@ -137,7 +137,7 @@
 /* 80482720 0044BCE0  4E 80 00 20 */	blr 
 .endfn __dt__8048268C
 
-.fn __dt__CScnItemModel, global
+.fn __dt__13CScnItemModelFv, global
 /* 80482724 0044BCE4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80482728 0044BCE8  7C 08 02 A6 */	mflr r0
 /* 8048272C 0044BCEC  2C 03 00 00 */	cmpwi r3, 0
@@ -159,7 +159,7 @@
 /* 8048276C 0044BD2C  80 63 08 24 */	lwz r3, 0x824(r3)
 /* 80482770 0044BD30  2C 03 00 00 */	cmpwi r3, 0
 /* 80482774 0044BD34  41 82 00 0C */	beq .L_80482780
-/* 80482778 0044BD38  4B FB 1D 61 */	bl func_804344D8
+/* 80482778 0044BD38  4B FB 1D 61 */	bl MemManager_804344D8
 /* 8048277C 0044BD3C  93 FD 08 24 */	stw r31, 0x824(r29)
 .L_80482780:
 /* 80482780 0044BD40  38 60 00 00 */	li r3, 0
@@ -187,7 +187,7 @@
 /* 804827D0 0044BD90  7C 08 03 A6 */	mtlr r0
 /* 804827D4 0044BD94  38 21 00 20 */	addi r1, r1, 0x20
 /* 804827D8 0044BD98  4E 80 00 20 */	blr 
-.endfn __dt__CScnItemModel
+.endfn __dt__13CScnItemModelFv
 
 .fn func_804827DC, global
 /* 804827DC 0044BD9C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4550,7 +4550,7 @@
 .obj __vt__13CScnItemModel, global
 	.4byte __RTTI__13CScnItemModel
 	.4byte 0
-	.4byte __dt__CScnItemModel
+	.4byte __dt__13CScnItemModelFv
 	.4byte func_80485CE8
 	.4byte func_80482048
 	.4byte func_80482288
@@ -4878,7 +4878,7 @@
 
 .obj "@eti_8003623C", local
 .hidden "@eti_8003623C"
-	.4byte __dt__CScnItemModel
+	.4byte __dt__13CScnItemModelFv
 	.4byte 0x000000B8
 	.4byte "@etb_8001E318"
 .endobj "@eti_8003623C"

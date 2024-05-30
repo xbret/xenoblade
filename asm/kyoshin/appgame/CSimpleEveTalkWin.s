@@ -49,7 +49,7 @@
 /* 801A1910 0016AED0  90 BB 00 10 */	stw r5, 0x10(r27)
 /* 801A1914 0016AED4  90 9B 00 6C */	stw r4, 0x6c(r27)
 /* 801A1918 0016AED8  90 1B 00 70 */	stw r0, 0x70(r27)
-/* 801A191C 0016AEDC  48 2B DC 49 */	bl __ct__UnkClass_8045F564
+/* 801A191C 0016AEDC  48 2B DC 49 */	bl __ct__17UnkClass_8045F564Fv
 /* 801A1920 0016AEE0  38 00 00 04 */	li r0, 4
 /* 801A1924 0016AEE4  93 9B 00 84 */	stw r28, 0x84(r27)
 /* 801A1928 0016AEE8  7F 63 DB 78 */	mr r3, r27
@@ -69,7 +69,7 @@
 /* 801A1960 0016AF20  4E 80 00 20 */	blr
 .endfn __ct__CSimpleEveTalkWin
 
-.fn __dt__CSimpleEveTalkWin, global
+.fn __dt__17CSimpleEveTalkWinFv, global
 /* 801A1964 0016AF24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A1968 0016AF28  7C 08 02 A6 */	mflr r0
 /* 801A196C 0016AF2C  2C 03 00 00 */	cmpwi r3, 0
@@ -81,13 +81,13 @@
 /* 801A1984 0016AF44  41 82 00 38 */	beq .L_801A19BC
 /* 801A1988 0016AF48  38 80 FF FF */	li r4, -1
 /* 801A198C 0016AF4C  38 63 00 74 */	addi r3, r3, 0x74
-/* 801A1990 0016AF50  48 2B DB F1 */	bl __dt__UnkClass_8045F564
+/* 801A1990 0016AF50  48 2B DB F1 */	bl __dt__17UnkClass_8045F564Fv
 /* 801A1994 0016AF54  2C 1E 00 00 */	cmpwi r30, 0
 /* 801A1998 0016AF58  41 82 00 14 */	beq .L_801A19AC
 /* 801A199C 0016AF5C  41 82 00 10 */	beq .L_801A19AC
 /* 801A19A0 0016AF60  7F C3 F3 78 */	mr r3, r30
 /* 801A19A4 0016AF64  38 80 00 00 */	li r4, 0
-/* 801A19A8 0016AF68  48 2A 31 91 */	bl __dt__CProcess
+/* 801A19A8 0016AF68  48 2A 31 91 */	bl __dt__8CProcessFv
 .L_801A19AC:
 /* 801A19AC 0016AF6C  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A19B0 0016AF70  40 81 00 0C */	ble .L_801A19BC
@@ -101,7 +101,7 @@
 /* 801A19CC 0016AF8C  7C 08 03 A6 */	mtlr r0
 /* 801A19D0 0016AF90  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A19D4 0016AF94  4E 80 00 20 */	blr 
-.endfn __dt__CSimpleEveTalkWin
+.endfn __dt__17CSimpleEveTalkWinFv
 
 .fn func_801A19D8, global
 /* 801A19D8 0016AF98  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -119,10 +119,10 @@
 /* 801A1A08 0016AFC8  38 C6 F6 3C */	addi r6, r6, CSimpleEveTalkWin_strpool@l
 /* 801A1A0C 0016AFCC  38 A0 40 00 */	li r5, 0x4000
 /* 801A1A10 0016AFD0  38 E0 00 00 */	li r7, 0
-/* 801A1A14 0016AFD4  48 2B DC 6D */	bl func_8045F680
+/* 801A1A14 0016AFD4  48 2B DC 6D */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 801A1A18 0016AFD8  38 61 00 08 */	addi r3, r1, 8
 /* 801A1A1C 0016AFDC  38 9F 00 74 */	addi r4, r31, 0x74
-/* 801A1A20 0016AFE0  48 2B DE 39 */	bl __ct__Class_8045F858
+/* 801A1A20 0016AFE0  48 2B DE 39 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 801A1A24 0016AFE4  7F A4 EB 78 */	mr r4, r29
 /* 801A1A28 0016AFE8  38 60 08 40 */	li r3, 0x840
 /* 801A1A2C 0016AFEC  48 29 30 31 */	bl heap_malloc
@@ -153,7 +153,7 @@
 /* 801A1A8C 0016B04C  98 1F 00 64 */	stb r0, 0x64(r31)
 /* 801A1A90 0016B050  38 61 00 08 */	addi r3, r1, 8
 /* 801A1A94 0016B054  38 80 FF FF */	li r4, -1
-/* 801A1A98 0016B058  48 2B DE 31 */	bl __dt__Class_8045F858
+/* 801A1A98 0016B058  48 2B DE 31 */	bl __dt__14Class_8045F858Fv
 /* 801A1A9C 0016B05C  48 00 03 40 */	b .L_801A1DDC
 .L_801A1AA0:
 /* 801A1AA0 0016B060  4B F9 3B 55 */	bl func_801355F4
@@ -162,7 +162,7 @@
 /* 801A1AAC 0016B06C  3B BD F6 3C */	addi r29, r29, CSimpleEveTalkWin_strpool@l
 /* 801A1AB0 0016B070  38 7F 00 54 */	addi r3, r31, 0x54
 /* 801A1AB4 0016B074  38 BD 00 12 */	addi r5, r29, 0x12
-/* 801A1AB8 0016B078  4B F9 53 CD */	bl func_80136E84
+/* 801A1AB8 0016B078  4B F9 53 CD */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801A1ABC 0016B07C  4B F9 3B 39 */	bl func_801355F4
 /* 801A1AC0 0016B080  7C 65 1B 78 */	mr r5, r3
 /* 801A1AC4 0016B084  80 7F 00 54 */	lwz r3, 0x54(r31)
@@ -366,10 +366,10 @@
 /* 801A1DC0 0016B380  38 C0 00 00 */	li r6, 0
 /* 801A1DC4 0016B384  48 2F 40 F1 */	bl func_80495EB4
 /* 801A1DC8 0016B388  38 7F 00 74 */	addi r3, r31, 0x74
-/* 801A1DCC 0016B38C  48 2B DA 45 */	bl func_8045F810
+/* 801A1DCC 0016B38C  48 2B DA 45 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 801A1DD0 0016B390  38 61 00 08 */	addi r3, r1, 8
 /* 801A1DD4 0016B394  38 80 FF FF */	li r4, -1
-/* 801A1DD8 0016B398  48 2B DA F1 */	bl __dt__Class_8045F858
+/* 801A1DD8 0016B398  48 2B DA F1 */	bl __dt__14Class_8045F858Fv
 .L_801A1DDC:
 /* 801A1DDC 0016B39C  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 801A1DE0 0016B3A0  83 E1 00 2C */	lwz r31, 0x2c(r1)
@@ -389,7 +389,7 @@
 /* 801A1E0C 0016B3CC  88 0D AA 94 */	lbz r0, lbl_80666C14@sda21(r13)
 /* 801A1E10 0016B3D0  2C 00 00 00 */	cmpwi r0, 0
 /* 801A1E14 0016B3D4  40 82 00 2C */	bne .L_801A1E40
-/* 801A1E18 0016B3D8  48 2A 6C 2D */	bl func_80448A44
+/* 801A1E18 0016B3D8  48 2A 6C 2D */	bl func_80448A44__Fv
 /* 801A1E1C 0016B3DC  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A1E20 0016B3E0  7F E4 FB 78 */	mr r4, r31
 /* 801A1E24 0016B3E4  41 82 00 08 */	beq .L_801A1E2C
@@ -431,7 +431,7 @@
 /* 801A1E9C 0016B45C  90 1F 00 88 */	stw r0, 0x88(r31)
 .L_801A1EA0:
 /* 801A1EA0 0016B460  38 7F 00 74 */	addi r3, r31, 0x74
-/* 801A1EA4 0016B464  48 2B D8 D5 */	bl func_8045F778
+/* 801A1EA4 0016B464  48 2B D8 D5 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 801A1EA8 0016B468  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801A1EAC 0016B46C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801A1EB0 0016B470  7C 08 03 A6 */	mtlr r0
@@ -520,7 +520,7 @@
 /* 801A1FDC 0016B59C  4B F9 55 35 */	bl func_80137510
 /* 801A1FE0 0016B5A0  2C 03 00 00 */	cmpwi r3, 0
 /* 801A1FE4 0016B5A4  41 82 00 38 */	beq .L_801A201C
-/* 801A1FE8 0016B5A8  48 2A 6A 5D */	bl func_80448A44
+/* 801A1FE8 0016B5A8  48 2A 6A 5D */	bl func_80448A44__Fv
 /* 801A1FEC 0016B5AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A1FF0 0016B5B0  7F E4 FB 78 */	mr r4, r31
 /* 801A1FF4 0016B5B4  41 82 00 08 */	beq .L_801A1FFC
@@ -579,7 +579,7 @@
 /* 801A20AC 0016B66C  38 81 00 08 */	addi r4, r1, 8
 /* 801A20B0 0016B670  38 A0 00 00 */	li r5, 0
 /* 801A20B4 0016B674  38 C0 00 01 */	li r6, 1
-/* 801A20B8 0016B678  4B F9 4F 81 */	bl func_80137038
+/* 801A20B8 0016B678  4B F9 4F 81 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 801A20BC 0016B67C  38 61 00 08 */	addi r3, r1, 8
 /* 801A20C0 0016B680  38 80 FF FF */	li r4, -1
 /* 801A20C4 0016B684  48 26 66 19 */	bl __dt__Q34nw4r3lyt8DrawInfoFv
@@ -617,7 +617,7 @@
 /* 801A2134 0016B6F4  38 60 00 00 */	li r3, 0
 /* 801A2138 0016B6F8  48 00 00 44 */	b .L_801A217C
 .L_801A213C:
-/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex
+/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex__Fv
 /* 801A2140 0016B700  7C 64 1B 78 */	mr r4, r3
 /* 801A2144 0016B704  38 60 00 B0 */	li r3, 0xb0
 /* 801A2148 0016B708  48 29 29 15 */	bl heap_malloc
@@ -682,7 +682,7 @@
 /* 801A2214 0016B7D4  90 1F 00 88 */	stw r0, 0x88(r31)
 .L_801A2218:
 /* 801A2218 0016B7D8  38 7F 00 74 */	addi r3, r31, 0x74
-/* 801A221C 0016B7DC  48 2B D5 5D */	bl func_8045F778
+/* 801A221C 0016B7DC  48 2B D5 5D */	bl func_8045F778__FP17UnkClass_8045F564
 /* 801A2220 0016B7E0  48 29 21 81 */	bl Heap_getRegionIndex2
 /* 801A2224 0016B7E4  7C 7D 1B 78 */	mr r29, r3
 /* 801A2228 0016B7E8  3C C0 80 50 */	lis r6, CSimpleEveTalkWin_strpool@ha
@@ -691,10 +691,10 @@
 /* 801A2234 0016B7F4  38 C6 F6 3C */	addi r6, r6, CSimpleEveTalkWin_strpool@l
 /* 801A2238 0016B7F8  38 A0 40 00 */	li r5, 0x4000
 /* 801A223C 0016B7FC  38 E0 00 00 */	li r7, 0
-/* 801A2240 0016B800  48 2B D4 41 */	bl func_8045F680
+/* 801A2240 0016B800  48 2B D4 41 */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 801A2244 0016B804  38 61 00 08 */	addi r3, r1, 8
 /* 801A2248 0016B808  38 9F 00 74 */	addi r4, r31, 0x74
-/* 801A224C 0016B80C  48 2B D6 0D */	bl __ct__Class_8045F858
+/* 801A224C 0016B80C  48 2B D6 0D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 801A2250 0016B810  7F A4 EB 78 */	mr r4, r29
 /* 801A2254 0016B814  38 60 08 40 */	li r3, 0x840
 /* 801A2258 0016B818  48 29 28 05 */	bl heap_malloc
@@ -725,7 +725,7 @@
 /* 801A22B8 0016B878  98 1F 00 64 */	stb r0, 0x64(r31)
 /* 801A22BC 0016B87C  38 61 00 08 */	addi r3, r1, 8
 /* 801A22C0 0016B880  38 80 FF FF */	li r4, -1
-/* 801A22C4 0016B884  48 2B D6 05 */	bl __dt__Class_8045F858
+/* 801A22C4 0016B884  48 2B D6 05 */	bl __dt__14Class_8045F858Fv
 /* 801A22C8 0016B888  48 00 03 40 */	b .L_801A2608
 .L_801A22CC:
 /* 801A22CC 0016B88C  38 00 00 00 */	li r0, 0
@@ -738,7 +738,7 @@
 /* 801A22E8 0016B8A8  3B BD F6 3C */	addi r29, r29, CSimpleEveTalkWin_strpool@l
 /* 801A22EC 0016B8AC  38 7F 00 54 */	addi r3, r31, 0x54
 /* 801A22F0 0016B8B0  38 BD 00 12 */	addi r5, r29, 0x12
-/* 801A22F4 0016B8B4  4B F9 4B 91 */	bl func_80136E84
+/* 801A22F4 0016B8B4  4B F9 4B 91 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 801A22F8 0016B8B8  4B F9 32 FD */	bl func_801355F4
 /* 801A22FC 0016B8BC  7C 65 1B 78 */	mr r5, r3
 /* 801A2300 0016B8C0  80 7F 00 54 */	lwz r3, 0x54(r31)
@@ -936,10 +936,10 @@
 /* 801A25F0 0016BBB0  D0 23 00 34 */	stfs f1, 0x34(r3)
 .L_801A25F4:
 /* 801A25F4 0016BBB4  38 7F 00 74 */	addi r3, r31, 0x74
-/* 801A25F8 0016BBB8  48 2B D2 19 */	bl func_8045F810
+/* 801A25F8 0016BBB8  48 2B D2 19 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 801A25FC 0016BBBC  38 61 00 08 */	addi r3, r1, 8
 /* 801A2600 0016BBC0  38 80 FF FF */	li r4, -1
-/* 801A2604 0016BBC4  48 2B D2 C5 */	bl __dt__Class_8045F858
+/* 801A2604 0016BBC4  48 2B D2 C5 */	bl __dt__14Class_8045F858Fv
 .L_801A2608:
 /* 801A2608 0016BBC8  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 801A260C 0016BBCC  83 E1 00 2C */	lwz r31, 0x2c(r1)
@@ -1198,7 +1198,7 @@
 
 .fn func_801A29B4, global
 /* 801A29B4 0016BF74  38 63 FF 94 */	addi r3, r3, -108
-/* 801A29B8 0016BF78  4B FF EF AC */	b __dt__CSimpleEveTalkWin
+/* 801A29B8 0016BF78  4B FF EF AC */	b __dt__17CSimpleEveTalkWinFv
 .endfn func_801A29B4
 
 .fn func_801A29BC, global
@@ -1208,7 +1208,7 @@
 
 .fn func_801A29C4, global
 /* 801A29C4 0016BF84  38 63 FF 90 */	addi r3, r3, -112
-/* 801A29C8 0016BF88  4B FF EF 9C */	b __dt__CSimpleEveTalkWin
+/* 801A29C8 0016BF88  4B FF EF 9C */	b __dt__17CSimpleEveTalkWinFv
 .endfn func_801A29C4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1247,47 +1247,47 @@
 .obj __vt__17CSimpleEveTalkWin, global
 	.4byte __RTTI__17CSimpleEveTalkWin
 	.4byte 0
-	.4byte __dt__CSimpleEveTalkWin
-	.4byte CChildListNode_Reset
+	.4byte __dt__17CSimpleEveTalkWinFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_801A19D8
 	.4byte func_801A1DF8
 	.4byte func_801A1EBC
-	.4byte func_80124584
-	.4byte CProcess_func_80043F20
+	.4byte "func_80124584__18CTTask<9IUIWindow>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__17CSimpleEveTalkWin
 	.4byte 0xFFFFFF94
 	.4byte func_801A29B4
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__17CSimpleEveTalkWin
 	.4byte 0xFFFFFF90
 	.4byte func_801A29C4
@@ -1376,13 +1376,13 @@
 	.4byte 0x00000000
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x0680001B
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__IUIWindow
+	.4byte __dt__9IUIWindowFv
 .endobj "@etb_8000F6B0"
 
 .obj "@etb_8000F6E4", local
@@ -1393,13 +1393,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8000F6E4"
 
 .obj "@etb_8000F718", local
@@ -1411,7 +1411,7 @@
 	.4byte 0x00CB0018
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8000F718"
 
 .obj "@etb_8000F738", local
@@ -1451,7 +1451,7 @@
 	.4byte 0x00C70018
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_8000F768"
 
 .obj "@etb_8000F788", local
@@ -1473,7 +1473,7 @@
 
 .obj "@eti_8002A530", local
 .hidden "@eti_8002A530"
-	.4byte __dt__CSimpleEveTalkWin
+	.4byte __dt__17CSimpleEveTalkWinFv
 	.4byte 0x00000074
 	.4byte "@etb_8000F6E4"
 .endobj "@eti_8002A530"

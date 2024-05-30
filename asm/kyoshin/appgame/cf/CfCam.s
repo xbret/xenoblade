@@ -27,7 +27,7 @@
 /* 8006B6C4 00034C84  4E 80 00 20 */	blr 
 .endfn func_8006B6C0
 
-.fn __dt__cf_CfCamEvent, global
+.fn __dt__Q22cf10CfCamEventFv, global
 /* 8006B6C8 00034C88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006B6CC 00034C8C  7C 08 02 A6 */	mflr r0
 /* 8006B6D0 00034C90  2C 03 00 00 */	cmpwi r3, 0
@@ -38,7 +38,7 @@
 /* 8006B6E4 00034CA4  7C 7E 1B 78 */	mr r30, r3
 /* 8006B6E8 00034CA8  41 82 00 1C */	beq .L_8006B704
 /* 8006B6EC 00034CAC  38 80 00 00 */	li r4, 0
-/* 8006B6F0 00034CB0  48 00 08 31 */	bl __dt__cf_CfCamFollow
+/* 8006B6F0 00034CB0  48 00 08 31 */	bl __dt__Q22cf11CfCamFollowFv
 /* 8006B6F4 00034CB4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006B6F8 00034CB8  40 81 00 0C */	ble .L_8006B704
 /* 8006B6FC 00034CBC  7F C3 F3 78 */	mr r3, r30
@@ -51,7 +51,7 @@
 /* 8006B714 00034CD4  7C 08 03 A6 */	mtlr r0
 /* 8006B718 00034CD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006B71C 00034CDC  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfCamEvent
+.endfn __dt__Q22cf10CfCamEventFv
 
 .fn func_8006B720, global
 /* 8006B720 00034CE0  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -576,7 +576,7 @@
 /* 8006BE7C 0003543C  4E 80 00 20 */	blr
 .endfn __ct__cf_CfCam
 
-.fn __dt__cf_CfCam, global
+.fn __dt__Q22cf5CfCamFv, global
 /* 8006BE80 00035440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006BE84 00035444  7C 08 02 A6 */	mflr r0
 /* 8006BE88 00035448  2C 03 00 00 */	cmpwi r3, 0
@@ -594,7 +594,7 @@
 /* 8006BEB4 00035474  7C 08 03 A6 */	mtlr r0
 /* 8006BEB8 00035478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006BEBC 0003547C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfCam
+.endfn __dt__Q22cf5CfCamFv
 
 .fn func_8006BEC0, global
 /* 8006BEC0 00035480  4E 80 00 20 */	blr 
@@ -644,7 +644,7 @@
 /* 8006BF1C 000354DC  4E 80 00 20 */	blr 
 .endfn func_8006BF14
 
-.fn __dt__cf_CfCamFollow, global
+.fn __dt__Q22cf11CfCamFollowFv, global
 /* 8006BF20 000354E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006BF24 000354E4  7C 08 02 A6 */	mflr r0
 /* 8006BF28 000354E8  2C 03 00 00 */	cmpwi r3, 0
@@ -673,7 +673,7 @@
 /* 8006BF80 00035540  90 0D A5 6C */	stw r0, lbl_806666EC@sda21(r13)
 /* 8006BF84 00035544  7F C3 F3 78 */	mr r3, r30
 /* 8006BF88 00035548  38 80 00 00 */	li r4, 0
-/* 8006BF8C 0003554C  4B FF FE F5 */	bl __dt__cf_CfCam
+/* 8006BF8C 0003554C  4B FF FE F5 */	bl __dt__Q22cf5CfCamFv
 /* 8006BF90 00035550  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006BF94 00035554  40 81 00 0C */	ble .L_8006BFA0
 /* 8006BF98 00035558  7F C3 F3 78 */	mr r3, r30
@@ -686,7 +686,7 @@
 /* 8006BFB0 00035570  7C 08 03 A6 */	mtlr r0
 /* 8006BFB4 00035574  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006BFB8 00035578  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfCamFollow
+.endfn __dt__Q22cf11CfCamFollowFv
 
 .fn func_8006BFBC, global
 /* 8006BFBC 0003557C  80 63 00 08 */	lwz r3, 8(r3)
@@ -1162,10 +1162,10 @@
 /* 8006C664 00035C24  4E 80 00 20 */	blr 
 .endfn func_8006C640
 
-.fn CfObject_func_8006C668, global
+.fn func_8006C668__Q22cf8CfObjectFv, global
 /* 8006C668 00035C28  38 60 00 00 */	li r3, 0
 /* 8006C66C 00035C2C  4E 80 00 20 */	blr 
-.endfn CfObject_func_8006C668
+.endfn func_8006C668__Q22cf8CfObjectFv
 
 .fn func_8006C670, global
 /* 8006C670 00035C30  80 63 00 C4 */	lwz r3, 0xc4(r3)
@@ -1505,10 +1505,10 @@
 /* 8006CB00 000360C0  4E 80 00 20 */	blr 
 .endfn func_8006CA2C
 
-.fn CfObject_func_8006CB04, global
+.fn func_8006CB04__Q22cf8CfObjectFv, global
 /* 8006CB04 000360C4  38 60 00 01 */	li r3, 1
 /* 8006CB08 000360C8  4E 80 00 20 */	blr 
-.endfn CfObject_func_8006CB04
+.endfn func_8006CB04__Q22cf8CfObjectFv
 
 .fn func_8006CB0C, global
 /* 8006CB0C 000360CC  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -2916,7 +2916,7 @@
 /* 8006DE60 00037420  7C 7F 1B 78 */	mr r31, r3
 /* 8006DE64 00037424  41 82 00 94 */	beq .L_8006DEF8
 /* 8006DE68 00037428  3B C0 00 01 */	li r30, 1
-/* 8006DE6C 0003742C  48 00 01 49 */	bl func_8006DFB4
+/* 8006DE6C 0003742C  48 00 01 49 */	bl func_8006DFB4__Q22cf11CActorParamFv
 /* 8006DE70 00037430  2C 03 00 03 */	cmpwi r3, 3
 /* 8006DE74 00037434  40 82 00 14 */	bne .L_8006DE88
 /* 8006DE78 00037438  C0 02 87 E8 */	lfs f0, float_80668B68@sda21(r2)
@@ -3016,10 +3016,10 @@
 /* 8006DFB0 00037570  4E 80 00 20 */	blr 
 .endfn func_8006DFA8
 
-.fn func_8006DFB4, global
+.fn func_8006DFB4__Q22cf11CActorParamFv, global
 /* 8006DFB4 00037574  80 63 15 E4 */	lwz r3, 0x15e4(r3)
 /* 8006DFB8 00037578  4E 80 00 20 */	blr 
-.endfn func_8006DFB4
+.endfn func_8006DFB4__Q22cf11CActorParamFv
 
 .fn func_8006DFBC, global
 /* 8006DFBC 0003757C  80 03 00 64 */	lwz r0, 0x64(r3)
@@ -8210,7 +8210,7 @@
 /* 800729CC 0003BF8C  2C 03 00 00 */	cmpwi r3, 0
 /* 800729D0 0003BF90  41 82 00 28 */	beq .L_800729F8
 /* 800729D4 0003BF94  38 7B 3E 9C */	addi r3, r27, 0x3e9c
-/* 800729D8 0003BF98  4B FD 6F BD */	bl CfObject_func_80049994
+/* 800729D8 0003BF98  4B FD 6F BD */	bl func_80049994__Q22cf8CfObjectFv
 /* 800729DC 0003BF9C  FF 20 08 90 */	fmr f25, f1
 /* 800729E0 0003BFA0  4B FD A2 89 */	bl func_8004CC68
 /* 800729E4 0003BFA4  D0 21 00 F0 */	stfs f1, 0xf0(r1)
@@ -8898,10 +8898,10 @@
 /* 800733A4 0003C964  4E 80 00 20 */	blr 
 .endfn func_8007339C
 
-.fn CfObject_func_800733A8, global
+.fn func_800733A8__Q22cf8CfObjectFv, global
 /* 800733A8 0003C968  38 60 00 00 */	li r3, 0
 /* 800733AC 0003C96C  4E 80 00 20 */	blr 
-.endfn CfObject_func_800733A8
+.endfn func_800733A8__Q22cf8CfObjectFv
 
 .fn func_800733B0, global
 /* 800733B0 0003C970  C0 23 00 14 */	lfs f1, 0x14(r3)
@@ -9902,10 +9902,10 @@
 /* 80074200 0003D7C0  4E 80 00 20 */	blr 
 .endfn func_80074090
 
-.fn CfObject_func_80074204, global
+.fn func_80074204__Q22cf8CfObjectFv, global
 /* 80074204 0003D7C4  38 60 00 00 */	li r3, 0
 /* 80074208 0003D7C8  4E 80 00 20 */	blr 
-.endfn CfObject_func_80074204
+.endfn func_80074204__Q22cf8CfObjectFv
 
 .fn func_8007420C, global
 /* 8007420C 0003D7CC  C0 44 00 2C */	lfs f2, 0x2c(r4)
@@ -9917,10 +9917,10 @@
 /* 80074224 0003D7E4  4E 80 00 20 */	blr 
 .endfn func_8007420C
 
-.fn CfObject_func_80074228, global
+.fn func_80074228__Q22cf8CfObjectFv, global
 /* 80074228 0003D7E8  38 60 00 00 */	li r3, 0
 /* 8007422C 0003D7EC  4E 80 00 20 */	blr 
-.endfn CfObject_func_80074228
+.endfn func_80074228__Q22cf8CfObjectFv
 
 .fn func_80074230, global
 /* 80074230 0003D7F0  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -10992,7 +10992,7 @@
 .obj __vt__Q22cf11CfCamFollow, global
 	.4byte __RTTI__Q22cf11CfCamFollow
 	.4byte 0
-	.4byte __dt__cf_CfCamFollow
+	.4byte __dt__Q22cf11CfCamFollowFv
 	.4byte func_8006CC68
 	.4byte func_8006B6B8
 	.4byte func_80074D60
@@ -11030,7 +11030,7 @@
 .obj __vt__Q22cf5CfCam, global
 	.4byte __RTTI__Q22cf5CfCam
 	.4byte 0
-	.4byte __dt__cf_CfCam
+	.4byte __dt__Q22cf5CfCamFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -11817,7 +11817,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__cf_CfCam
+	.4byte __dt__Q22cf5CfCamFv
 .endobj "@etb_800080D8"
 
 .obj "@etb_800080F4", local
@@ -12300,7 +12300,7 @@
 
 .obj "@eti_800233CC", local
 .hidden "@eti_800233CC"
-	.4byte __dt__cf_CfCamEvent
+	.4byte __dt__Q22cf10CfCamEventFv
 	.4byte 0x00000058
 	.4byte "@etb_800080A8"
 .endobj "@eti_800233CC"
@@ -12350,14 +12350,14 @@
 
 .obj "@eti_80023420", local
 .hidden "@eti_80023420"
-	.4byte __dt__cf_CfCam
+	.4byte __dt__Q22cf5CfCamFv
 	.4byte 0x00000040
 	.4byte "@etb_800080F4"
 .endobj "@eti_80023420"
 
 .obj "@eti_8002342C", local
 .hidden "@eti_8002342C"
-	.4byte __dt__cf_CfCamFollow
+	.4byte __dt__Q22cf11CfCamFollowFv
 	.4byte 0x0000009C
 	.4byte "@etb_800080FC"
 .endobj "@eti_8002342C"

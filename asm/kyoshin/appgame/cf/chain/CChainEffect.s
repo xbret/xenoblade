@@ -261,7 +261,7 @@
 .obj __vt__Q22cf12CChainEffect, global
 	.4byte __RTTI__Q22cf12CChainEffect
 	.4byte 0
-	.4byte __dt__cf_CChainEffect
+	.4byte __dt__Q22cf12CChainEffectFv
 	.4byte func_802A0AE0
 .endobj __vt__Q22cf12CChainEffect
 

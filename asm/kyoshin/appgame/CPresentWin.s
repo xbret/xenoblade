@@ -31,7 +31,7 @@
 /* 8022D5D0 001F6B90  4E 80 00 20 */	blr 
 .endfn __ct__CPresentWin
 
-.fn __dt__CPresentWin, global
+.fn __dt__11CPresentWinFv, global
 /* 8022D5D4 001F6B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022D5D8 001F6B98  7C 08 02 A6 */	mflr r0
 /* 8022D5DC 001F6B9C  2C 03 00 00 */	cmpwi r3, 0
@@ -49,7 +49,7 @@
 /* 8022D608 001F6BC8  7C 08 03 A6 */	mtlr r0
 /* 8022D60C 001F6BCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022D610 001F6BD0  4E 80 00 20 */	blr 
-.endfn __dt__CPresentWin
+.endfn __dt__11CPresentWinFv
 
 .fn func_8022D614, global
 /* 8022D614 001F6BD4  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -65,7 +65,7 @@
 /* 8022D63C 001F6BFC  90 83 00 04 */	stw r4, 4(r3)
 /* 8022D640 001F6C00  38 63 00 08 */	addi r3, r3, 8
 /* 8022D644 001F6C04  90 01 00 20 */	stw r0, 0x20(r1)
-/* 8022D648 001F6C08  4B F0 98 3D */	bl func_80136E84
+/* 8022D648 001F6C08  4B F0 98 3D */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 8022D64C 001F6C0C  3B DE 5F 4C */	addi r30, r30, CPresentWin_strpool@l
 /* 8022D650 001F6C10  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8022D654 001F6C14  80 BF 00 04 */	lwz r5, 4(r31)
@@ -381,7 +381,7 @@
 /* 8022DAF0 001F70B0  80 63 00 08 */	lwz r3, 8(r3)
 /* 8022DAF4 001F70B4  38 A0 00 00 */	li r5, 0
 /* 8022DAF8 001F70B8  38 C0 00 01 */	li r6, 1
-/* 8022DAFC 001F70BC  4B F0 95 3C */	b func_80137038
+/* 8022DAFC 001F70BC  4B F0 95 3C */	b func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 8022DB00 001F70C0  4E 80 00 20 */	blr 
 .endfn func_8022DAD8
 
@@ -391,7 +391,7 @@
 /* 8022DB0C 001F70CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022DB10 001F70D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022DB14 001F70D4  7C 7F 1B 78 */	mr r31, r3
-/* 8022DB18 001F70D8  48 21 AF 2D */	bl func_80448A44
+/* 8022DB18 001F70D8  48 21 AF 2D */	bl func_80448A44__Fv
 /* 8022DB1C 001F70DC  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8022DB20 001F70E0  38 00 00 00 */	li r0, 0
 /* 8022DB24 001F70E4  98 1F 00 30 */	stb r0, 0x30(r31)
@@ -1420,38 +1420,38 @@
 .obj __vt__11CPresentWin, global
 	.4byte __RTTI__11CPresentWin
 	.4byte 0
-	.4byte __dt__CPresentWin
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__11CPresentWinFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__11CPresentWin
 
 .obj CPresentWin_hierarchy, global
@@ -1587,7 +1587,7 @@
 
 .obj "@eti_8002E67C", local
 .hidden "@eti_8002E67C"
-	.4byte __dt__CPresentWin
+	.4byte __dt__11CPresentWinFv
 	.4byte 0x00000040
 	.4byte "@etb_8001575C"
 .endobj "@eti_8002E67C"

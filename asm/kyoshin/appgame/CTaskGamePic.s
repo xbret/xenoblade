@@ -69,7 +69,7 @@
 /* 80294DB0 0025E370  4E 80 00 20 */	blr 
 .endfn __ct__CTaskGamePic
 
-.fn __dt__CTTask_CTaskGamePic, global
+.fn "__dt__22CTTask<12CTaskGamePic>Fv", global
 /* 80294DB4 0025E374  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294DB8 0025E378  7C 08 02 A6 */	mflr r0
 /* 80294DBC 0025E37C  2C 03 00 00 */	cmpwi r3, 0
@@ -79,7 +79,7 @@
 /* 80294DCC 0025E38C  7C 9F 23 78 */	mr r31, r4
 /* 80294DD0 0025E390  41 82 00 1C */	beq .L_80294DEC
 /* 80294DD4 0025E394  38 80 00 00 */	li r4, 0
-/* 80294DD8 0025E398  48 1A FD 61 */	bl __dt__CProcess
+/* 80294DD8 0025E398  48 1A FD 61 */	bl __dt__8CProcessFv
 /* 80294DDC 0025E39C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80294DE0 0025E3A0  40 81 00 0C */	ble .L_80294DEC
 /* 80294DE4 0025E3A4  7F C3 F3 78 */	mr r3, r30
@@ -91,9 +91,9 @@
 /* 80294DF8 0025E3B8  7C 08 03 A6 */	mtlr r0
 /* 80294DFC 0025E3BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294E00 0025E3C0  4E 80 00 20 */	blr
-.endfn __dt__CTTask_CTaskGamePic
+.endfn "__dt__22CTTask<12CTaskGamePic>Fv"
 
-.fn __dt__CTaskGamePic, global
+.fn __dt__12CTaskGamePicFv, global
 /* 80294E04 0025E3C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294E08 0025E3C8  7C 08 02 A6 */	mflr r0
 /* 80294E0C 0025E3CC  2C 03 00 00 */	cmpwi r3, 0
@@ -104,7 +104,7 @@
 /* 80294E20 0025E3E0  41 82 00 20 */	beq .L_80294E40
 /* 80294E24 0025E3E4  41 82 00 0C */	beq .L_80294E30
 /* 80294E28 0025E3E8  38 80 00 00 */	li r4, 0
-/* 80294E2C 0025E3EC  48 1A FD 0D */	bl __dt__CProcess
+/* 80294E2C 0025E3EC  48 1A FD 0D */	bl __dt__8CProcessFv
 .L_80294E30:
 /* 80294E30 0025E3F0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80294E34 0025E3F4  40 81 00 0C */	ble .L_80294E40
@@ -117,7 +117,7 @@
 /* 80294E4C 0025E40C  7C 08 03 A6 */	mtlr r0
 /* 80294E50 0025E410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294E54 0025E414  4E 80 00 20 */	blr 
-.endfn __dt__CTaskGamePic
+.endfn __dt__12CTaskGamePicFv
 
 .fn func_80294E58, global
 /* 80294E58 0025E418  54 8C 40 2E */	slwi r12, r4, 8
@@ -166,10 +166,10 @@
 /* 80294EF4 0025E4B4  7F E5 FB 78 */	mr r5, r31
 /* 80294EF8 0025E4B8  38 C0 00 00 */	li r6, 0
 /* 80294EFC 0025E4BC  38 E0 00 00 */	li r7, 0
-/* 80294F00 0025E4C0  48 1B 98 95 */	bl CDeviceFile_openFile1
+/* 80294F00 0025E4C0  48 1B 98 95 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80294F04 0025E4C4  90 7D 00 60 */	stw r3, 0x60(r29)
 /* 80294F08 0025E4C8  38 80 00 00 */	li r4, 0
-/* 80294F0C 0025E4CC  48 1B A2 49 */	bl func_8044F154
+/* 80294F0C 0025E4CC  48 1B A2 49 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 /* 80294F10 0025E4D0  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 80294F14 0025E4D4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80294F18 0025E4D8  7C 08 03 A6 */	mtlr r0
@@ -209,11 +209,11 @@
 /* 80294F80 0025E540  38 00 00 00 */	li r0, 0
 /* 80294F84 0025E544  90 1F 00 60 */	stw r0, 0x60(r31)
 .L_80294F88:
-/* 80294F88 0025E548  48 1B 3A BD */	bl func_80448A44
+/* 80294F88 0025E548  48 1B 3A BD */	bl func_80448A44__Fv
 /* 80294F8C 0025E54C  80 7F 00 64 */	lwz r3, 0x64(r31)
 /* 80294F90 0025E550  2C 03 00 00 */	cmpwi r3, 0
 /* 80294F94 0025E554  41 82 00 10 */	beq .L_80294FA4
-/* 80294F98 0025E558  48 19 F5 41 */	bl func_804344D8
+/* 80294F98 0025E558  48 19 F5 41 */	bl MemManager_804344D8
 /* 80294F9C 0025E55C  38 00 00 00 */	li r0, 0
 /* 80294FA0 0025E560  90 1F 00 64 */	stw r0, 0x64(r31)
 .L_80294FA4:
@@ -543,7 +543,7 @@
 /* 80295454 0025EA14  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 80295458 0025EA18  7C 7D 1B 78 */	mr r29, r3
 /* 8029545C 0025EA1C  7C 9E 23 78 */	mr r30, r4
-/* 80295460 0025EA20  48 1A 21 55 */	bl getHeapIndex
+/* 80295460 0025EA20  48 1A 21 55 */	bl getHeapIndex__Fv
 /* 80295464 0025EA24  7C 64 1B 78 */	mr r4, r3
 /* 80295468 0025EA28  38 60 00 C8 */	li r3, 0xc8
 /* 8029546C 0025EA2C  48 19 F5 F1 */	bl heap_malloc
@@ -570,7 +570,7 @@
 /* 802954B0 0025EA70  4E 80 00 20 */	blr 
 .endfn func_802954B0
 
-.fn func_802954B4, global
+.fn "func_802954B4__22CTTask<12CTaskGamePic>Fv", global
 /* 802954B4 0025EA74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802954B8 0025EA78  7C 08 02 A6 */	mflr r0
 /* 802954BC 0025EA7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -590,9 +590,9 @@
 /* 802954F0 0025EAB0  7C 08 03 A6 */	mtlr r0
 /* 802954F4 0025EAB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802954F8 0025EAB8  4E 80 00 20 */	blr 
-.endfn func_802954B4
+.endfn "func_802954B4__22CTTask<12CTaskGamePic>Fv"
 
-.fn func_802954FC, global
+.fn "func_802954FC__22CTTask<12CTaskGamePic>Fv", global
 /* 802954FC 0025EABC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295500 0025EAC0  7C 08 02 A6 */	mflr r0
 /* 80295504 0025EAC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -612,7 +612,7 @@
 /* 80295538 0025EAF8  7C 08 03 A6 */	mtlr r0
 /* 8029553C 0025EAFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80295540 0025EB00  4E 80 00 20 */	blr 
-.endfn func_802954FC
+.endfn "func_802954FC__22CTTask<12CTaskGamePic>Fv"
 
 .fn CTaskGamePic_OnFileEvent, global
 /* 80295544 0025EB04  38 63 FF AC */	addi r3, r3, -84
@@ -621,7 +621,7 @@
 
 .fn func_8029554C, global
 /* 8029554C 0025EB0C  38 63 FF AC */	addi r3, r3, -84
-/* 80295550 0025EB10  4B FF F8 B4 */	b __dt__CTaskGamePic
+/* 80295550 0025EB10  4B FF F8 B4 */	b __dt__12CTaskGamePicFv
 .endfn func_8029554C
 
 .fn func_80295554, global
@@ -631,7 +631,7 @@
 
 .fn func_8029555C, global
 /* 8029555C 0025EB1C  38 63 FF A8 */	addi r3, r3, -88
-/* 80295560 0025EB20  4B FF F8 A4 */	b __dt__CTaskGamePic
+/* 80295560 0025EB20  4B FF F8 A4 */	b __dt__12CTaskGamePicFv
 .endfn func_8029555C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -655,47 +655,47 @@
 .obj __vt__12CTaskGamePic, global
 	.4byte __RTTI__12CTaskGamePic
 	.4byte 0
-	.4byte __dt__CTaskGamePic
-	.4byte CChildListNode_Reset
+	.4byte __dt__12CTaskGamePicFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80294F24
 	.4byte func_80294F44
 	.4byte func_80294FB8
 	.4byte func_802954B0
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__12CTaskGamePic
 	.4byte 0xFFFFFFAC
 	.4byte func_8029554C
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CTaskGamePic_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__12CTaskGamePic
 	.4byte 0xFFFFFFA8
 	.4byte func_8029555C
@@ -720,13 +720,13 @@
 .obj "__vt__22CTTask<12CTaskGamePic>", global
 	.4byte "__RTTI__22CTTask<12CTaskGamePic>"
 	.4byte 0
-	.4byte __dt__CTTask_CTaskGamePic
-	.4byte CChildListNode_Reset
+	.4byte "__dt__22CTTask<12CTaskGamePic>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_802954B4
-	.4byte func_802954FC
-	.4byte CProcess_func_80043F20
+	.4byte "func_802954B4__22CTTask<12CTaskGamePic>Fv"
+	.4byte "func_802954FC__22CTTask<12CTaskGamePic>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__22CTTask<12CTaskGamePic>"
 
 .obj CTTask_CTaskGamePic_hierarchy, global
@@ -803,10 +803,10 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80019AC8"
 
 .obj "@etb_80019AF0", local
@@ -878,14 +878,14 @@
 
 .obj "@eti_80031D3C", local
 .hidden "@eti_80031D3C"
-	.4byte __dt__CTTask_CTaskGamePic
+	.4byte "__dt__22CTTask<12CTaskGamePic>Fv"
 	.4byte 0x00000050
 	.4byte "@etb_80019AC0"
 .endobj "@eti_80031D3C"
 
 .obj "@eti_80031D48", local
 .hidden "@eti_80031D48"
-	.4byte __dt__CTaskGamePic
+	.4byte __dt__12CTaskGamePicFv
 	.4byte 0x00000054
 	.4byte "@etb_80019AC8"
 .endobj "@eti_80031D48"
@@ -934,14 +934,14 @@
 
 .obj "@eti_80031D9C", local
 .hidden "@eti_80031D9C"
-	.4byte func_802954B4
+	.4byte "func_802954B4__22CTTask<12CTaskGamePic>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80019B40"
 .endobj "@eti_80031D9C"
 
 .obj "@eti_80031DA8", local
 .hidden "@eti_80031DA8"
-	.4byte func_802954FC
+	.4byte "func_802954FC__22CTTask<12CTaskGamePic>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80019B48"
 .endobj "@eti_80031DA8"

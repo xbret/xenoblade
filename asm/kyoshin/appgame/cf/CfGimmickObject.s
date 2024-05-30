@@ -746,7 +746,7 @@
 /* 801F5A88 001BF048  4E 80 00 20 */	blr 
 .endfn __ct__cf_CfGimmickObject
 
-.fn __dt__cf_CfGimmickObject, global
+.fn __dt__Q22cf15CfGimmickObjectFv, global
 /* 801F5A8C 001BF04C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F5A90 001BF050  7C 08 02 A6 */	mflr r0
 /* 801F5A94 001BF054  2C 03 00 00 */	cmpwi r3, 0
@@ -764,7 +764,7 @@
 /* 801F5AC4 001BF084  48 01 49 71 */	bl func_8020A434
 /* 801F5AC8 001BF088  7F C3 F3 78 */	mr r3, r30
 /* 801F5ACC 001BF08C  38 80 00 00 */	li r4, 0
-/* 801F5AD0 001BF090  48 01 2E 5D */	bl __dt__cf_CfGimmick
+/* 801F5AD0 001BF090  48 01 2E 5D */	bl __dt__Q22cf9CfGimmickFv
 /* 801F5AD4 001BF094  2C 1F 00 00 */	cmpwi r31, 0
 /* 801F5AD8 001BF098  40 81 00 0C */	ble .L_801F5AE4
 /* 801F5ADC 001BF09C  7F C3 F3 78 */	mr r3, r30
@@ -777,7 +777,7 @@
 /* 801F5AF4 001BF0B4  7C 08 03 A6 */	mtlr r0
 /* 801F5AF8 001BF0B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F5AFC 001BF0BC  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfGimmickObject
+.endfn __dt__Q22cf15CfGimmickObjectFv
 
 .fn func_801F5B00, global
 /* 801F5B00 001BF0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4598,7 +4598,7 @@
 .obj __vt__Q22cf15CfGimmickObject, global
 	.4byte __RTTI__Q22cf15CfGimmickObject
 	.4byte 0
-	.4byte __dt__cf_CfGimmickObject
+	.4byte __dt__Q22cf15CfGimmickObjectFv
 	.4byte func_8020896C
 	.4byte func_801F5B00
 	.4byte func_801F5BF8
@@ -4727,7 +4727,7 @@
 	.4byte 0x00000000
 	.4byte 0x86800016
 	.4byte 0x00000000
-	.4byte __dt__cf_CfGimmick
+	.4byte __dt__Q22cf9CfGimmickFv
 .endobj "@etb_80012308"
 
 .obj "@etb_80012324", local
@@ -4738,7 +4738,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__cf_CfGimmick
+	.4byte __dt__Q22cf9CfGimmickFv
 .endobj "@etb_80012324"
 
 .obj "@etb_80012340", local
@@ -4892,7 +4892,7 @@
 
 .obj "@eti_8002C450", local
 .hidden "@eti_8002C450"
-	.4byte __dt__cf_CfGimmickObject
+	.4byte __dt__Q22cf15CfGimmickObjectFv
 	.4byte 0x00000074
 	.4byte "@etb_80012324"
 .endobj "@eti_8002C450"

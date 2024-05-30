@@ -56,7 +56,7 @@
 /* 80250DEC 0021A3AC  4E 80 00 20 */	blr
 .endfn __ct__CMenuMapSelectSC
 
-.fn __dt__CMenuMapSelectSC, global
+.fn __dt__16CMenuMapSelectSCFv, global
 /* 80250DF0 0021A3B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80250DF4 0021A3B4  7C 08 02 A6 */	mflr r0
 /* 80250DF8 0021A3B8  2C 03 00 00 */	cmpwi r3, 0
@@ -67,13 +67,13 @@
 /* 80250E0C 0021A3CC  41 82 00 44 */	beq .L_80250E50
 /* 80250E10 0021A3D0  38 80 FF FF */	li r4, -1
 /* 80250E14 0021A3D4  38 63 00 C0 */	addi r3, r3, 0xc0
-/* 80250E18 0021A3D8  4B FF AF 6D */	bl __dt__CFloorMap
+/* 80250E18 0021A3D8  4B FF AF 6D */	bl __dt__9CFloorMapFv
 /* 80250E1C 0021A3DC  38 7E 00 98 */	addi r3, r30, 0x98
 /* 80250E20 0021A3E0  38 80 FF FF */	li r4, -1
-/* 80250E24 0021A3E4  4B FF 35 25 */	bl __dt__CFade
+/* 80250E24 0021A3E4  4B FF 35 25 */	bl __dt__5CFadeFv
 /* 80250E28 0021A3E8  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80250E2C 0021A3EC  38 80 FF FF */	li r4, -1
-/* 80250E30 0021A3F0  4B F7 31 21 */	bl __dt__CTitleAHelp
+/* 80250E30 0021A3F0  4B F7 31 21 */	bl __dt__11CTitleAHelpFv
 /* 80250E34 0021A3F4  7F C3 F3 78 */	mr r3, r30
 /* 80250E38 0021A3F8  38 80 00 00 */	li r4, 0
 /* 80250E3C 0021A3FC  4B EA DE D1 */	bl __dt__800FED0C
@@ -88,7 +88,7 @@
 /* 80250E5C 0021A41C  7C 08 03 A6 */	mtlr r0
 /* 80250E60 0021A420  38 21 00 10 */	addi r1, r1, 0x10
 /* 80250E64 0021A424  4E 80 00 20 */	blr 
-.endfn __dt__CMenuMapSelectSC
+.endfn __dt__16CMenuMapSelectSCFv
 
 .fn func_80250E68, global
 /* 80250E68 0021A428  94 21 CC 40 */	stwu r1, -0x33c0(r1)
@@ -136,7 +136,7 @@
 /* 80250F10 0021A4D0  98 1F 00 96 */	stb r0, 0x96(r31)
 /* 80250F14 0021A4D4  88 01 00 67 */	lbz r0, 0x67(r1)
 /* 80250F18 0021A4D8  98 1F 00 97 */	stb r0, 0x97(r31)
-/* 80250F1C 0021A4DC  4B F7 30 35 */	bl __dt__CTitleAHelp
+/* 80250F1C 0021A4DC  4B F7 30 35 */	bl __dt__11CTitleAHelpFv
 /* 80250F20 0021A4E0  38 7F 00 60 */	addi r3, r31, 0x60
 /* 80250F24 0021A4E4  4B F7 30 81 */	bl CTitleAHelp_load
 /* 80250F28 0021A4E8  38 61 00 08 */	addi r3, r1, 8
@@ -162,7 +162,7 @@
 /* 80250F78 0021A538  98 1F 00 BE */	stb r0, 0xbe(r31)
 /* 80250F7C 0021A53C  88 01 00 2F */	lbz r0, 0x2f(r1)
 /* 80250F80 0021A540  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 80250F84 0021A544  4B FF 33 C5 */	bl __dt__CFade
+/* 80250F84 0021A544  4B FF 33 C5 */	bl __dt__5CFadeFv
 /* 80250F88 0021A548  38 7F 00 98 */	addi r3, r31, 0x98
 /* 80250F8C 0021A54C  4B FF 34 11 */	bl func_8024439C
 /* 80250F90 0021A550  38 61 00 68 */	addi r3, r1, 0x68
@@ -346,7 +346,7 @@
 /* 80251250 0021A810  80 01 33 AC */	lwz r0, 0x33ac(r1)
 /* 80251254 0021A814  90 1F 34 04 */	stw r0, 0x3404(r31)
 /* 80251258 0021A818  90 BF 34 00 */	stw r5, 0x3400(r31)
-/* 8025125C 0021A81C  4B FF AB 29 */	bl __dt__CFloorMap
+/* 8025125C 0021A81C  4B FF AB 29 */	bl __dt__9CFloorMapFv
 /* 80251260 0021A820  2C 1F 00 00 */	cmpwi r31, 0
 /* 80251264 0021A824  7F E4 FB 78 */	mr r4, r31
 /* 80251268 0021A828  41 82 00 08 */	beq .L_80251270
@@ -385,7 +385,7 @@
 /* 802512D0 0021A890  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802512D4 0021A894  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802512D8 0021A898  7C 7F 1B 78 */	mr r31, r3
-/* 802512DC 0021A89C  48 1F 77 69 */	bl func_80448A44
+/* 802512DC 0021A89C  48 1F 77 69 */	bl func_80448A44__Fv
 /* 802512E0 0021A8A0  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 802512E4 0021A8A4  38 80 00 01 */	li r4, 1
 /* 802512E8 0021A8A8  48 24 4F B9 */	bl func_804962A0
@@ -548,7 +548,7 @@
 .L_80251500:
 /* 80251500 0021AAC0  38 60 00 04 */	li r3, 4
 /* 80251504 0021AAC4  4B EE 6B 75 */	bl func_80138078
-/* 80251508 0021AAC8  48 1E 60 AD */	bl getHeapIndex
+/* 80251508 0021AAC8  48 1E 60 AD */	bl getHeapIndex__Fv
 /* 8025150C 0021AACC  7C 64 1B 78 */	mr r4, r3
 /* 80251510 0021AAD0  38 60 34 10 */	li r3, 0x3410
 /* 80251514 0021AAD4  48 1E 35 49 */	bl heap_malloc
@@ -1200,7 +1200,7 @@
 
 .fn func_80251DF0, global
 /* 80251DF0 0021B3B0  38 63 FF A8 */	addi r3, r3, -88
-/* 80251DF4 0021B3B4  4B FF EF FC */	b __dt__CMenuMapSelectSC
+/* 80251DF4 0021B3B4  4B FF EF FC */	b __dt__16CMenuMapSelectSCFv
 .endfn func_80251DF0
 
 
@@ -1240,13 +1240,13 @@
 .obj __vt__16CMenuMapSelectSC, global
 	.4byte __RTTI__16CMenuMapSelectSC
 	.4byte 0
-	.4byte __dt__CMenuMapSelectSC
-	.4byte CChildListNode_Reset
+	.4byte __dt__16CMenuMapSelectSCFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80250E68
 	.4byte func_802512C8
 	.4byte func_80251340
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__16CMenuMapSelectSC
 	.4byte 0xFFFFFFA8
 	.4byte func_80251DF0
@@ -1324,13 +1324,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000098
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1348,25 +1348,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000C0
-	.4byte __dt__CFloorMap
+	.4byte __dt__9CFloorMapFv
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CFloorMap
+	.4byte __dt__9CFloorMapFv
 	.4byte 0x8780001E
 	.4byte 0x00000098
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x000000C0
-	.4byte __dt__CFloorMap
+	.4byte __dt__9CFloorMapFv
 	.4byte 0x0780001E
 	.4byte 0x00000098
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_80016AC0"
 
 .obj "@etb_80016B34", local
@@ -1452,7 +1452,7 @@
 
 .obj "@eti_8002F624", local
 .hidden "@eti_8002F624"
-	.4byte __dt__CMenuMapSelectSC
+	.4byte __dt__16CMenuMapSelectSCFv
 	.4byte 0x00000078
 	.4byte "@etb_80016AC0"
 .endobj "@eti_8002F624"

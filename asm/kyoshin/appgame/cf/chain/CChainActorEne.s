@@ -497,7 +497,7 @@
 .obj __vt__Q22cf14CChainActorEne, global
 	.4byte __RTTI__Q22cf14CChainActorEne
 	.4byte 0
-	.4byte __dt__cf_CChainActorEne
+	.4byte __dt__Q22cf14CChainActorEneFv
 	.4byte func_80281308
 	.4byte func_80279B34
 	.4byte func_8028133C

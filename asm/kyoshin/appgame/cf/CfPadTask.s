@@ -78,7 +78,7 @@
 /* 801C1994 0018AF54  4E 80 00 20 */	blr 
 .endfn __dt__801C1958
 
-.fn __dt__CTTask_cf_CfPadTask, global
+.fn "__dt__23CTTask<Q22cf9CfPadTask>Fv", global
 /* 801C1998 0018AF58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C199C 0018AF5C  7C 08 02 A6 */	mflr r0
 /* 801C19A0 0018AF60  2C 03 00 00 */	cmpwi r3, 0
@@ -89,7 +89,7 @@
 /* 801C19B4 0018AF74  7C 7E 1B 78 */	mr r30, r3
 /* 801C19B8 0018AF78  41 82 00 1C */	beq .L_801C19D4
 /* 801C19BC 0018AF7C  38 80 00 00 */	li r4, 0
-/* 801C19C0 0018AF80  48 28 31 79 */	bl __dt__CProcess
+/* 801C19C0 0018AF80  48 28 31 79 */	bl __dt__8CProcessFv
 /* 801C19C4 0018AF84  2C 1F 00 00 */	cmpwi r31, 0
 /* 801C19C8 0018AF88  40 81 00 0C */	ble .L_801C19D4
 /* 801C19CC 0018AF8C  7F C3 F3 78 */	mr r3, r30
@@ -102,9 +102,9 @@
 /* 801C19E4 0018AFA4  7C 08 03 A6 */	mtlr r0
 /* 801C19E8 0018AFA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C19EC 0018AFAC  4E 80 00 20 */	blr
-.endfn __dt__CTTask_cf_CfPadTask
+.endfn "__dt__23CTTask<Q22cf9CfPadTask>Fv"
 
-.fn __dt__cf_CfPadTask, global
+.fn __dt__Q22cf9CfPadTaskFv, global
 /* 801C19F0 0018AFB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C19F4 0018AFB4  7C 08 02 A6 */	mflr r0
 /* 801C19F8 0018AFB8  2C 03 00 00 */	cmpwi r3, 0
@@ -134,7 +134,7 @@
 /* 801C1A54 0018B014  41 82 00 10 */	beq .L_801C1A64
 /* 801C1A58 0018B018  7F C3 F3 78 */	mr r3, r30
 /* 801C1A5C 0018B01C  38 80 00 00 */	li r4, 0
-/* 801C1A60 0018B020  48 28 30 D9 */	bl __dt__CProcess
+/* 801C1A60 0018B020  48 28 30 D9 */	bl __dt__8CProcessFv
 .L_801C1A64:
 /* 801C1A64 0018B024  2C 1F 00 00 */	cmpwi r31, 0
 /* 801C1A68 0018B028  40 81 00 0C */	ble .L_801C1A74
@@ -148,7 +148,7 @@
 /* 801C1A84 0018B044  7C 08 03 A6 */	mtlr r0
 /* 801C1A88 0018B048  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C1A8C 0018B04C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfPadTask
+.endfn __dt__Q22cf9CfPadTaskFv
 
 .fn func_801C1A90, global
 /* 801C1A90 0018B050  38 00 00 00 */	li r0, 0
@@ -1166,14 +1166,14 @@
 /* 801C28C0 0018BE80  4E 80 00 20 */	blr 
 .endfn func_801C20FC
 
-.fn __ct__cf_CfPadTask, global
+.fn __ct__Q22cf9CfPadTaskFv, global
 /* 801C28C4 0018BE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C28C8 0018BE88  7C 08 02 A6 */	mflr r0
 /* 801C28CC 0018BE8C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801C28D0 0018BE90  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801C28D4 0018BE94  93 C1 00 08 */	stw r30, 8(r1)
 /* 801C28D8 0018BE98  7C 7E 1B 78 */	mr r30, r3
-/* 801C28DC 0018BE9C  48 27 4C D9 */	bl getHeapIndex
+/* 801C28DC 0018BE9C  48 27 4C D9 */	bl getHeapIndex__Fv
 /* 801C28E0 0018BEA0  7C 64 1B 78 */	mr r4, r3
 /* 801C28E4 0018BEA4  38 60 00 68 */	li r3, 0x68
 /* 801C28E8 0018BEA8  48 27 21 75 */	bl heap_malloc
@@ -1228,7 +1228,7 @@
 /* 801C29A4 0018BF64  7C 08 03 A6 */	mtlr r0
 /* 801C29A8 0018BF68  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C29AC 0018BF6C  4E 80 00 20 */	blr
-.endfn __ct__cf_CfPadTask
+.endfn __ct__Q22cf9CfPadTaskFv
 
 .fn func_801C29B0, global
 /* 801C29B0 0018BF70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1366,7 +1366,7 @@
 /* 801C2B58 0018C118  4E 80 00 20 */	blr 
 .endfn func_801C2B34
 
-.fn func_801C2B5C, global
+.fn "func_801C2B5C__23CTTask<Q22cf9CfPadTask>Fv", global
 /* 801C2B5C 0018C11C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C2B60 0018C120  7C 08 02 A6 */	mflr r0
 /* 801C2B64 0018C124  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1386,9 +1386,9 @@
 /* 801C2B98 0018C158  7C 08 03 A6 */	mtlr r0
 /* 801C2B9C 0018C15C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C2BA0 0018C160  4E 80 00 20 */	blr 
-.endfn func_801C2B5C
+.endfn "func_801C2B5C__23CTTask<Q22cf9CfPadTask>Fv"
 
-.fn func_801C2BA4, global
+.fn "func_801C2BA4__23CTTask<Q22cf9CfPadTask>Fv", global
 /* 801C2BA4 0018C164  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C2BA8 0018C168  7C 08 02 A6 */	mflr r0
 /* 801C2BAC 0018C16C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1408,7 +1408,7 @@
 /* 801C2BE0 0018C1A0  7C 08 03 A6 */	mtlr r0
 /* 801C2BE4 0018C1A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C2BE8 0018C1A8  4E 80 00 20 */	blr 
-.endfn func_801C2BA4
+.endfn "func_801C2BA4__23CTTask<Q22cf9CfPadTask>Fv"
 
 .fn func_801C2BEC, global
 /* 801C2BEC 0018C1AC  38 63 FF AC */	addi r3, r3, -84
@@ -1417,7 +1417,7 @@
 
 .fn func_801C2BF4, global
 /* 801C2BF4 0018C1B4  38 63 FF AC */	addi r3, r3, -84
-/* 801C2BF8 0018C1B8  4B FF ED F8 */	b __dt__cf_CfPadTask
+/* 801C2BF8 0018C1B8  4B FF ED F8 */	b __dt__Q22cf9CfPadTaskFv
 .endfn func_801C2BF4
 
 .fn func_801C2BFC, global
@@ -1432,7 +1432,7 @@
 
 .fn func_801C2C0C, global
 /* 801C2C0C 0018C1CC  38 63 FF A8 */	addi r3, r3, -88
-/* 801C2C10 0018C1D0  4B FF ED E0 */	b __dt__cf_CfPadTask
+/* 801C2C10 0018C1D0  4B FF ED E0 */	b __dt__Q22cf9CfPadTaskFv
 .endfn func_801C2C0C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1456,13 +1456,13 @@
 .obj __vt__Q22cf9CfPadTask, global
 	.4byte __RTTI__Q22cf9CfPadTask
 	.4byte 0
-	.4byte __dt__cf_CfPadTask
-	.4byte CChildListNode_Reset
+	.4byte __dt__Q22cf9CfPadTaskFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_801C1A90
 	.4byte func_801C1AA4
 	.4byte func_801C1F68
-	.4byte func_801C2BA4
-	.4byte CProcess_func_80043F20
+	.4byte "func_801C2BA4__23CTTask<Q22cf9CfPadTask>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__Q22cf9CfPadTask
 	.4byte 0xFFFFFFAC
 	.4byte func_801C2BF4
@@ -1493,13 +1493,13 @@
 .obj "__vt__23CTTask<Q22cf9CfPadTask>", global
 	.4byte "__RTTI__23CTTask<Q22cf9CfPadTask>"
 	.4byte 0
-	.4byte __dt__CTTask_cf_CfPadTask
-	.4byte CChildListNode_Reset
+	.4byte "__dt__23CTTask<Q22cf9CfPadTask>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_801C2B5C
-	.4byte func_801C2BA4
-	.4byte CProcess_func_80043F20
+	.4byte "func_801C2B5C__23CTTask<Q22cf9CfPadTask>Fv"
+	.4byte "func_801C2BA4__23CTTask<Q22cf9CfPadTask>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__23CTTask<Q22cf9CfPadTask>"
 
 .obj CTTask_cf_CfPadTask_hierarchy, global
@@ -1658,16 +1658,16 @@
 	.4byte __dt__801C1958
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__IGameException
+	.4byte __dt__14IGameExceptionFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CfPadTask
+	.4byte "__dt__23CTTask<Q22cf9CfPadTask>Fv"
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte __dt__801C1958
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IGameException
+	.4byte __dt__14IGameExceptionFv
 .endobj "@etb_80010650"
 
 .obj "@etb_800106A4", local
@@ -1699,10 +1699,10 @@
 	.4byte __dt__801C1958
 	.4byte 0x0680001F
 	.4byte 0x00000054
-	.4byte __dt__IGameException
+	.4byte __dt__14IGameExceptionFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CTTask_cf_CfPadTask
+	.4byte "__dt__23CTTask<Q22cf9CfPadTask>Fv"
 .endobj "@etb_800106BC"
 
 .obj "@etb_800106F0", local
@@ -1762,14 +1762,14 @@
 
 .obj "@eti_8002B058", local
 .hidden "@eti_8002B058"
-	.4byte __dt__CTTask_cf_CfPadTask
+	.4byte "__dt__23CTTask<Q22cf9CfPadTask>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_80010648"
 .endobj "@eti_8002B058"
 
 .obj "@eti_8002B064", local
 .hidden "@eti_8002B064"
-	.4byte __dt__cf_CfPadTask
+	.4byte __dt__Q22cf9CfPadTaskFv
 	.4byte 0x000000A0
 	.4byte "@etb_80010650"
 .endobj "@eti_8002B064"
@@ -1797,7 +1797,7 @@
 
 .obj "@eti_8002B094", local
 .hidden "@eti_8002B094"
-	.4byte __ct__cf_CfPadTask
+	.4byte __ct__Q22cf9CfPadTaskFv
 	.4byte 0x000000EC
 	.4byte "@etb_800106BC"
 .endobj "@eti_8002B094"
@@ -1825,14 +1825,14 @@
 
 .obj "@eti_8002B0C4", local
 .hidden "@eti_8002B0C4"
-	.4byte func_801C2B5C
+	.4byte "func_801C2B5C__23CTTask<Q22cf9CfPadTask>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80010708"
 .endobj "@eti_8002B0C4"
 
 .obj "@eti_8002B0D0", local
 .hidden "@eti_8002B0D0"
-	.4byte func_801C2BA4
+	.4byte "func_801C2BA4__23CTTask<Q22cf9CfPadTask>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80010710"
 .endobj "@eti_8002B0D0"

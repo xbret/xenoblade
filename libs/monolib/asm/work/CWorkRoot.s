@@ -13,7 +13,7 @@
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
-/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex
+/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex__Fv
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
 /* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc
@@ -162,7 +162,7 @@
 .L_80443D1C:
 /* 80443D1C 0040D2DC  7F C3 F3 78 */	mr r3, r30
 /* 80443D20 0040D2E0  38 80 00 00 */	li r4, 0
-/* 80443D24 0040D2E4  4B FF 3D A5 */	bl __dt__CWorkThread
+/* 80443D24 0040D2E4  4B FF 3D A5 */	bl __dt__11CWorkThreadFv
 /* 80443D28 0040D2E8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80443D2C 0040D2EC  40 81 00 0C */	ble .L_80443D38
 /* 80443D30 0040D2F0  7F C3 F3 78 */	mr r3, r30
@@ -679,7 +679,7 @@
 /* 804443B0 0040D970  48 00 00 0C */	b .L_804443BC
 .L_804443B4:
 /* 804443B4 0040D974  7F E3 FB 78 */	mr r3, r31
-/* 804443B8 0040D978  4B FF 46 6D */	bl CWorkThread_WorkThreadEvent5
+/* 804443B8 0040D978  4B FF 46 6D */	bl WorkThreadEvent5__11CWorkThreadFv
 .L_804443BC:
 /* 804443BC 0040D97C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804443C0 0040D980  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -743,43 +743,43 @@
 	.4byte "__RTTI__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 	.4byte 0
 	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
-	.4byte CWorkThread_WorkThreadEvent4
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
+	.4byte WorkThreadEvent4__11CWorkThreadFv
 	.4byte CWorkRootThread_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 
 .obj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy, global
@@ -846,7 +846,7 @@
 	.4byte __dt__reslist_CWorkThread
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001C774"
 
 .obj "@etb_8001C7A8", local

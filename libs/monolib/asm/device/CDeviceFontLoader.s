@@ -27,7 +27,7 @@
 /* 80454ED4 0041E494  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFontLoader
 
-.fn __dt__CDeviceFontLoader, global
+.fn __dt__17CDeviceFontLoaderFv, global
 /* 80454ED8 0041E498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80454EDC 0041E49C  7C 08 02 A6 */	mflr r0
 /* 80454EE0 0041E4A0  2C 03 00 00 */	cmpwi r3, 0
@@ -38,7 +38,7 @@
 /* 80454EF4 0041E4B4  7C 7E 1B 78 */	mr r30, r3
 /* 80454EF8 0041E4B8  41 82 00 1C */	beq .L_80454F14
 /* 80454EFC 0041E4BC  38 80 00 00 */	li r4, 0
-/* 80454F00 0041E4C0  4B FE 2B C9 */	bl __dt__CWorkThread
+/* 80454F00 0041E4C0  4B FE 2B C9 */	bl __dt__11CWorkThreadFv
 /* 80454F04 0041E4C4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80454F08 0041E4C8  40 81 00 0C */	ble .L_80454F14
 /* 80454F0C 0041E4CC  7F C3 F3 78 */	mr r3, r30
@@ -51,7 +51,7 @@
 /* 80454F24 0041E4E4  7C 08 03 A6 */	mtlr r0
 /* 80454F28 0041E4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80454F2C 0041E4EC  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFontLoader
+.endfn __dt__17CDeviceFontLoaderFv
 
 .fn func_80454F30, global
 /* 80454F30 0041E4F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -99,14 +99,14 @@
 /* 80454FC8 0041E588  38 9F 01 C8 */	addi r4, r31, 0x1c8
 /* 80454FCC 0041E58C  38 C0 00 00 */	li r6, 0
 /* 80454FD0 0041E590  38 E0 00 00 */	li r7, 0
-/* 80454FD4 0041E594  4B FF 97 C1 */	bl CDeviceFile_openFile1
+/* 80454FD4 0041E594  4B FF 97 C1 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80454FD8 0041E598  90 7F 02 0C */	stw r3, 0x20c(r31)
 /* 80454FDC 0041E59C  38 80 00 00 */	li r4, 0
-/* 80454FE0 0041E5A0  4B FF A1 75 */	bl func_8044F154
+/* 80454FE0 0041E5A0  4B FF A1 75 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
 /* 80454FE4 0041E5A4  80 7F 02 0C */	lwz r3, 0x20c(r31)
 /* 80454FE8 0041E5A8  4B FF A4 1D */	bl func_8044F404
 /* 80454FEC 0041E5AC  7F E3 FB 78 */	mr r3, r31
-/* 80454FF0 0041E5B0  4B FE 3A 09 */	bl CWorkThread_WorkThreadEvent4
+/* 80454FF0 0041E5B0  4B FE 3A 09 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80454FF4 0041E5B4  48 00 00 08 */	b .L_80454FFC
 .L_80454FF8:
 /* 80454FF8 0041E5B8  38 60 00 00 */	li r3, 0
@@ -137,7 +137,7 @@
 /* 80455048 0041E608  7C 00 18 40 */	cmplw r0, r3
 /* 8045504C 0041E60C  40 82 00 10 */	bne .L_8045505C
 /* 80455050 0041E610  7F E3 FB 78 */	mr r3, r31
-/* 80455054 0041E614  4B FE 39 D1 */	bl CWorkThread_WorkThreadEvent5
+/* 80455054 0041E614  4B FE 39 D1 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 80455058 0041E618  48 00 00 08 */	b .L_80455060
 .L_8045505C:
 /* 8045505C 0041E61C  38 60 00 00 */	li r3, 0
@@ -201,44 +201,44 @@
 .obj __vt__17CDeviceFontLoader, global
 	.4byte __RTTI__17CDeviceFontLoader
 	.4byte 0
-	.4byte __dt__CDeviceFontLoader
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__17CDeviceFontLoaderFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CDeviceFontLoader_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFontLoader_WorkThreadEvent4
 	.4byte CDeviceFontLoader_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__17CDeviceFontLoader
 
 .obj CDeviceFontLoader_hierarchy, global
@@ -312,7 +312,7 @@
 
 .obj "@eti_80034E80", local
 .hidden "@eti_80034E80"
-	.4byte __dt__CDeviceFontLoader
+	.4byte __dt__17CDeviceFontLoaderFv
 	.4byte 0x00000058
 	.4byte "@etb_8001D1FC"
 .endobj "@eti_80034E80"

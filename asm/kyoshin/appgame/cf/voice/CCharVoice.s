@@ -647,7 +647,7 @@
 .obj __vt__Q22cf10CCharVoice, global
 	.4byte __RTTI__Q22cf10CCharVoice
 	.4byte 0
-	.4byte __dt__cf_CCharVoice
+	.4byte __dt__Q22cf10CCharVoiceFv
 	.4byte 0
 .endobj __vt__Q22cf10CCharVoice
 

@@ -1538,10 +1538,10 @@
 /* 801554D0 0011EA90  4E 80 00 20 */	blr
 .endfn func_80154280
 
-.fn func_801554D4, global
+.fn func_801554D4__Q22cf11CActorParamFv, global
 /* 801554D4 0011EA94  38 60 00 00 */	li r3, 0
 /* 801554D8 0011EA98  4E 80 00 20 */	blr 
-.endfn func_801554D4
+.endfn func_801554D4__Q22cf11CActorParamFv
 
 .fn func_801554DC, global
 /* 801554DC 0011EA9C  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -8,7 +8,7 @@
 /* 80444A20 0040DFE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80444A24 0040DFE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80444A28 0040DFE8  7C 7F 1B 78 */	mr r31, r3
-/* 80444A2C 0040DFEC  48 00 1C B5 */	bl __ct__CChildListNode
+/* 80444A2C 0040DFEC  48 00 1C B5 */	bl __ct__14CChildListNodeFv
 /* 80444A30 0040DFF0  3C 80 80 57 */	lis r4, __vt__8CProcess@ha
 /* 80444A34 0040DFF4  38 00 00 00 */	li r0, 0
 /* 80444A38 0040DFF8  38 84 F3 D8 */	addi r4, r4, __vt__8CProcess@l
@@ -20,7 +20,7 @@
 /* 80444A50 0040E010  98 1F 00 39 */	stb r0, 0x39(r31)
 /* 80444A54 0040E014  98 1F 00 3A */	stb r0, 0x3a(r31)
 /* 80444A58 0040E018  98 1F 00 3B */	stb r0, 0x3b(r31)
-/* 80444A5C 0040E01C  48 00 1B A5 */	bl CDoubleListNode_InsertEnd
+/* 80444A5C 0040E01C  48 00 1B A5 */	bl InsertEnd____17CDoubleListHeaderFP15CDoubleListNode
 /* 80444A60 0040E020  7F E3 FB 78 */	mr r3, r31
 /* 80444A64 0040E024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80444A68 0040E028  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -29,7 +29,7 @@
 /* 80444A74 0040E034  4E 80 00 20 */	blr 
 .endfn __ct__8CProcessFv
 
-.fn __dt__CChildListNode, global
+.fn __dt__14CChildListNodeFv, global
 /* 80444A78 0040E038  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444A7C 0040E03C  7C 08 02 A6 */	mflr r0
 /* 80444A80 0040E040  2C 03 00 00 */	cmpwi r3, 0
@@ -47,9 +47,9 @@
 /* 80444AAC 0040E06C  7C 08 03 A6 */	mtlr r0
 /* 80444AB0 0040E070  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444AB4 0040E074  4E 80 00 20 */	blr 
-.endfn __dt__CChildListNode
+.endfn __dt__14CChildListNodeFv
 
-.fn __dt__TChildListHeader_CChildListNode, global
+.fn "__dt__34TChildListHeader<14CChildListNode>Fv", global
 /* 80444AB8 0040E078  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444ABC 0040E07C  7C 08 02 A6 */	mflr r0
 /* 80444AC0 0040E080  2C 03 00 00 */	cmpwi r3, 0
@@ -67,7 +67,7 @@
 /* 80444AEC 0040E0AC  7C 08 03 A6 */	mtlr r0
 /* 80444AF0 0040E0B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444AF4 0040E0B4  4E 80 00 20 */	blr 
-.endfn __dt__TChildListHeader_CChildListNode
+.endfn "__dt__34TChildListHeader<14CChildListNode>Fv"
 
 .fn __dt__15CDoubleListNodeFv, global
 /* 80444AF8 0040E0B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -89,7 +89,7 @@
 /* 80444B34 0040E0F4  4E 80 00 20 */	blr 
 .endfn __dt__15CDoubleListNodeFv
 
-.fn __dt__CProcess, global
+.fn __dt__8CProcessFv, global
 /* 80444B38 0040E0F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80444B3C 0040E0FC  7C 08 02 A6 */	mflr r0
 /* 80444B40 0040E100  2C 03 00 00 */	cmpwi r3, 0
@@ -149,12 +149,12 @@
 /* 80444BFC 0040E1BC  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
 .L_80444C00:
 /* 80444C00 0040E1C0  7F A4 EB 78 */	mr r4, r29
-/* 80444C04 0040E1C4  48 00 1A 49 */	bl CDoubleListNode_Remove
+/* 80444C04 0040E1C4  48 00 1A 49 */	bl Remove__17CDoubleListHeaderFP15CDoubleListNode
 /* 80444C08 0040E1C8  48 00 00 10 */	b .L_80444C18
 .L_80444C0C:
 /* 80444C0C 0040E1CC  7F A4 EB 78 */	mr r4, r29
 /* 80444C10 0040E1D0  38 63 00 24 */	addi r3, r3, 0x24
-/* 80444C14 0040E1D4  48 00 1A 39 */	bl CDoubleListNode_Remove
+/* 80444C14 0040E1D4  48 00 1A 39 */	bl Remove__17CDoubleListHeaderFP15CDoubleListNode
 .L_80444C18:
 /* 80444C18 0040E1D8  2C 1E 00 00 */	cmpwi r30, 0
 /* 80444C1C 0040E1DC  40 81 00 0C */	ble .L_80444C28
@@ -169,7 +169,7 @@
 /* 80444C3C 0040E1FC  7C 08 03 A6 */	mtlr r0
 /* 80444C40 0040E200  38 21 00 20 */	addi r1, r1, 0x20
 /* 80444C44 0040E204  4E 80 00 20 */	blr 
-.endfn __dt__CProcess
+.endfn __dt__8CProcessFv
 
 .fn func_80444C48, global
 /* 80444C48 0040E208  2C 04 00 00 */	cmpwi r4, 0
@@ -203,7 +203,7 @@
 /* 80444CA4 0040E264  3C 60 80 66 */	lis r3, lbl_8065A404@ha
 /* 80444CA8 0040E268  7F A4 EB 78 */	mr r4, r29
 /* 80444CAC 0040E26C  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
-/* 80444CB0 0040E270  48 00 19 9D */	bl CDoubleListNode_Remove
+/* 80444CB0 0040E270  48 00 19 9D */	bl Remove__17CDoubleListHeaderFP15CDoubleListNode
 /* 80444CB4 0040E274  2C 1E 00 00 */	cmpwi r30, 0
 /* 80444CB8 0040E278  40 82 00 34 */	bne .L_80444CEC
 /* 80444CBC 0040E27C  2C 1F 00 00 */	cmpwi r31, 0
@@ -211,25 +211,25 @@
 /* 80444CC4 0040E284  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444CC8 0040E288  7F A4 EB 78 */	mr r4, r29
 /* 80444CCC 0040E28C  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444CD0 0040E290  48 00 18 ED */	bl CDoubleListNode_InsertTop
+/* 80444CD0 0040E290  48 00 18 ED */	bl InsertTop__17CDoubleListHeaderFP15CDoubleListNode
 /* 80444CD4 0040E294  48 00 00 3C */	b .L_80444D10
 .L_80444CD8:
 /* 80444CD8 0040E298  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444CDC 0040E29C  7F A4 EB 78 */	mr r4, r29
 /* 80444CE0 0040E2A0  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444CE4 0040E2A4  48 00 19 1D */	bl CDoubleListNode_InsertEnd
+/* 80444CE4 0040E2A4  48 00 19 1D */	bl InsertEnd____17CDoubleListHeaderFP15CDoubleListNode
 /* 80444CE8 0040E2A8  48 00 00 28 */	b .L_80444D10
 .L_80444CEC:
 /* 80444CEC 0040E2AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80444CF0 0040E2B0  41 82 00 14 */	beq .L_80444D04
 /* 80444CF4 0040E2B4  7F A4 EB 78 */	mr r4, r29
 /* 80444CF8 0040E2B8  38 7E 00 24 */	addi r3, r30, 0x24
-/* 80444CFC 0040E2BC  48 00 18 C1 */	bl CDoubleListNode_InsertTop
+/* 80444CFC 0040E2BC  48 00 18 C1 */	bl InsertTop__17CDoubleListHeaderFP15CDoubleListNode
 /* 80444D00 0040E2C0  48 00 00 10 */	b .L_80444D10
 .L_80444D04:
 /* 80444D04 0040E2C4  7F A4 EB 78 */	mr r4, r29
 /* 80444D08 0040E2C8  38 7E 00 24 */	addi r3, r30, 0x24
-/* 80444D0C 0040E2CC  48 00 18 F5 */	bl CDoubleListNode_InsertEnd
+/* 80444D0C 0040E2CC  48 00 18 F5 */	bl InsertEnd____17CDoubleListHeaderFP15CDoubleListNode
 .L_80444D10:
 /* 80444D10 0040E2D0  93 DD 00 14 */	stw r30, 0x14(r29)
 /* 80444D14 0040E2D4  7F A3 EB 78 */	mr r3, r29
@@ -277,17 +277,17 @@
 /* 80444DA4 0040E364  3C 60 80 66 */	lis r3, lbl_8065A424@ha
 /* 80444DA8 0040E368  7F E4 FB 78 */	mr r4, r31
 /* 80444DAC 0040E36C  38 63 A4 24 */	addi r3, r3, lbl_8065A424@l
-/* 80444DB0 0040E370  48 00 18 9D */	bl CDoubleListNode_Remove
+/* 80444DB0 0040E370  48 00 18 9D */	bl Remove__17CDoubleListHeaderFP15CDoubleListNode
 /* 80444DB4 0040E374  48 00 00 10 */	b .L_80444DC4
 .L_80444DB8:
 /* 80444DB8 0040E378  7F E4 FB 78 */	mr r4, r31
 /* 80444DBC 0040E37C  38 63 00 24 */	addi r3, r3, 0x24
-/* 80444DC0 0040E380  48 00 18 8D */	bl CDoubleListNode_Remove
+/* 80444DC0 0040E380  48 00 18 8D */	bl Remove__17CDoubleListHeaderFP15CDoubleListNode
 .L_80444DC4:
 /* 80444DC4 0040E384  3C 60 80 66 */	lis r3, lbl_8065A404@ha
 /* 80444DC8 0040E388  7F E4 FB 78 */	mr r4, r31
 /* 80444DCC 0040E38C  38 63 A4 04 */	addi r3, r3, lbl_8065A404@l
-/* 80444DD0 0040E390  48 00 18 31 */	bl CDoubleListNode_InsertEnd
+/* 80444DD0 0040E390  48 00 18 31 */	bl InsertEnd____17CDoubleListHeaderFP15CDoubleListNode
 /* 80444DD4 0040E394  38 00 00 00 */	li r0, 0
 /* 80444DD8 0040E398  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 80444DDC 0040E39C  98 1F 00 38 */	stb r0, 0x38(r31)
@@ -2089,8 +2089,8 @@
 /* 804464B8 0040FA78  7C 08 02 A6 */	mflr r0
 /* 804464BC 0040FA7C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804464C0 0040FA80  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 804464C4 0040FA84  3F E0 80 44 */	lis r31, __dt__TChildListHeader_CProcess@ha
-/* 804464C8 0040FA88  38 9F 65 38 */	addi r4, r31, __dt__TChildListHeader_CProcess@l
+/* 804464C4 0040FA84  3F E0 80 44 */	lis r31, "__dt__27TChildListHeader<8CProcess>Fv"@ha
+/* 804464C8 0040FA88  38 9F 65 38 */	addi r4, r31, "__dt__27TChildListHeader<8CProcess>Fv"@l
 /* 804464CC 0040FA8C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804464D0 0040FA90  3F C0 80 57 */	lis r30, "__vt__27TChildListHeader<8CProcess>"@ha
 /* 804464D4 0040FA94  3B DE F3 FC */	addi r30, r30, "__vt__27TChildListHeader<8CProcess>"@l
@@ -2106,7 +2106,7 @@
 /* 804464FC 0040FABC  4B E7 31 A1 */	bl __register_global_object
 /* 80446500 0040FAC0  38 7C 00 2C */	addi r3, r28, 0x2c
 /* 80446504 0040FAC4  93 BC 00 2C */	stw r29, 0x2c(r28)
-/* 80446508 0040FAC8  38 9F 65 38 */	addi r4, r31, __dt__TChildListHeader_CProcess@l
+/* 80446508 0040FAC8  38 9F 65 38 */	addi r4, r31, "__dt__27TChildListHeader<8CProcess>Fv"@l
 /* 8044650C 0040FACC  38 BC 00 20 */	addi r5, r28, 0x20
 /* 80446510 0040FAD0  93 C3 00 10 */	stw r30, 0x10(r3)
 /* 80446514 0040FAD4  4B E7 31 89 */	bl __register_global_object
@@ -2120,7 +2120,7 @@
 /* 80446534 0040FAF4  4E 80 00 20 */	blr
 .endfn sinit_804464B4
 
-.fn __dt__TChildListHeader_CProcess, global
+.fn "__dt__27TChildListHeader<8CProcess>Fv", global
 /* 80446538 0040FAF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044653C 0040FAFC  7C 08 02 A6 */	mflr r0
 /* 80446540 0040FB00  2C 03 00 00 */	cmpwi r3, 0
@@ -2138,7 +2138,7 @@
 /* 8044656C 0040FB2C  7C 08 03 A6 */	mtlr r0
 /* 80446570 0040FB30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446574 0040FB34  4E 80 00 20 */	blr 
-.endfn __dt__TChildListHeader_CProcess
+.endfn "__dt__27TChildListHeader<8CProcess>Fv"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
@@ -2164,20 +2164,20 @@
 .obj __vt__8CProcess, global
 	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __dt__CProcess
-	.4byte CChildListNode_Reset
+	.4byte __dt__8CProcessFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 .endobj __vt__8CProcess
 
 
 .obj "__vt__27TChildListHeader<8CProcess>", global
 	.4byte "__RTTI__27TChildListHeader<8CProcess>"
 	.4byte 0
-	.4byte __dt__TChildListHeader_CProcess
+	.4byte "__dt__27TChildListHeader<8CProcess>Fv"
 .endobj "__vt__27TChildListHeader<8CProcess>"
 
 
@@ -2227,7 +2227,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 .endobj "@etb_8001C89C"
 
 .obj "@etb_8001C8B8", local
@@ -2256,25 +2256,25 @@
 	.4byte 0x00000000
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 .endobj "@etb_8001C8D0"
 
 .obj "@etb_8001C934", local
@@ -2374,14 +2374,14 @@
 
 .obj "@eti_800344B4", local
 .hidden "@eti_800344B4"
-	.4byte __dt__CChildListNode
+	.4byte __dt__14CChildListNodeFv
 	.4byte 0x00000040
 	.4byte "@etb_8001C8B8"
 .endobj "@eti_800344B4"
 
 .obj "@eti_800344C0", local
 .hidden "@eti_800344C0"
-	.4byte __dt__TChildListHeader_CChildListNode
+	.4byte "__dt__34TChildListHeader<14CChildListNode>Fv"
 	.4byte 0x00000040
 	.4byte "@etb_8001C8C0"
 .endobj "@eti_800344C0"
@@ -2395,7 +2395,7 @@
 
 .obj "@eti_800344D8", local
 .hidden "@eti_800344D8"
-	.4byte __dt__CProcess
+	.4byte __dt__8CProcessFv
 	.4byte 0x00000110
 	.4byte "@etb_8001C8D0"
 .endobj "@eti_800344D8"
@@ -2493,7 +2493,7 @@
 
 .obj "@eti_80034580", local
 .hidden "@eti_80034580"
-	.4byte __dt__TChildListHeader_CProcess
+	.4byte "__dt__27TChildListHeader<8CProcess>Fv"
 	.4byte 0x00000040
 	.4byte "@etb_8001C99C"
 .endobj "@eti_80034580"

@@ -66,7 +66,7 @@
 .L_801C368C:
 /* 801C368C 0018CC4C  7F C3 F3 78 */	mr r3, r30
 /* 801C3690 0018CC50  38 80 00 00 */	li r4, 0
-/* 801C3694 0018CC54  4B FC 20 2D */	bl __dt__801856C0
+/* 801C3694 0018CC54  4B FC 20 2D */	bl __dt__Q22cf8CREvtObjFv
 /* 801C3698 0018CC58  2C 1F 00 00 */	cmpwi r31, 0
 /* 801C369C 0018CC5C  40 81 00 0C */	ble .L_801C36A8
 /* 801C36A0 0018CC60  7F C3 F3 78 */	mr r3, r30
@@ -359,7 +359,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801856C0
+	.4byte __dt__Q22cf8CREvtObjFv
 .endobj "@etb_8001087C"
 
 .obj "@etb_80010898", local

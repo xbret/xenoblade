@@ -377,7 +377,7 @@
 /* 80047810 00010DD0  4E 80 00 20 */	blr 
 .endfn setMapJumpArea
 
-.fn func_80047814, global
+.fn func_80047814__Q22cf13CfObjectPointFv, global
 /* 80047814 00010DD4  80 C4 00 00 */	lwz r6, 0(r4)
 /* 80047818 00010DD8  80 A4 00 04 */	lwz r5, 4(r4)
 /* 8004781C 00010DDC  80 04 00 08 */	lwz r0, 8(r4)
@@ -385,7 +385,7 @@
 /* 80047824 00010DE4  90 A3 00 40 */	stw r5, 0x40(r3)
 /* 80047828 00010DE8  90 03 00 44 */	stw r0, 0x44(r3)
 /* 8004782C 00010DEC  4E 80 00 20 */	blr 
-.endfn func_80047814
+.endfn func_80047814__Q22cf13CfObjectPointFv
 
 .fn setMapJumpAreaBox, local
 /* 80047830 00010DF0  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -2686,10 +2686,10 @@
 /* 80049990 00012F50  4E 80 00 20 */	blr 
 .endfn makeParty
 
-.fn CfObject_func_80049994, global
+.fn func_80049994__Q22cf8CfObjectFv, global
 /* 80049994 00012F54  C0 23 00 4C */	lfs f1, 0x4c(r3)
 /* 80049998 00012F58  4E 80 00 20 */	blr 
-.endfn CfObject_func_80049994
+.endfn func_80049994__Q22cf8CfObjectFv
 
 .fn makeGuestParty, local
 /* 8004999C 00012F5C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4010,7 +4010,7 @@
 /* 8004ABD4 00014194  4E 80 00 20 */	blr 
 .endfn partyWarp
 
-.fn func_8004ABD8, global
+.fn func_8004ABD8__Q22cf12CfObjectMoveFv, global
 /* 8004ABD8 00014198  80 83 00 C4 */	lwz r4, 0xc4(r3)
 /* 8004ABDC 0001419C  2C 04 00 00 */	cmpwi r4, 0
 /* 8004ABE0 000141A0  41 82 00 0C */	beq .L_8004ABEC
@@ -4019,7 +4019,7 @@
 .L_8004ABEC:
 /* 8004ABEC 000141AC  80 63 06 C0 */	lwz r3, 0x6c0(r3)
 /* 8004ABF0 000141B0  4E 80 00 20 */	blr 
-.endfn func_8004ABD8
+.endfn func_8004ABD8__Q22cf12CfObjectMoveFv
 
 .fn setMoney, local
 /* 8004ABF4 000141B4  94 21 FF F0 */	stwu r1, -0x10(r1)

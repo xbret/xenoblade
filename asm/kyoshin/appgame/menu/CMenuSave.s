@@ -66,7 +66,7 @@
 /* 8028DD98 00257358  4E 80 00 20 */	blr
 .endfn __ct__CMenuSave
 
-.fn __dt__CMenuSave, global
+.fn __dt__9CMenuSaveFv, global
 /* 8028DD9C 0025735C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028DDA0 00257360  7C 08 02 A6 */	mflr r0
 /* 8028DDA4 00257364  2C 03 00 00 */	cmpwi r3, 0
@@ -77,13 +77,13 @@
 /* 8028DDB8 00257378  41 82 00 44 */	beq .L_8028DDFC
 /* 8028DDBC 0025737C  38 80 FF FF */	li r4, -1
 /* 8028DDC0 00257380  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8028DDC4 00257384  48 00 13 F5 */	bl __dt__CSaveLoad
+/* 8028DDC4 00257384  48 00 13 F5 */	bl __dt__9CSaveLoadFv
 /* 8028DDC8 00257388  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8028DDCC 0025738C  38 80 FF FF */	li r4, -1
-/* 8028DDD0 00257390  4B F3 61 81 */	bl __dt__CTitleAHelp
+/* 8028DDD0 00257390  4B F3 61 81 */	bl __dt__11CTitleAHelpFv
 /* 8028DDD4 00257394  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8028DDD8 00257398  38 80 FF FF */	li r4, -1
-/* 8028DDDC 0025739C  4B F3 5B F5 */	bl __dt__CBgTex
+/* 8028DDDC 0025739C  4B F3 5B F5 */	bl __dt__6CBgTexFv
 /* 8028DDE0 002573A0  7F C3 F3 78 */	mr r3, r30
 /* 8028DDE4 002573A4  38 80 00 00 */	li r4, 0
 /* 8028DDE8 002573A8  4B E7 0F 25 */	bl __dt__800FED0C
@@ -98,7 +98,7 @@
 /* 8028DE08 002573C8  7C 08 03 A6 */	mtlr r0
 /* 8028DE0C 002573CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028DE10 002573D0  4E 80 00 20 */	blr 
-.endfn __dt__CMenuSave
+.endfn __dt__9CMenuSaveFv
 
 .fn func_8028DE14, global
 /* 8028DE14 002573D4  94 21 FE 40 */	stwu r1, -0x1c0(r1)
@@ -135,7 +135,7 @@
 /* 8028DE88 00257448  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8028DE8C 0025744C  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8028DE90 00257450  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8028DE94 00257454  4B F3 5B 3D */	bl __dt__CBgTex
+/* 8028DE94 00257454  4B F3 5B 3D */	bl __dt__6CBgTexFv
 /* 8028DE98 00257458  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8028DE9C 0025745C  4B F3 5D 79 */	bl func_801C3C14
 /* 8028DEA0 00257460  88 1F 02 08 */	lbz r0, 0x208(r31)
@@ -186,7 +186,7 @@
 /* 8028DF4C 0025750C  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8028DF50 00257510  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8028DF54 00257514  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8028DF58 00257518  4B F3 5F F9 */	bl __dt__CTitleAHelp
+/* 8028DF58 00257518  4B F3 5F F9 */	bl __dt__11CTitleAHelpFv
 /* 8028DF5C 0025751C  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8028DF60 00257520  4B F3 60 45 */	bl CTitleAHelp_load
 /* 8028DF64 00257524  88 9F 02 08 */	lbz r4, 0x208(r31)
@@ -329,9 +329,9 @@
 /* 8028E188 00257748  B0 1F 02 03 */	sth r0, 0x203(r31)
 /* 8028E18C 0025774C  88 01 01 AD */	lbz r0, 0x1ad(r1)
 /* 8028E190 00257750  98 1F 02 05 */	stb r0, 0x205(r31)
-/* 8028E194 00257754  48 00 10 25 */	bl __dt__CSaveLoad
+/* 8028E194 00257754  48 00 10 25 */	bl __dt__9CSaveLoadFv
 /* 8028E198 00257758  38 7F 00 B8 */	addi r3, r31, 0xb8
-/* 8028E19C 0025775C  48 00 10 A1 */	bl func_8028F23C
+/* 8028E19C 0025775C  48 00 10 A1 */	bl func_8028F23C__9CSaveLoadFv
 /* 8028E1A0 00257760  2C 1F 00 00 */	cmpwi r31, 0
 /* 8028E1A4 00257764  7F E4 FB 78 */	mr r4, r31
 /* 8028E1A8 00257768  41 82 00 08 */	beq .L_8028E1B0
@@ -354,7 +354,7 @@
 /* 8028E1DC 0025779C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8028E1E0 002577A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8028E1E4 002577A4  7C 7F 1B 78 */	mr r31, r3
-/* 8028E1E8 002577A8  48 1B A8 5D */	bl func_80448A44
+/* 8028E1E8 002577A8  48 1B A8 5D */	bl func_80448A44__Fv
 /* 8028E1EC 002577AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8028E1F0 002577B0  7F E4 FB 78 */	mr r4, r31
 /* 8028E1F4 002577B4  41 82 00 08 */	beq .L_8028E1FC
@@ -505,7 +505,7 @@
 /* 8028E3E4 002579A4  38 60 00 00 */	li r3, 0
 /* 8028E3E8 002579A8  48 00 00 44 */	b .L_8028E42C
 .L_8028E3EC:
-/* 8028E3EC 002579AC  48 1A 91 C9 */	bl getHeapIndex
+/* 8028E3EC 002579AC  48 1A 91 C9 */	bl getHeapIndex__Fv
 /* 8028E3F0 002579B0  7C 64 1B 78 */	mr r4, r3
 /* 8028E3F4 002579B4  38 60 02 0C */	li r3, 0x20c
 /* 8028E3F8 002579B8  48 1A 66 65 */	bl heap_malloc
@@ -792,7 +792,7 @@
 
 .fn func_8028E7C0, global
 /* 8028E7C0 00257D80  38 63 FF A8 */	addi r3, r3, -88
-/* 8028E7C4 00257D84  4B FF F5 D8 */	b __dt__CMenuSave
+/* 8028E7C4 00257D84  4B FF F5 D8 */	b __dt__9CMenuSaveFv
 .endfn func_8028E7C0
 
 
@@ -818,13 +818,13 @@
 .obj __vt__9CMenuSave, global
 	.4byte __RTTI__9CMenuSave
 	.4byte 0
-	.4byte __dt__CMenuSave
-	.4byte CChildListNode_Reset
+	.4byte __dt__9CMenuSaveFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8028DE14
 	.4byte func_8028E1D4
 	.4byte func_8028E25C
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__9CMenuSave
 	.4byte 0xFFFFFFA8
 	.4byte func_8028E7C0
@@ -885,16 +885,16 @@
 	.4byte 0x00000000
 	.4byte 0x0780001A
 	.4byte 0x000000B8
-	.4byte __dt__CSaveLoad
+	.4byte __dt__9CSaveLoadFv
 	.4byte 0x0780001A
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001A
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001A
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001A
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -912,25 +912,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CSaveLoad
+	.4byte __dt__9CSaveLoadFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CSaveLoad
+	.4byte __dt__9CSaveLoadFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CSaveLoad
+	.4byte __dt__9CSaveLoadFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001935C"
 
 .obj "@etb_800193D0", local
@@ -1004,7 +1004,7 @@
 
 .obj "@eti_8003185C", local
 .hidden "@eti_8003185C"
-	.4byte __dt__CMenuSave
+	.4byte __dt__9CMenuSaveFv
 	.4byte 0x00000078
 	.4byte "@etb_8001935C"
 .endobj "@eti_8003185C"

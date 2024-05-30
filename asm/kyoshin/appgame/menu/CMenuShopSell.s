@@ -57,7 +57,7 @@
 /* 8018A6F4 00153CB4  4E 80 00 20 */	blr
 .endfn __ct__CMenuShopSell
 
-.fn __dt__CMenuShopSell, global
+.fn __dt__13CMenuShopSellFv, global
 /* 8018A6F8 00153CB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018A6FC 00153CBC  7C 08 02 A6 */	mflr r0
 /* 8018A700 00153CC0  2C 03 00 00 */	cmpwi r3, 0
@@ -68,13 +68,13 @@
 /* 8018A714 00153CD4  41 82 00 44 */	beq .L_8018A758
 /* 8018A718 00153CD8  38 80 FF FF */	li r4, -1
 /* 8018A71C 00153CDC  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8018A720 00153CE0  48 04 02 45 */	bl __dt__CItemBoxGrid
+/* 8018A720 00153CE0  48 04 02 45 */	bl __dt__12CItemBoxGridFv
 /* 8018A724 00153CE4  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8018A728 00153CE8  38 80 FF FF */	li r4, -1
-/* 8018A72C 00153CEC  48 03 98 25 */	bl __dt__CTitleAHelp
+/* 8018A72C 00153CEC  48 03 98 25 */	bl __dt__11CTitleAHelpFv
 /* 8018A730 00153CF0  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8018A734 00153CF4  38 80 FF FF */	li r4, -1
-/* 8018A738 00153CF8  48 03 92 99 */	bl __dt__CBgTex
+/* 8018A738 00153CF8  48 03 92 99 */	bl __dt__6CBgTexFv
 /* 8018A73C 00153CFC  7F C3 F3 78 */	mr r3, r30
 /* 8018A740 00153D00  38 80 00 00 */	li r4, 0
 /* 8018A744 00153D04  4B F7 45 C9 */	bl __dt__800FED0C
@@ -89,7 +89,7 @@
 /* 8018A764 00153D24  7C 08 03 A6 */	mtlr r0
 /* 8018A768 00153D28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018A76C 00153D2C  4E 80 00 20 */	blr 
-.endfn __dt__CMenuShopSell
+.endfn __dt__13CMenuShopSellFv
 
 .fn func_8018A770, global
 /* 8018A770 00153D30  94 21 B5 80 */	stwu r1, -0x4a80(r1)
@@ -117,7 +117,7 @@
 /* 8018A7C8 00153D88  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8018A7CC 00153D8C  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8018A7D0 00153D90  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8018A7D4 00153D94  48 03 91 FD */	bl __dt__CBgTex
+/* 8018A7D4 00153D94  48 03 91 FD */	bl __dt__6CBgTexFv
 /* 8018A7D8 00153D98  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8018A7DC 00153D9C  48 03 94 39 */	bl func_801C3C14
 /* 8018A7E0 00153DA0  3C 60 80 50 */	lis r3, lbl_804FF328@ha
@@ -158,7 +158,7 @@
 /* 8018A86C 00153E2C  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8018A870 00153E30  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8018A874 00153E34  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8018A878 00153E38  48 03 96 D9 */	bl __dt__CTitleAHelp
+/* 8018A878 00153E38  48 03 96 D9 */	bl __dt__11CTitleAHelpFv
 /* 8018A87C 00153E3C  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8018A880 00153E40  48 03 97 25 */	bl CTitleAHelp_load
 /* 8018A884 00153E44  38 61 00 60 */	addi r3, r1, 0x60
@@ -661,7 +661,7 @@
 /* 8018B024 001545E4  48 00 01 0D */	bl func_8018B130
 /* 8018B028 001545E8  38 61 00 60 */	addi r3, r1, 0x60
 /* 8018B02C 001545EC  38 80 FF FF */	li r4, -1
-/* 8018B030 001545F0  48 03 F9 35 */	bl __dt__CItemBoxGrid
+/* 8018B030 001545F0  48 03 F9 35 */	bl __dt__12CItemBoxGridFv
 /* 8018B034 001545F4  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8018B038 001545F8  48 04 04 49 */	bl func_801CB480
 /* 8018B03C 001545FC  38 7F 00 B8 */	addi r3, r31, 0xb8
@@ -753,7 +753,7 @@
 /* 8018B168 00154728  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8018B16C 0015472C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8018B170 00154730  7C 7F 1B 78 */	mr r31, r3
-/* 8018B174 00154734  48 2B D8 D1 */	bl func_80448A44
+/* 8018B174 00154734  48 2B D8 D1 */	bl func_80448A44__Fv
 /* 8018B178 00154738  2C 1F 00 00 */	cmpwi r31, 0
 /* 8018B17C 0015473C  7F E4 FB 78 */	mr r4, r31
 /* 8018B180 00154740  41 82 00 08 */	beq .L_8018B188
@@ -892,7 +892,7 @@
 /* 8018B348 00154908  38 60 00 00 */	li r3, 0
 /* 8018B34C 0015490C  48 00 00 38 */	b .L_8018B384
 .L_8018B350:
-/* 8018B350 00154910  48 2A C2 65 */	bl getHeapIndex
+/* 8018B350 00154910  48 2A C2 65 */	bl getHeapIndex__Fv
 /* 8018B354 00154914  7C 64 1B 78 */	mr r4, r3
 /* 8018B358 00154918  38 60 4A C8 */	li r3, 0x4ac8
 /* 8018B35C 0015491C  48 2A 97 01 */	bl heap_malloc
@@ -1148,7 +1148,7 @@
 
 .fn func_8018B6B0, global
 /* 8018B6B0 00154C70  38 63 FF A8 */	addi r3, r3, -88
-/* 8018B6B4 00154C74  4B FF F0 44 */	b __dt__CMenuShopSell
+/* 8018B6B4 00154C74  4B FF F0 44 */	b __dt__13CMenuShopSellFv
 .endfn func_8018B6B0
 
 
@@ -1175,13 +1175,13 @@
 .obj __vt__13CMenuShopSell, global
 	.4byte __RTTI__13CMenuShopSell
 	.4byte 0
-	.4byte __dt__CMenuShopSell
-	.4byte CChildListNode_Reset
+	.4byte __dt__13CMenuShopSellFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8018A770
 	.4byte func_8018B160
 	.4byte func_8018B1CC
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__13CMenuShopSell
 	.4byte 0xFFFFFFA8
 	.4byte func_8018B6B0
@@ -1239,13 +1239,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1263,25 +1263,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8000EDE0"
 
 .obj "@etb_8000EE54", local
@@ -1355,7 +1355,7 @@
 
 .obj "@eti_80029C6C", local
 .hidden "@eti_80029C6C"
-	.4byte __dt__CMenuShopSell
+	.4byte __dt__13CMenuShopSellFv
 	.4byte 0x00000078
 	.4byte "@etb_8000EDE0"
 .endobj "@eti_80029C6C"

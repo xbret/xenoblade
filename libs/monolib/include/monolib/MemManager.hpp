@@ -79,8 +79,8 @@ bool lbl_80667E54;
 
 
 void* allocate(Heap* heap, u32 param2, u32 size, u32 param4);
-    MemBlock* func_804339B8(Heap*, MemBlock*);
-    MemBlock* func_80433AA8(Heap*, MemBlock*);
+    MemBlock* MemManager_804339B8(Heap*, MemBlock*);
+    MemBlock* MemManager_80433AA8(Heap*, MemBlock*);
     void* malloc(size_t size, int memBlockIndex);
 
     #define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)

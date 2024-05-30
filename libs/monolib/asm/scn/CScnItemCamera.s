@@ -146,7 +146,7 @@
 /* 8049EAD8 00468098  4E 80 00 20 */	blr 
 .endfn __dt__8049EA9C
 
-.fn __dt__CScnItemCamera, global
+.fn __dt__14CScnItemCameraFv, global
 /* 8049EADC 0046809C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049EAE0 004680A0  7C 08 02 A6 */	mflr r0
 /* 8049EAE4 004680A4  2C 03 00 00 */	cmpwi r3, 0
@@ -181,7 +181,7 @@
 /* 8049EB54 00468114  7C 08 03 A6 */	mtlr r0
 /* 8049EB58 00468118  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049EB5C 0046811C  4E 80 00 20 */	blr 
-.endfn __dt__CScnItemCamera
+.endfn __dt__14CScnItemCameraFv
 
 .fn func_8049EB60, global
 /* 8049EB60 00468120  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1366,7 +1366,7 @@
 .obj __vt__14CScnItemCamera, global
 	.4byte __RTTI__14CScnItemCamera
 	.4byte 0
-	.4byte __dt__CScnItemCamera
+	.4byte __dt__14CScnItemCameraFv
 	.4byte func_8049F9A4
 	.4byte func_80482048
 	.4byte func_8049F8E4
@@ -1608,7 +1608,7 @@
 
 .obj "@eti_800371FC", local
 .hidden "@eti_800371FC"
-	.4byte __dt__CScnItemCamera
+	.4byte __dt__14CScnItemCameraFv
 	.4byte 0x00000084
 	.4byte "@etb_8001F7B8"
 .endobj "@eti_800371FC"

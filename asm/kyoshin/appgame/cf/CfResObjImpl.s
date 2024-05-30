@@ -168,7 +168,7 @@
 /* 8016CA30 00135FF0  38 60 00 00 */	li r3, 0
 /* 8016CA34 00135FF4  38 04 00 01 */	addi r0, r4, 1
 /* 8016CA38 00135FF8  B0 1E 00 08 */	sth r0, 8(r30)
-/* 8016CA3C 00135FFC  48 2C 80 11 */	bl func_80434A4C
+/* 8016CA3C 00135FFC  48 2C 80 11 */	bl MemManager_80434A4C__FUc
 /* 8016CA40 00136000  80 7E 00 00 */	lwz r3, 0(r30)
 /* 8016CA44 00136004  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 8016CA48 00136008  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
@@ -275,7 +275,7 @@
 /* 8016CBD4 00136194  90 64 00 9C */	stw r3, 0x9c(r4)
 .L_8016CBD8:
 /* 8016CBD8 00136198  38 60 00 01 */	li r3, 1
-/* 8016CBDC 0013619C  48 2C 7E 71 */	bl func_80434A4C
+/* 8016CBDC 0013619C  48 2C 7E 71 */	bl MemManager_80434A4C__FUc
 /* 8016CBE0 001361A0  80 7E 00 00 */	lwz r3, 0(r30)
 /* 8016CBE4 001361A4  4B F5 03 BD */	bl func_800BCFA0
 /* 8016CBE8 001361A8  81 9E 00 10 */	lwz r12, 0x10(r30)
@@ -409,7 +409,7 @@
 /* 8016CD7C 0013633C  4E 80 00 20 */	blr 
 .endfn func_8016CD68
 
-.fn __dt__cf_CfResObjImpl, global
+.fn __dt__Q22cf12CfResObjImplFv, global
 /* 8016CD80 00136340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016CD84 00136344  7C 08 02 A6 */	mflr r0
 /* 8016CD88 00136348  2C 03 00 00 */	cmpwi r3, 0
@@ -427,7 +427,7 @@
 /* 8016CDB4 00136374  7C 08 03 A6 */	mtlr r0
 /* 8016CDB8 00136378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016CDBC 0013637C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfResObjImpl
+.endfn __dt__Q22cf12CfResObjImplFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -571,7 +571,7 @@
 .obj __vt__Q22cf12CfResObjImpl, global
 	.4byte __RTTI__Q22cf12CfResObjImpl
 	.4byte 0
-	.4byte __dt__cf_CfResObjImpl
+	.4byte __dt__Q22cf12CfResObjImplFv
 	.4byte func_8016CCE0
 	.4byte func_800BEA34
 	.4byte func_8016C860
@@ -716,7 +716,7 @@
 
 .obj "@eti_80029030", local
 .hidden "@eti_80029030"
-	.4byte __dt__cf_CfResObjImpl
+	.4byte __dt__Q22cf12CfResObjImplFv
 	.4byte 0x00000040
 	.4byte "@etb_8000E070"
 .endobj "@eti_80029030"

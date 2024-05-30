@@ -10058,7 +10058,7 @@
 /* 800FD6A4 000C6C64  4B FF 70 F4 */	b func_800F4798
 .endfn func_800FD6A0
 
-.fn __dt__cf_CfObjectSelectorObj, global
+.fn __dt__Q22cf19CfObjectSelectorObjFv, global
 /* 800FD6A8 000C6C68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800FD6AC 000C6C6C  7C 08 02 A6 */	mflr r0
 /* 800FD6B0 000C6C70  2C 03 00 00 */	cmpwi r3, 0
@@ -10114,7 +10114,7 @@
 /* 800FD768 000C6D28  7C 08 03 A6 */	mtlr r0
 /* 800FD76C 000C6D2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800FD770 000C6D30  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfObjectSelectorObj
+.endfn __dt__Q22cf19CfObjectSelectorObjFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -10152,7 +10152,7 @@
 .obj __vt__Q22cf13CfObjEnumList, global
 	.4byte __RTTI__Q22cf13CfObjEnumList
 	.4byte 0
-	.4byte __dt__cf_CfObjEnumList
+	.4byte __dt__Q22cf13CfObjEnumListFv
 .endobj __vt__Q22cf13CfObjEnumList
 
 .obj cf_CfObjEnumList_hierarchy, global
@@ -10294,7 +10294,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__reslist_cf_CfObject
+	.4byte "__dt__24reslist<PQ22cf8CfObject>Fv"
 .endobj "@etb_8000ABE0"
 
 .obj "@etb_8000ABFC", local
@@ -10693,7 +10693,7 @@
 
 .obj "@eti_800265D0", local
 .hidden "@eti_800265D0"
-	.4byte __dt__cf_CfObjectSelectorObj
+	.4byte __dt__Q22cf19CfObjectSelectorObjFv
 	.4byte 0x000000CC
 	.4byte "@etb_8000ACE4"
 .endobj "@eti_800265D0"

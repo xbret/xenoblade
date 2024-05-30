@@ -128,7 +128,7 @@
 /* 80058728 00021CE8  4E 80 00 20 */	blr 
 .endfn func_80058724
 
-.fn __dt__CTTask_CTaskEnvironment, global
+.fn "__dt__26CTTask<16CTaskEnvironment>Fv", global
 /* 8005872C 00021CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80058730 00021CF0  7C 08 02 A6 */	mflr r0
 /* 80058734 00021CF4  2C 03 00 00 */	cmpwi r3, 0
@@ -139,7 +139,7 @@
 /* 80058748 00021D08  7C 7E 1B 78 */	mr r30, r3
 /* 8005874C 00021D0C  41 82 00 1C */	beq .L_80058768
 /* 80058750 00021D10  38 80 00 00 */	li r4, 0
-/* 80058754 00021D14  48 3E C3 E5 */	bl __dt__CProcess
+/* 80058754 00021D14  48 3E C3 E5 */	bl __dt__8CProcessFv
 /* 80058758 00021D18  2C 1F 00 00 */	cmpwi r31, 0
 /* 8005875C 00021D1C  40 81 00 0C */	ble .L_80058768
 /* 80058760 00021D20  7F C3 F3 78 */	mr r3, r30
@@ -152,9 +152,9 @@
 /* 80058778 00021D38  7C 08 03 A6 */	mtlr r0
 /* 8005877C 00021D3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80058780 00021D40  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_CTaskEnvironment
+.endfn "__dt__26CTTask<16CTaskEnvironment>Fv"
 
-.fn __dt__CTaskEnvironment, global
+.fn __dt__16CTaskEnvironmentFv, global
 /* 80058784 00021D44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80058788 00021D48  7C 08 02 A6 */	mflr r0
 /* 8005878C 00021D4C  2C 03 00 00 */	cmpwi r3, 0
@@ -168,7 +168,7 @@
 /* 800587AC 00021D6C  90 0D A4 D8 */	stw r0, lbl_80666658@sda21(r13)
 /* 800587B0 00021D70  41 82 00 0C */	beq .L_800587BC
 /* 800587B4 00021D74  38 80 00 00 */	li r4, 0
-/* 800587B8 00021D78  48 3E C3 81 */	bl __dt__CProcess
+/* 800587B8 00021D78  48 3E C3 81 */	bl __dt__8CProcessFv
 .L_800587BC:
 /* 800587BC 00021D7C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800587C0 00021D80  40 81 00 0C */	ble .L_800587CC
@@ -182,7 +182,7 @@
 /* 800587DC 00021D9C  7C 08 03 A6 */	mtlr r0
 /* 800587E0 00021DA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800587E4 00021DA4  4E 80 00 20 */	blr 
-.endfn __dt__CTaskEnvironment
+.endfn __dt__16CTaskEnvironmentFv
 
 .fn func_800587E8, global
 /* 800587E8 00021DA8  80 6D A4 D8 */	lwz r3, lbl_80666658@sda21(r13)
@@ -1602,7 +1602,7 @@
 /* 80059C6C 0002322C  7C 9E 23 78 */	mr r30, r4
 /* 80059C70 00023230  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80059C74 00023234  7C 7D 1B 78 */	mr r29, r3
-/* 80059C78 00023238  48 3D D9 3D */	bl getHeapIndex
+/* 80059C78 00023238  48 3D D9 3D */	bl getHeapIndex__Fv
 /* 80059C7C 0002323C  7C 64 1B 78 */	mr r4, r3
 /* 80059C80 00023240  38 60 00 EC */	li r3, 0xec
 /* 80059C84 00023244  48 3D AD D9 */	bl heap_malloc
@@ -1627,7 +1627,7 @@
 /* 80059CCC 0002328C  4E 80 00 20 */	blr 
 .endfn func_80059C58
 
-.fn func_80059CD0, global
+.fn "func_80059CD0__26CTTask<16CTaskEnvironment>Fv", global
 /* 80059CD0 00023290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059CD4 00023294  7C 08 02 A6 */	mflr r0
 /* 80059CD8 00023298  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1647,9 +1647,9 @@
 /* 80059D0C 000232CC  7C 08 03 A6 */	mtlr r0
 /* 80059D10 000232D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80059D14 000232D4  4E 80 00 20 */	blr 
-.endfn func_80059CD0
+.endfn "func_80059CD0__26CTTask<16CTaskEnvironment>Fv"
 
-.fn func_80059D18, global
+.fn "func_80059D18__26CTTask<16CTaskEnvironment>Fv", global
 /* 80059D18 000232D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059D1C 000232DC  7C 08 02 A6 */	mflr r0
 /* 80059D20 000232E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1669,7 +1669,7 @@
 /* 80059D54 00023314  7C 08 03 A6 */	mtlr r0
 /* 80059D58 00023318  38 21 00 10 */	addi r1, r1, 0x10
 /* 80059D5C 0002331C  4E 80 00 20 */	blr
-.endfn func_80059D18
+.endfn "func_80059D18__26CTTask<16CTaskEnvironment>Fv"
 
 .fn sinit_80059D60, local
 /* 80059D60 00023320  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1774,13 +1774,13 @@
 .obj __vt__16CTaskEnvironment, global
 	.4byte __RTTI__16CTaskEnvironment
 	.4byte 0
-	.4byte __dt__CTaskEnvironment
-	.4byte CChildListNode_Reset
+	.4byte __dt__16CTaskEnvironmentFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80058C08
 	.4byte func_80058C58
 	.4byte func_80058CE8
 	.4byte func_800599DC
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 .endobj __vt__16CTaskEnvironment
 
 .obj CTaskEnvironment_hierarchy, global
@@ -1799,13 +1799,13 @@
 .obj "__vt__26CTTask<16CTaskEnvironment>", global
 	.4byte "__RTTI__26CTTask<16CTaskEnvironment>"
 	.4byte 0
-	.4byte __dt__CTTask_CTaskEnvironment
-	.4byte CChildListNode_Reset
+	.4byte "__dt__26CTTask<16CTaskEnvironment>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80059CD0
-	.4byte func_80059D18
-	.4byte CProcess_func_80043F20
+	.4byte "func_80059CD0__26CTTask<16CTaskEnvironment>Fv"
+	.4byte "func_80059D18__26CTTask<16CTaskEnvironment>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__26CTTask<16CTaskEnvironment>"
 
 .obj CTTask_CTaskEnvironment_hierarchy, global
@@ -2163,14 +2163,14 @@
 
 .obj "@eti_800226E8", local
 .hidden "@eti_800226E8"
-	.4byte __dt__CTTask_CTaskEnvironment
+	.4byte "__dt__26CTTask<16CTaskEnvironment>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8000771C"
 .endobj "@eti_800226E8"
 
 .obj "@eti_800226F4", local
 .hidden "@eti_800226F4"
-	.4byte __dt__CTaskEnvironment
+	.4byte __dt__16CTaskEnvironmentFv
 	.4byte 0x00000064
 	.4byte "@etb_80007724"
 .endobj "@eti_800226F4"
@@ -2247,14 +2247,14 @@
 
 .obj "@eti_80022778", local
 .hidden "@eti_80022778"
-	.4byte func_80059CD0
+	.4byte "func_80059CD0__26CTTask<16CTaskEnvironment>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8000777C"
 .endobj "@eti_80022778"
 
 .obj "@eti_80022784", local
 .hidden "@eti_80022784"
-	.4byte func_80059D18
+	.4byte "func_80059D18__26CTTask<16CTaskEnvironment>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80007784"
 .endobj "@eti_80022784"

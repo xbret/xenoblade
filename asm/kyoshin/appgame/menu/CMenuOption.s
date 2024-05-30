@@ -56,7 +56,7 @@
 /* 8029B5C4 00264B84  4E 80 00 20 */	blr
 .endfn __ct__CMenuOption
 
-.fn __dt__CMenuOption, global
+.fn __dt__11CMenuOptionFv, global
 /* 8029B5C8 00264B88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029B5CC 00264B8C  7C 08 02 A6 */	mflr r0
 /* 8029B5D0 00264B90  2C 03 00 00 */	cmpwi r3, 0
@@ -67,13 +67,13 @@
 /* 8029B5E4 00264BA4  41 82 00 44 */	beq .L_8029B628
 /* 8029B5E8 00264BA8  38 80 FF FF */	li r4, -1
 /* 8029B5EC 00264BAC  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8029B5F0 00264BB0  48 00 0C D9 */	bl __dt__COption
+/* 8029B5F0 00264BB0  48 00 0C D9 */	bl __dt__7COptionFv
 /* 8029B5F4 00264BB4  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8029B5F8 00264BB8  38 80 FF FF */	li r4, -1
-/* 8029B5FC 00264BBC  4B F2 89 55 */	bl __dt__CTitleAHelp
+/* 8029B5FC 00264BBC  4B F2 89 55 */	bl __dt__11CTitleAHelpFv
 /* 8029B600 00264BC0  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8029B604 00264BC4  38 80 FF FF */	li r4, -1
-/* 8029B608 00264BC8  4B F2 83 C9 */	bl __dt__CBgTex
+/* 8029B608 00264BC8  4B F2 83 C9 */	bl __dt__6CBgTexFv
 /* 8029B60C 00264BCC  7F C3 F3 78 */	mr r3, r30
 /* 8029B610 00264BD0  38 80 00 00 */	li r4, 0
 /* 8029B614 00264BD4  4B E6 36 F9 */	bl __dt__800FED0C
@@ -88,7 +88,7 @@
 /* 8029B634 00264BF4  7C 08 03 A6 */	mtlr r0
 /* 8029B638 00264BF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029B63C 00264BFC  4E 80 00 20 */	blr 
-.endfn __dt__CMenuOption
+.endfn __dt__11CMenuOptionFv
 
 .fn func_8029B640, global
 /* 8029B640 00264C00  94 21 FE 90 */	stwu r1, -0x170(r1)
@@ -116,7 +116,7 @@
 /* 8029B698 00264C58  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8029B69C 00264C5C  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8029B6A0 00264C60  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8029B6A4 00264C64  4B F2 83 2D */	bl __dt__CBgTex
+/* 8029B6A4 00264C64  4B F2 83 2D */	bl __dt__6CBgTexFv
 /* 8029B6A8 00264C68  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8029B6AC 00264C6C  4B F2 85 69 */	bl func_801C3C14
 /* 8029B6B0 00264C70  3C 60 80 51 */	lis r3, lbl_8050B9B4@ha
@@ -157,7 +157,7 @@
 /* 8029B73C 00264CFC  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8029B740 00264D00  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8029B744 00264D04  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8029B748 00264D08  4B F2 88 09 */	bl __dt__CTitleAHelp
+/* 8029B748 00264D08  4B F2 88 09 */	bl __dt__11CTitleAHelpFv
 /* 8029B74C 00264D0C  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8029B750 00264D10  4B F2 88 55 */	bl CTitleAHelp_load
 /* 8029B754 00264D14  88 9F 01 B5 */	lbz r4, 0x1b5(r31)
@@ -275,7 +275,7 @@
 /* 8029B914 00264ED4  4B EE F7 E9 */	bl func_8018B0FC
 /* 8029B918 00264ED8  38 61 00 60 */	addi r3, r1, 0x60
 /* 8029B91C 00264EDC  38 80 FF FF */	li r4, -1
-/* 8029B920 00264EE0  48 00 09 A9 */	bl __dt__COption
+/* 8029B920 00264EE0  48 00 09 A9 */	bl __dt__7COptionFv
 /* 8029B924 00264EE4  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8029B928 00264EE8  48 00 0A 35 */	bl func_8029C35C
 /* 8029B92C 00264EEC  2C 1F 00 00 */	cmpwi r31, 0
@@ -300,7 +300,7 @@
 /* 8029B968 00264F28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029B96C 00264F2C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029B970 00264F30  7C 7F 1B 78 */	mr r31, r3
-/* 8029B974 00264F34  48 1A D0 D1 */	bl func_80448A44
+/* 8029B974 00264F34  48 1A D0 D1 */	bl func_80448A44__Fv
 /* 8029B978 00264F38  2C 1F 00 00 */	cmpwi r31, 0
 /* 8029B97C 00264F3C  7F E4 FB 78 */	mr r4, r31
 /* 8029B980 00264F40  41 82 00 08 */	beq .L_8029B988
@@ -440,7 +440,7 @@
 /* 8029BB4C 0026510C  38 60 00 00 */	li r3, 0
 /* 8029BB50 00265110  48 00 00 3C */	b .L_8029BB8C
 .L_8029BB54:
-/* 8029BB54 00265114  48 19 BA 61 */	bl getHeapIndex
+/* 8029BB54 00265114  48 19 BA 61 */	bl getHeapIndex__Fv
 /* 8029BB58 00265118  7C 64 1B 78 */	mr r4, r3
 /* 8029BB5C 0026511C  38 60 01 B8 */	li r3, 0x1b8
 /* 8029BB60 00265120  48 19 8E FD */	bl heap_malloc
@@ -704,7 +704,7 @@
 
 .fn func_8029BED4, global
 /* 8029BED4 00265494  38 63 FF A8 */	addi r3, r3, -88
-/* 8029BED8 00265498  4B FF F6 F0 */	b __dt__CMenuOption
+/* 8029BED8 00265498  4B FF F6 F0 */	b __dt__11CMenuOptionFv
 .endfn func_8029BED4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -730,13 +730,13 @@
 .obj __vt__11CMenuOption, global
 	.4byte __RTTI__11CMenuOption
 	.4byte 0
-	.4byte __dt__CMenuOption
-	.4byte CChildListNode_Reset
+	.4byte __dt__11CMenuOptionFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8029B640
 	.4byte func_8029B960
 	.4byte func_8029B9CC
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__11CMenuOption
 	.4byte 0xFFFFFFA8
 	.4byte func_8029BED4
@@ -794,13 +794,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001C
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -818,25 +818,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__COption
+	.4byte __dt__7COptionFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__COption
+	.4byte __dt__7COptionFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__COption
+	.4byte __dt__7COptionFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001A23C"
 
 .obj "@etb_8001A2B0", local
@@ -910,7 +910,7 @@
 
 .obj "@eti_800321D4", local
 .hidden "@eti_800321D4"
-	.4byte __dt__CMenuOption
+	.4byte __dt__11CMenuOptionFv
 	.4byte 0x00000078
 	.4byte "@etb_8001A23C"
 .endobj "@eti_800321D4"

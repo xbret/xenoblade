@@ -44,7 +44,7 @@
 /* 802955FC 0025EBBC  4E 80 00 20 */	blr 
 .endfn __ct__CTaskGameEvt
 
-.fn __dt__CTTask_CTaskGameEvt, global
+.fn "__dt__22CTTask<12CTaskGameEvt>Fv", global
 /* 80295600 0025EBC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295604 0025EBC4  7C 08 02 A6 */	mflr r0
 /* 80295608 0025EBC8  2C 03 00 00 */	cmpwi r3, 0
@@ -54,7 +54,7 @@
 /* 80295618 0025EBD8  7C 9F 23 78 */	mr r31, r4
 /* 8029561C 0025EBDC  41 82 00 1C */	beq .L_80295638
 /* 80295620 0025EBE0  38 80 00 00 */	li r4, 0
-/* 80295624 0025EBE4  48 1A F5 15 */	bl __dt__CProcess
+/* 80295624 0025EBE4  48 1A F5 15 */	bl __dt__8CProcessFv
 /* 80295628 0025EBE8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8029562C 0025EBEC  40 81 00 0C */	ble .L_80295638
 /* 80295630 0025EBF0  7F C3 F3 78 */	mr r3, r30
@@ -66,9 +66,9 @@
 /* 80295644 0025EC04  7C 08 03 A6 */	mtlr r0
 /* 80295648 0025EC08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029564C 0025EC0C  4E 80 00 20 */	blr
-.endfn __dt__CTTask_CTaskGameEvt
+.endfn "__dt__22CTTask<12CTaskGameEvt>Fv"
 
-.fn __dt__CTaskGameEvt, global
+.fn __dt__12CTaskGameEvtFv, global
 /* 80295650 0025EC10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295654 0025EC14  7C 08 02 A6 */	mflr r0
 /* 80295658 0025EC18  2C 03 00 00 */	cmpwi r3, 0
@@ -79,7 +79,7 @@
 /* 8029566C 0025EC2C  41 82 00 20 */	beq .L_8029568C
 /* 80295670 0025EC30  41 82 00 0C */	beq .L_8029567C
 /* 80295674 0025EC34  38 80 00 00 */	li r4, 0
-/* 80295678 0025EC38  48 1A F4 C1 */	bl __dt__CProcess
+/* 80295678 0025EC38  48 1A F4 C1 */	bl __dt__8CProcessFv
 .L_8029567C:
 /* 8029567C 0025EC3C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80295680 0025EC40  40 81 00 0C */	ble .L_8029568C
@@ -92,7 +92,7 @@
 /* 80295698 0025EC58  7C 08 03 A6 */	mtlr r0
 /* 8029569C 0025EC5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802956A0 0025EC60  4E 80 00 20 */	blr 
-.endfn __dt__CTaskGameEvt
+.endfn __dt__12CTaskGameEvtFv
 
 .fn func_802956A4, global
 /* 802956A4 0025EC64  4B EC F9 94 */	b func_80165038
@@ -176,7 +176,7 @@
 /* 80295778 0025ED38  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8029577C 0025ED3C  7C 7D 1B 78 */	mr r29, r3
 /* 80295780 0025ED40  7C 9E 23 78 */	mr r30, r4
-/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex
+/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex__Fv
 /* 80295788 0025ED48  7C 64 1B 78 */	mr r4, r3
 /* 8029578C 0025ED4C  38 60 00 64 */	li r3, 0x64
 /* 80295790 0025ED50  48 19 F2 CD */	bl heap_malloc
@@ -203,7 +203,7 @@
 /* 802957D4 0025ED94  4E 80 00 20 */	blr 
 .endfn func_802957D4
 
-.fn func_802957D8, global
+.fn "func_802957D8__22CTTask<12CTaskGameEvt>Fv", global
 /* 802957D8 0025ED98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802957DC 0025ED9C  7C 08 02 A6 */	mflr r0
 /* 802957E0 0025EDA0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -223,9 +223,9 @@
 /* 80295814 0025EDD4  7C 08 03 A6 */	mtlr r0
 /* 80295818 0025EDD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029581C 0025EDDC  4E 80 00 20 */	blr 
-.endfn func_802957D8
+.endfn "func_802957D8__22CTTask<12CTaskGameEvt>Fv"
 
-.fn func_80295820, global
+.fn "func_80295820__22CTTask<12CTaskGameEvt>Fv", global
 /* 80295820 0025EDE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295824 0025EDE4  7C 08 02 A6 */	mflr r0
 /* 80295828 0025EDE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -245,7 +245,7 @@
 /* 8029585C 0025EE1C  7C 08 03 A6 */	mtlr r0
 /* 80295860 0025EE20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80295864 0025EE24  4E 80 00 20 */	blr 
-.endfn func_80295820
+.endfn "func_80295820__22CTTask<12CTaskGameEvt>Fv"
 
 .fn CTaskGameEvt_OnFileEvent, global
 /* 80295868 0025EE28  38 63 FF AC */	addi r3, r3, -84
@@ -254,7 +254,7 @@
 
 .fn func_80295870, global
 /* 80295870 0025EE30  38 63 FF AC */	addi r3, r3, -84
-/* 80295874 0025EE34  4B FF FD DC */	b __dt__CTaskGameEvt
+/* 80295874 0025EE34  4B FF FD DC */	b __dt__12CTaskGameEvtFv
 .endfn func_80295870
 
 .fn func_80295878, global
@@ -264,7 +264,7 @@
 
 .fn func_80295880, global
 /* 80295880 0025EE40  38 63 FF A8 */	addi r3, r3, -88
-/* 80295884 0025EE44  4B FF FD CC */	b __dt__CTaskGameEvt
+/* 80295884 0025EE44  4B FF FD CC */	b __dt__12CTaskGameEvtFv
 .endfn func_80295880
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -288,47 +288,47 @@
 .obj __vt__12CTaskGameEvt, global
 	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0
-	.4byte __dt__CTaskGameEvt
-	.4byte CChildListNode_Reset
+	.4byte __dt__12CTaskGameEvtFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_802956AC
 	.4byte func_802956CC
 	.4byte func_802956E4
 	.4byte func_802957D4
-	.4byte CProcess_func_80043F20
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0xFFFFFFAC
 	.4byte func_80295870
-	.4byte IWorkEvent_WorkEvent1
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CTaskGameEvt_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0xFFFFFFA8
 	.4byte func_80295880
@@ -353,13 +353,13 @@
 .obj "__vt__22CTTask<12CTaskGameEvt>", global
 	.4byte "__RTTI__22CTTask<12CTaskGameEvt>"
 	.4byte 0
-	.4byte __dt__CTTask_CTaskGameEvt
-	.4byte CChildListNode_Reset
+	.4byte "__dt__22CTTask<12CTaskGameEvt>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_802957D8
-	.4byte func_80295820
-	.4byte CProcess_func_80043F20
+	.4byte "func_802957D8__22CTTask<12CTaskGameEvt>Fv"
+	.4byte "func_80295820__22CTTask<12CTaskGameEvt>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__22CTTask<12CTaskGameEvt>"
 
 .obj CTTask_CTaskGameEvt_hierarchy, global
@@ -410,10 +410,10 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80019B60"
 
 .obj "@etb_80019B88", local
@@ -453,14 +453,14 @@
 
 .obj "@eti_80031DC0", local
 .hidden "@eti_80031DC0"
-	.4byte __dt__CTTask_CTaskGameEvt
+	.4byte "__dt__22CTTask<12CTaskGameEvt>Fv"
 	.4byte 0x00000050
 	.4byte "@etb_80019B58"
 .endobj "@eti_80031DC0"
 
 .obj "@eti_80031DCC", local
 .hidden "@eti_80031DCC"
-	.4byte __dt__CTaskGameEvt
+	.4byte __dt__12CTaskGameEvtFv
 	.4byte 0x00000054
 	.4byte "@etb_80019B60"
 .endobj "@eti_80031DCC"
@@ -481,14 +481,14 @@
 
 .obj "@eti_80031DF0", local
 .hidden "@eti_80031DF0"
-	.4byte func_802957D8
+	.4byte "func_802957D8__22CTTask<12CTaskGameEvt>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80019B98"
 .endobj "@eti_80031DF0"
 
 .obj "@eti_80031DFC", local
 .hidden "@eti_80031DFC"
-	.4byte func_80295820
+	.4byte "func_80295820__22CTTask<12CTaskGameEvt>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_80019BA0"
 .endobj "@eti_80031DFC"

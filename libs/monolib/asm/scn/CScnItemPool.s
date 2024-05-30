@@ -77,13 +77,13 @@
 /* 8048BEB0 00455470  48 00 A1 69 */	bl func_80496018
 /* 8048BEB4 00455474  7F 84 E3 78 */	mr r4, r28
 /* 8048BEB8 00455478  38 A0 00 04 */	li r5, 4
-/* 8048BEBC 0045547C  4B FA 85 71 */	bl func_8043442C
+/* 8048BEBC 0045547C  4B FA 85 71 */	bl MemManager_8043442C
 /* 8048BEC0 00455480  90 79 00 CC */	stw r3, 0xcc(r25)
 /* 8048BEC4 00455484  7F 43 D3 78 */	mr r3, r26
 /* 8048BEC8 00455488  48 00 A1 51 */	bl func_80496018
 /* 8048BECC 0045548C  1C 9C 00 58 */	mulli r4, r28, 0x58
 /* 8048BED0 00455490  38 A0 00 04 */	li r5, 4
-/* 8048BED4 00455494  4B FA 85 59 */	bl func_8043442C
+/* 8048BED4 00455494  4B FA 85 59 */	bl MemManager_8043442C
 /* 8048BED8 00455498  90 79 00 D0 */	stw r3, 0xd0(r25)
 /* 8048BEDC 0045549C  7F 85 E3 78 */	mr r5, r28
 /* 8048BEE0 004554A0  80 79 00 CC */	lwz r3, 0xcc(r25)
@@ -93,13 +93,13 @@
 /* 8048BEF0 004554B0  48 00 A1 29 */	bl func_80496018
 /* 8048BEF4 004554B4  7F C4 F3 78 */	mr r4, r30
 /* 8048BEF8 004554B8  38 A0 00 04 */	li r5, 4
-/* 8048BEFC 004554BC  4B FA 85 31 */	bl func_8043442C
+/* 8048BEFC 004554BC  4B FA 85 31 */	bl MemManager_8043442C
 /* 8048BF00 004554C0  90 79 00 D4 */	stw r3, 0xd4(r25)
 /* 8048BF04 004554C4  7F 43 D3 78 */	mr r3, r26
 /* 8048BF08 004554C8  48 00 A1 11 */	bl func_80496018
 /* 8048BF0C 004554CC  1C 9E 03 A8 */	mulli r4, r30, 0x3a8
 /* 8048BF10 004554D0  38 A0 00 04 */	li r5, 4
-/* 8048BF14 004554D4  4B FA 85 19 */	bl func_8043442C
+/* 8048BF14 004554D4  4B FA 85 19 */	bl MemManager_8043442C
 /* 8048BF18 004554D8  90 79 00 D8 */	stw r3, 0xd8(r25)
 /* 8048BF1C 004554DC  7F C5 F3 78 */	mr r5, r30
 /* 8048BF20 004554E0  80 79 00 D4 */	lwz r3, 0xd4(r25)
@@ -131,7 +131,7 @@
 /* 8048BF7C 0045553C  4E 80 00 20 */	blr 
 .endfn __ct__reslist_CScnItem
 
-.fn __dt___reslist_base_CScnItem, global
+.fn "__dt__25_reslist_base<P8CScnItem>Fv", global
 /* 8048BF80 00455540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048BF84 00455544  7C 08 02 A6 */	mflr r0
 /* 8048BF88 00455548  2C 03 00 00 */	cmpwi r3, 0
@@ -181,9 +181,9 @@
 /* 8048C028 004555E8  7C 08 03 A6 */	mtlr r0
 /* 8048C02C 004555EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048C030 004555F0  4E 80 00 20 */	blr 
-.endfn __dt___reslist_base_CScnItem
+.endfn "__dt__25_reslist_base<P8CScnItem>Fv"
 
-.fn __dt__reslist_CScnItem, global
+.fn "__dt__19reslist<P8CScnItem>Fv", global
 /* 8048C034 004555F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048C038 004555F8  7C 08 02 A6 */	mflr r0
 /* 8048C03C 004555FC  2C 03 00 00 */	cmpwi r3, 0
@@ -234,7 +234,7 @@
 /* 8048C0E0 004556A0  7C 08 03 A6 */	mtlr r0
 /* 8048C0E4 004556A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048C0E8 004556A8  4E 80 00 20 */	blr 
-.endfn __dt__reslist_CScnItem
+.endfn "__dt__19reslist<P8CScnItem>Fv"
 
 .fn func_8048C0EC, global
 /* 8048C0EC 004556AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -319,7 +319,7 @@
 /* 8048C214 004557D4  4E 80 00 20 */	blr
 .endfn func_8048C0EC
 
-.fn __dt__CScnItemPool, global
+.fn __dt__12CScnItemPoolFv, global
 /* 8048C218 004557D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048C21C 004557DC  7C 08 02 A6 */	mflr r0
 /* 8048C220 004557E0  2C 03 00 00 */	cmpwi r3, 0
@@ -352,55 +352,55 @@
 /* 8048C28C 0045584C  80 7E 00 CC */	lwz r3, 0xcc(r30)
 /* 8048C290 00455850  2C 03 00 00 */	cmpwi r3, 0
 /* 8048C294 00455854  41 82 00 10 */	beq .L_8048C2A4
-/* 8048C298 00455858  4B FA 82 41 */	bl func_804344D8
+/* 8048C298 00455858  4B FA 82 41 */	bl MemManager_804344D8
 /* 8048C29C 0045585C  38 00 00 00 */	li r0, 0
 /* 8048C2A0 00455860  90 1E 00 CC */	stw r0, 0xcc(r30)
 .L_8048C2A4:
 /* 8048C2A4 00455864  80 7E 00 D0 */	lwz r3, 0xd0(r30)
 /* 8048C2A8 00455868  2C 03 00 00 */	cmpwi r3, 0
 /* 8048C2AC 0045586C  41 82 00 10 */	beq .L_8048C2BC
-/* 8048C2B0 00455870  4B FA 82 29 */	bl func_804344D8
+/* 8048C2B0 00455870  4B FA 82 29 */	bl MemManager_804344D8
 /* 8048C2B4 00455874  38 00 00 00 */	li r0, 0
 /* 8048C2B8 00455878  90 1E 00 D0 */	stw r0, 0xd0(r30)
 .L_8048C2BC:
 /* 8048C2BC 0045587C  80 7E 00 D4 */	lwz r3, 0xd4(r30)
 /* 8048C2C0 00455880  2C 03 00 00 */	cmpwi r3, 0
 /* 8048C2C4 00455884  41 82 00 10 */	beq .L_8048C2D4
-/* 8048C2C8 00455888  4B FA 82 11 */	bl func_804344D8
+/* 8048C2C8 00455888  4B FA 82 11 */	bl MemManager_804344D8
 /* 8048C2CC 0045588C  38 00 00 00 */	li r0, 0
 /* 8048C2D0 00455890  90 1E 00 D4 */	stw r0, 0xd4(r30)
 .L_8048C2D4:
 /* 8048C2D4 00455894  80 7E 00 D8 */	lwz r3, 0xd8(r30)
 /* 8048C2D8 00455898  2C 03 00 00 */	cmpwi r3, 0
 /* 8048C2DC 0045589C  41 82 00 10 */	beq .L_8048C2EC
-/* 8048C2E0 004558A0  4B FA 81 F9 */	bl func_804344D8
+/* 8048C2E0 004558A0  4B FA 81 F9 */	bl MemManager_804344D8
 /* 8048C2E4 004558A4  38 00 00 00 */	li r0, 0
 /* 8048C2E8 004558A8  90 1E 00 D8 */	stw r0, 0xd8(r30)
 .L_8048C2EC:
 /* 8048C2EC 004558AC  38 7E 00 AC */	addi r3, r30, 0xac
 /* 8048C2F0 004558B0  38 80 FF FF */	li r4, -1
-/* 8048C2F4 004558B4  4B FF FD 41 */	bl __dt__reslist_CScnItem
+/* 8048C2F4 004558B4  4B FF FD 41 */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C2F8 004558B8  38 7E 00 8C */	addi r3, r30, 0x8c
 /* 8048C2FC 004558BC  38 80 FF FF */	li r4, -1
-/* 8048C300 004558C0  4B FF FD 35 */	bl __dt__reslist_CScnItem
+/* 8048C300 004558C0  4B FF FD 35 */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C304 004558C4  38 7E 00 6C */	addi r3, r30, 0x6c
 /* 8048C308 004558C8  38 80 FF FF */	li r4, -1
-/* 8048C30C 004558CC  4B FF FD 29 */	bl __dt__reslist_CScnItem
+/* 8048C30C 004558CC  4B FF FD 29 */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C310 004558D0  38 7E 00 4C */	addi r3, r30, 0x4c
 /* 8048C314 004558D4  38 80 FF FF */	li r4, -1
-/* 8048C318 004558D8  4B FF FD 1D */	bl __dt__reslist_CScnItem
+/* 8048C318 004558D8  4B FF FD 1D */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C31C 004558DC  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 8048C320 004558E0  38 80 FF FF */	li r4, -1
-/* 8048C324 004558E4  4B FF FD 11 */	bl __dt__reslist_CScnItem
+/* 8048C324 004558E4  4B FF FD 11 */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C328 004558E8  38 7E 00 0C */	addi r3, r30, 0xc
 /* 8048C32C 004558EC  38 80 FF FF */	li r4, -1
-/* 8048C330 004558F0  4B FF FD 05 */	bl __dt__reslist_CScnItem
+/* 8048C330 004558F0  4B FF FD 05 */	bl "__dt__19reslist<P8CScnItem>Fv"
 /* 8048C334 004558F4  38 7E 00 04 */	addi r3, r30, 4
 /* 8048C338 004558F8  38 80 00 00 */	li r4, 0
-/* 8048C33C 004558FC  4B FB CC 41 */	bl __dt__CDeviceVICb
+/* 8048C33C 004558FC  4B FB CC 41 */	bl __dt__11CDeviceVICbFv
 /* 8048C340 00455900  7F C3 F3 78 */	mr r3, r30
 /* 8048C344 00455904  38 80 00 00 */	li r4, 0
-/* 8048C348 00455908  4B BB 3F 95 */	bl __dt__IWorkEvent
+/* 8048C348 00455908  4B BB 3F 95 */	bl __dt__10IWorkEventFv
 /* 8048C34C 0045590C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8048C350 00455910  40 81 00 0C */	ble .L_8048C35C
 /* 8048C354 00455914  7F C3 F3 78 */	mr r3, r30
@@ -413,7 +413,7 @@
 /* 8048C36C 0045592C  7C 08 03 A6 */	mtlr r0
 /* 8048C370 00455930  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048C374 00455934  4E 80 00 20 */	blr 
-.endfn __dt__CScnItemPool
+.endfn __dt__12CScnItemPoolFv
 
 .fn __dt__8048C378, global
 /* 8048C378 00455938  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1341,9 +1341,9 @@
 /* 8048CF54 00456514  4E 80 00 20 */	blr
 .endfn func_8048CEDC
 
-.fn func_8048CF58, global
+.fn func_8048CF58__12CScnItemPoolFv, global
 /* 8048CF58 00456518  48 00 00 04 */	b func_8048CF5C
-.endfn func_8048CF58
+.endfn func_8048CF58__12CScnItemPoolFv
 
 .fn func_8048CF5C, global
 /* 8048CF5C 0045651C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1396,15 +1396,15 @@
 /* 8048D010 004565D0  4E 80 00 20 */	blr 
 .endfn func_8048CF5C
 
-.fn func_8048D014, global
+.fn func_8048D014__12CScnItemPoolFv, global
 /* 8048D014 004565D4  38 63 FF FC */	addi r3, r3, -4
-/* 8048D018 004565D8  4B FF FF 40 */	b func_8048CF58
-.endfn func_8048D014
+/* 8048D018 004565D8  4B FF FF 40 */	b func_8048CF58__12CScnItemPoolFv
+.endfn func_8048D014__12CScnItemPoolFv
 
-.fn func_8048D01C, global
+.fn func_8048D01C__12CScnItemPoolFv, global
 /* 8048D01C 004565DC  38 63 FF FC */	addi r3, r3, -4
-/* 8048D020 004565E0  4B FF F1 F8 */	b __dt__CScnItemPool
-.endfn func_8048D01C
+/* 8048D020 004565E0  4B FF F1 F8 */	b __dt__12CScnItemPoolFv
+.endfn func_8048D01C__12CScnItemPoolFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1431,45 +1431,45 @@
 .obj __vt__12CScnItemPool, global
 	.4byte __RTTI__12CScnItemPool
 	.4byte 0
-	.4byte __dt__CScnItemPool
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__12CScnItemPoolFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__12CScnItemPool
 	.4byte 0xFFFFFFFC
-	.4byte func_8048D01C
-	.4byte func_80166630
-	.4byte func_8048D014
-	.4byte func_80448A40
-	.4byte func_8048CF58
+	.4byte func_8048D01C__12CScnItemPoolFv
+	.4byte func_80166630__11CDeviceVICbFv
+	.4byte func_8048D014__12CScnItemPoolFv
+	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte func_8048CF58__12CScnItemPoolFv
 .endobj __vt__12CScnItemPool
 
 .obj CScnItemPool_hierarchy, global
@@ -1484,7 +1484,7 @@
 .obj "__vt__19reslist<P8CScnItem>", global
 	.4byte "__RTTI__19reslist<P8CScnItem>"
 	.4byte 0
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 .endobj "__vt__19reslist<P8CScnItem>"
 
 .obj reslist_CScnItem_hierarchy, global
@@ -1497,7 +1497,7 @@
 .obj "__vt__25_reslist_base<P8CScnItem>", global
 	.4byte "__RTTI__25_reslist_base<P8CScnItem>"
 	.4byte 0
-	.4byte __dt___reslist_base_CScnItem
+	.4byte "__dt__25_reslist_base<P8CScnItem>Fv"
 	.4byte 0
 .endobj "__vt__25_reslist_base<P8CScnItem>"
 
@@ -1535,28 +1535,28 @@
 	.4byte 0x00000000
 	.4byte 0x07800019
 	.4byte 0x000000AC
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x07800019
 	.4byte 0x0000008C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x07800019
 	.4byte 0x0000006C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x07800019
 	.4byte 0x0000004C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x07800019
 	.4byte 0x0000002C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x07800019
 	.4byte 0x0000000C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x06800019
 	.4byte 0x00000004
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 	.4byte 0x86800019
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001E990"
 
 .obj "@etb_8001EA08", local
@@ -1587,46 +1587,46 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000000AC
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000008C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000006C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000004C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000002C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000000C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0680001E
 	.4byte 0x00000004
-	.4byte __dt__CDeviceVICb
+	.4byte __dt__11CDeviceVICbFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x0780001E
 	.4byte 0x000000AC
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000008C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000006C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000004C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x0780001E
 	.4byte 0x0000002C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x8780001E
 	.4byte 0x0000000C
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 .endobj "@etb_8001EA20"
 
 .obj "@etb_8001EAE0", local
@@ -1750,14 +1750,14 @@
 
 .obj "@eti_80036638", local
 .hidden "@eti_80036638"
-	.4byte __dt___reslist_base_CScnItem
+	.4byte "__dt__25_reslist_base<P8CScnItem>Fv"
 	.4byte 0x000000B4
 	.4byte "@etb_8001EA08"
 .endobj "@eti_80036638"
 
 .obj "@eti_80036644", local
 .hidden "@eti_80036644"
-	.4byte __dt__reslist_CScnItem
+	.4byte "__dt__19reslist<P8CScnItem>Fv"
 	.4byte 0x000000B8
 	.4byte "@etb_8001EA10"
 .endobj "@eti_80036644"
@@ -1771,7 +1771,7 @@
 
 .obj "@eti_8003665C", local
 .hidden "@eti_8003665C"
-	.4byte __dt__CScnItemPool
+	.4byte __dt__12CScnItemPoolFv
 	.4byte 0x00000160
 	.4byte "@etb_8001EA20"
 .endobj "@eti_8003665C"

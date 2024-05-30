@@ -56,7 +56,7 @@
 /* 801726A0 0013BC60  4E 80 04 21 */	bctrl 
 /* 801726A4 0013BC64  7F C3 F3 78 */	mr r3, r30
 /* 801726A8 0013BC68  38 80 00 00 */	li r4, 0
-/* 801726AC 0013BC6C  48 01 30 15 */	bl __dt__801856C0
+/* 801726AC 0013BC6C  48 01 30 15 */	bl __dt__Q22cf8CREvtObjFv
 /* 801726B0 0013BC70  2C 1F 00 00 */	cmpwi r31, 0
 /* 801726B4 0013BC74  40 81 00 0C */	ble .L_801726C0
 /* 801726B8 0013BC78  7F C3 F3 78 */	mr r3, r30
@@ -1016,7 +1016,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801856C0
+	.4byte __dt__Q22cf8CREvtObjFv
 .endobj "@etb_8000E25C"
 
 .obj "@etb_8000E278", local

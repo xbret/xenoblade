@@ -188,7 +188,7 @@
 /* 80453AD0 0041D090  4E 80 00 20 */	blr 
 .endfn __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 
-.fn __dt__CDeviceFontLayer, global
+.fn __dt__16CDeviceFontLayerFv, global
 /* 80453AD4 0041D094  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80453AD8 0041D098  7C 08 02 A6 */	mflr r0
 /* 80453ADC 0041D09C  2C 03 00 00 */	cmpwi r3, 0
@@ -235,7 +235,7 @@
 .L_80453B78:
 /* 80453B78 0041D138  7F A3 EB 78 */	mr r3, r29
 /* 80453B7C 0041D13C  38 80 00 00 */	li r4, 0
-/* 80453B80 0041D140  4B FE 3F 49 */	bl __dt__CWorkThread
+/* 80453B80 0041D140  4B FE 3F 49 */	bl __dt__11CWorkThreadFv
 /* 80453B84 0041D144  2C 1E 00 00 */	cmpwi r30, 0
 /* 80453B88 0041D148  40 81 00 0C */	ble .L_80453B94
 /* 80453B8C 0041D14C  7F A3 EB 78 */	mr r3, r29
@@ -249,7 +249,7 @@
 /* 80453BA8 0041D168  7C 08 03 A6 */	mtlr r0
 /* 80453BAC 0041D16C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80453BB0 0041D170  4E 80 00 20 */	blr
-.endfn __dt__CDeviceFontLayer
+.endfn __dt__16CDeviceFontLayerFv
 
 .fn func_80453BB4, global
 /* 80453BB4 0041D174  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1530,7 +1530,7 @@
 /* 80454DCC 0041E38C  88 03 02 F0 */	lbz r0, 0x2f0(r3)
 /* 80454DD0 0041E390  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DD4 0041E394  41 82 00 08 */	beq .L_80454DDC
-/* 80454DD8 0041E398  4B FE 3C 4C */	b CWorkThread_WorkThreadEvent5
+/* 80454DD8 0041E398  4B FE 3C 4C */	b WorkThreadEvent5__11CWorkThreadFv
 .L_80454DDC:
 /* 80454DDC 0041E39C  38 60 00 00 */	li r3, 0
 /* 80454DE0 0041E3A0  4E 80 00 20 */	blr 
@@ -1547,7 +1547,7 @@
 /* 80454E00 0041E3C0  7C 64 1B 78 */	mr r4, r3
 /* 80454E04 0041E3C4  3C 60 00 01 */	lis r3, 1
 /* 80454E08 0041E3C8  38 A0 00 10 */	li r5, 0x10
-/* 80454E0C 0041E3CC  4B FD FD 59 */	bl func_80434B64
+/* 80454E0C 0041E3CC  4B FD FD 59 */	bl MemManager_80434B64
 /* 80454E10 0041E3D0  38 00 00 00 */	li r0, 0
 /* 80454E14 0041E3D4  90 6D BD E8 */	stw r3, lbl_80667F68@sda21(r13)
 /* 80454E18 0041E3D8  90 0D BD EC */	stw r0, lbl_80667F6C@sda21(r13)
@@ -1617,44 +1617,44 @@
 .obj __vt__16CDeviceFontLayer, global
 	.4byte __RTTI__16CDeviceFontLayer
 	.4byte 0
-	.4byte __dt__CDeviceFontLayer
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__16CDeviceFontLayerFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceFontLayer_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
-	.4byte CWorkThread_WorkThreadEvent4
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
+	.4byte WorkThreadEvent4__11CWorkThreadFv
 	.4byte CDeviceFontLayer_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__16CDeviceFontLayer
 
 .obj CDeviceFontLayer_hierarchy, global
@@ -1765,7 +1765,7 @@
 	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001D120"
 
 .obj "@etb_8001D15C", local
@@ -1893,7 +1893,7 @@
 
 .obj "@eti_80034DD8", local
 .hidden "@eti_80034DD8"
-	.4byte __dt__CDeviceFontLayer
+	.4byte __dt__16CDeviceFontLayerFv
 	.4byte 0x000000E0
 	.4byte "@etb_8001D16C"
 .endobj "@eti_80034DD8"

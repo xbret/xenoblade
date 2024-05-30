@@ -174,13 +174,13 @@
 /* 80093920 0005CEE0  4E 80 00 20 */	blr 
 .endfn func_8009377C
 
-.fn func_80093924, global
+.fn func_80093924__Q22cf12CfObjectMoveFv, global
 /* 80093924 0005CEE4  80 63 00 C4 */	lwz r3, 0xc4(r3)
 /* 80093928 0005CEE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8009392C 0005CEEC  4D 82 00 20 */	beqlr 
 /* 80093930 0005CEF0  90 83 03 7C */	stw r4, 0x37c(r3)
 /* 80093934 0005CEF4  4E 80 00 20 */	blr 
-.endfn func_80093924
+.endfn func_80093924__Q22cf12CfObjectMoveFv
 
 .fn func_80093938, global
 /* 80093938 0005CEF8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1230,7 +1230,7 @@
 /* 80094898 0005DE58  4E 80 00 20 */	blr 
 .endfn func_80093F28
 
-.fn CObjectState_func_8009489C, global
+.fn func_8009489C__Q22cf12CObjectStateFv, global
 /* 8009489C 0005DE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800948A0 0005DE60  7C 08 02 A6 */	mflr r0
 /* 800948A4 0005DE64  28 04 00 3F */	cmplwi r4, 0x3f
@@ -1255,7 +1255,7 @@
 /* 800948EC 0005DEAC  7C 08 03 A6 */	mtlr r0
 /* 800948F0 0005DEB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800948F4 0005DEB4  4E 80 00 20 */	blr
-.endfn CObjectState_func_8009489C
+.endfn func_8009489C__Q22cf12CObjectStateFv
 
 .fn func_800948F8, global
 /* 800948F8 0005DEB8  7C 04 28 50 */	subf r0, r4, r5
@@ -1749,15 +1749,15 @@
 /* 80094FEC 0005E5AC  4E 80 00 20 */	blr 
 .endfn func_80094FC8
 
-.fn func_80094FF0, global
+.fn func_80094FF0__Q22cf13CfObjectModelFv, global
 /* 80094FF0 0005E5B0  C0 23 00 A4 */	lfs f1, 0xa4(r3)
 /* 80094FF4 0005E5B4  4E 80 00 20 */	blr 
-.endfn func_80094FF0
+.endfn func_80094FF0__Q22cf13CfObjectModelFv
 
-.fn func_80094FF8, global
+.fn func_80094FF8__Q22cf13CfObjectModelFv, global
 /* 80094FF8 0005E5B8  C0 23 00 A0 */	lfs f1, 0xa0(r3)
 /* 80094FFC 0005E5BC  4E 80 00 20 */	blr 
-.endfn func_80094FF8
+.endfn func_80094FF8__Q22cf13CfObjectModelFv
 
 .fn func_80095000, global
 /* 80095000 0005E5C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3466,7 +3466,7 @@
 /* 80096858 0005FE18  4E 80 00 20 */	blr 
 .endfn func_80096854
 
-.fn __dt__cf_CtrlNpc, global
+.fn __dt__Q22cf7CtrlNpcFv, global
 /* 8009685C 0005FE1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80096860 0005FE20  7C 08 02 A6 */	mflr r0
 /* 80096864 0005FE24  2C 03 00 00 */	cmpwi r3, 0
@@ -3484,7 +3484,7 @@
 /* 80096890 0005FE50  7C 08 03 A6 */	mtlr r0
 /* 80096894 0005FE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80096898 0005FE58  4E 80 00 20 */	blr 
-.endfn __dt__cf_CtrlNpc
+.endfn __dt__Q22cf7CtrlNpcFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -3684,7 +3684,7 @@
 .obj __vt__Q22cf7CtrlNpc, global
 	.4byte __RTTI__Q22cf7CtrlNpc
 	.4byte 0
-	.4byte __dt__cf_CtrlNpc
+	.4byte __dt__Q22cf7CtrlNpcFv
 	.4byte func_80093938
 	.4byte func_8009684C
 	.4byte func_8004B524
@@ -3721,7 +3721,7 @@
 .obj __vt__Q22cf8CtrlBase, global
 	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
-	.4byte __dt__cf_CtrlBase
+	.4byte __dt__Q22cf8CtrlBaseFv
 	.4byte 0
 	.4byte func_80096854
 	.4byte func_8004B524
@@ -3921,7 +3921,7 @@
 	.4byte __dt__80087688
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__cf_CtrlBase
+	.4byte __dt__Q22cf8CtrlBaseFv
 .endobj "@etb_80008CC4"
 
 .obj "@etb_80008CF4", local
@@ -4097,7 +4097,7 @@
 
 .obj "@eti_80024380", local
 .hidden "@eti_80024380"
-	.4byte CObjectState_func_8009489C
+	.4byte func_8009489C__Q22cf12CObjectStateFv
 	.4byte 0x0000005C
 	.4byte "@etb_80008D14"
 .endobj "@eti_80024380"
@@ -4216,7 +4216,7 @@
 
 .obj "@eti_8002444C", local
 .hidden "@eti_8002444C"
-	.4byte __dt__cf_CtrlNpc
+	.4byte __dt__Q22cf7CtrlNpcFv
 	.4byte 0x00000040
 	.4byte "@etb_80008D9C"
 .endobj "@eti_8002444C"

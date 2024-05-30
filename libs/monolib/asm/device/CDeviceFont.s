@@ -167,7 +167,7 @@
 /* 804524E8 0041BAA8  4E 80 00 20 */	blr 
 .endfn __dt__reslist_IDeviceFontInfo
 
-.fn __dt__CDeviceFont, global
+.fn __dt__11CDeviceFontFv, global
 /* 804524EC 0041BAAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804524F0 0041BAB0  7C 08 02 A6 */	mflr r0
 /* 804524F4 0041BAB4  2C 03 00 00 */	cmpwi r3, 0
@@ -214,7 +214,7 @@
 /* 8045258C 0041BB4C  41 82 00 10 */	beq .L_8045259C
 /* 80452590 0041BB50  7F A3 EB 78 */	mr r3, r29
 /* 80452594 0041BB54  38 80 00 00 */	li r4, 0
-/* 80452598 0041BB58  4B FE 55 31 */	bl __dt__CWorkThread
+/* 80452598 0041BB58  4B FE 55 31 */	bl __dt__11CWorkThreadFv
 .L_8045259C:
 /* 8045259C 0041BB5C  2C 1E 00 00 */	cmpwi r30, 0
 /* 804525A0 0041BB60  40 81 00 0C */	ble .L_804525AC
@@ -229,7 +229,7 @@
 /* 804525C0 0041BB80  7C 08 03 A6 */	mtlr r0
 /* 804525C4 0041BB84  38 21 00 20 */	addi r1, r1, 0x20
 /* 804525C8 0041BB88  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFont
+.endfn __dt__11CDeviceFontFv
 
 .fn func_804525CC, global
 /* 804525CC 0041BB8C  80 6D BD D8 */	lwz r3, lbl_80667F58@sda21(r13)
@@ -264,7 +264,7 @@
 .L_80452624:
 /* 80452624 0041BBE4  3F E0 80 52 */	lis r31, lbl_805266F4@ha
 /* 80452628 0041BBE8  3B FF 66 F4 */	addi r31, r31, lbl_805266F4@l
-/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getHeapIndex
+/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getHeapIndex__Fv
 /* 80452630 0041BBF0  7C 64 1B 78 */	mr r4, r3
 /* 80452634 0041BBF4  38 60 02 F8 */	li r3, 0x2f8
 /* 80452638 0041BBF8  4B FE 24 25 */	bl heap_malloc
@@ -984,7 +984,7 @@
 /* 80452F3C 0041C4FC  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F40 0041C500  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F44 0041C504  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452F48 0041C508  4B FE 46 6D */	bl getHeapIndex
+/* 80452F48 0041C508  4B FE 46 6D */	bl getHeapIndex__Fv
 /* 80452F4C 0041C50C  7C 64 1B 78 */	mr r4, r3
 /* 80452F50 0041C510  38 60 02 10 */	li r3, 0x210
 /* 80452F54 0041C514  4B FE 1B 09 */	bl heap_malloc
@@ -1007,7 +1007,7 @@
 /* 80452F94 0041C554  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F98 0041C558  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F9C 0041C55C  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452FA0 0041C560  4B FE 46 15 */	bl getHeapIndex
+/* 80452FA0 0041C560  4B FE 46 15 */	bl getHeapIndex__Fv
 /* 80452FA4 0041C564  7C 64 1B 78 */	mr r4, r3
 /* 80452FA8 0041C568  38 60 02 10 */	li r3, 0x210
 /* 80452FAC 0041C56C  4B FE 1A B1 */	bl heap_malloc
@@ -1150,7 +1150,7 @@
 .L_80453184:
 /* 80453184 0041C744  90 7E 01 E8 */	stw r3, 0x1e8(r30)
 /* 80453188 0041C748  7F C3 F3 78 */	mr r3, r30
-/* 8045318C 0041C74C  4B FE 58 6D */	bl CWorkThread_WorkThreadEvent4
+/* 8045318C 0041C74C  4B FE 58 6D */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80453190 0041C750  48 00 00 08 */	b .L_80453198
 .L_80453194:
 /* 80453194 0041C754  38 60 00 00 */	li r3, 0
@@ -1235,7 +1235,7 @@
 /* 804532A0 0041C860  7F A3 EB 78 */	mr r3, r29
 /* 804532A4 0041C864  80 9D 01 CC */	lwz r4, 0x1cc(r29)
 /* 804532A8 0041C868  90 84 00 04 */	stw r4, 4(r4)
-/* 804532AC 0041C86C  4B FE 57 79 */	bl CWorkThread_WorkThreadEvent5
+/* 804532AC 0041C86C  4B FE 57 79 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804532B0 0041C870  48 00 00 08 */	b .L_804532B8
 .L_804532B4:
 /* 804532B4 0041C874  38 60 00 00 */	li r3, 0
@@ -1290,44 +1290,44 @@
 .obj __vt__11CDeviceFont, global
 	.4byte __RTTI__11CDeviceFont
 	.4byte 0
-	.4byte __dt__CDeviceFont
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__11CDeviceFontFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceFont_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFont_WorkThreadEvent4
 	.4byte CDeviceFont_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CDeviceFont
 
 .obj CDeviceFont_hierarchy, global
@@ -1420,7 +1420,7 @@
 	.4byte __dt__reslist_IDeviceFontInfo
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001CFEC"
 
 .obj "@etb_8001D014", local
@@ -1521,7 +1521,7 @@
 
 .obj "@eti_80034D00", local
 .hidden "@eti_80034D00"
-	.4byte __dt__CDeviceFont
+	.4byte __dt__11CDeviceFontFv
 	.4byte 0x000000E0
 	.4byte "@etb_8001D024"
 .endobj "@eti_80034D00"

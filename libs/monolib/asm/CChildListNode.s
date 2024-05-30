@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CChildListNode, global
+.fn __ct__14CChildListNodeFv, global
 /* 804466E0 0040FCA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804466E4 0040FCA4  7C 08 02 A6 */	mflr r0
 /* 804466E8 0040FCA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -24,15 +24,15 @@
 /* 80446728 0040FCE8  7C 08 03 A6 */	mtlr r0
 /* 8044672C 0040FCEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446730 0040FCF0  4E 80 00 20 */	blr 
-.endfn __ct__CChildListNode
+.endfn __ct__14CChildListNodeFv
 
-.fn CChildListNode_Reset, global
+.fn Reset__14CChildListNodeFv, global
 /* 80446734 0040FCF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80446738 0040FCF8  7C 08 02 A6 */	mflr r0
 /* 8044673C 0040FCFC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80446740 0040FD00  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80446744 0040FD04  7C 7F 1B 78 */	mr r31, r3
-/* 80446748 0040FD08  4B FF FE 59 */	bl CDoubleListNode_Reset
+/* 80446748 0040FD08  4B FF FE 59 */	bl Reset__15CDoubleListNodeFv
 /* 8044674C 0040FD0C  38 00 00 00 */	li r0, 0
 /* 80446750 0040FD10  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 80446754 0040FD14  90 1F 00 24 */	stw r0, 0x24(r31)
@@ -41,7 +41,7 @@
 /* 80446760 0040FD20  7C 08 03 A6 */	mtlr r0
 /* 80446764 0040FD24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80446768 0040FD28  4E 80 00 20 */	blr
-.endfn CChildListNode_Reset
+.endfn Reset__14CChildListNodeFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -61,15 +61,15 @@
 .obj __vt__14CChildListNode, global
 	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __dt__CChildListNode
-	.4byte CChildListNode_Reset
+	.4byte __dt__14CChildListNodeFv
+	.4byte Reset__14CChildListNodeFv
 .endobj __vt__14CChildListNode
 
 
 .obj "__vt__34TChildListHeader<14CChildListNode>", global
 	.4byte "__RTTI__34TChildListHeader<14CChildListNode>"
 	.4byte 0
-	.4byte __dt__TChildListHeader_CChildListNode
+	.4byte "__dt__34TChildListHeader<14CChildListNode>Fv"
 	.4byte 0
 .endobj "__vt__34TChildListHeader<14CChildListNode>"
 
@@ -104,14 +104,14 @@
 
 .obj "@eti_8003458C", local
 .hidden "@eti_8003458C"
-	.4byte __ct__CChildListNode
+	.4byte __ct__14CChildListNodeFv
 	.4byte 0x00000054
 	.4byte "@etb_8001C9A4"
 .endobj "@eti_8003458C"
 
 .obj "@eti_80034598", local
 .hidden "@eti_80034598"
-	.4byte CChildListNode_Reset
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0x00000038
 	.4byte "@etb_8001C9AC"
 .endobj "@eti_80034598"

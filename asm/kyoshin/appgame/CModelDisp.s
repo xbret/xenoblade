@@ -77,11 +77,11 @@
 /* 801FBECC 001C548C  38 63 00 0C */	addi r3, r3, 0xc
 /* 801FBED0 001C5490  4B E5 E5 9D */	bl __ct__cf_CActParamAnimGame
 /* 801FBED4 001C5494  3C 80 80 06 */	lis r4, __ct__cf_CActParamAnimGame@ha
-/* 801FBED8 001C5498  3C A0 80 06 */	lis r5, __dt__cf_CActParamAnimGame@ha
+/* 801FBED8 001C5498  3C A0 80 06 */	lis r5, __dt__Q22cf17CActParamAnimGameFv@ha
 /* 801FBEDC 001C549C  38 7F 05 50 */	addi r3, r31, 0x550
 /* 801FBEE0 001C54A0  38 C0 05 3C */	li r6, 0x53c
 /* 801FBEE4 001C54A4  38 84 A4 6C */	addi r4, r4, __ct__cf_CActParamAnimGame@l
-/* 801FBEE8 001C54A8  38 A5 A4 CC */	addi r5, r5, __dt__cf_CActParamAnimGame@l
+/* 801FBEE8 001C54A8  38 A5 A4 CC */	addi r5, r5, __dt__Q22cf17CActParamAnimGameFv@l
 /* 801FBEEC 001C54AC  38 E0 00 02 */	li r7, 2
 /* 801FBEF0 001C54B0  48 0B DC 11 */	bl __construct_array
 /* 801FBEF4 001C54B4  7F E3 FB 78 */	mr r3, r31
@@ -101,15 +101,15 @@
 /* 801FBF20 001C54E0  7C 7E 1B 78 */	mr r30, r3
 /* 801FBF24 001C54E4  7C 9F 23 78 */	mr r31, r4
 /* 801FBF28 001C54E8  41 82 00 38 */	beq .L_801FBF60
-/* 801FBF2C 001C54EC  3C 80 80 06 */	lis r4, __dt__cf_CActParamAnimGame@ha
+/* 801FBF2C 001C54EC  3C 80 80 06 */	lis r4, __dt__Q22cf17CActParamAnimGameFv@ha
 /* 801FBF30 001C54F0  38 A0 05 3C */	li r5, 0x53c
-/* 801FBF34 001C54F4  38 84 A4 CC */	addi r4, r4, __dt__cf_CActParamAnimGame@l
+/* 801FBF34 001C54F4  38 84 A4 CC */	addi r4, r4, __dt__Q22cf17CActParamAnimGameFv@l
 /* 801FBF38 001C54F8  38 C0 00 02 */	li r6, 2
 /* 801FBF3C 001C54FC  38 63 05 50 */	addi r3, r3, 0x550
 /* 801FBF40 001C5500  48 0B DC B9 */	bl __destroy_arr
 /* 801FBF44 001C5504  38 7E 00 0C */	addi r3, r30, 0xc
 /* 801FBF48 001C5508  38 80 FF FF */	li r4, -1
-/* 801FBF4C 001C550C  4B E5 E5 81 */	bl __dt__cf_CActParamAnimGame
+/* 801FBF4C 001C550C  4B E5 E5 81 */	bl __dt__Q22cf17CActParamAnimGameFv
 /* 801FBF50 001C5510  2C 1F 00 00 */	cmpwi r31, 0
 /* 801FBF54 001C5514  40 81 00 0C */	ble .L_801FBF60
 /* 801FBF58 001C5518  7F C3 F3 78 */	mr r3, r30
@@ -123,7 +123,7 @@
 /* 801FBF74 001C5534  4E 80 00 20 */	blr 
 .endfn __dt__801FBF0C
 
-.fn __dt__CModelDisp, global
+.fn __dt__10CModelDispFv, global
 /* 801FBF78 001C5538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FBF7C 001C553C  7C 08 02 A6 */	mflr r0
 /* 801FBF80 001C5540  2C 03 00 00 */	cmpwi r3, 0
@@ -149,7 +149,7 @@
 /* 801FBFCC 001C558C  7C 08 03 A6 */	mtlr r0
 /* 801FBFD0 001C5590  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FBFD4 001C5594  4E 80 00 20 */	blr 
-.endfn __dt__CModelDisp
+.endfn __dt__10CModelDispFv
 
 .fn func_801FBFD8, global
 /* 801FBFD8 001C5598  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1238,7 +1238,7 @@
 .obj __vt__10CModelDisp, global
 	.4byte __RTTI__10CModelDisp
 	.4byte 0
-	.4byte __dt__CModelDisp
+	.4byte __dt__10CModelDispFv
 	.4byte func_801FCBF4
 	.4byte func_800550D8
 	.4byte func_800550DC
@@ -1346,7 +1346,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001F
 	.4byte 0x0000000C
-	.4byte __dt__cf_CActParamAnimGame
+	.4byte __dt__Q22cf17CActParamAnimGameFv
 .endobj "@etb_80012714"
 
 .obj "@etb_80012730", local
@@ -1359,7 +1359,7 @@
 	.4byte 0x00000550
 	.4byte 0x00000002
 	.4byte 0x0000053C
-	.4byte __dt__cf_CActParamAnimGame
+	.4byte __dt__Q22cf17CActParamAnimGameFv
 .endobj "@etb_80012730"
 
 .obj "@etb_80012754", local
@@ -1473,7 +1473,7 @@
 
 .obj "@eti_8002C798", local
 .hidden "@eti_8002C798"
-	.4byte __dt__CModelDisp
+	.4byte __dt__10CModelDispFv
 	.4byte 0x00000060
 	.4byte "@etb_80012754"
 .endobj "@eti_8002C798"

@@ -27,7 +27,7 @@
 /* 80192E3C 0015C3FC  4E 80 00 20 */	blr 
 .endfn __ct__cf_CPartsChange
 
-.fn __dt__cf_CPartsChange, global
+.fn __dt__Q22cf12CPartsChangeFv, global
 /* 80192E40 0015C400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192E44 0015C404  7C 08 02 A6 */	mflr r0
 /* 80192E48 0015C408  2C 03 00 00 */	cmpwi r3, 0
@@ -45,7 +45,7 @@
 /* 80192E74 0015C434  7C 08 03 A6 */	mtlr r0
 /* 80192E78 0015C438  38 21 00 10 */	addi r1, r1, 0x10
 /* 80192E7C 0015C43C  4E 80 00 20 */	blr 
-.endfn __dt__cf_CPartsChange
+.endfn __dt__Q22cf12CPartsChangeFv
 
 .fn func_80192E80, global
 /* 80192E80 0015C440  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -7398,7 +7398,7 @@
 .obj __vt__Q22cf12CPartsChange, global
 	.4byte __RTTI__Q22cf12CPartsChange
 	.4byte 0
-	.4byte __dt__cf_CPartsChange
+	.4byte __dt__Q22cf12CPartsChangeFv
 	.4byte 0
 .endobj __vt__Q22cf12CPartsChange
 
@@ -8089,7 +8089,7 @@
 
 .obj "@eti_8002A0D4", local
 .hidden "@eti_8002A0D4"
-	.4byte __dt__cf_CPartsChange
+	.4byte __dt__Q22cf12CPartsChangeFv
 	.4byte 0x00000040
 	.4byte "@etb_8000F310"
 .endobj "@eti_8002A0D4"

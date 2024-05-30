@@ -29,7 +29,7 @@
 /* 80087604 00050BC4  4E 80 00 20 */	blr 
 .endfn __ct__cf_CtrlEnemy
 
-.fn __dt__cf_CtrlAct, global
+.fn __dt__Q22cf7CtrlActFv, global
 /* 80087608 00050BC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008760C 00050BCC  7C 08 02 A6 */	mflr r0
 /* 80087610 00050BD0  2C 03 00 00 */	cmpwi r3, 0
@@ -47,9 +47,9 @@
 /* 8008763C 00050BFC  7C 08 03 A6 */	mtlr r0
 /* 80087640 00050C00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80087644 00050C04  4E 80 00 20 */	blr 
-.endfn __dt__cf_CtrlAct
+.endfn __dt__Q22cf7CtrlActFv
 
-.fn __dt__cf_CtrlBase, global
+.fn __dt__Q22cf8CtrlBaseFv, global
 /* 80087648 00050C08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008764C 00050C0C  7C 08 02 A6 */	mflr r0
 /* 80087650 00050C10  2C 03 00 00 */	cmpwi r3, 0
@@ -67,7 +67,7 @@
 /* 8008767C 00050C3C  7C 08 03 A6 */	mtlr r0
 /* 80087680 00050C40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80087684 00050C44  4E 80 00 20 */	blr 
-.endfn __dt__cf_CtrlBase
+.endfn __dt__Q22cf8CtrlBaseFv
 
 .fn __dt__80087688, global
 /* 80087688 00050C48  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -89,7 +89,7 @@
 /* 800876C4 00050C84  4E 80 00 20 */	blr 
 .endfn __dt__80087688
 
-.fn __dt__cf_CtrlEnemy, global
+.fn __dt__Q22cf9CtrlEnemyFv, global
 /* 800876C8 00050C88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800876CC 00050C8C  7C 08 02 A6 */	mflr r0
 /* 800876D0 00050C90  2C 03 00 00 */	cmpwi r3, 0
@@ -116,7 +116,7 @@
 /* 80087720 00050CE0  7C 08 03 A6 */	mtlr r0
 /* 80087724 00050CE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80087728 00050CE8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CtrlEnemy
+.endfn __dt__Q22cf9CtrlEnemyFv
 
 .fn func_8008772C, global
 /* 8008772C 00050CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -644,10 +644,10 @@
 /* 80087EE0 000514A0  4E 80 00 20 */	blr 
 .endfn func_800877A8
 
-.fn func_80087EE4, global
+.fn func_80087EE4__Q22cf12CfObjectMoveFv, global
 /* 80087EE4 000514A4  C0 23 06 EC */	lfs f1, 0x6ec(r3)
 /* 80087EE8 000514A8  4E 80 00 20 */	blr 
-.endfn func_80087EE4
+.endfn func_80087EE4__Q22cf12CfObjectMoveFv
 
 .fn func_80087EEC, global
 /* 80087EEC 000514AC  94 21 FF 30 */	stwu r1, -0xd0(r1)
@@ -1120,10 +1120,10 @@
 /* 800885E4 00051BA4  4E 80 00 20 */	blr 
 .endfn func_80087EEC
 
-.fn func_800885E8, global
+.fn func_800885E8__Q22cf11CActorParamFv, global
 /* 800885E8 00051BA8  38 63 16 1C */	addi r3, r3, 0x161c
 /* 800885EC 00051BAC  4E 80 00 20 */	blr 
-.endfn func_800885E8
+.endfn func_800885E8__Q22cf11CActorParamFv
 
 .fn func_800885F0, global
 /* 800885F0 00051BB0  80 03 00 84 */	lwz r0, 0x84(r3)
@@ -1134,20 +1134,20 @@
 /* 80088604 00051BC4  4E 80 00 20 */	blr 
 .endfn func_800885F0
 
-.fn func_80088608, global
+.fn func_80088608__Q22cf11CActorParamFv, global
 /* 80088608 00051BC8  38 63 16 20 */	addi r3, r3, 0x1620
 /* 8008860C 00051BCC  4E 80 00 20 */	blr 
-.endfn func_80088608
+.endfn func_80088608__Q22cf11CActorParamFv
 
-.fn func_80088610, global
+.fn func_80088610__Q22cf11CActorParamFv, global
 /* 80088610 00051BD0  38 63 16 24 */	addi r3, r3, 0x1624
 /* 80088614 00051BD4  4E 80 00 20 */	blr 
-.endfn func_80088610
+.endfn func_80088610__Q22cf11CActorParamFv
 
-.fn func_80088618, global
+.fn func_80088618__Q22cf11CActorParamFv, global
 /* 80088618 00051BD8  80 63 17 E4 */	lwz r3, 0x17e4(r3)
 /* 8008861C 00051BDC  4E 80 00 20 */	blr 
-.endfn func_80088618
+.endfn func_80088618__Q22cf11CActorParamFv
 
 .fn func_80088620, global
 /* 80088620 00051BE0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1271,18 +1271,18 @@
 /* 800887E0 00051DA0  4E 80 00 20 */	blr 
 .endfn func_80088620
 
-.fn func_800887E4, global
+.fn func_800887E4__Q22cf11CActorParamFv, global
 /* 800887E4 00051DA4  88 63 16 28 */	lbz r3, 0x1628(r3)
 /* 800887E8 00051DA8  7C 03 00 D0 */	neg r0, r3
 /* 800887EC 00051DAC  7C 00 1B 78 */	or r0, r0, r3
 /* 800887F0 00051DB0  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 800887F4 00051DB4  4E 80 00 20 */	blr 
-.endfn func_800887E4
+.endfn func_800887E4__Q22cf11CActorParamFv
 
-.fn func_800887F8, global
+.fn func_800887F8__Q22cf11CActorParamFv, global
 /* 800887F8 00051DB8  80 63 15 EC */	lwz r3, 0x15ec(r3)
 /* 800887FC 00051DBC  4E 80 00 20 */	blr 
-.endfn func_800887F8
+.endfn func_800887F8__Q22cf11CActorParamFv
 
 .fn func_80088800, global
 /* 80088800 00051DC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1516,7 +1516,7 @@
 .obj __vt__Q22cf9CtrlEnemy, global
 	.4byte __RTTI__Q22cf9CtrlEnemy
 	.4byte 0
-	.4byte __dt__cf_CtrlEnemy
+	.4byte __dt__Q22cf9CtrlEnemyFv
 	.4byte func_8008772C
 	.4byte func_800888FC
 	.4byte func_800D5860
@@ -1675,7 +1675,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__cf_CtrlAct
+	.4byte __dt__Q22cf7CtrlActFv
 .endobj "@etb_80008AAC"
 
 .obj "@etb_80008AC8", local
@@ -1704,7 +1704,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__cf_CtrlAct
+	.4byte __dt__Q22cf7CtrlActFv
 .endobj "@etb_80008AE0"
 
 .obj "@etb_80008AFC", local
@@ -1762,14 +1762,14 @@
 
 .obj "@eti_800240B0", local
 .hidden "@eti_800240B0"
-	.4byte __dt__cf_CtrlAct
+	.4byte __dt__Q22cf7CtrlActFv
 	.4byte 0x00000040
 	.4byte "@etb_80008AC8"
 .endobj "@eti_800240B0"
 
 .obj "@eti_800240BC", local
 .hidden "@eti_800240BC"
-	.4byte __dt__cf_CtrlBase
+	.4byte __dt__Q22cf8CtrlBaseFv
 	.4byte 0x00000040
 	.4byte "@etb_80008AD0"
 .endobj "@eti_800240BC"
@@ -1783,7 +1783,7 @@
 
 .obj "@eti_800240D4", local
 .hidden "@eti_800240D4"
-	.4byte __dt__cf_CtrlEnemy
+	.4byte __dt__Q22cf9CtrlEnemyFv
 	.4byte 0x00000064
 	.4byte "@etb_80008AE0"
 .endobj "@eti_800240D4"

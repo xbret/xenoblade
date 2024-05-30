@@ -61,7 +61,7 @@
 /* 8011C528 000E5AE8  4E 80 00 20 */	blr
 .endfn __ct__CMenuQuestLog
 
-.fn __dt__CMenuQuestLog, global
+.fn __dt__13CMenuQuestLogFv, global
 /* 8011C52C 000E5AEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011C530 000E5AF0  7C 08 02 A6 */	mflr r0
 /* 8011C534 000E5AF4  2C 03 00 00 */	cmpwi r3, 0
@@ -72,16 +72,16 @@
 /* 8011C548 000E5B08  41 82 00 50 */	beq .L_8011C598
 /* 8011C54C 000E5B0C  38 80 FF FF */	li r4, -1
 /* 8011C550 000E5B10  38 63 22 40 */	addi r3, r3, 0x2240
-/* 8011C554 000E5B14  48 10 CF 19 */	bl __dt__CQstLogInfo
+/* 8011C554 000E5B14  48 10 CF 19 */	bl __dt__11CQstLogInfoFv
 /* 8011C558 000E5B18  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 8011C55C 000E5B1C  38 80 FF FF */	li r4, -1
-/* 8011C560 000E5B20  48 10 B4 6D */	bl __dt__CQstLogList
+/* 8011C560 000E5B20  48 10 B4 6D */	bl __dt__11CQstLogListFv
 /* 8011C564 000E5B24  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8011C568 000E5B28  38 80 FF FF */	li r4, -1
-/* 8011C56C 000E5B2C  48 0A 79 E5 */	bl __dt__CTitleAHelp
+/* 8011C56C 000E5B2C  48 0A 79 E5 */	bl __dt__11CTitleAHelpFv
 /* 8011C570 000E5B30  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8011C574 000E5B34  38 80 FF FF */	li r4, -1
-/* 8011C578 000E5B38  48 0A 74 59 */	bl __dt__CBgTex
+/* 8011C578 000E5B38  48 0A 74 59 */	bl __dt__6CBgTexFv
 /* 8011C57C 000E5B3C  7F C3 F3 78 */	mr r3, r30
 /* 8011C580 000E5B40  38 80 00 00 */	li r4, 0
 /* 8011C584 000E5B44  4B FE 27 89 */	bl __dt__800FED0C
@@ -96,7 +96,7 @@
 /* 8011C5A4 000E5B64  7C 08 03 A6 */	mtlr r0
 /* 8011C5A8 000E5B68  38 21 00 10 */	addi r1, r1, 0x10
 /* 8011C5AC 000E5B6C  4E 80 00 20 */	blr 
-.endfn __dt__CMenuQuestLog
+.endfn __dt__13CMenuQuestLogFv
 
 .fn func_8011C5B0, global
 /* 8011C5B0 000E5B70  94 21 DD D0 */	stwu r1, -0x2230(r1)
@@ -122,7 +122,7 @@
 /* 8011C600 000E5BC0  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8011C604 000E5BC4  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8011C608 000E5BC8  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8011C60C 000E5BCC  48 0A 73 C5 */	bl __dt__CBgTex
+/* 8011C60C 000E5BCC  48 0A 73 C5 */	bl __dt__6CBgTexFv
 /* 8011C610 000E5BD0  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8011C614 000E5BD4  48 0A 76 01 */	bl func_801C3C14
 /* 8011C618 000E5BD8  3C 60 80 50 */	lis r3, lbl_804F9D58@ha
@@ -163,7 +163,7 @@
 /* 8011C6A4 000E5C64  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8011C6A8 000E5C68  88 01 00 9F */	lbz r0, 0x9f(r1)
 /* 8011C6AC 000E5C6C  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8011C6B0 000E5C70  48 0A 78 A1 */	bl __dt__CTitleAHelp
+/* 8011C6B0 000E5C70  48 0A 78 A1 */	bl __dt__11CTitleAHelpFv
 /* 8011C6B4 000E5C74  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8011C6B8 000E5C78  48 0A 78 ED */	bl CTitleAHelp_load
 /* 8011C6BC 000E5C7C  80 1F 22 80 */	lwz r0, 0x2280(r31)
@@ -290,7 +290,7 @@
 /* 8011C898 000E5E58  98 1F 22 3E */	stb r0, 0x223e(r31)
 /* 8011C89C 000E5E5C  88 01 22 27 */	lbz r0, 0x2227(r1)
 /* 8011C8A0 000E5E60  98 1F 22 3F */	stb r0, 0x223f(r31)
-/* 8011C8A4 000E5E64  48 10 B1 29 */	bl __dt__CQstLogList
+/* 8011C8A4 000E5E64  48 10 B1 29 */	bl __dt__11CQstLogListFv
 /* 8011C8A8 000E5E68  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8011C8AC 000E5E6C  48 10 B1 B5 */	bl func_80227A60
 /* 8011C8B0 000E5E70  38 61 00 28 */	addi r3, r1, 0x28
@@ -326,7 +326,7 @@
 /* 8011C928 000E5EE8  B0 1F 22 7A */	sth r0, 0x227a(r31)
 /* 8011C92C 000E5EEC  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 8011C930 000E5EF0  90 1F 22 7C */	stw r0, 0x227c(r31)
-/* 8011C934 000E5EF4  48 10 CB 39 */	bl __dt__CQstLogInfo
+/* 8011C934 000E5EF4  48 10 CB 39 */	bl __dt__11CQstLogInfoFv
 /* 8011C938 000E5EF8  38 7F 22 40 */	addi r3, r31, 0x2240
 /* 8011C93C 000E5EFC  48 10 CB 85 */	bl func_802294C0
 /* 8011C940 000E5F00  2C 1F 00 00 */	cmpwi r31, 0
@@ -411,7 +411,7 @@
 /* 8011CA54 000E6014  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8011CA58 000E6018  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8011CA5C 000E601C  7C 7F 1B 78 */	mr r31, r3
-/* 8011CA60 000E6020  48 32 BF E5 */	bl func_80448A44
+/* 8011CA60 000E6020  48 32 BF E5 */	bl func_80448A44__Fv
 /* 8011CA64 000E6024  2C 1F 00 00 */	cmpwi r31, 0
 /* 8011CA68 000E6028  7F E4 FB 78 */	mr r4, r31
 /* 8011CA6C 000E602C  41 82 00 08 */	beq .L_8011CA74
@@ -614,7 +614,7 @@
 /* 8011CD08 000E62C8  38 60 00 00 */	li r3, 0
 /* 8011CD0C 000E62CC  48 00 00 3C */	b .L_8011CD48
 .L_8011CD10:
-/* 8011CD10 000E62D0  48 31 A8 A5 */	bl getHeapIndex
+/* 8011CD10 000E62D0  48 31 A8 A5 */	bl getHeapIndex__Fv
 /* 8011CD14 000E62D4  7C 64 1B 78 */	mr r4, r3
 /* 8011CD18 000E62D8  38 60 22 88 */	li r3, 0x2288
 /* 8011CD1C 000E62DC  48 31 7D 41 */	bl heap_malloc
@@ -1055,7 +1055,7 @@
 
 .fn func_8011D2F0, global
 /* 8011D2F0 000E68B0  38 63 FF A8 */	addi r3, r3, -88
-/* 8011D2F4 000E68B4  4B FF F2 38 */	b __dt__CMenuQuestLog
+/* 8011D2F4 000E68B4  4B FF F2 38 */	b __dt__13CMenuQuestLogFv
 .endfn func_8011D2F0
 
 .fn __dt__8011D2F8, global
@@ -1115,13 +1115,13 @@
 .obj __vt__13CMenuQuestLog, global
 	.4byte __RTTI__13CMenuQuestLog
 	.4byte 0
-	.4byte __dt__CMenuQuestLog
-	.4byte CChildListNode_Reset
+	.4byte __dt__13CMenuQuestLogFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_8011C5B0
 	.4byte func_8011CA4C
 	.4byte func_8011CAD4
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__13CMenuQuestLog
 	.4byte 0xFFFFFFA8
 	.4byte func_8011D2F0
@@ -1183,19 +1183,19 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x00002240
-	.4byte __dt__CQstLogInfo
+	.4byte __dt__11CQstLogInfoFv
 	.4byte 0x0780001C
 	.4byte 0x000000B8
-	.4byte __dt__CQstLogList
+	.4byte __dt__11CQstLogListFv
 	.4byte 0x0780001C
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001C
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1215,37 +1215,37 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00002240
-	.4byte __dt__CQstLogInfo
+	.4byte __dt__11CQstLogInfoFv
 	.4byte 0x0780001E
 	.4byte 0x00002240
-	.4byte __dt__CQstLogInfo
+	.4byte __dt__11CQstLogInfoFv
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CQstLogList
+	.4byte __dt__11CQstLogListFv
 	.4byte 0x0780001E
 	.4byte 0x00002240
-	.4byte __dt__CQstLogInfo
+	.4byte __dt__11CQstLogInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CQstLogList
+	.4byte __dt__11CQstLogListFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00002240
-	.4byte __dt__CQstLogInfo
+	.4byte __dt__11CQstLogInfoFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CQstLogList
+	.4byte __dt__11CQstLogListFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8000B948"
 
 .obj "@etb_8000B9F4", local
@@ -1367,7 +1367,7 @@
 
 .obj "@eti_80026D68", local
 .hidden "@eti_80026D68"
-	.4byte __dt__CMenuQuestLog
+	.4byte __dt__13CMenuQuestLogFv
 	.4byte 0x00000084
 	.4byte "@etb_8000B948"
 .endobj "@eti_80026D68"

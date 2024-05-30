@@ -64,7 +64,7 @@
 /* 80256A50 00220010  4E 80 00 20 */	blr
 .endfn __ct__CMenuKizunagram
 
-.fn __dt__CMenuKizunagram, global
+.fn __dt__15CMenuKizunagramFv, global
 /* 80256A54 00220014  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80256A58 00220018  7C 08 02 A6 */	mflr r0
 /* 80256A5C 0022001C  2C 03 00 00 */	cmpwi r3, 0
@@ -75,19 +75,19 @@
 /* 80256A70 00220030  41 82 00 5C */	beq .L_80256ACC
 /* 80256A74 00220034  38 80 FF FF */	li r4, -1
 /* 80256A78 00220038  38 63 01 F4 */	addi r3, r3, 0x1f4
-/* 80256A7C 0022003C  4B FE D8 CD */	bl __dt__CFade
+/* 80256A7C 0022003C  4B FE D8 CD */	bl __dt__5CFadeFv
 /* 80256A80 00220040  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 80256A84 00220044  38 80 FF FF */	li r4, -1
-/* 80256A88 00220048  48 05 7A 2D */	bl __dt__CLoad
+/* 80256A88 00220048  48 05 7A 2D */	bl __dt__5CLoadFv
 /* 80256A8C 0022004C  38 7E 01 78 */	addi r3, r30, 0x178
 /* 80256A90 00220050  38 80 FF FF */	li r4, -1
-/* 80256A94 00220054  48 00 6D 8D */	bl __dt__CPcKizunagram
+/* 80256A94 00220054  48 00 6D 8D */	bl __dt__13CPcKizunagramFv
 /* 80256A98 00220058  38 7E 00 98 */	addi r3, r30, 0x98
 /* 80256A9C 0022005C  38 80 FF FF */	li r4, -1
-/* 80256AA0 00220060  48 00 5A 11 */	bl __dt__CKizunagram
+/* 80256AA0 00220060  48 00 5A 11 */	bl __dt__11CKizunagramFv
 /* 80256AA4 00220064  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80256AA8 00220068  38 80 FF FF */	li r4, -1
-/* 80256AAC 0022006C  4B F6 D4 A5 */	bl __dt__CTitleAHelp
+/* 80256AAC 0022006C  4B F6 D4 A5 */	bl __dt__11CTitleAHelpFv
 /* 80256AB0 00220070  7F C3 F3 78 */	mr r3, r30
 /* 80256AB4 00220074  38 80 00 00 */	li r4, 0
 /* 80256AB8 00220078  4B EA 82 55 */	bl __dt__800FED0C
@@ -102,7 +102,7 @@
 /* 80256AD8 00220098  7C 08 03 A6 */	mtlr r0
 /* 80256ADC 0022009C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80256AE0 002200A0  4E 80 00 20 */	blr 
-.endfn __dt__CMenuKizunagram
+.endfn __dt__15CMenuKizunagramFv
 
 .fn func_80256AE4, global
 /* 80256AE4 002200A4  94 21 FE 30 */	stwu r1, -0x1d0(r1)
@@ -139,7 +139,7 @@
 /* 80256B60 00220120  98 1F 02 1A */	stb r0, 0x21a(r31)
 /* 80256B64 00220124  88 01 00 97 */	lbz r0, 0x97(r1)
 /* 80256B68 00220128  98 1F 02 1B */	stb r0, 0x21b(r31)
-/* 80256B6C 0022012C  4B FE D7 DD */	bl __dt__CFade
+/* 80256B6C 0022012C  4B FE D7 DD */	bl __dt__5CFadeFv
 /* 80256B70 00220130  38 7F 01 F4 */	addi r3, r31, 0x1f4
 /* 80256B74 00220134  4B FE D8 29 */	bl func_8024439C
 /* 80256B78 00220138  38 61 00 40 */	addi r3, r1, 0x40
@@ -172,7 +172,7 @@
 /* 80256BE4 002201A4  98 1F 01 F0 */	stb r0, 0x1f0(r31)
 /* 80256BE8 002201A8  88 01 00 6D */	lbz r0, 0x6d(r1)
 /* 80256BEC 002201AC  98 1F 01 F1 */	stb r0, 0x1f1(r31)
-/* 80256BF0 002201B0  48 05 78 C5 */	bl __dt__CLoad
+/* 80256BF0 002201B0  48 05 78 C5 */	bl __dt__5CLoadFv
 /* 80256BF4 002201B4  38 7F 01 C4 */	addi r3, r31, 0x1c4
 /* 80256BF8 002201B8  48 05 79 11 */	bl func_802AE508
 /* 80256BFC 002201BC  88 9F 02 1E */	lbz r4, 0x21e(r31)
@@ -302,7 +302,7 @@
 /* 80256DEC 002203AC  98 1F 01 75 */	stb r0, 0x175(r31)
 /* 80256DF0 002203B0  88 01 01 C6 */	lbz r0, 0x1c6(r1)
 /* 80256DF4 002203B4  98 1F 01 76 */	stb r0, 0x176(r31)
-/* 80256DF8 002203B8  48 00 56 B9 */	bl __dt__CKizunagram
+/* 80256DF8 002203B8  48 00 56 B9 */	bl __dt__11CKizunagramFv
 /* 80256DFC 002203BC  38 7F 00 98 */	addi r3, r31, 0x98
 /* 80256E00 002203C0  48 00 57 11 */	bl func_8025C510
 /* 80256E04 002203C4  3C 60 80 51 */	lis r3, lbl_80508140@ha
@@ -343,7 +343,7 @@
 /* 80256E90 00220450  98 1F 00 96 */	stb r0, 0x96(r31)
 /* 80256E94 00220454  88 01 00 3F */	lbz r0, 0x3f(r1)
 /* 80256E98 00220458  98 1F 00 97 */	stb r0, 0x97(r31)
-/* 80256E9C 0022045C  4B F6 D0 B5 */	bl __dt__CTitleAHelp
+/* 80256E9C 0022045C  4B F6 D0 B5 */	bl __dt__11CTitleAHelpFv
 /* 80256EA0 00220460  38 7F 00 60 */	addi r3, r31, 0x60
 /* 80256EA4 00220464  4B F6 D1 01 */	bl CTitleAHelp_load
 /* 80256EA8 00220468  38 61 00 98 */	addi r3, r1, 0x98
@@ -389,7 +389,7 @@
 /* 80256F48 00220508  98 1F 01 BC */	stb r0, 0x1bc(r31)
 /* 80256F4C 0022050C  C0 01 00 E0 */	lfs f0, 0xe0(r1)
 /* 80256F50 00220510  D0 1F 01 C0 */	stfs f0, 0x1c0(r31)
-/* 80256F54 00220514  48 00 68 CD */	bl __dt__CPcKizunagram
+/* 80256F54 00220514  48 00 68 CD */	bl __dt__13CPcKizunagramFv
 /* 80256F58 00220518  38 7F 01 78 */	addi r3, r31, 0x178
 /* 80256F5C 0022051C  48 00 69 19 */	bl func_8025D874
 /* 80256F60 00220520  2C 1F 00 00 */	cmpwi r31, 0
@@ -417,7 +417,7 @@
 /* 80256FA8 00220568  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80256FAC 0022056C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80256FB0 00220570  7C 7F 1B 78 */	mr r31, r3
-/* 80256FB4 00220574  48 1F 1A 91 */	bl func_80448A44
+/* 80256FB4 00220574  48 1F 1A 91 */	bl func_80448A44__Fv
 /* 80256FB8 00220578  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 80256FBC 0022057C  38 80 00 01 */	li r4, 1
 /* 80256FC0 00220580  48 23 F2 E1 */	bl func_804962A0
@@ -645,7 +645,7 @@
 /* 802572B4 00220874  38 60 00 00 */	li r3, 0
 /* 802572B8 00220878  48 00 00 3C */	b .L_802572F4
 .L_802572BC:
-/* 802572BC 0022087C  48 1E 02 F9 */	bl getHeapIndex
+/* 802572BC 0022087C  48 1E 02 F9 */	bl getHeapIndex__Fv
 /* 802572C0 00220880  7C 64 1B 78 */	mr r4, r3
 /* 802572C4 00220884  38 60 02 20 */	li r3, 0x220
 /* 802572C8 00220888  48 1D D7 95 */	bl heap_malloc
@@ -1217,7 +1217,7 @@
 
 .fn func_80257A84, global
 /* 80257A84 00221044  38 63 FF A8 */	addi r3, r3, -88
-/* 80257A88 00221048  4B FF EF CC */	b __dt__CMenuKizunagram
+/* 80257A88 00221048  4B FF EF CC */	b __dt__15CMenuKizunagramFv
 .endfn func_80257A84
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1268,13 +1268,13 @@
 .obj __vt__15CMenuKizunagram, global
 	.4byte __RTTI__15CMenuKizunagram
 	.4byte 0
-	.4byte __dt__CMenuKizunagram
-	.4byte CChildListNode_Reset
+	.4byte __dt__15CMenuKizunagramFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_80256AE4
 	.4byte func_80256FA0
 	.4byte func_8025703C
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__15CMenuKizunagram
 	.4byte 0xFFFFFFA8
 	.4byte func_80257A84
@@ -1339,22 +1339,22 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001C
 	.4byte 0x000001C4
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001C
 	.4byte 0x00000178
-	.4byte __dt__CPcKizunagram
+	.4byte __dt__13CPcKizunagramFv
 	.4byte 0x0780001C
 	.4byte 0x00000098
-	.4byte __dt__CKizunagram
+	.4byte __dt__11CKizunagramFv
 	.4byte 0x0780001C
 	.4byte 0x00000060
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1376,52 +1376,52 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x8780001E
 	.4byte 0x000001C4
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001E
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x8780001E
 	.4byte 0x00000178
-	.4byte __dt__CPcKizunagram
+	.4byte __dt__13CPcKizunagramFv
 	.4byte 0x0780001E
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001E
 	.4byte 0x00000178
-	.4byte __dt__CPcKizunagram
+	.4byte __dt__13CPcKizunagramFv
 	.4byte 0x8780001E
 	.4byte 0x00000098
-	.4byte __dt__CKizunagram
+	.4byte __dt__11CKizunagramFv
 	.4byte 0x0780001E
 	.4byte 0x000001F4
-	.4byte __dt__CFade
+	.4byte __dt__5CFadeFv
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__CLoad
+	.4byte __dt__5CLoadFv
 	.4byte 0x0780001E
 	.4byte 0x00000178
-	.4byte __dt__CPcKizunagram
+	.4byte __dt__13CPcKizunagramFv
 	.4byte 0x0780001E
 	.4byte 0x00000098
-	.4byte __dt__CKizunagram
+	.4byte __dt__11CKizunagramFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_800171BC"
 
 .obj "@etb_800172AC", local
@@ -1537,7 +1537,7 @@
 
 .obj "@eti_8002FA50", local
 .hidden "@eti_8002FA50"
-	.4byte __dt__CMenuKizunagram
+	.4byte __dt__15CMenuKizunagramFv
 	.4byte 0x00000090
 	.4byte "@etb_800171BC"
 .endobj "@eti_8002FA50"

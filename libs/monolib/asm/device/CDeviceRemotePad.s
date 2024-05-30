@@ -24,7 +24,7 @@
 .L_804467A8:
 /* 804467A8 0040FD68  7F E4 FB 78 */	mr r4, r31
 /* 804467AC 0040FD6C  38 A0 00 04 */	li r5, 4
-/* 804467B0 0040FD70  4B FE DC 7D */	bl func_8043442C
+/* 804467B0 0040FD70  4B FE DC 7D */	bl MemManager_8043442C
 /* 804467B4 0040FD74  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804467B8 0040FD78  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804467BC 0040FD7C  7C 08 03 A6 */	mtlr r0
@@ -38,7 +38,7 @@
 /* 804467D0 0040FD90  2C 03 00 00 */	cmpwi r3, 0
 /* 804467D4 0040FD94  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804467D8 0040FD98  41 82 00 08 */	beq .L_804467E0
-/* 804467DC 0040FD9C  4B FE DC FD */	bl func_804344D8
+/* 804467DC 0040FD9C  4B FE DC FD */	bl MemManager_804344D8
 .L_804467E0:
 /* 804467E0 0040FDA0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804467E4 0040FDA4  38 60 00 01 */	li r3, 1
@@ -57,7 +57,7 @@
 /* 8044680C 0040FDCC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80446810 0040FDD0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80446814 0040FDD4  7C 7D 1B 78 */	mr r29, r3
-/* 80446818 0040FDD8  4B FE DC 15 */	bl func_8043442C
+/* 80446818 0040FDD8  4B FE DC 15 */	bl MemManager_8043442C
 /* 8044681C 0040FDDC  90 6D BD 90 */	stw r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446820 0040FDE0  3B E0 00 00 */	li r31, 0
 /* 80446824 0040FDE4  3C 80 80 44 */	lis r4, func_804467C8@ha
@@ -179,7 +179,7 @@
 /* 804469E0 0040FFA0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804469E4 0040FFA4  2C 03 00 00 */	cmpwi r3, 0
 /* 804469E8 0040FFA8  41 82 00 10 */	beq .L_804469F8
-/* 804469EC 0040FFAC  4B FE DA ED */	bl func_804344D8
+/* 804469EC 0040FFAC  4B FE DA ED */	bl MemManager_804344D8
 /* 804469F0 0040FFB0  38 00 00 00 */	li r0, 0
 /* 804469F4 0040FFB4  90 0D BD 90 */	stw r0, CDeviceRemotePad_instancePtr@sda21(r13)
 .L_804469F8:
@@ -1382,44 +1382,44 @@
 .obj __vt__16CDeviceRemotePad, global
 	.4byte __RTTI__16CDeviceRemotePad
 	.4byte 0
-	.4byte __dt__CDeviceRemotePad
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__16CDeviceRemotePadFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceRemotePad_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceRemotePad_WorkThreadEvent4
 	.4byte CDeviceRemotePad_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__16CDeviceRemotePad
 
 .obj CDeviceRemotePad_hierarchy, global

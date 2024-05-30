@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __dt__CMenuGCItem, global
+.fn __dt__11CMenuGCItemFv, global
 /* 802B03D0 00279990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B03D4 00279994  7C 08 02 A6 */	mflr r0
 /* 802B03D8 00279998  2C 03 00 00 */	cmpwi r3, 0
@@ -14,19 +14,19 @@
 /* 802B03F0 002799B0  41 82 00 50 */	beq .L_802B0440
 /* 802B03F4 002799B4  38 80 FF FF */	li r4, -1
 /* 802B03F8 002799B8  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 802B03FC 002799BC  4B F1 A5 69 */	bl __dt__CItemBoxGrid
+/* 802B03FC 002799BC  4B F1 A5 69 */	bl __dt__12CItemBoxGridFv
 /* 802B0400 002799C0  38 7E 00 80 */	addi r3, r30, 0x80
 /* 802B0404 002799C4  38 80 FF FF */	li r4, -1
-/* 802B0408 002799C8  4B F1 3B 49 */	bl __dt__CTitleAHelp
+/* 802B0408 002799C8  4B F1 3B 49 */	bl __dt__11CTitleAHelpFv
 /* 802B040C 002799CC  38 7E 00 60 */	addi r3, r30, 0x60
 /* 802B0410 002799D0  38 80 FF FF */	li r4, -1
-/* 802B0414 002799D4  4B F1 35 BD */	bl __dt__CBgTex
+/* 802B0414 002799D4  4B F1 35 BD */	bl __dt__6CBgTexFv
 /* 802B0418 002799D8  2C 1E 00 00 */	cmpwi r30, 0
 /* 802B041C 002799DC  41 82 00 14 */	beq .L_802B0430
 /* 802B0420 002799E0  41 82 00 10 */	beq .L_802B0430
 /* 802B0424 002799E4  7F C3 F3 78 */	mr r3, r30
 /* 802B0428 002799E8  38 80 00 00 */	li r4, 0
-/* 802B042C 002799EC  48 19 47 0D */	bl __dt__CProcess
+/* 802B042C 002799EC  48 19 47 0D */	bl __dt__8CProcessFv
 .L_802B0430:
 /* 802B0430 002799F0  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B0434 002799F4  40 81 00 0C */	ble .L_802B0440
@@ -40,7 +40,7 @@
 /* 802B0450 00279A10  7C 08 03 A6 */	mtlr r0
 /* 802B0454 00279A14  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B0458 00279A18  4E 80 00 20 */	blr 
-.endfn __dt__CMenuGCItem
+.endfn __dt__11CMenuGCItemFv
 
 .fn func_802B045C, global
 /* 802B045C 00279A1C  94 21 B5 80 */	stwu r1, -0x4a80(r1)
@@ -71,7 +71,7 @@
 /* 802B04C0 00279A80  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 802B04C4 00279A84  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 802B04C8 00279A88  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 802B04CC 00279A8C  4B F1 35 05 */	bl __dt__CBgTex
+/* 802B04CC 00279A8C  4B F1 35 05 */	bl __dt__6CBgTexFv
 /* 802B04D0 00279A90  38 7F 00 60 */	addi r3, r31, 0x60
 /* 802B04D4 00279A94  4B F1 37 41 */	bl func_801C3C14
 /* 802B04D8 00279A98  3C 60 80 51 */	lis r3, lbl_8050C924@ha
@@ -117,7 +117,7 @@
 /* 802B0578 00279B38  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 802B057C 00279B3C  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 802B0580 00279B40  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 802B0584 00279B44  4B F1 39 CD */	bl __dt__CTitleAHelp
+/* 802B0584 00279B44  4B F1 39 CD */	bl __dt__11CTitleAHelpFv
 /* 802B0588 00279B48  38 7F 00 80 */	addi r3, r31, 0x80
 /* 802B058C 00279B4C  4B F1 3A 19 */	bl CTitleAHelp_load
 /* 802B0590 00279B50  80 DF 00 5C */	lwz r6, 0x5c(r31)
@@ -323,7 +323,7 @@
 /* 802B08B0 00279E70  4B EB 6C 21 */	bl func_801674D0
 /* 802B08B4 00279E74  38 61 00 60 */	addi r3, r1, 0x60
 /* 802B08B8 00279E78  38 80 FF FF */	li r4, -1
-/* 802B08BC 00279E7C  4B F1 A0 A9 */	bl __dt__CItemBoxGrid
+/* 802B08BC 00279E7C  4B F1 A0 A9 */	bl __dt__12CItemBoxGridFv
 /* 802B08C0 00279E80  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802B08C4 00279E84  4B F1 AB BD */	bl func_801CB480
 /* 802B08C8 00279E88  88 9F 4A C5 */	lbz r4, 0x4ac5(r31)
@@ -394,7 +394,7 @@
 /* 802B09B4 00279F74  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B09B8 00279F78  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B09BC 00279F7C  7C 7F 1B 78 */	mr r31, r3
-/* 802B09C0 00279F80  48 19 80 85 */	bl func_80448A44
+/* 802B09C0 00279F80  48 19 80 85 */	bl func_80448A44__Fv
 /* 802B09C4 00279F84  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B09C8 00279F88  7F E4 FB 78 */	mr r4, r31
 /* 802B09CC 00279F8C  41 82 00 08 */	beq .L_802B09D4
@@ -566,7 +566,7 @@
 /* 802B0C18 0027A1D8  38 60 00 00 */	li r3, 0
 /* 802B0C1C 0027A1DC  48 00 00 E0 */	b .L_802B0CFC
 .L_802B0C20:
-/* 802B0C20 0027A1E0  48 18 69 95 */	bl getHeapIndex
+/* 802B0C20 0027A1E0  48 18 69 95 */	bl getHeapIndex__Fv
 /* 802B0C24 0027A1E4  7C 64 1B 78 */	mr r4, r3
 /* 802B0C28 0027A1E8  38 60 4A C8 */	li r3, 0x4ac8
 /* 802B0C2C 0027A1EC  48 18 3E 31 */	bl heap_malloc
@@ -779,7 +779,7 @@
 
 .fn func_802B0F10, global
 /* 802B0F10 0027A4D0  38 63 FF A8 */	addi r3, r3, -88
-/* 802B0F14 0027A4D4  4B FF F4 BC */	b __dt__CMenuGCItem
+/* 802B0F14 0027A4D4  4B FF F4 BC */	b __dt__11CMenuGCItemFv
 .endfn func_802B0F10
 
 
@@ -806,13 +806,13 @@
 .obj __vt__11CMenuGCItem, global
 	.4byte __RTTI__11CMenuGCItem
 	.4byte 0
-	.4byte __dt__CMenuGCItem
-	.4byte CChildListNode_Reset
+	.4byte __dt__11CMenuGCItemFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_802B045C
 	.4byte func_802B09AC
 	.4byte func_802B0A10
-	.4byte CTTask_IUICf_func_80101FB8
-	.4byte CProcess_func_80043F20
+	.4byte "func_80101FB8__14CTTask<5IUICf>Fv"
+	.4byte func_80043F20__8CProcessFv
 	.4byte __RTTI__11CMenuGCItem
 	.4byte 0xFFFFFFA8
 	.4byte func_802B0F10
@@ -878,25 +878,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001B690"
 
 .obj "@etb_8001B704", local
@@ -939,13 +939,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -963,7 +963,7 @@
 
 .obj "@eti_80033350", local
 .hidden "@eti_80033350"
-	.4byte __dt__CMenuGCItem
+	.4byte __dt__11CMenuGCItemFv
 	.4byte 0x0000008C
 	.4byte "@etb_8001B690"
 .endobj "@eti_80033350"

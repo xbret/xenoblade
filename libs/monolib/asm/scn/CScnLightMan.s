@@ -56,7 +56,7 @@
 /* 8048D0E0 004566A0  4E 80 00 20 */	blr 
 .endfn __ct__CScnLightMan
 
-.fn __dt__CScnLightMan, global
+.fn __dt__12CScnLightManFv, global
 /* 8048D0E4 004566A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D0E8 004566A8  7C 08 02 A6 */	mflr r0
 /* 8048D0EC 004566AC  2C 03 00 00 */	cmpwi r3, 0
@@ -74,7 +74,7 @@
 /* 8048D118 004566D8  7C 08 03 A6 */	mtlr r0
 /* 8048D11C 004566DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048D120 004566E0  4E 80 00 20 */	blr
-.endfn __dt__CScnLightMan
+.endfn __dt__12CScnLightManFv
 
 .fn func_8048D124, global
 /* 8048D124 004566E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -142,7 +142,7 @@
 .obj __vt__12CScnLightMan, global
 	.4byte __RTTI__12CScnLightMan
 	.4byte 0
-	.4byte __dt__CScnLightMan
+	.4byte __dt__12CScnLightManFv
 	.4byte 0
 .endobj __vt__12CScnLightMan
 
@@ -197,7 +197,7 @@
 
 .obj "@eti_8003674C", local
 .hidden "@eti_8003674C"
-	.4byte __dt__CScnLightMan
+	.4byte __dt__12CScnLightManFv
 	.4byte 0x00000040
 	.4byte "@etb_8001EB78"
 .endobj "@eti_8003674C"

@@ -50,7 +50,7 @@
 /* 801F9388 001C2948  4E 80 00 20 */	blr 
 .endfn __ct__CPartyStateWin
 
-.fn __dt__CPartyStateWin, global
+.fn __dt__14CPartyStateWinFv, global
 /* 801F938C 001C294C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F9390 001C2950  7C 08 02 A6 */	mflr r0
 /* 801F9394 001C2954  2C 03 00 00 */	cmpwi r3, 0
@@ -61,22 +61,22 @@
 /* 801F93A8 001C2968  41 82 00 5C */	beq .L_801F9404
 /* 801F93AC 001C296C  38 80 FF FF */	li r4, -1
 /* 801F93B0 001C2970  38 63 6B A8 */	addi r3, r3, 0x6ba8
-/* 801F93B4 001C2974  48 03 22 ED */	bl __dt__CSysWin
+/* 801F93B4 001C2974  48 03 22 ED */	bl __dt__7CSysWinFv
 /* 801F93B8 001C2978  38 7E 41 50 */	addi r3, r30, 0x4150
 /* 801F93BC 001C297C  38 80 FF FF */	li r4, -1
-/* 801F93C0 001C2980  48 00 8C 35 */	bl __dt__CEquipChange
+/* 801F93C0 001C2980  48 00 8C 35 */	bl __dt__12CEquipChangeFv
 /* 801F93C4 001C2984  38 7E 30 90 */	addi r3, r30, 0x3090
 /* 801F93C8 001C2988  38 80 FF FF */	li r4, -1
-/* 801F93CC 001C298C  48 00 63 91 */	bl __dt__CModelDispEquip
+/* 801F93CC 001C298C  48 00 63 91 */	bl __dt__15CModelDispEquipFv
 /* 801F93D0 001C2990  38 7E 30 38 */	addi r3, r30, 0x3038
 /* 801F93D4 001C2994  38 80 FF FF */	li r4, -1
-/* 801F93D8 001C2998  48 00 3B 25 */	bl __dt__CPartyState
+/* 801F93D8 001C2998  48 00 3B 25 */	bl __dt__11CPartyStateFv
 /* 801F93DC 001C299C  38 7E 00 50 */	addi r3, r30, 0x50
 /* 801F93E0 001C29A0  38 80 FF FF */	li r4, -1
-/* 801F93E4 001C29A4  48 00 2B 95 */	bl __dt__CModelDisp
+/* 801F93E4 001C29A4  48 00 2B 95 */	bl __dt__10CModelDispFv
 /* 801F93E8 001C29A8  38 7E 00 18 */	addi r3, r30, 0x18
 /* 801F93EC 001C29AC  38 80 FF FF */	li r4, -1
-/* 801F93F0 001C29B0  4B FC AB 61 */	bl __dt__CTitleAHelp
+/* 801F93F0 001C29B0  4B FC AB 61 */	bl __dt__11CTitleAHelpFv
 /* 801F93F4 001C29B4  2C 1F 00 00 */	cmpwi r31, 0
 /* 801F93F8 001C29B8  40 81 00 0C */	ble .L_801F9404
 /* 801F93FC 001C29BC  7F C3 F3 78 */	mr r3, r30
@@ -88,7 +88,7 @@
 /* 801F9410 001C29D0  7C 08 03 A6 */	mtlr r0
 /* 801F9414 001C29D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F9418 001C29D8  4E 80 00 20 */	blr 
-.endfn __dt__CPartyStateWin
+.endfn __dt__14CPartyStateWinFv
 
 .fn func_801F941C, global
 /* 801F941C 001C29DC  94 21 93 D0 */	stwu r1, -0x6c30(r1)
@@ -157,7 +157,7 @@
 /* 801F9518 001C2AD8  4B E5 F3 25 */	bl func_8005883C
 /* 801F951C 001C2ADC  48 29 98 ED */	bl func_80492E08
 /* 801F9520 001C2AE0  38 60 00 01 */	li r3, 1
-/* 801F9524 001C2AE4  48 23 B5 31 */	bl func_80434A54
+/* 801F9524 001C2AE4  48 23 B5 31 */	bl MemManager_80434A54
 /* 801F9528 001C2AE8  38 7F 00 1E */	addi r3, r31, 0x1e
 /* 801F952C 001C2AEC  38 9F 00 28 */	addi r4, r31, 0x28
 /* 801F9530 001C2AF0  38 A0 00 01 */	li r5, 1
@@ -171,7 +171,7 @@
 /* 801F9550 001C2B10  4B FC 4C 1D */	bl func_801BE16C
 /* 801F9554 001C2B14  38 61 00 68 */	addi r3, r1, 0x68
 /* 801F9558 001C2B18  38 80 FF FF */	li r4, -1
-/* 801F955C 001C2B1C  4B FC A9 F5 */	bl __dt__CTitleAHelp
+/* 801F955C 001C2B1C  4B FC A9 F5 */	bl __dt__11CTitleAHelpFv
 /* 801F9560 001C2B20  38 7D 00 18 */	addi r3, r29, 0x18
 /* 801F9564 001C2B24  4B FC AA 41 */	bl CTitleAHelp_load
 /* 801F9568 001C2B28  80 9D 00 10 */	lwz r4, 0x10(r29)
@@ -182,7 +182,7 @@
 /* 801F957C 001C2B3C  48 00 03 99 */	bl func_801F9914
 /* 801F9580 001C2B40  38 61 3C 38 */	addi r3, r1, 0x3c38
 /* 801F9584 001C2B44  38 80 FF FF */	li r4, -1
-/* 801F9588 001C2B48  48 00 29 F1 */	bl __dt__CModelDisp
+/* 801F9588 001C2B48  48 00 29 F1 */	bl __dt__10CModelDispFv
 /* 801F958C 001C2B4C  38 7D 00 50 */	addi r3, r29, 0x50
 /* 801F9590 001C2B50  48 00 2A 49 */	bl func_801FBFD8
 /* 801F9594 001C2B54  38 61 00 C8 */	addi r3, r1, 0xc8
@@ -192,7 +192,7 @@
 /* 801F95A4 001C2B64  48 00 04 A5 */	bl func_801F9A48
 /* 801F95A8 001C2B68  38 61 00 C8 */	addi r3, r1, 0xc8
 /* 801F95AC 001C2B6C  38 80 FF FF */	li r4, -1
-/* 801F95B0 001C2B70  48 00 39 4D */	bl __dt__CPartyState
+/* 801F95B0 001C2B70  48 00 39 4D */	bl __dt__11CPartyStateFv
 /* 801F95B4 001C2B74  38 7D 30 38 */	addi r3, r29, 0x3038
 /* 801F95B8 001C2B78  48 00 39 A5 */	bl func_801FCF5C
 /* 801F95BC 001C2B7C  80 9D 00 10 */	lwz r4, 0x10(r29)
@@ -204,7 +204,7 @@
 /* 801F95D4 001C2B94  48 00 05 45 */	bl func_801F9B18
 /* 801F95D8 001C2B98  38 61 2B 78 */	addi r3, r1, 0x2b78
 /* 801F95DC 001C2B9C  38 80 FF FF */	li r4, -1
-/* 801F95E0 001C2BA0  48 00 61 7D */	bl __dt__CModelDispEquip
+/* 801F95E0 001C2BA0  48 00 61 7D */	bl __dt__15CModelDispEquipFv
 /* 801F95E4 001C2BA4  38 7D 30 90 */	addi r3, r29, 0x3090
 /* 801F95E8 001C2BA8  48 00 61 C9 */	bl func_801FF7B0
 /* 801F95EC 001C2BAC  38 61 01 20 */	addi r3, r1, 0x120
@@ -214,7 +214,7 @@
 /* 801F95FC 001C2BBC  48 00 06 B9 */	bl func_801F9CB4
 /* 801F9600 001C2BC0  38 61 01 20 */	addi r3, r1, 0x120
 /* 801F9604 001C2BC4  38 80 FF FF */	li r4, -1
-/* 801F9608 001C2BC8  48 00 89 ED */	bl __dt__CEquipChange
+/* 801F9608 001C2BC8  48 00 89 ED */	bl __dt__12CEquipChangeFv
 /* 801F960C 001C2BCC  38 7D 41 50 */	addi r3, r29, 0x4150
 /* 801F9610 001C2BD0  48 00 8A 81 */	bl func_80202090
 /* 801F9614 001C2BD4  38 61 00 28 */	addi r3, r1, 0x28
@@ -225,7 +225,7 @@
 /* 801F9628 001C2BE8  4B F6 DE 05 */	bl func_8016742C
 /* 801F962C 001C2BEC  38 61 00 28 */	addi r3, r1, 0x28
 /* 801F9630 001C2BF0  38 80 FF FF */	li r4, -1
-/* 801F9634 001C2BF4  48 03 20 6D */	bl __dt__CSysWin
+/* 801F9634 001C2BF4  48 03 20 6D */	bl __dt__7CSysWinFv
 /* 801F9638 001C2BF8  81 9D 6B A8 */	lwz r12, 0x6ba8(r29)
 /* 801F963C 001C2BFC  38 7D 6B A8 */	addi r3, r29, 0x6ba8
 /* 801F9640 001C2C00  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -379,11 +379,11 @@
 /* 801F9828 001C2DE8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F982C 001C2DEC  7C 7F 1B 78 */	mr r31, r3
 /* 801F9830 001C2DF0  48 23 AB 69 */	bl Heap_getRegionIndex1
-/* 801F9834 001C2DF4  48 23 AF 3D */	bl func_80434770
+/* 801F9834 001C2DF4  48 23 AF 3D */	bl MemManager_80434770
 /* 801F9838 001C2DF8  90 7F 00 00 */	stw r3, 0(r31)
 /* 801F983C 001C2DFC  80 6D A5 94 */	lwz r3, lbl_80666714@sda21(r13)
 /* 801F9840 001C2E00  48 29 C7 B1 */	bl func_80495FF0
-/* 801F9844 001C2E04  48 23 AF 2D */	bl func_80434770
+/* 801F9844 001C2E04  48 23 AF 2D */	bl MemManager_80434770
 /* 801F9848 001C2E08  90 7F 00 04 */	stw r3, 4(r31)
 /* 801F984C 001C2E0C  7F E3 FB 78 */	mr r3, r31
 /* 801F9850 001C2E10  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1069,9 +1069,9 @@
 /* 801FA25C 001C381C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801FA260 001C3820  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801FA264 001C3824  7C 7E 1B 78 */	mr r30, r3
-/* 801FA268 001C3828  48 24 E7 DD */	bl func_80448A44
+/* 801FA268 001C3828  48 24 E7 DD */	bl func_80448A44__Fv
 /* 801FA26C 001C382C  38 60 00 00 */	li r3, 0
-/* 801FA270 001C3830  48 23 A7 E5 */	bl func_80434A54
+/* 801FA270 001C3830  48 23 A7 E5 */	bl MemManager_80434A54
 /* 801FA274 001C3834  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 801FA278 001C3838  4B E4 B1 75 */	bl func_800453EC
 /* 801FA27C 001C383C  80 7E 00 10 */	lwz r3, 0x10(r30)
@@ -3034,7 +3034,7 @@
 
 .fn func_801FBDC0, global
 /* 801FBDC0 001C5380  38 63 FF FC */	addi r3, r3, -4
-/* 801FBDC4 001C5384  4B FF D5 C8 */	b __dt__CPartyStateWin
+/* 801FBDC4 001C5384  4B FF D5 C8 */	b __dt__14CPartyStateWinFv
 .endfn func_801FBDC0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -3095,38 +3095,38 @@
 .obj __vt__14CPartyStateWin, global
 	.4byte __RTTI__14CPartyStateWin
 	.4byte 0
-	.4byte __dt__CPartyStateWin
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__14CPartyStateWinFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte __RTTI__14CPartyStateWin
 	.4byte 0xFFFFFFFC
 	.4byte func_801FBDC0
@@ -3197,25 +3197,25 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00004150
-	.4byte __dt__CEquipChange
+	.4byte __dt__12CEquipChangeFv
 	.4byte 0x0780001E
 	.4byte 0x00003090
-	.4byte __dt__CModelDispEquip
+	.4byte __dt__15CModelDispEquipFv
 	.4byte 0x0780001E
 	.4byte 0x00003038
-	.4byte __dt__CPartyState
+	.4byte __dt__11CPartyStateFv
 	.4byte 0x0780001E
 	.4byte 0x00000050
-	.4byte __dt__CModelDisp
+	.4byte __dt__10CModelDispFv
 	.4byte 0x0780001E
 	.4byte 0x00000018
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0680001E
 	.4byte 0x00000004
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80012460"
 
 .obj "@etb_800124EC", local
@@ -3234,49 +3234,49 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00006BA8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00006BA8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x8780001E
 	.4byte 0x00004150
-	.4byte __dt__CEquipChange
+	.4byte __dt__12CEquipChangeFv
 	.4byte 0x0780001E
 	.4byte 0x00006BA8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00004150
-	.4byte __dt__CEquipChange
+	.4byte __dt__12CEquipChangeFv
 	.4byte 0x8780001E
 	.4byte 0x00003090
-	.4byte __dt__CModelDispEquip
+	.4byte __dt__15CModelDispEquipFv
 	.4byte 0x0780001E
 	.4byte 0x00006BA8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00004150
-	.4byte __dt__CEquipChange
+	.4byte __dt__12CEquipChangeFv
 	.4byte 0x0780001E
 	.4byte 0x00003090
-	.4byte __dt__CModelDispEquip
+	.4byte __dt__15CModelDispEquipFv
 	.4byte 0x8780001E
 	.4byte 0x00003038
-	.4byte __dt__CPartyState
+	.4byte __dt__11CPartyStateFv
 	.4byte 0x0780001E
 	.4byte 0x00006BA8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x00004150
-	.4byte __dt__CEquipChange
+	.4byte __dt__12CEquipChangeFv
 	.4byte 0x0780001E
 	.4byte 0x00003090
-	.4byte __dt__CModelDispEquip
+	.4byte __dt__15CModelDispEquipFv
 	.4byte 0x0780001E
 	.4byte 0x00003038
-	.4byte __dt__CPartyState
+	.4byte __dt__11CPartyStateFv
 	.4byte 0x8780001E
 	.4byte 0x00000050
-	.4byte __dt__CModelDisp
+	.4byte __dt__10CModelDispFv
 .endobj "@etb_800124EC"
 
 .obj "@etb_800125D0", local
@@ -3498,7 +3498,7 @@
 
 .obj "@eti_8002C5DC", local
 .hidden "@eti_8002C5DC"
-	.4byte __dt__CPartyStateWin
+	.4byte __dt__14CPartyStateWinFv
 	.4byte 0x00000090
 	.4byte "@etb_800124EC"
 .endobj "@eti_8002C5DC"

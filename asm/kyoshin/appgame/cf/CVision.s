@@ -457,7 +457,7 @@
 /* 801A3770 0016CD30  4E 80 00 20 */	blr 
 .endfn __dt__801A3728
 
-.fn __dt__cf_CVision, global
+.fn __dt__Q22cf7CVisionFv, global
 /* 801A3774 0016CD34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A3778 0016CD38  7C 08 02 A6 */	mflr r0
 /* 801A377C 0016CD3C  2C 03 00 00 */	cmpwi r3, 0
@@ -498,7 +498,7 @@
 /* 801A3800 0016CDC0  7C 08 03 A6 */	mtlr r0
 /* 801A3804 0016CDC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A3808 0016CDC8  4E 80 00 20 */	blr 
-.endfn __dt__cf_CVision
+.endfn __dt__Q22cf7CVisionFv
 
 .fn func_801A380C, global
 /* 801A380C 0016CDCC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -6901,18 +6901,23 @@
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5360
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5360
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5BA8
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5BA8
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6540
@@ -6976,15 +6981,19 @@
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4194
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6340
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte __RTTI__Q22cf12CObjectParam
@@ -6992,6 +7001,7 @@
 	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0x00003E9C
 	.4byte __RTTI__Q22cf12CObjectParam
@@ -7019,7 +7029,7 @@
 .obj __vt__Q22cf7CVision, global
 	.4byte __RTTI__Q22cf7CVision
 	.4byte 0
-	.4byte __dt__cf_CVision
+	.4byte __dt__Q22cf7CVisionFv
 	.4byte func_801A924C
 	.4byte func_801A6BCC
 	.4byte func_801A70DC
@@ -7036,12 +7046,14 @@
 .obj cf_CVision_hierarchy, global
 	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
+
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
 	.4byte __RTTI__Q22cf12CBattleState
@@ -7049,6 +7061,7 @@
 	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte __RTTI__Q22cf12CObjectParam
@@ -7058,6 +7071,7 @@
 	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte __RTTI__Q22cf12CObjectParam
@@ -7065,14 +7079,17 @@
 	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
 	.4byte 0
+
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte 0
+
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7568,7 +7585,7 @@
 
 .obj "@eti_8002A638", local
 .hidden "@eti_8002A638"
-	.4byte __dt__cf_CVision
+	.4byte __dt__Q22cf7CVisionFv
 	.4byte 0x00000098
 	.4byte "@etb_8000F8D4"
 .endobj "@eti_8002A638"

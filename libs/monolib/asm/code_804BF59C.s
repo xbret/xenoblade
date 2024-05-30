@@ -10,11 +10,11 @@
 /* 804BF5A0 00488B60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804BF5A4 00488B64  7C 08 02 A6 */	mflr r0
 /* 804BF5A8 00488B68  3C 80 80 4C */	lis r4, __ct__6CLightFv@ha
-/* 804BF5AC 00488B6C  3C A0 80 49 */	lis r5, __dt__CLight@ha
+/* 804BF5AC 00488B6C  3C A0 80 49 */	lis r5, __dt__6CLightFv@ha
 /* 804BF5B0 00488B70  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804BF5B4 00488B74  38 C0 00 40 */	li r6, 0x40
 /* 804BF5B8 00488B78  38 84 02 80 */	addi r4, r4, __ct__6CLightFv@l
-/* 804BF5BC 00488B7C  38 A5 20 34 */	addi r5, r5, __dt__CLight@l
+/* 804BF5BC 00488B7C  38 A5 20 34 */	addi r5, r5, __dt__6CLightFv@l
 /* 804BF5C0 00488B80  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804BF5C4 00488B84  38 E0 00 08 */	li r7, 8
 /* 804BF5C8 00488B88  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -111,9 +111,9 @@
 /* 804BF724 00488CE4  38 C0 00 08 */	li r6, 8
 /* 804BF728 00488CE8  38 63 02 00 */	addi r3, r3, 0x200
 /* 804BF72C 00488CEC  4B DF A4 CD */	bl __destroy_arr
-/* 804BF730 00488CF0  3C 80 80 49 */	lis r4, __dt__CLight@ha
+/* 804BF730 00488CF0  3C 80 80 49 */	lis r4, __dt__6CLightFv@ha
 /* 804BF734 00488CF4  7F C3 F3 78 */	mr r3, r30
-/* 804BF738 00488CF8  38 84 20 34 */	addi r4, r4, __dt__CLight@l
+/* 804BF738 00488CF8  38 84 20 34 */	addi r4, r4, __dt__6CLightFv@l
 /* 804BF73C 00488CFC  38 A0 00 40 */	li r5, 0x40
 /* 804BF740 00488D00  38 C0 00 08 */	li r6, 8
 /* 804BF744 00488D04  4B DF A4 B5 */	bl __destroy_arr
@@ -1006,7 +1006,7 @@
 	.4byte 0x00000000
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__CLight
+	.4byte __dt__6CLightFv
 .endobj "@etb_8001FF94"
 
 .obj "@etb_8001FFD4", local

@@ -555,7 +555,7 @@
 /* 8049D08C 0046664C  4E 80 00 20 */	blr 
 .endfn func_8049CF48
 
-.fn __dt__CScnFilterMan, global
+.fn __dt__13CScnFilterManFv, global
 /* 8049D090 00466650  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049D094 00466654  7C 08 02 A6 */	mflr r0
 /* 8049D098 00466658  2C 03 00 00 */	cmpwi r3, 0
@@ -583,7 +583,7 @@
 /* 8049D0F0 004666B0  4B FF FA 8D */	bl __dt__reslist_CScnFilter
 /* 8049D0F4 004666B4  7F C3 F3 78 */	mr r3, r30
 /* 8049D0F8 004666B8  38 80 00 00 */	li r4, 0
-/* 8049D0FC 004666BC  4B BA 32 21 */	bl __dt__IScnRender
+/* 8049D0FC 004666BC  4B BA 32 21 */	bl __dt__10IScnRenderFv
 /* 8049D100 004666C0  2C 1F 00 00 */	cmpwi r31, 0
 /* 8049D104 004666C4  40 81 00 0C */	ble .L_8049D110
 /* 8049D108 004666C8  7F C3 F3 78 */	mr r3, r30
@@ -596,7 +596,7 @@
 /* 8049D120 004666E0  7C 08 03 A6 */	mtlr r0
 /* 8049D124 004666E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049D128 004666E8  4E 80 00 20 */	blr 
-.endfn __dt__CScnFilterMan
+.endfn __dt__13CScnFilterManFv
 
 .fn func_8049D12C, global
 /* 8049D12C 004666EC  48 00 00 04 */	b __dt__8049D130
@@ -1612,7 +1612,7 @@
 .obj __vt__13CScnFilterMan, global
 	.4byte __RTTI__13CScnFilterMan
 	.4byte 0
-	.4byte __dt__CScnFilterMan
+	.4byte __dt__13CScnFilterManFv
 	.4byte func_8049DD60
 .endobj __vt__13CScnFilterMan
 
@@ -1704,7 +1704,7 @@
 	.4byte __dt__reslist_CScnFilter
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8001F4F4"
 
 .obj "@etb_8001F528", local
@@ -1795,7 +1795,7 @@
 	.4byte __dt__reslist_CScnFilter
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 	.4byte 0x8780001E
 	.4byte 0x00000028
 	.4byte __dt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
@@ -2048,7 +2048,7 @@
 
 .obj "@eti_80037028", local
 .hidden "@eti_80037028"
-	.4byte __dt__CScnFilterMan
+	.4byte __dt__13CScnFilterManFv
 	.4byte 0x0000009C
 	.4byte "@etb_8001F588"
 .endobj "@eti_80037028"

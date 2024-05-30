@@ -95,7 +95,7 @@
 /* 801F8F70 001C2530  38 60 00 00 */	li r3, 0
 /* 801F8F74 001C2534  38 04 00 01 */	addi r0, r4, 1
 /* 801F8F78 001C2538  B0 1F 00 08 */	sth r0, 8(r31)
-/* 801F8F7C 001C253C  48 23 BA D1 */	bl func_80434A4C
+/* 801F8F7C 001C253C  48 23 BA D1 */	bl MemManager_80434A4C__FUc
 /* 801F8F80 001C2540  80 7F 00 00 */	lwz r3, 0(r31)
 /* 801F8F84 001C2544  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 801F8F88 001C2548  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
@@ -193,7 +193,7 @@
 /* 801F90F4 001C26B4  90 64 00 9C */	stw r3, 0x9c(r4)
 .L_801F90F8:
 /* 801F90F8 001C26B8  38 60 00 01 */	li r3, 1
-/* 801F90FC 001C26BC  48 23 B9 51 */	bl func_80434A4C
+/* 801F90FC 001C26BC  48 23 B9 51 */	bl MemManager_80434A4C__FUc
 /* 801F9100 001C26C0  80 7F 00 00 */	lwz r3, 0(r31)
 /* 801F9104 001C26C4  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 801F9108 001C26C8  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
@@ -281,7 +281,7 @@
 /* 801F9224 001C27E4  4E 80 00 20 */	blr 
 .endfn func_801F91B4
 
-.fn __dt__cf_CfResTboxImpl, global
+.fn __dt__Q22cf13CfResTboxImplFv, global
 /* 801F9228 001C27E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F922C 001C27EC  7C 08 02 A6 */	mflr r0
 /* 801F9230 001C27F0  2C 03 00 00 */	cmpwi r3, 0
@@ -299,7 +299,7 @@
 /* 801F925C 001C281C  7C 08 03 A6 */	mtlr r0
 /* 801F9260 001C2820  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F9264 001C2824  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfResTboxImpl
+.endfn __dt__Q22cf13CfResTboxImplFv
 
 .fn func_801F9268, global
 /* 801F9268 001C2828  1C 04 00 49 */	mulli r0, r4, 0x49
@@ -370,7 +370,7 @@
 .obj __vt__Q22cf13CfResTboxImpl, global
 	.4byte __RTTI__Q22cf13CfResTboxImpl
 	.4byte 0
-	.4byte __dt__cf_CfResTboxImpl
+	.4byte __dt__Q22cf13CfResTboxImplFv
 	.4byte func_801F91B4
 	.4byte func_800BEA34
 	.4byte func_8016C860
@@ -503,7 +503,7 @@
 
 .obj "@eti_8002C5C4", local
 .hidden "@eti_8002C5C4"
-	.4byte __dt__cf_CfResTboxImpl
+	.4byte __dt__Q22cf13CfResTboxImplFv
 	.4byte 0x00000040
 	.4byte "@etb_80012458"
 .endobj "@eti_8002C5C4"

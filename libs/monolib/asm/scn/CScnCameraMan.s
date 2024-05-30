@@ -91,7 +91,7 @@
 /* 8049AE0C 004643CC  4E 80 00 20 */	blr 
 .endfn __ct__CScnCameraMan
 
-.fn __dt__CScnCameraMan, global
+.fn __dt__13CScnCameraManFv, global
 /* 8049AE10 004643D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049AE14 004643D4  7C 08 02 A6 */	mflr r0
 /* 8049AE18 004643D8  2C 03 00 00 */	cmpwi r3, 0
@@ -146,7 +146,7 @@
 /* 8049AEC8 00464488  7C 08 03 A6 */	mtlr r0
 /* 8049AECC 0046448C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049AED0 00464490  4E 80 00 20 */	blr
-.endfn __dt__CScnCameraMan
+.endfn __dt__13CScnCameraManFv
 
 .fn func_8049AED4, global
 /* 8049AED4 00464494  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -959,38 +959,38 @@
 .obj __vt__13CScnCameraMan, global
 	.4byte __RTTI__13CScnCameraMan
 	.4byte 0
-	.4byte __dt__CScnCameraMan
+	.4byte __dt__13CScnCameraManFv
 	.4byte func_8049B410
-	.4byte IWorkEvent_OnFileEvent
+	.4byte OnFileEvent__10IWorkEventFv
 	.4byte CScnCameraMan_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__13CScnCameraMan
 
 .obj CScnCameraMan_hierarchy, global
@@ -1071,7 +1071,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001F374"
 
 .obj "@etb_8001F390", local
@@ -1082,13 +1082,13 @@
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_8001F390"
 
 .obj "@etb_8001F3C4", local
@@ -1182,7 +1182,7 @@
 
 .obj "@eti_80036E0C", local
 .hidden "@eti_80036E0C"
-	.4byte __dt__CScnCameraMan
+	.4byte __dt__13CScnCameraManFv
 	.4byte 0x000000C4
 	.4byte "@etb_8001F390"
 .endobj "@eti_80036E0C"

@@ -195,7 +195,7 @@
 /* 804D6F18 004A04D8  90 78 00 40 */	stw r3, 0x40(r24)
 /* 804D6F1C 004A04DC  3A F7 24 D8 */	addi r23, r23, lbl_806624D8@l
 /* 804D6F20 004A04E0  80 77 00 04 */	lwz r3, 4(r23)
-/* 804D6F24 004A04E4  4B F5 D8 4D */	bl func_80434770
+/* 804D6F24 004A04E4  4B F5 D8 4D */	bl MemManager_80434770
 /* 804D6F28 004A04E8  1C 9A 00 1C */	mulli r4, r26, 0x1c
 /* 804D6F2C 004A04EC  57 20 08 3C */	slwi r0, r25, 1
 /* 804D6F30 004A04F0  7C 04 01 D6 */	mullw r0, r4, r0
@@ -448,7 +448,7 @@
 /* 804D7288 004A0848  4E 80 00 20 */	blr 
 .endfn __dt__reslist_CETrail_POINT
 
-.fn __dt__CETrail, global
+.fn __dt__7CETrailFv, global
 /* 804D728C 004A084C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D7290 004A0850  7C 08 02 A6 */	mflr r0
 /* 804D7294 004A0854  2C 03 00 00 */	cmpwi r3, 0
@@ -553,7 +553,7 @@
 /* 804D73F0 004A09B0  7C 08 03 A6 */	mtlr r0
 /* 804D73F4 004A09B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D73F8 004A09B8  4E 80 00 20 */	blr 
-.endfn __dt__CETrail
+.endfn __dt__7CETrailFv
 
 .fn func_804D73FC, global
 /* 804D73FC 004A09BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -636,7 +636,7 @@
 /* 804D7510 004A0AD0  38 63 00 38 */	addi r3, r3, 0x38
 /* 804D7514 004A0AD4  4B FF EB 61 */	bl func_804D6074
 /* 804D7518 004A0AD8  38 60 00 00 */	li r3, 0
-/* 804D751C 004A0ADC  4B F5 D5 31 */	bl func_80434A4C
+/* 804D751C 004A0ADC  4B F5 D5 31 */	bl MemManager_80434A4C__FUc
 /* 804D7520 004A0AE0  2C 1D 00 01 */	cmpwi r29, 1
 /* 804D7524 004A0AE4  41 82 00 B0 */	beq .L_804D75D4
 /* 804D7528 004A0AE8  2C 1D 00 02 */	cmpwi r29, 2
@@ -815,7 +815,7 @@
 /* 804D77BC 004A0D7C  41 80 FF 1C */	blt .L_804D76D8
 .L_804D77C0:
 /* 804D77C0 004A0D80  38 60 00 01 */	li r3, 1
-/* 804D77C4 004A0D84  4B F5 D2 89 */	bl func_80434A4C
+/* 804D77C4 004A0D84  4B F5 D2 89 */	bl MemManager_80434A4C__FUc
 .L_804D77C8:
 /* 804D77C8 004A0D88  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 804D77CC 004A0D8C  83 E1 00 2C */	lwz r31, 0x2c(r1)
@@ -1771,7 +1771,7 @@
 .obj __vt__7CETrail, global
 	.4byte __RTTI__7CETrail
 	.4byte 0
-	.4byte __dt__CETrail
+	.4byte __dt__7CETrailFv
 .endobj __vt__7CETrail
 
 
@@ -2023,7 +2023,7 @@
 
 .obj "@eti_8003848C", local
 .hidden "@eti_8003848C"
-	.4byte __dt__CETrail
+	.4byte __dt__7CETrailFv
 	.4byte 0x00000170
 	.4byte "@etb_8002054C"
 .endobj "@eti_8003848C"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B7DEC, global
+.fn func_802B7DEC__Q22cf14CHelp_CkKizunaFv, global
 /* 802B7DEC 002813AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B7DF0 002813B0  7C 08 02 A6 */	mflr r0
 /* 802B7DF4 002813B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,7 +21,7 @@
 /* 802B7E28 002813E8  7C 08 03 A6 */	mtlr r0
 /* 802B7E2C 002813EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B7E30 002813F0  4E 80 00 20 */	blr 
-.endfn func_802B7DEC
+.endfn func_802B7DEC__Q22cf14CHelp_CkKizunaFv
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -39,7 +39,7 @@
 
 .obj "@eti_800338E4", local
 .hidden "@eti_800338E4"
-	.4byte func_802B7DEC
+	.4byte func_802B7DEC__Q22cf14CHelp_CkKizunaFv
 	.4byte 0x00000048
 	.4byte "@etb_8001BD68"
 .endobj "@eti_800338E4"

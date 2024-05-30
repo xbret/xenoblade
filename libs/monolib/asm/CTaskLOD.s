@@ -12,7 +12,7 @@
 /* 8046291C 0042BEDC  7C BC 2B 78 */	mr r28, r5
 /* 80462920 0042BEE0  7C DD 33 78 */	mr r29, r6
 /* 80462924 0042BEE4  7C FE 3B 78 */	mr r30, r7
-/* 80462928 0042BEE8  4B FD 4C 8D */	bl getHeapIndex
+/* 80462928 0042BEE8  4B FD 4C 8D */	bl getHeapIndex__Fv
 /* 8046292C 0042BEEC  7C 64 1B 78 */	mr r4, r3
 /* 80462930 0042BEF0  38 60 1D 44 */	li r3, 0x1d44
 /* 80462934 0042BEF4  4B FD 21 29 */	bl heap_malloc
@@ -576,7 +576,7 @@
 /* 8046302C 0042C5EC  4E 80 00 20 */	blr 
 .endfn func_80463014
 
-.fn func_80463030, global
+.fn "func_80463030__17CTTask<8CTaskLOD>Fv", global
 /* 80463030 0042C5F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80463034 0042C5F4  7C 08 02 A6 */	mflr r0
 /* 80463038 0042C5F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -596,9 +596,9 @@
 /* 8046306C 0042C62C  7C 08 03 A6 */	mtlr r0
 /* 80463070 0042C630  38 21 00 10 */	addi r1, r1, 0x10
 /* 80463074 0042C634  4E 80 00 20 */	blr 
-.endfn func_80463030
+.endfn "func_80463030__17CTTask<8CTaskLOD>Fv"
 
-.fn func_80463078, global
+.fn "func_80463078__17CTTask<8CTaskLOD>Fv", global
 /* 80463078 0042C638  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046307C 0042C63C  7C 08 02 A6 */	mflr r0
 /* 80463080 0042C640  90 01 00 14 */	stw r0, 0x14(r1)
@@ -618,7 +618,7 @@
 /* 804630B4 0042C674  7C 08 03 A6 */	mtlr r0
 /* 804630B8 0042C678  38 21 00 10 */	addi r1, r1, 0x10
 /* 804630BC 0042C67C  4E 80 00 20 */	blr 
-.endfn func_80463078
+.endfn "func_80463078__17CTTask<8CTaskLOD>Fv"
 
 .fn func_804630C0, global
 /* 804630C0 0042C680  80 03 00 00 */	lwz r0, 0(r3)
@@ -1125,13 +1125,13 @@
 .obj __vt__8CTaskLOD, global
 	.4byte __RTTI__8CTaskLOD
 	.4byte 0
-	.4byte __dt__CTaskLOD
-	.4byte CChildListNode_Reset
+	.4byte __dt__8CTaskLODFv
+	.4byte Reset__14CChildListNodeFv
 	.4byte func_804628A0
 	.4byte func_804628A4
 	.4byte func_804628FC
-	.4byte func_80463078
-	.4byte CProcess_func_80043F20
+	.4byte "func_80463078__17CTTask<8CTaskLOD>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj __vt__8CTaskLOD
 
 .obj CTaskLOD_hierarchy, global
@@ -1150,13 +1150,13 @@
 .obj "__vt__17CTTask<8CTaskLOD>", global
 	.4byte "__RTTI__17CTTask<8CTaskLOD>"
 	.4byte 0
-	.4byte __dt__CTTask_CTaskLOD
-	.4byte CChildListNode_Reset
+	.4byte "__dt__17CTTask<8CTaskLOD>Fv"
+	.4byte Reset__14CChildListNodeFv
 	.4byte 0
 	.4byte 0
-	.4byte func_80463030
-	.4byte func_80463078
-	.4byte CProcess_func_80043F20
+	.4byte "func_80463030__17CTTask<8CTaskLOD>Fv"
+	.4byte "func_80463078__17CTTask<8CTaskLOD>Fv"
+	.4byte func_80043F20__8CProcessFv
 .endobj "__vt__17CTTask<8CTaskLOD>"
 
 .obj CTTask_CTaskLOD_hierarchy, global
@@ -1310,7 +1310,7 @@
 	.4byte __dt__8046D144
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CTTask_CTaskLOD
+	.4byte "__dt__17CTTask<8CTaskLOD>Fv"
 .endobj "@etb_8001D9C4"
 
 .obj "@etb_8001D9F4", local
@@ -1472,14 +1472,14 @@
 
 .obj "@eti_80035618", local
 .hidden "@eti_80035618"
-	.4byte func_80463030
+	.4byte "func_80463030__17CTTask<8CTaskLOD>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001DA34"
 .endobj "@eti_80035618"
 
 .obj "@eti_80035624", local
 .hidden "@eti_80035624"
-	.4byte func_80463078
+	.4byte "func_80463078__17CTTask<8CTaskLOD>Fv"
 	.4byte 0x00000048
 	.4byte "@etb_8001DA3C"
 .endobj "@eti_80035624"

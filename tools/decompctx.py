@@ -6,7 +6,11 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = os.path.abspath(os.path.join(script_dir, ".."))
 src_dir = os.path.join(root_dir, "src")
 include_dir = os.path.join(root_dir, "include")
-stl_dir = os.path.join(include_dir, "stl")
+ppceabi_dir = os.path.join(root_dir, "libs/PowerPC_EABI_Support/include")
+monolib_dir = os.path.join(root_dir, "libs/monolib/include")
+nw4r_dir = os.path.join(root_dir, "libs/nw4r/include")
+rvl_dir = os.path.join(root_dir, "libs/RVL_SDK/include")
+stl_dir = os.path.join(ppceabi_dir, "std")
 
 include_pattern = re.compile(r'^#include\s*[<"](.+?)[>"]$')
 guard_pattern = re.compile(r"^#ifndef\s+(.*)$")
@@ -19,12 +23,27 @@ def import_h_file(in_file, r_path) -> str:
     rel_path = os.path.join(root_dir, r_path, in_file)
     inc_path = os.path.join(include_dir, in_file)
     stl_path = os.path.join(stl_dir, in_file)
+    src_path = os.path.join(src_dir, in_file)
+    monolib_path = os.path.join(monolib_dir, in_file)
+    nw4r_path = os.path.join(nw4r_dir, in_file)
+    rvl_path = os.path.join(rvl_dir, in_file)
+    ppceabi_path = os.path.join(ppceabi_dir, in_file)
     if os.path.exists(rel_path):
         return import_c_file(rel_path)
     elif os.path.exists(inc_path):
         return import_c_file(inc_path)
     elif os.path.exists(stl_path):
         return import_c_file(stl_path)
+    elif os.path.exists(src_path):
+        return import_c_file(src_path)
+    elif os.path.exists(monolib_path):
+        return import_c_file(monolib_path)
+    elif os.path.exists(nw4r_path):
+        return import_c_file(nw4r_path)
+    elif os.path.exists(rvl_path):
+        return import_c_file(rvl_path)
+    elif os.path.exists(ppceabi_path):
+        return import_c_file(ppceabi_path)
     else:
         if not quiet:
             print("Failed to locate", in_file)

@@ -15,7 +15,7 @@
 /* 8049E3A4 00467964  4E 80 00 20 */	blr 
 .endfn __ct__CScnFrame
 
-.fn __dt__CScnFrame, global
+.fn __dt__9CScnFrameFv, global
 /* 8049E3A8 00467968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E3AC 0046796C  7C 08 02 A6 */	mflr r0
 /* 8049E3B0 00467970  2C 03 00 00 */	cmpwi r3, 0
@@ -33,7 +33,7 @@
 /* 8049E3DC 0046799C  7C 08 03 A6 */	mtlr r0
 /* 8049E3E0 004679A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E3E4 004679A4  4E 80 00 20 */	blr 
-.endfn __dt__CScnFrame
+.endfn __dt__9CScnFrameFv
 
 .fn func_8049E3E8, global
 /* 8049E3E8 004679A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -86,7 +86,7 @@
 .obj __vt__9CScnFrame, global
 	.4byte __RTTI__9CScnFrame
 	.4byte 0
-	.4byte __dt__CScnFrame
+	.4byte __dt__9CScnFrameFv
 	.4byte 0
 .endobj __vt__9CScnFrame
 
@@ -141,7 +141,7 @@
 
 .obj "@eti_80037178", local
 .hidden "@eti_80037178"
-	.4byte __dt__CScnFrame
+	.4byte __dt__9CScnFrameFv
 	.4byte 0x00000040
 	.4byte "@etb_8001F6A8"
 .endobj "@eti_80037178"

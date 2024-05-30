@@ -21,7 +21,7 @@
 /* 80263EEC 0022D4AC  4E 80 00 20 */	blr 
 .endfn __ct__UI_CPassiveSkillCur
 
-.fn __dt__UI_CPassiveSkillCur, global
+.fn __dt__Q22UI16CPassiveSkillCurFv, global
 /* 80263EF0 0022D4B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263EF4 0022D4B4  7C 08 02 A6 */	mflr r0
 /* 80263EF8 0022D4B8  2C 03 00 00 */	cmpwi r3, 0
@@ -39,7 +39,7 @@
 /* 80263F24 0022D4E4  7C 08 03 A6 */	mtlr r0
 /* 80263F28 0022D4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80263F2C 0022D4EC  4E 80 00 20 */	blr 
-.endfn __dt__UI_CPassiveSkillCur
+.endfn __dt__Q22UI16CPassiveSkillCurFv
 
 .fn func_80263F30, global
 /* 80263F30 0022D4F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -51,7 +51,7 @@
 /* 80263F48 0022D508  38 BF 92 B8 */	addi r5, r31, CPassiveSkill_strpool@l
 /* 80263F4C 0022D50C  80 83 00 04 */	lwz r4, 4(r3)
 /* 80263F50 0022D510  38 63 00 08 */	addi r3, r3, 8
-/* 80263F54 0022D514  4B ED 2F 31 */	bl func_80136E84
+/* 80263F54 0022D514  4B ED 2F 31 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80263F58 0022D518  3B FF 92 B8 */	addi r31, r31, CPassiveSkill_strpool@l
 /* 80263F5C 0022D51C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80263F60 0022D520  80 BE 00 04 */	lwz r5, 4(r30)
@@ -259,7 +259,7 @@
 /* 80264220 0022D7E0  38 BF 00 50 */	addi r5, r31, 0x50
 /* 80264224 0022D7E4  80 83 00 00 */	lwz r4, 0(r3)
 /* 80264228 0022D7E8  38 63 00 04 */	addi r3, r3, 4
-/* 8026422C 0022D7EC  4B ED 2C 59 */	bl func_80136E84
+/* 8026422C 0022D7EC  4B ED 2C 59 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80264230 0022D7F0  80 7E 00 04 */	lwz r3, 4(r30)
 /* 80264234 0022D7F4  38 9E 00 08 */	addi r4, r30, 8
 /* 80264238 0022D7F8  80 BE 00 00 */	lwz r5, 0(r30)
@@ -585,7 +585,7 @@
 /* 802646A4 0022DC64  4E 80 00 20 */	blr 
 .endfn __ct__UI_CPassiveSkillInfo
 
-.fn __dt__UI_CPassiveSkillInfo, global
+.fn __dt__Q22UI17CPassiveSkillInfoFv, global
 /* 802646A8 0022DC68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802646AC 0022DC6C  7C 08 02 A6 */	mflr r0
 /* 802646B0 0022DC70  2C 03 00 00 */	cmpwi r3, 0
@@ -603,7 +603,7 @@
 /* 802646DC 0022DC9C  7C 08 03 A6 */	mtlr r0
 /* 802646E0 0022DCA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802646E4 0022DCA4  4E 80 00 20 */	blr 
-.endfn __dt__UI_CPassiveSkillInfo
+.endfn __dt__Q22UI17CPassiveSkillInfoFv
 
 .fn func_802646E8, global
 /* 802646E8 0022DCA8  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -617,7 +617,7 @@
 /* 80264708 0022DCC8  7C 7F 1B 78 */	mr r31, r3
 /* 8026470C 0022DCCC  38 BE 00 C7 */	addi r5, r30, 0xc7
 /* 80264710 0022DCD0  38 63 00 08 */	addi r3, r3, 8
-/* 80264714 0022DCD4  4B ED 27 71 */	bl func_80136E84
+/* 80264714 0022DCD4  4B ED 27 71 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80264718 0022DCD8  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8026471C 0022DCDC  38 9F 00 0C */	addi r4, r31, 0xc
 /* 80264720 0022DCE0  80 BF 00 04 */	lwz r5, 4(r31)
@@ -960,7 +960,7 @@
 /* 80264C08 0022E1C8  7C 03 03 78 */	mr r3, r0
 /* 80264C0C 0022E1CC  38 A0 00 00 */	li r5, 0
 /* 80264C10 0022E1D0  38 C0 00 01 */	li r6, 1
-/* 80264C14 0022E1D4  4B ED 24 25 */	bl func_80137038
+/* 80264C14 0022E1D4  4B ED 24 25 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80264C18 0022E1D8  88 1E 00 1B */	lbz r0, 0x1b(r30)
 /* 80264C1C 0022E1DC  2C 00 00 00 */	cmpwi r0, 0
 /* 80264C20 0022E1E0  41 82 00 24 */	beq .L_80264C44
@@ -971,7 +971,7 @@
 /* 80264C34 0022E1F4  7F E4 FB 78 */	mr r4, r31
 /* 80264C38 0022E1F8  38 A0 00 00 */	li r5, 0
 /* 80264C3C 0022E1FC  38 C0 00 01 */	li r6, 1
-/* 80264C40 0022E200  4B ED 23 F9 */	bl func_80137038
+/* 80264C40 0022E200  4B ED 23 F9 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_80264C44:
 /* 80264C44 0022E204  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80264C48 0022E208  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3091,7 +3091,7 @@
 /* 80266B14 002300D4  4E 80 00 20 */	blr 
 .endfn __ct__UI_CPassiveSkillLine
 
-.fn __dt__UI_CPassiveSkillLine, global
+.fn __dt__Q22UI17CPassiveSkillLineFv, global
 /* 80266B18 002300D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266B1C 002300DC  7C 08 02 A6 */	mflr r0
 /* 80266B20 002300E0  2C 03 00 00 */	cmpwi r3, 0
@@ -3102,10 +3102,10 @@
 /* 80266B34 002300F4  41 82 00 2C */	beq .L_80266B60
 /* 80266B38 002300F8  38 80 FF FF */	li r4, -1
 /* 80266B3C 002300FC  38 63 01 78 */	addi r3, r3, 0x178
-/* 80266B40 00230100  4B F6 BE F9 */	bl __dt__CCur18
+/* 80266B40 00230100  4B F6 BE F9 */	bl __dt__6CCur18Fv
 /* 80266B44 00230104  38 7E 01 20 */	addi r3, r30, 0x120
 /* 80266B48 00230108  38 80 FF FF */	li r4, -1
-/* 80266B4C 0023010C  4B FF DB 5D */	bl __dt__UI_CPassiveSkillInfo
+/* 80266B4C 0023010C  4B FF DB 5D */	bl __dt__Q22UI17CPassiveSkillInfoFv
 /* 80266B50 00230110  2C 1F 00 00 */	cmpwi r31, 0
 /* 80266B54 00230114  40 81 00 0C */	ble .L_80266B60
 /* 80266B58 00230118  7F C3 F3 78 */	mr r3, r30
@@ -3117,7 +3117,7 @@
 /* 80266B6C 0023012C  7C 08 03 A6 */	mtlr r0
 /* 80266B70 00230130  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266B74 00230134  4E 80 00 20 */	blr 
-.endfn __dt__UI_CPassiveSkillLine
+.endfn __dt__Q22UI17CPassiveSkillLineFv
 
 .fn func_80266B78, global
 /* 80266B78 00230138  94 21 FF 20 */	stwu r1, -0xe0(r1)
@@ -3131,7 +3131,7 @@
 /* 80266B98 00230158  7C 7D 1B 78 */	mr r29, r3
 /* 80266B9C 0023015C  38 BC 03 69 */	addi r5, r28, 0x369
 /* 80266BA0 00230160  38 63 00 08 */	addi r3, r3, 8
-/* 80266BA4 00230164  4B ED 02 E1 */	bl func_80136E84
+/* 80266BA4 00230164  4B ED 02 E1 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80266BA8 00230168  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80266BAC 0023016C  38 9D 00 0C */	addi r4, r29, 0xc
 /* 80266BB0 00230170  80 BD 00 04 */	lwz r5, 4(r29)
@@ -3193,7 +3193,7 @@
 /* 80266C90 00230250  80 9D 00 04 */	lwz r4, 4(r29)
 /* 80266C94 00230254  38 7D 00 18 */	addi r3, r29, 0x18
 /* 80266C98 00230258  38 BC 03 CE */	addi r5, r28, 0x3ce
-/* 80266C9C 0023025C  4B ED 01 E9 */	bl func_80136E84
+/* 80266C9C 0023025C  4B ED 01 E9 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80266CA0 00230260  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 80266CA4 00230264  38 9D 00 1C */	addi r4, r29, 0x1c
 /* 80266CA8 00230268  80 BD 00 04 */	lwz r5, 4(r29)
@@ -3235,7 +3235,7 @@
 /* 80266D30 002302F0  38 BC 04 02 */	addi r5, r28, 0x402
 /* 80266D34 002302F4  7F 03 C3 78 */	mr r3, r24
 /* 80266D38 002302F8  7E FA 02 14 */	add r23, r26, r0
-/* 80266D3C 002302FC  4B ED 01 49 */	bl func_80136E84
+/* 80266D3C 002302FC  4B ED 01 49 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 /* 80266D40 00230300  80 78 00 00 */	lwz r3, 0(r24)
 /* 80266D44 00230304  7E E4 BB 78 */	mr r4, r23
 /* 80266D48 00230308  80 BD 00 04 */	lwz r5, 4(r29)
@@ -3342,7 +3342,7 @@
 /* 80266EDC 0023049C  48 00 03 8D */	bl func_80267268
 /* 80266EE0 002304A0  38 61 00 70 */	addi r3, r1, 0x70
 /* 80266EE4 002304A4  38 80 FF FF */	li r4, -1
-/* 80266EE8 002304A8  4B FF D7 C1 */	bl __dt__UI_CPassiveSkillInfo
+/* 80266EE8 002304A8  4B FF D7 C1 */	bl __dt__Q22UI17CPassiveSkillInfoFv
 /* 80266EEC 002304AC  38 7D 01 20 */	addi r3, r29, 0x120
 /* 80266EF0 002304B0  4B FF D7 F9 */	bl func_802646E8
 /* 80266EF4 002304B4  80 9D 00 04 */	lwz r4, 4(r29)
@@ -3365,7 +3365,7 @@
 /* 80266F38 002304F8  48 00 03 F5 */	bl func_8026732C
 /* 80266F3C 002304FC  38 61 00 20 */	addi r3, r1, 0x20
 /* 80266F40 00230500  38 80 FF FF */	li r4, -1
-/* 80266F44 00230504  4B F6 BA F5 */	bl __dt__CCur18
+/* 80266F44 00230504  4B F6 BA F5 */	bl __dt__6CCur18Fv
 /* 80266F48 00230508  81 9D 01 78 */	lwz r12, 0x178(r29)
 /* 80266F4C 0023050C  38 7D 01 78 */	addi r3, r29, 0x178
 /* 80266F50 00230510  81 8C 00 08 */	lwz r12, 8(r12)
@@ -3758,12 +3758,12 @@
 /* 802674A8 00230A68  7C 03 03 78 */	mr r3, r0
 /* 802674AC 00230A6C  38 A0 00 00 */	li r5, 0
 /* 802674B0 00230A70  38 C0 00 01 */	li r6, 1
-/* 802674B4 00230A74  4B EC FB 85 */	bl func_80137038
+/* 802674B4 00230A74  4B EC FB 85 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 802674B8 00230A78  80 7B 00 18 */	lwz r3, 0x18(r27)
 /* 802674BC 00230A7C  7F 84 E3 78 */	mr r4, r28
 /* 802674C0 00230A80  38 A0 00 00 */	li r5, 0
 /* 802674C4 00230A84  38 C0 00 01 */	li r6, 1
-/* 802674C8 00230A88  4B EC FB 71 */	bl func_80137038
+/* 802674C8 00230A88  4B EC FB 71 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 802674CC 00230A8C  88 7B 00 E8 */	lbz r3, 0xe8(r27)
 /* 802674D0 00230A90  38 03 00 FC */	addi r0, r3, 0xfc
 /* 802674D4 00230A94  54 00 06 3E */	clrlwi r0, r0, 0x18
@@ -3787,7 +3787,7 @@
 /* 80267510 00230AD0  38 A0 00 00 */	li r5, 0
 /* 80267514 00230AD4  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80267518 00230AD8  38 C0 00 01 */	li r6, 1
-/* 8026751C 00230ADC  4B EC FB 1D */	bl func_80137038
+/* 8026751C 00230ADC  4B EC FB 1D */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 /* 80267520 00230AE0  3B BD 00 01 */	addi r29, r29, 1
 /* 80267524 00230AE4  28 1D 00 05 */	cmplwi r29, 5
 /* 80267528 00230AE8  41 80 FF DC */	blt .L_80267504
@@ -3813,7 +3813,7 @@
 /* 80267574 00230B34  7F 84 E3 78 */	mr r4, r28
 /* 80267578 00230B38  38 A0 00 00 */	li r5, 0
 /* 8026757C 00230B3C  38 C0 00 01 */	li r6, 1
-/* 80267580 00230B40  4B EC FA B9 */	bl func_80137038
+/* 80267580 00230B40  4B EC FA B9 */	bl func_80137038__FPQ34nw4r3lyt6LayoutPvii
 .L_80267584:
 /* 80267584 00230B44  80 7B 01 74 */	lwz r3, 0x174(r27)
 /* 80267588 00230B48  2C 03 00 00 */	cmpwi r3, 0
@@ -10438,7 +10438,7 @@
 /* 8026D4D8 00236A98  7C 7F 1B 78 */	mr r31, r3
 /* 8026D4DC 00236A9C  90 83 00 00 */	stw r4, 0(r3)
 /* 8026D4E0 00236AA0  38 63 00 08 */	addi r3, r3, 8
-/* 8026D4E4 00236AA4  48 1F 20 81 */	bl __ct__UnkClass_8045F564
+/* 8026D4E4 00236AA4  48 1F 20 81 */	bl __ct__17UnkClass_8045F564Fv
 /* 8026D4E8 00236AA8  38 A0 00 00 */	li r5, 0
 /* 8026D4EC 00236AAC  38 00 00 01 */	li r0, 1
 /* 8026D4F0 00236AB0  90 BF 00 18 */	stw r5, 0x18(r31)
@@ -10462,7 +10462,7 @@
 /* 8026D538 00236AF8  4E 80 00 20 */	blr 
 .endfn __ct__UI_CPassiveSkill
 
-.fn __dt__UI_CPassiveSkill, global
+.fn __dt__Q22UI13CPassiveSkillFv, global
 /* 8026D53C 00236AFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026D540 00236B00  7C 08 02 A6 */	mflr r0
 /* 8026D544 00236B04  2C 03 00 00 */	cmpwi r3, 0
@@ -10473,13 +10473,13 @@
 /* 8026D558 00236B18  41 82 00 38 */	beq .L_8026D590
 /* 8026D55C 00236B1C  38 80 FF FF */	li r4, -1
 /* 8026D560 00236B20  38 63 01 B8 */	addi r3, r3, 0x1b8
-/* 8026D564 00236B24  4B FB E1 3D */	bl __dt__CSysWin
+/* 8026D564 00236B24  4B FB E1 3D */	bl __dt__7CSysWinFv
 /* 8026D568 00236B28  38 7E 00 28 */	addi r3, r30, 0x28
 /* 8026D56C 00236B2C  38 80 FF FF */	li r4, -1
-/* 8026D570 00236B30  4B FF 95 A9 */	bl __dt__UI_CPassiveSkillLine
+/* 8026D570 00236B30  4B FF 95 A9 */	bl __dt__Q22UI17CPassiveSkillLineFv
 /* 8026D574 00236B34  38 7E 00 08 */	addi r3, r30, 8
 /* 8026D578 00236B38  38 80 FF FF */	li r4, -1
-/* 8026D57C 00236B3C  48 1F 20 05 */	bl __dt__UnkClass_8045F564
+/* 8026D57C 00236B3C  48 1F 20 05 */	bl __dt__17UnkClass_8045F564Fv
 /* 8026D580 00236B40  2C 1F 00 00 */	cmpwi r31, 0
 /* 8026D584 00236B44  40 81 00 0C */	ble .L_8026D590
 /* 8026D588 00236B48  7F C3 F3 78 */	mr r3, r30
@@ -10491,7 +10491,7 @@
 /* 8026D59C 00236B5C  7C 08 03 A6 */	mtlr r0
 /* 8026D5A0 00236B60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026D5A4 00236B64  4E 80 00 20 */	blr 
-.endfn __dt__UI_CPassiveSkill
+.endfn __dt__Q22UI13CPassiveSkillFv
 
 .fn func_8026D5A8, global
 /* 8026D5A8 00236B68  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -10506,7 +10506,7 @@
 /* 8026D5CC 00236B8C  38 C0 00 00 */	li r6, 0
 /* 8026D5D0 00236B90  38 9D 09 DD */	addi r4, r29, 0x9dd
 /* 8026D5D4 00236B94  38 E0 00 00 */	li r7, 0
-/* 8026D5D8 00236B98  48 1E 11 BD */	bl CDeviceFile_openFile1
+/* 8026D5D8 00236B98  48 1E 11 BD */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8026D5DC 00236B9C  90 7C 00 18 */	stw r3, 0x18(r28)
 /* 8026D5E0 00236BA0  4B E3 C7 B1 */	bl func_800A9D90
 /* 8026D5E4 00236BA4  7F 85 E3 78 */	mr r5, r28
@@ -10556,7 +10556,7 @@
 /* 8026D694 00236C54  98 1C 01 F0 */	stb r0, 0x1f0(r28)
 /* 8026D698 00236C58  88 01 00 45 */	lbz r0, 0x45(r1)
 /* 8026D69C 00236C5C  98 1C 01 F1 */	stb r0, 0x1f1(r28)
-/* 8026D6A0 00236C60  4B FB E0 01 */	bl __dt__CSysWin
+/* 8026D6A0 00236C60  4B FB E0 01 */	bl __dt__7CSysWinFv
 /* 8026D6A4 00236C64  81 9C 01 B8 */	lwz r12, 0x1b8(r28)
 /* 8026D6A8 00236C68  38 7C 01 B8 */	addi r3, r28, 0x1b8
 /* 8026D6AC 00236C6C  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -10758,9 +10758,9 @@
 /* 8026D934 00236EF4  38 60 00 02 */	li r3, 2
 /* 8026D938 00236EF8  4B DC D1 55 */	bl func_8003AA8C
 /* 8026D93C 00236EFC  38 7E 00 18 */	addi r3, r30, 0x18
-/* 8026D940 00236F00  4B EC B7 A1 */	bl func_801390E0
+/* 8026D940 00236F00  4B EC B7 A1 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8026D944 00236F04  38 7E 00 1C */	addi r3, r30, 0x1c
-/* 8026D948 00236F08  4B EC B7 99 */	bl func_801390E0
+/* 8026D948 00236F08  4B EC B7 99 */	bl func_801390E0__FPP17UnkClass_80451720
 /* 8026D94C 00236F0C  3B E0 00 00 */	li r31, 0
 /* 8026D950 00236F10  9B FE 00 24 */	stb r31, 0x24(r30)
 /* 8026D954 00236F14  38 7E 00 28 */	addi r3, r30, 0x28
@@ -10768,10 +10768,10 @@
 /* 8026D95C 00236F1C  38 7E 01 B8 */	addi r3, r30, 0x1b8
 /* 8026D960 00236F20  4B FB DE 95 */	bl func_8022B7F4
 /* 8026D964 00236F24  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 8026D968 00236F28  4B EC B7 BD */	bl func_80139124
+/* 8026D968 00236F28  4B EC B7 BD */	bl func_80139124__FPQ34nw4r3lyt19ArcResourceAccessor
 /* 8026D96C 00236F2C  93 FE 00 20 */	stw r31, 0x20(r30)
 /* 8026D970 00236F30  38 7E 00 08 */	addi r3, r30, 8
-/* 8026D974 00236F34  48 1F 1E 05 */	bl func_8045F778
+/* 8026D974 00236F34  48 1F 1E 05 */	bl func_8045F778__FP17UnkClass_8045F564
 /* 8026D978 00236F38  3B E0 00 01 */	li r31, 1
 .L_8026D97C:
 /* 8026D97C 00236F3C  57 E3 06 3E */	clrlwi r3, r31, 0x18
@@ -11212,17 +11212,17 @@
 /* 8026DEC8 00237488  38 DD 0A 0B */	addi r6, r29, 0xa0b
 /* 8026DECC 0023748C  3C A0 00 04 */	lis r5, 4
 /* 8026DED0 00237490  38 E0 00 00 */	li r7, 0
-/* 8026DED4 00237494  48 1F 17 AD */	bl func_8045F680
+/* 8026DED4 00237494  48 1F 17 AD */	bl CLibLayout_addLayoutHeapEntry__FP17UnkClass_8045F564iiPCci
 /* 8026DED8 00237498  38 61 00 08 */	addi r3, r1, 8
 /* 8026DEDC 0023749C  38 9F 00 08 */	addi r4, r31, 8
-/* 8026DEE0 002374A0  48 1F 19 79 */	bl __ct__Class_8045F858
+/* 8026DEE0 002374A0  48 1F 19 79 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 8026DEE4 002374A4  80 9F 00 18 */	lwz r4, 0x18(r31)
 /* 8026DEE8 002374A8  38 00 00 00 */	li r0, 0
 /* 8026DEEC 002374AC  38 60 00 00 */	li r3, 0
 /* 8026DEF0 002374B0  83 C4 00 04 */	lwz r30, 4(r4)
 /* 8026DEF4 002374B4  90 04 00 04 */	stw r0, 4(r4)
-/* 8026DEF8 002374B8  48 1C 6B 55 */	bl func_80434A4C
-/* 8026DEFC 002374BC  48 1F 12 B9 */	bl CLibLayout_getArcResourceAccessorInstance
+/* 8026DEF8 002374B8  48 1C 6B 55 */	bl MemManager_80434A4C__FUc
+/* 8026DEFC 002374BC  48 1F 12 B9 */	bl CLibLayout_getArcResourceAccessorInstance__Fv
 /* 8026DF00 002374C0  90 7F 00 20 */	stw r3, 0x20(r31)
 /* 8026DF04 002374C4  7F C4 F3 78 */	mr r4, r30
 /* 8026DF08 002374C8  38 BD 0A 19 */	addi r5, r29, 0xa19
@@ -11321,7 +11321,7 @@
 /* 8026E074 00237634  4B FF 92 B9 */	bl func_8026732C
 /* 8026E078 00237638  38 61 00 10 */	addi r3, r1, 0x10
 /* 8026E07C 0023763C  38 80 FF FF */	li r4, -1
-/* 8026E080 00237640  4B FF 8A 99 */	bl __dt__UI_CPassiveSkillLine
+/* 8026E080 00237640  4B FF 8A 99 */	bl __dt__Q22UI17CPassiveSkillLineFv
 /* 8026E084 00237644  38 7F 00 28 */	addi r3, r31, 0x28
 /* 8026E088 00237648  4B FF 8A F1 */	bl func_80266B78
 /* 8026E08C 0023764C  7F E3 FB 78 */	mr r3, r31
@@ -11329,10 +11329,10 @@
 /* 8026E094 00237654  38 00 00 00 */	li r0, 0
 /* 8026E098 00237658  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 8026E09C 0023765C  38 7F 00 08 */	addi r3, r31, 8
-/* 8026E0A0 00237660  48 1F 17 71 */	bl func_8045F810
+/* 8026E0A0 00237660  48 1F 17 71 */	bl func_8045F810__FP17UnkClass_8045F564
 /* 8026E0A4 00237664  38 61 00 08 */	addi r3, r1, 8
 /* 8026E0A8 00237668  38 80 FF FF */	li r4, -1
-/* 8026E0AC 0023766C  48 1F 18 1D */	bl __dt__Class_8045F858
+/* 8026E0AC 0023766C  48 1F 18 1D */	bl __dt__14Class_8045F858Fv
 /* 8026E0B0 00237670  38 60 00 01 */	li r3, 1
 /* 8026E0B4 00237674  48 00 00 A4 */	b .L_8026E158
 .L_8026E0B8:
@@ -11666,38 +11666,38 @@
 .obj __vt__Q22UI13CPassiveSkill, global
 	.4byte __RTTI__Q22UI13CPassiveSkill
 	.4byte 0
-	.4byte __dt__UI_CPassiveSkill
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q22UI13CPassiveSkillFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte CPassiveSkill_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q22UI13CPassiveSkill
 
 .obj UI_CPassiveSkill_hierarchy, global
@@ -11710,21 +11710,21 @@
 .obj __vt__Q22UI17CPassiveSkillLine, global
 	.4byte __RTTI__Q22UI17CPassiveSkillLine
 	.4byte 0
-	.4byte __dt__UI_CPassiveSkillLine
+	.4byte __dt__Q22UI17CPassiveSkillLineFv
 .endobj __vt__Q22UI17CPassiveSkillLine
 
 
 .obj __vt__Q22UI17CPassiveSkillInfo, global
 	.4byte __RTTI__Q22UI17CPassiveSkillInfo
 	.4byte 0
-	.4byte __dt__UI_CPassiveSkillInfo
+	.4byte __dt__Q22UI17CPassiveSkillInfoFv
 .endobj __vt__Q22UI17CPassiveSkillInfo
 
 
 .obj __vt__Q22UI16CPassiveSkillCur, global
 	.4byte __RTTI__Q22UI16CPassiveSkillCur
 	.4byte 0
-	.4byte __dt__UI_CPassiveSkillCur
+	.4byte __dt__Q22UI16CPassiveSkillCurFv
 .endobj __vt__Q22UI16CPassiveSkillCur
 
 
@@ -12092,10 +12092,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000015C
-	.4byte __dt__UI_CPassiveSkillCur
+	.4byte __dt__Q22UI16CPassiveSkillCurFv
 	.4byte 0x8780001E
 	.4byte 0x00000120
-	.4byte __dt__UI_CPassiveSkillInfo
+	.4byte __dt__Q22UI17CPassiveSkillInfoFv
 .endobj "@etb_80017A54"
 
 .obj "@etb_80017A7C", local
@@ -12408,13 +12408,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000028
-	.4byte __dt__UI_CPassiveSkillLine
+	.4byte __dt__Q22UI17CPassiveSkillLineFv
 	.4byte 0x0780001F
 	.4byte 0x00000008
-	.4byte __dt__UnkClass_8045F564
+	.4byte __dt__17UnkClass_8045F564Fv
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__IWorkEvent
+	.4byte __dt__10IWorkEventFv
 .endobj "@etb_80017C14"
 
 .obj "@etb_80017C58", local
@@ -12427,13 +12427,13 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000001B8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x0780001E
 	.4byte 0x000001B8
-	.4byte __dt__CSysWin
+	.4byte __dt__7CSysWinFv
 	.4byte 0x8780001E
 	.4byte 0x00000028
-	.4byte __dt__UI_CPassiveSkillLine
+	.4byte __dt__Q22UI17CPassiveSkillLineFv
 .endobj "@etb_80017C58"
 
 .obj "@etb_80017C94", local
@@ -12515,7 +12515,7 @@
 	.4byte 0x006A0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__Class_8045F858
+	.4byte __dt__14Class_8045F858Fv
 .endobj "@etb_80017CF4"
 
 
@@ -12526,7 +12526,7 @@
 
 .obj "@eti_800300E0", local
 .hidden "@eti_800300E0"
-	.4byte __dt__UI_CPassiveSkillCur
+	.4byte __dt__Q22UI16CPassiveSkillCurFv
 	.4byte 0x00000040
 	.4byte "@etb_8001791C"
 .endobj "@eti_800300E0"
@@ -12624,7 +12624,7 @@
 
 .obj "@eti_80030188", local
 .hidden "@eti_80030188"
-	.4byte __dt__UI_CPassiveSkillInfo
+	.4byte __dt__Q22UI17CPassiveSkillInfoFv
 	.4byte 0x00000040
 	.4byte "@etb_8001798C"
 .endobj "@eti_80030188"
@@ -12806,7 +12806,7 @@
 
 .obj "@eti_800302C0", local
 .hidden "@eti_800302C0"
-	.4byte __dt__UI_CPassiveSkillLine
+	.4byte __dt__Q22UI17CPassiveSkillLineFv
 	.4byte 0x00000060
 	.4byte "@etb_80017A7C"
 .endobj "@eti_800302C0"
@@ -13156,7 +13156,7 @@
 
 .obj "@eti_80030518", local
 .hidden "@eti_80030518"
-	.4byte __dt__UI_CPassiveSkill
+	.4byte __dt__Q22UI13CPassiveSkillFv
 	.4byte 0x0000006C
 	.4byte "@etb_80017C58"
 .endobj "@eti_80030518"

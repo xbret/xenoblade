@@ -31,7 +31,7 @@
 /* 8044E1AC 0041776C  90 84 00 04 */	stw r4, 4(r4)
 /* 8044E1B0 00417770  90 7E 01 CC */	stw r3, 0x1cc(r30)
 /* 8044E1B4 00417774  93 CD BD C0 */	stw r30, lbl_80667F40@sda21(r13)
-/* 8044E1B8 00417778  4B FE 93 FD */	bl getHeapIndex
+/* 8044E1B8 00417778  4B FE 93 FD */	bl getHeapIndex__Fv
 /* 8044E1BC 0041777C  7C 64 1B 78 */	mr r4, r3
 /* 8044E1C0 00417780  38 60 0C 00 */	li r3, 0xc00
 /* 8044E1C4 00417784  4B FE 68 BD */	bl heap_malloc_1
@@ -205,7 +205,7 @@
 /* 8044E428 004179E8  4E 80 00 20 */	blr 
 .endfn __dt__reslist_CFileHandle
 
-.fn __dt__CDeviceFile, global
+.fn __dt__11CDeviceFileFv, global
 /* 8044E42C 004179EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044E430 004179F0  7C 08 02 A6 */	mflr r0
 /* 8044E434 004179F4  2C 03 00 00 */	cmpwi r3, 0
@@ -252,7 +252,7 @@
 /* 8044E4CC 00417A8C  41 82 00 10 */	beq .L_8044E4DC
 /* 8044E4D0 00417A90  7F A3 EB 78 */	mr r3, r29
 /* 8044E4D4 00417A94  38 80 00 00 */	li r4, 0
-/* 8044E4D8 00417A98  4B FE 95 F1 */	bl __dt__CWorkThread
+/* 8044E4D8 00417A98  4B FE 95 F1 */	bl __dt__11CWorkThreadFv
 .L_8044E4DC:
 /* 8044E4DC 00417A9C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8044E4E0 00417AA0  40 81 00 0C */	ble .L_8044E4EC
@@ -267,7 +267,7 @@
 /* 8044E500 00417AC0  7C 08 03 A6 */	mtlr r0
 /* 8044E504 00417AC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044E508 00417AC8  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFile
+.endfn __dt__11CDeviceFileFv
 
 .fn func_8044E50C, global
 /* 8044E50C 00417ACC  80 6D BD C0 */	lwz r3, lbl_80667F40@sda21(r13)
@@ -478,7 +478,7 @@
 #Opens either an arc file (in/outside an archive), or gets a file outside of an archive?
 #might reference files in pkb archives (cannot find list of archive file names anywhere though)
 #r3: ?, r4: path string pointer, r5, r6, r7
-.fn CDeviceFile_openFile1, global
+.fn CDeviceFile_openFile1__FiPCcPvii, global
 /* 8044E794 00417D54  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8044E798 00417D58  7C 08 02 A6 */	mflr r0
 /* 8044E79C 00417D5C  39 00 00 00 */	li r8, 0
@@ -573,7 +573,7 @@
 /* 8044E8DC 00417E9C  54 00 58 28 */	slwi r0, r0, 0xb
 /* 8044E8E0 00417EA0  7F 9C 02 14 */	add r28, r28, r0
 .L_8044E8E4:
-/* 8044E8E4 00417EA4  4B FE 8C D1 */	bl getHeapIndex
+/* 8044E8E4 00417EA4  4B FE 8C D1 */	bl getHeapIndex__Fv
 /* 8044E8E8 00417EA8  7C 64 1B 78 */	mr r4, r3
 /* 8044E8EC 00417EAC  38 60 01 A8 */	li r3, 0x1a8
 /* 8044E8F0 00417EB0  4B FE 61 6D */	bl heap_malloc
@@ -583,7 +583,7 @@
 /* 8044E900 00417EC0  7F 44 D3 78 */	mr r4, r26
 /* 8044E904 00417EC4  7F 25 CB 78 */	mr r5, r25
 /* 8044E908 00417EC8  7F 66 DB 78 */	mr r6, r27
-/* 8044E90C 00417ECC  48 00 2E 15 */	bl __ct__80451720
+/* 8044E90C 00417ECC  48 00 2E 15 */	bl __ct__17UnkClass_80451720Fv
 /* 8044E910 00417ED0  7C 7E 1B 78 */	mr r30, r3
 .L_8044E914:
 /* 8044E914 00417ED4  2C 1E 00 00 */	cmpwi r30, 0
@@ -691,7 +691,7 @@
 /* 8044EA78 00418038  7C 77 1B 78 */	mr r23, r3
 /* 8044EA7C 0041803C  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EA80 00418040  3B 04 00 07 */	addi r24, r4, 7
-/* 8044EA84 00418044  4B FE 8B 31 */	bl getHeapIndex
+/* 8044EA84 00418044  4B FE 8B 31 */	bl getHeapIndex__Fv
 /* 8044EA88 00418048  7C 64 1B 78 */	mr r4, r3
 /* 8044EA8C 0041804C  38 60 02 50 */	li r3, 0x250
 /* 8044EA90 00418050  4B FE 5F CD */	bl heap_malloc
@@ -714,7 +714,7 @@
 /* 8044EACC 0041808C  7C 77 1B 78 */	mr r23, r3
 /* 8044EAD0 00418090  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EAD4 00418094  3B 04 00 07 */	addi r24, r4, 7
-/* 8044EAD8 00418098  4B FE 8A DD */	bl getHeapIndex
+/* 8044EAD8 00418098  4B FE 8A DD */	bl getHeapIndex__Fv
 /* 8044EADC 0041809C  7C 64 1B 78 */	mr r4, r3
 /* 8044EAE0 004180A0  38 60 02 50 */	li r3, 0x250
 /* 8044EAE4 004180A4  4B FE 5F 79 */	bl heap_malloc
@@ -753,7 +753,7 @@
 /* 8044EB58 00418118  7D 41 53 78 */	mr r1, r10
 /* 8044EB5C 0041811C  7C 08 03 A6 */	mtlr r0
 /* 8044EB60 00418120  4E 80 00 20 */	blr 
-.endfn CDeviceFile_openFile1
+.endfn CDeviceFile_openFile1__FiPCcPvii
 
 #Similar to the above function, but used to open files in archives that aren't sound
 #files (usually) or arc files?
@@ -857,7 +857,7 @@
 /* 8044ECBC 0041827C  54 00 58 28 */	slwi r0, r0, 0xb
 /* 8044ECC0 00418280  7F 9C 02 14 */	add r28, r28, r0
 .L_8044ECC4:
-/* 8044ECC4 00418284  4B FE 88 F1 */	bl getHeapIndex
+/* 8044ECC4 00418284  4B FE 88 F1 */	bl getHeapIndex__Fv
 /* 8044ECC8 00418288  7C 64 1B 78 */	mr r4, r3
 /* 8044ECCC 0041828C  38 60 01 A8 */	li r3, 0x1a8
 /* 8044ECD0 00418290  4B FE 5D 8D */	bl heap_malloc
@@ -975,7 +975,7 @@
 /* 8044EE58 00418418  7C 77 1B 78 */	mr r23, r3
 /* 8044EE5C 0041841C  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EE60 00418420  3B 04 00 07 */	addi r24, r4, 7
-/* 8044EE64 00418424  4B FE 87 51 */	bl getHeapIndex
+/* 8044EE64 00418424  4B FE 87 51 */	bl getHeapIndex__Fv
 /* 8044EE68 00418428  7C 64 1B 78 */	mr r4, r3
 /* 8044EE6C 0041842C  38 60 02 50 */	li r3, 0x250
 /* 8044EE70 00418430  4B FE 5B ED */	bl heap_malloc
@@ -998,7 +998,7 @@
 /* 8044EEAC 0041846C  7C 77 1B 78 */	mr r23, r3
 /* 8044EEB0 00418470  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EEB4 00418474  3B 04 00 07 */	addi r24, r4, 7
-/* 8044EEB8 00418478  4B FE 86 FD */	bl getHeapIndex
+/* 8044EEB8 00418478  4B FE 86 FD */	bl getHeapIndex__Fv
 /* 8044EEBC 0041847C  7C 64 1B 78 */	mr r4, r3
 /* 8044EEC0 00418480  38 60 02 50 */	li r3, 0x250
 /* 8044EEC4 00418484  4B FE 5B 99 */	bl heap_malloc
@@ -1199,7 +1199,7 @@
 /* 8044F150 00418710  4E 80 00 20 */	blr 
 .endfn func_8044F118
 
-.fn func_8044F154, global
+.fn CDeviceFile_8044F154__FP17UnkClass_80451720i, global
 /* 8044F154 00418714  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044F158 00418718  7C 08 02 A6 */	mflr r0
 /* 8044F15C 0041871C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1227,7 +1227,7 @@
 /* 8044F1AC 0041876C  7C 08 03 A6 */	mtlr r0
 /* 8044F1B0 00418770  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044F1B4 00418774  4E 80 00 20 */	blr 
-.endfn func_8044F154
+.endfn CDeviceFile_8044F154__FP17UnkClass_80451720i
 
 .fn func_8044F1B8, global
 /* 8044F1B8 00418778  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -1415,12 +1415,12 @@
 /* 8044F410 004189D0  4E 80 00 20 */	blr 
 .endfn func_8044F404
 
-.fn func_8044F414, global
+.fn CDeviceFile_8044F414__FP17UnkClass_80451720, global
 /* 8044F414 004189D4  80 03 00 58 */	lwz r0, 0x58(r3)
 /* 8044F418 004189D8  60 00 00 04 */	ori r0, r0, 4
 /* 8044F41C 004189DC  90 03 00 58 */	stw r0, 0x58(r3)
 /* 8044F420 004189E0  4E 80 00 20 */	blr 
-.endfn func_8044F414
+.endfn CDeviceFile_8044F414__FP17UnkClass_80451720
 
 .fn CDeviceFile_WorkThreadEvent4, global
 /* 8044F424 004189E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1435,7 +1435,7 @@
 /* 8044F448 00418A08  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
 /* 8044F44C 00418A0C  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044F450 00418A10  3B E3 00 8B */	addi r31, r3, 0x8b
-/* 8044F454 00418A14  4B FE 81 61 */	bl getHeapIndex
+/* 8044F454 00418A14  4B FE 81 61 */	bl getHeapIndex__Fv
 /* 8044F458 00418A18  7C 64 1B 78 */	mr r4, r3
 /* 8044F45C 00418A1C  38 60 01 D8 */	li r3, 0x1d8
 /* 8044F460 00418A20  4B FE 55 FD */	bl heap_malloc
@@ -1451,7 +1451,7 @@
 /* 8044F484 00418A44  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
 /* 8044F488 00418A48  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044F48C 00418A4C  3B E3 00 9A */	addi r31, r3, 0x9a
-/* 8044F490 00418A50  4B FE 81 25 */	bl getHeapIndex
+/* 8044F490 00418A50  4B FE 81 25 */	bl getHeapIndex__Fv
 /* 8044F494 00418A54  7C 64 1B 78 */	mr r4, r3
 /* 8044F498 00418A58  38 60 01 E8 */	li r3, 0x1e8
 /* 8044F49C 00418A5C  4B FE 55 C1 */	bl heap_malloc
@@ -1465,7 +1465,7 @@
 /* 8044F4B8 00418A78  38 A0 00 00 */	li r5, 0
 /* 8044F4BC 00418A7C  4B FE 97 1D */	bl func_80438BD8
 /* 8044F4C0 00418A80  7F C3 F3 78 */	mr r3, r30
-/* 8044F4C4 00418A84  4B FE 95 35 */	bl CWorkThread_WorkThreadEvent4
+/* 8044F4C4 00418A84  4B FE 95 35 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8044F4C8 00418A88  48 00 00 08 */	b .L_8044F4D0
 .L_8044F4CC:
 /* 8044F4CC 00418A8C  38 60 00 00 */	li r3, 0
@@ -1495,7 +1495,7 @@
 /* 8044F51C 00418ADC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F520 00418AE0  40 82 00 10 */	bne .L_8044F530
 /* 8044F524 00418AE4  7F E3 FB 78 */	mr r3, r31
-/* 8044F528 00418AE8  4B FE 94 FD */	bl CWorkThread_WorkThreadEvent5
+/* 8044F528 00418AE8  4B FE 94 FD */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8044F52C 00418AEC  48 00 00 08 */	b .L_8044F534
 .L_8044F530:
 /* 8044F530 00418AF0  38 60 00 00 */	li r3, 0
@@ -1583,44 +1583,44 @@
 .obj __vt__11CDeviceFile, global
 	.4byte __RTTI__11CDeviceFile
 	.4byte 0
-	.4byte __dt__CDeviceFile
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__11CDeviceFileFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFile_WorkThreadEvent4
 	.4byte CDeviceFile_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CDeviceFile
 
 .obj CDeviceFile_hierarchy, global
@@ -1702,7 +1702,7 @@
 	.4byte __dt__reslist_CFileHandle
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__CDeviceBase
+	.4byte __dt__11CDeviceBaseFv
 .endobj "@etb_8001CD84"
 
 .obj "@etb_8001CDAC", local
@@ -1827,7 +1827,7 @@
 
 .obj "@eti_80034A30", local
 .hidden "@eti_80034A30"
-	.4byte __dt__CDeviceFile
+	.4byte __dt__11CDeviceFileFv
 	.4byte 0x000000E0
 	.4byte "@etb_8001CDBC"
 .endobj "@eti_80034A30"
@@ -1841,7 +1841,7 @@
 
 .obj "@eti_80034A48", local
 .hidden "@eti_80034A48"
-	.4byte CDeviceFile_openFile1
+	.4byte CDeviceFile_openFile1__FiPCcPvii
 	.4byte 0x000003D0
 	.4byte "@etb_8001CDE0"
 .endobj "@eti_80034A48"
@@ -1883,7 +1883,7 @@
 
 .obj "@eti_80034A90", local
 .hidden "@eti_80034A90"
-	.4byte func_8044F154
+	.4byte CDeviceFile_8044F154__FP17UnkClass_80451720i
 	.4byte 0x00000064
 	.4byte "@etb_8001CE10"
 .endobj "@eti_80034A90"

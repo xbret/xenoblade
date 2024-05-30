@@ -50,7 +50,7 @@
 /* 804E333C 004AC8FC  4E 80 00 20 */	blr 
 .endfn __ct__CSchedule
 
-.fn __dt__CSchedule, global
+.fn __dt__9CScheduleFv, global
 /* 804E3340 004AC900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3344 004AC904  7C 08 02 A6 */	mflr r0
 /* 804E3348 004AC908  2C 03 00 00 */	cmpwi r3, 0
@@ -119,7 +119,7 @@
 /* 804E3428 004AC9E8  7C 08 03 A6 */	mtlr r0
 /* 804E342C 004AC9EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E3430 004AC9F0  4E 80 00 20 */	blr 
-.endfn __dt__CSchedule
+.endfn __dt__9CScheduleFv
 
 .fn func_804E3434, global
 /* 804E3434 004AC9F4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -325,7 +325,7 @@
 .obj __vt__9CSchedule, global
 	.4byte __RTTI__9CSchedule
 	.4byte 0
-	.4byte __dt__CSchedule
+	.4byte __dt__9CScheduleFv
 	.4byte 0
 .endobj __vt__9CSchedule
 
@@ -366,7 +366,7 @@
 
 .obj "@eti_80038C0C", local
 .hidden "@eti_80038C0C"
-	.4byte __dt__CSchedule
+	.4byte __dt__9CScheduleFv
 	.4byte 0x000000F4
 	.4byte "@etb_80020B08"
 .endobj "@eti_80038C0C"

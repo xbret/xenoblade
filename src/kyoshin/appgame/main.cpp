@@ -85,7 +85,7 @@ void main(int argc, char* argv[]) {
 	func_804DAAA0(func_802AEBBC());
 	
 	lbl_80666438 = 0;
-	SetArenaMemorySize(0x680000, 0);
+	MemManager_setArenaMemorySize(0x680000, 0);
 	func_80448E78(0);
 	func_804559A8(0, 0x180000);
 	CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later

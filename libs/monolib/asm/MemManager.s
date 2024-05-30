@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80433300, global
+.fn MemManager_80433300, global
 /* 80433300 003FC8C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80433304 003FC8C4  7C 08 02 A6 */	mflr r0
 /* 80433308 003FC8C8  2C 03 00 00 */	cmpwi r3, 0
@@ -71,7 +71,7 @@
 /* 804333F4 003FC9B4  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_804333F8:
 /* 804333F8 003FC9B8  7F E3 FB 78 */	mr r3, r31
-/* 804333FC 003FC9BC  48 00 05 BD */	bl func_804339B8
+/* 804333FC 003FC9BC  48 00 05 BD */	bl MemManager_804339B8
 /* 80433400 003FC9C0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80433404 003FC9C4  2C 05 00 00 */	cmpwi r5, 0
 /* 80433408 003FC9C8  41 82 00 4C */	beq .L_80433454
@@ -125,7 +125,7 @@
 /* 804334B8 003FCA78  2C 04 00 00 */	cmpwi r4, 0
 /* 804334BC 003FCA7C  41 82 00 0C */	beq .L_804334C8
 /* 804334C0 003FCA80  7F E3 FB 78 */	mr r3, r31
-/* 804334C4 003FCA84  48 00 05 E5 */	bl func_80433AA8
+/* 804334C4 003FCA84  48 00 05 E5 */	bl MemManager_80433AA8
 .L_804334C8:
 /* 804334C8 003FCA88  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 804334CC 003FCA8C  38 03 FF FF */	addi r0, r3, -1
@@ -208,7 +208,7 @@
 /* 804335E4 003FCBA4  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_804335E8:
 /* 804335E8 003FCBA8  7F E3 FB 78 */	mr r3, r31
-/* 804335EC 003FCBAC  48 00 03 CD */	bl func_804339B8
+/* 804335EC 003FCBAC  48 00 03 CD */	bl MemManager_804339B8
 /* 804335F0 003FCBB0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 804335F4 003FCBB4  2C 05 00 00 */	cmpwi r5, 0
 /* 804335F8 003FCBB8  41 82 00 4C */	beq .L_80433644
@@ -262,7 +262,7 @@
 /* 804336A8 003FCC68  2C 04 00 00 */	cmpwi r4, 0
 /* 804336AC 003FCC6C  41 82 00 0C */	beq .L_804336B8
 /* 804336B0 003FCC70  7F E3 FB 78 */	mr r3, r31
-/* 804336B4 003FCC74  48 00 03 F5 */	bl func_80433AA8
+/* 804336B4 003FCC74  48 00 03 F5 */	bl MemManager_80433AA8
 .L_804336B8:
 /* 804336B8 003FCC78  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 804336BC 003FCC7C  38 03 FF FF */	addi r0, r3, -1
@@ -276,15 +276,15 @@
 /* 804336D8 003FCC98  7C 08 03 A6 */	mtlr r0
 /* 804336DC 003FCC9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804336E0 003FCCA0  4E 80 00 20 */	blr 
-.endfn func_80433300
+.endfn MemManager_80433300
 
-.fn SetArenaMemorySize, global
+.fn MemManager_setArenaMemorySize, global
 /* 804336E4 003FCCA4  90 6D 9C BC */	stw r3, arenaMemorySize@sda21(r13)
 /* 804336E8 003FCCA8  90 8D BC D8 */	stw r4, lbl_80667E58@sda21(r13)
 /* 804336EC 003FCCAC  4E 80 00 20 */	blr 
-.endfn SetArenaMemorySize
+.endfn MemManager_setArenaMemorySize
 
-.fn func_804336F0, global
+.fn MemManager_804336F0, global
 /* 804336F0 003FCCB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804336F4 003FCCB4  7C 08 02 A6 */	mflr r0
 /* 804336F8 003FCCB8  2C 05 00 00 */	cmpwi r5, 0
@@ -489,9 +489,9 @@
 /* 804339AC 003FCF6C  7C 08 03 A6 */	mtlr r0
 /* 804339B0 003FCF70  38 21 00 30 */	addi r1, r1, 0x30
 /* 804339B4 003FCF74  4E 80 00 20 */	blr 
-.endfn func_804336F0
+.endfn MemManager_804336F0
 
-.fn func_804339B8, global
+.fn MemManager_804339B8, global
 /* 804339B8 003FCF78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804339BC 003FCF7C  7C 08 02 A6 */	mflr r0
 /* 804339C0 003FCF80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -561,9 +561,9 @@
 /* 80433A9C 003FD05C  7C 08 03 A6 */	mtlr r0
 /* 80433AA0 003FD060  38 21 00 10 */	addi r1, r1, 0x10
 /* 80433AA4 003FD064  4E 80 00 20 */	blr 
-.endfn func_804339B8
+.endfn MemManager_804339B8
 
-.fn func_80433AA8, global
+.fn MemManager_80433AA8, global
 /* 80433AA8 003FD068  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80433AAC 003FD06C  7C 08 02 A6 */	mflr r0
 /* 80433AB0 003FD070  90 01 00 14 */	stw r0, 0x14(r1)
@@ -621,7 +621,7 @@
 /* 80433B70 003FD130  80 85 00 04 */	lwz r4, 4(r5)
 /* 80433B74 003FD134  2C 04 00 00 */	cmpwi r4, 0
 /* 80433B78 003FD138  41 82 00 08 */	beq .L_80433B80
-/* 80433B7C 003FD13C  4B FF FF 2D */	bl func_80433AA8
+/* 80433B7C 003FD13C  4B FF FF 2D */	bl MemManager_80433AA8
 .L_80433B80:
 /* 80433B80 003FD140  7F E3 FB 78 */	mr r3, r31
 /* 80433B84 003FD144  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -629,7 +629,7 @@
 /* 80433B8C 003FD14C  7C 08 03 A6 */	mtlr r0
 /* 80433B90 003FD150  38 21 00 10 */	addi r1, r1, 0x10
 /* 80433B94 003FD154  4E 80 00 20 */	blr 
-.endfn func_80433AA8
+.endfn MemManager_80433AA8
 
 .fn heap_allocate, global
 /* 80433B98 003FD158  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -704,7 +704,7 @@
 /* 80433C88 003FD248  7F 85 E3 78 */	mr r5, r28
 /* 80433C8C 003FD24C  7F A6 EB 78 */	mr r6, r29
 /* 80433C90 003FD250  7F C7 F3 78 */	mr r7, r30
-/* 80433C94 003FD254  4B FF FA 5D */	bl func_804336F0
+/* 80433C94 003FD254  4B FF FA 5D */	bl MemManager_804336F0
 /* 80433C98 003FD258  7C 67 1B 78 */	mr r7, r3
 /* 80433C9C 003FD25C  48 00 00 38 */	b .L_80433CD4
 /* 80433CA0 003FD260  48 00 00 2C */	b .L_80433CCC
@@ -714,7 +714,7 @@
 /* 80433CAC 003FD26C  7F 85 E3 78 */	mr r5, r28
 /* 80433CB0 003FD270  7F A6 EB 78 */	mr r6, r29
 /* 80433CB4 003FD274  7F C7 F3 78 */	mr r7, r30
-/* 80433CB8 003FD278  4B FF FA 39 */	bl func_804336F0
+/* 80433CB8 003FD278  4B FF FA 39 */	bl MemManager_804336F0
 /* 80433CBC 003FD27C  2C 03 00 00 */	cmpwi r3, 0
 /* 80433CC0 003FD280  7C 67 1B 78 */	mr r7, r3
 /* 80433CC4 003FD284  40 82 00 10 */	bne .L_80433CD4
@@ -955,7 +955,7 @@
 /* 80434010 003FD5D0  2C 00 00 00 */	cmpwi r0, 0
 /* 80434014 003FD5D4  41 82 00 0C */	beq .L_80434020
 /* 80434018 003FD5D8  38 80 FF FF */	li r4, -1
-/* 8043401C 003FD5DC  4B FF F2 E5 */	bl func_80433300
+/* 8043401C 003FD5DC  4B FF F2 E5 */	bl MemManager_80433300
 .L_80434020:
 /* 80434020 003FD5E0  37 DE FF FF */	addic. r30, r30, -1
 /* 80434024 003FD5E4  40 80 FF DC */	bge .L_80434000
@@ -1080,7 +1080,7 @@
 /* 804341CC 003FD78C  4E 80 00 20 */	blr 
 .endfn heap_createRegion
 
-.fn func_804341D0, global
+.fn MemManager_804341D0, global
 /* 804341D0 003FD790  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804341D4 003FD794  7C 08 02 A6 */	mflr r0
 /* 804341D8 003FD798  2C 04 00 00 */	cmpwi r4, 0
@@ -1132,7 +1132,7 @@
 /* 80434274 003FD834  7F 63 DB 78 */	mr r3, r27
 /* 80434278 003FD838  38 C1 00 08 */	addi r6, r1, 8
 /* 8043427C 003FD83C  38 A0 00 10 */	li r5, 0x10
-/* 80434280 003FD840  48 00 04 85 */	bl func_80434704
+/* 80434280 003FD840  48 00 04 85 */	bl MemManager_80434704
 /* 80434284 003FD844  2C 03 00 00 */	cmpwi r3, 0
 /* 80434288 003FD848  40 82 00 0C */	bne .L_80434294
 /* 8043428C 003FD84C  3B 80 00 00 */	li r28, 0
@@ -1207,7 +1207,7 @@
 /* 8043438C 003FD94C  7C 08 03 A6 */	mtlr r0
 /* 80434390 003FD950  38 21 00 30 */	addi r1, r1, 0x30
 /* 80434394 003FD954  4E 80 00 20 */	blr 
-.endfn func_804341D0
+.endfn MemManager_804341D0
 
 .fn Heap_getRegionIndex1, global
 /* 80434398 003FD958  80 6D 9C B0 */	lwz r3, regionIndex1@sda21(r13)
@@ -1224,7 +1224,7 @@
 /* 804343AC 003FD96C  4E 80 00 20 */	blr 
 .endfn Heap_getRegionIndex2_2
 
-.fn func_804343B0, global
+.fn MemManager_804343B0, global
 /* 804343B0 003FD970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804343B4 003FD974  7C 08 02 A6 */	mflr r0
 /* 804343B8 003FD978  54 64 06 3E */	clrlwi r4, r3, 0x18
@@ -1253,16 +1253,16 @@
 /* 80434408 003FD9C8  38 80 FF FF */	li r4, -1
 /* 8043440C 003FD9CC  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434410 003FD9D0  7C 63 02 14 */	add r3, r3, r0
-/* 80434414 003FD9D4  4B FF EE ED */	bl func_80433300
+/* 80434414 003FD9D4  4B FF EE ED */	bl MemManager_80433300
 /* 80434418 003FD9D8  38 60 00 01 */	li r3, 1
 .L_8043441C:
 /* 8043441C 003FD9DC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80434420 003FD9E0  7C 08 03 A6 */	mtlr r0
 /* 80434424 003FD9E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80434428 003FD9E8  4E 80 00 20 */	blr 
-.endfn func_804343B0
+.endfn MemManager_804343B0
 
-.fn func_8043442C, global
+.fn MemManager_8043442C, global
 /* 8043442C 003FD9EC  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80434430 003FD9F0  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434434 003FD9F4  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1272,9 +1272,9 @@
 /* 80434444 003FDA04  38 80 00 00 */	li r4, 0
 /* 80434448 003FDA08  7C 63 02 14 */	add r3, r3, r0
 /* 8043444C 003FDA0C  4B FF F7 4C */	b heap_allocate
-.endfn func_8043442C
+.endfn MemManager_8043442C
 
-.fn func_80434450, global
+.fn MemManager_80434450, global
 /* 80434450 003FDA10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80434454 003FDA14  7C 08 02 A6 */	mflr r0
 /* 80434458 003FDA18  38 C0 00 00 */	li r6, 0
@@ -1292,7 +1292,7 @@
 /* 80434488 003FDA48  7F E3 FB 78 */	mr r3, r31
 /* 8043448C 003FDA4C  90 C1 00 08 */	stw r6, 8(r1)
 /* 80434490 003FDA50  38 C1 00 08 */	addi r6, r1, 8
-/* 80434494 003FDA54  48 00 02 71 */	bl func_80434704
+/* 80434494 003FDA54  48 00 02 71 */	bl MemManager_80434704
 /* 80434498 003FDA58  2C 03 00 00 */	cmpwi r3, 0
 /* 8043449C 003FDA5C  40 82 00 0C */	bne .L_804344A8
 /* 804344A0 003FDA60  38 60 00 00 */	li r3, 0
@@ -1311,9 +1311,9 @@
 /* 804344CC 003FDA8C  7C 08 03 A6 */	mtlr r0
 /* 804344D0 003FDA90  38 21 00 20 */	addi r1, r1, 0x20
 /* 804344D4 003FDA94  4E 80 00 20 */	blr 
-.endfn func_80434450
+.endfn MemManager_80434450
 
-.fn func_804344D8, global
+.fn MemManager_804344D8, global
 /* 804344D8 003FDA98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804344DC 003FDA9C  7C 08 02 A6 */	mflr r0
 /* 804344E0 003FDAA0  2C 03 00 00 */	cmpwi r3, 0
@@ -1375,7 +1375,7 @@
 /* 804345A8 003FDB68  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_804345AC:
 /* 804345AC 003FDB6C  7F E3 FB 78 */	mr r3, r31
-/* 804345B0 003FDB70  4B FF F4 09 */	bl func_804339B8
+/* 804345B0 003FDB70  4B FF F4 09 */	bl MemManager_804339B8
 /* 804345B4 003FDB74  80 A3 00 00 */	lwz r5, 0(r3)
 /* 804345B8 003FDB78  2C 05 00 00 */	cmpwi r5, 0
 /* 804345BC 003FDB7C  41 82 00 4C */	beq .L_80434608
@@ -1429,7 +1429,7 @@
 /* 8043466C 003FDC2C  2C 04 00 00 */	cmpwi r4, 0
 /* 80434670 003FDC30  41 82 00 0C */	beq .L_8043467C
 /* 80434674 003FDC34  7F E3 FB 78 */	mr r3, r31
-/* 80434678 003FDC38  4B FF F4 31 */	bl func_80433AA8
+/* 80434678 003FDC38  4B FF F4 31 */	bl MemManager_80433AA8
 .L_8043467C:
 /* 8043467C 003FDC3C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 80434680 003FDC40  38 03 FF FF */	addi r0, r3, -1
@@ -1442,9 +1442,9 @@
 /* 80434694 003FDC54  7C 08 03 A6 */	mtlr r0
 /* 80434698 003FDC58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043469C 003FDC5C  4E 80 00 20 */	blr 
-.endfn func_804344D8
+.endfn MemManager_804344D8
 
-.fn func_804346A0, global
+.fn MemManager_804346A0, global
 /* 804346A0 003FDC60  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804346A4 003FDC64  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804346A8 003FDC68  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1452,9 +1452,9 @@
 /* 804346B0 003FDC70  7C 63 02 14 */	add r3, r3, r0
 /* 804346B4 003FDC74  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 804346B8 003FDC78  4E 80 00 20 */	blr 
-.endfn func_804346A0
+.endfn MemManager_804346A0
 
-.fn func_804346BC, global
+.fn MemManager_804346BC, global
 /* 804346BC 003FDC7C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804346C0 003FDC80  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804346C4 003FDC84  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1476,9 +1476,9 @@
 /* 804346F8 003FDCB8  2C 04 00 00 */	cmpwi r4, 0
 /* 804346FC 003FDCBC  40 82 FF F0 */	bne .L_804346EC
 /* 80434700 003FDCC0  4E 80 00 20 */	blr 
-.endfn func_804346BC
+.endfn MemManager_804346BC
 
-.fn func_80434704, global
+.fn MemManager_80434704, global
 /* 80434704 003FDCC4  80 03 00 00 */	lwz r0, 0(r3)
 /* 80434708 003FDCC8  2C 00 00 00 */	cmpwi r0, 0
 /* 8043470C 003FDCCC  40 82 00 0C */	bne .L_80434718
@@ -1511,9 +1511,9 @@
 /* 80434764 003FDD24  40 82 FF C0 */	bne .L_80434724
 /* 80434768 003FDD28  38 60 00 00 */	li r3, 0
 /* 8043476C 003FDD2C  4E 80 00 20 */	blr 
-.endfn func_80434704
+.endfn MemManager_80434704
 
-.fn func_80434770, global
+.fn MemManager_80434770, global
 /* 80434770 003FDD30  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80434774 003FDD34  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434778 003FDD38  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1546,9 +1546,9 @@
 /* 804347CC 003FDD8C  80 65 00 0C */	lwz r3, 0xc(r5)
 /* 804347D0 003FDD90  38 63 FF E0 */	addi r3, r3, -32
 /* 804347D4 003FDD94  4E 80 00 20 */	blr 
-.endfn func_80434770
+.endfn MemManager_80434770
 
-.fn func_804347D8, global
+.fn MemManager_804347D8, global
 /* 804347D8 003FDD98  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804347DC 003FDD9C  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804347E0 003FDDA0  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1575,9 +1575,9 @@
 /* 80434824 003FDDE4  40 82 FF E4 */	bne .L_80434808
 /* 80434828 003FDDE8  38 65 00 20 */	addi r3, r5, 0x20
 /* 8043482C 003FDDEC  4E 80 00 20 */	blr 
-.endfn func_804347D8
+.endfn MemManager_804347D8
 
-.fn func_80434830, global
+.fn MemManager_80434830, global
 /* 80434830 003FDDF0  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80434834 003FDDF4  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434838 003FDDF8  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1609,9 +1609,9 @@
 .L_8043489C:
 /* 8043489C 003FDE5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804348A0 003FDE60  4E 80 00 20 */	blr 
-.endfn func_80434830
+.endfn MemManager_80434830
 
-.fn func_804348A4, global
+.fn MemManager_804348A4, global
 /* 804348A4 003FDE64  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804348A8 003FDE68  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804348AC 003FDE6C  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1619,9 +1619,9 @@
 /* 804348B4 003FDE74  7C 63 02 14 */	add r3, r3, r0
 /* 804348B8 003FDE78  98 83 00 6C */	stb r4, 0x6c(r3)
 /* 804348BC 003FDE7C  4E 80 00 20 */	blr 
-.endfn func_804348A4
+.endfn MemManager_804348A4
 
-.fn func_804348C0, global
+.fn MemManager_804348C0, global
 /* 804348C0 003FDE80  2C 03 00 00 */	cmpwi r3, 0
 /* 804348C4 003FDE84  40 82 00 10 */	bne .L_804348D4
 /* 804348C8 003FDE88  3C 60 00 01 */	lis r3, 0x0000FFFF@ha
@@ -1741,18 +1741,18 @@
 /* 80434A40 003FE000  42 00 FF 60 */	bdnz .L_804349A0
 /* 80434A44 003FE004  54 A3 C4 3E */	rlwinm r3, r5, 0x18, 0x10, 0x1f
 /* 80434A48 003FE008  4E 80 00 20 */	blr 
-.endfn func_804348C0
+.endfn MemManager_804348C0
 
 #FUN_002ffbf4 in xc3d
-.fn func_80434A4C, global
+.fn MemManager_80434A4C__FUc, global
 /* 80434A4C 003FE00C  98 6D 9C B9 */	stb r3, lbl_80665E39@sda21(r13)
 /* 80434A50 003FE010  4E 80 00 20 */	blr 
-.endfn func_80434A4C
+.endfn MemManager_80434A4C__FUc
 
-.fn func_80434A54, global
+.fn MemManager_80434A54, global
 /* 80434A54 003FE014  98 6D BC DC */	stb r3, lbl_80667E5C@sda21(r13)
 /* 80434A58 003FE018  4E 80 00 20 */	blr 
-.endfn func_80434A54
+.endfn MemManager_80434A54
 
 
 .fn heap_malloc, global
@@ -1779,7 +1779,7 @@
 /* 80434AA0 003FE060  4B FF F0 F8 */	b heap_allocate
 .endfn heap_malloc_1
 
-.fn func_80434AA4, global
+.fn MemManager_80434AA4, global
 /* 80434AA4 003FE064  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80434AA8 003FE068  7C 08 02 A6 */	mflr r0
 /* 80434AAC 003FE06C  2C 05 00 00 */	cmpwi r5, 0
@@ -1802,7 +1802,7 @@
 /* 80434AF0 003FE0B0  7F A4 EB 78 */	mr r4, r29
 /* 80434AF4 003FE0B4  7F E5 FB 78 */	mr r5, r31
 /* 80434AF8 003FE0B8  38 C1 00 08 */	addi r6, r1, 8
-/* 80434AFC 003FE0BC  4B FF FC 09 */	bl func_80434704
+/* 80434AFC 003FE0BC  4B FF FC 09 */	bl MemManager_80434704
 /* 80434B00 003FE0C0  2C 03 00 00 */	cmpwi r3, 0
 /* 80434B04 003FE0C4  40 82 00 0C */	bne .L_80434B10
 /* 80434B08 003FE0C8  38 60 00 00 */	li r3, 0
@@ -1831,9 +1831,9 @@
 /* 80434B58 003FE118  7C 08 03 A6 */	mtlr r0
 /* 80434B5C 003FE11C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80434B60 003FE120  4E 80 00 20 */	blr 
-.endfn func_80434AA4
+.endfn MemManager_80434AA4
 
-.fn func_80434B64, global
+.fn MemManager_80434B64, global
 /* 80434B64 003FE124  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80434B68 003FE128  7C 08 02 A6 */	mflr r0
 /* 80434B6C 003FE12C  2C 05 00 00 */	cmpwi r5, 0
@@ -1856,7 +1856,7 @@
 /* 80434BB0 003FE170  7F A4 EB 78 */	mr r4, r29
 /* 80434BB4 003FE174  7F E5 FB 78 */	mr r5, r31
 /* 80434BB8 003FE178  38 C1 00 08 */	addi r6, r1, 8
-/* 80434BBC 003FE17C  4B FF FB 49 */	bl func_80434704
+/* 80434BBC 003FE17C  4B FF FB 49 */	bl MemManager_80434704
 /* 80434BC0 003FE180  2C 03 00 00 */	cmpwi r3, 0
 /* 80434BC4 003FE184  40 82 00 0C */	bne .L_80434BD0
 /* 80434BC8 003FE188  38 60 00 00 */	li r3, 0
@@ -1885,7 +1885,7 @@
 /* 80434C18 003FE1D8  7C 08 03 A6 */	mtlr r0
 /* 80434C1C 003FE1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80434C20 003FE1E0  4E 80 00 20 */	blr
-.endfn func_80434B64
+.endfn MemManager_80434B64
 
 .fn __nw__FUl, global
 /* 80434C24 003FE1E4  38 60 00 00 */	li r3, 0
@@ -1948,7 +1948,7 @@
 /* 80434CEC 003FE2AC  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_80434CF0:
 /* 80434CF0 003FE2B0  7F E3 FB 78 */	mr r3, r31
-/* 80434CF4 003FE2B4  4B FF EC C5 */	bl func_804339B8
+/* 80434CF4 003FE2B4  4B FF EC C5 */	bl MemManager_804339B8
 /* 80434CF8 003FE2B8  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80434CFC 003FE2BC  2C 05 00 00 */	cmpwi r5, 0
 /* 80434D00 003FE2C0  41 82 00 4C */	beq .L_80434D4C
@@ -2002,7 +2002,7 @@
 /* 80434DB0 003FE370  2C 04 00 00 */	cmpwi r4, 0
 /* 80434DB4 003FE374  41 82 00 0C */	beq .L_80434DC0
 /* 80434DB8 003FE378  7F E3 FB 78 */	mr r3, r31
-/* 80434DBC 003FE37C  4B FF EC ED */	bl func_80433AA8
+/* 80434DBC 003FE37C  4B FF EC ED */	bl MemManager_80433AA8
 .L_80434DC0:
 /* 80434DC0 003FE380  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 80434DC4 003FE384  38 03 FF FF */	addi r0, r3, -1
@@ -2071,7 +2071,7 @@
 /* 80434EA0 003FE460  90 1F 00 0C */	stw r0, 0xc(r31)
 .L_80434EA4:
 /* 80434EA4 003FE464  7F E3 FB 78 */	mr r3, r31
-/* 80434EA8 003FE468  4B FF EB 11 */	bl func_804339B8
+/* 80434EA8 003FE468  4B FF EB 11 */	bl MemManager_804339B8
 /* 80434EAC 003FE46C  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80434EB0 003FE470  2C 05 00 00 */	cmpwi r5, 0
 /* 80434EB4 003FE474  41 82 00 4C */	beq .L_80434F00
@@ -2125,7 +2125,7 @@
 /* 80434F64 003FE524  2C 04 00 00 */	cmpwi r4, 0
 /* 80434F68 003FE528  41 82 00 0C */	beq .L_80434F74
 /* 80434F6C 003FE52C  7F E3 FB 78 */	mr r3, r31
-/* 80434F70 003FE530  4B FF EB 39 */	bl func_80433AA8
+/* 80434F70 003FE530  4B FF EB 39 */	bl MemManager_80433AA8
 .L_80434F74:
 /* 80434F74 003FE534  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 80434F78 003FE538  38 03 FF FF */	addi r0, r3, -1
@@ -2375,28 +2375,28 @@
 
 .obj "@eti_80033B30", local
 .hidden "@eti_80033B30"
-	.4byte func_80433300
+	.4byte MemManager_80433300
 	.4byte 0x000003E4
 	.4byte "@etb_8001BF98"
 .endobj "@eti_80033B30"
 
 .obj "@eti_80033B3C", local
 .hidden "@eti_80033B3C"
-	.4byte func_804336F0
+	.4byte MemManager_804336F0
 	.4byte 0x000002C8
 	.4byte "@etb_8001BFA0"
 .endobj "@eti_80033B3C"
 
 .obj "@eti_80033B48", local
 .hidden "@eti_80033B48"
-	.4byte func_804339B8
+	.4byte MemManager_804339B8
 	.4byte 0x000000F0
 	.4byte "@etb_8001BFA8"
 .endobj "@eti_80033B48"
 
 .obj "@eti_80033B54", local
 .hidden "@eti_80033B54"
-	.4byte func_80433AA8
+	.4byte MemManager_80433AA8
 	.4byte 0x000000F0
 	.4byte "@etb_8001BFB0"
 .endobj "@eti_80033B54"
@@ -2431,49 +2431,49 @@
 
 .obj "@eti_80033B90", local
 .hidden "@eti_80033B90"
-	.4byte func_804341D0
+	.4byte MemManager_804341D0
 	.4byte 0x000001C8
 	.4byte "@etb_8001BFD8"
 .endobj "@eti_80033B90"
 
 .obj "@eti_80033B9C", local
 .hidden "@eti_80033B9C"
-	.4byte func_804343B0
+	.4byte MemManager_804343B0
 	.4byte 0x0000007C
 	.4byte "@etb_8001BFE0"
 .endobj "@eti_80033B9C"
 
 .obj "@eti_80033BA8", local
 .hidden "@eti_80033BA8"
-	.4byte func_80434450
+	.4byte MemManager_80434450
 	.4byte 0x00000088
 	.4byte "@etb_8001BFE8"
 .endobj "@eti_80033BA8"
 
 .obj "@eti_80033BB4", local
 .hidden "@eti_80033BB4"
-	.4byte func_804344D8
+	.4byte MemManager_804344D8
 	.4byte 0x000001C8
 	.4byte "@etb_8001BFF0"
 .endobj "@eti_80033BB4"
 
 .obj "@eti_80033BC0", local
 .hidden "@eti_80033BC0"
-	.4byte func_80434830
+	.4byte MemManager_80434830
 	.4byte 0x00000074
 	.4byte "@etb_8001BFF8"
 .endobj "@eti_80033BC0"
 
 .obj "@eti_80033BCC", local
 .hidden "@eti_80033BCC"
-	.4byte func_80434AA4
+	.4byte MemManager_80434AA4
 	.4byte 0x000000C0
 	.4byte "@etb_8001C000"
 .endobj "@eti_80033BCC"
 
 .obj "@eti_80033BD8", local
 .hidden "@eti_80033BD8"
-	.4byte func_80434B64
+	.4byte MemManager_80434B64
 	.4byte 0x000000C0
 	.4byte "@etb_8001C008"
 .endobj "@eti_80033BD8"

@@ -13,7 +13,7 @@
 /* 80166720 0012FCE0  4E 80 00 20 */	blr 
 .endfn __ct__cf_CInfoCf
 
-.fn __dt__cf_CInfoCf, global
+.fn __dt__Q22cf7CInfoCfFv, global
 /* 80166724 0012FCE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80166728 0012FCE8  7C 08 02 A6 */	mflr r0
 /* 8016672C 0012FCEC  2C 03 00 00 */	cmpwi r3, 0
@@ -33,7 +33,7 @@
 /* 80166760 0012FD20  7C 08 03 A6 */	mtlr r0
 /* 80166764 0012FD24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80166768 0012FD28  4E 80 00 20 */	blr 
-.endfn __dt__cf_CInfoCf
+.endfn __dt__Q22cf7CInfoCfFv
 
 .fn func_8016676C, global
 /* 8016676C 0012FD2C  80 6D A9 C0 */	lwz r3, lbl_80666B40@sda21(r13)
@@ -105,7 +105,7 @@
 /* 80166834 0012FDF4  4E 80 00 20 */	blr
 .endfn func_80166830
 
-.fn __dt__CMenuItem, global
+.fn __dt__9CMenuItemFv, global
 /* 80166838 0012FDF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016683C 0012FDFC  7C 08 02 A6 */	mflr r0
 /* 80166840 0012FE00  2C 03 00 00 */	cmpwi r3, 0
@@ -117,19 +117,19 @@
 /* 80166858 0012FE18  41 82 00 50 */	beq .L_801668A8
 /* 8016685C 0012FE1C  38 80 FF FF */	li r4, -1
 /* 80166860 0012FE20  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80166864 0012FE24  48 06 41 01 */	bl __dt__CItemBoxGrid
+/* 80166864 0012FE24  48 06 41 01 */	bl __dt__12CItemBoxGridFv
 /* 80166868 0012FE28  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8016686C 0012FE2C  38 80 FF FF */	li r4, -1
-/* 80166870 0012FE30  48 05 D6 E1 */	bl __dt__CTitleAHelp
+/* 80166870 0012FE30  48 05 D6 E1 */	bl __dt__11CTitleAHelpFv
 /* 80166874 0012FE34  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80166878 0012FE38  38 80 FF FF */	li r4, -1
-/* 8016687C 0012FE3C  48 05 D1 55 */	bl __dt__CBgTex
+/* 8016687C 0012FE3C  48 05 D1 55 */	bl __dt__6CBgTexFv
 /* 80166880 0012FE40  2C 1E 00 00 */	cmpwi r30, 0
 /* 80166884 0012FE44  41 82 00 14 */	beq .L_80166898
 /* 80166888 0012FE48  41 82 00 10 */	beq .L_80166898
 /* 8016688C 0012FE4C  7F C3 F3 78 */	mr r3, r30
 /* 80166890 0012FE50  38 80 00 00 */	li r4, 0
-/* 80166894 0012FE54  48 2D E2 A5 */	bl __dt__CProcess
+/* 80166894 0012FE54  48 2D E2 A5 */	bl __dt__8CProcessFv
 .L_80166898:
 /* 80166898 0012FE58  2C 1F 00 00 */	cmpwi r31, 0
 /* 8016689C 0012FE5C  40 81 00 0C */	ble .L_801668A8
@@ -143,7 +143,7 @@
 /* 801668B8 0012FE78  7C 08 03 A6 */	mtlr r0
 /* 801668BC 0012FE7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801668C0 0012FE80  4E 80 00 20 */	blr 
-.endfn __dt__CMenuItem
+.endfn __dt__9CMenuItemFv
 
 .fn func_801668C4, global
 /* 801668C4 0012FE84  94 21 B5 80 */	stwu r1, -0x4a80(r1)
@@ -180,7 +180,7 @@
 /* 8016693C 0012FEFC  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 80166940 0012FF00  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 80166944 0012FF04  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 80166948 0012FF08  48 05 D0 89 */	bl __dt__CBgTex
+/* 80166948 0012FF08  48 05 D0 89 */	bl __dt__6CBgTexFv
 /* 8016694C 0012FF0C  38 7F 00 60 */	addi r3, r31, 0x60
 /* 80166950 0012FF10  48 05 D2 C5 */	bl func_801C3C14
 /* 80166954 0012FF14  2C 03 00 00 */	cmpwi r3, 0
@@ -231,7 +231,7 @@
 /* 80166A04 0012FFC4  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 80166A08 0012FFC8  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 80166A0C 0012FFCC  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 80166A10 0012FFD0  48 05 D5 41 */	bl __dt__CTitleAHelp
+/* 80166A10 0012FFD0  48 05 D5 41 */	bl __dt__11CTitleAHelpFv
 /* 80166A14 0012FFD4  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80166A18 0012FFD8  48 05 D5 8D */	bl CTitleAHelp_load
 /* 80166A1C 0012FFDC  88 1F 4A C5 */	lbz r0, 0x4ac5(r31)
@@ -442,7 +442,7 @@
 /* 80166D4C 0013030C  48 00 07 85 */	bl func_801674D0
 /* 80166D50 00130310  38 61 00 60 */	addi r3, r1, 0x60
 /* 80166D54 00130314  38 80 FF FF */	li r4, -1
-/* 80166D58 00130318  48 06 3C 0D */	bl __dt__CItemBoxGrid
+/* 80166D58 00130318  48 06 3C 0D */	bl __dt__12CItemBoxGridFv
 /* 80166D5C 0013031C  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 80166D60 00130320  48 06 47 21 */	bl func_801CB480
 /* 80166D64 00130324  88 9F 4A C5 */	lbz r4, 0x4ac5(r31)
@@ -1049,7 +1049,7 @@
 /* 8016762C 00130BEC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80167630 00130BF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80167634 00130BF4  7C 7F 1B 78 */	mr r31, r3
-/* 80167638 00130BF8  48 2E 14 0D */	bl func_80448A44
+/* 80167638 00130BF8  48 2E 14 0D */	bl func_80448A44__Fv
 /* 8016763C 00130BFC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80167640 00130C00  7F E4 FB 78 */	mr r4, r31
 /* 80167644 00130C04  41 82 00 08 */	beq .L_8016764C
@@ -1262,7 +1262,7 @@
 .obj __vt__Q22cf7CInfoCf, global
 	.4byte __RTTI__Q22cf7CInfoCf
 	.4byte 0
-	.4byte __dt__cf_CInfoCf
+	.4byte __dt__Q22cf7CInfoCfFv
 	.4byte 0
 .endobj __vt__Q22cf7CInfoCf
 
@@ -1311,25 +1311,25 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__CItemBoxGrid
+	.4byte __dt__12CItemBoxGridFv
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__CTitleAHelp
+	.4byte __dt__11CTitleAHelpFv
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__CBgTex
+	.4byte __dt__6CBgTexFv
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__IScnRender
+	.4byte __dt__10IScnRenderFv
 .endobj "@etb_8000DD10"
 
 .obj "@etb_8000DD84", local
@@ -1396,7 +1396,7 @@
 
 .obj "@eti_80028D24", local
 .hidden "@eti_80028D24"
-	.4byte __dt__cf_CInfoCf
+	.4byte __dt__Q22cf7CInfoCfFv
 	.4byte 0x00000048
 	.4byte "@etb_8000DD00"
 .endobj "@eti_80028D24"
@@ -1410,7 +1410,7 @@
 
 .obj "@eti_80028D3C", local
 .hidden "@eti_80028D3C"
-	.4byte __dt__CMenuItem
+	.4byte __dt__9CMenuItemFv
 	.4byte 0x0000008C
 	.4byte "@etb_8000DD10"
 .endobj "@eti_80028D3C"

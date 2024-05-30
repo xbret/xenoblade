@@ -24,7 +24,7 @@
 /* 80460128 004296E8  4E 80 00 20 */	blr 
 .endfn __ct__CLibVM
 
-.fn __dt__CLibVM, global
+.fn __dt__6CLibVMFv, global
 /* 8046012C 004296EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80460130 004296F0  7C 08 02 A6 */	mflr r0
 /* 80460134 004296F4  2C 03 00 00 */	cmpwi r3, 0
@@ -37,7 +37,7 @@
 /* 80460150 00429710  38 00 00 00 */	li r0, 0
 /* 80460154 00429714  90 0D BE 78 */	stw r0, lbl_80667FF8@sda21(r13)
 /* 80460158 00429718  38 80 00 00 */	li r4, 0
-/* 8046015C 0042971C  4B FD 79 6D */	bl __dt__CWorkThread
+/* 8046015C 0042971C  4B FD 79 6D */	bl __dt__11CWorkThreadFv
 /* 80460160 00429720  2C 1F 00 00 */	cmpwi r31, 0
 /* 80460164 00429724  40 81 00 0C */	ble .L_80460170
 /* 80460168 00429728  7F C3 F3 78 */	mr r3, r30
@@ -50,7 +50,7 @@
 /* 80460180 00429740  7C 08 03 A6 */	mtlr r0
 /* 80460184 00429744  38 21 00 10 */	addi r1, r1, 0x10
 /* 80460188 00429748  4E 80 00 20 */	blr 
-.endfn __dt__CLibVM
+.endfn __dt__6CLibVMFv
 
 .fn func_8046018C, global
 /* 8046018C 0042974C  80 6D BE 78 */	lwz r3, lbl_80667FF8@sda21(r13)
@@ -131,7 +131,7 @@
 /* 80460278 00429838  4E 80 04 21 */	bctrl 
 .L_8046027C:
 /* 8046027C 0042983C  7F E3 FB 78 */	mr r3, r31
-/* 80460280 00429840  4B FD 87 79 */	bl CWorkThread_WorkThreadEvent4
+/* 80460280 00429840  4B FD 87 79 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80460284 00429844  48 00 00 08 */	b .L_8046028C
 .L_80460288:
 /* 80460288 00429848  38 60 00 00 */	li r3, 0
@@ -163,7 +163,7 @@
 /* 804602E0 004298A0  4E 80 04 21 */	bctrl 
 .L_804602E4:
 /* 804602E4 004298A4  7F E3 FB 78 */	mr r3, r31
-/* 804602E8 004298A8  4B FD 87 3D */	bl CWorkThread_WorkThreadEvent5
+/* 804602E8 004298A8  4B FD 87 3D */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804602EC 004298AC  48 00 00 08 */	b .L_804602F4
 .L_804602F0:
 /* 804602F0 004298B0  38 60 00 00 */	li r3, 0
@@ -2811,7 +2811,7 @@
 /* 804627D4 0042BD94  4E 80 00 20 */	blr 
 .endfn func_80462068
 
-.fn __dt__CTTask_CTaskLOD, global
+.fn "__dt__17CTTask<8CTaskLOD>Fv", global
 /* 804627D8 0042BD98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804627DC 0042BD9C  7C 08 02 A6 */	mflr r0
 /* 804627E0 0042BDA0  2C 03 00 00 */	cmpwi r3, 0
@@ -2822,7 +2822,7 @@
 /* 804627F4 0042BDB4  7C 7E 1B 78 */	mr r30, r3
 /* 804627F8 0042BDB8  41 82 00 1C */	beq .L_80462814
 /* 804627FC 0042BDBC  38 80 00 00 */	li r4, 0
-/* 80462800 0042BDC0  4B FE 23 39 */	bl __dt__CProcess
+/* 80462800 0042BDC0  4B FE 23 39 */	bl __dt__8CProcessFv
 /* 80462804 0042BDC4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80462808 0042BDC8  40 81 00 0C */	ble .L_80462814
 /* 8046280C 0042BDCC  7F C3 F3 78 */	mr r3, r30
@@ -2835,9 +2835,9 @@
 /* 80462824 0042BDE4  7C 08 03 A6 */	mtlr r0
 /* 80462828 0042BDE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046282C 0042BDEC  4E 80 00 20 */	blr 
-.endfn __dt__CTTask_CTaskLOD
+.endfn "__dt__17CTTask<8CTaskLOD>Fv"
 
-.fn __dt__CTaskLOD, global
+.fn __dt__8CTaskLODFv, global
 /* 80462830 0042BDF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80462834 0042BDF4  7C 08 02 A6 */	mflr r0
 /* 80462838 0042BDF8  2C 03 00 00 */	cmpwi r3, 0
@@ -2854,7 +2854,7 @@
 /* 80462864 0042BE24  41 82 00 10 */	beq .L_80462874
 /* 80462868 0042BE28  7F C3 F3 78 */	mr r3, r30
 /* 8046286C 0042BE2C  38 80 00 00 */	li r4, 0
-/* 80462870 0042BE30  4B FE 22 C9 */	bl __dt__CProcess
+/* 80462870 0042BE30  4B FE 22 C9 */	bl __dt__8CProcessFv
 .L_80462874:
 /* 80462874 0042BE34  2C 1F 00 00 */	cmpwi r31, 0
 /* 80462878 0042BE38  40 81 00 0C */	ble .L_80462884
@@ -2868,7 +2868,7 @@
 /* 80462894 0042BE54  7C 08 03 A6 */	mtlr r0
 /* 80462898 0042BE58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046289C 0042BE5C  4E 80 00 20 */	blr 
-.endfn __dt__CTaskLOD
+.endfn __dt__8CTaskLODFv
 
 .fn func_804628A0, global
 /* 804628A0 0042BE60  4E 80 00 20 */	blr 
@@ -3650,44 +3650,44 @@
 .obj __vt__6CLibVM, global
 	.4byte __RTTI__6CLibVM
 	.4byte 0
-	.4byte __dt__CLibVM
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__6CLibVMFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CLibVM_WorkThreadEvent4
 	.4byte CLibVM_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__6CLibVM
 
 .obj CLibVM_hierarchy, global
@@ -3872,7 +3872,7 @@
 
 .obj "@eti_80035510", local
 .hidden "@eti_80035510"
-	.4byte __dt__CLibVM
+	.4byte __dt__6CLibVMFv
 	.4byte 0x00000060
 	.4byte "@etb_8001D948"
 .endobj "@eti_80035510"
@@ -3942,14 +3942,14 @@
 
 .obj "@eti_80035588", local
 .hidden "@eti_80035588"
-	.4byte __dt__CTTask_CTaskLOD
+	.4byte "__dt__17CTTask<8CTaskLOD>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001D998"
 .endobj "@eti_80035588"
 
 .obj "@eti_80035594", local
 .hidden "@eti_80035594"
-	.4byte __dt__CTaskLOD
+	.4byte __dt__8CTaskLODFv
 	.4byte 0x00000070
 	.4byte "@etb_8001D9A0"
 .endobj "@eti_80035594"

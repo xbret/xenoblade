@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B85A4, global
+.fn func_802B85A4__Q22cf8CHelp_PgFv, global
 /* 802B85A4 00281B64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B85A8 00281B68  7C 08 02 A6 */	mflr r0
 /* 802B85AC 00281B6C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -27,7 +27,7 @@
 /* 802B85F8 00281BB8  7C 08 03 A6 */	mtlr r0
 /* 802B85FC 00281BBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B8600 00281BC0  4E 80 00 20 */	blr 
-.endfn func_802B85A4
+.endfn func_802B85A4__Q22cf8CHelp_PgFv
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
@@ -53,7 +53,7 @@
 
 .obj "@eti_80033998", local
 .hidden "@eti_80033998"
-	.4byte func_802B85A4
+	.4byte func_802B85A4__Q22cf8CHelp_PgFv
 	.4byte 0x00000060
 	.4byte "@etb_8001BE08"
 .endobj "@eti_80033998"

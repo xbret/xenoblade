@@ -28,7 +28,7 @@
 /* 8044F61C 00418BDC  4B FF DA 45 */	bl func_8044D060
 /* 8044F620 00418BE0  38 80 08 00 */	li r4, 0x800
 /* 8044F624 00418BE4  38 A0 00 20 */	li r5, 0x20
-/* 8044F628 00418BE8  4B FE 4E 05 */	bl func_8043442C
+/* 8044F628 00418BE8  4B FE 4E 05 */	bl MemManager_8043442C
 /* 8044F62C 00418BEC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8044F630 00418BF0  90 7F 01 D8 */	stw r3, 0x1d8(r31)
 /* 8044F634 00418BF4  7F E3 FB 78 */	mr r3, r31
@@ -64,7 +64,7 @@
 /* 8044F698 00418C58  4E 80 00 20 */	blr
 .endfn __dt__8044F65C
 
-.fn __dt__CDeviceFileCri, global
+.fn __dt__14CDeviceFileCriFv, global
 /* 8044F69C 00418C5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044F6A0 00418C60  7C 08 02 A6 */	mflr r0
 /* 8044F6A4 00418C64  2C 03 00 00 */	cmpwi r3, 0
@@ -91,12 +91,12 @@
 /* 8044F6F4 00418CB4  80 7D 01 D8 */	lwz r3, 0x1d8(r29)
 /* 8044F6F8 00418CB8  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F6FC 00418CBC  41 82 00 0C */	beq .L_8044F708
-/* 8044F700 00418CC0  4B FE 4D D9 */	bl func_804344D8
+/* 8044F700 00418CC0  4B FE 4D D9 */	bl MemManager_804344D8
 /* 8044F704 00418CC4  93 FD 01 D8 */	stw r31, 0x1d8(r29)
 .L_8044F708:
 /* 8044F708 00418CC8  7F A3 EB 78 */	mr r3, r29
 /* 8044F70C 00418CCC  38 80 00 00 */	li r4, 0
-/* 8044F710 00418CD0  4B FE 83 B9 */	bl __dt__CWorkThread
+/* 8044F710 00418CD0  4B FE 83 B9 */	bl __dt__11CWorkThreadFv
 /* 8044F714 00418CD4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8044F718 00418CD8  40 81 00 0C */	ble .L_8044F724
 /* 8044F71C 00418CDC  7F A3 EB 78 */	mr r3, r29
@@ -110,7 +110,7 @@
 /* 8044F738 00418CF8  7C 08 03 A6 */	mtlr r0
 /* 8044F73C 00418CFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044F740 00418D00  4E 80 00 20 */	blr 
-.endfn __dt__CDeviceFileCri
+.endfn __dt__14CDeviceFileCriFv
 
 .fn func_8044F744, global
 /* 8044F744 00418D04  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1496,7 +1496,7 @@
 .endfn CDeviceFileCri_wkUpdate
 
 .fn CDeviceFileCri_WorkThreadEvent4, global
-/* 804509B4 00419F74  4B FE 80 44 */	b CWorkThread_WorkThreadEvent4
+/* 804509B4 00419F74  4B FE 80 44 */	b WorkThreadEvent4__11CWorkThreadFv
 .endfn CDeviceFileCri_WorkThreadEvent4
 
 .fn CDeviceFileCri_WorkThreadEvent5, global
@@ -1516,7 +1516,7 @@
 /* 804509EC 00419FAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804509F0 00419FB0  40 82 00 10 */	bne .L_80450A00
 /* 804509F4 00419FB4  7F E3 FB 78 */	mr r3, r31
-/* 804509F8 00419FB8  4B FE 80 2D */	bl CWorkThread_WorkThreadEvent5
+/* 804509F8 00419FB8  4B FE 80 2D */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 804509FC 00419FBC  48 00 00 08 */	b .L_80450A04
 .L_80450A00:
 /* 80450A00 00419FC0  38 60 00 00 */	li r3, 0
@@ -1639,41 +1639,41 @@
 .obj __vt__14CDeviceFileCri, global
 	.4byte __RTTI__14CDeviceFileCri
 	.4byte 0
-	.4byte __dt__CDeviceFileCri
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte __dt__14CDeviceFileCriFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 	.4byte CDeviceFileCri_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CDeviceFileCri_WorkThreadEvent4
 	.4byte CDeviceFileCri_WorkThreadEvent5
 	.4byte CDeviceFileCri_WorkThreadEvent6
@@ -1756,7 +1756,7 @@
 	.4byte __dt__8044F65C
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 .endobj "@etb_8001CE38"
 
 .obj "@etb_8001CE60", local
@@ -1778,7 +1778,7 @@
 	.4byte __dt__8044F65C
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__CWorkThread
+	.4byte __dt__11CWorkThreadFv
 	.4byte 0x8680001D
 	.4byte 0x000001C4
 	.4byte __dt__8044F65C
@@ -1888,7 +1888,7 @@
 
 .obj "@eti_80034AE4", local
 .hidden "@eti_80034AE4"
-	.4byte __dt__CDeviceFileCri
+	.4byte __dt__14CDeviceFileCriFv
 	.4byte 0x000000A8
 	.4byte "@etb_8001CE68"
 .endobj "@eti_80034AE4"

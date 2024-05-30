@@ -175,7 +175,7 @@
 /* 80449408 004129C8  4E 80 00 20 */	blr 
 .endfn __ct__CGXCache
 
-.fn __dt__IStateCache, global
+.fn __dt__11IStateCacheFv, global
 /* 8044940C 004129CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80449410 004129D0  7C 08 02 A6 */	mflr r0
 /* 80449414 004129D4  2C 03 00 00 */	cmpwi r3, 0
@@ -193,7 +193,7 @@
 /* 80449440 00412A00  7C 08 03 A6 */	mtlr r0
 /* 80449444 00412A04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449448 00412A08  4E 80 00 20 */	blr 
-.endfn __dt__IStateCache
+.endfn __dt__11IStateCacheFv
 
 .fn __ct__CMsgParam_32, global
 /* 8044944C 00412A0C  3C E0 80 57 */	lis r7, "__vt__13CMsgParam<32>"@ha
@@ -826,7 +826,7 @@
 /* 80449D00 004132C0  4E 80 00 20 */	blr 
 .endfn __ct__IStateCache
 
-.fn __dt__CGXCache, global
+.fn __dt__8CGXCacheFv, global
 /* 80449D04 004132C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80449D08 004132C8  7C 08 02 A6 */	mflr r0
 /* 80449D0C 004132CC  2C 03 00 00 */	cmpwi r3, 0
@@ -854,7 +854,7 @@
 /* 80449D5C 0041331C  7C 08 03 A6 */	mtlr r0
 /* 80449D60 00413320  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449D64 00413324  4E 80 00 20 */	blr 
-.endfn __dt__CGXCache
+.endfn __dt__8CGXCacheFv
 
 .fn func_80449D68, global
 /* 80449D68 00413328  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -1454,7 +1454,7 @@
 .obj __vt__8CGXCache, global
 	.4byte __RTTI__8CGXCache
 	.4byte 0
-	.4byte __dt__CGXCache
+	.4byte __dt__8CGXCacheFv
 	.4byte func_80449D68
 .endobj __vt__8CGXCache
 
@@ -1475,7 +1475,7 @@
 .obj __vt__11IStateCache, global
 	.4byte __RTTI__11IStateCache
 	.4byte 0
-	.4byte __dt__IStateCache
+	.4byte __dt__11IStateCacheFv
 	.4byte 0
 .endobj __vt__11IStateCache
 
@@ -1629,7 +1629,7 @@
 	.4byte __dt__804494D8
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__IStateCache
+	.4byte __dt__11IStateCacheFv
 .endobj "@etb_8001CB90"
 
 .obj "@etb_8001CBB8", local
@@ -1711,7 +1711,7 @@
 
 .obj "@eti_800347A8", local
 .hidden "@eti_800347A8"
-	.4byte __dt__IStateCache
+	.4byte __dt__11IStateCacheFv
 	.4byte 0x00000040
 	.4byte "@etb_8001CBB8"
 .endobj "@eti_800347A8"
@@ -1774,7 +1774,7 @@
 
 .obj "@eti_80034814", local
 .hidden "@eti_80034814"
-	.4byte __dt__CGXCache
+	.4byte __dt__8CGXCacheFv
 	.4byte 0x00000064
 	.4byte "@etb_8001CC00"
 .endobj "@eti_80034814"

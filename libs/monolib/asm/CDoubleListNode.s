@@ -15,7 +15,7 @@
 /* 8044659C 0040FB5C  4E 80 00 20 */	blr 
 .endfn __ct__15CDoubleListNodeFv
 
-.fn CDoubleListNode_Reset, global
+.fn Reset__15CDoubleListNodeFv, global
 /* 804465A0 0040FB60  38 80 00 00 */	li r4, 0
 /* 804465A4 0040FB64  38 00 FF FF */	li r0, -1
 /* 804465A8 0040FB68  90 83 00 00 */	stw r4, 0(r3)
@@ -23,9 +23,9 @@
 /* 804465B0 0040FB70  98 83 00 08 */	stb r4, 8(r3)
 /* 804465B4 0040FB74  90 03 00 0C */	stw r0, 0xc(r3)
 /* 804465B8 0040FB78  4E 80 00 20 */	blr 
-.endfn CDoubleListNode_Reset
+.endfn Reset__15CDoubleListNodeFv
 
-.fn CDoubleListNode_InsertTop, global
+.fn InsertTop__17CDoubleListHeaderFP15CDoubleListNode, global
 /* 804465BC 0040FB7C  2C 04 00 00 */	cmpwi r4, 0
 /* 804465C0 0040FB80  41 82 00 38 */	beq .L_804465F8
 /* 804465C4 0040FB84  80 C3 00 00 */	lwz r6, 0(r3)
@@ -45,9 +45,9 @@
 .L_804465F8:
 /* 804465F8 0040FBB8  7C 83 23 78 */	mr r3, r4
 /* 804465FC 0040FBBC  4E 80 00 20 */	blr 
-.endfn CDoubleListNode_InsertTop
+.endfn InsertTop__17CDoubleListHeaderFP15CDoubleListNode
 
-.fn CDoubleListNode_InsertEnd, global
+.fn InsertEnd____17CDoubleListHeaderFP15CDoubleListNode, global
 /* 80446600 0040FBC0  2C 04 00 00 */	cmpwi r4, 0
 /* 80446604 0040FBC4  41 82 00 40 */	beq .L_80446644
 /* 80446608 0040FBC8  41 82 00 38 */	beq .L_80446640
@@ -70,9 +70,9 @@
 .L_80446644:
 /* 80446644 0040FC04  7C 83 23 78 */	mr r3, r4
 /* 80446648 0040FC08  4E 80 00 20 */	blr 
-.endfn CDoubleListNode_InsertEnd
+.endfn InsertEnd____17CDoubleListHeaderFP15CDoubleListNode
 
-.fn CDoubleListNode_Remove, global
+.fn Remove__17CDoubleListHeaderFP15CDoubleListNode, global
 /* 8044664C 0040FC0C  2C 04 00 00 */	cmpwi r4, 0
 /* 80446650 0040FC10  40 82 00 0C */	bne .L_8044665C
 /* 80446654 0040FC14  38 60 00 00 */	li r3, 0
@@ -117,7 +117,7 @@
 .L_804466D8:
 /* 804466D8 0040FC98  7C 83 23 78 */	mr r3, r4
 /* 804466DC 0040FC9C  4E 80 00 20 */	blr 
-.endfn CDoubleListNode_Remove
+.endfn Remove__17CDoubleListHeaderFP15CDoubleListNode
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -127,5 +127,5 @@
 	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
 	.4byte __dt__15CDoubleListNodeFv
-	.4byte CDoubleListNode_Reset
+	.4byte Reset__15CDoubleListNodeFv
 .endobj __vt__15CDoubleListNode

@@ -121,7 +121,7 @@
 /* 800CA66C 00093C2C  4E 80 00 20 */	blr
 .endfn func_800CA590
 
-.fn __dt__cf_CfObjectImplObj, global
+.fn __dt__Q22cf15CfObjectImplObjFv, global
 /* 800CA670 00093C30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA674 00093C34  7C 08 02 A6 */	mflr r0
 /* 800CA678 00093C38  2C 03 00 00 */	cmpwi r3, 0
@@ -133,7 +133,7 @@
 /* 800CA690 00093C50  41 82 00 20 */	beq .L_800CA6B0
 /* 800CA694 00093C54  38 80 FF FF */	li r4, -1
 /* 800CA698 00093C58  38 63 03 68 */	addi r3, r3, 0x368
-/* 800CA69C 00093C5C  48 0C 87 A5 */	bl __dt__cf_CPartsChange
+/* 800CA69C 00093C5C  48 0C 87 A5 */	bl __dt__Q22cf12CPartsChangeFv
 /* 800CA6A0 00093C60  2C 1F 00 00 */	cmpwi r31, 0
 /* 800CA6A4 00093C64  40 81 00 0C */	ble .L_800CA6B0
 /* 800CA6A8 00093C68  7F C3 F3 78 */	mr r3, r30
@@ -146,7 +146,7 @@
 /* 800CA6C0 00093C80  7C 08 03 A6 */	mtlr r0
 /* 800CA6C4 00093C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 800CA6C8 00093C88  4E 80 00 20 */	blr 
-.endfn __dt__cf_CfObjectImplObj
+.endfn __dt__Q22cf15CfObjectImplObjFv
 
 .fn func_800CA6CC, global
 /* 800CA6CC 00093C8C  38 63 FF F4 */	addi r3, r3, -12
@@ -155,12 +155,12 @@
 
 .fn func_800CA6D4, global
 /* 800CA6D4 00093C94  38 63 FF F4 */	addi r3, r3, -12
-/* 800CA6D8 00093C98  4B FF FF 98 */	b __dt__cf_CfObjectImplObj
+/* 800CA6D8 00093C98  4B FF FF 98 */	b __dt__Q22cf15CfObjectImplObjFv
 .endfn func_800CA6D4
 
 .fn func_800CA6DC, global
 /* 800CA6DC 00093C9C  38 63 FF F0 */	addi r3, r3, -16
-/* 800CA6E0 00093CA0  4B FF FF 90 */	b __dt__cf_CfObjectImplObj
+/* 800CA6E0 00093CA0  4B FF FF 90 */	b __dt__Q22cf15CfObjectImplObjFv
 .endfn func_800CA6DC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -179,7 +179,7 @@
 .obj __vt__Q22cf15CfObjectImplObj, global
 	.4byte __RTTI__Q22cf15CfObjectImplObj
 	.4byte 0
-	.4byte __dt__cf_CfObjectImplObj
+	.4byte __dt__Q22cf15CfObjectImplObjFv
 	.4byte func_80054A20
 	.4byte func_800CC5DC
 	.4byte func_800CC638
@@ -307,7 +307,7 @@
 
 .obj "@eti_80025E38", local
 .hidden "@eti_80025E38"
-	.4byte __dt__cf_CfObjectImplObj
+	.4byte __dt__Q22cf15CfObjectImplObjFv
 	.4byte 0x0000005C
 	.4byte "@etb_8000A38C"
 .endobj "@eti_80025E38"

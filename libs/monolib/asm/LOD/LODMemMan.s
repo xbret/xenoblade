@@ -79,7 +79,7 @@
 /* 8046D100 004366C0  4E 80 00 20 */	blr 
 .endfn __ct__LOD_LODMemMan
 
-.fn __dt__LOD_LODMemMan, global
+.fn __dt__Q23LOD9LODMemManFv, global
 /* 8046D104 004366C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046D108 004366C8  7C 08 02 A6 */	mflr r0
 /* 8046D10C 004366CC  2C 03 00 00 */	cmpwi r3, 0
@@ -97,7 +97,7 @@
 /* 8046D138 004366F8  7C 08 03 A6 */	mtlr r0
 /* 8046D13C 004366FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046D140 00436700  4E 80 00 20 */	blr 
-.endfn __dt__LOD_LODMemMan
+.endfn __dt__Q23LOD9LODMemManFv
 
 .fn __dt__8046D144, global
 /* 8046D144 00436704  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5190,14 +5190,14 @@
 /* 804717B8 0043AD78  41 82 00 18 */	beq .L_804717D0
 /* 804717BC 0043AD7C  41 82 00 14 */	beq .L_804717D0
 /* 804717C0 0043AD80  7C 03 03 78 */	mr r3, r0
-/* 804717C4 0043AD84  4B FC 2D 15 */	bl func_804344D8
+/* 804717C4 0043AD84  4B FC 2D 15 */	bl MemManager_804344D8
 /* 804717C8 0043AD88  38 00 00 00 */	li r0, 0
 /* 804717CC 0043AD8C  90 0D BF 88 */	stw r0, lbl_80668108@sda21(r13)
 .L_804717D0:
 /* 804717D0 0043AD90  7F C3 F3 78 */	mr r3, r30
 /* 804717D4 0043AD94  7F E4 FB 78 */	mr r4, r31
 /* 804717D8 0043AD98  38 A0 00 20 */	li r5, 0x20
-/* 804717DC 0043AD9C  4B FC 2C 51 */	bl func_8043442C
+/* 804717DC 0043AD9C  4B FC 2C 51 */	bl MemManager_8043442C
 /* 804717E0 0043ADA0  90 6D BF 88 */	stw r3, lbl_80668108@sda21(r13)
 /* 804717E4 0043ADA4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804717E8 0043ADA8  83 C1 00 08 */	lwz r30, 8(r1)
@@ -5215,7 +5215,7 @@
 /* 8047180C 0043ADCC  2C 03 00 00 */	cmpwi r3, 0
 /* 80471810 0043ADD0  41 82 00 0C */	beq .L_8047181C
 /* 80471814 0043ADD4  41 82 00 08 */	beq .L_8047181C
-/* 80471818 0043ADD8  4B FC 2C C1 */	bl func_804344D8
+/* 80471818 0043ADD8  4B FC 2C C1 */	bl MemManager_804344D8
 .L_8047181C:
 /* 8047181C 0043ADDC  38 00 00 00 */	li r0, 0
 /* 80471820 0043ADE0  90 0D BF 88 */	stw r0, lbl_80668108@sda21(r13)
@@ -5240,7 +5240,7 @@
 /* 80471860 0043AE20  41 82 00 18 */	beq .L_80471878
 /* 80471864 0043AE24  41 82 00 14 */	beq .L_80471878
 /* 80471868 0043AE28  7C 03 03 78 */	mr r3, r0
-/* 8047186C 0043AE2C  4B FC 2C 6D */	bl func_804344D8
+/* 8047186C 0043AE2C  4B FC 2C 6D */	bl MemManager_804344D8
 /* 80471870 0043AE30  38 00 00 00 */	li r0, 0
 /* 80471874 0043AE34  90 1D 00 08 */	stw r0, 8(r29)
 .L_80471878:
@@ -5256,14 +5256,14 @@
 /* 80471898 0043AE58  2C 03 00 00 */	cmpwi r3, 0
 /* 8047189C 0043AE5C  41 82 00 14 */	beq .L_804718B0
 /* 804718A0 0043AE60  41 82 00 10 */	beq .L_804718B0
-/* 804718A4 0043AE64  4B FC 2C 35 */	bl func_804344D8
+/* 804718A4 0043AE64  4B FC 2C 35 */	bl MemManager_804344D8
 /* 804718A8 0043AE68  38 00 00 00 */	li r0, 0
 /* 804718AC 0043AE6C  90 1D 00 04 */	stw r0, 4(r29)
 .L_804718B0:
 /* 804718B0 0043AE70  7F E3 FB 78 */	mr r3, r31
 /* 804718B4 0043AE74  7F C4 F3 78 */	mr r4, r30
 /* 804718B8 0043AE78  38 A0 00 20 */	li r5, 0x20
-/* 804718BC 0043AE7C  4B FC 2B 71 */	bl func_8043442C
+/* 804718BC 0043AE7C  4B FC 2B 71 */	bl MemManager_8043442C
 /* 804718C0 0043AE80  90 7D 00 04 */	stw r3, 4(r29)
 /* 804718C4 0043AE84  48 00 00 20 */	b .L_804718E4
 .L_804718C8:
@@ -5271,7 +5271,7 @@
 /* 804718CC 0043AE8C  2C 03 00 00 */	cmpwi r3, 0
 /* 804718D0 0043AE90  41 82 00 14 */	beq .L_804718E4
 /* 804718D4 0043AE94  41 82 00 10 */	beq .L_804718E4
-/* 804718D8 0043AE98  4B FC 2C 01 */	bl func_804344D8
+/* 804718D8 0043AE98  4B FC 2C 01 */	bl MemManager_804344D8
 /* 804718DC 0043AE9C  38 00 00 00 */	li r0, 0
 /* 804718E0 0043AEA0  90 1D 00 04 */	stw r0, 4(r29)
 .L_804718E4:
@@ -5312,7 +5312,7 @@
 /* 80471960 0043AF20  2C 03 00 00 */	cmpwi r3, 0
 /* 80471964 0043AF24  41 82 00 20 */	beq .L_80471984
 /* 80471968 0043AF28  41 82 00 1C */	beq .L_80471984
-/* 8047196C 0043AF2C  4B FC 2B 6D */	bl func_804344D8
+/* 8047196C 0043AF2C  4B FC 2B 6D */	bl MemManager_804344D8
 /* 80471970 0043AF30  38 00 00 00 */	li r0, 0
 /* 80471974 0043AF34  90 1E 00 04 */	stw r0, 4(r30)
 /* 80471978 0043AF38  48 00 00 0C */	b .L_80471984
@@ -5324,7 +5324,7 @@
 /* 80471988 0043AF48  2C 03 00 00 */	cmpwi r3, 0
 /* 8047198C 0043AF4C  41 82 00 14 */	beq .L_804719A0
 /* 80471990 0043AF50  41 82 00 10 */	beq .L_804719A0
-/* 80471994 0043AF54  4B FC 2B 45 */	bl func_804344D8
+/* 80471994 0043AF54  4B FC 2B 45 */	bl MemManager_804344D8
 /* 80471998 0043AF58  38 00 00 00 */	li r0, 0
 /* 8047199C 0043AF5C  90 1E 00 08 */	stw r0, 8(r30)
 .L_804719A0:
@@ -5377,7 +5377,7 @@
 /* 80471A44 0043B004  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80471A48 0043B008  41 82 00 14 */	beq .L_80471A5C
 /* 80471A4C 0043B00C  41 82 00 10 */	beq .L_80471A5C
-/* 80471A50 0043B010  4B FC 2A 89 */	bl func_804344D8
+/* 80471A50 0043B010  4B FC 2A 89 */	bl MemManager_804344D8
 /* 80471A54 0043B014  38 00 00 00 */	li r0, 0
 /* 80471A58 0043B018  90 1F 00 08 */	stw r0, 8(r31)
 .L_80471A5C:
@@ -5445,14 +5445,14 @@
 /* 80471B38 0043B0F8  41 82 00 18 */	beq .L_80471B50
 /* 80471B3C 0043B0FC  41 82 00 14 */	beq .L_80471B50
 /* 80471B40 0043B100  7D 63 5B 78 */	mr r3, r11
-/* 80471B44 0043B104  4B FC 29 95 */	bl func_804344D8
+/* 80471B44 0043B104  4B FC 29 95 */	bl MemManager_804344D8
 /* 80471B48 0043B108  38 00 00 00 */	li r0, 0
 /* 80471B4C 0043B10C  90 15 00 08 */	stw r0, 8(r21)
 .L_80471B50:
 /* 80471B50 0043B110  4B FC 28 49 */	bl Heap_getRegionIndex1
 /* 80471B54 0043B114  7F A4 EB 78 */	mr r4, r29
 /* 80471B58 0043B118  38 A0 00 20 */	li r5, 0x20
-/* 80471B5C 0043B11C  4B FC 28 D1 */	bl func_8043442C
+/* 80471B5C 0043B11C  4B FC 28 D1 */	bl MemManager_8043442C
 /* 80471B60 0043B120  90 75 00 08 */	stw r3, 8(r21)
 /* 80471B64 0043B124  7F A5 EB 78 */	mr r5, r29
 /* 80471B68 0043B128  38 80 00 00 */	li r4, 0
@@ -5654,7 +5654,7 @@
 /* 80471E10 0043B3D0  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80471E14 0043B3D4  41 82 00 14 */	beq .L_80471E28
 /* 80471E18 0043B3D8  41 82 00 10 */	beq .L_80471E28
-/* 80471E1C 0043B3DC  4B FC 26 BD */	bl func_804344D8
+/* 80471E1C 0043B3DC  4B FC 26 BD */	bl MemManager_804344D8
 /* 80471E20 0043B3E0  38 00 00 00 */	li r0, 0
 /* 80471E24 0043B3E4  90 1F 00 08 */	stw r0, 8(r31)
 .L_80471E28:
@@ -9142,38 +9142,38 @@
 .obj __vt__Q23LOD9LODMemMan, global
 	.4byte __RTTI__Q23LOD9LODMemMan
 	.4byte 0
-	.4byte __dt__LOD_LODMemMan
-	.4byte IWorkEvent_WorkEvent1
+	.4byte __dt__Q23LOD9LODMemManFv
+	.4byte WorkEvent1__10IWorkEventFv
 	.4byte LODMemMan_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
 .endobj __vt__Q23LOD9LODMemMan
 
 .obj LOD_LODMemMan_hierarchy, global
@@ -9672,7 +9672,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001F
 	.4byte 0x00000A44
-	.4byte __dt__LOD_LODMemMan
+	.4byte __dt__Q23LOD9LODMemManFv
 .endobj "@etb_8001DD2C"
 
 .obj "@etb_8001DD48", local
@@ -9692,7 +9692,7 @@
 	.4byte __dt__8046A584
 	.4byte 0x8780001E
 	.4byte 0x00000A44
-	.4byte __dt__LOD_LODMemMan
+	.4byte __dt__Q23LOD9LODMemManFv
 .endobj "@etb_8001DD50"
 
 .obj "@etb_8001DD78", local
@@ -10128,7 +10128,7 @@
 
 .obj "@eti_80035A98", local
 .hidden "@eti_80035A98"
-	.4byte __dt__LOD_LODMemMan
+	.4byte __dt__Q23LOD9LODMemManFv
 	.4byte 0x00000040
 	.4byte "@etb_8001DD48"
 .endobj "@eti_80035A98"

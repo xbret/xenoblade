@@ -206,11 +206,11 @@
 .fn __ct__Q34nw4r3lyt6LayoutFv, global
 /* 803FFEE8 003C94A8  38 00 00 00 */	li r0, 0
 /* 803FFEEC 003C94AC  C0 02 C1 D8 */	lfs f0, float_8066C558@sda21(r2)
-/* 803FFEF0 003C94B0  3C 80 80 57 */	lis r4, lbl_8056D258@ha
+/* 803FFEF0 003C94B0  3C 80 80 57 */	lis r4, __vt__Q34nw4r3lyt6Layout@ha
 /* 803FFEF4 003C94B4  90 03 00 08 */	stw r0, 8(r3)
 /* 803FFEF8 003C94B8  38 A3 00 08 */	addi r5, r3, 8
 /* 803FFEFC 003C94BC  90 03 00 0C */	stw r0, 0xc(r3)
-/* 803FFF00 003C94C0  38 84 D2 58 */	addi r4, r4, lbl_8056D258@l
+/* 803FFF00 003C94C0  38 84 D2 58 */	addi r4, r4, __vt__Q34nw4r3lyt6Layout@l
 /* 803FFF04 003C94C4  90 83 00 00 */	stw r4, 0(r3)
 /* 803FFF08 003C94C8  90 03 00 04 */	stw r0, 4(r3)
 /* 803FFF0C 003C94CC  90 A3 00 08 */	stw r5, 8(r3)
@@ -233,8 +233,8 @@
 /* 803FFF44 003C9504  7C 9C 23 78 */	mr r28, r4
 /* 803FFF48 003C9508  41 82 00 EC */	beq .L_80400034
 /* 803FFF4C 003C950C  83 A3 00 14 */	lwz r29, 0x14(r3)
-/* 803FFF50 003C9510  3C 80 80 57 */	lis r4, lbl_8056D258@ha
-/* 803FFF54 003C9514  38 84 D2 58 */	addi r4, r4, lbl_8056D258@l
+/* 803FFF50 003C9510  3C 80 80 57 */	lis r4, __vt__Q34nw4r3lyt6Layout@ha
+/* 803FFF54 003C9514  38 84 D2 58 */	addi r4, r4, __vt__Q34nw4r3lyt6Layout@l
 /* 803FFF58 003C9518  2C 1D 00 00 */	cmpwi r29, 0
 /* 803FFF5C 003C951C  90 83 00 00 */	stw r4, 0(r3)
 /* 803FFF60 003C9520  41 82 00 1C */	beq .L_803FFF7C
@@ -1222,7 +1222,7 @@
 .balign 8
 
 
-.obj lbl_8056D258, global
+.obj __vt__Q34nw4r3lyt6Layout, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt6LayoutFv
@@ -1239,7 +1239,7 @@
 	.4byte Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt6LayoutFUl
 	.4byte "SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase<w>"
-.endobj lbl_8056D258
+.endobj __vt__Q34nw4r3lyt6Layout
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -24,7 +24,7 @@
 /* 8045D198 00426758  4E 80 00 20 */	blr 
 .endfn __ct__CLibG3d
 
-.fn __dt__CLibG3d, global
+.fn __dt__7CLibG3dFv, global
 /* 8045D19C 0042675C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D1A0 00426760  7C 08 02 A6 */	mflr r0
 /* 8045D1A4 00426764  2C 03 00 00 */	cmpwi r3, 0
@@ -37,7 +37,7 @@
 /* 8045D1C0 00426780  38 00 00 00 */	li r0, 0
 /* 8045D1C4 00426784  90 0D BE 48 */	stw r0, lbl_80667FC8@sda21(r13)
 /* 8045D1C8 00426788  38 80 00 00 */	li r4, 0
-/* 8045D1CC 0042678C  4B FD A8 FD */	bl __dt__CWorkThread
+/* 8045D1CC 0042678C  4B FD A8 FD */	bl __dt__11CWorkThreadFv
 /* 8045D1D0 00426790  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045D1D4 00426794  40 81 00 0C */	ble .L_8045D1E0
 /* 8045D1D8 00426798  7F C3 F3 78 */	mr r3, r30
@@ -50,7 +50,7 @@
 /* 8045D1F0 004267B0  7C 08 03 A6 */	mtlr r0
 /* 8045D1F4 004267B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045D1F8 004267B8  4E 80 00 20 */	blr 
-.endfn __dt__CLibG3d
+.endfn __dt__7CLibG3dFv
 
 .fn func_8045D1FC, global
 /* 8045D1FC 004267BC  80 6D BE 48 */	lwz r3, lbl_80667FC8@sda21(r13)
@@ -123,7 +123,7 @@
 /* 8045D2D4 00426894  4B FE B1 29 */	bl func_804483FC
 /* 8045D2D8 00426898  4B F8 DA 05 */	bl SetRenderModeObj__Q34nw4r3g3d8G3DStateFRC16_GXRenderModeObj
 /* 8045D2DC 0042689C  7F E3 FB 78 */	mr r3, r31
-/* 8045D2E0 004268A0  4B FD B7 19 */	bl CWorkThread_WorkThreadEvent4
+/* 8045D2E0 004268A0  4B FD B7 19 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 8045D2E4 004268A4  48 00 00 08 */	b .L_8045D2EC
 .L_8045D2E8:
 /* 8045D2E8 004268A8  38 60 00 00 */	li r3, 0
@@ -149,7 +149,7 @@
 /* 8045D328 004268E8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045D32C 004268EC  40 82 00 10 */	bne .L_8045D33C
 /* 8045D330 004268F0  7F E3 FB 78 */	mr r3, r31
-/* 8045D334 004268F4  4B FD B6 F1 */	bl CWorkThread_WorkThreadEvent5
+/* 8045D334 004268F4  4B FD B6 F1 */	bl WorkThreadEvent5__11CWorkThreadFv
 /* 8045D338 004268F8  48 00 00 08 */	b .L_8045D340
 .L_8045D33C:
 /* 8045D33C 004268FC  38 60 00 00 */	li r3, 0
@@ -168,44 +168,44 @@
 .obj __vt__7CLibG3d, global
 	.4byte __RTTI__7CLibG3d
 	.4byte 0
-	.4byte __dt__CLibG3d
-	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnFileEvent
-	.4byte IWorkEvent_WorkEvent3
-	.4byte IWorkEvent_WorkEvent4
-	.4byte IWorkEvent_WorkEvent5
-	.4byte IWorkEvent_WorkEvent6
-	.4byte IWorkEvent_WorkEvent7
-	.4byte IWorkEvent_WorkEvent8
-	.4byte IWorkEvent_WorkEvent9
-	.4byte IWorkEvent_WorkEvent10
-	.4byte IWorkEvent_WorkEvent11
-	.4byte IWorkEvent_WorkEvent12
-	.4byte IWorkEvent_WorkEvent13
-	.4byte IWorkEvent_WorkEvent14
-	.4byte IWorkEvent_WorkEvent15
-	.4byte IWorkEvent_WorkEvent16
-	.4byte IWorkEvent_WorkEvent17
-	.4byte IWorkEvent_WorkEvent18
-	.4byte IWorkEvent_WorkEvent19
-	.4byte IWorkEvent_WorkEvent20
-	.4byte IWorkEvent_WorkEvent21
-	.4byte IWorkEvent_WorkEvent22
-	.4byte IWorkEvent_WorkEvent23
-	.4byte IWorkEvent_WorkEvent24
-	.4byte IWorkEvent_WorkEvent25
-	.4byte IWorkEvent_WorkEvent26
-	.4byte IWorkEvent_WorkEvent27
-	.4byte IWorkEvent_WorkEvent28
-	.4byte IWorkEvent_WorkEvent29
-	.4byte IWorkEvent_WorkEvent30
-	.4byte IWorkEvent_WorkEvent31
-	.4byte CWorkThread_wkUpdate
-	.4byte CWorkThread_WorkThreadEvent2
-	.4byte CWorkThread_WorkThreadEvent3
+	.4byte __dt__7CLibG3dFv
+	.4byte WorkEvent1__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFv
+	.4byte WorkEvent3__10IWorkEventFv
+	.4byte WorkEvent4__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent6__10IWorkEventFv
+	.4byte WorkEvent7__10IWorkEventFv
+	.4byte WorkEvent8__10IWorkEventFv
+	.4byte WorkEvent9__10IWorkEventFv
+	.4byte WorkEvent10__10IWorkEventFv
+	.4byte WorkEvent11__10IWorkEventFv
+	.4byte WorkEvent12__10IWorkEventFv
+	.4byte WorkEvent13__10IWorkEventFv
+	.4byte WorkEvent14__10IWorkEventFv
+	.4byte WorkEvent15__10IWorkEventFv
+	.4byte WorkEvent16__10IWorkEventFv
+	.4byte WorkEvent17__10IWorkEventFv
+	.4byte WorkEvent18__10IWorkEventFv
+	.4byte WorkEvent19__10IWorkEventFv
+	.4byte WorkEvent20__10IWorkEventFv
+	.4byte WorkEvent21__10IWorkEventFv
+	.4byte WorkEvent22__10IWorkEventFv
+	.4byte WorkEvent23__10IWorkEventFv
+	.4byte WorkEvent24__10IWorkEventFv
+	.4byte WorkEvent25__10IWorkEventFv
+	.4byte WorkEvent26__10IWorkEventFv
+	.4byte WorkEvent27__10IWorkEventFv
+	.4byte WorkEvent28__10IWorkEventFv
+	.4byte WorkEvent29__10IWorkEventFv
+	.4byte WorkEvent30__10IWorkEventFv
+	.4byte WorkEvent31__10IWorkEventFv
+	.4byte wkUpdate__11CWorkThreadFv
+	.4byte WorkThreadEvent2__11CWorkThreadFv
+	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte CLibG3d_WorkThreadEvent4
 	.4byte CLibG3d_WorkThreadEvent5
-	.4byte CWorkThread_WorkThreadEvent6
+	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__7CLibG3d
 
 .obj CLibG3d_hierarchy, global
@@ -284,7 +284,7 @@
 
 .obj "@eti_800352C4", local
 .hidden "@eti_800352C4"
-	.4byte __dt__CLibG3d
+	.4byte __dt__7CLibG3dFv
 	.4byte 0x00000060
 	.4byte "@etb_8001D6E8"
 .endobj "@eti_800352C4"
