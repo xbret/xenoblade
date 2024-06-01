@@ -359,10 +359,10 @@
 /* 8009DB10 000670D0  4E 80 00 20 */	blr 
 .endfn func_8009D7F4
 
-.fn func_8009DB14__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc94__Q22cf11CActorParamFv, global
 /* 8009DB14 000670D4  38 63 16 50 */	addi r3, r3, 0x1650
 /* 8009DB18 000670D8  4E 80 00 20 */	blr 
-.endfn func_8009DB14__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc94__Q22cf11CActorParamFv
 
 .fn func_8009DB1C, global
 /* 8009DB1C 000670DC  7C 83 23 78 */	mr r3, r4
@@ -684,10 +684,10 @@
 /* 8009DFBC 0006757C  4E 80 00 20 */	blr 
 .endfn func_8009DBF4
 
-.fn func_8009DFC0__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc33__Q22cf11CActorParamFv, global
 /* 8009DFC0 00067580  D0 23 17 E8 */	stfs f1, 0x17e8(r3)
 /* 8009DFC4 00067584  4E 80 00 20 */	blr 
-.endfn func_8009DFC0__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc33__Q22cf11CActorParamFv
 
 .fn func_8009DFC8, global
 /* 8009DFC8 00067588  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2347,50 +2347,50 @@
 /* 8009F688 00068C48  4E 80 00 20 */	blr 
 .endfn func_8009EF9C
 
-.fn func_8009F68C__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc16__Q22cf11CActorParamFv, global
 /* 8009F68C 00068C4C  D0 23 15 F8 */	stfs f1, 0x15f8(r3)
 /* 8009F690 00068C50  4E 80 00 20 */	blr 
-.endfn func_8009F68C__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc16__Q22cf11CActorParamFv
 
-.fn func_8009F694__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc55__Q22cf11CActorParamFv, global
 /* 8009F694 00068C54  B0 83 16 0E */	sth r4, 0x160e(r3)
 /* 8009F698 00068C58  4E 80 00 20 */	blr 
-.endfn func_8009F694__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc55__Q22cf11CActorParamFv
 
-.fn func_8009F69C__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc61__Q22cf11CActorParamFv, global
 /* 8009F69C 00068C5C  B0 83 16 16 */	sth r4, 0x1616(r3)
 /* 8009F6A0 00068C60  4E 80 00 20 */	blr 
-.endfn func_8009F69C__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc61__Q22cf11CActorParamFv
 
-.fn func_8009F6A4__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc65__Q22cf11CActorParamFv, global
 /* 8009F6A4 00068C64  D0 23 16 10 */	stfs f1, 0x1610(r3)
 /* 8009F6A8 00068C68  4E 80 00 20 */	blr 
-.endfn func_8009F6A4__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc65__Q22cf11CActorParamFv
 
-.fn func_8009F6AC__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc68__Q22cf11CActorParamFv, global
 /* 8009F6AC 00068C6C  D0 23 16 18 */	stfs f1, 0x1618(r3)
 /* 8009F6B0 00068C70  4E 80 00 20 */	blr 
-.endfn func_8009F6AC__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc68__Q22cf11CActorParamFv
 
-.fn func_8009F6B4__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc74__Q22cf11CActorParamFv, global
 /* 8009F6B4 00068C74  D0 23 18 30 */	stfs f1, 0x1830(r3)
 /* 8009F6B8 00068C78  4E 80 00 20 */	blr 
-.endfn func_8009F6B4__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc74__Q22cf11CActorParamFv
 
-.fn func_8009F6BC__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc14__Q22cf11CActorParamFv, global
 /* 8009F6BC 00068C7C  98 83 15 F4 */	stb r4, 0x15f4(r3)
 /* 8009F6C0 00068C80  4E 80 00 20 */	blr 
-.endfn func_8009F6BC__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc14__Q22cf11CActorParamFv
 
-.fn func_8009F6C4__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc165__Q22cf11CActorParamFv, global
 /* 8009F6C4 00068C84  38 63 16 4C */	addi r3, r3, 0x164c
 /* 8009F6C8 00068C88  4E 80 00 20 */	blr 
-.endfn func_8009F6C4__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc165__Q22cf11CActorParamFv
 
-.fn func_8009F6CC__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc116__Q22cf11CActorParamFv, global
 /* 8009F6CC 00068C8C  D0 23 16 20 */	stfs f1, 0x1620(r3)
 /* 8009F6D0 00068C90  4E 80 00 20 */	blr 
-.endfn func_8009F6CC__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc116__Q22cf11CActorParamFv
 
 .fn func_8009F6D4, global
 /* 8009F6D4 00068C94  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -2519,10 +2519,10 @@
 /* 8009F8AC 00068E6C  4E 80 00 20 */	blr 
 .endfn func_8009F6D4
 
-.fn func_8009F8B0__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc152__Q22cf11CActorParamFv, global
 /* 8009F8B0 00068E70  38 63 33 58 */	addi r3, r3, 0x3358
 /* 8009F8B4 00068E74  4E 80 00 20 */	blr 
-.endfn func_8009F8B0__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc152__Q22cf11CActorParamFv
 
 .fn __ct__8009F8B8, global
 /* 8009F8B8 00068E78  94 21 F1 80 */	stwu r1, -0xe80(r1)
@@ -3545,15 +3545,15 @@
 /* 800A0818 00069DD8  4E 80 00 20 */	blr 
 .endfn func_800A03F4
 
-.fn func_800A081C__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc125__Q22cf11CActorParamFv, global
 /* 800A081C 00069DDC  38 63 27 40 */	addi r3, r3, 0x2740
 /* 800A0820 00069DE0  4E 80 00 20 */	blr 
-.endfn func_800A081C__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc125__Q22cf11CActorParamFv
 
-.fn func_800A0824__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc76__Q22cf11CActorParamFv, global
 /* 800A0824 00069DE4  38 63 18 30 */	addi r3, r3, 0x1830
 /* 800A0828 00069DE8  4E 80 00 20 */	blr 
-.endfn func_800A0824__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc76__Q22cf11CActorParamFv
 
 .fn func_800A082C, global
 /* 800A082C 00069DEC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3972,10 +3972,10 @@
 /* 800A0E58 0006A418  4E 80 00 20 */	blr 
 .endfn func_800A0860
 
-.fn func_800A0E5C__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc100__Q22cf11CActorParamFv, global
 /* 800A0E5C 0006A41C  38 63 17 E4 */	addi r3, r3, 0x17e4
 /* 800A0E60 0006A420  4E 80 00 20 */	blr 
-.endfn func_800A0E5C__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc100__Q22cf11CActorParamFv
 
 .fn func_800A0E64, global
 /* 800A0E64 0006A424  94 21 FF 80 */	stwu r1, -0x80(r1)
@@ -4346,9 +4346,9 @@
 /* 800A13BC 0006A97C  4E 80 00 20 */	blr 
 .endfn func_800A1370
 
-.fn func_800A13C0__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc126__Q22cf11CActorParamFv, global
 /* 800A13C0 0006A980  4E 80 00 20 */	blr 
-.endfn func_800A13C0__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc126__Q22cf11CActorParamFv
 
 .fn func_800A13C4, global
 /* 800A13C4 0006A984  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4684,14 +4684,14 @@
 /* 800A1894 0006AE54  4E 80 00 20 */	blr 
 .endfn func_800A145C
 
-.fn func_800A1898__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc26__Q22cf11CActorParamFv, global
 /* 800A1898 0006AE58  80 63 16 50 */	lwz r3, 0x1650(r3)
 /* 800A189C 0006AE5C  4E 80 00 20 */	blr 
-.endfn func_800A1898__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc26__Q22cf11CActorParamFv
 
-.fn func_800A18A0__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc166__Q22cf11CActorParamFv, global
 /* 800A18A0 0006AE60  4E 80 00 20 */	blr 
-.endfn func_800A18A0__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc166__Q22cf11CActorParamFv
 
 .fn func_800A18A4, global
 /* 800A18A4 0006AE64  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -5656,7 +5656,7 @@
 /* 800A2658 0006BC18  4E 80 00 20 */	blr 
 .endfn func_800A21F8
 
-.fn func_800A265C__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc82__Q22cf11CActorParamFv, global
 /* 800A265C 0006BC1C  80 C3 16 04 */	lwz r6, 0x1604(r3)
 /* 800A2660 0006BC20  3C A0 05 F6 */	lis r5, 0x05F5E0FF@ha
 /* 800A2664 0006BC24  38 05 E0 FF */	addi r0, r5, 0x05F5E0FF@l
@@ -5666,9 +5666,9 @@
 /* 800A2674 0006BC34  4C 81 00 20 */	blelr 
 /* 800A2678 0006BC38  90 03 16 04 */	stw r0, 0x1604(r3)
 /* 800A267C 0006BC3C  4E 80 00 20 */	blr 
-.endfn func_800A265C__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc82__Q22cf11CActorParamFv
 
-.fn func_800A2680__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc90__Q22cf11CActorParamFv, global
 /* 800A2680 0006BC40  80 C3 16 08 */	lwz r6, 0x1608(r3)
 /* 800A2684 0006BC44  3C A0 05 F6 */	lis r5, 0x05F5E0FF@ha
 /* 800A2688 0006BC48  38 05 E0 FF */	addi r0, r5, 0x05F5E0FF@l
@@ -5678,7 +5678,7 @@
 /* 800A2698 0006BC58  4C 81 00 20 */	blelr 
 /* 800A269C 0006BC5C  90 03 16 08 */	stw r0, 0x1608(r3)
 /* 800A26A0 0006BC60  4E 80 00 20 */	blr 
-.endfn func_800A2680__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc90__Q22cf11CActorParamFv
 
 .fn func_800A26A4, global
 /* 800A26A4 0006BC64  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -5993,12 +5993,12 @@
 /* 800A2AB8 0006C078  4E 80 00 20 */	blr 
 .endfn func_800A2974
 
-.fn func_800A2ABC__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc85__Q22cf11CActorParamFv, global
 /* 800A2ABC 0006C07C  80 63 16 04 */	lwz r3, 0x1604(r3)
 /* 800A2AC0 0006C080  4E 80 00 20 */	blr 
-.endfn func_800A2ABC__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc85__Q22cf11CActorParamFv
 
-.fn func_800A2AC4__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc83__Q22cf11CActorParamFv, global
 /* 800A2AC4 0006C084  80 C3 16 00 */	lwz r6, 0x1600(r3)
 /* 800A2AC8 0006C088  3C A0 05 F6 */	lis r5, 0x05F5E0FF@ha
 /* 800A2ACC 0006C08C  38 05 E0 FF */	addi r0, r5, 0x05F5E0FF@l
@@ -6008,12 +6008,12 @@
 /* 800A2ADC 0006C09C  4C 81 00 20 */	blelr 
 /* 800A2AE0 0006C0A0  90 03 16 00 */	stw r0, 0x1600(r3)
 /* 800A2AE4 0006C0A4  4E 80 00 20 */	blr 
-.endfn func_800A2AC4__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc83__Q22cf11CActorParamFv
 
-.fn func_800A2AE8__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc81__Q22cf11CActorParamFv, global
 /* 800A2AE8 0006C0A8  90 83 16 04 */	stw r4, 0x1604(r3)
 /* 800A2AEC 0006C0AC  4E 80 00 20 */	blr 
-.endfn func_800A2AE8__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc81__Q22cf11CActorParamFv
 
 .fn func_800A2AF0, global
 /* 800A2AF0 0006C0B0  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -6699,36 +6699,36 @@
 /* 800A3484 0006CA44  4E 80 00 20 */	blr 
 .endfn func_800A33C8
 
-.fn func_800A3488__Q22cf12CObjectStateFv, global
+.fn CObjectState_virtualFunc13__Q22cf12CObjectStateFv, global
 /* 800A3488 0006CA48  80 03 00 08 */	lwz r0, 8(r3)
 /* 800A348C 0006CA4C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 800A3490 0006CA50  4E 80 00 20 */	blr 
-.endfn func_800A3488__Q22cf12CObjectStateFv
+.endfn CObjectState_virtualFunc13__Q22cf12CObjectStateFv
 
-.fn func_800A3494__Q22cf12CObjectStateFv, global
+.fn CObjectState_virtualFunc12__Q22cf12CObjectStateFv, global
 /* 800A3494 0006CA54  38 63 00 0C */	addi r3, r3, 0xc
 /* 800A3498 0006CA58  4E 80 00 20 */	blr 
-.endfn func_800A3494__Q22cf12CObjectStateFv
+.endfn CObjectState_virtualFunc12__Q22cf12CObjectStateFv
 
-.fn func_800A349C__Q22cf12CObjectStateFv, global
+.fn CObjectState_virtualFunc6__Q22cf12CObjectStateFv, global
 /* 800A349C 0006CA5C  38 00 00 00 */	li r0, 0
 /* 800A34A0 0006CA60  90 03 00 08 */	stw r0, 8(r3)
 /* 800A34A4 0006CA64  4E 80 00 20 */	blr 
-.endfn func_800A349C__Q22cf12CObjectStateFv
+.endfn CObjectState_virtualFunc6__Q22cf12CObjectStateFv
 
-.fn func_800A34A8__Q22cf12CObjectStateFv, global
+.fn CObjectState_virtualFunc4__Q22cf12CObjectStateFv, global
 /* 800A34A8 0006CA68  38 00 00 00 */	li r0, 0
 /* 800A34AC 0006CA6C  90 03 00 04 */	stw r0, 4(r3)
 /* 800A34B0 0006CA70  4E 80 00 20 */	blr 
-.endfn func_800A34A8__Q22cf12CObjectStateFv
+.endfn CObjectState_virtualFunc4__Q22cf12CObjectStateFv
 
-.fn func_800A34B4__Q22cf12CObjectParamFv, global
+.fn CObjectParam_virtualFunc3__Q22cf12CObjectParamFv, global
 /* 800A34B4 0006CA74  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 800A34B8 0006CA78  7C 03 00 D0 */	neg r0, r3
 /* 800A34BC 0006CA7C  7C 00 1B 78 */	or r0, r0, r3
 /* 800A34C0 0006CA80  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 800A34C4 0006CA84  4E 80 00 20 */	blr 
-.endfn func_800A34B4__Q22cf12CObjectParamFv
+.endfn CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
 
 .fn func_800A34C8, global
 /* 800A34C8 0006CA88  38 00 00 00 */	li r0, 0
@@ -7383,43 +7383,43 @@
 .obj __vt__Q22cf12CObjectParam, global
 	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte func_8003DC64__Q22cf12CObjectStateFv
-	.4byte func_8003CB58__Q22cf12CObjectStateFv
-	.4byte func_8003DD34__Q22cf12CObjectStateFv
-	.4byte func_800A34A8__Q22cf12CObjectStateFv
-	.4byte func_8009489C__Q22cf12CObjectStateFv
-	.4byte func_800A349C__Q22cf12CObjectStateFv
-	.4byte func_80086B4C__Q22cf12CObjectStateFv
-	.4byte func_8003CB20__Q22cf12CObjectStateFv
-	.4byte func_8003D98C__Q22cf12CObjectStateFv
-	.4byte func_8003D8C0__Q22cf12CObjectStateFv
-	.4byte func_8003D7B0__Q22cf12CObjectStateFv
-	.4byte func_800A3494__Q22cf12CObjectStateFv
-	.4byte func_800A3488__Q22cf12CObjectStateFv
-	.4byte func_8003C7F8__Q22cf12CObjectParamFv
-	.4byte func_8003C2EC__Q22cf12CObjectParamFv
-	.4byte func_800A34B4__Q22cf12CObjectParamFv
-	.4byte func_80080640__Q22cf12CObjectParamFv
-	.4byte func_8003E664__Q22cf12CObjectParamFv
-	.4byte func_8003DC74__Q22cf12CObjectParamFv
+	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc2__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc4__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
 .endobj __vt__Q22cf12CObjectParam
 
 .obj __vt__Q22cf12CObjectState, global
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte func_8003DC64__Q22cf12CObjectStateFv
-	.4byte func_8003CB58__Q22cf12CObjectStateFv
-	.4byte func_8003DD34__Q22cf12CObjectStateFv
-	.4byte func_800A34A8__Q22cf12CObjectStateFv
-	.4byte func_8009489C__Q22cf12CObjectStateFv
-	.4byte func_800A349C__Q22cf12CObjectStateFv
-	.4byte func_80086B4C__Q22cf12CObjectStateFv
-	.4byte func_8003CB20__Q22cf12CObjectStateFv
-	.4byte func_8003D98C__Q22cf12CObjectStateFv
-	.4byte func_8003D8C0__Q22cf12CObjectStateFv
-	.4byte func_8003D7B0__Q22cf12CObjectStateFv
-	.4byte func_800A3494__Q22cf12CObjectStateFv
-	.4byte func_800A3488__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
 .endobj __vt__Q22cf12CObjectState
 
 

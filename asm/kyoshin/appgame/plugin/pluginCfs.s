@@ -2686,10 +2686,10 @@
 /* 80049990 00012F50  4E 80 00 20 */	blr 
 .endfn makeParty
 
-.fn func_80049994__Q22cf8CfObjectFv, global
+.fn CfObject_vtableFunc31__Q22cf8CfObjectFv, global
 /* 80049994 00012F54  C0 23 00 4C */	lfs f1, 0x4c(r3)
 /* 80049998 00012F58  4E 80 00 20 */	blr 
-.endfn func_80049994__Q22cf8CfObjectFv
+.endfn CfObject_vtableFunc31__Q22cf8CfObjectFv
 
 .fn makeGuestParty, local
 /* 8004999C 00012F5C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4010,7 +4010,7 @@
 /* 8004ABD4 00014194  4E 80 00 20 */	blr 
 .endfn partyWarp
 
-.fn func_8004ABD8__Q22cf12CfObjectMoveFv, global
+.fn CfObject_vtableFunc48__Q22cf12CfObjectMoveFv, global
 /* 8004ABD8 00014198  80 83 00 C4 */	lwz r4, 0xc4(r3)
 /* 8004ABDC 0001419C  2C 04 00 00 */	cmpwi r4, 0
 /* 8004ABE0 000141A0  41 82 00 0C */	beq .L_8004ABEC
@@ -4019,7 +4019,7 @@
 .L_8004ABEC:
 /* 8004ABEC 000141AC  80 63 06 C0 */	lwz r3, 0x6c0(r3)
 /* 8004ABF0 000141B0  4E 80 00 20 */	blr 
-.endfn func_8004ABD8__Q22cf12CfObjectMoveFv
+.endfn CfObject_vtableFunc48__Q22cf12CfObjectMoveFv
 
 .fn setMoney, local
 /* 8004ABF4 000141B4  94 21 FF F0 */	stwu r1, -0x10(r1)

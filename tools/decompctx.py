@@ -14,8 +14,10 @@ stl_dir = os.path.join(ppceabi_dir, "std")
 
 include_pattern = re.compile(r'^#include\s*[<"](.+?)[>"]$')
 guard_pattern = re.compile(r"^#ifndef\s+(.*)$")
+pragmaonce_pattern = re.compile(r'^#pragma once.*$')
 
 defines: set[str] = set()
+files: set[str] = set()
 quiet = False
 
 
@@ -57,11 +59,16 @@ def import_c_file(in_file) -> str:
     with open(in_file, encoding="shift-jis") as file:
         for idx, line in enumerate(file):
             guard_match = guard_pattern.match(line.strip())
+            pragmaonce_match = pragmaonce_pattern.match(line.strip())
             if idx == 0:
                 if guard_match:
                     if guard_match[1] in defines:
                         break
                     defines.add(guard_match[1])
+                if pragmaonce_match:
+                    if in_file in files:
+                        break
+                    files.add(in_file)
                 if not quiet:
                     print("Processing file", in_file)
             include_match = include_pattern.match(line.strip())

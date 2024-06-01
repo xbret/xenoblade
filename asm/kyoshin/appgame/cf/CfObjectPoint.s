@@ -411,98 +411,98 @@
 .obj __vt__Q22cf13CfObjectPoint, global
 	.4byte __RTTI__Q22cf13CfObjectPoint
 	.4byte 0
-	.4byte func_8003DC64__Q22cf12CObjectStateFv
-	.4byte func_8003CB58__Q22cf12CObjectStateFv
-	.4byte func_8003DD34__Q22cf12CObjectStateFv
-	.4byte func_800A34A8__Q22cf12CObjectStateFv
-	.4byte func_8009489C__Q22cf12CObjectStateFv
-	.4byte func_800A349C__Q22cf12CObjectStateFv
-	.4byte func_80086B4C__Q22cf12CObjectStateFv
-	.4byte func_8003CB20__Q22cf12CObjectStateFv
-	.4byte func_8003D98C__Q22cf12CObjectStateFv
-	.4byte func_8003D8C0__Q22cf12CObjectStateFv
-	.4byte func_8003D7B0__Q22cf12CObjectStateFv
-	.4byte func_800A3494__Q22cf12CObjectStateFv
-	.4byte func_800A3488__Q22cf12CObjectStateFv
-	.4byte func_8003C7F8__Q22cf12CObjectParamFv
-	.4byte func_8003C2EC__Q22cf12CObjectParamFv
-	.4byte func_800A34B4__Q22cf12CObjectParamFv
+	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc2__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
 	.4byte func_800C136C__Q22cf13CfObjectPointFv
-	.4byte func_8003E664__Q22cf12CObjectParamFv
-	.4byte func_8003DC74__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
 	.4byte __dt__Q22cf13CfObjectPointFv
 	.4byte func_800C1244__Q22cf13CfObjectPointFv
 	.4byte func_800C1324__Q22cf13CfObjectPointFv
 	.4byte func_800C14CC__Q22cf13CfObjectPointFv
-	.4byte func_800AC600__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc5__Q22cf8CfObjectFv
 	.4byte func_800C1444__Q22cf13CfObjectPointFv
 	.4byte func_800C1638__Q22cf13CfObjectPointFv
 	.4byte func_800C1658__Q22cf13CfObjectPointFv
-	.4byte func_8006CB04__Q22cf8CfObjectFv
-	.4byte func_800AC5F0__Q22cf8CfObjectFv
-	.4byte func_800AC5E4__Q22cf8CfObjectFv
-	.4byte func_800AC5E0__Q22cf8CfObjectFv
-	.4byte func_800AC5D8__Q22cf8CfObjectFv
-	.4byte func_800AC5D4__Q22cf8CfObjectFv
-	.4byte func_800AC5CC__Q22cf8CfObjectFv
-	.4byte func_800AC5C8__Q22cf8CfObjectFv
-	.4byte func_800AC5C0__Q22cf8CfObjectFv
-	.4byte func_800AC5B8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc9__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc10__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc11__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc12__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc13__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc14__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc15__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc16__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc17__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc18__Q22cf8CfObjectFv
 	.4byte func_80047814__Q22cf13CfObjectPointFv
 	.4byte func_800C171C__Q22cf13CfObjectPointFv
-	.4byte func_800AC5A8__Q22cf8CfObjectFv
-	.4byte func_8003C544__Q22cf8CfObjectFv
-	.4byte func_8003C0C8__Q22cf8CfObjectFv
-	.4byte func_800AC5A0__Q22cf8CfObjectFv
-	.4byte func_800BAF50__Q22cf8CfObjectFv
-	.4byte func_8003C914__Q22cf8CfObjectFv
-	.4byte func_8003F15C__Q22cf8CfObjectFv
-	.4byte func_800AC598__Q22cf8CfObjectFv
-	.4byte func_8003C784__Q22cf8CfObjectFv
-	.4byte func_8003C774__Q22cf8CfObjectFv
-	.4byte func_80049994__Q22cf8CfObjectFv
-	.4byte func_80080244__Q22cf8CfObjectFv
-	.4byte func_80080234__Q22cf8CfObjectFv
-	.4byte func_8003C250__Q22cf8CfObjectFv
-	.4byte func_800AC590__Q22cf8CfObjectFv
-	.4byte func_800AC588__Q22cf8CfObjectFv
-	.4byte func_800AC580__Q22cf8CfObjectFv
-	.4byte func_800AC578__Q22cf8CfObjectFv
-	.4byte func_800AC560__Q22cf8CfObjectFv
-	.4byte func_800AC568__Q22cf8CfObjectFv
-	.4byte func_800AC570__Q22cf8CfObjectFv
-	.4byte func_800AC548__Q22cf8CfObjectFv
-	.4byte func_800AC550__Q22cf8CfObjectFv
-	.4byte func_800AC558__Q22cf8CfObjectFv
-	.4byte func_800AC544__Q22cf8CfObjectFv
-	.4byte func_8008738C__Q22cf8CfObjectFv
-	.4byte func_8007DA78__Q22cf8CfObjectFv
-	.4byte func_800733A8__Q22cf8CfObjectFv
-	.4byte func_8003CD68__Q22cf8CfObjectFv
-	.4byte func_8003CDD8__Q22cf8CfObjectFv
-	.4byte func_800AC53C__Q22cf8CfObjectFv
-	.4byte func_80074228__Q22cf8CfObjectFv
-	.4byte func_8008735C__Q22cf8CfObjectFv
-	.4byte func_8006C668__Q22cf8CfObjectFv
-	.4byte func_80074204__Q22cf8CfObjectFv
-	.4byte func_800873A4__Q22cf8CfObjectFv
-	.4byte func_800AC538__Q22cf8CfObjectFv
-	.4byte func_800873C0__Q22cf8CfObjectFv
-	.4byte func_800AC534__Q22cf8CfObjectFv
-	.4byte func_800AC52C__Q22cf8CfObjectFv
-	.4byte func_800AC528__Q22cf8CfObjectFv
-	.4byte func_800AC520__Q22cf8CfObjectFv
-	.4byte func_800BAC74__Q22cf8CfObjectFv
-	.4byte func_8003F1E8__Q22cf8CfObjectFv
-	.4byte func_800AC4F8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc21__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc22__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc23__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc24__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc25__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc26__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc27__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc28__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc29__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc30__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc31__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc32__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc33__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc34__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc35__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc36__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc37__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc38__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc39__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc40__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc41__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc42__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc43__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc44__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc45__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc46__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc47__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc48__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc49__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc50__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc51__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc52__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc53__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc54__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc55__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc56__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc57__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc58__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc59__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc60__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc61__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc62__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc63__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc64__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc65__Q22cf8CfObjectFv
 	.4byte func_800C16F4__Q22cf13CfObjectPointFv
-	.4byte func_800AC4D0__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc67__Q22cf8CfObjectFv
 	.4byte func_800AC604__Q22cf13CfObjectPointFv
-	.4byte func_800AC4C8__Q22cf8CfObjectFv
-	.4byte func_800AC4C4__Q22cf8CfObjectFv
-	.4byte func_800AC4BC__Q22cf8CfObjectFv
-	.4byte func_800AC4B8__Q22cf8CfObjectFv
-	.4byte func_800AC4B0__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc69__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc70__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc71__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc72__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc73__Q22cf8CfObjectFv
 .endobj __vt__Q22cf13CfObjectPoint
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

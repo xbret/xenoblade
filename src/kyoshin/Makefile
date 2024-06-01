@@ -91,6 +91,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTalkWindow.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIBattleManager.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUICfManager.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_80135FDC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIWindowManager.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfBdat.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuUpdate.o\
@@ -315,7 +316,9 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Sp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Talk.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Target.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/pluginVoice.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802B8A3C.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/pluginVoice.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_802B9064.o\
 	$(BUILD_DIR)/src/kyoshin/appgame/CBattery.o\
 
 #$(GAME_FILES): INCLUDES += -i src/ -i libs/monolib/include/ -i libs/mm/include/ -i libs/nw4r/include/

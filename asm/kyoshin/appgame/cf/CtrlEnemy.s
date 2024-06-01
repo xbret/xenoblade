@@ -644,10 +644,10 @@
 /* 80087EE0 000514A0  4E 80 00 20 */	blr 
 .endfn func_800877A8
 
-.fn func_80087EE4__Q22cf12CfObjectMoveFv, global
+.fn CfObject_vtableFunc60__Q22cf12CfObjectMoveFv, global
 /* 80087EE4 000514A4  C0 23 06 EC */	lfs f1, 0x6ec(r3)
 /* 80087EE8 000514A8  4E 80 00 20 */	blr 
-.endfn func_80087EE4__Q22cf12CfObjectMoveFv
+.endfn CfObject_vtableFunc60__Q22cf12CfObjectMoveFv
 
 .fn func_80087EEC, global
 /* 80087EEC 000514AC  94 21 FF 30 */	stwu r1, -0xd0(r1)
@@ -1120,10 +1120,10 @@
 /* 800885E4 00051BA4  4E 80 00 20 */	blr 
 .endfn func_80087EEC
 
-.fn func_800885E8__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc113__Q22cf11CActorParamFv, global
 /* 800885E8 00051BA8  38 63 16 1C */	addi r3, r3, 0x161c
 /* 800885EC 00051BAC  4E 80 00 20 */	blr 
-.endfn func_800885E8__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc113__Q22cf11CActorParamFv
 
 .fn func_800885F0, global
 /* 800885F0 00051BB0  80 03 00 84 */	lwz r0, 0x84(r3)
@@ -1134,20 +1134,20 @@
 /* 80088604 00051BC4  4E 80 00 20 */	blr 
 .endfn func_800885F0
 
-.fn func_80088608__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc117__Q22cf11CActorParamFv, global
 /* 80088608 00051BC8  38 63 16 20 */	addi r3, r3, 0x1620
 /* 8008860C 00051BCC  4E 80 00 20 */	blr 
-.endfn func_80088608__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc117__Q22cf11CActorParamFv
 
-.fn func_80088610__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc119__Q22cf11CActorParamFv, global
 /* 80088610 00051BD0  38 63 16 24 */	addi r3, r3, 0x1624
 /* 80088614 00051BD4  4E 80 00 20 */	blr 
-.endfn func_80088610__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc119__Q22cf11CActorParamFv
 
-.fn func_80088618__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc29__Q22cf11CActorParamFv, global
 /* 80088618 00051BD8  80 63 17 E4 */	lwz r3, 0x17e4(r3)
 /* 8008861C 00051BDC  4E 80 00 20 */	blr 
-.endfn func_80088618__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc29__Q22cf11CActorParamFv
 
 .fn func_80088620, global
 /* 80088620 00051BE0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1271,18 +1271,18 @@
 /* 800887E0 00051DA0  4E 80 00 20 */	blr 
 .endfn func_80088620
 
-.fn func_800887E4__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc115__Q22cf11CActorParamFv, global
 /* 800887E4 00051DA4  88 63 16 28 */	lbz r3, 0x1628(r3)
 /* 800887E8 00051DA8  7C 03 00 D0 */	neg r0, r3
 /* 800887EC 00051DAC  7C 00 1B 78 */	or r0, r0, r3
 /* 800887F0 00051DB0  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 800887F4 00051DB4  4E 80 00 20 */	blr 
-.endfn func_800887E4__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc115__Q22cf11CActorParamFv
 
-.fn func_800887F8__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc19__Q22cf11CActorParamFv, global
 /* 800887F8 00051DB8  80 63 15 EC */	lwz r3, 0x15ec(r3)
 /* 800887FC 00051DBC  4E 80 00 20 */	blr 
-.endfn func_800887F8__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc19__Q22cf11CActorParamFv
 
 .fn func_80088800, global
 /* 80088800 00051DC0  94 21 FF F0 */	stwu r1, -0x10(r1)

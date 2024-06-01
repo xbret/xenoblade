@@ -99,6 +99,7 @@ LIBS = [
             ["kyoshin/appgame/CTalkWindow", False],
             ["kyoshin/appgame/CUIBattleManager", False],
             ["kyoshin/appgame/CUICfManager", False],
+			["kyoshin/appgame/code_80135FDC", False],
             ["kyoshin/appgame/CUIWindowManager", False],
             ["kyoshin/appgame/cf/CfBdat", False],
             ["kyoshin/appgame/menu/CMenuUpdate", False],
@@ -323,7 +324,9 @@ LIBS = [
             ["kyoshin/appgame/help/CHelp_Sp", False],
             ["kyoshin/appgame/help/CHelp_Talk", False],
             ["kyoshin/appgame/help/CHelp_Target", False],
-            ["kyoshin/appgame/plugin/pluginVoice", False],
+			["kyoshin/appgame/code_802B8A3C", False],
+            ["kyoshin/appgame/plugin/pluginVoice", True],
+			["kyoshin/appgame/code_802B9064", False],
             [
 				"kyoshin/appgame/CBattery", 
 				True,

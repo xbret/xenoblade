@@ -3856,10 +3856,10 @@
 /* 8005DC24 000271E4  4E 80 00 20 */	blr 
 .endfn func_8005DB1C__Q22cf17CActParamAnimGame
 
-.fn func_8005DC28__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc38__Q22cf11CActorParamFv, global
 /* 8005DC28 000271E8  C0 23 17 F4 */	lfs f1, 0x17f4(r3)
 /* 8005DC2C 000271EC  4E 80 00 20 */	blr 
-.endfn func_8005DC28__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc38__Q22cf11CActorParamFv
 
 .fn func_8005DC30__Q22cf17CActParamAnimGame, global
 /* 8005DC30 000271F0  94 21 FF F0 */	stwu r1, -0x10(r1)

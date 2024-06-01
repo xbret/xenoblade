@@ -1425,10 +1425,10 @@
 /* 8008B574 00054B34  4E 80 00 20 */	blr 
 .endfn func_8008A2C8
 
-.fn func_8008B578__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc132__Q22cf11CActorParamFv, global
 /* 8008B578 00054B38  38 63 32 98 */	addi r3, r3, 0x3298
 /* 8008B57C 00054B3C  4E 80 00 20 */	blr 
-.endfn func_8008B578__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc132__Q22cf11CActorParamFv
 
 .fn func_8008B580, global
 /* 8008B580 00054B40  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -4354,10 +4354,10 @@
 /* 8008E060 00057620  4E 80 00 20 */	blr 
 .endfn func_8008D51C
 
-.fn func_8008E064__Q22cf12CfObjectMoveFv, global
+.fn CfObject_vtableFunc58__Q22cf12CfObjectMoveFv, global
 /* 8008E064 00057624  38 63 06 E4 */	addi r3, r3, 0x6e4
 /* 8008E068 00057628  4E 80 00 20 */	blr 
-.endfn func_8008E064__Q22cf12CfObjectMoveFv
+.endfn CfObject_vtableFunc58__Q22cf12CfObjectMoveFv
 
 .fn func_8008E06C, global
 /* 8008E06C 0005762C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -6091,7 +6091,7 @@
 /* 8008F9C8 00058F88  4E 80 00 20 */	blr 
 .endfn func_8008F2E0
 
-.fn func_8008F9CC__Q22cf12CfObjectMoveFv, global
+.fn CfObject_vtableFunc18__Q22cf12CfObjectMoveFv, global
 /* 8008F9CC 00058F8C  80 63 00 C4 */	lwz r3, 0xc4(r3)
 /* 8008F9D0 00058F90  2C 03 00 00 */	cmpwi r3, 0
 /* 8008F9D4 00058F94  41 82 00 10 */	beq .L_8008F9E4
@@ -6101,7 +6101,7 @@
 .L_8008F9E4:
 /* 8008F9E4 00058FA4  38 60 00 01 */	li r3, 1
 /* 8008F9E8 00058FA8  4E 80 00 20 */	blr 
-.endfn func_8008F9CC__Q22cf12CfObjectMoveFv
+.endfn CfObject_vtableFunc18__Q22cf12CfObjectMoveFv
 
 .fn func_8008F9EC, global
 /* 8008F9EC 00058FAC  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -9556,10 +9556,10 @@
 /* 80092CA4 0005C264  4E 80 00 20 */	blr 
 .endfn func_80091864
 
-.fn func_80092CA8__Q22cf12CfObjectMoveFv, global
+.fn CfObjectMove_vtableFunc5__Q22cf12CfObjectMoveFv, global
 /* 80092CA8 0005C268  38 63 06 E8 */	addi r3, r3, 0x6e8
 /* 80092CAC 0005C26C  4E 80 00 20 */	blr 
-.endfn func_80092CA8__Q22cf12CfObjectMoveFv
+.endfn CfObjectMove_vtableFunc5__Q22cf12CfObjectMoveFv
 
 .fn func_80092CB0, global
 /* 80092CB0 0005C270  38 00 00 00 */	li r0, 0

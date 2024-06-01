@@ -174,13 +174,13 @@
 /* 80093920 0005CEE0  4E 80 00 20 */	blr 
 .endfn func_8009377C
 
-.fn func_80093924__Q22cf12CfObjectMoveFv, global
+.fn CfObjectMove_vtableFunc6__Q22cf12CfObjectMoveFv, global
 /* 80093924 0005CEE4  80 63 00 C4 */	lwz r3, 0xc4(r3)
 /* 80093928 0005CEE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8009392C 0005CEEC  4D 82 00 20 */	beqlr 
 /* 80093930 0005CEF0  90 83 03 7C */	stw r4, 0x37c(r3)
 /* 80093934 0005CEF4  4E 80 00 20 */	blr 
-.endfn func_80093924__Q22cf12CfObjectMoveFv
+.endfn CfObjectMove_vtableFunc6__Q22cf12CfObjectMoveFv
 
 .fn func_80093938, global
 /* 80093938 0005CEF8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1230,7 +1230,7 @@
 /* 80094898 0005DE58  4E 80 00 20 */	blr 
 .endfn func_80093F28
 
-.fn func_8009489C__Q22cf12CObjectStateFv, global
+.fn CObjectState_virtualFunc5__Q22cf12CObjectStateFv, global
 /* 8009489C 0005DE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800948A0 0005DE60  7C 08 02 A6 */	mflr r0
 /* 800948A4 0005DE64  28 04 00 3F */	cmplwi r4, 0x3f
@@ -1255,7 +1255,7 @@
 /* 800948EC 0005DEAC  7C 08 03 A6 */	mtlr r0
 /* 800948F0 0005DEB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800948F4 0005DEB4  4E 80 00 20 */	blr
-.endfn func_8009489C__Q22cf12CObjectStateFv
+.endfn CObjectState_virtualFunc5__Q22cf12CObjectStateFv
 
 .fn func_800948F8, global
 /* 800948F8 0005DEB8  7C 04 28 50 */	subf r0, r4, r5
@@ -1749,15 +1749,15 @@
 /* 80094FEC 0005E5AC  4E 80 00 20 */	blr 
 .endfn func_80094FC8
 
-.fn func_80094FF0__Q22cf13CfObjectModelFv, global
+.fn CfObject_vtableFunc73__Q22cf13CfObjectModelFv, global
 /* 80094FF0 0005E5B0  C0 23 00 A4 */	lfs f1, 0xa4(r3)
 /* 80094FF4 0005E5B4  4E 80 00 20 */	blr 
-.endfn func_80094FF0__Q22cf13CfObjectModelFv
+.endfn CfObject_vtableFunc73__Q22cf13CfObjectModelFv
 
-.fn func_80094FF8__Q22cf13CfObjectModelFv, global
+.fn CfObject_vtableFunc71__Q22cf13CfObjectModelFv, global
 /* 80094FF8 0005E5B8  C0 23 00 A0 */	lfs f1, 0xa0(r3)
 /* 80094FFC 0005E5BC  4E 80 00 20 */	blr 
-.endfn func_80094FF8__Q22cf13CfObjectModelFv
+.endfn CfObject_vtableFunc71__Q22cf13CfObjectModelFv
 
 .fn func_80095000, global
 /* 80095000 0005E5C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4097,7 +4097,7 @@
 
 .obj "@eti_80024380", local
 .hidden "@eti_80024380"
-	.4byte func_8009489C__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
 	.4byte 0x0000005C
 	.4byte "@etb_80008D14"
 .endobj "@eti_80024380"

@@ -7,15 +7,23 @@ extern void func_8049CAF4();
 extern void func_8049CB6C(u32*);
 
 template <typename T>
+class _reslist_node{
+public:
+	_reslist_node* next; //0x00
+	_reslist_node* prev; //0x04
+	T* item;
+};
+
+template <typename T>
 class _reslist_base{
 public:
 	_reslist_base(){
 		mList = nullptr;
 		unk18 = 0;
 		unk1C = 0;
-		unk4 = (u32*)&unk8;
-		*unk8 = (u32)&unk8;
-		unkC = (u32*)&unk8;
+		unk4 = &unk8;
+		unk8 = (_reslist_node<T>*)&unk8;
+		unkC = (_reslist_node<T>*)&unk8;
 	}
 
 	virtual ~_reslist_base(){
@@ -47,11 +55,11 @@ public:
         *ptr = 0;
     }
 
-	u32* unk4;
-	u32* unk8;
-	u32* unkC;
+	_reslist_node<T>** unk4; //points to unk8
+	_reslist_node<T>* unk8; //pointer to start node?
+	_reslist_node<T>* unkC; //pointer to end node?
 	void* unk10;
-	T* mList; //0x14
+	_reslist_node<T>* mList; //0x14
 	u32 unk18;
 	u32 unk1C;
 };
@@ -63,4 +71,9 @@ public:
 	}
 	virtual ~reslist(){
 	}
+	void remove(const T&);
+	void push_back(const T&);
+	void begin();
+	void end();
+
 };

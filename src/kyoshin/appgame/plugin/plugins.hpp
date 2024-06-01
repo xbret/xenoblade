@@ -5,6 +5,7 @@
 #include "kyoshin/appgame/plugin/pluginWait.hpp"
 #include "kyoshin/appgame/plugin/pluginMath.hpp"
 #include "kyoshin/appgame/plugin/pluginPad.hpp"
+#include "kyoshin/appgame/plugin/pluginVoice.hpp"
 
 extern "C"{
 void pluginBtlRegist();
@@ -15,7 +16,6 @@ void pluginCfsRegist();
 void pluginCamRegist();
 void pluginTimeRegist();
 void pluginSndRegist();
-void pluginVoiceRegist();
 void pluginHelpRegist();
 void ocBuiltinRegist();
 void ocBdatRegist();

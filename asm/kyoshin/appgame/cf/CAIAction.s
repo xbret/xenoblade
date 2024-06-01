@@ -125,7 +125,7 @@
 /* 8014AA14 00113FD4  4E 80 00 20 */	blr 
 .endfn func_8014AA10
 
-.fn func_8014AA18__Q22cf9CAIActionFv, global
+.fn CAIAction_vtableFunc1__Q22cf9CAIActionFv, global
 /* 8014AA18 00113FD8  80 C3 0A DC */	lwz r6, 0xadc(r3)
 /* 8014AA1C 00113FDC  38 00 00 00 */	li r0, 0
 /* 8014AA20 00113FE0  90 C4 00 00 */	stw r6, 0(r4)
@@ -196,9 +196,9 @@
 /* 8014AB1C 001140DC  7C 06 00 40 */	cmplw r6, r0
 /* 8014AB20 001140E0  41 80 FF 54 */	blt .L_8014AA74
 /* 8014AB24 001140E4  4E 80 00 20 */	blr 
-.endfn func_8014AA18__Q22cf9CAIActionFv
+.endfn CAIAction_vtableFunc1__Q22cf9CAIActionFv
 
-.fn func_8014AB28__Q22cf9CAIActionFv, global
+.fn CAIAction_vtableFunc2__Q22cf9CAIActionFv, global
 /* 8014AB28 001140E8  38 00 00 00 */	li r0, 0
 /* 8014AB2C 001140EC  90 03 02 14 */	stw r0, 0x214(r3)
 /* 8014AB30 001140F0  38 C0 00 00 */	li r6, 0
@@ -269,7 +269,7 @@
 /* 8014AC2C 001141EC  7C 06 00 40 */	cmplw r6, r0
 /* 8014AC30 001141F0  41 80 FF 54 */	blt .L_8014AB84
 /* 8014AC34 001141F4  4E 80 00 20 */	blr 
-.endfn func_8014AB28__Q22cf9CAIActionFv
+.endfn CAIAction_vtableFunc2__Q22cf9CAIActionFv
 
 .fn func_8014AC38, global
 /* 8014AC38 001141F8  80 03 02 14 */	lwz r0, 0x214(r3)
@@ -11059,8 +11059,8 @@
 .obj __vt__Q22cf9CAIAction, global
 	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0
-	.4byte func_8014AA18__Q22cf9CAIActionFv
-	.4byte func_8014AB28__Q22cf9CAIActionFv
+	.4byte CAIAction_vtableFunc1__Q22cf9CAIActionFv
+	.4byte CAIAction_vtableFunc2__Q22cf9CAIActionFv
 .endobj __vt__Q22cf9CAIAction
 
 

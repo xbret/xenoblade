@@ -2268,13 +2268,13 @@
 /* 80076F70 00040530  4E 80 00 20 */	blr 
 .endfn func_80076D8C
 
-.fn func_80076F74__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc129__Q22cf11CActorParamFv, global
 /* 80076F74 00040534  88 03 33 54 */	lbz r0, 0x3354(r3)
 /* 80076F78 00040538  1C 00 00 BC */	mulli r0, r0, 0xbc
 /* 80076F7C 0004053C  7C 63 02 14 */	add r3, r3, r0
 /* 80076F80 00040540  38 63 2A 84 */	addi r3, r3, 0x2a84
 /* 80076F84 00040544  4E 80 00 20 */	blr 
-.endfn func_80076F74__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc129__Q22cf11CActorParamFv
 
 .fn func_80076F88, global
 /* 80076F88 00040548  94 21 FF 40 */	stwu r1, -0xc0(r1)

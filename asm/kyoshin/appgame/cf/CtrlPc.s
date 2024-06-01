@@ -1901,10 +1901,10 @@
 /* 800983AC 0006196C  4E 80 00 20 */	blr 
 .endfn func_80098194
 
-.fn func_800983B0__Q22cf11CActorParamFv, global
+.fn CActorParam_vtableFunc122__Q22cf11CActorParamFv, global
 /* 800983B0 00061970  38 63 19 E8 */	addi r3, r3, 0x19e8
 /* 800983B4 00061974  4E 80 00 20 */	blr 
-.endfn func_800983B0__Q22cf11CActorParamFv
+.endfn CActorParam_vtableFunc122__Q22cf11CActorParamFv
 
 .fn func_800983B8, global
 /* 800983B8 00061978  94 21 FF C0 */	stwu r1, -0x40(r1)

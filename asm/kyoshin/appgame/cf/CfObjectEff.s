@@ -82,9 +82,9 @@
 /* 800AC758 00075D18  4E 80 00 20 */	blr 
 .endfn __ct__800AC62C
 
-.fn func_800AC75C__Q22cf8CfObjectFv, global
+.fn CfObject_vtableFunc3__Q22cf8CfObjectFv, global
 /* 800AC75C 00075D1C  4E 80 00 20 */	blr 
-.endfn func_800AC75C__Q22cf8CfObjectFv
+.endfn CfObject_vtableFunc3__Q22cf8CfObjectFv
 
 
 .fn __dt__Q22cf8CfObjectFv, global
@@ -117,9 +117,9 @@
 /* 800AC7C4 00075D84  4E 80 00 20 */	blr 
 .endfn __dt__Q22cf8CfObjectFv
 
-.fn func_800AC7C8__Q22cf8CfObjectFv, global
+.fn CfObject_vtableFunc6__Q22cf8CfObjectFv, global
 /* 800AC7C8 00075D88  4E 80 00 20 */	blr 
-.endfn func_800AC7C8__Q22cf8CfObjectFv
+.endfn CfObject_vtableFunc6__Q22cf8CfObjectFv
 
 .fn func_800AC7CC__Q22cf11CfObjectEffFv, global
 /* 800AC7CC 00075D8C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -253,9 +253,9 @@
 /* 800AC988 00075F48  4E 80 00 20 */	blr 
 .endfn func_800AC86C__Q22cf11CfObjectEffFv
 
-.fn func_800AC98C__Q22cf13CfObjectModelFv, global
+.fn CfObjectModel_vtableFunc18__Q22cf13CfObjectModelFv, global
 /* 800AC98C 00075F4C  4E 80 00 20 */	blr 
-.endfn func_800AC98C__Q22cf13CfObjectModelFv
+.endfn CfObjectModel_vtableFunc18__Q22cf13CfObjectModelFv
 
 .fn func_800AC990__Q22cf11CfObjectEffFv, global
 /* 800AC990 00075F50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -529,7 +529,7 @@
 /* 800ACCF4 000762B4  7C 9F 23 78 */	mr r31, r4
 /* 800ACCF8 000762B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 800ACCFC 000762BC  7C 7E 1B 78 */	mr r30, r3
-/* 800ACD00 000762C0  48 00 E2 51 */	bl func_800BAF50__Q22cf8CfObjectFv
+/* 800ACD00 000762C0  48 00 E2 51 */	bl CfObject_vtableFunc25__Q22cf8CfObjectFv
 /* 800ACD04 000762C4  80 9E 00 94 */	lwz r4, 0x94(r30)
 /* 800ACD08 000762C8  80 1E 00 68 */	lwz r0, 0x68(r30)
 /* 800ACD0C 000762CC  2C 04 00 00 */	cmpwi r4, 0
@@ -1435,49 +1435,49 @@
 .obj __vt__Q22cf11CfObjectEff, global
 	.4byte __RTTI__Q22cf11CfObjectEff
 	.4byte 0
-	.4byte func_8003DC64__Q22cf12CObjectStateFv
-	.4byte func_8003CB58__Q22cf12CObjectStateFv
-	.4byte func_8003DD34__Q22cf12CObjectStateFv
-	.4byte func_800A34A8__Q22cf12CObjectStateFv
-	.4byte func_8009489C__Q22cf12CObjectStateFv
-	.4byte func_800A349C__Q22cf12CObjectStateFv
-	.4byte func_80086B4C__Q22cf12CObjectStateFv
-	.4byte func_8003CB20__Q22cf12CObjectStateFv
-	.4byte func_8003D98C__Q22cf12CObjectStateFv
-	.4byte func_8003D8C0__Q22cf12CObjectStateFv
-	.4byte func_8003D7B0__Q22cf12CObjectStateFv
-	.4byte func_800A3494__Q22cf12CObjectStateFv
-	.4byte func_800A3488__Q22cf12CObjectStateFv
-	.4byte func_8003C7F8__Q22cf12CObjectParamFv
-	.4byte func_8003C2EC__Q22cf12CObjectParamFv
-	.4byte func_800A34B4__Q22cf12CObjectParamFv
-	.4byte func_80080640__Q22cf12CObjectParamFv
-	.4byte func_8003E664__Q22cf12CObjectParamFv
-	.4byte func_8003DC74__Q22cf12CObjectParamFv
+	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc2__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc4__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
+	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
 	.4byte __dt__Q22cf11CfObjectEffFv
 	.4byte func_800AC7CC__Q22cf11CfObjectEffFv
-	.4byte func_800AC75C__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc3__Q22cf8CfObjectFv
 	.4byte func_800AD3A4__Q22cf11CfObjectEffFv
-	.4byte func_800AC600__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc5__Q22cf8CfObjectFv
 	.4byte func_800AC86C__Q22cf11CfObjectEffFv
 	.4byte func_800ACAE8__Q22cf11CfObjectEffFv
 	.4byte func_800ACB08__Q22cf11CfObjectEffFv
-	.4byte func_8006CB04__Q22cf8CfObjectFv
-	.4byte func_800AC5F0__Q22cf8CfObjectFv
-	.4byte func_800AC5E4__Q22cf8CfObjectFv
-	.4byte func_800AC5E0__Q22cf8CfObjectFv
-	.4byte func_800AC5D8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc9__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc10__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc11__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc12__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc13__Q22cf8CfObjectFv
 	.4byte func_800ACC3C__Q22cf11CfObjectEffFv
-	.4byte func_800AC5CC__Q22cf8CfObjectFv
-	.4byte func_800AC5C8__Q22cf8CfObjectFv
-	.4byte func_800AC5C0__Q22cf8CfObjectFv
-	.4byte func_800AC5B8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc15__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc16__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc17__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc18__Q22cf8CfObjectFv
 	.4byte func_800ACC94__Q22cf11CfObjectEffFv
 	.4byte func_800ACD5C__Q22cf11CfObjectEffFv
-	.4byte func_800AC5A8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc21__Q22cf8CfObjectFv
 	.4byte func_800ACCD4__Q22cf11CfObjectEffFv
-	.4byte func_8003C0C8__Q22cf8CfObjectFv
-	.4byte func_800AC5A0__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc23__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc24__Q22cf8CfObjectFv
 	.4byte func_800ACCE4__Q22cf11CfObjectEffFv
 	.4byte func_800ACD4C__Q22cf11CfObjectEffFv
 	.4byte func_800ACDA0__Q22cf11CfObjectEffFv
@@ -1490,43 +1490,43 @@
 	.4byte func_800ACE78__Q22cf11CfObjectEffFv
 	.4byte func_800ACEAC__Q22cf11CfObjectEffFv
 	.4byte func_800ACF34__Q22cf11CfObjectEffFv
-	.4byte func_800AC580__Q22cf8CfObjectFv
-	.4byte func_800AC578__Q22cf8CfObjectFv
-	.4byte func_800AC560__Q22cf8CfObjectFv
-	.4byte func_800AC568__Q22cf8CfObjectFv
-	.4byte func_800AC570__Q22cf8CfObjectFv
-	.4byte func_800AC548__Q22cf8CfObjectFv
-	.4byte func_800AC550__Q22cf8CfObjectFv
-	.4byte func_800AC558__Q22cf8CfObjectFv
-	.4byte func_800AC544__Q22cf8CfObjectFv
-	.4byte func_8008738C__Q22cf8CfObjectFv
-	.4byte func_8007DA78__Q22cf8CfObjectFv
-	.4byte func_800733A8__Q22cf8CfObjectFv
-	.4byte func_8003CD68__Q22cf8CfObjectFv
-	.4byte func_8003CDD8__Q22cf8CfObjectFv
-	.4byte func_800AC53C__Q22cf8CfObjectFv
-	.4byte func_80074228__Q22cf8CfObjectFv
-	.4byte func_8008735C__Q22cf8CfObjectFv
-	.4byte func_8006C668__Q22cf8CfObjectFv
-	.4byte func_80074204__Q22cf8CfObjectFv
-	.4byte func_800873A4__Q22cf8CfObjectFv
-	.4byte func_800AC538__Q22cf8CfObjectFv
-	.4byte func_800873C0__Q22cf8CfObjectFv
-	.4byte func_800AC534__Q22cf8CfObjectFv
-	.4byte func_800AC52C__Q22cf8CfObjectFv
-	.4byte func_800AC528__Q22cf8CfObjectFv
-	.4byte func_800AC520__Q22cf8CfObjectFv
-	.4byte func_800BAC74__Q22cf8CfObjectFv
-	.4byte func_8003F1E8__Q22cf8CfObjectFv
-	.4byte func_800AC4F8__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc37__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc38__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc39__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc40__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc41__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc42__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc43__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc44__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc45__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc46__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc47__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc48__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc49__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc50__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc51__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc52__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc53__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc54__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc55__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc56__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc57__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc58__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc59__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc60__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc61__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc62__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc63__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc64__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc65__Q22cf8CfObjectFv
 	.4byte func_800ACBA4__Q22cf11CfObjectEffFv
-	.4byte func_800AC4D0__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc67__Q22cf8CfObjectFv
 	.4byte func_800AD4A4__Q22cf11CfObjectEffFv
-	.4byte func_800AC4C8__Q22cf8CfObjectFv
-	.4byte func_800AC4C4__Q22cf8CfObjectFv
-	.4byte func_800AC4BC__Q22cf8CfObjectFv
-	.4byte func_800AC4B8__Q22cf8CfObjectFv
-	.4byte func_800AC4B0__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc69__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc70__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc71__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc72__Q22cf8CfObjectFv
+	.4byte CfObject_vtableFunc73__Q22cf8CfObjectFv
 	.4byte __RTTI__Q22cf11CfObjectEff
 	.4byte 0xFFFFFF70
 	.4byte func_800AD858__Q22cf11CfObjectEffFv
