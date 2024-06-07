@@ -50,7 +50,7 @@ ADX_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_rbf.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_uni.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_utl.o\
-	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_crs.o\
+	$(BUILD_DIR)/libs/CriWare/src/adx/sj/sj_crs.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_err.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/svm/svm.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/adx_bsps.o\
@@ -62,6 +62,10 @@ ADX_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/srcwii/adx_suwii.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/srcwii/adx_rnawii.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/std/cri_crw_std.o\
+
+#Criware uses GC 3.0 (maybe)
+$(ADX_FILES): MWCC_VERSION := 3.0
+$(ADX_FILES): CONSOLE := GC
 
 DEPENDS += $(ADX_FILES:.o=.d)
 
