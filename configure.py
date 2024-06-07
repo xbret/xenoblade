@@ -1093,8 +1093,8 @@ LIBS = [
     },
     {
         "lib": "libadxwii",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
+        "mw_console": "GC",
+        "mw_version": "3.0",
         "root_dir": "libs/CriWare",
         "cflags": "$cflags_criware",
         "host": False,
@@ -1150,7 +1150,7 @@ LIBS = [
             ["adx/sj/sj_rbf", False],
             ["adx/sj/sj_uni", False],
             ["adx/sj/sj_utl", False],
-            ["adx/sj/sj_crs", False],
+            ["adx/sj/sj_crs", True],
             ["adx/sj/sj_err", False],
             ["adx/svm/svm", False],
             ["adx/adxt/adx_bsps", False],
@@ -1763,7 +1763,7 @@ def main():
         cflags_base += " -DNDEBUG -w off"
     cflags_base += " -lang=c99" #TODO: add c99 lang flag on per lib basis
     n.variable("cflags_base", cflags_base)
-    n.variable("cflags_criware", "$cflags_base -sdata 0 -sdata2 0 -i libs/CriWare/src/")
+    n.variable("cflags_criware", "$cflags_base -sdata 0 -sdata2 0 -Cpp_exceptions off -i libs/CriWare/src/")
     n.variable("cflags_nw4r", "$cflags_base -inline auto -Cpp_exceptions off -RTTI off")
     n.variable("cflags_sdk", "$cflags_base -use_lmw_stmw off -Cpp_exceptions off -enum int -inline auto -ipa file -func_align 16")
 
