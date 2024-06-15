@@ -1151,6 +1151,7 @@ LIBS = [
             ["adx/sj/sj_rbf", False],
             ["adx/sj/sj_uni", False],
             ["adx/sj/sj_utl", False],
+            ["adx/sj/sj_crs", True],
             ["adx/sj/sj_err", False],
             ["adx/svm/svm", False],
             ["adx/adxt/adx_dcd3", False],
