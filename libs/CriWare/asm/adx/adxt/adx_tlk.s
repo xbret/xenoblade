@@ -29,7 +29,7 @@
 /* 803825F8 0034BBB8  4E 80 00 20 */	blr 
 .endfn ADXT_Create
 
-.fn adxt_Create, global
+.fn adxt_Create, local
 /* 803825FC 0034BBBC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80382600 0034BBC0  7C 08 02 A6 */	mflr r0
 /* 80382604 0034BBC4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -232,9 +232,9 @@
 /* 803828E0 0034BEA0  80 9F 00 08 */	lwz r4, 8(r31)
 /* 803828E4 0034BEA4  48 00 F7 41 */	bl LSC_SetStmHndl
 /* 803828E8 0034BEA8  48 00 6B 15 */	bl ADXCRS_Lock
-/* 803828EC 0034BEAC  3C 60 80 5F */	lis r3, lbl_805E8598@ha
+/* 803828EC 0034BEAC  3C 60 80 5F */	lis r3, adxt_def_svrfreq@ha
 /* 803828F0 0034BEB0  3C 80 80 52 */	lis r4, lbl_80519970@ha
-/* 803828F4 0034BEB4  80 A3 85 98 */	lwz r5, lbl_805E8598@l(r3)
+/* 803828F4 0034BEB4  80 A3 85 98 */	lwz r5, adxt_def_svrfreq@l(r3)
 /* 803828F8 0034BEB8  3C 60 80 52 */	lis r3, lbl_80519968@ha
 /* 803828FC 0034BEBC  3C 00 43 30 */	lis r0, 0x4330
 /* 80382900 0034BEC0  C0 03 99 68 */	lfs f0, lbl_80519968@l(r3)
@@ -357,7 +357,7 @@
 /* 80382AAC 0034C06C  4E 80 00 20 */	blr 
 .endfn ADXT_Destroy
 
-.fn adxt_Destroy, global
+.fn adxt_Destroy, local
 /* 80382AB0 0034C070  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80382AB4 0034C074  7C 08 02 A6 */	mflr r0
 /* 80382AB8 0034C078  2C 03 00 00 */	cmpwi r3, 0
@@ -374,15 +374,15 @@
 /* 80382AE4 0034C0A4  48 00 77 35 */	bl ADXERR_CallErrFunc1_
 /* 80382AE8 0034C0A8  48 00 02 08 */	b .L_80382CF0
 .L_80382AEC:
-/* 80382AEC 0034C0AC  3C 80 80 5F */	lis r4, lbl_805E85A0@ha
-/* 80382AF0 0034C0B0  81 84 85 A0 */	lwz r12, lbl_805E85A0@l(r4)
+/* 80382AEC 0034C0AC  3C 80 80 5F */	lis r4, ahxdetachfunc@ha
+/* 80382AF0 0034C0B0  81 84 85 A0 */	lwz r12, ahxdetachfunc@l(r4)
 /* 80382AF4 0034C0B4  2C 0C 00 00 */	cmpwi r12, 0
 /* 80382AF8 0034C0B8  41 82 00 0C */	beq .L_80382B04
 /* 80382AFC 0034C0BC  7D 89 03 A6 */	mtctr r12
 /* 80382B00 0034C0C0  4E 80 04 21 */	bctrl 
 .L_80382B04:
-/* 80382B04 0034C0C4  3C 60 80 5F */	lis r3, lbl_805E85A4@ha
-/* 80382B08 0034C0C8  81 83 85 A4 */	lwz r12, lbl_805E85A4@l(r3)
+/* 80382B04 0034C0C4  3C 60 80 5F */	lis r3, pl2detachfunc@ha
+/* 80382B08 0034C0C8  81 83 85 A4 */	lwz r12, pl2detachfunc@l(r3)
 /* 80382B0C 0034C0CC  2C 0C 00 00 */	cmpwi r12, 0
 /* 80382B10 0034C0D0  41 82 00 10 */	beq .L_80382B20
 /* 80382B14 0034C0D4  7F E3 FB 78 */	mr r3, r31
@@ -761,7 +761,7 @@
 /* 8038303C 0034C5FC  4E 80 00 20 */	blr 
 .endfn ADXT_StartSj
 
-.fn adxt_StopWithoutLsc, global
+.fn adxt_StopWithoutLsc, local
 /* 80383040 0034C600  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383044 0034C604  7C 08 02 A6 */	mflr r0
 /* 80383048 0034C608  90 01 00 14 */	stw r0, 0x14(r1)
@@ -880,7 +880,7 @@
 /* 803831D4 0034C794  4E 80 00 20 */	blr 
 .endfn ADXT_GetStat
 
-.fn adxt_GetTimeSfreq2, global
+.fn adxt_GetTimeSfreq2, local
 /* 803831D8 0034C798  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803831DC 0034C79C  7C 08 02 A6 */	mflr r0
 /* 803831E0 0034C7A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1004,7 +1004,7 @@
 /* 80383390 0034C950  4E 80 00 20 */	blr 
 .endfn ADXT_GetTime
 
-.fn adxt_GetTime, global
+.fn adxt_GetTime, local
 /* 80383394 0034C954  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80383398 0034C958  7C 08 02 A6 */	mflr r0
 /* 8038339C 0034C95C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1013,14 +1013,14 @@
 /* 803833A8 0034C968  3C 00 43 30 */	lis r0, 0x4330
 /* 803833AC 0034C96C  2C 03 00 00 */	cmpwi r3, 0
 /* 803833B0 0034C970  3F C0 80 52 */	lis r30, lbl_80519968@ha
-/* 803833B4 0034C974  3F E0 80 5F */	lis r31, lbl_805E8570@ha
+/* 803833B4 0034C974  3F E0 80 5F */	lis r31, adxt_svr_start_cb@ha
 /* 803833B8 0034C978  90 01 00 10 */	stw r0, 0x10(r1)
 /* 803833BC 0034C97C  7C 7B 1B 78 */	mr r27, r3
 /* 803833C0 0034C980  7C 9C 23 78 */	mr r28, r4
 /* 803833C4 0034C984  7C BD 2B 78 */	mr r29, r5
 /* 803833C8 0034C988  90 01 00 18 */	stw r0, 0x18(r1)
 /* 803833CC 0034C98C  3B DE 99 68 */	addi r30, r30, lbl_80519968@l
-/* 803833D0 0034C990  3B FF 85 70 */	addi r31, r31, lbl_805E8570@l
+/* 803833D0 0034C990  3B FF 85 70 */	addi r31, r31, adxt_svr_start_cb@l
 /* 803833D4 0034C994  41 82 00 14 */	beq .L_803833E8
 /* 803833D8 0034C998  2C 04 00 00 */	cmpwi r4, 0
 /* 803833DC 0034C99C  41 82 00 0C */	beq .L_803833E8
@@ -1380,7 +1380,7 @@
 /* 803838CC 0034CE8C  4E 80 00 20 */	blr 
 .endfn ADXT_SetOutPan
 
-.fn adxt_SetOutPan, global
+.fn adxt_SetOutPan, local
 /* 803838D0 0034CE90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803838D4 0034CE94  7C 08 02 A6 */	mflr r0
 /* 803838D8 0034CE98  2C 03 00 00 */	cmpwi r3, 0
@@ -1595,10 +1595,10 @@
 /* 80383B98 0034D158  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80383B9C 0034D15C  7C 7F 1B 78 */	mr r31, r3
 /* 80383BA0 0034D160  48 00 58 65 */	bl ADXCRS_Enter
-/* 80383BA4 0034D164  3C 80 80 5F */	lis r4, lbl_805E8598@ha
-/* 80383BA8 0034D168  3C 60 80 5F */	lis r3, lbl_805E859C@ha
-/* 80383BAC 0034D16C  93 E4 85 98 */	stw r31, lbl_805E8598@l(r4)
-/* 80383BB0 0034D170  93 E3 85 9C */	stw r31, lbl_805E859C@l(r3)
+/* 80383BA4 0034D164  3C 80 80 5F */	lis r4, adxt_def_svrfreq@ha
+/* 80383BA8 0034D168  3C 60 80 5F */	lis r3, adxt_last_svrfreq@ha
+/* 80383BAC 0034D16C  93 E4 85 98 */	stw r31, adxt_def_svrfreq@l(r4)
+/* 80383BB0 0034D170  93 E3 85 9C */	stw r31, adxt_last_svrfreq@l(r3)
 /* 80383BB4 0034D174  48 00 58 55 */	bl ADXCRS_Leave
 /* 80383BB8 0034D178  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80383BBC 0034D17C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1626,8 +1626,8 @@
 /* 80383C08 0034D1C8  48 00 00 A0 */	b .L_80383CA8
 .L_80383C0C:
 /* 80383C0C 0034D1CC  93 BF 00 38 */	stw r29, 0x38(r31)
-/* 80383C10 0034D1D0  3C 60 80 5F */	lis r3, lbl_805E859C@ha
-/* 80383C14 0034D1D4  93 A3 85 9C */	stw r29, lbl_805E859C@l(r3)
+/* 80383C10 0034D1D0  3C 60 80 5F */	lis r3, adxt_last_svrfreq@ha
+/* 80383C14 0034D1D4  93 A3 85 9C */	stw r29, adxt_last_svrfreq@l(r3)
 /* 80383C18 0034D1D8  83 BF 00 04 */	lwz r29, 4(r31)
 /* 80383C1C 0034D1DC  7F A3 EB 78 */	mr r3, r29
 /* 80383C20 0034D1E0  4B FF C1 21 */	bl ADXSJD_GetStat
@@ -1678,7 +1678,7 @@
 .endfn ADXT_SetSvrFreq
 
 #ADXT_GetNumSctIbuf?
-.fn func_80383CC8, global
+.fn criware_80383CC8, global
 /* 80383CC8 0034D288  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383CCC 0034D28C  7C 08 02 A6 */	mflr r0
 /* 80383CD0 0034D290  2C 03 00 00 */	cmpwi r3, 0
@@ -1709,10 +1709,10 @@
 /* 80383D28 0034D2E8  7C 08 03 A6 */	mtlr r0
 /* 80383D2C 0034D2EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80383D30 0034D2F0  4E 80 00 20 */	blr 
-.endfn func_80383CC8
+.endfn criware_80383CC8
 
 #ADXT_GetNumSmplObuf?
-.fn func_80383D34, global
+.fn criware_80383D34, global
 /* 80383D34 0034D2F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80383D38 0034D2F8  7C 08 02 A6 */	mflr r0
 /* 80383D3C 0034D2FC  2C 03 00 00 */	cmpwi r3, 0
@@ -1749,7 +1749,7 @@
 /* 80383DA8 0034D368  7C 08 03 A6 */	mtlr r0
 /* 80383DAC 0034D36C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80383DB0 0034D370  4E 80 00 20 */	blr 
-.endfn func_80383D34
+.endfn criware_80383D34
 
 .fn ADXT_SetAutoRcvr, global
 /* 80383DB4 0034D374  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1783,13 +1783,13 @@
 /* 80383E18 0034D3D8  4E 80 00 20 */	blr 
 .endfn ADXT_ExecServer
 
-.fn adxt_ExecServer, global
+.fn adxt_ExecServer, local
 /* 80383E1C 0034D3DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80383E20 0034D3E0  7C 08 02 A6 */	mflr r0
 /* 80383E24 0034D3E4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80383E28 0034D3E8  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80383E2C 0034D3EC  3F E0 80 5F */	lis r31, lbl_805E8570@ha
-/* 80383E30 0034D3F0  3B FF 85 70 */	addi r31, r31, lbl_805E8570@l
+/* 80383E2C 0034D3EC  3F E0 80 5F */	lis r31, adxt_svr_start_cb@ha
+/* 80383E30 0034D3F0  3B FF 85 70 */	addi r31, r31, adxt_svr_start_cb@l
 /* 80383E34 0034D3F4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80383E38 0034D3F8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80383E3C 0034D3FC  48 00 55 C1 */	bl ADXCRS_Lock
@@ -1888,7 +1888,7 @@
 /* 80383F80 0034D540  4E 80 00 20 */	blr 
 .endfn ADXT_GetErrCode
 
-.fn adxt_SetLpFlg, global
+.fn adxt_SetLpFlg, local
 /* 80383F84 0034D544  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80383F88 0034D548  7C 08 02 A6 */	mflr r0
 /* 80383F8C 0034D54C  2C 03 00 00 */	cmpwi r3, 0
@@ -1987,7 +1987,7 @@
 /* 803840DC 0034D69C  4E 80 00 20 */	blr 
 .endfn ADXT_Pause
 
-.fn adxt_Pause, global
+.fn adxt_Pause, local
 /* 803840E0 0034D6A0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803840E4 0034D6A4  7C 08 02 A6 */	mflr r0
 /* 803840E8 0034D6A8  2C 03 00 00 */	cmpwi r3, 0
@@ -2029,13 +2029,13 @@
 /* 80384170 0034D730  80 03 5D 5C */	lwz r0, adxt_vsync_cnt@l(r3)
 /* 80384174 0034D734  90 1F 00 A0 */	stw r0, 0xa0(r31)
 .L_80384178:
-/* 80384178 0034D738  3F C0 80 5F */	lis r30, lbl_805E8590@ha
+/* 80384178 0034D738  3F C0 80 5F */	lis r30, adxt_time_mode@ha
 /* 8038417C 0034D73C  38 00 00 00 */	li r0, 0
-/* 80384180 0034D740  83 BE 85 90 */	lwz r29, lbl_805E8590@l(r30)
+/* 80384180 0034D740  83 BE 85 90 */	lwz r29, adxt_time_mode@l(r30)
 /* 80384184 0034D744  7F E3 FB 78 */	mr r3, r31
 /* 80384188 0034D748  38 81 00 0C */	addi r4, r1, 0xc
 /* 8038418C 0034D74C  38 A1 00 08 */	addi r5, r1, 8
-/* 80384190 0034D750  90 1E 85 90 */	stw r0, lbl_805E8590@l(r30)
+/* 80384190 0034D750  90 1E 85 90 */	stw r0, adxt_time_mode@l(r30)
 /* 80384194 0034D754  4B FF F2 01 */	bl adxt_GetTime
 /* 80384198 0034D758  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 8038419C 0034D75C  3C 80 43 30 */	lis r4, 0x4330
@@ -2046,8 +2046,8 @@
 /* 803841B0 0034D770  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 803841B4 0034D774  C8 45 99 70 */	lfd f2, lbl_80519970@l(r5)
 /* 803841B8 0034D778  90 61 00 1C */	stw r3, 0x1c(r1)
-/* 803841BC 0034D77C  3C C0 80 5F */	lis r6, lbl_805E85A8@ha
-/* 803841C0 0034D780  80 66 85 A8 */	lwz r3, lbl_805E85A8@l(r6)
+/* 803841BC 0034D77C  3C C0 80 5F */	lis r6, adxt_time_unit@ha
+/* 803841C0 0034D780  80 66 85 A8 */	lwz r3, adxt_time_unit@l(r6)
 /* 803841C4 0034D784  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 803841C8 0034D788  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803841CC 0034D78C  6C 63 80 00 */	xoris r3, r3, 0x8000
@@ -2059,7 +2059,7 @@
 /* 803841E4 0034D7A4  90 81 00 10 */	stw r4, 0x10(r1)
 /* 803841E8 0034D7A8  EC 01 00 24 */	fdivs f0, f1, f0
 /* 803841EC 0034D7AC  C8 21 00 10 */	lfd f1, 0x10(r1)
-/* 803841F0 0034D7B0  93 BE 85 90 */	stw r29, lbl_805E8590@l(r30)
+/* 803841F0 0034D7B0  93 BE 85 90 */	stw r29, adxt_time_mode@l(r30)
 /* 803841F4 0034D7B4  EC 21 10 28 */	fsubs f1, f1, f2
 /* 803841F8 0034D7B8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 803841FC 0034D7BC  4B F3 5E 31 */	bl __cvt_fp2unsigned
@@ -2136,18 +2136,18 @@
 .L_803842E0:
 /* 803842E0 0034D8A0  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 803842E4 0034D8A4  7F 84 E3 78 */	mr r4, r28
-/* 803842E8 0034D8A8  48 01 70 F5 */	bl func_8039B3DC
+/* 803842E8 0034D8A8  48 01 70 F5 */	bl criware_8039B3DC
 /* 803842EC 0034D8AC  7C 7C 1B 78 */	mr r28, r3
 /* 803842F0 0034D8B0  48 00 51 15 */	bl ADXCRS_Enter
 /* 803842F4 0034D8B4  4B FF FB 29 */	bl adxt_ExecServer
 /* 803842F8 0034D8B8  48 00 51 11 */	bl ADXCRS_Leave
-/* 803842FC 0034D8BC  3F C0 80 5F */	lis r30, lbl_805E8590@ha
+/* 803842FC 0034D8BC  3F C0 80 5F */	lis r30, adxt_time_mode@ha
 /* 80384300 0034D8C0  38 00 00 00 */	li r0, 0
-/* 80384304 0034D8C4  83 BE 85 90 */	lwz r29, lbl_805E8590@l(r30)
+/* 80384304 0034D8C4  83 BE 85 90 */	lwz r29, adxt_time_mode@l(r30)
 /* 80384308 0034D8C8  7F E3 FB 78 */	mr r3, r31
 /* 8038430C 0034D8CC  38 81 00 08 */	addi r4, r1, 8
 /* 80384310 0034D8D0  38 A1 00 0C */	addi r5, r1, 0xc
-/* 80384314 0034D8D4  90 1E 85 90 */	stw r0, lbl_805E8590@l(r30)
+/* 80384314 0034D8D4  90 1E 85 90 */	stw r0, adxt_time_mode@l(r30)
 /* 80384318 0034D8D8  4B FF F0 7D */	bl adxt_GetTime
 /* 8038431C 0034D8DC  80 61 00 08 */	lwz r3, 8(r1)
 /* 80384320 0034D8E0  3C 80 43 30 */	lis r4, 0x4330
@@ -2158,8 +2158,8 @@
 /* 80384334 0034D8F4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80384338 0034D8F8  C8 45 99 70 */	lfd f2, lbl_80519970@l(r5)
 /* 8038433C 0034D8FC  90 61 00 1C */	stw r3, 0x1c(r1)
-/* 80384340 0034D900  3C C0 80 5F */	lis r6, lbl_805E85A8@ha
-/* 80384344 0034D904  80 66 85 A8 */	lwz r3, lbl_805E85A8@l(r6)
+/* 80384340 0034D900  3C C0 80 5F */	lis r6, adxt_time_unit@ha
+/* 80384344 0034D904  80 66 85 A8 */	lwz r3, adxt_time_unit@l(r6)
 /* 80384348 0034D908  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 8038434C 0034D90C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80384350 0034D910  6C 63 80 00 */	xoris r3, r3, 0x8000
@@ -2171,7 +2171,7 @@
 /* 80384368 0034D928  90 81 00 10 */	stw r4, 0x10(r1)
 /* 8038436C 0034D92C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80384370 0034D930  C8 21 00 10 */	lfd f1, 0x10(r1)
-/* 80384374 0034D934  93 BE 85 90 */	stw r29, lbl_805E8590@l(r30)
+/* 80384374 0034D934  93 BE 85 90 */	stw r29, adxt_time_mode@l(r30)
 /* 80384378 0034D938  EC 21 10 28 */	fsubs f1, f1, f2
 /* 8038437C 0034D93C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80384380 0034D940  4B F3 5C AD */	bl __cvt_fp2unsigned
@@ -2349,7 +2349,7 @@
 /* 803845C8 0034DB88  4E 80 00 20 */	blr 
 .endfn ADXT_InsertSilence
 
-.fn adxt_InsertSilence, global
+.fn adxt_InsertSilence, local
 /* 803845CC 0034DB8C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803845D0 0034DB90  7C 08 02 A6 */	mflr r0
 /* 803845D4 0034DB94  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2527,11 +2527,9 @@
 
 .balign 8
 
-
 .obj adxstm_seteos_sct, global
 	.4byte 0x00000019
 .endobj adxstm_seteos_sct
-
 
 .obj adxt_time_adjust_sw, global
 	.4byte 0x00000001
@@ -2539,30 +2537,114 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805E8570, global
-	.skip 0x20
-.endobj lbl_805E8570
-
-.obj lbl_805E8590, global
-	.skip 0x8
-.endobj lbl_805E8590
-
-.obj lbl_805E8598, global
+.obj adxt_svr_start_cb, local
 	.skip 0x4
-.endobj lbl_805E8598
+.endobj adxt_svr_start_cb
 
-.obj lbl_805E859C, global
+.obj adxt_svr_start_cb_obj, local
 	.skip 0x4
-.endobj lbl_805E859C
+.endobj adxt_svr_start_cb_obj
 
-.obj lbl_805E85A0, global
+.obj adxt_svr_end_cb, local
 	.skip 0x4
-.endobj lbl_805E85A0
+.endobj adxt_svr_end_cb
 
-.obj lbl_805E85A4, global
+.obj adxt_svr_end_cb_obj, local
 	.skip 0x4
-.endobj lbl_805E85A4
+.endobj adxt_svr_end_cb_obj
 
-.obj lbl_805E85A8, global
-	.skip 0x48
-.endobj lbl_805E85A8
+.obj adxrna_svr_start_cb, local
+	.skip 0x4
+.endobj adxrna_svr_start_cb
+
+.obj adxrna_svr_start_cb_obj, local
+	.skip 0x4
+.endobj adxrna_svr_start_cb_obj
+
+.obj adxrna_svr_end_cb, local
+	.skip 0x4
+.endobj adxrna_svr_end_cb
+
+.obj adxrna_svr_end_cb_obj, local
+	.skip 0x4
+.endobj adxrna_svr_end_cb_obj
+
+.obj adxt_time_mode, global
+	.skip 0x4
+.endobj adxt_time_mode
+
+.obj adxt_tsvr_enter_cnt, global
+	.skip 0x4
+.endobj adxt_tsvr_enter_cnt
+
+.obj adxt_def_svrfreq, global
+	.skip 0x4
+.endobj adxt_def_svrfreq
+
+.obj adxt_last_svrfreq, global
+	.skip 0x4
+.endobj adxt_last_svrfreq
+
+.obj ahxdetachfunc, global
+	.skip 0x4
+.endobj ahxdetachfunc
+
+.obj pl2detachfunc, global
+	.skip 0x4
+.endobj pl2detachfunc
+
+.obj adxt_time_unit, global
+	.skip 0x4
+.endobj adxt_time_unit
+
+.obj adxt_time_adjust_cnt, global
+	.skip 0x4
+.endobj adxt_time_adjust_cnt
+
+.obj adxt_diff_av, global
+	.skip 0x4
+.endobj adxt_diff_av
+
+.skip 0x4
+
+.obj adxt_fileid_buf, local
+	.skip 0x10
+.endobj adxt_fileid_buf
+
+.obj adxt_svrcnt, global
+	.skip 0x4
+.endobj adxt_svrcnt
+
+.obj adxt_svrcnt_sjd, global
+	.skip 0x4
+.endobj adxt_svrcnt_sjd
+
+.obj adxt_svrcnt_rna, global
+	.skip 0x4
+.endobj adxt_svrcnt_rna
+
+.obj adxt_svrcnt_adxf, global
+	.skip 0x4
+.endobj adxt_svrcnt_adxf
+
+.obj adxt_svrcnt_adxstm, global
+	.skip 0x4
+.endobj adxt_svrcnt_adxstm
+
+.obj adxt_svrcnt_hndl, global
+	.skip 0x4
+.endobj adxt_svrcnt_hndl
+
+.obj adxt_mvtmp_d, global
+	.skip 0x4
+.endobj adxt_mvtmp_d
+
+.obj adxt_mviop_d, global
+	.skip 0x4
+.endobj adxt_mviop_d
+
+.obj adxt_mviop_f, global
+	.skip 0x4
+.endobj adxt_mviop_f
+
+.skip 0x4

@@ -23,5 +23,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj cri_verstr_ptr, local
-	.skip 0x8
+	.skip 0x4
 .endobj cri_verstr_ptr
+
+.skip 0x4

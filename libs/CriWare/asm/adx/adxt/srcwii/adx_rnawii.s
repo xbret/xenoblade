@@ -78,9 +78,9 @@
 /* 8039B3D8 00364998  4B FF F4 1C */	b AXRNA_SetBitPerSmpl
 .endfn ADXRNA_SetBitPerSmpl
 
-.fn func_8039B3DC, global
-/* 8039B3DC 0036499C  4B FF F4 30 */	b func_8039A80C
-.endfn func_8039B3DC
+.fn criware_8039B3DC, global
+/* 8039B3DC 0036499C  4B FF F4 30 */	b criware_8039A80C
+.endfn criware_8039B3DC
 
 .fn ADXRNA_SetTotalNumSmpl, global
 /* 8039B3E0 003649A0  4E 80 00 20 */	blr
@@ -90,7 +90,7 @@
 /* 8039B3E4 003649A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B3E8 003649A8  7C 08 02 A6 */	mflr r0
 /* 8039B3EC 003649AC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8039B3F0 003649B0  4B FF F4 15 */	bl func_8039A804
+/* 8039B3F0 003649B0  4B FF F4 15 */	bl criware_8039A804
 /* 8039B3F4 003649B4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039B3F8 003649B8  38 60 00 00 */	li r3, 0
 /* 8039B3FC 003649BC  7C 08 03 A6 */	mtlr r0

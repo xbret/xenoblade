@@ -47,10 +47,9 @@
 /* 803928A0 0035BE60  4E 80 00 20 */	blr 
 .endfn mfci_str_to_uint_ptr
 
-#mfCiExecHndl or mfCiExecServer
-.fn func_803928A4, global
+.fn mfCiExecServer, global
 /* 803928A4 0035BE64  4E 80 00 20 */	blr 
-.endfn func_803928A4
+.endfn mfCiExecServer
 
 .fn mfCiEntryErrFunc, global
 /* 803928A8 0035BE68  3C C0 80 5F */	lis r6, mfci_err_func@ha
@@ -60,8 +59,7 @@
 /* 803928B8 0035BE78  4E 80 00 20 */	blr 
 .endfn mfCiEntryErrFunc
 
-#mfCiGetFileSize or mfci_reset_hn
-.fn func_803928BC, global
+.fn mfCiGetFileSize, global
 /* 803928BC 0035BE7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803928C0 0035BE80  7C 08 02 A6 */	mflr r0
 /* 803928C4 0035BE84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -117,7 +115,7 @@
 /* 80392980 0035BF40  7C 08 03 A6 */	mtlr r0
 /* 80392984 0035BF44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392988 0035BF48  4E 80 00 20 */	blr 
-.endfn func_803928BC
+.endfn mfCiGetFileSize
 
 .fn mfCiOpen, global
 /* 8039298C 0035BF4C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -980,9 +978,9 @@
 
 
 .obj mfci_vtbl, global
-	.4byte func_803928A4
+	.4byte mfCiExecServer
 	.4byte mfCiEntryErrFunc
-	.4byte func_803928BC
+	.4byte mfCiGetFileSize
 	.4byte 0
 	.4byte mfCiOpen
 	.4byte mfCiClose
@@ -1015,5 +1013,15 @@
 .endobj mfci_err_func
 
 .obj mfci_err_obj, global
-	.skip 0x9F4
+	.skip 0x4
 .endobj mfci_err_obj
+
+.obj mfci_obj, global
+.skip 0x8C0
+.endobj mfci_obj
+
+.obj mfci_err_str, global
+.skip 0x12C
+.endobj mfci_err_str
+
+.skip 0x4

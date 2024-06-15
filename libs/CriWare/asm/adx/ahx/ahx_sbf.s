@@ -17,17 +17,17 @@
 .fn AHXSBF_Init, global
 /* 8038C444 00355A04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C448 00355A08  7C 08 02 A6 */	mflr r0
-/* 8038C44C 00355A0C  3C 60 80 5F */	lis r3, lbl_805E9AF0@ha
+/* 8038C44C 00355A0C  3C 60 80 5F */	lis r3, ahxsbf_init_cnt@ha
 /* 8038C450 00355A10  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8038C454 00355A14  80 03 9A F0 */	lwz r0, lbl_805E9AF0@l(r3)
+/* 8038C454 00355A14  80 03 9A F0 */	lwz r0, ahxsbf_init_cnt@l(r3)
 /* 8038C458 00355A18  2C 00 00 00 */	cmpwi r0, 0
 /* 8038C45C 00355A1C  40 82 00 08 */	bne .L_8038C464
 /* 8038C460 00355A20  48 00 00 25 */	bl ahxsbf_init_filter
 .L_8038C464:
-/* 8038C464 00355A24  3C 80 80 5F */	lis r4, lbl_805E9AF0@ha
-/* 8038C468 00355A28  80 64 9A F0 */	lwz r3, lbl_805E9AF0@l(r4)
+/* 8038C464 00355A24  3C 80 80 5F */	lis r4, ahxsbf_init_cnt@ha
+/* 8038C468 00355A28  80 64 9A F0 */	lwz r3, ahxsbf_init_cnt@l(r4)
 /* 8038C46C 00355A2C  38 03 00 01 */	addi r0, r3, 1
-/* 8038C470 00355A30  90 04 9A F0 */	stw r0, lbl_805E9AF0@l(r4)
+/* 8038C470 00355A30  90 04 9A F0 */	stw r0, ahxsbf_init_cnt@l(r4)
 /* 8038C474 00355A34  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8038C478 00355A38  7C 08 03 A6 */	mtlr r0
 /* 8038C47C 00355A3C  38 21 00 10 */	addi r1, r1, 0x10
@@ -35,8 +35,8 @@
 .endfn AHXSBF_Init
 
 .fn ahxsbf_init_filter, global
-/* 8038C484 00355A44  3C 60 80 5F */	lis r3, lbl_805E9AE8@ha
-/* 8038C488 00355A48  38 63 9A E8 */	addi r3, r3, lbl_805E9AE8@l
+/* 8038C484 00355A44  3C 60 80 5F */	lis r3, ahxsbf_synthesis_filter_table2@ha
+/* 8038C488 00355A48  38 63 9A E8 */	addi r3, r3, ahxsbf_synthesis_filter_table2@l
 /* 8038C48C 00355A4C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8038C490 00355A50  2C 00 00 00 */	cmpwi r0, 0
 /* 8038C494 00355A54  4C 82 00 20 */	bnelr 
@@ -191,10 +191,10 @@
 .endfn ahxsbf_init_filter
 
 .fn AHXSBF_Finish, global
-/* 8038C6DC 00355C9C  3C 80 80 5F */	lis r4, lbl_805E9AF0@ha
-/* 8038C6E0 00355CA0  80 64 9A F0 */	lwz r3, lbl_805E9AF0@l(r4)
+/* 8038C6DC 00355C9C  3C 80 80 5F */	lis r4, ahxsbf_init_cnt@ha
+/* 8038C6E0 00355CA0  80 64 9A F0 */	lwz r3, ahxsbf_init_cnt@l(r4)
 /* 8038C6E4 00355CA4  38 03 FF FF */	addi r0, r3, -1
-/* 8038C6E8 00355CA8  90 04 9A F0 */	stw r0, lbl_805E9AF0@l(r4)
+/* 8038C6E8 00355CA8  90 04 9A F0 */	stw r0, ahxsbf_init_cnt@l(r4)
 /* 8038C6EC 00355CAC  4E 80 00 20 */	blr 
 .endfn AHXSBF_Finish
 
@@ -208,15 +208,15 @@
 /* 8038C708 00355CC8  7C 7F 1B 78 */	mr r31, r3
 /* 8038C70C 00355CCC  4B C7 7C 45 */	bl memset
 /* 8038C710 00355CD0  38 C0 00 40 */	li r6, 0x40
-/* 8038C714 00355CD4  3C A0 80 5F */	lis r5, lbl_805E9AEC@ha
+/* 8038C714 00355CD4  3C A0 80 5F */	lis r5, ahxsbf_synthesis_window_table2@ha
 /* 8038C718 00355CD8  90 DF 00 08 */	stw r6, 8(r31)
-/* 8038C71C 00355CDC  3C 80 80 5F */	lis r4, lbl_805E9AE8@ha
+/* 8038C71C 00355CDC  3C 80 80 5F */	lis r4, ahxsbf_synthesis_filter_table2@ha
 /* 8038C720 00355CE0  38 00 00 01 */	li r0, 1
 /* 8038C724 00355CE4  7F E3 FB 78 */	mr r3, r31
 /* 8038C728 00355CE8  90 DF 00 04 */	stw r6, 4(r31)
-/* 8038C72C 00355CEC  80 A5 9A EC */	lwz r5, lbl_805E9AEC@l(r5)
+/* 8038C72C 00355CEC  80 A5 9A EC */	lwz r5, ahxsbf_synthesis_window_table2@l(r5)
 /* 8038C730 00355CF0  90 BF 00 10 */	stw r5, 0x10(r31)
-/* 8038C734 00355CF4  80 84 9A E8 */	lwz r4, lbl_805E9AE8@l(r4)
+/* 8038C734 00355CF4  80 84 9A E8 */	lwz r4, ahxsbf_synthesis_filter_table2@l(r4)
 /* 8038C738 00355CF8  90 9F 00 0C */	stw r4, 0xc(r31)
 /* 8038C73C 00355CFC  98 1F 00 00 */	stb r0, 0(r31)
 /* 8038C740 00355D00  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -245,17 +245,21 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.obj lbl_805E9AE8, global
+.obj ahxsbf_synthesis_filter_table2, global
 	.skip 0x4
-.endobj lbl_805E9AE8
+.endobj ahxsbf_synthesis_filter_table2
 
-.obj lbl_805E9AEC, global
+.obj ahxsbf_synthesis_window_table2, global
 	.skip 0x4
-.endobj lbl_805E9AEC
+.endobj ahxsbf_synthesis_window_table2
 
-.obj lbl_805E9AF0, global
-	.skip 0x8
-.endobj lbl_805E9AF0
+.obj ahxsbf_init_cnt, global
+	.skip 0x4
+.endobj ahxsbf_init_cnt
+
+.obj ahxsbf_filter_flg, global
+	.skip 0x4
+.endobj ahxsbf_filter_flg
 
 .obj lbl_805E9AF8, global
 	.skip 0x4

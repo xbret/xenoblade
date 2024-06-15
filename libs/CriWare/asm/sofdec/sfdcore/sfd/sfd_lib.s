@@ -46,8 +46,8 @@
 /* 803C0AF0 0038A0B0  90 61 00 08 */	stw r3, 8(r1)
 /* 803C0AF4 0038A0B4  40 82 00 10 */	bne .L_803C0B04
 /* 803C0AF8 0038A0B8  48 00 85 25 */	bl SFPLY_Init
-/* 803C0AFC 0038A0BC  4B FF F5 61 */	bl SFHDS_Finish
-/* 803C0B00 0038A0C0  4B FF F2 21 */	bl func_803BFD20
+/* 803C0AFC 0038A0BC  4B FF F5 61 */	bl SFHDS_Init
+/* 803C0B00 0038A0C0  4B FF F2 21 */	bl criware_803BFD20
 .L_803C0B04:
 /* 803C0B04 0038A0C4  80 7F 00 00 */	lwz r3, 0(r31)
 /* 803C0B08 0038A0C8  2C 03 00 00 */	cmpwi r3, 0
@@ -71,7 +71,7 @@
 /* 803C0B4C 0038A10C  4E 80 00 20 */	blr 
 .endfn SFD_Init
 
-.fn sflib_InitLibWork, global
+.fn sflib_InitLibWork, local
 /* 803C0B50 0038A110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0B54 0038A114  7C 08 02 A6 */	mflr r0
 /* 803C0B58 0038A118  38 80 00 00 */	li r4, 0
@@ -235,7 +235,7 @@
 /* 803C0D90 0038A350  4E 80 00 20 */	blr 
 .endfn SFLIB_SetErr
 
-.fn func_803C0D94, global
+.fn criware_803C0D94, global
 /* 803C0D94 0038A354  2C 03 00 00 */	cmpwi r3, 0
 /* 803C0D98 0038A358  40 82 00 18 */	bne .L_803C0DB0
 /* 803C0D9C 0038A35C  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
@@ -254,9 +254,9 @@
 /* 803C0DC8 0038A388  38 00 FF FF */	li r0, -1
 /* 803C0DCC 0038A38C  48 00 00 10 */	b .L_803C0DDC
 .L_803C0DD0:
-/* 803C0DD0 0038A390  3C C0 80 61 */	lis r6, lbl_8060A510@ha
+/* 803C0DD0 0038A390  3C C0 80 61 */	lis r6, sfd_hn_last@ha
 /* 803C0DD4 0038A394  38 00 00 00 */	li r0, 0
-/* 803C0DD8 0038A398  90 66 A5 10 */	stw r3, lbl_8060A510@l(r6)
+/* 803C0DD8 0038A398  90 66 A5 10 */	stw r3, sfd_hn_last@l(r6)
 .L_803C0DDC:
 /* 803C0DDC 0038A39C  2C 00 00 00 */	cmpwi r0, 0
 /* 803C0DE0 0038A3A0  41 82 00 14 */	beq .L_803C0DF4
@@ -270,7 +270,7 @@
 .L_803C0DFC:
 /* 803C0DFC 0038A3BC  38 60 00 00 */	li r3, 0
 /* 803C0E00 0038A3C0  4E 80 00 20 */	blr 
-.endfn func_803C0D94
+.endfn criware_803C0D94
 
 .fn SFLIB_CheckHn, global
 /* 803C0E04 0038A3C4  2C 03 00 00 */	cmpwi r3, 0
@@ -284,8 +284,8 @@
 /* 803C0E20 0038A3E0  38 60 FF FF */	li r3, -1
 /* 803C0E24 0038A3E4  4E 80 00 20 */	blr
 .L_803C0E28:
-/* 803C0E28 0038A3E8  3C 80 80 61 */	lis r4, lbl_8060A510@ha
-/* 803C0E2C 0038A3EC  90 64 A5 10 */	stw r3, lbl_8060A510@l(r4)
+/* 803C0E28 0038A3E8  3C 80 80 61 */	lis r4, sfd_hn_last@ha
+/* 803C0E2C 0038A3EC  90 64 A5 10 */	stw r3, sfd_hn_last@l(r4)
 /* 803C0E30 0038A3F0  38 60 00 00 */	li r3, 0
 /* 803C0E34 0038A3F4  4E 80 00 20 */	blr 
 .endfn SFLIB_CheckHn
@@ -1713,13 +1713,25 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj lbl_8060A2D8, global
-	.skip 0xC
+	.skip 0x4
 .endobj lbl_8060A2D8
+
+.obj sflib_sizeof_sfdhn, global
+	.skip 0x4
+.endobj sflib_sizeof_sfdhn
+
+.obj cri_verstr_ptr, local
+	.skip 0x4
+.endobj cri_verstr_ptr
 
 .obj SFLIB_libwork, global
 	.skip 0x22C
 .endobj SFLIB_libwork
 
-.obj lbl_8060A510, global
-	.skip 0x8
-.endobj lbl_8060A510
+.obj sfd_hn_last, global
+	.skip 0x4
+.endobj sfd_hn_last
+
+.obj SFD_pts_error_msg, global
+	.skip 0x4
+.endobj SFD_pts_error_msg

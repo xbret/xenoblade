@@ -2,21 +2,21 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__cf_CfObjectMove, global
+.fn __ct__Q22cf12CfObjectMoveFv, global
 /* 800BBC4C 0008520C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BBC50 00085210  7C 08 02 A6 */	mflr r0
 /* 800BBC54 00085214  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BBC58 00085218  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BBC5C 0008521C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BBC60 00085220  7C 7E 1B 78 */	mr r30, r3
-/* 800BBC64 00085224  4B FF EB 85 */	bl __ct__800BA7E8
+/* 800BBC64 00085224  4B FF EB 85 */	bl __ct__Q22cf13CfObjectModelFv
 /* 800BBC68 00085228  3C 60 80 53 */	lis r3, __vt__Q22cf12CfObjectMove@ha
 /* 800BBC6C 0008522C  3B E0 00 00 */	li r31, 0
 /* 800BBC70 00085230  38 63 CE 60 */	addi r3, r3, __vt__Q22cf12CfObjectMove@l
 /* 800BBC74 00085234  90 7E 00 00 */	stw r3, 0(r30)
 /* 800BBC78 00085238  38 7E 00 D0 */	addi r3, r30, 0xd0
 /* 800BBC7C 0008523C  93 FE 00 C4 */	stw r31, 0xc4(r30)
-/* 800BBC80 00085240  4B F9 E7 ED */	bl __ct__cf_CActParamAnimGame
+/* 800BBC80 00085240  4B F9 E7 ED */	bl __ct__Q22cf17CActParamAnimGameFv
 /* 800BBC84 00085244  38 7E 06 0C */	addi r3, r30, 0x60c
 /* 800BBC88 00085248  48 3F 4C 9D */	bl func_804B0924
 /* 800BBC8C 0008524C  88 1E 06 C9 */	lbz r0, 0x6c9(r30)
@@ -75,7 +75,7 @@
 /* 800BBD60 00085320  7C 08 03 A6 */	mtlr r0
 /* 800BBD64 00085324  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BBD68 00085328  4E 80 00 20 */	blr 
-.endfn __ct__cf_CfObjectMove
+.endfn __ct__Q22cf12CfObjectMoveFv
 
 .fn __dt__Q22cf12CfObjectMoveFv, global
 /* 800BBD6C 0008532C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4722,7 +4722,7 @@
 
 .obj "@eti_80025784", local
 .hidden "@eti_80025784"
-	.4byte __ct__cf_CfObjectMove
+	.4byte __ct__Q22cf12CfObjectMoveFv
 	.4byte 0x00000120
 	.4byte "@etb_80009C8C"
 .endobj "@eti_80025784"

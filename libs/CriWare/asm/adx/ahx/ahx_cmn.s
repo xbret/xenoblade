@@ -16,15 +16,11 @@
 /* 8038D9E4 00356FA4  4E 80 00 20 */	blr 
 .endfn AHXCMN_SetAlcInfTbl
 
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.balign 8
-
-
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 .obj lbl_805E9B08, global
-	.skip 0x8
+	.skip 0x4
 .endobj lbl_805E9B08
+
+.skip 0x4

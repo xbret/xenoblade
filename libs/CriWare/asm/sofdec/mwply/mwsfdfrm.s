@@ -158,7 +158,7 @@
 .L_8039BE30:
 /* 8039BE30 003653F0  7F C3 F3 78 */	mr r3, r30
 /* 8039BE34 003653F4  7F E4 FB 78 */	mr r4, r31
-/* 8039BE38 003653F8  48 00 24 61 */	bl func_8039E298
+/* 8039BE38 003653F8  48 00 24 61 */	bl criware_8039E298
 /* 8039BE3C 003653FC  2C 03 00 01 */	cmpwi r3, 1
 /* 8039BE40 00365400  40 82 00 10 */	bne .L_8039BE50
 /* 8039BE44 00365404  38 00 00 02 */	li r0, 2
@@ -172,7 +172,7 @@
 /* 8039BE5C 0036541C  7F E4 FB 78 */	mr r4, r31
 /* 8039BE60 00365420  38 A1 00 08 */	addi r5, r1, 8
 /* 8039BE64 00365424  38 C1 00 0C */	addi r6, r1, 0xc
-/* 8039BE68 00365428  48 00 2A C1 */	bl func_8039E928
+/* 8039BE68 00365428  48 00 2A C1 */	bl criware_8039E928
 /* 8039BE6C 0036542C  80 01 00 08 */	lwz r0, 8(r1)
 /* 8039BE70 00365430  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 8039BE74 00365434  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -448,7 +448,7 @@
 /* 8039C220 003657E0  4E 80 00 20 */	blr 
 .endfn mwl_convFrmInfFromSFD
 
-.fn mwsffrm_SetPicUsrInf, global
+.fn mwsffrm_SetPicUsrInf, local
 /* 8039C224 003657E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C228 003657E8  7C 08 02 A6 */	mflr r0
 /* 8039C22C 003657EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -491,7 +491,7 @@
 /* 8039C2B0 00365870  4E 80 00 20 */	blr 
 .endfn mwsffrm_SetPicUsrInf
 
-.fn mwsffrm_SetSudDatInf, global
+.fn mwsffrm_SetSudDatInf, local
 /* 8039C2B4 00365874  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C2B8 00365878  7C 08 02 A6 */	mflr r0
 /* 8039C2BC 0036587C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -935,7 +935,7 @@
 /* 8039C8C8 00365E88  38 A1 00 30 */	addi r5, r1, 0x30
 /* 8039C8CC 00365E8C  38 C1 00 2C */	addi r6, r1, 0x2c
 /* 8039C8D0 00365E90  38 E1 00 28 */	addi r7, r1, 0x28
-/* 8039C8D4 00365E94  48 00 04 A9 */	bl func_8039CD7C
+/* 8039C8D4 00365E94  48 00 04 A9 */	bl criware_8039CD7C
 /* 8039C8D8 00365E98  7F 43 D3 78 */	mr r3, r26
 /* 8039C8DC 00365E9C  38 81 00 40 */	addi r4, r1, 0x40
 /* 8039C8E0 00365EA0  48 03 41 E9 */	bl SFH_AnlyDiffTime
@@ -992,7 +992,7 @@
 /* 8039C9A4 00365F64  4E 80 00 20 */	blr 
 .endfn mwsffrm_CallbackAnalyzeSofdecHeader
 
-.fn mwsffrm_AnalyAudioInfo, global
+.fn mwsffrm_AnalyAudioInfo, local
 /* 8039C9A8 00365F68  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039C9AC 00365F6C  7C 08 02 A6 */	mflr r0
 /* 8039C9B0 00365F70  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1087,7 +1087,7 @@
 /* 8039CAE4 003660A4  38 00 00 01 */	li r0, 1
 /* 8039CAE8 003660A8  7F 23 CB 78 */	mr r3, r25
 /* 8039CAEC 003660AC  90 19 02 90 */	stw r0, 0x290(r25)
-/* 8039CAF0 003660B0  48 00 00 19 */	bl func_8039CB08
+/* 8039CAF0 003660B0  48 00 00 19 */	bl mwsffrm_ChangeSettingSyncPlayback
 .L_8039CAF4:
 /* 8039CAF4 003660B4  BB 21 00 24 */	lmw r25, 0x24(r1)
 /* 8039CAF8 003660B8  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -1096,7 +1096,7 @@
 /* 8039CB04 003660C4  4E 80 00 20 */	blr 
 .endfn mwsffrm_AnalyAudioInfo
 
-.fn func_8039CB08, global
+.fn mwsffrm_ChangeSettingSyncPlayback, local
 /* 8039CB08 003660C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CB0C 003660CC  7C 08 02 A6 */	mflr r0
 /* 8039CB10 003660D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1124,7 +1124,7 @@
 /* 8039CB68 00366128  7F 63 DB 78 */	mr r3, r27
 /* 8039CB6C 0036612C  7F 85 E3 78 */	mr r5, r28
 /* 8039CB70 00366130  38 80 00 00 */	li r4, 0
-/* 8039CB74 00366134  48 00 66 4D */	bl func_803A31C0
+/* 8039CB74 00366134  48 00 66 4D */	bl MWSFD_SetSstCh
 /* 8039CB78 00366138  3B C0 00 01 */	li r30, 1
 .L_8039CB7C:
 /* 8039CB7C 0036613C  2C 1E 00 01 */	cmpwi r30, 1
@@ -1132,7 +1132,7 @@
 /* 8039CB84 00366144  7F 63 DB 78 */	mr r3, r27
 /* 8039CB88 00366148  3B 80 FF FF */	li r28, -1
 /* 8039CB8C 0036614C  38 80 00 00 */	li r4, 0
-/* 8039CB90 00366150  48 00 66 DD */	bl MWSFD_DisconnectSst
+/* 8039CB90 00366150  48 00 66 DD */	bl criware_803A326C
 .L_8039CB94:
 /* 8039CB94 00366154  80 1B 05 F0 */	lwz r0, 0x5f0(r27)
 /* 8039CB98 00366158  3B A0 00 00 */	li r29, 0
@@ -1151,7 +1151,7 @@
 /* 8039CBCC 0036618C  7F 63 DB 78 */	mr r3, r27
 /* 8039CBD0 00366190  7F 25 CB 78 */	mr r5, r25
 /* 8039CBD4 00366194  38 80 00 01 */	li r4, 1
-/* 8039CBD8 00366198  48 00 65 E9 */	bl func_803A31C0
+/* 8039CBD8 00366198  48 00 65 E9 */	bl MWSFD_SetSstCh
 /* 8039CBDC 0036619C  3B A0 00 01 */	li r29, 1
 .L_8039CBE0:
 /* 8039CBE0 003661A0  2C 1D 00 01 */	cmpwi r29, 1
@@ -1159,13 +1159,13 @@
 /* 8039CBE8 003661A8  7F 63 DB 78 */	mr r3, r27
 /* 8039CBEC 003661AC  3B 20 FF FF */	li r25, -1
 /* 8039CBF0 003661B0  38 80 00 01 */	li r4, 1
-/* 8039CBF4 003661B4  48 00 66 79 */	bl MWSFD_DisconnectSst
+/* 8039CBF4 003661B4  48 00 66 79 */	bl criware_803A326C
 .L_8039CBF8:
 /* 8039CBF8 003661B8  7F E3 FB 78 */	mr r3, r31
 /* 8039CBFC 003661BC  38 A1 00 08 */	addi r5, r1, 8
 /* 8039CC00 003661C0  3B 40 00 00 */	li r26, 0
 /* 8039CC04 003661C4  38 80 00 1E */	li r4, 0x1e
-/* 8039CC08 003661C8  48 02 F9 D9 */	bl func_803CC5E0
+/* 8039CC08 003661C8  48 02 F9 D9 */	bl SFD_GetCond
 /* 8039CC0C 003661CC  80 01 00 08 */	lwz r0, 8(r1)
 /* 8039CC10 003661D0  2C 00 FF FF */	cmpwi r0, -1
 /* 8039CC14 003661D4  40 82 00 BC */	bne .L_8039CCD0
@@ -1270,9 +1270,9 @@
 /* 8039CD70 00366330  7C 08 03 A6 */	mtlr r0
 /* 8039CD74 00366334  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039CD78 00366338  4E 80 00 20 */	blr 
-.endfn func_8039CB08
+.endfn mwsffrm_ChangeSettingSyncPlayback
 
-.fn func_8039CD7C, global
+.fn criware_8039CD7C, global
 /* 8039CD7C 0036633C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CD80 00366340  7C 08 02 A6 */	mflr r0
 /* 8039CD84 00366344  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1331,7 +1331,7 @@
 /* 8039CE4C 0036640C  7C 08 03 A6 */	mtlr r0
 /* 8039CE50 00366410  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039CE54 00366414  4E 80 00 20 */	blr 
-.endfn func_8039CD7C
+.endfn criware_8039CD7C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

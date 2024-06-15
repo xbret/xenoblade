@@ -474,10 +474,10 @@
 .fn ADX_DecodeSte4, global
 /* 80389A68 00353028  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80389A6C 0035302C  7C 08 02 A6 */	mflr r0
-/* 80389A70 00353030  3D 60 80 5F */	lis r11, lbl_805F60B0@ha
+/* 80389A70 00353030  3D 60 80 5F */	lis r11, adx_decode_output_mono_flag@ha
 /* 80389A74 00353034  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80389A78 00353038  81 81 00 28 */	lwz r12, 0x28(r1)
-/* 80389A7C 0035303C  80 0B 60 B0 */	lwz r0, lbl_805F60B0@l(r11)
+/* 80389A7C 0035303C  80 0B 60 B0 */	lwz r0, adx_decode_output_mono_flag@l(r11)
 /* 80389A80 00353040  A9 61 00 2E */	lha r11, 0x2e(r1)
 /* 80389A84 00353044  2C 00 00 00 */	cmpwi r0, 0
 /* 80389A88 00353048  A8 01 00 32 */	lha r0, 0x32(r1)

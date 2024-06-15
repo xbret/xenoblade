@@ -8,7 +8,7 @@
 /* 803A0C68 0036A228  4E 80 00 20 */	blr
 .endfn MWSFLIB_GetLibWorkPtr
 
-.fn mwsflib_LscErrFunc, global
+.fn mwsflib_LscErrFunc, local
 /* 803A0C6C 0036A22C  7C 83 23 78 */	mr r3, r4
 /* 803A0C70 0036A230  4C C6 31 82 */	crclr 6
 /* 803A0C74 0036A234  4B FF CF C4 */	b MWSFSVM_Error
@@ -20,8 +20,8 @@
 /* 803A0C80 0036A240  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0C84 0036A244  90 01 00 44 */	stw r0, 0x44(r1)
 /* 803A0C88 0036A248  93 E1 00 3C */	stw r31, 0x3c(r1)
-/* 803A0C8C 0036A24C  3F E0 80 60 */	lis r31, lbl_80602958@ha
-/* 803A0C90 0036A250  3B FF 29 58 */	addi r31, r31, lbl_80602958@l
+/* 803A0C8C 0036A24C  3F E0 80 60 */	lis r31, mwsfd_init_cnt@ha
+/* 803A0C90 0036A250  3B FF 29 58 */	addi r31, r31, mwsfd_init_cnt@l
 /* 803A0C94 0036A254  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 803A0C98 0036A258  3F C0 80 52 */	lis r30, mwsfd_ver_str@ha
 /* 803A0C9C 0036A25C  3B DE E0 E0 */	addi r30, r30, mwsfd_ver_str@l
@@ -100,9 +100,9 @@
 /* 803A0DB0 0036A370  C0 5E 03 20 */	lfs f2, 0x320(r30)
 /* 803A0DB4 0036A374  38 00 00 00 */	li r0, 0
 /* 803A0DB8 0036A378  C0 21 00 08 */	lfs f1, 8(r1)
-/* 803A0DBC 0036A37C  3C 60 80 60 */	lis r3, lbl_80605EB4@ha
+/* 803A0DBC 0036A37C  3C 60 80 60 */	lis r3, mwg_vcnt@ha
 /* 803A0DC0 0036A380  C0 1E 03 1C */	lfs f0, 0x31c(r30)
-/* 803A0DC4 0036A384  90 03 5E B4 */	stw r0, lbl_80605EB4@l(r3)
+/* 803A0DC4 0036A384  90 03 5E B4 */	stw r0, mwg_vcnt@l(r3)
 /* 803A0DC8 0036A388  EC 02 00 7A */	fmadds f0, f2, f1, f0
 /* 803A0DCC 0036A38C  FC 00 00 1E */	fctiwz f0, f0
 /* 803A0DD0 0036A390  D8 01 00 28 */	stfd f0, 0x28(r1)
@@ -148,9 +148,9 @@
 /* 803A0E6C 0036A42C  38 63 26 C4 */	addi r3, r3, MWSFSVR_MainThrdProc@l
 /* 803A0E70 0036A430  38 80 00 00 */	li r4, 0
 /* 803A0E74 0036A434  4B FF CD 81 */	bl MWSFSVM_EntryMainFunc
-/* 803A0E78 0036A438  3C 60 80 3A */	lis r3, func_803A2908@ha
+/* 803A0E78 0036A438  3C 60 80 3A */	lis r3, criware_803A2908@ha
 /* 803A0E7C 0036A43C  38 BE 00 93 */	addi r5, r30, 0x93
-/* 803A0E80 0036A440  38 63 29 08 */	addi r3, r3, func_803A2908@l
+/* 803A0E80 0036A440  38 63 29 08 */	addi r3, r3, criware_803A2908@l
 /* 803A0E84 0036A444  38 80 00 00 */	li r4, 0
 /* 803A0E88 0036A448  4B FF CD 2D */	bl MWSFSVM_EntryIdleFunc
 .L_803A0E8C:
@@ -178,7 +178,7 @@
 /* 803A0EDC 0036A49C  4E 80 00 20 */	blr 
 .endfn mwPlyInitSfdFx
 
-.fn mwsflib_InitLibWork, global
+.fn mwsflib_InitLibWork, local
 /* 803A0EE0 0036A4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0EE4 0036A4A4  7C 08 02 A6 */	mflr r0
 /* 803A0EE8 0036A4A8  38 80 00 00 */	li r4, 0
@@ -253,7 +253,7 @@
 /* 803A0FD0 0036A590  4E 80 00 20 */	blr 
 .endfn MWSFLIB_SetErrCode
 
-.fn mwPlySfdInit, global
+.fn mwPlySfdInit, local
 /* 803A0FD4 0036A594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A0FD8 0036A598  7C 08 02 A6 */	mflr r0
 /* 803A0FDC 0036A59C  3C 80 80 52 */	lis r4, mwsfd_initsfdpara@ha
@@ -290,7 +290,7 @@
 /* 803A1050 0036A610  38 60 00 00 */	li r3, 0
 /* 803A1054 0036A614  38 84 10 98 */	addi r4, r4, MWSFLIB_SfdErrFunc@l
 /* 803A1058 0036A618  38 A0 00 00 */	li r5, 0
-/* 803A105C 0036A61C  48 01 FD 39 */	bl func_803C0D94
+/* 803A105C 0036A61C  48 01 FD 39 */	bl criware_803C0D94
 /* 803A1060 0036A620  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1064 0036A624  41 82 00 1C */	beq .L_803A1080
 /* 803A1068 0036A628  3C 80 80 60 */	lis r4, mwsfd_libwork@ha
@@ -315,8 +315,8 @@
 /* 803A10A0 0036A660  2C 03 00 00 */	cmpwi r3, 0
 /* 803A10A4 0036A664  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803A10A8 0036A668  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803A10AC 0036A66C  3F E0 80 60 */	lis r31, lbl_80602958@ha
-/* 803A10B0 0036A670  3B FF 29 58 */	addi r31, r31, lbl_80602958@l
+/* 803A10AC 0036A66C  3F E0 80 60 */	lis r31, mwsfd_init_cnt@ha
+/* 803A10B0 0036A670  3B FF 29 58 */	addi r31, r31, mwsfd_init_cnt@l
 /* 803A10B4 0036A674  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803A10B8 0036A678  7C 9E 23 78 */	mr r30, r4
 /* 803A10BC 0036A67C  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -508,7 +508,7 @@
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 .endobj mwsfd_ver_str
 
-.obj mwsfd_trentry, global
+.obj mwsfd_trentry, local
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -527,12 +527,12 @@
 .endobj mwsfd_trentry
 
 
-.obj mwsfd_initsfdpara, global
+.obj mwsfd_initsfdpara, local
 	.4byte mwsfd_trentry
 	.4byte 0x0000EA24
 .endobj mwsfd_initsfdpara
 
-.obj mwsfd_siz_mwplyhn, local
+.obj mwsfd_siz_mwplyhn, global
 	.4byte 0x00000670
 .endobj mwsfd_siz_mwplyhn
 
@@ -717,18 +717,46 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80602958, global
+.obj mwsfd_init_cnt, global
 	.skip 0x4
-.endobj lbl_80602958
+.endobj mwsfd_init_cnt
 
-.obj lbl_8060295C, global
+.obj mwsfd_init_flag, global
 	.skip 0x4
-.endobj lbl_8060295C
+.endobj mwsfd_init_flag
 
 .obj lbl_80602960, global
-	.skip 0x8
+	.skip 0x4
 .endobj lbl_80602960
 
+.obj lbl_80602964, global
+	.skip 0x4
+.endobj lbl_80602964
+
 .obj mwsfd_libwork, global
-	.skip 0x3548
+	.skip 0x33F8
 .endobj mwsfd_libwork
+
+.obj cri_verstr_ptr, local
+	.skip 0x4
+.endobj cri_verstr_ptr
+
+.obj mwsfd_err_mwsfdhn, global
+	.skip 0x4
+.endobj mwsfd_err_mwsfdhn
+
+.obj mwsfd_err_sfdhn, global
+	.skip 0x4
+.endobj mwsfd_err_sfdhn
+
+.obj mwg_sfd_errcnt, local
+	.skip 0x4
+.endobj mwg_sfd_errcnt
+
+.obj mwg_sfd_errcode, local
+	.skip 0x40
+.endobj mwg_sfd_errcode
+
+.obj mwg_sfd_errstr, local
+	.skip 0x100
+.endobj mwg_sfd_errstr

@@ -9,8 +9,8 @@
 /* 8038A194 00353754  38 A0 01 00 */	li r5, 0x100
 /* 8038A198 00353758  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8038A19C 0035375C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8038A1A0 00353760  3F E0 80 5F */	lis r31, lbl_805E99C0@ha
-/* 8038A1A4 00353764  3B FF 99 C0 */	addi r31, r31, lbl_805E99C0@l
+/* 8038A1A0 00353760  3F E0 80 5F */	lis r31, adxerr_func@ha
+/* 8038A1A4 00353764  3B FF 99 C0 */	addi r31, r31, adxerr_func@l
 /* 8038A1A8 00353768  38 7F 00 08 */	addi r3, r31, 8
 /* 8038A1AC 0035376C  4B C7 A1 A5 */	bl memset
 /* 8038A1B0 00353770  38 00 00 00 */	li r0, 0
@@ -30,8 +30,8 @@
 /* 8038A1DC 0035379C  38 A0 01 00 */	li r5, 0x100
 /* 8038A1E0 003537A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8038A1E4 003537A4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8038A1E8 003537A8  3F E0 80 5F */	lis r31, lbl_805E99C0@ha
-/* 8038A1EC 003537AC  3B FF 99 C0 */	addi r31, r31, lbl_805E99C0@l
+/* 8038A1E8 003537A8  3F E0 80 5F */	lis r31, adxerr_func@ha
+/* 8038A1EC 003537AC  3B FF 99 C0 */	addi r31, r31, adxerr_func@l
 /* 8038A1F0 003537B0  38 7F 00 08 */	addi r3, r31, 8
 /* 8038A1F4 003537B4  4B C7 A1 5D */	bl memset
 /* 8038A1F8 003537B8  38 00 00 00 */	li r0, 0
@@ -50,8 +50,8 @@
 /* 8038A220 003537E0  2C 03 00 00 */	cmpwi r3, 0
 /* 8038A224 003537E4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8038A228 003537E8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8038A22C 003537EC  3F E0 80 5F */	lis r31, lbl_805E99C0@ha
-/* 8038A230 003537F0  3B FF 99 C0 */	addi r31, r31, lbl_805E99C0@l
+/* 8038A22C 003537EC  3F E0 80 5F */	lis r31, adxerr_func@ha
+/* 8038A230 003537F0  3B FF 99 C0 */	addi r31, r31, adxerr_func@l
 /* 8038A234 003537F4  40 82 00 18 */	bne .L_8038A24C
 /* 8038A238 003537F8  3C 60 80 52 */	lis r3, lbl_8051AB08@ha
 /* 8038A23C 003537FC  38 63 AB 08 */	addi r3, r3, lbl_8051AB08@l
@@ -89,8 +89,8 @@
 /* 8038A2A4 00353864  2C 03 00 00 */	cmpwi r3, 0
 /* 8038A2A8 00353868  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8038A2AC 0035386C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8038A2B0 00353870  3F E0 80 5F */	lis r31, lbl_805E99C0@ha
-/* 8038A2B4 00353874  3B FF 99 C0 */	addi r31, r31, lbl_805E99C0@l
+/* 8038A2B0 00353870  3F E0 80 5F */	lis r31, adxerr_func@ha
+/* 8038A2B4 00353874  3B FF 99 C0 */	addi r31, r31, adxerr_func@l
 /* 8038A2B8 00353878  93 C1 00 08 */	stw r30, 8(r1)
 /* 8038A2BC 0035387C  7C 9E 23 78 */	mr r30, r4
 /* 8038A2C0 00353880  41 82 00 0C */	beq .L_8038A2CC
@@ -215,8 +215,8 @@
 /* 8038A46C 00353A2C  38 A5 00 04 */	addi r5, r5, 4
 /* 8038A470 00353A30  42 00 FF 0C */	bdnz .L_8038A37C
 .L_8038A474:
-/* 8038A474 00353A34  3C 60 80 5F */	lis r3, lbl_805E9AC8@ha
-/* 8038A478 00353A38  38 63 9A C8 */	addi r3, r3, lbl_805E9AC8@l
+/* 8038A474 00353A34  3C 60 80 5F */	lis r3, "buf$122"@ha
+/* 8038A478 00353A38  38 63 9A C8 */	addi r3, r3, "buf$122"@l
 /* 8038A47C 00353A3C  4B F2 F1 3D */	bl strlen
 /* 8038A480 00353A40  38 9E FF FF */	addi r4, r30, -1
 /* 8038A484 00353A44  7C 03 20 00 */	cmpw r3, r4
@@ -240,10 +240,10 @@
 /* 8038A4C4 00353A84  2C 05 00 00 */	cmpwi r5, 0
 /* 8038A4C8 00353A88  41 82 00 AC */	beq .L_8038A574
 /* 8038A4CC 00353A8C  38 A7 00 07 */	addi r5, r7, 7
-/* 8038A4D0 00353A90  3C 60 80 5F */	lis r3, lbl_805E9AC8@ha
+/* 8038A4D0 00353A90  3C 60 80 5F */	lis r3, "buf$122"@ha
 /* 8038A4D4 00353A94  54 A5 E8 FE */	srwi r5, r5, 3
 /* 8038A4D8 00353A98  38 04 FF FF */	addi r0, r4, -1
-/* 8038A4DC 00353A9C  38 63 9A C8 */	addi r3, r3, lbl_805E9AC8@l
+/* 8038A4DC 00353A9C  38 63 9A C8 */	addi r3, r3, "buf$122"@l
 /* 8038A4E0 00353AA0  7C A9 03 A6 */	mtctr r5
 /* 8038A4E4 00353AA4  2C 07 00 00 */	cmpwi r7, 0
 /* 8038A4E8 00353AA8  40 81 00 8C */	ble .L_8038A574
@@ -283,11 +283,11 @@
 /* 8038A56C 00353B2C  98 E5 00 07 */	stb r7, 7(r5)
 /* 8038A570 00353B30  42 00 FF 7C */	bdnz .L_8038A4EC
 .L_8038A574:
-/* 8038A574 00353B34  3C A0 80 5F */	lis r5, lbl_805E9AC8@ha
+/* 8038A574 00353B34  3C A0 80 5F */	lis r5, "buf$122"@ha
 /* 8038A578 00353B38  7C 06 20 50 */	subf r0, r6, r4
 /* 8038A57C 00353B3C  38 E4 FF FF */	addi r7, r4, -1
 /* 8038A580 00353B40  7C 7F 32 14 */	add r3, r31, r6
-/* 8038A584 00353B44  38 A5 9A C8 */	addi r5, r5, lbl_805E9AC8@l
+/* 8038A584 00353B44  38 A5 9A C8 */	addi r5, r5, "buf$122"@l
 /* 8038A588 00353B48  7C 09 03 A6 */	mtctr r0
 /* 8038A58C 00353B4C  7C 06 20 00 */	cmpw r6, r4
 /* 8038A590 00353B50  40 80 00 1C */	bge .L_8038A5AC
@@ -362,10 +362,18 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805E99C0, global
-	.skip 0x108
-.endobj lbl_805E99C0
+.obj adxerr_func, global
+	.skip 0x4
+.endobj adxerr_func
 
-.obj lbl_805E9AC8, global
+.obj adxerr_obj, global
+	.skip 0x4
+.endobj adxerr_obj
+
+.obj adxerr_msg, global
+	.skip 0x100
+.endobj adxerr_msg
+
+.obj "buf$122", local
 	.skip 0x20
-.endobj lbl_805E9AC8
+.endobj "buf$122"

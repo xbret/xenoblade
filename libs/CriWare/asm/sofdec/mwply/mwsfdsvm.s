@@ -7,8 +7,8 @@
 /* 8039DB24 003670E4  7C 08 02 A6 */	mflr r0
 /* 8039DB28 003670E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039DB2C 003670EC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8039DB30 003670F0  3F E0 80 60 */	lis r31, lbl_80602790@ha
-/* 8039DB34 003670F4  3B FF 27 90 */	addi r31, r31, lbl_80602790@l
+/* 8039DB30 003670F0  3F E0 80 60 */	lis r31, mwg_vbin_fid@ha
+/* 8039DB34 003670F4  3B FF 27 90 */	addi r31, r31, mwg_vbin_fid@l
 /* 8039DB38 003670F8  4B FF 9C 41 */	bl SVM_Init
 /* 8039DB3C 003670FC  38 00 00 00 */	li r0, 0
 /* 8039DB40 00367100  90 1F 00 00 */	stw r0, 0(r31)
@@ -36,8 +36,8 @@
 /* 8039DB8C 0036714C  7F E4 FB 78 */	mr r4, r31
 /* 8039DB90 00367150  38 60 00 02 */	li r3, 2
 /* 8039DB94 00367154  4B FF 94 A9 */	bl SVM_SetCbSvrIdWithString
-/* 8039DB98 00367158  3C 60 80 60 */	lis r3, lbl_80602794@ha
-/* 8039DB9C 0036715C  93 E3 27 94 */	stw r31, lbl_80602794@l(r3)
+/* 8039DB98 00367158  3C 60 80 60 */	lis r3, mwg_vsync_fid@ha
+/* 8039DB9C 0036715C  93 E3 27 94 */	stw r31, mwg_vsync_fid@l(r3)
 /* 8039DBA0 00367160  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8039DBA4 00367164  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039DBA8 00367168  7C 08 03 A6 */	mtlr r0
@@ -56,8 +56,8 @@
 /* 8039DBD0 00367190  7C E4 3B 78 */	mr r4, r7
 /* 8039DBD4 00367194  7C 05 03 78 */	mr r5, r0
 /* 8039DBD8 00367198  4B FF 90 1D */	bl SVM_SetCbSvrWithString
-/* 8039DBDC 0036719C  3C 80 80 60 */	lis r4, lbl_80602798@ha
-/* 8039DBE0 003671A0  90 64 27 98 */	stw r3, lbl_80602798@l(r4)
+/* 8039DBDC 0036719C  3C 80 80 60 */	lis r4, mwg_idle_fid@ha
+/* 8039DBE0 003671A0  90 64 27 98 */	stw r3, mwg_idle_fid@l(r4)
 /* 8039DBE4 003671A4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039DBE8 003671A8  7C 08 03 A6 */	mtlr r0
 /* 8039DBEC 003671AC  38 21 00 10 */	addi r1, r1, 0x10
@@ -75,8 +75,8 @@
 /* 8039DC10 003671D0  7C E4 3B 78 */	mr r4, r7
 /* 8039DC14 003671D4  7C 05 03 78 */	mr r5, r0
 /* 8039DC18 003671D8  4B FF 8F DD */	bl SVM_SetCbSvrWithString
-/* 8039DC1C 003671DC  3C 80 80 60 */	lis r4, lbl_8060279C@ha
-/* 8039DC20 003671E0  90 64 27 9C */	stw r3, lbl_8060279C@l(r4)
+/* 8039DC1C 003671DC  3C 80 80 60 */	lis r4, mwg_main_fid@ha
+/* 8039DC20 003671E0  90 64 27 9C */	stw r3, mwg_main_fid@l(r4)
 /* 8039DC24 003671E4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039DC28 003671E8  7C 08 03 A6 */	mtlr r0
 /* 8039DC2C 003671EC  38 21 00 10 */	addi r1, r1, 0x10
@@ -105,10 +105,10 @@
 /* 8039DC70 00367230  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_8039DC74:
 /* 8039DC74 00367234  90 81 00 0C */	stw r4, 0xc(r1)
-/* 8039DC78 00367238  3F E0 80 60 */	lis r31, lbl_806027A0@ha
+/* 8039DC78 00367238  3F E0 80 60 */	lis r31, "errstr$5168"@ha
 /* 8039DC7C 0036723C  38 80 00 00 */	li r4, 0
 /* 8039DC80 00367240  90 61 00 08 */	stw r3, 8(r1)
-/* 8039DC84 00367244  38 7F 27 A0 */	addi r3, r31, lbl_806027A0@l
+/* 8039DC84 00367244  38 7F 27 A0 */	addi r3, r31, "errstr$5168"@l
 /* 8039DC88 00367248  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 8039DC8C 0036724C  38 A0 01 00 */	li r5, 0x100
 /* 8039DC90 00367250  90 C1 00 14 */	stw r6, 0x14(r1)
@@ -124,7 +124,7 @@
 /* 8039DCB8 00367278  38 A1 00 68 */	addi r5, r1, 0x68
 /* 8039DCBC 0036727C  7F C4 F3 78 */	mr r4, r30
 /* 8039DCC0 00367280  90 61 00 68 */	stw r3, 0x68(r1)
-/* 8039DCC4 00367284  38 7F 27 A0 */	addi r3, r31, lbl_806027A0@l
+/* 8039DCC4 00367284  38 7F 27 A0 */	addi r3, r31, "errstr$5168"@l
 /* 8039DCC8 00367288  90 01 00 70 */	stw r0, 0x70(r1)
 /* 8039DCCC 0036728C  4B F2 31 F5 */	bl vsprintf
 /* 8039DCD0 00367290  3C 60 80 60 */	lis r3, lbl_80602960@ha
@@ -132,7 +132,7 @@
 /* 8039DCD8 00367298  2C 03 00 00 */	cmpwi r3, 0
 /* 8039DCDC 0036729C  41 82 00 28 */	beq .L_8039DD04
 /* 8039DCE0 003672A0  3C 80 80 57 */	lis r4, lbl_8056A274@ha
-/* 8039DCE4 003672A4  38 1F 27 A0 */	addi r0, r31, lbl_806027A0@l
+/* 8039DCE4 003672A4  38 1F 27 A0 */	addi r0, r31, "errstr$5168"@l
 /* 8039DCE8 003672A8  38 84 A2 74 */	addi r4, r4, lbl_8056A274@l
 /* 8039DCEC 003672AC  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8039DCF0 003672B0  38 84 00 04 */	addi r4, r4, 4
@@ -141,8 +141,8 @@
 /* 8039DCFC 003672BC  7D 89 03 A6 */	mtctr r12
 /* 8039DD00 003672C0  4E 80 04 21 */	bctrl 
 .L_8039DD04:
-/* 8039DD04 003672C4  3C 60 80 60 */	lis r3, lbl_806027A0@ha
-/* 8039DD08 003672C8  38 63 27 A0 */	addi r3, r3, lbl_806027A0@l
+/* 8039DD04 003672C4  3C 60 80 60 */	lis r3, "errstr$5168"@ha
+/* 8039DD08 003672C8  38 63 27 A0 */	addi r3, r3, "errstr$5168"@l
 /* 8039DD0C 003672CC  4B FF 8E 61 */	bl SVM_CallErr1
 /* 8039DD10 003672D0  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 8039DD14 003672D4  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
@@ -202,22 +202,22 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80602790, global
+.obj mwg_vbin_fid, local
 	.skip 0x4
-.endobj lbl_80602790
+.endobj mwg_vbin_fid
 
-.obj lbl_80602794, global
+.obj mwg_vsync_fid, local
 	.skip 0x4
-.endobj lbl_80602794
+.endobj mwg_vsync_fid
 
-.obj lbl_80602798, global
+.obj mwg_idle_fid, local
 	.skip 0x4
-.endobj lbl_80602798
+.endobj mwg_idle_fid
 
-.obj lbl_8060279C, global
+.obj mwg_main_fid, local
 	.skip 0x4
-.endobj lbl_8060279C
+.endobj mwg_main_fid
 
-.obj lbl_806027A0, global
+.obj "errstr$5168", local
 	.skip 0x100
-.endobj lbl_806027A0
+.endobj "errstr$5168"

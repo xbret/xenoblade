@@ -3,10 +3,10 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn MPVERR_Init, global
-/* 803A6154 0036F714  3C 80 80 60 */	lis r4, lbl_80605F38@ha
+/* 803A6154 0036F714  3C 80 80 60 */	lis r4, mpverrinf@ha
 /* 803A6158 0036F718  38 00 00 00 */	li r0, 0
-/* 803A615C 0036F71C  38 64 5F 38 */	addi r3, r4, lbl_80605F38@l
-/* 803A6160 0036F720  90 04 5F 38 */	stw r0, lbl_80605F38@l(r4)
+/* 803A615C 0036F71C  38 64 5F 38 */	addi r3, r4, mpverrinf@l
+/* 803A6160 0036F720  90 04 5F 38 */	stw r0, mpverrinf@l(r4)
 /* 803A6164 0036F724  90 03 00 04 */	stw r0, 4(r3)
 /* 803A6168 0036F728  90 03 00 08 */	stw r0, 8(r3)
 /* 803A616C 0036F72C  90 03 00 0C */	stw r0, 0xc(r3)
@@ -36,18 +36,18 @@
 /* 803A61B4 0036F774  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803A61B8 0036F778  7C 9D 23 78 */	mr r29, r4
 /* 803A61BC 0036F77C  40 82 00 10 */	bne .L_803A61CC
-/* 803A61C0 0036F780  3C 80 80 60 */	lis r4, lbl_80605F38@ha
-/* 803A61C4 0036F784  38 84 5F 38 */	addi r4, r4, lbl_80605F38@l
+/* 803A61C0 0036F780  3C 80 80 60 */	lis r4, mpverrinf@ha
+/* 803A61C4 0036F784  38 84 5F 38 */	addi r4, r4, mpverrinf@l
 /* 803A61C8 0036F788  48 00 00 4C */	b .L_803A6214
 .L_803A61CC:
 /* 803A61CC 0036F78C  48 00 28 0D */	bl MPVLIB_CheckHn
 /* 803A61D0 0036F790  2C 03 00 00 */	cmpwi r3, 0
 /* 803A61D4 0036F794  41 82 00 3C */	beq .L_803A6210
-/* 803A61D8 0036F798  3C 60 80 60 */	lis r3, lbl_80605F38@ha
+/* 803A61D8 0036F798  3C 60 80 60 */	lis r3, mpverrinf@ha
 /* 803A61DC 0036F79C  3C 80 FF 03 */	lis r4, 0xFF030203@ha
-/* 803A61E0 0036F7A0  81 83 5F 38 */	lwz r12, lbl_80605F38@l(r3)
+/* 803A61E0 0036F7A0  81 83 5F 38 */	lwz r12, mpverrinf@l(r3)
 /* 803A61E4 0036F7A4  38 84 02 03 */	addi r4, r4, 0xFF030203@l
-/* 803A61E8 0036F7A8  38 63 5F 38 */	addi r3, r3, lbl_80605F38@l
+/* 803A61E8 0036F7A8  38 63 5F 38 */	addi r3, r3, mpverrinf@l
 /* 803A61EC 0036F7AC  2C 0C 00 00 */	cmpwi r12, 0
 /* 803A61F0 0036F7B0  90 83 00 08 */	stw r4, 8(r3)
 /* 803A61F4 0036F7B4  41 82 00 10 */	beq .L_803A6204
@@ -82,12 +82,12 @@
 /* 803A624C 0036F80C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803A6250 0036F810  7C 9F 23 78 */	mr r31, r4
 /* 803A6254 0036F814  40 82 00 34 */	bne .L_803A6288
-/* 803A6258 0036F818  3C A0 80 60 */	lis r5, lbl_80605F38@ha
+/* 803A6258 0036F818  3C A0 80 60 */	lis r5, mpverrinf@ha
 /* 803A625C 0036F81C  2C 04 00 00 */	cmpwi r4, 0
-/* 803A6260 0036F820  38 65 5F 38 */	addi r3, r5, lbl_80605F38@l
+/* 803A6260 0036F820  38 65 5F 38 */	addi r3, r5, mpverrinf@l
 /* 803A6264 0036F824  90 83 00 08 */	stw r4, 8(r3)
 /* 803A6268 0036F828  41 82 00 44 */	beq .L_803A62AC
-/* 803A626C 0036F82C  81 85 5F 38 */	lwz r12, lbl_80605F38@l(r5)
+/* 803A626C 0036F82C  81 85 5F 38 */	lwz r12, mpverrinf@l(r5)
 /* 803A6270 0036F830  2C 0C 00 00 */	cmpwi r12, 0
 /* 803A6274 0036F834  41 82 00 38 */	beq .L_803A62AC
 /* 803A6278 0036F838  80 63 00 04 */	lwz r3, 4(r3)
@@ -115,6 +115,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80605F38, global
-	.skip 0x18
-.endobj lbl_80605F38
+.obj mpverrinf, local
+	.skip 0x14
+.endobj mpverrinf
+
+.skip 0x4

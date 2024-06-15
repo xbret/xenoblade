@@ -21,7 +21,7 @@
 /* 803A4648 0036DC08  4E 80 00 20 */	blr 
 .endfn MPVCMC_InitObj
 
-.fn mpvcmc_InitMcOiTa, global
+.fn mpvcmc_InitMcOiTa, local
 /* 803A464C 0036DC0C  80 03 0B 24 */	lwz r0, 0xb24(r3)
 /* 803A4650 0036DC10  38 A3 0A D8 */	addi r5, r3, 0xad8
 /* 803A4654 0036DC14  38 C3 03 80 */	addi r6, r3, 0x380

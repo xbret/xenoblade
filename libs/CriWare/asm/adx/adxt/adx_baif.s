@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn AIFF_GetInfo, global
+.fn AIFF_GetInfo, local
 /* 80385DE4 0034F3A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385DE8 0034F3A8  39 23 00 0C */	addi r9, r3, 0xc
 /* 80385DEC 0034F3AC  39 60 00 00 */	li r11, 0

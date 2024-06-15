@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #ADXF_LoadPartitionFmgLongNw or ADXF_LoadPartitionNw
-.fn func_8037C778, global
+.fn criware_8037C778, global
 /* 8037C778 00345D38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037C77C 00345D3C  7C 08 02 A6 */	mflr r0
 /* 8037C780 00345D40  90 01 00 34 */	stw r0, 0x34(r1)
@@ -46,7 +46,7 @@
 /* 8037C814 00345DD4  7C 08 03 A6 */	mtlr r0
 /* 8037C818 00345DD8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037C81C 00345DDC  4E 80 00 20 */	blr 
-.endfn func_8037C778
+.endfn criware_8037C778
 
 .fn adxf_LoadPtBothNw, global
 /* 8037C820 00345DE0  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -516,7 +516,7 @@
 /* 8037CEF0 003464B0  4E 80 00 20 */	blr 
 .endfn ADXF_GetPtStat
 
-.fn adxf_GetPtStat, global
+.fn adxf_GetPtStat, local
 /* 8037CEF4 003464B4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037CEF8 003464B8  7C 08 02 A6 */	mflr r0
 /* 8037CEFC 003464BC  3C 80 80 5E */	lis r4, adxf_ldptnw_ptid@ha
@@ -2019,7 +2019,7 @@
 /* 8037E460 00347A20  4E 80 00 20 */	blr 
 .endfn adxf_read_sj32
 
-.fn adxf_ReadNw32, global
+.fn adxf_ReadNw32, local
 /* 8037E464 00347A24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037E468 00347A28  7C 08 02 A6 */	mflr r0
 /* 8037E46C 00347A2C  3D 40 80 5E */	lis r10, adxf_cmd_hstry@ha
@@ -2271,7 +2271,7 @@
 /* 8037E7EC 00347DAC  4E 80 00 20 */	blr 
 .endfn ADXF_Stop
 
-.fn adxf_Stop, global
+.fn adxf_Stop, local
 /* 8037E7F0 00347DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037E7F4 00347DB4  7C 08 02 A6 */	mflr r0
 /* 8037E7F8 00347DB8  3D 00 80 5E */	lis r8, adxf_cmd_hstry@ha
@@ -2623,7 +2623,7 @@
 /* 8037ECF0 003482B0  4E 80 00 20 */	blr 
 .endfn ADXF_Seek
 
-.fn adxf_Seek, global
+.fn adxf_Seek, local
 /* 8037ECF4 003482B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037ECF8 003482B8  7C 08 02 A6 */	mflr r0
 /* 8037ECFC 003482BC  2C 83 00 00 */	cmpwi cr1, r3, 0
@@ -3052,7 +3052,7 @@
 /* 8037F2C8 00348888  4E 80 00 20 */	blr 
 .endfn ADXF_GetFnameRangeEx
 
-.fn adxf_GetFnameRangeEx, global
+.fn adxf_GetFnameRangeEx, local
 /* 8037F2CC 0034888C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037F2D0 00348890  7C 08 02 A6 */	mflr r0
 /* 8037F2D4 00348894  90 01 00 34 */	stw r0, 0x34(r1)

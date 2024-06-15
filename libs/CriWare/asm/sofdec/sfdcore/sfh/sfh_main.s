@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn SFH_Finish, global
+.fn SFH_Init, global
 /* 803D0610 00399BD0  3C 80 80 62 */	lis r4, lbl_8061CE20@ha
 /* 803D0614 00399BD4  80 64 CE 20 */	lwz r3, lbl_8061CE20@l(r4)
 /* 803D0618 00399BD8  38 03 00 01 */	addi r0, r3, 1
 /* 803D061C 00399BDC  90 04 CE 20 */	stw r0, lbl_8061CE20@l(r4)
 /* 803D0620 00399BE0  4E 80 00 20 */	blr 
-.endfn SFH_Finish
+.endfn SFH_Init
 
 .fn SFH_Create, global
 /* 803D0624 00399BE4  94 21 FF E0 */	stwu r1, -0x20(r1)

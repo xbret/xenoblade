@@ -217,7 +217,7 @@
 /* 803CC5DC 00395B9C  4E 80 00 20 */	blr 
 .endfn SFSET_SetCond
 
-.fn func_803CC5E0, global
+.fn SFD_GetCond, global
 /* 803CC5E0 00395BA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC5E4 00395BA4  7C 08 02 A6 */	mflr r0
 /* 803CC5E8 00395BA8  2C 03 00 00 */	cmpwi r3, 0
@@ -259,7 +259,7 @@
 /* 803CC668 00395C28  7C 08 03 A6 */	mtlr r0
 /* 803CC66C 00395C2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC670 00395C30  4E 80 00 20 */	blr 
-.endfn func_803CC5E0
+.endfn SFD_GetCond
 
 .fn SFSET_GetCond, global
 /* 803CC674 00395C34  54 80 10 3A */	slwi r0, r4, 2

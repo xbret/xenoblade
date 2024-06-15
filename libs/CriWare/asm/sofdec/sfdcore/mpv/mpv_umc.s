@@ -12,25 +12,25 @@
 /* 803AC474 00375A34  3D 40 80 3B */	lis r10, MPVMC08_OneRefV2_TuneC@ha
 /* 803AC478 00375A38  3D 20 80 3B */	lis r9, MPVMC08_OneRef4p_TuneC@ha
 /* 803AC47C 00375A3C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803AC480 00375A40  3F E0 80 60 */	lis r31, lbl_80607B28@ha
+/* 803AC480 00375A40  3F E0 80 60 */	lis r31, mpvumc_oneref@ha
 /* 803AC484 00375A44  3D 00 80 3B */	lis r8, MPVMC16_OneRef1p_TuneC@ha
-/* 803AC488 00375A48  3C E0 80 60 */	lis r7, lbl_80607B48@ha
+/* 803AC488 00375A48  3C E0 80 60 */	lis r7, mpvumc_oneref_y@ha
 /* 803AC48C 00375A4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 803AC490 00375A50  3F C0 80 3B */	lis r30, MPVMC08_OneRef1p_TuneC@ha
 /* 803AC494 00375A54  3C C0 80 3B */	lis r6, MPVMC16_OneRefH2_TuneC@ha
 /* 803AC498 00375A58  3C 80 80 3B */	lis r4, MPVMC16_OneRefV2_TuneC@ha
 /* 803AC49C 00375A5C  3C 60 80 3B */	lis r3, MPVMC16_OneRef4p_TuneC@ha
 /* 803AC4A0 00375A60  3B DE 8A 38 */	addi r30, r30, MPVMC08_OneRef1p_TuneC@l
-/* 803AC4A4 00375A64  39 7F 7B 28 */	addi r11, r31, lbl_80607B28@l
+/* 803AC4A4 00375A64  39 7F 7B 28 */	addi r11, r31, mpvumc_oneref@l
 /* 803AC4A8 00375A68  39 4A 8F 18 */	addi r10, r10, MPVMC08_OneRefV2_TuneC@l
 /* 803AC4AC 00375A6C  39 8C 93 AC */	addi r12, r12, MPVMC08_OneRefH2_TuneC@l
 /* 803AC4B0 00375A70  39 29 95 F4 */	addi r9, r9, MPVMC08_OneRef4p_TuneC@l
 /* 803AC4B4 00375A74  39 08 DE 88 */	addi r8, r8, MPVMC16_OneRef1p_TuneC@l
-/* 803AC4B8 00375A78  38 A7 7B 48 */	addi r5, r7, lbl_80607B48@l
+/* 803AC4B8 00375A78  38 A7 7B 48 */	addi r5, r7, mpvumc_oneref_y@l
 /* 803AC4BC 00375A7C  38 84 E4 A8 */	addi r4, r4, MPVMC16_OneRefV2_TuneC@l
 /* 803AC4C0 00375A80  38 C6 E9 68 */	addi r6, r6, MPVMC16_OneRefH2_TuneC@l
 /* 803AC4C4 00375A84  38 63 ED C8 */	addi r3, r3, MPVMC16_OneRef4p_TuneC@l
-/* 803AC4C8 00375A88  93 DF 7B 28 */	stw r30, lbl_80607B28@l(r31)
+/* 803AC4C8 00375A88  93 DF 7B 28 */	stw r30, mpvumc_oneref@l(r31)
 /* 803AC4CC 00375A8C  91 8B 00 04 */	stw r12, 4(r11)
 /* 803AC4D0 00375A90  91 4B 00 08 */	stw r10, 8(r11)
 /* 803AC4D4 00375A94  91 2B 00 0C */	stw r9, 0xc(r11)
@@ -38,7 +38,7 @@
 /* 803AC4DC 00375A9C  91 8B 00 14 */	stw r12, 0x14(r11)
 /* 803AC4E0 00375AA0  91 4B 00 18 */	stw r10, 0x18(r11)
 /* 803AC4E4 00375AA4  91 4B 00 1C */	stw r10, 0x1c(r11)
-/* 803AC4E8 00375AA8  91 07 7B 48 */	stw r8, lbl_80607B48@l(r7)
+/* 803AC4E8 00375AA8  91 07 7B 48 */	stw r8, mpvumc_oneref_y@l(r7)
 /* 803AC4EC 00375AAC  90 C5 00 04 */	stw r6, 4(r5)
 /* 803AC4F0 00375AB0  90 85 00 08 */	stw r4, 8(r5)
 /* 803AC4F4 00375AB4  90 65 00 0C */	stw r3, 0xc(r5)
@@ -495,14 +495,14 @@
 /* 803ACB80 00376140  4E 80 00 20 */	blr 
 .endfn MPVUMC_BiDirect
 
-.fn mpvumc_OneReadMb, global
+.fn mpvumc_OneReadMb, local
 /* 803ACB84 00376144  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803ACB88 00376148  7C 08 02 A6 */	mflr r0
-/* 803ACB8C 0037614C  3D 60 80 60 */	lis r11, lbl_80607B48@ha
-/* 803ACB90 00376150  3D 80 80 60 */	lis r12, lbl_80607B28@ha
+/* 803ACB8C 0037614C  3D 60 80 60 */	lis r11, mpvumc_oneref_y@ha
+/* 803ACB90 00376150  3D 80 80 60 */	lis r12, mpvumc_oneref@ha
 /* 803ACB94 00376154  90 01 00 44 */	stw r0, 0x44(r1)
-/* 803ACB98 00376158  39 6B 7B 48 */	addi r11, r11, lbl_80607B48@l
-/* 803ACB9C 0037615C  39 8C 7B 28 */	addi r12, r12, lbl_80607B28@l
+/* 803ACB98 00376158  39 6B 7B 48 */	addi r11, r11, mpvumc_oneref_y@l
+/* 803ACB9C 0037615C  39 8C 7B 28 */	addi r12, r12, mpvumc_oneref@l
 /* 803ACBA0 00376160  BE A1 00 14 */	stmw r21, 0x14(r1)
 /* 803ACBA4 00376164  3B 63 0A 4C */	addi r27, r3, 0xa4c
 /* 803ACBA8 00376168  81 27 00 18 */	lwz r9, 0x18(r7)
@@ -587,7 +587,7 @@
 /* 803ACCE4 003762A4  4E 80 00 20 */	blr 
 .endfn mpvumc_OneReadMb
 
-.fn mpvumc_OneMakeMb, global
+.fn mpvumc_OneMakeMb, local
 /* 803ACCE8 003762A8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803ACCEC 003762AC  38 84 00 04 */	addi r4, r4, 4
 /* 803ACCF0 003762B0  39 20 00 00 */	li r9, 0
@@ -706,7 +706,7 @@
 /* 803ACEA4 00376464  4E 80 00 20 */	blr 
 .endfn mpvumc_OneMakeMb
 
-.fn mpvumc_BiMakeMb, global
+.fn mpvumc_BiMakeMb, local
 /* 803ACEA8 00376468  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803ACEAC 0037646C  38 00 00 08 */	li r0, 8
 /* 803ACEB0 00376470  38 C0 00 08 */	li r6, 8
@@ -1119,7 +1119,7 @@
 /* 803AD4C8 00376A88  4E 80 00 20 */	blr 
 .endfn MPVUMC_PpicSkipped
 
-.fn mpvumc_PpicSkipMb, global
+.fn mpvumc_PpicSkipMb, local
 /* 803AD4CC 00376A8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803AD4D0 00376A90  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803AD4D4 00376A94  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -1748,10 +1748,10 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80607B28, global
+.obj mpvumc_oneref, local
 	.skip 0x20
-.endobj lbl_80607B28
+.endobj mpvumc_oneref
 
-.obj lbl_80607B48, global
+.obj mpvumc_oneref_y, local
 	.skip 0x20
-.endobj lbl_80607B48
+.endobj mpvumc_oneref_y

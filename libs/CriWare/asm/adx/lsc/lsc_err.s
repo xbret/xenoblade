@@ -6,16 +6,16 @@
 /* 803917A8 0035AD68  2C 03 00 00 */	cmpwi r3, 0
 /* 803917AC 0035AD6C  40 82 00 1C */	bne .L_803917C8
 /* 803917B0 0035AD70  38 00 00 00 */	li r0, 0
-/* 803917B4 0035AD74  3C 80 80 5F */	lis r4, lbl_805EB270@ha
-/* 803917B8 0035AD78  3C 60 80 5F */	lis r3, lbl_805EB274@ha
-/* 803917BC 0035AD7C  90 04 B2 70 */	stw r0, lbl_805EB270@l(r4)
-/* 803917C0 0035AD80  90 03 B2 74 */	stw r0, lbl_805EB274@l(r3)
+/* 803917B4 0035AD74  3C 80 80 5F */	lis r4, lsc_err_func@ha
+/* 803917B8 0035AD78  3C 60 80 5F */	lis r3, lsc_err_obj@ha
+/* 803917BC 0035AD7C  90 04 B2 70 */	stw r0, lsc_err_func@l(r4)
+/* 803917C0 0035AD80  90 03 B2 74 */	stw r0, lsc_err_obj@l(r3)
 /* 803917C4 0035AD84  4E 80 00 20 */	blr
 .L_803917C8:
-/* 803917C8 0035AD88  3C C0 80 5F */	lis r6, lbl_805EB270@ha
-/* 803917CC 0035AD8C  3C A0 80 5F */	lis r5, lbl_805EB274@ha
-/* 803917D0 0035AD90  90 66 B2 70 */	stw r3, lbl_805EB270@l(r6)
-/* 803917D4 0035AD94  90 85 B2 74 */	stw r4, lbl_805EB274@l(r5)
+/* 803917C8 0035AD88  3C C0 80 5F */	lis r6, lsc_err_func@ha
+/* 803917CC 0035AD8C  3C A0 80 5F */	lis r5, lsc_err_obj@ha
+/* 803917D0 0035AD90  90 66 B2 70 */	stw r3, lsc_err_func@l(r6)
+/* 803917D4 0035AD94  90 85 B2 74 */	stw r4, lsc_err_obj@l(r5)
 /* 803917D8 0035AD98  4E 80 00 20 */	blr 
 .endfn LSC_EntryErrFunc
 
@@ -39,10 +39,10 @@
 .L_8039181C:
 /* 8039181C 0035ADDC  39 61 00 98 */	addi r11, r1, 0x98
 /* 80391820 0035ADE0  38 01 00 08 */	addi r0, r1, 8
-/* 80391824 0035ADE4  3F C0 80 5F */	lis r30, lbl_805EB270@ha
+/* 80391824 0035ADE4  3F C0 80 5F */	lis r30, lsc_err_func@ha
 /* 80391828 0035ADE8  3D 80 01 00 */	lis r12, 0x100
 /* 8039182C 0035ADEC  90 81 00 0C */	stw r4, 0xc(r1)
-/* 80391830 0035ADF0  3B DE B2 70 */	addi r30, r30, lbl_805EB270@l
+/* 80391830 0035ADF0  3B DE B2 70 */	addi r30, r30, lsc_err_func@l
 /* 80391834 0035ADF4  3B E1 00 68 */	addi r31, r1, 0x68
 /* 80391838 0035ADF8  38 80 01 00 */	li r4, 0x100
 /* 8039183C 0035ADFC  90 61 00 08 */	stw r3, 8(r1)
@@ -78,10 +78,14 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805EB270, global
+.obj lsc_err_func, global
 	.skip 0x4
-.endobj lbl_805EB270
+.endobj lsc_err_func
 
-.obj lbl_805EB274, global
-	.skip 0x104
-.endobj lbl_805EB274
+.obj lsc_err_obj, global
+	.skip 0x4
+.endobj lsc_err_obj
+
+.obj lsc_err_msg, global
+	.skip 0x100
+.endobj lsc_err_msg

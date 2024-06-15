@@ -5,12 +5,12 @@
 .fn CRICFG_Read, global
 /* 8038F4E0 00358AA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038F4E4 00358AA4  7C 08 02 A6 */	mflr r0
-/* 8038F4E8 00358AA8  3C A0 80 5F */	lis r5, lbl_805E9D20@ha
+/* 8038F4E8 00358AA8  3C A0 80 5F */	lis r5, cfglib_cfginfo@ha
 /* 8038F4EC 00358AAC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8038F4F0 00358AB0  BF 61 00 0C */	stmw r27, 0xc(r1)
 /* 8038F4F4 00358AB4  7C 7B 1B 78 */	mr r27, r3
 /* 8038F4F8 00358AB8  7C 9C 23 78 */	mr r28, r4
-/* 8038F4FC 00358ABC  83 A5 9D 20 */	lwz r29, lbl_805E9D20@l(r5)
+/* 8038F4FC 00358ABC  83 A5 9D 20 */	lwz r29, cfglib_cfginfo@l(r5)
 /* 8038F500 00358AC0  2C 1D 00 00 */	cmpwi r29, 0
 /* 8038F504 00358AC4  40 82 00 0C */	bne .L_8038F510
 /* 8038F508 00358AC8  38 60 FF FF */	li r3, -1
@@ -22,9 +22,9 @@
 /* 8038F51C 00358ADC  3B A0 00 00 */	li r29, 0
 /* 8038F520 00358AE0  48 00 00 44 */	b .L_8038F564
 .L_8038F524:
-/* 8038F524 00358AE4  3C 60 80 5F */	lis r3, lbl_805E9D24@ha
+/* 8038F524 00358AE4  3C 60 80 5F */	lis r3, cfglib_nelem@ha
 /* 8038F528 00358AE8  3B E0 00 00 */	li r31, 0
-/* 8038F52C 00358AEC  83 C3 9D 24 */	lwz r30, lbl_805E9D24@l(r3)
+/* 8038F52C 00358AEC  83 C3 9D 24 */	lwz r30, cfglib_nelem@l(r3)
 /* 8038F530 00358AF0  48 00 00 28 */	b .L_8038F558
 .L_8038F534:
 /* 8038F534 00358AF4  7F A3 EB 78 */	mr r3, r29
@@ -60,10 +60,10 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805E9D20, global
+.obj cfglib_cfginfo, local
 	.skip 0x4
-.endobj lbl_805E9D20
+.endobj cfglib_cfginfo
 
-.obj lbl_805E9D24, global
+.obj cfglib_nelem, local
 	.skip 0x4
-.endobj lbl_805E9D24
+.endobj cfglib_nelem

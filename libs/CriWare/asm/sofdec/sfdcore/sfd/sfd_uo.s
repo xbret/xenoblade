@@ -56,17 +56,17 @@
 /* 803CEB10 003980D0  4E 80 00 20 */	blr 
 .endfn SFD_SetUsrSj
 
-.fn SFUO_Init, global
+.fn SFUO_Init, local
 /* 803CEB14 003980D4  38 60 00 00 */	li r3, 0
 /* 803CEB18 003980D8  4E 80 00 20 */	blr 
 .endfn SFUO_Init
 
-.fn SFUO_Finish, global
+.fn SFUO_Finish, local
 /* 803CEB1C 003980DC  38 60 00 00 */	li r3, 0
 /* 803CEB20 003980E0  4E 80 00 20 */	blr 
 .endfn SFUO_Finish
 
-.fn SFUO_ExecServer, global
+.fn SFUO_ExecServer, local
 /* 803CEB24 003980E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CEB28 003980E8  7C 08 02 A6 */	mflr r0
 /* 803CEB2C 003980EC  38 80 00 08 */	li r4, 8
@@ -109,7 +109,7 @@
 /* 803CEBB8 00398178  4E 80 00 20 */	blr 
 .endfn SFUO_ExecServer
 
-.fn SFUO_Create, global
+.fn SFUO_Create, local
 /* 803CEBBC 0039817C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEBC0 00398180  7C 08 02 A6 */	mflr r0
 /* 803CEBC4 00398184  90 01 00 24 */	stw r0, 0x24(r1)
@@ -145,56 +145,56 @@
 /* 803CEC38 003981F8  4E 80 00 20 */	blr 
 .endfn SFUO_Create
 
-.fn SFUO_Destroy, global
+.fn SFUO_Destroy, local
 /* 803CEC3C 003981FC  38 60 00 00 */	li r3, 0
 /* 803CEC40 00398200  4E 80 00 20 */	blr 
 .endfn SFUO_Destroy
 
-.fn SFUO_RequestStop, global
+.fn SFUO_RequestStop, local
 /* 803CEC44 00398204  38 60 00 00 */	li r3, 0
 /* 803CEC48 00398208  4E 80 00 20 */	blr 
 .endfn SFUO_RequestStop
 
-.fn SFUO_Start, global
+.fn SFUO_Start, local
 /* 803CEC4C 0039820C  38 60 00 00 */	li r3, 0
 /* 803CEC50 00398210  4E 80 00 20 */	blr 
 .endfn SFUO_Start
 
-.fn SFUO_Stop, global
+.fn SFUO_Stop, local
 /* 803CEC54 00398214  38 60 00 00 */	li r3, 0
 /* 803CEC58 00398218  4E 80 00 20 */	blr 
 .endfn SFUO_Stop
 
-.fn SFUO_Pause, global
+.fn SFUO_Pause, local
 /* 803CEC5C 0039821C  38 60 00 00 */	li r3, 0
 /* 803CEC60 00398220  4E 80 00 20 */	blr 
 .endfn SFUO_Pause
 
-.fn SFUO_GetWrite, global
+.fn SFUO_GetWrite, local
 /* 803CEC64 00398224  3C 80 FF 00 */	lis r4, 0xFF000601@ha
 /* 803CEC68 00398228  38 84 06 01 */	addi r4, r4, 0xFF000601@l
 /* 803CEC6C 0039822C  4B FF 1F E8 */	b SFLIB_SetErr
 .endfn SFUO_GetWrite
 
-.fn SFUO_AddWrite, global
+.fn SFUO_AddWrite, local
 /* 803CEC70 00398230  3C 80 FF 00 */	lis r4, 0xFF000601@ha
 /* 803CEC74 00398234  38 84 06 01 */	addi r4, r4, 0xFF000601@l
 /* 803CEC78 00398238  4B FF 1F DC */	b SFLIB_SetErr
 .endfn SFUO_AddWrite
 
-.fn SFUO_GetRead, global
+.fn SFUO_GetRead, local
 /* 803CEC7C 0039823C  3C 80 FF 00 */	lis r4, 0xFF000601@ha
 /* 803CEC80 00398240  38 84 06 01 */	addi r4, r4, 0xFF000601@l
 /* 803CEC84 00398244  4B FF 1F D0 */	b SFLIB_SetErr
 .endfn SFUO_GetRead
 
-.fn SFUO_AddRead, global
+.fn SFUO_AddRead, local
 /* 803CEC88 00398248  3C 80 FF 00 */	lis r4, 0xFF000601@ha
 /* 803CEC8C 0039824C  38 84 06 01 */	addi r4, r4, 0xFF000601@l
 /* 803CEC90 00398250  4B FF 1F C4 */	b SFLIB_SetErr
 .endfn SFUO_AddRead
 
-.fn SFUO_Seek, global
+.fn SFUO_Seek, local
 /* 803CEC94 00398254  38 60 00 00 */	li r3, 0
 /* 803CEC98 00398258  4E 80 00 20 */	blr 
 .endfn SFUO_Seek

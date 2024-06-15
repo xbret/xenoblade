@@ -27,7 +27,7 @@
 /* 803823E0 0034B9A0  4E 80 00 20 */	blr 
 .endfn ADXT_StartAfs
 
-.fn adxt_StartAfs, global
+.fn adxt_StartAfs, local
 /* 803823E4 0034B9A4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803823E8 0034B9A8  7C 08 02 A6 */	mflr r0
 /* 803823EC 0034B9AC  2C 03 00 00 */	cmpwi r3, 0

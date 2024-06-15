@@ -10,8 +10,8 @@
 /* 803A672C 0036FCEC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803A6730 0036FCF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803A6734 0036FCF4  93 C1 00 08 */	stw r30, 8(r1)
-/* 803A6738 0036FCF8  3F C0 80 60 */	lis r30, lbl_80605F50@ha
-/* 803A673C 0036FCFC  3B DE 5F 50 */	addi r30, r30, lbl_80605F50@l
+/* 803A6738 0036FCF8  3F C0 80 60 */	lis r30, skip_func@ha
+/* 803A673C 0036FCFC  3B DE 5F 50 */	addi r30, r30, skip_func@l
 /* 803A6740 0036FD00  38 7E 00 00 */	addi r3, r30, 0
 /* 803A6744 0036FD04  4B C5 DC 0D */	bl memset
 /* 803A6748 0036FD08  38 7E 00 28 */	addi r3, r30, 0x28
@@ -184,7 +184,7 @@
 /* 803A69A0 0036FF60  48 00 00 0C */	b .L_803A69AC
 .L_803A69A4:
 /* 803A69A4 0036FF64  80 61 00 10 */	lwz r3, 0x10(r1)
-/* 803A69A8 0036FF68  4B FF F0 4D */	bl func_803A59F4
+/* 803A69A8 0036FF68  4B FF F0 4D */	bl MPV_CheckDelim
 .L_803A69AC:
 /* 803A69AC 0036FF6C  2C 03 00 00 */	cmpwi r3, 0
 /* 803A69B0 0036FF70  41 82 00 BC */	beq .L_803A6A6C
@@ -301,7 +301,7 @@
 /* 803A6B34 003700F4  4E 80 00 20 */	blr 
 .endfn MPV_DecodePicAtr
 
-.fn mpvhdec_GetCodec, global
+.fn mpvhdec_GetCodec, local
 /* 803A6B38 003700F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A6B3C 003700FC  7C 08 02 A6 */	mflr r0
 /* 803A6B40 00370100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -336,7 +336,7 @@
 /* 803A6BAC 0037016C  80 7E 0C FC */	lwz r3, 0xcfc(r30)
 /* 803A6BB0 00370170  48 00 00 30 */	b .L_803A6BE0
 .L_803A6BB4:
-/* 803A6BB4 00370174  4B FF EE 41 */	bl func_803A59F4
+/* 803A6BB4 00370174  4B FF EE 41 */	bl MPV_CheckDelim
 /* 803A6BB8 00370178  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 803A6BBC 0037017C  41 82 00 10 */	beq .L_803A6BCC
 /* 803A6BC0 00370180  38 00 00 02 */	li r0, 2
@@ -358,14 +358,14 @@
 /* 803A6BF4 003701B4  4E 80 00 20 */	blr 
 .endfn mpvhdec_GetCodec
 
-.fn mpvhdec_DecShcSj, global
+.fn mpvhdec_DecShcSj, local
 /* 803A6BF8 003701B8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A6BFC 003701BC  7C 08 02 A6 */	mflr r0
-/* 803A6C00 003701C0  3C E0 80 60 */	lis r7, lbl_80605F10@ha
+/* 803A6C00 003701C0  3C E0 80 60 */	lis r7, mpvbdec_zigzag_idct@ha
 /* 803A6C04 003701C4  39 00 00 00 */	li r8, 0
 /* 803A6C08 003701C8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803A6C0C 003701CC  38 00 00 01 */	li r0, 1
-/* 803A6C10 003701D0  38 E7 5F 10 */	addi r7, r7, lbl_80605F10@l
+/* 803A6C10 003701D0  38 E7 5F 10 */	addi r7, r7, mpvbdec_zigzag_idct@l
 /* 803A6C14 003701D4  BF 41 00 18 */	stmw r26, 0x18(r1)
 /* 803A6C18 003701D8  7C 9B 23 78 */	mr r27, r4
 /* 803A6C1C 003701DC  7C 7A 1B 78 */	mr r26, r3
@@ -648,9 +648,9 @@
 /* 803A6FD0 00370590  42 00 FF 40 */	bdnz .L_803A6F10
 /* 803A6FD4 00370594  48 00 00 1C */	b .L_803A6FF0
 .L_803A6FD8:
-/* 803A6FD8 00370598  3C 80 80 60 */	lis r4, lbl_80605F1C@ha
+/* 803A6FD8 00370598  3C 80 80 60 */	lis r4, mpvbdec_dfl_iqm@ha
 /* 803A6FDC 0037059C  38 7A 03 00 */	addi r3, r26, 0x300
-/* 803A6FE0 003705A0  38 84 5F 1C */	addi r4, r4, lbl_80605F1C@l
+/* 803A6FE0 003705A0  38 84 5F 1C */	addi r4, r4, mpvbdec_dfl_iqm@l
 /* 803A6FE4 003705A4  38 A0 00 10 */	li r5, 0x10
 /* 803A6FE8 003705A8  80 84 00 08 */	lwz r4, 8(r4)
 /* 803A6FEC 003705AC  48 02 D4 21 */	bl UTY_MemcpyDword
@@ -789,7 +789,7 @@
 /* 803A71C8 00370788  4E 80 00 20 */	blr 
 .endfn mpvhdec_DecShcSj
 
-.fn mpvhdec_DecGscSj, global
+.fn mpvhdec_DecGscSj, local
 /* 803A71CC 0037078C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A71D0 00370790  7C 08 02 A6 */	mflr r0
 /* 803A71D4 00370794  38 C0 00 02 */	li r6, 2
@@ -915,7 +915,7 @@
 /* 803A7390 00370950  4E 80 00 20 */	blr 
 .endfn mpvhdec_DecGscSj
 
-.fn mpvhdec_DecPscSj, global
+.fn mpvhdec_DecPscSj, local
 /* 803A7394 00370954  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A7398 00370958  7C 08 02 A6 */	mflr r0
 /* 803A739C 0037095C  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -923,8 +923,8 @@
 /* 803A73A4 00370964  38 00 00 03 */	li r0, 3
 /* 803A73A8 00370968  38 A5 FF FF */	addi r5, r5, 0x7FFFFFFF@l
 /* 803A73AC 0037096C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803A73B0 00370970  3F E0 80 60 */	lis r31, lbl_80605F50@ha
-/* 803A73B4 00370974  3B FF 5F 50 */	addi r31, r31, lbl_80605F50@l
+/* 803A73B0 00370970  3F E0 80 60 */	lis r31, skip_func@ha
+/* 803A73B4 00370974  3B FF 5F 50 */	addi r31, r31, skip_func@l
 /* 803A73B8 00370978  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803A73BC 0037097C  7C 9E 23 78 */	mr r30, r4
 /* 803A73C0 00370980  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -1233,7 +1233,7 @@
 /* 803A77F0 00370DB0  4E 80 00 20 */	blr 
 .endfn mpvhdec_DecPscSj
 
-.fn mpvhdec_DecEscSj, global
+.fn mpvhdec_DecEscSj, local
 /* 803A77F4 00370DB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A77F8 00370DB8  7C 08 02 A6 */	mflr r0
 /* 803A77FC 00370DBC  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -1288,7 +1288,7 @@
 /* 803A78C0 00370E80  4E 80 00 20 */	blr 
 .endfn mpvhdec_DecEscSj
 
-.fn mpvhdec_DecUdscSj, global
+.fn mpvhdec_DecUdscSj, local
 /* 803A78C4 00370E84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A78C8 00370E88  7C 08 02 A6 */	mflr r0
 /* 803A78CC 00370E8C  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -1353,7 +1353,7 @@
 /* 803A79B8 00370F78  4E 80 00 20 */	blr 
 .endfn mpvhdec_DecUdscSj
 
-.fn mpvhdec_AnalyUd, global
+.fn mpvhdec_AnalyUd, local
 /* 803A79BC 00370F7C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A79C0 00370F80  7C 08 02 A6 */	mflr r0
 /* 803A79C4 00370F84  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1369,7 +1369,7 @@
 /* 803A79EC 00370FAC  48 00 00 18 */	b .L_803A7A04
 .L_803A79F0:
 /* 803A79F0 00370FB0  7C 7E FA 14 */	add r3, r30, r31
-/* 803A79F4 00370FB4  4B FF E0 01 */	bl func_803A59F4
+/* 803A79F4 00370FB4  4B FF E0 01 */	bl MPV_CheckDelim
 /* 803A79F8 00370FB8  2C 03 00 00 */	cmpwi r3, 0
 /* 803A79FC 00370FBC  40 82 00 10 */	bne .L_803A7A0C
 /* 803A7A00 00370FC0  3B FF 00 01 */	addi r31, r31, 1
@@ -1474,7 +1474,7 @@
 /* 803A7B68 00371128  4E 80 00 20 */	blr 
 .endfn mpvhdec_AnalyUd
 
-.fn mpvhdec_DecSeqUdsc, global
+.fn mpvhdec_DecSeqUdsc, local
 /* 803A7B6C 0037112C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A7B70 00371130  7C 08 02 A6 */	mflr r0
 /* 803A7B74 00371134  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1524,7 +1524,7 @@
 /* 803A7C18 003711D8  90 76 0D 08 */	stw r3, 0xd08(r22)
 .L_803A7C1C:
 /* 803A7C1C 003711DC  7F 43 D3 78 */	mr r3, r26
-/* 803A7C20 003711E0  4B FF DD D5 */	bl func_803A59F4
+/* 803A7C20 003711E0  4B FF DD D5 */	bl MPV_CheckDelim
 /* 803A7C24 003711E4  2C 03 00 00 */	cmpwi r3, 0
 /* 803A7C28 003711E8  40 82 00 10 */	bne .L_803A7C38
 /* 803A7C2C 003711EC  3B 18 00 01 */	addi r24, r24, 1
@@ -1608,7 +1608,7 @@
 /* 803A7D40 00371300  4E 80 04 21 */	bctrl 
 /* 803A7D44 00371304  4B FF FF 48 */	b .L_803A7C8C
 .L_803A7D48:
-/* 803A7D48 00371308  4B FF DC AD */	bl func_803A59F4
+/* 803A7D48 00371308  4B FF DC AD */	bl MPV_CheckDelim
 /* 803A7D4C 0037130C  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 803A7D50 00371310  7C 7F 1B 78 */	mr r31, r3
 /* 803A7D54 00371314  38 61 00 10 */	addi r3, r1, 0x10
@@ -1750,7 +1750,7 @@
 .balign 8
 
 
-.obj dec_mbs_func, global
+.obj dec_mbs_func, local
 	.4byte 0
 	.4byte MPVDEC_DecIpicMb
 	.4byte MPVDEC_DecPpicMb
@@ -1767,6 +1767,22 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80605F50, global
-	.skip 0xF0
-.endobj lbl_80605F50
+.obj skip_func, local
+	.skip 0x28
+.endobj skip_func
+
+.obj s_mc_intra_func, local
+	.skip 0x50
+.endobj s_mc_intra_func
+
+.obj s_mc_forward_func, local
+	.skip 0x28
+.endobj s_mc_forward_func
+
+.obj s_mc_backward_func, local
+	.skip 0x28
+.endobj s_mc_backward_func
+
+.obj s_mc_bidirect_func, local
+	.skip 0x28
+.endobj s_mc_bidirect_func

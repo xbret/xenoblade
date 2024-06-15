@@ -248,7 +248,7 @@
 /* 803CBBA4 00395164  4E 80 00 20 */	blr 
 .endfn SFPTS_ReadPtsQue
 
-.fn sfpts_SearchPtsQue, global
+.fn sfpts_SearchPtsQue, local
 /* 803CBBA8 00395168  80 03 00 08 */	lwz r0, 8(r3)
 /* 803CBBAC 0039516C  7D 65 32 14 */	add r11, r5, r6
 /* 803CBBB0 00395170  81 43 00 04 */	lwz r10, 4(r3)

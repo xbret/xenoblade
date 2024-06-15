@@ -7,15 +7,15 @@
 
 .fn MPVABDEC_Init, global
 /* 803AEFF8 003785B8  3C 80 80 52 */	lis r4, mpvabdec_funcs_isr@ha
-/* 803AEFFC 003785BC  3C 60 80 60 */	lis r3, lbl_80607B68@ha
+/* 803AEFFC 003785BC  3C 60 80 60 */	lis r3, mpvabdec_funcs_idct@ha
 /* 803AF000 003785C0  38 84 F8 F0 */	addi r4, r4, mpvabdec_funcs_isr@l
-/* 803AF004 003785C4  38 63 7B 68 */	addi r3, r3, lbl_80607B68@l
+/* 803AF004 003785C4  38 63 7B 68 */	addi r3, r3, mpvabdec_funcs_idct@l
 /* 803AF008 003785C8  90 83 00 08 */	stw r4, 8(r3)
 /* 803AF00C 003785CC  4E 80 00 20 */	blr 
 .endfn MPVABDEC_Init
 
 
-.fn mpvabdec_IntraBlock_Isr, global
+.fn mpvabdec_IntraBlock_Isr, local
 /* 803AF010 003785D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803AF014 003785D4  BE 81 00 10 */	stmw r20, 0x10(r1)
 /* 803AF018 003785D8  80 C3 09 88 */	lwz r6, 0x988(r3)
@@ -3692,7 +3692,7 @@
 /* 803B264C 0037BC0C  4E 80 00 20 */	blr 
 .endfn mpvabdec_IntraBlock_Isr
 
-.fn mpvabdec_IntraBlockDc11_Isr, global
+.fn mpvabdec_IntraBlockDc11_Isr, local
 /* 803B2650 0037BC10  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B2654 0037BC14  BE 81 00 10 */	stmw r20, 0x10(r1)
 /* 803B2658 0037BC18  80 C3 09 88 */	lwz r6, 0x988(r3)
@@ -7360,7 +7360,7 @@
 /* 803B5C6C 0037F22C  4E 80 00 20 */	blr 
 .endfn mpvabdec_IntraBlockDc11_Isr
 
-.fn mpvabdec_NintraBlock_Isr, global
+.fn mpvabdec_NintraBlock_Isr, local
 /* 803B5C70 0037F230  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B5C74 0037F234  38 00 00 00 */	li r0, 0
 /* 803B5C78 0037F238  BE 61 00 0C */	stmw r19, 0xc(r1)
@@ -11328,7 +11328,7 @@
 
 .balign 8
 
-.obj mpvabdec_funcs_isr, global
+.obj mpvabdec_funcs_isr, local
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr
@@ -12122,6 +12122,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80607B68, global
-	.skip 0x10
-.endobj lbl_80607B68
+.obj mpvabdec_funcs_idct, global
+	.skip 0xC
+.endobj mpvabdec_funcs_idct
+
+.skip 0x4

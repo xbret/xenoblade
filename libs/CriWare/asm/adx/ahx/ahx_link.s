@@ -29,8 +29,8 @@
 /* 8038A6E8 00353CA8  48 00 00 E0 */	b .L_8038A7C8
 .L_8038A6EC:
 /* 8038A6EC 00353CAC  4B FF 89 F5 */	bl ADXT_Stop
-/* 8038A6F0 00353CB0  3C 60 80 5F */	lis r3, lbl_805E85A0@ha
-/* 8038A6F4 00353CB4  81 83 85 A0 */	lwz r12, lbl_805E85A0@l(r3)
+/* 8038A6F0 00353CB0  3C 60 80 5F */	lis r3, ahxdetachfunc@ha
+/* 8038A6F4 00353CB4  81 83 85 A0 */	lwz r12, ahxdetachfunc@l(r3)
 /* 8038A6F8 00353CB8  2C 0C 00 00 */	cmpwi r12, 0
 /* 8038A6FC 00353CBC  41 82 00 10 */	beq .L_8038A70C
 /* 8038A700 00353CC0  7F 43 D3 78 */	mr r3, r26
@@ -64,7 +64,7 @@
 /* 8038A768 00353D28  3C A0 80 39 */	lis r5, AHXSJD_SetExtPrm@ha
 /* 8038A76C 00353D2C  90 7E 00 B8 */	stw r3, 0xb8(r30)
 /* 8038A770 00353D30  3B BD A7 F8 */	addi r29, r29, AHXLINK_DetachAhx@l
-/* 8038A774 00353D34  3F C0 80 5F */	lis r30, lbl_805E85A0@ha
+/* 8038A774 00353D34  3F C0 80 5F */	lis r30, ahxdetachfunc@ha
 /* 8038A778 00353D38  3B FF A8 88 */	addi r31, r31, AHXLINK_ExecOneAhx@l
 /* 8038A77C 00353D3C  3D 80 80 5F */	lis r12, ahxexecfunc@ha
 /* 8038A780 00353D40  39 6B A8 84 */	addi r11, r11, AHXLINK_TermSupply@l
@@ -75,7 +75,7 @@
 /* 8038A794 00353D54  3C C0 80 5F */	lis r6, ahxsetsjifunc@ha
 /* 8038A798 00353D58  38 A5 CE E8 */	addi r5, r5, AHXSJD_SetExtPrm@l
 /* 8038A79C 00353D5C  3C 80 80 5F */	lis r4, ahxsetextfunc@ha
-/* 8038A7A0 00353D60  93 BE 85 A0 */	stw r29, lbl_805E85A0@l(r30)
+/* 8038A7A0 00353D60  93 BE 85 A0 */	stw r29, ahxdetachfunc@l(r30)
 /* 8038A7A4 00353D64  93 EC 89 D4 */	stw r31, ahxexecfunc@l(r12)
 /* 8038A7A8 00353D68  91 6A 89 D0 */	stw r11, ahxtermsupplyfunc@l(r10)
 /* 8038A7AC 00353D6C  91 28 89 CC */	stw r9, ahxsetdecsmplfunc@l(r8)
@@ -94,8 +94,8 @@
 .endfn ADXT_AttachAhx
 
 .fn ADXT_DetachAhx, global
-/* 8038A7DC 00353D9C  3C 80 80 5F */	lis r4, lbl_805E85A0@ha
-/* 8038A7E0 00353DA0  81 84 85 A0 */	lwz r12, lbl_805E85A0@l(r4)
+/* 8038A7DC 00353D9C  3C 80 80 5F */	lis r4, ahxdetachfunc@ha
+/* 8038A7E0 00353DA0  81 84 85 A0 */	lwz r12, ahxdetachfunc@l(r4)
 /* 8038A7E4 00353DA4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8038A7E8 00353DA8  4D 82 00 20 */	beqlr 
 /* 8038A7EC 00353DAC  7D 89 03 A6 */	mtctr r12

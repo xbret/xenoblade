@@ -21,7 +21,7 @@
 /* 80391D94 0035B354  4E 80 00 20 */	blr 
 .endfn LSC_Create
 
-.fn lsc_Create, global
+.fn lsc_Create, local
 /* 80391D98 0035B358  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80391D9C 0035B35C  7C 08 02 A6 */	mflr r0
 /* 80391DA0 0035B360  2C 03 00 00 */	cmpwi r3, 0
@@ -276,7 +276,7 @@
 /* 80392120 0035B6E0  4E 80 00 20 */	blr 
 .endfn LSC_EntryFileRange
 
-.fn lsc_EntryFileRange, global
+.fn lsc_EntryFileRange, local
 /* 80392124 0035B6E4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80392128 0035B6E8  7C 08 02 A6 */	mflr r0
 /* 8039212C 0035B6EC  2C 03 00 00 */	cmpwi r3, 0
@@ -746,8 +746,8 @@
 .endfn LSC_SetFlowLimit
 
 .fn LSC_CallStatFunc, global
-/* 80392784 0035BD44  3C 80 80 5F */	lis r4, lbl_805EFA80@ha
-/* 80392788 0035BD48  38 84 FA 80 */	addi r4, r4, lbl_805EFA80@l
+/* 80392784 0035BD44  3C 80 80 5F */	lis r4, lsc_stat_func@ha
+/* 80392788 0035BD48  38 84 FA 80 */	addi r4, r4, lsc_stat_func@l
 /* 8039278C 0035BD4C  81 84 00 00 */	lwz r12, 0(r4)
 /* 80392790 0035BD50  2C 0C 00 00 */	cmpwi r12, 0
 /* 80392794 0035BD54  4D 82 00 20 */	beqlr 
@@ -820,10 +820,16 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lsc_obj, global
-	.skip 0x4700
-.endobj lsc_obj
+.obj lsc_stat_func, global
+	.skip 0x4
+.endobj lsc_stat_func
 
-.obj lbl_805EFA80, global
-	.skip 0x10
-.endobj lbl_805EFA80
+.obj lsc_stat_obj1, global
+	.skip 0x4
+.endobj lsc_stat_obj1
+
+.obj lsc_stat_obj2, global
+	.skip 0x4
+.endobj lsc_stat_obj2
+
+.skip 0x4

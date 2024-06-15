@@ -20,12 +20,12 @@
 /* 801FF59C 001C8B5C  7C BC 2B 78 */	mr r28, r5
 /* 801FF5A0 001C8B60  90 03 00 08 */	stw r0, 8(r3)
 /* 801FF5A4 001C8B64  38 7D 00 0C */	addi r3, r29, 0xc
-/* 801FF5A8 001C8B68  4B E5 AE C5 */	bl __ct__cf_CActParamAnimGame
-/* 801FF5AC 001C8B6C  3C 80 80 06 */	lis r4, __ct__cf_CActParamAnimGame@ha
+/* 801FF5A8 001C8B68  4B E5 AE C5 */	bl __ct__Q22cf17CActParamAnimGameFv
+/* 801FF5AC 001C8B6C  3C 80 80 06 */	lis r4, __ct__Q22cf17CActParamAnimGameFv@ha
 /* 801FF5B0 001C8B70  3C A0 80 06 */	lis r5, __dt__Q22cf17CActParamAnimGameFv@ha
 /* 801FF5B4 001C8B74  38 7D 05 50 */	addi r3, r29, 0x550
 /* 801FF5B8 001C8B78  38 C0 05 3C */	li r6, 0x53c
-/* 801FF5BC 001C8B7C  38 84 A4 6C */	addi r4, r4, __ct__cf_CActParamAnimGame@l
+/* 801FF5BC 001C8B7C  38 84 A4 6C */	addi r4, r4, __ct__Q22cf17CActParamAnimGameFv@l
 /* 801FF5C0 001C8B80  38 A5 A4 CC */	addi r5, r5, __dt__Q22cf17CActParamAnimGameFv@l
 /* 801FF5C4 001C8B84  38 E0 00 02 */	li r7, 2
 /* 801FF5C8 001C8B88  48 0B A5 39 */	bl __construct_array

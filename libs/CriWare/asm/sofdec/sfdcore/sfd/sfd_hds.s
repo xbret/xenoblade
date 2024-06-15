@@ -2,9 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn SFHDS_Finish, global
-/* 803C005C 0038961C  48 01 05 B4 */	b SFH_Finish
-.endfn SFHDS_Finish
+.fn SFHDS_Init, global
+/* 803C005C 0038961C  48 01 05 B4 */	b SFH_Init
+.endfn SFHDS_Init
 
 
 .fn SFHDS_InitFhd, global
@@ -256,7 +256,7 @@
 .endfn SFHDS_ReprocessHdr
 
 
-.fn sfhds_DoProcessHdr, global
+.fn sfhds_DoProcessHdr, local
 /* 803C03AC 0038996C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803C03B0 00389970  7C 08 02 A6 */	mflr r0
 /* 803C03B4 00389974  90 01 00 84 */	stw r0, 0x84(r1)
@@ -571,7 +571,7 @@
 /* 803C07CC 00389D8C  4E 80 00 20 */	blr 
 .endfn sfhds_DoProcessHdr
 
-.fn sfhds_AnlyVideo, global
+.fn sfhds_AnlyVideo, local
 /* 803C07D0 00389D90  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C07D4 00389D94  7C 08 02 A6 */	mflr r0
 /* 803C07D8 00389D98  90 01 00 54 */	stw r0, 0x54(r1)

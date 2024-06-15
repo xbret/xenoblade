@@ -8,7 +8,7 @@
 /* 800BF994 00088F54  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BF998 00088F58  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BF99C 00088F5C  7C 7F 1B 78 */	mr r31, r3
-/* 800BF9A0 00088F60  4B FF C2 AD */	bl __ct__cf_CfObjectMove
+/* 800BF9A0 00088F60  4B FF C2 AD */	bl __ct__Q22cf12CfObjectMoveFv
 /* 800BF9A4 00088F64  3C 60 80 53 */	lis r3, __vt__Q22cf11CfObjectObj@ha
 /* 800BF9A8 00088F68  38 00 00 00 */	li r0, 0
 /* 800BF9AC 00088F6C  38 63 D3 1C */	addi r3, r3, __vt__Q22cf11CfObjectObj@l

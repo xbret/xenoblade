@@ -3,10 +3,10 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn RNAERR_EntryErrFunc, global
-/* 80398FA8 00362568  3C C0 80 5F */	lis r6, lbl_805F60B8@ha
-/* 80398FAC 0036256C  3C A0 80 5F */	lis r5, lbl_805F60BC@ha
-/* 80398FB0 00362570  90 66 60 B8 */	stw r3, lbl_805F60B8@l(r6)
-/* 80398FB4 00362574  90 85 60 BC */	stw r4, lbl_805F60BC@l(r5)
+/* 80398FA8 00362568  3C C0 80 5F */	lis r6, rnaerr_func@ha
+/* 80398FAC 0036256C  3C A0 80 5F */	lis r5, rnaerr_obj@ha
+/* 80398FB0 00362570  90 66 60 B8 */	stw r3, rnaerr_func@l(r6)
+/* 80398FB4 00362574  90 85 60 BC */	stw r4, rnaerr_obj@l(r5)
 /* 80398FB8 00362578  4E 80 00 20 */	blr 
 .endfn RNAERR_EntryErrFunc
 
@@ -17,8 +17,8 @@
 /* 80398FC8 00362588  38 A0 00 FF */	li r5, 0xff
 /* 80398FCC 0036258C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80398FD0 00362590  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80398FD4 00362594  3F E0 80 5F */	lis r31, lbl_805F60B8@ha
-/* 80398FD8 00362598  3B FF 60 B8 */	addi r31, r31, lbl_805F60B8@l
+/* 80398FD4 00362594  3F E0 80 5F */	lis r31, rnaerr_func@ha
+/* 80398FD8 00362598  3B FF 60 B8 */	addi r31, r31, rnaerr_func@l
 /* 80398FDC 0036259C  38 7F 00 08 */	addi r3, r31, 8
 /* 80398FE0 003625A0  4B F2 97 99 */	bl strncpy
 /* 80398FE4 003625A4  81 9F 00 00 */	lwz r12, 0(r31)
@@ -38,10 +38,14 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805F60B8, global
+.obj rnaerr_func, global
 	.skip 0x4
-.endobj lbl_805F60B8
+.endobj rnaerr_func
 
-.obj lbl_805F60BC, global
-	.skip 0x104
-.endobj lbl_805F60BC
+.obj rnaerr_obj, global
+	.skip 0x4
+.endobj rnaerr_obj
+
+.obj rnaerr_msg, global
+	.skip 0x100
+.endobj rnaerr_msg

@@ -71,7 +71,7 @@
 .endobj lbl_8051CD48
 
 
-.obj adxwiisdk_build, local
+.obj adxwiisdk_build, global
 	.4byte lbl_8051CD48
 .endobj adxwiisdk_build
 

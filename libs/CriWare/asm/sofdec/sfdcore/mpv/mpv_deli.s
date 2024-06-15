@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn MPV_CheckDelim, global
+.fn criware_803A5908, global
 /* 803A5908 0036EEC8  38 00 01 00 */	li r0, 0x100
 /* 803A590C 0036EECC  38 80 00 00 */	li r4, 0
 /* 803A5910 0036EED0  7C 09 03 A6 */	mtctr r0
@@ -54,15 +54,15 @@
 /* 803A59A4 0036EF64  38 63 00 01 */	addi r3, r3, 1
 /* 803A59A8 0036EF68  42 00 FF 6C */	bdnz .L_803A5914
 /* 803A59AC 0036EF6C  4E 80 00 20 */	blr 
-.endfn MPV_CheckDelim
+.endfn criware_803A5908
 
 
-.fn func_803A59B0, global
+.fn criware_803A59B0, global
 /* 803A59B0 0036EF70  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 803A59B4 0036EF74  7C 08 02 A6 */	mflr r0
 /* 803A59B8 0036EF78  90 01 01 14 */	stw r0, 0x114(r1)
 /* 803A59BC 0036EF7C  38 61 00 08 */	addi r3, r1, 8
-/* 803A59C0 0036EF80  4B FF FF 49 */	bl MPV_CheckDelim
+/* 803A59C0 0036EF80  4B FF FF 49 */	bl criware_803A5908
 /* 803A59C4 0036EF84  3C 80 80 52 */	lis r4, lbl_8051F608@ha
 /* 803A59C8 0036EF88  38 61 00 08 */	addi r3, r1, 8
 /* 803A59CC 0036EF8C  38 84 F6 08 */	addi r4, r4, lbl_8051F608@l
@@ -77,10 +77,9 @@
 /* 803A59E8 0036EFA8  7C 08 03 A6 */	mtlr r0
 /* 803A59EC 0036EFAC  38 21 01 10 */	addi r1, r1, 0x110
 /* 803A59F0 0036EFB0  4E 80 00 20 */	blr 
-.endfn func_803A59B0
+.endfn criware_803A59B0
 
-#MPV_CheckDelim?
-.fn func_803A59F4, global
+.fn MPV_CheckDelim, global
 /* 803A59F4 0036EFB4  88 A3 00 00 */	lbz r5, 0(r3)
 /* 803A59F8 0036EFB8  88 83 00 01 */	lbz r4, 1(r3)
 /* 803A59FC 0036EFBC  54 A5 40 2E */	slwi r5, r5, 8
@@ -98,7 +97,7 @@
 /* 803A5A28 0036EFE8  38 84 F6 08 */	addi r4, r4, lbl_8051F608@l
 /* 803A5A2C 0036EFEC  7C 64 00 AE */	lbzx r3, r4, r0
 /* 803A5A30 0036EFF0  4E 80 00 20 */	blr 
-.endfn func_803A59F4
+.endfn MPV_CheckDelim
 
 .fn MPV_BsearchDelim, global
 /* 803A5A34 0036EFF4  3C C0 80 52 */	lis r6, lbl_8051F608@ha

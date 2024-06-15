@@ -227,7 +227,7 @@
 /* 8043C618 00405BD8  4E 80 00 20 */	blr 
 .endfn __dt__10CViewFrameFv
 
-.fn __dt___reslist_base_IWorkEvent, global
+.fn "__dt__28_reslist_base<P10IWorkEvent>Fv", global
 /* 8043C61C 00405BDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C620 00405BE0  7C 08 02 A6 */	mflr r0
 /* 8043C624 00405BE4  2C 03 00 00 */	cmpwi r3, 0
@@ -277,9 +277,9 @@
 /* 8043C6C4 00405C84  7C 08 03 A6 */	mtlr r0
 /* 8043C6C8 00405C88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C6CC 00405C8C  4E 80 00 20 */	blr 
-.endfn __dt___reslist_base_IWorkEvent
+.endfn "__dt__28_reslist_base<P10IWorkEvent>Fv"
 
-.fn __dt__reslist_IWorkEvent, global
+.fn "__dt__22reslist<P10IWorkEvent>Fv", global
 /* 8043C6D0 00405C90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C6D4 00405C94  7C 08 02 A6 */	mflr r0
 /* 8043C6D8 00405C98  2C 03 00 00 */	cmpwi r3, 0
@@ -330,9 +330,9 @@
 /* 8043C77C 00405D3C  7C 08 03 A6 */	mtlr r0
 /* 8043C780 00405D40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C784 00405D44  4E 80 00 20 */	blr 
-.endfn __dt__reslist_IWorkEvent
+.endfn "__dt__22reslist<P10IWorkEvent>Fv"
 
-.fn __dt__CMsgParam_10, global
+.fn "__dt__13CMsgParam<10>Fv", global
 /* 8043C788 00405D48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C78C 00405D4C  7C 08 02 A6 */	mflr r0
 /* 8043C790 00405D50  2C 03 00 00 */	cmpwi r3, 0
@@ -357,7 +357,7 @@
 /* 8043C7D4 00405D94  7C 08 03 A6 */	mtlr r0
 /* 8043C7D8 00405D98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C7DC 00405D9C  4E 80 00 20 */	blr
-.endfn __dt__CMsgParam_10
+.endfn "__dt__13CMsgParam<10>Fv"
 
 .fn __dt__5CViewFv, global
 /* 8043C7E0 00405DA0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4310,14 +4310,14 @@
 .obj "__vt__13CMsgParam<10>", global
 	.4byte "__RTTI__13CMsgParam<10>"
 	.4byte 0
-	.4byte __dt__CMsgParam_10
+	.4byte "__dt__13CMsgParam<10>Fv"
 .endobj "__vt__13CMsgParam<10>"
 
 
 .obj "__vt__22reslist<P10IWorkEvent>", global
 	.4byte "__RTTI__22reslist<P10IWorkEvent>"
 	.4byte 0
-	.4byte __dt__reslist_IWorkEvent
+	.4byte "__dt__22reslist<P10IWorkEvent>Fv"
 .endobj "__vt__22reslist<P10IWorkEvent>"
 
 .obj reslist_IWorkEvent_hierarchy, global
@@ -4330,7 +4330,7 @@
 .obj "__vt__28_reslist_base<P10IWorkEvent>", global
 	.4byte "__RTTI__28_reslist_base<P10IWorkEvent>"
 	.4byte 0
-	.4byte __dt___reslist_base_IWorkEvent
+	.4byte "__dt__28_reslist_base<P10IWorkEvent>Fv"
 	.4byte 0
 .endobj "__vt__28_reslist_base<P10IWorkEvent>"
 
@@ -4430,13 +4430,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__CMsgParam_10
+	.4byte "__dt__13CMsgParam<10>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__reslist_IWorkEvent
+	.4byte "__dt__22reslist<P10IWorkEvent>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x0780001E
 	.4byte 0x000001DC
 	.4byte __dt__10CViewFrameFv
@@ -4491,13 +4491,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__CMsgParam_10
+	.4byte "__dt__13CMsgParam<10>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__reslist_IWorkEvent
+	.4byte "__dt__22reslist<P10IWorkEvent>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x0780001E
 	.4byte 0x000001DC
 	.4byte __dt__10CViewFrameFv
@@ -4506,13 +4506,13 @@
 	.4byte __dt__8043C59C
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__CMsgParam_10
+	.4byte "__dt__13CMsgParam<10>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__reslist_IWorkEvent
+	.4byte "__dt__22reslist<P10IWorkEvent>Fv"
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x0780001E
 	.4byte 0x000001DC
 	.4byte __dt__10CViewFrameFv
@@ -4711,21 +4711,21 @@
 
 .obj "@eti_80034088", local
 .hidden "@eti_80034088"
-	.4byte __dt___reslist_base_IWorkEvent
+	.4byte "__dt__28_reslist_base<P10IWorkEvent>Fv"
 	.4byte 0x000000B4
 	.4byte "@etb_8001C44C"
 .endobj "@eti_80034088"
 
 .obj "@eti_80034094", local
 .hidden "@eti_80034094"
-	.4byte __dt__reslist_IWorkEvent
+	.4byte "__dt__22reslist<P10IWorkEvent>Fv"
 	.4byte 0x000000B8
 	.4byte "@etb_8001C454"
 .endobj "@eti_80034094"
 
 .obj "@eti_800340A0", local
 .hidden "@eti_800340A0"
-	.4byte __dt__CMsgParam_10
+	.4byte "__dt__13CMsgParam<10>Fv"
 	.4byte 0x00000058
 	.4byte "@etb_8001C45C"
 .endobj "@eti_800340A0"

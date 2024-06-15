@@ -131,7 +131,7 @@
 .balign 8
 
 
-.obj sud_ver_str, local
+.obj sud_ver_str, global
 	.asciz "\nCRI SUD/WII Ver.0.05 Build:Nov 13 2008 18:22:10\n"
 	.balign 4
 .endobj sud_ver_str
@@ -153,7 +153,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj sud_init_cnt, local
+.obj sud_init_cnt, global
 	.skip 0x4
 .endobj sud_init_cnt
 

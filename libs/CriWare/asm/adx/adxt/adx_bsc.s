@@ -1241,7 +1241,7 @@
 /* 80387AA0 00351060  4E 80 00 20 */	blr 
 .endfn ADXB_RestoreSnapshot
 
-.fn adxb_get_key, global
+.fn adxb_get_key, local
 /* 80387AA4 00351064  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80387AA8 00351068  7C 08 02 A6 */	mflr r0
 /* 80387AAC 0035106C  28 04 00 04 */	cmplwi r4, 4
@@ -1995,7 +1995,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj skg_init_count, global
+.obj skg_init_count, local
 	.skip 0x4
 .endobj skg_init_count
 
@@ -2008,12 +2008,28 @@
 .endobj pl2encodefunc
 
 .obj pl2resetfunc, global
-	.skip 0xC
+	.skip 0x4
 .endobj pl2resetfunc
 
+.obj adxb_def_k0, global
+	.skip 0x2
+.endobj adxb_def_k0
+
+.obj adxb_def_km, global
+	.skip 0x2
+.endobj adxb_def_km
+
+.obj adxb_def_ka, global
+	.skip 0x2
+.endobj adxb_def_ka
+
+.skip 0x2
+
 .obj adxb_dec_err_mode, global
-	.skip 0x8
+	.skip 0x4
 .endobj adxb_dec_err_mode
+
+.skip 0x4
 
 .obj adxb_obj, local
 	.skip 0xFC0

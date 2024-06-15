@@ -9,8 +9,8 @@
 /* 803C7BBC 0039117C  38 A0 00 24 */	li r5, 0x24
 /* 803C7BC0 00391180  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803C7BC4 00391184  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803C7BC8 00391188  3F E0 80 62 */	lis r31, lbl_8061CD58@ha
-/* 803C7BCC 0039118C  3B FF CD 58 */	addi r31, r31, lbl_8061CD58@l
+/* 803C7BC8 00391188  3F E0 80 62 */	lis r31, sfmpv_para@ha
+/* 803C7BCC 0039118C  3B FF CD 58 */	addi r31, r31, sfmpv_para@l
 /* 803C7BD0 00391190  38 7F 00 00 */	addi r3, r31, 0
 /* 803C7BD4 00391194  4B C3 C7 7D */	bl memset
 /* 803C7BD8 00391198  38 7F 00 28 */	addi r3, r31, 0x28
@@ -30,8 +30,8 @@
 
 .fn SFD_SetMpvParaTbl, global
 /* 803C7C0C 003911CC  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 803C7C10 003911D0  3D 60 80 62 */	lis r11, lbl_8061CD58@ha
-/* 803C7C14 003911D4  39 6B CD 58 */	addi r11, r11, lbl_8061CD58@l
+/* 803C7C10 003911D0  3D 60 80 62 */	lis r11, sfmpv_para@ha
+/* 803C7C14 003911D4  39 6B CD 58 */	addi r11, r11, sfmpv_para@l
 /* 803C7C18 003911D8  39 00 00 00 */	li r8, 0
 /* 803C7C1C 003911DC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803C7C20 003911E0  39 4B 00 00 */	addi r10, r11, 0
@@ -123,9 +123,9 @@
 /* 803C7D54 00391314  4E 80 00 20 */	blr 
 .endfn SFD_SetMpvParaTbl
 
-.fn sfmpvf_CheckMpvPara, global
-/* 803C7D58 00391318  3C 80 80 62 */	lis r4, lbl_8061CD58@ha
-/* 803C7D5C 0039131C  38 84 CD 58 */	addi r4, r4, lbl_8061CD58@l
+.fn sfmpvf_CheckMpvPara, local
+/* 803C7D58 00391318  3C 80 80 62 */	lis r4, sfmpv_para@ha
+/* 803C7D5C 0039131C  38 84 CD 58 */	addi r4, r4, sfmpv_para@l
 /* 803C7D60 00391320  38 64 00 00 */	addi r3, r4, 0
 /* 803C7D64 00391324  80 A3 00 1C */	lwz r5, 0x1c(r3)
 /* 803C7D68 00391328  2C 05 00 00 */	cmpwi r5, 0
@@ -179,8 +179,8 @@
 /* 803C7DFC 003913BC  7C 08 02 A6 */	mflr r0
 /* 803C7E00 003913C0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803C7E04 003913C4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803C7E08 003913C8  3F E0 80 62 */	lis r31, lbl_8061CD58@ha
-/* 803C7E0C 003913CC  3B FF CD 58 */	addi r31, r31, lbl_8061CD58@l
+/* 803C7E08 003913C8  3F E0 80 62 */	lis r31, sfmpv_para@ha
+/* 803C7E0C 003913CC  3B FF CD 58 */	addi r31, r31, sfmpv_para@l
 /* 803C7E10 003913D0  93 C1 00 08 */	stw r30, 8(r1)
 /* 803C7E14 003913D4  7C 7E 1B 78 */	mr r30, r3
 /* 803C7E18 003913D8  4B FF FF 41 */	bl sfmpvf_CheckMpvPara
@@ -235,8 +235,8 @@
 /* 803C7EC8 00391488  38 A0 00 08 */	li r5, 8
 /* 803C7ECC 0039148C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803C7ED0 00391490  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803C7ED4 00391494  3F E0 80 62 */	lis r31, lbl_8061CD58@ha
-/* 803C7ED8 00391498  3B FF CD 58 */	addi r31, r31, lbl_8061CD58@l
+/* 803C7ED4 00391494  3F E0 80 62 */	lis r31, sfmpv_para@ha
+/* 803C7ED8 00391498  3B FF CD 58 */	addi r31, r31, sfmpv_para@l
 /* 803C7EDC 0039149C  93 C1 00 08 */	stw r30, 8(r1)
 /* 803C7EE0 003914A0  7C 7E 1B 78 */	mr r30, r3
 /* 803C7EE4 003914A4  38 FF 00 00 */	addi r7, r31, 0
@@ -352,15 +352,15 @@
 .endfn SFD_SetPicUsrBuf
 
 .fn SFMPVF_ResetPicUsrBuf, global
-/* 803C807C 0039163C  3C C0 80 62 */	lis r6, lbl_8061CD58@ha
-/* 803C8080 00391640  38 C6 CD 58 */	addi r6, r6, lbl_8061CD58@l
+/* 803C807C 0039163C  3C C0 80 62 */	lis r6, sfmpv_para@ha
+/* 803C8080 00391640  38 C6 CD 58 */	addi r6, r6, sfmpv_para@l
 /* 803C8084 00391644  80 86 00 70 */	lwz r4, 0x70(r6)
 /* 803C8088 00391648  80 A6 00 74 */	lwz r5, 0x74(r6)
 /* 803C808C 0039164C  80 C6 00 78 */	lwz r6, 0x78(r6)
 /* 803C8090 00391650  48 00 00 04 */	b sfmpvf_SetPicUsrBuf
 .endfn SFMPVF_ResetPicUsrBuf
 
-.fn sfmpvf_SetPicUsrBuf, global
+.fn sfmpvf_SetPicUsrBuf, local
 /* 803C8094 00391654  2C 04 00 00 */	cmpwi r4, 0
 /* 803C8098 00391658  39 03 38 D0 */	addi r8, r3, 0x38d0
 /* 803C809C 0039165C  41 82 00 14 */	beq .L_803C80B0
@@ -779,7 +779,7 @@
 /* 803C8630 00391BF0  4E 80 00 20 */	blr 
 .endfn SFMPVF_IsTermDec
 
-.fn func_803C8634, global
+.fn SFMPVF_SetGopStat, global
 /* 803C8634 00391BF4  80 A3 28 44 */	lwz r5, 0x2844(r3)
 /* 803C8638 00391BF8  38 83 28 50 */	addi r4, r3, 0x2850
 /* 803C863C 00391BFC  38 00 00 01 */	li r0, 1
@@ -798,7 +798,7 @@
 /* 803C8664 00391C24  38 84 01 08 */	addi r4, r4, 0x108
 /* 803C8668 00391C28  42 00 FF E4 */	bdnz .L_803C864C
 /* 803C866C 00391C2C  4E 80 00 20 */	blr 
-.endfn func_803C8634
+.endfn SFMPVF_SetGopStat
 
 .fn SFMPVF_GetNumFrm, global
 /* 803C8670 00391C30  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1048,7 +1048,7 @@
 /* 803C89A0 00391F60  4E 80 00 20 */	blr 
 .endfn SFD_IsNextFrmReady
 
-.fn sfmpvf_SearchStbyFrm, global
+.fn sfmpvf_SearchStbyFrm, local
 /* 803C89A4 00391F64  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C89A8 00391F68  7C 08 02 A6 */	mflr r0
 /* 803C89AC 00391F6C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1121,7 +1121,7 @@
 /* 803C8A98 00392058  4E 80 00 20 */	blr 
 .endfn sfmpvf_SearchStbyFrm
 
-.fn sfmpvf_IsChkFirst, global
+.fn sfmpvf_IsChkFirst, local
 /* 803C8A9C 0039205C  2C 03 00 00 */	cmpwi r3, 0
 /* 803C8AA0 00392060  40 82 00 0C */	bne .L_803C8AAC
 /* 803C8AA4 00392064  38 60 00 01 */	li r3, 1
@@ -1207,6 +1207,30 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_8061CD58, global
-	.skip 0x80
-.endobj lbl_8061CD58
+.obj sfmpv_para, local
+	.skip 0x24
+.endobj sfmpv_para
+
+.skip 0x4
+
+.obj sfmpv_rfb_adr_tbl, local
+	.skip 0x8
+.endobj sfmpv_rfb_adr_tbl
+
+.obj sfmpv_ta_adr_tbl, local
+	.skip 0x40
+.endobj sfmpv_ta_adr_tbl
+
+.obj sfmpv_picusr_pbuf, local
+	.skip 0x4
+.endobj sfmpv_picusr_pbuf
+
+.obj sfmpv_picusr_bufnum, local
+	.skip 0x4
+.endobj sfmpv_picusr_bufnum
+
+.obj sfmpv_picusr_buf1siz, local
+	.skip 0x4
+.endobj sfmpv_picusr_buf1siz
+
+.skip 0x4

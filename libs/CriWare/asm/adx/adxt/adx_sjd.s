@@ -1086,7 +1086,7 @@
 /* 803808EC 00349EAC  4E 80 00 20 */	blr 
 .endfn ADXSJD_ExecHndl
 
-.fn adxsjd_insert_proc, global
+.fn adxsjd_insert_proc, local
 /* 803808F0 00349EB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803808F4 00349EB4  7C 08 02 A6 */	mflr r0
 /* 803808F8 00349EB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1173,7 +1173,7 @@
 /* 80380A24 00349FE4  4E 80 00 20 */	blr 
 .endfn adxsjd_insert_proc
 
-.fn adxsjd_discard_proc, global
+.fn adxsjd_discard_proc, local
 /* 80380A28 00349FE8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80380A2C 00349FEC  7C 08 02 A6 */	mflr r0
 /* 80380A30 00349FF0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1564,8 +1564,24 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj adxsjd_init_cnt, global
-	.skip 0x14
+	.skip 0x4
 .endobj adxsjd_init_cnt
+
+.obj adxsjd_svr_start_cb, local
+	.skip 0x4
+.endobj adxsjd_svr_start_cb
+
+.obj adxsjd_svr_start_cb_obj, local
+	.skip 0x4
+.endobj adxsjd_svr_start_cb_obj
+
+.obj adxsjd_svr_end_cb, local
+	.skip 0x4
+.endobj adxsjd_svr_end_cb
+
+.obj adxsjd_svr_end_cb_obj, local
+	.skip 0x4
+.endobj adxsjd_svr_end_cb_obj
 
 .obj pl2setsfreqfunc, global
 	.skip 0x4

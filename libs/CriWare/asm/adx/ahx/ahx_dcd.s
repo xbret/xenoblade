@@ -4,13 +4,13 @@
 
 .fn SKG_GenerateKey, local
 /* 8038D9E8 00356FA8  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8038D9EC 00356FAC  3D 20 80 5F */	lis r9, skg_init_count_1@ha
+/* 8038D9EC 00356FAC  3D 20 80 5F */	lis r9, skg_init_count@ha
 /* 8038D9F0 00356FB0  BF 41 00 08 */	stmw r26, 8(r1)
-/* 8038D9F4 00356FB4  81 09 9B 10 */	lwz r8, skg_init_count_1@l(r9)
+/* 8038D9F4 00356FB4  81 09 9B 10 */	lwz r8, skg_init_count@l(r9)
 /* 8038D9F8 00356FB8  2C 08 00 00 */	cmpwi r8, 0
 /* 8038D9FC 00356FBC  40 82 00 0C */	bne .L_8038DA08
 /* 8038DA00 00356FC0  38 08 00 01 */	addi r0, r8, 1
-/* 8038DA04 00356FC4  90 09 9B 10 */	stw r0, skg_init_count_1@l(r9)
+/* 8038DA04 00356FC4  90 09 9B 10 */	stw r0, skg_init_count@l(r9)
 .L_8038DA08:
 /* 8038DA08 00356FC8  38 00 00 00 */	li r0, 0
 /* 8038DA0C 00356FCC  2C 03 00 00 */	cmpwi r3, 0
@@ -735,8 +735,8 @@
 /* 8038E464 00357A24  38 A0 00 40 */	li r5, 0x40
 /* 8038E468 00357A28  4B C7 5E E9 */	bl memset
 /* 8038E46C 00357A2C  38 00 00 00 */	li r0, 0
-/* 8038E470 00357A30  3F A0 80 5F */	lis r29, lbl_805E9B20@ha
-/* 8038E474 00357A34  3B BD 9B 20 */	addi r29, r29, lbl_805E9B20@l
+/* 8038E470 00357A30  3F A0 80 5F */	lis r29, "buf$338"@ha
+/* 8038E474 00357A34  3B BD 9B 20 */	addi r29, r29, "buf$338"@l
 /* 8038E478 00357A38  90 01 00 08 */	stw r0, 8(r1)
 /* 8038E47C 00357A3C  3B 9D 00 04 */	addi r28, r29, 4
 /* 8038E480 00357A40  48 00 00 18 */	b .L_8038E498
@@ -749,9 +749,9 @@
 .L_8038E498:
 /* 8038E498 00357A58  7C 1D E0 40 */	cmplw r29, r28
 /* 8038E49C 00357A5C  40 82 FF E8 */	bne .L_8038E484
-/* 8038E4A0 00357A60  3C 60 80 5F */	lis r3, lbl_805E9B20@ha
+/* 8038E4A0 00357A60  3C 60 80 5F */	lis r3, "buf$338"@ha
 /* 8038E4A4 00357A64  38 A1 00 08 */	addi r5, r1, 8
-/* 8038E4A8 00357A68  38 63 9B 20 */	addi r3, r3, lbl_805E9B20@l
+/* 8038E4A8 00357A68  38 63 9B 20 */	addi r3, r3, "buf$338"@l
 /* 8038E4AC 00357A6C  38 80 00 04 */	li r4, 4
 /* 8038E4B0 00357A70  38 C0 00 00 */	li r6, 0
 /* 8038E4B4 00357A74  4B FF EB B5 */	bl ADX_DecodeHeader
@@ -767,9 +767,9 @@
 .L_8038E4D8:
 /* 8038E4D8 00357A98  7C 1D E0 40 */	cmplw r29, r28
 /* 8038E4DC 00357A9C  40 82 FF E8 */	bne .L_8038E4C4
-/* 8038E4E0 00357AA0  3C 60 80 5F */	lis r3, lbl_805E9B20@ha
+/* 8038E4E0 00357AA0  3C 60 80 5F */	lis r3, "buf$338"@ha
 /* 8038E4E4 00357AA4  38 A1 00 08 */	addi r5, r1, 8
-/* 8038E4E8 00357AA8  38 63 9B 20 */	addi r3, r3, lbl_805E9B20@l
+/* 8038E4E8 00357AA8  38 63 9B 20 */	addi r3, r3, "buf$338"@l
 /* 8038E4EC 00357AAC  38 C1 00 10 */	addi r6, r1, 0x10
 /* 8038E4F0 00357AB0  38 80 02 00 */	li r4, 0x200
 /* 8038E4F4 00357AB4  4B FF EB 75 */	bl ADX_DecodeHeader
@@ -813,13 +813,13 @@
 /* 8038E58C 00357B4C  2C 00 00 10 */	cmpwi r0, 0x10
 /* 8038E590 00357B50  41 80 00 44 */	blt .L_8038E5D4
 /* 8038E594 00357B54  38 00 00 00 */	li r0, 0
-/* 8038E598 00357B58  3C 80 80 5F */	lis r4, skg_init_count_1@ha
+/* 8038E598 00357B58  3C 80 80 5F */	lis r4, skg_init_count@ha
 /* 8038E59C 00357B5C  B0 1F 03 BC */	sth r0, 0x3bc(r31)
-/* 8038E5A0 00357B60  80 64 9B 10 */	lwz r3, skg_init_count_1@l(r4)
+/* 8038E5A0 00357B60  80 64 9B 10 */	lwz r3, skg_init_count@l(r4)
 /* 8038E5A4 00357B64  2C 03 00 00 */	cmpwi r3, 0
 /* 8038E5A8 00357B68  40 82 00 0C */	bne .L_8038E5B4
 /* 8038E5AC 00357B6C  38 03 00 01 */	addi r0, r3, 1
-/* 8038E5B0 00357B70  90 04 9B 10 */	stw r0, skg_init_count_1@l(r4)
+/* 8038E5B0 00357B70  90 04 9B 10 */	stw r0, skg_init_count@l(r4)
 .L_8038E5B4:
 /* 8038E5B4 00357B74  3C 60 80 52 */	lis r3, lbl_8051ACA8@ha
 /* 8038E5B8 00357B78  38 BF 03 BE */	addi r5, r31, 0x3be
@@ -1570,13 +1570,13 @@
 /* 8038EFBC 0035857C  3D 60 80 52 */	lis r11, double_8051ACA0@ha
 /* 8038EFC0 00358580  3D 40 80 52 */	lis r10, lbl_8051AC98@ha
 /* 8038EFC4 00358584  7C 06 02 14 */	add r0, r6, r0
-/* 8038EFC8 00358588  3F 40 80 57 */	lis r26, lbl_805691E0@ha
+/* 8038EFC8 00358588  3F 40 80 57 */	lis r26, "mskptn$672"@ha
 /* 8038EFCC 0035858C  91 81 00 10 */	stw r12, 0x10(r1)
 /* 8038EFD0 00358590  7C 7E 1B 78 */	mr r30, r3
 /* 8038EFD4 00358594  82 04 00 04 */	lwz r16, 4(r4)
 /* 8038EFD8 00358598  7D 3F 4B 78 */	mr r31, r9
 /* 8038EFDC 0035859C  91 81 00 18 */	stw r12, 0x18(r1)
-/* 8038EFE0 003585A0  3B 5A 91 E0 */	addi r26, r26, lbl_805691E0@l
+/* 8038EFE0 003585A0  3B 5A 91 E0 */	addi r26, r26, "mskptn$672"@l
 /* 8038EFE4 003585A4  81 C4 00 10 */	lwz r14, 0x10(r4)
 /* 8038EFE8 003585A8  3A 60 00 00 */	li r19, 0
 /* 8038EFEC 003585AC  90 A1 00 08 */	stw r5, 8(r1)
@@ -1968,7 +1968,7 @@
 .endobj ahxdc_jsb_table
 
 
-.obj lbl_805691E0, global
+.obj "mskptn$672", local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -1979,23 +1979,24 @@
 	.4byte 0x0000007F
 	.4byte 0x000000FF
 	.4byte 0
-.endobj lbl_805691E0
+.endobj "mskptn$672"
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-#skg_init_count
-.obj skg_init_count_1, global
+.obj skg_init_count, local
 	.skip 0x4
-.endobj skg_init_count_1
+.endobj skg_init_count
 
 .obj lbl_805E9B14, global
 	.skip 0x4
 .endobj lbl_805E9B14
 
 .obj ahxdcd_init_cnt, global
-	.skip 0x8
+	.skip 0x4
 .endobj ahxdcd_init_cnt
 
-.obj lbl_805E9B20, global
+.skip 0x4
+
+.obj "buf$338", local
 	.skip 0x200
-.endobj lbl_805E9B20
+.endobj "buf$338"

@@ -48,7 +48,7 @@
 /* 8014A900 00113EC0  4E 80 00 20 */	blr 
 .endfn func_8014A8F8
 
-.fn __ct__cf_CAIAction, global
+.fn __ct__Q22cf9CAIActionFv, global
 /* 8014A904 00113EC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8014A908 00113EC8  7C 08 02 A6 */	mflr r0
 /* 8014A90C 00113ECC  3C 80 80 53 */	lis r4, __vt__Q22cf9CAIAction@ha
@@ -118,7 +118,7 @@
 /* 8014AA04 00113FC4  7C 08 03 A6 */	mtlr r0
 /* 8014AA08 00113FC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8014AA0C 00113FCC  4E 80 00 20 */	blr 
-.endfn __ct__cf_CAIAction
+.endfn __ct__Q22cf9CAIActionFv
 
 .fn func_8014AA10, global
 /* 8014AA10 00113FD0  90 83 0B 14 */	stw r4, 0xb14(r3)
@@ -11313,7 +11313,7 @@
 
 .obj "@eti_80028418", local
 .hidden "@eti_80028418"
-	.4byte __ct__cf_CAIAction
+	.4byte __ct__Q22cf9CAIActionFv
 	.4byte 0x0000010C
 	.4byte "@etb_8000D19C"
 .endobj "@eti_80028418"

@@ -3,9 +3,11 @@ SOFDEC_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/cft/cft_common.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdfrm.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdrna.o\
+	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdrsc.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdsl.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdsvm.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwstm.o\
+	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdsee.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdsfx.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdcre.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/mwply/mwsfdlib.o\
@@ -44,6 +46,7 @@ SOFDEC_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_adxt.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_aoap.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_buf.o\
+	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/code_803BFD20.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_con.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_hds.o\
 	$(BUILD_DIR)/libs/CriWare/asm/sofdec/sfdcore/sfd/sfd_lib.o\

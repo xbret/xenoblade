@@ -14,9 +14,9 @@
 /* 803A3FAC 0036D56C  38 7F 11 60 */	addi r3, r31, 0x1160
 /* 803A3FB0 0036D570  48 01 5F A9 */	bl DCT_IsrInitScaleTbl
 /* 803A3FB4 0036D574  3C 80 80 52 */	lis r4, mpvcdec_funcs_int1@ha
-/* 803A3FB8 0036D578  3C 60 80 60 */	lis r3, lbl_80605F2C@ha
+/* 803A3FB8 0036D578  3C 60 80 60 */	lis r3, mpvcdec_funcs_idct@ha
 /* 803A3FBC 0036D57C  38 84 F5 F8 */	addi r4, r4, mpvcdec_funcs_int1@l
-/* 803A3FC0 0036D580  38 63 5F 2C */	addi r3, r3, lbl_80605F2C@l
+/* 803A3FC0 0036D580  38 63 5F 2C */	addi r3, r3, mpvcdec_funcs_idct@l
 /* 803A3FC4 0036D584  90 83 00 08 */	stw r4, 8(r3)
 /* 803A3FC8 0036D588  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803A3FCC 0036D58C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -27,11 +27,11 @@
 
 .fn MPVCDEC_StartFrame, global
 /* 803A3FDC 0036D59C  3C C0 80 3C */	lis r6, DCT_IsrTrans@ha
-/* 803A3FE0 0036D5A0  3C A0 80 60 */	lis r5, lbl_80605F2C@ha
+/* 803A3FE0 0036D5A0  3C A0 80 60 */	lis r5, mpvcdec_funcs_idct@ha
 /* 803A3FE4 0036D5A4  38 C6 9F 68 */	addi r6, r6, DCT_IsrTrans@l
 /* 803A3FE8 0036D5A8  3C 80 80 60 */	lis r4, mpvcdec_ixa@ha
 /* 803A3FEC 0036D5AC  90 C3 0C 84 */	stw r6, 0xc84(r3)
-/* 803A3FF0 0036D5B0  38 A5 5F 2C */	addi r5, r5, lbl_80605F2C@l
+/* 803A3FF0 0036D5B0  38 A5 5F 2C */	addi r5, r5, mpvcdec_funcs_idct@l
 /* 803A3FF4 0036D5B4  80 84 5F 28 */	lwz r4, mpvcdec_ixa@l(r4)
 /* 803A3FF8 0036D5B8  38 04 11 60 */	addi r0, r4, 0x1160
 /* 803A3FFC 0036D5BC  90 03 09 B4 */	stw r0, 0x9b4(r3)
@@ -44,7 +44,7 @@
 /* 803A4018 0036D5D8  4E 80 00 20 */	blr 
 .endfn MPVCDEC_StartFrame
 
-.fn mpvcdec_IntraBlocksInt1, global
+.fn mpvcdec_IntraBlocksInt1, local
 /* 803A401C 0036D5DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A4020 0036D5E0  7C 08 02 A6 */	mflr r0
 /* 803A4024 0036D5E4  39 20 00 00 */	li r9, 0
@@ -345,7 +345,7 @@
 /* 803A44C0 0036DA80  4E 80 00 20 */	blr 
 .endfn mpvcdec_IntraBlocksInt1
 
-.fn mpvcdec_NintraBlocksInt1, global
+.fn mpvcdec_NintraBlocksInt1, local
 /* 803A44C4 0036DA84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A44C8 0036DA88  7C 08 02 A6 */	mflr r0
 /* 803A44CC 0036DA8C  38 A3 03 40 */	addi r5, r3, 0x340
@@ -442,25 +442,17 @@
 
 .balign 8
 
-.obj mpvcdec_funcs_int1, global
+.obj mpvcdec_funcs_int1, local
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
 .endobj mpvcdec_funcs_int1
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80605F10, global
-	.skip 0xC
-.endobj lbl_80605F10
-
-.obj lbl_80605F1C, global
-	.skip 0xC
-.endobj lbl_80605F1C
-
-.obj mpvcdec_ixa, global
+.obj mpvcdec_ixa, local
 	.skip 0x4
 .endobj mpvcdec_ixa
 
-.obj lbl_80605F2C, global
+.obj mpvcdec_funcs_idct, local
 	.skip 0xC
-.endobj lbl_80605F2C
+.endobj mpvcdec_funcs_idct

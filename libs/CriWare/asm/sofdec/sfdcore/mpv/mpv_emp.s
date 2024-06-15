@@ -435,7 +435,7 @@
 /* 803A6084 0036F644  38 60 00 00 */	li r3, 0
 /* 803A6088 0036F648  48 00 00 B0 */	b .L_803A6138
 .L_803A608C:
-/* 803A608C 0036F64C  4B FF F9 69 */	bl func_803A59F4
+/* 803A608C 0036F64C  4B FF F9 69 */	bl MPV_CheckDelim
 /* 803A6090 0036F650  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
 /* 803A6094 0036F654  41 82 00 30 */	beq .L_803A60C4
 /* 803A6098 0036F658  88 1D 00 06 */	lbz r0, 6(r29)
@@ -499,7 +499,7 @@
 
 .balign 8
 
-.obj mpvemp_mbai, global
+.obj mpvemp_mbai, local
 	.2byte 0x0000
 	.2byte 0x0101
 	.2byte 0x0303

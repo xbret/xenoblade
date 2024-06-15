@@ -10,10 +10,10 @@
 /* 80399018 003625D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039901C 003625DC  7C 08 02 A6 */	mflr r0
 /* 80399020 003625E0  3C 60 80 5F */	lis r3, axrna_init_cnt@ha
-/* 80399024 003625E4  3C 80 80 52 */	lis r4, lbl_8051C78C@ha
+/* 80399024 003625E4  3C 80 80 52 */	lis r4, axrna_build@ha
 /* 80399028 003625E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039902C 003625EC  80 03 61 C0 */	lwz r0, axrna_init_cnt@l(r3)
-/* 80399030 003625F0  80 64 C7 8C */	lwz r3, lbl_8051C78C@l(r4)
+/* 80399030 003625F0  80 64 C7 8C */	lwz r3, axrna_build@l(r4)
 /* 80399034 003625F4  2C 00 00 00 */	cmpwi r0, 0
 /* 80399038 003625F8  40 82 00 18 */	bne .L_80399050
 /* 8039903C 003625FC  3C 60 80 5F */	lis r3, axrna_obj@ha
@@ -403,7 +403,7 @@
 /* 80399594 00362B54  41 80 FF E8 */	blt .L_8039957C
 /* 80399598 00362B58  7F E3 FB 78 */	mr r3, r31
 /* 8039959C 00362B5C  38 80 00 10 */	li r4, 0x10
-/* 803995A0 00362B60  48 00 13 41 */	bl func_8039A8E0
+/* 803995A0 00362B60  48 00 13 41 */	bl criware_8039A8E0
 /* 803995A4 00362B64  38 60 00 00 */	li r3, 0
 /* 803995A8 00362B68  38 00 00 01 */	li r0, 1
 /* 803995AC 00362B6C  98 7F 00 01 */	stb r3, 1(r31)
@@ -1100,7 +1100,7 @@
 /* 80399F48 00363508  4E 80 00 20 */	blr 
 .endfn axrna_start_trans
 
-.fn func_80399F4C, global
+.fn criware_80399F4C, global
 /* 80399F4C 0036350C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80399F50 00363510  7C 08 02 A6 */	mflr r0
 /* 80399F54 00363514  3C 80 51 EC */	lis r4, 0x51EB851F@ha
@@ -1245,7 +1245,7 @@
 /* 8039A16C 0036372C  7F 24 CB 78 */	mr r4, r25
 /* 8039A170 00363730  80 A1 00 10 */	lwz r5, 0x10(r1)
 /* 8039A174 00363734  7F 06 C3 78 */	mr r6, r24
-/* 8039A178 00363738  48 00 13 69 */	bl func_8039B4E0
+/* 8039A178 00363738  48 00 13 69 */	bl criware_8039B4E0
 /* 8039A17C 0036373C  80 7D 00 C8 */	lwz r3, 0xc8(r29)
 /* 8039A180 00363740  38 A1 00 10 */	addi r5, r1, 0x10
 /* 8039A184 00363744  38 80 00 01 */	li r4, 1
@@ -1360,7 +1360,7 @@
 /* 8039A31C 003638DC  7C 08 03 A6 */	mtlr r0
 /* 8039A320 003638E0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8039A324 003638E4  4E 80 00 20 */	blr 
-.endfn func_80399F4C
+.endfn criware_80399F4C
 
 .fn axrna_start_flash, global
 /* 8039A328 003638E8  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1499,7 +1499,7 @@
 /* 8039A508 00363AC8  2C 00 00 01 */	cmpwi r0, 1
 /* 8039A50C 00363ACC  40 82 00 10 */	bne .L_8039A51C
 /* 8039A510 00363AD0  7F E3 FB 78 */	mr r3, r31
-/* 8039A514 00363AD4  4B FF FA 39 */	bl func_80399F4C
+/* 8039A514 00363AD4  4B FF FA 39 */	bl criware_80399F4C
 /* 8039A518 00363AD8  48 00 00 48 */	b .L_8039A560
 .L_8039A51C:
 /* 8039A51C 00363ADC  7F E3 FB 78 */	mr r3, r31
@@ -1723,15 +1723,15 @@
 /* 8039A800 00363DC0  4E 80 00 20 */	blr 
 .endfn AXRNA_SetBitPerSmpl
 
-.fn func_8039A804, global
+.fn criware_8039A804, global
 /* 8039A804 00363DC4  38 60 00 00 */	li r3, 0
 /* 8039A808 00363DC8  4E 80 00 20 */	blr
-.endfn func_8039A804
+.endfn criware_8039A804
 
-.fn func_8039A80C, global
+.fn criware_8039A80C, global
 /* 8039A80C 00363DCC  38 60 00 00 */	li r3, 0
 /* 8039A810 00363DD0  4E 80 00 20 */	blr 
-.endfn func_8039A80C
+.endfn criware_8039A80C
 
 .fn AXRNA_SetMain, global
 /* 8039A814 00363DD4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1796,7 +1796,7 @@
 
 #this function belongs to another file?
 
-.fn func_8039A8E0, global
+.fn criware_8039A8E0, global
 /* 8039A8E0 00363EA0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8039A8E4 00363EA4  7C 08 02 A6 */	mflr r0
 /* 8039A8E8 00363EA8  2C 03 00 00 */	cmpwi r3, 0
@@ -1886,7 +1886,7 @@
 /* 8039AA0C 00363FCC  7C 08 03 A6 */	mtlr r0
 /* 8039AA10 00363FD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039AA14 00363FD4  4E 80 00 20 */	blr 
-.endfn func_8039A8E0
+.endfn criware_8039A8E0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1897,9 +1897,9 @@
 .endobj lbl_8051C760
 
 
-.obj lbl_8051C78C, global
+.obj axrna_build, global
 	.4byte lbl_8051C760
-.endobj lbl_8051C78C
+.endobj axrna_build
 
 
 .obj ax_rna_strpool, global

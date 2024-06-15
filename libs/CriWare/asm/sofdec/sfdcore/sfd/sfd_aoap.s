@@ -109,17 +109,17 @@
 /* 803BEA34 00387FF4  4E 80 00 20 */	blr 
 .endfn SFAOAP_SetSpeed
 
-.fn SFAOAP_Init, global
+.fn SFAOAP_Init, local
 /* 803BEA38 00387FF8  38 60 00 00 */	li r3, 0
 /* 803BEA3C 00387FFC  4E 80 00 20 */	blr 
 .endfn SFAOAP_Init
 
-.fn SFAOAP_Finish, global
+.fn SFAOAP_Finish, local
 /* 803BEA40 00388000  38 60 00 00 */	li r3, 0
 /* 803BEA44 00388004  4E 80 00 20 */	blr 
 .endfn SFAOAP_Finish
 
-.fn SFAOAP_ExecServer, global
+.fn SFAOAP_ExecServer, local
 /* 803BEA48 00388008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEA4C 0038800C  7C 08 02 A6 */	mflr r0
 /* 803BEA50 00388010  38 80 00 06 */	li r4, 6
@@ -171,7 +171,7 @@
 /* 803BEAF8 003880B8  4E 80 00 20 */	blr 
 .endfn SFAOAP_ExecServer
 
-.fn SFAOAP_Create, global
+.fn SFAOAP_Create, local
 /* 803BEAFC 003880BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEB00 003880C0  7C 08 02 A6 */	mflr r0
 /* 803BEB04 003880C4  38 80 00 06 */	li r4, 6
@@ -195,12 +195,12 @@
 /* 803BEB44 00388104  4E 80 00 20 */	blr 
 .endfn SFAOAP_Create
 
-.fn SFAOAP_Destroy, global
+.fn SFAOAP_Destroy, local
 /* 803BEB48 00388108  38 60 00 00 */	li r3, 0
 /* 803BEB4C 0038810C  4E 80 00 20 */	blr 
 .endfn SFAOAP_Destroy
 
-.fn SFAOAP_RequestStop, global
+.fn SFAOAP_RequestStop, local
 /* 803BEB50 00388110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEB54 00388114  7C 08 02 A6 */	mflr r0
 /* 803BEB58 00388118  38 80 00 06 */	li r4, 6
@@ -213,7 +213,7 @@
 /* 803BEB74 00388134  4E 80 00 20 */	blr 
 .endfn SFAOAP_RequestStop
 
-.fn SFAOAP_Start, global
+.fn SFAOAP_Start, local
 /* 803BEB78 00388138  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEB7C 0038813C  7C 08 02 A6 */	mflr r0
 /* 803BEB80 00388140  38 80 00 06 */	li r4, 6
@@ -246,7 +246,7 @@
 /* 803BEBE0 003881A0  4E 80 00 20 */	blr 
 .endfn SFAOAP_Start
 
-.fn SFAOAP_Stop, global
+.fn SFAOAP_Stop, local
 /* 803BEBE4 003881A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEBE8 003881A8  7C 08 02 A6 */	mflr r0
 /* 803BEBEC 003881AC  38 80 00 06 */	li r4, 6
@@ -279,7 +279,7 @@
 /* 803BEC4C 0038820C  4E 80 00 20 */	blr 
 .endfn SFAOAP_Stop
 
-.fn SFAOAP_Pause, global
+.fn SFAOAP_Pause, local
 /* 803BEC50 00388210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BEC54 00388214  7C 08 02 A6 */	mflr r0
 /* 803BEC58 00388218  90 01 00 14 */	stw r0, 0x14(r1)
@@ -315,31 +315,31 @@
 /* 803BECC4 00388284  4E 80 00 20 */	blr 
 .endfn SFAOAP_Pause
 
-.fn SFAOAP_GetWrite, global
+.fn SFAOAP_GetWrite, local
 /* 803BECC8 00388288  3C 80 FF 00 */	lis r4, 0xFF000A01@ha
 /* 803BECCC 0038828C  38 84 0A 01 */	addi r4, r4, 0xFF000A01@l
 /* 803BECD0 00388290  48 00 1F 84 */	b SFLIB_SetErr
 .endfn SFAOAP_GetWrite
 
-.fn SFAOAP_AddWrite, global
+.fn SFAOAP_AddWrite, local
 /* 803BECD4 00388294  3C 80 FF 00 */	lis r4, 0xFF000A01@ha
 /* 803BECD8 00388298  38 84 0A 01 */	addi r4, r4, 0xFF000A01@l
 /* 803BECDC 0038829C  48 00 1F 78 */	b SFLIB_SetErr
 .endfn SFAOAP_AddWrite
 
-.fn SFAOAP_GetRead, global
+.fn SFAOAP_GetRead, local
 /* 803BECE0 003882A0  3C 80 FF 00 */	lis r4, 0xFF000A01@ha
 /* 803BECE4 003882A4  38 84 0A 01 */	addi r4, r4, 0xFF000A01@l
 /* 803BECE8 003882A8  48 00 1F 6C */	b SFLIB_SetErr
 .endfn SFAOAP_GetRead
 
-.fn SFAOAP_AddRead, global
+.fn SFAOAP_AddRead, local
 /* 803BECEC 003882AC  3C 80 FF 00 */	lis r4, 0xFF000A01@ha
 /* 803BECF0 003882B0  38 84 0A 01 */	addi r4, r4, 0xFF000A01@l
 /* 803BECF4 003882B4  48 00 1F 60 */	b SFLIB_SetErr
 .endfn SFAOAP_AddRead
 
-.fn SFAOAP_Seek, global
+.fn SFAOAP_Seek, local
 /* 803BECF8 003882B8  38 60 00 00 */	li r3, 0
 /* 803BECFC 003882BC  4E 80 00 20 */	blr 
 .endfn SFAOAP_Seek

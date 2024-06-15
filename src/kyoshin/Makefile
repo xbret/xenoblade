@@ -55,6 +55,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectColl.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectEff.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectEne.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800B06A4.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectMap.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectModel.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectMove.o\

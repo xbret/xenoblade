@@ -1509,7 +1509,7 @@
 /* 803D2114 0039B6D4  7C 64 1B 78 */	mr r4, r3
 /* 803D2118 0039B6D8  38 7D 00 1F */	addi r3, r29, 0x1f
 /* 803D211C 0039B6DC  4B FF E0 29 */	bl SFHLOCAL_GetNbyteL
-/* 803D2120 0039B6E0  48 00 0B 79 */	bl func_803D2C98
+/* 803D2120 0039B6E0  48 00 0B 79 */	bl criware_803D2C98
 /* 803D2124 0039B6E4  90 7C 00 00 */	stw r3, 0(r28)
 /* 803D2128 0039B6E8  38 60 00 01 */	li r3, 1
 .L_803D212C:
@@ -2411,7 +2411,7 @@
 /* 803D2C94 0039C254  4E 80 00 20 */	blr 
 .endfn VER1_AnlyFtrNetHeight
 
-.fn func_803D2C98, global
+.fn criware_803D2C98, global
 /* 803D2C98 0039C258  28 03 00 08 */	cmplwi r3, 8
 /* 803D2C9C 0039C25C  41 81 00 68 */	bgt .L_803D2D04
 /* 803D2CA0 0039C260  3C 80 80 57 */	lis r4, jumptable_8056C744@ha
@@ -2450,7 +2450,7 @@
 .L_803D2D04:
 /* 803D2D04 0039C2C4  38 60 00 00 */	li r3, 0
 /* 803D2D08 0039C2C8  4E 80 00 20 */	blr 
-.endfn func_803D2C98
+.endfn criware_803D2C98
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

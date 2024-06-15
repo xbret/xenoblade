@@ -50,11 +50,11 @@ ADX_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_rbf.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_uni.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_utl.o\
-	$(BUILD_DIR)/libs/CriWare/src/adx/sj/sj_crs.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/sj/sj_err.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/svm/svm.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/adx_bsps.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/adx_bau.o\
+	$(BUILD_DIR)/libs/CriWare/asm/adx/adxt/adx_dcd3.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/wiirna/rna_crs.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/wiirna/rna_err.o\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/wiirna/ax_rna.o\

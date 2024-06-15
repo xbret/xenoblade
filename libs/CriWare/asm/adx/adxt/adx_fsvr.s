@@ -15,13 +15,13 @@
 /* 8037F5A0 00348B60  4E 80 00 20 */	blr 
 .endfn ADXT_ExecFsSvr
 
-.fn adxt_ExecFsSvr, global
+.fn adxt_ExecFsSvr, local
 /* 8037F5A4 00348B64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F5A8 00348B68  7C 08 02 A6 */	mflr r0
 /* 8037F5AC 00348B6C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8037F5B0 00348B70  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8037F5B4 00348B74  3F E0 80 5E */	lis r31, lbl_805E5D30@ha
-/* 8037F5B8 00348B78  3B FF 5D 30 */	addi r31, r31, lbl_805E5D30@l
+/* 8037F5B4 00348B74  3F E0 80 5E */	lis r31, adxt_fssvr_enter_cnt@ha
+/* 8037F5B8 00348B78  3B FF 5D 30 */	addi r31, r31, adxt_fssvr_enter_cnt@l
 /* 8037F5BC 00348B7C  48 00 9E 41 */	bl ADXCRS_Lock
 /* 8037F5C0 00348B80  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8037F5C4 00348B84  2C 00 00 00 */	cmpwi r0, 0
@@ -75,6 +75,26 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805E5D30, global
-	.skip 0x18
-.endobj lbl_805E5D30
+.obj adxt_fssvr_enter_cnt, global
+	.skip 0x4
+.endobj adxt_fssvr_enter_cnt
+
+.obj adxt_fsst_enter_cnt, global
+	.skip 0x4
+.endobj adxt_fsst_enter_cnt
+
+.obj adxt_fs_svr_start_cb, local
+	.skip 0x4
+.endobj adxt_fs_svr_start_cb
+
+.obj adxt_fs_svr_start_cb_obj, local
+	.skip 0x4
+.endobj adxt_fs_svr_start_cb_obj
+
+.obj adxt_fs_svr_end_cb, local
+	.skip 0x4
+.endobj adxt_fs_svr_end_cb
+
+.obj adxt_fs_svr_end_cb_obj, local
+	.skip 0x4
+.endobj adxt_fs_svr_end_cb_obj

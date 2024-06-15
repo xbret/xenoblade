@@ -80,6 +80,7 @@ namespace cf{
 		virtual void CfObject_vtableFunc72();
 		virtual void CfObject_vtableFunc73();
 
-		void func_800BE898(int, u32, float, float); //not sure if belongs here?
+		//not sure if belongs here? (can be in any class from CObjectState to CfObjectMove)
+		void func_800BE898(int, u32, float, float);
 	};
 }

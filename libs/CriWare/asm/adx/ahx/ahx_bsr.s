@@ -123,7 +123,7 @@
 /* 8038D4B0 00356A70  4E 80 00 20 */	blr 
 .endfn AHXBSR_Restruct
 
-.fn ahxbsr_get_data, global
+.fn ahxbsr_get_data, local
 /* 8038D4B4 00356A74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D4B8 00356A78  7C 08 02 A6 */	mflr r0
 /* 8038D4BC 00356A7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -500,7 +500,7 @@
 
 .balign 8
 
-.obj ahxbsr_maxi_val, global
+.obj ahxbsr_maxi_val, local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003

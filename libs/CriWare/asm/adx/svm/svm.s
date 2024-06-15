@@ -7,8 +7,8 @@
 /* 803969A0 0035FF60  7C 08 02 A6 */	mflr r0
 /* 803969A4 0035FF64  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803969A8 0035FF68  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803969AC 0035FF6C  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 803969B0 0035FF70  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 803969AC 0035FF6C  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 803969B0 0035FF70  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 803969B4 0035FF74  81 9F 00 10 */	lwz r12, 0x10(r31)
 /* 803969B8 0035FF78  2C 0C 00 00 */	cmpwi r12, 0
 /* 803969BC 0035FF7C  41 82 00 34 */	beq .L_803969F0
@@ -38,8 +38,8 @@
 /* 80396A08 0035FFC8  7C 08 02 A6 */	mflr r0
 /* 80396A0C 0035FFCC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80396A10 0035FFD0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80396A14 0035FFD4  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80396A18 0035FFD8  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80396A14 0035FFD4  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80396A18 0035FFD8  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80396A1C 0035FFDC  80 1F 00 18 */	lwz r0, 0x18(r31)
 /* 80396A20 0035FFE0  2C 00 00 00 */	cmpwi r0, 0
 /* 80396A24 0035FFE4  41 82 00 5C */	beq .L_80396A80
@@ -93,10 +93,10 @@
 /* 80396ACC 0036008C  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_80396AD0:
 /* 80396AD0 00360090  90 81 00 0C */	stw r4, 0xc(r1)
-/* 80396AD4 00360094  3F E0 80 5F */	lis r31, lbl_805F5D50@ha
+/* 80396AD4 00360094  3F E0 80 5F */	lis r31, svmerr_msg@ha
 /* 80396AD8 00360098  38 80 00 00 */	li r4, 0
 /* 80396ADC 0036009C  90 61 00 08 */	stw r3, 8(r1)
-/* 80396AE0 003600A0  38 7F 5D 50 */	addi r3, r31, lbl_805F5D50@l
+/* 80396AE0 003600A0  38 7F 5D 50 */	addi r3, r31, svmerr_msg@l
 /* 80396AE4 003600A4  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 80396AE8 003600A8  38 A0 00 80 */	li r5, 0x80
 /* 80396AEC 003600AC  90 C1 00 14 */	stw r6, 0x14(r1)
@@ -112,16 +112,16 @@
 /* 80396B14 003600D4  38 C1 00 68 */	addi r6, r1, 0x68
 /* 80396B18 003600D8  7F C5 F3 78 */	mr r5, r30
 /* 80396B1C 003600DC  90 61 00 68 */	stw r3, 0x68(r1)
-/* 80396B20 003600E0  38 7F 5D 50 */	addi r3, r31, lbl_805F5D50@l
+/* 80396B20 003600E0  38 7F 5D 50 */	addi r3, r31, svmerr_msg@l
 /* 80396B24 003600E4  38 80 00 80 */	li r4, 0x80
 /* 80396B28 003600E8  90 01 00 70 */	stw r0, 0x70(r1)
 /* 80396B2C 003600EC  48 00 49 A9 */	bl criCrw_Vsprintf
-/* 80396B30 003600F0  3C 60 80 5F */	lis r3, lbl_805F5DD0@ha
-/* 80396B34 003600F4  81 83 5D D0 */	lwz r12, lbl_805F5DD0@l(r3)
+/* 80396B30 003600F0  3C 60 80 5F */	lis r3, svm_err_func@ha
+/* 80396B34 003600F4  81 83 5D D0 */	lwz r12, svm_err_func@l(r3)
 /* 80396B38 003600F8  2C 0C 00 00 */	cmpwi r12, 0
 /* 80396B3C 003600FC  41 82 00 18 */	beq .L_80396B54
-/* 80396B40 00360100  38 63 5D D0 */	addi r3, r3, lbl_805F5DD0@l
-/* 80396B44 00360104  38 9F 5D 50 */	addi r4, r31, lbl_805F5D50@l
+/* 80396B40 00360100  38 63 5D D0 */	addi r3, r3, svm_err_func@l
+/* 80396B44 00360104  38 9F 5D 50 */	addi r4, r31, svmerr_msg@l
 /* 80396B48 00360108  80 63 00 04 */	lwz r3, 4(r3)
 /* 80396B4C 0036010C  7D 89 03 A6 */	mtctr r12
 /* 80396B50 00360110  4E 80 04 21 */	bctrl 
@@ -141,27 +141,27 @@
 /* 80396B78 00360138  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80396B7C 0036013C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80396B80 00360140  40 82 00 24 */	bne .L_80396BA4
-/* 80396B84 00360144  3C 60 80 5F */	lis r3, lbl_805F5DD0@ha
+/* 80396B84 00360144  3C 60 80 5F */	lis r3, svm_err_func@ha
 /* 80396B88 00360148  38 80 00 00 */	li r4, 0
-/* 80396B8C 0036014C  81 83 5D D0 */	lwz r12, lbl_805F5DD0@l(r3)
-/* 80396B90 00360150  38 63 5D D0 */	addi r3, r3, lbl_805F5DD0@l
+/* 80396B8C 0036014C  81 83 5D D0 */	lwz r12, svm_err_func@l(r3)
+/* 80396B90 00360150  38 63 5D D0 */	addi r3, r3, svm_err_func@l
 /* 80396B94 00360154  80 63 00 04 */	lwz r3, 4(r3)
 /* 80396B98 00360158  7D 89 03 A6 */	mtctr r12
 /* 80396B9C 0036015C  4E 80 04 21 */	bctrl 
 /* 80396BA0 00360160  48 00 00 40 */	b .L_80396BE0
 .L_80396BA4:
-/* 80396BA4 00360164  3F E0 80 5F */	lis r31, lbl_805F5D50@ha
+/* 80396BA4 00360164  3F E0 80 5F */	lis r31, svmerr_msg@ha
 /* 80396BA8 00360168  7C 65 1B 78 */	mr r5, r3
-/* 80396BAC 0036016C  38 7F 5D 50 */	addi r3, r31, lbl_805F5D50@l
+/* 80396BAC 0036016C  38 7F 5D 50 */	addi r3, r31, svmerr_msg@l
 /* 80396BB0 00360170  38 80 00 80 */	li r4, 0x80
 /* 80396BB4 00360174  38 C0 00 7F */	li r6, 0x7f
 /* 80396BB8 00360178  48 00 48 6D */	bl criCrw_Strncpy
-/* 80396BBC 0036017C  3C 60 80 5F */	lis r3, lbl_805F5DD0@ha
-/* 80396BC0 00360180  81 83 5D D0 */	lwz r12, lbl_805F5DD0@l(r3)
+/* 80396BBC 0036017C  3C 60 80 5F */	lis r3, svm_err_func@ha
+/* 80396BC0 00360180  81 83 5D D0 */	lwz r12, svm_err_func@l(r3)
 /* 80396BC4 00360184  2C 0C 00 00 */	cmpwi r12, 0
 /* 80396BC8 00360188  41 82 00 18 */	beq .L_80396BE0
-/* 80396BCC 0036018C  38 63 5D D0 */	addi r3, r3, lbl_805F5DD0@l
-/* 80396BD0 00360190  38 9F 5D 50 */	addi r4, r31, lbl_805F5D50@l
+/* 80396BCC 0036018C  38 63 5D D0 */	addi r3, r3, svm_err_func@l
+/* 80396BD0 00360190  38 9F 5D 50 */	addi r4, r31, svmerr_msg@l
 /* 80396BD4 00360194  80 63 00 04 */	lwz r3, 4(r3)
 /* 80396BD8 00360198  7D 89 03 A6 */	mtctr r12
 /* 80396BDC 0036019C  4E 80 04 21 */	bctrl 
@@ -178,8 +178,8 @@
 /* 80396BF8 003601B8  7C 08 02 A6 */	mflr r0
 /* 80396BFC 003601BC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80396C00 003601C0  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 80396C04 003601C4  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80396C08 003601C8  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80396C04 003601C4  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80396C08 003601C8  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80396C0C 003601CC  7C 7B 1B 78 */	mr r27, r3
 /* 80396C10 003601D0  7C 9C 23 78 */	mr r28, r4
 /* 80396C14 003601D4  7C BD 2B 78 */	mr r29, r5
@@ -243,14 +243,14 @@
 /* 80396CE8 003602A8  4E 80 00 20 */	blr 
 .endfn SVM_SetCbSvrWithString
 
-.fn svm_SetCbSvr, global
+.fn svm_SetCbSvr, local
 /* 80396CEC 003602AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80396CF0 003602B0  7C 08 02 A6 */	mflr r0
 /* 80396CF4 003602B4  2C 03 00 00 */	cmpwi r3, 0
 /* 80396CF8 003602B8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80396CFC 003602BC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80396D00 003602C0  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80396D04 003602C4  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80396D00 003602C0  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80396D04 003602C4  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80396D08 003602C8  41 80 00 0C */	blt .L_80396D14
 /* 80396D0C 003602CC  2C 03 00 08 */	cmpwi r3, 8
 /* 80396D10 003602D0  41 80 00 68 */	blt .L_80396D78
@@ -351,8 +351,8 @@
 /* 80396E54 00360414  7C 08 02 A6 */	mflr r0
 /* 80396E58 00360418  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80396E5C 0036041C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80396E60 00360420  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80396E64 00360424  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80396E60 00360420  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80396E64 00360424  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80396E68 00360428  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80396E6C 0036042C  7C 9E 23 78 */	mr r30, r4
 /* 80396E70 00360430  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -489,8 +489,8 @@
 /* 80397040 00360600  7C 08 02 A6 */	mflr r0
 /* 80397044 00360604  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80397048 00360608  BF 41 00 08 */	stmw r26, 8(r1)
-/* 8039704C 0036060C  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80397050 00360610  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 8039704C 0036060C  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80397050 00360610  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397054 00360614  7C 7A 1B 78 */	mr r26, r3
 /* 80397058 00360618  7C 9B 23 78 */	mr r27, r4
 /* 8039705C 0036061C  7C BC 2B 78 */	mr r28, r5
@@ -554,17 +554,17 @@
 /* 80397130 003606F0  4E 80 00 20 */	blr 
 .endfn SVM_SetCbSvrIdWithString
 
-.fn svm_SetCbSvrId, global
+.fn svm_SetCbSvrId, local
 /* 80397134 003606F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80397138 003606F8  7C 08 02 A6 */	mflr r0
 /* 8039713C 003606FC  2C 04 00 00 */	cmpwi r4, 0
 /* 80397140 00360700  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80397144 00360704  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 80397148 00360708  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
+/* 80397148 00360708  3F E0 80 5F */	lis r31, svm_init_level@ha
 /* 8039714C 0036070C  7C BB 2B 78 */	mr r27, r5
 /* 80397150 00360710  7C DC 33 78 */	mr r28, r6
 /* 80397154 00360714  7C FD 3B 78 */	mr r29, r7
-/* 80397158 00360718  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397158 00360718  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 8039715C 0036071C  41 80 00 0C */	blt .L_80397168
 /* 80397160 00360720  2C 04 00 06 */	cmpwi r4, 6
 /* 80397164 00360724  41 80 00 64 */	blt .L_803971C8
@@ -683,8 +683,8 @@
 /* 803972F4 003608B4  7C 08 02 A6 */	mflr r0
 /* 803972F8 003608B8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803972FC 003608BC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80397300 003608C0  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80397304 003608C4  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397300 003608C0  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80397304 003608C4  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397308 003608C8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8039730C 003608CC  7C BE 2B 78 */	mr r30, r5
 /* 80397310 003608D0  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -752,9 +752,9 @@
 .endfn SVM_SetCbBdr
 
 .fn SVM_GotoSvrBorder, global
-/* 803973F4 003609B4  3C 80 80 5F */	lis r4, lbl_805F6018@ha
+/* 803973F4 003609B4  3C 80 80 5F */	lis r4, svm_goto_border_func@ha
 /* 803973F8 003609B8  54 60 18 38 */	slwi r0, r3, 3
-/* 803973FC 003609BC  38 84 60 18 */	addi r4, r4, lbl_805F6018@l
+/* 803973FC 003609BC  38 84 60 18 */	addi r4, r4, svm_goto_border_func@l
 /* 80397400 003609C0  7D 84 00 2E */	lwzx r12, r4, r0
 /* 80397404 003609C4  2C 0C 00 00 */	cmpwi r12, 0
 /* 80397408 003609C8  4D 82 00 20 */	beqlr 
@@ -770,8 +770,8 @@
 /* 80397424 003609E4  7C 08 02 A6 */	mflr r0
 /* 80397428 003609E8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8039742C 003609EC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80397430 003609F0  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80397434 003609F4  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397430 003609F0  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80397434 003609F4  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397438 003609F8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8039743C 003609FC  7C 9E 23 78 */	mr r30, r4
 /* 80397440 00360A00  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -834,17 +834,17 @@
 .endfn SVM_SetCbErr
 
 .fn SVM_SetCbLock, global
-/* 80397510 00360AD0  3C C0 80 5F */	lis r6, lbl_805F5D40@ha
-/* 80397514 00360AD4  38 A6 5D 40 */	addi r5, r6, lbl_805F5D40@l
-/* 80397518 00360AD8  90 66 5D 40 */	stw r3, lbl_805F5D40@l(r6)
+/* 80397510 00360AD0  3C C0 80 5F */	lis r6, svm_lock_func@ha
+/* 80397514 00360AD4  38 A6 5D 40 */	addi r5, r6, svm_lock_func@l
+/* 80397518 00360AD8  90 66 5D 40 */	stw r3, svm_lock_func@l(r6)
 /* 8039751C 00360ADC  90 85 00 04 */	stw r4, 4(r5)
 /* 80397520 00360AE0  4E 80 00 20 */	blr 
 .endfn SVM_SetCbLock
 
 .fn SVM_SetCbUnlock, global
-/* 80397524 00360AE4  3C C0 80 5F */	lis r6, lbl_805F5D48@ha
-/* 80397528 00360AE8  38 A6 5D 48 */	addi r5, r6, lbl_805F5D48@l
-/* 8039752C 00360AEC  90 66 5D 48 */	stw r3, lbl_805F5D48@l(r6)
+/* 80397524 00360AE4  3C C0 80 5F */	lis r6, svm_unlock_func@ha
+/* 80397528 00360AE8  38 A6 5D 48 */	addi r5, r6, svm_unlock_func@l
+/* 8039752C 00360AEC  90 66 5D 48 */	stw r3, svm_unlock_func@l(r6)
 /* 80397530 00360AF0  90 85 00 04 */	stw r4, 4(r5)
 /* 80397534 00360AF4  4E 80 00 20 */	blr 
 .endfn SVM_SetCbUnlock
@@ -854,8 +854,8 @@
 /* 8039753C 00360AFC  7C 08 02 A6 */	mflr r0
 /* 80397540 00360B00  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80397544 00360B04  BF 21 00 14 */	stmw r25, 0x14(r1)
-/* 80397548 00360B08  3F 80 80 5F */	lis r28, lbl_805F5D30@ha
-/* 8039754C 00360B0C  3B 9C 5D 30 */	addi r28, r28, lbl_805F5D30@l
+/* 80397548 00360B08  3F 80 80 5F */	lis r28, svm_init_level@ha
+/* 8039754C 00360B0C  3B 9C 5D 30 */	addi r28, r28, svm_init_level@l
 /* 80397550 00360B10  3B 60 00 00 */	li r27, 0
 /* 80397554 00360B14  38 7C 00 A8 */	addi r3, r28, 0xa8
 /* 80397558 00360B18  3B 40 00 00 */	li r26, 0
@@ -895,8 +895,8 @@
 /* 803975CC 00360B8C  7C 08 02 A6 */	mflr r0
 /* 803975D0 00360B90  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803975D4 00360B94  BF 21 00 14 */	stmw r25, 0x14(r1)
-/* 803975D8 00360B98  3F 80 80 5F */	lis r28, lbl_805F5D30@ha
-/* 803975DC 00360B9C  3B 9C 5D 30 */	addi r28, r28, lbl_805F5D30@l
+/* 803975D8 00360B98  3F 80 80 5F */	lis r28, svm_init_level@ha
+/* 803975DC 00360B9C  3B 9C 5D 30 */	addi r28, r28, svm_init_level@l
 /* 803975E0 00360BA0  3B 60 00 00 */	li r27, 0
 /* 803975E4 00360BA4  38 7C 00 A8 */	addi r3, r28, 0xa8
 /* 803975E8 00360BA8  3B 40 00 00 */	li r26, 0
@@ -936,8 +936,8 @@
 /* 8039765C 00360C1C  7C 08 02 A6 */	mflr r0
 /* 80397660 00360C20  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80397664 00360C24  BF 21 00 14 */	stmw r25, 0x14(r1)
-/* 80397668 00360C28  3F 80 80 5F */	lis r28, lbl_805F5D30@ha
-/* 8039766C 00360C2C  3B 9C 5D 30 */	addi r28, r28, lbl_805F5D30@l
+/* 80397668 00360C28  3F 80 80 5F */	lis r28, svm_init_level@ha
+/* 8039766C 00360C2C  3B 9C 5D 30 */	addi r28, r28, svm_init_level@l
 /* 80397670 00360C30  3B 60 00 00 */	li r27, 0
 /* 80397674 00360C34  38 7C 00 A8 */	addi r3, r28, 0xa8
 /* 80397678 00360C38  3B 40 00 00 */	li r26, 0
@@ -977,8 +977,8 @@
 /* 803976EC 00360CAC  7C 08 02 A6 */	mflr r0
 /* 803976F0 00360CB0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803976F4 00360CB4  BF 21 00 14 */	stmw r25, 0x14(r1)
-/* 803976F8 00360CB8  3F 80 80 5F */	lis r28, lbl_805F5D30@ha
-/* 803976FC 00360CBC  3B 9C 5D 30 */	addi r28, r28, lbl_805F5D30@l
+/* 803976F8 00360CB8  3F 80 80 5F */	lis r28, svm_init_level@ha
+/* 803976FC 00360CBC  3B 9C 5D 30 */	addi r28, r28, svm_init_level@l
 /* 80397700 00360CC0  3B 60 00 00 */	li r27, 0
 /* 80397704 00360CC4  38 7C 00 A8 */	addi r3, r28, 0xa8
 /* 80397708 00360CC8  3B 40 00 00 */	li r26, 0
@@ -1018,8 +1018,8 @@
 /* 8039777C 00360D3C  7C 08 02 A6 */	mflr r0
 /* 80397780 00360D40  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80397784 00360D44  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80397788 00360D48  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 8039778C 00360D4C  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397788 00360D48  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 8039778C 00360D4C  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397790 00360D50  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80397794 00360D54  2C 00 00 00 */	cmpwi r0, 0
 /* 80397798 00360D58  40 82 00 78 */	bne .L_80397810
@@ -1068,8 +1068,8 @@
 /* 80397834 00360DF4  7C 08 02 A6 */	mflr r0
 /* 80397838 00360DF8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039783C 00360DFC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80397840 00360E00  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 80397844 00360E04  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397840 00360E00  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 80397844 00360E04  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397848 00360E08  80 7F 00 00 */	lwz r3, 0(r31)
 /* 8039784C 00360E0C  38 03 FF FF */	addi r0, r3, -1
 /* 80397850 00360E10  90 1F 00 00 */	stw r0, 0(r31)
@@ -1122,8 +1122,8 @@
 /* 803978FC 00360EBC  7C 08 02 A6 */	mflr r0
 /* 80397900 00360EC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80397904 00360EC4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80397908 00360EC8  3F E0 80 5F */	lis r31, lbl_805F5D30@ha
-/* 8039790C 00360ECC  3B FF 5D 30 */	addi r31, r31, lbl_805F5D30@l
+/* 80397908 00360EC8  3F E0 80 5F */	lis r31, svm_init_level@ha
+/* 8039790C 00360ECC  3B FF 5D 30 */	addi r31, r31, svm_init_level@l
 /* 80397910 00360ED0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80397914 00360ED4  7C 7E 1B 78 */	mr r30, r3
 /* 80397918 00360ED8  81 9F 03 78 */	lwz r12, 0x378(r31)
@@ -1216,32 +1216,62 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.balign 8
+.obj svm_init_level, global
+	.skip 0x4
+.endobj svm_init_level
 
-.obj lbl_805F5D30, global
-	.skip 0x10
-.endobj lbl_805F5D30
+.obj svm_lock_level, global
+	.skip 0x4
+.endobj svm_lock_level
 
-.obj lbl_805F5D40, global
+.obj svm_locking_type, global
+	.skip 0x4
+.endobj svm_locking_type
+
+.skip 0x4
+
+.obj svm_lock_func, local
 	.skip 0x8
-.endobj lbl_805F5D40
+.endobj svm_lock_func
 
-.obj lbl_805F5D48, global
+.obj svm_unlock_func, local
 	.skip 0x8
-.endobj lbl_805F5D48
+.endobj svm_unlock_func
 
-.obj lbl_805F5D50, global
+.obj svmerr_msg, global
 	.skip 0x80
-.endobj lbl_805F5D50
+.endobj svmerr_msg
 
-.obj lbl_805F5DD0, global
-	.skip 0x248
-.endobj lbl_805F5DD0
-
-.obj lbl_805F6018, global
-	.skip 0x98
-.endobj lbl_805F6018
-
-.obj lbl_805F60B0, global
+.obj svm_err_func, local
 	.skip 0x8
-.endobj lbl_805F60B0
+.endobj svm_err_func
+
+.obj svm_svr_ftbl, local
+	.skip 0x240
+.endobj svm_svr_ftbl
+
+.obj svm_goto_border_func, local
+	.skip 0x40
+.endobj svm_goto_border_func
+
+.obj svm_svr_exec_flag, global
+	.skip 0x20
+.endobj svm_svr_exec_flag
+
+.obj svm_exec_cnt, global
+	.skip 0x20
+.endobj svm_exec_cnt
+
+.obj svm_pre_waitv_func, local
+	.skip 0x8
+.endobj svm_pre_waitv_func
+
+.obj svm_post_waitv_func, local
+	.skip 0x8
+.endobj svm_post_waitv_func
+
+.obj svm_tas_fptr, local
+	.skip 0x4
+.endobj svm_tas_fptr
+
+.skip 0x4

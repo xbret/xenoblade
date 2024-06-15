@@ -168,7 +168,7 @@
 /* 803BEF6C 0038852C  4E 80 00 20 */	blr 
 .endfn SFBUF_InitHn
 
-.fn sfbuf_InitRingSj, global
+.fn sfbuf_InitRingSj, local
 /* 803BEF70 00388530  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803BEF74 00388534  7C 08 02 A6 */	mflr r0
 /* 803BEF78 00388538  54 C8 10 3A */	slwi r8, r6, 2
@@ -324,7 +324,7 @@
 /* 803BF19C 0038875C  4E 80 00 20 */	blr 
 .endfn SFBUF_DestroySj
 
-.fn sfbuf_InitVfrmBuf, global
+.fn sfbuf_InitVfrmBuf, local
 /* 803BF1A0 00388760  1D 27 00 74 */	mulli r9, r7, 0x74
 /* 803BF1A4 00388764  54 EA 10 3A */	slwi r10, r7, 2
 /* 803BF1A8 00388768  7D 06 50 2E */	lwzx r8, r6, r10
@@ -383,7 +383,7 @@
 /* 803BF27C 0038883C  4E 80 00 20 */	blr 
 .endfn sfbuf_InitVfrmBuf
 
-.fn sfbuf_InitAringBuf, global
+.fn sfbuf_InitAringBuf, local
 /* 803BF280 00388840  1D 06 00 74 */	mulli r8, r6, 0x74
 /* 803BF284 00388844  54 C9 10 3A */	slwi r9, r6, 2
 /* 803BF288 00388848  7C E5 48 2E */	lwzx r7, r5, r9
@@ -582,7 +582,7 @@
 /* 803BF524 00388AE4  48 00 00 04 */	b sfbuf_RingGetSub
 .endfn SFBUF_RingGetRead
 
-.fn sfbuf_RingGetSub, global
+.fn sfbuf_RingGetSub, local
 /* 803BF528 00388AE8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BF52C 00388AEC  7C 08 02 A6 */	mflr r0
 /* 803BF530 00388AF0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -682,7 +682,7 @@
 /* 803BF67C 00388C3C  48 00 00 04 */	b sfbuf_RingAddSub
 .endfn SFBUF_RingAddRead
 
-.fn sfbuf_RingAddSub, global
+.fn sfbuf_RingAddSub, local
 /* 803BF680 00388C40  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BF684 00388C44  7C 08 02 A6 */	mflr r0
 /* 803BF688 00388C48  2C 05 00 00 */	cmpwi r5, 0
@@ -1179,26 +1179,12 @@
 /* 803BFD1C 003892DC  4E 80 00 20 */	blr 
 .endfn SFBUF_UpdateFlowCnt
 
-
-.fn func_803BFD20, global
-/* 803BFD20 003892E0  3C 80 80 61 */	lis r4, lbl_8060A2D0@ha
-/* 803BFD24 003892E4  80 64 A2 D0 */	lwz r3, lbl_8060A2D0@l(r4)
-/* 803BFD28 003892E8  38 03 00 01 */	addi r0, r3, 1
-/* 803BFD2C 003892EC  90 04 A2 D0 */	stw r0, lbl_8060A2D0@l(r4)
-/* 803BFD30 003892F0  80 04 A2 D0 */	lwz r0, lbl_8060A2D0@l(r4)
-/* 803BFD34 003892F4  4E 80 00 20 */	blr 
-.endfn func_803BFD20
-
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj sfbuf_sjrbf_uuid, global
+.obj sfbuf_sjrbf_uuid, local
 	.skip 0x4
 .endobj sfbuf_sjrbf_uuid
 
-.obj sfbuf_sjmem_uuid, global
+.obj sfbuf_sjmem_uuid, local
 	.skip 0x4
 .endobj sfbuf_sjmem_uuid
-
-.obj lbl_8060A2D0, global
-	.skip 0x8
-.endobj lbl_8060A2D0

@@ -84,7 +84,7 @@
 /* 8039CF90 00366550  4E 80 00 20 */	blr 
 .endfn mwPlyEntryFname
 
-.fn func_8039CF94, global
+.fn mwPlyStartSeamless, global
 /* 8039CF94 00366554  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039CF98 00366558  7C 08 02 A6 */	mflr r0
 /* 8039CF9C 0036655C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -129,7 +129,7 @@
 .L_8039D02C:
 /* 8039D02C 003665EC  80 9F 04 F4 */	lwz r4, 0x4f4(r31)
 /* 8039D030 003665F0  7F E3 FB 78 */	mr r3, r31
-/* 8039D034 003665F4  48 00 47 BD */	bl func_803A17F0
+/* 8039D034 003665F4  48 00 47 BD */	bl mwPlyStartSj
 /* 8039D038 003665F8  7F E3 FB 78 */	mr r3, r31
 /* 8039D03C 003665FC  48 00 4B 89 */	bl MWSFPLY_SetFlowLimit
 /* 8039D040 00366600  80 7F 00 54 */	lwz r3, 0x54(r31)
@@ -143,7 +143,7 @@
 /* 8039D060 00366620  4E 80 04 21 */	bctrl 
 .L_8039D064:
 /* 8039D064 00366624  7F E3 FB 78 */	mr r3, r31
-/* 8039D068 00366628  48 00 20 D9 */	bl func_8039F140
+/* 8039D068 00366628  48 00 20 D9 */	bl MWSFCRE_SetSupplySj
 /* 8039D06C 0036662C  38 00 00 00 */	li r0, 0
 /* 8039D070 00366630  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 8039D074 00366634  90 1F 06 28 */	stw r0, 0x628(r31)
@@ -163,9 +163,9 @@
 /* 8039D0A8 00366668  7C 08 03 A6 */	mtlr r0
 /* 8039D0AC 0036666C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039D0B0 00366670  4E 80 00 20 */	blr 
-.endfn func_8039CF94
+.endfn mwPlyStartSeamless
 
-.fn func_8039D0B4, global
+.fn criware_8039D0B4, global
 /* 8039D0B4 00366674  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D0B8 00366678  7C 08 02 A6 */	mflr r0
 /* 8039D0BC 0036667C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -217,9 +217,9 @@
 /* 8039D168 00366728  7C 08 03 A6 */	mtlr r0
 /* 8039D16C 0036672C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D170 00366730  4E 80 00 20 */	blr 
-.endfn func_8039D0B4
+.endfn criware_8039D0B4
 
-.fn func_8039D174, global
+.fn mwPlyStartFnameLp, global
 /* 8039D174 00366734  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D178 00366738  7C 08 02 A6 */	mflr r0
 /* 8039D17C 0036673C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -262,7 +262,7 @@
 .L_8039D208:
 /* 8039D208 003667C8  7F C3 F3 78 */	mr r3, r30
 /* 8039D20C 003667CC  7F E4 FB 78 */	mr r4, r31
-/* 8039D210 003667D0  48 00 4A 79 */	bl func_803A1C88
+/* 8039D210 003667D0  48 00 4A 79 */	bl criware_803A1C88
 /* 8039D214 003667D4  80 1E 00 08 */	lwz r0, 8(r30)
 /* 8039D218 003667D8  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8039D21C 003667DC  41 82 00 DC */	beq .L_8039D2F8
@@ -315,7 +315,7 @@
 /* 8039D2D0 00366890  4E 80 04 21 */	bctrl 
 .L_8039D2D4:
 /* 8039D2D4 00366894  7F C3 F3 78 */	mr r3, r30
-/* 8039D2D8 00366898  4B FF FC BD */	bl func_8039CF94
+/* 8039D2D8 00366898  4B FF FC BD */	bl mwPlyStartSeamless
 /* 8039D2DC 0036689C  80 1E 06 34 */	lwz r0, 0x634(r30)
 /* 8039D2E0 003668A0  38 60 00 01 */	li r3, 1
 /* 8039D2E4 003668A4  90 7E 06 38 */	stw r3, 0x638(r30)
@@ -342,9 +342,9 @@
 /* 8039D330 003668F0  7C 08 03 A6 */	mtlr r0
 /* 8039D334 003668F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D338 003668F8  4E 80 00 20 */	blr 
-.endfn func_8039D174
+.endfn mwPlyStartFnameLp
 
-.fn mwPlyEntryFnameRange, global
+.fn mwPlyStartFnameRangeLp, global
 /* 8039D33C 003668FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D340 00366900  7C 08 02 A6 */	mflr r0
 /* 8039D344 00366904  90 01 00 24 */	stw r0, 0x24(r1)
@@ -368,7 +368,7 @@
 .L_8039D38C:
 /* 8039D38C 0036694C  7F E3 FB 78 */	mr r3, r31
 /* 8039D390 00366950  7F C4 F3 78 */	mr r4, r30
-/* 8039D394 00366954  48 00 48 F5 */	bl func_803A1C88
+/* 8039D394 00366954  48 00 48 F5 */	bl criware_803A1C88
 /* 8039D398 00366958  80 7F 00 54 */	lwz r3, 0x54(r31)
 /* 8039D39C 0036695C  4B FF 50 E1 */	bl LSC_Stop
 /* 8039D3A0 00366960  83 DF 04 D8 */	lwz r30, 0x4d8(r31)
@@ -434,7 +434,7 @@
 /* 8039D480 00366A40  4E 80 04 21 */	bctrl 
 .L_8039D484:
 /* 8039D484 00366A44  7F E3 FB 78 */	mr r3, r31
-/* 8039D488 00366A48  4B FF FB 0D */	bl func_8039CF94
+/* 8039D488 00366A48  4B FF FB 0D */	bl mwPlyStartSeamless
 /* 8039D48C 00366A4C  80 1F 06 34 */	lwz r0, 0x634(r31)
 /* 8039D490 00366A50  38 80 00 03 */	li r4, 3
 /* 8039D494 00366A54  38 60 00 01 */	li r3, 1
@@ -454,7 +454,7 @@
 /* 8039D4C8 00366A88  7C 08 03 A6 */	mtlr r0
 /* 8039D4CC 00366A8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D4D0 00366A90  4E 80 00 20 */	blr 
-.endfn mwPlyEntryFnameRange
+.endfn mwPlyStartFnameRangeLp
 
 .fn MWSFLSC_IsFsStatErr, global
 /* 8039D4D4 00366A94  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -486,7 +486,7 @@
 /* 8039D524 00366AE4  4E 80 00 20 */	blr 
 .endfn MWSFLSC_Pause
 
-.fn func_8039D528, global
+.fn mwPlyLinkStm, global
 /* 8039D528 00366AE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039D52C 00366AEC  7C 08 02 A6 */	mflr r0
 /* 8039D530 00366AF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -520,7 +520,7 @@
 /* 8039D594 00366B54  7C 08 03 A6 */	mtlr r0
 /* 8039D598 00366B58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039D59C 00366B5C  4E 80 00 20 */	blr 
-.endfn func_8039D528
+.endfn mwPlyLinkStm
 
 .fn mwPlyExecInfiniteLoopHandle, global
 /* 8039D5A0 00366B60  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -588,13 +588,13 @@
 /* 8039D68C 00366C4C  28 00 00 01 */	cmplwi r0, 1
 /* 8039D690 00366C50  41 81 04 70 */	bgt .L_8039DB00
 /* 8039D694 00366C54  7F A3 EB 78 */	mr r3, r29
-/* 8039D698 00366C58  48 00 48 45 */	bl func_803A1EDC
+/* 8039D698 00366C58  48 00 48 45 */	bl mwPlyGetRareStat
 /* 8039D69C 00366C5C  2C 03 00 03 */	cmpwi r3, 3
 /* 8039D6A0 00366C60  40 82 02 18 */	bne .L_8039D8B8
 /* 8039D6A4 00366C64  7F A3 EB 78 */	mr r3, r29
 /* 8039D6A8 00366C68  38 81 00 14 */	addi r4, r1, 0x14
 /* 8039D6AC 00366C6C  38 A1 00 18 */	addi r5, r1, 0x18
-/* 8039D6B0 00366C70  48 00 49 75 */	bl func_803A2024
+/* 8039D6B0 00366C70  48 00 49 75 */	bl mwPlyGetTime
 /* 8039D6B4 00366C74  80 1D 06 38 */	lwz r0, 0x638(r29)
 /* 8039D6B8 00366C78  38 60 00 01 */	li r3, 1
 /* 8039D6BC 00366C7C  90 7D 06 34 */	stw r3, 0x634(r29)
@@ -611,7 +611,7 @@
 .L_8039D6E4:
 /* 8039D6E4 00366CA4  80 9D 04 D8 */	lwz r4, 0x4d8(r29)
 /* 8039D6E8 00366CA8  7F A3 EB 78 */	mr r3, r29
-/* 8039D6EC 00366CAC  4B FF FA 89 */	bl func_8039D174
+/* 8039D6EC 00366CAC  4B FF FA 89 */	bl mwPlyStartFnameLp
 /* 8039D6F0 00366CB0  48 00 01 B4 */	b .L_8039D8A4
 .L_8039D6F4:
 /* 8039D6F4 00366CB4  83 FD 06 44 */	lwz r31, 0x644(r29)
@@ -712,7 +712,7 @@
 /* 8039D858 00366E18  4E 80 04 21 */	bctrl 
 .L_8039D85C:
 /* 8039D85C 00366E1C  7F A3 EB 78 */	mr r3, r29
-/* 8039D860 00366E20  4B FF F7 35 */	bl func_8039CF94
+/* 8039D860 00366E20  4B FF F7 35 */	bl mwPlyStartSeamless
 /* 8039D864 00366E24  80 1D 06 34 */	lwz r0, 0x634(r29)
 /* 8039D868 00366E28  38 80 00 02 */	li r4, 2
 /* 8039D86C 00366E2C  38 60 00 01 */	li r3, 1
@@ -729,7 +729,7 @@
 /* 8039D894 00366E54  7F A3 EB 78 */	mr r3, r29
 /* 8039D898 00366E58  80 BD 06 48 */	lwz r5, 0x648(r29)
 /* 8039D89C 00366E5C  80 DD 06 4C */	lwz r6, 0x64c(r29)
-/* 8039D8A0 00366E60  4B FF FA 9D */	bl mwPlyEntryFnameRange
+/* 8039D8A0 00366E60  4B FF FA 9D */	bl mwPlyStartFnameRangeLp
 .L_8039D8A4:
 /* 8039D8A4 00366E64  80 7D 06 54 */	lwz r3, 0x654(r29)
 /* 8039D8A8 00366E68  38 00 00 00 */	li r0, 0
@@ -740,7 +740,7 @@
 /* 8039D8B8 00366E78  7F A3 EB 78 */	mr r3, r29
 /* 8039D8BC 00366E7C  38 81 00 08 */	addi r4, r1, 8
 /* 8039D8C0 00366E80  38 A1 00 0C */	addi r5, r1, 0xc
-/* 8039D8C4 00366E84  48 00 47 61 */	bl func_803A2024
+/* 8039D8C4 00366E84  48 00 47 61 */	bl mwPlyGetTime
 /* 8039D8C8 00366E88  80 61 00 08 */	lwz r3, 8(r1)
 /* 8039D8CC 00366E8C  3C 80 10 62 */	lis r4, 0x10624DD3@ha
 /* 8039D8D0 00366E90  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -911,24 +911,24 @@
 .balign 8
 
 .obj mwsfdsl_strpool, global
-	.asciz "E1122633 mwPlyEntryFname: handle is invalid."
-	.asciz "E10915B mwPlyEntryFname: fname is NULL."
-	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'"
-	.asciz "E1122634 mwPlyStartSeamless: handle is invalid."
-	.asciz "E1122642 mwPlyLinkStm: handle is invalid."
-	.asciz "E1122641 mwPlySetLpFlg: handle is invalid."
-	.asciz "E1122630 mwPlyStartFnameLp: handle is invalid."
-	.asciz "E10915A mwPlyStartFnameLp: fname is NULL."
-	.asciz "E1122631 mwPlyReleaseLp: handle is invalid."
-	.asciz "E1122635 mwPlyReleaseSeamless: handle is invalid."
-	.asciz "E1122636 mwPlyEntryAfs: handle is invalid."
-	.asciz "E008311 mwPlyEntryAfs: can't entry pid=%d fid=%d"
-	.asciz "E1122632 mwPlyStartAfsLp: handle is invalid."
-	.asciz "E407023 mwPlyEntryFnameRange: handle is invalid."
-	.asciz "E407024 mwPlyStartFnameRangeLp: handle is invalid."
-	.asciz "E1122637 mwPlyGetSlFname: handle is invalid."
-	.asciz "E10821B : Invalid value of stm_no : %d"
-	.asciz "%08x.%08x"
-	.asciz "E05080801 framerate of movie is invalid."
+	.asciz "E1122633 mwPlyEntryFname: handle is invalid." #0x0
+	.asciz "E10915B mwPlyEntryFname: fname is NULL." #0x2D
+	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'" #0x55
+	.asciz "E1122634 mwPlyStartSeamless: handle is invalid." #0x84
+	.asciz "E1122642 mwPlyLinkStm: handle is invalid." #0xB4
+	.asciz "E1122641 mwPlySetLpFlg: handle is invalid." #0xDE
+	.asciz "E1122630 mwPlyStartFnameLp: handle is invalid." #0x109
+	.asciz "E10915A mwPlyStartFnameLp: fname is NULL." #0x138
+	.asciz "E1122631 mwPlyReleaseLp: handle is invalid." #0x162
+	.asciz "E1122635 mwPlyReleaseSeamless: handle is invalid." #0x18E
+	.asciz "E1122636 mwPlyEntryAfs: handle is invalid." #0x1C0
+	.asciz "E008311 mwPlyEntryAfs: can't entry pid=%d fid=%d" #0x1EB
+	.asciz "E1122632 mwPlyStartAfsLp: handle is invalid." #0x21C
+	.asciz "E407023 mwPlyEntryFnameRange: handle is invalid." #0x249
+	.asciz "E407024 mwPlyStartFnameRangeLp: handle is invalid." #0x27A
+	.asciz "E1122637 mwPlyGetSlFname: handle is invalid." #0x2AD
+	.asciz "E10821B : Invalid value of stm_no : %d" #0x2DA
+	.asciz "%08x.%08x" #0x301
+	.asciz "E05080801 framerate of movie is invalid." #0x30B
 	.4byte 0
 .endobj mwsfdsl_strpool

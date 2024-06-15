@@ -8,7 +8,7 @@
 /* 800BFC98 00089258  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BFC9C 0008925C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BFCA0 00089260  7C 7F 1B 78 */	mr r31, r3
-/* 800BFCA4 00089264  48 0B 01 C5 */	bl __ct__cf_CfObjectActor
+/* 800BFCA4 00089264  48 0B 01 C5 */	bl __ct__Q22cf13CfObjectActorFv
 /* 800BFCA8 00089268  3C A0 80 53 */	lis r5, __vt__Q22cf10CfObjectPc@ha
 /* 800BFCAC 0008926C  38 A5 D5 70 */	addi r5, r5, __vt__Q22cf10CfObjectPc@l
 /* 800BFCB0 00089270  90 BF 00 00 */	stw r5, 0(r31)

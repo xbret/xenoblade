@@ -9,8 +9,8 @@
 /* 803CF0F4 003986B4  38 A0 01 D0 */	li r5, 0x1d0
 /* 803CF0F8 003986B8  90 01 01 34 */	stw r0, 0x134(r1)
 /* 803CF0FC 003986BC  93 E1 01 2C */	stw r31, 0x12c(r1)
-/* 803CF100 003986C0  3F E0 80 62 */	lis r31, lbl_8061CE08@ha
-/* 803CF104 003986C4  3B FF CE 08 */	addi r31, r31, lbl_8061CE08@l
+/* 803CF100 003986C0  3F E0 80 62 */	lis r31, sftst_debout_siz@ha
+/* 803CF104 003986C4  3B FF CE 08 */	addi r31, r31, sftst_debout_siz@l
 /* 803CF108 003986C8  93 C1 01 28 */	stw r30, 0x128(r1)
 /* 803CF10C 003986CC  93 A1 01 24 */	stw r29, 0x124(r1)
 /* 803CF110 003986D0  93 81 01 20 */	stw r28, 0x120(r1)
@@ -297,16 +297,16 @@
 /* 803CF4DC 00398A9C  4E 80 00 20 */	blr 
 .endfn SFTST_Calc
 
-.fn sftst_CalcSub, global
+.fn sftst_CalcSub, local
 /* 803CF4E0 00398AA0  94 21 FE 60 */	stwu r1, -0x1a0(r1)
 /* 803CF4E4 00398AA4  7C 08 02 A6 */	mflr r0
 /* 803CF4E8 00398AA8  90 01 01 A4 */	stw r0, 0x1a4(r1)
 /* 803CF4EC 00398AAC  BE 81 01 70 */	stmw r20, 0x170(r1)
-/* 803CF4F0 00398AB0  3F A0 80 62 */	lis r29, lbl_8061CE08@ha
+/* 803CF4F0 00398AB0  3F A0 80 62 */	lis r29, sftst_debout_siz@ha
 /* 803CF4F4 00398AB4  7C 76 1B 78 */	mr r22, r3
 /* 803CF4F8 00398AB8  7C 97 23 78 */	mr r23, r4
 /* 803CF4FC 00398ABC  7C D8 33 78 */	mr r24, r6
-/* 803CF500 00398AC0  3B BD CE 08 */	addi r29, r29, lbl_8061CE08@l
+/* 803CF500 00398AC0  3B BD CE 08 */	addi r29, r29, sftst_debout_siz@l
 /* 803CF504 00398AC4  80 05 00 0C */	lwz r0, 0xc(r5)
 /* 803CF508 00398AC8  80 E5 00 08 */	lwz r7, 8(r5)
 /* 803CF50C 00398ACC  68 00 00 01 */	xori r0, r0, 1
@@ -1075,7 +1075,6 @@
 
 .balign 8
 
-
 .obj lbl_805206E8, global
 	.asciz "%p, %ld, %ld, 0x%08lX%08lX, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld \n"
 	.balign 4
@@ -1085,7 +1084,6 @@
 
 .balign 8
 
-
 .obj lbl_8056C610, global
 	.asciz "tst, help_time_sec, help_time_msec, help_time_64, help_time, mt_max, master_time, out_time,  mt_ot, mtmax_ot,  diff_l_max, diff_l_min, diff_a_max, tst->diff_a_min, pastat, adjmode, resethist, excesserr, adj_limit, adj_front, adj_rear,  movave_1st, movave_2nd,  adxt_stat \n\n"
 	.balign 4
@@ -1094,6 +1092,24 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_8061CE08, global
-	.skip 0x18
-.endobj lbl_8061CE08
+.obj sftst_debout_siz, global
+	.skip 0x4
+.endobj sftst_debout_siz
+
+.obj sftst_debout_buf, global
+	.skip 0x4
+.endobj sftst_debout_buf
+
+.obj sftst_debout_write, global
+	.skip 0x4
+.endobj sftst_debout_write
+
+.obj sftst_debout_round, global
+	.skip 0x4
+.endobj sftst_debout_round
+
+.obj sftst_last, global
+	.skip 0x4
+.endobj sftst_last
+
+.skip 0x4

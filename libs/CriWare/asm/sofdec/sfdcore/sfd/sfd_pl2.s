@@ -287,7 +287,7 @@
 /* 803C8F94 00392554  4E 80 00 20 */	blr 
 .endfn SFPL2_Standby
 
-.fn func_803C8F98, global
+.fn SFD_SetSpeedRational, global
 /* 803C8F98 00392558  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8F9C 0039255C  7C 08 02 A6 */	mflr r0
 /* 803C8FA0 00392560  90 01 00 24 */	stw r0, 0x24(r1)
@@ -323,4 +323,4 @@
 /* 803C9010 003925D0  7C 08 03 A6 */	mtlr r0
 /* 803C9014 003925D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C9018 003925D8  4E 80 00 20 */	blr 
-.endfn func_803C8F98
+.endfn SFD_SetSpeedRational

@@ -8,13 +8,6 @@
 namespace cf{
 	class CActorParam : public CActorState, public CBattleState, public CDebugState{
 	public:
-		//vtable 2 (CBattleState)
-		//virtual void CBattleState_virtualFunc1();
-		//virtual void CBattleState_virtualFunc2();
-		//virtual void CBattleState_virtualFunc3();
-		//virtual void CBattleState_virtualFunc17();
-		//virtual void CBattleState_virtualFunc18();
-		//vtable 2 (CActorParam)
 		virtual void CActorParam_vtableFunc1();
 		virtual void CActorParam_vtableFunc2();
 		virtual void CActorParam_vtableFunc3();
@@ -152,7 +145,7 @@ namespace cf{
 		virtual void CActorParam_vtableFunc135();
 		virtual void CActorParam_vtableFunc136();
 		virtual void CActorParam_vtableFunc137();
-		virtual int CActorParam_vtableFunc138();
+		virtual bool CActorParam_vtableFunc138();
 		virtual void CActorParam_vtableFunc139();
 		virtual void CActorParam_vtableFunc140();
 		virtual void CActorParam_vtableFunc141();

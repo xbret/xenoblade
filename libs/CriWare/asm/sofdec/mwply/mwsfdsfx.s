@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-#the later code might be part of mwsfdcre
-
 .fn MWSFSFX_Init, global
 /* 8039DED4 00367494  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DED8 00367498  7C 08 02 A6 */	mflr r0
@@ -20,7 +17,7 @@
 /* 8039DF00 003674C0  4E 80 00 20 */	blr
 .endfn MWSFSFX_Init
 
-.fn mwsfsfx_SfxErrCbFn, global
+.fn mwsfsfx_SfxErrCbFn, local
 /* 8039DF04 003674C4  7C 83 23 78 */	mr r3, r4
 /* 8039DF08 003674C8  4C C6 31 82 */	crclr 6
 /* 8039DF0C 003674CC  4B FF FD 2C */	b MWSFSVM_Error
@@ -301,7 +298,7 @@
 .endfn MWSFD_CnvFrmInfToSfx
 
 
-.fn func_8039E298, global
+.fn criware_8039E298, global
 /* 8039E298 00367858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E29C 0036785C  7C 08 02 A6 */	mflr r0
 /* 8039E2A0 00367860  90 01 00 14 */	stw r0, 0x14(r1)
@@ -338,7 +335,7 @@
 /* 8039E310 003678D0  7C 08 03 A6 */	mtlr r0
 /* 8039E314 003678D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E318 003678D8  4E 80 00 20 */	blr 
-.endfn func_8039E298
+.endfn criware_8039E298
 
 .fn MWSFD_IsColAdjFrame, global
 /* 8039E31C 003678DC  54 80 E8 04 */	slwi r0, r4, 0x1d
@@ -376,7 +373,7 @@
 /* 8039E388 00367948  4E 80 00 20 */	blr 
 .endfn MWSFD_GetFxType
 
-.fn mwsfsfx_SetYcc420plnInfToSfx, global
+.fn mwsfsfx_SetYcc420plnInfToSfx, local
 /* 8039E38C 0036794C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039E390 00367950  7C 08 02 A6 */	mflr r0
 /* 8039E394 00367954  90 01 00 34 */	stw r0, 0x34(r1)
@@ -545,7 +542,7 @@
 /* 8039E5B4 00367B74  4C C6 31 82 */	crclr 6
 /* 8039E5B8 00367B78  4B FF F6 81 */	bl MWSFSVM_Error
 /* 8039E5BC 00367B7C  7F E3 FB 78 */	mr r3, r31
-/* 8039E5C0 00367B80  48 00 23 F5 */	bl func_803A09B4
+/* 8039E5C0 00367B80  48 00 23 F5 */	bl criware_803A09B4
 /* 8039E5C4 00367B84  38 60 00 00 */	li r3, 0
 .L_8039E5C8:
 /* 8039E5C8 00367B88  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -683,7 +680,7 @@
 /* 8039E778 00367D38  4E 80 00 20 */	blr 
 .endfn MWSFTAG_UpdateTagInf
 
-.fn mwsftag_GetAinfFromSj, global
+.fn mwsftag_GetAinfFromSj, local
 /* 8039E77C 00367D3C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039E780 00367D40  7C 08 02 A6 */	mflr r0
 /* 8039E784 00367D44  38 80 00 01 */	li r4, 1
@@ -800,7 +797,7 @@
 /* 8039E924 00367EE4  4E 80 00 20 */	blr 
 .endfn mwsftag_GetAinfFromSj
 
-.fn func_8039E928, global
+.fn criware_8039E928, global
 /* 8039E928 00367EE8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8039E92C 00367EEC  7C 08 02 A6 */	mflr r0
 /* 8039E930 00367EF0  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1060,7 +1057,7 @@
 /* 8039EC98 00368258  7C 08 03 A6 */	mtlr r0
 /* 8039EC9C 0036825C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8039ECA0 00368260  4E 80 00 20 */	blr 
-.endfn func_8039E928
+.endfn criware_8039E928
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

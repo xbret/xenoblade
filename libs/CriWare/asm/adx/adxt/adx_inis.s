@@ -12,7 +12,7 @@
 /* 8037F680 00348C40  48 00 AB 98 */	b ADXERR_CallErrFunc1_
 .endfn adxini_lscerr_cbfn
 
-.fn adxt_exec_main_thrd, global
+.fn adxt_exec_main_thrd, local
 /* 8037F684 00348C44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F688 00348C48  7C 08 02 A6 */	mflr r0
 /* 8037F68C 00348C4C  90 01 00 14 */	stw r0, 0x14(r1)

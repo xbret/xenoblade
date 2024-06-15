@@ -10,7 +10,7 @@
 /* 8005A40C 000239CC  7C 9F 23 78 */	mr r31, r4
 /* 8005A410 000239D0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8005A414 000239D4  7C 7E 1B 78 */	mr r30, r3
-/* 8005A418 000239D8  4B FF 0C 11 */	bl __ct__CActParamAnim
+/* 8005A418 000239D8  4B FF 0C 11 */	bl __ct__13CActParamAnimFv
 /* 8005A41C 000239DC  3C 60 80 53 */	lis r3, __vt__Q22cf17CActParamAnimGame@ha
 /* 8005A420 000239E0  38 00 00 00 */	li r0, 0
 /* 8005A424 000239E4  38 63 9C 88 */	addi r3, r3, __vt__Q22cf17CActParamAnimGame@l
@@ -33,13 +33,13 @@
 /* 8005A468 00023A28  4E 80 00 20 */	blr 
 .endfn __ct__8005A3FC
 
-.fn __ct__cf_CActParamAnimGame, global
+.fn __ct__Q22cf17CActParamAnimGameFv, global
 /* 8005A46C 00023A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A470 00023A30  7C 08 02 A6 */	mflr r0
 /* 8005A474 00023A34  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8005A478 00023A38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8005A47C 00023A3C  7C 7F 1B 78 */	mr r31, r3
-/* 8005A480 00023A40  4B FF 0B A9 */	bl __ct__CActParamAnim
+/* 8005A480 00023A40  4B FF 0B A9 */	bl __ct__13CActParamAnimFv
 /* 8005A484 00023A44  3C 60 80 53 */	lis r3, __vt__Q22cf17CActParamAnimGame@ha
 /* 8005A488 00023A48  38 00 00 00 */	li r0, 0
 /* 8005A48C 00023A4C  38 63 9C 88 */	addi r3, r3, __vt__Q22cf17CActParamAnimGame@l
@@ -58,7 +58,7 @@
 /* 8005A4C0 00023A80  7C 08 03 A6 */	mtlr r0
 /* 8005A4C4 00023A84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A4C8 00023A88  4E 80 00 20 */	blr 
-.endfn __ct__cf_CActParamAnimGame
+.endfn __ct__Q22cf17CActParamAnimGameFv
 
 .fn __dt__Q22cf17CActParamAnimGameFv, global
 /* 8005A4CC 00023A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7170,7 +7170,7 @@
 
 .obj "@eti_800227FC", local
 .hidden "@eti_800227FC"
-	.4byte __ct__cf_CActParamAnimGame
+	.4byte __ct__Q22cf17CActParamAnimGameFv
 	.4byte 0x00000060
 	.4byte "@etb_80007808"
 .endobj "@eti_800227FC"

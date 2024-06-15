@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CActParamData, global
+.fn __ct__13CActParamDataFv, global
 /* 800539EC 0001CFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800539F0 0001CFB0  7C 08 02 A6 */	mflr r0
 /* 800539F4 0001CFB4  3C 80 80 53 */	lis r4, __vt__13CActParamData@ha
@@ -28,7 +28,7 @@
 /* 80053A44 0001D004  7C 08 03 A6 */	mtlr r0
 /* 80053A48 0001D008  38 21 00 10 */	addi r1, r1, 0x10
 /* 80053A4C 0001D00C  4E 80 00 20 */	blr 
-.endfn __ct__CActParamData
+.endfn __ct__13CActParamDataFv
 
 .fn __dt__13CActParamDataFv, global
 /* 80053A50 0001D010  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -6011,7 +6011,7 @@
 
 .obj "@eti_80022514", local
 .hidden "@eti_80022514"
-	.4byte __ct__CActParamData
+	.4byte __ct__13CActParamDataFv
 	.4byte 0x00000064
 	.4byte "@etb_800075E4"
 .endobj "@eti_80022514"

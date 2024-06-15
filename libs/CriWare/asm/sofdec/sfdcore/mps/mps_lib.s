@@ -304,7 +304,7 @@
 /* 803BD0D8 00386698  4E 80 00 20 */	blr
 .endfn MPS_Create
 
-.fn mpslib_InitHn, global
+.fn mpslib_InitHn, local
 /* 803BD0DC 0038669C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD0E0 003866A0  7C 08 02 A6 */	mflr r0
 /* 803BD0E4 003866A4  38 80 00 00 */	li r4, 0
@@ -452,5 +452,7 @@
 .endobj MPSLIB_libwork
 
 .obj mpslib_hn_last, global
-	.skip 0x8
+	.skip 0x4
 .endobj mpslib_hn_last
+
+.skip 0x4

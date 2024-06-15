@@ -28,7 +28,7 @@
 /* 803A1388 0036A948  4E 80 00 20 */	blr 
 .endfn mwPlySfdStart
 
-.fn func_803A138C, global
+.fn mwPlyTermSupply, global
 /* 803A138C 0036A94C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1390 0036A950  7C 08 02 A6 */	mflr r0
 /* 803A1394 0036A954  90 01 00 14 */	stw r0, 0x14(r1)
@@ -46,9 +46,9 @@
 /* 803A13C0 0036A980  7C 08 03 A6 */	mtlr r0
 /* 803A13C4 0036A984  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A13C8 0036A988  4E 80 00 20 */	blr 
-.endfn func_803A138C
+.endfn mwPlyTermSupply
 
-.fn func_803A13CC, global
+.fn mw_sfd_start_ex, local
 /* 803A13CC 0036A98C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A13D0 0036A990  7C 08 02 A6 */	mflr r0
 /* 803A13D4 0036A994  90 01 00 24 */	stw r0, 0x24(r1)
@@ -118,10 +118,10 @@
 .L_803A14C8:
 /* 803A14C8 0036AA88  38 7D 05 C8 */	addi r3, r29, 0x5c8
 /* 803A14CC 0036AA8C  38 80 00 01 */	li r4, 1
-/* 803A14D0 0036AA90  48 00 21 45 */	bl func_803A3614
+/* 803A14D0 0036AA90  48 00 21 45 */	bl MWSST_SetLnkSw
 /* 803A14D4 0036AA94  38 7D 05 F0 */	addi r3, r29, 0x5f0
 /* 803A14D8 0036AA98  38 80 00 01 */	li r4, 1
-/* 803A14DC 0036AA9C  48 00 21 39 */	bl func_803A3614
+/* 803A14DC 0036AA9C  48 00 21 39 */	bl MWSST_SetLnkSw
 .L_803A14E0:
 /* 803A14E0 0036AAA0  80 7D 00 48 */	lwz r3, 0x48(r29)
 /* 803A14E4 0036AAA4  48 02 7A 51 */	bl SFD_Standby
@@ -149,7 +149,7 @@
 /* 803A1534 0036AAF4  7F C3 F3 78 */	mr r3, r30
 /* 803A1538 0036AAF8  38 A1 00 08 */	addi r5, r1, 8
 /* 803A153C 0036AAFC  38 80 00 06 */	li r4, 6
-/* 803A1540 0036AB00  48 02 B0 A1 */	bl func_803CC5E0
+/* 803A1540 0036AB00  48 02 B0 A1 */	bl SFD_GetCond
 /* 803A1544 0036AB04  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1548 0036AB08  40 82 00 1C */	bne .L_803A1564
 /* 803A154C 0036AB0C  80 01 00 08 */	lwz r0, 8(r1)
@@ -203,7 +203,7 @@
 /* 803A15F8 0036ABB8  48 00 07 5D */	bl MWSFD_SetAudioSw
 /* 803A15FC 0036ABBC  80 9D 00 78 */	lwz r4, 0x78(r29)
 /* 803A1600 0036ABC0  7F A3 EB 78 */	mr r3, r29
-/* 803A1604 0036ABC4  48 00 07 61 */	bl func_803A1D64
+/* 803A1604 0036ABC4  48 00 07 61 */	bl criware_803A1D64
 /* 803A1608 0036ABC8  38 60 00 00 */	li r3, 0
 /* 803A160C 0036ABCC  38 00 00 01 */	li r0, 1
 /* 803A1610 0036ABD0  90 7D 00 94 */	stw r3, 0x94(r29)
@@ -218,9 +218,9 @@
 /* 803A1630 0036ABF0  7C 08 03 A6 */	mtlr r0
 /* 803A1634 0036ABF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1638 0036ABF8  4E 80 00 20 */	blr 
-.endfn func_803A13CC
+.endfn mw_sfd_start_ex
 
-.fn func_803A163C, global
+.fn mwPlyStartFname, global
 /* 803A163C 0036ABFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1640 0036AC00  7C 08 02 A6 */	mflr r0
 /* 803A1644 0036AC04  3C A0 80 60 */	lis r5, lbl_80602960@ha
@@ -270,16 +270,16 @@
 /* 803A16E8 0036ACA8  48 00 19 E5 */	bl MWSFD_SetProhibitServer
 /* 803A16EC 0036ACAC  7F C3 F3 78 */	mr r3, r30
 /* 803A16F0 0036ACB0  38 80 00 00 */	li r4, 0
-/* 803A16F4 0036ACB4  4B FF B9 C1 */	bl func_8039D0B4
+/* 803A16F4 0036ACB4  4B FF B9 C1 */	bl criware_8039D0B4
 /* 803A16F8 0036ACB8  7F C3 F3 78 */	mr r3, r30
 /* 803A16FC 0036ACBC  38 80 00 00 */	li r4, 0
-/* 803A1700 0036ACC0  4B FF BE 29 */	bl func_8039D528
+/* 803A1700 0036ACC0  4B FF BE 29 */	bl mwPlyLinkStm
 /* 803A1704 0036ACC4  80 1E 04 F4 */	lwz r0, 0x4f4(r30)
 /* 803A1708 0036ACC8  7F C3 F3 78 */	mr r3, r30
 /* 803A170C 0036ACCC  90 1E 04 F0 */	stw r0, 0x4f0(r30)
-/* 803A1710 0036ACD0  48 00 01 75 */	bl func_803A1884
+/* 803A1710 0036ACD0  48 00 01 75 */	bl mwSfdStopDec
 /* 803A1714 0036ACD4  7F C3 F3 78 */	mr r3, r30
-/* 803A1718 0036ACD8  4B FF FC B5 */	bl func_803A13CC
+/* 803A1718 0036ACD8  4B FF FC B5 */	bl mw_sfd_start_ex
 /* 803A171C 0036ACDC  38 60 00 00 */	li r3, 0
 /* 803A1720 0036ACE0  48 00 19 AD */	bl MWSFD_SetProhibitServer
 /* 803A1724 0036ACE4  7F E3 FB 78 */	mr r3, r31
@@ -313,11 +313,11 @@
 /* 803A178C 0036AD4C  90 FE 04 E8 */	stw r7, 0x4e8(r30)
 /* 803A1790 0036AD50  90 DE 04 EC */	stw r6, 0x4ec(r30)
 /* 803A1794 0036AD54  90 1E 04 E0 */	stw r0, 0x4e0(r30)
-/* 803A1798 0036AD58  4B FF C7 35 */	bl func_8039DECC
+/* 803A1798 0036AD58  4B FF C7 35 */	bl MWSFSEE_StartFnameSub1
 /* 803A179C 0036AD5C  7F C3 F3 78 */	mr r3, r30
 /* 803A17A0 0036AD60  38 80 00 00 */	li r4, 0
 /* 803A17A4 0036AD64  38 A0 FF FF */	li r5, -1
-/* 803A17A8 0036AD68  4B FF C7 29 */	bl func_8039DED0
+/* 803A17A8 0036AD68  4B FF C7 29 */	bl MWSFSEE_StartFnameSub2
 .L_803A17AC:
 /* 803A17AC 0036AD6C  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A17B0 0036AD70  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
@@ -337,9 +337,9 @@
 /* 803A17E4 0036ADA4  7C 08 03 A6 */	mtlr r0
 /* 803A17E8 0036ADA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A17EC 0036ADAC  4E 80 00 20 */	blr 
-.endfn func_803A163C
+.endfn mwPlyStartFname
 
-.fn func_803A17F0, global
+.fn mwPlyStartSj, global
 /* 803A17F0 0036ADB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A17F4 0036ADB4  7C 08 02 A6 */	mflr r0
 /* 803A17F8 0036ADB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -360,7 +360,7 @@
 /* 803A1830 0036ADF0  38 60 00 01 */	li r3, 1
 /* 803A1834 0036ADF4  48 00 18 99 */	bl MWSFD_SetProhibitServer
 /* 803A1838 0036ADF8  7F C3 F3 78 */	mr r3, r30
-/* 803A183C 0036ADFC  48 00 00 49 */	bl func_803A1884
+/* 803A183C 0036ADFC  48 00 00 49 */	bl mwSfdStopDec
 /* 803A1840 0036AE00  38 00 00 00 */	li r0, 0
 /* 803A1844 0036AE04  38 80 00 02 */	li r4, 2
 /* 803A1848 0036AE08  93 FE 04 F0 */	stw r31, 0x4f0(r30)
@@ -369,7 +369,7 @@
 /* 803A1854 0036AE14  90 1E 05 08 */	stw r0, 0x508(r30)
 /* 803A1858 0036AE18  90 1E 05 0C */	stw r0, 0x50c(r30)
 /* 803A185C 0036AE1C  90 1E 05 10 */	stw r0, 0x510(r30)
-/* 803A1860 0036AE20  4B FF FB 6D */	bl func_803A13CC
+/* 803A1860 0036AE20  4B FF FB 6D */	bl mw_sfd_start_ex
 /* 803A1864 0036AE24  38 60 00 00 */	li r3, 0
 /* 803A1868 0036AE28  48 00 18 65 */	bl MWSFD_SetProhibitServer
 .L_803A186C:
@@ -379,9 +379,9 @@
 /* 803A1878 0036AE38  7C 08 03 A6 */	mtlr r0
 /* 803A187C 0036AE3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1880 0036AE40  4E 80 00 20 */	blr 
-.endfn func_803A17F0
+.endfn mwPlyStartSj
 
-.fn func_803A1884, global
+.fn mwSfdStopDec, global
 /* 803A1884 0036AE44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1888 0036AE48  7C 08 02 A6 */	mflr r0
 /* 803A188C 0036AE4C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -396,7 +396,7 @@
 /* 803A18B0 0036AE70  7F E3 FB 78 */	mr r3, r31
 /* 803A18B4 0036AE74  90 1E 00 04 */	stw r0, 4(r30)
 /* 803A18B8 0036AE78  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 803A18BC 0036AE7C  48 02 92 C1 */	bl func_803CAB7C
+/* 803A18BC 0036AE7C  48 02 92 C1 */	bl SFD_Stop
 /* 803A18C0 0036AE80  2C 03 00 00 */	cmpwi r3, 0
 /* 803A18C4 0036AE84  41 82 00 20 */	beq .L_803A18E4
 /* 803A18C8 0036AE88  38 60 FE CC */	li r3, -308
@@ -417,7 +417,7 @@
 /* 803A1900 0036AEC0  90 1E 06 20 */	stw r0, 0x620(r30)
 /* 803A1904 0036AEC4  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1908 0036AEC8  41 82 00 08 */	beq .L_803A1910
-/* 803A190C 0036AECC  4B FF C5 89 */	bl func_8039DE94
+/* 803A190C 0036AECC  4B FF C5 89 */	bl MWSTM_ReqStop
 .L_803A1910:
 /* 803A1910 0036AED0  80 7E 00 54 */	lwz r3, 0x54(r30)
 /* 803A1914 0036AED4  2C 03 00 00 */	cmpwi r3, 0
@@ -464,7 +464,7 @@
 /* 803A19A4 0036AF64  7C 08 03 A6 */	mtlr r0
 /* 803A19A8 0036AF68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A19AC 0036AF6C  4E 80 00 20 */	blr 
-.endfn func_803A1884
+.endfn mwSfdStopDec
 
 .fn mwPlyStop, global
 /* 803A19B0 0036AF70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -500,10 +500,10 @@
 /* 803A1A20 0036AFE0  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 803A1A24 0036AFE4  48 02 98 BD */	bl SFD_RequestStop
 /* 803A1A28 0036AFE8  7F E3 FB 78 */	mr r3, r31
-/* 803A1A2C 0036AFEC  4B FF FE 59 */	bl func_803A1884
+/* 803A1A2C 0036AFEC  4B FF FE 59 */	bl mwSfdStopDec
 /* 803A1A30 0036AFF0  7F E3 FB 78 */	mr r3, r31
 /* 803A1A34 0036AFF4  38 80 00 00 */	li r4, 0
-/* 803A1A38 0036AFF8  4B FF BA F1 */	bl func_8039D528
+/* 803A1A38 0036AFF8  4B FF BA F1 */	bl mwPlyLinkStm
 /* 803A1A3C 0036AFFC  38 00 00 00 */	li r0, 0
 /* 803A1A40 0036B000  80 7F 00 54 */	lwz r3, 0x54(r31)
 /* 803A1A44 0036B004  90 1F 00 84 */	stw r0, 0x84(r31)
@@ -528,7 +528,7 @@
 /* 803A1A88 0036B048  4E 80 00 20 */	blr 
 .endfn mwPlyStop
 
-.fn func_803A1A8C, global
+.fn mwPlyPause, global
 /* 803A1A8C 0036B04C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A1A90 0036B050  7C 08 02 A6 */	mflr r0
 /* 803A1A94 0036B054  90 01 00 24 */	stw r0, 0x24(r1)
@@ -569,7 +569,7 @@
 /* 803A1B14 0036B0D4  7F E3 FB 78 */	mr r3, r31
 /* 803A1B18 0036B0D8  38 A1 00 08 */	addi r5, r1, 8
 /* 803A1B1C 0036B0DC  38 80 00 06 */	li r4, 6
-/* 803A1B20 0036B0E0  48 02 AA C1 */	bl func_803CC5E0
+/* 803A1B20 0036B0E0  48 02 AA C1 */	bl SFD_GetCond
 /* 803A1B24 0036B0E4  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1B28 0036B0E8  40 82 00 1C */	bne .L_803A1B44
 /* 803A1B2C 0036B0EC  80 01 00 08 */	lwz r0, 8(r1)
@@ -615,7 +615,7 @@
 /* 803A1BB8 0036B178  7C 08 03 A6 */	mtlr r0
 /* 803A1BBC 0036B17C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1BC0 0036B180  4E 80 00 20 */	blr 
-.endfn func_803A1A8C
+.endfn mwPlyPause
 
 .fn MWSFPLY_SetFlowLimit, global
 /* 803A1BC4 0036B184  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -636,14 +636,14 @@
 /* 803A1C00 0036B1C0  FC 00 00 1E */	fctiwz f0, f0
 /* 803A1C04 0036B1C4  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 803A1C08 0036B1C8  80 81 00 14 */	lwz r4, 0x14(r1)
-/* 803A1C0C 0036B1CC  48 00 01 F9 */	bl func_803A1E04
+/* 803A1C0C 0036B1CC  48 00 01 F9 */	bl criware_803A1E04
 /* 803A1C10 0036B1D0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803A1C14 0036B1D4  7C 08 03 A6 */	mtlr r0
 /* 803A1C18 0036B1D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1C1C 0036B1DC  4E 80 00 20 */	blr 
 .endfn MWSFPLY_SetFlowLimit
 
-.fn func_803A1C20, global
+.fn mwPlyChkSupply, global
 /* 803A1C20 0036B1E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1C24 0036B1E4  7C 08 02 A6 */	mflr r0
 /* 803A1C28 0036B1E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -671,9 +671,9 @@
 /* 803A1C7C 0036B23C  7C 08 03 A6 */	mtlr r0
 /* 803A1C80 0036B240  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1C84 0036B244  4E 80 00 20 */	blr 
-.endfn func_803A1C20
+.endfn mwPlyChkSupply
 
-.fn func_803A1C88, global
+.fn criware_803A1C88, global
 /* 803A1C88 0036B248  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1C8C 0036B24C  7C 08 02 A6 */	mflr r0
 /* 803A1C90 0036B250  90 01 00 14 */	stw r0, 0x14(r1)
@@ -707,7 +707,7 @@
 /* 803A1CF8 0036B2B8  7C 08 03 A6 */	mtlr r0
 /* 803A1CFC 0036B2BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1D00 0036B2C0  4E 80 00 20 */	blr 
-.endfn func_803A1C88
+.endfn criware_803A1C88
 
 .fn MWSFD_IsEndPrepareStop, global
 /* 803A1D04 0036B2C4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -748,41 +748,41 @@
 .endobj double_8051E7B8
 
 .obj mwsfdply_strpool, global
-	.asciz "E20010703F mwPlySfdStandby"
-	.asciz "E20010703G mwPlySfdStart"
-	.asciz "E10821A : Invalid value of SFD_GetPaStat : %d"
-	.asciz "E06083101 mwPlyTermSupply: can't term"
-	.asciz "E0203263 mw_sfd_start_ex: RESET failed."
-	.asciz "E201213 mw_sfd_start_ex: can't set AddInfSJ"
-	.asciz "E08031101 mwPlyStartXX: can't link stream"
-	.asciz "E2007 mwPlyPause; can't pause (%s)"
-	.asciz "ON"
-	.asciz "OFF"
-	.asciz "E1122601 mwPlyStartFname: handle is invalid."
-	.asciz "E10915C mwPlyStartFname: fname is NULL."
-	.asciz "E211121 filename is longer."
-	.asciz "E08111003 memory entry is over 16."
-	.asciz "E08111002 failed to get file size form sofdec header."
-	.asciz "E08111004 mwPlyStartMemSeamless: handle is invalid."
-	.asciz "E08111005 mwPlyStartMemSeamless: can't play file type MPV. Use memory file system(MFS)."
-	.asciz "E1122610 mwPlyStartMem: handle is invalid."
-	.asciz "E4111701 mwPlyStartMem: can't play file type MPV. Use memory file system(MFS)."
-	.asciz "E08111001 failed to get file size form sofdec header."
-	.asciz "E1122609 mwply_StartSj: handle is invalid."
-	.asciz "E2003 mwSfdStop:can't stop SFD"
-	.asciz "E1122602 mwSfdStop: handle is invalid."
-	.asciz "E11226041 mwPlyStepFrame; handle is invalid."
-	.asciz "E1122604 mwPlyPause; handle is invalid."
-	.asciz "E1110801 mwPlyControlVideoDecoding_ext; handle is invalid."
-	.asciz "E1122638 mwPlyStartAfs: handle is invalid."
-	.asciz "E211151 ADXF_GetFnameRangeEx() faild."
-	.asciz "%08x.%08x"
-	.asciz "E407021 mwPlyStartFnameRange: handle is invalid."
-	.asciz "E407022 mwPlyStartFnameRange: fname is NULL."
-	.asciz "E5090602 mwPlyRequestStop: handle is invalid."
-	.asciz "E7021901 mwPlyStartIpicture: handle is invalid."
-	.asciz "E7021901 mwPlyStartIpicture: parametar error."
-	.asciz "E7021901 mwPlyStartIpicture: seekipic_tbl indicates that data is not only I picture."
+	.asciz "E20010703F mwPlySfdStandby" #0x0
+	.asciz "E20010703G mwPlySfdStart" #0x1B
+	.asciz "E10821A : Invalid value of SFD_GetPaStat : %d" #0x34
+	.asciz "E06083101 mwPlyTermSupply: can't term" #0x62
+	.asciz "E0203263 mw_sfd_start_ex: RESET failed." #0x88
+	.asciz "E201213 mw_sfd_start_ex: can't set AddInfSJ" #0xB0
+	.asciz "E08031101 mwPlyStartXX: can't link stream" #0xDC
+	.asciz "E2007 mwPlyPause; can't pause (%s)" #0x106
+	.asciz "ON" #0x129
+	.asciz "OFF" #0x12C
+	.asciz "E1122601 mwPlyStartFname: handle is invalid." #0x130
+	.asciz "E10915C mwPlyStartFname: fname is NULL." #0x15D
+	.asciz "E211121 filename is longer." #0x185
+	.asciz "E08111003 memory entry is over 16." #0x1A1
+	.asciz "E08111002 failed to get file size form sofdec header." #0x1C4
+	.asciz "E08111004 mwPlyStartMemSeamless: handle is invalid." #0x1FA
+	.asciz "E08111005 mwPlyStartMemSeamless: can't play file type MPV. Use memory file system(MFS)." #0x22E
+	.asciz "E1122610 mwPlyStartMem: handle is invalid." #0x286
+	.asciz "E4111701 mwPlyStartMem: can't play file type MPV. Use memory file system(MFS)." #0x2B1
+	.asciz "E08111001 failed to get file size form sofdec header." #0x300
+	.asciz "E1122609 mwply_StartSj: handle is invalid." #0x336
+	.asciz "E2003 mwSfdStop:can't stop SFD" #0x361
+	.asciz "E1122602 mwSfdStop: handle is invalid." #0x380
+	.asciz "E11226041 mwPlyStepFrame; handle is invalid." #0x3A7
+	.asciz "E1122604 mwPlyPause; handle is invalid." #0x3D4
+	.asciz "E1110801 mwPlyControlVideoDecoding_ext; handle is invalid." #0x3FC
+	.asciz "E1122638 mwPlyStartAfs: handle is invalid." #0x437
+	.asciz "E211151 ADXF_GetFnameRangeEx() faild." #0x462
+	.asciz "%08x.%08x" #0x488
+	.asciz "E407021 mwPlyStartFnameRange: handle is invalid." #0x492
+	.asciz "E407022 mwPlyStartFnameRange: fname is NULL." #0x4C3
+	.asciz "E5090602 mwPlyRequestStop: handle is invalid." #0x4F0
+	.asciz "E7021901 mwPlyStartIpicture: handle is invalid." #0x51E
+	.asciz "E7021901 mwPlyStartIpicture: parametar error." #0x54E
+	.asciz "E7021901 mwPlyStartIpicture: seekipic_tbl indicates that data is not only I picture." #0x57C
 	.balign 4
 	.4byte 0
 .endobj mwsfdply_strpool

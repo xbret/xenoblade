@@ -8,7 +8,7 @@
 /* 800AD890 00076E50  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800AD894 00076E54  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800AD898 00076E58  7C 7F 1B 78 */	mr r31, r3
-/* 800AD89C 00076E5C  48 0C 25 CD */	bl __ct__cf_CfObjectActor
+/* 800AD89C 00076E5C  48 0C 25 CD */	bl __ct__Q22cf13CfObjectActorFv
 /* 800AD8A0 00076E60  3C 60 80 53 */	lis r3, __vt__Q22cf11CfObjectEne@ha
 /* 800AD8A4 00076E64  38 00 00 00 */	li r0, 0
 /* 800AD8A8 00076E68  38 63 C1 E8 */	addi r3, r3, __vt__Q22cf11CfObjectEne@l
@@ -1416,7 +1416,7 @@
 /* 800AED44 00078304  4E 80 00 20 */	blr 
 .endfn func_800AEC68__Q22cf11CfObjectEneFv
 
-.fn func_800AED48__Q22cf11CfObjectEneFv, global
+.fn CActorParam_vtableFunc166__Q22cf11CfObjectEneFv, global
 /* 800AED48 00078308  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 800AED4C 0007830C  7C 08 02 A6 */	mflr r0
 /* 800AED50 00078310  90 01 01 24 */	stw r0, 0x124(r1)
@@ -1890,9 +1890,9 @@
 /* 800AF484 00078A44  7C 08 03 A6 */	mtlr r0
 /* 800AF488 00078A48  38 21 01 20 */	addi r1, r1, 0x120
 /* 800AF48C 00078A4C  4E 80 00 20 */	blr 
-.endfn func_800AED48__Q22cf11CfObjectEneFv
+.endfn CActorParam_vtableFunc166__Q22cf11CfObjectEneFv
 
-.fn func_800AF490__Q22cf11CfObjectEneFv, global
+.fn CActorParam_vtableFunc167__Q22cf11CfObjectEneFv, global
 /* 800AF490 00078A50  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 800AF494 00078A54  7C 08 02 A6 */	mflr r0
 /* 800AF498 00078A58  90 01 00 84 */	stw r0, 0x84(r1)
@@ -2110,7 +2110,7 @@
 /* 800AF7D8 00078D98  7C 08 03 A6 */	mtlr r0
 /* 800AF7DC 00078D9C  38 21 00 80 */	addi r1, r1, 0x80
 /* 800AF7E0 00078DA0  4E 80 00 20 */	blr 
-.endfn func_800AF490__Q22cf11CfObjectEneFv
+.endfn CActorParam_vtableFunc167__Q22cf11CfObjectEneFv
 
 .fn func_800AF7E4, global
 /* 800AF7E4 00078DA4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3384,20 +3384,20 @@
 /* 800B0658 00079C18  4B FF F4 A4 */	b CActorParam_vtableFunc3__Q22cf13CfObjectActorFv
 .endfn CBattleState_virtualFunc2__Q22cf13CfObjectActorFv
 
-.fn func_800B065C__Q22cf11CfObjectEneFv, global
+.fn CObjectParam_virtualFunc4__Q22cf11CfObjectEneFv, global
 /* 800B065C 00079C1C  38 63 C1 64 */	addi r3, r3, -16028
 /* 800B0660 00079C20  4B FF D7 48 */	b func_800ADDA8__Q22cf11CfObjectEneFv
-.endfn func_800B065C__Q22cf11CfObjectEneFv
+.endfn CObjectParam_virtualFunc4__Q22cf11CfObjectEneFv
 
 .fn CfObject_vtableFunc31__Q22cf13CfObjectActorFv, global
 /* 800B0664 00079C24  38 63 C1 64 */	addi r3, r3, -16028
 /* 800B0668 00079C28  48 0C 1D C4 */	b CfObjectActor_vtableFunc6__Q22cf13CfObjectActorFv
 .endfn CfObject_vtableFunc31__Q22cf13CfObjectActorFv
 
-.fn func_800B066C__Q22cf11CfObjectEneFv, global
+.fn CfObject_vtableFunc2__Q22cf11CfObjectEneFv, global
 /* 800B066C 00079C2C  38 63 C1 64 */	addi r3, r3, -16028
 /* 800B0670 00079C30  4B FF D4 BC */	b func_800ADB2C__Q22cf11CfObjectEneFv
-.endfn func_800B066C__Q22cf11CfObjectEneFv
+.endfn CfObject_vtableFunc2__Q22cf11CfObjectEneFv
 
 .fn CfObjectMove_vtableFunc15__Q22cf13CfObjectActorFv, global
 /* 800B0674 00079C34  38 63 C1 64 */	addi r3, r3, -16028
@@ -3419,10 +3419,10 @@
 /* 800B0690 00079C50  48 0C 1E 98 */	b CfObjectActor_vtableFunc10__Q22cf13CfObjectActorFv
 .endfn CfObject_vtableFunc14__Q22cf13CfObjectActorFv
 
-.fn func_800B0694__Q22cf11CfObjectEneFv, global
+.fn CfObject_vtableFunc4__Q22cf11CfObjectEneFv, global
 /* 800B0694 00079C54  38 63 C1 64 */	addi r3, r3, -16028
 /* 800B0698 00079C58  4B FF D5 3C */	b func_800ADBD4__Q22cf11CfObjectEneFv
-.endfn func_800B0694__Q22cf11CfObjectEneFv
+.endfn CfObject_vtableFunc4__Q22cf11CfObjectEneFv
 
 .fn func_800B069C__Q22cf11CfObjectEneFv, global
 /* 800B069C 00079C5C  38 63 C1 64 */	addi r3, r3, -16028
@@ -3752,8 +3752,8 @@
 	.4byte CActorParam_vtableFunc163__Q22cf11CActorParamFv
 	.4byte CActorParam_vtableFunc164__Q22cf11CActorParamFv
 	.4byte CActorParam_vtableFunc165__Q22cf11CActorParamFv
-	.4byte func_800AED48__Q22cf11CfObjectEneFv
-	.4byte func_800AF490__Q22cf11CfObjectEneFv
+	.4byte CActorParam_vtableFunc166__Q22cf11CfObjectEneFv
+	.4byte CActorParam_vtableFunc167__Q22cf11CfObjectEneFv
 	.4byte CActorParam_vtableFunc168__Q22cf11CActorParamFv
 	.4byte CActorParam_vtableFunc169__Q22cf11CActorParamFv
 	.4byte CActorParam_vtableFunc170__Q22cf11CActorParamFv
@@ -3790,13 +3790,13 @@
 	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
 	.4byte CObjectParam_virtualFunc2__Q22cf13CfObjectActorFv
 	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
-	.4byte func_800B065C__Q22cf11CfObjectEneFv
+	.4byte CObjectParam_virtualFunc4__Q22cf11CfObjectEneFv
 	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
 	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
 	.4byte func_800B069C__Q22cf11CfObjectEneFv
-	.4byte func_800B066C__Q22cf11CfObjectEneFv
+	.4byte CfObject_vtableFunc2__Q22cf11CfObjectEneFv
 	.4byte CfObject_vtableFunc3__Q22cf8CfObjectFv
-	.4byte func_800B0694__Q22cf11CfObjectEneFv
+	.4byte CfObject_vtableFunc4__Q22cf11CfObjectEneFv
 	.4byte CfObject_vtableFunc5__Q22cf12CfObjectMoveFv
 	.4byte CfObject_vtableFunc6__Q22cf12CfObjectMoveFv
 	.4byte CfObject_vtableFunc7__Q22cf12CfObjectMoveFv
@@ -4281,14 +4281,14 @@
 
 .obj "@eti_80024E90", local
 .hidden "@eti_80024E90"
-	.4byte func_800AED48__Q22cf11CfObjectEneFv
+	.4byte CActorParam_vtableFunc166__Q22cf11CfObjectEneFv
 	.4byte 0x00000748
 	.4byte "@etb_800095FC"
 .endobj "@eti_80024E90"
 
 .obj "@eti_80024E9C", local
 .hidden "@eti_80024E9C"
-	.4byte func_800AF490__Q22cf11CfObjectEneFv
+	.4byte CActorParam_vtableFunc167__Q22cf11CfObjectEneFv
 	.4byte 0x00000354
 	.4byte "@etb_80009604"
 .endobj "@eti_80024E9C"

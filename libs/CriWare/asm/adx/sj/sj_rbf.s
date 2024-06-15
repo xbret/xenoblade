@@ -86,7 +86,7 @@
 /* 80394404 0035D9C4  4E 80 00 20 */	blr 
 .endfn SJRBF_Create
 
-.fn sjrbf_Create, global
+.fn sjrbf_Create, local
 /* 80394408 0035D9C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039440C 0035D9CC  7C 08 02 A6 */	mflr r0
 /* 80394410 0035D9D0  3C C0 80 5F */	lis r6, sjrbf_obj@ha
@@ -358,7 +358,7 @@
 /* 803947D4 0035DD94  4E 80 00 20 */	blr 
 .endfn SJRBF_Reset
 
-.fn sjrbf_Reset, global
+.fn sjrbf_Reset, local
 /* 803947D8 0035DD98  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803947DC 0035DD9C  7C 08 02 A6 */	mflr r0
 /* 803947E0 0035DDA0  2C 03 00 00 */	cmpwi r3, 0
@@ -439,7 +439,7 @@
 /* 803948F4 0035DEB4  4E 80 00 20 */	blr 
 .endfn SJRBF_GetNumData
 
-.fn sjrbf_GetNumData, global
+.fn sjrbf_GetNumData, local
 /* 803948F8 0035DEB8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803948FC 0035DEBC  7C 08 02 A6 */	mflr r0
 /* 80394900 0035DEC0  2C 03 00 00 */	cmpwi r3, 0
@@ -537,7 +537,7 @@
 /* 80394A4C 0035E00C  4E 80 00 20 */	blr 
 .endfn SJRBF_GetChunk
 
-.fn sjrbf_GetChunk, global
+.fn sjrbf_GetChunk, local
 /* 80394A50 0035E010  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80394A54 0035E014  7C 08 02 A6 */	mflr r0
 /* 80394A58 0035E018  2C 03 00 00 */	cmpwi r3, 0
@@ -714,7 +714,7 @@
 /* 80394CD0 0035E290  4E 80 00 20 */	blr 
 .endfn SJRBF_PutChunk
 
-.fn sjrbf_PutChunk, global
+.fn sjrbf_PutChunk, local
 /* 80394CD4 0035E294  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80394CD8 0035E298  7C 08 02 A6 */	mflr r0
 /* 80394CDC 0035E29C  2C 03 00 00 */	cmpwi r3, 0
@@ -874,7 +874,7 @@
 /* 80394F0C 0035E4CC  4E 80 00 20 */	blr 
 .endfn SJRBF_UngetChunk
 
-.fn sjrbf_UngetChunk, global
+.fn sjrbf_UngetChunk, local
 /* 80394F10 0035E4D0  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80394F14 0035E4D4  7C 08 02 A6 */	mflr r0
 /* 80394F18 0035E4D8  2C 03 00 00 */	cmpwi r3, 0
@@ -1065,7 +1065,7 @@
 /* 803951C4 0035E784  4E 80 00 20 */	blr 
 .endfn SJRBF_IsGetChunk
 
-.fn sjrbf_IsGetChunk, global
+.fn sjrbf_IsGetChunk, local
 /* 803951C8 0035E788  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803951CC 0035E78C  7C 08 02 A6 */	mflr r0
 /* 803951D0 0035E790  2C 03 00 00 */	cmpwi r3, 0
@@ -1404,7 +1404,7 @@
 
 .balign 8
 
-.obj sjrbf_uuid, global
+.obj sjrbf_uuid, local
 	.4byte 0x3B9A9E81
 	.4byte 0x0DBB11D2
 	.4byte 0xA6BF4445
@@ -1479,8 +1479,10 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj sjrbf_init_cnt, global
-	.skip 0x8
+	.skip 0x4
 .endobj sjrbf_init_cnt
+
+.skip 0x4
 
 .obj sjrbf_obj, global
 	.skip 0x4800

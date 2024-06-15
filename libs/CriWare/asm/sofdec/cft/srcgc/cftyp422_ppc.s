@@ -3,11 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn CFT_Ycc420plnToArgb8888Init, global
-/* 8039B7F8 00364DB8  3C 80 80 60 */	lis r4, lbl_80601380@ha
+/* 8039B7F8 00364DB8  3C 80 80 60 */	lis r4, y__r@ha
 /* 8039B7FC 00364DBC  3D 00 80 52 */	lis r8, lbl_8051CDF0@ha
 /* 8039B800 00364DC0  39 08 CD F0 */	addi r8, r8, lbl_8051CDF0@l
 /* 8039B804 00364DC4  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8039B808 00364DC8  38 84 13 80 */	addi r4, r4, lbl_80601380@l
+/* 8039B808 00364DC8  38 84 13 80 */	addi r4, r4, y__r@l
 /* 8039B80C 00364DCC  3C 60 43 30 */	lis r3, 0x4330
 /* 8039B810 00364DD0  38 00 00 80 */	li r0, 0x80
 /* 8039B814 00364DD4  90 61 00 08 */	stw r3, 8(r1)
@@ -96,7 +96,7 @@
 /* 8039B95C 00364F1C  4E 80 00 20 */	blr
 .endfn CFT_Ycc420plnToArgb8888Init
 
-.fn func_8039B960, global
+.fn CFT_Ycc420plnToY84C44, global
 /* 8039B960 00364F20  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039B964 00364F24  38 C0 00 08 */	li r6, 8
 /* 8039B968 00364F28  80 03 00 10 */	lwz r0, 0x10(r3)
@@ -267,7 +267,7 @@
 /* 8039BBDC 0036519C  BA 81 00 10 */	lmw r20, 0x10(r1)
 /* 8039BBE0 003651A0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039BBE4 003651A4  4E 80 00 20 */	blr 
-.endfn func_8039B960
+.endfn CFT_Ycc420plnToY84C44
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -275,35 +275,76 @@
 
 .obj lbl_8051CDF0, global
 	.4byte 0x3F950A85
+
 	.float 0.5
+
 	.4byte 0xBEC880BB
+
 	.4byte 0x40011A55
+
 	.4byte 0x3FCC4A9A
+
 	.4byte 0xBF50147A
-	.4byte 0x43300000
-	.4byte 0x80000000
+
+	.8byte 0x4330000080000000
+
 	.4byte 0x437F0000
+
 	.4byte 0x3F94FDF4
+
 	.4byte 0x40011687
+
 	.4byte 0xBEC8B439
+
 	.4byte 0
+
 	.4byte 0xBF5020C5
+
 	.4byte 0x3FCC49BA
+
 	.4byte 0x41800000
+
 	.4byte 0x40145D17
+
 	.4byte 0x437B0000
-	.4byte 0x43300000
-	.4byte 0
+
+	.8byte 0x4330000000000000
+
 	.4byte 0xC1910A85
+
 	.4byte 0x42880000
+
 	.4byte 0x40945D17
+
 	.4byte 0x43770000
+
 	.4byte 0x401306EB
-	.4byte 0
 .endobj lbl_8051CDF0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80601380, global
-	.skip 0x1408
-.endobj lbl_80601380
+.obj y__r, local
+	.skip 0x400
+.endobj y__r
+
+.obj cb_g, local
+	.skip 0x400
+.endobj cb_g
+
+.obj cb_b, local
+	.skip 0x400
+.endobj cb_b
+
+.obj cr_r, local
+	.skip 0x400
+.endobj cr_r
+
+.obj cr_g, local
+	.skip 0x400
+.endobj cr_g
+
+.obj gqr_save, local
+	.skip 0x4
+.endobj gqr_save
+
+.skip 0x4

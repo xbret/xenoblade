@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn mwsfcre_CalcWorkStmBuf, global
+.fn mwsfcre_CalcWorkStmBuf, local
 /* 8039ECA4 00368264  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039ECA8 00368268  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039ECAC 0036826C  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -236,7 +236,7 @@
 /* 8039EFEC 003685AC  4E 80 00 20 */	blr 
 .endfn mwPlyCalcWorkCprmSfd
 
-.fn mwsfcre_IsOuterFrmPoolUsed, global
+.fn mwsfcre_IsOuterFrmPoolUsed, local
 /* 8039EFF0 003685B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039EFF4 003685B4  7C 08 02 A6 */	mflr r0
 /* 8039EFF8 003685B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -331,7 +331,7 @@
 /* 8039F13C 003686FC  4E 80 00 20 */	blr 
 .endfn mwsfcre_IsOuterFrmPoolUsed
 
-.fn func_8039F140, global
+.fn MWSFCRE_SetSupplySj, global
 /* 8039F140 00368700  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039F144 00368704  7C 08 02 A6 */	mflr r0
 /* 8039F148 00368708  90 01 00 34 */	stw r0, 0x34(r1)
@@ -427,9 +427,9 @@
 /* 8039F298 00368858  7C 08 03 A6 */	mtlr r0
 /* 8039F29C 0036885C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039F2A0 00368860  4E 80 00 20 */	blr 
-.endfn func_8039F140
+.endfn MWSFCRE_SetSupplySj
 
-.fn func_8039F2A4, global
+.fn mwsfcre_MallocRfb, local
 /* 8039F2A4 00368864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039F2A8 00368868  7C 08 02 A6 */	mflr r0
 /* 8039F2AC 0036886C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -494,11 +494,11 @@
 /* 8039F390 00368950  48 00 00 20 */	b .L_8039F3B0
 .L_8039F394:
 /* 8039F394 00368954  7F 84 E3 78 */	mr r4, r28
-/* 8039F398 00368958  48 00 47 4D */	bl func_803A3AE4
+/* 8039F398 00368958  48 00 47 4D */	bl criware_803A3AE4
 /* 8039F39C 0036895C  90 7E 00 00 */	stw r3, 0(r30)
 /* 8039F3A0 00368960  7F A3 EB 78 */	mr r3, r29
 /* 8039F3A4 00368964  7F 84 E3 78 */	mr r4, r28
-/* 8039F3A8 00368968  48 00 47 3D */	bl func_803A3AE4
+/* 8039F3A8 00368968  48 00 47 3D */	bl criware_803A3AE4
 /* 8039F3AC 0036896C  90 7E 00 04 */	stw r3, 4(r30)
 .L_8039F3B0:
 /* 8039F3B0 00368970  80 1E 00 00 */	lwz r0, 0(r30)
@@ -519,9 +519,9 @@
 /* 8039F3E4 003689A4  7C 08 03 A6 */	mtlr r0
 /* 8039F3E8 003689A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039F3EC 003689AC  4E 80 00 20 */	blr 
-.endfn func_8039F2A4
+.endfn mwsfcre_MallocRfb
 
-.fn func_8039F3F0, global
+.fn mwsfcre_MallocTab, local
 /* 8039F3F0 003689B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039F3F4 003689B4  7C 08 02 A6 */	mflr r0
 /* 8039F3F8 003689B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -607,7 +607,7 @@
 .L_8039F51C:
 /* 8039F51C 00368ADC  7F 63 DB 78 */	mr r3, r27
 /* 8039F520 00368AE0  7F 44 D3 78 */	mr r4, r26
-/* 8039F524 00368AE4  48 00 45 C1 */	bl func_803A3AE4
+/* 8039F524 00368AE4  48 00 45 C1 */	bl criware_803A3AE4
 /* 8039F528 00368AE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8039F52C 00368AEC  90 7D 00 00 */	stw r3, 0(r29)
 /* 8039F530 00368AF0  40 82 00 08 */	bne .L_8039F538
@@ -625,9 +625,9 @@
 /* 8039F554 00368B14  7C 08 03 A6 */	mtlr r0
 /* 8039F558 00368B18  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039F55C 00368B1C  4E 80 00 20 */	blr 
-.endfn func_8039F3F0
+.endfn mwsfcre_MallocTab
 
-.fn mwsfcre_CreateSfd, global
+.fn mwsfcre_CreateSfd, local
 /* 8039F560 00368B20  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8039F564 00368B24  7C 08 02 A6 */	mflr r0
 /* 8039F568 00368B28  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -712,22 +712,22 @@
 /* 8039F694 00368C54  7C 05 02 14 */	add r0, r5, r0
 /* 8039F698 00368C58  7C 80 22 14 */	add r4, r0, r4
 /* 8039F69C 00368C5C  38 84 00 20 */	addi r4, r4, 0x20
-/* 8039F6A0 00368C60  48 00 44 45 */	bl func_803A3AE4
+/* 8039F6A0 00368C60  48 00 44 45 */	bl criware_803A3AE4
 /* 8039F6A4 00368C64  80 99 00 04 */	lwz r4, 4(r25)
 /* 8039F6A8 00368C68  7C 7A 1B 78 */	mr r26, r3
 /* 8039F6AC 00368C6C  7D E3 7B 78 */	mr r3, r15
 /* 8039F6B0 00368C70  38 84 00 40 */	addi r4, r4, 0x40
-/* 8039F6B4 00368C74  48 00 44 31 */	bl func_803A3AE4
+/* 8039F6B4 00368C74  48 00 44 31 */	bl criware_803A3AE4
 /* 8039F6B8 00368C78  7C 7B 1B 78 */	mr r27, r3
 /* 8039F6BC 00368C7C  7D E3 7B 78 */	mr r3, r15
 /* 8039F6C0 00368C80  7E 04 83 78 */	mr r4, r16
 /* 8039F6C4 00368C84  38 A1 00 08 */	addi r5, r1, 8
-/* 8039F6C8 00368C88  4B FF FB DD */	bl func_8039F2A4
+/* 8039F6C8 00368C88  4B FF FB DD */	bl mwsfcre_MallocRfb
 /* 8039F6CC 00368C8C  7C 7C 1B 78 */	mr r28, r3
 /* 8039F6D0 00368C90  7D E3 7B 78 */	mr r3, r15
 /* 8039F6D4 00368C94  7E 04 83 78 */	mr r4, r16
 /* 8039F6D8 00368C98  38 A1 00 10 */	addi r5, r1, 0x10
-/* 8039F6DC 00368C9C  4B FF FD 15 */	bl func_8039F3F0
+/* 8039F6DC 00368C9C  4B FF FD 15 */	bl mwsfcre_MallocTab
 /* 8039F6E0 00368CA0  28 14 00 0B */	cmplwi r20, 0xb
 /* 8039F6E4 00368CA4  7C 6E 1B 78 */	mr r14, r3
 /* 8039F6E8 00368CA8  41 81 00 24 */	bgt .L_8039F70C
@@ -747,11 +747,11 @@
 /* 8039F714 00368CD4  40 82 00 28 */	bne .L_8039F73C
 /* 8039F718 00368CD8  80 99 00 14 */	lwz r4, 0x14(r25)
 /* 8039F71C 00368CDC  7D E3 7B 78 */	mr r3, r15
-/* 8039F720 00368CE0  48 00 43 C5 */	bl func_803A3AE4
+/* 8039F720 00368CE0  48 00 43 C5 */	bl criware_803A3AE4
 /* 8039F724 00368CE4  80 99 00 18 */	lwz r4, 0x18(r25)
 /* 8039F728 00368CE8  7C 77 1B 78 */	mr r23, r3
 /* 8039F72C 00368CEC  7D E3 7B 78 */	mr r3, r15
-/* 8039F730 00368CF0  48 00 43 B5 */	bl func_803A3AE4
+/* 8039F730 00368CF0  48 00 43 B5 */	bl criware_803A3AE4
 /* 8039F734 00368CF4  7C 76 1B 78 */	mr r22, r3
 /* 8039F738 00368CF8  48 00 00 0C */	b .L_8039F744
 .L_8039F73C:
@@ -760,29 +760,29 @@
 .L_8039F744:
 /* 8039F744 00368D04  7D E3 7B 78 */	mr r3, r15
 /* 8039F748 00368D08  38 80 08 00 */	li r4, 0x800
-/* 8039F74C 00368D0C  48 00 43 99 */	bl func_803A3AE4
+/* 8039F74C 00368D0C  48 00 43 99 */	bl criware_803A3AE4
 /* 8039F750 00368D10  7C 7D 1B 78 */	mr r29, r3
 /* 8039F754 00368D14  7D E3 7B 78 */	mr r3, r15
 /* 8039F758 00368D18  38 80 40 00 */	li r4, 0x4000
-/* 8039F75C 00368D1C  48 00 43 89 */	bl func_803A3AE4
+/* 8039F75C 00368D1C  48 00 43 89 */	bl criware_803A3AE4
 /* 8039F760 00368D20  7C 7E 1B 78 */	mr r30, r3
 /* 8039F764 00368D24  7D E3 7B 78 */	mr r3, r15
 /* 8039F768 00368D28  38 80 01 00 */	li r4, 0x100
-/* 8039F76C 00368D2C  48 00 43 79 */	bl func_803A3AE4
+/* 8039F76C 00368D2C  48 00 43 79 */	bl criware_803A3AE4
 /* 8039F770 00368D30  7C 71 1B 78 */	mr r17, r3
 /* 8039F774 00368D34  7D E3 7B 78 */	mr r3, r15
 /* 8039F778 00368D38  38 80 04 E0 */	li r4, 0x4e0
-/* 8039F77C 00368D3C  48 00 43 69 */	bl func_803A3AE4
+/* 8039F77C 00368D3C  48 00 43 69 */	bl criware_803A3AE4
 /* 8039F780 00368D40  90 61 00 9C */	stw r3, 0x9c(r1)
 /* 8039F784 00368D44  7D E3 7B 78 */	mr r3, r15
 /* 8039F788 00368D48  38 80 01 00 */	li r4, 0x100
-/* 8039F78C 00368D4C  48 00 43 59 */	bl func_803A3AE4
+/* 8039F78C 00368D4C  48 00 43 59 */	bl criware_803A3AE4
 /* 8039F790 00368D50  38 00 01 20 */	li r0, 0x120
 /* 8039F794 00368D54  7C 7F 1B 78 */	mr r31, r3
 /* 8039F798 00368D58  90 0F 05 1C */	stw r0, 0x51c(r15)
 /* 8039F79C 00368D5C  7D E3 7B 78 */	mr r3, r15
 /* 8039F7A0 00368D60  38 80 01 20 */	li r4, 0x120
-/* 8039F7A4 00368D64  48 00 43 41 */	bl func_803A3AE4
+/* 8039F7A4 00368D64  48 00 43 41 */	bl criware_803A3AE4
 /* 8039F7A8 00368D68  2C 1A 00 00 */	cmpwi r26, 0
 /* 8039F7AC 00368D6C  90 6F 05 18 */	stw r3, 0x518(r15)
 /* 8039F7B0 00368D70  41 82 00 50 */	beq .L_8039F800
@@ -812,7 +812,7 @@
 /* 8039F80C 00368DCC  4C C6 31 82 */	crclr 6
 /* 8039F810 00368DD0  4B FF E4 29 */	bl MWSFSVM_Error
 /* 8039F814 00368DD4  7D E3 7B 78 */	mr r3, r15
-/* 8039F818 00368DD8  48 00 42 31 */	bl func_803A3A48
+/* 8039F818 00368DD8  48 00 42 31 */	bl criware_803A3A48
 /* 8039F81C 00368DDC  38 60 00 00 */	li r3, 0
 /* 8039F820 00368DE0  48 00 03 F0 */	b .L_8039FC10
 .L_8039F824:
@@ -843,7 +843,7 @@
 /* 8039F874 00368E34  4C C6 31 82 */	crclr 6
 /* 8039F878 00368E38  4B FF E3 C1 */	bl MWSFSVM_Error
 /* 8039F87C 00368E3C  7D E3 7B 78 */	mr r3, r15
-/* 8039F880 00368E40  48 00 41 C9 */	bl func_803A3A48
+/* 8039F880 00368E40  48 00 41 C9 */	bl criware_803A3A48
 /* 8039F884 00368E44  38 60 00 00 */	li r3, 0
 /* 8039F888 00368E48  48 00 03 88 */	b .L_8039FC10
 .L_8039F88C:
@@ -1054,7 +1054,7 @@
 /* 8039FB6C 0036912C  3C 80 80 3A */	lis r4, MWSFLIB_SfdErrFunc@ha
 /* 8039FB70 00369130  7D E5 7B 78 */	mr r5, r15
 /* 8039FB74 00369134  38 84 10 98 */	addi r4, r4, MWSFLIB_SfdErrFunc@l
-/* 8039FB78 00369138  48 02 12 1D */	bl func_803C0D94
+/* 8039FB78 00369138  48 02 12 1D */	bl criware_803C0D94
 /* 8039FB7C 0036913C  2C 03 00 00 */	cmpwi r3, 0
 /* 8039FB80 00369140  41 82 00 28 */	beq .L_8039FBA8
 /* 8039FB84 00369144  38 60 FE D1 */	li r3, -303
@@ -1102,7 +1102,7 @@
 /* 8039FC20 003691E0  4E 80 00 20 */	blr 
 .endfn mwsfcre_CreateSfd
 
-.fn mwsfcre_AttachPicUsrBuf, global
+.fn mwsfcre_AttachPicUsrBuf, local
 /* 8039FC24 003691E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039FC28 003691E8  7C 08 02 A6 */	mflr r0
 /* 8039FC2C 003691EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1274,7 +1274,7 @@
 /* 8039FE98 00369458  83 E3 00 48 */	lwz r31, 0x48(r3)
 /* 8039FE9C 0036945C  90 03 00 48 */	stw r0, 0x48(r3)
 /* 8039FEA0 00369460  7F E3 FB 78 */	mr r3, r31
-/* 8039FEA4 00369464  48 02 AC D9 */	bl func_803CAB7C
+/* 8039FEA4 00369464  48 02 AC D9 */	bl SFD_Stop
 /* 8039FEA8 00369468  2C 03 00 00 */	cmpwi r3, 0
 /* 8039FEAC 0036946C  41 82 00 20 */	beq .L_8039FECC
 /* 8039FEB0 00369470  3C 60 80 52 */	lis r3, mwsfdcre_strpool@ha
@@ -1290,7 +1290,7 @@
 /* 8039FED4 00369494  7F E3 FB 78 */	mr r3, r31
 /* 8039FED8 00369498  7F C5 F3 78 */	mr r5, r30
 /* 8039FEDC 0036949C  38 84 10 98 */	addi r4, r4, MWSFLIB_SfdErrFunc@l
-/* 8039FEE0 003694A0  48 02 0E B5 */	bl func_803C0D94
+/* 8039FEE0 003694A0  48 02 0E B5 */	bl criware_803C0D94
 /* 8039FEE4 003694A4  2C 03 00 00 */	cmpwi r3, 0
 /* 8039FEE8 003694A8  41 82 00 28 */	beq .L_8039FF10
 /* 8039FEEC 003694AC  38 60 FE D1 */	li r3, -303
@@ -1315,7 +1315,7 @@
 /* 8039FF30 003694F0  4E 80 00 20 */	blr 
 .endfn MWSFCRE_ResetSfdHn
 
-.fn func_8039FF34, global
+.fn criware_8039FF34, global
 /* 8039FF34 003694F4  94 21 FD D0 */	stwu r1, -0x230(r1)
 /* 8039FF38 003694F8  7C 08 02 A6 */	mflr r0
 /* 8039FF3C 003694FC  90 01 02 34 */	stw r0, 0x234(r1)
@@ -1389,7 +1389,7 @@
 /* 803A0044 00369604  7C 08 03 A6 */	mtlr r0
 /* 803A0048 00369608  38 21 02 30 */	addi r1, r1, 0x230
 /* 803A004C 0036960C  4E 80 00 20 */	blr 
-.endfn func_8039FF34
+.endfn criware_8039FF34
 
 .fn mwPlyCreateSofdec, global
 /* 803A0050 00369610  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1525,7 +1525,7 @@
 /* 803A0230 003697F0  80 1D 00 18 */	lwz r0, 0x18(r29)
 /* 803A0234 003697F4  90 1E 05 38 */	stw r0, 0x538(r30)
 /* 803A0238 003697F8  93 9E 05 3C */	stw r28, 0x53c(r30)
-/* 803A023C 003697FC  48 00 39 5D */	bl func_803A3B98
+/* 803A023C 003697FC  48 00 39 5D */	bl criware_803A3B98
 /* 803A0240 00369800  93 9E 05 48 */	stw r28, 0x548(r30)
 /* 803A0244 00369804  7F A3 EB 78 */	mr r3, r29
 /* 803A0248 00369808  93 9E 05 4C */	stw r28, 0x54c(r30)
@@ -1622,7 +1622,7 @@
 /* 803A03B0 00369970  4E 80 04 21 */	bctrl 
 .L_803A03B4:
 /* 803A03B4 00369974  7F C3 F3 78 */	mr r3, r30
-/* 803A03B8 00369978  48 00 06 8D */	bl func_803A0A44
+/* 803A03B8 00369978  48 00 06 8D */	bl mwply_Destroy
 /* 803A03BC 0036997C  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A03C0 00369980  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A03C4 00369984  2C 03 00 00 */	cmpwi r3, 0
@@ -1679,7 +1679,7 @@
 /* 803A0488 00369A48  4E 80 04 21 */	bctrl 
 .L_803A048C:
 /* 803A048C 00369A4C  7F C3 F3 78 */	mr r3, r30
-/* 803A0490 00369A50  48 00 05 B5 */	bl func_803A0A44
+/* 803A0490 00369A50  48 00 05 B5 */	bl mwply_Destroy
 /* 803A0494 00369A54  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A0498 00369A58  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A049C 00369A5C  2C 03 00 00 */	cmpwi r3, 0
@@ -1721,7 +1721,7 @@
 /* 803A0524 00369AE4  4E 80 04 21 */	bctrl 
 .L_803A0528:
 /* 803A0528 00369AE8  7F C3 F3 78 */	mr r3, r30
-/* 803A052C 00369AEC  48 00 05 19 */	bl func_803A0A44
+/* 803A052C 00369AEC  48 00 05 19 */	bl mwply_Destroy
 /* 803A0530 00369AF0  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A0534 00369AF4  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A0538 00369AF8  2C 03 00 00 */	cmpwi r3, 0
@@ -1796,7 +1796,7 @@
 /* 803A063C 00369BFC  4E 80 04 21 */	bctrl 
 .L_803A0640:
 /* 803A0640 00369C00  7F C3 F3 78 */	mr r3, r30
-/* 803A0644 00369C04  48 00 04 01 */	bl func_803A0A44
+/* 803A0644 00369C04  48 00 04 01 */	bl mwply_Destroy
 /* 803A0648 00369C08  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A064C 00369C0C  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A0650 00369C10  2C 03 00 00 */	cmpwi r3, 0
@@ -1821,7 +1821,7 @@
 /* 803A0694 00369C54  80 9E 00 4C */	lwz r4, 0x4c(r30)
 /* 803A0698 00369C58  4B FF 19 8D */	bl LSC_SetStmHndl
 /* 803A069C 00369C5C  7F C3 F3 78 */	mr r3, r30
-/* 803A06A0 00369C60  48 00 02 21 */	bl func_803A08C0
+/* 803A06A0 00369C60  48 00 02 21 */	bl mwsfcre_MallocCompoWork
 /* 803A06A4 00369C64  2C 03 FF FF */	cmpwi r3, -1
 /* 803A06A8 00369C68  40 82 00 70 */	bne .L_803A0718
 /* 803A06AC 00369C6C  3C 60 80 60 */	lis r3, lbl_80602960@ha
@@ -1838,7 +1838,7 @@
 /* 803A06D8 00369C98  4E 80 04 21 */	bctrl 
 .L_803A06DC:
 /* 803A06DC 00369C9C  7F C3 F3 78 */	mr r3, r30
-/* 803A06E0 00369CA0  48 00 03 65 */	bl func_803A0A44
+/* 803A06E0 00369CA0  48 00 03 65 */	bl mwply_Destroy
 /* 803A06E4 00369CA4  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A06E8 00369CA8  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A06EC 00369CAC  2C 03 00 00 */	cmpwi r3, 0
@@ -1880,7 +1880,7 @@
 /* 803A0774 00369D34  4E 80 04 21 */	bctrl 
 .L_803A0778:
 /* 803A0778 00369D38  7F C3 F3 78 */	mr r3, r30
-/* 803A077C 00369D3C  48 00 02 C9 */	bl func_803A0A44
+/* 803A077C 00369D3C  48 00 02 C9 */	bl mwply_Destroy
 /* 803A0780 00369D40  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A0784 00369D44  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A0788 00369D48  2C 03 00 00 */	cmpwi r3, 0
@@ -1926,7 +1926,7 @@
 /* 803A0820 00369DE0  4E 80 04 21 */	bctrl 
 .L_803A0824:
 /* 803A0824 00369DE4  7F C3 F3 78 */	mr r3, r30
-/* 803A0828 00369DE8  48 00 02 1D */	bl func_803A0A44
+/* 803A0828 00369DE8  48 00 02 1D */	bl mwply_Destroy
 /* 803A082C 00369DEC  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A0830 00369DF0  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A0834 00369DF4  2C 03 00 00 */	cmpwi r3, 0
@@ -1969,7 +1969,7 @@
 /* 803A08BC 00369E7C  4E 80 00 20 */	blr 
 .endfn mwPlyCreateSofdec
 
-.fn func_803A08C0, global
+.fn mwsfcre_MallocCompoWork, local
 /* 803A08C0 00369E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A08C4 00369E84  7C 08 02 A6 */	mflr r0
 /* 803A08C8 00369E88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1984,7 +1984,7 @@
 /* 803A08EC 00369EAC  7C 7E 1B 78 */	mr r30, r3
 /* 803A08F0 00369EB0  7F A3 EB 78 */	mr r3, r29
 /* 803A08F4 00369EB4  7F C4 F3 78 */	mr r4, r30
-/* 803A08F8 00369EB8  48 00 31 ED */	bl func_803A3AE4
+/* 803A08F8 00369EB8  48 00 31 ED */	bl criware_803A3AE4
 /* 803A08FC 00369EBC  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0900 00369EC0  40 82 00 28 */	bne .L_803A0928
 /* 803A0904 00369EC4  3C 60 80 52 */	lis r3, mwsfdcre_strpool@ha
@@ -1993,7 +1993,7 @@
 /* 803A0910 00369ED0  4C C6 31 82 */	crclr 6
 /* 803A0914 00369ED4  4B FF D3 25 */	bl MWSFSVM_Error
 /* 803A0918 00369ED8  7F A3 EB 78 */	mr r3, r29
-/* 803A091C 00369EDC  48 00 31 2D */	bl func_803A3A48
+/* 803A091C 00369EDC  48 00 31 2D */	bl criware_803A3A48
 /* 803A0920 00369EE0  38 60 FF FF */	li r3, -1
 /* 803A0924 00369EE4  48 00 00 74 */	b .L_803A0998
 .L_803A0928:
@@ -2005,7 +2005,7 @@
 /* 803A093C 00369EFC  40 82 00 4C */	bne .L_803A0988
 /* 803A0940 00369F00  7F A3 EB 78 */	mr r3, r29
 /* 803A0944 00369F04  3C 80 00 02 */	lis r4, 2
-/* 803A0948 00369F08  48 00 31 9D */	bl func_803A3AE4
+/* 803A0948 00369F08  48 00 31 9D */	bl criware_803A3AE4
 /* 803A094C 00369F0C  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0950 00369F10  40 82 00 28 */	bne .L_803A0978
 /* 803A0954 00369F14  3C 60 80 52 */	lis r3, mwsfdcre_strpool@ha
@@ -2014,7 +2014,7 @@
 /* 803A0960 00369F20  4C C6 31 82 */	crclr 6
 /* 803A0964 00369F24  4B FF D2 D5 */	bl MWSFSVM_Error
 /* 803A0968 00369F28  7F A3 EB 78 */	mr r3, r29
-/* 803A096C 00369F2C  48 00 30 DD */	bl func_803A3A48
+/* 803A096C 00369F2C  48 00 30 DD */	bl criware_803A3A48
 /* 803A0970 00369F30  38 60 FF FF */	li r3, -1
 /* 803A0974 00369F34  48 00 00 24 */	b .L_803A0998
 .L_803A0978:
@@ -2036,9 +2036,9 @@
 /* 803A09A8 00369F68  7C 08 03 A6 */	mtlr r0
 /* 803A09AC 00369F6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A09B0 00369F70  4E 80 00 20 */	blr 
-.endfn func_803A08C0
+.endfn mwsfcre_MallocCompoWork
 
-.fn func_803A09B4, global
+.fn criware_803A09B4, global
 /* 803A09B4 00369F74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A09B8 00369F78  7C 08 02 A6 */	mflr r0
 /* 803A09BC 00369F7C  3C 80 80 60 */	lis r4, lbl_80602960@ha
@@ -2059,7 +2059,7 @@
 /* 803A09F8 00369FB8  4E 80 04 21 */	bctrl 
 .L_803A09FC:
 /* 803A09FC 00369FBC  7F E3 FB 78 */	mr r3, r31
-/* 803A0A00 00369FC0  48 00 00 45 */	bl func_803A0A44
+/* 803A0A00 00369FC0  48 00 00 45 */	bl mwply_Destroy
 /* 803A0A04 00369FC4  3C 60 80 60 */	lis r3, lbl_80602960@ha
 /* 803A0A08 00369FC8  80 63 29 60 */	lwz r3, lbl_80602960@l(r3)
 /* 803A0A0C 00369FCC  2C 03 00 00 */	cmpwi r3, 0
@@ -2077,9 +2077,9 @@
 /* 803A0A38 00369FF8  7C 08 03 A6 */	mtlr r0
 /* 803A0A3C 00369FFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0A40 0036A000  4E 80 00 20 */	blr 
-.endfn func_803A09B4
+.endfn criware_803A09B4
 
-.fn func_803A0A44, global
+.fn mwply_Destroy, local
 /* 803A0A44 0036A004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0A48 0036A008  7C 08 02 A6 */	mflr r0
 /* 803A0A4C 0036A00C  2C 03 00 00 */	cmpwi r3, 0
@@ -2092,7 +2092,7 @@
 /* 803A0A68 0036A028  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 803A0A6C 0036A02C  48 02 A8 75 */	bl SFD_RequestStop
 /* 803A0A70 0036A030  7F E3 FB 78 */	mr r3, r31
-/* 803A0A74 0036A034  48 00 0E 11 */	bl func_803A1884
+/* 803A0A74 0036A034  48 00 0E 11 */	bl mwSfdStopDec
 /* 803A0A78 0036A038  38 00 00 00 */	li r0, 0
 /* 803A0A7C 0036A03C  38 60 00 00 */	li r3, 0
 /* 803A0A80 0036A040  90 1F 00 00 */	stw r0, 0(r31)
@@ -2112,7 +2112,7 @@
 /* 803A0AB0 0036A070  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 803A0AB4 0036A074  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0AB8 0036A078  41 82 00 08 */	beq .L_803A0AC0
-/* 803A0ABC 0036A07C  4B FF D3 65 */	bl func_8039DE20
+/* 803A0ABC 0036A07C  4B FF D3 65 */	bl MWSTM_Destroy
 .L_803A0AC0:
 /* 803A0AC0 0036A080  80 7F 04 F4 */	lwz r3, 0x4f4(r31)
 /* 803A0AC4 0036A084  2C 03 00 00 */	cmpwi r3, 0
@@ -2155,9 +2155,9 @@
 /* 803A0B48 0036A108  38 7F 05 F0 */	addi r3, r31, 0x5f0
 /* 803A0B4C 0036A10C  48 00 2C B5 */	bl MWSST_Destroy
 /* 803A0B50 0036A110  7F E3 FB 78 */	mr r3, r31
-/* 803A0B54 0036A114  48 00 2E F5 */	bl func_803A3A48
+/* 803A0B54 0036A114  48 00 2E F5 */	bl criware_803A3A48
 /* 803A0B58 0036A118  7F E3 FB 78 */	mr r3, r31
-/* 803A0B5C 0036A11C  48 00 30 49 */	bl func_803A3BA4
+/* 803A0B5C 0036A11C  48 00 30 49 */	bl criware_803A3BA4
 /* 803A0B60 0036A120  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0B64 0036A124  41 82 00 18 */	beq .L_803A0B7C
 /* 803A0B68 0036A128  3C 60 80 52 */	lis r3, mwsfdcre_strpool@ha
@@ -2178,9 +2178,9 @@
 /* 803A0B9C 0036A15C  7C 08 03 A6 */	mtlr r0
 /* 803A0BA0 0036A160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0BA4 0036A164  4E 80 00 20 */	blr 
-.endfn func_803A0A44
+.endfn mwply_Destroy
 
-.fn func_803A0BA8, global
+.fn criware_803A0BA8, global
 /* 803A0BA8 0036A168  80 A3 05 3C */	lwz r5, 0x53c(r3)
 /* 803A0BAC 0036A16C  80 03 05 34 */	lwz r0, 0x534(r3)
 /* 803A0BB0 0036A170  7C A5 22 14 */	add r5, r5, r4
@@ -2196,9 +2196,9 @@
 .L_803A0BD4:
 /* 803A0BD4 0036A194  7C C3 33 78 */	mr r3, r6
 /* 803A0BD8 0036A198  4E 80 00 20 */	blr 
-.endfn func_803A0BA8
+.endfn criware_803A0BA8
 
-.fn func_803A0BDC, global
+.fn criware_803A0BDC, global
 /* 803A0BDC 0036A19C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0BE0 0036A1A0  7C 08 02 A6 */	mflr r0
 /* 803A0BE4 0036A1A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2215,13 +2215,13 @@
 /* 803A0C10 0036A1D0  7C 08 03 A6 */	mtlr r0
 /* 803A0C14 0036A1D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0C18 0036A1D8  4E 80 00 20 */	blr 
-.endfn func_803A0BDC
+.endfn criware_803A0BDC
 
-.fn func_803A0C1C, global
+.fn criware_803A0C1C, global
 /* 803A0C1C 0036A1DC  4E 80 00 20 */	blr 
-.endfn func_803A0C1C
+.endfn criware_803A0C1C
 
-.fn func_803A0C20, global
+.fn criware_803A0C20, global
 /* 803A0C20 0036A1E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0C24 0036A1E4  7C 08 02 A6 */	mflr r0
 /* 803A0C28 0036A1E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2238,13 +2238,13 @@
 /* 803A0C54 0036A214  7C 08 03 A6 */	mtlr r0
 /* 803A0C58 0036A218  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0C5C 0036A21C  4E 80 00 20 */	blr 
-.endfn func_803A0C20
+.endfn criware_803A0C20
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .balign 8
 
-.obj mwsfd_mps_trsetup, global
+.obj mwsfd_mps_trsetup, local
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -2256,7 +2256,7 @@
 	.4byte SFD_tr_uo
 .endobj mwsfd_mps_trsetup
 
-.obj mwsfd_mpv_trsetup, global
+.obj mwsfd_mpv_trsetup, local
 	.4byte SFD_tr_in_mem
 	.4byte 0
 	.4byte SFD_tr_vd_mpv
@@ -2268,7 +2268,7 @@
 	.4byte 0
 .endobj mwsfd_mpv_trsetup
 
-.obj mwsfd_vonlysfd_trsetup, global
+.obj mwsfd_vonlysfd_trsetup, local
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -2291,45 +2291,45 @@
 .endobj double_8051DA70
 
 .obj mwsfdcre_strpool, global
-	.asciz "E206011 MwsfdCrePrm: illigal buffmt."
-	.asciz "E1122613 mwPlyCalcWorkCprmSfd: cprm is NULL."
-	.asciz "E7092501 mwPlyCalcWorkCprmSfd: M4V is not support."
-	.asciz "E7092502 mwPlyCalcWorkCprmSfd: H264 is not support."
-	.asciz "E6081101 outer_frmpool_num error"
-	.asciz "E6081102 outer_frmpool_size error"
-	.asciz "E6081103 outer_frmpool_ptr error"
-	.asciz "E20010703B MWSFCRE_SetSupplySj"
-	.asciz "E2053002 not enough work"
-	.asciz "E4041301 not enough work"
-	.asciz "E20010703C mwPlyCreateSofdec: create error"
-	.asciz "E20010703D mwPlyCreateSofdec: set errcb"
-	.asciz "E410142 mwPlyCreateSofdec: can't skghn."
-	.asciz "E02120501 Internal Error: mwsfcre_AttachPicUsrBuf()."
-	.asciz "E02120502 mwsfcre_AttachPicUsrBuf(): usrdatbuf is short."
-	.asciz "E02120503 mwPlyAttachPicUsrBuf(): bufsize is short."
-	.asciz "E20010703E MWSFCRE_DestroySfd"
-	.asciz "E0203261 MWSFCRE_ResetSfdHn: SFD_Stop() failed."
-	.asciz "E0203262 MWSFCRE_ResetSfdHn: SFD_SetErrFn() failed."
-	.asciz "%ld, %ld, %ld, %ld, %ld, %ld, %p, %ld, %ld, %d, %ld, %ld, %p"
-	.asciz "E1122612 mwPlyCreateSofdec : cprm is NULL."
-	.asciz "E3012102 Buffer format is invalid."
-	.asciz "E4110901 Number of frame pool exceeds 14."
-	.asciz "E4061801 mwPlyCreateSofdec: Number of MWPLY handles exceeds its maximum number."
-	.asciz "E2053006 mwPlyCreateSofdec: Didn't set malloc/free func."
-	.asciz "E2012 mwPlyCreate:can't create SFD"
-	.asciz "E2013 mwPlyCreate:can't create SJ"
-	.asciz "E08102901 mwPlyCreate:can't create uniSJ"
-	.asciz "E201185 can't create SfxHn"
-	.asciz "E201212 mwPlyCreate: can't set AddInfSJ"
-	.asciz "E2053003 not enough work: sfx_wk"
-	.asciz "E2053004 not enough work: ainfsj_buf"
-	.asciz "E2053005 forgot free."
-	.asciz "E410251 mwPlyGetHdrInfWithKey: parameter is illigal."
-	.asciz "E204161 mwPlyGetHdrInf(): NULL pointer"
-	.asciz "E204162 mwPlyGetHdrInf(): bufsize error"
-	.asciz "E7060501 mwPlyGetHdrAudioDetail(): NULL pointer"
-	.asciz "E7060502 mwPlyGetHdrAudioDetail(): bsize is too small."
-	.asciz "E7060503 SFH_Create return NULL."
+	.asciz "E206011 MwsfdCrePrm: illigal buffmt." #0x0
+	.asciz "E1122613 mwPlyCalcWorkCprmSfd: cprm is NULL." #0x25
+	.asciz "E7092501 mwPlyCalcWorkCprmSfd: M4V is not support." #0x52
+	.asciz "E7092502 mwPlyCalcWorkCprmSfd: H264 is not support." #0x85
+	.asciz "E6081101 outer_frmpool_num error" #0xB9
+	.asciz "E6081102 outer_frmpool_size error" #0xDA
+	.asciz "E6081103 outer_frmpool_ptr error" #0xFC
+	.asciz "E20010703B MWSFCRE_SetSupplySj" #0x11D
+	.asciz "E2053002 not enough work" #0x13C
+	.asciz "E4041301 not enough work" #0x155
+	.asciz "E20010703C mwPlyCreateSofdec: create error" #0x16E
+	.asciz "E20010703D mwPlyCreateSofdec: set errcb" #0x199
+	.asciz "E410142 mwPlyCreateSofdec: can't skghn." #0x1C1
+	.asciz "E02120501 Internal Error: mwsfcre_AttachPicUsrBuf()." #0x1E9
+	.asciz "E02120502 mwsfcre_AttachPicUsrBuf(): usrdatbuf is short." #0x21E
+	.asciz "E02120503 mwPlyAttachPicUsrBuf(): bufsize is short." #0x257
+	.asciz "E20010703E MWSFCRE_DestroySfd" #0x28B
+	.asciz "E0203261 MWSFCRE_ResetSfdHn: SFD_Stop() failed." #0x2A9
+	.asciz "E0203262 MWSFCRE_ResetSfdHn: SFD_SetErrFn() failed." #0x2D9
+	.asciz "%ld, %ld, %ld, %ld, %ld, %ld, %p, %ld, %ld, %d, %ld, %ld, %p" #0x30D
+	.asciz "E1122612 mwPlyCreateSofdec : cprm is NULL." #0x34A
+	.asciz "E3012102 Buffer format is invalid." #0x375
+	.asciz "E4110901 Number of frame pool exceeds 14." #0x398
+	.asciz "E4061801 mwPlyCreateSofdec: Number of MWPLY handles exceeds its maximum number." #0x3C2
+	.asciz "E2053006 mwPlyCreateSofdec: Didn't set malloc/free func." #0x412
+	.asciz "E2012 mwPlyCreate:can't create SFD" #0x44B
+	.asciz "E2013 mwPlyCreate:can't create SJ" #0x46E
+	.asciz "E08102901 mwPlyCreate:can't create uniSJ" #0x490
+	.asciz "E201185 can't create SfxHn" #0x4B9
+	.asciz "E201212 mwPlyCreate: can't set AddInfSJ" #0x4D4
+	.asciz "E2053003 not enough work: sfx_wk" #0x4FC
+	.asciz "E2053004 not enough work: ainfsj_buf" #0x51D
+	.asciz "E2053005 forgot free." #0x542
+	.asciz "E410251 mwPlyGetHdrInfWithKey: parameter is illigal." #0x558
+	.asciz "E204161 mwPlyGetHdrInf(): NULL pointer" #0x58D
+	.asciz "E204162 mwPlyGetHdrInf(): bufsize error" #0x5B4
+	.asciz "E7060501 mwPlyGetHdrAudioDetail(): NULL pointer" #0x5DC
+	.asciz "E7060502 mwPlyGetHdrAudioDetail(): bsize is too small." #0x60C
+	.asciz "E7060503 SFH_Create return NULL." #0x643
 	.4byte 0
 .endobj mwsfdcre_strpool
 
@@ -2338,7 +2338,7 @@
 
 .balign 8
 
-.obj mwsfd_sfdmps_crepara, global
+.obj mwsfd_sfdmps_crepara, local
 	.4byte mwsfd_mps_trsetup
 	.4byte 0
 	.4byte 0x00010000
@@ -3549,5 +3549,44 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj lbl_806028A0, global
-	.skip 0xB8
+	.skip 0x4
 .endobj lbl_806028A0
+
+.obj sjb, local
+	.skip 0x4
+.endobj sjb
+
+.obj sib, local
+	.skip 0x4
+.endobj sib
+
+.obj vib, local
+	.skip 0x4
+.endobj vib
+
+.obj aib, local
+	.skip 0x4
+.endobj aib
+
+.obj adxibuf, local
+	.skip 0x4
+.endobj adxibuf
+
+.obj adxwk, local
+	.skip 0x4
+.endobj adxwk
+
+.obj rfb, local
+	.skip 0x4
+.endobj rfb
+
+.obj tab, local
+	.skip 0x4
+.endobj tab
+
+.obj mwsfd_sisjadr, local
+	.skip 0x4
+.endobj mwsfd_sisjadr
+
+.skip 0x90
+

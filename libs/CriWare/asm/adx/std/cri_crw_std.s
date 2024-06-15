@@ -80,7 +80,7 @@
 
 #may not belong here?
 
-.fn func_8039B4E0, global
+.fn criware_8039B4E0, global
 /* 8039B4E0 00364AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B4E4 00364AA4  7C 08 02 A6 */	mflr r0
 /* 8039B4E8 00364AA8  7C 04 30 00 */	cmpw r4, r6
@@ -298,7 +298,7 @@
 /* 8039B7EC 00364DAC  7C 08 03 A6 */	mtlr r0
 /* 8039B7F0 00364DB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B7F4 00364DB4  4E 80 00 20 */	blr
-.endfn func_8039B4E0
+.endfn criware_8039B4E0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

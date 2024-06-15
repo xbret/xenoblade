@@ -255,7 +255,7 @@
 /* 803D307C 0039C63C  4E 80 00 20 */	blr 
 .endfn VER2_IsEffFtrInf
 
-.fn searchStmId, global
+.fn searchStmId, local
 /* 803D3080 0039C640  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D3084 0039C644  7C 08 02 A6 */	mflr r0
 /* 803D3088 0039C648  90 01 00 24 */	stw r0, 0x24(r1)

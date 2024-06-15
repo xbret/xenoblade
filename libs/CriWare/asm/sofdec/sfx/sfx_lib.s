@@ -7,8 +7,8 @@
 /* 803D582C 0039EDEC  7C 08 02 A6 */	mflr r0
 /* 803D5830 0039EDF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803D5834 0039EDF4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803D5838 0039EDF8  3F E0 80 62 */	lis r31, lbl_8061CE38@ha
-/* 803D583C 0039EDFC  3B FF CE 38 */	addi r31, r31, lbl_8061CE38@l
+/* 803D5838 0039EDF8  3F E0 80 62 */	lis r31, sfx_init_cnt@ha
+/* 803D583C 0039EDFC  3B FF CE 38 */	addi r31, r31, sfx_init_cnt@l
 /* 803D5840 0039EE00  80 1F 00 00 */	lwz r0, 0(r31)
 /* 803D5844 0039EE04  2C 00 00 01 */	cmpwi r0, 1
 /* 803D5848 0039EE08  40 80 00 58 */	bge .L_803D58A0
@@ -193,7 +193,7 @@
 /* 803D5AC0 0039F080  4E 80 00 20 */	blr 
 .endfn SFX_Create
 
-.fn sfx_InitHn, global
+.fn sfx_InitHn, local
 /* 803D5AC4 0039F084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5AC8 0039F088  7C 08 02 A6 */	mflr r0
 /* 803D5ACC 0039F08C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -289,8 +289,8 @@
 .endfn SFX_SetCcirFx
 
 .fn SFX_GetForceSplitField, global
-/* 803D5C0C 0039F1CC  3C 60 80 62 */	lis r3, lbl_8061CE3C@ha
-/* 803D5C10 0039F1D0  80 63 CE 3C */	lwz r3, lbl_8061CE3C@l(r3)
+/* 803D5C0C 0039F1CC  3C 60 80 62 */	lis r3, sfxcnv_forcesplit@ha
+/* 803D5C10 0039F1D0  80 63 CE 3C */	lwz r3, sfxcnv_forcesplit@l(r3)
 /* 803D5C14 0039F1D4  4E 80 00 20 */	blr 
 .endfn SFX_GetForceSplitField
 
@@ -314,13 +314,19 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_8061CE38, global
+.obj sfx_init_cnt, global
 	.skip 0x4
-.endobj lbl_8061CE38
+.endobj sfx_init_cnt
 
-.obj lbl_8061CE3C, global
-	.skip 0xC
-.endobj lbl_8061CE3C
+.obj sfxcnv_forcesplit, global
+	.skip 0x4
+.endobj sfxcnv_forcesplit
+
+.obj sfx_dummy, local
+	.skip 0x4
+.endobj sfx_dummy
+
+.skip 0x4
 
 .obj sfx_libwork, global
 	.skip 0x528

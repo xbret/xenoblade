@@ -9,12 +9,12 @@
 /* 803A1D60 0036B320  48 02 A5 E4 */	b SFD_SetCond
 .endfn MWSFD_SetAudioSw
 
-.fn func_803A1D64, global
+.fn criware_803A1D64, global
 /* 803A1D64 0036B324  80 63 00 48 */	lwz r3, 0x48(r3)
 /* 803A1D68 0036B328  7C 85 23 78 */	mr r5, r4
 /* 803A1D6C 0036B32C  38 80 00 05 */	li r4, 5
 /* 803A1D70 0036B330  48 02 A5 D4 */	b SFD_SetCond
-.endfn func_803A1D64
+.endfn criware_803A1D64
 
 .fn mwPlyGetSfdHn, global
 /* 803A1D74 0036B334  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -64,7 +64,7 @@
 .L_803A1DF4:
 /* 803A1DF4 0036B3B4  38 60 00 00 */	li r3, 0
 .L_803A1DF8:
-/* 803A1DF8 0036B3B8  48 02 A7 E8 */	b func_803CC5E0
+/* 803A1DF8 0036B3B8  48 02 A7 E8 */	b SFD_GetCond
 .endfn MWSFD_GetCond
 
 .fn MWSFD_GetStmHn, global
@@ -72,7 +72,7 @@
 /* 803A1E00 0036B3C0  4E 80 00 20 */	blr 
 .endfn MWSFD_GetStmHn
 
-.fn func_803A1E04, global
+.fn criware_803A1E04, global
 /* 803A1E04 0036B3C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1E08 0036B3C8  7C 08 02 A6 */	mflr r0
 /* 803A1E0C 0036B3CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,7 +91,7 @@
 /* 803A1E40 0036B400  7C 08 03 A6 */	mtlr r0
 /* 803A1E44 0036B404  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1E48 0036B408  4E 80 00 20 */	blr 
-.endfn func_803A1E04
+.endfn criware_803A1E04
 
 .fn MWSFD_IsEnableHndl, global
 /* 803A1E4C 0036B40C  2C 03 00 00 */	cmpwi r3, 0
@@ -109,7 +109,7 @@
 /* 803A1E6C 0036B42C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803A1E70 0036B430  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803A1E74 0036B434  7C 7F 1B 78 */	mr r31, r3
-/* 803A1E78 0036B438  48 00 00 65 */	bl func_803A1EDC
+/* 803A1E78 0036B438  48 00 00 65 */	bl mwPlyGetRareStat
 /* 803A1E7C 0036B43C  80 1F 06 2C */	lwz r0, 0x62c(r31)
 /* 803A1E80 0036B440  2C 00 00 01 */	cmpwi r0, 1
 /* 803A1E84 0036B444  40 82 00 44 */	bne .L_803A1EC8
@@ -139,7 +139,7 @@
 /* 803A1ED8 0036B498  4E 80 00 20 */	blr 
 .endfn mwPlyGetStat
 
-.fn func_803A1EDC, global
+.fn mwPlyGetRareStat, global
 /* 803A1EDC 0036B49C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A1EE0 0036B4A0  7C 08 02 A6 */	mflr r0
 /* 803A1EE4 0036B4A4  2C 03 00 00 */	cmpwi r3, 0
@@ -174,7 +174,7 @@
 /* 803A1F4C 0036B50C  48 00 00 44 */	b .L_803A1F90
 .L_803A1F50:
 /* 803A1F50 0036B510  7F C3 F3 78 */	mr r3, r30
-/* 803A1F54 0036B514  48 00 03 05 */	bl func_803A2258
+/* 803A1F54 0036B514  48 00 03 05 */	bl criware_803A2258
 /* 803A1F58 0036B518  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1F5C 0036B51C  41 82 00 0C */	beq .L_803A1F68
 /* 803A1F60 0036B520  38 60 00 04 */	li r3, 4
@@ -199,9 +199,9 @@
 /* 803A1F9C 0036B55C  7C 08 03 A6 */	mtlr r0
 /* 803A1FA0 0036B560  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A1FA4 0036B564  4E 80 00 20 */	blr 
-.endfn func_803A1EDC
+.endfn mwPlyGetRareStat
 
-.fn func_803A1FA8, global
+.fn MWSFSET_ExecSetCyclicFrameOutput, global
 /* 803A1FA8 0036B568  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A1FAC 0036B56C  7C 08 02 A6 */	mflr r0
 /* 803A1FB0 0036B570  90 01 00 24 */	stw r0, 0x24(r1)
@@ -234,9 +234,9 @@
 /* 803A2018 0036B5D8  7C 08 03 A6 */	mtlr r0
 /* 803A201C 0036B5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2020 0036B5E0  4E 80 00 20 */	blr 
-.endfn func_803A1FA8
+.endfn MWSFSET_ExecSetCyclicFrameOutput
 
-.fn func_803A2024, global
+.fn mwPlyGetTime, global
 /* 803A2024 0036B5E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A2028 0036B5E8  7C 08 02 A6 */	mflr r0
 /* 803A202C 0036B5EC  2C 03 00 00 */	cmpwi r3, 0
@@ -294,7 +294,7 @@
 /* 803A20E8 0036B6A8  7C 08 03 A6 */	mtlr r0
 /* 803A20EC 0036B6AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A20F0 0036B6B0  4E 80 00 20 */	blr 
-.endfn func_803A2024
+.endfn mwPlyGetTime
 
 .fn mwPlySetOutVol, global
 /* 803A20F4 0036B6B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -325,10 +325,10 @@
 /* 803A214C 0036B70C  4B FF AD 0D */	bl MWSFRNA_SetOutVol
 /* 803A2150 0036B710  7F E4 FB 78 */	mr r4, r31
 /* 803A2154 0036B714  38 7E 05 C8 */	addi r3, r30, 0x5c8
-/* 803A2158 0036B718  48 00 13 A1 */	bl func_803A34F8
+/* 803A2158 0036B718  48 00 13 A1 */	bl MWSST_SetOutVol
 /* 803A215C 0036B71C  7F E4 FB 78 */	mr r4, r31
 /* 803A2160 0036B720  38 7E 05 F0 */	addi r3, r30, 0x5f0
-/* 803A2164 0036B724  48 00 13 95 */	bl func_803A34F8
+/* 803A2164 0036B724  48 00 13 95 */	bl MWSST_SetOutVol
 .L_803A2168:
 /* 803A2168 0036B728  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803A216C 0036B72C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -338,7 +338,7 @@
 /* 803A217C 0036B73C  4E 80 00 20 */	blr 
 .endfn mwPlySetOutVol
 
-.fn func_803A2180, global
+.fn mwPlyGetOutVol, global
 /* 803A2180 0036B740  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2184 0036B744  7C 08 02 A6 */	mflr r0
 /* 803A2188 0036B748  2C 03 00 00 */	cmpwi r3, 0
@@ -402,9 +402,9 @@
 /* 803A224C 0036B80C  7C 08 03 A6 */	mtlr r0
 /* 803A2250 0036B810  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2254 0036B814  4E 80 00 20 */	blr 
-.endfn func_803A2180
+.endfn mwPlyGetOutVol
 
-.fn func_803A2258, global
+.fn criware_803A2258, global
 /* 803A2258 0036B818  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A225C 0036B81C  7C 08 02 A6 */	mflr r0
 /* 803A2260 0036B820  38 83 05 C8 */	addi r4, r3, 0x5c8
@@ -438,122 +438,50 @@
 /* 803A22C4 0036B884  7C 08 03 A6 */	mtlr r0
 /* 803A22C8 0036B888  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A22CC 0036B88C  4E 80 00 20 */	blr 
-.endfn func_803A2258
-
-.fn mwsfsvr_SyncStartSst, global
-/* 803A22D0 0036B890  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 803A22D4 0036B894  7C 08 02 A6 */	mflr r0
-/* 803A22D8 0036B898  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803A22DC 0036B89C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803A22E0 0036B8A0  93 C1 00 08 */	stw r30, 8(r1)
-/* 803A22E4 0036B8A4  7C 7E 1B 78 */	mr r30, r3
-/* 803A22E8 0036B8A8  80 63 00 48 */	lwz r3, 0x48(r3)
-/* 803A22EC 0036B8AC  48 02 A0 11 */	bl SFD_GetHnStat
-/* 803A22F0 0036B8B0  2C 03 00 03 */	cmpwi r3, 3
-/* 803A22F4 0036B8B4  40 82 00 C8 */	bne .L_803A23BC
-/* 803A22F8 0036B8B8  80 1E 05 C8 */	lwz r0, 0x5c8(r30)
-/* 803A22FC 0036B8BC  3B FE 05 C8 */	addi r31, r30, 0x5c8
-/* 803A2300 0036B8C0  2C 00 00 01 */	cmpwi r0, 1
-/* 803A2304 0036B8C4  40 82 00 34 */	bne .L_803A2338
-/* 803A2308 0036B8C8  7F E3 FB 78 */	mr r3, r31
-/* 803A230C 0036B8CC  48 00 10 D1 */	bl MWSST_GetStat
-/* 803A2310 0036B8D0  2C 03 00 02 */	cmpwi r3, 2
-/* 803A2314 0036B8D4  41 82 00 24 */	beq .L_803A2338
-/* 803A2318 0036B8D8  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 803A231C 0036B8DC  38 80 00 01 */	li r4, 1
-/* 803A2320 0036B8E0  80 A3 00 00 */	lwz r5, 0(r3)
-/* 803A2324 0036B8E4  81 85 00 24 */	lwz r12, 0x24(r5)
-/* 803A2328 0036B8E8  7D 89 03 A6 */	mtctr r12
-/* 803A232C 0036B8EC  4E 80 04 21 */	bctrl 
-/* 803A2330 0036B8F0  2C 03 00 00 */	cmpwi r3, 0
-/* 803A2334 0036B8F4  40 82 00 88 */	bne .L_803A23BC
-.L_803A2338:
-/* 803A2338 0036B8F8  80 1E 05 F0 */	lwz r0, 0x5f0(r30)
-/* 803A233C 0036B8FC  3B FE 05 F0 */	addi r31, r30, 0x5f0
-/* 803A2340 0036B900  2C 00 00 01 */	cmpwi r0, 1
-/* 803A2344 0036B904  40 82 00 34 */	bne .L_803A2378
-/* 803A2348 0036B908  7F E3 FB 78 */	mr r3, r31
-/* 803A234C 0036B90C  48 00 10 91 */	bl MWSST_GetStat
-/* 803A2350 0036B910  2C 03 00 02 */	cmpwi r3, 2
-/* 803A2354 0036B914  41 82 00 24 */	beq .L_803A2378
-/* 803A2358 0036B918  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 803A235C 0036B91C  38 80 00 01 */	li r4, 1
-/* 803A2360 0036B920  80 A3 00 00 */	lwz r5, 0(r3)
-/* 803A2364 0036B924  81 85 00 24 */	lwz r12, 0x24(r5)
-/* 803A2368 0036B928  7D 89 03 A6 */	mtctr r12
-/* 803A236C 0036B92C  4E 80 04 21 */	bctrl 
-/* 803A2370 0036B930  2C 03 00 00 */	cmpwi r3, 0
-/* 803A2374 0036B934  40 82 00 48 */	bne .L_803A23BC
-.L_803A2378:
-/* 803A2378 0036B938  7F C3 F3 78 */	mr r3, r30
-/* 803A237C 0036B93C  4B FF EF BD */	bl mwPlySfdStart
-/* 803A2380 0036B940  88 1E 00 82 */	lbz r0, 0x82(r30)
-/* 803A2384 0036B944  7C 00 07 75 */	extsb. r0, r0
-/* 803A2388 0036B948  40 82 00 10 */	bne .L_803A2398
-/* 803A238C 0036B94C  7F C3 F3 78 */	mr r3, r30
-/* 803A2390 0036B950  38 80 00 00 */	li r4, 0
-/* 803A2394 0036B954  4B FF F6 F9 */	bl func_803A1A8C
-.L_803A2398:
-/* 803A2398 0036B958  88 1E 00 82 */	lbz r0, 0x82(r30)
-/* 803A239C 0036B95C  7C 00 07 75 */	extsb. r0, r0
-/* 803A23A0 0036B960  40 82 00 1C */	bne .L_803A23BC
-/* 803A23A4 0036B964  38 7E 05 C8 */	addi r3, r30, 0x5c8
-/* 803A23A8 0036B968  38 80 00 00 */	li r4, 0
-/* 803A23AC 0036B96C  48 00 10 D5 */	bl MWSST_GetTime
-/* 803A23B0 0036B970  38 7E 05 F0 */	addi r3, r30, 0x5f0
-/* 803A23B4 0036B974  38 80 00 00 */	li r4, 0
-/* 803A23B8 0036B978  48 00 10 C9 */	bl MWSST_GetTime
-.L_803A23BC:
-/* 803A23BC 0036B97C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 803A23C0 0036B980  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 803A23C4 0036B984  83 C1 00 08 */	lwz r30, 8(r1)
-/* 803A23C8 0036B988  7C 08 03 A6 */	mtlr r0
-/* 803A23CC 0036B98C  38 21 00 10 */	addi r1, r1, 0x10
-/* 803A23D0 0036B990  4E 80 00 20 */	blr 
-.endfn mwsfsvr_SyncStartSst
+.endfn criware_803A2258
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .balign 8
 
 .obj mwsfdset_strpool, global
-	.asciz "E1122617 mwPlySetAudioSw: handle is invalid."
-	.asciz "E6042001 mwPlySetVideoSw: handle is invalid."
-	.asciz "E1122640 mwPlyGetSfdHn: handle is invalid."
-	.asciz "E1122639 mwPlyGetAdxtHn: handle is invalid."
-	.asciz "E202232 mwPlyGetNumDropFrm: handle is invalid."
-	.asciz "E1122619 mwPlyGetNumSkipDec: handle is invalid."
-	.asciz "E1122628 mwPlySetBpicSkip mwPlySetPpicSkip: handle is invalid."
-	.asciz "E1122616 mwPlySetAudioCh: handle is invalid."
-	.asciz "E10911A mwPlySetAudioCh: Invalid ch no."
-	.asciz "E2080801 mwPlyGetNumAudioCh: handle is invalid."
-	.asciz "E2080601 mwPlySetVideoCh: handle is invalid."
-	.asciz "E2080602 mwPlySetVideoCh: Invalid ch no."
-	.asciz "E2080802 mwPlyGetNumVideoCh: handle is invalid."
-	.asciz "E1122625 mwPlySetLimitTime: handle is invalid."
-	.asciz "E5090601 mwPlyGetLimitTime: handle is invalid."
-	.asciz "W200401 mwPlyGetStat: handle is invalid"
-	.asciz "E1122644 mwPlySetFrameOutputCycle: handle is invalid."
-	.asciz "E1122626 mwPlySetSyncMode: handle is invalid."
-	.asciz "E6020801 syncmode is invalid."
-	.asciz "E2010802 mwPlyGetSyncMode: handle is invalid."
-	.asciz "E1122621 mwPlyGetNumDecPool: handle is invalid."
-	.asciz "E1121601 mwPlyGetNumDecPool"
-	.asciz "E1122620 mwPlyGetNumTotalDec: handle is invalid."
-	.asciz "E1122603 mwPlyGetTime; handle is invalid."
-	.asciz "E200601 mwPlyGetTime; can't get time"
-	.asciz "E1122605 mwPlySetOutVol: handle is invalid."
-	.asciz "E1122606 mwPlyGetOutVol: handle is invalid."
-	.asciz "E1122607 mwPlySetOutPan: handle is invalid."
-	.asciz "E1122608 mwPlyGetOutPan: handle is invalid."
-	.asciz "E1122623 mwPlyGetNumSkipEmptyB: handle is invalid."
-	.asciz "E1122627 mwPlySetEmptyBpicSkip: handle is invalid."
-	.asciz "E1122624 mwPlyGetInputSj: handle is invalid."
-	.asciz "E202191 mwPlyGetPlyInf: handle is invalid."
-	.asciz "E1122643 mwPlyGetFlowInf: handle is invalid."
-	.asciz "E302251 mwPlySetSpeedRational: handle is invalid."
-	.asciz "E302251 mwPlySetSpeed: handle is invalid."
-	.asciz "E211051 mwPlySetFloatSpeed: handle is invalid."
-	.asciz "E5060801 mwPlySetUpdateTimeAuto: handle is invalid."
+	.asciz "E1122617 mwPlySetAudioSw: handle is invalid." #0x0
+	.asciz "E6042001 mwPlySetVideoSw: handle is invalid." #0x2D
+	.asciz "E1122640 mwPlyGetSfdHn: handle is invalid." #0x5A
+	.asciz "E1122639 mwPlyGetAdxtHn: handle is invalid." #0x85
+	.asciz "E202232 mwPlyGetNumDropFrm: handle is invalid." #0xB1
+	.asciz "E1122619 mwPlyGetNumSkipDec: handle is invalid." #0xE0
+	.asciz "E1122628 mwPlySetBpicSkip mwPlySetPpicSkip: handle is invalid." #0x110
+	.asciz "E1122616 mwPlySetAudioCh: handle is invalid." #0x14F
+	.asciz "E10911A mwPlySetAudioCh: Invalid ch no." #0x17C
+	.asciz "E2080801 mwPlyGetNumAudioCh: handle is invalid." #0x1A4
+	.asciz "E2080601 mwPlySetVideoCh: handle is invalid." #0x1D4
+	.asciz "E2080602 mwPlySetVideoCh: Invalid ch no." #0x201
+	.asciz "E2080802 mwPlyGetNumVideoCh: handle is invalid." #0x22A
+	.asciz "E1122625 mwPlySetLimitTime: handle is invalid." #0x25A
+	.asciz "E5090601 mwPlyGetLimitTime: handle is invalid." #0x289
+	.asciz "W200401 mwPlyGetStat: handle is invalid" #0x2B8
+	.asciz "E1122644 mwPlySetFrameOutputCycle: handle is invalid." #0x2E0
+	.asciz "E1122626 mwPlySetSyncMode: handle is invalid." #0x316
+	.asciz "E6020801 syncmode is invalid." #0x344
+	.asciz "E2010802 mwPlyGetSyncMode: handle is invalid." #0x362
+	.asciz "E1122621 mwPlyGetNumDecPool: handle is invalid." #0x390
+	.asciz "E1121601 mwPlyGetNumDecPool" #0x3C0
+	.asciz "E1122620 mwPlyGetNumTotalDec: handle is invalid." #0x3DC
+	.asciz "E1122603 mwPlyGetTime; handle is invalid." #0x40D
+	.asciz "E200601 mwPlyGetTime; can't get time" #0x437
+	.asciz "E1122605 mwPlySetOutVol: handle is invalid." #0x45C
+	.asciz "E1122606 mwPlyGetOutVol: handle is invalid." #0x488
+	.asciz "E1122607 mwPlySetOutPan: handle is invalid." #0x4B4
+	.asciz "E1122608 mwPlyGetOutPan: handle is invalid." #0x4E0
+	.asciz "E1122623 mwPlyGetNumSkipEmptyB: handle is invalid." #0x50C
+	.asciz "E1122627 mwPlySetEmptyBpicSkip: handle is invalid." #0x53F
+	.asciz "E1122624 mwPlyGetInputSj: handle is invalid." #0x572
+	.asciz "E202191 mwPlyGetPlyInf: handle is invalid." #0x59F
+	.asciz "E1122643 mwPlyGetFlowInf: handle is invalid." #0x5CA
+	.asciz "E302251 mwPlySetSpeedRational: handle is invalid." #0x5F7
+	.asciz "E302251 mwPlySetSpeed: handle is invalid." #0x629
+	.asciz "E211051 mwPlySetFloatSpeed: handle is invalid." #0x653
+	.asciz "E5060801 mwPlySetUpdateTimeAuto: handle is invalid." #0x682
 	.balign 4
 .endobj mwsfdset_strpool

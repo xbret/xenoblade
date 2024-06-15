@@ -5,25 +5,6 @@
 namespace cf{
 	class CfObjectPc : public CfObjectActor{
 	public:
-		//vtable 2 (CActorParam)
-		//virtual void CActorParam_vtableFunc4();
-		//virtual void CActorParam_vtableFunc86();
-		//virtual void CActorParam_vtableFunc88();
-		//virtual void CActorParam_vtableFunc166();
-		//virtual void CActorParam_vtableFunc167();
-		//virtual void CActorParam_vtableFunc173();
-		//virtual void CActorParam_vtableFunc176();
-		//virtual void CActorParam_vtableFunc178();
-		//vtable 4 (CObjectParam)
-		//virtual void CObjectParam_virtualFunc4();
-		//vtable 4 (CfObject)
-		//virtual void func_800C1220(); (thunk for dtor)
-		//virtual void CfObject_vtableFunc2();
-		//virtual void CfObject_vtableFunc3();
-		//virtual void CfObject_vtableFunc4();
-		//virtual void CfObject_vtableFunc6();
-		//vtable 4 (CfObjectMove)
-		//virtual void CfObjectMove_vtableFunc16();
 		//vtable 4 (CfObjectActor)
 		virtual ~CfObjectPc();
 		//vtable 4 (CfObjectPc)

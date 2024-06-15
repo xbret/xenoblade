@@ -25,8 +25,8 @@
 /* 8039AA30 00363FF0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8039AA34 00363FF4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039AA38 00363FF8  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8039AA3C 00363FFC  3F C0 80 5F */	lis r30, lbl_805F7010@ha
-/* 8039AA40 00364000  3B DE 70 10 */	addi r30, r30, lbl_805F7010@l
+/* 8039AA3C 00363FFC  3F C0 80 5F */	lis r30, adxwii_exec_svr@ha
+/* 8039AA40 00364000  3B DE 70 10 */	addi r30, r30, adxwii_exec_svr@l
 /* 8039AA44 00364004  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8039AA48 00364008  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8039AA4C 0036400C  80 1E 00 40 */	lwz r0, 0x40(r30)
@@ -71,8 +71,8 @@
 /* 8039AAD8 00364098  7C 08 02 A6 */	mflr r0
 /* 8039AADC 0036409C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039AAE0 003640A0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8039AAE4 003640A4  3F E0 80 5F */	lis r31, lbl_805F7010@ha
-/* 8039AAE8 003640A8  3B FF 70 10 */	addi r31, r31, lbl_805F7010@l
+/* 8039AAE4 003640A4  3F E0 80 5F */	lis r31, adxwii_exec_svr@ha
+/* 8039AAE8 003640A8  3B FF 70 10 */	addi r31, r31, adxwii_exec_svr@l
 /* 8039AAEC 003640AC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8039AAF0 003640B0  80 7F 00 40 */	lwz r3, 0x40(r31)
 /* 8039AAF4 003640B4  38 03 FF FF */	addi r0, r3, -1
@@ -103,8 +103,8 @@
 /* 8039AB44 00364104  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8039AB48 00364108  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039AB4C 0036410C  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8039AB50 00364110  3F C0 80 5F */	lis r30, lbl_805F7010@ha
-/* 8039AB54 00364114  3B DE 70 10 */	addi r30, r30, lbl_805F7010@l
+/* 8039AB50 00364110  3F C0 80 5F */	lis r30, adxwii_exec_svr@ha
+/* 8039AB54 00364114  3B DE 70 10 */	addi r30, r30, adxwii_exec_svr@l
 /* 8039AB58 00364118  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8039AB5C 0036411C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8039AB60 00364120  80 1E 03 90 */	lwz r0, 0x390(r30)
@@ -152,8 +152,8 @@
 .endfn adxm_goto_mwidle_border
 
 .fn adxm_safe_proc, global
-/* 8039ABF8 003641B8  3C 80 80 5F */	lis r4, lbl_805F7010@ha
-/* 8039ABFC 003641BC  38 84 70 10 */	addi r4, r4, lbl_805F7010@l
+/* 8039ABF8 003641B8  3C 80 80 5F */	lis r4, adxwii_exec_svr@ha
+/* 8039ABFC 003641BC  38 84 70 10 */	addi r4, r4, adxwii_exec_svr@l
 /* 8039AC00 003641C0  48 00 00 10 */	b .L_8039AC10
 .L_8039AC04:
 /* 8039AC04 003641C4  80 64 00 48 */	lwz r3, 0x48(r4)
@@ -176,8 +176,8 @@
 /* 8039AC38 003641F8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8039AC3C 003641FC  3F C0 80 5E */	lis r30, adxt_vsync_cnt@ha
 /* 8039AC40 00364200  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8039AC44 00364204  3F A0 80 5F */	lis r29, lbl_805F7010@ha
-/* 8039AC48 00364208  3B BD 70 10 */	addi r29, r29, lbl_805F7010@l
+/* 8039AC44 00364204  3F A0 80 5F */	lis r29, adxwii_exec_svr@ha
+/* 8039AC48 00364208  3B BD 70 10 */	addi r29, r29, adxwii_exec_svr@l
 /* 8039AC4C 0036420C  3B FD 00 68 */	addi r31, r29, 0x68
 /* 8039AC50 00364210  48 00 00 50 */	b .L_8039ACA0
 .L_8039AC54:
@@ -220,8 +220,8 @@
 /* 8039ACD4 00364294  7C 08 02 A6 */	mflr r0
 /* 8039ACD8 00364298  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039ACDC 0036429C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8039ACE0 003642A0  3F E0 80 5F */	lis r31, lbl_805F7010@ha
-/* 8039ACE4 003642A4  3B FF 70 10 */	addi r31, r31, lbl_805F7010@l
+/* 8039ACE0 003642A0  3F E0 80 5F */	lis r31, adxwii_exec_svr@ha
+/* 8039ACE4 003642A4  3B FF 70 10 */	addi r31, r31, adxwii_exec_svr@l
 /* 8039ACE8 003642A8  48 00 00 18 */	b .L_8039AD00
 .L_8039ACEC:
 /* 8039ACEC 003642AC  4B FC A5 05 */	bl VIWaitForRetrace
@@ -247,8 +247,8 @@
 /* 8039AD2C 003642EC  7C 08 02 A6 */	mflr r0
 /* 8039AD30 003642F0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8039AD34 003642F4  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 8039AD38 003642F8  3F 60 80 5F */	lis r27, lbl_805F7010@ha
-/* 8039AD3C 003642FC  3B 7B 70 10 */	addi r27, r27, lbl_805F7010@l
+/* 8039AD38 003642F8  3F 60 80 5F */	lis r27, adxwii_exec_svr@ha
+/* 8039AD3C 003642FC  3B 7B 70 10 */	addi r27, r27, adxwii_exec_svr@l
 /* 8039AD40 00364300  3B A0 00 00 */	li r29, 0
 /* 8039AD44 00364304  3B DB 00 10 */	addi r30, r27, 0x10
 /* 8039AD48 00364308  3B FB 00 68 */	addi r31, r27, 0x68
@@ -303,9 +303,9 @@
 /* 8039ADF4 003643B4  4E 80 00 20 */	blr 
 .endfn adxm_mwidle_proc
 
-.fn func_8039ADF8, global
+.fn criware_8039ADF8, global
 /* 8039ADF8 003643B8  4B FF C6 28 */	b SVM_SetCbErr
-.endfn func_8039ADF8
+.endfn criware_8039ADF8
 
 .fn adxm_create_base_thread, global
 /* 8039ADFC 003643BC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -318,8 +318,8 @@
 /* 8039AE18 003643D8  39 20 00 01 */	li r9, 1
 /* 8039AE1C 003643DC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039AE20 003643E0  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8039AE24 003643E4  3F C0 80 5F */	lis r30, lbl_805F7010@ha
-/* 8039AE28 003643E8  3B DE 70 10 */	addi r30, r30, lbl_805F7010@l
+/* 8039AE24 003643E4  3F C0 80 5F */	lis r30, adxwii_exec_svr@ha
+/* 8039AE28 003643E8  3B DE 70 10 */	addi r30, r30, adxwii_exec_svr@l
 /* 8039AE2C 003643EC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8039AE30 003643F0  38 DE 09 F8 */	addi r6, r30, 0x9f8
 /* 8039AE34 003643F4  3B FE 00 10 */	addi r31, r30, 0x10
@@ -375,9 +375,9 @@
 /* 8039AEFC 003644BC  80 7F F0 38 */	lwz r3, adxm_main_thread@l(r31)
 /* 8039AF00 003644C0  7F 84 E3 78 */	mr r4, r28
 /* 8039AF04 003644C4  4B FC 19 5D */	bl OSSetThreadPriority
-/* 8039AF08 003644C8  3C 60 80 60 */	lis r3, lbl_805FF03C@ha
+/* 8039AF08 003644C8  3C 60 80 60 */	lis r3, adxm_main_thread_def_prio@ha
 /* 8039AF0C 003644CC  38 00 00 00 */	li r0, 0
-/* 8039AF10 003644D0  93 83 F0 3C */	stw r28, lbl_805FF03C@l(r3)
+/* 8039AF10 003644D0  93 83 F0 3C */	stw r28, adxm_main_thread_def_prio@l(r3)
 /* 8039AF14 003644D4  90 1E 00 70 */	stw r0, 0x70(r30)
 /* 8039AF18 003644D8  4B FC 07 19 */	bl OSEnableScheduler
 /* 8039AF1C 003644DC  7F A3 EB 78 */	mr r3, r29
@@ -400,8 +400,8 @@
 /* 8039AF50 00364510  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039AF54 00364514  80 04 CD 10 */	lwz r0, adxwii_build@l(r4)
 /* 8039AF58 00364518  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8039AF5C 0036451C  3F E0 80 5F */	lis r31, lbl_805F7010@ha
-/* 8039AF60 00364520  3B FF 70 10 */	addi r31, r31, lbl_805F7010@l
+/* 8039AF5C 0036451C  3F E0 80 5F */	lis r31, adxwii_exec_svr@ha
+/* 8039AF60 00364520  3B FF 70 10 */	addi r31, r31, adxwii_exec_svr@l
 /* 8039AF64 00364524  93 C1 00 08 */	stw r30, 8(r1)
 /* 8039AF68 00364528  7C 7E 1B 78 */	mr r30, r3
 /* 8039AF6C 0036452C  80 1F 00 04 */	lwz r0, 4(r31)
@@ -487,8 +487,8 @@
 /* 8039B094 00364654  7C 08 02 A6 */	mflr r0
 /* 8039B098 00364658  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8039B09C 0036465C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8039B0A0 00364660  3F E0 80 5F */	lis r31, lbl_805F7010@ha
-/* 8039B0A4 00364664  3B FF 70 10 */	addi r31, r31, lbl_805F7010@l
+/* 8039B0A0 00364660  3F E0 80 5F */	lis r31, adxwii_exec_svr@ha
+/* 8039B0A4 00364664  3B FF 70 10 */	addi r31, r31, adxwii_exec_svr@l
 /* 8039B0A8 00364668  93 C1 00 08 */	stw r30, 8(r1)
 /* 8039B0AC 0036466C  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8039B0B0 00364670  34 00 FF FF */	addic. r0, r0, -1
@@ -532,10 +532,10 @@
 /* 8039B138 003646F8  4B FC 04 B9 */	bl OSDisableScheduler
 /* 8039B13C 003646FC  38 00 00 01 */	li r0, 1
 /* 8039B140 00364700  3C 60 80 60 */	lis r3, adxm_main_thread@ha
-/* 8039B144 00364704  3C 80 80 60 */	lis r4, lbl_805FF03C@ha
+/* 8039B144 00364704  3C 80 80 60 */	lis r4, adxm_main_thread_def_prio@ha
 /* 8039B148 00364708  90 1F 00 70 */	stw r0, 0x70(r31)
 /* 8039B14C 0036470C  80 63 F0 38 */	lwz r3, adxm_main_thread@l(r3)
-/* 8039B150 00364710  80 84 F0 3C */	lwz r4, lbl_805FF03C@l(r4)
+/* 8039B150 00364710  80 84 F0 3C */	lwz r4, adxm_main_thread_def_prio@l(r4)
 /* 8039B154 00364714  4B FC 17 0D */	bl OSSetThreadPriority
 /* 8039B158 00364718  38 00 00 00 */	li r0, 0
 /* 8039B15C 0036471C  90 1F 00 70 */	stw r0, 0x70(r31)
@@ -646,7 +646,7 @@
 .endobj lbl_8051CCE0
 
 
-.obj adxwii_build, local
+.obj adxwii_build, global
 	.4byte lbl_8051CCE0
 .endobj adxwii_build
 
@@ -658,17 +658,183 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805F7010, global
-	.skip 0x8028
-.endobj lbl_805F7010
+.obj adxwii_exec_svr, global
+	.skip 0x4
+.endobj adxwii_exec_svr
+
+.obj adxm_init_level, global
+	.skip 0x4
+.endobj adxm_init_level
+
+.obj adxm_init_ex, global
+	.skip 0x4
+.endobj adxm_init_ex
+
+.skip 0x4
+
+.obj adxm_save_tprm, local
+	.skip 0x30
+.endobj adxm_save_tprm
+
+.obj adxm_lock_level, global
+	.skip 0x4
+.endobj adxm_lock_level
+
+.obj adxm_goto_border_flag, global
+	.skip 0x4
+.endobj adxm_goto_border_flag
+
+.obj adxm_safe_cnt, global
+	.skip 0x4
+.endobj adxm_safe_cnt
+
+.obj adxm_vsync_cnt, global
+	.skip 0x4
+.endobj adxm_vsync_cnt
+
+.obj adxm_fs_cnt, global
+	.skip 0x4
+.endobj adxm_fs_cnt
+
+.obj adxm_mwidle_cnt, global
+	.skip 0x4
+.endobj adxm_mwidle_cnt
+
+.obj adxm_usrvsync_cnt, global
+	.skip 0x4
+.endobj adxm_usrvsync_cnt
+
+.obj adxm_usridle_cnt, global
+	.skip 0x4
+.endobj adxm_usridle_cnt
+
+.obj adxm_mwidle_exec_flag, global
+	.skip 0x4
+.endobj adxm_mwidle_exec_flag
+
+.skip 0x4
+
+.obj adxm_mwidle_sleep_cb, global
+	.skip 0x8
+.endobj adxm_mwidle_sleep_cb
+
+.obj adxm_set_prio, global
+	.skip 0x4
+.endobj adxm_set_prio
+
+.obj adxm_cur_prio, global
+	.skip 0x4
+.endobj adxm_cur_prio
+
+.obj adxm_safe_thread, global
+	.skip 0x318
+.endobj adxm_safe_thread
+
+.obj adxm_mwidle_end, global
+	.skip 0x4
+.endobj adxm_mwidle_end
+
+.skip 0x4
+
+.obj adxm_mwidle_thread, global
+	.skip 0x318
+.endobj adxm_mwidle_thread
+
+.obj adxm_usridle_end, global
+	.skip 0x4
+.endobj adxm_usridle_end
+
+.skip 0x4
+
+.obj adxm_usridle_thread, global
+	.skip 0x318
+.endobj adxm_usridle_thread
+
+.obj adxm_safe_act, global
+	.skip 0x4
+.endobj adxm_safe_act
+
+.obj adxm_safe_end, global
+	.skip 0x4
+.endobj adxm_safe_end
+
+.obj adxm_vsync_act, global
+	.skip 0x4
+.endobj adxm_vsync_act
+
+.obj adxm_vsync_end, global
+	.skip 0x4
+.endobj adxm_vsync_end
+
+.obj adxm_fs_act, global
+	.skip 0x4
+.endobj adxm_fs_act
+
+.obj adxm_fs_end, global
+	.skip 0x4
+.endobj adxm_fs_end
+
+.obj adxm_mwidle_act, global
+	.skip 0x4
+.endobj adxm_mwidle_act
+
+.obj adxm_usrvsync_act, global
+	.skip 0x4
+.endobj adxm_usrvsync_act
+
+.obj adxm_usridle_act, global
+	.skip 0x4
+.endobj adxm_usridle_act
+
+.skip 0x4
+
+.obj adxm_stack_safe, local
+	.skip 0x1000
+.endobj adxm_stack_safe
+
+.obj adxm_vsync_thread, global
+	.skip 0x318
+.endobj adxm_vsync_thread
+
+.obj adxm_stack_vsync, local
+	.skip 0x2000
+.endobj adxm_stack_vsync
+
+.obj adxm_fs_thread, global
+	.skip 0x318
+.endobj adxm_fs_thread
+
+.obj adxm_stack_fs, local
+	.skip 0x2000
+.endobj adxm_stack_fs
+
+.obj adxm_stack_mwidle, local
+	.skip 0x2000
+.endobj adxm_stack_mwidle
 
 .obj adxm_main_thread, global
 	.skip 0x4
 .endobj adxm_main_thread
 
-.obj lbl_805FF03C, global
-	.skip 0x2320
-.endobj lbl_805FF03C
+.obj adxm_main_thread_def_prio, global
+	.skip 0x4
+.endobj adxm_main_thread_def_prio
+
+.obj adxm_stack_usrvsync, local
+	.skip 0x1000
+.endobj adxm_stack_usrvsync
+
+.obj adxm_stack_usridle, local
+	.skip 0x1000
+.endobj adxm_stack_usridle
+
+.obj adxm_usrvsync_thread, global
+	.skip 0x318
+.endobj adxm_usrvsync_thread
+
+.obj adxm_usrvsync_end, global
+	.skip 0x4
+.endobj adxm_usrvsync_end
 
 .obj adxm_wii_framework, global
 	.skip 0x4

@@ -80,7 +80,7 @@
 /* 80438D58 00402318  4E 80 00 20 */	blr 
 .endfn __ct__CProc
 
-.fn __dt___reslist_base_unsigned_long, global
+.fn "__dt__17_reslist_base<Ul>Fv", global
 /* 80438D5C 0040231C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438D60 00402320  7C 08 02 A6 */	mflr r0
 /* 80438D64 00402324  2C 03 00 00 */	cmpwi r3, 0
@@ -130,9 +130,9 @@
 /* 80438E04 004023C4  7C 08 03 A6 */	mtlr r0
 /* 80438E08 004023C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438E0C 004023CC  4E 80 00 20 */	blr 
-.endfn __dt___reslist_base_unsigned_long
+.endfn "__dt__17_reslist_base<Ul>Fv"
 
-.fn __dt__reslist_unsigned_long, global
+.fn "__dt__11reslist<Ul>Fv", global
 /* 80438E10 004023D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438E14 004023D4  7C 08 02 A6 */	mflr r0
 /* 80438E18 004023D8  2C 03 00 00 */	cmpwi r3, 0
@@ -183,7 +183,7 @@
 /* 80438EBC 0040247C  7C 08 03 A6 */	mtlr r0
 /* 80438EC0 00402480  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438EC4 00402484  4E 80 00 20 */	blr 
-.endfn __dt__reslist_unsigned_long
+.endfn "__dt__11reslist<Ul>Fv"
 
 .fn __dt__5CProcFv, global
 /* 80438EC8 00402488  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -896,7 +896,7 @@
 .obj "__vt__11reslist<Ul>", global
 	.4byte "__RTTI__11reslist<Ul>"
 	.4byte 0
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 .endobj "__vt__11reslist<Ul>"
 
 .obj reslist_unsigned_long_hierarchy, global
@@ -909,7 +909,7 @@
 .obj "__vt__17_reslist_base<Ul>", global
 	.4byte "__RTTI__17_reslist_base<Ul>"
 	.4byte 0
-	.4byte __dt___reslist_base_unsigned_long
+	.4byte "__dt__17_reslist_base<Ul>Fv"
 	.4byte 0
 .endobj "__vt__17_reslist_base<Ul>"
 
@@ -954,7 +954,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000001C4
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__11CWorkThreadFv
@@ -980,7 +980,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001C4
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 .endobj "@etb_8001C1EC"
 
 .obj "@etb_8001C208", local
@@ -1026,14 +1026,14 @@
 
 .obj "@eti_80033E24", local
 .hidden "@eti_80033E24"
-	.4byte __dt___reslist_base_unsigned_long
+	.4byte "__dt__17_reslist_base<Ul>Fv"
 	.4byte 0x000000B4
 	.4byte "@etb_8001C1DC"
 .endobj "@eti_80033E24"
 
 .obj "@eti_80033E30", local
 .hidden "@eti_80033E30"
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x000000B8
 	.4byte "@etb_8001C1E4"
 .endobj "@eti_80033E30"

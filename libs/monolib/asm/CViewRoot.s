@@ -558,7 +558,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000004F4
-	.4byte __dt__reslist_unsigned_long
+	.4byte "__dt__11reslist<Ul>Fv"
 	.4byte 0x0780001E
 	.4byte 0x000003E4
 	.4byte __dt__80442084

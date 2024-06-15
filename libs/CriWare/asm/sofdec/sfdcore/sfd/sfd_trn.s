@@ -136,7 +136,7 @@
 /* 803CE5D8 00397B98  4E 80 00 20 */	blr 
 .endfn SFTRN_InitHn
 
-.fn sftrn_BuildAll, global
+.fn sftrn_BuildAll, local
 /* 803CE5DC 00397B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE5E0 00397BA0  7C 08 02 A6 */	mflr r0
 /* 803CE5E4 00397BA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -264,7 +264,7 @@
 /* 803CE7A4 00397D64  4E 80 00 20 */	blr 
 .endfn sftrn_BuildAll
 
-.fn sftrn_BuildSystem, global
+.fn sftrn_BuildSystem, local
 /* 803CE7A8 00397D68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE7AC 00397D6C  7C 08 02 A6 */	mflr r0
 /* 803CE7B0 00397D70  38 A0 00 01 */	li r5, 1

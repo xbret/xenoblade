@@ -2,31 +2,31 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn SFADXT_SetOutPan, global
+.fn SFADXT_SetOutPan, local
 /* 803BD2A8 00386868  80 63 20 A4 */	lwz r3, 0x20a4(r3)
 /* 803BD2AC 0038686C  80 63 00 00 */	lwz r3, 0(r3)
 /* 803BD2B0 00386870  4B FC 65 C8 */	b ADXT_SetOutPan
 .endfn SFADXT_SetOutPan
 
-.fn SFADXT_GetOutPan, global
+.fn SFADXT_GetOutPan, local
 /* 803BD2B4 00386874  80 63 20 A4 */	lwz r3, 0x20a4(r3)
 /* 803BD2B8 00386878  80 63 00 00 */	lwz r3, 0(r3)
 /* 803BD2BC 0038687C  4B FC 67 80 */	b ADXT_GetOutPan
 .endfn SFADXT_GetOutPan
 
-.fn SFADXT_SetOutVol, global
+.fn SFADXT_SetOutVol, local
 /* 803BD2C0 00386880  80 63 20 A4 */	lwz r3, 0x20a4(r3)
 /* 803BD2C4 00386884  80 63 00 00 */	lwz r3, 0(r3)
 /* 803BD2C8 00386888  4B FC 67 E0 */	b ADXT_SetOutVol
 .endfn SFADXT_SetOutVol
 
-.fn SFADXT_GetOutVol, global
+.fn SFADXT_GetOutVol, local
 /* 803BD2CC 0038688C  80 63 20 A4 */	lwz r3, 0x20a4(r3)
 /* 803BD2D0 00386890  80 63 00 00 */	lwz r3, 0(r3)
 /* 803BD2D4 00386894  4B FC 68 60 */	b ADXT_GetOutVol
 .endfn SFADXT_GetOutVol
 
-.fn SFADXT_SetSpeed, global
+.fn SFADXT_SetSpeed, local
 /* 803BD2D8 00386898  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BD2DC 0038689C  7C 08 02 A6 */	mflr r0
 /* 803BD2E0 003868A0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -156,7 +156,7 @@
 /* 803BD4B0 00386A70  4E 80 00 20 */	blr 
 .endfn SFD_SetAdxtPara
 
-.fn SFADXT_Init, global
+.fn SFADXT_Init, local
 /* 803BD4B4 00386A74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD4B8 00386A78  7C 08 02 A6 */	mflr r0
 /* 803BD4BC 00386A7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -174,7 +174,7 @@
 /* 803BD4EC 00386AAC  4E 80 00 20 */	blr 
 .endfn SFADXT_Init
 
-.fn SFADXT_Finish, global
+.fn SFADXT_Finish, local
 /* 803BD4F0 00386AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD4F4 00386AB4  7C 08 02 A6 */	mflr r0
 /* 803BD4F8 00386AB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -187,13 +187,13 @@
 /* 803BD514 00386AD4  4E 80 00 20 */	blr
 .endfn SFADXT_Finish
 
-.fn func_803BD518, global
+.fn criware_803BD518, global
 /* 803BD518 00386AD8  7C C5 33 78 */	mr r5, r6
 /* 803BD51C 00386ADC  7C E4 3B 78 */	mr r4, r7
 /* 803BD520 00386AE0  48 00 29 D0 */	b SFCON_WriteTotSmplQue
-.endfn func_803BD518
+.endfn criware_803BD518
 
-.fn SFADXT_ExecServer, global
+.fn SFADXT_ExecServer, local
 /* 803BD524 00386AE4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BD528 00386AE8  7C 08 02 A6 */	mflr r0
 /* 803BD52C 00386AEC  3C 80 80 61 */	lis r4, lbl_8060A2D8@ha
@@ -369,7 +369,7 @@
 /* 803BD7AC 00386D6C  4E 80 00 20 */	blr
 .endfn SFADXT_ExecServer
 
-.fn sfadxt_CopyData, global
+.fn sfadxt_CopyData, local
 /* 803BD7B0 00386D70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BD7B4 00386D74  7C 08 02 A6 */	mflr r0
 /* 803BD7B8 00386D78  90 01 00 34 */	stw r0, 0x34(r1)
@@ -444,7 +444,7 @@
 /* 803BD8BC 00386E7C  4E 80 00 20 */	blr
 .endfn sfadxt_CopyData
 
-.fn sfadxt_AdjustSync, global
+.fn sfadxt_AdjustSync, local
 /* 803BD8C0 00386E80  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BD8C4 00386E84  7C 08 02 A6 */	mflr r0
 /* 803BD8C8 00386E88  90 01 00 54 */	stw r0, 0x54(r1)
@@ -625,7 +625,7 @@
 /* 803BDB3C 003870FC  4E 80 00 20 */	blr
 .endfn sfadxt_AdjustSync
 
-.fn sfadxt_ExcludeHdr, global
+.fn sfadxt_ExcludeHdr, local
 /* 803BDB40 00387100  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BDB44 00387104  7C 08 02 A6 */	mflr r0
 /* 803BDB48 00387108  2C 05 01 20 */	cmpwi r5, 0x120
@@ -679,7 +679,7 @@
 /* 803BDBF8 003871B8  4E 80 00 20 */	blr 
 .endfn sfadxt_ExcludeHdr
 
-.fn sfadxt_SearchAlign, global
+.fn sfadxt_SearchAlign, local
 /* 803BDBFC 003871BC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803BDC00 003871C0  7C 08 02 A6 */	mflr r0
 /* 803BDC04 003871C4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -752,7 +752,7 @@
 /* 803BDCEC 003872AC  4E 80 00 20 */	blr
 .endfn sfadxt_SearchAlign
 
-.fn sfadxt_ExcludeSilence, global
+.fn sfadxt_ExcludeSilence, local
 /* 803BDCF0 003872B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BDCF4 003872B4  7C 08 02 A6 */	mflr r0
 /* 803BDCF8 003872B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -841,7 +841,7 @@
 /* 803BDE18 003873D8  4E 80 00 20 */	blr 
 .endfn sfadxt_ExcludeSilence
 
-.fn sfadxt_ChkTermFlg, global
+.fn sfadxt_ChkTermFlg, local
 /* 803BDE1C 003873DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BDE20 003873E0  7C 08 02 A6 */	mflr r0
 /* 803BDE24 003873E4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -938,7 +938,7 @@
 /* 803BDF64 00387524  4E 80 00 20 */	blr 
 .endfn sfadxt_ChkTermFlg
 
-.fn sfadxt_SetAdxtHd, global
+.fn sfadxt_SetAdxtHd, local
 /* 803BDF68 00387528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BDF6C 0038752C  7C 08 02 A6 */	mflr r0
 /* 803BDF70 00387530  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1000,7 +1000,7 @@
 /* 803BE040 00387600  4E 80 00 20 */	blr 
 .endfn sfadxt_SetAdxtHd
 
-.fn SFADXT_Create, global
+.fn SFADXT_Create, local
 /* 803BE044 00387604  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BE048 00387608  7C 08 02 A6 */	mflr r0
 /* 803BE04C 0038760C  38 80 00 06 */	li r4, 6
@@ -1055,10 +1055,10 @@
 /* 803BE0F8 003876B8  48 00 2B 5D */	bl SFLIB_SetErr
 /* 803BE0FC 003876BC  48 00 00 F0 */	b .L_803BE1EC
 .L_803BE100:
-/* 803BE100 003876C0  3C 80 80 3C */	lis r4, func_803BD518@ha
+/* 803BE100 003876C0  3C 80 80 3C */	lis r4, criware_803BD518@ha
 /* 803BE104 003876C4  7F C3 F3 78 */	mr r3, r30
 /* 803BE108 003876C8  7F A5 EB 78 */	mr r5, r29
-/* 803BE10C 003876CC  38 84 D5 18 */	addi r4, r4, func_803BD518@l
+/* 803BE10C 003876CC  38 84 D5 18 */	addi r4, r4, criware_803BD518@l
 /* 803BE110 003876D0  4B FC 63 41 */	bl ADXT_EntryFltFunc
 /* 803BE114 003876D4  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 803BE118 003876D8  80 9F 00 08 */	lwz r4, 8(r31)
@@ -1125,7 +1125,7 @@
 /* 803BE204 003877C4  4E 80 00 20 */	blr 
 .endfn SFADXT_Create
 
-.fn sfadxt_InitInf, global
+.fn sfadxt_InitInf, local
 /* 803BE208 003877C8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803BE20C 003877CC  7C 08 02 A6 */	mflr r0
 /* 803BE210 003877D0  3D 20 80 61 */	lis r9, sfadxt_para@ha
@@ -1264,7 +1264,7 @@
 /* 803BE418 003879D8  4E 80 00 20 */	blr
 .endfn sfadxt_InitInf
 
-.fn sfadxt_GetTime, global
+.fn sfadxt_GetTime, local
 /* 803BE41C 003879DC  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803BE420 003879E0  7C 08 02 A6 */	mflr r0
 /* 803BE424 003879E4  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1332,7 +1332,7 @@
 /* 803BE510 00387AD0  4E 80 00 20 */	blr 
 .endfn sfadxt_GetTime
 
-.fn SFADXT_Destroy, global
+.fn SFADXT_Destroy, local
 /* 803BE514 00387AD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BE518 00387AD8  7C 08 02 A6 */	mflr r0
 /* 803BE51C 00387ADC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1396,12 +1396,12 @@
 /* 803BE5F4 00387BB4  4E 80 00 20 */	blr 
 .endfn SFADXT_Destroy
 
-.fn SFADXT_RequestStop, global
+.fn SFADXT_RequestStop, local
 /* 803BE5F8 00387BB8  38 60 00 00 */	li r3, 0
 /* 803BE5FC 00387BBC  4E 80 00 20 */	blr 
 .endfn SFADXT_RequestStop
 
-.fn SFADXT_Start, global
+.fn SFADXT_Start, local
 /* 803BE600 00387BC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BE604 00387BC4  7C 08 02 A6 */	mflr r0
 /* 803BE608 00387BC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1429,7 +1429,7 @@
 /* 803BE65C 00387C1C  4E 80 00 20 */	blr 
 .endfn SFADXT_Start
 
-.fn SFADXT_Stop, global
+.fn SFADXT_Stop, local
 /* 803BE660 00387C20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BE664 00387C24  7C 08 02 A6 */	mflr r0
 /* 803BE668 00387C28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1443,7 +1443,7 @@
 /* 803BE688 00387C48  4E 80 00 20 */	blr 
 .endfn SFADXT_Stop
 
-.fn SFADXT_Pause, global
+.fn SFADXT_Pause, local
 /* 803BE68C 00387C4C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803BE690 00387C50  7C 08 02 A6 */	mflr r0
 /* 803BE694 00387C54  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1527,31 +1527,31 @@
 /* 803BE7B8 00387D78  4E 80 00 20 */	blr 
 .endfn SFADXT_Pause
 
-.fn SFADXT_GetWrite, global
+.fn SFADXT_GetWrite, local
 /* 803BE7BC 00387D7C  3C 80 FF 00 */	lis r4, 0xFF000C03@ha
 /* 803BE7C0 00387D80  38 84 0C 03 */	addi r4, r4, 0xFF000C03@l
 /* 803BE7C4 00387D84  48 00 24 90 */	b SFLIB_SetErr
 .endfn SFADXT_GetWrite
 
-.fn SFADXT_AddWrite, global
+.fn SFADXT_AddWrite, local
 /* 803BE7C8 00387D88  3C 80 FF 00 */	lis r4, 0xFF000C03@ha
 /* 803BE7CC 00387D8C  38 84 0C 03 */	addi r4, r4, 0xFF000C03@l
 /* 803BE7D0 00387D90  48 00 24 84 */	b SFLIB_SetErr
 .endfn SFADXT_AddWrite
 
-.fn SFADXT_GetRead, global
+.fn SFADXT_GetRead, local
 /* 803BE7D4 00387D94  3C 80 FF 00 */	lis r4, 0xFF000C03@ha
 /* 803BE7D8 00387D98  38 84 0C 03 */	addi r4, r4, 0xFF000C03@l
 /* 803BE7DC 00387D9C  48 00 24 78 */	b SFLIB_SetErr
 .endfn SFADXT_GetRead
 
-.fn SFADXT_AddRead, global
+.fn SFADXT_AddRead, local
 /* 803BE7E0 00387DA0  3C 80 FF 00 */	lis r4, 0xFF000C03@ha
 /* 803BE7E4 00387DA4  38 84 0C 03 */	addi r4, r4, 0xFF000C03@l
 /* 803BE7E8 00387DA8  48 00 24 6C */	b SFLIB_SetErr
 .endfn SFADXT_AddRead
 
-.fn SFADXT_Seek, global
+.fn SFADXT_Seek, local
 /* 803BE7EC 00387DAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BE7F0 00387DB0  7C 08 02 A6 */	mflr r0
 /* 803BE7F4 00387DB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1635,10 +1635,9 @@
 	.4byte SFADXT_GetRead
 	.4byte SFADXT_AddRead
 	.4byte SFADXT_Seek
-	
 .endobj SFD_tr_ad_adxt
 
-.obj sfadxt_silence, global
+.obj sfadxt_silence, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1646,20 +1645,20 @@
 	.4byte 0
 .endobj sfadxt_silence
 
-	.4byte 0x44D8677D
-	.float 0.01
-	.float 0.5
-	.8byte 0x4330000080000000
-	.asciz "(c)CRI"
-	.balign 4
+.4byte 0x44D8677D
+.float 0.01
+.float 0.5
+.8byte 0x4330000080000000
+.asciz "(c)CRI"
+.balign 4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj sfadxt_para, global
+.obj sfadxt_para, local
 	.skip 0x1C
 .endobj sfadxt_para
 
-.obj sfadxt_adxterr, global
+.obj sfadxt_adxterr, local
 	.skip 0x4
 .endobj sfadxt_adxterr
 

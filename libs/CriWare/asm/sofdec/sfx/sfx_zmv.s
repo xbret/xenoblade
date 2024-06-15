@@ -237,7 +237,7 @@
 /* 803D60E0 0039F6A0  4E 80 00 20 */	blr 
 .endfn SFXZ_GetZfrmRange
 
-.fn sfxzmv_MakeOrgZ32TblByDirect, global
+.fn sfxzmv_MakeOrgZ32TblByDirect, local
 /* 803D60E4 0039F6A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D60E8 0039F6A8  3C 05 80 00 */	addis r0, r5, 0x8000
 /* 803D60EC 0039F6AC  28 00 00 00 */	cmplwi r0, 0
@@ -450,7 +450,7 @@
 /* 803D6410 0039F9D0  4E 80 00 20 */	blr 
 .endfn sfxzmv_MakeOrgZ32TblByDirect
 
-.fn sfxzmv_MakeOrgZ32TblByCCIR, global
+.fn sfxzmv_MakeOrgZ32TblByCCIR, local
 /* 803D6414 0039F9D4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803D6418 0039F9D8  7C 08 02 A6 */	mflr r0
 /* 803D641C 0039F9DC  90 01 00 74 */	stw r0, 0x74(r1)
@@ -985,7 +985,7 @@
 /* 803D6C20 003A01E0  4E 80 00 20 */	blr 
 .endfn SFXZ_MakeCnvZTbl
 
-.fn sfxzmv_MakeZ16TblFromOrgZ32, global
+.fn sfxzmv_MakeZ16TblFromOrgZ32, local
 /* 803D6C24 003A01E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D6C28 003A01E8  3C C0 80 62 */	lis r6, sfxz_work@ha
 /* 803D6C2C 003A01EC  38 C6 D4 98 */	addi r6, r6, sfxz_work@l
@@ -1114,7 +1114,7 @@
 /* 803D6E00 003A03C0  4E 80 00 20 */	blr 
 .endfn sfxzmv_MakeZ16TblFromOrgZ32
 
-.fn sfxzmv_MakeZ32TblFromOrgZ32, global
+.fn sfxzmv_MakeZ32TblFromOrgZ32, local
 /* 803D6E04 003A03C4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803D6E08 003A03C8  7C 08 02 A6 */	mflr r0
 /* 803D6E0C 003A03CC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1307,5 +1307,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj sfxz_work, global
-	.skip 0x270
+	.skip 0x26C
 .endobj sfxz_work
+
+.skip 0x4

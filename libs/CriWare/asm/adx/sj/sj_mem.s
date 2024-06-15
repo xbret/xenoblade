@@ -82,7 +82,7 @@
 /* 803935A0 0035CB60  4E 80 00 20 */	blr 
 .endfn SJMEM_Create
 
-.fn sjmem_Create, global
+.fn sjmem_Create, local
 /* 803935A4 0035CB64  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803935A8 0035CB68  7C 08 02 A6 */	mflr r0
 /* 803935AC 0035CB6C  3C A0 80 5F */	lis r5, sjmem_obj@ha
@@ -450,7 +450,7 @@
 /* 80393ACC 0035D08C  4E 80 00 20 */	blr 
 .endfn SJMEM_GetNumData
 
-.fn sjmem_GetNumData, global
+.fn sjmem_GetNumData, local
 /* 80393AD0 0035D090  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393AD4 0035D094  7C 08 02 A6 */	mflr r0
 /* 80393AD8 0035D098  2C 03 00 00 */	cmpwi r3, 0
@@ -548,7 +548,7 @@
 /* 80393C24 0035D1E4  4E 80 00 20 */	blr 
 .endfn SJMEM_GetChunk
 
-.fn sjmem_GetChunk, global
+.fn sjmem_GetChunk, local
 /* 80393C28 0035D1E8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393C2C 0035D1EC  7C 08 02 A6 */	mflr r0
 /* 80393C30 0035D1F0  2C 03 00 00 */	cmpwi r3, 0
@@ -659,7 +659,7 @@
 /* 80393DB0 0035D370  4E 80 00 20 */	blr 
 .endfn SJMEM_PutChunk
 
-.fn sjmem_PutChunk, global
+.fn sjmem_PutChunk, local
 /* 80393DB4 0035D374  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393DB8 0035D378  7C 08 02 A6 */	mflr r0
 /* 80393DBC 0035D37C  2C 03 00 00 */	cmpwi r3, 0
@@ -754,7 +754,7 @@
 /* 80393F04 0035D4C4  4E 80 00 20 */	blr 
 .endfn SJMEM_UngetChunk
 
-.fn sjmem_UngetChunk, global
+.fn sjmem_UngetChunk, local
 /* 80393F08 0035D4C8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393F0C 0035D4CC  7C 08 02 A6 */	mflr r0
 /* 80393F10 0035D4D0  2C 03 00 00 */	cmpwi r3, 0
@@ -894,7 +894,7 @@
 /* 80394100 0035D6C0  4E 80 00 20 */	blr 
 .endfn SJMEM_IsGetChunk
 
-.fn sjmem_IsGetChunk, global
+.fn sjmem_IsGetChunk, local
 /* 80394104 0035D6C4  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80394108 0035D6C8  7C 08 02 A6 */	mflr r0
 /* 8039410C 0035D6CC  2C 03 00 00 */	cmpwi r3, 0
@@ -1037,7 +1037,7 @@
 
 .balign 8
 
-.obj sjmem_uuid, global
+.obj sjmem_uuid, local
 	.4byte 0xDD9EEE41
 	.4byte 0x167911D2
 	.4byte 0x936C0060

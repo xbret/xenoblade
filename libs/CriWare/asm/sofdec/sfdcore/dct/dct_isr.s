@@ -7,8 +7,8 @@
 /* 803B9DF0 003833B0  7C 08 02 A6 */	mflr r0
 /* 803B9DF4 003833B4  90 01 00 64 */	stw r0, 0x64(r1)
 /* 803B9DF8 003833B8  93 E1 00 5C */	stw r31, 0x5c(r1)
-/* 803B9DFC 003833BC  3F E0 80 60 */	lis r31, lbl_80607F80@ha
-/* 803B9E00 003833C0  3B FF 7F 80 */	addi r31, r31, lbl_80607F80@l
+/* 803B9DFC 003833BC  3F E0 80 60 */	lis r31, dctisr_version_dummy@ha
+/* 803B9E00 003833C0  3B FF 7F 80 */	addi r31, r31, dctisr_version_dummy@l
 /* 803B9E04 003833C4  93 C1 00 58 */	stw r30, 0x58(r1)
 /* 803B9E08 003833C8  3F C0 80 52 */	lis r30, sfsd_short_cut@ha
 /* 803B9E0C 003833CC  3B DE F9 28 */	addi r30, r30, sfsd_short_cut@l
@@ -118,7 +118,7 @@
 /* 803B9F78 00383538  48 00 03 7C */	b MSID_JRevDctSparse
 .endfn DCT_IsrTrans
 
-.fn initSparseTbl, global
+.fn initSparseTbl, local
 /* 803B9F7C 0038353C  94 21 FB 10 */	stwu r1, -0x4f0(r1)
 /* 803B9F80 00383540  7C 08 02 A6 */	mflr r0
 /* 803B9F84 00383544  90 01 04 F4 */	stw r0, 0x4f4(r1)
@@ -126,15 +126,15 @@
 /* 803B9F8C 0038354C  4B F0 01 35 */	bl _savefpr_28
 /* 803B9F90 00383550  BF 01 04 B0 */	stmw r24, 0x4b0(r1)
 /* 803B9F94 00383554  3F 20 80 52 */	lis r25, sfsd_short_cut@ha
-/* 803B9F98 00383558  3F 00 80 61 */	lis r24, lbl_80608288@ha
+/* 803B9F98 00383558  3F 00 80 61 */	lis r24, PreIDCT@ha
 /* 803B9F9C 0038355C  3B 39 F9 28 */	addi r25, r25, sfsd_short_cut@l
 /* 803B9FA0 00383560  38 80 00 00 */	li r4, 0
-/* 803B9FA4 00383564  38 78 82 88 */	addi r3, r24, lbl_80608288@l
+/* 803B9FA4 00383564  38 78 82 88 */	addi r3, r24, PreIDCT@l
 /* 803B9FA8 00383568  38 A0 20 00 */	li r5, 0x2000
 /* 803B9FAC 0038356C  4B C4 A3 A5 */	bl memset
 /* 803B9FB0 00383570  4B FF FB 19 */	bl DCT_AcInit
 /* 803B9FB4 00383574  CB D9 04 D8 */	lfd f30, 0x4d8(r25)
-/* 803B9FB8 00383578  3B B8 82 88 */	addi r29, r24, lbl_80608288@l
+/* 803B9FB8 00383578  3B B8 82 88 */	addi r29, r24, PreIDCT@l
 /* 803B9FBC 0038357C  CB F9 04 F0 */	lfd f31, 0x4f0(r25)
 /* 803B9FC0 00383580  3B 80 00 00 */	li r28, 0
 /* 803B9FC4 00383584  CB B9 05 00 */	lfd f29, 0x500(r25)
@@ -414,10 +414,10 @@
 /* 803BA3AC 0038396C  4E 80 00 20 */	blr
 .L_803BA3B0:
 /* 803BA3B0 00383970  54 80 08 3C */	slwi r0, r4, 1
-/* 803BA3B4 00383974  3C A0 80 61 */	lis r5, lbl_80608288@ha
+/* 803BA3B4 00383974  3C A0 80 61 */	lis r5, PreIDCT@ha
 /* 803BA3B8 00383978  7C 03 02 AE */	lhax r0, r3, r0
 /* 803BA3BC 0038397C  54 84 38 30 */	slwi r4, r4, 7
-/* 803BA3C0 00383980  38 A5 82 88 */	addi r5, r5, lbl_80608288@l
+/* 803BA3C0 00383980  38 A5 82 88 */	addi r5, r5, PreIDCT@l
 /* 803BA3C4 00383984  38 63 00 80 */	addi r3, r3, 0x80
 /* 803BA3C8 00383988  7C 85 22 14 */	add r4, r5, r4
 /* 803BA3CC 0038398C  38 A0 00 10 */	li r5, 0x10
@@ -995,11 +995,11 @@
 /* 803BAC04 003841C4  4E 80 00 20 */	blr 
 .endfn MSID_JRevDctDense
 
-.fn IdctColumn_0000_0, global
+.fn IdctColumn_0000_0, local
 /* 803BAC08 003841C8  4E 80 00 20 */	blr 
 .endfn IdctColumn_0000_0
 
-.fn IdctColumn_0000_1, global
+.fn IdctColumn_0000_1, local
 /* 803BAC0C 003841CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BAC10 003841D0  3C C0 FF FF */	lis r6, 0xFFFF3C11@ha
 /* 803BAC14 003841D4  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1073,7 +1073,7 @@
 /* 803BAD1C 003842DC  4E 80 00 20 */	blr 
 .endfn IdctColumn_0000_1
 
-.fn IdctColumn_0001_0, global
+.fn IdctColumn_0001_0, local
 /* 803BAD20 003842E0  3C 80 00 01 */	lis r4, 0x00016A0A@ha
 /* 803BAD24 003842E4  39 20 00 08 */	li r9, 8
 /* 803BAD28 003842E8  38 A4 6A 0A */	addi r5, r4, 0x00016A0A@l
@@ -1107,7 +1107,7 @@
 /* 803BAD94 00384354  4E 80 00 20 */	blr 
 .endfn IdctColumn_0001_0
 
-.fn IdctColumn_0001_1, global
+.fn IdctColumn_0001_1, local
 /* 803BAD98 00384358  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BAD9C 0038435C  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BADA0 00384360  3C A0 00 01 */	lis r5, 0x00016A0A@ha
@@ -1188,7 +1188,7 @@
 /* 803BAEC4 00384484  4E 80 00 20 */	blr 
 .endfn IdctColumn_0001_1
 
-.fn IdctColumn_0010_0, global
+.fn IdctColumn_0010_0, local
 /* 803BAEC8 00384488  38 C0 00 08 */	li r6, 8
 .L_803BAECC:
 /* 803BAECC 0038448C  A8 83 00 40 */	lha r4, 0x40(r3)
@@ -1213,7 +1213,7 @@
 /* 803BAF18 003844D8  4E 80 00 20 */	blr 
 .endfn IdctColumn_0010_0
 
-.fn IdctColumn_0010_1, global
+.fn IdctColumn_0010_1, local
 /* 803BAF1C 003844DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BAF20 003844E0  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BAF24 003844E4  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1291,7 +1291,7 @@
 /* 803BB03C 003845FC  4E 80 00 20 */	blr 
 .endfn IdctColumn_0010_1
 
-.fn IdctColumn_0100_0, global
+.fn IdctColumn_0100_0, local
 /* 803BB040 00384600  3C 80 FF FF */	lis r4, 0xFFFE95F6@ha
 /* 803BB044 00384604  39 20 00 08 */	li r9, 8
 /* 803BB048 00384608  38 A4 95 F6 */	addi r5, r4, 0xFFFE95F6@l
@@ -1326,7 +1326,7 @@
 /* 803BB0B8 00384678  4E 80 00 20 */	blr 
 .endfn IdctColumn_0100_0
 
-.fn IdctColumn_0100_1, global
+.fn IdctColumn_0100_1, local
 /* 803BB0BC 0038467C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BB0C0 00384680  3D 00 FF FF */	lis r8, 0xFFFE95F6@ha
 /* 803BB0C4 00384684  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1408,7 +1408,7 @@
 /* 803BB1EC 003847AC  4E 80 00 20 */	blr 
 .endfn IdctColumn_0100_1
 
-.fn IdctColumn_1000_0, global
+.fn IdctColumn_1000_0, local
 /* 803BB1F0 003847B0  38 A0 00 08 */	li r5, 8
 .L_803BB1F4:
 /* 803BB1F4 003847B4  A8 03 00 00 */	lha r0, 0(r3)
@@ -1430,7 +1430,7 @@
 /* 803BB234 003847F4  4E 80 00 20 */	blr 
 .endfn IdctColumn_1000_0
 
-.fn IdctColumn_1000_1, global
+.fn IdctColumn_1000_1, local
 /* 803BB238 003847F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB23C 003847FC  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB240 00384800  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1513,7 +1513,7 @@
 /* 803BB36C 0038492C  4E 80 00 20 */	blr 
 .endfn IdctColumn_1000_1
 
-.fn IdctColumn_1010_0, global
+.fn IdctColumn_1010_0, local
 /* 803BB370 00384930  38 E0 00 08 */	li r7, 8
 .L_803BB374:
 /* 803BB374 00384934  A8 83 00 00 */	lha r4, 0(r3)
@@ -1542,7 +1542,7 @@
 /* 803BB3D0 00384990  4E 80 00 20 */	blr 
 .endfn IdctColumn_1010_0
 
-.fn IdctColumn_1010_1, global
+.fn IdctColumn_1010_1, local
 /* 803BB3D4 00384994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB3D8 00384998  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB3DC 0038499C  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1624,7 +1624,7 @@
 /* 803BB504 00384AC4  4E 80 00 20 */	blr 
 .endfn IdctColumn_1010_1
 
-.fn IdctColumn_1111_0, global
+.fn IdctColumn_1111_0, local
 /* 803BB508 00384AC8  3C 80 00 01 */	lis r4, 0x00016A0A@ha
 /* 803BB50C 00384ACC  39 60 00 08 */	li r11, 8
 /* 803BB510 00384AD0  38 84 6A 0A */	addi r4, r4, 0x00016A0A@l
@@ -1671,7 +1671,7 @@
 /* 803BB5B0 00384B70  4E 80 00 20 */	blr 
 .endfn IdctColumn_1111_0
 
-.fn IdctColumn_1111_1, global
+.fn IdctColumn_1111_1, local
 /* 803BB5B4 00384B74  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BB5B8 00384B78  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB5BC 00384B7C  3C A0 00 01 */	lis r5, 0x00016A0A@ha
@@ -1770,7 +1770,7 @@
 .balign 8
 
 
-.obj sfsd_short_cut, global
+.obj sfsd_short_cut, local
 	.4byte 0x800100FF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -2029,7 +2029,7 @@
 	.4byte 0xFFFFFFFF
 .endobj sfsd_short_cut
 
-.obj idct_column_func, local
+.obj idct_column_func, global
 	.4byte IdctColumn_0000_1
 	.4byte IdctColumn_0000_0
 	.4byte IdctColumn_0001_1
@@ -2069,33 +2069,25 @@
 .endobj col_sw_off_msk
 
 .obj scale8_f, local
-	.4byte 0x3FD6A09E
-	.4byte 0x667F3BCD
-	.4byte 0x3FDF6297
-	.4byte 0xCFF75CB0
-	.4byte 0x3FDD906B
-	.4byte 0xCF328D46
-	.4byte 0x3FDA9B66
-	.4byte 0x290EA1A3
-	.4byte 0x3FD6A09E
-	.4byte 0x667F3BCD
-	.4byte 0x3FD1C73B
-	.4byte 0x39AE68C8
-	.4byte 0x3FC87DE2
-	.4byte 0xA6AEA963
-	.4byte 0x3FB8F8B8
-	.4byte 0x3C69A60B
+	.8byte 0x3FD6A09E667F3BCD
+	.8byte 0x3FDF6297CFF75CB0
+	.8byte 0x3FDD906BCF328D46
+	.8byte 0x3FDA9B66290EA1A3
+	.8byte 0x3FD6A09E667F3BCD
+	.8byte 0x3FD1C73B39AE68C8
+	.8byte 0x3FC87DE2A6AEA963
+	.8byte 0x3FB8F8B83C69A60B
 .endobj scale8_f
 
-.obj dctisr_pre_idct_bits, local
+.obj dctisr_pre_idct_bits, global
 	.4byte 0x0000000B
 .endobj dctisr_pre_idct_bits
 
-.obj dctisr_upscale_bit_i, local
+.obj dctisr_upscale_bit_i, global
 	.4byte 0x00000010
 .endobj dctisr_upscale_bit_i
 
-.obj dctisr_line_descale_bit, local
+.obj dctisr_line_descale_bit, global
 	.4byte 0x00000010
 	.4byte 0
 .endobj dctisr_line_descale_bit
@@ -2145,14 +2137,24 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80607F80, global
-	.skip 0x208
-.endobj lbl_80607F80
+.obj dctisr_version_dummy, local
+	.skip 0x4
+.endobj dctisr_version_dummy
+
+.skip 0x4
+
+.obj sfsd_scale_tbl_f, local
+	.skip 0x200
+.endobj sfsd_scale_tbl_f
 
 .obj sfsd_scale_tbl, global
-	.skip 0x100
+	.skip 0x80
 .endobj sfsd_scale_tbl
 
-.obj lbl_80608288, global
+.obj sfsd_scale_tbl2, local
+	.skip 0x80
+.endobj sfsd_scale_tbl2
+
+.obj PreIDCT, local
 	.skip 0x2000
-.endobj lbl_80608288
+.endobj PreIDCT

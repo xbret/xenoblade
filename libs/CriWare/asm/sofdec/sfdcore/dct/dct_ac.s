@@ -10,9 +10,9 @@
 /* 803B9AD8 00383098  4B F0 05 E9 */	bl _savefpr_28
 /* 803B9ADC 0038309C  BE C1 00 18 */	stmw r22, 0x18(r1)
 /* 803B9AE0 003830A0  3F 80 80 52 */	lis r28, lbl_8051F900@ha
-/* 803B9AE4 003830A4  3F A0 80 60 */	lis r29, lbl_80607B78@ha
+/* 803B9AE4 003830A4  3F A0 80 60 */	lis r29, dctac_version_dummy@ha
 /* 803B9AE8 003830A8  3B 9C F9 00 */	addi r28, r28, lbl_8051F900@l
-/* 803B9AEC 003830AC  3B BD 7B 78 */	addi r29, r29, lbl_80607B78@l
+/* 803B9AEC 003830AC  3B BD 7B 78 */	addi r29, r29, dctac_version_dummy@l
 /* 803B9AF0 003830B0  48 00 1C 29 */	bl DCT_GetVerStr
 /* 803B9AF4 003830B4  90 7D 00 00 */	stw r3, 0(r29)
 /* 803B9AF8 003830B8  3B 7D 00 08 */	addi r27, r29, 8
@@ -72,8 +72,8 @@
 .endfn DCT_AcInit
 
 .fn DCT_AcIdctDouble, global
-/* 803B9BC0 00383180  3C A0 80 60 */	lis r5, lbl_80607B80@ha
-/* 803B9BC4 00383184  38 A5 7B 80 */	addi r5, r5, lbl_80607B80@l
+/* 803B9BC0 00383180  3C A0 80 60 */	lis r5, dctac_i_const@ha
+/* 803B9BC4 00383184  38 A5 7B 80 */	addi r5, r5, dctac_i_const@l
 /* 803B9BC8 00383188  48 00 00 04 */	b .L_803B9BCC
 .L_803B9BCC:
 /* 803B9BCC 0038318C  94 21 FD E0 */	stwu r1, -0x220(r1)
@@ -223,16 +223,20 @@
 .balign 8
 
 .obj lbl_8051F900, global
-	.4byte 0x3FD6A09E
-	.4byte 0x667F3BCD
-	.4byte 0x3FE00000
-	.4byte 0
-	.4byte 0x3FD921FB
-	.4byte 0x54442D18
-	.4byte 0x43300000
-	.4byte 0x80000000
+	.double 0.3535533905932738
 .endobj lbl_8051F900
 
+.obj lbl_8051F908, global
+	.double 0.5
+.endobj lbl_8051F908
+
+.obj lbl_8051F910, global
+	.double 0.39269908169872414
+.endobj lbl_8051F910
+
+.obj lbl_8051F918, global
+	.8byte 0x4330000080000000
+.endobj lbl_8051F918
 
 .obj double_8051F920, global
 	.double 0
@@ -240,10 +244,16 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80607B78, global
-	.skip 0x8
-.endobj lbl_80607B78
+.obj dctac_version_dummy, local
+	.skip 0x4
+.endobj dctac_version_dummy
 
-.obj lbl_80607B80, global
-	.skip 0x400
-.endobj lbl_80607B80
+.skip 0x4
+
+.obj dctac_i_const, local
+	.skip 0x200
+.endobj dctac_i_const
+
+.obj dctac_f_const, local
+	.skip 0x200
+.endobj dctac_i_const

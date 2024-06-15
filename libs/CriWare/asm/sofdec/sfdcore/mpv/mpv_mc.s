@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn MPVMC08_Init, global
-/* 803A8A0C 00371FCC  3C 80 80 52 */	lis r4, lbl_8051F820@ha
-/* 803A8A10 00371FD0  38 C4 F8 20 */	addi r6, r4, lbl_8051F820@l
-/* 803A8A14 00371FD4  80 E4 F8 20 */	lwz r7, lbl_8051F820@l(r4)
+/* 803A8A0C 00371FCC  3C 80 80 52 */	lis r4, mpvmc_oneref1p_func_table@ha
+/* 803A8A10 00371FD0  38 C4 F8 20 */	addi r6, r4, mpvmc_oneref1p_func_table@l
+/* 803A8A14 00371FD4  80 E4 F8 20 */	lwz r7, mpvmc_oneref1p_func_table@l(r4)
 /* 803A8A18 00371FD8  80 A6 00 04 */	lwz r5, 4(r6)
 /* 803A8A1C 00371FDC  80 86 00 08 */	lwz r4, 8(r6)
 /* 803A8A20 00371FE0  80 06 00 0C */	lwz r0, 0xc(r6)
@@ -880,12 +880,12 @@
 .balign 8
 
 
-.obj lbl_8051F820, global
+.obj mpvmc_oneref1p_func_table, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
-.endobj lbl_8051F820
+.endobj mpvmc_oneref1p_func_table
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

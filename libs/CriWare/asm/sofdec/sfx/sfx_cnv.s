@@ -64,7 +64,7 @@
 /* 803D4ADC 0039E09C  4E 80 00 20 */	blr 
 .endfn SFX_IsMergeField
 
-.fn sfxcnv_MakeTable, global
+.fn sfxcnv_MakeTable, local
 /* 803D4AE0 0039E0A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4AE4 0039E0A4  7C 08 02 A6 */	mflr r0
 /* 803D4AE8 0039E0A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -575,7 +575,7 @@
 /* 803D51E4 0039E7A4  4E 80 00 20 */	blr 
 .endfn SFX_CnvFrmByCbFunc
 
-.fn sfxcnv_ExecCnvFrmByCbFunc, global
+.fn sfxcnv_ExecCnvFrmByCbFunc, local
 /* 803D51E8 0039E7A8  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803D51EC 0039E7AC  7C 08 02 A6 */	mflr r0
 /* 803D51F0 0039E7B0  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -665,7 +665,7 @@
 /* 803D5320 0039E8E0  4E 80 00 20 */	blr 
 .endfn sfxcnv_ExecCnvFrmByCbFunc
 
-.fn sfxcnv_MakeCftSrcBuf, global
+.fn sfxcnv_MakeCftSrcBuf, local
 /* 803D5324 0039E8E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5328 0039E8E8  7C 08 02 A6 */	mflr r0
 /* 803D532C 0039E8EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -765,7 +765,7 @@
 /* 803D548C 0039EA4C  4E 80 00 20 */	blr 
 .endfn sfxcnv_MakeCftSrcBuf
 
-.fn sfxcnv_ExecCopyAlphaByCbFunc, global
+.fn sfxcnv_ExecCopyAlphaByCbFunc, local
 /* 803D5490 0039EA50  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 803D5494 0039EA54  7C 08 02 A6 */	mflr r0
 /* 803D5498 0039EA58  90 01 01 04 */	stw r0, 0x104(r1)
@@ -875,7 +875,7 @@
 /* 803D560C 0039EBCC  4E 80 00 20 */	blr 
 .endfn SFX_SetBytePerPixelOutBuf
 
-.fn sfxcnv_MakeDstBufInf, global
+.fn sfxcnv_MakeDstBufInf, local
 /* 803D5610 0039EBD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5614 0039EBD4  7C 08 02 A6 */	mflr r0
 /* 803D5618 0039EBD8  90 01 00 24 */	stw r0, 0x24(r1)

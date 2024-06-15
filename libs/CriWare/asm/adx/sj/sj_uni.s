@@ -86,7 +86,7 @@
 /* 8039578C 0035ED4C  4E 80 00 20 */	blr 
 .endfn SJUNI_Create
 
-.fn sjuni_Create, global
+.fn sjuni_Create, local
 /* 80395790 0035ED50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80395794 0035ED54  7C 08 02 A6 */	mflr r0
 /* 80395798 0035ED58  3C C0 80 5F */	lis r6, sjuni_obj@ha
@@ -357,7 +357,7 @@
 /* 80395B58 0035F118  4E 80 00 20 */	blr 
 .endfn SJUNI_Reset
 
-.fn sjuni_Reset, global
+.fn sjuni_Reset, local
 /* 80395B5C 0035F11C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395B60 0035F120  7C 08 02 A6 */	mflr r0
 /* 80395B64 0035F124  2C 03 00 00 */	cmpwi r3, 0
@@ -458,7 +458,7 @@
 /* 80395CC0 0035F280  4E 80 00 20 */	blr 
 .endfn SJUNI_GetNumData
 
-.fn sjuni_GetNumData, global
+.fn sjuni_GetNumData, local
 /* 80395CC4 0035F284  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395CC8 0035F288  7C 08 02 A6 */	mflr r0
 /* 80395CCC 0035F28C  2C 03 00 00 */	cmpwi r3, 0
@@ -566,7 +566,7 @@
 /* 80395E38 0035F3F8  4E 80 00 20 */	blr 
 .endfn SJUNI_GetChunk
 
-.fn sjuni_GetChunk, global
+.fn sjuni_GetChunk, local
 /* 80395E3C 0035F3FC  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80395E40 0035F400  7C 08 02 A6 */	mflr r0
 /* 80395E44 0035F404  2C 03 00 00 */	cmpwi r3, 0
@@ -706,7 +706,7 @@
 /* 8039602C 0035F5EC  4E 80 00 20 */	blr 
 .endfn SJUNI_PutChunk
 
-.fn sjuni_PutChunk, global
+.fn sjuni_PutChunk, local
 /* 80396030 0035F5F0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80396034 0035F5F4  7C 08 02 A6 */	mflr r0
 /* 80396038 0035F5F8  2C 03 00 00 */	cmpwi r3, 0
@@ -848,7 +848,7 @@
 /* 80396224 0035F7E4  4E 80 00 20 */	blr 
 .endfn SJUNI_UngetChunk
 
-.fn sjuni_UngetChunk, global
+.fn sjuni_UngetChunk, local
 /* 80396228 0035F7E8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039622C 0035F7EC  7C 08 02 A6 */	mflr r0
 /* 80396230 0035F7F0  2C 03 00 00 */	cmpwi r3, 0
@@ -991,7 +991,7 @@
 /* 80396428 0035F9E8  4E 80 00 20 */	blr 
 .endfn SJUNI_IsGetChunk
 
-.fn sjuni_IsGetChunk, global
+.fn sjuni_IsGetChunk, local
 /* 8039642C 0035F9EC  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80396430 0035F9F0  7C 08 02 A6 */	mflr r0
 /* 80396434 0035F9F4  2C 03 00 00 */	cmpwi r3, 0
@@ -1156,7 +1156,7 @@
 
 .balign 8
 
-.obj sjuni_uuid, global
+.obj sjuni_uuid, local
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060
@@ -1215,8 +1215,10 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj sjuni_init_cnt, global
-	.skip 0x8
+	.skip 0x4
 .endobj sjuni_init_cnt
+
+.skip 0x4
 
 .obj sjuni_obj, global
 	.skip 0xC00

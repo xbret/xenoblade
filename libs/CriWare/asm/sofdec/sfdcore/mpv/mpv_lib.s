@@ -5,12 +5,12 @@
 .fn MPV_Init, global
 /* 803A7F30 003714F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A7F34 003714F4  7C 08 02 A6 */	mflr r0
-/* 803A7F38 003714F8  3C A0 80 52 */	lis r5, lbl_8051F778@ha
+/* 803A7F38 003714F8  3C A0 80 52 */	lis r5, MPVLIB_version_str@ha
 /* 803A7F3C 003714FC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 803A7F40 00371500  38 A5 F7 78 */	addi r5, r5, lbl_8051F778@l
+/* 803A7F40 00371500  38 A5 F7 78 */	addi r5, r5, MPVLIB_version_str@l
 /* 803A7F44 00371504  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 803A7F48 00371508  3F E0 80 60 */	lis r31, lbl_80606040@ha
-/* 803A7F4C 0037150C  3B FF 60 40 */	addi r31, r31, lbl_80606040@l
+/* 803A7F48 00371508  3F E0 80 60 */	lis r31, mpvlib_use_lc@ha
+/* 803A7F4C 0037150C  3B FF 60 40 */	addi r31, r31, mpvlib_use_lc@l
 /* 803A7F50 00371510  7C 7B 1B 78 */	mr r27, r3
 /* 803A7F54 00371514  7C 9C 23 78 */	mr r28, r4
 /* 803A7F58 00371518  90 BF 00 04 */	stw r5, 4(r31)
@@ -59,7 +59,7 @@
 /* 803A7FF4 003715B4  93 63 00 54 */	stw r27, 0x54(r3)
 /* 803A7FF8 003715B8  93 C3 00 58 */	stw r30, 0x58(r3)
 /* 803A7FFC 003715BC  4B FF E1 59 */	bl MPVERR_Init
-/* 803A8000 003715C0  4B FF D9 B1 */	bl func_803A59B0
+/* 803A8000 003715C0  4B FF D9 B1 */	bl criware_803A59B0
 /* 803A8004 003715C4  4B FF E7 19 */	bl MPVHDEC_Init
 /* 803A8008 003715C8  4B FF E2 BD */	bl MPVFRM_Init
 /* 803A800C 003715CC  48 01 16 E9 */	bl MPVSL_Init
@@ -119,7 +119,7 @@
 /* 803A80CC 0037168C  4E 80 00 20 */	blr 
 .endfn MPV_Init
 
-.fn mpvlib_ChkFatal, global
+.fn mpvlib_ChkFatal, local
 /* 803A80D0 00371690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A80D4 00371694  7C 08 02 A6 */	mflr r0
 /* 803A80D8 00371698  90 01 00 14 */	stw r0, 0x14(r1)
@@ -165,10 +165,10 @@
 /* 803A8164 00371724  4E 80 00 20 */	blr 
 .endfn mpvlib_ChkFatal
 
-.fn mpvlib_InitClip0255, global
-/* 803A8168 00371728  3D 40 80 60 */	lis r10, lbl_806060A8@ha
+.fn mpvlib_InitClip0255, local
+/* 803A8168 00371728  3D 40 80 60 */	lis r10, mpv_clip_0_255_tbl@ha
 /* 803A816C 0037172C  38 00 00 08 */	li r0, 8
-/* 803A8170 00371730  39 4A 60 A8 */	addi r10, r10, lbl_806060A8@l
+/* 803A8170 00371730  39 4A 60 A8 */	addi r10, r10, mpv_clip_0_255_tbl@l
 /* 803A8174 00371734  38 60 00 00 */	li r3, 0
 /* 803A8178 00371738  7C 09 03 A6 */	mtctr r0
 .L_803A817C:
@@ -346,15 +346,15 @@
 /* 803A8420 003719E0  98 6A 00 2F */	stb r3, 0x2f(r10)
 /* 803A8424 003719E4  39 4A 00 30 */	addi r10, r10, 0x30
 /* 803A8428 003719E8  42 00 FF 3C */	bdnz .L_803A8364
-/* 803A842C 003719EC  3C 80 80 60 */	lis r4, lbl_806060A8@ha
-/* 803A8430 003719F0  3C 60 80 60 */	lis r3, lbl_806064A8@ha
-/* 803A8434 003719F4  38 84 60 A8 */	addi r4, r4, lbl_806060A8@l
+/* 803A842C 003719EC  3C 80 80 60 */	lis r4, mpv_clip_0_255_tbl@ha
+/* 803A8430 003719F0  3C 60 80 60 */	lis r3, mpv_clip_0_255_base@ha
+/* 803A8434 003719F4  38 84 60 A8 */	addi r4, r4, mpv_clip_0_255_tbl@l
 /* 803A8438 003719F8  38 04 01 80 */	addi r0, r4, 0x180
-/* 803A843C 003719FC  90 03 64 A8 */	stw r0, lbl_806064A8@l(r3)
+/* 803A843C 003719FC  90 03 64 A8 */	stw r0, mpv_clip_0_255_base@l(r3)
 /* 803A8440 00371A00  4E 80 00 20 */	blr 
 .endfn mpvlib_InitClip0255
 
-.fn mpvlib_InitPicAtr, global
+.fn mpvlib_InitPicAtr, local
 /* 803A8444 00371A04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A8448 00371A08  7C 08 02 A6 */	mflr r0
 /* 803A844C 00371A0C  38 80 00 00 */	li r4, 0
@@ -422,8 +422,8 @@
 /* 803A8538 00371AF8  48 00 3F E1 */	bl MPVUMC_Finish
 /* 803A853C 00371AFC  48 01 11 BD */	bl MPVSL_Finish
 /* 803A8540 00371B00  48 00 6A 8D */	bl MPVM2V_Finish
-/* 803A8544 00371B04  3C 60 80 60 */	lis r3, lbl_80606048@ha
-/* 803A8548 00371B08  38 63 60 48 */	addi r3, r3, lbl_80606048@l
+/* 803A8544 00371B04  3C 60 80 60 */	lis r3, mpvlib_libwork@ha
+/* 803A8548 00371B08  38 63 60 48 */	addi r3, r3, mpvlib_libwork@l
 /* 803A854C 00371B0C  80 03 00 48 */	lwz r0, 0x48(r3)
 /* 803A8550 00371B10  80 63 00 50 */	lwz r3, 0x50(r3)
 /* 803A8554 00371B14  54 00 00 C7 */	rlwinm. r0, r0, 0, 3, 3
@@ -443,8 +443,8 @@
 .endfn MPV_Finish
 
 .fn MPV_Create, global
-/* 803A8584 00371B44  3C 60 80 60 */	lis r3, lbl_80606048@ha
-/* 803A8588 00371B48  38 63 60 48 */	addi r3, r3, lbl_80606048@l
+/* 803A8584 00371B44  3C 60 80 60 */	lis r3, mpvlib_libwork@ha
+/* 803A8588 00371B48  38 63 60 48 */	addi r3, r3, mpvlib_libwork@l
 /* 803A858C 00371B4C  80 03 00 54 */	lwz r0, 0x54(r3)
 /* 803A8590 00371B50  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803A8594 00371B54  7C 09 03 A6 */	mtctr r0
@@ -466,8 +466,8 @@
 /* 803A85C4 00371B84  38 60 00 00 */	li r3, 0
 /* 803A85C8 00371B88  4E 80 00 20 */	blr
 .L_803A85CC:
-/* 803A85CC 00371B8C  3C 80 80 60 */	lis r4, lbl_80606048@ha
-/* 803A85D0 00371B90  38 84 60 48 */	addi r4, r4, lbl_80606048@l
+/* 803A85CC 00371B8C  3C 80 80 60 */	lis r4, mpvlib_libwork@ha
+/* 803A85D0 00371B90  38 84 60 48 */	addi r4, r4, mpvlib_libwork@l
 /* 803A85D4 00371B94  80 04 00 48 */	lwz r0, 0x48(r4)
 /* 803A85D8 00371B98  54 00 00 C7 */	rlwinm. r0, r0, 0, 3, 3
 /* 803A85DC 00371B9C  41 82 00 20 */	beq .L_803A85FC
@@ -480,60 +480,60 @@
 /* 803A85F4 00371BB4  38 84 00 20 */	addi r4, r4, 0x20
 /* 803A85F8 00371BB8  42 00 FF F4 */	bdnz .L_803A85EC
 .L_803A85FC:
-/* 803A85FC 00371BBC  48 00 00 08 */	b func_803A8604
+/* 803A85FC 00371BBC  48 00 00 08 */	b mpvlib_InitHn
 /* 803A8600 00371BC0  4E 80 00 20 */	blr
 .endfn MPV_Create
 
-.fn func_803A8604, global
+.fn mpvlib_InitHn, local
 /* 803A8604 00371BC4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A8608 00371BC8  7C 08 02 A6 */	mflr r0
-/* 803A860C 00371BCC  3C 80 80 60 */	lis r4, lbl_80606048@ha
+/* 803A860C 00371BCC  3C 80 80 60 */	lis r4, mpvlib_libwork@ha
 /* 803A8610 00371BD0  39 63 03 80 */	addi r11, r3, 0x380
 /* 803A8614 00371BD4  90 01 00 34 */	stw r0, 0x34(r1)
-/* 803A8618 00371BD8  3C A0 80 60 */	lis r5, lbl_80607B24@ha
-/* 803A861C 00371BDC  38 84 60 48 */	addi r4, r4, lbl_80606048@l
-/* 803A8620 00371BE0  3C C0 80 60 */	lis r6, lbl_80607B20@ha
+/* 803A8618 00371BD8  3C A0 80 60 */	lis r5, mpvvlc_run_level_8@ha
+/* 803A861C 00371BDC  38 84 60 48 */	addi r4, r4, mpvlib_libwork@l
+/* 803A8620 00371BE0  3C C0 80 60 */	lis r6, mpvvlc_run_level_4@ha
 /* 803A8624 00371BE4  BE E1 00 0C */	stmw r23, 0xc(r1)
-/* 803A8628 00371BE8  3E E0 80 60 */	lis r23, lbl_80607B18@ha
-/* 803A862C 00371BEC  3F 00 80 60 */	lis r24, lbl_80607B14@ha
-/* 803A8630 00371BF0  3F 20 80 60 */	lis r25, lbl_80607B10@ha
+/* 803A8628 00371BE8  3E E0 80 60 */	lis r23, mpvvlc_run_level_1@ha
+/* 803A862C 00371BEC  3F 00 80 60 */	lis r24, mpvvlc_run_level_0a@ha
+/* 803A8630 00371BF0  3F 20 80 60 */	lis r25, mpvvlc_run_level_0b@ha
 /* 803A8634 00371BF4  3F 40 80 60 */	lis r26, mpvvlc_run_level_0c@ha
-/* 803A8638 00371BF8  3D 80 80 60 */	lis r12, lbl_806064A8@ha
+/* 803A8638 00371BF8  3D 80 80 60 */	lis r12, mpv_clip_0_255_base@ha
 /* 803A863C 00371BFC  39 4B 01 80 */	addi r10, r11, 0x180
 /* 803A8640 00371C00  39 23 01 00 */	addi r9, r3, 0x100
 /* 803A8644 00371C04  39 03 01 80 */	addi r8, r3, 0x180
 /* 803A8648 00371C08  3B C0 00 00 */	li r30, 0
 /* 803A864C 00371C0C  7C 7F 1B 78 */	mr r31, r3
 /* 803A8650 00371C10  80 E4 00 50 */	lwz r7, 0x50(r4)
-/* 803A8654 00371C14  80 05 7B 24 */	lwz r0, lbl_80607B24@l(r5)
-/* 803A8658 00371C18  3C A0 80 60 */	lis r5, lbl_80607B1C@ha
+/* 803A8654 00371C14  80 05 7B 24 */	lwz r0, mpvvlc_run_level_8@l(r5)
+/* 803A8658 00371C18  3C A0 80 60 */	lis r5, mpvvlc_run_level_2@ha
 /* 803A865C 00371C1C  3B 67 11 E0 */	addi r27, r7, 0x11e0
 /* 803A8660 00371C20  3B 87 12 00 */	addi r28, r7, 0x1200
 /* 803A8664 00371C24  90 03 09 90 */	stw r0, 0x990(r3)
 /* 803A8668 00371C28  3B A7 11 00 */	addi r29, r7, 0x1100
 /* 803A866C 00371C2C  38 E3 02 00 */	addi r7, r3, 0x200
-/* 803A8670 00371C30  80 C6 7B 20 */	lwz r6, lbl_80607B20@l(r6)
+/* 803A8670 00371C30  80 C6 7B 20 */	lwz r6, mpvvlc_run_level_4@l(r6)
 /* 803A8674 00371C34  38 06 FF F0 */	addi r0, r6, -16
 /* 803A8678 00371C38  38 C3 02 80 */	addi r6, r3, 0x280
 /* 803A867C 00371C3C  90 03 09 94 */	stw r0, 0x994(r3)
 /* 803A8680 00371C40  38 03 00 80 */	addi r0, r3, 0x80
-/* 803A8684 00371C44  80 A5 7B 1C */	lwz r5, lbl_80607B1C@l(r5)
+/* 803A8684 00371C44  80 A5 7B 1C */	lwz r5, mpvvlc_run_level_2@l(r5)
 /* 803A8688 00371C48  38 A5 FF E0 */	addi r5, r5, -32
 /* 803A868C 00371C4C  90 A3 09 98 */	stw r5, 0x998(r3)
 /* 803A8690 00371C50  38 A0 00 40 */	li r5, 0x40
-/* 803A8694 00371C54  82 F7 7B 18 */	lwz r23, lbl_80607B18@l(r23)
+/* 803A8694 00371C54  82 F7 7B 18 */	lwz r23, mpvvlc_run_level_1@l(r23)
 /* 803A8698 00371C58  3A F7 FF E0 */	addi r23, r23, -32
 /* 803A869C 00371C5C  92 E3 09 9C */	stw r23, 0x99c(r3)
-/* 803A86A0 00371C60  83 18 7B 14 */	lwz r24, lbl_80607B14@l(r24)
+/* 803A86A0 00371C60  83 18 7B 14 */	lwz r24, mpvvlc_run_level_0a@l(r24)
 /* 803A86A4 00371C64  93 03 09 A0 */	stw r24, 0x9a0(r3)
-/* 803A86A8 00371C68  83 39 7B 10 */	lwz r25, lbl_80607B10@l(r25)
+/* 803A86A8 00371C68  83 39 7B 10 */	lwz r25, mpvvlc_run_level_0b@l(r25)
 /* 803A86AC 00371C6C  93 23 09 A4 */	stw r25, 0x9a4(r3)
 /* 803A86B0 00371C70  83 5A 7B 0C */	lwz r26, mpvvlc_run_level_0c@l(r26)
 /* 803A86B4 00371C74  93 43 09 A8 */	stw r26, 0x9a8(r3)
 /* 803A86B8 00371C78  93 63 09 B8 */	stw r27, 0x9b8(r3)
 /* 803A86BC 00371C7C  93 83 09 BC */	stw r28, 0x9bc(r3)
 /* 803A86C0 00371C80  93 A3 09 B0 */	stw r29, 0x9b0(r3)
-/* 803A86C4 00371C84  81 8C 64 A8 */	lwz r12, lbl_806064A8@l(r12)
+/* 803A86C4 00371C84  81 8C 64 A8 */	lwz r12, mpv_clip_0_255_base@l(r12)
 /* 803A86C8 00371C88  91 83 09 C0 */	stw r12, 0x9c0(r3)
 /* 803A86CC 00371C8C  91 83 0A 90 */	stw r12, 0xa90(r3)
 /* 803A86D0 00371C90  90 63 0A 94 */	stw r3, 0xa94(r3)
@@ -596,15 +596,15 @@
 /* 803A87B0 00371D70  7C 08 03 A6 */	mtlr r0
 /* 803A87B4 00371D74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803A87B8 00371D78  4E 80 00 20 */	blr 
-.endfn func_803A8604
+.endfn mpvlib_InitHn
 
-.fn func_803A87BC, global
+.fn MPV_GetDctCnt, global
 /* 803A87BC 00371D7C  80 03 0A 10 */	lwz r0, 0xa10(r3)
 /* 803A87C0 00371D80  90 04 00 00 */	stw r0, 0(r4)
 /* 803A87C4 00371D84  80 03 0A 14 */	lwz r0, 0xa14(r3)
 /* 803A87C8 00371D88  90 05 00 00 */	stw r0, 0(r5)
 /* 803A87CC 00371D8C  4E 80 00 20 */	blr 
-.endfn func_803A87BC
+.endfn MPV_GetDctCnt
 
 .fn MPV_Destroy, global
 /* 803A87D0 00371D90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -623,9 +623,9 @@
 /* 803A8800 00371DC0  38 00 FF FF */	li r0, -1
 /* 803A8804 00371DC4  48 00 00 10 */	b .L_803A8814
 .L_803A8808:
-/* 803A8808 00371DC8  3C 80 80 60 */	lis r4, lbl_806064AC@ha
+/* 803A8808 00371DC8  3C 80 80 60 */	lis r4, mpvlib_mpvobj@ha
 /* 803A880C 00371DCC  38 00 00 00 */	li r0, 0
-/* 803A8810 00371DD0  90 64 64 AC */	stw r3, lbl_806064AC@l(r4)
+/* 803A8810 00371DD0  90 64 64 AC */	stw r3, mpvlib_mpvobj@l(r4)
 .L_803A8814:
 /* 803A8814 00371DD4  2C 00 00 00 */	cmpwi r0, 0
 /* 803A8818 00371DD8  41 82 00 18 */	beq .L_803A8830
@@ -639,8 +639,8 @@
 /* 803A8834 00371DF4  48 00 67 A5 */	bl MPVM2V_Destroy
 /* 803A8838 00371DF8  7F E3 FB 78 */	mr r3, r31
 /* 803A883C 00371DFC  48 01 0E C5 */	bl MPVSL_Destroy
-/* 803A8840 00371E00  3C 60 80 60 */	lis r3, lbl_80606048@ha
-/* 803A8844 00371E04  38 63 60 48 */	addi r3, r3, lbl_80606048@l
+/* 803A8840 00371E00  3C 60 80 60 */	lis r3, mpvlib_libwork@ha
+/* 803A8844 00371E04  38 63 60 48 */	addi r3, r3, mpvlib_libwork@l
 /* 803A8848 00371E08  80 03 00 48 */	lwz r0, 0x48(r3)
 /* 803A884C 00371E0C  54 00 00 C7 */	rlwinm. r0, r0, 0, 3, 3
 /* 803A8850 00371E10  41 82 00 1C */	beq .L_803A886C
@@ -669,9 +669,9 @@
 /* 803A8894 00371E54  2C 03 00 00 */	cmpwi r3, 0
 /* 803A8898 00371E58  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803A889C 00371E5C  40 82 00 50 */	bne .L_803A88EC
-/* 803A88A0 00371E60  3C C0 80 60 */	lis r6, lbl_80606048@ha
+/* 803A88A0 00371E60  3C C0 80 60 */	lis r6, mpvlib_libwork@ha
 /* 803A88A4 00371E64  54 80 10 3A */	slwi r0, r4, 2
-/* 803A88A8 00371E68  38 C6 60 48 */	addi r6, r6, lbl_80606048@l
+/* 803A88A8 00371E68  38 C6 60 48 */	addi r6, r6, mpvlib_libwork@l
 /* 803A88AC 00371E6C  80 E6 00 58 */	lwz r7, 0x58(r6)
 /* 803A88B0 00371E70  80 C6 00 54 */	lwz r6, 0x54(r6)
 /* 803A88B4 00371E74  7D 00 3A 14 */	add r8, r0, r7
@@ -688,8 +688,8 @@
 /* 803A88D8 00371E98  38 E7 0D C0 */	addi r7, r7, 0xdc0
 /* 803A88DC 00371E9C  42 00 FF E8 */	bdnz .L_803A88C4
 .L_803A88E0:
-/* 803A88E0 00371EA0  3C C0 80 60 */	lis r6, lbl_80606048@ha
-/* 803A88E4 00371EA4  38 C6 60 48 */	addi r6, r6, lbl_80606048@l
+/* 803A88E0 00371EA0  3C C0 80 60 */	lis r6, mpvlib_libwork@ha
+/* 803A88E4 00371EA4  38 C6 60 48 */	addi r6, r6, mpvlib_libwork@l
 /* 803A88E8 00371EA8  48 00 00 50 */	b .L_803A8938
 .L_803A88EC:
 /* 803A88EC 00371EAC  40 82 00 0C */	bne .L_803A88F8
@@ -702,9 +702,9 @@
 /* 803A8904 00371EC4  38 00 FF FF */	li r0, -1
 /* 803A8908 00371EC8  48 00 00 10 */	b .L_803A8918
 .L_803A890C:
-/* 803A890C 00371ECC  3C C0 80 60 */	lis r6, lbl_806064AC@ha
+/* 803A890C 00371ECC  3C C0 80 60 */	lis r6, mpvlib_mpvobj@ha
 /* 803A8910 00371ED0  38 00 00 00 */	li r0, 0
-/* 803A8914 00371ED4  90 66 64 AC */	stw r3, lbl_806064AC@l(r6)
+/* 803A8914 00371ED4  90 66 64 AC */	stw r3, mpvlib_mpvobj@l(r6)
 .L_803A8918:
 /* 803A8918 00371ED8  2C 00 00 00 */	cmpwi r0, 0
 /* 803A891C 00371EDC  41 82 00 18 */	beq .L_803A8934
@@ -727,11 +727,11 @@
 /* 803A8954 00371F14  4E 80 00 20 */	blr 
 .endfn MPV_SetCond
 
-.fn func_803A8958, global
+.fn MPV_GetCond, global
 /* 803A8958 00371F18  2C 03 00 00 */	cmpwi r3, 0
 /* 803A895C 00371F1C  40 82 00 10 */	bne .L_803A896C
-/* 803A8960 00371F20  3C C0 80 60 */	lis r6, lbl_80606048@ha
-/* 803A8964 00371F24  38 C6 60 48 */	addi r6, r6, lbl_80606048@l
+/* 803A8960 00371F20  3C C0 80 60 */	lis r6, mpvlib_libwork@ha
+/* 803A8964 00371F24  38 C6 60 48 */	addi r6, r6, mpvlib_libwork@l
 /* 803A8968 00371F28  48 00 00 4C */	b .L_803A89B4
 .L_803A896C:
 /* 803A896C 00371F2C  40 82 00 0C */	bne .L_803A8978
@@ -744,9 +744,9 @@
 /* 803A8984 00371F44  38 00 FF FF */	li r0, -1
 /* 803A8988 00371F48  48 00 00 10 */	b .L_803A8998
 .L_803A898C:
-/* 803A898C 00371F4C  3C C0 80 60 */	lis r6, lbl_806064AC@ha
+/* 803A898C 00371F4C  3C C0 80 60 */	lis r6, mpvlib_mpvobj@ha
 /* 803A8990 00371F50  38 00 00 00 */	li r0, 0
-/* 803A8994 00371F54  90 66 64 AC */	stw r3, lbl_806064AC@l(r6)
+/* 803A8994 00371F54  90 66 64 AC */	stw r3, mpvlib_mpvobj@l(r6)
 .L_803A8998:
 /* 803A8998 00371F58  2C 00 00 00 */	cmpwi r0, 0
 /* 803A899C 00371F5C  41 82 00 14 */	beq .L_803A89B0
@@ -762,7 +762,7 @@
 /* 803A89BC 00371F7C  7C 06 00 2E */	lwzx r0, r6, r0
 /* 803A89C0 00371F80  90 05 00 00 */	stw r0, 0(r5)
 /* 803A89C4 00371F84  4E 80 00 20 */	blr
-.endfn func_803A8958
+.endfn MPV_GetCond
 
 .fn MPV_SetMbCb, global
 /* 803A89C8 00371F88  90 83 0B 50 */	stw r4, 0xb50(r3)
@@ -783,8 +783,8 @@
 /* 803A89F4 00371FB4  38 60 FF FF */	li r3, -1
 /* 803A89F8 00371FB8  4E 80 00 20 */	blr
 .L_803A89FC:
-/* 803A89FC 00371FBC  3C 80 80 60 */	lis r4, lbl_806064AC@ha
-/* 803A8A00 00371FC0  90 64 64 AC */	stw r3, lbl_806064AC@l(r4)
+/* 803A89FC 00371FBC  3C 80 80 60 */	lis r4, mpvlib_mpvobj@ha
+/* 803A8A00 00371FC0  90 64 64 AC */	stw r3, mpvlib_mpvobj@l(r4)
 /* 803A8A04 00371FC4  38 60 00 00 */	li r3, 0
 /* 803A8A08 00371FC8  4E 80 00 20 */	blr 
 .endfn MPVLIB_CheckHn
@@ -793,14 +793,14 @@
 
 .balign 8
 
-.obj lbl_8051F778, global
+.obj MPVLIB_version_str, global
 	.asciz "\nCRI MPV/WII Ver.2.059 Build:Nov 13 2008 18:21:44\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
-.endobj lbl_8051F778
+.endobj MPVLIB_version_str
 
 
-.obj mpvlib_cond_dfl, global
+.obj mpvlib_cond_dfl, local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -829,22 +829,36 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80606040, global
-	.skip 0x8
-.endobj lbl_80606040
-
-.obj lbl_80606048, global
-	.skip 0x60
-.endobj lbl_80606048
-
-.obj lbl_806060A8, global
-	.skip 0x400
-.endobj lbl_806060A8
-
-.obj lbl_806064A8, global
+.obj mpvlib_use_lc, global
 	.skip 0x4
-.endobj lbl_806064A8
+.endobj mpvlib_use_lc
 
-.obj lbl_806064AC, global
-	.skip 0xC
-.endobj lbl_806064AC
+.obj cri_verstr_ptr, local
+	.skip 0x4
+.endobj cri_verstr_ptr
+
+.obj mpvlib_libwork, local
+	.skip 0x5C
+.endobj mpvlib_libwork
+
+.skip 0x4
+
+.obj mpv_clip_0_255_tbl, local
+	.skip 0x400
+.endobj mpv_clip_0_255_tbl
+
+.obj mpv_clip_0_255_base, global
+	.skip 0x4
+.endobj mpv_clip_0_255_base
+
+.obj mpvlib_mpvobj, local
+	.skip 0x4
+.endobj mpvlib_mpvobj
+
+.obj mpvlib_oix, global
+	.skip 0x4
+.endobj mpvlib_oix
+
+.obj mpvlib_iix, global
+	.skip 0x4
+.endobj mpvlib_iix
