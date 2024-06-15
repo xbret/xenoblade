@@ -1216,6 +1216,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
+
 .obj svm_init_level, global
 	.skip 0x4
 .endobj svm_init_level
