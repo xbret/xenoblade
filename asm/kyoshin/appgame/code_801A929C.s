@@ -2,52 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801A929C, global
-/* 801A929C 0017285C  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 801A92A0 00172860  7C 08 02 A6 */	mflr r0
-/* 801A92A4 00172864  2C 04 00 00 */	cmpwi r4, 0
-/* 801A92A8 00172868  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801A92AC 0017286C  DB E1 00 10 */	stfd f31, 0x10(r1)
-/* 801A92B0 00172870  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
-/* 801A92B4 00172874  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801A92B8 00172878  93 C1 00 08 */	stw r30, 8(r1)
-/* 801A92BC 0017287C  41 82 00 0C */	beq .L_801A92C8
-/* 801A92C0 00172880  C3 E2 A2 14 */	lfs f31, float_8066A594@sda21(r2)
-/* 801A92C4 00172884  48 00 00 08 */	b .L_801A92CC
-.L_801A92C8:
-/* 801A92C8 00172888  C3 E2 A2 30 */	lfs f31, float_8066A5B0@sda21(r2)
-.L_801A92CC:
-/* 801A92CC 0017288C  7C 7F 1B 78 */	mr r31, r3
-/* 801A92D0 00172890  3B C0 00 00 */	li r30, 0
-.L_801A92D4:
-/* 801A92D4 00172894  3C 7F 00 02 */	addis r3, r31, 2
-/* 801A92D8 00172898  80 63 61 A8 */	lwz r3, 0x61a8(r3)
-/* 801A92DC 0017289C  2C 03 00 00 */	cmpwi r3, 0
-/* 801A92E0 001728A0  41 82 00 28 */	beq .L_801A9308
-/* 801A92E4 001728A4  FC 20 F8 90 */	fmr f1, f31
-/* 801A92E8 001728A8  4B F0 39 69 */	bl func_800ACC50
-/* 801A92EC 001728AC  3C 7F 00 02 */	addis r3, r31, 2
-/* 801A92F0 001728B0  80 63 61 A8 */	lwz r3, 0x61a8(r3)
-/* 801A92F4 001728B4  80 63 00 94 */	lwz r3, 0x94(r3)
-/* 801A92F8 001728B8  2C 03 00 00 */	cmpwi r3, 0
-/* 801A92FC 001728BC  41 82 00 0C */	beq .L_801A9308
-/* 801A9300 001728C0  C0 22 A2 30 */	lfs f1, float_8066A5B0@sda21(r2)
-/* 801A9304 001728C4  48 33 A3 D9 */	bl func_804E36DC
-.L_801A9308:
-/* 801A9308 001728C8  3B DE 00 01 */	addi r30, r30, 1
-/* 801A930C 001728CC  3B FF 00 04 */	addi r31, r31, 4
-/* 801A9310 001728D0  2C 1E 00 04 */	cmpwi r30, 4
-/* 801A9314 001728D4  41 80 FF C0 */	blt .L_801A92D4
-/* 801A9318 001728D8  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 801A931C 001728DC  E3 E1 00 18 */	psq_l f31, 24(r1), 0, qr0
-/* 801A9320 001728E0  CB E1 00 10 */	lfd f31, 0x10(r1)
-/* 801A9324 001728E4  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 801A9328 001728E8  83 C1 00 08 */	lwz r30, 8(r1)
-/* 801A932C 001728EC  7C 08 03 A6 */	mtlr r0
-/* 801A9330 001728F0  38 21 00 20 */	addi r1, r1, 0x20
-/* 801A9334 001728F4  4E 80 00 20 */	blr 
-.endfn func_801A929C
-
 .fn func_801A9338, global
 /* 801A9338 001728F8  3C 80 00 01 */	lis r4, 0x0000FFFF@ha
 /* 801A933C 001728FC  38 04 FF FF */	addi r0, r4, 0x0000FFFF@l
@@ -1991,13 +1945,6 @@
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
-
-.obj "@etb_8000FAA4", local
-.hidden "@etb_8000FAA4"
-	.4byte 0x104A0000
-	.4byte 0x00000000
-.endobj "@etb_8000FAA4"
-
 .obj "@etb_8000FAAC", local
 .hidden "@etb_8000FAAC"
 	.4byte 0x308A0000
@@ -2054,13 +2001,6 @@
 
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
-
-.obj "@eti_8002A788", local
-.hidden "@eti_8002A788"
-	.4byte func_801A929C
-	.4byte 0x0000009C
-	.4byte "@etb_8000FAA4"
-.endobj "@eti_8002A788"
 
 .obj "@eti_8002A794", local
 .hidden "@eti_8002A794"

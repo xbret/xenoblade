@@ -14246,7 +14246,7 @@
 /* 801D1464 0019AA24  48 28 DC 5D */	bl func_8045F0C0
 /* 801D1468 0019AA28  7C 64 1B 78 */	mr r4, r3
 /* 801D146C 0019AA2C  38 60 08 58 */	li r3, 0x858
-/* 801D1470 0019AA30  48 26 35 ED */	bl heap_malloc
+/* 801D1470 0019AA30  48 26 35 ED */	bl heap_malloc__3mtlFUli
 /* 801D1474 0019AA34  2C 03 00 00 */	cmpwi r3, 0
 /* 801D1478 0019AA38  41 82 00 08 */	beq .L_801D1480
 /* 801D147C 0019AA3C  4B F5 4C 09 */	bl __ct__CTagProcessor
@@ -15391,7 +15391,7 @@
 	.4byte CItemBoxGrid_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

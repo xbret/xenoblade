@@ -292,10 +292,10 @@
 /* 8045FCF8 004292B8  41 82 00 50 */	beq .L_8045FD48
 /* 8045FCFC 004292BC  48 00 00 40 */	b .L_8045FD3C
 .L_8045FD00:
-/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex__Fv
+/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex__3mtlFv
 /* 8045FD04 004292C4  7C 64 1B 78 */	mr r4, r3
 /* 8045FD08 004292C8  38 60 00 18 */	li r3, 0x18
-/* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc
+/* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc__3mtlFUli
 /* 8045FD10 004292D0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FD14 004292D4  41 82 00 0C */	beq .L_8045FD20
 /* 8045FD18 004292D8  7F C4 F3 78 */	mr r4, r30
@@ -610,7 +610,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -663,7 +663,7 @@
 	.4byte CLibStaticData_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

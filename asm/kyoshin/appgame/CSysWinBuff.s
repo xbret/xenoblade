@@ -334,10 +334,10 @@
 /* 80274970 0023DF30  38 60 00 00 */	li r3, 0
 /* 80274974 0023DF34  48 00 00 F4 */	b .L_80274A68
 .L_80274978:
-/* 80274978 0023DF38  48 1C 2C 3D */	bl getHeapIndex__Fv
+/* 80274978 0023DF38  48 1C 2C 3D */	bl getHeapIndex__3mtlFv
 /* 8027497C 0023DF3C  7C 64 1B 78 */	mr r4, r3
 /* 80274980 0023DF40  38 60 00 BC */	li r3, 0xbc
-/* 80274984 0023DF44  48 1C 00 D9 */	bl heap_malloc
+/* 80274984 0023DF44  48 1C 00 D9 */	bl heap_malloc__3mtlFUli
 /* 80274988 0023DF48  2C 03 00 00 */	cmpwi r3, 0
 /* 8027498C 0023DF4C  7C 7F 1B 78 */	mr r31, r3
 /* 80274990 0023DF50  41 82 00 C0 */	beq .L_80274A50
@@ -510,7 +510,7 @@
 	.4byte CSysWinBuff_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

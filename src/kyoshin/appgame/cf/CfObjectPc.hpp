@@ -1,5 +1,6 @@
 #pragma once
 
+#include "types.h"
 #include "kyoshin/appgame/cf/CfObjectActor.hpp"
 
 namespace cf{

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "types.h"
 #include "monolib/vm/yvm.h"
 
 int deb_put(_sVMThread* pThread);

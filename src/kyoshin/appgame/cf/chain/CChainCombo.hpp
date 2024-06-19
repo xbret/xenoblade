@@ -1,4 +1,7 @@
+#pragma once
+
 #include "types.h"
+
 void func_80294824(void*);
 void func_80294834(void*);
 void func_802AA338();

@@ -163,7 +163,7 @@
 /* 8045F188 00428748  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045F18C 0042874C  80 8D BE 68 */	lwz r4, lbl_80667FE8@sda21(r13)
 /* 8045F190 00428750  80 84 01 DC */	lwz r4, 0x1dc(r4)
-/* 8045F194 00428754  4B FD 58 C9 */	bl heap_malloc
+/* 8045F194 00428754  4B FD 58 C9 */	bl heap_malloc__3mtlFUli
 /* 8045F198 00428758  2C 03 00 00 */	cmpwi r3, 0
 /* 8045F19C 0042875C  41 82 00 08 */	beq .L_8045F1A4
 /* 8045F1A0 00428760  4B FA 0D 49 */	bl __ct__Q34nw4r3lyt6LayoutFv
@@ -181,7 +181,7 @@
 /* 8045F1C0 00428780  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045F1C4 00428784  80 8D BE 68 */	lwz r4, lbl_80667FE8@sda21(r13)
 /* 8045F1C8 00428788  80 84 01 DC */	lwz r4, 0x1dc(r4)
-/* 8045F1CC 0042878C  4B FD 58 91 */	bl heap_malloc
+/* 8045F1CC 0042878C  4B FD 58 91 */	bl heap_malloc__3mtlFUli
 /* 8045F1D0 00428790  2C 03 00 00 */	cmpwi r3, 0
 /* 8045F1D4 00428794  41 82 00 08 */	beq .L_8045F1DC
 /* 8045F1D8 00428798  4B FA AC D5 */	bl __ct__Q34nw4r3lyt19ArcResourceAccessorFv
@@ -764,7 +764,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

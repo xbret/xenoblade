@@ -35,20 +35,20 @@ public:
 	}
 
     void func_8049CAF4(){
-        u32* ppuVar1;
-        u32* ppuVar2;
+        _reslist_node<T>* ppuVar1;
+        _reslist_node<T>* ppuVar2;
     
-        ppuVar2 = (u32*)*unk4;
+        ppuVar2 = *unk4;
         
-        while (ppuVar1 = unk4, ppuVar2 != ppuVar1) {
-            ppuVar1 = (u32*)*ppuVar2;
-            func_8049CB6C(ppuVar2 + 2);
-            func_8049CB70(ppuVar2);
+        while (ppuVar1 = (_reslist_node<T>*)unk4, ppuVar2 != ppuVar1) {
+            ppuVar1 = ppuVar2->next;
+            func_8049CB6C((u32*)&ppuVar2->item);
+            func_8049CB70((u32*)ppuVar2);
             ppuVar2 = ppuVar1;
         }
     
-        *ppuVar1 = (u32)ppuVar1;
-        unk4[1] = (u32)unk4;
+        ppuVar1->next = ppuVar1;
+        *unk4 = (_reslist_node<T>*)unk4;
     }
 
     void func_8049CB70(u32* ptr){

@@ -176,10 +176,10 @@
 /* 80295778 0025ED38  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8029577C 0025ED3C  7C 7D 1B 78 */	mr r29, r3
 /* 80295780 0025ED40  7C 9E 23 78 */	mr r30, r4
-/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex__Fv
+/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex__3mtlFv
 /* 80295788 0025ED48  7C 64 1B 78 */	mr r4, r3
 /* 8029578C 0025ED4C  38 60 00 64 */	li r3, 0x64
-/* 80295790 0025ED50  48 19 F2 CD */	bl heap_malloc
+/* 80295790 0025ED50  48 19 F2 CD */	bl heap_malloc__3mtlFUli
 /* 80295794 0025ED54  2C 03 00 00 */	cmpwi r3, 0
 /* 80295798 0025ED58  7C 7F 1B 78 */	mr r31, r3
 /* 8029579C 0025ED5C  41 82 00 10 */	beq .L_802957AC
@@ -302,7 +302,7 @@
 	.4byte CTaskGameEvt_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

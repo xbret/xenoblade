@@ -13,10 +13,10 @@
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
-/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex__Fv
+/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex__3mtlFv
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
-/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc
+/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc__3mtlFUli
 /* 80443B40 0040D100  2C 03 00 00 */	cmpwi r3, 0
 /* 80443B44 0040D104  7C 7E 1B 78 */	mr r30, r3
 /* 80443B48 0040D108  41 82 00 50 */	beq .L_80443B98
@@ -43,7 +43,7 @@
 /* 80443B98 0040D158  7F C3 F3 78 */	mr r3, r30
 /* 80443B9C 0040D15C  38 80 00 00 */	li r4, 0
 /* 80443BA0 0040D160  38 A0 00 00 */	li r5, 0
-/* 80443BA4 0040D164  4B FF 50 35 */	bl func_80438BD8
+/* 80443BA4 0040D164  4B FF 50 35 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80443BA8 0040D168  93 CD BD 68 */	stw r30, cDesktopPointer@sda21(r13)
 /* 80443BAC 0040D16C  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80443BB0 0040D170  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -747,7 +747,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

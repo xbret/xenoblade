@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CGame, global
+.fn __ct__5CGameFPCcP11CWorkThread, global
 /* 80039220 000027E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039224 000027E4  7C 08 02 A6 */	mflr r0
 /* 80039228 000027E8  38 C0 00 08 */	li r6, 8
 /* 8003922C 000027EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80039230 000027F0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80039234 000027F4  7C 7F 1B 78 */	mr r31, r3
-/* 80039238 000027F8  48 3F F9 F9 */	bl __ct__CProc
+/* 80039238 000027F8  48 3F F9 F9 */	bl __ct__5CProcFPCcP11CWorkThreadUl
 /* 8003923C 000027FC  C0 02 80 08 */	lfs f0, float_80668388@sda21(r2)
 /* 80039240 00002800  3C 60 80 53 */	lis r3, __vt__5CGame@ha
 /* 80039244 00002804  38 A0 00 00 */	li r5, 0
@@ -28,21 +28,21 @@
 /* 80039278 00002838  90 1F 02 20 */	stw r0, 0x220(r31)
 /* 8003927C 0000283C  D0 1F 02 24 */	stfs f0, 0x224(r31)
 /* 80039280 00002840  90 BF 02 28 */	stw r5, 0x228(r31)
-/* 80039284 00002844  93 ED A4 80 */	stw r31, lbl_80666600@sda21(r13)
-/* 80039288 00002848  48 42 43 41 */	bl func_8045D5C8
-/* 8003928C 0000284C  3C 60 80 04 */	lis r3, func_80039D08@ha
-/* 80039290 00002850  38 63 9D 08 */	addi r3, r3, func_80039D08@l
-/* 80039294 00002854  48 40 B5 E1 */	bl func_80444874
+/* 80039284 00002844  93 ED A4 80 */	stw r31, instance__5CGame@sda21(r13)
+/* 80039288 00002848  48 42 43 41 */	bl func_8045D5C8__FUl
+/* 8003928C 0000284C  3C 60 80 04 */	lis r3, func_80039D08__Fv@ha
+/* 80039290 00002850  38 63 9D 08 */	addi r3, r3, func_80039D08__Fv@l
+/* 80039294 00002854  48 40 B5 E1 */	bl func_80444874__FPv
 /* 80039298 00002858  7F E3 FB 78 */	mr r3, r31
 /* 8003929C 0000285C  38 80 00 04 */	li r4, 4
-/* 800392A0 00002860  48 3F EC 51 */	bl func_80437EF0
+/* 800392A0 00002860  48 3F EC 51 */	bl func_80437EF0__11CWorkThreadFUl
 /* 800392A4 00002864  7F E3 FB 78 */	mr r3, r31
 /* 800392A8 00002868  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800392AC 0000286C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800392B0 00002870  7C 08 03 A6 */	mtlr r0
 /* 800392B4 00002874  38 21 00 10 */	addi r1, r1, 0x10
 /* 800392B8 00002878  4E 80 00 20 */	blr 
-.endfn __ct__CGame
+.endfn __ct__5CGameFPCcP11CWorkThread
 
 .fn __dt__5CGameFv, global
 /* 800392BC 0000287C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -57,11 +57,11 @@
 /* 800392E0 000028A0  38 84 82 A0 */	addi r4, r4, __vt__5CGame@l
 /* 800392E4 000028A4  90 83 00 00 */	stw r4, 0(r3)
 /* 800392E8 000028A8  38 60 00 00 */	li r3, 0
-/* 800392EC 000028AC  48 40 B5 89 */	bl func_80444874
+/* 800392EC 000028AC  48 40 B5 89 */	bl func_80444874__FPv
 /* 800392F0 000028B0  38 60 00 00 */	li r3, 0
-/* 800392F4 000028B4  48 42 42 D5 */	bl func_8045D5C8
+/* 800392F4 000028B4  48 42 42 D5 */	bl func_8045D5C8__FUl
 /* 800392F8 000028B8  38 00 00 00 */	li r0, 0
-/* 800392FC 000028BC  90 0D A4 80 */	stw r0, lbl_80666600@sda21(r13)
+/* 800392FC 000028BC  90 0D A4 80 */	stw r0, instance__5CGame@sda21(r13)
 /* 80039300 000028C0  7F C3 F3 78 */	mr r3, r30
 /* 80039304 000028C4  38 80 00 00 */	li r4, 0
 /* 80039308 000028C8  48 3F FB C1 */	bl __dt__5CProcFv
@@ -78,54 +78,53 @@
 /* 80039330 000028F0  4E 80 00 20 */	blr 
 .endfn __dt__5CGameFv
 
-.fn func_80039334, global
-/* 80039334 000028F4  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
+.fn getCGameInstancePtr__Fv, global
+/* 80039334 000028F4  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039338 000028F8  4E 80 00 20 */	blr 
-.endfn func_80039334
+.endfn getCGameInstancePtr__Fv
 
-.fn func_8003933C, global
+.fn func_8003933C__Fv, global
 /* 8003933C 000028FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039340 00002900  7C 08 02 A6 */	mflr r0
 /* 80039344 00002904  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039348 00002908  48 12 B5 C9 */	bl func_80164910
+/* 80039348 00002908  48 12 B5 C9 */	bl func_80164910__Fv
 /* 8003934C 0000290C  7C 60 00 34 */	cntlzw r0, r3
 /* 80039350 00002910  54 03 D9 7E */	srwi r3, r0, 5
 /* 80039354 00002914  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039358 00002918  7C 08 03 A6 */	mtlr r0
 /* 8003935C 0000291C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039360 00002920  4E 80 00 20 */	blr
-.endfn func_8003933C
+.endfn func_8003933C__Fv
 
-#CGameRestart?
-.fn CGameRestart, global
+.fn func_80039364__Fv, global
 /* 80039364 00002924  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039368 00002928  7C 08 02 A6 */	mflr r0
 /* 8003936C 0000292C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80039370 00002930  BF A1 00 14 */	stmw r29, 0x14(r1)
-/* 80039374 00002934  80 0D A4 80 */	lwz r0, lbl_80666600@sda21(r13)
+/* 80039374 00002934  80 0D A4 80 */	lwz r0, instance__5CGame@sda21(r13)
 /* 80039378 00002938  2C 00 00 00 */	cmpwi r0, 0
 /* 8003937C 0000293C  40 82 00 0C */	bne .L_80039388
-/* 80039380 00002940  48 00 06 B1 */	bl GameMain
+/* 80039380 00002940  48 00 06 B1 */	bl GameMain__Fv
 /* 80039384 00002944  48 00 00 A0 */	b .L_80039424
 .L_80039388:
-/* 80039388 00002948  80 0D A4 8C */	lwz r0, lbl_8066660C@sda21(r13)
+/* 80039388 00002948  80 0D A4 8C */	lwz r0, CGameRestart_instancePtr@sda21(r13)
 /* 8003938C 0000294C  2C 00 00 00 */	cmpwi r0, 0
 /* 80039390 00002950  40 82 00 94 */	bne .L_80039424
-/* 80039394 00002954  48 41 C7 05 */	bl func_80455A98
+/* 80039394 00002954  48 41 C7 05 */	bl getCDesktopInstancePtr__Fv
 /* 80039398 00002958  3F E0 80 4F */	lis r31, CGame_strpool@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
 /* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
-/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__Fv
+/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__3mtlFv
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
-/* 800393B0 00002970  48 3F B6 AD */	bl heap_malloc
+/* 800393B0 00002970  48 3F B6 AD */	bl heap_malloc__3mtlFUli
 /* 800393B4 00002974  2C 03 00 00 */	cmpwi r3, 0
 /* 800393B8 00002978  7C 7D 1B 78 */	mr r29, r3
 /* 800393BC 0000297C  41 82 00 28 */	beq .L_800393E4
 /* 800393C0 00002980  7F E4 FB 78 */	mr r4, r31
 /* 800393C4 00002984  7F C5 F3 78 */	mr r5, r30
 /* 800393C8 00002988  38 C0 00 08 */	li r6, 8
-/* 800393CC 0000298C  48 3F F8 65 */	bl __ct__CProc
+/* 800393CC 0000298C  48 3F F8 65 */	bl __ct__5CProcFPCcP11CWorkThreadUl
 /* 800393D0 00002990  3C 60 80 53 */	lis r3, "__vt__Q219@unnamed@CGame_cpp@12CGameRestart"@ha
 /* 800393D4 00002994  38 00 FF FF */	li r0, -1
 /* 800393D8 00002998  38 63 81 E0 */	addi r3, r3, "__vt__Q219@unnamed@CGame_cpp@12CGameRestart"@l
@@ -135,36 +134,36 @@
 /* 800393E4 000029A4  7F A3 EB 78 */	mr r3, r29
 /* 800393E8 000029A8  7F C4 F3 78 */	mr r4, r30
 /* 800393EC 000029AC  38 A0 00 00 */	li r5, 0
-/* 800393F0 000029B0  48 3F F7 E9 */	bl func_80438BD8
-/* 800393F4 000029B4  48 41 C6 AD */	bl func_80455AA0
+/* 800393F0 000029B0  48 3F F7 E9 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
+/* 800393F4 000029B4  48 41 C6 AD */	bl func_80455AA0__Fv
 /* 800393F8 000029B8  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 800393FC 000029BC  2C 1D 00 00 */	cmpwi r29, 0
 /* 80039400 000029C0  90 1D 01 E4 */	stw r0, 0x1e4(r29)
-/* 80039404 000029C4  93 AD A4 8C */	stw r29, lbl_8066660C@sda21(r13)
+/* 80039404 000029C4  93 AD A4 8C */	stw r29, CGameRestart_instancePtr@sda21(r13)
 /* 80039408 000029C8  41 82 00 1C */	beq .L_80039424
-/* 8003940C 000029CC  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
+/* 8003940C 000029CC  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039410 000029D0  38 80 00 00 */	li r4, 0
 /* 80039414 000029D4  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 80039418 000029D8  90 1D 01 EC */	stw r0, 0x1ec(r29)
-/* 8003941C 000029DC  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
-/* 80039420 000029E0  48 3F EA D1 */	bl func_80437EF0
+/* 8003941C 000029DC  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
+/* 80039420 000029E0  48 3F EA D1 */	bl func_80437EF0__11CWorkThreadFUl
 .L_80039424:
 /* 80039424 000029E4  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 80039428 000029E8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8003942C 000029EC  7C 08 03 A6 */	mtlr r0
 /* 80039430 000029F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039434 000029F4  4E 80 00 20 */	blr 
-.endfn CGameRestart
+.endfn func_80039364__Fv
 
-.fn func_80039438, global
-/* 80039438 000029F8  80 8D A4 80 */	lwz r4, lbl_80666600@sda21(r13)
+.fn func_80039438__Fb, global
+/* 80039438 000029F8  80 8D A4 80 */	lwz r4, instance__5CGame@sda21(r13)
 /* 8003943C 000029FC  2C 04 00 00 */	cmpwi r4, 0
 /* 80039440 00002A00  4D 82 00 20 */	beqlr 
 /* 80039444 00002A04  90 64 02 20 */	stw r3, 0x220(r4)
 /* 80039448 00002A08  4E 80 00 20 */	blr 
-.endfn func_80039438
+.endfn func_80039438__Fb
 
-.fn CGame_wkUpdate, global
+.fn wkUpdate__5CGameFv, global
 /* 8003944C 00002A0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039450 00002A10  7C 08 02 A6 */	mflr r0
 /* 80039454 00002A14  90 01 00 14 */	stw r0, 0x14(r1)
@@ -236,9 +235,9 @@
 /* 80039544 00002B04  7C 08 03 A6 */	mtlr r0
 /* 80039548 00002B08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003954C 00002B0C  4E 80 00 20 */	blr 
-.endfn CGame_wkUpdate
+.endfn wkUpdate__5CGameFv
 
-.fn CGame_WorkThreadEvent2, global
+.fn WorkThreadEvent2__5CGameFv, global
 /* 80039550 00002B10  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80039554 00002B14  7C 08 02 A6 */	mflr r0
 /* 80039558 00002B18  90 01 00 64 */	stw r0, 0x64(r1)
@@ -282,14 +281,14 @@
 /* 800395E8 00002BA8  7C 08 03 A6 */	mtlr r0
 /* 800395EC 00002BAC  38 21 00 60 */	addi r1, r1, 0x60
 /* 800395F0 00002BB0  4E 80 00 20 */	blr 
-.endfn CGame_WorkThreadEvent2
+.endfn WorkThreadEvent2__5CGameFv
 
-.fn func_800395F4, global
+.fn func_800395F4__FUl, global
 /* 800395F4 00002BB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800395F8 00002BB8  7C 08 02 A6 */	mflr r0
 /* 800395FC 00002BBC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80039600 00002BC0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80039604 00002BC4  80 8D A4 80 */	lwz r4, lbl_80666600@sda21(r13)
+/* 80039604 00002BC4  80 8D A4 80 */	lwz r4, instance__5CGame@sda21(r13)
 /* 80039608 00002BC8  2C 04 00 00 */	cmpwi r4, 0
 /* 8003960C 00002BCC  41 82 00 74 */	beq .L_80039680
 /* 80039610 00002BD0  80 04 01 EC */	lwz r0, 0x1ec(r4)
@@ -302,34 +301,34 @@
 /* 8003962C 00002BEC  38 03 FF 8E */	addi r0, r3, -114
 /* 80039630 00002BF0  7C 1F 07 34 */	extsh r31, r0
 /* 80039634 00002BF4  48 40 ED C9 */	bl func_804483FC
-/* 80039638 00002BF8  80 AD A4 80 */	lwz r5, lbl_80666600@sda21(r13)
+/* 80039638 00002BF8  80 AD A4 80 */	lwz r5, instance__5CGame@sda21(r13)
 /* 8003963C 00002BFC  7F E7 FB 78 */	mr r7, r31
 /* 80039640 00002C00  A8 C3 00 04 */	lha r6, 4(r3)
 /* 80039644 00002C04  38 80 00 00 */	li r4, 0
 /* 80039648 00002C08  80 65 01 EC */	lwz r3, 0x1ec(r5)
 /* 8003964C 00002C0C  38 A0 00 38 */	li r5, 0x38
-/* 80039650 00002C10  48 00 00 45 */	bl func_80039694
+/* 80039650 00002C10  48 00 00 45 */	bl func_80039694__FP5CViewssss
 /* 80039654 00002C14  48 00 00 2C */	b .L_80039680
 .L_80039658:
 /* 80039658 00002C18  48 40 ED A5 */	bl func_804483FC
 /* 8003965C 00002C1C  AB E3 00 06 */	lha r31, 6(r3)
 /* 80039660 00002C20  48 40 ED 9D */	bl func_804483FC
-/* 80039664 00002C24  80 AD A4 80 */	lwz r5, lbl_80666600@sda21(r13)
+/* 80039664 00002C24  80 AD A4 80 */	lwz r5, instance__5CGame@sda21(r13)
 /* 80039668 00002C28  7F E7 FB 78 */	mr r7, r31
 /* 8003966C 00002C2C  A8 C3 00 04 */	lha r6, 4(r3)
 /* 80039670 00002C30  38 80 00 00 */	li r4, 0
 /* 80039674 00002C34  80 65 01 EC */	lwz r3, 0x1ec(r5)
 /* 80039678 00002C38  38 A0 00 00 */	li r5, 0
-/* 8003967C 00002C3C  48 00 00 19 */	bl func_80039694
+/* 8003967C 00002C3C  48 00 00 19 */	bl func_80039694__FP5CViewssss
 .L_80039680:
 /* 80039680 00002C40  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039684 00002C44  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80039688 00002C48  7C 08 03 A6 */	mtlr r0
 /* 8003968C 00002C4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039690 00002C50  4E 80 00 20 */	blr 
-.endfn func_800395F4
+.endfn func_800395F4__FUl
 
-.fn func_80039694, global
+.fn func_80039694__FP5CViewssss, global
 /* 80039694 00002C54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039698 00002C58  7C 08 02 A6 */	mflr r0
 /* 8003969C 00002C5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -338,14 +337,14 @@
 /* 800396A8 00002C68  B0 A1 00 0A */	sth r5, 0xa(r1)
 /* 800396AC 00002C6C  B0 C1 00 0C */	sth r6, 0xc(r1)
 /* 800396B0 00002C70  B0 E1 00 0E */	sth r7, 0xe(r1)
-/* 800396B4 00002C74  48 40 34 C9 */	bl func_8043CB7C
+/* 800396B4 00002C74  48 40 34 C9 */	bl func_8043CB7C__5CViewFRCQ22ml7CRect16
 /* 800396B8 00002C78  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800396BC 00002C7C  7C 08 03 A6 */	mtlr r0
 /* 800396C0 00002C80  38 21 00 10 */	addi r1, r1, 0x10
 /* 800396C4 00002C84  4E 80 00 20 */	blr 
-.endfn func_80039694
+.endfn func_80039694__FP5CViewssss
 
-.fn CGame_WorkThreadEvent4, global
+.fn WorkThreadEvent4__5CGameFv, global
 /* 800396C8 00002C88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800396CC 00002C8C  7C 08 02 A6 */	mflr r0
 /* 800396D0 00002C90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -358,7 +357,7 @@
 /* 800396EC 00002CAC  38 60 00 00 */	li r3, 0
 /* 800396F0 00002CB0  48 00 01 88 */	b .L_80039878
 .L_800396F4:
-/* 800396F4 00002CB4  48 41 C3 AD */	bl func_80455AA0
+/* 800396F4 00002CB4  48 41 C3 AD */	bl func_80455AA0__Fv
 /* 800396F8 00002CB8  80 8D 80 00 */	lwz r4, lbl_80664180@sda21(r13)
 /* 800396FC 00002CBC  7C 65 1B 78 */	mr r5, r3
 /* 80039700 00002CC0  7F A3 EB 78 */	mr r3, r29
@@ -394,7 +393,7 @@
 /* 80039774 00002D34  80 7D 01 EC */	lwz r3, 0x1ec(r29)
 /* 80039778 00002D38  38 80 00 00 */	li r4, 0
 /* 8003977C 00002D3C  38 A0 00 00 */	li r5, 0
-/* 80039780 00002D40  4B FF FF 15 */	bl func_80039694
+/* 80039780 00002D40  4B FF FF 15 */	bl func_80039694__FP5CViewssss
 /* 80039784 00002D44  48 00 00 30 */	b .L_800397B4
 .L_80039788:
 /* 80039788 00002D48  48 40 EC 75 */	bl func_804483FC
@@ -407,7 +406,7 @@
 /* 800397A4 00002D64  80 7D 01 EC */	lwz r3, 0x1ec(r29)
 /* 800397A8 00002D68  38 80 00 00 */	li r4, 0
 /* 800397AC 00002D6C  38 A0 00 38 */	li r5, 0x38
-/* 800397B0 00002D70  4B FF FE E5 */	bl func_80039694
+/* 800397B0 00002D70  4B FF FE E5 */	bl func_80039694__FP5CViewssss
 .L_800397B4:
 /* 800397B4 00002D74  C0 02 80 0C */	lfs f0, float_8066838C@sda21(r2)
 /* 800397B8 00002D78  D0 01 00 10 */	stfs f0, 0x10(r1)
@@ -425,7 +424,7 @@
 /* 800397E8 00002DA8  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 800397EC 00002DAC  90 04 04 50 */	stw r0, 0x450(r4)
 /* 800397F0 00002DB0  48 40 E4 39 */	bl func_80447C28
-/* 800397F4 00002DB4  4B FF FE 01 */	bl func_800395F4
+/* 800397F4 00002DB4  4B FF FE 01 */	bl func_800395F4__FUl
 /* 800397F8 00002DB8  38 60 00 00 */	li r3, 0
 /* 800397FC 00002DBC  48 41 BB 85 */	bl func_80455380
 /* 80039800 00002DC0  48 40 27 75 */	bl __ct__8043BF74
@@ -458,7 +457,7 @@
 /* 8003986C 00002E2C  48 0F D6 19 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 .L_80039870:
 /* 80039870 00002E30  7F A3 EB 78 */	mr r3, r29
-/* 80039874 00002E34  48 3F FE 2D */	bl CProc_WorkThreadEvent4
+/* 80039874 00002E34  48 3F FE 2D */	bl WorkThreadEvent4__5CProcFv
 .L_80039878:
 /* 80039878 00002E38  39 61 00 30 */	addi r11, r1, 0x30
 /* 8003987C 00002E3C  48 28 09 2D */	bl _restgpr_29
@@ -466,9 +465,9 @@
 /* 80039884 00002E44  7C 08 03 A6 */	mtlr r0
 /* 80039888 00002E48  38 21 00 30 */	addi r1, r1, 0x30
 /* 8003988C 00002E4C  4E 80 00 20 */	blr 
-.endfn CGame_WorkThreadEvent4
+.endfn WorkThreadEvent4__5CGameFv
 
-.fn CGame_WorkThreadEvent5, global
+.fn WorkThreadEvent5__5CGameFv, global
 /* 80039890 00002E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039894 00002E54  7C 08 02 A6 */	mflr r0
 /* 80039898 00002E58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -527,7 +526,7 @@
 /* 80039954 00002F14  90 0D A4 84 */	stw r0, lbl_80666604@sda21(r13)
 .L_80039958:
 /* 80039958 00002F18  7F E3 FB 78 */	mr r3, r31
-/* 8003995C 00002F1C  48 3F FD 49 */	bl CProc_WorkThreadEvent5
+/* 8003995C 00002F1C  48 3F FD 49 */	bl WorkThreadEvent5__5CProcFv
 /* 80039960 00002F20  48 00 00 08 */	b .L_80039968
 .L_80039964:
 /* 80039964 00002F24  38 60 00 00 */	li r3, 0
@@ -537,9 +536,8 @@
 /* 80039970 00002F30  7C 08 03 A6 */	mtlr r0
 /* 80039974 00002F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039978 00002F38  4E 80 00 20 */	blr 
-.endfn CGame_WorkThreadEvent5
+.endfn WorkThreadEvent5__5CGameFv
 
-#part of lyt_arcResourceAccessor
 .fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, weak
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039980 00002F40  7C 08 02 A6 */	mflr r0
@@ -570,7 +568,7 @@
 /* 800399DC 00002F9C  4E 80 00 20 */	blr 
 .endfn __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 
-.fn __dt__800399E0, weak
+.fn "__dt__Q34nw4r2ut36LinkList<Q34nw4r3lyt11FontRefLink,0>Fv", weak
 /* 800399E0 00002FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800399E4 00002FA4  7C 08 02 A6 */	mflr r0
 /* 800399E8 00002FA8  2C 03 00 00 */	cmpwi r3, 0
@@ -592,42 +590,42 @@
 /* 80039A24 00002FE4  7C 08 03 A6 */	mtlr r0
 /* 80039A28 00002FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039A2C 00002FEC  4E 80 00 20 */	blr 
-.endfn __dt__800399E0
+.endfn "__dt__Q34nw4r2ut36LinkList<Q34nw4r3lyt11FontRefLink,0>Fv"
 
-.fn GameMain, global
+.fn GameMain__Fv, global
 /* 80039A30 00002FF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039A34 00002FF4  7C 08 02 A6 */	mflr r0
 /* 80039A38 00002FF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80039A3C 00002FFC  BF 81 00 10 */	stmw r28, 0x10(r1)
-/* 80039A40 00003000  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
+/* 80039A40 00003000  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039A44 00003004  2C 03 00 00 */	cmpwi r3, 0
 /* 80039A48 00003008  41 82 00 0C */	beq .L_80039A54
-/* 80039A4C 0000300C  48 3F F7 5D */	bl func_804391A8
+/* 80039A4C 0000300C  48 3F F7 5D */	bl func_804391A8__5CProcFv
 /* 80039A50 00003010  48 00 00 60 */	b .L_80039AB0
 .L_80039A54:
-/* 80039A54 00003014  48 41 C0 4D */	bl func_80455AA0
+/* 80039A54 00003014  48 41 C0 4D */	bl func_80455AA0__Fv
 /* 80039A58 00003018  83 A3 00 4C */	lwz r29, 0x4c(r3)
-/* 80039A5C 0000301C  48 41 C0 3D */	bl func_80455A98
+/* 80039A5C 0000301C  48 41 C0 3D */	bl getCDesktopInstancePtr__Fv
 /* 80039A60 00003020  3C 80 80 4F */	lis r4, CGame_strpool@ha
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
 /* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, CGame_strpool@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
-/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__Fv
+/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__3mtlFv
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
 /* 80039A78 00003038  38 60 02 30 */	li r3, 0x230
-/* 80039A7C 0000303C  48 3F AF E1 */	bl heap_malloc
+/* 80039A7C 0000303C  48 3F AF E1 */	bl heap_malloc__3mtlFUli
 /* 80039A80 00003040  2C 03 00 00 */	cmpwi r3, 0
 /* 80039A84 00003044  7C 7C 1B 78 */	mr r28, r3
 /* 80039A88 00003048  41 82 00 14 */	beq .L_80039A9C
 /* 80039A8C 0000304C  7F E4 FB 78 */	mr r4, r31
 /* 80039A90 00003050  7F C5 F3 78 */	mr r5, r30
-/* 80039A94 00003054  4B FF F7 8D */	bl __ct__CGame
+/* 80039A94 00003054  4B FF F7 8D */	bl __ct__5CGameFPCcP11CWorkThread
 /* 80039A98 00003058  7C 7C 1B 78 */	mr r28, r3
 .L_80039A9C:
 /* 80039A9C 0000305C  7F 83 E3 78 */	mr r3, r28
 /* 80039AA0 00003060  7F C4 F3 78 */	mr r4, r30
 /* 80039AA4 00003064  38 A0 00 00 */	li r5, 0
-/* 80039AA8 00003068  48 3F F1 31 */	bl func_80438BD8
+/* 80039AA8 00003068  48 3F F1 31 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80039AAC 0000306C  93 BC 01 E4 */	stw r29, 0x1e4(r28)
 .L_80039AB0:
 /* 80039AB0 00003070  BB 81 00 10 */	lmw r28, 0x10(r1)
@@ -635,9 +633,9 @@
 /* 80039AB8 00003078  7C 08 03 A6 */	mtlr r0
 /* 80039ABC 0000307C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039AC0 00003080  4E 80 00 20 */	blr 
-.endfn GameMain
+.endfn GameMain__Fv
 
-.fn func_80039AC4, global
+.fn func_80039AC4__FPvUlUl, global
 /* 80039AC4 00003084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039AC8 00003088  7C 08 02 A6 */	mflr r0
 /* 80039ACC 0000308C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -645,13 +643,13 @@
 /* 80039AD4 00003094  7C 7D 1B 78 */	mr r29, r3
 /* 80039AD8 00003098  7C 9E 23 78 */	mr r30, r4
 /* 80039ADC 0000309C  7C BF 2B 78 */	mr r31, r5
-/* 80039AE0 000030A0  80 0D A4 80 */	lwz r0, lbl_80666600@sda21(r13)
+/* 80039AE0 000030A0  80 0D A4 80 */	lwz r0, instance__5CGame@sda21(r13)
 /* 80039AE4 000030A4  2C 00 00 00 */	cmpwi r0, 0
 /* 80039AE8 000030A8  41 82 00 3C */	beq .L_80039B24
 /* 80039AEC 000030AC  48 00 8C 05 */	bl func_800426F0
 /* 80039AF0 000030B0  2C 03 00 00 */	cmpwi r3, 0
 /* 80039AF4 000030B4  40 82 00 30 */	bne .L_80039B24
-/* 80039AF8 000030B8  80 6D A4 80 */	lwz r3, lbl_80666600@sda21(r13)
+/* 80039AF8 000030B8  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039AFC 000030BC  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 80039B00 000030C0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80039B04 000030C4  40 82 00 20 */	bne .L_80039B24
@@ -668,9 +666,9 @@
 /* 80039B2C 000030EC  7C 08 03 A6 */	mtlr r0
 /* 80039B30 000030F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039B34 000030F4  4E 80 00 20 */	blr 
-.endfn func_80039AC4
+.endfn func_80039AC4__FPvUlUl
 
-.fn CGame_WorkThreadEvent6, global
+.fn WorkThreadEvent6__5CGameFv, global
 /* 80039B38 000030F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039B3C 000030FC  7C 08 02 A6 */	mflr r0
 /* 80039B40 00003100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -689,7 +687,7 @@
 /* 80039B70 00003130  48 00 00 84 */	b .L_80039BF4
 .L_80039B74:
 /* 80039B74 00003134  7F E3 FB 78 */	mr r3, r31
-/* 80039B78 00003138  48 3F EA 31 */	bl func_804385A8
+/* 80039B78 00003138  48 3F EA 31 */	bl func_804385A8__FUl
 /* 80039B7C 0000313C  2C 03 00 00 */	cmpwi r3, 0
 /* 80039B80 00003140  40 82 00 0C */	bne .L_80039B8C
 /* 80039B84 00003144  3B E0 00 00 */	li r31, 0
@@ -732,9 +730,9 @@
 /* 80039BFC 000031BC  7C 08 03 A6 */	mtlr r0
 /* 80039C00 000031C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039C04 000031C4  4E 80 00 20 */	blr 
-.endfn CGame_WorkThreadEvent6
+.endfn WorkThreadEvent6__5CGameFv
 
-.fn CGame_WorkEvent5, global
+.fn WorkEvent5__5CGameFPv, global
 /* 80039C08 000031C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039C0C 000031CC  7C 08 02 A6 */	mflr r0
 /* 80039C10 000031D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -742,7 +740,7 @@
 /* 80039C18 000031D8  7C 9F 23 78 */	mr r31, r4
 /* 80039C1C 000031DC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80039C20 000031E0  7C 7E 1B 78 */	mr r30, r3
-/* 80039C24 000031E4  48 04 45 91 */	bl func_8007E1B4
+/* 80039C24 000031E4  48 04 45 91 */	bl func_8007E1B4__Fv
 /* 80039C28 000031E8  2C 03 00 00 */	cmpwi r3, 0
 /* 80039C2C 000031EC  41 82 00 C4 */	beq .L_80039CF0
 /* 80039C30 000031F0  2C 1F 00 00 */	cmpwi r31, 0
@@ -750,23 +748,23 @@
 /* 80039C38 000031F8  80 1E 02 28 */	lwz r0, 0x228(r30)
 /* 80039C3C 000031FC  2C 00 00 00 */	cmpwi r0, 0
 /* 80039C40 00003200  40 82 00 44 */	bne .L_80039C84
-/* 80039C44 00003204  48 18 63 D1 */	bl func_801C0014
+/* 80039C44 00003204  48 18 63 D1 */	bl func_801C0014__Fv
 /* 80039C48 00003208  D0 3E 02 24 */	stfs f1, 0x224(r30)
 /* 80039C4C 0000320C  C0 22 80 0C */	lfs f1, float_8066838C@sda21(r2)
 /* 80039C50 00003210  FC 40 08 90 */	fmr f2, f1
-/* 80039C54 00003214  48 18 63 59 */	bl func_801BFFAC
+/* 80039C54 00003214  48 18 63 59 */	bl func_801BFFAC__Fff
 /* 80039C58 00003218  38 60 00 01 */	li r3, 1
-/* 80039C5C 0000321C  48 12 A8 61 */	bl func_801644BC
-/* 80039C60 00003220  48 09 F5 29 */	bl getBattleManagerInstance
+/* 80039C5C 0000321C  48 12 A8 61 */	bl func_801644BC__FUl
+/* 80039C60 00003220  48 09 F5 29 */	bl getBattleManagerInstancePtr__Fv
 /* 80039C64 00003224  2C 03 00 00 */	cmpwi r3, 0
 /* 80039C68 00003228  41 82 00 14 */	beq .L_80039C7C
-/* 80039C6C 0000322C  48 09 F5 1D */	bl getBattleManagerInstance
+/* 80039C6C 0000322C  48 09 F5 1D */	bl getBattleManagerInstancePtr__Fv
 /* 80039C70 00003230  38 80 00 01 */	li r4, 1
 /* 80039C74 00003234  38 63 21 9C */	addi r3, r3, 0x219c
-/* 80039C78 00003238  48 16 F6 25 */	bl func_801A929C
+/* 80039C78 00003238  48 16 F6 25 */	bl func_801A929C__Q22cf7CVisionFUl
 .L_80039C7C:
 /* 80039C7C 0000323C  38 60 00 01 */	li r3, 1
-/* 80039C80 00003240  48 00 B3 3D */	bl func_80044FBC
+/* 80039C80 00003240  48 00 B3 3D */	bl func_80044FBC__FUl
 .L_80039C84:
 /* 80039C84 00003244  80 7E 02 28 */	lwz r3, 0x228(r30)
 /* 80039C88 00003248  38 03 00 01 */	addi r0, r3, 1
@@ -778,19 +776,19 @@
 /* 80039C9C 0000325C  41 81 00 3C */	bgt .L_80039CD8
 /* 80039CA0 00003260  C0 3E 02 24 */	lfs f1, 0x224(r30)
 /* 80039CA4 00003264  C0 42 80 0C */	lfs f2, float_8066838C@sda21(r2)
-/* 80039CA8 00003268  48 18 63 05 */	bl func_801BFFAC
+/* 80039CA8 00003268  48 18 63 05 */	bl func_801BFFAC__Fff
 /* 80039CAC 0000326C  38 60 00 00 */	li r3, 0
-/* 80039CB0 00003270  48 12 A8 0D */	bl func_801644BC
-/* 80039CB4 00003274  48 09 F4 D5 */	bl getBattleManagerInstance
+/* 80039CB0 00003270  48 12 A8 0D */	bl func_801644BC__FUl
+/* 80039CB4 00003274  48 09 F4 D5 */	bl getBattleManagerInstancePtr__Fv
 /* 80039CB8 00003278  2C 03 00 00 */	cmpwi r3, 0
 /* 80039CBC 0000327C  41 82 00 14 */	beq .L_80039CD0
-/* 80039CC0 00003280  48 09 F4 C9 */	bl getBattleManagerInstance
+/* 80039CC0 00003280  48 09 F4 C9 */	bl getBattleManagerInstancePtr__Fv
 /* 80039CC4 00003284  38 80 00 00 */	li r4, 0
 /* 80039CC8 00003288  38 63 21 9C */	addi r3, r3, 0x219c
-/* 80039CCC 0000328C  48 16 F5 D1 */	bl func_801A929C
+/* 80039CCC 0000328C  48 16 F5 D1 */	bl func_801A929C__Q22cf7CVisionFUl
 .L_80039CD0:
 /* 80039CD0 00003290  38 60 00 00 */	li r3, 0
-/* 80039CD4 00003294  48 00 B2 E9 */	bl func_80044FBC
+/* 80039CD4 00003294  48 00 B2 E9 */	bl func_80044FBC__FUl
 .L_80039CD8:
 /* 80039CD8 00003298  80 7E 02 28 */	lwz r3, 0x228(r30)
 /* 80039CDC 0000329C  34 03 FF FF */	addic. r0, r3, -1
@@ -805,25 +803,25 @@
 /* 80039CFC 000032BC  7C 08 03 A6 */	mtlr r0
 /* 80039D00 000032C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039D04 000032C4  4E 80 00 20 */	blr
-.endfn CGame_WorkEvent5
+.endfn WorkEvent5__5CGameFPv
 
-.fn func_80039D08, global
+.fn func_80039D08__Fv, global
 /* 80039D08 000032C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039D0C 000032CC  7C 08 02 A6 */	mflr r0
 /* 80039D10 000032D0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039D14 000032D4  80 0D A4 80 */	lwz r0, lbl_80666600@sda21(r13)
+/* 80039D14 000032D4  80 0D A4 80 */	lwz r0, instance__5CGame@sda21(r13)
 /* 80039D18 000032D8  2C 00 00 00 */	cmpwi r0, 0
 /* 80039D1C 000032DC  41 82 00 14 */	beq .L_80039D30
-/* 80039D20 000032E0  48 04 44 95 */	bl func_8007E1B4
+/* 80039D20 000032E0  48 04 44 95 */	bl func_8007E1B4__Fv
 /* 80039D24 000032E4  2C 03 00 00 */	cmpwi r3, 0
 /* 80039D28 000032E8  41 82 00 08 */	beq .L_80039D30
-/* 80039D2C 000032EC  48 18 5C 11 */	bl func_801BF93C
+/* 80039D2C 000032EC  48 18 5C 11 */	bl func_801BF93C__Fv
 .L_80039D30:
 /* 80039D30 000032F0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039D34 000032F4  7C 08 03 A6 */	mtlr r0
 /* 80039D38 000032F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039D3C 000032FC  4E 80 00 20 */	blr
-.endfn func_80039D08
+.endfn func_80039D08__Fv
 
 #weak funcs from IWorkEvent/CWorkThread
 
@@ -956,9 +954,9 @@
 /* 80039E08 000033C8  4E 80 00 20 */	blr 
 .endfn WorkEvent6__10IWorkEventFv
 
-.fn WorkEvent5__10IWorkEventFv, weak
+.fn WorkEvent5__10IWorkEventFPv, weak
 /* 80039E0C 000033CC  4E 80 00 20 */	blr 
-.endfn WorkEvent5__10IWorkEventFv
+.endfn WorkEvent5__10IWorkEventFPv
 
 .fn WorkEvent4__10IWorkEventFv, weak
 /* 80039E10 000033D0  38 60 00 00 */	li r3, 0
@@ -993,33 +991,31 @@
 /* 80039E3C 000033FC  4E 80 00 20 */	blr 
 .endfn WorkThreadEvent2__11CWorkThreadFv
 
-#CGameRestart
-
-.fn CGameRestart_wkUpdate, global
+.fn "wkUpdate__Q219@unnamed@CGame_cpp@12CGameRestartFv", global
 /* 80039E40 00003400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E44 00003404  7C 08 02 A6 */	mflr r0
 /* 80039E48 00003408  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80039E4C 0000340C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80039E50 00003410  7C 7F 1B 78 */	mr r31, r3
 /* 80039E54 00003414  80 63 01 EC */	lwz r3, 0x1ec(r3)
-/* 80039E58 00003418  48 3F E7 51 */	bl func_804385A8
+/* 80039E58 00003418  48 3F E7 51 */	bl func_804385A8__FUl
 /* 80039E5C 0000341C  2C 03 00 00 */	cmpwi r3, 0
 /* 80039E60 00003420  40 82 00 1C */	bne .L_80039E7C
-/* 80039E64 00003424  4B FF FB CD */	bl GameMain
+/* 80039E64 00003424  4B FF FB CD */	bl GameMain__Fv
 /* 80039E68 00003428  7F E3 FB 78 */	mr r3, r31
 /* 80039E6C 0000342C  38 80 00 00 */	li r4, 0
-/* 80039E70 00003430  48 3F E0 81 */	bl func_80437EF0
+/* 80039E70 00003430  48 3F E0 81 */	bl func_80437EF0__11CWorkThreadFUl
 /* 80039E74 00003434  38 00 00 00 */	li r0, 0
-/* 80039E78 00003438  90 0D A4 8C */	stw r0, lbl_8066660C@sda21(r13)
+/* 80039E78 00003438  90 0D A4 8C */	stw r0, CGameRestart_instancePtr@sda21(r13)
 .L_80039E7C:
 /* 80039E7C 0000343C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039E80 00003440  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80039E84 00003444  7C 08 03 A6 */	mtlr r0
 /* 80039E88 00003448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039E8C 0000344C  4E 80 00 20 */	blr 
-.endfn CGameRestart_wkUpdate
+.endfn "wkUpdate__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 
-.fn __dt___unnamed_CGame_cpp_CGameRestart, global
+.fn "__dt__Q219@unnamed@CGame_cpp@12CGameRestartFv", global
 /* 80039E90 00003450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E94 00003454  7C 08 02 A6 */	mflr r0
 /* 80039E98 00003458  2C 03 00 00 */	cmpwi r3, 0
@@ -1041,26 +1037,26 @@
 /* 80039ED4 00003494  7C 08 03 A6 */	mtlr r0
 /* 80039ED8 00003498  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039EDC 0000349C  4E 80 00 20 */	blr
-.endfn __dt___unnamed_CGame_cpp_CGameRestart
+.endfn "__dt__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 
-.fn sinit_80039EE0, local
+.fn "__sinit_\CGame_cpp", local
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
-/* 80039EE8 000034A8  48 00 00 04 */	b "__ct__10FixStr<64>Fv"
-.endfn sinit_80039EE0
+/* 80039EE8 000034A8  48 00 00 04 */	b "__ct__Q22ml10FixStr<64>Fv"
+.endfn "__sinit_\CGame_cpp"
 
-.fn "__ct__10FixStr<64>Fv", weak
+.fn "__ct__Q22ml10FixStr<64>Fv", weak
 /* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
 /* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
 /* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80039EF8 000034B8  4E 80 00 20 */	blr
-.endfn "__ct__10FixStr<64>Fv"
+.endfn "__ct__Q22ml10FixStr<64>Fv"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .balign 4
 
-.4byte sinit_80039EE0
+.4byte "__sinit_\CGame_cpp"
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1100,12 +1096,12 @@
 .obj "__vt__Q219@unnamed@CGame_cpp@12CGameRestart", global
 	.4byte "__RTTI__Q219@unnamed@CGame_cpp@12CGameRestart"
 	.4byte 0
-	.4byte __dt___unnamed_CGame_cpp_CGameRestart
+	.4byte "__dt__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 	.4byte WorkEvent1__10IWorkEventFv
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -1132,11 +1128,11 @@
 	.4byte WorkEvent29__10IWorkEventFv
 	.4byte WorkEvent30__10IWorkEventFv
 	.4byte WorkEvent31__10IWorkEventFv
-	.4byte CGameRestart_wkUpdate
+	.4byte "wkUpdate__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CProc_WorkThreadEvent4
-	.4byte CProc_WorkThreadEvent5
+	.4byte WorkThreadEvent4__5CProcFv
+	.4byte WorkThreadEvent5__5CProcFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q219@unnamed@CGame_cpp@12CGameRestart"
 
@@ -1161,7 +1157,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte CGame_WorkEvent5
+	.4byte WorkEvent5__5CGameFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -1188,12 +1184,12 @@
 	.4byte WorkEvent29__10IWorkEventFv
 	.4byte WorkEvent30__10IWorkEventFv
 	.4byte WorkEvent31__10IWorkEventFv
-	.4byte CGame_wkUpdate
-	.4byte CGame_WorkThreadEvent2
+	.4byte wkUpdate__5CGameFv
+	.4byte WorkThreadEvent2__5CGameFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CGame_WorkThreadEvent4
-	.4byte CGame_WorkThreadEvent5
-	.4byte CGame_WorkThreadEvent6
+	.4byte WorkThreadEvent4__5CGameFv
+	.4byte WorkThreadEvent5__5CGameFv
+	.4byte WorkThreadEvent6__5CGameFv
 .endobj __vt__5CGame
 
 .obj CGame_hierarchy, global
@@ -1301,9 +1297,9 @@
 
 .balign 8
 
-.obj lbl_80666600, global
+.obj instance__5CGame, global
 	.skip 0x4
-.endobj lbl_80666600
+.endobj instance__5CGame
 
 .obj lbl_80666604, global
 	.skip 0x4
@@ -1313,9 +1309,9 @@
 	.skip 0x4
 .endobj lbl_80666608
 
-.obj lbl_8066660C, global
+.obj CGameRestart_instancePtr, global
 	.skip 0x4
-.endobj lbl_8066660C
+.endobj CGameRestart_instancePtr
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020
@@ -1404,7 +1400,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000024
-	.4byte __dt__800399E0
+	.4byte "__dt__Q34nw4r2ut36LinkList<Q34nw4r3lyt11FontRefLink,0>Fv"
 .endobj "@etb_80006768"
 
 .obj "@etb_80006784", local
@@ -1461,7 +1457,7 @@
 
 .obj "@eti_80021020", local
 .hidden "@eti_80021020"
-	.4byte __ct__CGame
+	.4byte __ct__5CGameFPCcP11CWorkThread
 	.4byte 0x0000009C
 	.4byte "@etb_800066E0"
 .endobj "@eti_80021020"
@@ -1475,56 +1471,56 @@
 
 .obj "@eti_80021038", local
 .hidden "@eti_80021038"
-	.4byte func_8003933C
+	.4byte func_8003933C__Fv
 	.4byte 0x00000028
 	.4byte "@etb_80006718"
 .endobj "@eti_80021038"
 
 .obj "@eti_80021044", local
 .hidden "@eti_80021044"
-	.4byte CGameRestart
+	.4byte func_80039364__Fv
 	.4byte 0x000000D4
 	.4byte "@etb_80006720"
 .endobj "@eti_80021044"
 
 .obj "@eti_80021050", local
 .hidden "@eti_80021050"
-	.4byte CGame_wkUpdate
+	.4byte wkUpdate__5CGameFv
 	.4byte 0x00000104
 	.4byte "@etb_80006728"
 .endobj "@eti_80021050"
 
 .obj "@eti_8002105C", local
 .hidden "@eti_8002105C"
-	.4byte CGame_WorkThreadEvent2
+	.4byte WorkThreadEvent2__5CGameFv
 	.4byte 0x000000A4
 	.4byte "@etb_80006730"
 .endobj "@eti_8002105C"
 
 .obj "@eti_80021068", local
 .hidden "@eti_80021068"
-	.4byte func_800395F4
+	.4byte func_800395F4__FUl
 	.4byte 0x000000A0
 	.4byte "@etb_80006748"
 .endobj "@eti_80021068"
 
 .obj "@eti_80021074", local
 .hidden "@eti_80021074"
-	.4byte func_80039694
+	.4byte func_80039694__FP5CViewssss
 	.4byte 0x00000034
 	.4byte "@etb_80006750"
 .endobj "@eti_80021074"
 
 .obj "@eti_80021080", local
 .hidden "@eti_80021080"
-	.4byte CGame_WorkThreadEvent4
+	.4byte WorkThreadEvent4__5CGameFv
 	.4byte 0x000001C8
 	.4byte "@etb_80006758"
 .endobj "@eti_80021080"
 
 .obj "@eti_8002108C", local
 .hidden "@eti_8002108C"
-	.4byte CGame_WorkThreadEvent5
+	.4byte WorkThreadEvent5__5CGameFv
 	.4byte 0x000000EC
 	.4byte "@etb_80006760"
 .endobj "@eti_8002108C"
@@ -1538,56 +1534,56 @@
 
 .obj "@eti_800210A4", local
 .hidden "@eti_800210A4"
-	.4byte __dt__800399E0
+	.4byte "__dt__Q34nw4r2ut36LinkList<Q34nw4r3lyt11FontRefLink,0>Fv"
 	.4byte 0x00000050
 	.4byte "@etb_80006784"
 .endobj "@eti_800210A4"
 
 .obj "@eti_800210B0", local
 .hidden "@eti_800210B0"
-	.4byte GameMain
+	.4byte GameMain__Fv
 	.4byte 0x00000094
 	.4byte "@etb_8000678C"
 .endobj "@eti_800210B0"
 
 .obj "@eti_800210BC", local
 .hidden "@eti_800210BC"
-	.4byte func_80039AC4
+	.4byte func_80039AC4__FPvUlUl
 	.4byte 0x00000074
 	.4byte "@etb_80006794"
 .endobj "@eti_800210BC"
 
 .obj "@eti_800210C8", local
 .hidden "@eti_800210C8"
-	.4byte CGame_WorkThreadEvent6
+	.4byte WorkThreadEvent6__5CGameFv
 	.4byte 0x000000D0
 	.4byte "@etb_8000679C"
 .endobj "@eti_800210C8"
 
 .obj "@eti_800210D4", local
 .hidden "@eti_800210D4"
-	.4byte CGame_WorkEvent5
+	.4byte WorkEvent5__5CGameFPv
 	.4byte 0x00000100
 	.4byte "@etb_800067A4"
 .endobj "@eti_800210D4"
 
 .obj "@eti_800210E0", local
 .hidden "@eti_800210E0"
-	.4byte func_80039D08
+	.4byte func_80039D08__Fv
 	.4byte 0x00000038
 	.4byte "@etb_800067AC"
 .endobj "@eti_800210E0"
 
 .obj "@eti_800210EC", local
 .hidden "@eti_800210EC"
-	.4byte CGameRestart_wkUpdate
+	.4byte "wkUpdate__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 	.4byte 0x00000050
 	.4byte "@etb_800067B4"
 .endobj "@eti_800210EC"
 
 .obj "@eti_800210F8", local
 .hidden "@eti_800210F8"
-	.4byte __dt___unnamed_CGame_cpp_CGameRestart
+	.4byte "__dt__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 	.4byte 0x00000050
 	.4byte "@etb_800067BC"
 .endobj "@eti_800210F8"

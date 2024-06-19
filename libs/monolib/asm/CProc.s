@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CProc, global
+.fn __ct__5CProcFPCcP11CWorkThreadUl, global
 /* 80438C30 004021F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438C34 004021F4  7C 08 02 A6 */	mflr r0
 /* 80438C38 004021F8  7C C6 07 34 */	extsh r6, r6
@@ -78,7 +78,7 @@
 /* 80438D50 00402310  7C 08 03 A6 */	mtlr r0
 /* 80438D54 00402314  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438D58 00402318  4E 80 00 20 */	blr 
-.endfn __ct__CProc
+.endfn __ct__5CProcFPCcP11CWorkThreadUl
 
 .fn "__dt__17_reslist_base<Ul>Fv", global
 /* 80438D5C 0040231C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -276,7 +276,7 @@
 /* 80438FFC 004025BC  48 00 01 68 */	b .L_80439164
 .L_80439000:
 /* 80439000 004025C0  83 FE 00 58 */	lwz r31, 0x58(r30)
-/* 80439004 004025C4  48 01 CA 95 */	bl func_80455A98
+/* 80439004 004025C4  48 01 CA 95 */	bl getCDesktopInstancePtr__Fv
 /* 80439008 004025C8  7C 1F 18 40 */	cmplw r31, r3
 /* 8043900C 004025CC  40 82 00 0C */	bne .L_80439018
 /* 80439010 004025D0  7F C3 F3 78 */	mr r3, r30
@@ -309,7 +309,7 @@
 /* 80439068 00402628  48 00 00 F8 */	b .L_80439160
 .L_8043906C:
 /* 8043906C 0040262C  83 FE 00 58 */	lwz r31, 0x58(r30)
-/* 80439070 00402630  48 01 CA 29 */	bl func_80455A98
+/* 80439070 00402630  48 01 CA 29 */	bl getCDesktopInstancePtr__Fv
 /* 80439074 00402634  7C 1F 18 40 */	cmplw r31, r3
 /* 80439078 00402638  40 82 00 08 */	bne .L_80439080
 /* 8043907C 0040263C  48 00 00 E4 */	b .L_80439160
@@ -341,7 +341,7 @@
 /* 804390D0 00402690  48 00 00 90 */	b .L_80439160
 .L_804390D4:
 /* 804390D4 00402694  83 FE 00 58 */	lwz r31, 0x58(r30)
-/* 804390D8 00402698  48 01 C9 C1 */	bl func_80455A98
+/* 804390D8 00402698  48 01 C9 C1 */	bl getCDesktopInstancePtr__Fv
 /* 804390DC 0040269C  7C 1F 18 40 */	cmplw r31, r3
 /* 804390E0 004026A0  40 82 00 08 */	bne .L_804390E8
 /* 804390E4 004026A4  48 00 00 7C */	b .L_80439160
@@ -373,7 +373,7 @@
 /* 80439138 004026F8  48 00 00 28 */	b .L_80439160
 .L_8043913C:
 /* 8043913C 004026FC  83 FE 00 58 */	lwz r31, 0x58(r30)
-/* 80439140 00402700  48 01 C9 59 */	bl func_80455A98
+/* 80439140 00402700  48 01 C9 59 */	bl getCDesktopInstancePtr__Fv
 /* 80439144 00402704  7C 1F 18 40 */	cmplw r31, r3
 /* 80439148 00402708  40 82 00 08 */	bne .L_80439150
 /* 8043914C 0040270C  48 00 00 14 */	b .L_80439160
@@ -409,7 +409,7 @@
 /* 804391A4 00402764  4E 80 00 20 */	blr 
 .endfn func_8043917C
 
-.fn func_804391A8, global
+.fn func_804391A8__5CProcFv, global
 /* 804391A8 00402768  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804391AC 0040276C  7C 08 02 A6 */	mflr r0
 /* 804391B0 00402770  38 A0 00 00 */	li r5, 0
@@ -462,7 +462,7 @@
 /* 8043924C 0040280C  7C 08 03 A6 */	mtlr r0
 /* 80439250 00402810  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439254 00402814  4E 80 00 20 */	blr 
-.endfn func_804391A8
+.endfn func_804391A8__5CProcFv
 
 .fn func_80439258, global
 /* 80439258 00402818  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -539,10 +539,10 @@
 /* 80439354 00402914  80 1F 00 A8 */	lwz r0, 0xa8(r31)
 /* 80439358 00402918  7C 00 EA 14 */	add r0, r0, r29
 /* 8043935C 0040291C  90 1F 00 A8 */	stw r0, 0xa8(r31)
-/* 80439360 00402920  4B FF E2 55 */	bl getHeapIndex__Fv
+/* 80439360 00402920  4B FF E2 55 */	bl getHeapIndex__3mtlFv
 /* 80439364 00402924  7C 64 1B 78 */	mr r4, r3
 /* 80439368 00402928  38 60 04 70 */	li r3, 0x470
-/* 8043936C 0040292C  4B FF B6 F1 */	bl heap_malloc
+/* 8043936C 0040292C  4B FF B6 F1 */	bl heap_malloc__3mtlFUli
 /* 80439370 00402930  2C 03 00 00 */	cmpwi r3, 0
 /* 80439374 00402934  7C 7D 1B 78 */	mr r29, r3
 /* 80439378 00402938  41 82 00 14 */	beq .L_8043938C
@@ -554,7 +554,7 @@
 /* 8043938C 0040294C  7F A3 EB 78 */	mr r3, r29
 /* 80439390 00402950  7F 64 DB 78 */	mr r4, r27
 /* 80439394 00402954  38 A0 00 00 */	li r5, 0
-/* 80439398 00402958  4B FF F8 41 */	bl func_80438BD8
+/* 80439398 00402958  4B FF F8 41 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8043939C 0040295C  7F A3 EB 78 */	mr r3, r29
 /* 804393A0 00402960  7F 84 07 34 */	extsh r4, r28
 /* 804393A4 00402964  4B FF E8 6D */	bl __dt__80437C10
@@ -758,7 +758,7 @@
 /* 80439670 00402C30  B0 7F 00 4E */	sth r3, 0x4e(r31)
 .L_80439674:
 /* 80439674 00402C34  7F A3 EB 78 */	mr r3, r29
-/* 80439678 00402C38  48 00 35 05 */	bl func_8043CB7C
+/* 80439678 00402C38  48 00 35 05 */	bl func_8043CB7C__5CViewFRCQ22ml7CRect16
 .L_8043967C:
 /* 8043967C 00402C3C  7F EA FB 78 */	mr r10, r31
 /* 80439680 00402C40  7F A3 EB 78 */	mr r3, r29
@@ -771,11 +771,11 @@
 /* 8043969C 00402C5C  4E 80 00 20 */	blr 
 .endfn func_804392F4
 
-.fn CProc_WorkThreadEvent4, global
+.fn WorkThreadEvent4__5CProcFv, global
 /* 804396A0 00402C60  4B FF F3 58 */	b WorkThreadEvent4__11CWorkThreadFv
-.endfn CProc_WorkThreadEvent4
+.endfn WorkThreadEvent4__5CProcFv
 
-.fn CProc_WorkThreadEvent5, global
+.fn WorkThreadEvent5__5CProcFv, global
 /* 804396A4 00402C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804396A8 00402C68  7C 08 02 A6 */	mflr r0
 /* 804396AC 00402C6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -822,7 +822,7 @@
 /* 80439740 00402D00  7C 08 03 A6 */	mtlr r0
 /* 80439744 00402D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439748 00402D08  4E 80 00 20 */	blr 
-.endfn CProc_WorkThreadEvent5
+.endfn WorkThreadEvent5__5CProcFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -857,7 +857,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -887,8 +887,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CProc_WorkThreadEvent4
-	.4byte CProc_WorkThreadEvent5
+	.4byte WorkThreadEvent4__5CProcFv
+	.4byte WorkThreadEvent5__5CProcFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__5CProc
 
@@ -1019,7 +1019,7 @@
 
 .obj "@eti_80033E18", local
 .hidden "@eti_80033E18"
-	.4byte __ct__CProc
+	.4byte __ct__5CProcFPCcP11CWorkThreadUl
 	.4byte 0x0000012C
 	.4byte "@etb_8001C1B4"
 .endobj "@eti_80033E18"
@@ -1054,7 +1054,7 @@
 
 .obj "@eti_80033E54", local
 .hidden "@eti_80033E54"
-	.4byte func_804391A8
+	.4byte func_804391A8__5CProcFv
 	.4byte 0x000000B0
 	.4byte "@etb_8001C210"
 .endobj "@eti_80033E54"
@@ -1075,7 +1075,7 @@
 
 .obj "@eti_80033E78", local
 .hidden "@eti_80033E78"
-	.4byte CProc_WorkThreadEvent5
+	.4byte WorkThreadEvent5__5CProcFv
 	.4byte 0x000000A8
 	.4byte "@etb_8001C228"
 .endobj "@eti_80033E78"

@@ -175,10 +175,10 @@
 /* 80444650 0040DC10  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 80444654 0040DC14  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 80444658 0040DC18  3B E3 00 24 */	addi r31, r3, 0x24
-/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getHeapIndex__Fv
+/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getHeapIndex__3mtlFv
 /* 80444660 0040DC20  7C 64 1B 78 */	mr r4, r3
 /* 80444664 0040DC24  38 60 01 C8 */	li r3, 0x1c8
-/* 80444668 0040DC28  4B FF 03 F5 */	bl heap_malloc
+/* 80444668 0040DC28  4B FF 03 F5 */	bl heap_malloc__3mtlFUli
 /* 8044466C 0040DC2C  2C 03 00 00 */	cmpwi r3, 0
 /* 80444670 0040DC30  41 82 00 10 */	beq .L_80444680
 /* 80444674 0040DC34  7F E4 FB 78 */	mr r4, r31
@@ -187,16 +187,16 @@
 .L_80444680:
 /* 80444680 0040DC40  7F C4 F3 78 */	mr r4, r30
 /* 80444684 0040DC44  38 A0 00 00 */	li r5, 0
-/* 80444688 0040DC48  4B FF 45 51 */	bl func_80438BD8
+/* 80444688 0040DC48  4B FF 45 51 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8044468C 0040DC4C  48 00 02 E5 */	bl func_80444970
 /* 80444690 0040DC50  3C 80 80 52 */	lis r4, CWorkSystem_strpool@ha
 /* 80444694 0040DC54  90 7E 01 C4 */	stw r3, 0x1c4(r30)
 /* 80444698 0040DC58  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044469C 0040DC5C  3B E4 00 33 */	addi r31, r4, 0x33
-/* 804446A0 0040DC60  4B FF 2F 15 */	bl getHeapIndex__Fv
+/* 804446A0 0040DC60  4B FF 2F 15 */	bl getHeapIndex__3mtlFv
 /* 804446A4 0040DC64  7C 64 1B 78 */	mr r4, r3
 /* 804446A8 0040DC68  38 60 01 E8 */	li r3, 0x1e8
-/* 804446AC 0040DC6C  4B FF 03 B1 */	bl heap_malloc
+/* 804446AC 0040DC6C  4B FF 03 B1 */	bl heap_malloc__3mtlFUli
 /* 804446B0 0040DC70  2C 03 00 00 */	cmpwi r3, 0
 /* 804446B4 0040DC74  41 82 00 10 */	beq .L_804446C4
 /* 804446B8 0040DC78  7F E4 FB 78 */	mr r4, r31
@@ -205,14 +205,14 @@
 .L_804446C4:
 /* 804446C4 0040DC84  7F C4 F3 78 */	mr r4, r30
 /* 804446C8 0040DC88  38 A0 00 00 */	li r5, 0
-/* 804446CC 0040DC8C  4B FF 45 0D */	bl func_80438BD8
+/* 804446CC 0040DC8C  4B FF 45 0D */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 804446D0 0040DC90  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 804446D4 0040DC94  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 804446D8 0040DC98  3B E3 00 44 */	addi r31, r3, 0x44
-/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getHeapIndex__Fv
+/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getHeapIndex__3mtlFv
 /* 804446E0 0040DCA0  7C 64 1B 78 */	mr r4, r3
 /* 804446E4 0040DCA4  38 60 02 08 */	li r3, 0x208
-/* 804446E8 0040DCA8  4B FF 03 75 */	bl heap_malloc
+/* 804446E8 0040DCA8  4B FF 03 75 */	bl heap_malloc__3mtlFUli
 /* 804446EC 0040DCAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804446F0 0040DCB0  41 82 00 10 */	beq .L_80444700
 /* 804446F4 0040DCB4  7F E4 FB 78 */	mr r4, r31
@@ -221,7 +221,7 @@
 .L_80444700:
 /* 80444700 0040DCC0  7F C4 F3 78 */	mr r4, r30
 /* 80444704 0040DCC4  38 A0 00 00 */	li r5, 0
-/* 80444708 0040DCC8  4B FF 44 D1 */	bl func_80438BD8
+/* 80444708 0040DCC8  4B FF 44 D1 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8044470C 0040DCCC  7F C3 F3 78 */	mr r3, r30
 /* 80444710 0040DCD0  4B FF 61 11 */	bl __ct__8043A820
 /* 80444714 0040DCD4  7F C3 F3 78 */	mr r3, r30
@@ -301,10 +301,10 @@
 /* 80444814 0040DDD4  7C 7E 1B 78 */	mr r30, r3
 /* 80444818 0040DDD8  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044481C 0040DDDC  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 80444820 0040DDE0  4B FF 2D 95 */	bl getHeapIndex__Fv
+/* 80444820 0040DDE0  4B FF 2D 95 */	bl getHeapIndex__3mtlFv
 /* 80444824 0040DDE4  7C 64 1B 78 */	mr r4, r3
 /* 80444828 0040DDE8  38 60 01 D0 */	li r3, 0x1d0
-/* 8044482C 0040DDEC  4B FF 02 31 */	bl heap_malloc
+/* 8044482C 0040DDEC  4B FF 02 31 */	bl heap_malloc__3mtlFUli
 /* 80444830 0040DDF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80444834 0040DDF4  7C 7D 1B 78 */	mr r29, r3
 /* 80444838 0040DDF8  41 82 00 14 */	beq .L_8044484C
@@ -316,7 +316,7 @@
 /* 8044484C 0040DE0C  7F A3 EB 78 */	mr r3, r29
 /* 80444850 0040DE10  7F C4 F3 78 */	mr r4, r30
 /* 80444854 0040DE14  38 A0 00 00 */	li r5, 0
-/* 80444858 0040DE18  4B FF 43 81 */	bl func_80438BD8
+/* 80444858 0040DE18  4B FF 43 81 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8044485C 0040DE1C  7F A3 EB 78 */	mr r3, r29
 /* 80444860 0040DE20  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 80444864 0040DE24  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -325,10 +325,10 @@
 /* 80444870 0040DE30  4E 80 00 20 */	blr 
 .endfn func_804447FC
 
-.fn func_80444874, global
+.fn func_80444874__FPv, global
 /* 80444874 0040DE34  90 6D BD 78 */	stw r3, lbl_80667EF8@sda21(r13)
 /* 80444878 0040DE38  4E 80 00 20 */	blr 
-.endfn func_80444874
+.endfn func_80444874__FPv
 
 .fn func_8044487C, global
 /* 8044487C 0040DE3C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -389,7 +389,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

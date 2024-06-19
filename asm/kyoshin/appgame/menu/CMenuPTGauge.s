@@ -280,7 +280,7 @@
 /* 801872FC 001508BC  41 82 02 A0 */	beq .L_8018759C
 /* 80187300 001508C0  48 00 02 B8 */	b .L_801875B8
 .L_80187304:
-/* 80187304 001508C4  4B F5 1E 85 */	bl getBattleManagerInstance
+/* 80187304 001508C4  4B F5 1E 85 */	bl getBattleManagerInstancePtr__Fv
 /* 80187308 001508C8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8018730C 001508CC  38 80 00 00 */	li r4, 0
 /* 80187310 001508D0  80 65 00 00 */	lwz r3, 0(r5)
@@ -340,7 +340,7 @@
 /* 801873D8 00150998  90 1F 00 8C */	stw r0, 0x8c(r31)
 /* 801873DC 0015099C  48 00 01 DC */	b .L_801875B8
 .L_801873E0:
-/* 801873E0 001509A0  4B F5 1D A9 */	bl getBattleManagerInstance
+/* 801873E0 001509A0  4B F5 1D A9 */	bl getBattleManagerInstancePtr__Fv
 /* 801873E4 001509A4  80 1F 00 90 */	lwz r0, 0x90(r31)
 /* 801873E8 001509A8  3C A0 80 53 */	lis r5, lbl_80535BC8@ha
 /* 801873EC 001509AC  83 C3 01 94 */	lwz r30, 0x194(r3)
@@ -353,7 +353,7 @@
 /* 80187408 001509C8  60 00 00 00 */	nop 
 /* 8018740C 001509CC  2C 1E 00 00 */	cmpwi r30, 0
 /* 80187410 001509D0  41 81 00 A4 */	bgt .L_801874B4
-/* 80187414 001509D4  4B F5 1D 75 */	bl getBattleManagerInstance
+/* 80187414 001509D4  4B F5 1D 75 */	bl getBattleManagerInstancePtr__Fv
 /* 80187418 001509D8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8018741C 001509DC  38 80 00 00 */	li r4, 0
 /* 80187420 001509E0  80 65 00 00 */	lwz r3, 0(r5)
@@ -399,7 +399,7 @@
 /* 801874B4 00150A74  80 1F 00 90 */	lwz r0, 0x90(r31)
 /* 801874B8 00150A78  2C 00 00 01 */	cmpwi r0, 1
 /* 801874BC 00150A7C  40 80 00 FC */	bge .L_801875B8
-/* 801874C0 00150A80  4B F5 1C C9 */	bl getBattleManagerInstance
+/* 801874C0 00150A80  4B F5 1C C9 */	bl getBattleManagerInstancePtr__Fv
 /* 801874C4 00150A84  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 801874C8 00150A88  38 00 00 00 */	li r0, 0
 /* 801874CC 00150A8C  28 03 00 01 */	cmplwi r3, 1
@@ -543,10 +543,10 @@
 /* 801876BC 00150C7C  38 60 00 00 */	li r3, 0
 /* 801876C0 00150C80  48 00 00 38 */	b .L_801876F8
 .L_801876C4:
-/* 801876C4 00150C84  48 2A FE F1 */	bl getHeapIndex__Fv
+/* 801876C4 00150C84  48 2A FE F1 */	bl getHeapIndex__3mtlFv
 /* 801876C8 00150C88  7C 64 1B 78 */	mr r4, r3
 /* 801876CC 00150C8C  38 60 00 A4 */	li r3, 0xa4
-/* 801876D0 00150C90  48 2A D3 8D */	bl heap_malloc
+/* 801876D0 00150C90  48 2A D3 8D */	bl heap_malloc__3mtlFUli
 /* 801876D4 00150C94  2C 03 00 00 */	cmpwi r3, 0
 /* 801876D8 00150C98  41 82 00 0C */	beq .L_801876E4
 /* 801876DC 00150C9C  7F E4 FB 78 */	mr r4, r31
@@ -583,7 +583,7 @@
 /* 80187738 00150CF8  80 1F 00 90 */	lwz r0, 0x90(r31)
 /* 8018773C 00150CFC  2C 00 00 01 */	cmpwi r0, 1
 /* 80187740 00150D00  40 80 00 24 */	bge .L_80187764
-/* 80187744 00150D04  4B F5 1A 45 */	bl getBattleManagerInstance
+/* 80187744 00150D04  4B F5 1A 45 */	bl getBattleManagerInstancePtr__Fv
 /* 80187748 00150D08  80 03 01 94 */	lwz r0, 0x194(r3)
 /* 8018774C 00150D0C  2C 00 01 2C */	cmpwi r0, 0x12c
 /* 80187750 00150D10  40 82 00 14 */	bne .L_80187764
@@ -737,7 +737,7 @@
 /* 8018796C 00150F2C  7C 7F 1B 78 */	mr r31, r3
 /* 80187970 00150F30  80 63 00 88 */	lwz r3, 0x88(r3)
 /* 80187974 00150F34  4B FA FA D1 */	bl func_80137444
-/* 80187978 00150F38  4B F5 18 11 */	bl getBattleManagerInstance
+/* 80187978 00150F38  4B F5 18 11 */	bl getBattleManagerInstancePtr__Fv
 /* 8018797C 00150F3C  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 80187980 00150F40  38 00 00 00 */	li r0, 0
 /* 80187984 00150F44  28 03 00 01 */	cmplwi r3, 1
@@ -1204,7 +1204,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

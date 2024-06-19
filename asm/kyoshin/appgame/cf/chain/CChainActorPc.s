@@ -385,7 +385,7 @@
 /* 80281EA0 0024B460  4E 80 04 21 */	bctrl 
 /* 80281EA4 0024B464  2C 03 00 00 */	cmpwi r3, 0
 /* 80281EA8 0024B468  40 82 00 4C */	bne .L_80281EF4
-/* 80281EAC 0024B46C  4B E5 72 DD */	bl getBattleManagerInstance
+/* 80281EAC 0024B46C  4B E5 72 DD */	bl getBattleManagerInstancePtr__Fv
 /* 80281EB0 0024B470  7F 84 E3 78 */	mr r4, r28
 /* 80281EB4 0024B474  38 60 00 00 */	li r3, 0
 /* 80281EB8 0024B478  38 A0 00 00 */	li r5, 0
@@ -538,7 +538,7 @@
 /* 8028209C 0024B65C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802820A0 0024B660  7C 08 02 A6 */	mflr r0
 /* 802820A4 0024B664  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802820A8 0024B668  4B E5 70 E1 */	bl getBattleManagerInstance
+/* 802820A8 0024B668  4B E5 70 E1 */	bl getBattleManagerInstancePtr__Fv
 /* 802820AC 0024B66C  80 A3 01 94 */	lwz r5, 0x194(r3)
 /* 802820B0 0024B670  38 00 01 2C */	li r0, 0x12c
 /* 802820B4 0024B674  38 60 00 00 */	li r3, 0
@@ -555,7 +555,7 @@
 /* 802820D4 0024B694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802820D8 0024B698  7C 08 02 A6 */	mflr r0
 /* 802820DC 0024B69C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802820E0 0024B6A0  4B E5 70 A9 */	bl getBattleManagerInstance
+/* 802820E0 0024B6A0  4B E5 70 A9 */	bl getBattleManagerInstancePtr__Fv
 /* 802820E4 0024B6A4  38 80 00 00 */	li r4, 0
 /* 802820E8 0024B6A8  38 63 01 94 */	addi r3, r3, 0x194
 /* 802820EC 0024B6AC  4B F0 A8 09 */	bl func_8018C8F4

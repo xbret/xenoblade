@@ -3,6 +3,8 @@
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
 #include "kyoshin/appgame/plugin/pluginMain.hpp"
+#include "monolib/lib/CLibHbm.hpp"
+#include "monolib/MemManager.hpp"
 #include "monolib/code_80450B14.hpp"
 #include "monolib/Unknown1.hpp"
 #include "monolib/vm/yvm.h"
@@ -24,12 +26,10 @@ struct StaticArcFile{
 
 extern "C"{
 extern void func_80057CDC();
-extern void MemManager_setArenaMemorySize(u32, u32);
 extern void CWorkRoot_Run();
 extern void func_80448E78(u32);
 extern void func_804559A8(u32, u32);
 extern void CDesktop_SaveStartFunctionCallback(FunctionStruct*, u32);
-extern void func_8045D5C8(u32);
 extern void func_8045FBB0(StaticArcFile*);
 extern void CLibVM_SetCallbacks(void*, void*);
 extern void func_804DAA90(u16**);

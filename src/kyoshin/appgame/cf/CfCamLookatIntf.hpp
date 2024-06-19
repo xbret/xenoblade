@@ -1,3 +1,6 @@
+#pragma once
+
+#include "types.h"
 #include "monolib/Vector.hpp"
 
 namespace cf{

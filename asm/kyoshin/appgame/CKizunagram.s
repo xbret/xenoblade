@@ -656,7 +656,7 @@
 /* 802583A0 00221960  48 20 6D 21 */	bl func_8045F0C0
 /* 802583A4 00221964  7C 64 1B 78 */	mr r4, r3
 /* 802583A8 00221968  38 60 00 D8 */	li r3, 0xd8
-/* 802583AC 0022196C  48 1D C6 B1 */	bl heap_malloc
+/* 802583AC 0022196C  48 1D C6 B1 */	bl heap_malloc__3mtlFUli
 /* 802583B0 00221970  2C 03 00 00 */	cmpwi r3, 0
 /* 802583B4 00221974  7C 78 1B 78 */	mr r24, r3
 /* 802583B8 00221978  41 82 00 0C */	beq .L_802583C4
@@ -811,7 +811,7 @@
 /* 80258600 00221BC0  48 20 6A C1 */	bl func_8045F0C0
 /* 80258604 00221BC4  7C 64 1B 78 */	mr r4, r3
 /* 80258608 00221BC8  38 60 00 F0 */	li r3, 0xf0
-/* 8025860C 00221BCC  48 1D C4 51 */	bl heap_malloc
+/* 8025860C 00221BCC  48 1D C4 51 */	bl heap_malloc__3mtlFUli
 /* 80258610 00221BD0  2C 03 00 00 */	cmpwi r3, 0
 /* 80258614 00221BD4  7C 78 1B 78 */	mr r24, r3
 /* 80258618 00221BD8  41 82 00 34 */	beq .L_8025864C
@@ -2559,7 +2559,7 @@
 /* 80259F64 00223524  48 20 51 5D */	bl func_8045F0C0
 /* 80259F68 00223528  7C 64 1B 78 */	mr r4, r3
 /* 80259F6C 0022352C  38 60 00 F0 */	li r3, 0xf0
-/* 80259F70 00223530  48 1D AA ED */	bl heap_malloc
+/* 80259F70 00223530  48 1D AA ED */	bl heap_malloc__3mtlFUli
 /* 80259F74 00223534  2C 03 00 00 */	cmpwi r3, 0
 /* 80259F78 00223538  7C 7B 1B 78 */	mr r27, r3
 /* 80259F7C 0022353C  41 82 00 34 */	beq .L_80259FB0
@@ -6577,7 +6577,7 @@
 	.4byte CKizunagram_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

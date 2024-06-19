@@ -1,7 +1,7 @@
 #include "kyoshin/appgame/CBattery.hpp"
+#include "monolib/MemManager.hpp"
 #include <stdio.h>
 
-extern int getHeapIndex();
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
 extern void func_80136E84(nw4r::lyt::Layout**, nw4r::lyt::ArcResourceAccessor*, const char*);
 extern void func_80137038(nw4r::lyt::Layout*, void*, int, int);
@@ -29,7 +29,7 @@ CBattery::~CBattery(){
 }
 
 void CBattery::func_802B92A4(){
-	int heapIndex = getHeapIndex();
+	int heapIndex = mtl::getHeapIndex();
 	unk14 = CDeviceFile_openFile1(heapIndex, "/menu/Battery.arc", (void*)this, 0, 0);
 	//likely member functions of the class
 	CDeviceFile_8044F154(unk14, 3);
@@ -100,7 +100,7 @@ bool CBattery::OnFileEvent(CEventFile* eventFile){
 			func_802B9364();
 			return true;
 		}
-		int heapIndex = getHeapIndex();
+		int heapIndex = mtl::getHeapIndex();
 		CLibLayout_addLayoutHeapEntry(&unk4, heapIndex, 0xC00, "CBattery", 0); //Add the class to the layout heap
 		Class_8045F858 sp8 = Class_8045F858(&unk4);
 		void* r29 = unk14->unk4;

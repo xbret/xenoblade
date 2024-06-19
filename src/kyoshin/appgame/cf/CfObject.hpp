@@ -1,5 +1,6 @@
 #pragma once
 
+#include "types.h"
 #include "kyoshin/appgame/cf/CObjectParam.hpp"
 
 namespace cf{

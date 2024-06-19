@@ -1546,7 +1546,7 @@
 /* 8045B24C 0042480C  4E 80 00 20 */	blr 
 .endfn func_8045B1E0
 
-.fn WorkEvent5__16CLibCriMoviePlayFv, global
+.fn WorkEvent5__16CLibCriMoviePlayFPv, global
 /* 8045B250 00424810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045B254 00424814  7C 08 02 A6 */	mflr r0
 /* 8045B258 00424818  2C 04 00 00 */	cmpwi r4, 0
@@ -1602,7 +1602,7 @@
 /* 8045B304 004248C4  7C 08 03 A6 */	mtlr r0
 /* 8045B308 004248C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045B30C 004248CC  4E 80 00 20 */	blr
-.endfn WorkEvent5__16CLibCriMoviePlayFv
+.endfn WorkEvent5__16CLibCriMoviePlayFPv
 
 .fn func_8045B310, global
 /* 8045B310 004248D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1731,7 +1731,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__16CLibCriMoviePlayFv
+	.4byte WorkEvent5__16CLibCriMoviePlayFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -2056,7 +2056,7 @@
 
 .obj "@eti_800351EC", local
 .hidden "@eti_800351EC"
-	.4byte WorkEvent5__16CLibCriMoviePlayFv
+	.4byte WorkEvent5__16CLibCriMoviePlayFPv
 	.4byte 0x000000C0
 	.4byte "@etb_8001D604"
 .endobj "@eti_800351EC"

@@ -390,10 +390,10 @@
 /* 8027EA10 00247FD0  38 60 00 00 */	li r3, 0
 /* 8027EA14 00247FD4  48 00 00 38 */	b .L_8027EA4C
 .L_8027EA18:
-/* 8027EA18 00247FD8  48 1B 8B 9D */	bl getHeapIndex__Fv
+/* 8027EA18 00247FD8  48 1B 8B 9D */	bl getHeapIndex__3mtlFv
 /* 8027EA1C 00247FDC  7C 64 1B 78 */	mr r4, r3
 /* 8027EA20 00247FE0  38 60 00 A4 */	li r3, 0xa4
-/* 8027EA24 00247FE4  48 1B 60 39 */	bl heap_malloc
+/* 8027EA24 00247FE4  48 1B 60 39 */	bl heap_malloc__3mtlFUli
 /* 8027EA28 00247FE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8027EA2C 00247FEC  41 82 00 0C */	beq .L_8027EA38
 /* 8027EA30 00247FF0  7F E4 FB 78 */	mr r4, r31
@@ -594,7 +594,7 @@
 /* 8027ECF8 002482B8  48 1E 03 C9 */	bl func_8045F0C0
 /* 8027ECFC 002482BC  7C 64 1B 78 */	mr r4, r3
 /* 8027ED00 002482C0  38 60 08 58 */	li r3, 0x858
-/* 8027ED04 002482C4  48 1B 5D 59 */	bl heap_malloc
+/* 8027ED04 002482C4  48 1B 5D 59 */	bl heap_malloc__3mtlFUli
 /* 8027ED08 002482C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8027ED0C 002482CC  41 82 00 08 */	beq .L_8027ED14
 /* 8027ED10 002482D0  4B EA 73 75 */	bl __ct__CTagProcessor
@@ -778,7 +778,7 @@
 /* 8027EF64 00248524  88 0D B0 80 */	lbz r0, lbl_80667200@sda21(r13)
 /* 8027EF68 00248528  2C 00 00 00 */	cmpwi r0, 0
 /* 8027EF6C 0024852C  41 82 01 10 */	beq .L_8027F07C
-/* 8027EF70 00248530  4B E5 A2 19 */	bl getBattleManagerInstance
+/* 8027EF70 00248530  4B E5 A2 19 */	bl getBattleManagerInstancePtr__Fv
 /* 8027EF74 00248534  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 8027EF78 00248538  38 80 00 00 */	li r4, 0
 /* 8027EF7C 0024853C  80 65 00 00 */	lwz r3, 0(r5)
@@ -875,7 +875,7 @@
 /* 8027F0B8 00248678  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027F0BC 0024867C  7C 08 02 A6 */	mflr r0
 /* 8027F0C0 00248680  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027F0C4 00248684  4B E5 A0 C5 */	bl getBattleManagerInstance
+/* 8027F0C4 00248684  4B E5 A0 C5 */	bl getBattleManagerInstancePtr__Fv
 /* 8027F0C8 00248688  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8027F0CC 0024868C  38 80 00 00 */	li r4, 0
 /* 8027F0D0 00248690  80 65 00 00 */	lwz r3, 0(r5)
@@ -2524,7 +2524,7 @@
 /* 802807B4 00249D74  80 03 3F 00 */	lwz r0, 0x3f00(r3)
 /* 802807B8 00249D78  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 802807BC 00249D7C  41 82 00 34 */	beq .L_802807F0
-/* 802807C0 00249D80  4B E5 89 C9 */	bl getBattleManagerInstance
+/* 802807C0 00249D80  4B E5 89 C9 */	bl getBattleManagerInstancePtr__Fv
 /* 802807C4 00249D84  7F E4 FB 78 */	mr r4, r31
 /* 802807C8 00249D88  4B E5 98 A5 */	bl func_800DA06C
 /* 802807CC 00249D8C  2C 03 00 00 */	cmpwi r3, 0
@@ -3434,7 +3434,7 @@
 	.4byte CSysWinScenarioLog_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

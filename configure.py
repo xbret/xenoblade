@@ -7,7 +7,11 @@ LIBS = [
         "cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS",
         "host": True,
         "objects": [
-            ["kyoshin/appgame/CGame", False],
+            [
+                "kyoshin/appgame/CGame", 
+                False,
+                {"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s -func_align 4"},
+            ],
             ["kyoshin/appgame/main", True],
             ["kyoshin/appgame/plugin/pluginDeb", True],
             ["kyoshin/appgame/plugin/pluginWait", True],
@@ -1761,7 +1765,7 @@ def main():
         sys.exit(f'Invalid version "{version}"')
     build_path = args.build_dir / f"xenoblade.{version}"
 
-    cflags_base = f"-proc gekko -nodefaults -fp hard -O4,p -enum int -use_lmw_stmw on -sdata 8 -sdata2 8 -func_align 4 -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/std -i libs/nw4r/include/ -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/"
+    cflags_base = f"-proc gekko -nodefaults -fp hard -O4,p -enum int -use_lmw_stmw on -sdata 8 -sdata2 8 -func_align 4 -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/ -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/"
     if args.debug:
         cflags_base += " -sym on -D_DEBUG"
     else:

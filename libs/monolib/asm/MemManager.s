@@ -278,11 +278,11 @@
 /* 804336E0 003FCCA0  4E 80 00 20 */	blr 
 .endfn MemManager_80433300
 
-.fn MemManager_setArenaMemorySize, global
+.fn MemManager_setArenaMemorySize__3mtlFUlUl, global
 /* 804336E4 003FCCA4  90 6D 9C BC */	stw r3, arenaMemorySize@sda21(r13)
 /* 804336E8 003FCCA8  90 8D BC D8 */	stw r4, lbl_80667E58@sda21(r13)
 /* 804336EC 003FCCAC  4E 80 00 20 */	blr 
-.endfn MemManager_setArenaMemorySize
+.endfn MemManager_setArenaMemorySize__3mtlFUlUl
 
 .fn MemManager_804336F0, global
 /* 804336F0 003FCCB0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1755,7 +1755,7 @@
 .endfn MemManager_80434A54
 
 
-.fn heap_malloc, global
+.fn heap_malloc__3mtlFUli, global
 /* 80434A5C 003FE01C  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 80434A60 003FE020  3C C0 80 65 */	lis r6, heapArray@ha
 /* 80434A64 003FE024  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1765,7 +1765,7 @@
 /* 80434A74 003FE034  7C 66 02 14 */	add r3, r6, r0
 /* 80434A78 003FE038  38 C0 00 04 */	li r6, 4
 /* 80434A7C 003FE03C  4B FF F1 1C */	b heap_allocate
-.endfn heap_malloc
+.endfn heap_malloc__3mtlFUli
 
 .fn heap_malloc_1, global
 /* 80434A80 003FE040  54 80 06 3E */	clrlwi r0, r4, 0x18

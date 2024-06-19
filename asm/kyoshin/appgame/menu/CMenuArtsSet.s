@@ -18,10 +18,10 @@
 /* 8022F438 001F89F8  38 60 00 00 */	li r3, 0
 /* 8022F43C 001F89FC  48 00 00 D4 */	b .L_8022F510
 .L_8022F440:
-/* 8022F440 001F8A00  48 20 81 75 */	bl getHeapIndex__Fv
+/* 8022F440 001F8A00  48 20 81 75 */	bl getHeapIndex__3mtlFv
 /* 8022F444 001F8A04  7C 64 1B 78 */	mr r4, r3
 /* 8022F448 001F8A08  38 60 03 68 */	li r3, 0x368
-/* 8022F44C 001F8A0C  48 20 56 11 */	bl heap_malloc
+/* 8022F44C 001F8A0C  48 20 56 11 */	bl heap_malloc__3mtlFUli
 /* 8022F450 001F8A10  2C 03 00 00 */	cmpwi r3, 0
 /* 8022F454 001F8A14  7C 7E 1B 78 */	mr r30, r3
 /* 8022F458 001F8A18  41 82 00 A0 */	beq .L_8022F4F8
@@ -7444,7 +7444,7 @@
 	.4byte CArtsList_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

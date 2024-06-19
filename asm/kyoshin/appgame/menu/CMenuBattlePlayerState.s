@@ -1705,7 +1705,7 @@
 /* 8010C6E8 000D5CA8  90 15 02 30 */	stw r0, 0x230(r21)
 /* 8010C6EC 000D5CAC  A8 03 00 00 */	lha r0, 0(r3)
 /* 8010C6F0 000D5CB0  90 15 02 38 */	stw r0, 0x238(r21)
-/* 8010C6F4 000D5CB4  4B FC CA 95 */	bl getBattleManagerInstance
+/* 8010C6F4 000D5CB4  4B FC CA 95 */	bl getBattleManagerInstancePtr__Fv
 /* 8010C6F8 000D5CB8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8010C6FC 000D5CBC  38 80 00 00 */	li r4, 0
 /* 8010C700 000D5CC0  80 65 00 00 */	lwz r3, 0(r5)
@@ -2196,10 +2196,10 @@
 /* 8010CDF4 000D63B4  38 60 00 00 */	li r3, 0
 /* 8010CDF8 000D63B8  48 00 00 38 */	b .L_8010CE30
 .L_8010CDFC:
-/* 8010CDFC 000D63BC  48 32 A7 B9 */	bl getHeapIndex__Fv
+/* 8010CDFC 000D63BC  48 32 A7 B9 */	bl getHeapIndex__3mtlFv
 /* 8010CE00 000D63C0  7C 64 1B 78 */	mr r4, r3
 /* 8010CE04 000D63C4  38 60 07 FC */	li r3, 0x7fc
-/* 8010CE08 000D63C8  48 32 7C 55 */	bl heap_malloc
+/* 8010CE08 000D63C8  48 32 7C 55 */	bl heap_malloc__3mtlFUli
 /* 8010CE0C 000D63CC  2C 03 00 00 */	cmpwi r3, 0
 /* 8010CE10 000D63D0  41 82 00 0C */	beq .L_8010CE1C
 /* 8010CE14 000D63D4  7F E4 FB 78 */	mr r4, r31
@@ -3262,7 +3262,7 @@
 /* 8010DD70 000D7330  2C 03 00 00 */	cmpwi r3, 0
 /* 8010DD74 000D7334  41 82 01 6C */	beq .L_8010DEE0
 /* 8010DD78 000D7338  48 06 20 BD */	bl func_8016FE34
-/* 8010DD7C 000D733C  4B FC B4 0D */	bl getBattleManagerInstance
+/* 8010DD7C 000D733C  4B FC B4 0D */	bl getBattleManagerInstancePtr__Fv
 /* 8010DD80 000D7340  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8010DD84 000D7344  38 80 00 00 */	li r4, 0
 /* 8010DD88 000D7348  80 65 00 00 */	lwz r3, 0(r5)
@@ -4248,7 +4248,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

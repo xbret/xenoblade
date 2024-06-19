@@ -624,7 +624,7 @@
 /* 8043CB78 00406138  4E 80 00 20 */	blr 
 .endfn func_8043CAFC
 
-.fn func_8043CB7C, global
+.fn func_8043CB7C__5CViewFRCQ22ml7CRect16, global
 /* 8043CB7C 0040613C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8043CB80 00406140  7C 08 02 A6 */	mflr r0
 /* 8043CB84 00406144  90 01 00 34 */	stw r0, 0x34(r1)
@@ -717,7 +717,7 @@
 /* 8043CCC0 00406280  7C 08 03 A6 */	mtlr r0
 /* 8043CCC4 00406284  38 21 00 30 */	addi r1, r1, 0x30
 /* 8043CCC8 00406288  4E 80 00 20 */	blr 
-.endfn func_8043CB7C
+.endfn func_8043CB7C__5CViewFRCQ22ml7CRect16
 
 .fn func_8043CCCC, global
 /* 8043CCCC 0040628C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -3016,7 +3016,7 @@
 /* 8043EC00 004081C0  40 82 00 10 */	bne .L_8043EC10
 /* 8043EC04 004081C4  7F A3 EB 78 */	mr r3, r29
 /* 8043EC08 004081C8  38 80 00 00 */	li r4, 0
-/* 8043EC0C 004081CC  4B FF 92 E5 */	bl func_80437EF0
+/* 8043EC0C 004081CC  4B FF 92 E5 */	bl func_80437EF0__11CWorkThreadFUl
 .L_8043EC10:
 /* 8043EC10 004081D0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8043EC14 004081D4  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -4249,7 +4249,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -4760,7 +4760,7 @@
 
 .obj "@eti_800340DC", local
 .hidden "@eti_800340DC"
-	.4byte func_8043CB7C
+	.4byte func_8043CB7C__5CViewFRCQ22ml7CRect16
 	.4byte 0x00000150
 	.4byte "@etb_8001C518"
 .endobj "@eti_800340DC"

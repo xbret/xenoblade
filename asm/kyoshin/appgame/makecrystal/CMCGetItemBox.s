@@ -3464,7 +3464,7 @@
 /* 80299BA8 00263168  48 1C 55 19 */	bl func_8045F0C0
 /* 80299BAC 0026316C  7C 64 1B 78 */	mr r4, r3
 /* 80299BB0 00263170  38 60 08 58 */	li r3, 0x858
-/* 80299BB4 00263174  48 19 AE A9 */	bl heap_malloc
+/* 80299BB4 00263174  48 19 AE A9 */	bl heap_malloc__3mtlFUli
 /* 80299BB8 00263178  2C 03 00 00 */	cmpwi r3, 0
 /* 80299BBC 0026317C  41 82 00 08 */	beq .L_80299BC4
 /* 80299BC0 00263180  4B E8 C4 C5 */	bl __ct__CTagProcessor
@@ -3915,7 +3915,7 @@
 	.4byte CMCGetItemBox_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

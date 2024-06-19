@@ -675,7 +675,7 @@
 /* 80144F0C 0010E4CC  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80144F10 0010E4D0  7C 7C 1B 78 */	mr r28, r3
 /* 80144F14 0010E4D4  40 82 00 38 */	bne .L_80144F4C
-/* 80144F18 0010E4D8  4B F9 42 71 */	bl getBattleManagerInstance
+/* 80144F18 0010E4D8  4B F9 42 71 */	bl getBattleManagerInstancePtr__Fv
 /* 80144F1C 0010E4DC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 80144F20 0010E4E0  38 80 00 00 */	li r4, 0
 /* 80144F24 0010E4E4  80 65 00 00 */	lwz r3, 0(r5)
@@ -700,10 +700,10 @@
 /* 80144F64 0010E524  38 60 00 00 */	li r3, 0
 /* 80144F68 0010E528  48 00 00 40 */	b .L_80144FA8
 .L_80144F6C:
-/* 80144F6C 0010E52C  48 2F 26 49 */	bl getHeapIndex__Fv
+/* 80144F6C 0010E52C  48 2F 26 49 */	bl getHeapIndex__3mtlFv
 /* 80144F70 0010E530  7C 64 1B 78 */	mr r4, r3
 /* 80144F74 0010E534  38 60 00 E4 */	li r3, 0xe4
-/* 80144F78 0010E538  48 2E FA E5 */	bl heap_malloc
+/* 80144F78 0010E538  48 2E FA E5 */	bl heap_malloc__3mtlFUli
 /* 80144F7C 0010E53C  2C 03 00 00 */	cmpwi r3, 0
 /* 80144F80 0010E540  41 82 00 14 */	beq .L_80144F94
 /* 80144F84 0010E544  7F A4 EB 78 */	mr r4, r29
@@ -1590,7 +1590,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

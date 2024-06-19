@@ -278,10 +278,10 @@
 /* 80459B50 00423110  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B54 00423114  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B58 00423118  3B E3 00 05 */	addi r31, r3, 5
-/* 80459B5C 0042311C  4B FD DA 59 */	bl getHeapIndex__Fv
+/* 80459B5C 0042311C  4B FD DA 59 */	bl getHeapIndex__3mtlFv
 /* 80459B60 00423120  7C 64 1B 78 */	mr r4, r3
 /* 80459B64 00423124  38 60 06 28 */	li r3, 0x628
-/* 80459B68 00423128  4B FD AE F5 */	bl heap_malloc
+/* 80459B68 00423128  4B FD AE F5 */	bl heap_malloc__3mtlFUli
 /* 80459B6C 0042312C  2C 03 00 00 */	cmpwi r3, 0
 /* 80459B70 00423130  41 82 00 10 */	beq .L_80459B80
 /* 80459B74 00423134  7F E4 FB 78 */	mr r4, r31
@@ -290,14 +290,14 @@
 .L_80459B80:
 /* 80459B80 00423140  7F C4 F3 78 */	mr r4, r30
 /* 80459B84 00423144  38 A0 00 00 */	li r5, 0
-/* 80459B88 00423148  4B FD F0 51 */	bl func_80438BD8
+/* 80459B88 00423148  4B FD F0 51 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80459B8C 0042314C  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B90 00423150  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B94 00423154  3B E3 00 16 */	addi r31, r3, 0x16
-/* 80459B98 00423158  4B FD DA 1D */	bl getHeapIndex__Fv
+/* 80459B98 00423158  4B FD DA 1D */	bl getHeapIndex__3mtlFv
 /* 80459B9C 0042315C  7C 64 1B 78 */	mr r4, r3
 /* 80459BA0 00423160  38 60 04 B8 */	li r3, 0x4b8
-/* 80459BA4 00423164  4B FD AE B9 */	bl heap_malloc
+/* 80459BA4 00423164  4B FD AE B9 */	bl heap_malloc__3mtlFUli
 /* 80459BA8 00423168  2C 03 00 00 */	cmpwi r3, 0
 /* 80459BAC 0042316C  41 82 00 10 */	beq .L_80459BBC
 /* 80459BB0 00423170  7F E4 FB 78 */	mr r4, r31
@@ -306,7 +306,7 @@
 .L_80459BBC:
 /* 80459BBC 0042317C  7F C4 F3 78 */	mr r4, r30
 /* 80459BC0 00423180  38 A0 00 00 */	li r5, 0
-/* 80459BC4 00423184  4B FD F0 15 */	bl func_80438BD8
+/* 80459BC4 00423184  4B FD F0 15 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80459BC8 00423188  7F C3 F3 78 */	mr r3, r30
 /* 80459BCC 0042318C  4B FD EE 2D */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80459BD0 00423190  48 00 00 08 */	b .L_80459BD8
@@ -412,7 +412,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

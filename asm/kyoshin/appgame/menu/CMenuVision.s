@@ -776,7 +776,7 @@
 /* 801AC918 00175ED8  93 78 00 24 */	stw r27, 0x24(r24)
 /* 801AC91C 00175EDC  48 00 01 EC */	b .L_801ACB08
 .L_801AC920:
-/* 801AC920 00175EE0  4B F2 C8 69 */	bl getBattleManagerInstance
+/* 801AC920 00175EE0  4B F2 C8 69 */	bl getBattleManagerInstancePtr__Fv
 /* 801AC924 00175EE4  4B F3 DB 21 */	bl func_800EA444
 /* 801AC928 00175EE8  2C 03 00 00 */	cmpwi r3, 0
 /* 801AC92C 00175EEC  7C 7A 1B 78 */	mr r26, r3
@@ -1050,10 +1050,10 @@
 /* 801ACD08 001762C8  38 60 00 00 */	li r3, 0
 /* 801ACD0C 001762CC  48 00 00 38 */	b .L_801ACD44
 .L_801ACD10:
-/* 801ACD10 001762D0  48 28 A8 A5 */	bl getHeapIndex__Fv
+/* 801ACD10 001762D0  48 28 A8 A5 */	bl getHeapIndex__3mtlFv
 /* 801ACD14 001762D4  7C 64 1B 78 */	mr r4, r3
 /* 801ACD18 001762D8  38 60 01 94 */	li r3, 0x194
-/* 801ACD1C 001762DC  48 28 7D 41 */	bl heap_malloc
+/* 801ACD1C 001762DC  48 28 7D 41 */	bl heap_malloc__3mtlFUli
 /* 801ACD20 001762E0  2C 03 00 00 */	cmpwi r3, 0
 /* 801ACD24 001762E4  41 82 00 0C */	beq .L_801ACD30
 /* 801ACD28 001762E8  7F E4 FB 78 */	mr r4, r31
@@ -1591,7 +1591,7 @@
 /* 801AD51C 00176ADC  7C 77 1B 78 */	mr r23, r3
 /* 801AD520 00176AE0  2C 00 00 00 */	cmpwi r0, 0
 /* 801AD524 00176AE4  41 82 23 F8 */	beq .L_801AF91C
-/* 801AD528 00176AE8  4B F2 BC 61 */	bl getBattleManagerInstance
+/* 801AD528 00176AE8  4B F2 BC 61 */	bl getBattleManagerInstancePtr__Fv
 /* 801AD52C 00176AEC  4B F3 CF 19 */	bl func_800EA444
 /* 801AD530 00176AF0  2C 03 00 00 */	cmpwi r3, 0
 /* 801AD534 00176AF4  7C 7C 1B 78 */	mr r28, r3
@@ -4058,7 +4058,7 @@
 /* 801AF95C 00178F1C  80 0D AA F8 */	lwz r0, lbl_80666C78@sda21(r13)
 /* 801AF960 00178F20  2C 00 00 00 */	cmpwi r0, 0
 /* 801AF964 00178F24  41 82 01 44 */	beq .L_801AFAA8
-/* 801AF968 00178F28  4B F2 98 21 */	bl getBattleManagerInstance
+/* 801AF968 00178F28  4B F2 98 21 */	bl getBattleManagerInstancePtr__Fv
 /* 801AF96C 00178F2C  4B F3 AA D9 */	bl func_800EA444
 /* 801AF970 00178F30  2C 03 00 00 */	cmpwi r3, 0
 /* 801AF974 00178F34  41 82 01 34 */	beq .L_801AFAA8
@@ -4626,7 +4626,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

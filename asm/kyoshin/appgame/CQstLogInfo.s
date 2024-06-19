@@ -2228,7 +2228,7 @@
 /* 8022B3C8 001F4988  48 23 3C F9 */	bl func_8045F0C0
 /* 8022B3CC 001F498C  7C 64 1B 78 */	mr r4, r3
 /* 8022B3D0 001F4990  38 60 08 58 */	li r3, 0x858
-/* 8022B3D4 001F4994  48 20 96 89 */	bl heap_malloc
+/* 8022B3D4 001F4994  48 20 96 89 */	bl heap_malloc__3mtlFUli
 /* 8022B3D8 001F4998  2C 03 00 00 */	cmpwi r3, 0
 /* 8022B3DC 001F499C  41 82 00 08 */	beq .L_8022B3E4
 /* 8022B3E0 001F49A0  4B EF AC A5 */	bl __ct__CTagProcessor
@@ -2860,7 +2860,7 @@
 	.4byte CQstLogInfo_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

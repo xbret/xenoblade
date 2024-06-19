@@ -6796,10 +6796,10 @@
 /* 8011C1DC 000E579C  38 60 00 00 */	li r3, 0
 /* 8011C1E0 000E57A0  48 00 00 F4 */	b .L_8011C2D4
 .L_8011C1E4:
-/* 8011C1E4 000E57A4  48 31 B3 D1 */	bl getHeapIndex__Fv
+/* 8011C1E4 000E57A4  48 31 B3 D1 */	bl getHeapIndex__3mtlFv
 /* 8011C1E8 000E57A8  7C 64 1B 78 */	mr r4, r3
 /* 8011C1EC 000E57AC  38 60 08 D8 */	li r3, 0x8d8
-/* 8011C1F0 000E57B0  48 31 88 6D */	bl heap_malloc
+/* 8011C1F0 000E57B0  48 31 88 6D */	bl heap_malloc__3mtlFUli
 /* 8011C1F4 000E57B4  2C 03 00 00 */	cmpwi r3, 0
 /* 8011C1F8 000E57B8  7C 7C 1B 78 */	mr r28, r3
 /* 8011C1FC 000E57BC  41 82 00 C0 */	beq .L_8011C2BC
@@ -7379,7 +7379,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -7441,7 +7441,7 @@
 	.4byte CMiniMap_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -7486,7 +7486,7 @@
 	.4byte CMMTex_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -7531,7 +7531,7 @@
 	.4byte CMMClock_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

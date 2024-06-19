@@ -3775,7 +3775,7 @@
 /* 8025657C 0021FB3C  48 20 8B 45 */	bl func_8045F0C0
 /* 80256580 0021FB40  7C 64 1B 78 */	mr r4, r3
 /* 80256584 0021FB44  38 60 08 58 */	li r3, 0x858
-/* 80256588 0021FB48  48 1D E4 D5 */	bl heap_malloc
+/* 80256588 0021FB48  48 1D E4 D5 */	bl heap_malloc__3mtlFUli
 /* 8025658C 0021FB4C  2C 03 00 00 */	cmpwi r3, 0
 /* 80256590 0021FB50  41 82 00 08 */	beq .L_80256598
 /* 80256594 0021FB54  4B EC FA F1 */	bl __ct__CTagProcessor
@@ -4221,7 +4221,7 @@
 	.4byte CCollepedia_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

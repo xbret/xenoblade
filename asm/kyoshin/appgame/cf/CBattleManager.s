@@ -649,13 +649,13 @@
 /* 800D8318 000A18D8  2C 00 00 03 */	cmpwi r0, 3
 /* 800D831C 000A18DC  40 82 00 28 */	bne .L_800D8344
 .L_800D8320:
-/* 800D8320 000A18E0  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D8320 000A18E0  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D8324 000A18E4  7F A4 EB 78 */	mr r4, r29
 /* 800D8328 000A18E8  38 63 01 A8 */	addi r3, r3, 0x1a8
 /* 800D832C 000A18EC  48 1A 16 C5 */	bl func_802799F0
 /* 800D8330 000A18F0  2C 03 00 00 */	cmpwi r3, 0
 /* 800D8334 000A18F4  41 82 00 10 */	beq .L_800D8344
-/* 800D8338 000A18F8  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D8338 000A18F8  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D833C 000A18FC  C0 03 20 AC */	lfs f0, 0x20ac(r3)
 /* 800D8340 000A1900  EF FF 00 2A */	fadds f31, f31, f0
 .L_800D8344:
@@ -857,7 +857,7 @@
 /* 800D8634 000A1BF4  48 0E 1B 19 */	bl __ct__cf_CSuddenCommu
 /* 800D8638 000A1BF8  38 7D 21 9C */	addi r3, r29, 0x219c
 /* 800D863C 000A1BFC  48 0C AA 9D */	bl __ct__cf_CVision
-/* 800D8640 000A1C00  48 35 EF 75 */	bl getHeapIndex__Fv
+/* 800D8640 000A1C00  48 35 EF 75 */	bl getHeapIndex__3mtlFv
 /* 800D8644 000A1C04  7C 7E 1B 78 */	mr r30, r3
 /* 800D8648 000A1C08  38 60 03 00 */	li r3, 0x300
 /* 800D864C 000A1C0C  7F C4 F3 78 */	mr r4, r30
@@ -1680,10 +1680,10 @@
 /* 800D9184 000A2744  4E 80 00 20 */	blr 
 .endfn __dt__Q22cf14CBattleManagerFv
 
-.fn getBattleManagerInstance, global
-/* 800D9188 000A2748  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+.fn getBattleManagerInstancePtr__Fv, global
+/* 800D9188 000A2748  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D918C 000A274C  4E 80 00 20 */	blr 
-.endfn getBattleManagerInstance
+.endfn getBattleManagerInstancePtr__Fv
 
 .fn func_800D9190, global
 /* 800D9190 000A2750  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1693,12 +1693,12 @@
 /* 800D91A0 000A2760  3C A0 00 03 */	lis r5, 0x000283D8@ha
 /* 800D91A4 000A2764  7C 64 1B 78 */	mr r4, r3
 /* 800D91A8 000A2768  38 65 83 D8 */	addi r3, r5, 0x000283D8@l
-/* 800D91AC 000A276C  48 35 B8 B1 */	bl heap_malloc
+/* 800D91AC 000A276C  48 35 B8 B1 */	bl heap_malloc__3mtlFUli
 /* 800D91B0 000A2770  2C 03 00 00 */	cmpwi r3, 0
 /* 800D91B4 000A2774  41 82 00 08 */	beq .L_800D91BC
 /* 800D91B8 000A2778  4B FF F3 45 */	bl __ct__cf_CBattleManager
 .L_800D91BC:
-/* 800D91BC 000A277C  90 6D A6 78 */	stw r3, CBattleManager_instance@sda21(r13)
+/* 800D91BC 000A277C  90 6D A6 78 */	stw r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D91C0 000A2780  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800D91C4 000A2784  7C 08 03 A6 */	mtlr r0
 /* 800D91C8 000A2788  38 21 00 10 */	addi r1, r1, 0x10
@@ -1709,7 +1709,7 @@
 /* 800D91D0 000A2790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D91D4 000A2794  7C 08 02 A6 */	mflr r0
 /* 800D91D8 000A2798  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800D91DC 000A279C  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D91DC 000A279C  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D91E0 000A27A0  2C 03 00 00 */	cmpwi r3, 0
 /* 800D91E4 000A27A4  41 82 00 24 */	beq .L_800D9208
 /* 800D91E8 000A27A8  41 82 00 18 */	beq .L_800D9200
@@ -1720,7 +1720,7 @@
 /* 800D91FC 000A27BC  4E 80 04 21 */	bctrl 
 .L_800D9200:
 /* 800D9200 000A27C0  38 00 00 00 */	li r0, 0
-/* 800D9204 000A27C4  90 0D A6 78 */	stw r0, CBattleManager_instance@sda21(r13)
+/* 800D9204 000A27C4  90 0D A6 78 */	stw r0, CBattleManager_instancePtr@sda21(r13)
 .L_800D9208:
 /* 800D9208 000A27C8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800D920C 000A27CC  7C 08 03 A6 */	mtlr r0
@@ -2141,7 +2141,7 @@
 /* 800D97A4 000A2D64  7C 06 20 40 */	cmplw r6, r4
 /* 800D97A8 000A2D68  40 82 FF D8 */	bne .L_800D9780
 .L_800D97AC:
-/* 800D97AC 000A2D6C  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D97AC 000A2D6C  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D97B0 000A2D70  38 80 00 00 */	li r4, 0
 /* 800D97B4 000A2D74  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 800D97B8 000A2D78  80 65 00 00 */	lwz r3, 0(r5)
@@ -2156,7 +2156,7 @@
 /* 800D97D4 000A2D94  40 82 01 88 */	bne .L_800D995C
 /* 800D97D8 000A2D98  7F C3 F3 78 */	mr r3, r30
 /* 800D97DC 000A2D9C  48 01 A9 C5 */	bl func_800F41A0
-/* 800D97E0 000A2DA0  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D97E0 000A2DA0  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D97E4 000A2DA4  38 80 00 00 */	li r4, 0
 /* 800D97E8 000A2DA8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 800D97EC 000A2DAC  80 65 00 00 */	lwz r3, 0(r5)
@@ -2641,7 +2641,7 @@
 .L_800D9E8C:
 /* 800D9E8C 000A344C  7C 04 18 40 */	cmplw r4, r3
 /* 800D9E90 000A3450  40 82 FF F8 */	bne .L_800D9E88
-/* 800D9E94 000A3454  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D9E94 000A3454  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D9E98 000A3458  38 80 00 00 */	li r4, 0
 /* 800D9E9C 000A345C  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 800D9EA0 000A3460  80 65 00 00 */	lwz r3, 0(r5)
@@ -2659,7 +2659,7 @@
 /* 800D9EC8 000A3488  80 1F 3F 00 */	lwz r0, 0x3f00(r31)
 /* 800D9ECC 000A348C  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 800D9ED0 000A3490  40 82 00 30 */	bne .L_800D9F00
-/* 800D9ED4 000A3494  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800D9ED4 000A3494  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800D9ED8 000A3498  38 80 00 00 */	li r4, 0
 /* 800D9EDC 000A349C  80 A3 00 08 */	lwz r5, 8(r3)
 /* 800D9EE0 000A34A0  80 65 00 00 */	lwz r3, 0(r5)
@@ -3111,7 +3111,7 @@
 /* 800DA540 000A3B00  81 8C 05 B8 */	lwz r12, 0x5b8(r12)
 /* 800DA544 000A3B04  7D 89 03 A6 */	mtctr r12
 /* 800DA548 000A3B08  4E 80 04 21 */	bctrl 
-/* 800DA54C 000A3B0C  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800DA54C 000A3B0C  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800DA550 000A3B10  FF A0 08 90 */	fmr f29, f1
 /* 800DA554 000A3B14  38 00 00 00 */	li r0, 0
 /* 800DA558 000A3B18  88 63 01 AA */	lbz r3, 0x1aa(r3)
@@ -3780,7 +3780,7 @@
 /* 800DAF38 000A44F8  38 80 00 3B */	li r4, 0x3b
 /* 800DAF3C 000A44FC  48 18 53 29 */	bl func_80260264
 .L_800DAF40:
-/* 800DAF40 000A4500  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800DAF40 000A4500  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800DAF44 000A4504  7F 44 D3 78 */	mr r4, r26
 /* 800DAF48 000A4508  80 E1 00 08 */	lwz r7, 8(r1)
 /* 800DAF4C 000A450C  38 A0 00 00 */	li r5, 0
@@ -11983,7 +11983,7 @@
 /* 800E2498 000ABA58  7D 89 03 A6 */	mtctr r12
 /* 800E249C 000ABA5C  4E 80 04 21 */	bctrl 
 .L_800E24A0:
-/* 800E24A0 000ABA60  80 0D A6 78 */	lwz r0, CBattleManager_instance@sda21(r13)
+/* 800E24A0 000ABA60  80 0D A6 78 */	lwz r0, CBattleManager_instancePtr@sda21(r13)
 /* 800E24A4 000ABA64  2C 00 00 00 */	cmpwi r0, 0
 /* 800E24A8 000ABA68  41 82 00 10 */	beq .L_800E24B8
 /* 800E24AC 000ABA6C  38 7A 21 9C */	addi r3, r26, 0x219c
@@ -13984,7 +13984,7 @@
 /* 800E41F4 000AD7B4  7C 00 00 34 */	cntlzw r0, r0
 /* 800E41F8 000AD7B8  54 00 D9 7F */	rlwinm. r0, r0, 0x1b, 5, 0x1f
 /* 800E41FC 000AD7BC  41 82 00 1C */	beq .L_800E4218
-/* 800E4200 000AD7C0  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E4200 000AD7C0  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E4204 000AD7C4  7F 04 C3 78 */	mr r4, r24
 /* 800E4208 000AD7C8  38 A0 00 00 */	li r5, 0
 /* 800E420C 000AD7CC  38 C0 00 16 */	li r6, 0x16
@@ -14059,7 +14059,7 @@
 /* 800E4318 000AD8D8  4E 80 04 21 */	bctrl 
 /* 800E431C 000AD8DC  2C 03 00 00 */	cmpwi r3, 0
 /* 800E4320 000AD8E0  41 82 00 1C */	beq .L_800E433C
-/* 800E4324 000AD8E4  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E4324 000AD8E4  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E4328 000AD8E8  7E E4 BB 78 */	mr r4, r23
 /* 800E432C 000AD8EC  7F 05 C3 78 */	mr r5, r24
 /* 800E4330 000AD8F0  38 C0 00 02 */	li r6, 2
@@ -14094,7 +14094,7 @@
 /* 800E43A0 000AD960  38 80 00 3A */	li r4, 0x3a
 /* 800E43A4 000AD964  48 17 BE C1 */	bl func_80260264
 .L_800E43A8:
-/* 800E43A8 000AD968  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E43A8 000AD968  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E43AC 000AD96C  7E E4 BB 78 */	mr r4, r23
 /* 800E43B0 000AD970  80 E1 00 AC */	lwz r7, 0xac(r1)
 /* 800E43B4 000AD974  7F 05 C3 78 */	mr r5, r24
@@ -14136,7 +14136,7 @@
 /* 800E4438 000AD9F8  48 06 43 41 */	bl func_80148778
 /* 800E443C 000AD9FC  2C 03 00 00 */	cmpwi r3, 0
 /* 800E4440 000ADA00  41 82 00 1C */	beq .L_800E445C
-/* 800E4444 000ADA04  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E4444 000ADA04  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E4448 000ADA08  7E E4 BB 78 */	mr r4, r23
 /* 800E444C 000ADA0C  7F 05 C3 78 */	mr r5, r24
 /* 800E4450 000ADA10  38 C0 00 04 */	li r6, 4
@@ -14154,7 +14154,7 @@
 /* 800E447C 000ADA3C  2C 03 00 00 */	cmpwi r3, 0
 /* 800E4480 000ADA40  41 82 00 1C */	beq .L_800E449C
 .L_800E4484:
-/* 800E4484 000ADA44  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E4484 000ADA44  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E4488 000ADA48  7E E4 BB 78 */	mr r4, r23
 /* 800E448C 000ADA4C  7F 05 C3 78 */	mr r5, r24
 /* 800E4490 000ADA50  38 C0 00 05 */	li r6, 5
@@ -14182,7 +14182,7 @@
 /* 800E44E0 000ADAA0  80 01 03 54 */	lwz r0, 0x354(r1)
 /* 800E44E4 000ADAA4  54 00 06 F9 */	rlwinm. r0, r0, 0, 0x1b, 0x1c
 /* 800E44E8 000ADAA8  41 82 00 1C */	beq .L_800E4504
-/* 800E44EC 000ADAAC  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E44EC 000ADAAC  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E44F0 000ADAB0  7E E4 BB 78 */	mr r4, r23
 /* 800E44F4 000ADAB4  80 E1 00 A8 */	lwz r7, 0xa8(r1)
 /* 800E44F8 000ADAB8  38 A0 00 00 */	li r5, 0
@@ -14192,7 +14192,7 @@
 /* 800E4504 000ADAC4  80 01 03 54 */	lwz r0, 0x354(r1)
 /* 800E4508 000ADAC8  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 800E450C 000ADACC  41 82 00 1C */	beq .L_800E4528
-/* 800E4510 000ADAD0  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E4510 000ADAD0  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E4514 000ADAD4  7E E4 BB 78 */	mr r4, r23
 /* 800E4518 000ADAD8  80 E1 00 A8 */	lwz r7, 0xa8(r1)
 /* 800E451C 000ADADC  38 A0 00 00 */	li r5, 0
@@ -15765,7 +15765,7 @@
 /* 800E5B68 000AF128  38 80 00 74 */	li r4, 0x74
 /* 800E5B6C 000AF12C  48 17 A6 F9 */	bl func_80260264
 .L_800E5B70:
-/* 800E5B70 000AF130  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E5B70 000AF130  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E5B74 000AF134  7E E4 BB 78 */	mr r4, r23
 /* 800E5B78 000AF138  80 E1 00 A0 */	lwz r7, 0xa0(r1)
 /* 800E5B7C 000AF13C  38 A0 00 00 */	li r5, 0
@@ -16046,7 +16046,7 @@
 /* 800E5FA8 000AF568  90 61 01 B8 */	stw r3, 0x1b8(r1)
 /* 800E5FAC 000AF56C  38 C1 01 A8 */	addi r6, r1, 0x1a8
 /* 800E5FB0 000AF570  60 00 18 00 */	ori r0, r0, 0x1800
-/* 800E5FB4 000AF574  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E5FB4 000AF574  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E5FB8 000AF578  D0 01 01 C8 */	stfs f0, 0x1c8(r1)
 /* 800E5FBC 000AF57C  38 80 00 00 */	li r4, 0
 /* 800E5FC0 000AF580  38 E0 00 00 */	li r7, 0
@@ -19341,7 +19341,7 @@
 /* 800E8F34 000B24F4  64 00 44 00 */	oris r0, r0, 0x4400
 /* 800E8F38 000B24F8  90 03 00 78 */	stw r0, 0x78(r3)
 /* 800E8F3C 000B24FC  7F 26 CB 78 */	mr r6, r25
-/* 800E8F40 000B2500  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E8F40 000B2500  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E8F44 000B2504  4B FF 21 B9 */	bl func_800DB0FC
 /* 800E8F48 000B2508  80 19 00 78 */	lwz r0, 0x78(r25)
 /* 800E8F4C 000B250C  54 00 01 88 */	rlwinm r0, r0, 0, 6, 4
@@ -19719,7 +19719,7 @@
 /* 800E94D4 000B2A94  64 00 44 00 */	oris r0, r0, 0x4400
 /* 800E94D8 000B2A98  90 03 00 78 */	stw r0, 0x78(r3)
 /* 800E94DC 000B2A9C  7F A6 EB 78 */	mr r6, r29
-/* 800E94E0 000B2AA0  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E94E0 000B2AA0  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E94E4 000B2AA4  4B FF 1C 19 */	bl func_800DB0FC
 /* 800E94E8 000B2AA8  80 1D 00 78 */	lwz r0, 0x78(r29)
 /* 800E94EC 000B2AAC  7F 43 D3 78 */	mr r3, r26
@@ -20365,7 +20365,7 @@
 /* 800E9E70 000B3430  90 81 00 20 */	stw r4, 0x20(r1)
 /* 800E9E74 000B3434  38 C1 00 20 */	addi r6, r1, 0x20
 /* 800E9E78 000B3438  60 00 18 00 */	ori r0, r0, 0x1800
-/* 800E9E7C 000B343C  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E9E7C 000B343C  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E9E80 000B3440  92 E1 00 24 */	stw r23, 0x24(r1)
 /* 800E9E84 000B3444  38 80 00 00 */	li r4, 0
 /* 800E9E88 000B3448  38 E0 00 00 */	li r7, 0
@@ -20418,7 +20418,7 @@
 /* 800E9F3C 000B34FC  38 E0 00 00 */	li r7, 0
 /* 800E9F40 000B3500  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 800E9F44 000B3504  60 00 18 00 */	ori r0, r0, 0x1800
-/* 800E9F48 000B3508  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800E9F48 000B3508  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800E9F4C 000B350C  B3 21 00 2C */	sth r25, 0x2c(r1)
 /* 800E9F50 000B3510  81 1D 3F 10 */	lwz r8, 0x3f10(r29)
 /* 800E9F54 000B3514  91 01 00 20 */	stw r8, 0x20(r1)
@@ -20779,7 +20779,7 @@
 .endfn func_800EA410
 
 .fn func_800EA420, global
-/* 800EA420 000B39E0  80 0D A6 78 */	lwz r0, CBattleManager_instance@sda21(r13)
+/* 800EA420 000B39E0  80 0D A6 78 */	lwz r0, CBattleManager_instancePtr@sda21(r13)
 /* 800EA424 000B39E4  2C 00 00 00 */	cmpwi r0, 0
 /* 800EA428 000B39E8  41 82 00 14 */	beq .L_800EA43C
 /* 800EA42C 000B39EC  85 83 21 9C */	lwzu r12, 0x219c(r3)
@@ -20792,7 +20792,7 @@
 .endfn func_800EA420
 
 .fn func_800EA444, global
-/* 800EA444 000B3A04  80 0D A6 78 */	lwz r0, CBattleManager_instance@sda21(r13)
+/* 800EA444 000B3A04  80 0D A6 78 */	lwz r0, CBattleManager_instancePtr@sda21(r13)
 /* 800EA448 000B3A08  2C 00 00 00 */	cmpwi r0, 0
 /* 800EA44C 000B3A0C  41 82 00 0C */	beq .L_800EA458
 /* 800EA450 000B3A10  38 63 21 9C */	addi r3, r3, 0x219c
@@ -21066,7 +21066,7 @@
 .L_800EA7F4:
 /* 800EA7F4 000B3DB4  57 E0 07 7B */	rlwinm. r0, r31, 0, 0x1d, 0x1d
 /* 800EA7F8 000B3DB8  41 82 01 70 */	beq .L_800EA968
-/* 800EA7FC 000B3DBC  80 0D A6 78 */	lwz r0, CBattleManager_instance@sda21(r13)
+/* 800EA7FC 000B3DBC  80 0D A6 78 */	lwz r0, CBattleManager_instancePtr@sda21(r13)
 /* 800EA800 000B3DC0  2C 00 00 00 */	cmpwi r0, 0
 /* 800EA804 000B3DC4  41 82 00 14 */	beq .L_800EA818
 /* 800EA808 000B3DC8  38 7E 21 9C */	addi r3, r30, 0x219c
@@ -21209,7 +21209,7 @@
 /* 800EA9E8 000B3FA8  90 65 00 08 */	stw r3, 8(r5)
 /* 800EA9EC 000B3FAC  90 05 00 30 */	stw r0, 0x30(r5)
 /* 800EA9F0 000B3FB0  7F C5 F3 78 */	mr r5, r30
-/* 800EA9F4 000B3FB4  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800EA9F4 000B3FB4  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800EA9F8 000B3FB8  48 00 1F 21 */	bl func_800EC918
 /* 800EA9FC 000B3FBC  2C 1F 00 00 */	cmpwi r31, 0
 /* 800EAA00 000B3FC0  41 82 00 14 */	beq .L_800EAA14
@@ -23340,7 +23340,7 @@
 /* 800EC7D0 000B5D90  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800EC7D4 000B5D94  D0 1C 00 5C */	stfs f0, 0x5c(r28)
 .L_800EC7D8:
-/* 800EC7D8 000B5D98  80 0D A6 78 */	lwz r0, CBattleManager_instance@sda21(r13)
+/* 800EC7D8 000B5D98  80 0D A6 78 */	lwz r0, CBattleManager_instancePtr@sda21(r13)
 /* 800EC7DC 000B5D9C  2C 00 00 00 */	cmpwi r0, 0
 /* 800EC7E0 000B5DA0  41 82 00 14 */	beq .L_800EC7F4
 /* 800EC7E4 000B5DA4  38 78 21 9C */	addi r3, r24, 0x219c
@@ -30343,7 +30343,7 @@
 /* 800F2DB4 000BC374  A8 13 00 4A */	lha r0, 0x4a(r19)
 /* 800F2DB8 000BC378  7E E4 BB 78 */	mr r4, r23
 /* 800F2DBC 000BC37C  7D 05 19 D6 */	mullw r8, r5, r3
-/* 800F2DC0 000BC380  80 6D A6 78 */	lwz r3, CBattleManager_instance@sda21(r13)
+/* 800F2DC0 000BC380  80 6D A6 78 */	lwz r3, CBattleManager_instancePtr@sda21(r13)
 /* 800F2DC4 000BC384  7F 05 C3 78 */	mr r5, r24
 /* 800F2DC8 000BC388  38 C1 02 50 */	addi r6, r1, 0x250
 /* 800F2DCC 000BC38C  38 E0 00 00 */	li r7, 0
@@ -33371,9 +33371,9 @@
 
 .balign 8
 
-.obj CBattleManager_instance, local
+.obj CBattleManager_instancePtr, local
 	.skip 0x4
-.endobj CBattleManager_instance
+.endobj CBattleManager_instancePtr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

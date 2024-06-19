@@ -57,6 +57,13 @@ namespace ml{
 			height = 0;
 		}
 
+		CRect16(s16 x, s16 y, s16 width, s16 height){
+			this->x = x;
+			this->y = y;
+			this->width = width;
+			this->height = height;
+		}
+
 		bool isInside(const CPnt16& point) const;
 	};
 

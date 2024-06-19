@@ -2623,10 +2623,10 @@
 /* 8013242C 000FB9EC  90 77 01 14 */	stw r3, 0x114(r23)
 /* 80132430 000FB9F0  38 80 00 03 */	li r4, 3
 /* 80132434 000FB9F4  48 31 CD 21 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
-/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex__Fv
+/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex__3mtlFv
 /* 8013243C 000FB9FC  7C 64 1B 78 */	mr r4, r3
 /* 80132440 000FBA00  38 60 00 54 */	li r3, 0x54
-/* 80132444 000FBA04  48 30 26 19 */	bl heap_malloc
+/* 80132444 000FBA04  48 30 26 19 */	bl heap_malloc__3mtlFUli
 /* 80132448 000FBA08  2C 03 00 00 */	cmpwi r3, 0
 /* 8013244C 000FBA0C  7C 76 1B 78 */	mr r22, r3
 /* 80132450 000FBA10  41 82 00 58 */	beq .L_801324A8
@@ -3950,10 +3950,10 @@
 /* 80133714 000FCCD4  48 30 0C 8D */	bl Heap_getRegionIndex2
 /* 80133718 000FCCD8  7C 7F 1B 78 */	mr r31, r3
 .L_8013371C:
-/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex__Fv
+/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex__3mtlFv
 /* 80133720 000FCCE0  7C 64 1B 78 */	mr r4, r3
 /* 80133724 000FCCE4  38 60 0C 94 */	li r3, 0xc94
-/* 80133728 000FCCE8  48 30 13 35 */	bl heap_malloc
+/* 80133728 000FCCE8  48 30 13 35 */	bl heap_malloc__3mtlFUli
 /* 8013372C 000FCCEC  2C 03 00 00 */	cmpwi r3, 0
 /* 80133730 000FCCF0  41 82 00 10 */	beq .L_80133740
 /* 80133734 000FCCF4  7F C4 F3 78 */	mr r4, r30
@@ -6612,7 +6612,7 @@
 /* 801359F0 000FEFB0  38 60 00 01 */	li r3, 1
 /* 801359F4 000FEFB4  48 00 02 FC */	b .L_80135CF0
 .L_801359F8:
-/* 801359F8 000FEFB8  4B FA 37 91 */	bl getBattleManagerInstance
+/* 801359F8 000FEFB8  4B FA 37 91 */	bl getBattleManagerInstancePtr__Fv
 /* 801359FC 000FEFBC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 80135A00 000FEFC0  38 80 00 00 */	li r4, 0
 /* 80135A04 000FEFC4  80 65 00 00 */	lwz r3, 0(r5)
@@ -7203,7 +7203,7 @@
 	.4byte func_80135FBC__12CUICfManagerFv
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

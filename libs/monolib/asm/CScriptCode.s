@@ -487,7 +487,7 @@
 /* 8043A760 00403D20  48 00 9D B5 */	bl func_80444514
 /* 8043A764 00403D24  7C 64 1B 78 */	mr r4, r3
 /* 8043A768 00403D28  38 60 00 08 */	li r3, 8
-/* 8043A76C 00403D2C  4B FF A2 F1 */	bl heap_malloc
+/* 8043A76C 00403D2C  4B FF A2 F1 */	bl heap_malloc__3mtlFUli
 /* 8043A770 00403D30  7C 7F 1B 78 */	mr r31, r3
 /* 8043A774 00403D34  38 80 00 00 */	li r4, 0
 /* 8043A778 00403D38  38 A0 00 08 */	li r5, 8
@@ -550,10 +550,10 @@
 /* 8043A838 00403DF8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8043A83C 00403DFC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8043A840 00403E00  7C 7D 1B 78 */	mr r29, r3
-/* 8043A844 00403E04  4B FF CD 71 */	bl getHeapIndex__Fv
+/* 8043A844 00403E04  4B FF CD 71 */	bl getHeapIndex__3mtlFv
 /* 8043A848 00403E08  7C 64 1B 78 */	mr r4, r3
 /* 8043A84C 00403E0C  38 60 17 40 */	li r3, 0x1740
-/* 8043A850 00403E10  4B FF A2 0D */	bl heap_malloc
+/* 8043A850 00403E10  4B FF A2 0D */	bl heap_malloc__3mtlFUli
 /* 8043A854 00403E14  2C 03 00 00 */	cmpwi r3, 0
 /* 8043A858 00403E18  7C 7E 1B 78 */	mr r30, r3
 /* 8043A85C 00403E1C  41 82 00 4C */	beq .L_8043A8A8
@@ -579,7 +579,7 @@
 /* 8043A8A8 00403E68  7F C3 F3 78 */	mr r3, r30
 /* 8043A8AC 00403E6C  7F A4 EB 78 */	mr r4, r29
 /* 8043A8B0 00403E70  38 A0 00 00 */	li r5, 0
-/* 8043A8B4 00403E74  4B FF E3 25 */	bl func_80438BD8
+/* 8043A8B4 00403E74  4B FF E3 25 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8043A8B8 00403E78  7F C3 F3 78 */	mr r3, r30
 /* 8043A8BC 00403E7C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8043A8C0 00403E80  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -667,7 +667,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

@@ -70,10 +70,10 @@
 /* 804437EC 0040CDAC  83 CD BD 38 */	lwz r30, lbl_80667EB8@sda21(r13)
 /* 804437F0 0040CDB0  38 63 5F A0 */	addi r3, r3, CWorkControl_strpool@l
 /* 804437F4 0040CDB4  3B E3 00 10 */	addi r31, r3, 0x10
-/* 804437F8 0040CDB8  4B FF 3D BD */	bl getHeapIndex__Fv
+/* 804437F8 0040CDB8  4B FF 3D BD */	bl getHeapIndex__3mtlFv
 /* 804437FC 0040CDBC  7C 64 1B 78 */	mr r4, r3
 /* 80443800 0040CDC0  38 60 01 C8 */	li r3, 0x1c8
-/* 80443804 0040CDC4  4B FF 12 59 */	bl heap_malloc
+/* 80443804 0040CDC4  4B FF 12 59 */	bl heap_malloc__3mtlFUli
 /* 80443808 0040CDC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8044380C 0040CDCC  41 82 00 10 */	beq .L_8044381C
 /* 80443810 0040CDD0  7F E4 FB 78 */	mr r4, r31
@@ -82,7 +82,7 @@
 .L_8044381C:
 /* 8044381C 0040CDDC  7F C4 F3 78 */	mr r4, r30
 /* 80443820 0040CDE0  38 A0 00 00 */	li r5, 0
-/* 80443824 0040CDE4  4B FF 53 B5 */	bl func_80438BD8
+/* 80443824 0040CDE4  4B FF 53 B5 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80443828 0040CDE8  38 60 00 01 */	li r3, 1
 .L_8044382C:
 /* 8044382C 0040CDEC  BB C1 00 08 */	lmw r30, 8(r1)
@@ -191,10 +191,10 @@
 /* 8044396C 0040CF2C  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 80443970 0040CF30  7C 7D 1B 78 */	mr r29, r3
 /* 80443974 0040CF34  3B E4 00 6C */	addi r31, r4, 0x6c
-/* 80443978 0040CF38  4B FF 3C 3D */	bl getHeapIndex__Fv
+/* 80443978 0040CF38  4B FF 3C 3D */	bl getHeapIndex__3mtlFv
 /* 8044397C 0040CF3C  7C 64 1B 78 */	mr r4, r3
 /* 80443980 0040CF40  38 60 01 C8 */	li r3, 0x1c8
-/* 80443984 0040CF44  4B FF 10 D9 */	bl heap_malloc
+/* 80443984 0040CF44  4B FF 10 D9 */	bl heap_malloc__3mtlFUli
 /* 80443988 0040CF48  2C 03 00 00 */	cmpwi r3, 0
 /* 8044398C 0040CF4C  7C 7E 1B 78 */	mr r30, r3
 /* 80443990 0040CF50  41 82 00 14 */	beq .L_804439A4
@@ -206,7 +206,7 @@
 /* 804439A4 0040CF64  7F C3 F3 78 */	mr r3, r30
 /* 804439A8 0040CF68  7F A4 EB 78 */	mr r4, r29
 /* 804439AC 0040CF6C  38 A0 00 00 */	li r5, 0
-/* 804439B0 0040CF70  4B FF 52 29 */	bl func_80438BD8
+/* 804439B0 0040CF70  4B FF 52 29 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 804439B4 0040CF74  7F C3 F3 78 */	mr r3, r30
 /* 804439B8 0040CF78  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 804439BC 0040CF7C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -249,7 +249,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

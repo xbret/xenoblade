@@ -114,7 +114,7 @@
 /* 801F946C 001C2A2C  48 00 02 31 */	bl func_801F969C
 /* 801F9470 001C2A30  80 7D 00 14 */	lwz r3, 0x14(r29)
 /* 801F9474 001C2A34  38 81 00 10 */	addi r4, r1, 0x10
-/* 801F9478 001C2A38  48 24 37 05 */	bl func_8043CB7C
+/* 801F9478 001C2A38  48 24 37 05 */	bl func_8043CB7C__5CViewFRCQ22ml7CRect16
 /* 801F947C 001C2A3C  C0 22 A7 18 */	lfs f1, float_8066AA98@sda21(r2)
 /* 801F9480 001C2A40  38 61 00 18 */	addi r3, r1, 0x18
 /* 801F9484 001C2A44  FC 40 08 90 */	fmr f2, f1
@@ -1116,7 +1116,7 @@
 /* 801FA30C 001C38CC  48 23 EF 4D */	bl func_80439258
 /* 801FA310 001C38D0  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 801FA314 001C38D4  38 80 00 00 */	li r4, 0
-/* 801FA318 001C38D8  48 23 DB D9 */	bl func_80437EF0
+/* 801FA318 001C38D8  48 23 DB D9 */	bl func_80437EF0__11CWorkThreadFUl
 /* 801FA31C 001C38DC  38 00 00 00 */	li r0, 0
 /* 801FA320 001C38E0  90 1E 00 14 */	stw r0, 0x14(r30)
 .L_801FA324:
@@ -1254,7 +1254,7 @@
 /* 801FA4C8 001C3A88  4B FF F2 45 */	bl func_801F970C
 /* 801FA4CC 001C3A8C  7C 64 1B 78 */	mr r4, r3
 /* 801FA4D0 001C3A90  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 801FA4D4 001C3A94  48 24 26 A9 */	bl func_8043CB7C
+/* 801FA4D4 001C3A94  48 24 26 A9 */	bl func_8043CB7C__5CViewFRCQ22ml7CRect16
 .L_801FA4D8:
 /* 801FA4D8 001C3A98  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 801FA4DC 001C3A9C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -3100,7 +3100,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

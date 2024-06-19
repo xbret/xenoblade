@@ -374,7 +374,7 @@
 /* 80044FB8 0000E578  48 48 6B 5C */	b func_804CBB14
 .endfn func_80044F8C
 
-.fn func_80044FBC, global
+.fn func_80044FBC__FUl, global
 /* 80044FBC 0000E57C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044FC0 0000E580  7C 08 02 A6 */	mflr r0
 /* 80044FC4 0000E584  90 01 00 14 */	stw r0, 0x14(r1)
@@ -410,7 +410,7 @@
 /* 8004502C 0000E5EC  7C 08 03 A6 */	mtlr r0
 /* 80045030 0000E5F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80045034 0000E5F4  4E 80 00 20 */	blr
-.endfn func_80044FBC
+.endfn func_80044FBC__FUl
 
 .fn func_80045038, global
 /* 80045038 0000E5F8  3C 60 80 66 */	lis r3, lbl_806624D8@ha
@@ -465,10 +465,10 @@
 /* 800450D8 0000E698  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 800450DC 0000E69C  7C 7D 1B 78 */	mr r29, r3
 /* 800450E0 0000E6A0  7C 9E 23 78 */	mr r30, r4
-/* 800450E4 0000E6A4  48 3F 24 D1 */	bl getHeapIndex__Fv
+/* 800450E4 0000E6A4  48 3F 24 D1 */	bl getHeapIndex__3mtlFv
 /* 800450E8 0000E6A8  7C 64 1B 78 */	mr r4, r3
 /* 800450EC 0000E6AC  38 60 00 94 */	li r3, 0x94
-/* 800450F0 0000E6B0  48 3E F9 6D */	bl heap_malloc
+/* 800450F0 0000E6B0  48 3E F9 6D */	bl heap_malloc__3mtlFUli
 /* 800450F4 0000E6B4  2C 03 00 00 */	cmpwi r3, 0
 /* 800450F8 0000E6B8  7C 7F 1B 78 */	mr r31, r3
 /* 800450FC 0000E6BC  41 82 00 10 */	beq .L_8004510C
@@ -1217,7 +1217,7 @@
 
 .obj "@eti_80021B60", local
 .hidden "@eti_80021B60"
-	.4byte func_80044FBC
+	.4byte func_80044FBC__FUl
 	.4byte 0x0000007C
 	.4byte "@etb_80006F48"
 .endobj "@eti_80021B60"

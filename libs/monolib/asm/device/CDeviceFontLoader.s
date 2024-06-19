@@ -169,7 +169,7 @@
 /* 804550B4 0041E674  4B FF DC CD */	bl func_80452D80
 /* 804550B8 0041E678  7F E3 FB 78 */	mr r3, r31
 /* 804550BC 0041E67C  38 80 00 00 */	li r4, 0
-/* 804550C0 0041E680  4B FE 2E 31 */	bl func_80437EF0
+/* 804550C0 0041E680  4B FE 2E 31 */	bl func_80437EF0__11CWorkThreadFUl
 .L_804550C4:
 /* 804550C4 0041E684  38 00 00 00 */	li r0, 0
 /* 804550C8 0041E688  90 1F 02 0C */	stw r0, 0x20c(r31)
@@ -206,7 +206,7 @@
 	.4byte CDeviceFontLoader_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

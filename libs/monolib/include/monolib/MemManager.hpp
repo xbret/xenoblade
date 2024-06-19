@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+#include <string.h>
 
 namespace mtl{
 
@@ -64,26 +65,28 @@ struct Heap{
     }
 };
 
-Heap heapArray[80]; 
-int arenaMemorySize;
-int lbl_80665E28;
-int lbl_80665E2C;
-int regionIndex1;
-int regionIndex2;
-bool lbl_80665E38;
-bool lbl_80665E39;
-s32 lbl_80667E50;
-bool lbl_80667E54;
+extern Heap heapArray[80]; 
+extern int arenaMemorySize;
+extern int lbl_80665E28;
+extern int lbl_80665E2C;
+extern int regionIndex1;
+extern int regionIndex2;
+extern bool lbl_80665E38;
+extern bool lbl_80665E39;
+extern s32 lbl_80667E50;
+extern bool lbl_80667E54;
 
 #define MEM2_END_ADDR 0x935E0000
 
 
 void* allocate(Heap* heap, u32 param2, u32 size, u32 param4);
-    MemBlock* MemManager_804339B8(Heap*, MemBlock*);
-    MemBlock* MemManager_80433AA8(Heap*, MemBlock*);
-    void* malloc(size_t size, int memBlockIndex);
+MemBlock* MemManager_804339B8(Heap*, MemBlock*);
+MemBlock* MemManager_80433AA8(Heap*, MemBlock*);
+void MemManager_setArenaMemorySize(u32, u32);
+void* heap_malloc(size_t size, int memBlockIndex);
+int getHeapIndex();
 
-    #define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)
+#define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)
 
 static inline Heap* getHeap(u32 index){
     return &(heapArray[index & 0xFF]);
@@ -91,8 +94,8 @@ static inline Heap* getHeap(u32 index){
 
 }
 
-void operator delete(void*);
-void operator delete[](void*);
+void operator delete(void*) throw();
+void operator delete[](void*) throw();
 
 /*Operator new seems to have been inlined in Monolithsoft's code, with it following this general pattern:
 
@@ -118,6 +121,7 @@ bl constructor
 Not sure what the second param is
 The second parameter is often the result from getHeapIndex. They might've used some
 type of macro for those cases? */
-inline void* operator new(size_t size, int memBlockIndex){
-    return mtl::malloc(size,memBlockIndex);
+inline void* operator new(size_t size){
+	int memBlockIndex = mtl::getHeapIndex();
+    return mtl::heap_malloc(size,memBlockIndex);
 }

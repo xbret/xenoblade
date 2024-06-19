@@ -9,7 +9,7 @@
 /* 804559D8 0041EF98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804559DC 0041EF9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804559E0 0041EFA0  7C 7F 1B 78 */	mr r31, r3
-/* 804559E4 0041EFA4  4B FE 32 4D */	bl __ct__CProc
+/* 804559E4 0041EFA4  4B FE 32 4D */	bl __ct__5CProcFPCcP11CWorkThreadUl
 /* 804559E8 0041EFA8  3C 80 80 57 */	lis r4, __vt__8CDesktop@ha
 /* 804559EC 0041EFAC  38 60 00 00 */	li r3, 0
 /* 804559F0 0041EFB0  38 84 04 10 */	addi r4, r4, __vt__8CDesktop@l
@@ -19,7 +19,7 @@
 /* 80455A00 0041EFC0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80455A04 0041EFC4  38 7F 01 EC */	addi r3, r31, 0x1ec
 /* 80455A08 0041EFC8  C0 02 C8 9C */	lfs f0, float_8066CC1C@sda21(r2)
-/* 80455A0C 0041EFCC  93 ED BE 04 */	stw r31, lbl_80667F84@sda21(r13)
+/* 80455A0C 0041EFCC  93 ED BE 04 */	stw r31, CDesktop_instancePtr@sda21(r13)
 /* 80455A10 0041EFD0  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80455A14 0041EFD4  D0 3F 01 EC */	stfs f1, 0x1ec(r31)
 /* 80455A18 0041EFD8  D0 3F 01 F0 */	stfs f1, 0x1f0(r31)
@@ -44,7 +44,7 @@
 /* 80455A58 0041F018  7C 9F 23 78 */	mr r31, r4
 /* 80455A5C 0041F01C  41 82 00 24 */	beq .L_80455A80
 /* 80455A60 0041F020  38 00 00 00 */	li r0, 0
-/* 80455A64 0041F024  90 0D BE 04 */	stw r0, lbl_80667F84@sda21(r13)
+/* 80455A64 0041F024  90 0D BE 04 */	stw r0, CDesktop_instancePtr@sda21(r13)
 /* 80455A68 0041F028  38 80 00 00 */	li r4, 0
 /* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__5CProcFv
 /* 80455A70 0041F030  2C 1F 00 00 */	cmpwi r31, 0
@@ -60,13 +60,13 @@
 /* 80455A94 0041F054  4E 80 00 20 */	blr 
 .endfn __dt__8CDesktopFv
 
-.fn func_80455A98, global
-/* 80455A98 0041F058  80 6D BE 04 */	lwz r3, lbl_80667F84@sda21(r13)
+.fn getCDesktopInstancePtr__Fv, global
+/* 80455A98 0041F058  80 6D BE 04 */	lwz r3, CDesktop_instancePtr@sda21(r13)
 /* 80455A9C 0041F05C  4E 80 00 20 */	blr 
-.endfn func_80455A98
+.endfn getCDesktopInstancePtr__Fv
 
-.fn func_80455AA0, global
-/* 80455AA0 0041F060  80 6D BE 04 */	lwz r3, lbl_80667F84@sda21(r13)
+.fn func_80455AA0__Fv, global
+/* 80455AA0 0041F060  80 6D BE 04 */	lwz r3, CDesktop_instancePtr@sda21(r13)
 /* 80455AA4 0041F064  2C 03 00 00 */	cmpwi r3, 0
 /* 80455AA8 0041F068  40 82 00 0C */	bne .L_80455AB4
 /* 80455AAC 0041F06C  38 60 00 00 */	li r3, 0
@@ -74,10 +74,10 @@
 .L_80455AB4:
 /* 80455AB4 0041F074  80 63 01 FC */	lwz r3, 0x1fc(r3)
 /* 80455AB8 0041F078  4E 80 00 20 */	blr 
-.endfn func_80455AA0
+.endfn func_80455AA0__Fv
 
 .fn func_80455ABC, global
-/* 80455ABC 0041F07C  80 0D BE 04 */	lwz r0, lbl_80667F84@sda21(r13)
+/* 80455ABC 0041F07C  80 0D BE 04 */	lwz r0, CDesktop_instancePtr@sda21(r13)
 /* 80455AC0 0041F080  2C 00 00 00 */	cmpwi r0, 0
 /* 80455AC4 0041F084  40 82 00 0C */	bne .L_80455AD0
 /* 80455AC8 0041F088  38 60 00 00 */	li r3, 0
@@ -229,17 +229,17 @@
 /* 80455CD0 0041F290  3F C0 80 52 */	lis r30, lbl_8052685C@ha
 /* 80455CD4 0041F294  7C 7D 1B 78 */	mr r29, r3
 /* 80455CD8 0041F298  3B DE 68 5C */	addi r30, r30, lbl_8052685C@l
-/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getHeapIndex__Fv
+/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getHeapIndex__3mtlFv
 /* 80455CE0 0041F2A0  7C 64 1B 78 */	mr r4, r3
 /* 80455CE4 0041F2A4  38 60 01 F0 */	li r3, 0x1f0
-/* 80455CE8 0041F2A8  4B FD ED 75 */	bl heap_malloc
+/* 80455CE8 0041F2A8  4B FD ED 75 */	bl heap_malloc__3mtlFUli
 /* 80455CEC 0041F2AC  2C 03 00 00 */	cmpwi r3, 0
 /* 80455CF0 0041F2B0  7C 7C 1B 78 */	mr r28, r3
 /* 80455CF4 0041F2B4  41 82 00 24 */	beq .L_80455D18
 /* 80455CF8 0041F2B8  7F C4 F3 78 */	mr r4, r30
 /* 80455CFC 0041F2BC  7F A5 EB 78 */	mr r5, r29
 /* 80455D00 0041F2C0  38 C0 00 08 */	li r6, 8
-/* 80455D04 0041F2C4  4B FE 2F 2D */	bl __ct__CProc
+/* 80455D04 0041F2C4  4B FE 2F 2D */	bl __ct__5CProcFPCcP11CWorkThreadUl
 /* 80455D08 0041F2C8  3C 60 80 57 */	lis r3, "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"@ha
 /* 80455D0C 0041F2CC  38 63 03 50 */	addi r3, r3, "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"@l
 /* 80455D10 0041F2D0  90 7C 00 00 */	stw r3, 0(r28)
@@ -248,8 +248,8 @@
 /* 80455D18 0041F2D8  7F 83 E3 78 */	mr r3, r28
 /* 80455D1C 0041F2DC  7F A4 EB 78 */	mr r4, r29
 /* 80455D20 0041F2E0  38 A0 00 00 */	li r5, 0
-/* 80455D24 0041F2E4  4B FE 2E B5 */	bl func_80438BD8
-/* 80455D28 0041F2E8  4B FF FD 79 */	bl func_80455AA0
+/* 80455D24 0041F2E4  4B FE 2E B5 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
+/* 80455D28 0041F2E8  4B FF FD 79 */	bl func_80455AA0__Fv
 /* 80455D2C 0041F2EC  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 80455D30 0041F2F0  90 1C 01 E4 */	stw r0, 0x1e4(r28)
 /* 80455D34 0041F2F4  4B FE 3A 79 */	bl func_804397AC
@@ -257,17 +257,17 @@
 /* 80455D3C 0041F2FC  7C 7D 1B 78 */	mr r29, r3
 /* 80455D40 0041F300  38 84 68 5C */	addi r4, r4, lbl_8052685C@l
 /* 80455D44 0041F304  3B 84 00 13 */	addi r28, r4, 0x13
-/* 80455D48 0041F308  4B FE 18 6D */	bl getHeapIndex__Fv
+/* 80455D48 0041F308  4B FE 18 6D */	bl getHeapIndex__3mtlFv
 /* 80455D4C 0041F30C  7C 64 1B 78 */	mr r4, r3
 /* 80455D50 0041F310  38 60 01 F0 */	li r3, 0x1f0
-/* 80455D54 0041F314  4B FD ED 09 */	bl heap_malloc
+/* 80455D54 0041F314  4B FD ED 09 */	bl heap_malloc__3mtlFUli
 /* 80455D58 0041F318  2C 03 00 00 */	cmpwi r3, 0
 /* 80455D5C 0041F31C  7C 7E 1B 78 */	mr r30, r3
 /* 80455D60 0041F320  41 82 00 24 */	beq .L_80455D84
 /* 80455D64 0041F324  7F 84 E3 78 */	mr r4, r28
 /* 80455D68 0041F328  7F A5 EB 78 */	mr r5, r29
 /* 80455D6C 0041F32C  38 C0 00 40 */	li r6, 0x40
-/* 80455D70 0041F330  4B FE 2E C1 */	bl __ct__CProc
+/* 80455D70 0041F330  4B FE 2E C1 */	bl __ct__5CProcFPCcP11CWorkThreadUl
 /* 80455D74 0041F334  3C 60 80 57 */	lis r3, "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"@ha
 /* 80455D78 0041F338  38 63 02 90 */	addi r3, r3, "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"@l
 /* 80455D7C 0041F33C  90 7E 00 00 */	stw r3, 0(r30)
@@ -276,8 +276,8 @@
 /* 80455D84 0041F344  7F C3 F3 78 */	mr r3, r30
 /* 80455D88 0041F348  7F A4 EB 78 */	mr r4, r29
 /* 80455D8C 0041F34C  38 A0 00 00 */	li r5, 0
-/* 80455D90 0041F350  4B FE 2E 49 */	bl func_80438BD8
-/* 80455D94 0041F354  4B FF FD 0D */	bl func_80455AA0
+/* 80455D90 0041F350  4B FE 2E 49 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
+/* 80455D94 0041F354  4B FF FD 0D */	bl func_80455AA0__Fv
 /* 80455D98 0041F358  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 80455D9C 0041F35C  90 1E 01 E4 */	stw r0, 0x1e4(r30)
 /* 80455DA0 0041F360  88 0D BE 08 */	lbz r0, lbl_80667F88@sda21(r13)
@@ -293,7 +293,7 @@
 /* 80455DC4 0041F384  38 60 00 00 */	li r3, 0
 /* 80455DC8 0041F388  4B FF 24 E9 */	bl func_804482B0
 /* 80455DCC 0041F38C  7F E3 FB 78 */	mr r3, r31
-/* 80455DD0 0041F390  4B FE 38 D1 */	bl CProc_WorkThreadEvent4
+/* 80455DD0 0041F390  4B FE 38 D1 */	bl WorkThreadEvent4__5CProcFv
 /* 80455DD4 0041F394  48 00 00 08 */	b .L_80455DDC
 .L_80455DD8:
 /* 80455DD8 0041F398  38 60 00 00 */	li r3, 0
@@ -326,7 +326,7 @@
 /* 80455E34 0041F3F4  7F E3 FB 78 */	mr r3, r31
 /* 80455E38 0041F3F8  4B FF 89 49 */	bl func_8044E780
 /* 80455E3C 0041F3FC  7F E3 FB 78 */	mr r3, r31
-/* 80455E40 0041F400  4B FE 38 65 */	bl CProc_WorkThreadEvent5
+/* 80455E40 0041F400  4B FE 38 65 */	bl WorkThreadEvent5__5CProcFv
 /* 80455E44 0041F404  48 00 00 08 */	b .L_80455E4C
 .L_80455E48:
 /* 80455E48 0041F408  38 60 00 00 */	li r3, 0
@@ -457,7 +457,7 @@
 .endfn CDesktop_SaveStartFunctionCallback
 
 .fn func_80455FD4, global
-/* 80455FD4 0041F594  80 0D BE 04 */	lwz r0, lbl_80667F84@sda21(r13)
+/* 80455FD4 0041F594  80 0D BE 04 */	lwz r0, CDesktop_instancePtr@sda21(r13)
 /* 80455FD8 0041F598  2C 00 00 00 */	cmpwi r0, 0
 /* 80455FDC 0041F59C  4D 82 00 20 */	beqlr 
 /* 80455FE0 0041F5A0  2C 03 00 00 */	cmpwi r3, 0
@@ -466,7 +466,7 @@
 /* 80455FEC 0041F5AC  41 82 00 08 */	beq .L_80455FF4
 /* 80455FF0 0041F5B0  38 80 00 0A */	li r4, 0xa
 .L_80455FF4:
-/* 80455FF4 0041F5B4  4B FE 1E FC */	b func_80437EF0
+/* 80455FF4 0041F5B4  4B FE 1E FC */	b func_80437EF0__11CWorkThreadFUl
 /* 80455FF8 0041F5B8  4E 80 00 20 */	blr 
 .endfn func_80455FD4
 
@@ -535,7 +535,7 @@
 /* 804560D0 0041F690  48 00 00 0C */	b .L_804560DC
 .L_804560D4:
 /* 804560D4 0041F694  7F E3 FB 78 */	mr r3, r31
-/* 804560D8 0041F698  4B FE 35 CD */	bl CProc_WorkThreadEvent5
+/* 804560D8 0041F698  4B FE 35 CD */	bl WorkThreadEvent5__5CProcFv
 .L_804560DC:
 /* 804560DC 0041F69C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804560E0 0041F6A0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -557,7 +557,7 @@
 /* 80456114 0041F6D4  48 00 00 0C */	b .L_80456120
 .L_80456118:
 /* 80456118 0041F6D8  7F E3 FB 78 */	mr r3, r31
-/* 8045611C 0041F6DC  4B FE 35 89 */	bl CProc_WorkThreadEvent5
+/* 8045611C 0041F6DC  4B FE 35 89 */	bl WorkThreadEvent5__5CProcFv
 .L_80456120:
 /* 80456120 0041F6E0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80456124 0041F6E4  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -607,7 +607,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -637,7 +637,7 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CProc_WorkThreadEvent4
+	.4byte WorkThreadEvent4__5CProcFv
 	.4byte CDesktop_WorkThreadEvent5
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"
@@ -662,7 +662,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -692,7 +692,7 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CProc_WorkThreadEvent4
+	.4byte WorkThreadEvent4__5CProcFv
 	.4byte func_804560F0
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"
@@ -717,7 +717,7 @@
 	.4byte CDesktop_OnFileEvent
 	.4byte CDesktop_WorkEvent3
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
@@ -822,9 +822,9 @@
 	.skip 0x4
 .endobj CDesktop_startFunctionStruct
 
-.obj lbl_80667F84, global
+.obj CDesktop_instancePtr, global
 	.skip 0x4
-.endobj lbl_80667F84
+.endobj CDesktop_instancePtr
 
 .obj lbl_80667F88, global
 	.skip 0x4

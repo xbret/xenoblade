@@ -125,7 +125,7 @@
 /* 801A1A20 0016AFE0  48 2B DE 39 */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 801A1A24 0016AFE4  7F A4 EB 78 */	mr r4, r29
 /* 801A1A28 0016AFE8  38 60 08 40 */	li r3, 0x840
-/* 801A1A2C 0016AFEC  48 29 30 31 */	bl heap_malloc
+/* 801A1A2C 0016AFEC  48 29 30 31 */	bl heap_malloc__3mtlFUli
 /* 801A1A30 0016AFF0  2C 03 00 00 */	cmpwi r3, 0
 /* 801A1A34 0016AFF4  41 82 00 08 */	beq .L_801A1A3C
 /* 801A1A38 0016AFF8  4B F8 64 C9 */	bl __ct__CTagProcessorSE
@@ -617,10 +617,10 @@
 /* 801A2134 0016B6F4  38 60 00 00 */	li r3, 0
 /* 801A2138 0016B6F8  48 00 00 44 */	b .L_801A217C
 .L_801A213C:
-/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex__Fv
+/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex__3mtlFv
 /* 801A2140 0016B700  7C 64 1B 78 */	mr r4, r3
 /* 801A2144 0016B704  38 60 00 B0 */	li r3, 0xb0
-/* 801A2148 0016B708  48 29 29 15 */	bl heap_malloc
+/* 801A2148 0016B708  48 29 29 15 */	bl heap_malloc__3mtlFUli
 /* 801A214C 0016B70C  2C 03 00 00 */	cmpwi r3, 0
 /* 801A2150 0016B710  41 82 00 18 */	beq .L_801A2168
 /* 801A2154 0016B714  7F 84 E3 78 */	mr r4, r28
@@ -697,7 +697,7 @@
 /* 801A224C 0016B80C  48 2B D6 0D */	bl __ct__14Class_8045F858FP17UnkClass_8045F564
 /* 801A2250 0016B810  7F A4 EB 78 */	mr r4, r29
 /* 801A2254 0016B814  38 60 08 40 */	li r3, 0x840
-/* 801A2258 0016B818  48 29 28 05 */	bl heap_malloc
+/* 801A2258 0016B818  48 29 28 05 */	bl heap_malloc__3mtlFUli
 /* 801A225C 0016B81C  2C 03 00 00 */	cmpwi r3, 0
 /* 801A2260 0016B820  41 82 00 08 */	beq .L_801A2268
 /* 801A2264 0016B824  4B F8 5C 9D */	bl __ct__CTagProcessorSE
@@ -1261,7 +1261,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

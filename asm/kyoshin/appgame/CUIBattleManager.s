@@ -332,10 +332,10 @@
 /* 8012E434 000F79F4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8012E438 000F79F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8012E43C 000F79FC  7C 7E 1B 78 */	mr r30, r3
-/* 8012E440 000F7A00  48 30 91 75 */	bl getHeapIndex__Fv
+/* 8012E440 000F7A00  48 30 91 75 */	bl getHeapIndex__3mtlFv
 /* 8012E444 000F7A04  7C 64 1B 78 */	mr r4, r3
 /* 8012E448 000F7A08  38 60 00 54 */	li r3, 0x54
-/* 8012E44C 000F7A0C  48 30 66 11 */	bl heap_malloc
+/* 8012E44C 000F7A0C  48 30 66 11 */	bl heap_malloc__3mtlFUli
 /* 8012E450 000F7A10  2C 03 00 00 */	cmpwi r3, 0
 /* 8012E454 000F7A14  7C 7F 1B 78 */	mr r31, r3
 /* 8012E458 000F7A18  41 82 00 58 */	beq .L_8012E4B0
@@ -1580,10 +1580,10 @@
 /* 8012F59C 000F8B5C  48 30 4E 05 */	bl Heap_getRegionIndex2
 /* 8012F5A0 000F8B60  7C 7F 1B 78 */	mr r31, r3
 .L_8012F5A4:
-/* 8012F5A4 000F8B64  48 30 80 11 */	bl getHeapIndex__Fv
+/* 8012F5A4 000F8B64  48 30 80 11 */	bl getHeapIndex__3mtlFv
 /* 8012F5A8 000F8B68  7C 64 1B 78 */	mr r4, r3
 /* 8012F5AC 000F8B6C  38 60 00 F0 */	li r3, 0xf0
-/* 8012F5B0 000F8B70  48 30 54 AD */	bl heap_malloc
+/* 8012F5B0 000F8B70  48 30 54 AD */	bl heap_malloc__3mtlFUli
 /* 8012F5B4 000F8B74  2C 03 00 00 */	cmpwi r3, 0
 /* 8012F5B8 000F8B78  41 82 00 10 */	beq .L_8012F5C8
 /* 8012F5BC 000F8B7C  7F C4 F3 78 */	mr r4, r30
@@ -2416,7 +2416,7 @@
 	.4byte CUIBattleManager_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

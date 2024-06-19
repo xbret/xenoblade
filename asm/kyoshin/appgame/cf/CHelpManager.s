@@ -12,7 +12,7 @@
 /* 802958A0 0025EE60  48 19 EB 01 */	bl Heap_getRegionIndex2
 /* 802958A4 0025EE64  7C 64 1B 78 */	mr r4, r3
 /* 802958A8 0025EE68  38 60 00 20 */	li r3, 0x20
-/* 802958AC 0025EE6C  48 19 F1 B1 */	bl heap_malloc
+/* 802958AC 0025EE6C  48 19 F1 B1 */	bl heap_malloc__3mtlFUli
 /* 802958B0 0025EE70  2C 03 00 00 */	cmpwi r3, 0
 /* 802958B4 0025EE74  7C 7E 1B 78 */	mr r30, r3
 /* 802958B8 0025EE78  41 82 00 4C */	beq .L_80295904
@@ -325,7 +325,7 @@
 /* 80295CDC 0025F29C  80 04 3F 08 */	lwz r0, 0x3f08(r4)
 /* 80295CE0 0025F2A0  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 80295CE4 0025F2A4  41 82 00 38 */	beq .L_80295D1C
-/* 80295CE8 0025F2A8  4B E4 34 A1 */	bl getBattleManagerInstance
+/* 80295CE8 0025F2A8  4B E4 34 A1 */	bl getBattleManagerInstancePtr__Fv
 /* 80295CEC 0025F2AC  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 80295CF0 0025F2B0  38 80 00 00 */	li r4, 0
 /* 80295CF4 0025F2B4  80 65 00 00 */	lwz r3, 0(r5)

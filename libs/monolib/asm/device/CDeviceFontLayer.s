@@ -1518,7 +1518,7 @@
 /* 80454DA8 0041E368  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DAC 0041E36C  4D 82 00 20 */	beqlr 
 /* 80454DB0 0041E370  38 80 00 00 */	li r4, 0
-/* 80454DB4 0041E374  4B FE 31 3C */	b func_80437EF0
+/* 80454DB4 0041E374  4B FE 31 3C */	b func_80437EF0__11CWorkThreadFUl
 /* 80454DB8 0041E378  4E 80 00 20 */	blr 
 .endfn CDeviceFontLayer_wkUpdate
 
@@ -1622,7 +1622,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

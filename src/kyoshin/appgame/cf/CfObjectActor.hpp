@@ -1,5 +1,6 @@
 #pragma once
 
+#include "types.h"
 #include "kyoshin/appgame/cf/CfObjectMove.hpp"
 #include "kyoshin/appgame/cf/CAIAction.hpp"
 #include "kyoshin/appgame/cf/CActorParam.hpp"

@@ -195,10 +195,10 @@
 /* 8045D5C4 00426B84  4E 80 00 20 */	blr 
 .endfn func_8045D554
 
-.fn func_8045D5C8, global
+.fn func_8045D5C8__FUl, global
 /* 8045D5C8 00426B88  98 6D BE 54 */	stb r3, lbl_80667FD4@sda21(r13)
 /* 8045D5CC 00426B8C  4E 80 00 20 */	blr 
-.endfn func_8045D5C8
+.endfn func_8045D5C8__FUl
 
 .fn func_8045D5D0, global
 /* 8045D5D0 00426B90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -391,7 +391,7 @@
 /* 8045D848 00426E08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045D84C 00426E0C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045D850 00426E10  7C 7E 1B 78 */	mr r30, r3
-/* 8045D854 00426E14  4B FF 82 45 */	bl func_80455A98
+/* 8045D854 00426E14  4B FF 82 45 */	bl getCDesktopInstancePtr__Fv
 /* 8045D858 00426E18  2C 03 00 00 */	cmpwi r3, 0
 /* 8045D85C 00426E1C  41 82 03 0C */	beq .L_8045DB68
 /* 8045D860 00426E20  83 ED 9F 60 */	lwz r31, lbl_806660E0@sda21(r13)
@@ -506,7 +506,7 @@
 /* 8045D9E0 00426FA0  41 82 00 10 */	beq .L_8045D9F0
 /* 8045D9E4 00426FA4  48 00 0B 45 */	bl func_8045E528
 /* 8045D9E8 00426FA8  38 80 00 00 */	li r4, 0
-/* 8045D9EC 00426FAC  4B FD A5 05 */	bl func_80437EF0
+/* 8045D9EC 00426FAC  4B FD A5 05 */	bl func_80437EF0__11CWorkThreadFUl
 .L_8045D9F0:
 /* 8045D9F0 00426FB0  38 00 00 00 */	li r0, 0
 /* 8045D9F4 00426FB4  98 1E 02 64 */	stb r0, 0x264(r30)
@@ -960,7 +960,7 @@
 /* 8045E01C 004275DC  40 82 00 10 */	bne .L_8045E02C
 /* 8045E020 004275E0  48 00 05 09 */	bl func_8045E528
 /* 8045E024 004275E4  38 80 00 00 */	li r4, 0
-/* 8045E028 004275E8  4B FD 9E C9 */	bl func_80437EF0
+/* 8045E028 004275E8  4B FD 9E C9 */	bl func_80437EF0__11CWorkThreadFUl
 .L_8045E02C:
 /* 8045E02C 004275EC  38 00 00 00 */	li r0, 0
 /* 8045E030 004275F0  90 1F 02 30 */	stw r0, 0x230(r31)
@@ -1351,7 +1351,7 @@
 	.4byte CLibHbm_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

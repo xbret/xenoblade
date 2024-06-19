@@ -16,7 +16,7 @@
 /* 804430EC 0040C6AC  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 804430F0 0040C6B0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 804430F4 0040C6B4  40 82 01 0C */	bne .L_80443200
-/* 804430F8 0040C6B8  48 01 29 A1 */	bl func_80455A98
+/* 804430F8 0040C6B8  48 01 29 A1 */	bl getCDesktopInstancePtr__Fv
 /* 804430FC 0040C6BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80443100 0040C6C0  41 82 01 00 */	beq .L_80443200
 /* 80443104 0040C6C4  80 6D BD 30 */	lwz r3, lbl_80667EB0@sda21(r13)
@@ -315,10 +315,10 @@
 /* 80443514 0040CAD4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80443518 0040CAD8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044351C 0040CADC  7C 7D 1B 78 */	mr r29, r3
-/* 80443520 0040CAE0  4B FF 40 95 */	bl getHeapIndex__Fv
+/* 80443520 0040CAE0  4B FF 40 95 */	bl getHeapIndex__3mtlFv
 /* 80443524 0040CAE4  7C 64 1B 78 */	mr r4, r3
 /* 80443528 0040CAE8  38 60 05 20 */	li r3, 0x520
-/* 8044352C 0040CAEC  4B FF 15 31 */	bl heap_malloc
+/* 8044352C 0040CAEC  4B FF 15 31 */	bl heap_malloc__3mtlFUli
 /* 80443530 0040CAF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80443534 0040CAF4  7C 7E 1B 78 */	mr r30, r3
 /* 80443538 0040CAF8  41 82 01 A4 */	beq .L_804436DC
@@ -431,7 +431,7 @@
 /* 804436DC 0040CC9C  7F C3 F3 78 */	mr r3, r30
 /* 804436E0 0040CCA0  7F A4 EB 78 */	mr r4, r29
 /* 804436E4 0040CCA4  38 A0 00 00 */	li r5, 0
-/* 804436E8 0040CCA8  4B FF 54 F1 */	bl func_80438BD8
+/* 804436E8 0040CCA8  4B FF 54 F1 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 804436EC 0040CCAC  7F C3 F3 78 */	mr r3, r30
 /* 804436F0 0040CCB0  38 80 00 00 */	li r4, 0
 /* 804436F4 0040CCB4  4B FF 4E D9 */	bl func_804385CC
@@ -474,7 +474,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

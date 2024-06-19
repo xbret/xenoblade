@@ -66,7 +66,7 @@
 /* 80443A94 0040D054  41 82 00 1C */	beq .L_80443AB0
 /* 80443A98 0040D058  7F E3 FB 78 */	mr r3, r31
 /* 80443A9C 0040D05C  38 80 00 00 */	li r4, 0
-/* 80443AA0 0040D060  4B FF 44 51 */	bl func_80437EF0
+/* 80443AA0 0040D060  4B FF 44 51 */	bl func_80437EF0__11CWorkThreadFUl
 /* 80443AA4 0040D064  7F E3 FB 78 */	mr r3, r31
 /* 80443AA8 0040D068  4B FF 4F 51 */	bl WorkThreadEvent4__11CWorkThreadFv
 /* 80443AAC 0040D06C  48 00 00 08 */	b .L_80443AB4
@@ -135,7 +135,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

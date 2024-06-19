@@ -16,7 +16,7 @@ public:
     virtual bool OnFileEvent(CEventFile* eventFile){ return false; }
     virtual bool WorkEvent3(){ return false; }
     virtual bool WorkEvent4(){ return false; }
-    virtual void WorkEvent5(){}
+    virtual void WorkEvent5(UNKTYPE* r4){}
     virtual bool WorkEvent6(){ return false; }
     virtual bool WorkEvent7(){ return false; }
     virtual bool WorkEvent8(){ return false; }

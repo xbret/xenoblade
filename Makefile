@@ -92,7 +92,7 @@ TRANSFORM_DEP := tools/transform-win.py
 endif
 
 # Options
-INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/std
+INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl
 ASM_INCLUDES := -I include/
 
 # TODO: fix the makefile to make objdiff work without this

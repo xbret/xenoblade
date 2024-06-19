@@ -1,3 +1,6 @@
+#pragma once
+
+#include "types.h"
 #include "monolib/Math.hpp"
 
 using namespace ml;

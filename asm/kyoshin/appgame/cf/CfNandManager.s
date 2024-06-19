@@ -375,10 +375,10 @@
 /* 8023C204 002057C4  38 00 00 00 */	li r0, 0
 /* 8023C208 002057C8  90 03 00 30 */	stw r0, 0x30(r3)
 /* 8023C20C 002057CC  7C 7B 1B 78 */	mr r27, r3
-/* 8023C210 002057D0  4B E9 CF 79 */	bl getBattleManagerInstance
+/* 8023C210 002057D0  4B E9 CF 79 */	bl getBattleManagerInstancePtr__Fv
 /* 8023C214 002057D4  2C 03 00 00 */	cmpwi r3, 0
 /* 8023C218 002057D8  41 82 00 10 */	beq .L_8023C228
-/* 8023C21C 002057DC  4B E9 CF 6D */	bl getBattleManagerInstance
+/* 8023C21C 002057DC  4B E9 CF 6D */	bl getBattleManagerInstancePtr__Fv
 /* 8023C220 002057E0  80 03 01 94 */	lwz r0, 0x194(r3)
 /* 8023C224 002057E4  90 1B 00 30 */	stw r0, 0x30(r27)
 .L_8023C228:
@@ -1018,7 +1018,7 @@
 /* 8023CB80 00206140  93 7A 40 88 */	stw r27, 0x4088(r26)
 /* 8023CB84 00206144  93 FA 40 84 */	stw r31, 0x4084(r26)
 /* 8023CB88 00206148  90 7A 40 8C */	stw r3, 0x408c(r26)
-/* 8023CB8C 0020614C  4B F8 34 89 */	bl func_801C0014
+/* 8023CB8C 0020614C  4B F8 34 89 */	bl func_801C0014__Fv
 /* 8023CB90 00206150  D0 3A 40 C0 */	stfs f1, 0x40c0(r26)
 /* 8023CB94 00206154  4B F4 CB 0D */	bl func_801896A0
 /* 8023CB98 00206158  D0 3A 40 C4 */	stfs f1, 0x40c4(r26)
@@ -2614,7 +2614,7 @@
 /* 8023E300 002078C0  3F 1E 00 02 */	addis r24, r30, 2
 /* 8023E304 002078C4  C0 42 AC 18 */	lfs f2, float_8066AF98@sda21(r2)
 /* 8023E308 002078C8  C0 38 77 80 */	lfs f1, 0x7780(r24)
-/* 8023E30C 002078CC  4B F8 1C A1 */	bl func_801BFFAC
+/* 8023E30C 002078CC  4B F8 1C A1 */	bl func_801BFFAC__Fff
 /* 8023E310 002078D0  C0 38 77 84 */	lfs f1, 0x7784(r24)
 /* 8023E314 002078D4  4B F4 B2 E1 */	bl func_801895F4
 /* 8023E318 002078D8  C0 38 77 88 */	lfs f1, 0x7788(r24)
@@ -4687,10 +4687,10 @@
 /* 8023FFFC 002095BC  38 60 00 00 */	li r3, 0
 /* 80240000 002095C0  48 00 00 40 */	b .L_80240040
 .L_80240004:
-/* 80240004 002095C4  48 1F 75 B1 */	bl getHeapIndex__Fv
+/* 80240004 002095C4  48 1F 75 B1 */	bl getHeapIndex__3mtlFv
 /* 80240008 002095C8  7C 64 1B 78 */	mr r4, r3
 /* 8024000C 002095CC  38 60 01 94 */	li r3, 0x194
-/* 80240010 002095D0  48 1F 4A 4D */	bl heap_malloc
+/* 80240010 002095D0  48 1F 4A 4D */	bl heap_malloc__3mtlFUli
 /* 80240014 002095D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80240018 002095D8  7C 7F 1B 78 */	mr r31, r3
 /* 8024001C 002095DC  41 82 00 10 */	beq .L_8024002C
@@ -5227,7 +5227,7 @@
 	.4byte OnFileEvent__Q22cf13CfNandManagerFv
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

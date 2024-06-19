@@ -442,10 +442,10 @@
 /* 80252440 0021BA00  38 60 00 00 */	li r3, 0
 /* 80252444 0021BA04  48 00 00 C0 */	b .L_80252504
 .L_80252448:
-/* 80252448 0021BA08  48 1E 51 6D */	bl getHeapIndex__Fv
+/* 80252448 0021BA08  48 1E 51 6D */	bl getHeapIndex__3mtlFv
 /* 8025244C 0021BA0C  7C 64 1B 78 */	mr r4, r3
 /* 80252450 0021BA10  38 60 00 88 */	li r3, 0x88
-/* 80252454 0021BA14  48 1E 26 09 */	bl heap_malloc
+/* 80252454 0021BA14  48 1E 26 09 */	bl heap_malloc__3mtlFUli
 /* 80252458 0021BA18  2C 03 00 00 */	cmpwi r3, 0
 /* 8025245C 0021BA1C  7C 7E 1B 78 */	mr r30, r3
 /* 80252460 0021BA20  41 82 00 8C */	beq .L_802524EC
@@ -645,7 +645,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

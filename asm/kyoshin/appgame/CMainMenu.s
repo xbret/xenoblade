@@ -901,10 +901,10 @@
 /* 800FF6E4 000C8CA4  38 60 00 00 */	li r3, 0
 /* 800FF6E8 000C8CA8  48 00 00 38 */	b .L_800FF720
 .L_800FF6EC:
-/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getHeapIndex__Fv
+/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getHeapIndex__3mtlFv
 /* 800FF6F0 000C8CB0  7C 64 1B 78 */	mr r4, r3
 /* 800FF6F4 000C8CB4  38 60 00 E4 */	li r3, 0xe4
-/* 800FF6F8 000C8CB8  48 33 53 65 */	bl heap_malloc
+/* 800FF6F8 000C8CB8  48 33 53 65 */	bl heap_malloc__3mtlFUli
 /* 800FF6FC 000C8CBC  2C 03 00 00 */	cmpwi r3, 0
 /* 800FF700 000C8CC0  41 82 00 0C */	beq .L_800FF70C
 /* 800FF704 000C8CC4  7F E4 FB 78 */	mr r4, r31
@@ -3387,7 +3387,7 @@
 /* 80101B34 000CB0F4  38 60 00 01 */	li r3, 1
 /* 80101B38 000CB0F8  48 00 00 A8 */	b .L_80101BE0
 .L_80101B3C:
-/* 80101B3C 000CB0FC  4B FD 76 4D */	bl getBattleManagerInstance
+/* 80101B3C 000CB0FC  4B FD 76 4D */	bl getBattleManagerInstancePtr__Fv
 /* 80101B40 000CB100  80 A3 00 08 */	lwz r5, 8(r3)
 /* 80101B44 000CB104  38 80 00 00 */	li r4, 0
 /* 80101B48 000CB108  80 65 00 00 */	lwz r3, 0(r5)
@@ -3959,7 +3959,7 @@
 	.4byte CMainMenu_OnFileEvent
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

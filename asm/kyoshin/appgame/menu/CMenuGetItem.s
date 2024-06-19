@@ -653,10 +653,10 @@
 /* 8014A0C0 00113680  38 60 00 00 */	li r3, 0
 /* 8014A0C4 00113684  48 00 00 3C */	b .L_8014A100
 .L_8014A0C8:
-/* 8014A0C8 00113688  48 2E D4 ED */	bl getHeapIndex__Fv
+/* 8014A0C8 00113688  48 2E D4 ED */	bl getHeapIndex__3mtlFv
 /* 8014A0CC 0011368C  7C 64 1B 78 */	mr r4, r3
 /* 8014A0D0 00113690  38 60 01 B4 */	li r3, 0x1b4
-/* 8014A0D4 00113694  48 2E A9 89 */	bl heap_malloc
+/* 8014A0D4 00113694  48 2E A9 89 */	bl heap_malloc__3mtlFUli
 /* 8014A0D8 00113698  2C 03 00 00 */	cmpwi r3, 0
 /* 8014A0DC 0011369C  41 82 00 10 */	beq .L_8014A0EC
 /* 8014A0E0 001136A0  7F C4 F3 78 */	mr r4, r30
@@ -706,10 +706,10 @@
 /* 8014A178 00113738  38 60 00 00 */	li r3, 0
 /* 8014A17C 0011373C  48 00 00 3C */	b .L_8014A1B8
 .L_8014A180:
-/* 8014A180 00113740  48 2E D4 35 */	bl getHeapIndex__Fv
+/* 8014A180 00113740  48 2E D4 35 */	bl getHeapIndex__3mtlFv
 /* 8014A184 00113744  7C 64 1B 78 */	mr r4, r3
 /* 8014A188 00113748  38 60 01 B4 */	li r3, 0x1b4
-/* 8014A18C 0011374C  48 2E A8 D1 */	bl heap_malloc
+/* 8014A18C 0011374C  48 2E A8 D1 */	bl heap_malloc__3mtlFUli
 /* 8014A190 00113750  2C 03 00 00 */	cmpwi r3, 0
 /* 8014A194 00113754  41 82 00 10 */	beq .L_8014A1A4
 /* 8014A198 00113758  7F C4 F3 78 */	mr r4, r30
@@ -762,10 +762,10 @@
 /* 8014A23C 001137FC  38 60 00 00 */	li r3, 0
 /* 8014A240 00113800  48 00 00 40 */	b .L_8014A280
 .L_8014A244:
-/* 8014A244 00113804  48 2E D3 71 */	bl getHeapIndex__Fv
+/* 8014A244 00113804  48 2E D3 71 */	bl getHeapIndex__3mtlFv
 /* 8014A248 00113808  7C 64 1B 78 */	mr r4, r3
 /* 8014A24C 0011380C  38 60 01 B4 */	li r3, 0x1b4
-/* 8014A250 00113810  48 2E A8 0D */	bl heap_malloc
+/* 8014A250 00113810  48 2E A8 0D */	bl heap_malloc__3mtlFUli
 /* 8014A254 00113814  2C 03 00 00 */	cmpwi r3, 0
 /* 8014A258 00113818  41 82 00 14 */	beq .L_8014A26C
 /* 8014A25C 0011381C  7F A4 EB 78 */	mr r4, r29
@@ -1269,7 +1269,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv

@@ -194,7 +194,7 @@
 /* 801A00FC 001696BC  2C 03 00 00 */	cmpwi r3, 0
 /* 801A0100 001696C0  41 82 01 88 */	beq .L_801A0288
 /* 801A0104 001696C4  4B FC FD 31 */	bl func_8016FE34
-/* 801A0108 001696C8  4B F3 90 81 */	bl getBattleManagerInstance
+/* 801A0108 001696C8  4B F3 90 81 */	bl getBattleManagerInstancePtr__Fv
 /* 801A010C 001696CC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 801A0110 001696D0  38 80 00 00 */	li r4, 0
 /* 801A0114 001696D4  80 65 00 00 */	lwz r3, 0(r5)
@@ -259,7 +259,7 @@
 /* 801A01F0 001697B0  2C 03 00 00 */	cmpwi r3, 0
 /* 801A01F4 001697B4  41 82 00 94 */	beq .L_801A0288
 /* 801A01F8 001697B8  4B FC FC 3D */	bl func_8016FE34
-/* 801A01FC 001697BC  4B F3 8F 8D */	bl getBattleManagerInstance
+/* 801A01FC 001697BC  4B F3 8F 8D */	bl getBattleManagerInstancePtr__Fv
 /* 801A0200 001697C0  80 A3 00 08 */	lwz r5, 8(r3)
 /* 801A0204 001697C4  38 80 00 00 */	li r4, 0
 /* 801A0208 001697C8  80 65 00 00 */	lwz r3, 0(r5)
@@ -382,10 +382,10 @@
 /* 801A03A4 00169964  38 60 00 00 */	li r3, 0
 /* 801A03A8 00169968  48 00 00 C4 */	b .L_801A046C
 .L_801A03AC:
-/* 801A03AC 0016996C  48 29 72 09 */	bl getHeapIndex__Fv
+/* 801A03AC 0016996C  48 29 72 09 */	bl getHeapIndex__3mtlFv
 /* 801A03B0 00169970  7C 64 1B 78 */	mr r4, r3
 /* 801A03B4 00169974  38 60 00 84 */	li r3, 0x84
-/* 801A03B8 00169978  48 29 46 A5 */	bl heap_malloc
+/* 801A03B8 00169978  48 29 46 A5 */	bl heap_malloc__3mtlFUli
 /* 801A03BC 0016997C  2C 03 00 00 */	cmpwi r3, 0
 /* 801A03C0 00169980  7C 7E 1B 78 */	mr r30, r3
 /* 801A03C4 00169984  41 82 00 90 */	beq .L_801A0454
@@ -496,7 +496,7 @@
 	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
-	.4byte WorkEvent5__10IWorkEventFv
+	.4byte WorkEvent5__10IWorkEventFPv
 	.4byte WorkEvent6__10IWorkEventFv
 	.4byte WorkEvent7__10IWorkEventFv
 	.4byte WorkEvent8__10IWorkEventFv
