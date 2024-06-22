@@ -502,10 +502,10 @@
 /* 8003C2E8 000058A8  4E 80 00 20 */	blr 
 .endfn func_8003C260
 
-.fn CObjectParam_virtualFunc2__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc2__Q22cf12CObjectParamFv, global
 /* 8003C2EC 000058AC  38 63 00 10 */	addi r3, r3, 0x10
 /* 8003C2F0 000058B0  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc2__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc2__Q22cf12CObjectParamFv
 
 .fn func_8003C2F4, local
 /* 8003C2F4 000058B4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -868,7 +868,7 @@
 /* 8003C7F4 00005DB4  4E 80 00 20 */	blr 
 .endfn func_8003C78C
 
-.fn CObjectParam_virtualFunc1__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc1__Q22cf12CObjectParamFv, global
 /* 8003C7F8 00005DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003C7FC 00005DBC  7C 08 02 A6 */	mflr r0
 /* 8003C800 00005DC0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -888,7 +888,7 @@
 /* 8003C838 00005DF8  7C 08 03 A6 */	mtlr r0
 /* 8003C83C 00005DFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003C840 00005E00  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc1__Q22cf12CObjectParamFv
 
 .fn isValid, local
 /* 8003C844 00005E04  38 60 00 00 */	li r3, 0
@@ -1104,7 +1104,7 @@
 /* 8003CB1C 000060DC  4E 80 00 20 */	blr 
 .endfn dispOff
 
-.fn CObjectState_virtualFunc8__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc8__Q22cf12CObjectStateFv, global
 /* 8003CB20 000060E0  28 04 00 3F */	cmplwi r4, 0x3f
 /* 8003CB24 000060E4  40 80 00 1C */	bge .L_8003CB40
 /* 8003CB28 000060E8  80 03 00 08 */	lwz r0, 8(r3)
@@ -1120,16 +1120,16 @@
 /* 8003CB4C 0000610C  7C 00 1B 78 */	or r0, r0, r3
 /* 8003CB50 00006110  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003CB54 00006114  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc8__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc8__Q22cf12CObjectStateFv
 
-.fn CObjectState_virtualFunc2__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc2__Q22cf12CObjectStateFv, global
 /* 8003CB58 00006118  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003CB5C 0000611C  7C 03 20 38 */	and r3, r0, r4
 /* 8003CB60 00006120  7C 03 00 D0 */	neg r0, r3
 /* 8003CB64 00006124  7C 00 1B 78 */	or r0, r0, r3
 /* 8003CB68 00006128  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003CB6C 0000612C  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc2__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc2__Q22cf12CObjectStateFv
 
 .fn func_8003CB70, local
 /* 8003CB70 00006130  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1994,10 +1994,10 @@
 /* 8003D7AC 00006D6C  4E 80 00 20 */	blr 
 .endfn isTalk
 
-.fn CObjectState_virtualFunc11__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc11__Q22cf12CObjectStateFv, global
 /* 8003D7B0 00006D70  38 63 00 08 */	addi r3, r3, 8
 /* 8003D7B4 00006D74  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc11__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc11__Q22cf12CObjectStateFv
 
 .fn onEvent, local
 /* 8003D7B8 00006D78  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2075,7 +2075,7 @@
 /* 8003D8BC 00006E7C  4E 80 00 20 */	blr 
 .endfn onEvent
 
-.fn CObjectState_virtualFunc10__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc10__Q22cf12CObjectStateFv, global
 /* 8003D8C0 00006E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003D8C4 00006E84  7C 08 02 A6 */	mflr r0
 /* 8003D8C8 00006E88  2C 05 00 00 */	cmpwi r5, 0
@@ -2129,9 +2129,9 @@
 /* 8003D980 00006F40  7C 08 03 A6 */	mtlr r0
 /* 8003D984 00006F44  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003D988 00006F48  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc10__Q22cf12CObjectStateFv
 
-.fn CObjectState_virtualFunc9__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc9__Q22cf12CObjectStateFv, global
 /* 8003D98C 00006F4C  28 04 00 3F */	cmplwi r4, 0x3f
 /* 8003D990 00006F50  40 80 00 1C */	bge .L_8003D9AC
 /* 8003D994 00006F54  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -2147,7 +2147,7 @@
 /* 8003D9B8 00006F78  7C 00 1B 78 */	or r0, r0, r3
 /* 8003D9BC 00006F7C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003D9C0 00006F80  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc9__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc9__Q22cf12CObjectStateFv
 
 .fn func_8003D9C4, local
 /* 8003D9C4 00006F84  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2333,17 +2333,17 @@
 /* 8003DC60 00007220  4E 80 00 20 */	blr 
 .endfn winTalk
 
-.fn CObjectState_virtualFunc1__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc1__Q22cf12CObjectStateFv, global
 /* 8003DC64 00007224  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003DC68 00007228  7C 00 23 78 */	or r0, r0, r4
 /* 8003DC6C 0000722C  90 03 00 04 */	stw r0, 4(r3)
 /* 8003DC70 00007230  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc1__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc1__Q22cf12CObjectStateFv
 
-.fn CObjectParam_virtualFunc6__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc6__Q22cf12CObjectParamFv, global
 /* 8003DC74 00007234  90 83 00 34 */	stw r4, 0x34(r3)
 /* 8003DC78 00007238  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc6__Q22cf12CObjectParamFv
 
 .fn func_8003DC7C, local
 /* 8003DC7C 0000723C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2398,12 +2398,12 @@
 /* 8003DD30 000072F0  4E 80 00 20 */	blr 
 .endfn func_8003DC7C
 
-.fn CObjectState_virtualFunc3__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc3__Q22cf12CObjectStateFv, global
 /* 8003DD34 000072F4  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003DD38 000072F8  7C 00 20 78 */	andc r0, r0, r4
 /* 8003DD3C 000072FC  90 03 00 04 */	stw r0, 4(r3)
 /* 8003DD40 00007300  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc3__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc3__Q22cf12CObjectStateFv
 
 .fn func_8003DD44, local
 /* 8003DD44 00007304  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3056,10 +3056,10 @@
 /* 8003E660 00007C20  4E 80 00 20 */	blr 
 .endfn func_8003E528
 
-.fn CObjectParam_virtualFunc5__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc5__Q22cf12CObjectParamFv, global
 /* 8003E664 00007C24  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 8003E668 00007C28  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc5__Q22cf12CObjectParamFv
 
 .fn func_8003E66C, local
 /* 8003E66C 00007C2C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -7186,7 +7186,7 @@
 
 .obj "@eti_800213E0", local
 .hidden "@eti_800213E0"
-	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc1__Q22cf12CObjectParamFv
 	.4byte 0x0000004C
 	.4byte "@etb_800069AC"
 .endobj "@eti_800213E0"
@@ -7333,7 +7333,7 @@
 
 .obj "@eti_800214DC", local
 .hidden "@eti_800214DC"
-	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc10__Q22cf12CObjectStateFv
 	.4byte 0x000000CC
 	.4byte "@etb_80006A54"
 .endobj "@eti_800214DC"

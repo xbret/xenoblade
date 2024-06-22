@@ -6699,36 +6699,36 @@
 /* 800A3484 0006CA44  4E 80 00 20 */	blr 
 .endfn func_800A33C8
 
-.fn CObjectState_virtualFunc13__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc13__Q22cf12CObjectStateFv, global
 /* 800A3488 0006CA48  80 03 00 08 */	lwz r0, 8(r3)
 /* 800A348C 0006CA4C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 800A3490 0006CA50  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc13__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc13__Q22cf12CObjectStateFv
 
-.fn CObjectState_virtualFunc12__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc12__Q22cf12CObjectStateFv, global
 /* 800A3494 0006CA54  38 63 00 0C */	addi r3, r3, 0xc
 /* 800A3498 0006CA58  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc12__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc12__Q22cf12CObjectStateFv
 
-.fn CObjectState_virtualFunc6__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc6__Q22cf12CObjectStateFv, global
 /* 800A349C 0006CA5C  38 00 00 00 */	li r0, 0
 /* 800A34A0 0006CA60  90 03 00 08 */	stw r0, 8(r3)
 /* 800A34A4 0006CA64  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc6__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc6__Q22cf12CObjectStateFv
 
-.fn CObjectState_virtualFunc4__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc4__Q22cf12CObjectStateFv, global
 /* 800A34A8 0006CA68  38 00 00 00 */	li r0, 0
 /* 800A34AC 0006CA6C  90 03 00 04 */	stw r0, 4(r3)
 /* 800A34B0 0006CA70  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc4__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc4__Q22cf12CObjectStateFv
 
-.fn CObjectParam_virtualFunc3__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc3__Q22cf12CObjectParamFv, global
 /* 800A34B4 0006CA74  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 800A34B8 0006CA78  7C 03 00 D0 */	neg r0, r3
 /* 800A34BC 0006CA7C  7C 00 1B 78 */	or r0, r0, r3
 /* 800A34C0 0006CA80  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 800A34C4 0006CA84  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc3__Q22cf12CObjectParamFv
 
 .fn func_800A34C8, global
 /* 800A34C8 0006CA88  38 00 00 00 */	li r0, 0
@@ -7383,43 +7383,43 @@
 .obj __vt__Q22cf12CObjectParam, global
 	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
-	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc2__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc4__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
+	.4byte CObjectState_vtableFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectParam_vtableFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc2__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc3__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc4__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc5__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc6__Q22cf12CObjectParamFv
 .endobj __vt__Q22cf12CObjectParam
 
 .obj __vt__Q22cf12CObjectState, global
 	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc13__Q22cf12CObjectStateFv
 .endobj __vt__Q22cf12CObjectState
 
 

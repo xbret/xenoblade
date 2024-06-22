@@ -4,6 +4,7 @@
 #include "kyoshin/appgame/cf/CObjectParam.hpp"
 
 namespace cf{
+	//min size: 0x70
 	class CfObject : public CObjectParam{
 	public:
 		//vtable 1 (CfObject)
@@ -83,5 +84,10 @@ namespace cf{
 
 		//not sure if belongs here? (can be in any class from CObjectState to CfObjectMove)
 		void func_800BE898(int, u32, float, float);
+
+
+		//0x0: vtable
+		//0x0-38: CObjectParam
+		u8 unk38_3[0x38];
 	};
 }

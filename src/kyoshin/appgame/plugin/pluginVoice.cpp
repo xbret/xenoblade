@@ -18,7 +18,7 @@ int voice_play(_sVMThread* pThread) {
 	while((u32)node != (u32)list->unk4){
 		cf::CfObjectPc* object = (cf::CfObjectPc*)node->item;
 		if(object->CActorParam_vtableFunc138() == 0){
-			if(r30 == object->unk3F28){
+			if(r30 == object->unk8C_3){
 				object->func_800BE898(r27, 0x14, 1.0f, 30.0f);
 				break;
 			}

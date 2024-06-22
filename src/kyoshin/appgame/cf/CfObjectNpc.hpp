@@ -4,7 +4,11 @@
 #include "kyoshin/appgame/cf/CfObjectMove.hpp"
 
 namespace cf{
-	class CfObjectNpc : CfObjectMove{
-
+	//size: 0x71C
+	class CfObjectNpc : public CfObjectMove{
+	public:
+		//0x0: vtable
+		//0x0-718: CfObjectMove
+		u8 unk718[4];
 	};
 }

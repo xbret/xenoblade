@@ -5117,11 +5117,11 @@
 /* 8008063C 00049BFC  4E 80 00 20 */	blr 
 .endfn __dt__Q22cf14CfObjectImplPcFv
 
-.fn CObjectParam_virtualFunc4__Q22cf12CObjectParamFv, global
+.fn CObjectParam_vtableFunc4__Q22cf12CObjectParamFv, global
 /* 80080640 00049C00  38 00 00 00 */	li r0, 0
 /* 80080644 00049C04  90 03 00 34 */	stw r0, 0x34(r3)
 /* 80080648 00049C08  4E 80 00 20 */	blr 
-.endfn CObjectParam_virtualFunc4__Q22cf12CObjectParamFv
+.endfn CObjectParam_vtableFunc4__Q22cf12CObjectParamFv
 
 .fn func_8008064C, global
 /* 8008064C 00049C0C  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -12540,12 +12540,12 @@
 /* 80086B48 00050108  4B FE 33 58 */	b func_80069EA0
 .endfn func_80086B48
 
-.fn CObjectState_virtualFunc7__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc7__Q22cf12CObjectStateFv, global
 /* 80086B4C 0005010C  80 03 00 08 */	lwz r0, 8(r3)
 /* 80086B50 00050110  7C 00 20 78 */	andc r0, r0, r4
 /* 80086B54 00050114  90 03 00 08 */	stw r0, 8(r3)
 /* 80086B58 00050118  4E 80 00 20 */	blr 
-.endfn CObjectState_virtualFunc7__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc7__Q22cf12CObjectStateFv
 
 .fn func_80086B5C, global
 /* 80086B5C 0005011C  94 21 FF D0 */	stwu r1, -0x30(r1)

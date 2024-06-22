@@ -2644,9 +2644,9 @@
 /* 800BE0F0 000876B0  4E 80 00 20 */	blr
 .endfn CfObjectMove_vtableFunc4__Q22cf12CfObjectMoveFv
 
-.fn CObjectParam_virtualFunc2__Q22cf12CfObjectMoveFv, global
-/* 800BE0F4 000876B4  4B FF D4 A0 */	b CObjectParam_virtualFunc2__Q22cf13CfObjectModelFv
-.endfn CObjectParam_virtualFunc2__Q22cf12CfObjectMoveFv
+.fn CObjectParam_vtableFunc2__Q22cf12CfObjectMoveFv, global
+/* 800BE0F4 000876B4  4B FF D4 A0 */	b CObjectParam_vtableFunc2__Q22cf13CfObjectModelFv
+.endfn CObjectParam_vtableFunc2__Q22cf12CfObjectMoveFv
 
 .fn func_800BE0F8, global
 /* 800BE0F8 000876B8  80 A3 00 98 */	lwz r5, 0x98(r3)
@@ -4124,25 +4124,25 @@
 .obj __vt__Q22cf12CfObjectMove, global
 	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0
-	.4byte CObjectState_virtualFunc1__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc2__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc3__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc4__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc6__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc7__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc8__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc9__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc10__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc11__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc12__Q22cf12CObjectStateFv
-	.4byte CObjectState_virtualFunc13__Q22cf12CObjectStateFv
-	.4byte CObjectParam_virtualFunc1__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc2__Q22cf12CfObjectMoveFv
-	.4byte CObjectParam_virtualFunc3__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc4__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc5__Q22cf12CObjectParamFv
-	.4byte CObjectParam_virtualFunc6__Q22cf12CObjectParamFv
+	.4byte CObjectState_vtableFunc1__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc2__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc3__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc4__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc6__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc7__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc8__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc9__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc10__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc11__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc12__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc13__Q22cf12CObjectStateFv
+	.4byte CObjectParam_vtableFunc1__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc2__Q22cf12CfObjectMoveFv
+	.4byte CObjectParam_vtableFunc3__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc4__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc5__Q22cf12CObjectParamFv
+	.4byte CObjectParam_vtableFunc6__Q22cf12CObjectParamFv
 	.4byte __dt__Q22cf12CfObjectMoveFv
 	.4byte CfObject_vtableFunc2__Q22cf13CfObjectModelFv
 	.4byte CfObject_vtableFunc3__Q22cf8CfObjectFv

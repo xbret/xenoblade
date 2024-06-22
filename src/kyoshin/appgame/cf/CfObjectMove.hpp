@@ -4,6 +4,7 @@
 #include "kyoshin/appgame/cf/CfObjectModel.hpp"
 
 namespace cf{
+	//min size: 0x715
 	class CfObjectMove : public CfObjectModel{
 	public:
 		//vtable 1 (CfObject)
@@ -32,5 +33,10 @@ namespace cf{
 		virtual void CfObjectMove_vtableFunc21();
 		virtual void CfObjectMove_vtableFunc22();
 		virtual void CfObjectMove_vtableFunc23();
+
+		//0x0: vtable
+		//0x0-BE: CfObjectModel
+		u8 unkBE_3[0x657];
+		u8 unk715[3]; //might not belong here
 	};
 }

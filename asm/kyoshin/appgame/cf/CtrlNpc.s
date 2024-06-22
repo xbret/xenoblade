@@ -1230,7 +1230,7 @@
 /* 80094898 0005DE58  4E 80 00 20 */	blr 
 .endfn func_80093F28
 
-.fn CObjectState_virtualFunc5__Q22cf12CObjectStateFv, global
+.fn CObjectState_vtableFunc5__Q22cf12CObjectStateFv, global
 /* 8009489C 0005DE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800948A0 0005DE60  7C 08 02 A6 */	mflr r0
 /* 800948A4 0005DE64  28 04 00 3F */	cmplwi r4, 0x3f
@@ -1255,7 +1255,7 @@
 /* 800948EC 0005DEAC  7C 08 03 A6 */	mtlr r0
 /* 800948F0 0005DEB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800948F4 0005DEB4  4E 80 00 20 */	blr
-.endfn CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+.endfn CObjectState_vtableFunc5__Q22cf12CObjectStateFv
 
 .fn func_800948F8, global
 /* 800948F8 0005DEB8  7C 04 28 50 */	subf r0, r4, r5
@@ -4097,7 +4097,7 @@
 
 .obj "@eti_80024380", local
 .hidden "@eti_80024380"
-	.4byte CObjectState_virtualFunc5__Q22cf12CObjectStateFv
+	.4byte CObjectState_vtableFunc5__Q22cf12CObjectStateFv
 	.4byte 0x0000005C
 	.4byte "@etb_80008D14"
 .endobj "@eti_80024380"

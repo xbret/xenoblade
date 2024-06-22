@@ -4,11 +4,10 @@
 #include "kyoshin/appgame/cf/CfObjectActor.hpp"
 
 namespace cf{
+	//size: 0x45C0
 	class CfObjectPc : public CfObjectActor{
 	public:
-		//vtable 4 (CfObjectActor)
 		virtual ~CfObjectPc();
-		//vtable 4 (CfObjectPc)
 		virtual void func_800BFF20();
 		virtual void func_800C0080();
 		virtual void func_800C0524();
@@ -24,7 +23,8 @@ namespace cf{
 		virtual void func_800C0514();
 		virtual void func_800C11CC();
 
-		u8 unk3EA0[0x88];
-		u16 unk3F28;
+		//0x0: vtable
+		//0x0-45BC: CfObjectActor
+		u8 unk45BC[0x4];
 	};
 }
