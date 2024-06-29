@@ -21,28 +21,28 @@ CDeviceSC::~CDeviceSC(){
 }
 
 CDeviceSC* CDeviceSC::getInstance(){
-	return CDeviceSC::instance;
+	return instance;
 }
 
-bool func_80447C28(){
-	return CDeviceSC::instance->aspectRatio - 1 == 0;
+bool CDeviceSC::isWideAspectRatio(){
+	return instance->aspectRatio == SC_ASPECT_WIDE;
 }
 
-bool checkIfScSoundModeMono(){
-	return CDeviceSC::instance->soundMode == SC_SND_MONO;
+bool CDeviceSC::isSoundModeMono(){
+	return instance->soundMode == SC_SND_MONO;
 }
 
-u8 getSCLanguage(){
-	return CDeviceSC::instance->language;
+u8 CDeviceSC::getLanguage(){
+	return instance->language;
 }
 
-bool func_80447C60(){
-	return CDeviceSC::instance->CWorkThread_inline2();
+bool CDeviceSC::func_80447C60(){
+	return instance->CWorkThread_inline2();
 }
 
 bool CDeviceSC::WorkThreadEvent4(){
 	if(SCCheckStatus() == SC_STATUS_0){
-		u32 r3 = func_8044DEE0();
+		u32 r3 = CDeviceClock::func_8044DEE0();
 		if(r3 != 0){
 			//Update SC values
 			aspectRatio = SCGetAspectRatio();

@@ -1033,11 +1033,11 @@
 /* 8044757C 00410B3C  4E 80 00 20 */	blr 
 .endfn func_80447574
 
-.fn CDeviceRemotePad_80447580, global
+.fn CDeviceRemotePad_80447580__Fv, global
 /* 80447580 00410B40  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447584 00410B44  80 63 08 DC */	lwz r3, 0x8dc(r3)
 /* 80447588 00410B48  4E 80 00 20 */	blr
-.endfn CDeviceRemotePad_80447580
+.endfn CDeviceRemotePad_80447580__Fv
 
 .fn func_8044758C, global
 /* 8044758C 00410B4C  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
@@ -1045,7 +1045,7 @@
 /* 80447594 00410B54  4E 80 00 20 */	blr 
 .endfn func_8044758C
 
-.fn func_80447598, global
+.fn func_80447598__Fv, global
 /* 80447598 00410B58  3C 60 80 66 */	lis r3, lbl_8065A438@ha
 /* 8044759C 00410B5C  38 00 00 00 */	li r0, 0
 /* 804475A0 00410B60  9C 03 A4 38 */	stbu r0, lbl_8065A438@l(r3)
@@ -1065,7 +1065,7 @@
 /* 804475D8 00410B98  98 03 02 30 */	stb r0, 0x230(r3)
 /* 804475DC 00410B9C  98 03 02 58 */	stb r0, 0x258(r3)
 /* 804475E0 00410BA0  4E 80 00 20 */	blr 
-.endfn func_80447598
+.endfn func_80447598__Fv
 
 .fn func_804475E4, global
 /* 804475E4 00410BA4  94 21 FF E0 */	stwu r1, -0x20(r1)

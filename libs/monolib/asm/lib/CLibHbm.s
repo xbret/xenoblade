@@ -636,7 +636,7 @@
 /* 8045DBA4 00427164  80 6D BE 50 */	lwz r3, lbl_80667FD0@sda21(r13)
 /* 8045DBA8 00427168  38 63 01 EC */	addi r3, r3, 0x1ec
 /* 8045DBAC 0042716C  4B BA 67 A5 */	bl memset
-/* 8045DBB0 00427170  4B FE A0 A5 */	bl getSCLanguage__Fv
+/* 8045DBB0 00427170  4B FE A0 A5 */	bl getLanguage__9CDeviceSCFv
 /* 8045DBB4 00427174  80 8D BE 50 */	lwz r4, lbl_80667FD0@sda21(r13)
 /* 8045DBB8 00427178  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 8045DBBC 0042717C  38 00 00 00 */	li r0, 0

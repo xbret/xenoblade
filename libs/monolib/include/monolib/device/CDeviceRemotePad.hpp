@@ -2,6 +2,5 @@
 
 #include "types.h"
 
-extern "C"{
 int* CDeviceRemotePad_80447580();
-}
+void func_80447598();

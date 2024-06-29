@@ -11,6 +11,10 @@ public:
 	virtual bool WorkThreadEvent4();
 	virtual bool WorkThreadEvent5();
 	static CDeviceSC* getInstance();
+	static bool isWideAspectRatio();
+	static bool isSoundModeMono();
+	static u8 getLanguage();
+	static bool func_80447C60();
 
 	//0x0: vtable
 	//0x0-1C8: CDeviceBase

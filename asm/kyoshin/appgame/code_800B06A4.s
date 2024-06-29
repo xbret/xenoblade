@@ -148,7 +148,7 @@
 /* 800B08A8 00079E68  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B08AC 00079E6C  7C 7E 1B 78 */	mr r30, r3
 /* 800B08B0 00079E70  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 800B08B4 00079E74  48 38 41 CD */	bl heap_malloc_1
+/* 800B08B4 00079E74  48 38 41 CD */	bl heap_malloc_1__3mtlFUli
 /* 800B08B8 00079E78  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 800B08BC 00079E7C  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 800B08C0 00079E80  38 A0 00 00 */	li r5, 0
@@ -700,7 +700,7 @@
 /* 800B1008 0007A5C8  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B100C 0007A5CC  7C 7E 1B 78 */	mr r30, r3
 /* 800B1010 0007A5D0  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 800B1014 0007A5D4  48 38 3A 6D */	bl heap_malloc_1
+/* 800B1014 0007A5D4  48 38 3A 6D */	bl heap_malloc_1__3mtlFUli
 /* 800B1018 0007A5D8  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 800B101C 0007A5DC  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 800B1020 0007A5E0  38 A0 00 00 */	li r5, 0
@@ -868,7 +868,7 @@
 /* 800B1274 0007A834  48 38 37 E9 */	bl heap_malloc__3mtlFUli
 /* 800B1278 0007A838  2C 03 00 00 */	cmpwi r3, 0
 /* 800B127C 0007A83C  41 82 00 08 */	beq .L_800B1284
-/* 800B1280 0007A840  48 15 47 FD */	bl __ct__reslist_cf_CfMapMineManager_MinePoint
+/* 800B1280 0007A840  48 15 47 FD */	bl __ct__80205A7C
 .L_800B1284:
 /* 800B1284 0007A844  90 7F 0C AC */	stw r3, 0xcac(r31)
 /* 800B1288 0007A848  38 00 00 00 */	li r0, 0
@@ -956,7 +956,7 @@
 /* 800B1394 0007A954  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B1398 0007A958  7C 7E 1B 78 */	mr r30, r3
 /* 800B139C 0007A95C  38 66 00 10 */	addi r3, r6, 0x10
-/* 800B13A0 0007A960  48 38 36 E1 */	bl heap_malloc_1
+/* 800B13A0 0007A960  48 38 36 E1 */	bl heap_malloc_1__3mtlFUli
 /* 800B13A4 0007A964  3C 80 80 0B */	lis r4, func_800B0B8C@ha
 /* 800B13A8 0007A968  7F E7 FB 78 */	mr r7, r31
 /* 800B13AC 0007A96C  38 84 0B 8C */	addi r4, r4, func_800B0B8C@l

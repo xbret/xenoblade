@@ -387,7 +387,7 @@
 /* 8049CE2C 004663EC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049CE30 004663F0  7C 7E 1B 78 */	mr r30, r3
 /* 8049CE34 004663F4  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 8049CE38 004663F8  4B F9 7C 49 */	bl heap_malloc_1
+/* 8049CE38 004663F8  4B F9 7C 49 */	bl heap_malloc_1__3mtlFUli
 /* 8049CE3C 004663FC  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 8049CE40 00466400  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 8049CE44 00466404  38 60 00 00 */	li r3, 0
@@ -475,7 +475,7 @@
 /* 8049CF60 00466520  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049CF64 00466524  7C 7E 1B 78 */	mr r30, r3
 /* 8049CF68 00466528  38 66 00 10 */	addi r3, r6, 0x10
-/* 8049CF6C 0046652C  4B F9 7B 15 */	bl heap_malloc_1
+/* 8049CF6C 0046652C  4B F9 7B 15 */	bl heap_malloc_1__3mtlFUli
 /* 8049CF70 00466530  3C 80 80 4A */	lis r4, func_8049CC70@ha
 /* 8049CF74 00466534  7F E7 FB 78 */	mr r7, r31
 /* 8049CF78 00466538  38 84 CC 70 */	addi r4, r4, func_8049CC70@l

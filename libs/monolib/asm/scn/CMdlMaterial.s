@@ -73,7 +73,7 @@
 /* 804E5530 004AEAF0  4B EF 46 D1 */	bl GetResMatNumEntries__Q34nw4r3g3d6ResMdlCFv
 /* 804E5534 004AEAF4  7D C4 73 78 */	mr r4, r14
 /* 804E5538 004AEAF8  54 63 20 36 */	slwi r3, r3, 4
-/* 804E553C 004AEAFC  4B F4 F5 45 */	bl heap_malloc_1
+/* 804E553C 004AEAFC  4B F4 F5 45 */	bl heap_malloc_1__3mtlFUli
 /* 804E5540 004AEB00  90 7D 00 08 */	stw r3, 8(r29)
 .L_804E5544:
 /* 804E5544 004AEB04  38 00 00 00 */	li r0, 0

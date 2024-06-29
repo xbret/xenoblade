@@ -84,6 +84,7 @@ MemBlock* MemManager_804339B8(Heap*, MemBlock*);
 MemBlock* MemManager_80433AA8(Heap*, MemBlock*);
 void MemManager_setArenaMemorySize(u32, u32);
 void* heap_malloc(size_t size, int memBlockIndex);
+void* heap_malloc_1(size_t size, int memBlockIndex);
 int getHeapIndex();
 
 #define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__reslist_cf_CfMapMineManager_MinePoint, global
+.fn __ct__80205A7C, global
 /* 80205A7C 001CF03C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80205A80 001CF040  7C 08 02 A6 */	mflr r0
 /* 80205A84 001CF044  3C 80 80 54 */	lis r4, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@ha
@@ -199,7 +199,7 @@
 /* 80205D48 001CF308  4B E5 C2 B5 */	bl func_80061FFC
 /* 80205D4C 001CF30C  7C 64 1B 78 */	mr r4, r3
 /* 80205D50 001CF310  38 60 19 D8 */	li r3, 0x19d8
-/* 80205D54 001CF314  48 22 ED 2D */	bl heap_malloc_1
+/* 80205D54 001CF314  48 22 ED 2D */	bl heap_malloc_1__3mtlFUli
 /* 80205D58 001CF318  3C 80 80 20 */	lis r4, func_80205F78@ha
 /* 80205D5C 001CF31C  38 A0 00 00 */	li r5, 0
 /* 80205D60 001CF320  38 84 5F 78 */	addi r4, r4, func_80205F78@l
@@ -341,7 +341,7 @@
 /* 80205F6C 001CF52C  7C 08 03 A6 */	mtlr r0
 /* 80205F70 001CF530  38 21 00 20 */	addi r1, r1, 0x20
 /* 80205F74 001CF534  4E 80 00 20 */	blr
-.endfn __ct__reslist_cf_CfMapMineManager_MinePoint
+.endfn __ct__80205A7C
 
 .fn func_80205F78, global
 /* 80205F78 001CF538  80 03 00 28 */	lwz r0, 0x28(r3)
@@ -2897,7 +2897,7 @@
 
 .obj "@eti_8002CD44", local
 .hidden "@eti_8002CD44"
-	.4byte __ct__reslist_cf_CfMapMineManager_MinePoint
+	.4byte __ct__80205A7C
 	.4byte 0x000004FC
 	.4byte "@etb_80012E10"
 .endobj "@eti_8002CD44"

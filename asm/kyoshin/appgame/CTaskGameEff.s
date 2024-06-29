@@ -295,7 +295,7 @@
 /* 80044EA8 0000E468  48 3E F4 F9 */	bl Heap_getRegionIndex2
 /* 80044EAC 0000E46C  7C 64 1B 78 */	mr r4, r3
 /* 80044EB0 0000E470  38 60 00 30 */	li r3, 0x30
-/* 80044EB4 0000E474  48 3E FB CD */	bl heap_malloc_1
+/* 80044EB4 0000E474  48 3E FB CD */	bl heap_malloc_1__3mtlFUli
 /* 80044EB8 0000E478  38 00 00 04 */	li r0, 4
 /* 80044EBC 0000E47C  90 7E 00 88 */	stw r3, 0x88(r30)
 /* 80044EC0 0000E480  38 A0 00 00 */	li r5, 0

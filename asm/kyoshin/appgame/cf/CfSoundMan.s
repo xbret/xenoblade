@@ -29,7 +29,7 @@
 /* 801BF7C8 00188D88  38 60 00 04 */	li r3, 4
 /* 801BF7CC 00188D8C  38 80 00 03 */	li r4, 3
 /* 801BF7D0 00188D90  48 26 18 51 */	bl InitSoundSystem__Q34nw4r3snd11SoundSystemFll
-/* 801BF7D4 00188D94  48 28 84 6D */	bl checkIfScSoundModeMono__Fv
+/* 801BF7D4 00188D94  48 28 84 6D */	bl isSoundModeMono__9CDeviceSCFv
 /* 801BF7D8 00188D98  2C 03 00 00 */	cmpwi r3, 0
 /* 801BF7DC 00188D9C  41 82 00 08 */	beq .L_801BF7E4
 /* 801BF7E0 00188DA0  3B E0 00 03 */	li r31, 3
