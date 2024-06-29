@@ -1520,7 +1520,7 @@ LIBS = [
             ["CChildListNode", False],
             ["device/CDeviceRemotePad", False],
             ["device/CDeviceBase", False],
-            ["device/CDeviceSC", False],
+            ["device/CDeviceSC", True],
             ["device/CDeviceVI", False],
             ["device/CDeviceVICb", False],
             ["CFontLayer", False],

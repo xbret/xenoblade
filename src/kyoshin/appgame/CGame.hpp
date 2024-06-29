@@ -14,7 +14,7 @@ public:
 	virtual void wkUpdate();
 	virtual void WorkThreadEvent2();
 	virtual bool WorkThreadEvent4();
-	virtual void WorkThreadEvent5();
+	virtual bool WorkThreadEvent5();
 	virtual bool WorkThreadEvent6();
 
 	u32 unk1EC;
@@ -46,7 +46,7 @@ void GameMain();
 namespace {
 	class CGameRestart : public CProc {
 	public:
-		CGameRestart(const char* name, CWorkThread* workThread, u32 r6) : CProc(name, workThread, r6){
+		CGameRestart(const char* name, CWorkThread* workThread, int r6) : CProc(name, workThread, r6){
 			unk1EC = -1;
 		}
 		virtual ~CGameRestart(){}

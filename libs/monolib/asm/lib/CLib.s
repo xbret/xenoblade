@@ -327,7 +327,7 @@
 /* 804597D8 00422D98  7F E4 FB 78 */	mr r4, r31
 /* 804597DC 00422D9C  7F C5 F3 78 */	mr r5, r30
 /* 804597E0 00422DA0  38 C0 00 08 */	li r6, 8
-/* 804597E4 00422DA4  4B FD DD D9 */	bl __ct__CWorkThread
+/* 804597E4 00422DA4  4B FD DD D9 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804597E8 00422DA8  3C 60 80 57 */	lis r3, __vt__4CLib@ha
 /* 804597EC 00422DAC  38 00 00 0B */	li r0, 0xb
 /* 804597F0 00422DB0  38 63 05 E8 */	addi r3, r3, __vt__4CLib@l

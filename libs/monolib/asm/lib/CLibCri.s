@@ -9,7 +9,7 @@
 /* 80459870 00422E30  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80459874 00422E34  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80459878 00422E38  7C 7F 1B 78 */	mr r31, r3
-/* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__CWorkThread
+/* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80459880 00422E40  38 7F 01 C4 */	addi r3, r31, 0x1c4
 /* 80459884 00422E44  4B FE F6 BD */	bl __ct__CDeviceVICb
 /* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__7CLibCri@ha

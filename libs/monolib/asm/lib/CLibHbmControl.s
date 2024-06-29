@@ -550,7 +550,7 @@
 /* 8045ED0C 004282CC  7F E4 FB 78 */	mr r4, r31
 /* 8045ED10 004282D0  7F C5 F3 78 */	mr r5, r30
 /* 8045ED14 004282D4  38 C0 00 08 */	li r6, 8
-/* 8045ED18 004282D8  4B FD 9F 19 */	bl __ct__5CProcFPCcP11CWorkThreadUl
+/* 8045ED18 004282D8  4B FD 9F 19 */	bl __ct__5CProcFPCcP11CWorkThreadi
 /* 8045ED1C 004282DC  3C 60 80 57 */	lis r3, __vt__14CLibHbmControl@ha
 /* 8045ED20 004282E0  38 C0 00 00 */	li r6, 0
 /* 8045ED24 004282E4  38 63 0A D8 */	addi r3, r3, __vt__14CLibHbmControl@l

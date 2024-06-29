@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__5CProcFPCcP11CWorkThreadUl, global
+.fn __ct__5CProcFPCcP11CWorkThreadi, global
 /* 80438C30 004021F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438C34 004021F4  7C 08 02 A6 */	mflr r0
 /* 80438C38 004021F8  7C C6 07 34 */	extsh r6, r6
@@ -10,7 +10,7 @@
 /* 80438C40 00402200  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80438C44 00402204  7C 7F 1B 78 */	mr r31, r3
 /* 80438C48 00402208  93 C1 00 08 */	stw r30, 8(r1)
-/* 80438C4C 0040220C  4B FF E9 71 */	bl __ct__CWorkThread
+/* 80438C4C 0040220C  4B FF E9 71 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80438C50 00402210  3C 80 80 57 */	lis r4, __vt__5CProc@ha
 /* 80438C54 00402214  3C 60 80 57 */	lis r3, "__vt__17_reslist_base<Ul>"@ha
 /* 80438C58 00402218  3B C0 00 00 */	li r30, 0
@@ -78,7 +78,7 @@
 /* 80438D50 00402310  7C 08 03 A6 */	mtlr r0
 /* 80438D54 00402314  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438D58 00402318  4E 80 00 20 */	blr 
-.endfn __ct__5CProcFPCcP11CWorkThreadUl
+.endfn __ct__5CProcFPCcP11CWorkThreadi
 
 .fn "__dt__17_reslist_base<Ul>Fv", global
 /* 80438D5C 0040231C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1019,7 +1019,7 @@
 
 .obj "@eti_80033E18", local
 .hidden "@eti_80033E18"
-	.4byte __ct__5CProcFPCcP11CWorkThreadUl
+	.4byte __ct__5CProcFPCcP11CWorkThreadi
 	.4byte 0x0000012C
 	.4byte "@etb_8001C1B4"
 .endobj "@eti_80033E18"

@@ -472,7 +472,7 @@
 .endfn ENCiConvertStringUnicodeToSjis
 
 .balign 16, 0
-.fn ENCiConvertUnicodeToSjis, global
+.fn ENCiConvertUnicodeToSjis, local
 /* 80313530 002DCAF0  28 04 00 80 */	cmplwi r4, 0x80
 /* 80313534 002DCAF4  40 80 00 14 */	bge .L_80313548
 /* 80313538 002DCAF8  38 00 00 00 */	li r0, 0
@@ -547,7 +547,7 @@
 .endfn ENCiConvertUnicodeToSjis
 
 .balign 16, 0
-.fn ENCiFindSjisFromUnicode, global
+.fn ENCiFindSjisFromUnicode, local
 /* 80313630 002DCBF0  54 87 06 3F */	clrlwi. r7, r4, 0x18
 /* 80313634 002DCBF4  54 86 C6 3E */	rlwinm r6, r4, 0x18, 0x18, 0x1f
 /* 80313638 002DCBF8  41 82 00 1C */	beq .L_80313654

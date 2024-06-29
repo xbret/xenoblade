@@ -120,7 +120,7 @@ bool CGame::WorkThreadEvent4(){
 	CProc::WorkThreadEvent4();
 }
 
-void CGame::WorkThreadEvent5(){
+bool CGame::WorkThreadEvent5(){
 
 }
 

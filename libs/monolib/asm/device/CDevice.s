@@ -23,7 +23,7 @@
 /* 8044D864 00416E24  7F E4 FB 78 */	mr r4, r31
 /* 8044D868 00416E28  7F A5 EB 78 */	mr r5, r29
 /* 8044D86C 00416E2C  38 C0 00 40 */	li r6, 0x40
-/* 8044D870 00416E30  4B FE 9D 4D */	bl __ct__CWorkThread
+/* 8044D870 00416E30  4B FE 9D 4D */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044D874 00416E34  3C 60 80 57 */	lis r3, "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException"@ha
 /* 8044D878 00416E38  38 63 F8 40 */	addi r3, r3, "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException"@l
 /* 8044D87C 00416E3C  90 7E 00 00 */	stw r3, 0(r30)
@@ -99,7 +99,7 @@
 /* 8044D970 00416F30  7F E4 FB 78 */	mr r4, r31
 /* 8044D974 00416F34  7F C5 F3 78 */	mr r5, r30
 /* 8044D978 00416F38  38 C0 00 20 */	li r6, 0x20
-/* 8044D97C 00416F3C  4B FE 9C 41 */	bl __ct__CWorkThread
+/* 8044D97C 00416F3C  4B FE 9C 41 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044D980 00416F40  3C 60 80 57 */	lis r3, __vt__7CDevice@ha
 /* 8044D984 00416F44  38 00 00 0A */	li r0, 0xa
 /* 8044D988 00416F48  38 63 F8 F8 */	addi r3, r3, __vt__7CDevice@l

@@ -163,7 +163,7 @@
 /* 804375B8 00400B78  4E 80 00 20 */	blr 
 .endfn getHeapIndex__3mtlFv
 
-.fn __ct__CWorkThread, global
+.fn __ct__11CWorkThreadFPCcP11CWorkThreadi, global
 /* 804375BC 00400B7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804375C0 00400B80  7C 08 02 A6 */	mflr r0
 /* 804375C4 00400B84  3C E0 80 57 */	lis r7, __vt__11CWorkThread@ha
@@ -393,7 +393,7 @@
 /* 804378F8 00400EB8  7C 08 03 A6 */	mtlr r0
 /* 804378FC 00400EBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80437900 00400EC0  4E 80 00 20 */	blr 
-.endfn __ct__CWorkThread
+.endfn __ct__11CWorkThreadFPCcP11CWorkThreadi
 
 .fn __dt___reslist_base_CWorkThread, global
 /* 80437904 00400EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1187,7 +1187,7 @@
 /* 804383B4 00401974  48 01 5B 25 */	bl func_8044DED8
 /* 804383B8 00401978  2C 03 00 00 */	cmpwi r3, 0
 /* 804383BC 0040197C  41 82 00 18 */	beq .L_804383D4
-/* 804383C0 00401980  48 01 5B 21 */	bl func_8044DEE0
+/* 804383C0 00401980  48 01 5B 21 */	bl func_8044DEE0__Fv
 /* 804383C4 00401984  2C 03 00 00 */	cmpwi r3, 0
 /* 804383C8 00401988  40 82 00 14 */	bne .L_804383DC
 /* 804383CC 0040198C  2C 18 00 00 */	cmpwi r24, 0
@@ -2150,7 +2150,7 @@
 
 .obj "@eti_80033D4C", local
 .hidden "@eti_80033D4C"
-	.4byte __ct__CWorkThread
+	.4byte __ct__11CWorkThreadFPCcP11CWorkThreadi
 	.4byte 0x00000348
 	.4byte "@etb_8001C100"
 .endobj "@eti_80033D4C"

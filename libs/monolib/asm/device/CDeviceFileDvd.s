@@ -9,7 +9,7 @@
 /* 80450B60 0041A120  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80450B64 0041A124  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80450B68 0041A128  7C 7F 1B 78 */	mr r31, r3
-/* 80450B6C 0041A12C  4B FE 6A 51 */	bl __ct__CWorkThread
+/* 80450B6C 0041A12C  4B FE 6A 51 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80450B70 0041A130  3C 60 80 57 */	lis r3, __vt__14CDeviceFileDvd@ha
 /* 80450B74 0041A134  38 80 00 00 */	li r4, 0
 /* 80450B78 0041A138  38 63 FC 68 */	addi r3, r3, __vt__14CDeviceFileDvd@l

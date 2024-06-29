@@ -117,7 +117,7 @@
 /* 804398BC 00402E7C  7F E4 FB 78 */	mr r4, r31
 /* 804398C0 00402E80  7F A5 EB 78 */	mr r5, r29
 /* 804398C4 00402E84  38 C0 00 20 */	li r6, 0x20
-/* 804398C8 00402E88  4B FF DC F5 */	bl __ct__CWorkThread
+/* 804398C8 00402E88  4B FF DC F5 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804398CC 00402E8C  3C 60 80 57 */	lis r3, __vt__9CProcRoot@ha
 /* 804398D0 00402E90  38 00 00 15 */	li r0, 0x15
 /* 804398D4 00402E94  38 63 EB 20 */	addi r3, r3, __vt__9CProcRoot@l

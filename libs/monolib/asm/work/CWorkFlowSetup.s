@@ -9,7 +9,7 @@
 /* 804439D8 0040CF98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804439DC 0040CF9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804439E0 0040CFA0  7C 7F 1B 78 */	mr r31, r3
-/* 804439E4 0040CFA4  4B FF 3B D9 */	bl __ct__CWorkThread
+/* 804439E4 0040CFA4  4B FF 3B D9 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804439E8 0040CFA8  3C 60 80 57 */	lis r3, __vt__14CWorkFlowSetup@ha
 /* 804439EC 0040CFAC  38 00 00 00 */	li r0, 0
 /* 804439F0 0040CFB0  38 63 F0 F8 */	addi r3, r3, __vt__14CWorkFlowSetup@l

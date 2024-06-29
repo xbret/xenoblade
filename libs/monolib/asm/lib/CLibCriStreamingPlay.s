@@ -10,7 +10,7 @@
 /* 8045B3FC 004249BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045B400 004249C0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045B404 004249C4  7C 7E 1B 78 */	mr r30, r3
-/* 8045B408 004249C8  4B FD C1 B5 */	bl __ct__CWorkThread
+/* 8045B408 004249C8  4B FD C1 B5 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8045B40C 004249CC  3C A0 80 57 */	lis r5, __vt__20CLibCriStreamingPlay@ha
 /* 8045B410 004249D0  38 DE 02 5C */	addi r6, r30, 0x25c
 /* 8045B414 004249D4  38 A5 08 70 */	addi r5, r5, __vt__20CLibCriStreamingPlay@l
@@ -189,7 +189,7 @@
 .L_8045B67C:
 /* 8045B67C 00424C3C  38 00 00 00 */	li r0, 0
 /* 8045B680 00424C40  90 1F 00 90 */	stw r0, 0x90(r31)
-/* 8045B684 00424C44  4B FE C5 BD */	bl func_80447C40
+/* 8045B684 00424C44  4B FE C5 BD */	bl checkIfScSoundModeMono__Fv
 /* 8045B688 00424C48  2C 03 00 00 */	cmpwi r3, 0
 /* 8045B68C 00424C4C  41 82 00 14 */	beq .L_8045B6A0
 /* 8045B690 00424C50  80 1F 00 90 */	lwz r0, 0x90(r31)

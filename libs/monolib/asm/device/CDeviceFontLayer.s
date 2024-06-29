@@ -10,7 +10,7 @@
 /* 80453848 0041CE08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045384C 0041CE0C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80453850 0041CE10  7C 7E 1B 78 */	mr r30, r3
-/* 80453854 0041CE14  4B FE 3D 69 */	bl __ct__CWorkThread
+/* 80453854 0041CE14  4B FE 3D 69 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80453858 0041CE18  3C 80 80 57 */	lis r4, __vt__16CDeviceFontLayer@ha
 /* 8045385C 0041CE1C  3C 60 80 57 */	lis r3, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 80453860 0041CE20  3B E0 00 00 */	li r31, 0

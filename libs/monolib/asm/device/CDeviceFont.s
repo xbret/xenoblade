@@ -10,7 +10,7 @@
 /* 804522AC 0041B86C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804522B0 0041B870  93 C1 00 08 */	stw r30, 8(r1)
 /* 804522B4 0041B874  7C 7E 1B 78 */	mr r30, r3
-/* 804522B8 0041B878  4B FE 53 05 */	bl __ct__CWorkThread
+/* 804522B8 0041B878  4B FE 53 05 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804522BC 0041B87C  3C 60 80 57 */	lis r3, __vt__11CDeviceFont@ha
 /* 804522C0 0041B880  3C C0 80 57 */	lis r6, "__vt__33_reslist_base<P15IDeviceFontInfo>"@ha
 /* 804522C4 0041B884  3B E0 00 00 */	li r31, 0

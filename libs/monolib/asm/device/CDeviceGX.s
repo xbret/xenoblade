@@ -10,7 +10,7 @@
 /* 804550F4 0041E6B4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804550F8 0041E6B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 804550FC 0041E6BC  7C 7E 1B 78 */	mr r30, r3
-/* 80455100 0041E6C0  4B FE 24 BD */	bl __ct__CWorkThread
+/* 80455100 0041E6C0  4B FE 24 BD */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80455104 0041E6C4  3C 60 80 57 */	lis r3, __vt__11CDeviceBase@ha
 /* 80455108 0041E6C8  3B E0 00 00 */	li r31, 0
 /* 8045510C 0041E6CC  38 63 F4 F8 */	addi r3, r3, __vt__11CDeviceBase@l

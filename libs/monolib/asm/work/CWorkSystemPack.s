@@ -9,7 +9,7 @@
 /* 804DD900 004A6EC0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804DD904 004A6EC4  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 804DD908 004A6EC8  7C 7F 1B 78 */	mr r31, r3
-/* 804DD90C 004A6ECC  4B F5 9C B1 */	bl __ct__CWorkThread
+/* 804DD90C 004A6ECC  4B F5 9C B1 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804DD910 004A6ED0  3C 80 80 57 */	lis r4, __vt__15CWorkSystemPack@ha
 /* 804DD914 004A6ED4  3C 60 80 57 */	lis r3, "__vt__26_reslist_base<P9CPackItem>"@ha
 /* 804DD918 004A6ED8  3B C0 00 00 */	li r30, 0

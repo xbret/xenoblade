@@ -9,7 +9,7 @@
 /* 80439CC0 00403280  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80439CC4 00403284  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80439CC8 00403288  7C 7F 1B 78 */	mr r31, r3
-/* 80439CCC 0040328C  4B FF D8 F1 */	bl __ct__CWorkThread
+/* 80439CCC 0040328C  4B FF D8 F1 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80439CD0 00403290  3C 60 80 57 */	lis r3, __vt__9CRsrcData@ha
 /* 80439CD4 00403294  38 80 00 00 */	li r4, 0
 /* 80439CD8 00403298  38 63 EB D8 */	addi r3, r3, __vt__9CRsrcData@l

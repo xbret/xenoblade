@@ -9,7 +9,7 @@
 /* 80454E8C 0041E44C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80454E90 0041E450  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80454E94 0041E454  7C 7F 1B 78 */	mr r31, r3
-/* 80454E98 0041E458  4B FE 27 25 */	bl __ct__CWorkThread
+/* 80454E98 0041E458  4B FE 27 25 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80454E9C 0041E45C  3C 60 80 57 */	lis r3, __vt__17CDeviceFontLoader@ha
 /* 80454EA0 0041E460  38 80 00 00 */	li r4, 0
 /* 80454EA4 0041E464  38 63 00 F0 */	addi r3, r3, __vt__17CDeviceFontLoader@l

@@ -10,7 +10,7 @@
 /* 8044DB34 004170F4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044DB38 004170F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044DB3C 004170FC  7C 7E 1B 78 */	mr r30, r3
-/* 8044DB40 00417100  4B FE 9A 7D */	bl __ct__CWorkThread
+/* 8044DB40 00417100  4B FE 9A 7D */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044DB44 00417104  3C 60 80 57 */	lis r3, __vt__12CDeviceClock@ha
 /* 8044DB48 00417108  3D 00 80 57 */	lis r8, "__vt__35_reslist_base<P17IDeviceClockFrame>"@ha
 /* 8044DB4C 0041710C  3B E0 00 00 */	li r31, 0
@@ -269,7 +269,7 @@
 /* 8044DEDC 0041749C  4E 80 00 20 */	blr 
 .endfn func_8044DED8
 
-.fn func_8044DEE0, global
+.fn func_8044DEE0__Fv, global
 /* 8044DEE0 004174A0  80 CD BD B8 */	lwz r6, lbl_80667F38@sda21(r13)
 /* 8044DEE4 004174A4  80 06 00 7C */	lwz r0, 0x7c(r6)
 /* 8044DEE8 004174A8  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
@@ -319,7 +319,7 @@
 /* 8044DF7C 0041753C  4D 82 00 20 */	beqlr 
 /* 8044DF80 00417540  38 60 00 01 */	li r3, 1
 /* 8044DF84 00417544  4E 80 00 20 */	blr 
-.endfn func_8044DEE0
+.endfn func_8044DEE0__Fv
 
 .fn func_8044DF88, global
 /* 8044DF88 00417548  4B F0 E9 D8 */	b OSGetTime
@@ -435,7 +435,7 @@
 /* 8044E0F4 004176B4  80 04 00 00 */	lwz r0, 0(r4)
 /* 8044E0F8 004176B8  7C 00 20 40 */	cmplw r0, r4
 /* 8044E0FC 004176BC  40 82 00 34 */	bne .L_8044E130
-/* 8044E100 004176C0  4B FF 9B 21 */	bl func_80447C20
+/* 8044E100 004176C0  4B FF 9B 21 */	bl getInstance__9CDeviceSCFv
 /* 8044E104 004176C4  2C 03 00 00 */	cmpwi r3, 0
 /* 8044E108 004176C8  40 82 00 28 */	bne .L_8044E130
 /* 8044E10C 004176CC  4B FF 63 C9 */	bl func_804444D4

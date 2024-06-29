@@ -9,7 +9,7 @@
 /* 8044F5D0 00418B90  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8044F5D4 00418B94  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044F5D8 00418B98  7C 7F 1B 78 */	mr r31, r3
-/* 8044F5DC 00418B9C  4B FE 7F E1 */	bl __ct__CWorkThread
+/* 8044F5DC 00418B9C  4B FE 7F E1 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044F5E0 00418BA0  3C A0 80 57 */	lis r5, __vt__14CDeviceFileCri@ha
 /* 8044F5E4 00418BA4  38 60 00 00 */	li r3, 0
 /* 8044F5E8 00418BA8  38 A5 FB 94 */	addi r5, r5, __vt__14CDeviceFileCri@l

@@ -9,7 +9,7 @@
 /* 8045EF90 00428550  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045EF94 00428554  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045EF98 00428558  7C 7F 1B 78 */	mr r31, r3
-/* 8045EF9C 0042855C  4B FD 86 21 */	bl __ct__CWorkThread
+/* 8045EF9C 0042855C  4B FD 86 21 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8045EFA0 00428560  3C 60 80 57 */	lis r3, __vt__10CLibLayout@ha
 /* 8045EFA4 00428564  38 80 00 00 */	li r4, 0
 /* 8045EFA8 00428568  38 63 0B 98 */	addi r3, r3, __vt__10CLibLayout@l

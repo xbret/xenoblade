@@ -10,7 +10,7 @@
 /* 8045F940 00428F00  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045F944 00428F04  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045F948 00428F08  7C 7E 1B 78 */	mr r30, r3
-/* 8045F94C 00428F0C  4B FD 7C 71 */	bl __ct__CWorkThread
+/* 8045F94C 00428F0C  4B FD 7C 71 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8045F950 00428F10  3C 60 80 57 */	lis r3, __vt__14CLibStaticData@ha
 /* 8045F954 00428F14  3B E0 00 00 */	li r31, 0
 /* 8045F958 00428F18  38 63 0C 50 */	addi r3, r3, __vt__14CLibStaticData@l

@@ -9,7 +9,7 @@
 /* 8045D15C 0042671C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045D160 00426720  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045D164 00426724  7C 7F 1B 78 */	mr r31, r3
-/* 8045D168 00426728  4B FD A4 55 */	bl __ct__CWorkThread
+/* 8045D168 00426728  4B FD A4 55 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8045D16C 0042672C  3C 60 80 57 */	lis r3, __vt__7CLibG3d@ha
 /* 8045D170 00426730  38 00 00 0C */	li r0, 0xc
 /* 8045D174 00426734  38 63 09 38 */	addi r3, r3, __vt__7CLibG3d@l

@@ -11,7 +11,7 @@
 /* 8043C2D8 00405898  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8043C2DC 0040589C  7C 7E 1B 78 */	mr r30, r3
 /* 8043C2E0 004058A0  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8043C2E4 004058A4  4B FF B2 D9 */	bl __ct__CWorkThread
+/* 8043C2E4 004058A4  4B FF B2 D9 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8043C2E8 004058A8  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8043C2EC 004058AC  48 00 CC F1 */	bl __ct__CFontLayer
 /* 8043C2F0 004058B0  3C 80 80 57 */	lis r4, __vt__5CView@ha

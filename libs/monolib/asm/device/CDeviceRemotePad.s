@@ -1270,7 +1270,7 @@
 /* 8044789C 00410E5C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804478A0 00410E60  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804478A4 00410E64  7C 7F 1B 78 */	mr r31, r3
-/* 804478A8 00410E68  4B FE FD 15 */	bl __ct__CWorkThread
+/* 804478A8 00410E68  4B FE FD 15 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804478AC 00410E6C  3C 80 80 57 */	lis r4, __vt__16CDeviceRemotePad@ha
 /* 804478B0 00410E70  38 00 00 00 */	li r0, 0
 /* 804478B4 00410E74  38 84 F4 38 */	addi r4, r4, __vt__16CDeviceRemotePad@l

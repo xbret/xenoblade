@@ -9,7 +9,7 @@
 /* 804559D8 0041EF98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804559DC 0041EF9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804559E0 0041EFA0  7C 7F 1B 78 */	mr r31, r3
-/* 804559E4 0041EFA4  4B FE 32 4D */	bl __ct__5CProcFPCcP11CWorkThreadUl
+/* 804559E4 0041EFA4  4B FE 32 4D */	bl __ct__5CProcFPCcP11CWorkThreadi
 /* 804559E8 0041EFA8  3C 80 80 57 */	lis r4, __vt__8CDesktop@ha
 /* 804559EC 0041EFAC  38 60 00 00 */	li r3, 0
 /* 804559F0 0041EFB0  38 84 04 10 */	addi r4, r4, __vt__8CDesktop@l
@@ -239,7 +239,7 @@
 /* 80455CF8 0041F2B8  7F C4 F3 78 */	mr r4, r30
 /* 80455CFC 0041F2BC  7F A5 EB 78 */	mr r5, r29
 /* 80455D00 0041F2C0  38 C0 00 08 */	li r6, 8
-/* 80455D04 0041F2C4  4B FE 2F 2D */	bl __ct__5CProcFPCcP11CWorkThreadUl
+/* 80455D04 0041F2C4  4B FE 2F 2D */	bl __ct__5CProcFPCcP11CWorkThreadi
 /* 80455D08 0041F2C8  3C 60 80 57 */	lis r3, "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"@ha
 /* 80455D0C 0041F2CC  38 63 03 50 */	addi r3, r3, "__vt__Q222@unnamed@CDesktop_cpp@18CDesktopBackGround"@l
 /* 80455D10 0041F2D0  90 7C 00 00 */	stw r3, 0(r28)
@@ -267,7 +267,7 @@
 /* 80455D64 0041F324  7F 84 E3 78 */	mr r4, r28
 /* 80455D68 0041F328  7F A5 EB 78 */	mr r5, r29
 /* 80455D6C 0041F32C  38 C0 00 40 */	li r6, 0x40
-/* 80455D70 0041F330  4B FE 2E C1 */	bl __ct__5CProcFPCcP11CWorkThreadUl
+/* 80455D70 0041F330  4B FE 2E C1 */	bl __ct__5CProcFPCcP11CWorkThreadi
 /* 80455D74 0041F334  3C 60 80 57 */	lis r3, "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"@ha
 /* 80455D78 0041F338  38 63 02 90 */	addi r3, r3, "__vt__Q222@unnamed@CDesktop_cpp@17CDesktopException"@l
 /* 80455D7C 0041F33C  90 7E 00 00 */	stw r3, 0(r30)

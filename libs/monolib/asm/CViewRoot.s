@@ -325,7 +325,7 @@
 /* 8044353C 0040CAFC  7F E4 FB 78 */	mr r4, r31
 /* 80443540 0040CB00  7F A5 EB 78 */	mr r5, r29
 /* 80443544 0040CB04  38 C0 00 80 */	li r6, 0x80
-/* 80443548 0040CB08  4B FF 40 75 */	bl __ct__CWorkThread
+/* 80443548 0040CB08  4B FF 40 75 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__9CViewRoot@ha
 /* 80443550 0040CB10  3C C0 80 57 */	lis r6, "__vt__17_reslist_base<Ul>"@ha
 /* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__9CViewRoot@l

@@ -10,7 +10,7 @@
 /* 8044E158 00417718  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044E15C 0041771C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044E160 00417720  7C 7E 1B 78 */	mr r30, r3
-/* 8044E164 00417724  4B FE 94 59 */	bl __ct__CWorkThread
+/* 8044E164 00417724  4B FE 94 59 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8044E168 00417728  3C 60 80 57 */	lis r3, __vt__11CDeviceFile@ha
 /* 8044E16C 0041772C  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CFileHandle>"@ha
 /* 8044E170 00417730  3B E0 00 00 */	li r31, 0

@@ -35,7 +35,7 @@ MONOLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolib/asm/CChildListNode.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceRemotePad.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceBase.o\
-	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceSC.o\
+	$(BUILD_DIR)/libs/monolib/src/device/CDeviceSC.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceVI.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceVICb.o\
 	$(BUILD_DIR)/libs/monolib/asm/CFontLayer.o\

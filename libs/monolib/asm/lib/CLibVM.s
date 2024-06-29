@@ -9,7 +9,7 @@
 /* 804600EC 004296AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804600F0 004296B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804600F4 004296B4  7C 7F 1B 78 */	mr r31, r3
-/* 804600F8 004296B8  4B FD 74 C5 */	bl __ct__CWorkThread
+/* 804600F8 004296B8  4B FD 74 C5 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804600FC 004296BC  3C 60 80 57 */	lis r3, __vt__6CLibVM@ha
 /* 80460100 004296C0  38 00 00 12 */	li r0, 0x12
 /* 80460104 004296C4  38 63 0D 90 */	addi r3, r3, __vt__6CLibVM@l

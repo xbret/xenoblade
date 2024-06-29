@@ -10,7 +10,7 @@ ppceabi_dir = os.path.join(root_dir, "libs/PowerPC_EABI_Support/include")
 monolib_dir = os.path.join(root_dir, "libs/monolib/include")
 nw4r_dir = os.path.join(root_dir, "libs/nw4r/include")
 rvl_dir = os.path.join(root_dir, "libs/RVL_SDK/include")
-stl_dir = os.path.join(ppceabi_dir, "std")
+stl_dir = os.path.join(ppceabi_dir, "stl")
 
 include_pattern = re.compile(r'^#include\s*[<"](.+?)[>"]$')
 guard_pattern = re.compile(r"^#ifndef\s+(.*)$")

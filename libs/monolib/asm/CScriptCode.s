@@ -560,7 +560,7 @@
 /* 8043A860 00403E20  7F E4 FB 78 */	mr r4, r31
 /* 8043A864 00403E24  7F A5 EB 78 */	mr r5, r29
 /* 8043A868 00403E28  38 C0 00 01 */	li r6, 1
-/* 8043A86C 00403E2C  4B FF CD 51 */	bl __ct__CWorkThread
+/* 8043A86C 00403E2C  4B FF CD 51 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 8043A870 00403E30  3C 60 80 57 */	lis r3, __vt__11CScriptCode@ha
 /* 8043A874 00403E34  3B E0 00 00 */	li r31, 0
 /* 8043A878 00403E38  38 63 EC 90 */	addi r3, r3, __vt__11CScriptCode@l

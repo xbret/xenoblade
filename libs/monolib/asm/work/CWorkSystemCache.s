@@ -9,7 +9,7 @@
 /* 804D8D9C 004A235C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804D8DA0 004A2360  BF C1 00 08 */	stmw r30, 8(r1)
 /* 804D8DA4 004A2364  7C 7E 1B 78 */	mr r30, r3
-/* 804D8DA8 004A2368  4B F5 E8 15 */	bl __ct__CWorkThread
+/* 804D8DA8 004A2368  4B F5 E8 15 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 804D8DAC 004A236C  3C 60 80 57 */	lis r3, __vt__16CWorkSystemCache@ha
 /* 804D8DB0 004A2370  3C A0 80 57 */	lis r5, "__vt__28_reslist_base<P10CCacheItem>"@ha
 /* 804D8DB4 004A2374  3B E0 00 00 */	li r31, 0
