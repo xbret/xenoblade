@@ -34,7 +34,7 @@ namespace nw4r
 
             ut::LinkListNode mNode; // at 0x0
             AnimationBlock *mResource; // at 0xC
-            f32 mFrame; // at 0x10
+            float mFrame; // at 0x10
         };
 
         struct AnimTransformBasic : AnimTransform

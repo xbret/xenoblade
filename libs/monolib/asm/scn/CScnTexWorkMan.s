@@ -14,7 +14,7 @@
 /* 804900DC 0045969C  7C 9D 23 78 */	mr r29, r4
 /* 804900E0 004596A0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804900E4 004596A4  7C 7C 1B 78 */	mr r28, r3
-/* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__CDeviceVICb
+/* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__11CDeviceVICb
 /* 804900EC 004596AC  3C 60 80 57 */	lis r3, __vt__14CScnTexWorkMan@ha
 /* 804900F0 004596B0  93 BC 00 04 */	stw r29, 4(r28)
 /* 804900F4 004596B4  38 63 20 18 */	addi r3, r3, __vt__14CScnTexWorkMan@l

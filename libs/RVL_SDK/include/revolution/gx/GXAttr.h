@@ -6,25 +6,50 @@
 extern "C" {
 #endif
 
-void GXSetVtxDesc(GXAttr, GXAttr);
+
+typedef struct _GXVtxDescList {
+    GXAttr attr;     // at 0x0
+    GXAttrType type; // at  0x4
+} GXVtxDescList;
+
+typedef struct _GXVtxAttrFmtList {
+    GXAttr attr;         // at 0x0
+    GXCompCnt compCnt;   // at 0x4
+    GXCompType compType; // at 0x8
+    u8 shift;            // at 0xC
+} GXVtxAttrFmtList;
+
+void GXSetVtxDesc(GXAttr name, GXAttrType type);
+void GXSetVtxDescv(const GXVtxDescList* list);
+void GXGetVtxDesc(GXAttr name, GXAttrType* type);
+void GXGetVtxDescv(GXVtxDescList* list);
+void GXClearVtxDesc(void);
+void GXSetVtxAttrFmt(GXVtxFmt fmt, GXAttr attr, GXCompCnt compCnt,
+                     GXCompType compType, u8 shift);
+
+// TODO: Please find a way to get rid of this
+#ifdef GXATTR_MATCH_HACK
+void GXSetVtxAttrFmtv(s16 fmt, const GXVtxAttrFmtList* list);
+#else
+void GXSetVtxAttrFmtv(GXVtxFmt fmt, const GXVtxAttrFmtList* list);
+#endif
+
+void GXGetVtxAttrFmt(GXVtxFmt fmt, GXAttr attr, GXCompCnt* compCnt,
+                     GXCompType* compType, u8* shift);
+void GXGetVtxAttrFmtv(GXVtxFmt fmt, GXVtxAttrFmtList* list);
+void GXSetArray(GXAttr attr, const void* base, u8 stride);
+void GXInvalidateVtxCache(void);
+void GXSetTexCoordGen2(GXTexCoordID id, GXTexGenType type, GXTexGenSrc src,
+                       u32 texMtxIdx, GXBool normalize, u32 dualTexMtxIdx);
+void GXSetNumTexGens(u8 num);
 
 void __GXSetVCD(void);
 void __GXCalculateVLim(void);
-
-void GXClearVtxDesc(void);
-void GXSetVtxAttrFmt(u32 formatIndex, GXAttr, u32, u32, u8 frac);
-
 void __GXSetVAT(void);
 
-void GXSetArray(GXAttr, const void*, u8);
-
-void GXSetTexCoordGen2(GXTexCoordID, GXTexGenType, GXTexGenSrc, u32, u8,
-                       u32);
-void GXSetNumTexGens(u8);
-
-static inline void GXSetTexCoordGen(GXTexCoordID coord, GXTexGenType type,
-                                    GXTexGenSrc src, u32 r6) {
-    GXSetTexCoordGen2(coord, type, src, r6, 0, 0x7D);
+static void GXSetTexCoordGen(GXTexCoordID id, GXTexGenType type,
+                             GXTexGenSrc src, u32 texMtxIdx) {
+    GXSetTexCoordGen2(id, type, src, texMtxIdx, FALSE, GX_DUALMTX_IDENT);
 }
 
 #ifdef __cplusplus

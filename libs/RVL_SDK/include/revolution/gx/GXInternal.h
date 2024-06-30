@@ -59,6 +59,10 @@ typedef struct _GXTexObjImpl {
     u8 todo;
 } GXTexObjImpl;
 
+typedef struct _GXTlutObjImpl {
+    u8 todo;
+} GXTlutObjImpl;
+
 #ifdef __cplusplus
 }
 #endif

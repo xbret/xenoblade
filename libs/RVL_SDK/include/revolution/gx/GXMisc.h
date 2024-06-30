@@ -5,11 +5,19 @@
 extern "C" {
 #endif
 
-void GXSetMisc(u32 token, u32 val);
+typedef void (*GXDrawDoneCallback)(void);
+
+void GXSetMisc(UNKWORD token, UNKWORD val);
 void GXFlush(void);
 void GXResetWriteGatherPipe(void);
 
 void GXAbortFrame(void);
+
+void GXDrawDone(void);
+void GXPixModeSync(void);
+
+GXDrawDoneCallback GXSetDrawDoneCallback(GXDrawDoneCallback);
+
 
 #ifdef __cplusplus
 }

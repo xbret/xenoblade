@@ -2,19 +2,19 @@
 
 inline void __GXSetAmbMat(u32 dirtyFlags) {
     if (dirtyFlags & GX_DIRTY_AMB_COLOR0) {
-        GX_LOAD_XF_REG(GX_XF_REG_AMBIENT0, *(u32*)&__GXData->ambColors[0]);
+        GX_XF_LOAD_REG(GX_XF_REG_AMBIENT0, *(u32*)&gxdt->ambColors[0]);
     }
 
     if (dirtyFlags & GX_DIRTY_AMB_COLOR1) {
-        GX_LOAD_XF_REG(GX_XF_REG_AMBIENT1, *(u32*)&__GXData->ambColors[1]);
+        GX_XF_LOAD_REG(GX_XF_REG_AMBIENT1, *(u32*)&gxdt->ambColors[1]);
     }
 
     if (dirtyFlags & GX_DIRTY_MAT_COLOR0) {
-        GX_LOAD_XF_REG(GX_XF_REG_MATERIAL0, *(u32*)&__GXData->matColors[0]);
+        GX_XF_LOAD_REG(GX_XF_REG_MATERIAL0, *(u32*)&gxdt->matColors[0]);
     }
 
     if (dirtyFlags & GX_DIRTY_MAT_COLOR1) {
-        GX_LOAD_XF_REG(GX_XF_REG_MATERIAL1, *(u32*)&__GXData->matColors[1]);
+        GX_XF_LOAD_REG(GX_XF_REG_MATERIAL1, *(u32*)&gxdt->matColors[1]);
     }
 }
 
@@ -23,9 +23,9 @@ inline void __GXSetLightChan(volatile s32 dirtyFlags) {
     u32 bits;
     u32 addr = GX_XF_REG_COLOR0CNTRL;
 
-    if (dirtyFlags & 0x1000000) {
-        u32 colors = (__GXData->genMode & 0x70) >> 4;
-        GX_LOAD_XF_REG(GX_XF_REG_NUMCOLORS, colors);
+    if (dirtyFlags & GX_DIRTY_NUM_COLORS) {
+        u32 colors = GX_BP_GET_GENMODE_NUMCOLORS(gxdt->genMode);
+        GX_XF_LOAD_REG(GX_XF_REG_NUMCOLORS, colors);
     }
 
     bits = dirtyFlags;
@@ -33,7 +33,7 @@ inline void __GXSetLightChan(volatile s32 dirtyFlags) {
     i = 0;
     for (; bits != 0; i++, addr++, bits >>= 1) {
         if (bits & 1) {
-            GX_LOAD_XF_REG(addr, __GXData->colorControl[i]);
+            GX_XF_LOAD_REG(addr, gxdt->colorControl[i]);
         }
     }
 }
@@ -44,9 +44,9 @@ inline void __GXSetTexGen(volatile s32 dirtyFlags) {
     u32 taddr = GX_XF_REG_TEX0;
     u32 dtaddr;
 
-    if (dirtyFlags & 0x2000000) {
-        u32 gens = __GXData->genMode & 0xF;
-        GX_LOAD_XF_REG(GX_XF_REG_NUMTEX, gens);
+    if (dirtyFlags & GX_DIRTY_NUM_TEX) {
+        u32 gens = GX_BP_GET_GENMODE_NUMTEX(gxdt->genMode);
+        GX_XF_LOAD_REG(GX_XF_REG_NUMTEX, gens);
     }
 
     bits = dirtyFlags;
@@ -55,15 +55,15 @@ inline void __GXSetTexGen(volatile s32 dirtyFlags) {
     for (; bits != 0; taddr++, i++, bits >>= 1) {
         dtaddr = taddr + GX_XF_REG_DUALTEX0 - GX_XF_REG_TEX0;
         if (bits & 1) {
-            GX_LOAD_XF_REG(taddr, __GXData->texRegs[i]);
-            GX_LOAD_XF_REG(dtaddr, __GXData->dualTexRegs[i]);
+            GX_XF_LOAD_REG(taddr, gxdt->texRegs[i]);
+            GX_XF_LOAD_REG(dtaddr, gxdt->dualTexRegs[i]);
         }
     }
 }
 
 void __GXSetDirtyState(void) {
     u32 tempFlags;
-    u32 dirtyFlags = __GXData->dirtyFlags;
+    u32 dirtyFlags = gxdt->gxDirtyFlags;
 
     if (dirtyFlags & GX_DIRTY_SU_TEX) {
         __GXSetSUTexRegs();
@@ -74,10 +74,7 @@ void __GXSetDirtyState(void) {
     }
 
     if (dirtyFlags & GX_DIRTY_GEN_MODE) {
-        //__GXSetGenMode();
-        //the compiler really doesn't want to inline __GXSetGenMode
-        GX_LOAD_BP_REG(__GXData->genMode);
-        __GXData->xfWritten = FALSE;
+        __GXSetGenMode();
     }
 
     if (dirtyFlags & GX_DIRTY_VCD) {
@@ -88,7 +85,7 @@ void __GXSetDirtyState(void) {
         __GXSetVAT();
     }
 
-    if (dirtyFlags & GX_DIRTY_VLIM) {
+    if (dirtyFlags & (GX_DIRTY_VCD | GX_DIRTY_VAT)) {
         __GXCalculateVLim();
     }
 
@@ -125,34 +122,19 @@ void __GXSetDirtyState(void) {
             __GXSetProjection();
         }
 
-        __GXData->xfWritten = TRUE;
+        gxdt->lastWriteWasXF = TRUE;
     }
 
-    __GXData->dirtyFlags = 0;
+    gxdt->gxDirtyFlags = 0;
 }
 
-//fake inline bc the compiler doesn't want to be nice
-inline void GXSendFlushPrim(void) {
-    u32 i;
-    u32 sz = __GXData->SHORT_0x4 * __GXData->SHORT_0x6;
-
-    WGPIPE.uc = GX_TRIANGLESTRIP;
-    WGPIPE.us = __GXData->SHORT_0x4;
-
-    for (i = 0; i < sz; i += 4) {
-        WGPIPE.i = 0;
-    }
-
-    __GXData->xfWritten = TRUE;
-}
-
-void GXBegin(GXPrimitive prim, GXVtxFmtIdx fmt, u16 verts) {
-    if (__GXData->dirtyFlags != 0) {
+void GXBegin(GXPrimitive prim, GXVtxFmt fmt, u16 verts) {
+    if (gxdt->gxDirtyFlags != 0) {
         __GXSetDirtyState();
     }
 
-    if (__GXData->WORD_0x0 == 0) {
-        GXSendFlushPrim();
+    if (gxdt->WORD_0x0 == 0) {
+        __GXSendFlushPrim();
     }
 
     WGPIPE.c = fmt | prim;
@@ -161,23 +143,23 @@ void GXBegin(GXPrimitive prim, GXVtxFmtIdx fmt, u16 verts) {
 
 void __GXSendFlushPrim(void) {
     u32 i;
-    u32 sz = __GXData->SHORT_0x4 * __GXData->SHORT_0x6;
+    u32 sz = gxdt->SHORT_0x4 * gxdt->vlim;
 
     WGPIPE.uc = GX_TRIANGLESTRIP;
-    WGPIPE.us = __GXData->SHORT_0x4;
+    WGPIPE.us = gxdt->SHORT_0x4;
 
     for (i = 0; i < sz; i += 4) {
         WGPIPE.i = 0;
     }
 
-    __GXData->xfWritten = TRUE;
+    gxdt->lastWriteWasXF = TRUE;
 }
 
 void GXSetLineWidth(u8 width, u32 offset) {
-    __GXData->linePtWidth = GX_BITSET(__GXData->linePtWidth, 24, 8, width);
-    __GXData->linePtWidth = GX_BITSET(__GXData->linePtWidth, 13, 3, offset);
-    GX_LOAD_BP_REG(__GXData->linePtWidth);
-    __GXData->xfWritten = FALSE;
+    GX_BP_SET_LINEPTWIDTH_LINESZ(gxdt->linePtWidth, width);
+    GX_BP_SET_LINEPTWIDTH_LINEOFS(gxdt->linePtWidth, offset);
+    GX_BP_LOAD_REG(gxdt->linePtWidth);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 //unused
@@ -185,46 +167,55 @@ void GXGetLineWidth(){
 }
 
 void GXSetPointSize(u8 size, u32 offset) {
-    __GXData->linePtWidth = GX_BITSET(__GXData->linePtWidth, 16, 8, size);
-    __GXData->linePtWidth = GX_BITSET(__GXData->linePtWidth, 10, 3, offset);
-    GX_LOAD_BP_REG(__GXData->linePtWidth);
-    __GXData->xfWritten = FALSE;
+    GX_BP_SET_LINEPTWIDTH_POINTSZ(gxdt->linePtWidth, size);
+    GX_BP_SET_LINEPTWIDTH_POINTOFS(gxdt->linePtWidth, offset);
+    GX_BP_LOAD_REG(gxdt->linePtWidth);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 //unused
 void GXGetPointSize(){
 }
 
-void GXEnableTexOffsets(GXTexCoordID coordId, GXBool lineOfs,
-                        GXBool pointOfs) {
-    __GXData->txcRegs[coordId] = GX_BITSET(__GXData->txcRegs[coordId], 13, 1, lineOfs);
-    __GXData->txcRegs[coordId] = GX_BITSET(__GXData->txcRegs[coordId], 12, 1, pointOfs);
-    GX_LOAD_BP_REG(__GXData->txcRegs[coordId]);
-    __GXData->xfWritten = FALSE;
+void GXEnableTexOffsets(GXTexCoordID id, GXBool lineOfs, GXBool pointOfs) {
+    GX_BP_SET_SU_SSIZE_USELINEOFS(gxdt->txcRegs[id], lineOfs);
+    GX_BP_SET_SU_SSIZE_USEPOINTOFS(gxdt->txcRegs[id], pointOfs);
+    GX_BP_LOAD_REG(gxdt->txcRegs[id]);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 void GXSetCullMode(GXCullMode mode) {
+    // Swap bits to get hardware representation (see nw4r::g3d::fifo::cm2hw)
     GXCullMode bits = (GXCullMode)(mode << 1 & 2 | mode >> 1 & 1);
-    __GXData->genMode = GX_BITSET(__GXData->genMode, 16, 2, bits);
-    __GXData->dirtyFlags |= GX_DIRTY_GEN_MODE;
+    GX_BP_SET_GENMODE_CULLMODE(gxdt->genMode, bits);
+    gxdt->gxDirtyFlags |= GX_DIRTY_GEN_MODE;
 }
 
 //unused
 void GXGetCullMode(GXCullMode* out) {
+    // TODO: Fakematch? Should use GX_BP_GET_GENMODE_CULLMODE if possible
     s32 bits = 0;
-    bits |= (s32)(__GXData->genMode >> 14 & 2) >> 1;
-    bits |= (s32)(__GXData->genMode >> 13 & 2);
+    bits |= (s32)(gxdt->genMode >> (13 + 1) & 2) >> 1;
+    bits |= (s32)(gxdt->genMode >> 13 & 2);
     *out = (GXCullMode)bits;
 }
 
 void GXSetCoPlanar(GXBool coplanar) {
-    __GXData->genMode = GX_BITSET(__GXData->genMode, 12, 1, coplanar);
-    GX_LOAD_BP_REG(GX_BP_REG_SS_MASK << 24 | 0x80000)
-    GX_LOAD_BP_REG(__GXData->genMode);
-    __GXData->xfWritten = FALSE;
+    u32 reg;
+
+    GX_BP_SET_GENMODE_COPLANAR(gxdt->genMode, coplanar);
+
+    // TODO: GX_BP_SET_OPCODE doesn't work.
+    // Did they really write this out?
+    reg = 0;
+    reg |= GX_BP_REG_SSMASK << 24;
+    reg |= 0x80000;
+
+    GX_BP_LOAD_REG(reg);
+    GX_BP_LOAD_REG(gxdt->genMode);
 }
 
 void __GXSetGenMode(void) {
-    GX_LOAD_BP_REG(__GXData->genMode);
-    __GXData->xfWritten = FALSE;
+    GX_BP_LOAD_REG(gxdt->genMode);
+    gxdt->lastWriteWasXF = FALSE;
 }

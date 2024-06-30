@@ -19,15 +19,15 @@ u32 GXEndDisplayList(void) {
 }
 
 void GXCallDisplayList(void* list, u32 size) {
-    if (__GXData->dirtyFlags != 0) {
+    if (gxdt->gxDirtyFlags != 0) {
         __GXSetDirtyState();
     }
 
-    if (__GXData->WORD_0x0 == 0) {
+    if (gxdt->WORD_0x0 == 0) {
         __GXSendFlushPrim();
     }
 
-    WGPIPE.c = GX_FIFO_CALL_DL;
+    WGPIPE.c = GX_FIFO_CMD_CALL_DL;
     WGPIPE.p = list;
     WGPIPE.i = size;
 }

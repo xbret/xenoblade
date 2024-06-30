@@ -48,7 +48,8 @@ public:
 	reslist<CWorkThread*> unk5C;
 	u32 unk7C;
 	u32 unk80;
-	u8 unk84[0x1A4 - 0x84];
+	u8 unk84[0xA0 - 0x84];
+	u8 unkA0[0x1A4 - 0xA0];
 	u32* unk1A4;
 	u32 unk1A8;
 	u32 unk1AC;

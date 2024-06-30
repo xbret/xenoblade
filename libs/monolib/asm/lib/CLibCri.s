@@ -11,7 +11,7 @@
 /* 80459878 00422E38  7C 7F 1B 78 */	mr r31, r3
 /* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80459880 00422E40  38 7F 01 C4 */	addi r3, r31, 0x1c4
-/* 80459884 00422E44  4B FE F6 BD */	bl __ct__CDeviceVICb
+/* 80459884 00422E44  4B FE F6 BD */	bl __ct__11CDeviceVICb
 /* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__7CLibCri@ha
 /* 8045988C 00422E4C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459890 00422E50  38 84 06 A0 */	addi r4, r4, __vt__7CLibCri@l
@@ -331,10 +331,10 @@
 /* 80459C08 004231C8  80 04 00 00 */	lwz r0, 0(r4)
 /* 80459C0C 004231CC  7C 00 20 40 */	cmplw r0, r4
 /* 80459C10 004231D0  40 82 00 48 */	bne .L_80459C58
-/* 80459C14 004231D4  4B FE A8 C1 */	bl func_804444D4
+/* 80459C14 004231D4  4B FE A8 C1 */	bl getInstance__11CWorkSystemFv
 /* 80459C18 004231D8  2C 03 00 00 */	cmpwi r3, 0
 /* 80459C1C 004231DC  40 82 00 3C */	bne .L_80459C58
-/* 80459C20 004231E0  4B FF F7 D1 */	bl func_804593F0
+/* 80459C20 004231E0  4B FF F7 D1 */	bl getInstance__4CLibFv
 /* 80459C24 004231E4  2C 03 00 00 */	cmpwi r3, 0
 /* 80459C28 004231E8  40 82 00 30 */	bne .L_80459C58
 /* 80459C2C 004231EC  4B F2 5B F5 */	bl ADXT_Finish
@@ -515,7 +515,7 @@
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x0680001F
 	.4byte 0x000001C4
 	.4byte __dt__11CDeviceVICbFv
@@ -536,7 +536,7 @@
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x0680001E
 	.4byte 0x000001C4
 	.4byte __dt__11CDeviceVICbFv
@@ -545,10 +545,10 @@
 	.4byte __dt__11CWorkThreadFv
 	.4byte 0x8680001E
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x0680001E
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x8680001E
 	.4byte 0x000001C4
 	.4byte __dt__11CDeviceVICbFv

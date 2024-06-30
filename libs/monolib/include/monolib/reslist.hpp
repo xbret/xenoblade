@@ -3,13 +3,8 @@
 #include "types.h"
 #include "monolib/MemManager.hpp"
 
-
-extern void func_8049CAF4();
-extern void func_8049CB6C(u32*);
-
 template <typename T>
-class _reslist_node{
-public:
+struct _reslist_node{
 	_reslist_node<T>* next; //0x00
 	_reslist_node<T>* prev; //0x04
 	T item; //0x8
@@ -20,15 +15,15 @@ class _reslist_base{
 public:
 	_reslist_base(){
 		mList = nullptr;
-		unk18 = 0;
+		capacity = 0;
 		unk1C = 0;
-		unk4 = &unk8;
-		unk8 = (_reslist_node<T>*)&unk8;
-		unkC = (_reslist_node<T>*)&unk8;
+		pStartNode = &startNode;
+		pStartNode->next = &startNode;
+		pStartNode->prev = startNode.next;
 	}
 
 	virtual ~_reslist_base(){
-		func_8049CAF4();
+		clear();
 		if (unk1C == 0 && mList != nullptr) {
 			delete[](this->mList);
 			mList = nullptr;
@@ -43,40 +38,27 @@ public:
 		r4->next = nullptr;
 	}
 
-	inline void func_8049CAF4(){
-		_reslist_node<T>* ppuVar1;
-		_reslist_node<T>* ppuVar2;
-	
-		ppuVar2 = *unk4;
+	//func_8049CAF4
+	void clear(){
+		_reslist_node<T>* r5 = pStartNode->next;
 		
-		while (ppuVar1 = (_reslist_node<T>*)unk4, ppuVar2 != ppuVar1) {
-			ppuVar1 = ppuVar2->next;
-			func_8049CB6C(&ppuVar2->item);
-			func_8049CB70(ppuVar2);
-			ppuVar2 = ppuVar1;
+		while (r5 != pStartNode) {
+			_reslist_node<T>* r4 = r5;
+			r5 = r5->next;
+			func_8049CB6C(&r4->item);
+			func_8049CB70(r4);
 		}
 	
-		ppuVar1->next = ppuVar1;
-		*unk4 = (_reslist_node<T>*)unk4;
+		pStartNode->next = pStartNode;
+		pStartNode->prev = pStartNode;
 	}
 
-	inline void initList(int capacity, int heapIndex){
-		mList = (_reslist_node<T>*)mtl::heap_malloc_1(sizeof(_reslist_node<T>) * capacity, heapIndex);
-
-		for(int i = 0; i < capacity; i++){
-			mList[i].next = nullptr;
-		}
-
-		unk18 = capacity;
-	}
-
-	_reslist_node<T>** unk4; //points to unk8
-	_reslist_node<T>* unk8; //pointer to start node?
-	_reslist_node<T>* unkC; //pointer to end node?
-	void* unk10;
+	//0x0: vtable
+	_reslist_node<T>* pStartNode; //0x4
+	_reslist_node<T> startNode; //0x8
 	_reslist_node<T>* mList; //0x14
-	u32 unk18;
-	u8 unk1C;
+	u32 capacity; //0x18
+	u8 unk1C; //0x1C
 	u8 unk1D[3];
 };
 
@@ -84,7 +66,7 @@ public:
 template <typename T>
 class reslist : public _reslist_base<T> {
 public:
-	reslist(){
+	reslist() : _reslist_base<T>() {
 	}
 	virtual ~reslist(){
 	}
@@ -92,5 +74,15 @@ public:
 	void push_back(const T&);
 	void begin();
 	void end();
+
+	inline void initList(int capacity, int heapIndex) {
+		mList = (_reslist_node<T>*)mtl::heap_malloc_1(sizeof(_reslist_node<T>) * capacity, heapIndex);
+
+		for(int i = 0; i < capacity; i++){
+			mList[i].next = nullptr;
+		}
+
+		this->capacity = capacity;
+	}
 
 };

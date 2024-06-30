@@ -32,10 +32,10 @@
 /* 804593EC 004229AC  4E 80 00 20 */	blr 
 .endfn __dt__4CLibFv
 
-.fn func_804593F0, global
+.fn getInstance__4CLibFv, global
 /* 804593F0 004229B0  80 6D BE 28 */	lwz r3, lbl_80667FA8@sda21(r13)
 /* 804593F4 004229B4  4E 80 00 20 */	blr 
-.endfn func_804593F0
+.endfn getInstance__4CLibFv
 
 .fn func_804593F8, global
 /* 804593F8 004229B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -272,7 +272,7 @@
 /* 80459714 00422CD4  80 04 00 00 */	lwz r0, 0(r4)
 /* 80459718 00422CD8  7C 00 20 40 */	cmplw r0, r4
 /* 8045971C 00422CDC  40 82 00 14 */	bne .L_80459730
-/* 80459720 00422CE0  4B FE AD B5 */	bl func_804444D4
+/* 80459720 00422CE0  4B FE AD B5 */	bl getInstance__11CWorkSystemFv
 /* 80459724 00422CE4  2C 03 00 00 */	cmpwi r3, 0
 /* 80459728 00422CE8  40 82 00 08 */	bne .L_80459730
 /* 8045972C 00422CEC  3B E0 00 01 */	li r31, 1
@@ -288,7 +288,7 @@
 /* 80459750 00422D10  80 03 00 00 */	lwz r0, 0(r3)
 /* 80459754 00422D14  7C 00 18 40 */	cmplw r0, r3
 /* 80459758 00422D18  40 82 00 1C */	bne .L_80459774
-/* 8045975C 00422D1C  4B FE AD 79 */	bl func_804444D4
+/* 8045975C 00422D1C  4B FE AD 79 */	bl getInstance__11CWorkSystemFv
 /* 80459760 00422D20  2C 03 00 00 */	cmpwi r3, 0
 /* 80459764 00422D24  40 82 00 10 */	bne .L_80459774
 /* 80459768 00422D28  7F C3 F3 78 */	mr r3, r30

@@ -29,7 +29,7 @@
 /* 8016417C 0012D73C  90 9F 00 48 */	stw r4, 0x48(r31)
 /* 80164180 0012D740  80 05 00 08 */	lwz r0, 8(r5)
 /* 80164184 0012D744  90 1F 00 50 */	stw r0, 0x50(r31)
-/* 80164188 0012D748  48 2E 4D B9 */	bl __ct__CDeviceVICb
+/* 80164188 0012D748  48 2E 4D B9 */	bl __ct__11CDeviceVICb
 /* 8016418C 0012D74C  3C E0 80 53 */	lis r7, __vt__Q22cf11CTaskREvent@ha
 /* 80164190 0012D750  3B C0 00 00 */	li r30, 0
 /* 80164194 0012D754  38 E7 3F 60 */	addi r7, r7, __vt__Q22cf11CTaskREvent@l

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CDeviceVI, global
+.fn __ct__9CDeviceVIFPCcP11CWorkThread, global
 /* 80447DD4 00411394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447DD8 00411398  7C 08 02 A6 */	mflr r0
 /* 80447DDC 0041139C  38 C0 00 08 */	li r6, 8
@@ -56,7 +56,7 @@
 /* 80447E9C 0041145C  98 7F 02 B5 */	stb r3, 0x2b5(r31)
 /* 80447EA0 00411460  90 1F 02 B8 */	stw r0, 0x2b8(r31)
 /* 80447EA4 00411464  D0 1F 02 BC */	stfs f0, 0x2bc(r31)
-/* 80447EA8 00411468  93 ED BD A8 */	stw r31, lbl_80667F28@sda21(r13)
+/* 80447EA8 00411468  93 ED BD A8 */	stw r31, instance__9CDeviceVI@sda21(r13)
 /* 80447EAC 0041146C  B1 3F 02 A0 */	sth r9, 0x2a0(r31)
 /* 80447EB0 00411470  B1 3F 02 A2 */	sth r9, 0x2a2(r31)
 /* 80447EB4 00411474  88 0D BD AC */	lbz r0, lbl_80667F2C@sda21(r13)
@@ -78,12 +78,12 @@
 /* 80447EEC 004114AC  38 A0 00 3C */	li r5, 0x3c
 /* 80447EF0 004114B0  38 84 BA B0 */	addi r4, r4, GXNtsc480Int@l
 /* 80447EF4 004114B4  4B BB C1 0D */	bl memcpy
-/* 80447EF8 004114B8  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 80447EF8 004114B8  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 80447EFC 004114BC  38 60 00 C0 */	li r3, 0xc0
 /* 80447F00 004114C0  80 04 01 CC */	lwz r0, 0x1cc(r4)
 /* 80447F04 004114C4  60 00 00 01 */	ori r0, r0, 1
 /* 80447F08 004114C8  90 04 01 CC */	stw r0, 0x1cc(r4)
-/* 80447F0C 004114CC  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 80447F0C 004114CC  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 80447F10 004114D0  80 04 01 CC */	lwz r0, 0x1cc(r4)
 /* 80447F14 004114D4  60 00 00 10 */	ori r0, r0, 0x10
 /* 80447F18 004114D8  90 04 01 CC */	stw r0, 0x1cc(r4)
@@ -136,9 +136,9 @@
 /* 80447FD0 00411590  7C 08 03 A6 */	mtlr r0
 /* 80447FD4 00411594  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447FD8 00411598  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceVI
+.endfn __ct__9CDeviceVIFPCcP11CWorkThread
 
-.fn __dt__80447FDC, global
+.fn __dt__17UnkClass_80447FDCFv, global
 /* 80447FDC 0041159C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447FE0 004115A0  7C 08 02 A6 */	mflr r0
 /* 80447FE4 004115A4  2C 03 00 00 */	cmpwi r3, 0
@@ -156,9 +156,9 @@
 /* 80448010 004115D0  7C 08 03 A6 */	mtlr r0
 /* 80448014 004115D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448018 004115D8  4E 80 00 20 */	blr 
-.endfn __dt__80447FDC
+.endfn __dt__17UnkClass_80447FDCFv
 
-.fn __dt___reslist_base_CDeviceVICb, global
+.fn "__dt__29_reslist_base<P11CDeviceVICb>Fv", global
 /* 8044801C 004115DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448020 004115E0  7C 08 02 A6 */	mflr r0
 /* 80448024 004115E4  2C 03 00 00 */	cmpwi r3, 0
@@ -208,9 +208,9 @@
 /* 804480C4 00411684  7C 08 03 A6 */	mtlr r0
 /* 804480C8 00411688  38 21 00 10 */	addi r1, r1, 0x10
 /* 804480CC 0041168C  4E 80 00 20 */	blr 
-.endfn __dt___reslist_base_CDeviceVICb
+.endfn "__dt__29_reslist_base<P11CDeviceVICb>Fv"
 
-.fn __dt__reslist_CDeviceVICb, global
+.fn "__dt__23reslist<P11CDeviceVICb>Fv", global
 /* 804480D0 00411690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804480D4 00411694  7C 08 02 A6 */	mflr r0
 /* 804480D8 00411698  2C 03 00 00 */	cmpwi r3, 0
@@ -261,7 +261,7 @@
 /* 8044817C 0041173C  7C 08 03 A6 */	mtlr r0
 /* 80448180 00411740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448184 00411744  4E 80 00 20 */	blr
-.endfn __dt__reslist_CDeviceVICb
+.endfn "__dt__23reslist<P11CDeviceVICb>Fv"
 
 .fn __dt__9CDeviceVIFv, global
 /* 80448188 00411748  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -294,7 +294,7 @@
 .L_804481F0:
 /* 804481F0 004117B0  37 FD 01 D0 */	addic. r31, r29, 0x1d0
 /* 804481F4 004117B4  38 00 00 00 */	li r0, 0
-/* 804481F8 004117B8  90 0D BD A8 */	stw r0, lbl_80667F28@sda21(r13)
+/* 804481F8 004117B8  90 0D BD A8 */	stw r0, instance__9CDeviceVI@sda21(r13)
 /* 804481FC 004117BC  41 82 00 68 */	beq .L_80448264
 /* 80448200 004117C0  41 82 00 64 */	beq .L_80448264
 /* 80448204 004117C4  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CDeviceVICb>"@ha
@@ -345,14 +345,14 @@
 /* 804482A4 00411864  4E 80 00 20 */	blr 
 .endfn __dt__9CDeviceVIFv
 
-.fn func_804482A8__Fv, global
-/* 804482A8 00411868  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+.fn getInstance__9CDeviceVIFv, global
+/* 804482A8 00411868  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804482AC 0041186C  4E 80 00 20 */	blr 
-.endfn func_804482A8__Fv
+.endfn getInstance__9CDeviceVIFv
 
 .fn func_804482B0, global
 /* 804482B0 00411870  2C 03 00 00 */	cmpwi r3, 0
-/* 804482B4 00411874  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804482B4 00411874  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804482B8 00411878  41 82 00 14 */	beq .L_804482CC
 /* 804482BC 0041187C  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 804482C0 00411880  60 00 00 10 */	ori r0, r0, 0x10
@@ -366,7 +366,7 @@
 .endfn func_804482B0
 
 .fn func_804482DC, global
-/* 804482DC 0041189C  80 ED BD A8 */	lwz r7, lbl_80667F28@sda21(r13)
+/* 804482DC 0041189C  80 ED BD A8 */	lwz r7, instance__9CDeviceVI@sda21(r13)
 /* 804482E0 004118A0  80 07 00 7C */	lwz r0, 0x7c(r7)
 /* 804482E4 004118A4  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 804482E8 004118A8  41 82 00 0C */	beq .L_804482F4
@@ -427,7 +427,7 @@
 
 .fn func_804483A0, global
 /* 804483A0 00411960  2C 03 00 00 */	cmpwi r3, 0
-/* 804483A4 00411964  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804483A4 00411964  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804483A8 00411968  41 82 00 14 */	beq .L_804483BC
 /* 804483AC 0041196C  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 804483B0 00411970  60 00 00 01 */	ori r0, r0, 1
@@ -441,14 +441,14 @@
 .endfn func_804483A0
 
 .fn func_804483CC, global
-/* 804483CC 0041198C  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804483CC 0041198C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804483D0 00411990  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 804483D4 00411994  54 03 07 FE */	clrlwi r3, r0, 0x1f
 /* 804483D8 00411998  4E 80 00 20 */	blr 
 .endfn func_804483CC
 
 .fn func_804483DC, global
-/* 804483DC 0041199C  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 804483DC 0041199C  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 804483E0 004119A0  2C 04 00 00 */	cmpwi r4, 0
 /* 804483E4 004119A4  4D 82 00 20 */	beqlr 
 /* 804483E8 004119A8  28 03 00 1E */	cmplwi r3, 0x1e
@@ -460,31 +460,31 @@
 .endfn func_804483DC
 
 .fn func_804483FC, global
-/* 804483FC 004119BC  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804483FC 004119BC  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448400 004119C0  38 63 02 00 */	addi r3, r3, 0x200
 /* 80448404 004119C4  4E 80 00 20 */	blr 
 .endfn func_804483FC
 
 .fn func_80448408, global
-/* 80448408 004119C8  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448408 004119C8  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 8044840C 004119CC  80 63 02 B8 */	lwz r3, 0x2b8(r3)
 /* 80448410 004119D0  4E 80 00 20 */	blr 
 .endfn func_80448408
 
 .fn func_80448414, global
-/* 80448414 004119D4  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448414 004119D4  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448418 004119D8  C0 23 02 BC */	lfs f1, 0x2bc(r3)
 /* 8044841C 004119DC  4E 80 00 20 */	blr 
 .endfn func_80448414
 
 .fn func_80448420, global
-/* 80448420 004119E0  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448420 004119E0  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448424 004119E4  80 63 02 AC */	lwz r3, 0x2ac(r3)
 /* 80448428 004119E8  4E 80 00 20 */	blr 
 .endfn func_80448420
 
 .fn func_8044842C, global
-/* 8044842C 004119EC  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 8044842C 004119EC  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448430 004119F0  80 63 02 A8 */	lwz r3, 0x2a8(r3)
 /* 80448434 004119F4  4E 80 00 20 */	blr 
 .endfn func_8044842C
@@ -495,7 +495,7 @@
 /* 80448440 00411A00  38 E0 00 00 */	li r7, 0
 /* 80448444 00411A04  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80448448 00411A08  7C 3F 0B 78 */	mr r31, r1
-/* 8044844C 00411A0C  80 AD BD A8 */	lwz r5, lbl_80667F28@sda21(r13)
+/* 8044844C 00411A0C  80 AD BD A8 */	lwz r5, instance__9CDeviceVI@sda21(r13)
 /* 80448450 00411A10  81 25 01 D4 */	lwz r9, 0x1d4(r5)
 /* 80448454 00411A14  81 05 01 E8 */	lwz r8, 0x1e8(r5)
 /* 80448458 00411A18  48 00 00 1C */	b .L_80448474
@@ -532,7 +532,7 @@
 .endfn func_80448438
 
 .fn func_804484C4, global
-/* 804484C4 00411A84  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 804484C4 00411A84  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 804484C8 00411A88  38 00 00 00 */	li r0, 0
 /* 804484CC 00411A8C  80 A4 01 D4 */	lwz r5, 0x1d4(r4)
 /* 804484D0 00411A90  80 E5 00 00 */	lwz r7, 0(r5)
@@ -607,7 +607,7 @@
 /* 80448594 00411B54  7C 9E 23 78 */	mr r30, r4
 /* 80448598 00411B58  41 82 01 30 */	beq .L_804486C8
 /* 8044859C 00411B5C  54 64 07 3E */	clrlwi r4, r3, 0x1c
-/* 804485A0 00411B60  80 AD BD A8 */	lwz r5, lbl_80667F28@sda21(r13)
+/* 804485A0 00411B60  80 AD BD A8 */	lwz r5, instance__9CDeviceVI@sda21(r13)
 /* 804485A4 00411B64  28 04 00 04 */	cmplwi r4, 4
 /* 804485A8 00411B68  54 66 E7 3E */	rlwinm r6, r3, 0x1c, 0x1c, 0x1f
 /* 804485AC 00411B6C  41 80 00 0C */	blt .L_804485B8
@@ -640,16 +640,16 @@
 /* 80448608 00411BC8  38 65 02 3C */	addi r3, r5, 0x23c
 /* 8044860C 00411BCC  38 A0 00 3C */	li r5, 0x3c
 /* 80448610 00411BD0  4B BB B9 F1 */	bl memcpy
-/* 80448614 00411BD4  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448614 00411BD4  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448618 00411BD8  38 80 02 80 */	li r4, 0x280
 /* 8044861C 00411BDC  38 00 01 C8 */	li r0, 0x1c8
 /* 80448620 00411BE0  2C 1E 00 00 */	cmpwi r30, 0
 /* 80448624 00411BE4  B0 83 02 40 */	sth r4, 0x240(r3)
-/* 80448628 00411BE8  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448628 00411BE8  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 8044862C 00411BEC  B0 03 02 42 */	sth r0, 0x242(r3)
-/* 80448630 00411BF0  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448630 00411BF0  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448634 00411BF4  B0 03 02 44 */	sth r0, 0x244(r3)
-/* 80448638 00411BF8  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448638 00411BF8  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 8044863C 00411BFC  B0 03 02 4C */	sth r0, 0x24c(r3)
 /* 80448640 00411C00  40 82 00 1C */	bne .L_8044865C
 /* 80448644 00411C04  4B FF F5 E5 */	bl isWideAspectRatio__9CDeviceSCFv
@@ -659,31 +659,31 @@
 /* 80448654 00411C14  3B C0 02 AE */	li r30, 0x2ae
 /* 80448658 00411C18  48 00 00 0C */	b .L_80448664
 .L_8044865C:
-/* 8044865C 00411C1C  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 8044865C 00411C1C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448660 00411C20  B3 C3 02 4A */	sth r30, 0x24a(r3)
 .L_80448664:
-/* 80448664 00411C24  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448664 00411C24  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448668 00411C28  3C 80 80 66 */	lis r4, lbl_8065A6B8@ha
 /* 8044866C 00411C2C  38 84 A6 B8 */	addi r4, r4, lbl_8065A6B8@l
 /* 80448670 00411C30  B3 C3 02 4A */	sth r30, 0x24a(r3)
-/* 80448674 00411C34  80 AD BD A8 */	lwz r5, lbl_80667F28@sda21(r13)
+/* 80448674 00411C34  80 AD BD A8 */	lwz r5, instance__9CDeviceVI@sda21(r13)
 /* 80448678 00411C38  A0 05 02 4A */	lhz r0, 0x24a(r5)
 /* 8044867C 00411C3C  20 60 02 D0 */	subfic r3, r0, 0x2d0
 /* 80448680 00411C40  54 60 0F FE */	srwi r0, r3, 0x1f
 /* 80448684 00411C44  7C 00 1A 14 */	add r0, r0, r3
 /* 80448688 00411C48  7C 00 0E 70 */	srawi r0, r0, 1
 /* 8044868C 00411C4C  B0 05 02 46 */	sth r0, 0x246(r5)
-/* 80448690 00411C50  80 AD BD A8 */	lwz r5, lbl_80667F28@sda21(r13)
+/* 80448690 00411C50  80 AD BD A8 */	lwz r5, instance__9CDeviceVI@sda21(r13)
 /* 80448694 00411C54  A0 05 02 44 */	lhz r0, 0x244(r5)
 /* 80448698 00411C58  20 60 01 E0 */	subfic r3, r0, 0x1e0
 /* 8044869C 00411C5C  54 60 0F FE */	srwi r0, r3, 0x1f
 /* 804486A0 00411C60  7C 00 1A 14 */	add r0, r0, r3
 /* 804486A4 00411C64  7C 00 0E 70 */	srawi r0, r0, 1
 /* 804486A8 00411C68  B0 05 02 48 */	sth r0, 0x248(r5)
-/* 804486AC 00411C6C  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804486AC 00411C6C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804486B0 00411C70  7C 04 F8 2E */	lwzx r0, r4, r31
 /* 804486B4 00411C74  90 03 02 A0 */	stw r0, 0x2a0(r3)
-/* 804486B8 00411C78  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804486B8 00411C78  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804486BC 00411C7C  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 804486C0 00411C80  60 00 00 08 */	ori r0, r0, 8
 /* 804486C4 00411C84  90 03 01 CC */	stw r0, 0x1cc(r3)
@@ -818,7 +818,7 @@
 /* 8044887C 00411E3C  7C 08 02 A6 */	mflr r0
 /* 80448880 00411E40  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80448884 00411E44  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80448888 00411E48  81 0D BD A8 */	lwz r8, lbl_80667F28@sda21(r13)
+/* 80448888 00411E48  81 0D BD A8 */	lwz r8, instance__9CDeviceVI@sda21(r13)
 /* 8044888C 00411E4C  80 E8 00 7C */	lwz r7, 0x7c(r8)
 /* 80448890 00411E50  54 E0 06 F7 */	rlwinm. r0, r7, 0, 0x1b, 0x1b
 /* 80448894 00411E54  41 82 00 0C */	beq .L_804488A0
@@ -876,7 +876,7 @@
 /* 80448944 00411F04  40 82 00 08 */	bne .L_8044894C
 /* 80448948 00411F08  48 00 00 E4 */	b .L_80448A2C
 .L_8044894C:
-/* 8044894C 00411F0C  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 8044894C 00411F0C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448950 00411F10  2C 03 00 00 */	cmpwi r3, 0
 /* 80448954 00411F14  40 82 00 0C */	bne .L_80448960
 /* 80448958 00411F18  38 00 00 00 */	li r0, 0
@@ -898,7 +898,7 @@
 /* 8044898C 00411F4C  4E 80 04 21 */	bctrl 
 /* 80448990 00411F50  83 FF 00 00 */	lwz r31, 0(r31)
 .L_80448994:
-/* 80448994 00411F54  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448994 00411F54  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448998 00411F58  80 03 01 D4 */	lwz r0, 0x1d4(r3)
 /* 8044899C 00411F5C  7C 1F 00 40 */	cmplw r31, r0
 /* 804489A0 00411F60  40 82 FF DC */	bne .L_8044897C
@@ -908,20 +908,20 @@
 /* 804489AC 00411F6C  41 82 00 7C */	beq .L_80448A28
 /* 804489B0 00411F70  90 03 02 A8 */	stw r0, 0x2a8(r3)
 /* 804489B4 00411F74  38 00 00 00 */	li r0, 0
-/* 804489B8 00411F78  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 804489B8 00411F78  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 804489BC 00411F7C  90 03 02 B0 */	stw r0, 0x2b0(r3)
 /* 804489C0 00411F80  4B F1 DB 41 */	bl VIGetTvFormat
 /* 804489C4 00411F84  38 03 FF FF */	addi r0, r3, -1
 /* 804489C8 00411F88  7C 00 00 34 */	cntlzw r0, r0
 /* 804489CC 00411F8C  54 00 D9 7F */	rlwinm. r0, r0, 0x1b, 5, 0x1f
 /* 804489D0 00411F90  41 82 00 18 */	beq .L_804489E8
-/* 804489D4 00411F94  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 804489D4 00411F94  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 804489D8 00411F98  38 60 00 32 */	li r3, 0x32
 /* 804489DC 00411F9C  80 04 02 A8 */	lwz r0, 0x2a8(r4)
 /* 804489E0 00411FA0  7C 03 03 96 */	divwu r0, r3, r0
 /* 804489E4 00411FA4  48 00 00 14 */	b .L_804489F8
 .L_804489E8:
-/* 804489E8 00411FA8  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 804489E8 00411FA8  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 804489EC 00411FAC  38 60 00 3C */	li r3, 0x3c
 /* 804489F0 00411FB0  80 04 02 A8 */	lwz r0, 0x2a8(r4)
 /* 804489F4 00411FB4  7C 03 03 96 */	divwu r0, r3, r0
@@ -929,7 +929,7 @@
 /* 804489F8 00411FB8  90 04 02 B8 */	stw r0, 0x2b8(r4)
 /* 804489FC 00411FBC  3C 00 43 30 */	lis r0, 0x4330
 /* 80448A00 00411FC0  C8 42 C7 F0 */	lfd f2, double_8066CB70@sda21(r2)
-/* 80448A04 00411FC4  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448A04 00411FC4  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448A08 00411FC8  90 01 00 08 */	stw r0, 8(r1)
 /* 80448A0C 00411FCC  80 03 02 B8 */	lwz r0, 0x2b8(r3)
 /* 80448A10 00411FD0  90 01 00 0C */	stw r0, 0xc(r1)
@@ -979,7 +979,7 @@
 /* 80448A88 00412048  7C 08 02 A6 */	mflr r0
 /* 80448A8C 0041204C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80448A90 00412050  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80448A94 00412054  81 0D BD A8 */	lwz r8, lbl_80667F28@sda21(r13)
+/* 80448A94 00412054  81 0D BD A8 */	lwz r8, instance__9CDeviceVI@sda21(r13)
 /* 80448A98 00412058  80 E8 00 7C */	lwz r7, 0x7c(r8)
 /* 80448A9C 0041205C  54 E0 06 F7 */	rlwinm. r0, r7, 0, 0x1b, 0x1b
 /* 80448AA0 00412060  41 82 00 0C */	beq .L_80448AAC
@@ -1037,7 +1037,7 @@
 /* 80448B50 00412110  40 82 00 08 */	bne .L_80448B58
 /* 80448B54 00412114  48 00 01 A8 */	b .L_80448CFC
 .L_80448B58:
-/* 80448B58 00412118  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448B58 00412118  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448B5C 0041211C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448B60 00412120  40 82 00 0C */	bne .L_80448B6C
 /* 80448B64 00412124  38 00 00 00 */	li r0, 0
@@ -1059,7 +1059,7 @@
 /* 80448B98 00412158  4E 80 04 21 */	bctrl 
 /* 80448B9C 0041215C  83 FF 00 00 */	lwz r31, 0(r31)
 .L_80448BA0:
-/* 80448BA0 00412160  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448BA0 00412160  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448BA4 00412164  80 03 01 D4 */	lwz r0, 0x1d4(r3)
 /* 80448BA8 00412168  7C 1F 00 40 */	cmplw r31, r0
 /* 80448BAC 0041216C  40 82 FF DC */	bne .L_80448B88
@@ -1068,7 +1068,7 @@
 /* 80448BB4 00412174  48 00 C7 B5 */	bl func_80455368
 /* 80448BB8 00412178  2C 03 00 00 */	cmpwi r3, 0
 /* 80448BBC 0041217C  41 82 00 20 */	beq .L_80448BDC
-/* 80448BC0 00412180  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448BC0 00412180  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448BC4 00412184  80 03 02 98 */	lwz r0, 0x298(r3)
 /* 80448BC8 00412188  54 00 10 3A */	slwi r0, r0, 2
 /* 80448BCC 0041218C  7C 63 02 14 */	add r3, r3, r0
@@ -1076,14 +1076,14 @@
 /* 80448BD4 00412194  48 00 CA 89 */	bl func_8045565C
 /* 80448BD8 00412198  48 00 00 1C */	b .L_80448BF4
 .L_80448BDC:
-/* 80448BDC 0041219C  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448BDC 0041219C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448BE0 004121A0  80 03 02 94 */	lwz r0, 0x294(r3)
 /* 80448BE4 004121A4  54 00 10 3A */	slwi r0, r0, 2
 /* 80448BE8 004121A8  7C 63 02 14 */	add r3, r3, r0
 /* 80448BEC 004121AC  80 63 02 88 */	lwz r3, 0x288(r3)
 /* 80448BF0 004121B0  48 00 CA 6D */	bl func_8045565C
 .L_80448BF4:
-/* 80448BF4 004121B4  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448BF4 004121B4  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448BF8 004121B8  2C 03 00 00 */	cmpwi r3, 0
 /* 80448BFC 004121BC  40 82 00 0C */	bne .L_80448C08
 /* 80448C00 004121C0  38 00 00 00 */	li r0, 0
@@ -1105,7 +1105,7 @@
 /* 80448C34 004121F4  4E 80 04 21 */	bctrl 
 /* 80448C38 004121F8  83 FF 00 00 */	lwz r31, 0(r31)
 .L_80448C3C:
-/* 80448C3C 004121FC  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448C3C 004121FC  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448C40 00412200  80 03 01 D4 */	lwz r0, 0x1d4(r3)
 /* 80448C44 00412204  7C 1F 00 40 */	cmplw r31, r0
 /* 80448C48 00412208  40 82 FF DC */	bne .L_80448C24
@@ -1114,7 +1114,7 @@
 /* 80448C50 00412210  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 80448C54 00412214  40 82 00 24 */	bne .L_80448C78
 .L_80448C58:
-/* 80448C58 00412218  83 ED BD A8 */	lwz r31, lbl_80667F28@sda21(r13)
+/* 80448C58 00412218  83 ED BD A8 */	lwz r31, instance__9CDeviceVI@sda21(r13)
 /* 80448C5C 0041221C  4B F1 D7 65 */	bl VIGetRetraceCount
 /* 80448C60 00412220  80 1F 02 A4 */	lwz r0, 0x2a4(r31)
 /* 80448C64 00412224  80 9F 02 A8 */	lwz r4, 0x2a8(r31)
@@ -1123,40 +1123,40 @@
 /* 80448C70 00412230  7C 03 00 40 */	cmplw r3, r0
 /* 80448C74 00412234  41 80 FF E4 */	blt .L_80448C58
 .L_80448C78:
-/* 80448C78 00412238  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448C78 00412238  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448C7C 0041223C  80 03 02 94 */	lwz r0, 0x294(r3)
 /* 80448C80 00412240  54 00 10 3A */	slwi r0, r0, 2
 /* 80448C84 00412244  7C 63 02 14 */	add r3, r3, r0
 /* 80448C88 00412248  80 63 02 88 */	lwz r3, 0x288(r3)
 /* 80448C8C 0041224C  4B F1 D6 45 */	bl VISetNextFrameBuffer
-/* 80448C90 00412250  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448C90 00412250  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448C94 00412254  80 03 02 94 */	lwz r0, 0x294(r3)
 /* 80448C98 00412258  90 03 02 98 */	stw r0, 0x298(r3)
-/* 80448C9C 0041225C  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 80448C9C 0041225C  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 80448CA0 00412260  80 64 02 94 */	lwz r3, 0x294(r4)
 /* 80448CA4 00412264  38 63 00 01 */	addi r3, r3, 1
 /* 80448CA8 00412268  90 64 02 94 */	stw r3, 0x294(r4)
 /* 80448CAC 0041226C  80 04 02 84 */	lwz r0, 0x284(r4)
 /* 80448CB0 00412270  7C 03 00 40 */	cmplw r3, r0
 /* 80448CB4 00412274  41 80 00 10 */	blt .L_80448CC4
-/* 80448CB8 00412278  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448CB8 00412278  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448CBC 0041227C  38 00 00 00 */	li r0, 0
 /* 80448CC0 00412280  90 03 02 94 */	stw r0, 0x294(r3)
 .L_80448CC4:
 /* 80448CC4 00412284  4B F1 D4 ED */	bl VIFlush
-/* 80448CC8 00412288  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
+/* 80448CC8 00412288  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448CCC 0041228C  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 80448CD0 00412290  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 80448CD4 00412294  40 82 00 08 */	bne .L_80448CDC
 /* 80448CD8 00412298  4B F1 C5 19 */	bl VIWaitForRetrace
 .L_80448CDC:
-/* 80448CDC 0041229C  83 ED BD A8 */	lwz r31, lbl_80667F28@sda21(r13)
+/* 80448CDC 0041229C  83 ED BD A8 */	lwz r31, instance__9CDeviceVI@sda21(r13)
 /* 80448CE0 004122A0  4B F1 D6 E1 */	bl VIGetRetraceCount
 /* 80448CE4 004122A4  80 1F 02 A4 */	lwz r0, 0x2a4(r31)
 /* 80448CE8 004122A8  7C 00 18 50 */	subf r0, r0, r3
 /* 80448CEC 004122AC  90 1F 02 AC */	stw r0, 0x2ac(r31)
 /* 80448CF0 004122B0  4B F1 D6 D1 */	bl VIGetRetraceCount
-/* 80448CF4 004122B4  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
+/* 80448CF4 004122B4  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 80448CF8 004122B8  90 64 02 A4 */	stw r3, 0x2a4(r4)
 .L_80448CFC:
 /* 80448CFC 004122BC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1255,10 +1255,10 @@
 /* 80448E30 004123F0  48 00 46 09 */	bl func_8044D438
 /* 80448E34 004123F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E38 004123F8  41 82 00 28 */	beq .L_80448E60
-/* 80448E3C 004123FC  4B FF B6 99 */	bl func_804444D4
+/* 80448E3C 004123FC  4B FF B6 99 */	bl getInstance__11CWorkSystemFv
 /* 80448E40 00412400  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E44 00412404  40 82 00 1C */	bne .L_80448E60
-/* 80448E48 00412408  48 01 05 A9 */	bl func_804593F0
+/* 80448E48 00412408  48 01 05 A9 */	bl getInstance__4CLibFv
 /* 80448E4C 0041240C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E50 00412410  40 82 00 10 */	bne .L_80448E60
 /* 80448E54 00412414  7F E3 FB 78 */	mr r3, r31
@@ -1344,7 +1344,7 @@
 /* 80448F3C 004124FC  4B FF F2 4C */	b __dt__9CDeviceVIFv
 .endfn func_80448F38
 
-.fn __ct__CDeviceVICb, global
+.fn __ct__11CDeviceVICb, global
 /* 80448F40 00412500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F44 00412504  7C 08 02 A6 */	mflr r0
 /* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__11CDeviceVICb@ha
@@ -1360,7 +1360,7 @@
 /* 80448F70 00412530  7C 08 03 A6 */	mtlr r0
 /* 80448F74 00412534  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448F78 00412538  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceVICb
+.endfn __ct__11CDeviceVICb
 
 .fn __dt__11CDeviceVICbFv, global
 /* 80448F7C 0041253C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1540,7 +1540,7 @@
 .obj "__vt__23reslist<P11CDeviceVICb>", global
 	.4byte "__RTTI__23reslist<P11CDeviceVICb>"
 	.4byte 0
-	.4byte __dt__reslist_CDeviceVICb
+	.4byte "__dt__23reslist<P11CDeviceVICb>Fv"
 .endobj "__vt__23reslist<P11CDeviceVICb>"
 
 .obj reslist_CDeviceVICb_hierarchy, global
@@ -1553,7 +1553,7 @@
 .obj "__vt__29_reslist_base<P11CDeviceVICb>", global
 	.4byte "__RTTI__29_reslist_base<P11CDeviceVICb>"
 	.4byte 0
-	.4byte __dt___reslist_base_CDeviceVICb
+	.4byte "__dt__29_reslist_base<P11CDeviceVICb>Fv"
 	.4byte 0
 .endobj "__vt__29_reslist_base<P11CDeviceVICb>"
 
@@ -1627,9 +1627,9 @@
 
 .balign 8
 
-.obj lbl_80667F28, global
+.obj instance__9CDeviceVI, global
 	.skip 0x4
-.endobj lbl_80667F28
+.endobj instance__9CDeviceVI
 
 .obj lbl_80667F2C, global
 	.skip 0x4
@@ -1647,10 +1647,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000001D0
-	.4byte __dt__reslist_CDeviceVICb
+	.4byte "__dt__23reslist<P11CDeviceVICb>Fv"
 	.4byte 0x0680001F
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__11CDeviceBaseFv
@@ -1684,19 +1684,19 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000001D0
-	.4byte __dt__reslist_CDeviceVICb
+	.4byte "__dt__23reslist<P11CDeviceVICb>Fv"
 	.4byte 0x0680001D
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__11CDeviceBaseFv
 	.4byte 0x0780001D
 	.4byte 0x000001D0
-	.4byte __dt__reslist_CDeviceVICb
+	.4byte "__dt__23reslist<P11CDeviceVICb>Fv"
 	.4byte 0x8680001D
 	.4byte 0x000001C8
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 .endobj "@etb_8001CABC"
 
 .obj "@etb_8001CB10", local
@@ -1783,28 +1783,28 @@
 
 .obj "@eti_800346A0", local
 .hidden "@eti_800346A0"
-	.4byte __ct__CDeviceVI
+	.4byte __ct__9CDeviceVIFPCcP11CWorkThread
 	.4byte 0x00000208
 	.4byte "@etb_8001CA70"
 .endobj "@eti_800346A0"
 
 .obj "@eti_800346AC", local
 .hidden "@eti_800346AC"
-	.4byte __dt__80447FDC
+	.4byte __dt__17UnkClass_80447FDCFv
 	.4byte 0x00000040
 	.4byte "@etb_8001CAA4"
 .endobj "@eti_800346AC"
 
 .obj "@eti_800346B8", local
 .hidden "@eti_800346B8"
-	.4byte __dt___reslist_base_CDeviceVICb
+	.4byte "__dt__29_reslist_base<P11CDeviceVICb>Fv"
 	.4byte 0x000000B4
 	.4byte "@etb_8001CAAC"
 .endobj "@eti_800346B8"
 
 .obj "@eti_800346C4", local
 .hidden "@eti_800346C4"
-	.4byte __dt__reslist_CDeviceVICb
+	.4byte "__dt__23reslist<P11CDeviceVICb>Fv"
 	.4byte 0x000000B8
 	.4byte "@etb_8001CAB4"
 .endobj "@eti_800346C4"
@@ -1895,7 +1895,7 @@
 
 .obj "@eti_80034760", local
 .hidden "@eti_80034760"
-	.4byte __ct__CDeviceVICb
+	.4byte __ct__11CDeviceVICb
 	.4byte 0x0000003C
 	.4byte "@etb_8001CB68"
 .endobj "@eti_80034760"

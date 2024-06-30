@@ -8,6 +8,8 @@ extern "C" {
 
 GX_DECL_PUBLIC_STRUCT(GXFifoObj, 128);
 
+void GXGetGPStatus(u8*, u8*, u8*, u8*, u8*);
+
 void GXSetCPUFifo(GXFifoObj*);
 BOOL GXGetCPUFifo(GXFifoObj*);
 

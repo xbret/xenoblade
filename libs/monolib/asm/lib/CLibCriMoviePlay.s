@@ -12,7 +12,7 @@
 /* 80459CB0 00423270  7C 7E 1B 78 */	mr r30, r3
 /* 80459CB4 00423274  4B FD D9 09 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80459CB8 00423278  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__CDeviceVICb
+/* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__11CDeviceVICb
 /* 80459CC0 00423280  3C A0 80 57 */	lis r5, __vt__16CLibCriMoviePlay@ha
 /* 80459CC4 00423284  38 DE 02 DC */	addi r6, r30, 0x2dc
 /* 80459CC8 00423288  38 A5 07 90 */	addi r5, r5, __vt__16CLibCriMoviePlay@l

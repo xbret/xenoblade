@@ -30,7 +30,7 @@ namespace nw4r
                 return *this;
             }
 
-            f32 x, y;
+            float x, y;
         };
 
 		/*

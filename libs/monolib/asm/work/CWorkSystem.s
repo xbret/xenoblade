@@ -56,10 +56,10 @@
 /* 804444D0 0040DA90  4E 80 00 20 */	blr 
 .endfn __dt__11CWorkSystemFv
 
-.fn func_804444D4, global
+.fn getInstance__11CWorkSystemFv, global
 /* 804444D4 0040DA94  80 6D BD 7C */	lwz r3, lbl_80667EFC@sda21(r13)
 /* 804444D8 0040DA98  4E 80 00 20 */	blr 
-.endfn func_804444D4
+.endfn getInstance__11CWorkSystemFv
 
 .fn func_804444DC, global
 /* 804444DC 0040DA9C  80 8D BD 7C */	lwz r4, lbl_80667EFC@sda21(r13)

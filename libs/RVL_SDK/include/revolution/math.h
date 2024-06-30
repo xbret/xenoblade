@@ -22,7 +22,7 @@ extern "C" {
 #define SQUARE(v) ((v) * (v))
 
 #define TAU     6.2831855f
-#define PI      3.1415927f
+#define M_PI    3.1415927f
 #define HALF_PI 1.5707964f
 
 #define LONG_TAU 6.2831854820251465

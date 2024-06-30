@@ -1,48 +1,48 @@
 #include "revolution/GX.h"
 
-void GXSetTevIndirect(GXTevStageID tev_stage, GXIndTexStageID ind_stage,
-                      GXIndTexFormat format, GXIndTexBiasSel bias_sel,
-                      GXIndTexMtxID matrix_sel, GXIndTexWrap wrap_s,
-                      GXIndTexWrap wrap_t, GXBool add_prev, GXBool utc_lod,
-                      GXIndTexAlphaSel alpha_sel) {
-    u32 opcode = tev_stage + GX_BP_REG_IND_CMD;
+void GXSetTevIndirect(GXTevStageID tevStage, GXIndTexStageID texStage,
+                      GXIndTexFormat texFmt, GXIndTexBiasSel biasSel,
+                      GXIndTexMtxID mtxId, GXIndTexWrap wrapS,
+                      GXIndTexWrap wrapT, GXBool addPrev, GXBool utcLod,
+                      GXIndTexAlphaSel alphaSel) {
+    u32 opcode = tevStage + GX_BP_REG_INDTEVSTAGE0;
+
     u32 cmd = 0;
+    GX_BP_SET_INDTEVSTAGE_STAGE(cmd, texStage);
+    GX_BP_SET_INDTEVSTAGE_FORMAT(cmd, texFmt);
+    GX_BP_SET_INDTEVSTAGE_BIAS(cmd, biasSel);
+    GX_BP_SET_INDTEVSTAGE_ALPHA(cmd, alphaSel);
+    GX_BP_SET_INDTEVSTAGE_MTX(cmd, mtxId);
+    GX_BP_SET_INDTEVSTAGE_WRAPS(cmd, wrapS);
+    GX_BP_SET_INDTEVSTAGE_WRAPT(cmd, wrapT);
+    GX_BP_SET_INDTEVSTAGE_UTCLOD(cmd, utcLod);
+    GX_BP_SET_INDTEVSTAGE_ADDPREV(cmd, addPrev);
+    GX_BP_SET_OPCODE(cmd, opcode);
 
-    cmd = GX_BITSET(cmd, 30, 2, ind_stage);
-    cmd = GX_BITSET(cmd, 28, 2, format);
-    cmd = GX_BITSET(cmd, 25, 3, bias_sel);
-    cmd = GX_BITSET(cmd, 23, 2, alpha_sel);
-    cmd = GX_BITSET(cmd, 19, 4, matrix_sel);
-    cmd = GX_BITSET(cmd, 16, 3, wrap_s);
-    cmd = GX_BITSET(cmd, 13, 3, wrap_t);
-    cmd = GX_BITSET(cmd, 12, 1, utc_lod);
-    cmd = GX_BITSET(cmd, 11, 1, add_prev);
-    cmd = GX_BITSET(cmd, 0, 8, opcode);
-
-    GX_LOAD_BP_REG(cmd);
-    __GXData->xfWritten = FALSE;
+    GX_BP_LOAD_REG(cmd);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 //only matches on 1.0
-void GXSetIndTexMtx(GXIndTexMtxID mtx_sel, const float offset_mtx[2][3], s8 scale_exp) {
+void GXSetIndTexMtx(GXIndTexMtxID id, const float offset[2][3], s8 scaleExp) {
     u32 index;
     u32 cmd;
 
-    switch (mtx_sel) {
+    switch (id) {
     case GX_ITM_0:
     case GX_ITM_1:
     case GX_ITM_2:
-        index = mtx_sel - GX_ITM_0;
+        index = id - GX_ITM_0;
         break;
     case GX_ITM_S0:
     case GX_ITM_S1:
     case GX_ITM_S2:
-        index = mtx_sel - GX_ITM_S0;
+        index = id - GX_ITM_S0;
         break;
     case GX_ITM_T0:
     case GX_ITM_T1:
     case GX_ITM_T2:
-        index = mtx_sel - GX_ITM_T0;
+        index = id - GX_ITM_T0;
         break;
     case 4:
     case 8:
@@ -50,107 +50,110 @@ void GXSetIndTexMtx(GXIndTexMtxID mtx_sel, const float offset_mtx[2][3], s8 scal
         index = 0;
     }
 
-    scale_exp += 0x11;
+    scaleExp += 17;
 
     cmd = 0;
-    cmd = GX_BITSET(cmd, 21, 11, 1024.0f * offset_mtx[0][0]);
-    cmd = GX_BITSET(cmd, 10, 11, 1024.0f * offset_mtx[1][0]);
-    cmd = GX_BITSET(cmd, 8, 2, scale_exp);
-    GX_BP_CMD_SET_OPCODE(cmd, (index * 4) - index + GX_BP_REG_IND_MTXA);
-    GX_LOAD_BP_REG(cmd);
+    GX_BP_SET_INDMTXA_M00(cmd, 1024.0f * offset[0][0]);
+    GX_BP_SET_INDMTXA_M10(cmd, 1024.0f * offset[1][0]);
+    GX_BP_SET_INDMTXA_EXP(cmd, scaleExp);
+    GX_BP_SET_OPCODE(cmd, index * 3 + GX_BP_REG_INDMTX0A);
+    GX_BP_LOAD_REG(cmd);
 
+    // TODO: Match using GX_BP_SET_INDMTXB_EXP
     cmd = 0;
-    cmd = GX_BITSET(cmd, 21, 11, 1024.0f * offset_mtx[0][1]);
-    cmd = GX_BITSET(cmd, 10, 11, 1024.0f * offset_mtx[1][1]);
-    cmd = __rlwimi(cmd, scale_exp, 20, 8, 9);
-    GX_BP_CMD_SET_OPCODE(cmd, (index * 4) - index + GX_BP_REG_IND_MTXB);
-    GX_LOAD_BP_REG(cmd);
+    GX_BP_SET_INDMTXB_M01(cmd, 1024.0f * offset[0][1]);
+    GX_BP_SET_INDMTXB_M11(cmd, 1024.0f * offset[1][1]);
+    cmd = __rlwimi(cmd, scaleExp, 20, 8, 9);
+    GX_BP_SET_OPCODE(cmd, index * 3 + GX_BP_REG_INDMTX0B);
+    GX_BP_LOAD_REG(cmd);
 
+    // TODO: Match using GX_BP_SET_INDMTXC_EXP
     cmd = 0;
-    cmd = GX_BITSET(cmd, 21, 11, 1024.0f * offset_mtx[0][2]);
-    cmd = GX_BITSET(cmd, 10, 11, 1024.0f * offset_mtx[1][2]);
-    cmd = __rlwimi(cmd, scale_exp, 18, 8, 9);
-    GX_BP_CMD_SET_OPCODE(cmd, (index * 4) - index + GX_BP_REG_IND_MTXC);
-    GX_LOAD_BP_REG(cmd);
+    GX_BP_SET_INDMTXC_M02(cmd, 1024.0f * offset[0][2]);
+    GX_BP_SET_INDMTXC_M12(cmd, 1024.0f * offset[1][2]);
+    cmd = __rlwimi(cmd, scaleExp, 18, 8, 9);
+    GX_BP_SET_OPCODE(cmd, index * 3 + GX_BP_REG_INDMTX0C);
+    GX_BP_LOAD_REG(cmd);
 
-    __GXData->xfWritten = FALSE;
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 
-void GXSetIndTexCoordScale(GXIndTexStageID ind_stage, GXIndTexScale scale_s,
-                           GXIndTexScale scale_t) {
-    switch (ind_stage) {
+void GXSetIndTexCoordScale(GXIndTexStageID stage, GXIndTexScale scaleS,
+                           GXIndTexScale scaleT) {
+    switch (stage) {
     case GX_INDTEXSTAGE0:
-        __GXData->ras1_ss0 = GX_BITSET(__GXData->ras1_ss0, 28, 4, scale_s);
-        __GXData->ras1_ss0 = GX_BITSET(__GXData->ras1_ss0, 24, 4, scale_t);
-        GX_BP_CMD_SET_OPCODE(__GXData->ras1_ss0, GX_BP_REG_RAS1_SS0);
-        GX_LOAD_BP_REG(__GXData->ras1_ss0);
+        GX_BP_SET_RAS1_SS0_S0(gxdt->ras1_ss0, scaleS);
+        GX_BP_SET_RAS1_SS0_T0(gxdt->ras1_ss0, scaleT);
+        GX_BP_SET_OPCODE(gxdt->ras1_ss0, GX_BP_REG_RAS1_SS0);
+        GX_BP_LOAD_REG(gxdt->ras1_ss0);
         break;
     case GX_INDTEXSTAGE1:
-        __GXData->ras1_ss0 = GX_BITSET(__GXData->ras1_ss0, 20, 4, scale_s);
-        __GXData->ras1_ss0 = GX_BITSET(__GXData->ras1_ss0, 16, 4, scale_t);
-        GX_BP_CMD_SET_OPCODE(__GXData->ras1_ss0, GX_BP_REG_RAS1_SS0);
-        GX_LOAD_BP_REG(__GXData->ras1_ss0);
+        GX_BP_SET_RAS1_SS0_S1(gxdt->ras1_ss0, scaleS);
+        GX_BP_SET_RAS1_SS0_T1(gxdt->ras1_ss0, scaleT);
+        GX_BP_SET_OPCODE(gxdt->ras1_ss0, GX_BP_REG_RAS1_SS0);
+        GX_BP_LOAD_REG(gxdt->ras1_ss0);
         break;
     case GX_INDTEXSTAGE2:
-        __GXData->ras1_ss1 = GX_BITSET(__GXData->ras1_ss1, 28, 4, scale_s);
-        __GXData->ras1_ss1 = GX_BITSET(__GXData->ras1_ss1, 24, 4, scale_t);
-        GX_BP_CMD_SET_OPCODE(__GXData->ras1_ss1, GX_BP_REG_RAS1_SS1);
-        GX_LOAD_BP_REG(__GXData->ras1_ss1);
+        GX_BP_SET_RAS1_SS1_S2(gxdt->ras1_ss1, scaleS);
+        GX_BP_SET_RAS1_SS1_T2(gxdt->ras1_ss1, scaleT);
+        GX_BP_SET_OPCODE(gxdt->ras1_ss1, GX_BP_REG_RAS1_SS1);
+        GX_BP_LOAD_REG(gxdt->ras1_ss1);
         break;
     case GX_INDTEXSTAGE3:
-        __GXData->ras1_ss1 = GX_BITSET(__GXData->ras1_ss1, 20, 4, scale_s);
-        __GXData->ras1_ss1 = GX_BITSET(__GXData->ras1_ss1, 16, 4, scale_t);
-        GX_BP_CMD_SET_OPCODE(__GXData->ras1_ss1, GX_BP_REG_RAS1_SS1);
-        GX_LOAD_BP_REG(__GXData->ras1_ss1);
+        GX_BP_SET_RAS1_SS1_S3(gxdt->ras1_ss1, scaleS);
+        GX_BP_SET_RAS1_SS1_T3(gxdt->ras1_ss1, scaleT);
+        GX_BP_SET_OPCODE(gxdt->ras1_ss1, GX_BP_REG_RAS1_SS1);
+        GX_BP_LOAD_REG(gxdt->ras1_ss1);
         break;
     }
 
-    __GXData->xfWritten = FALSE;
+    gxdt->lastWriteWasXF = FALSE;
 }
 
-void GXSetIndTexOrder(GXIndTexStageID ind_stage, GXTexCoordID tex_coord,
-                      GXTexMapID tex_map) {
-    if (tex_map == GX_TEXMAP_NULL) {
-        tex_map = GX_TEXMAP0;
+void GXSetIndTexOrder(GXIndTexStageID stage, GXTexCoordID coord,
+                      GXTexMapID map) {
+    if (map == GX_TEXMAP_NULL) {
+        map = GX_TEXMAP0;
     }
 
-    if (tex_coord == GX_TEXCOORD_NULL) {
-        tex_coord = GX_TEXCOORD0;
+    if (coord == GX_TEXCOORD_NULL) {
+        coord = GX_TEXCOORD0;
     }
 
-    switch (ind_stage) {
+    switch (stage) {
     case GX_INDTEXSTAGE0:
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 29, 3, tex_map);
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 26, 3, tex_coord);
+        GX_BP_SET_RAS1_IREF_MAP0(gxdt->ras1_iref, map);
+        GX_BP_SET_RAS1_IREF_TXC0(gxdt->ras1_iref, coord);
         break;
     case GX_INDTEXSTAGE1:
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 23, 3, tex_map);
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 20, 3, tex_coord);
+        GX_BP_SET_RAS1_IREF_MAP1(gxdt->ras1_iref, map);
+        GX_BP_SET_RAS1_IREF_TXC1(gxdt->ras1_iref, coord);
         break;
     case GX_INDTEXSTAGE2:
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 17, 3, tex_map);
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 14, 3, tex_coord);
+        GX_BP_SET_RAS1_IREF_MAP2(gxdt->ras1_iref, map);
+        GX_BP_SET_RAS1_IREF_TXC2(gxdt->ras1_iref, coord);
         break;
     case GX_INDTEXSTAGE3:
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 11, 3, tex_map);
-        __GXData->ras1_iref = GX_BITSET(__GXData->ras1_iref, 8, 3, tex_coord);
+        GX_BP_SET_RAS1_IREF_MAP3(gxdt->ras1_iref, map);
+        GX_BP_SET_RAS1_IREF_TXC3(gxdt->ras1_iref, coord);
         break;
     }
 
-    GX_LOAD_BP_REG(__GXData->ras1_iref);
-    __GXData->dirtyFlags |= 0x3;
-    __GXData->xfWritten = FALSE;
+    GX_BP_LOAD_REG(gxdt->ras1_iref);
+    gxdt->gxDirtyFlags |= GX_DIRTY_SU_TEX;
+    gxdt->gxDirtyFlags |= GX_DIRTY_BP_MASK;
+    gxdt->lastWriteWasXF = FALSE;
 }
 
-void GXSetNumIndStages(u8 nstages) {
-    __GXData->genMode = GX_BITSET(__GXData->genMode, 13, 3, nstages);
-    __GXData->dirtyFlags |= GX_DIRTY_BP_MASK;
-    __GXData->dirtyFlags |= GX_DIRTY_GEN_MODE;
+void GXSetNumIndStages(u8 num) {
+    GX_BP_SET_GENMODE_NUMINDSTAGES(gxdt->genMode, num);
+    gxdt->gxDirtyFlags |= GX_DIRTY_BP_MASK;
+    gxdt->gxDirtyFlags |= GX_DIRTY_GEN_MODE;
 }
 
-void GXSetTevDirect(GXTevStageID tev_stage) {
-    GXSetTevIndirect(tev_stage, GX_INDTEXSTAGE0, GX_ITF_8, GX_ITB_NONE, GX_ITM_OFF,
+void GXSetTevDirect(GXTevStageID stage) {
+    GXSetTevIndirect(stage, GX_INDTEXSTAGE0, GX_ITF_8, GX_ITB_NONE, GX_ITM_OFF,
                      GX_ITW_OFF, GX_ITW_OFF, FALSE, FALSE, GX_ITBA_OFF);
 }
 
@@ -182,12 +185,12 @@ void GXSetTevIndRepeat(){
 void __GXUpdateBPMask(void) {}
 
 void __GXSetIndirectMask(u32 mask) {
-    __GXData->ind_imask = GX_BITSET(__GXData->ind_imask, 24, 8, mask);
-    GX_LOAD_BP_REG(__GXData->ind_imask);
-    __GXData->xfWritten = FALSE;
+    GX_BP_SET_INDIMASK_IMASK(gxdt->ind_imask, mask);
+    GX_BP_LOAD_REG(gxdt->ind_imask);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 void __GXFlushTextureState(void) {
-    GX_LOAD_BP_REG(__GXData->ind_imask);
-    __GXData->xfWritten = FALSE;
+    GX_BP_LOAD_REG(gxdt->ind_imask);
+    gxdt->lastWriteWasXF = FALSE;
 }

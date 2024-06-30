@@ -58,8 +58,8 @@ bool CDeviceSC::WorkThreadEvent4(){
 }
 
 bool CDeviceSC::WorkThreadEvent5(){
-	if((u32)*unk5C.unk4 == (u32)unk5C.unk4){
-		if(func_804482A8() == nullptr){
+	if(unk5C.pStartNode->next == unk5C.pStartNode){
+		if(CDeviceVI::getInstance() == nullptr){
 			return CWorkThread::WorkThreadEvent5();
 		}
 	}
