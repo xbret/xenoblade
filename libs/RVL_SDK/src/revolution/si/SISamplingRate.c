@@ -52,12 +52,12 @@ void SISetSamplingRate(u32 msec) {
     SamplingRate = msec;
 
     switch ((u32)VIGetTvFormat()) {
-        case VI_TV_FMT_NTSC:
-        case VI_TV_FMT_MPAL:
-        case VI_TV_FMT_EURGB60:
+        case VI_NTSC:
+        case VI_MPAL:
+        case VI_EURGB60:
             xy = XYNTSC;
             break;
-        case VI_TV_FMT_PAL:
+        case VI_PAL:
             xy = XYPAL;
             break;
         default:

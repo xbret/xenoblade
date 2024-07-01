@@ -1,6 +1,7 @@
 #ifndef RVL_SDK_VI_VI3IN1_H
 #define RVL_SDK_VI_VI3IN1_H
 #include "types.h"
+#include "revolution/vi/vitypes.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -8,6 +9,8 @@ extern "C" {
 void __VISetRGBModeImm(void);
 
 void __VISetRevolutionModeSimple(void);
+
+void VISetTrapFilter(VIBool filter);
 
 #ifdef __cplusplus
 }

@@ -122,37 +122,37 @@ static void ConfigureVideo(u16 width, u16 height) {
     rmode.viHeight = height;
 
     switch ((u32)VIGetTvFormat()) {
-    case VI_TV_FMT_NTSC:
-    case VI_TV_FMT_MPAL:
+    case VI_NTSC:
+    case VI_MPAL:
         if (VI_HW_REGS[VI_REG_VICLK] & VI_VICLK_54MHZ) {
             // Progressive mode
-            rmode.tvInfo = VI_TV_INFO(VI_TV_FMT_NTSC, VI_SCAN_MODE_PROG);
+            rmode.viTVmode = VI_TVMODE(VI_NTSC, VI_PROGRESSIVE);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFB_MODE_SF;
+            rmode.xfbMode = VI_XFBMODE_SF;
         } else {
             // Non-progressive mode
-            rmode.tvInfo = VI_TV_INFO(VI_TV_FMT_NTSC, VI_SCAN_MODE_NON_INT);
+            rmode.viTVmode = VI_TVMODE(VI_NTSC, VI_INTERLACE);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFB_MODE_DF;
+            rmode.xfbMode = VI_XFBMODE_DF;
         }
         break;
-    case VI_TV_FMT_EURGB60:
+    case VI_EURGB60:
         if (VI_HW_REGS[VI_REG_VICLK] & VI_VICLK_54MHZ) {
             // Progressive mode
-            rmode.tvInfo = VI_TV_INFO(VI_TV_FMT_EURGB60, VI_SCAN_MODE_PROG);
+            rmode.viTVmode = VI_TVMODE(VI_EURGB60, VI_PROGRESSIVE);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFB_MODE_SF;
+            rmode.xfbMode = VI_XFBMODE_SF;
         }else{
             // Non-progressive mode
-            rmode.tvInfo = VI_TV_INFO(VI_TV_FMT_EURGB60, VI_SCAN_MODE_NON_INT);
+            rmode.viTVmode = VI_TVMODE(VI_EURGB60, VI_INTERLACE);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFB_MODE_DF;
+            rmode.xfbMode = VI_XFBMODE_DF;
         }
         break;
-    case VI_TV_FMT_PAL:
-        rmode.tvInfo = VI_TV_INFO(VI_TV_FMT_PAL, VI_SCAN_MODE_NON_INT);
+    case VI_PAL:
+        rmode.viTVmode = VI_TVMODE(VI_PAL, VI_INTERLACE);
         rmode.viYOrigin = 47;
-        rmode.xfbMode = VI_XFB_MODE_DF;
+        rmode.xfbMode = VI_XFBMODE_DF;
         break;
     }
 

@@ -4,6 +4,7 @@
 extern "C" {
 #endif
 
+#include "revolution/vi/vitypes.h"
 #include "revolution/vi/vi.h"
 #include "revolution/vi/vi3in1.h"
 #include "revolution/vi/vihardware.h"

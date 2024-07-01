@@ -15,6 +15,7 @@ void GXAbortFrame(void);
 
 void GXDrawDone(void);
 void GXPixModeSync(void);
+u16 GXReadDrawSync(void);
 
 GXDrawDoneCallback GXSetDrawDoneCallback(GXDrawDoneCallback);
 

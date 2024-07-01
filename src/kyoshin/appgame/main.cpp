@@ -86,7 +86,7 @@ void main(int argc, char* argv[]) {
 	
 	lbl_80666438 = 0;
 	mtl::MemManager_setArenaMemorySize(0x680000, 0);
-	func_80448E78(0);
+	CDeviceVI::func_80448E78(false);
 	func_804559A8(0, 0x180000);
 	CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
 	func_8045FBB0(staticArcFiles);

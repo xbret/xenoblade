@@ -533,7 +533,7 @@
 /* 804441D8 0040D798  48 00 40 D1 */	bl getInstance__9CDeviceVIFv
 /* 804441DC 0040D79C  2C 03 00 00 */	cmpwi r3, 0
 /* 804441E0 0040D7A0  41 82 00 08 */	beq .L_804441E8
-/* 804441E4 0040D7A4  48 00 46 95 */	bl func_80448878
+/* 804441E4 0040D7A4  48 00 46 95 */	bl func_80448878__9CDeviceVIFv
 .L_804441E8:
 /* 804441E8 0040D7A8  4B FF FE 85 */	bl func_8044406C
 /* 804441EC 0040D7AC  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
@@ -543,7 +543,7 @@
 /* 804441FC 0040D7BC  48 00 40 AD */	bl getInstance__9CDeviceVIFv
 /* 80444200 0040D7C0  2C 03 00 00 */	cmpwi r3, 0
 /* 80444204 0040D7C4  41 82 00 08 */	beq .L_8044420C
-/* 80444208 0040D7C8  48 00 48 7D */	bl func_80448A84
+/* 80444208 0040D7C8  48 00 48 7D */	bl func_80448A84__9CDeviceVIFv
 .L_8044420C:
 /* 8044420C 0040D7CC  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 80444210 0040D7D0  4B FF 58 C5 */	bl func_80439AD4
@@ -647,7 +647,7 @@
 .endfn CWorkRoot_Run
 
 .fn CWorkRoot_PreRetraceCallback, global
-/* 80444368 0040D928  48 00 49 A8 */	b func_80448D10
+/* 80444368 0040D928  48 00 49 A8 */	b func_80448D10__9CDeviceVIFv
 .endfn CWorkRoot_PreRetraceCallback
 
 .fn func_8044436C, global

@@ -1522,6 +1522,7 @@ LIBS = [
             ["device/CDeviceBase", False],
             ["device/CDeviceSC", True],
             ["device/CDeviceVI", False],
+			["device/CDeviceVICb", False],
             ["CFontLayer", False],
             ["CGXCache", False],
             ["IStateCache", False],

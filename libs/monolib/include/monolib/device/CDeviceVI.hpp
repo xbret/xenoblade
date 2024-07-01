@@ -2,46 +2,71 @@
 
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
+#include "monolib/device/UnkClass_80447FDC.hpp"
+#include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/reslist.hpp"
 #include "revolution/GX.h"
+#include "revolution/VI.h"
 
-class CDeviceVICb {
-
-};
-
-class UnkClass_80447FDC {
-public:
-	UnkClass_80447FDC(){
-	}
-	~UnkClass_80447FDC(){
-	}
-
-	void init(u32* val){
-		unk0 = val;
-	}
-
-	u32* unk0;
-	u32 unk4;
-
-	void func_804EE194();
-	void func_804EE1B0();
-};
 
 //size: 0x2c0
-class CDeviceVI : public CDeviceBase {
+class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {
 public:
 	CDeviceVI(const char* name, CWorkThread* workThread);
 	virtual ~CDeviceVI();
 	static CDeviceVI* getInstance();
+	static void func_804482B0(u32 r3);
+	static bool func_804482DC();
+	static void func_804483A0(u32 r3);
+	static u32 func_804483CC();
+	static void func_804483DC(u32 r3);
+	static GXRenderModeObj* func_804483FC();
+	static u32 func_80448408();
+	static float func_80448414();
+	static u32 func_80448420();
+	static u32 func_8044842C();
+	static void func_80448438();
+	static void func_804484C4();
+	static bool isWideAspectRatio();
+	static bool isTvFormatPal();
+	static u32 func_8044853C();
+	static float getSomeRatio();
+	static void func_8044857C(u32 r3, u32 r4);
+	void func_804486E4();
+	static void func_80448878();
+	static void func_80448A44();
+	static void func_80448A84();
+	static void func_80448D10();
+	virtual bool WorkThreadEvent4();
+	virtual bool WorkThreadEvent5();
+	static void func_80448E78(bool state);
+	static bool func_80448E80();
+	void func_80448E88();
+	virtual void UnkVirtualFunc2();
+
+	inline u32 convertTvFormat() {
+		u32 r4 = 0;
+		if(tvFormat == VI_PAL) r4 = 1;
+		else if(tvFormat == VI_MPAL) r4 = 3;
+		else if(tvFormat == VI_EURGB60) r4 = 2;
+		return r4;
+	}
+
+	inline u32 convertScanMode() {
+		u32 r3 = 16;
+		if(scanMode == VI_NON_INTERLACE) r3 = 0;
+		else if(scanMode == VI_PROGRESSIVE) r3 = 32;
+		return r3;
+	}
 
 	//0x0: vtable
 	//0x0-1c8: CDeviceBase
-	UnkClass_80447FDC unk1C8;
+	//UnkClass_80447FDC unk1C8;
 	reslist<CDeviceVICb*> unk1D0;
-	u32 unk1F0;
+	u32 tvFormat; //0x1F0
 	u32 unk1F4;
-	u32 unk1F8;
-	u32 unk1FC;
+	u32 scanMode; //0x1F8
+	u32 dimmingCount; //0x1FC
 	GXRenderModeObj unk200;
 	GXRenderModeObj unk23C;
 	u16 unk278;
@@ -67,5 +92,6 @@ public:
 	u32 unk2B8;
 	float unk2BC;
 
+protected:
 	static CDeviceVI* instance;
 };

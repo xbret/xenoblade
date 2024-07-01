@@ -429,7 +429,7 @@
 .endfn func_80069EA8
 
 .fn func_80069EE0, global
-/* 80069EE0 000334A0  48 3D E6 30 */	b func_80448510
+/* 80069EE0 000334A0  48 3D E6 30 */	b isTvFormatPal__9CDeviceVIFv
 .endfn func_80069EE0
 
 .fn func_80069EE4, global
@@ -1053,7 +1053,7 @@
 /* 8006A768 00033D28  80 6D A5 24 */	lwz r3, lbl_806666A4@sda21(r13)
 /* 8006A76C 00033D2C  38 03 00 01 */	addi r0, r3, 1
 /* 8006A770 00033D30  90 0D A5 24 */	stw r0, lbl_806666A4@sda21(r13)
-/* 8006A774 00033D34  48 3D DD 9D */	bl func_80448510
+/* 8006A774 00033D34  48 3D DD 9D */	bl isTvFormatPal__9CDeviceVIFv
 /* 8006A778 00033D38  2C 03 00 00 */	cmpwi r3, 0
 /* 8006A77C 00033D3C  80 6D A5 24 */	lwz r3, lbl_806666A4@sda21(r13)
 /* 8006A780 00033D40  38 00 00 1E */	li r0, 0x1e

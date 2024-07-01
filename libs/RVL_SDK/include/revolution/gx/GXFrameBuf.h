@@ -7,7 +7,7 @@ extern "C" {
 #endif
 
 typedef struct _GXRenderModeObj {
-    u32 tvInfo;               // at 0x0
+    u32 viTVmode;             // at 0x0
     u16 fbWidth;              // at 0x4
     u16 efbHeight;            // at 0x6
     u16 xfbHeight;            // at 0x8

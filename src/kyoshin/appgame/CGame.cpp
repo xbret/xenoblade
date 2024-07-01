@@ -3,6 +3,7 @@
 #include "monolib/lib/CLibHbm.hpp"
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/CDesktop.hpp"
+#include "monolib/device/CDeviceVI.hpp"
 #include "kyoshin/appgame/cf/CTaskREvent.hpp"
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
 #include "nw4r/lyt/lyt_arcResourceAccessor.h"
@@ -10,7 +11,6 @@
 extern u32 func_8045FB08();
 extern u32 func_8007E1B4();
 extern void func_801BF93C();
-extern UNKTYPE* func_804483FC();
 extern float func_801C0014();
 extern void func_801BFFAC(float f1, float f2);
 extern void func_801644BC(u32 r3);
@@ -91,19 +91,19 @@ void func_800395F4(u32 r3){
 	if(CGame::instance != nullptr){
 		if(CGame::instance->unk1EC != 0){
 			if(r3 == 0){
-				UNKTYPE* temp_r3 = func_804483FC();
-				u16 temp_r3_1 = *(u16*)((u32)temp_r3 + 6);
-				s16 temp_r0 = temp_r3_1 - 114;
-				UNKTYPE* temp_r3_2 = func_804483FC(); //???
-				s16 temp_r6 = *(s16*)((u32)temp_r3_2 + 4);
-				func_80039694((CView*)(CGame::instance->unk1EC), 0, 56, temp_r6, temp_r0);
+				GXRenderModeObj* rendMode = CDeviceVI::func_804483FC();
+				u16 temp_r3_1 = rendMode->efbHeight;
+				s16 efbHeight = temp_r3_1 - 114;
+				GXRenderModeObj* rendMode1 = CDeviceVI::func_804483FC(); //???
+				s16 fbWidth = rendMode1->fbWidth;
+				func_80039694((CView*)(CGame::instance->unk1EC), 0, 56, fbWidth, efbHeight);
 			}else{
-				UNKTYPE* temp_r3 = func_804483FC();
-				s16 temp_r31 = *(s16*)((u32)temp_r3 + 6);
-				UNKTYPE* temp_r3_2 = func_804483FC(); //???
+				GXRenderModeObj* rendMode = CDeviceVI::func_804483FC();
+				s16 efbHeight = rendMode->efbHeight;
+				GXRenderModeObj* rendMode1 = CDeviceVI::func_804483FC(); //???
 				CView* view = (CView*)(CGame::instance->unk1EC);
-				s16 temp_r6 = *(s16*)((u32)temp_r3_2 + 4);
-				func_80039694(view, 0, 0, temp_r6, temp_r31);
+				s16 fbWidth = rendMode1->fbWidth;
+				func_80039694(view, 0, 0, fbWidth, efbHeight);
 			}
 		}
 	}

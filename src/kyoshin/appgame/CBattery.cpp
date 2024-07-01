@@ -1,5 +1,6 @@
 #include "kyoshin/appgame/CBattery.hpp"
 #include "monolib/MemManager.hpp"
+#include "monolib/device/CDeviceVI.hpp"
 #include <stdio.h>
 
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
@@ -8,7 +9,6 @@ extern void func_80137038(nw4r::lyt::Layout*, void*, int, int);
 extern void func_801390E0(UnkClass_80451720**);
 extern void func_80139124(nw4r::lyt::ArcResourceAccessor*);
 extern void MemManager_80434A4C(u8);
-extern void func_80448A44();
 extern UnkClass_80451720* CDeviceFile_openFile1(int, const char*, void*, int, int);
 extern void CDeviceFile_8044F154(UnkClass_80451720*, int);
 extern void CDeviceFile_8044F414(UnkClass_80451720*);
@@ -48,7 +48,7 @@ void CBattery::func_802B9334(void* r4){
 }
 
 void CBattery::func_802B9364(){
-	func_80448A44();
+	CDeviceVI::func_80448A44();
 	func_801390E0(&unk14);
 	unk20 = false;
 	if(layout != nullptr){

@@ -1219,10 +1219,10 @@
 /* 804343A4 003FD964  4E 80 00 20 */	blr 
 .endfn Heap_getRegionIndex2
 
-.fn Heap_getRegionIndex2_2, global
+.fn Heap_getRegionIndex2_2__Fv, global
 /* 804343A8 003FD968  80 6D 9C B4 */	lwz r3, regionIndex2@sda21(r13)
 /* 804343AC 003FD96C  4E 80 00 20 */	blr 
-.endfn Heap_getRegionIndex2_2
+.endfn Heap_getRegionIndex2_2__Fv
 
 .fn MemManager_804343B0, global
 /* 804343B0 003FD970  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1833,7 +1833,7 @@
 /* 80434B60 003FE120  4E 80 00 20 */	blr 
 .endfn MemManager_80434AA4
 
-.fn MemManager_80434B64, global
+.fn MemManager_80434B64__FUliUl, global
 /* 80434B64 003FE124  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80434B68 003FE128  7C 08 02 A6 */	mflr r0
 /* 80434B6C 003FE12C  2C 05 00 00 */	cmpwi r5, 0
@@ -1885,7 +1885,7 @@
 /* 80434C18 003FE1D8  7C 08 03 A6 */	mtlr r0
 /* 80434C1C 003FE1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80434C20 003FE1E0  4E 80 00 20 */	blr
-.endfn MemManager_80434B64
+.endfn MemManager_80434B64__FUliUl
 
 .fn __nw__FUl, global
 /* 80434C24 003FE1E4  38 60 00 00 */	li r3, 0
@@ -2473,7 +2473,7 @@
 
 .obj "@eti_80033BD8", local
 .hidden "@eti_80033BD8"
-	.4byte MemManager_80434B64
+	.4byte MemManager_80434B64__FUliUl
 	.4byte 0x000000C0
 	.4byte "@etb_8001C008"
 .endobj "@eti_80033BD8"
