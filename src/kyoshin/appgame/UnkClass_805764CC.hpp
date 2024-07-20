@@ -28,21 +28,21 @@ public:
 
 class UnkClass_805764CC{
 public:
-	reslist<CfObject> objList1; //0x00
+	reslist<CfObject*> objList1; //0x00
 	UnkClass_800B0AD8 unk20; //0x20
 	//might be an array?
-	reslist<CfObject> objList2; //0xB28
-	reslist<CfObject> objList3; //0xB48
-	reslist<CfObject> objList4; //0xB68
-	reslist<CfObject> objList5; //0xB88
-	reslist<CfObject> objList6; //0xBA8
-	reslist<CfObject> objList7; //0xBC8
-	reslist<CfObject> objList8; //0xBE8
-	reslist<CfObject> objList9; //0xC08
-	reslist<CfObject> objList10; //0xC28
-	reslist<TBoxInfo> tboxInfoList; //0xC48
+	reslist<CfObject*> objList2; //0xB28
+	reslist<CfObject*> objList3; //0xB48
+	reslist<CfObject*> objList4; //0xB68
+	reslist<CfObject*> objList5; //0xB88
+	reslist<CfObject*> objList6; //0xBA8
+	reslist<CfObject*> objList7; //0xBC8
+	reslist<CfObject*> objList8; //0xBE8
+	reslist<CfObject*> objList9; //0xC08
+	reslist<CfObject*> objList10; //0xC28
+	reslist<TBoxInfo*> tboxInfoList; //0xC48
 	u8 unkC68[0x18];
-	reslist<IFactoryEvent> factoryEventList; //0xC80
+	reslist<IFactoryEvent*> factoryEventList; //0xC80
 	u32 unkCA0;
 	u32 unkCA4;
 	u32 unkCA8;

@@ -16,7 +16,7 @@
 /* 8048BDBC 0045537C  7D 3F 4B 78 */	mr r31, r9
 /* 8048BDC0 00455380  4B CB 69 7D */	bl __ct__IWorkEvent
 /* 8048BDC4 00455384  38 79 00 04 */	addi r3, r25, 4
-/* 8048BDC8 00455388  4B FB D1 79 */	bl __ct__11CDeviceVICb
+/* 8048BDC8 00455388  4B FB D1 79 */	bl __ct__11CDeviceVICbFv
 /* 8048BDCC 0045538C  3C 80 80 57 */	lis r4, __vt__12CScnItemPool@ha
 /* 8048BDD0 00455390  93 59 00 08 */	stw r26, 8(r25)
 /* 8048BDD4 00455394  38 84 1C D0 */	addi r4, r4, __vt__12CScnItemPool@l
@@ -1466,9 +1466,9 @@
 	.4byte __RTTI__12CScnItemPool
 	.4byte 0xFFFFFFFC
 	.4byte func_8048D01C__12CScnItemPoolFv
-	.4byte func_80166630__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc2__11CDeviceVICbFv
 	.4byte func_8048D014__12CScnItemPoolFv
-	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 	.4byte func_8048CF58__12CScnItemPoolFv
 .endobj __vt__12CScnItemPool
 

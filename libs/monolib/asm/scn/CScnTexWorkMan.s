@@ -14,7 +14,7 @@
 /* 804900DC 0045969C  7C 9D 23 78 */	mr r29, r4
 /* 804900E0 004596A0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804900E4 004596A4  7C 7C 1B 78 */	mr r28, r3
-/* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__11CDeviceVICb
+/* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__11CDeviceVICbFv
 /* 804900EC 004596AC  3C 60 80 57 */	lis r3, __vt__14CScnTexWorkMan@ha
 /* 804900F0 004596B0  93 BC 00 04 */	stw r29, 4(r28)
 /* 804900F4 004596B4  38 63 20 18 */	addi r3, r3, __vt__14CScnTexWorkMan@l
@@ -40,7 +40,7 @@
 /* 80490144 00459704  90 6D C0 44 */	stw r3, lbl_806681C4@sda21(r13)
 /* 80490148 00459708  90 6D C0 48 */	stw r3, lbl_806681C8@sda21(r13)
 /* 8049014C 0045970C  7F 83 E3 78 */	mr r3, r28
-/* 80490150 00459710  4B FB 82 E9 */	bl func_80448438__9CDeviceVIFv
+/* 80490150 00459710  4B FB 82 E9 */	bl addCallback__9CDeviceVIFP11CDeviceVICb
 .L_80490154:
 /* 80490154 00459714  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80490158 00459718  7F 83 E3 78 */	mr r3, r28
@@ -75,7 +75,7 @@
 /* 804901C0 00459780  38 00 FF FF */	li r0, -1
 /* 804901C4 00459784  90 0D A1 48 */	stw r0, lbl_806662C8@sda21(r13)
 /* 804901C8 00459788  7F C3 F3 78 */	mr r3, r30
-/* 804901CC 0045978C  4B FB 82 F9 */	bl func_804484C4__9CDeviceVIFv
+/* 804901CC 0045978C  4B FB 82 F9 */	bl removeCallback__9CDeviceVIFP11CDeviceVICb
 .L_804901D0:
 /* 804901D0 00459790  7F C3 F3 78 */	mr r3, r30
 /* 804901D4 00459794  38 80 00 00 */	li r4, 0
@@ -2131,9 +2131,9 @@
 	.4byte __RTTI__14CScnTexWorkMan
 	.4byte 0
 	.4byte __dt__14CScnTexWorkManFv
-	.4byte func_80166630__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc2__11CDeviceVICbFv
 	.4byte func_80490310__14CScnTexWorkManFv
-	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 .endobj __vt__14CScnTexWorkMan
 
 .obj CScnTexWorkMan_hierarchy, global

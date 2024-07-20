@@ -8,7 +8,6 @@
 #include "revolution/GX.h"
 #include "revolution/VI.h"
 
-
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {
 public:
@@ -25,18 +24,19 @@ public:
 	static float func_80448414();
 	static u32 func_80448420();
 	static u32 func_8044842C();
-	static void func_80448438();
-	static void func_804484C4();
+	static bool addCallback(CDeviceVICb* entry);
+	static bool removeCallback(CDeviceVICb* entry);
 	static bool isWideAspectRatio();
 	static bool isTvFormatPal();
-	static u32 func_8044853C();
+	static u32 getSomeSize();
 	static float getSomeRatio();
 	static void func_8044857C(u32 r3, u32 r4);
 	void func_804486E4();
+	virtual void wkUpdate();
 	static void func_80448878();
 	static void func_80448A44();
 	static void func_80448A84();
-	static void func_80448D10();
+	static u32 func_80448D10();
 	virtual bool WorkThreadEvent4();
 	virtual bool WorkThreadEvent5();
 	static void func_80448E78(bool state);
@@ -61,8 +61,8 @@ public:
 
 	//0x0: vtable
 	//0x0-1c8: CDeviceBase
-	//UnkClass_80447FDC unk1C8;
-	reslist<CDeviceVICb*> unk1D0;
+	//0x1c8-1d0: UnkClass_80447FDC
+	reslist<CDeviceVICb*> callbackList;
 	u32 tvFormat; //0x1F0
 	u32 unk1F4;
 	u32 scanMode; //0x1F8
@@ -73,7 +73,7 @@ public:
 	u16 unk27A;
 	u16 unk27C;
 	u16 unk27E;
-	u32* unk280;
+	void* unk280;
 	u32 unk284;
 	u32 unk288;
 	u8 unk28C[0x8]; //padding?

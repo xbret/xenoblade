@@ -11,7 +11,7 @@
 /* 80459878 00422E38  7C 7F 1B 78 */	mr r31, r3
 /* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80459880 00422E40  38 7F 01 C4 */	addi r3, r31, 0x1c4
-/* 80459884 00422E44  4B FE F6 BD */	bl __ct__11CDeviceVICb
+/* 80459884 00422E44  4B FE F6 BD */	bl __ct__11CDeviceVICbFv
 /* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__7CLibCri@ha
 /* 8045988C 00422E4C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459890 00422E50  38 84 06 A0 */	addi r4, r4, __vt__7CLibCri@l
@@ -449,8 +449,8 @@
 	.4byte 0xFFFFFE3C
 	.4byte func_80459C80__7CLibCriFv
 	.4byte func_80459C78__7CLibCriFv
-	.4byte func_8016662C__11CDeviceVICbFv
-	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc3__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 	.4byte __RTTI__7CLibCri
 	.4byte 0xFFFFFE38
 	.4byte func_80459C90__7CLibCriFv

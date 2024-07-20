@@ -562,8 +562,8 @@
 /* 803D9C30 003A31F0  4E 80 00 20 */	blr 
 .endfn GetResMatNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-#GetResTev__Q34nw4r3g3d6ResMdlCFi or GetResTev__Q34nw4r3g3d6ResMdlCFUl
-.fn func_803D9C34, global
+#could also be GetResTev__Q34nw4r3g3d6ResMdlCFi
+.fn GetResTev__Q34nw4r3g3d6ResMdlCFUl, global
 /* 803D9C34 003A31F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 803D9C38 003A31F8  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 803D9C3C 003A31FC  2C 00 00 00 */	cmpwi r0, 0
@@ -589,7 +589,7 @@
 .L_803D9C80:
 /* 803D9C80 003A3240  38 60 00 00 */	li r3, 0
 /* 803D9C84 003A3244  4E 80 00 20 */	blr 
-.endfn func_803D9C34
+.endfn GetResTev__Q34nw4r3g3d6ResMdlCFUl
 
 .fn GetResShp__Q34nw4r3g3d6ResMdlCFi, global
 /* 803D9C88 003A3248  80 63 00 00 */	lwz r3, 0(r3)
@@ -666,8 +666,8 @@
 /* 803D9D60 003A3320  4E 80 00 20 */	blr 
 .endfn GetResShpNumEntries__Q34nw4r3g3d6ResMdlCFv
 
-#GetResTexPlttInfoOffsetFromTexName__Q34nw4r3g3d6ResMdlCFi or GetResTexPlttInfoOffsetFromTexName__Q34nw4r3g3d6ResMdlCFUl
-.fn func_803D9D64, global
+#could also be GetResTexPlttInfoOffsetFromTexName__Q34nw4r3g3d6ResMdlCFi
+.fn GetResTexPlttInfoOffsetFromTexName__Q34nw4r3g3d6ResMdlCFUl, global
 /* 803D9D64 003A3324  80 63 00 00 */	lwz r3, 0(r3)
 /* 803D9D68 003A3328  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 803D9D6C 003A332C  2C 00 00 00 */	cmpwi r0, 0
@@ -693,7 +693,7 @@
 .L_803D9DB0:
 /* 803D9DB0 003A3370  38 60 00 00 */	li r3, 0
 /* 803D9DB4 003A3374  4E 80 00 20 */	blr 
-.endfn func_803D9D64
+.endfn GetResTexPlttInfoOffsetFromTexName__Q34nw4r3g3d6ResMdlCFUl
 
 .fn GetResTexPlttInfoOffsetFromTexNameNumEntries__Q34nw4r3g3d6ResMdlCFv, global
 /* 803D9DB8 003A3378  80 63 00 00 */	lwz r3, 0(r3)

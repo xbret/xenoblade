@@ -41,6 +41,10 @@ namespace ml{
 			x = 0;
 			y = 0;
 		}
+		CPnt16(s16 x, s16 y){
+			this->x = x;
+			this->y = y;
+		}
 	};
 
 

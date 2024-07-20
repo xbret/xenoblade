@@ -7,7 +7,20 @@ namespace mtl{
 template <typename T>
 class PtrSingleton{
 public:
-    static T* getInstance();
+    PtrSingleton(){
+        instance = this;
+    }
+
+    ~PtrSingleton(){
+        instance = nullptr;
+    }
+
+    static T* getInstance(){
+        return instance;
+    }
+
+protected:
+    static T* instance;
 };
 
 }

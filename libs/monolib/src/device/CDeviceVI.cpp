@@ -1,28 +1,48 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceGX.hpp"
+#include "monolib/device/CDevice.hpp"
 #include "monolib/lib/CLib.hpp"
+#include "monolib/work/CWorkSystem.hpp"
+#include "monolib/MemManager.hpp"
+#include "monolib/Math.hpp"
 #include <string.h>
 
-extern int Heap_getRegionIndex2_2();
-extern u32* MemManager_80434B64(u32 r3, int index, u32 r5);
-extern u32 func_8044D058();
-
-struct Test {
-	Test(u16 x, u16 y){
-		this->x = x;
-		this->y = y;
-	}
-	u16 x;
-	u16 y;
-};
+extern bool func_8044D438();
 
 CDeviceVI* CDeviceVI::instance;
 
-//why not just... do index + 1?
-const u32 lbl_805262A8[] = {
-	1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
-	16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+static const VIGamma gammaLevels[] = {
+	VI_GM_0_1,
+	VI_GM_0_2,
+	VI_GM_0_3,
+	VI_GM_0_4,
+	VI_GM_0_5,
+	VI_GM_0_6,
+	VI_GM_0_7,
+	VI_GM_0_8,
+	VI_GM_0_9,
+	VI_GM_1_0,
+	VI_GM_1_1,
+	VI_GM_1_2,
+	VI_GM_1_3,
+	VI_GM_1_4,
+	VI_GM_1_5,
+	VI_GM_1_6,
+	VI_GM_1_7,
+	VI_GM_1_8,
+	VI_GM_1_9,
+	VI_GM_2_0,
+	VI_GM_2_1,
+	VI_GM_2_2,
+	VI_GM_2_3,
+	VI_GM_2_4,
+	VI_GM_2_5,
+	VI_GM_2_6,
+	VI_GM_2_7,
+	VI_GM_2_8,
+	VI_GM_2_9,
+	VI_GM_3_0
 };
 
 GXRenderModeObj* renderModes[] = {
@@ -44,27 +64,26 @@ GXRenderModeObj* renderModes[] = {
 	&GXMpal480ProgSoft
 };
 
-static Test lbl_8065A6B8[] = {
-	Test(0,8),
-	Test(0,0),
-	Test(0,0),
-	Test(0,16),
-	Test(0,8),
-	Test(0,16),
-	Test(0,0),
-	Test(0,0),
-	Test(0,8),
-	Test(0,16),
-	Test(0,16),
-	Test(0,16),
-	Test(0,8),
-	Test(0,16),
-	Test(0,16),
-	Test(0,16)
+static CPnt16 lbl_8065A6B8[] = {
+	CPnt16(0,8),
+	CPnt16(0,0),
+	CPnt16(0,0),
+	CPnt16(0,16),
+	CPnt16(0,8),
+	CPnt16(0,16),
+	CPnt16(0,0),
+	CPnt16(0,0),
+	CPnt16(0,8),
+	CPnt16(0,16),
+	CPnt16(0,16),
+	CPnt16(0,16),
+	CPnt16(0,8),
+	CPnt16(0,16),
+	CPnt16(0,16),
+	CPnt16(0,16)
 };
 
-//UnkClass_8065A6B8 lbl_8065A6B8;
-bool lbl_80667F2C;
+static bool lbl_80667F2C;
 
 CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8)
 , UnkClass_80447FDC() {
@@ -91,20 +110,12 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
 	instance = this;
 	unk2A0 = 0;
 	unk2A2 = 0;
-
-	//idk wtf this is
-	int index;
-	if(lbl_80667F2C != false){
-		index = Heap_getRegionIndex2_2();
-	}else{
-		index = func_8044D058();
-	}
-	unk280 = MemManager_80434B64(0x12C000, index, 0x20);
+	unk280 = mtl::allocateHeap(getSomeSize(), lbl_80667F2C ? mtl::Heap_getRegionIndex2_2() : func_8044D058(), 0x20);
 
 	memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
 	instance->unk4 |= 0x1;
 	instance->unk4 |= 0x10;
-	unk1D0.initList(16, unk54);
+	callbackList.initList(16, unk54);
 
 	UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
 	func_804EE194(ptr);
@@ -175,6 +186,16 @@ u32 CDeviceVI::func_8044842C(){
 	return instance->unk2A8;
 }
 
+bool CDeviceVI::addCallback(CDeviceVICb* entry){
+	instance->callbackList.push_back(entry);
+	return true;
+}
+
+bool CDeviceVI::removeCallback(CDeviceVICb* entry){
+	instance->callbackList.remove(entry);
+	return true;
+}
+
 bool CDeviceVI::isWideAspectRatio(){
 	return CDeviceSC::isWideAspectRatio();
 }
@@ -183,7 +204,7 @@ bool CDeviceVI::isTvFormatPal(){
 	return VIGetTvFormat() == VI_PAL;
 }
 
-u32 CDeviceVI::func_8044853C(){
+u32 CDeviceVI::getSomeSize(){
 	return 0x12C000;
 }
 
@@ -199,6 +220,19 @@ float CDeviceVI::getSomeRatio(){
 	return ratio;
 }
 
+void CDeviceVI::wkUpdate(){
+	VISetGamma(gammaLevels[unk1F4]);
+
+	if(unk4 & 8){
+		VISetBlack(VI_TRUE);
+	}else{
+		VISetBlack(unk4 & 1);
+	}
+
+	VIFlush();
+	func_804486E4();
+}
+
 void CDeviceVI::func_80448A44(){
 	if(CDeviceGX::func_80455368() != false){
 		while(GXReadDrawSync() != 0xBEEF){
@@ -206,6 +240,47 @@ void CDeviceVI::func_80448A44(){
 	}else{
 		GXDrawDone();
 	}
+}
+
+void CDeviceVI::func_80448A84(){
+	CDeviceVI* vi = instance;
+
+	u32 r0 = vi->unk7C & 0x10;
+	if(r0 != 0){
+		r0 = 1;
+	}else{
+		int r0_1 = vi->unk1AC;
+		int r6 = 0;
+		if(r0_1 > 0){
+
+		}
+
+		r6 = -1;
+
+		lbl_78:
+		r0 = r6 < 0;
+	}
+
+	u32 r0_2 = 0;
+	if(r0 == 0){
+		int r4 = vi->unk48;
+		u32 r3 = 1;
+		if(r4 != 2 && r4 != 3){
+			r3 = 0;
+		}
+		if(r3 != 0){
+			r0_2 = 1;
+		}
+	}
+
+	if(r0_2 != 0){
+
+	}
+
+}
+
+u32 CDeviceVI::func_80448D10(){
+	return 1;
 }
 
 bool CDeviceVI::WorkThreadEvent4(){
@@ -230,6 +305,14 @@ bool CDeviceVI::WorkThreadEvent4(){
 bool CDeviceVI::WorkThreadEvent5(){
 	VISetBlack(VI_TRUE);
 	VIFlush();
+	if(unk5C.pStartNode->next == unk5C.pStartNode){
+		if(CDeviceGX::getInstance() == nullptr && func_8044D438() &&
+		CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
+			return CWorkThread::WorkThreadEvent5();
+		}
+	}
+
+	return false;
 }
 
 void CDeviceVI::func_80448E78(bool state){

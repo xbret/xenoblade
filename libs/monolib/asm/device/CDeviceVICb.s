@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.fn __ct__11CDeviceVICb, global
+.fn __ct__11CDeviceVICbFv, global
 /* 80448F40 00412500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F44 00412504  7C 08 02 A6 */	mflr r0
 /* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__11CDeviceVICb@ha
@@ -12,14 +12,14 @@
 /* 80448F54 00412514  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80448F58 00412518  7C 7F 1B 78 */	mr r31, r3
 /* 80448F5C 0041251C  90 83 00 00 */	stw r4, 0(r3)
-/* 80448F60 00412520  4B FF F4 D9 */	bl func_80448438__9CDeviceVIFv
+/* 80448F60 00412520  4B FF F4 D9 */	bl addCallback__9CDeviceVIFP11CDeviceVICb
 /* 80448F64 00412524  7F E3 FB 78 */	mr r3, r31
 /* 80448F68 00412528  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80448F6C 0041252C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80448F70 00412530  7C 08 03 A6 */	mtlr r0
 /* 80448F74 00412534  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448F78 00412538  4E 80 00 20 */	blr 
-.endfn __ct__11CDeviceVICb
+.endfn __ct__11CDeviceVICbFv
 
 .fn __dt__11CDeviceVICbFv, global
 /* 80448F7C 0041253C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -34,7 +34,7 @@
 /* 80448FA0 00412560  3C 80 80 57 */	lis r4, __vt__11CDeviceVICb@ha
 /* 80448FA4 00412564  38 84 F7 A8 */	addi r4, r4, __vt__11CDeviceVICb@l
 /* 80448FA8 00412568  90 83 00 00 */	stw r4, 0(r3)
-/* 80448FAC 0041256C  4B FF F5 19 */	bl func_804484C4__9CDeviceVIFv
+/* 80448FAC 0041256C  4B FF F5 19 */	bl removeCallback__9CDeviceVIFP11CDeviceVICb
 /* 80448FB0 00412570  2C 1F 00 00 */	cmpwi r31, 0
 /* 80448FB4 00412574  40 81 00 0C */	ble .L_80448FC0
 /* 80448FB8 00412578  7F C3 F3 78 */	mr r3, r30
@@ -66,9 +66,9 @@
 	.4byte __RTTI__11CDeviceVICb
 	.4byte 0
 	.4byte __dt__11CDeviceVICbFv
-	.4byte func_80166630__11CDeviceVICbFv
-	.4byte func_8016662C__11CDeviceVICbFv
-	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc2__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc3__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 .endobj __vt__11CDeviceVICb
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -102,7 +102,7 @@
 
 .obj "@eti_80034760", local
 .hidden "@eti_80034760"
-	.4byte __ct__11CDeviceVICb
+	.4byte __ct__11CDeviceVICbFv
 	.4byte 0x0000003C
 	.4byte "@etb_8001CB68"
 .endobj "@eti_80034760"

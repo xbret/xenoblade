@@ -493,7 +493,7 @@
 /* 80444154 0040D714  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444158 0040D718  7C 08 02 A6 */	mflr r0
 /* 8044415C 0040D71C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80444160 0040D720  48 01 11 4D */	bl func_804552AC
+/* 80444160 0040D720  48 01 11 4D */	bl getInstance__9CDeviceGXFv
 /* 80444164 0040D724  2C 03 00 00 */	cmpwi r3, 0
 /* 80444168 0040D728  41 82 00 08 */	beq .L_80444170
 /* 8044416C 0040D72C  48 01 16 31 */	bl func_8045579C
@@ -616,8 +616,8 @@
 /* 804442F4 0040D8B4  4B FF F8 15 */	bl __ct__CWorkRootThread
 /* 804442F8 0040D8B8  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 804442FC 0040D8BC  4B FF F6 5D */	bl CWorkControl_create
-/* 80444300 0040D8C0  48 00 96 29 */	bl __ct__CDevice
-/* 80444304 0040D8C4  48 01 54 8D */	bl __ct__CLib
+/* 80444300 0040D8C0  48 00 96 29 */	bl CDevice_create
+/* 80444304 0040D8C4  48 01 54 8D */	bl CLib_create
 /* 80444308 0040D8C8  48 00 04 F5 */	bl func_804447FC
 .L_8044430C:
 /* 8044430C 0040D8CC  4B FF FD 61 */	bl func_8044406C #this function call leads to GameMain

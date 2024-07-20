@@ -2,6 +2,7 @@
 
 #include "types.h"
 
+//min size: 0x4
 class UnkClass_80447FDC {
 public:
 	UnkClass_80447FDC(){
@@ -12,9 +13,8 @@ public:
 
 	virtual void UnkVirtualFunc2() = 0;
 
-
-	//u32* unk0;
-	u32 unk4;
+	//0x0: vtable
+	u32 unk4; //may not belong here
 };
 
 extern void func_804EE194(UNKTYPE* r3);

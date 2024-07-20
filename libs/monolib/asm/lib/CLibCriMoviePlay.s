@@ -12,7 +12,7 @@
 /* 80459CB0 00423270  7C 7E 1B 78 */	mr r30, r3
 /* 80459CB4 00423274  4B FD D9 09 */	bl __ct__11CWorkThreadFPCcP11CWorkThreadi
 /* 80459CB8 00423278  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__11CDeviceVICb
+/* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__11CDeviceVICbFv
 /* 80459CC0 00423280  3C A0 80 57 */	lis r5, __vt__16CLibCriMoviePlay@ha
 /* 80459CC4 00423284  38 DE 02 DC */	addi r6, r30, 0x2dc
 /* 80459CC8 00423288  38 A5 07 90 */	addi r5, r5, __vt__16CLibCriMoviePlay@l
@@ -897,7 +897,7 @@
 /* 8045A91C 00423EDC  80 1F 00 9C */	lwz r0, 0x9c(r31)
 /* 8045A920 00423EE0  2C 00 00 00 */	cmpwi r0, 0
 /* 8045A924 00423EE4  41 82 01 F0 */	beq .L_8045AB14
-/* 8045A928 00423EE8  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 8045A928 00423EE8  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 8045A92C 00423EEC  4B FF 0C 95 */	bl func_8044B5C0
 /* 8045A930 00423EF0  38 7F 00 A4 */	addi r3, r31, 0xa4
 /* 8045A934 00423EF4  38 80 00 00 */	li r4, 0
@@ -908,7 +908,7 @@
 /* 8045A948 00423F08  38 60 00 00 */	li r3, 0
 /* 8045A94C 00423F0C  38 80 00 01 */	li r4, 1
 /* 8045A950 00423F10  4B FF F4 9D */	bl func_80459DEC
-/* 8045A954 00423F14  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 8045A954 00423F14  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 8045A958 00423F18  38 80 00 00 */	li r4, 0
 /* 8045A95C 00423F1C  38 A0 00 00 */	li r5, 0
 /* 8045A960 00423F20  4B FE FD 69 */	bl func_8044A6C8
@@ -995,8 +995,8 @@
 /* 8045AAA4 00424064  D0 07 80 00 */	stfs f0, -0x8000(r7)
 /* 8045AAA8 00424068  C0 02 C9 34 */	lfs f0, float_8066CCB4@sda21(r2)
 /* 8045AAAC 0042406C  D0 07 80 00 */	stfs f0, -0x8000(r7)
-/* 8045AAB0 00424070  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 8045AAB4 00424074  4B FF 13 85 */	bl func_8044BE38
+/* 8045AAB0 00424070  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
+/* 8045AAB4 00424074  4B FF 13 85 */	bl func_8044BE38__8CGXCacheFv
 /* 8045AAB8 00424078  4B FE 82 F1 */	bl func_80442DA8
 /* 8045AABC 0042407C  38 61 00 08 */	addi r3, r1, 8
 /* 8045AAC0 00424080  4B FF B6 75 */	bl func_80456134
@@ -1012,8 +1012,8 @@
 /* 8045AAE8 004240A8  7F C4 F3 78 */	mr r4, r30
 /* 8045AAEC 004240AC  38 61 00 08 */	addi r3, r1, 8
 /* 8045AAF0 004240B0  4B FF C2 BD */	bl func_80456DAC
-/* 8045AAF4 004240B4  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 8045AAF8 004240B8  4B FF 13 41 */	bl func_8044BE38
+/* 8045AAF4 004240B4  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
+/* 8045AAF8 004240B8  4B FF 13 41 */	bl func_8044BE38__8CGXCacheFv
 /* 8045AAFC 004240BC  4B FE 82 AD */	bl func_80442DA8
 /* 8045AB00 004240C0  38 61 00 08 */	addi r3, r1, 8
 /* 8045AB04 004240C4  38 80 FF FF */	li r4, -1
@@ -1769,7 +1769,7 @@
 	.4byte func_8045B3E4__16CLibCriMoviePlayFv
 	.4byte func_8045B3DC__16CLibCriMoviePlayFv
 	.4byte func_8045B3D4__16CLibCriMoviePlayFv
-	.4byte func_80448A40__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 	.4byte func_8045AE84__16CLibCriMoviePlayFv
 	.4byte func_8045B1DC__16CLibCriMoviePlayFv
 .endobj __vt__16CLibCriMoviePlay

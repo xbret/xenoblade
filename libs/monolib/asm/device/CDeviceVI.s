@@ -62,7 +62,7 @@
 /* 80447EB4 00411474  88 0D BD AC */	lbz r0, lbl_80667F2C@sda21(r13)
 /* 80447EB8 00411478  2C 00 00 00 */	cmpwi r0, 0
 /* 80447EBC 0041147C  41 82 00 0C */	beq .L_80447EC8
-/* 80447EC0 00411480  4B FE C4 E9 */	bl Heap_getRegionIndex2_2__Fv
+/* 80447EC0 00411480  4B FE C4 E9 */	bl Heap_getRegionIndex2_2__3mtlFv
 /* 80447EC4 00411484  48 00 00 08 */	b .L_80447ECC
 .L_80447EC8:
 /* 80447EC8 00411488  48 00 51 91 */	bl func_8044D058__Fv
@@ -71,7 +71,7 @@
 /* 80447ED0 00411490  7C 64 1B 78 */	mr r4, r3
 /* 80447ED4 00411494  38 65 C0 00 */	addi r3, r5, 0x0012C000@l
 /* 80447ED8 00411498  38 A0 00 20 */	li r5, 0x20
-/* 80447EDC 0041149C  4B FE CC 89 */	bl MemManager_80434B64__FUliUl
+/* 80447EDC 0041149C  4B FE CC 89 */	bl allocateHeap__3mtlFUliUl
 /* 80447EE0 004114A0  90 7F 02 80 */	stw r3, 0x280(r31)
 /* 80447EE4 004114A4  3C 80 80 55 */	lis r4, GXNtsc480Int@ha
 /* 80447EE8 004114A8  38 7F 02 00 */	addi r3, r31, 0x200
@@ -489,7 +489,7 @@
 /* 80448434 004119F4  4E 80 00 20 */	blr 
 .endfn func_8044842C__9CDeviceVIFv
 
-.fn func_80448438__9CDeviceVIFv, global
+.fn addCallback__9CDeviceVIFP11CDeviceVICb, global
 /* 80448438 004119F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8044843C 004119FC  38 C0 00 00 */	li r6, 0
 /* 80448440 00411A00  38 E0 00 00 */	li r7, 0
@@ -529,9 +529,9 @@
 /* 804484B8 00411A78  83 FF 00 2C */	lwz r31, 0x2c(r31)
 /* 804484BC 00411A7C  80 21 00 00 */	lwz r1, 0(r1)
 /* 804484C0 00411A80  4E 80 00 20 */	blr 
-.endfn func_80448438__9CDeviceVIFv
+.endfn addCallback__9CDeviceVIFP11CDeviceVICb
 
-.fn func_804484C4__9CDeviceVIFv, global
+.fn removeCallback__9CDeviceVIFP11CDeviceVICb, global
 /* 804484C4 00411A84  80 8D BD A8 */	lwz r4, instance__9CDeviceVI@sda21(r13)
 /* 804484C8 00411A88  38 00 00 00 */	li r0, 0
 /* 804484CC 00411A8C  80 A4 01 D4 */	lwz r5, 0x1d4(r4)
@@ -553,7 +553,7 @@
 /* 80448500 00411AC0  40 82 FF D8 */	bne .L_804484D8
 /* 80448504 00411AC4  38 60 00 01 */	li r3, 1
 /* 80448508 00411AC8  4E 80 00 20 */	blr 
-.endfn func_804484C4__9CDeviceVIFv
+.endfn removeCallback__9CDeviceVIFP11CDeviceVICb
 
 .fn isWideAspectRatio__9CDeviceVIFv, global
 /* 8044850C 00411ACC  4B FF F7 1C */	b isWideAspectRatio__9CDeviceSCFv
@@ -573,11 +573,11 @@
 /* 80448538 00411AF8  4E 80 00 20 */	blr 
 .endfn isTvFormatPal__9CDeviceVIFv
 
-.fn func_8044853C__9CDeviceVIFv, global
+.fn getSomeSize__9CDeviceVIFv, global
 /* 8044853C 00411AFC  3C 60 00 13 */	lis r3, 0x0012C000@ha
 /* 80448540 00411B00  38 63 C0 00 */	addi r3, r3, 0x0012C000@l
 /* 80448544 00411B04  4E 80 00 20 */	blr 
-.endfn func_8044853C__9CDeviceVIFv
+.endfn getSomeSize__9CDeviceVIFv
 
 .fn getSomeRatio__9CDeviceVIFv, global
 /* 80448548 00411B08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -781,12 +781,12 @@
 /* 80448808 00411DC8  4E 80 00 20 */	blr 
 .endfn func_804486E4__9CDeviceVIFv
 
-.fn CDeviceVI_wkUpdate, global
+.fn wkUpdate__9CDeviceVIFv, global
 /* 8044880C 00411DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448810 00411DD0  7C 08 02 A6 */	mflr r0
-/* 80448814 00411DD4  3C 80 80 52 */	lis r4, lbl_805262A8@ha
+/* 80448814 00411DD4  3C 80 80 52 */	lis r4, gammaLevels@ha
 /* 80448818 00411DD8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8044881C 00411DDC  38 84 62 A8 */	addi r4, r4, lbl_805262A8@l
+/* 8044881C 00411DDC  38 84 62 A8 */	addi r4, r4, gammaLevels@l
 /* 80448820 00411DE0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80448824 00411DE4  7C 7F 1B 78 */	mr r31, r3
 /* 80448828 00411DE8  80 03 01 F4 */	lwz r0, 0x1f4(r3)
@@ -811,7 +811,7 @@
 /* 8044886C 00411E2C  7C 08 03 A6 */	mtlr r0
 /* 80448870 00411E30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448874 00411E34  4E 80 00 20 */	blr 
-.endfn CDeviceVI_wkUpdate
+.endfn wkUpdate__9CDeviceVIFv
 
 .fn func_80448878__9CDeviceVIFv, global
 /* 80448878 00411E38  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -871,7 +871,7 @@
 /* 80448930 00411EF0  41 82 00 FC */	beq .L_80448A2C
 /* 80448934 00411EF4  54 E0 07 FF */	clrlwi. r0, r7, 0x1f
 /* 80448938 00411EF8  40 82 00 F4 */	bne .L_80448A2C
-/* 8044893C 00411EFC  48 00 C9 71 */	bl func_804552AC
+/* 8044893C 00411EFC  48 00 C9 71 */	bl getInstance__9CDeviceGXFv
 /* 80448940 00411F00  2C 03 00 00 */	cmpwi r3, 0
 /* 80448944 00411F04  40 82 00 08 */	bne .L_8044894C
 /* 80448948 00411F08  48 00 00 E4 */	b .L_80448A2C
@@ -948,9 +948,9 @@
 /* 80448A3C 00411FFC  4E 80 00 20 */	blr 
 .endfn func_80448878__9CDeviceVIFv
 
-.fn func_80448A40__11CDeviceVICbFv, global
+.fn CDeviceVICb_vtableFunc4__11CDeviceVICbFv, weak
 /* 80448A40 00412000  4E 80 00 20 */	blr 
-.endfn func_80448A40__11CDeviceVICbFv
+.endfn CDeviceVICb_vtableFunc4__11CDeviceVICbFv
 
 .fn func_80448A44__9CDeviceVIFv, global
 /* 80448A44 00412004  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1032,7 +1032,7 @@
 /* 80448B3C 004120FC  41 82 01 C0 */	beq .L_80448CFC
 /* 80448B40 00412100  54 E0 07 FF */	clrlwi. r0, r7, 0x1f
 /* 80448B44 00412104  40 82 01 B8 */	bne .L_80448CFC
-/* 80448B48 00412108  48 00 C7 65 */	bl func_804552AC
+/* 80448B48 00412108  48 00 C7 65 */	bl getInstance__9CDeviceGXFv
 /* 80448B4C 0041210C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448B50 00412110  40 82 00 08 */	bne .L_80448B58
 /* 80448B54 00412114  48 00 01 A8 */	b .L_80448CFC
@@ -1249,10 +1249,10 @@
 /* 80448E18 004123D8  80 03 00 00 */	lwz r0, 0(r3)
 /* 80448E1C 004123DC  7C 00 18 40 */	cmplw r0, r3
 /* 80448E20 004123E0  40 82 00 40 */	bne .L_80448E60
-/* 80448E24 004123E4  48 00 C4 89 */	bl func_804552AC
+/* 80448E24 004123E4  48 00 C4 89 */	bl getInstance__9CDeviceGXFv
 /* 80448E28 004123E8  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E2C 004123EC  40 82 00 34 */	bne .L_80448E60
-/* 80448E30 004123F0  48 00 46 09 */	bl func_8044D438
+/* 80448E30 004123F0  48 00 46 09 */	bl func_8044D438__Fv
 /* 80448E34 004123F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E38 004123F8  41 82 00 28 */	beq .L_80448E60
 /* 80448E3C 004123FC  4B FF B6 99 */	bl getInstance__11CWorkSystemFv
@@ -1354,7 +1354,7 @@
 
 .balign 8
 
-.obj lbl_805262A8, global
+.obj gammaLevels, global
 	.4byte 0x01
 	.4byte 0x02
 	.4byte 0x03
@@ -1385,7 +1385,7 @@
 	.4byte 0x1C
 	.4byte 0x1D
 	.4byte 0x1E
-.endobj lbl_805262A8
+.endobj gammaLevels
 
 .obj CDeviceVI_typestr, global
 	.asciz "CDeviceVI"
@@ -1462,7 +1462,7 @@
 	.4byte WorkEvent29__10IWorkEventFv
 	.4byte WorkEvent30__10IWorkEventFv
 	.4byte WorkEvent31__10IWorkEventFv
-	.4byte CDeviceVI_wkUpdate
+	.4byte wkUpdate__9CDeviceVIFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
 	.4byte WorkThreadEvent4__9CDeviceVIFv
@@ -1564,7 +1564,7 @@
 .endobj instance__9CDeviceVI
 
 .obj lbl_80667F2C, global
-	.skip 0x4
+	.skip 0x1
 .endobj lbl_80667F2C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
@@ -1738,7 +1738,7 @@
 
 .obj "@eti_800346DC", local
 .hidden "@eti_800346DC"
-	.4byte func_80448438__9CDeviceVIFv
+	.4byte addCallback__9CDeviceVIFP11CDeviceVICb
 	.4byte 0x0000008C
 	.4byte "@etb_8001CB10"
 .endobj "@eti_800346DC"
@@ -1773,7 +1773,7 @@
 
 .obj "@eti_80034718", local
 .hidden "@eti_80034718"
-	.4byte CDeviceVI_wkUpdate
+	.4byte wkUpdate__9CDeviceVIFv
 	.4byte 0x0000006C
 	.4byte "@etb_8001CB38"
 .endobj "@eti_80034718"

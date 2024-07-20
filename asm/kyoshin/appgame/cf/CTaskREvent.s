@@ -29,7 +29,7 @@
 /* 8016417C 0012D73C  90 9F 00 48 */	stw r4, 0x48(r31)
 /* 80164180 0012D740  80 05 00 08 */	lwz r0, 8(r5)
 /* 80164184 0012D744  90 1F 00 50 */	stw r0, 0x50(r31)
-/* 80164188 0012D748  48 2E 4D B9 */	bl __ct__11CDeviceVICb
+/* 80164188 0012D748  48 2E 4D B9 */	bl __ct__11CDeviceVICbFv
 /* 8016418C 0012D74C  3C E0 80 53 */	lis r7, __vt__Q22cf11CTaskREvent@ha
 /* 80164190 0012D750  3B C0 00 00 */	li r30, 0
 /* 80164194 0012D754  38 E7 3F 60 */	addi r7, r7, __vt__Q22cf11CTaskREvent@l
@@ -2694,13 +2694,13 @@
 /* 80166628 0012FBE8  4E 80 00 20 */	blr 
 .endfn func_801665A4
 
-.fn func_8016662C__11CDeviceVICbFv, global
+.fn CDeviceVICb_vtableFunc3__11CDeviceVICbFv, weak
 /* 8016662C 0012FBEC  4E 80 00 20 */	blr 
-.endfn func_8016662C__11CDeviceVICbFv
+.endfn CDeviceVICb_vtableFunc3__11CDeviceVICbFv
 
-.fn func_80166630__11CDeviceVICbFv, global
+.fn CDeviceVICb_vtableFunc2__11CDeviceVICbFv, weak
 /* 80166630 0012FBF0  4E 80 00 20 */	blr 
-.endfn func_80166630__11CDeviceVICbFv
+.endfn CDeviceVICb_vtableFunc2__11CDeviceVICbFv
 
 .fn "func_80166634__26CTTask<Q22cf11CTaskREvent>Fv", global
 /* 80166634 0012FBF4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4258,8 +4258,8 @@
 	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFAC
 	.4byte func_801666CC
-	.4byte func_80166630__11CDeviceVICbFv
-	.4byte func_8016662C__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc2__11CDeviceVICbFv
+	.4byte CDeviceVICb_vtableFunc3__11CDeviceVICbFv
 	.4byte func_801666C4
 	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFA8

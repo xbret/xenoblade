@@ -37,10 +37,9 @@ MONOLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceBase.o\
 	$(BUILD_DIR)/libs/monolib/src/device/CDeviceSC.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceVI.o\
-	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceVICb.o\
+	$(BUILD_DIR)/libs/monolib/src/device/CDeviceVICb.o\
 	$(BUILD_DIR)/libs/monolib/asm/CFontLayer.o\
 	$(BUILD_DIR)/libs/monolib/asm/CGXCache.o\
-	$(BUILD_DIR)/libs/monolib/asm/IStateCache.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDevice.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceClock.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceFile.o\

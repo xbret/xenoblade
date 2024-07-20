@@ -70,8 +70,48 @@ public:
 	}
 	virtual ~reslist(){
 	}
-	void remove(const T&);
-	void push_back(const T&);
+
+	void remove(const T& item) {
+		_reslist_node<T>* startNode = pStartNode;
+		_reslist_node<T>* curNode = startNode->next;
+		
+		//Walk through the list
+		while(curNode != startNode){
+			_reslist_node<T>* next = curNode->next;
+			//If we find an entry containing the item, remove the entry
+			if(curNode->item == item){
+				_reslist_node<T>* prev = curNode->prev;
+				prev->next = next;
+				next->prev = prev;
+				curNode->next = nullptr;
+			}
+			curNode = next;
+		}
+	}
+
+	void push_back(const T& item){
+		_reslist_node<T>* r9 = pStartNode;
+		u32 r8 = capacity;
+		int i = 0;
+
+		//Go through the list until we find an empty slot
+		while(i < capacity){
+			if(mList[i].next == 0) break;
+			i++;
+		}
+
+
+		if(&mList[i].item != nullptr){
+			mList[i].item = item;
+		}
+
+		mList[i].next = r9;
+		mList[i].prev = r9->prev;
+		r9->prev->next = mList[i].next;
+		r9->prev = mList[i].next;
+	}
+
+
 	void begin();
 	void end();
 

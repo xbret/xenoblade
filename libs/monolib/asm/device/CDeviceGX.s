@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__9CDeviceGXFv, global
+.fn __ct__9CDeviceGXFPCcP11CWorkThread, global
 /* 804550E4 0041E6A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804550E8 0041E6A8  7C 08 02 A6 */	mflr r0
 /* 804550EC 0041E6AC  38 C0 00 00 */	li r6, 0
@@ -17,7 +17,7 @@
 /* 80455110 0041E6D0  90 7E 00 00 */	stw r3, 0(r30)
 /* 80455114 0041E6D4  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 80455118 0041E6D8  93 FE 01 C4 */	stw r31, 0x1c4(r30)
-/* 8045511C 0041E6DC  4B FF 3E 25 */	bl __ct__11CDeviceVICb
+/* 8045511C 0041E6DC  4B FF 3E 25 */	bl __ct__11CDeviceVICbFv
 /* 80455120 0041E6E0  3C 60 80 57 */	lis r3, __vt__9CDeviceGX@ha
 /* 80455124 0041E6E4  C0 02 C8 70 */	lfs f0, float_8066CBF0@sda21(r2)
 /* 80455128 0041E6E8  38 63 01 A8 */	addi r3, r3, __vt__9CDeviceGX@l
@@ -34,26 +34,26 @@
 /* 80455154 0041E714  93 FE 02 70 */	stw r31, 0x270(r30)
 /* 80455158 0041E718  98 1E 02 74 */	stb r0, 0x274(r30)
 /* 8045515C 0041E71C  93 FE 02 78 */	stw r31, 0x278(r30)
-/* 80455160 0041E720  4B FF 40 05 */	bl __ct__CGXCache
+/* 80455160 0041E720  4B FF 40 05 */	bl __ct__8CGXCacheFv
 /* 80455164 0041E724  38 1E 02 7C */	addi r0, r30, 0x27c
 /* 80455168 0041E728  93 CD BD F8 */	stw r30, instance__9CDeviceGX@sda21(r13)
-/* 8045516C 0041E72C  90 0D BD FC */	stw r0, lbl_80667F7C@sda21(r13)
+/* 8045516C 0041E72C  90 0D BD FC */	stw r0, cacheInstance__9CDeviceGX@sda21(r13)
 /* 80455170 0041E730  4B FF 7E E9 */	bl func_8044D058__Fv
 /* 80455174 0041E734  7C 64 1B 78 */	mr r4, r3
-/* 80455178 0041E738  80 6D 9E F8 */	lwz r3, lbl_80666078@sda21(r13)
+/* 80455178 0041E738  80 6D 9E F8 */	lwz r3, gxHeapSize@sda21(r13)
 /* 8045517C 0041E73C  38 A0 00 20 */	li r5, 0x20
-/* 80455180 0041E740  4B FD F9 E5 */	bl MemManager_80434B64__FUliUl
+/* 80455180 0041E740  4B FD F9 E5 */	bl allocateHeap__3mtlFUliUl
 /* 80455184 0041E744  90 7E 02 50 */	stw r3, 0x250(r30)
-/* 80455188 0041E748  80 0D 9E F8 */	lwz r0, lbl_80666078@sda21(r13)
+/* 80455188 0041E748  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
 /* 8045518C 0041E74C  7C 03 02 14 */	add r0, r3, r0
 /* 80455190 0041E750  90 1E 02 54 */	stw r0, 0x254(r30)
 /* 80455194 0041E754  38 60 00 00 */	li r3, 0
-/* 80455198 0041E758  80 8D BD FC */	lwz r4, lbl_80667F7C@sda21(r13)
+/* 80455198 0041E758  80 8D BD FC */	lwz r4, cacheInstance__9CDeviceGX@sda21(r13)
 /* 8045519C 0041E75C  93 E4 05 0C */	stw r31, 0x50c(r4)
-/* 804551A0 0041E760  48 00 01 E1 */	bl func_80455380
-/* 804551A4 0041E764  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 804551A0 0041E760  48 00 01 E1 */	bl updateVerticalFilter__9CDeviceGXF15EVerticalFilter
+/* 804551A4 0041E764  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 804551A8 0041E768  38 80 00 00 */	li r4, 0
-/* 804551AC 0041E76C  4B FF 60 E9 */	bl func_8044B294
+/* 804551AC 0041E76C  4B FF 60 E9 */	bl func_8044B294__8CGXCacheFUl
 /* 804551B0 0041E770  C0 22 C8 74 */	lfs f1, float_8066CBF4@sda21(r2)
 /* 804551B4 0041E774  C0 02 C8 70 */	lfs f0, float_8066CBF0@sda21(r2)
 /* 804551B8 0041E778  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -74,7 +74,7 @@
 /* 804551EC 0041E7AC  7C 08 03 A6 */	mtlr r0
 /* 804551F0 0041E7B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804551F4 0041E7B4  4E 80 00 20 */	blr
-.endfn __ct__9CDeviceGXFv
+.endfn __ct__9CDeviceGXFPCcP11CWorkThread
 
 .fn __dt__9CDeviceGXFv, global
 /* 804551F8 0041E7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -127,12 +127,12 @@
 /* 804552A8 0041E868  4E 80 00 20 */	blr 
 .endfn __dt__9CDeviceGXFv
 
-.fn func_804552AC, global
+.fn getInstance__9CDeviceGXFv, global
 /* 804552AC 0041E86C  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 804552B0 0041E870  4E 80 00 20 */	blr 
-.endfn func_804552AC
+.endfn getInstance__9CDeviceGXFv
 
-.fn func_804552B4, global
+.fn func_804552B4__9CDeviceGXFv, global
 /* 804552B4 0041E874  80 CD BD F8 */	lwz r6, instance__9CDeviceGX@sda21(r13)
 /* 804552B8 0041E878  80 06 00 7C */	lwz r0, 0x7c(r6)
 /* 804552BC 0041E87C  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
@@ -182,13 +182,13 @@
 /* 80455350 0041E910  4D 82 00 20 */	beqlr 
 /* 80455354 0041E914  38 60 00 01 */	li r3, 1
 /* 80455358 0041E918  4E 80 00 20 */	blr 
-.endfn func_804552B4
+.endfn func_804552B4__9CDeviceGXFv
 
-.fn func_8045535C, global
+.fn func_8045535C__9CDeviceGXFUl, global
 /* 8045535C 0041E91C  80 8D BD F8 */	lwz r4, instance__9CDeviceGX@sda21(r13)
 /* 80455360 0041E920  90 64 01 CC */	stw r3, 0x1cc(r4)
 /* 80455364 0041E924  4E 80 00 20 */	blr 
-.endfn func_8045535C
+.endfn func_8045535C__9CDeviceGXFUl
 
 .fn func_80455368__9CDeviceGXFv, global
 /* 80455368 0041E928  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
@@ -199,7 +199,7 @@
 /* 8045537C 0041E93C  4E 80 00 20 */	blr 
 .endfn func_80455368__9CDeviceGXFv
 
-.fn func_80455380, global
+.fn updateVerticalFilter__9CDeviceGXF15EVerticalFilter, global
 /* 80455380 0041E940  80 8D BD F8 */	lwz r4, instance__9CDeviceGX@sda21(r13)
 /* 80455384 0041E944  90 64 02 78 */	stw r3, 0x278(r4)
 /* 80455388 0041E948  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
@@ -272,9 +272,9 @@
 /* 8045548C 0041EA4C  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 80455490 0041EA50  98 03 02 5F */	stb r0, 0x25f(r3)
 /* 80455494 0041EA54  4E 80 00 20 */	blr
-.endfn func_80455380
+.endfn updateVerticalFilter__9CDeviceGXF15EVerticalFilter
 
-.fn func_80455498, global
+.fn CDeviceVICb_vtableFunc3__9CDeviceGXFv, global
 /* 80455498 0041EA58  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8045549C 0041EA5C  7C 08 02 A6 */	mflr r0
 /* 804554A0 0041EA60  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -294,12 +294,12 @@
 /* 804554D8 0041EA98  7C 83 20 50 */	subf r4, r3, r4
 /* 804554DC 0041EA9C  48 00 00 10 */	b .L_804554EC
 .L_804554E0:
-/* 804554E0 0041EAA0  80 0D 9E F8 */	lwz r0, lbl_80666078@sda21(r13)
+/* 804554E0 0041EAA0  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
 /* 804554E4 0041EAA4  7C 64 18 50 */	subf r3, r4, r3
 /* 804554E8 0041EAA8  7C 83 00 50 */	subf r4, r3, r0
 .L_804554EC:
 /* 804554EC 0041EAAC  3C 60 43 30 */	lis r3, 0x4330
-/* 804554F0 0041EAB0  80 0D 9E F8 */	lwz r0, lbl_80666078@sda21(r13)
+/* 804554F0 0041EAB0  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
 /* 804554F4 0041EAB4  90 81 00 94 */	stw r4, 0x94(r1)
 /* 804554F8 0041EAB8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 804554FC 0041EABC  C8 22 C8 80 */	lfd f1, double_8066CC00@sda21(r2)
@@ -320,17 +320,17 @@
 /* 80455538 0041EAF8  7C 08 03 A6 */	mtlr r0
 /* 8045553C 0041EAFC  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80455540 0041EB00  4E 80 00 20 */	blr
-.endfn func_80455498
+.endfn CDeviceVICb_vtableFunc3__9CDeviceGXFv
 
-.fn func_80455544, global
+.fn CDeviceVICb_vtableFunc4__9CDeviceGXFv, global
 /* 80455544 0041EB04  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 80455548 0041EB08  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 8045554C 0041EB0C  2C 00 00 01 */	cmpwi r0, 1
 /* 80455550 0041EB10  4D 82 00 20 */	beqlr 
-/* 80455554 0041EB14  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 80455558 0041EB18  4B FF 68 E0 */	b func_8044BE38
+/* 80455554 0041EB14  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
+/* 80455558 0041EB18  4B FF 68 E0 */	b func_8044BE38__8CGXCacheFv
 /* 8045555C 0041EB1C  4E 80 00 20 */	blr 
-.endfn func_80455544
+.endfn CDeviceVICb_vtableFunc4__9CDeviceGXFv
 
 .fn func_80455560, global
 /* 80455560 0041EB20  94 21 FE 90 */	stwu r1, -0x170(r1)
@@ -360,15 +360,15 @@
 /* 804555C0 0041EB80  38 03 B0 0B */	addi r0, r3, 0x0000B00B@l
 /* 804555C4 0041EB84  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 804555C8 0041EB88  4B EC 4B C9 */	bl GXSetDrawSync
-/* 804555CC 0041EB8C  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 804555D0 0041EB90  4B FF 68 69 */	bl func_8044BE38
+/* 804555CC 0041EB8C  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
+/* 804555D0 0041EB90  4B FF 68 69 */	bl func_8044BE38__8CGXCacheFv
 /* 804555D4 0041EB94  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 804555D8 0041EB98  88 03 02 74 */	lbz r0, 0x274(r3)
 /* 804555DC 0041EB9C  2C 00 00 00 */	cmpwi r0, 0
 /* 804555E0 0041EBA0  40 82 00 68 */	bne .L_80455648
 /* 804555E4 0041EBA4  38 61 00 98 */	addi r3, r1, 0x98
 /* 804555E8 0041EBA8  48 00 0B 4D */	bl func_80456134
-/* 804555EC 0041EBAC  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 804555EC 0041EBAC  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 804555F0 0041EBB0  4B FF 5F C5 */	bl func_8044B5B4
 /* 804555F4 0041EBB4  7C 64 1B 78 */	mr r4, r3
 /* 804555F8 0041EBB8  38 61 00 98 */	addi r3, r1, 0x98
@@ -491,7 +491,7 @@
 .endfn func_8045579C
 
 .fn func_804557A0, global
-/* 804557A0 0041ED60  80 6D 9E F8 */	lwz r3, lbl_80666078@sda21(r13)
+/* 804557A0 0041ED60  80 6D 9E F8 */	lwz r3, gxHeapSize@sda21(r13)
 /* 804557A4 0041ED64  4E 80 00 20 */	blr 
 .endfn func_804557A0
 
@@ -505,7 +505,7 @@
 /* 804557C0 0041ED80  2C 03 00 00 */	cmpwi r3, 0
 /* 804557C4 0041ED84  41 82 00 CC */	beq .L_80455890
 /* 804557C8 0041ED88  80 7F 02 50 */	lwz r3, 0x250(r31)
-/* 804557CC 0041ED8C  80 8D 9E F8 */	lwz r4, lbl_80666078@sda21(r13)
+/* 804557CC 0041ED8C  80 8D 9E F8 */	lwz r4, gxHeapSize@sda21(r13)
 /* 804557D0 0041ED90  4B EC 20 61 */	bl GXInit
 /* 804557D4 0041ED94  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 804557D8 0041ED98  80 03 01 CC */	lwz r0, 0x1cc(r3)
@@ -514,7 +514,7 @@
 /* 804557E4 0041EDA4  4B EC 4A 7D */	bl GXSetDrawDone
 /* 804557E8 0041EDA8  80 9F 02 50 */	lwz r4, 0x250(r31)
 /* 804557EC 0041EDAC  38 7F 01 D0 */	addi r3, r31, 0x1d0
-/* 804557F0 0041EDB0  80 AD 9E F8 */	lwz r5, lbl_80666078@sda21(r13)
+/* 804557F0 0041EDB0  80 AD 9E F8 */	lwz r5, gxHeapSize@sda21(r13)
 /* 804557F4 0041EDB4  4B EC 2F 6D */	bl GXInitFifoBase
 /* 804557F8 0041EDB8  38 7F 01 D0 */	addi r3, r31, 0x1d0
 /* 804557FC 0041EDBC  4B EC 30 F5 */	bl GXSetCPUFifo
@@ -525,11 +525,11 @@
 /* 80455810 0041EDD0  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 80455814 0041EDD4  4B EC 49 7D */	bl GXSetDrawSync
 .L_80455818:
-/* 80455818 0041EDD8  80 8D BD FC */	lwz r4, lbl_80667F7C@sda21(r13)
+/* 80455818 0041EDD8  80 8D BD FC */	lwz r4, cacheInstance__9CDeviceGX@sda21(r13)
 /* 8045581C 0041EDDC  38 00 00 00 */	li r0, 0
 /* 80455820 0041EDE0  38 60 00 00 */	li r3, 0
 /* 80455824 0041EDE4  90 04 05 0C */	stw r0, 0x50c(r4)
-/* 80455828 0041EDE8  4B FF FB 59 */	bl func_80455380
+/* 80455828 0041EDE8  4B FF FB 59 */	bl updateVerticalFilter__9CDeviceGXF15EVerticalFilter
 /* 8045582C 0041EDEC  4B FF 2B D1 */	bl func_804483FC__9CDeviceVIFv
 /* 80455830 0041EDF0  88 03 00 19 */	lbz r0, 0x19(r3)
 /* 80455834 0041EDF4  2C 00 00 00 */	cmpwi r0, 0
@@ -543,8 +543,8 @@
 /* 80455850 0041EE10  38 80 00 00 */	li r4, 0
 /* 80455854 0041EE14  4B EC 8A 5D */	bl GXSetPixelFmt
 .L_80455858:
-/* 80455858 0041EE18  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
-/* 8045585C 0041EE1C  4B FF 65 DD */	bl func_8044BE38
+/* 80455858 0041EE18  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
+/* 8045585C 0041EE1C  4B FF 65 DD */	bl func_8044BE38__8CGXCacheFv
 /* 80455860 0041EE20  38 60 00 00 */	li r3, 0
 /* 80455864 0041EE24  4B EC 8A FD */	bl GXSetDither
 /* 80455868 0041EE28  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
@@ -585,7 +585,7 @@
 /* 804558D8 0041EE98  80 03 00 00 */	lwz r0, 0(r3)
 /* 804558DC 0041EE9C  7C 00 18 40 */	cmplw r0, r3
 /* 804558E0 0041EEA0  40 82 00 34 */	bne .L_80455914
-/* 804558E4 0041EEA4  4B FF 7B 55 */	bl func_8044D438
+/* 804558E4 0041EEA4  4B FF 7B 55 */	bl func_8044D438__Fv
 /* 804558E8 0041EEA8  2C 03 00 00 */	cmpwi r3, 0
 /* 804558EC 0041EEAC  41 82 00 28 */	beq .L_80455914
 /* 804558F0 0041EEB0  4B FE EB E5 */	bl getInstance__11CWorkSystemFv
@@ -643,26 +643,26 @@
 /* 804559A4 0041EF64  4E 80 00 20 */	blr 
 .endfn func_8045592C
 
-.fn func_804559A8, global
+.fn init__9CDeviceGXF11_GXPixelFmtUl, global
 /* 804559A8 0041EF68  90 6D BD F4 */	stw r3, lbl_80667F74@sda21(r13)
-/* 804559AC 0041EF6C  90 8D 9E F8 */	stw r4, lbl_80666078@sda21(r13)
+/* 804559AC 0041EF6C  90 8D 9E F8 */	stw r4, gxHeapSize@sda21(r13)
 /* 804559B0 0041EF70  4E 80 00 20 */	blr 
-.endfn func_804559A8
+.endfn init__9CDeviceGXF11_GXPixelFmtUl
 
-.fn func_804559B4, global
+.fn "@456@CDeviceVICb_vtableFunc4__9CDeviceGXFv", weak
 /* 804559B4 0041EF74  38 63 FE 38 */	addi r3, r3, -456
-/* 804559B8 0041EF78  4B FF FB 8C */	b func_80455544
-.endfn func_804559B4
+/* 804559B8 0041EF78  4B FF FB 8C */	b CDeviceVICb_vtableFunc4__9CDeviceGXFv
+.endfn "@456@CDeviceVICb_vtableFunc4__9CDeviceGXFv"
 
-.fn func_804559BC, global
+.fn "@456@CDeviceVICb_vtableFunc3__9CDeviceGXFv", weak
 /* 804559BC 0041EF7C  38 63 FE 38 */	addi r3, r3, -456
-/* 804559C0 0041EF80  4B FF FA D8 */	b func_80455498
-.endfn func_804559BC
+/* 804559C0 0041EF80  4B FF FA D8 */	b CDeviceVICb_vtableFunc3__9CDeviceGXFv
+.endfn "@456@CDeviceVICb_vtableFunc3__9CDeviceGXFv"
 
-.fn func_804559C4, global
+.fn "@456@__dt__9CDeviceGXFv", weak
 /* 804559C4 0041EF84  38 63 FE 38 */	addi r3, r3, -456
 /* 804559C8 0041EF88  4B FF F8 30 */	b __dt__9CDeviceGXFv
-.endfn func_804559C4
+.endfn "@456@__dt__9CDeviceGXFv"
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -722,12 +722,12 @@
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__9CDeviceGX
 	.4byte 0xFFFFFE38
-	.4byte func_804559C4
-	.4byte func_80166630__11CDeviceVICbFv
-	.4byte func_804559BC
-	.4byte func_804559B4
-	.4byte func_80455498
-	.4byte func_80455544
+	.4byte "@456@__dt__9CDeviceGXFv"
+	.4byte CDeviceVICb_vtableFunc2__11CDeviceVICbFv
+	.4byte "@456@CDeviceVICb_vtableFunc3__9CDeviceGXFv"
+	.4byte "@456@CDeviceVICb_vtableFunc4__9CDeviceGXFv"
+	.4byte CDeviceVICb_vtableFunc3__9CDeviceGXFv
+	.4byte CDeviceVICb_vtableFunc4__9CDeviceGXFv
 .endobj __vt__9CDeviceGX
 
 .obj CDeviceGX_hierarchy, global
@@ -748,9 +748,9 @@
 
 .balign 8
 
-.obj lbl_80666078, global
+.obj gxHeapSize, global
 	.4byte 0x00200000
-.endobj lbl_80666078
+.endobj gxHeapSize
 
 
 .obj lbl_8066607C, global
@@ -813,9 +813,9 @@
 	.skip 0x4
 .endobj instance__9CDeviceGX
 
-.obj lbl_80667F7C, global
+.obj cacheInstance__9CDeviceGX, global
 	.skip 0x4
-.endobj lbl_80667F7C
+.endobj cacheInstance__9CDeviceGX
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -907,7 +907,7 @@
 
 .obj "@eti_80034EBC", local
 .hidden "@eti_80034EBC"
-	.4byte __ct__9CDeviceGXFv
+	.4byte __ct__9CDeviceGXFPCcP11CWorkThread
 	.4byte 0x00000114
 	.4byte "@etb_8001D224"
 .endobj "@eti_80034EBC"
@@ -921,7 +921,7 @@
 
 .obj "@eti_80034ED4", local
 .hidden "@eti_80034ED4"
-	.4byte func_80455498
+	.4byte CDeviceVICb_vtableFunc3__9CDeviceGXFv
 	.4byte 0x000000AC
 	.4byte "@etb_8001D2A4"
 .endobj "@eti_80034ED4"

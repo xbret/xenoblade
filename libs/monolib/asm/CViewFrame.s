@@ -3450,7 +3450,7 @@
 /* 80442C40 0040C200  80 6C 04 EC */	lwz r3, 0x4ec(r12)
 /* 80442C44 0040C204  38 03 00 01 */	addi r0, r3, 1
 /* 80442C48 0040C208  90 0C 04 EC */	stw r0, 0x4ec(r12)
-/* 80442C4C 0040C20C  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 80442C4C 0040C20C  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 80442C50 0040C210  48 00 86 49 */	bl func_8044B298
 .L_80442C54:
 /* 80442C54 0040C214  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3523,7 +3523,7 @@
 /* 80442D44 0040C304  83 C7 02 C4 */	lwz r30, 0x2c4(r7)
 /* 80442D48 0040C308  81 47 03 D4 */	lwz r10, 0x3d4(r7)
 /* 80442D4C 0040C30C  80 C7 04 E4 */	lwz r6, 0x4e4(r7)
-/* 80442D50 0040C310  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 80442D50 0040C310  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 80442D54 0040C314  7C E9 43 D6 */	divw r7, r9, r8
 /* 80442D58 0040C318  7C 05 23 D6 */	divw r0, r5, r4
 /* 80442D5C 0040C31C  7C E7 41 D6 */	mullw r7, r7, r8
@@ -3579,7 +3579,7 @@
 /* 80442E14 0040C3D4  83 C7 02 C4 */	lwz r30, 0x2c4(r7)
 /* 80442E18 0040C3D8  81 47 03 D4 */	lwz r10, 0x3d4(r7)
 /* 80442E1C 0040C3DC  80 C7 04 E4 */	lwz r6, 0x4e4(r7)
-/* 80442E20 0040C3E0  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)
+/* 80442E20 0040C3E0  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
 /* 80442E24 0040C3E4  7C E9 43 D6 */	divw r7, r9, r8
 /* 80442E28 0040C3E8  7C 05 23 D6 */	divw r0, r5, r4
 /* 80442E2C 0040C3EC  7C E7 41 D6 */	mullw r7, r7, r8

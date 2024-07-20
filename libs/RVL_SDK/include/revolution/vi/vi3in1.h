@@ -7,9 +7,9 @@ extern "C" {
 #endif
 
 void __VISetRGBModeImm(void);
-
 void __VISetRevolutionModeSimple(void);
 
+void VISetGamma(VIGamma gamma);
 void VISetTrapFilter(VIBool filter);
 
 #ifdef __cplusplus
