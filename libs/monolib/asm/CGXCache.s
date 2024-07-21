@@ -2560,11 +2560,11 @@
 /* 8044B5B0 00414B70  4E 80 00 20 */	blr 
 .endfn func_8044B4B8
 
-.fn func_8044B5B4, global
+.fn func_8044B5B4__8CGXCacheFv, global
 /* 8044B5B4 00414B74  38 80 00 02 */	li r4, 2
 /* 8044B5B8 00414B78  38 63 00 04 */	addi r3, r3, 4
 /* 8044B5BC 00414B7C  48 00 19 B8 */	b func_8044CF74
-.endfn func_8044B5B4
+.endfn func_8044B5B4__8CGXCacheFv
 
 .fn func_8044B5C0, global
 /* 8044B5C0 00414B80  94 21 FF D0 */	stwu r1, -0x30(r1)

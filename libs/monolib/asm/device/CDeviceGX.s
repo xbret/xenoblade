@@ -40,11 +40,11 @@
 /* 8045516C 0041E72C  90 0D BD FC */	stw r0, cacheInstance__9CDeviceGX@sda21(r13)
 /* 80455170 0041E730  4B FF 7E E9 */	bl func_8044D058__Fv
 /* 80455174 0041E734  7C 64 1B 78 */	mr r4, r3
-/* 80455178 0041E738  80 6D 9E F8 */	lwz r3, gxHeapSize@sda21(r13)
+/* 80455178 0041E738  80 6D 9E F8 */	lwz r3, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 8045517C 0041E73C  38 A0 00 20 */	li r5, 0x20
 /* 80455180 0041E740  4B FD F9 E5 */	bl allocateHeap__3mtlFUliUl
 /* 80455184 0041E744  90 7E 02 50 */	stw r3, 0x250(r30)
-/* 80455188 0041E748  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
+/* 80455188 0041E748  80 0D 9E F8 */	lwz r0, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 8045518C 0041E74C  7C 03 02 14 */	add r0, r3, r0
 /* 80455190 0041E750  90 1E 02 54 */	stw r0, 0x254(r30)
 /* 80455194 0041E754  38 60 00 00 */	li r3, 0
@@ -294,12 +294,12 @@
 /* 804554D8 0041EA98  7C 83 20 50 */	subf r4, r3, r4
 /* 804554DC 0041EA9C  48 00 00 10 */	b .L_804554EC
 .L_804554E0:
-/* 804554E0 0041EAA0  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
+/* 804554E0 0041EAA0  80 0D 9E F8 */	lwz r0, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804554E4 0041EAA4  7C 64 18 50 */	subf r3, r4, r3
 /* 804554E8 0041EAA8  7C 83 00 50 */	subf r4, r3, r0
 .L_804554EC:
 /* 804554EC 0041EAAC  3C 60 43 30 */	lis r3, 0x4330
-/* 804554F0 0041EAB0  80 0D 9E F8 */	lwz r0, gxHeapSize@sda21(r13)
+/* 804554F0 0041EAB0  80 0D 9E F8 */	lwz r0, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804554F4 0041EAB4  90 81 00 94 */	stw r4, 0x94(r1)
 /* 804554F8 0041EAB8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 804554FC 0041EABC  C8 22 C8 80 */	lfd f1, double_8066CC00@sda21(r2)
@@ -332,7 +332,7 @@
 /* 8045555C 0041EB1C  4E 80 00 20 */	blr 
 .endfn CDeviceVICb_vtableFunc4__9CDeviceGXFv
 
-.fn func_80455560, global
+.fn func_80455560__9CDeviceGXFv, global
 /* 80455560 0041EB20  94 21 FE 90 */	stwu r1, -0x170(r1)
 /* 80455564 0041EB24  7C 08 02 A6 */	mflr r0
 /* 80455568 0041EB28  90 01 01 74 */	stw r0, 0x174(r1)
@@ -367,12 +367,12 @@
 /* 804555DC 0041EB9C  2C 00 00 00 */	cmpwi r0, 0
 /* 804555E0 0041EBA0  40 82 00 68 */	bne .L_80455648
 /* 804555E4 0041EBA4  38 61 00 98 */	addi r3, r1, 0x98
-/* 804555E8 0041EBA8  48 00 0B 4D */	bl func_80456134
+/* 804555E8 0041EBA8  48 00 0B 4D */	bl func_80456134__17UnkClass_804561ACFv
 /* 804555EC 0041EBAC  80 6D BD FC */	lwz r3, cacheInstance__9CDeviceGX@sda21(r13)
-/* 804555F0 0041EBB0  4B FF 5F C5 */	bl func_8044B5B4
+/* 804555F0 0041EBB0  4B FF 5F C5 */	bl func_8044B5B4__8CGXCacheFv
 /* 804555F4 0041EBB4  7C 64 1B 78 */	mr r4, r3
 /* 804555F8 0041EBB8  38 61 00 98 */	addi r3, r1, 0x98
-/* 804555FC 0041EBBC  48 00 0E A5 */	bl func_804564A0
+/* 804555FC 0041EBBC  48 00 0E A5 */	bl func_804564A0__17UnkClass_804561ACFUl
 /* 80455600 0041EBC0  4B FF 2D FD */	bl func_804483FC__9CDeviceVIFv
 /* 80455604 0041EBC4  AB E3 00 06 */	lha r31, 6(r3)
 /* 80455608 0041EBC8  4B FF 2D F5 */	bl func_804483FC__9CDeviceVIFv
@@ -384,21 +384,21 @@
 /* 80455620 0041EBE0  B0 01 00 10 */	sth r0, 0x10(r1)
 /* 80455624 0041EBE4  B0 01 00 12 */	sth r0, 0x12(r1)
 /* 80455628 0041EBE8  B3 E1 00 16 */	sth r31, 0x16(r1)
-/* 8045562C 0041EBEC  48 00 17 81 */	bl func_80456DAC
+/* 8045562C 0041EBEC  48 00 17 81 */	bl func_80456DAC__17UnkClass_804561ACFRCQ22ml7CRect16
 /* 80455630 0041EBF0  38 61 00 98 */	addi r3, r1, 0x98
 /* 80455634 0041EBF4  38 80 FF FF */	li r4, -1
-/* 80455638 0041EBF8  48 00 0B 75 */	bl __dt__804561AC
+/* 80455638 0041EBF8  48 00 0B 75 */	bl __dt__17UnkClass_804561ACFv
 /* 8045563C 0041EBFC  48 00 00 0C */	b .L_80455648
 .L_80455640:
-/* 80455640 0041EC00  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
-/* 80455644 0041EC04  4B FF 1F A1 */	bl func_804475E4
+/* 80455640 0041EC00  80 6D 9E FC */	lwz r3, someString@sda21(r13)
+/* 80455644 0041EC04  4B FF 1F A1 */	bl func_804475E4__FPCc
 .L_80455648:
 /* 80455648 0041EC08  80 01 01 74 */	lwz r0, 0x174(r1)
 /* 8045564C 0041EC0C  83 E1 01 6C */	lwz r31, 0x16c(r1)
 /* 80455650 0041EC10  7C 08 03 A6 */	mtlr r0
 /* 80455654 0041EC14  38 21 01 70 */	addi r1, r1, 0x170
 /* 80455658 0041EC18  4E 80 00 20 */	blr 
-.endfn func_80455560
+.endfn func_80455560__9CDeviceGXFv
 
 .fn func_8045565C, global
 /* 8045565C 0041EC1C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -460,17 +460,17 @@
 /* 80455734 0041ECF4  88 84 02 74 */	lbz r4, 0x274(r4)
 /* 80455738 0041ECF8  4B EC 5F 39 */	bl GXCopyDisp
 /* 8045573C 0041ECFC  4B EC 4B D5 */	bl GXDrawDone
-/* 80455740 0041ED00  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
-/* 80455744 0041ED04  4B FF 1F A5 */	bl func_804476E8
+/* 80455740 0041ED00  80 6D 9E FC */	lwz r3, someString@sda21(r13)
+/* 80455744 0041ED04  4B FF 1F A5 */	bl func_804476E8__FPCc
 /* 80455748 0041ED08  4B FF 2C E5 */	bl func_8044842C__9CDeviceVIFv
 /* 8045574C 0041ED0C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80455750 0041ED10  3C 00 43 30 */	lis r0, 0x4330
 /* 80455754 0041ED14  C8 22 C8 80 */	lfd f1, double_8066CC00@sda21(r2)
 /* 80455758 0041ED18  90 01 00 08 */	stw r0, 8(r1)
-/* 8045575C 0041ED1C  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
+/* 8045575C 0041ED1C  80 6D 9E FC */	lwz r3, someString@sda21(r13)
 /* 80455760 0041ED20  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80455764 0041ED24  EF E0 08 28 */	fsubs f31, f0, f1
-/* 80455768 0041ED28  4B FF 20 81 */	bl func_804477E8
+/* 80455768 0041ED28  4B FF 20 81 */	bl func_804477E8__FPCc
 /* 8045576C 0041ED2C  EC 01 F8 24 */	fdivs f0, f1, f31
 /* 80455770 0041ED30  D0 0D BD F0 */	stfs f0, lbl_80667F70@sda21(r13)
 .L_80455774:
@@ -486,14 +486,14 @@
 /* 80455798 0041ED58  4E 80 00 20 */	blr 
 .endfn func_8045565C
 
-.fn func_8045579C, global
+.fn func_8045579C__9CDeviceGXFv, global
 /* 8045579C 0041ED5C  4E 80 00 20 */	blr 
-.endfn func_8045579C
+.endfn func_8045579C__9CDeviceGXFv
 
-.fn func_804557A0, global
-/* 804557A0 0041ED60  80 6D 9E F8 */	lwz r3, gxHeapSize@sda21(r13)
+.fn func_804557A0__9CDeviceGXFv, global
+/* 804557A0 0041ED60  80 6D 9E F8 */	lwz r3, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804557A4 0041ED64  4E 80 00 20 */	blr 
-.endfn func_804557A0
+.endfn func_804557A0__9CDeviceGXFv
 
 .fn CDeviceGX_WorkThreadEvent4, global
 /* 804557A8 0041ED68  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -505,7 +505,7 @@
 /* 804557C0 0041ED80  2C 03 00 00 */	cmpwi r3, 0
 /* 804557C4 0041ED84  41 82 00 CC */	beq .L_80455890
 /* 804557C8 0041ED88  80 7F 02 50 */	lwz r3, 0x250(r31)
-/* 804557CC 0041ED8C  80 8D 9E F8 */	lwz r4, gxHeapSize@sda21(r13)
+/* 804557CC 0041ED8C  80 8D 9E F8 */	lwz r4, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804557D0 0041ED90  4B EC 20 61 */	bl GXInit
 /* 804557D4 0041ED94  80 6D BD F8 */	lwz r3, instance__9CDeviceGX@sda21(r13)
 /* 804557D8 0041ED98  80 03 01 CC */	lwz r0, 0x1cc(r3)
@@ -514,7 +514,7 @@
 /* 804557E4 0041EDA4  4B EC 4A 7D */	bl GXSetDrawDone
 /* 804557E8 0041EDA8  80 9F 02 50 */	lwz r4, 0x250(r31)
 /* 804557EC 0041EDAC  38 7F 01 D0 */	addi r3, r31, 0x1d0
-/* 804557F0 0041EDB0  80 AD 9E F8 */	lwz r5, gxHeapSize@sda21(r13)
+/* 804557F0 0041EDB0  80 AD 9E F8 */	lwz r5, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804557F4 0041EDB4  4B EC 2F 6D */	bl GXInitFifoBase
 /* 804557F8 0041EDB8  38 7F 01 D0 */	addi r3, r31, 0x1d0
 /* 804557FC 0041EDBC  4B EC 30 F5 */	bl GXSetCPUFifo
@@ -539,7 +539,7 @@
 /* 80455844 0041EE04  4B EC 8A 6D */	bl GXSetPixelFmt
 /* 80455848 0041EE08  48 00 00 10 */	b .L_80455858
 .L_8045584C:
-/* 8045584C 0041EE0C  80 6D BD F4 */	lwz r3, lbl_80667F74@sda21(r13)
+/* 8045584C 0041EE0C  80 6D BD F4 */	lwz r3, pixelFormat__9CDeviceGX@sda21(r13)
 /* 80455850 0041EE10  38 80 00 00 */	li r4, 0
 /* 80455854 0041EE14  4B EC 8A 5D */	bl GXSetPixelFmt
 .L_80455858:
@@ -551,8 +551,8 @@
 /* 8045586C 0041EE2C  80 03 01 CC */	lwz r0, 0x1cc(r3)
 /* 80455870 0041EE30  2C 00 00 01 */	cmpwi r0, 1
 /* 80455874 0041EE34  40 82 00 10 */	bne .L_80455884
-/* 80455878 0041EE38  3C 60 80 45 */	lis r3, func_8045592C@ha
-/* 8045587C 0041EE3C  38 63 59 2C */	addi r3, r3, func_8045592C@l
+/* 80455878 0041EE38  3C 60 80 45 */	lis r3, drawSyncCallback__9CDeviceGXFUs@ha
+/* 8045587C 0041EE3C  38 63 59 2C */	addi r3, r3, drawSyncCallback__9CDeviceGXFUs@l
 /* 80455880 0041EE40  4B EC 4C C1 */	bl GXSetDrawSyncCallback
 .L_80455884:
 /* 80455884 0041EE44  7F E3 FB 78 */	mr r3, r31
@@ -607,7 +607,7 @@
 /* 80455928 0041EEE8  4E 80 00 20 */	blr
 .endfn CDeviceGX_WorkThreadEvent5
 
-.fn func_8045592C, global
+.fn drawSyncCallback__9CDeviceGXFUs, global
 /* 8045592C 0041EEEC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80455930 0041EEF0  7C 08 02 A6 */	mflr r0
 /* 80455934 0041EEF4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -615,23 +615,23 @@
 /* 8045593C 0041EEFC  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
 /* 80455940 0041EF00  28 03 B0 0B */	cmplwi r3, 0xb00b
 /* 80455944 0041EF04  40 82 00 10 */	bne .L_80455954
-/* 80455948 0041EF08  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
-/* 8045594C 0041EF0C  4B FF 1C 99 */	bl func_804475E4
+/* 80455948 0041EF08  80 6D 9E FC */	lwz r3, someString@sda21(r13)
+/* 8045594C 0041EF0C  4B FF 1C 99 */	bl func_804475E4__FPCc
 /* 80455950 0041EF10  48 00 00 40 */	b .L_80455990
 .L_80455954:
 /* 80455954 0041EF14  28 03 BE EF */	cmplwi r3, 0xbeef
 /* 80455958 0041EF18  40 82 00 38 */	bne .L_80455990
-/* 8045595C 0041EF1C  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
-/* 80455960 0041EF20  4B FF 1D 89 */	bl func_804476E8
+/* 8045595C 0041EF1C  80 6D 9E FC */	lwz r3, someString@sda21(r13)
+/* 80455960 0041EF20  4B FF 1D 89 */	bl func_804476E8__FPCc
 /* 80455964 0041EF24  4B FF 2A C9 */	bl func_8044842C__9CDeviceVIFv
 /* 80455968 0041EF28  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8045596C 0041EF2C  3C 00 43 30 */	lis r0, 0x4330
 /* 80455970 0041EF30  C8 22 C8 80 */	lfd f1, double_8066CC00@sda21(r2)
 /* 80455974 0041EF34  90 01 00 08 */	stw r0, 8(r1)
-/* 80455978 0041EF38  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
+/* 80455978 0041EF38  80 6D 9E FC */	lwz r3, someString@sda21(r13)
 /* 8045597C 0041EF3C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80455980 0041EF40  EF E0 08 28 */	fsubs f31, f0, f1
-/* 80455984 0041EF44  4B FF 1E 65 */	bl func_804477E8
+/* 80455984 0041EF44  4B FF 1E 65 */	bl func_804477E8__FPCc
 /* 80455988 0041EF48  EC 01 F8 24 */	fdivs f0, f1, f31
 /* 8045598C 0041EF4C  D0 0D BD F0 */	stfs f0, lbl_80667F70@sda21(r13)
 .L_80455990:
@@ -641,11 +641,11 @@
 /* 8045599C 0041EF5C  7C 08 03 A6 */	mtlr r0
 /* 804559A0 0041EF60  38 21 00 20 */	addi r1, r1, 0x20
 /* 804559A4 0041EF64  4E 80 00 20 */	blr 
-.endfn func_8045592C
+.endfn drawSyncCallback__9CDeviceGXFUs
 
 .fn init__9CDeviceGXF11_GXPixelFmtUl, global
-/* 804559A8 0041EF68  90 6D BD F4 */	stw r3, lbl_80667F74@sda21(r13)
-/* 804559AC 0041EF6C  90 8D 9E F8 */	stw r4, gxHeapSize@sda21(r13)
+/* 804559A8 0041EF68  90 6D BD F4 */	stw r3, pixelFormat__9CDeviceGX@sda21(r13)
+/* 804559AC 0041EF6C  90 8D 9E F8 */	stw r4, gxHeapSize__9CDeviceGX@sda21(r13)
 /* 804559B0 0041EF70  4E 80 00 20 */	blr 
 .endfn init__9CDeviceGXF11_GXPixelFmtUl
 
@@ -748,14 +748,14 @@
 
 .balign 8
 
-.obj gxHeapSize, global
+.obj gxHeapSize__9CDeviceGX, global
 	.4byte 0x00200000
-.endobj gxHeapSize
+.endobj gxHeapSize__9CDeviceGX
 
 
-.obj lbl_8066607C, global
+.obj someString, global
 	.4byte lbl_8066CBE8
-.endobj lbl_8066607C
+.endobj someString
 
 .obj __RTTI__9CDeviceGX, global
 	.4byte CDeviceGX_typestr
@@ -805,9 +805,9 @@
 	.skip 0x4
 .endobj lbl_80667F70
 
-.obj lbl_80667F74, global
+.obj pixelFormat__9CDeviceGX, global
 	.skip 0x4
-.endobj lbl_80667F74
+.endobj pixelFormat__9CDeviceGX
 
 .obj instance__9CDeviceGX, global
 	.skip 0x4
@@ -874,7 +874,7 @@
 	.4byte 0x000F0010
 	.4byte 0x00000000
 	.4byte 0x82000098
-	.4byte __dt__804561AC
+	.4byte __dt__17UnkClass_804561ACFv
 .endobj "@etb_8001D2AC"
 
 .obj "@etb_8001D2C4", local
@@ -928,7 +928,7 @@
 
 .obj "@eti_80034EE0", local
 .hidden "@eti_80034EE0"
-	.4byte func_80455560
+	.4byte func_80455560__9CDeviceGXFv
 	.4byte 0x000000FC
 	.4byte "@etb_8001D2AC"
 .endobj "@eti_80034EE0"
@@ -956,7 +956,7 @@
 
 .obj "@eti_80034F10", local
 .hidden "@eti_80034F10"
-	.4byte func_8045592C
+	.4byte drawSyncCallback__9CDeviceGXFUs
 	.4byte 0x0000007C
 	.4byte "@etb_8001D2DC"
 .endobj "@eti_80034F10"

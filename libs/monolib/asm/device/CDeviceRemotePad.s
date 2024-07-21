@@ -1067,7 +1067,7 @@
 /* 804475E0 00410BA0  4E 80 00 20 */	blr 
 .endfn func_80447598__Fv
 
-.fn func_804475E4, global
+.fn func_804475E4__FPCc, global
 /* 804475E4 00410BA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804475E8 00410BA8  7C 08 02 A6 */	mflr r0
 /* 804475EC 00410BAC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1140,9 +1140,9 @@
 /* 804476DC 00410C9C  7C 08 03 A6 */	mtlr r0
 /* 804476E0 00410CA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804476E4 00410CA4  4E 80 00 20 */	blr 
-.endfn func_804475E4
+.endfn func_804475E4__FPCc
 
-.fn func_804476E8, global
+.fn func_804476E8__FPCc, global
 /* 804476E8 00410CA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804476EC 00410CAC  7C 08 02 A6 */	mflr r0
 /* 804476F0 00410CB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1211,9 +1211,9 @@
 /* 804477DC 00410D9C  7C 08 03 A6 */	mtlr r0
 /* 804477E0 00410DA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804477E4 00410DA4  4E 80 00 20 */	blr 
-.endfn func_804476E8
+.endfn func_804476E8__FPCc
 
-.fn func_804477E8, global
+.fn func_804477E8__FPCc, global
 /* 804477E8 00410DA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804477EC 00410DAC  7C 08 02 A6 */	mflr r0
 /* 804477F0 00410DB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1261,7 +1261,7 @@
 /* 80447884 00410E44  7C 08 03 A6 */	mtlr r0
 /* 80447888 00410E48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044788C 00410E4C  4E 80 00 20 */	blr 
-.endfn func_804477E8
+.endfn func_804477E8__FPCc
 
 .fn __ct__CDeviceRemotePad, global
 /* 80447890 00410E50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1668,21 +1668,21 @@
 
 .obj "@eti_80034610", local
 .hidden "@eti_80034610"
-	.4byte func_804475E4
+	.4byte func_804475E4__FPCc
 	.4byte 0x00000104
 	.4byte "@etb_8001C9FC"
 .endobj "@eti_80034610"
 
 .obj "@eti_8003461C", local
 .hidden "@eti_8003461C"
-	.4byte func_804476E8
+	.4byte func_804476E8__FPCc
 	.4byte 0x00000100
 	.4byte "@etb_8001CA04"
 .endobj "@eti_8003461C"
 
 .obj "@eti_80034628", local
 .hidden "@eti_80034628"
-	.4byte func_804477E8
+	.4byte func_804477E8__FPCc
 	.4byte 0x000000A8
 	.4byte "@etb_8001CA0C"
 .endobj "@eti_80034628"

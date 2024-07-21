@@ -14,7 +14,9 @@ public:
 	CGXCache();
 	virtual ~CGXCache();
 	void func_8044B294(u32 r4);
+	u32 func_8044B5B4();
 	bool func_8044BE38();
+	void func_8044BFC0();
 
 	//0x0: vtable
 	//0x0-0x4: IStateCache

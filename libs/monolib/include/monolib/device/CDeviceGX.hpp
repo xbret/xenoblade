@@ -25,10 +25,20 @@ public:
 	static void updateVerticalFilter(EVerticalFilter filter);
 	virtual void CDeviceVICb_vtableFunc3();
 	virtual void CDeviceVICb_vtableFunc4();
-	static void init(GXPixelFmt pixelFormat, u32 heapSize);
+	static void func_80455560();
+	static void func_8045579C();
+	static int func_804557A0();
+	static void drawSyncCallback(u16 token);
+	static void init(GXPixelFmt format, u32 heapSize);
 
 	static inline CGXCache* getCacheInstance(){
 		return cacheInstance;
+	}
+
+	inline void setUnk260(float f){
+		if(f < 0) f = 0;
+		else if(f > 2) f = 2;
+		unk260 = f;
 	}
 
 	//0x0: vtable
@@ -52,5 +62,7 @@ public:
 protected:
 	static CDeviceGX* instance;
 	static CGXCache* cacheInstance;
+	static GXPixelFmt pixelFormat;
+	static int gxHeapSize;
 };
 

@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+typedef void (*GXDrawSyncCallback)(u16 token);
 typedef void (*GXDrawDoneCallback)(void);
 
 void GXSetMisc(UNKWORD token, UNKWORD val);
@@ -15,9 +16,11 @@ void GXAbortFrame(void);
 
 void GXDrawDone(void);
 void GXPixModeSync(void);
+void GXSetDrawSync(u16 token);
 u16 GXReadDrawSync(void);
 
-GXDrawDoneCallback GXSetDrawDoneCallback(GXDrawDoneCallback);
+GXDrawSyncCallback GXSetDrawSyncCallback(GXDrawSyncCallback callback);
+GXDrawDoneCallback GXSetDrawDoneCallback(GXDrawDoneCallback callback);
 
 
 #ifdef __cplusplus
