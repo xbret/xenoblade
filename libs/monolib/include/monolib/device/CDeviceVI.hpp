@@ -19,7 +19,7 @@ public:
 	static void func_804483A0(u32 r3);
 	static u32 func_804483CC();
 	static void func_804483DC(u32 r3);
-	static GXRenderModeObj* func_804483FC();
+	static GXRenderModeObj* getRenderModeObj();
 	static u32 func_80448408();
 	static float func_80448414();
 	static u32 func_80448420();

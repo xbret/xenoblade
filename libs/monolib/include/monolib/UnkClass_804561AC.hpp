@@ -8,7 +8,9 @@ using namespace ml;
 
 class UnkClass_804561AC {
 public:
-	UnkClass_804561AC(){}
+	UnkClass_804561AC(){
+		func_80456134();
+	}
 	~UnkClass_804561AC();
 	UnkClass_804561AC* func_80456134();
 	void func_804564A0(u32 r4);

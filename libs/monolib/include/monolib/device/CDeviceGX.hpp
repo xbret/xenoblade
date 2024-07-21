@@ -3,14 +3,16 @@
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
+#include "monolib/device/CDeviceVI.hpp"
+#include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/CGXCache.hpp"
 #include "revolution/GX.h"
 
 enum EVerticalFilter {
-	None,
-	Filter1,
-	Filter2,
-	Filter3
+	VFILTER_NONE,
+	VFILTER_1,
+	VFILTER_2,
+	VFILTER_3
 };
 
 //size: 0x798
@@ -26,10 +28,14 @@ public:
 	virtual void CDeviceVICb_vtableFunc3();
 	virtual void CDeviceVICb_vtableFunc4();
 	static void func_80455560();
+	static void func_8045565C(void* r3);
 	static void func_8045579C();
 	static int func_804557A0();
+	virtual bool WorkThreadEvent4();
+	virtual bool WorkThreadEvent5();
 	static void drawSyncCallback(u16 token);
 	static void init(GXPixelFmt format, u32 heapSize);
+
 
 	static inline CGXCache* getCacheInstance(){
 		return cacheInstance;
@@ -41,14 +47,31 @@ public:
 		unk260 = f;
 	}
 
+	static inline void someInline(void* r3){
+		CDeviceGX* gx = instance;
+		GXBool vf = gx->filter != VFILTER_NONE;
+		GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
+		GXBool aa = CDeviceVI::getRenderModeObj()->aa;
+		u8* vfilter = gx->vfilter;
+		GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
+		GXCopyDisp(r3, instance->unk274);
+	}
+
+	static inline void anotherInline(){
+		func_804476E8(someString);
+		float temp = CDeviceVI::func_8044842C();
+		float temp2 = func_804477E8(someString);
+		lbl_80667F70 = temp2/temp;
+	}
+
 	//0x0: vtable
 	//0x0-1c8: CDeviceBase
 	//0x1c8-1cc: CDeviceVICb
 	BOOL unk1CC;
-	u8 unk1D0[0x250 - 0x1D0];
-	void* gxHeap;
-	void* gxHeapEndAddress;
-	u8 vfilter[8];
+	GXFifoObj fifo; //0x1D0
+	void* gxHeap; //0x250
+	void* gxHeapEndAddress; //0x254
+	u8 vfilter[8]; //0x258
 	float unk260;
 	float unk264;
 	u8 unk268[4];
@@ -56,7 +79,7 @@ public:
 	u32 unk270;
 	u8 unk274;
 	u8 unk275[3];
-	EVerticalFilter filter;
+	EVerticalFilter filter; //0x278
 	CGXCache unk27C;
 
 protected:
@@ -64,5 +87,7 @@ protected:
 	static CGXCache* cacheInstance;
 	static GXPixelFmt pixelFormat;
 	static int gxHeapSize;
+	static float lbl_80667F70;
+	static const char* someString;
 };
 

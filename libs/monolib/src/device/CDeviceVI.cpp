@@ -8,8 +8,6 @@
 #include "monolib/Math.hpp"
 #include <string.h>
 
-extern bool func_8044D438();
-
 CDeviceVI* CDeviceVI::instance;
 
 static const VIGamma gammaLevels[] = {
@@ -166,7 +164,7 @@ void CDeviceVI::func_804483DC(u32 r3){
 	}
 }
 
-GXRenderModeObj* CDeviceVI::func_804483FC(){
+GXRenderModeObj* CDeviceVI::getRenderModeObj(){
 	return &instance->unk200;
 }
 

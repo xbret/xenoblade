@@ -47,10 +47,10 @@ void GXSetTexCopyDst(u16 w, u16 h, GXTexFmt fmt, GXBool mipmap);
 void GXSetCopyClamp(GXCopyClamp clamp);
 
 void GXSetCopyClear(GXColor color, u32 z);
-void GXSetCopyFilter(GXBool, u8 sample_pattern[12][2], GXBool, u8 vfilter[7]);
+void GXSetCopyFilter(GXBool aa, u8 sample_pattern[12][2], GXBool vf, u8 vfilter[7]);
 
-void GXCopyDisp(void*, GXBool);
-void GXCopyTex(void*, GXBool);
+void GXCopyDisp(void* dst, GXBool clear);
+void GXCopyTex(void* dst, GXBool clear);
 
 #ifdef __cplusplus
 }

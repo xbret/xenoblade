@@ -125,4 +125,8 @@ public:
 		this->capacity = capacity;
 	}
 
+	inline bool atStart(){
+		return pStartNode->next == pStartNode;
+	}
+
 };

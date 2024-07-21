@@ -1,33 +1,30 @@
 #include "monolib/device/CDeviceGX.hpp"
-#include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDevice.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/UnkClass_804561AC.hpp"
+#include "monolib/work/CWorkSystem.hpp"
+#include "monolib/lib/CLib.hpp"
 
-extern void func_804475E4(const char* str);
-extern void func_804476E8(const char* str);
-extern float func_804477E8(const char* str);
-
+float CDeviceGX::lbl_80667F70;
 GXPixelFmt CDeviceGX::pixelFormat;
 CDeviceGX* CDeviceGX::instance;
 CGXCache* CDeviceGX::cacheInstance;
 int CDeviceGX::gxHeapSize = 0x200000; //2 MB
+const char* CDeviceGX::someString = "GPCost";
 
-static float lbl_80667F70;
-static const char* someString = "GPCost";
-
+//Graphics callback tokens
 const u16 token1 = 0xB00B; //kinda sus but ok
 const u16 token2 = 0xBEEF;
 
 CDeviceGX::CDeviceGX(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 0),
 CDeviceVICb(), unk1CC(false), gxHeap(nullptr), gxHeapEndAddress(nullptr), unk264(0), unk26C(0),
-unk270(0), unk274(1), filter(None){
+unk270(0), unk274(1), filter(VFILTER_NONE){
 	instance = this;
 	cacheInstance = &unk27C;
 	gxHeap = mtl::allocateHeap(gxHeapSize, func_8044D058(), 0x20);
 	gxHeapEndAddress = (void*)((u32)gxHeap + gxHeapSize);
 	cacheInstance->unk50C = 0;
-	updateVerticalFilter(None);
+	updateVerticalFilter(VFILTER_NONE);
 	cacheInstance->func_8044B294(0);
 	setUnk260(1);
 }
@@ -60,7 +57,9 @@ bool CDeviceGX::func_80455368(){
 void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
 	instance->filter = filter;
 	
-	if(instance->filter == 1){
+	//This doesn't seem to actually be used by the game, and is
+	//just a leftover.
+	if(instance->filter == VFILTER_1){
 		instance->vfilter[0] = 0;
 		instance->vfilter[1] = 3;
 		instance->vfilter[2] = 19;
@@ -69,7 +68,7 @@ void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
 		instance->vfilter[5] = 3;
 		instance->vfilter[6] = 0;
 		instance->vfilter[7] = 0;
-	}else if(instance->filter == 2){
+	}else if(instance->filter == VFILTER_2){
 		instance->vfilter[0] = 4;
 		instance->vfilter[1] = 4;
 		instance->vfilter[2] = 15;
@@ -78,7 +77,7 @@ void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
 		instance->vfilter[5] = 4;
 		instance->vfilter[6] = 4;
 		instance->vfilter[7] = 0;
-	}else if(instance->filter == 3){
+	}else if(instance->filter == VFILTER_3){
 		instance->vfilter[0] = 8;
 		instance->vfilter[1] = 8;
 		instance->vfilter[2] = 10;
@@ -91,13 +90,13 @@ void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
 }
 
 void CDeviceGX::CDeviceVICb_vtableFunc3(){
-	GXFifoObj fifo;
+	GXFifoObj fifoTemp;
 	void* readPtr;
 	void* writePtr;
 
 	GXFlush();
-	GXGetCPUFifo(&fifo);
-	GXGetFifoPtrs(&fifo, &readPtr, &writePtr);
+	GXGetCPUFifo(&fifoTemp);
+	GXGetFifoPtrs(&fifoTemp, &readPtr, &writePtr);
 	
 	u32 temp1 = unk26C;
 	u32 temp = (u32)writePtr;
@@ -122,29 +121,41 @@ void CDeviceGX::func_80455560(){
 	if(instance->unk1CC == true){
 		GXFlush();
 
-		GXFifoObj fifo;
+		GXFifoObj fifoTemp;
 		void* readPtr;
 		void* writePtr;
 
-		GXGetCPUFifo(&fifo);
-		GXGetFifoPtrs(&fifo, &readPtr, &writePtr);
+		GXGetCPUFifo(&fifoTemp);
+		GXGetFifoPtrs(&fifoTemp, &readPtr, &writePtr);
 		instance->unk26C = (u32)writePtr;
 		instance->unk270 = (u32)readPtr;
 		GXEnableBreakPt(writePtr);
+
 		GXSetDrawSync(token1);
 		cacheInstance->func_8044BE38();
+
 		if(instance->unk274 == 0){
 			UnkClass_804561AC something;
-			something.func_80456134();
-			u32 r4 = cacheInstance->func_8044B5B4();
-			something.func_804564A0(r4);
-			s16 efbHeight = CDeviceVI::func_804483FC()->efbHeight;
-			s16 fbWidth = CDeviceVI::func_804483FC()->fbWidth;
+			something.func_804564A0(cacheInstance->func_8044B5B4());
+			s16 efbHeight = CDeviceVI::getRenderModeObj()->efbHeight;
+			s16 fbWidth = CDeviceVI::getRenderModeObj()->fbWidth;
 			CRect16 sp10 = CRect16(0,0,fbWidth,efbHeight);
 			something.func_80456DAC(sp10);
 		}
 	}else{
 		func_804475E4(someString);
+	}
+}
+
+void CDeviceGX::func_8045565C(void* r3){
+	if(instance->unk1CC == true){
+		GXSetDrawSync(token2);
+		someInline(r3);
+		while(GXReadDrawSync() != token2){}
+	}else{
+		someInline(r3);
+		GXDrawDone();
+		anotherInline();
 	}
 }
 
@@ -155,14 +166,60 @@ int CDeviceGX::func_804557A0(){
 	return instance->gxHeapSize;
 }
 
+bool CDeviceGX::WorkThreadEvent4(){
+	if(CDeviceVI::func_804482DC()){
+		GXInit(gxHeap, gxHeapSize);
+
+		if(instance->unk1CC == true){
+			GXSetDrawDone();
+			GXInitFifoBase(&fifo, gxHeap, gxHeapSize);
+			GXSetCPUFifo(&fifo);
+			GXSetGPFifo(&fifo);
+			GXSetDrawSync(token2);
+		}
+
+		cacheInstance->unk50C = 0;
+		updateVerticalFilter(VFILTER_NONE);
+
+		GXRenderModeObj* renderMode = CDeviceVI::getRenderModeObj();
+
+		if(renderMode->aa != 0){
+			GXSetPixelFmt(GX_PF_RGBA565_Z16, GX_ZC_LINEAR);
+		}else{
+			GXSetPixelFmt(pixelFormat, GX_ZC_LINEAR);
+		}
+
+		cacheInstance->func_8044BE38();
+		GXSetDither(GX_DISABLE);
+
+		if(instance->unk1CC == true){
+			GXSetDrawSyncCallback(drawSyncCallback);
+		}
+
+		return CWorkThread::WorkThreadEvent4();
+	}
+
+	return false;
+}
+
+bool CDeviceGX::WorkThreadEvent5(){
+	if(instance->unk1CC == true){
+		GXSetDrawSyncCallback(nullptr);
+	}
+
+	if(unk5C.atStart() && func_8044D438() && CWorkSystem::getInstance() == nullptr
+	&& CLib::getInstance() == nullptr){
+		return CWorkThread::WorkThreadEvent5();
+	}
+
+	return false;
+}
+
 void CDeviceGX::drawSyncCallback(u16 token){
 	if(token == token1){
 		func_804475E4(someString);
 	}else if(token == token2){
-		func_804476E8(someString);
-		float temp = CDeviceVI::func_8044842C();
-		float temp2 = func_804477E8(someString);
-		lbl_80667F70 = temp2/temp;
+		anotherInline();
 	}
 }
 

@@ -91,16 +91,16 @@ void func_800395F4(u32 r3){
 	if(CGame::instance != nullptr){
 		if(CGame::instance->unk1EC != 0){
 			if(r3 == 0){
-				GXRenderModeObj* rendMode = CDeviceVI::func_804483FC();
+				GXRenderModeObj* rendMode = CDeviceVI::getRenderModeObj();
 				u16 temp_r3_1 = rendMode->efbHeight;
 				s16 efbHeight = temp_r3_1 - 114;
-				GXRenderModeObj* rendMode1 = CDeviceVI::func_804483FC(); //???
+				GXRenderModeObj* rendMode1 = CDeviceVI::getRenderModeObj(); //???
 				s16 fbWidth = rendMode1->fbWidth;
 				func_80039694((CView*)(CGame::instance->unk1EC), 0, 56, fbWidth, efbHeight);
 			}else{
-				GXRenderModeObj* rendMode = CDeviceVI::func_804483FC();
+				GXRenderModeObj* rendMode = CDeviceVI::getRenderModeObj();
 				s16 efbHeight = rendMode->efbHeight;
-				GXRenderModeObj* rendMode1 = CDeviceVI::func_804483FC(); //???
+				GXRenderModeObj* rendMode1 = CDeviceVI::getRenderModeObj(); //???
 				CView* view = (CView*)(CGame::instance->unk1EC);
 				s16 fbWidth = rendMode1->fbWidth;
 				func_80039694(view, 0, 0, fbWidth, efbHeight);

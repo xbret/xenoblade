@@ -81,7 +81,7 @@ extern GXData* const __GXData;
 // I hate typing this name out
 #define gxdt __GXData
 
-GXFifoObj* GXInit(void*, u32);
+GXFifoObj* GXInit(void* base, u32 size);
 
 #ifdef __cplusplus
 }

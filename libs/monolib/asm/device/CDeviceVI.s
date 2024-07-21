@@ -459,11 +459,11 @@
 /* 804483F8 004119B8  4E 80 00 20 */	blr 
 .endfn func_804483DC__9CDeviceVIFUl
 
-.fn func_804483FC__9CDeviceVIFv, global
+.fn getRenderModeObj__9CDeviceVIFv, global
 /* 804483FC 004119BC  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448400 004119C0  38 63 02 00 */	addi r3, r3, 0x200
 /* 80448404 004119C4  4E 80 00 20 */	blr 
-.endfn func_804483FC__9CDeviceVIFv
+.endfn getRenderModeObj__9CDeviceVIFv
 
 .fn func_80448408__9CDeviceVIFv, global
 /* 80448408 004119C8  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
@@ -1073,7 +1073,7 @@
 /* 80448BC8 00412188  54 00 10 3A */	slwi r0, r0, 2
 /* 80448BCC 0041218C  7C 63 02 14 */	add r3, r3, r0
 /* 80448BD0 00412190  80 63 02 88 */	lwz r3, 0x288(r3)
-/* 80448BD4 00412194  48 00 CA 89 */	bl func_8045565C
+/* 80448BD4 00412194  48 00 CA 89 */	bl func_8045565C__9CDeviceGXFPv
 /* 80448BD8 00412198  48 00 00 1C */	b .L_80448BF4
 .L_80448BDC:
 /* 80448BDC 0041219C  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
@@ -1081,7 +1081,7 @@
 /* 80448BE4 004121A4  54 00 10 3A */	slwi r0, r0, 2
 /* 80448BE8 004121A8  7C 63 02 14 */	add r3, r3, r0
 /* 80448BEC 004121AC  80 63 02 88 */	lwz r3, 0x288(r3)
-/* 80448BF0 004121B0  48 00 CA 6D */	bl func_8045565C
+/* 80448BF0 004121B0  48 00 CA 6D */	bl func_8045565C__9CDeviceGXFPv
 .L_80448BF4:
 /* 80448BF4 004121B4  80 6D BD A8 */	lwz r3, instance__9CDeviceVI@sda21(r13)
 /* 80448BF8 004121B8  2C 03 00 00 */	cmpwi r3, 0

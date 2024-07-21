@@ -15,6 +15,7 @@ void GXResetWriteGatherPipe(void);
 void GXAbortFrame(void);
 
 void GXDrawDone(void);
+void GXSetDrawDone(void);
 void GXPixModeSync(void);
 void GXSetDrawSync(u16 token);
 u16 GXReadDrawSync(void);

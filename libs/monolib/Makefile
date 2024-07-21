@@ -54,7 +54,7 @@ MONOLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceFontInfoRom.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceFontLayer.o\
 	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceFontLoader.o\
-	$(BUILD_DIR)/libs/monolib/asm/device/CDeviceGX.o\
+	$(BUILD_DIR)/libs/monolib/src/device/CDeviceGX.o\
 	$(BUILD_DIR)/libs/monolib/asm/CDesktop.o\
 	$(BUILD_DIR)/libs/monolib/asm/code_80456134.o\
 	$(BUILD_DIR)/libs/monolib/asm/CException.o\

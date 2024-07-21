@@ -48,6 +48,11 @@ extern "C" {
 // Real name! (from patent)
 typedef unsigned char GXBool;
 
+#define GX_FALSE ((GXBool)0)
+#define GX_TRUE ((GXBool)1)
+#define GX_ENABLE ((GXBool)1)
+#define GX_DISABLE ((GXBool)0)
+
 /**
  * Common structs
  */

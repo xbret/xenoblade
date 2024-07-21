@@ -1539,7 +1539,7 @@ LIBS = [
             ["device/CDeviceFontInfoRom", False],
             ["device/CDeviceFontLayer", False],
             ["device/CDeviceFontLoader", False],
-            ["device/CDeviceGX", False],
+            ["device/CDeviceGX", True],
             ["CDesktop", False],
             ["code_80456134", False],
             ["CException", False],
