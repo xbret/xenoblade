@@ -30,8 +30,8 @@
 /* 80039280 00002840  90 BF 02 28 */	stw r5, 0x228(r31)
 /* 80039284 00002844  93 ED A4 80 */	stw r31, instance__5CGame@sda21(r13)
 /* 80039288 00002848  48 42 43 41 */	bl func_8045D5C8__FUl
-/* 8003928C 0000284C  3C 60 80 04 */	lis r3, func_80039D08__Fv@ha
-/* 80039290 00002850  38 63 9D 08 */	addi r3, r3, func_80039D08__Fv@l
+/* 8003928C 0000284C  3C 60 80 04 */	lis r3, func_80039D08__5CGameFv@ha
+/* 80039290 00002850  38 63 9D 08 */	addi r3, r3, func_80039D08__5CGameFv@l
 /* 80039294 00002854  48 40 B5 E1 */	bl func_80444874__FPv
 /* 80039298 00002858  7F E3 FB 78 */	mr r3, r31
 /* 8003929C 0000285C  38 80 00 04 */	li r4, 4
@@ -78,12 +78,12 @@
 /* 80039330 000028F0  4E 80 00 20 */	blr 
 .endfn __dt__5CGameFv
 
-.fn getCGameInstancePtr__Fv, global
+.fn getInstance__5CGameFv, global
 /* 80039334 000028F4  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039338 000028F8  4E 80 00 20 */	blr 
-.endfn getCGameInstancePtr__Fv
+.endfn getInstance__5CGameFv
 
-.fn func_8003933C__Fv, global
+.fn func_8003933C__5CGameFv, global
 /* 8003933C 000028FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039340 00002900  7C 08 02 A6 */	mflr r0
 /* 80039344 00002904  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,9 +94,9 @@
 /* 80039358 00002918  7C 08 03 A6 */	mtlr r0
 /* 8003935C 0000291C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039360 00002920  4E 80 00 20 */	blr
-.endfn func_8003933C__Fv
+.endfn func_8003933C__5CGameFv
 
-.fn func_80039364__Fv, global
+.fn func_80039364__5CGameFv, global
 /* 80039364 00002924  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039368 00002928  7C 08 02 A6 */	mflr r0
 /* 8003936C 0000292C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -104,16 +104,16 @@
 /* 80039374 00002934  80 0D A4 80 */	lwz r0, instance__5CGame@sda21(r13)
 /* 80039378 00002938  2C 00 00 00 */	cmpwi r0, 0
 /* 8003937C 0000293C  40 82 00 0C */	bne .L_80039388
-/* 80039380 00002940  48 00 06 B1 */	bl GameMain__Fv
+/* 80039380 00002940  48 00 06 B1 */	bl GameMain__5CGameFv
 /* 80039384 00002944  48 00 00 A0 */	b .L_80039424
 .L_80039388:
-/* 80039388 00002948  80 0D A4 8C */	lwz r0, CGameRestart_instancePtr@sda21(r13)
+/* 80039388 00002948  80 0D A4 8C */	lwz r0, "instance__Q219@unnamed@CGame_cpp@12CGameRestart"@sda21(r13)
 /* 8003938C 0000294C  2C 00 00 00 */	cmpwi r0, 0
 /* 80039390 00002950  40 82 00 94 */	bne .L_80039424
-/* 80039394 00002954  48 41 C7 05 */	bl getCDesktopInstancePtr__Fv
-/* 80039398 00002958  3F E0 80 4F */	lis r31, CGame_strpool@ha
+/* 80039394 00002954  48 41 C7 05 */	bl getInstance__8CDesktopFv
+/* 80039398 00002958  3F E0 80 4F */	lis r31, "@stringBase0"@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
-/* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
+/* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, "@stringBase0"@l
 /* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__3mtlFv
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
@@ -139,7 +139,7 @@
 /* 800393F8 000029B8  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 800393FC 000029BC  2C 1D 00 00 */	cmpwi r29, 0
 /* 80039400 000029C0  90 1D 01 E4 */	stw r0, 0x1e4(r29)
-/* 80039404 000029C4  93 AD A4 8C */	stw r29, CGameRestart_instancePtr@sda21(r13)
+/* 80039404 000029C4  93 AD A4 8C */	stw r29, "instance__Q219@unnamed@CGame_cpp@12CGameRestart"@sda21(r13)
 /* 80039408 000029C8  41 82 00 1C */	beq .L_80039424
 /* 8003940C 000029CC  80 6D A4 80 */	lwz r3, instance__5CGame@sda21(r13)
 /* 80039410 000029D0  38 80 00 00 */	li r4, 0
@@ -153,15 +153,15 @@
 /* 8003942C 000029EC  7C 08 03 A6 */	mtlr r0
 /* 80039430 000029F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039434 000029F4  4E 80 00 20 */	blr 
-.endfn func_80039364__Fv
+.endfn func_80039364__5CGameFv
 
-.fn func_80039438__Fb, global
+.fn func_80039438__5CGameFb, global
 /* 80039438 000029F8  80 8D A4 80 */	lwz r4, instance__5CGame@sda21(r13)
 /* 8003943C 000029FC  2C 04 00 00 */	cmpwi r4, 0
 /* 80039440 00002A00  4D 82 00 20 */	beqlr 
 /* 80039444 00002A04  90 64 02 20 */	stw r3, 0x220(r4)
 /* 80039448 00002A08  4E 80 00 20 */	blr 
-.endfn func_80039438__Fb
+.endfn func_80039438__5CGameFb
 
 .fn wkUpdate__5CGameFv, global
 /* 8003944C 00002A0C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -193,9 +193,9 @@
 /* 800394B0 00002A70  A8 FE 01 F8 */	lha r7, 0x1f8(r30)
 /* 800394B4 00002A74  48 00 75 89 */	bl func_80040A3C
 .L_800394B8:
-/* 800394B8 00002A78  3C 60 80 4F */	lis r3, CGame_strpool@ha
+/* 800394B8 00002A78  3C 60 80 4F */	lis r3, "@stringBase0"@ha
 /* 800394BC 00002A7C  38 00 FF FF */	li r0, -1
-/* 800394C0 00002A80  38 63 5B 5C */	addi r3, r3, CGame_strpool@l
+/* 800394C0 00002A80  38 63 5B 5C */	addi r3, r3, "@stringBase0"@l
 /* 800394C4 00002A84  B0 1E 01 F4 */	sth r0, 0x1f4(r30)
 /* 800394C8 00002A88  3B E3 00 0D */	addi r31, r3, 0xd
 /* 800394CC 00002A8C  B0 1E 01 F6 */	sth r0, 0x1f6(r30)
@@ -283,7 +283,7 @@
 /* 800395F0 00002BB0  4E 80 00 20 */	blr 
 .endfn WorkThreadEvent2__5CGameFv
 
-.fn func_800395F4__FUl, global
+.fn func_800395F4__5CGameFb, global
 /* 800395F4 00002BB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800395F8 00002BB8  7C 08 02 A6 */	mflr r0
 /* 800395FC 00002BBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -307,7 +307,7 @@
 /* 80039644 00002C04  38 80 00 00 */	li r4, 0
 /* 80039648 00002C08  80 65 01 EC */	lwz r3, 0x1ec(r5)
 /* 8003964C 00002C0C  38 A0 00 38 */	li r5, 0x38
-/* 80039650 00002C10  48 00 00 45 */	bl func_80039694__FP5CViewssss
+/* 80039650 00002C10  48 00 00 45 */	bl func_80039694__5CGameFP5CViewssss
 /* 80039654 00002C14  48 00 00 2C */	b .L_80039680
 .L_80039658:
 /* 80039658 00002C18  48 40 ED A5 */	bl getRenderModeObj__9CDeviceVIFv
@@ -319,16 +319,16 @@
 /* 80039670 00002C30  38 80 00 00 */	li r4, 0
 /* 80039674 00002C34  80 65 01 EC */	lwz r3, 0x1ec(r5)
 /* 80039678 00002C38  38 A0 00 00 */	li r5, 0
-/* 8003967C 00002C3C  48 00 00 19 */	bl func_80039694__FP5CViewssss
+/* 8003967C 00002C3C  48 00 00 19 */	bl func_80039694__5CGameFP5CViewssss
 .L_80039680:
 /* 80039680 00002C40  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039684 00002C44  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80039688 00002C48  7C 08 03 A6 */	mtlr r0
 /* 8003968C 00002C4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039690 00002C50  4E 80 00 20 */	blr 
-.endfn func_800395F4__FUl
+.endfn func_800395F4__5CGameFb
 
-.fn func_80039694__FP5CViewssss, global
+.fn func_80039694__5CGameFP5CViewssss, global
 /* 80039694 00002C54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039698 00002C58  7C 08 02 A6 */	mflr r0
 /* 8003969C 00002C5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -342,7 +342,7 @@
 /* 800396BC 00002C7C  7C 08 03 A6 */	mtlr r0
 /* 800396C0 00002C80  38 21 00 10 */	addi r1, r1, 0x10
 /* 800396C4 00002C84  4E 80 00 20 */	blr 
-.endfn func_80039694__FP5CViewssss
+.endfn func_80039694__5CGameFP5CViewssss
 
 .fn WorkThreadEvent4__5CGameFv, global
 /* 800396C8 00002C88  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -393,7 +393,7 @@
 /* 80039774 00002D34  80 7D 01 EC */	lwz r3, 0x1ec(r29)
 /* 80039778 00002D38  38 80 00 00 */	li r4, 0
 /* 8003977C 00002D3C  38 A0 00 00 */	li r5, 0
-/* 80039780 00002D40  4B FF FF 15 */	bl func_80039694__FP5CViewssss
+/* 80039780 00002D40  4B FF FF 15 */	bl func_80039694__5CGameFP5CViewssss
 /* 80039784 00002D44  48 00 00 30 */	b .L_800397B4
 .L_80039788:
 /* 80039788 00002D48  48 40 EC 75 */	bl getRenderModeObj__9CDeviceVIFv
@@ -406,7 +406,7 @@
 /* 800397A4 00002D64  80 7D 01 EC */	lwz r3, 0x1ec(r29)
 /* 800397A8 00002D68  38 80 00 00 */	li r4, 0
 /* 800397AC 00002D6C  38 A0 00 38 */	li r5, 0x38
-/* 800397B0 00002D70  4B FF FE E5 */	bl func_80039694__FP5CViewssss
+/* 800397B0 00002D70  4B FF FE E5 */	bl func_80039694__5CGameFP5CViewssss
 .L_800397B4:
 /* 800397B4 00002D74  C0 02 80 0C */	lfs f0, float_8066838C@sda21(r2)
 /* 800397B8 00002D78  D0 01 00 10 */	stfs f0, 0x10(r1)
@@ -424,7 +424,7 @@
 /* 800397E8 00002DA8  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 800397EC 00002DAC  90 04 04 50 */	stw r0, 0x450(r4)
 /* 800397F0 00002DB0  48 40 E4 39 */	bl isWideAspectRatio__9CDeviceSCFv
-/* 800397F4 00002DB4  4B FF FE 01 */	bl func_800395F4__FUl
+/* 800397F4 00002DB4  4B FF FE 01 */	bl func_800395F4__5CGameFb
 /* 800397F8 00002DB8  38 60 00 00 */	li r3, 0
 /* 800397FC 00002DBC  48 41 BB 85 */	bl updateVerticalFilter__9CDeviceGXF15EVerticalFilter
 /* 80039800 00002DC0  48 40 27 75 */	bl __ct__8043BF74
@@ -438,9 +438,9 @@
 /* 80039820 00002DE0  48 32 D0 51 */	bl VIEnableDimming
 /* 80039824 00002DE4  38 60 00 01 */	li r3, 1
 /* 80039828 00002DE8  48 32 D0 A9 */	bl VISetTimeToDimming
-/* 8003982C 00002DEC  3F E0 80 4F */	lis r31, CGame_strpool@ha
+/* 8003982C 00002DEC  3F E0 80 4F */	lis r31, "@stringBase0"@ha
 /* 80039830 00002DF0  38 81 00 08 */	addi r4, r1, 8
-/* 80039834 00002DF4  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
+/* 80039834 00002DF4  3B FF 5B 5C */	addi r31, r31, "@stringBase0"@l
 /* 80039838 00002DF8  38 A0 00 00 */	li r5, 0
 /* 8003983C 00002DFC  38 7F 00 0E */	addi r3, r31, 0xe
 /* 80039840 00002E00  48 42 63 79 */	bl func_8045FBB8
@@ -592,7 +592,7 @@
 /* 80039A2C 00002FEC  4E 80 00 20 */	blr 
 .endfn "__dt__Q34nw4r2ut36LinkList<Q34nw4r3lyt11FontRefLink,0>Fv"
 
-.fn GameMain__Fv, global
+.fn GameMain__5CGameFv, global
 /* 80039A30 00002FF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039A34 00002FF4  7C 08 02 A6 */	mflr r0
 /* 80039A38 00002FF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -605,10 +605,10 @@
 .L_80039A54:
 /* 80039A54 00003014  48 41 C0 4D */	bl func_80455AA0__Fv
 /* 80039A58 00003018  83 A3 00 4C */	lwz r29, 0x4c(r3)
-/* 80039A5C 0000301C  48 41 C0 3D */	bl getCDesktopInstancePtr__Fv
-/* 80039A60 00003020  3C 80 80 4F */	lis r4, CGame_strpool@ha
+/* 80039A5C 0000301C  48 41 C0 3D */	bl getInstance__8CDesktopFv
+/* 80039A60 00003020  3C 80 80 4F */	lis r4, "@stringBase0"@ha
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
-/* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, CGame_strpool@l
+/* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, "@stringBase0"@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
 /* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__3mtlFv
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
@@ -633,9 +633,9 @@
 /* 80039AB8 00003078  7C 08 03 A6 */	mtlr r0
 /* 80039ABC 0000307C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039AC0 00003080  4E 80 00 20 */	blr 
-.endfn GameMain__Fv
+.endfn GameMain__5CGameFv
 
-.fn func_80039AC4__FPvUlUl, global
+.fn func_80039AC4__5CGameFPvUlUl, global
 /* 80039AC4 00003084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80039AC8 00003088  7C 08 02 A6 */	mflr r0
 /* 80039ACC 0000308C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -666,7 +666,7 @@
 /* 80039B2C 000030EC  7C 08 03 A6 */	mtlr r0
 /* 80039B30 000030F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80039B34 000030F4  4E 80 00 20 */	blr 
-.endfn func_80039AC4__FPvUlUl
+.endfn func_80039AC4__5CGameFPvUlUl
 
 .fn WorkThreadEvent6__5CGameFv, global
 /* 80039B38 000030F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -755,10 +755,10 @@
 /* 80039C54 00003214  48 18 63 59 */	bl func_801BFFAC__Fff
 /* 80039C58 00003218  38 60 00 01 */	li r3, 1
 /* 80039C5C 0000321C  48 12 A8 61 */	bl func_801644BC__FUl
-/* 80039C60 00003220  48 09 F5 29 */	bl getBattleManagerInstancePtr__Fv
+/* 80039C60 00003220  48 09 F5 29 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80039C64 00003224  2C 03 00 00 */	cmpwi r3, 0
 /* 80039C68 00003228  41 82 00 14 */	beq .L_80039C7C
-/* 80039C6C 0000322C  48 09 F5 1D */	bl getBattleManagerInstancePtr__Fv
+/* 80039C6C 0000322C  48 09 F5 1D */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80039C70 00003230  38 80 00 01 */	li r4, 1
 /* 80039C74 00003234  38 63 21 9C */	addi r3, r3, 0x219c
 /* 80039C78 00003238  48 16 F6 25 */	bl func_801A929C__Q22cf7CVisionFUl
@@ -779,10 +779,10 @@
 /* 80039CA8 00003268  48 18 63 05 */	bl func_801BFFAC__Fff
 /* 80039CAC 0000326C  38 60 00 00 */	li r3, 0
 /* 80039CB0 00003270  48 12 A8 0D */	bl func_801644BC__FUl
-/* 80039CB4 00003274  48 09 F4 D5 */	bl getBattleManagerInstancePtr__Fv
+/* 80039CB4 00003274  48 09 F4 D5 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80039CB8 00003278  2C 03 00 00 */	cmpwi r3, 0
 /* 80039CBC 0000327C  41 82 00 14 */	beq .L_80039CD0
-/* 80039CC0 00003280  48 09 F4 C9 */	bl getBattleManagerInstancePtr__Fv
+/* 80039CC0 00003280  48 09 F4 C9 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80039CC4 00003284  38 80 00 00 */	li r4, 0
 /* 80039CC8 00003288  38 63 21 9C */	addi r3, r3, 0x219c
 /* 80039CCC 0000328C  48 16 F5 D1 */	bl func_801A929C__Q22cf7CVisionFUl
@@ -805,7 +805,7 @@
 /* 80039D04 000032C4  4E 80 00 20 */	blr
 .endfn WorkEvent5__5CGameFPv
 
-.fn func_80039D08__Fv, global
+.fn func_80039D08__5CGameFv, global
 /* 80039D08 000032C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039D0C 000032CC  7C 08 02 A6 */	mflr r0
 /* 80039D10 000032D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -821,7 +821,7 @@
 /* 80039D34 000032F4  7C 08 03 A6 */	mtlr r0
 /* 80039D38 000032F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039D3C 000032FC  4E 80 00 20 */	blr
-.endfn func_80039D08__Fv
+.endfn func_80039D08__5CGameFv
 
 #weak funcs from IWorkEvent/CWorkThread
 
@@ -1001,12 +1001,12 @@
 /* 80039E58 00003418  48 3F E7 51 */	bl func_804385A8__FUl
 /* 80039E5C 0000341C  2C 03 00 00 */	cmpwi r3, 0
 /* 80039E60 00003420  40 82 00 1C */	bne .L_80039E7C
-/* 80039E64 00003424  4B FF FB CD */	bl GameMain__Fv
+/* 80039E64 00003424  4B FF FB CD */	bl GameMain__5CGameFv
 /* 80039E68 00003428  7F E3 FB 78 */	mr r3, r31
 /* 80039E6C 0000342C  38 80 00 00 */	li r4, 0
 /* 80039E70 00003430  48 3F E0 81 */	bl func_80437EF0__11CWorkThreadFUl
 /* 80039E74 00003434  38 00 00 00 */	li r0, 0
-/* 80039E78 00003438  90 0D A4 8C */	stw r0, CGameRestart_instancePtr@sda21(r13)
+/* 80039E78 00003438  90 0D A4 8C */	stw r0, "instance__Q219@unnamed@CGame_cpp@12CGameRestart"@sda21(r13)
 .L_80039E7C:
 /* 80039E7C 0000343C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80039E80 00003440  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1077,7 +1077,7 @@
 .endobj IWorkEvent_typestr
 
 
-.obj CGame_strpool, global
+.obj "@stringBase0", local
 	.asciz "CGameRestart"
 	.byte 0x00
 	.asciz "43"
@@ -1085,7 +1085,7 @@
 	.asciz "4_3mode.brlyt"
 	.asciz "CGame"
 	.balign 4
-.endobj CGame_strpool
+.endobj "@stringBase0"
 
 
 
@@ -1309,9 +1309,9 @@
 	.skip 0x4
 .endobj lbl_80666608
 
-.obj CGameRestart_instancePtr, global
+.obj "instance__Q219@unnamed@CGame_cpp@12CGameRestart", global
 	.skip 0x4
-.endobj CGameRestart_instancePtr
+.endobj "instance__Q219@unnamed@CGame_cpp@12CGameRestart"
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020
@@ -1471,14 +1471,14 @@
 
 .obj "@eti_80021038", local
 .hidden "@eti_80021038"
-	.4byte func_8003933C__Fv
+	.4byte func_8003933C__5CGameFv
 	.4byte 0x00000028
 	.4byte "@etb_80006718"
 .endobj "@eti_80021038"
 
 .obj "@eti_80021044", local
 .hidden "@eti_80021044"
-	.4byte func_80039364__Fv
+	.4byte func_80039364__5CGameFv
 	.4byte 0x000000D4
 	.4byte "@etb_80006720"
 .endobj "@eti_80021044"
@@ -1499,14 +1499,14 @@
 
 .obj "@eti_80021068", local
 .hidden "@eti_80021068"
-	.4byte func_800395F4__FUl
+	.4byte func_800395F4__5CGameFb
 	.4byte 0x000000A0
 	.4byte "@etb_80006748"
 .endobj "@eti_80021068"
 
 .obj "@eti_80021074", local
 .hidden "@eti_80021074"
-	.4byte func_80039694__FP5CViewssss
+	.4byte func_80039694__5CGameFP5CViewssss
 	.4byte 0x00000034
 	.4byte "@etb_80006750"
 .endobj "@eti_80021074"
@@ -1541,14 +1541,14 @@
 
 .obj "@eti_800210B0", local
 .hidden "@eti_800210B0"
-	.4byte GameMain__Fv
+	.4byte GameMain__5CGameFv
 	.4byte 0x00000094
 	.4byte "@etb_8000678C"
 .endobj "@eti_800210B0"
 
 .obj "@eti_800210BC", local
 .hidden "@eti_800210BC"
-	.4byte func_80039AC4__FPvUlUl
+	.4byte func_80039AC4__5CGameFPvUlUl
 	.4byte 0x00000074
 	.4byte "@etb_80006794"
 .endobj "@eti_800210BC"
@@ -1569,7 +1569,7 @@
 
 .obj "@eti_800210E0", local
 .hidden "@eti_800210E0"
-	.4byte func_80039D08__Fv
+	.4byte func_80039D08__5CGameFv
 	.4byte 0x00000038
 	.4byte "@etb_800067AC"
 .endobj "@eti_800210E0"

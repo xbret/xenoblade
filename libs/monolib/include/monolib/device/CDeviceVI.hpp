@@ -59,6 +59,14 @@ public:
 		return r3;
 	}
 
+	static inline u16 getEfbHeight(){
+		return getRenderModeObj()->efbHeight;
+	}
+
+	static inline u16 getFbWidth(){
+		return getRenderModeObj()->fbWidth;
+	}
+
 	//0x0: vtable
 	//0x0-1c8: CDeviceBase
 	//0x1c8-1d0: UnkClass_80447FDC

@@ -1705,7 +1705,7 @@
 /* 8010C6E8 000D5CA8  90 15 02 30 */	stw r0, 0x230(r21)
 /* 8010C6EC 000D5CAC  A8 03 00 00 */	lha r0, 0(r3)
 /* 8010C6F0 000D5CB0  90 15 02 38 */	stw r0, 0x238(r21)
-/* 8010C6F4 000D5CB4  4B FC CA 95 */	bl getBattleManagerInstancePtr__Fv
+/* 8010C6F4 000D5CB4  4B FC CA 95 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8010C6F8 000D5CB8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8010C6FC 000D5CBC  38 80 00 00 */	li r4, 0
 /* 8010C700 000D5CC0  80 65 00 00 */	lwz r3, 0(r5)
@@ -3262,7 +3262,7 @@
 /* 8010DD70 000D7330  2C 03 00 00 */	cmpwi r3, 0
 /* 8010DD74 000D7334  41 82 01 6C */	beq .L_8010DEE0
 /* 8010DD78 000D7338  48 06 20 BD */	bl func_8016FE34
-/* 8010DD7C 000D733C  4B FC B4 0D */	bl getBattleManagerInstancePtr__Fv
+/* 8010DD7C 000D733C  4B FC B4 0D */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8010DD80 000D7340  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8010DD84 000D7344  38 80 00 00 */	li r4, 0
 /* 8010DD88 000D7348  80 65 00 00 */	lwz r3, 0(r5)

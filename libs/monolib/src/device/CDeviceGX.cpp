@@ -13,7 +13,7 @@ int CDeviceGX::gxHeapSize = 0x200000; //2 MB
 const char* CDeviceGX::someString = "GPCost";
 
 //Graphics callback tokens
-const u16 token1 = 0xB00B; //kinda sus but ok
+const u16 token1 = 0xB00B;
 const u16 token2 = 0xBEEF;
 
 CDeviceGX::CDeviceGX(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 0),
@@ -43,7 +43,7 @@ CDeviceGX* CDeviceGX::getInstance(){
 }
 
 bool CDeviceGX::func_804552B4(){
-	return instance->CWorkThread_inline2();
+	return instance->CWorkThread_inline1();
 }
 
 void CDeviceGX::func_8045535C(u32 r3){

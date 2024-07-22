@@ -616,12 +616,12 @@
 /* 804442F4 0040D8B4  4B FF F8 15 */	bl __ct__CWorkRootThread
 /* 804442F8 0040D8B8  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
 /* 804442FC 0040D8BC  4B FF F6 5D */	bl CWorkControl_create
-/* 80444300 0040D8C0  48 00 96 29 */	bl CDevice_create
+/* 80444300 0040D8C0  48 00 96 29 */	bl create__7CDeviceFv
 /* 80444304 0040D8C4  48 01 54 8D */	bl CLib_create
 /* 80444308 0040D8C8  48 00 04 F5 */	bl func_804447FC
 .L_8044430C:
 /* 8044430C 0040D8CC  4B FF FD 61 */	bl func_8044406C #this function call leads to GameMain
-/* 80444310 0040D8D0  48 00 8D 41 */	bl func_8044D050
+/* 80444310 0040D8D0  48 00 8D 41 */	bl getInstance__7CDeviceFv
 /* 80444314 0040D8D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80444318 0040D8D8  41 82 FF F4 */	beq .L_8044430C
 /* 8044431C 0040D8DC  48 00 8F 2D */	bl func_8044D248

@@ -14,7 +14,7 @@
 /* 8044D00C 004165CC  7C 7E 1B 78 */	mr r30, r3
 /* 8044D010 004165D0  41 82 00 24 */	beq .L_8044D034
 /* 8044D014 004165D4  38 00 00 00 */	li r0, 0
-/* 8044D018 004165D8  90 0D BD B0 */	stw r0, lbl_80667F30@sda21(r13)
+/* 8044D018 004165D8  90 0D BD B0 */	stw r0, instance__7CDevice@sda21(r13)
 /* 8044D01C 004165DC  38 80 00 00 */	li r4, 0
 /* 8044D020 004165E0  4B FE AA A9 */	bl __dt__11CWorkThreadFv
 /* 8044D024 004165E4  2C 1F 00 00 */	cmpwi r31, 0
@@ -31,10 +31,10 @@
 /* 8044D04C 0041660C  4E 80 00 20 */	blr 
 .endfn __dt__7CDeviceFv
 
-.fn func_8044D050, global
-/* 8044D050 00416610  80 6D BD B0 */	lwz r3, lbl_80667F30@sda21(r13)
+.fn getInstance__7CDeviceFv, global
+/* 8044D050 00416610  80 6D BD B0 */	lwz r3, instance__7CDevice@sda21(r13)
 /* 8044D054 00416614  4E 80 00 20 */	blr 
-.endfn func_8044D050
+.endfn getInstance__7CDeviceFv
 
 .fn func_8044D058__Fv, global
 /* 8044D058 00416618  80 6D 9E 20 */	lwz r3, lbl_80665FA0@sda21(r13)
@@ -51,7 +51,7 @@
 /* 8044D06C 0041662C  7C 08 02 A6 */	mflr r0
 /* 8044D070 00416630  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8044D074 00416634  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 8044D078 00416638  80 ED BD B0 */	lwz r7, lbl_80667F30@sda21(r13)
+/* 8044D078 00416638  80 ED BD B0 */	lwz r7, instance__7CDevice@sda21(r13)
 /* 8044D07C 0041663C  80 07 00 7C */	lwz r0, 0x7c(r7)
 /* 8044D080 00416640  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 8044D084 00416644  41 82 00 0C */	beq .L_8044D090
@@ -177,7 +177,7 @@
 /* 8044D218 004167D8  7C 00 1B 78 */	or r0, r0, r3
 /* 8044D21C 004167DC  54 1E 0F FE */	srwi r30, r0, 0x1f
 .L_8044D220:
-/* 8044D220 004167E0  80 6D BD B0 */	lwz r3, lbl_80667F30@sda21(r13)
+/* 8044D220 004167E0  80 6D BD B0 */	lwz r3, instance__7CDevice@sda21(r13)
 /* 8044D224 004167E4  80 03 00 60 */	lwz r0, 0x60(r3)
 /* 8044D228 004167E8  7C 1F 00 40 */	cmplw r31, r0
 /* 8044D22C 004167EC  40 82 FF 18 */	bne .L_8044D144
@@ -195,7 +195,7 @@
 /* 8044D24C 0041680C  7C 08 02 A6 */	mflr r0
 /* 8044D250 00416810  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8044D254 00416814  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 8044D258 00416818  80 ED BD B0 */	lwz r7, lbl_80667F30@sda21(r13)
+/* 8044D258 00416818  80 ED BD B0 */	lwz r7, instance__7CDevice@sda21(r13)
 /* 8044D25C 0041681C  80 07 00 7C */	lwz r0, 0x7c(r7)
 /* 8044D260 00416820  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 8044D264 00416824  41 82 00 0C */	beq .L_8044D270
@@ -326,7 +326,7 @@
 .L_8044D40C:
 /* 8044D40C 004169CC  83 FF 00 00 */	lwz r31, 0(r31)
 .L_8044D410:
-/* 8044D410 004169D0  80 6D BD B0 */	lwz r3, lbl_80667F30@sda21(r13)
+/* 8044D410 004169D0  80 6D BD B0 */	lwz r3, instance__7CDevice@sda21(r13)
 /* 8044D414 004169D4  80 03 00 60 */	lwz r0, 0x60(r3)
 /* 8044D418 004169D8  7C 1F 00 40 */	cmplw r31, r0
 /* 8044D41C 004169DC  40 82 FF 08 */	bne .L_8044D324
@@ -340,7 +340,7 @@
 .endfn func_8044D248
 
 .fn func_8044D438__Fv, global
-/* 8044D438 004169F8  80 ED BD B0 */	lwz r7, lbl_80667F30@sda21(r13)
+/* 8044D438 004169F8  80 ED BD B0 */	lwz r7, instance__7CDevice@sda21(r13)
 /* 8044D43C 004169FC  80 07 00 7C */	lwz r0, 0x7c(r7)
 /* 8044D440 00416A00  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 8044D444 00416A04  41 82 00 0C */	beq .L_8044D450
@@ -423,7 +423,7 @@
 /* 8044D53C 00416AFC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D540 00416B00  40 82 00 58 */	bne .L_8044D598
 /* 8044D544 00416B04  3F E0 80 52 */	lis r31, lbl_805263E8@ha
-/* 8044D548 00416B08  83 CD BD B0 */	lwz r30, lbl_80667F30@sda21(r13)
+/* 8044D548 00416B08  83 CD BD B0 */	lwz r30, instance__7CDevice@sda21(r13)
 /* 8044D54C 00416B0C  3B FF 63 E8 */	addi r31, r31, lbl_805263E8@l
 /* 8044D550 00416B10  4B FE A0 65 */	bl getHeapIndex__3mtlFv
 /* 8044D554 00416B14  7C 64 1B 78 */	mr r4, r3
@@ -449,7 +449,7 @@
 /* 8044D59C 00416B5C  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D5A0 00416B60  40 82 00 5C */	bne .L_8044D5FC
 /* 8044D5A4 00416B64  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D5A8 00416B68  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D5A8 00416B68  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D5AC 00416B6C  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D5B0 00416B70  3B C3 00 0A */	addi r30, r3, 0xa
 /* 8044D5B4 00416B74  4B FE A0 01 */	bl getHeapIndex__3mtlFv
@@ -476,7 +476,7 @@
 /* 8044D600 00416BC0  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D604 00416BC4  40 82 00 44 */	bne .L_8044D648
 /* 8044D608 00416BC8  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D60C 00416BCC  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D60C 00416BCC  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D610 00416BD0  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D614 00416BD4  3B C3 00 14 */	addi r30, r3, 0x14
 /* 8044D618 00416BD8  4B FE 9F 9D */	bl getHeapIndex__3mtlFv
@@ -497,7 +497,7 @@
 /* 8044D64C 00416C0C  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D650 00416C10  40 82 00 5C */	bne .L_8044D6AC
 /* 8044D654 00416C14  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D658 00416C18  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D658 00416C18  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D65C 00416C1C  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D660 00416C20  3B C3 00 25 */	addi r30, r3, 0x25
 /* 8044D664 00416C24  4B FE 9F 51 */	bl getHeapIndex__3mtlFv
@@ -524,7 +524,7 @@
 /* 8044D6B0 00416C70  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D6B4 00416C74  40 82 00 5C */	bne .L_8044D710
 /* 8044D6B8 00416C78  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D6BC 00416C7C  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D6BC 00416C7C  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D6C0 00416C80  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D6C4 00416C84  3B C3 00 32 */	addi r30, r3, 0x32
 /* 8044D6C8 00416C88  4B FE 9E ED */	bl getHeapIndex__3mtlFv
@@ -551,7 +551,7 @@
 /* 8044D714 00416CD4  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D718 00416CD8  40 82 00 44 */	bne .L_8044D75C
 /* 8044D71C 00416CDC  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D720 00416CE0  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D720 00416CE0  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D724 00416CE4  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D728 00416CE8  3B C3 00 3C */	addi r30, r3, 0x3c
 /* 8044D72C 00416CEC  4B FE 9E 89 */	bl getHeapIndex__3mtlFv
@@ -572,7 +572,7 @@
 /* 8044D760 00416D20  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D764 00416D24  40 82 00 44 */	bne .L_8044D7A8
 /* 8044D768 00416D28  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D76C 00416D2C  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D76C 00416D2C  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D770 00416D30  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D774 00416D34  3B C3 00 48 */	addi r30, r3, 0x48
 /* 8044D778 00416D38  4B FE 9E 3D */	bl getHeapIndex__3mtlFv
@@ -593,7 +593,7 @@
 /* 8044D7AC 00416D6C  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D7B0 00416D70  40 82 00 44 */	bne .L_8044D7F4
 /* 8044D7B4 00416D74  3C 60 80 52 */	lis r3, lbl_805263E8@ha
-/* 8044D7B8 00416D78  83 ED BD B0 */	lwz r31, lbl_80667F30@sda21(r13)
+/* 8044D7B8 00416D78  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D7BC 00416D7C  38 63 63 E8 */	addi r3, r3, lbl_805263E8@l
 /* 8044D7C0 00416D80  3B C3 00 54 */	addi r30, r3, 0x54
 /* 8044D7C4 00416D84  4B FE 9D F1 */	bl getHeapIndex__3mtlFv
@@ -701,7 +701,7 @@
 /* 8044D924 00416EE4  4E 80 00 20 */	blr 
 .endfn CDevice_WorkThreadEvent5
 
-.fn CDevice_create, global
+.fn create__7CDeviceFv, global
 /* 8044D928 00416EE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D92C 00416EEC  7C 08 02 A6 */	mflr r0
 /* 8044D930 00416EF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -728,7 +728,7 @@
 /* 8044D984 00416F44  38 00 00 0A */	li r0, 0xa
 /* 8044D988 00416F48  38 63 F8 F8 */	addi r3, r3, __vt__7CDevice@l
 /* 8044D98C 00416F4C  90 7D 00 00 */	stw r3, 0(r29)
-/* 8044D990 00416F50  93 AD BD B0 */	stw r29, lbl_80667F30@sda21(r13)
+/* 8044D990 00416F50  93 AD BD B0 */	stw r29, instance__7CDevice@sda21(r13)
 /* 8044D994 00416F54  90 1D 00 50 */	stw r0, 0x50(r29)
 .L_8044D998:
 /* 8044D998 00416F58  7F A3 EB 78 */	mr r3, r29
@@ -743,7 +743,7 @@
 /* 8044D9BC 00416F7C  7C 08 03 A6 */	mtlr r0
 /* 8044D9C0 00416F80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044D9C4 00416F84  4E 80 00 20 */	blr 
-.endfn CDevice_create
+.endfn create__7CDeviceFv
 
 .fn func_8044D9C8, global
 /* 8044D9C8 00416F88  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1050,9 +1050,9 @@
 
 .balign 8
 
-.obj lbl_80667F30, global
+.obj instance__7CDevice, global
 	.skip 0x4
-.endobj lbl_80667F30
+.endobj instance__7CDevice
 
 .obj lbl_80667F34, global
 	.skip 0x4
@@ -1172,7 +1172,7 @@
 
 .obj "@eti_80034970", local
 .hidden "@eti_80034970"
-	.4byte CDevice_create
+	.4byte create__7CDeviceFv
 	.4byte 0x000000A0
 	.4byte "@etb_8001CCE8"
 .endobj "@eti_80034970"

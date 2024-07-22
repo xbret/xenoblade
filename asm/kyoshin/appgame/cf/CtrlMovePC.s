@@ -126,7 +126,7 @@
 /* 80199598 00162B58  C0 02 A0 A0 */	lfs f0, float_8066A420@sda21(r2)
 /* 8019959C 00162B5C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801995A0 00162B60  41 82 00 64 */	beq .L_80199604
-/* 801995A4 00162B64  4B F3 FB E5 */	bl getBattleManagerInstancePtr__Fv
+/* 801995A4 00162B64  4B F3 FB E5 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 801995A8 00162B68  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 801995AC 00162B6C  38 00 00 00 */	li r0, 0
 /* 801995B0 00162B70  28 03 00 01 */	cmplwi r3, 1
@@ -1460,7 +1460,7 @@
 /* 8019A8FC 00163EBC  80 0D A5 A8 */	lwz r0, lbl_80666728@sda21(r13)
 /* 8019A900 00163EC0  54 00 01 4B */	rlwinm. r0, r0, 0, 5, 5
 /* 8019A904 00163EC4  40 82 00 88 */	bne .L_8019A98C
-/* 8019A908 00163EC8  4B F3 E8 81 */	bl getBattleManagerInstancePtr__Fv
+/* 8019A908 00163EC8  4B F3 E8 81 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8019A90C 00163ECC  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 8019A910 00163ED0  2C 00 00 00 */	cmpwi r0, 0
 /* 8019A914 00163ED4  40 82 00 78 */	bne .L_8019A98C
@@ -1830,7 +1830,7 @@
 /* 8019AE64 00164424  4B ED 40 A1 */	bl func_8006EF04
 /* 8019AE68 00164428  2C 03 00 00 */	cmpwi r3, 0
 /* 8019AE6C 0016442C  40 82 00 48 */	bne .L_8019AEB4
-/* 8019AE70 00164430  4B F3 E3 19 */	bl getBattleManagerInstancePtr__Fv
+/* 8019AE70 00164430  4B F3 E3 19 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8019AE74 00164434  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 8019AE78 00164438  38 00 00 00 */	li r0, 0
 /* 8019AE7C 0016443C  28 03 00 01 */	cmplwi r3, 1
@@ -1841,7 +1841,7 @@
 .L_8019AE90:
 /* 8019AE90 00164450  2C 00 00 00 */	cmpwi r0, 0
 /* 8019AE94 00164454  40 82 00 20 */	bne .L_8019AEB4
-/* 8019AE98 00164458  4B F3 E2 F1 */	bl getBattleManagerInstancePtr__Fv
+/* 8019AE98 00164458  4B F3 E2 F1 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8019AE9C 0016445C  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 8019AEA0 00164460  7C 00 00 34 */	cntlzw r0, r0
 /* 8019AEA4 00164464  54 00 D9 7E */	srwi r0, r0, 5

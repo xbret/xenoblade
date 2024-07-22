@@ -325,7 +325,7 @@
 /* 80295CDC 0025F29C  80 04 3F 08 */	lwz r0, 0x3f08(r4)
 /* 80295CE0 0025F2A0  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 80295CE4 0025F2A4  41 82 00 38 */	beq .L_80295D1C
-/* 80295CE8 0025F2A8  4B E4 34 A1 */	bl getBattleManagerInstancePtr__Fv
+/* 80295CE8 0025F2A8  4B E4 34 A1 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80295CEC 0025F2AC  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 80295CF0 0025F2B0  38 80 00 00 */	li r4, 0
 /* 80295CF4 0025F2B4  80 65 00 00 */	lwz r3, 0(r5)

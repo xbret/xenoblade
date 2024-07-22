@@ -29,7 +29,7 @@ CDeviceClock* CDeviceClock::getInstance(){
 }
 
 bool CDeviceClock::func_8044DEE0(){
-	return instance->CWorkThread_inline2();
+	return instance->CWorkThread_inline1();
 }
 
 s64 CDeviceClock::getTimeNow(){

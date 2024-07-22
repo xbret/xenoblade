@@ -809,7 +809,7 @@
 /* 8020DF10 001D74D0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8020DF14 001D74D4  7C 7F 1B 78 */	mr r31, r3
 /* 8020DF18 001D74D8  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8020DF1C 001D74DC  4B EC B2 6D */	bl getBattleManagerInstancePtr__Fv
+/* 8020DF1C 001D74DC  4B EC B2 6D */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8020DF20 001D74E0  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 8020DF24 001D74E4  38 00 00 00 */	li r0, 0
 /* 8020DF28 001D74E8  28 03 00 01 */	cmplwi r3, 1
@@ -820,7 +820,7 @@
 .L_8020DF3C:
 /* 8020DF3C 001D74FC  2C 00 00 00 */	cmpwi r0, 0
 /* 8020DF40 001D7500  40 82 00 14 */	bne .L_8020DF54
-/* 8020DF44 001D7504  4B EC B2 45 */	bl getBattleManagerInstancePtr__Fv
+/* 8020DF44 001D7504  4B EC B2 45 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8020DF48 001D7508  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 8020DF4C 001D750C  2C 00 00 00 */	cmpwi r0, 0
 /* 8020DF50 001D7510  41 82 00 10 */	beq .L_8020DF60

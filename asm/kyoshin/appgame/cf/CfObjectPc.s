@@ -668,7 +668,7 @@
 /* 800C05C8 00089B88  7C 00 1B 78 */	or r0, r0, r3
 /* 800C05CC 00089B8C  54 00 0F FF */	rlwinm. r0, r0, 1, 0x1f, 0x1f
 /* 800C05D0 00089B90  40 82 01 44 */	bne .L_800C0714
-/* 800C05D4 00089B94  48 01 8B B5 */	bl getBattleManagerInstancePtr__Fv
+/* 800C05D4 00089B94  48 01 8B B5 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C05D8 00089B98  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 800C05DC 00089B9C  38 80 00 00 */	li r4, 0
 /* 800C05E0 00089BA0  80 65 00 00 */	lwz r3, 0(r5)
@@ -974,7 +974,7 @@
 /* 800C0A38 00089FF8  FF E0 08 90 */	fmr f31, f1
 /* 800C0A3C 00089FFC  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 800C0A40 0008A000  7C 7F 1B 78 */	mr r31, r3
-/* 800C0A44 0008A004  48 01 87 45 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0A44 0008A004  48 01 87 45 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0A48 0008A008  FC 20 F8 90 */	fmr f1, f31
 /* 800C0A4C 0008A00C  7F E3 FB 78 */	mr r3, r31
 /* 800C0A50 0008A010  48 0B B0 FD */	bl CActorParam_vtableFunc176__Q22cf11CActorParamFv
@@ -1102,7 +1102,7 @@
 /* 800C0C04 0008A1C4  7C 64 1B 78 */	mr r4, r3
 /* 800C0C08 0008A1C8  80 7F 3F 10 */	lwz r3, 0x3f10(r31)
 /* 800C0C0C 0008A1CC  48 1B 55 3D */	bl func_80276148
-/* 800C0C10 0008A1D0  48 01 85 79 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0C10 0008A1D0  48 01 85 79 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0C14 0008A1D4  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 800C0C18 0008A1D8  38 00 00 00 */	li r0, 0
 /* 800C0C1C 0008A1DC  28 03 00 01 */	cmplwi r3, 1
@@ -1113,7 +1113,7 @@
 .L_800C0C30:
 /* 800C0C30 0008A1F0  2C 00 00 00 */	cmpwi r0, 0
 /* 800C0C34 0008A1F4  40 82 00 94 */	bne .L_800C0CC8
-/* 800C0C38 0008A1F8  48 01 85 51 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0C38 0008A1F8  48 01 85 51 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0C3C 0008A1FC  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 800C0C40 0008A200  2C 00 00 00 */	cmpwi r0, 0
 /* 800C0C44 0008A204  40 82 00 84 */	bne .L_800C0CC8
@@ -1294,7 +1294,7 @@
 /* 800C0EC8 0008A488  4E 80 04 21 */	bctrl 
 /* 800C0ECC 0008A48C  2C 03 00 00 */	cmpwi r3, 0
 /* 800C0ED0 0008A490  40 82 02 D0 */	bne .L_800C11A0
-/* 800C0ED4 0008A494  48 01 82 B5 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0ED4 0008A494  48 01 82 B5 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0ED8 0008A498  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 800C0EDC 0008A49C  38 00 00 00 */	li r0, 0
 /* 800C0EE0 0008A4A0  28 03 00 01 */	cmplwi r3, 1
@@ -1308,7 +1308,7 @@
 /* 800C0EFC 0008A4BC  38 60 00 00 */	li r3, 0
 /* 800C0F00 0008A4C0  48 00 02 AC */	b .L_800C11AC
 .L_800C0F04:
-/* 800C0F04 0008A4C4  48 01 82 85 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0F04 0008A4C4  48 01 82 85 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0F08 0008A4C8  38 63 21 6C */	addi r3, r3, 0x216c
 /* 800C0F0C 0008A4CC  48 0F 93 BD */	bl func_801BA2C8
 /* 800C0F10 0008A4D0  2C 03 00 00 */	cmpwi r3, 0
@@ -1316,7 +1316,7 @@
 /* 800C0F18 0008A4D8  38 60 00 00 */	li r3, 0
 /* 800C0F1C 0008A4DC  48 00 02 90 */	b .L_800C11AC
 .L_800C0F20:
-/* 800C0F20 0008A4E0  48 01 82 69 */	bl getBattleManagerInstancePtr__Fv
+/* 800C0F20 0008A4E0  48 01 82 69 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 800C0F24 0008A4E4  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 800C0F28 0008A4E8  2C 00 00 00 */	cmpwi r0, 0
 /* 800C0F2C 0008A4EC  41 82 00 0C */	beq .L_800C0F38

@@ -37,7 +37,7 @@ u8 CDeviceSC::getLanguage(){
 }
 
 bool CDeviceSC::func_80447C60(){
-	return instance->CWorkThread_inline2();
+	return instance->CWorkThread_inline1();
 }
 
 bool CDeviceSC::WorkThreadEvent4(){

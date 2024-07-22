@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CDesktop, global
+.fn __ct__8CDesktopFPCcP11CWorkThread, global
 /* 804559CC 0041EF8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804559D0 0041EF90  7C 08 02 A6 */	mflr r0
 /* 804559D4 0041EF94  38 C0 00 80 */	li r6, 0x80
@@ -19,7 +19,7 @@
 /* 80455A00 0041EFC0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80455A04 0041EFC4  38 7F 01 EC */	addi r3, r31, 0x1ec
 /* 80455A08 0041EFC8  C0 02 C8 9C */	lfs f0, float_8066CC1C@sda21(r2)
-/* 80455A0C 0041EFCC  93 ED BE 04 */	stw r31, CDesktop_instancePtr@sda21(r13)
+/* 80455A0C 0041EFCC  93 ED BE 04 */	stw r31, instance__8CDesktop@sda21(r13)
 /* 80455A10 0041EFD0  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80455A14 0041EFD4  D0 3F 01 EC */	stfs f1, 0x1ec(r31)
 /* 80455A18 0041EFD8  D0 3F 01 F0 */	stfs f1, 0x1f0(r31)
@@ -32,7 +32,7 @@
 /* 80455A34 0041EFF4  7C 08 03 A6 */	mtlr r0
 /* 80455A38 0041EFF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455A3C 0041EFFC  4E 80 00 20 */	blr 
-.endfn __ct__CDesktop
+.endfn __ct__8CDesktopFPCcP11CWorkThread
 
 .fn __dt__8CDesktopFv, global
 /* 80455A40 0041F000  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -44,7 +44,7 @@
 /* 80455A58 0041F018  7C 9F 23 78 */	mr r31, r4
 /* 80455A5C 0041F01C  41 82 00 24 */	beq .L_80455A80
 /* 80455A60 0041F020  38 00 00 00 */	li r0, 0
-/* 80455A64 0041F024  90 0D BE 04 */	stw r0, CDesktop_instancePtr@sda21(r13)
+/* 80455A64 0041F024  90 0D BE 04 */	stw r0, instance__8CDesktop@sda21(r13)
 /* 80455A68 0041F028  38 80 00 00 */	li r4, 0
 /* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__5CProcFv
 /* 80455A70 0041F030  2C 1F 00 00 */	cmpwi r31, 0
@@ -60,13 +60,13 @@
 /* 80455A94 0041F054  4E 80 00 20 */	blr 
 .endfn __dt__8CDesktopFv
 
-.fn getCDesktopInstancePtr__Fv, global
-/* 80455A98 0041F058  80 6D BE 04 */	lwz r3, CDesktop_instancePtr@sda21(r13)
+.fn getInstance__8CDesktopFv, global
+/* 80455A98 0041F058  80 6D BE 04 */	lwz r3, instance__8CDesktop@sda21(r13)
 /* 80455A9C 0041F05C  4E 80 00 20 */	blr 
-.endfn getCDesktopInstancePtr__Fv
+.endfn getInstance__8CDesktopFv
 
 .fn func_80455AA0__Fv, global
-/* 80455AA0 0041F060  80 6D BE 04 */	lwz r3, CDesktop_instancePtr@sda21(r13)
+/* 80455AA0 0041F060  80 6D BE 04 */	lwz r3, instance__8CDesktop@sda21(r13)
 /* 80455AA4 0041F064  2C 03 00 00 */	cmpwi r3, 0
 /* 80455AA8 0041F068  40 82 00 0C */	bne .L_80455AB4
 /* 80455AAC 0041F06C  38 60 00 00 */	li r3, 0
@@ -77,7 +77,7 @@
 .endfn func_80455AA0__Fv
 
 .fn func_80455ABC, global
-/* 80455ABC 0041F07C  80 0D BE 04 */	lwz r0, CDesktop_instancePtr@sda21(r13)
+/* 80455ABC 0041F07C  80 0D BE 04 */	lwz r0, instance__8CDesktop@sda21(r13)
 /* 80455AC0 0041F080  2C 00 00 00 */	cmpwi r0, 0
 /* 80455AC4 0041F084  40 82 00 0C */	bne .L_80455AD0
 /* 80455AC8 0041F088  38 60 00 00 */	li r3, 0
@@ -457,7 +457,7 @@
 .endfn CDesktop_SaveStartFunctionCallback
 
 .fn func_80455FD4, global
-/* 80455FD4 0041F594  80 0D BE 04 */	lwz r0, CDesktop_instancePtr@sda21(r13)
+/* 80455FD4 0041F594  80 0D BE 04 */	lwz r0, instance__8CDesktop@sda21(r13)
 /* 80455FD8 0041F598  2C 00 00 00 */	cmpwi r0, 0
 /* 80455FDC 0041F59C  4D 82 00 20 */	beqlr 
 /* 80455FE0 0041F5A0  2C 03 00 00 */	cmpwi r3, 0
@@ -822,9 +822,9 @@
 	.skip 0x4
 .endobj CDesktop_startFunctionStruct
 
-.obj CDesktop_instancePtr, global
+.obj instance__8CDesktop, global
 	.skip 0x4
-.endobj CDesktop_instancePtr
+.endobj instance__8CDesktop
 
 .obj lbl_80667F88, global
 	.skip 0x4
@@ -931,7 +931,7 @@
 
 .obj "@eti_80034F1C", local
 .hidden "@eti_80034F1C"
-	.4byte __ct__CDesktop
+	.4byte __ct__8CDesktopFPCcP11CWorkThread
 	.4byte 0x00000074
 	.4byte "@etb_8001D2E4"
 .endobj "@eti_80034F1C"

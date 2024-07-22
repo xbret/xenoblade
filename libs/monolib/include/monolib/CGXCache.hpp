@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+#include "monolib/CMsgParam.hpp"
 
 //size: 0x4
 class IStateCache {
@@ -20,7 +21,8 @@ public:
 
 	//0x0: vtable
 	//0x0-0x4: IStateCache
-	u8 unk4[0x50C - 0x4];
+	CMsgParam<32> unk4;
+	u8 unk4A0[0x50C - 0x4A0];
 	u32 unk50C;
 	u8 unk510[0xC];
 };

@@ -4206,7 +4206,7 @@
 /* 80121008 000EA5C8  80 03 02 14 */	lwz r0, 0x214(r3)
 /* 8012100C 000EA5CC  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 80121010 000EA5D0  40 82 0E 58 */	bne .L_80121E68
-/* 80121014 000EA5D4  4B FB 81 75 */	bl getBattleManagerInstancePtr__Fv
+/* 80121014 000EA5D4  4B FB 81 75 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 80121018 000EA5D8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8012101C 000EA5DC  38 80 00 00 */	li r4, 0
 /* 80121020 000EA5E0  80 03 00 08 */	lwz r0, 8(r3)

@@ -2,7 +2,7 @@
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/code_802AEB74.hpp"
 
-FunctionStruct lbl_80528380 = {"ゲームメイン", &GameMain};
+FunctionStruct lbl_80528380 = {"ゲームメイン", &CGame::GameMain};
 const char* const staticArcStr = "static.arc";
 
 const char* const pkhFilenames[13] = {

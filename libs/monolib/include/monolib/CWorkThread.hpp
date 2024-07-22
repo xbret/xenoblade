@@ -4,6 +4,7 @@
 #include "monolib/IWorkEvent.hpp"
 #include "monolib/FixStr.hpp"
 #include "monolib/reslist.hpp"
+#include "monolib/CMsgParam.hpp"
 
 using namespace ml;
 
@@ -23,18 +24,8 @@ public:
 	void func_80438BD8(CWorkThread* r4, u32 r5);
 	u32 func_80457CA4(UNKTYPE* r4, u32 r5);
 
-	inline int CWorkThread_inline1() const {
-
-		for(int i = 0; i < unk1AC; i++){
-			if(unk1A4[((unk1A8 + i) % unk1B0) * 9] == 2){
-				return i;
-            }
-		}
-
-		return -1;
-	}
-    inline bool CWorkThread_inline2() const {
-        bool r0_1 = (unk7C & 0x10) ? true : (CWorkThread_inline1() >= 0);
+    inline bool CWorkThread_inline1() const {
+        bool r0_1 = (unk7C & 0x10) ? true : (unk80.someInline() >= 0);
 	    return (!r0_1 && (unk48 == 2 || unk48 == 3));
     }
 
@@ -47,15 +38,7 @@ public:
 	u32 unk58;
 	reslist<CWorkThread*> unk5C;
 	u32 unk7C;
-	u32 unk80;
-	u8 unk84[0xA0 - 0x84];
-	u8 unkA0[0x1A4 - 0xA0];
-	u32* unk1A4;
-	u32 unk1A8;
-	u32 unk1AC;
-	u32 unk1B0;
-	u32 unk1B4;
-	u32 unk1B8;
+	CMsgParam<8> unk80;
 	u32 unk1BC;
 	u32 unk1C0;
 };

@@ -142,7 +142,7 @@ void CDeviceVI::func_804482B0(u32 r3){
 }
 
 bool CDeviceVI::func_804482DC(){
-	bool result = instance->CWorkThread_inline2();
+	bool result = instance->CWorkThread_inline1();
 	return result == false || (instance->unk4 & 0x4) != 0 ? false : true;
 }
 
@@ -247,7 +247,7 @@ void CDeviceVI::func_80448A84(){
 	if(r0 != 0){
 		r0 = 1;
 	}else{
-		int r0_1 = vi->unk1AC;
+		int r0_1 = vi->unk80.field4;
 		int r6 = 0;
 		if(r0_1 > 0){
 

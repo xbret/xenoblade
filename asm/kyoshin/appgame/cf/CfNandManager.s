@@ -375,10 +375,10 @@
 /* 8023C204 002057C4  38 00 00 00 */	li r0, 0
 /* 8023C208 002057C8  90 03 00 30 */	stw r0, 0x30(r3)
 /* 8023C20C 002057CC  7C 7B 1B 78 */	mr r27, r3
-/* 8023C210 002057D0  4B E9 CF 79 */	bl getBattleManagerInstancePtr__Fv
+/* 8023C210 002057D0  4B E9 CF 79 */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8023C214 002057D4  2C 03 00 00 */	cmpwi r3, 0
 /* 8023C218 002057D8  41 82 00 10 */	beq .L_8023C228
-/* 8023C21C 002057DC  4B E9 CF 6D */	bl getBattleManagerInstancePtr__Fv
+/* 8023C21C 002057DC  4B E9 CF 6D */	bl getInstance__Q22cf14CBattleManagerFv
 /* 8023C220 002057E0  80 03 01 94 */	lwz r0, 0x194(r3)
 /* 8023C224 002057E4  90 1B 00 30 */	stw r0, 0x30(r27)
 .L_8023C228:
