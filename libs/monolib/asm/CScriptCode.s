@@ -511,7 +511,7 @@
 /* 8043A7BC 00403D7C  4E 80 00 20 */	blr 
 .endfn func_8043A70C
 
-.fn CScriptCode_WorkThreadEvent5, global
+.fn CScriptCode_wkShutdown, global
 /* 8043A7C0 00403D80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A7C4 00403D84  7C 08 02 A6 */	mflr r0
 /* 8043A7C8 00403D88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -528,7 +528,7 @@
 /* 8043A7F4 00403DB4  2C 03 00 00 */	cmpwi r3, 0
 /* 8043A7F8 00403DB8  40 82 00 10 */	bne .L_8043A808
 /* 8043A7FC 00403DBC  7F E3 FB 78 */	mr r3, r31
-/* 8043A800 00403DC0  4B FF E2 25 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8043A800 00403DC0  4B FF E2 25 */	bl wkShutdown__11CWorkThreadFv
 /* 8043A804 00403DC4  48 00 00 08 */	b .L_8043A80C
 .L_8043A808:
 /* 8043A808 00403DC8  38 60 00 00 */	li r3, 0
@@ -538,7 +538,7 @@
 /* 8043A814 00403DD4  7C 08 03 A6 */	mtlr r0
 /* 8043A818 00403DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A81C 00403DDC  4E 80 00 20 */	blr 
-.endfn CScriptCode_WorkThreadEvent5
+.endfn CScriptCode_wkShutdown
 
 .fn __ct__8043A820, global
 /* 8043A820 00403DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -697,8 +697,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__11CWorkThreadFv
-	.4byte CScriptCode_WorkThreadEvent5
+	.4byte wkStartup__11CWorkThreadFv
+	.4byte CScriptCode_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CScriptCode
 
@@ -830,7 +830,7 @@
 
 .obj "@eti_80033F8C", local
 .hidden "@eti_80033F8C"
-	.4byte CScriptCode_WorkThreadEvent5
+	.4byte CScriptCode_wkShutdown
 	.4byte 0x00000060
 	.4byte "@etb_8001C308"
 .endobj "@eti_80033F8C"

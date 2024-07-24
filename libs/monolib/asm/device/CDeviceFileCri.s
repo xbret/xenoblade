@@ -25,7 +25,7 @@
 /* 8044F610 00418BD0  90 7F 01 E0 */	stw r3, 0x1e0(r31)
 /* 8044F614 00418BD4  98 7F 01 E4 */	stb r3, 0x1e4(r31)
 /* 8044F618 00418BD8  93 ED BD C8 */	stw r31, lbl_80667F48@sda21(r13)
-/* 8044F61C 00418BDC  4B FF DA 45 */	bl func_8044D060
+/* 8044F61C 00418BDC  4B FF DA 45 */	bl func_8044D060__7CDeviceFv
 /* 8044F620 00418BE0  38 80 08 00 */	li r4, 0x800
 /* 8044F624 00418BE4  38 A0 00 20 */	li r5, 0x20
 /* 8044F628 00418BE8  4B FE 4E 05 */	bl MemManager_8043442C
@@ -1495,11 +1495,11 @@
 /* 804509B0 00419F70  4E 80 00 20 */	blr 
 .endfn CDeviceFileCri_wkUpdate
 
-.fn CDeviceFileCri_WorkThreadEvent4, global
-/* 804509B4 00419F74  4B FE 80 44 */	b WorkThreadEvent4__11CWorkThreadFv
-.endfn CDeviceFileCri_WorkThreadEvent4
+.fn CDeviceFileCri_wkStartup, global
+/* 804509B4 00419F74  4B FE 80 44 */	b wkStartup__11CWorkThreadFv
+.endfn CDeviceFileCri_wkStartup
 
-.fn CDeviceFileCri_WorkThreadEvent5, global
+.fn CDeviceFileCri_wkShutdown, global
 /* 804509B8 00419F78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804509BC 00419F7C  7C 08 02 A6 */	mflr r0
 /* 804509C0 00419F80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1516,7 +1516,7 @@
 /* 804509EC 00419FAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804509F0 00419FB0  40 82 00 10 */	bne .L_80450A00
 /* 804509F4 00419FB4  7F E3 FB 78 */	mr r3, r31
-/* 804509F8 00419FB8  4B FE 80 2D */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804509F8 00419FB8  4B FE 80 2D */	bl wkShutdown__11CWorkThreadFv
 /* 804509FC 00419FBC  48 00 00 08 */	b .L_80450A04
 .L_80450A00:
 /* 80450A00 00419FC0  38 60 00 00 */	li r3, 0
@@ -1526,7 +1526,7 @@
 /* 80450A0C 00419FCC  7C 08 03 A6 */	mtlr r0
 /* 80450A10 00419FD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450A14 00419FD4  4E 80 00 20 */	blr 
-.endfn CDeviceFileCri_WorkThreadEvent5
+.endfn CDeviceFileCri_wkShutdown
 
 .fn CDeviceFileCri_WorkThreadEvent6, global
 /* 80450A18 00419FD8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1674,8 +1674,8 @@
 	.4byte CDeviceFileCri_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CDeviceFileCri_WorkThreadEvent4
-	.4byte CDeviceFileCri_WorkThreadEvent5
+	.4byte CDeviceFileCri_wkStartup
+	.4byte CDeviceFileCri_wkShutdown
 	.4byte CDeviceFileCri_WorkThreadEvent6
 	.4byte __RTTI__14CDeviceFileCri
 	.4byte 0xFFFFFE3C
@@ -1972,7 +1972,7 @@
 
 .obj "@eti_80034B74", local
 .hidden "@eti_80034B74"
-	.4byte CDeviceFileCri_WorkThreadEvent5
+	.4byte CDeviceFileCri_wkShutdown
 	.4byte 0x00000060
 	.4byte "@etb_8001CEFC"
 .endobj "@eti_80034B74"

@@ -1,6 +1,5 @@
 #include "monolib/device/CDeviceGX.hpp"
 #include "monolib/device/CDevice.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/UnkClass_804561AC.hpp"
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/lib/CLib.hpp"
@@ -21,7 +20,7 @@ CDeviceVICb(), unk1CC(false), gxHeap(nullptr), gxHeapEndAddress(nullptr), unk264
 unk270(0), unk274(1), filter(VFILTER_NONE){
 	instance = this;
 	cacheInstance = &unk27C;
-	gxHeap = mtl::allocateHeap(gxHeapSize, func_8044D058(), 0x20);
+	gxHeap = mtl::allocateHeap(gxHeapSize, CDevice::func_8044D058(), 0x20);
 	gxHeapEndAddress = (void*)((u32)gxHeap + gxHeapSize);
 	cacheInstance->unk50C = 0;
 	updateVerticalFilter(VFILTER_NONE);
@@ -166,7 +165,7 @@ int CDeviceGX::func_804557A0(){
 	return instance->gxHeapSize;
 }
 
-bool CDeviceGX::WorkThreadEvent4(){
+bool CDeviceGX::wkStartup(){
 	if(CDeviceVI::func_804482DC()){
 		GXInit(gxHeap, gxHeapSize);
 
@@ -196,20 +195,20 @@ bool CDeviceGX::WorkThreadEvent4(){
 			GXSetDrawSyncCallback(drawSyncCallback);
 		}
 
-		return CWorkThread::WorkThreadEvent4();
+		return CWorkThread::wkStartup();
 	}
 
 	return false;
 }
 
-bool CDeviceGX::WorkThreadEvent5(){
+bool CDeviceGX::wkShutdown(){
 	if(instance->unk1CC == true){
 		GXSetDrawSyncCallback(nullptr);
 	}
 
-	if(unk5C.atStart() && func_8044D438() && CWorkSystem::getInstance() == nullptr
+	if(workThreadList.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
 	&& CLib::getInstance() == nullptr){
-		return CWorkThread::WorkThreadEvent5();
+		return CWorkThread::wkShutdown();
 	}
 
 	return false;
@@ -223,7 +222,7 @@ void CDeviceGX::drawSyncCallback(u16 token){
 	}
 }
 
-void CDeviceGX::init(GXPixelFmt format, u32 heapSize){
+void CDeviceGX::setValues(GXPixelFmt format, u32 heapSize){
 	pixelFormat = format;
 	gxHeapSize = heapSize;
 }

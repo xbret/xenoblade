@@ -157,14 +157,14 @@
 /* 8045957C 00422B3C  4E 80 00 20 */	blr 
 .endfn func_804593F8
 
-.fn CLib_WorkThreadEvent4, global
+.fn CLib_wkStartup, global
 /* 80459580 00422B40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459584 00422B44  7C 08 02 A6 */	mflr r0
 /* 80459588 00422B48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045958C 00422B4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80459590 00422B50  93 C1 00 08 */	stw r30, 8(r1)
 /* 80459594 00422B54  7C 7E 1B 78 */	mr r30, r3
-/* 80459598 00422B58  4B FF 3A D1 */	bl func_8044D068
+/* 80459598 00422B58  4B FF 3A D1 */	bl func_8044D068__7CDeviceFv
 /* 8045959C 00422B5C  2C 03 00 00 */	cmpwi r3, 0
 /* 804595A0 00422B60  41 82 01 38 */	beq .L_804596D8
 /* 804595A4 00422B64  3F E0 80 52 */	lis r31, lbl_805268A8@ha
@@ -247,7 +247,7 @@
 /* 804596C4 00422C84  38 A0 00 00 */	li r5, 0
 /* 804596C8 00422C88  4B FD F5 11 */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 804596CC 00422C8C  7F C3 F3 78 */	mr r3, r30
-/* 804596D0 00422C90  4B FD F3 29 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 804596D0 00422C90  4B FD F3 29 */	bl wkStartup__11CWorkThreadFv
 /* 804596D4 00422C94  48 00 00 08 */	b .L_804596DC
 .L_804596D8:
 /* 804596D8 00422C98  38 60 00 00 */	li r3, 0
@@ -258,9 +258,9 @@
 /* 804596E8 00422CA8  7C 08 03 A6 */	mtlr r0
 /* 804596EC 00422CAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804596F0 00422CB0  4E 80 00 20 */	blr 
-.endfn CLib_WorkThreadEvent4
+.endfn CLib_wkStartup
 
-.fn CLib_WorkThreadEvent5, global
+.fn CLib_wkShutdown, global
 /* 804596F4 00422CB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804596F8 00422CB8  7C 08 02 A6 */	mflr r0
 /* 804596FC 00422CBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -292,7 +292,7 @@
 /* 80459760 00422D20  2C 03 00 00 */	cmpwi r3, 0
 /* 80459764 00422D24  40 82 00 10 */	bne .L_80459774
 /* 80459768 00422D28  7F C3 F3 78 */	mr r3, r30
-/* 8045976C 00422D2C  4B FD F2 B9 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8045976C 00422D2C  4B FD F2 B9 */	bl wkShutdown__11CWorkThreadFv
 /* 80459770 00422D30  48 00 00 08 */	b .L_80459778
 .L_80459774:
 /* 80459774 00422D34  38 60 00 00 */	li r3, 0
@@ -303,7 +303,7 @@
 /* 80459784 00422D44  7C 08 03 A6 */	mtlr r0
 /* 80459788 00422D48  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045978C 00422D4C  4E 80 00 20 */	blr 
-.endfn CLib_WorkThreadEvent5
+.endfn CLib_wkShutdown
 
 .fn CLib_create, global
 /* 80459790 00422D50  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -312,7 +312,7 @@
 /* 8045979C 00422D5C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804597A0 00422D60  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804597A4 00422D64  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 804597A8 00422D68  4B FE A0 15 */	bl func_804437BC
+/* 804597A8 00422D68  4B FE A0 15 */	bl func_804437BC__Fv
 /* 804597AC 00422D6C  3C 80 80 52 */	lis r4, lbl_805268A8@ha
 /* 804597B0 00422D70  7C 7E 1B 78 */	mr r30, r3
 /* 804597B4 00422D74  38 84 68 A8 */	addi r4, r4, lbl_805268A8@l
@@ -409,8 +409,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CLib_WorkThreadEvent4
-	.4byte CLib_WorkThreadEvent5
+	.4byte CLib_wkStartup
+	.4byte CLib_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__4CLib
 
@@ -512,14 +512,14 @@
 
 .obj "@eti_800350E4", local
 .hidden "@eti_800350E4"
-	.4byte CLib_WorkThreadEvent4
+	.4byte CLib_wkStartup
 	.4byte 0x00000174
 	.4byte "@etb_8001D488"
 .endobj "@eti_800350E4"
 
 .obj "@eti_800350F0", local
 .hidden "@eti_800350F0"
-	.4byte CLib_WorkThreadEvent5
+	.4byte CLib_wkShutdown
 	.4byte 0x0000009C
 	.4byte "@etb_8001D490"
 .endobj "@eti_800350F0"

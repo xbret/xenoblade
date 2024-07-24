@@ -409,7 +409,7 @@
 /* 8044E0A4 00417664  4E 80 00 20 */	blr 
 .endfn wkUpdate__12CDeviceClockFv
 
-.fn WorkThreadEvent4__12CDeviceClockFv, global
+.fn wkStartup__12CDeviceClockFv, global
 /* 8044E0A8 00417668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E0AC 0041766C  7C 08 02 A6 */	mflr r0
 /* 8044E0B0 00417670  90 01 00 14 */	stw r0, 0x14(r1)
@@ -417,15 +417,15 @@
 /* 8044E0B8 00417678  7C 7F 1B 78 */	mr r31, r3
 /* 8044E0BC 0041767C  4B FF 94 DD */	bl func_80447598__Fv
 /* 8044E0C0 00417680  7F E3 FB 78 */	mr r3, r31
-/* 8044E0C4 00417684  4B FE A9 35 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8044E0C4 00417684  4B FE A9 35 */	bl wkStartup__11CWorkThreadFv
 /* 8044E0C8 00417688  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8044E0CC 0041768C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8044E0D0 00417690  7C 08 03 A6 */	mtlr r0
 /* 8044E0D4 00417694  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E0D8 00417698  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent4__12CDeviceClockFv
+.endfn wkStartup__12CDeviceClockFv
 
-.fn WorkThreadEvent5__12CDeviceClockFv, global
+.fn wkShutdown__12CDeviceClockFv, global
 /* 8044E0DC 0041769C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E0E0 004176A0  7C 08 02 A6 */	mflr r0
 /* 8044E0E4 004176A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -445,7 +445,7 @@
 /* 8044E11C 004176DC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044E120 004176E0  40 82 00 10 */	bne .L_8044E130
 /* 8044E124 004176E4  7F E3 FB 78 */	mr r3, r31
-/* 8044E128 004176E8  4B FE A8 FD */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8044E128 004176E8  4B FE A8 FD */	bl wkShutdown__11CWorkThreadFv
 /* 8044E12C 004176EC  48 00 00 08 */	b .L_8044E134
 .L_8044E130:
 /* 8044E130 004176F0  38 60 00 00 */	li r3, 0
@@ -455,7 +455,7 @@
 /* 8044E13C 004176FC  7C 08 03 A6 */	mtlr r0
 /* 8044E140 00417700  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E144 00417704  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent5__12CDeviceClockFv
+.endfn wkShutdown__12CDeviceClockFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -519,8 +519,8 @@
 	.4byte wkUpdate__12CDeviceClockFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__12CDeviceClockFv
-	.4byte WorkThreadEvent5__12CDeviceClockFv
+	.4byte wkStartup__12CDeviceClockFv
+	.4byte wkShutdown__12CDeviceClockFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__12CDeviceClock
 
@@ -708,14 +708,14 @@
 
 .obj "@eti_800349F4", local
 .hidden "@eti_800349F4"
-	.4byte WorkThreadEvent4__12CDeviceClockFv
+	.4byte wkStartup__12CDeviceClockFv
 	.4byte 0x00000034
 	.4byte "@etb_8001CD74"
 .endobj "@eti_800349F4"
 
 .obj "@eti_80034A00", local
 .hidden "@eti_80034A00"
-	.4byte WorkThreadEvent5__12CDeviceClockFv
+	.4byte wkShutdown__12CDeviceClockFv
 	.4byte 0x0000006C
 	.4byte "@etb_8001CD7C"
 .endobj "@eti_80034A00"

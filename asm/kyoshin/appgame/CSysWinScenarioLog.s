@@ -125,7 +125,7 @@
 /* 8027E668 00247C28  41 82 00 08 */	beq .L_8027E670
 /* 8027E66C 00247C2C  3B FE 00 6C */	addi r31, r30, 0x6c
 .L_8027E670:
-/* 8027E670 00247C30  48 1B 5D 31 */	bl Heap_getRegionIndex2
+/* 8027E670 00247C30  48 1B 5D 31 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8027E674 00247C34  3C 80 80 51 */	lis r4, CSysWinScenarioLog_strpool@ha
 /* 8027E678 00247C38  7F E5 FB 78 */	mr r5, r31
 /* 8027E67C 00247C3C  38 84 A4 A8 */	addi r4, r4, CSysWinScenarioLog_strpool@l
@@ -572,7 +572,7 @@
 /* 8027ECA0 00248260  80 03 00 74 */	lwz r0, 0x74(r3)
 /* 8027ECA4 00248264  7C 00 20 40 */	cmplw r0, r4
 /* 8027ECA8 00248268  40 82 01 5C */	bne .L_8027EE04
-/* 8027ECAC 0024826C  48 1B 56 F5 */	bl Heap_getRegionIndex2
+/* 8027ECAC 0024826C  48 1B 56 F5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8027ECB0 00248270  3C C0 80 51 */	lis r6, CSysWinScenarioLog_strpool@ha
 /* 8027ECB4 00248274  3C A0 00 01 */	lis r5, 1
 /* 8027ECB8 00248278  38 C6 A4 A8 */	addi r6, r6, CSysWinScenarioLog_strpool@l

@@ -307,7 +307,7 @@
 /* 801AC224 001757E4  F3 E1 00 58 */	psq_st f31, 88(r1), 0, qr0
 /* 801AC228 001757E8  48 10 DF 25 */	bl _savegpr_25
 /* 801AC22C 001757EC  7C 7B 1B 78 */	mr r27, r3
-/* 801AC230 001757F0  48 28 81 71 */	bl Heap_getRegionIndex2
+/* 801AC230 001757F0  48 28 81 71 */	bl Heap_getRegionIndex2__3mtlFv
 /* 801AC234 001757F4  3C A0 00 03 */	lis r5, 0x0002C000@ha
 /* 801AC238 001757F8  3F 40 80 50 */	lis r26, CMenuVision_strpool@ha
 /* 801AC23C 001757FC  7C 64 1B 78 */	mr r4, r3

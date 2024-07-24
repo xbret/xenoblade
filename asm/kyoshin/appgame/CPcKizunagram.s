@@ -306,7 +306,7 @@
 /* 8025D87C 00226E3C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8025D880 00226E40  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8025D884 00226E44  7C 7F 1B 78 */	mr r31, r3
-/* 8025D888 00226E48  48 1D 6B 19 */	bl Heap_getRegionIndex2
+/* 8025D888 00226E48  48 1D 6B 19 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025D88C 00226E4C  3C 80 80 51 */	lis r4, CPcKizunagram_strpool@ha
 /* 8025D890 00226E50  7F E5 FB 78 */	mr r5, r31
 /* 8025D894 00226E54  38 84 8F 00 */	addi r4, r4, CPcKizunagram_strpool@l
@@ -1615,7 +1615,7 @@
 /* 8025EA80 00228040  80 04 00 04 */	lwz r0, 4(r4)
 /* 8025EA84 00228044  7C 05 00 40 */	cmplw r5, r0
 /* 8025EA88 00228048  40 82 01 6C */	bne .L_8025EBF4
-/* 8025EA8C 0022804C  48 1D 59 15 */	bl Heap_getRegionIndex2
+/* 8025EA8C 0022804C  48 1D 59 15 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025EA90 00228050  3F A0 80 51 */	lis r29, CPcKizunagram_strpool@ha
 /* 8025EA94 00228054  3C A0 00 01 */	lis r5, 0x00012000@ha
 /* 8025EA98 00228058  3B BD 8F 00 */	addi r29, r29, CPcKizunagram_strpool@l

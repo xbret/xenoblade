@@ -132,7 +132,7 @@
 /* 8017EF6C 0014852C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8017EF70 00148530  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8017EF74 00148534  7C 7D 1B 78 */	mr r29, r3
-/* 8017EF78 00148538  48 2B 54 29 */	bl Heap_getRegionIndex2
+/* 8017EF78 00148538  48 2B 54 29 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8017EF7C 0014853C  3F C0 80 50 */	lis r30, CMenuZeal_strpool@ha
 /* 8017EF80 00148540  7C 64 1B 78 */	mr r4, r3
 /* 8017EF84 00148544  38 7D 00 A4 */	addi r3, r29, 0xa4

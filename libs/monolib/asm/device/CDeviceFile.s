@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CDeviceFile, global
+.fn __ct__11CDeviceFileFPCcP11CWorkThread, global
 /* 8044E148 00417708  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E14C 0041770C  7C 08 02 A6 */	mflr r0
 /* 8044E150 00417710  38 C0 00 08 */	li r6, 8
@@ -30,7 +30,7 @@
 /* 8044E1A8 00417768  90 84 00 00 */	stw r4, 0(r4)
 /* 8044E1AC 0041776C  90 84 00 04 */	stw r4, 4(r4)
 /* 8044E1B0 00417770  90 7E 01 CC */	stw r3, 0x1cc(r30)
-/* 8044E1B4 00417774  93 CD BD C0 */	stw r30, lbl_80667F40@sda21(r13)
+/* 8044E1B4 00417774  93 CD BD C0 */	stw r30, instance__11CDeviceFile@sda21(r13)
 /* 8044E1B8 00417778  4B FE 93 FD */	bl getHeapIndex__3mtlFv
 /* 8044E1BC 0041777C  7C 64 1B 78 */	mr r4, r3
 /* 8044E1C0 00417780  38 60 0C 00 */	li r3, 0xc00
@@ -98,7 +98,7 @@
 /* 8044E2B4 00417874  7C 08 03 A6 */	mtlr r0
 /* 8044E2B8 00417878  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E2BC 0041787C  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceFile
+.endfn __ct__11CDeviceFileFPCcP11CWorkThread
 
 .fn __dt___reslist_base_CFileHandle, global
 /* 8044E2C0 00417880  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -218,7 +218,7 @@
 /* 8044E450 00417A10  41 82 00 9C */	beq .L_8044E4EC
 /* 8044E454 00417A14  37 E3 01 CC */	addic. r31, r3, 0x1cc
 /* 8044E458 00417A18  38 00 00 00 */	li r0, 0
-/* 8044E45C 00417A1C  90 0D BD C0 */	stw r0, lbl_80667F40@sda21(r13)
+/* 8044E45C 00417A1C  90 0D BD C0 */	stw r0, instance__11CDeviceFile@sda21(r13)
 /* 8044E460 00417A20  41 82 00 68 */	beq .L_8044E4C8
 /* 8044E464 00417A24  41 82 00 64 */	beq .L_8044E4C8
 /* 8044E468 00417A28  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CFileHandle>"@ha
@@ -269,16 +269,16 @@
 /* 8044E508 00417AC8  4E 80 00 20 */	blr 
 .endfn __dt__11CDeviceFileFv
 
-.fn func_8044E50C, global
-/* 8044E50C 00417ACC  80 6D BD C0 */	lwz r3, lbl_80667F40@sda21(r13)
+.fn getInstance__11CDeviceFileFv, global
+/* 8044E50C 00417ACC  80 6D BD C0 */	lwz r3, instance__11CDeviceFile@sda21(r13)
 /* 8044E510 00417AD0  4E 80 00 20 */	blr 
-.endfn func_8044E50C
+.endfn getInstance__11CDeviceFileFv
 
 .fn func_8044E514, global
 /* 8044E514 00417AD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E518 00417AD8  7C 08 02 A6 */	mflr r0
 /* 8044E51C 00417ADC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8044E520 00417AE0  80 CD BD C0 */	lwz r6, lbl_80667F40@sda21(r13)
+/* 8044E520 00417AE0  80 CD BD C0 */	lwz r6, instance__11CDeviceFile@sda21(r13)
 /* 8044E524 00417AE4  80 06 00 7C */	lwz r0, 0x7c(r6)
 /* 8044E528 00417AE8  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 8044E52C 00417AEC  41 82 00 0C */	beq .L_8044E538
@@ -461,14 +461,14 @@
 .endfn func_8044E768
 
 .fn func_8044E770, global
-/* 8044E770 00417D30  80 8D BD C0 */	lwz r4, lbl_80667F40@sda21(r13)
+/* 8044E770 00417D30  80 8D BD C0 */	lwz r4, instance__11CDeviceFile@sda21(r13)
 /* 8044E774 00417D34  90 64 01 C8 */	stw r3, 0x1c8(r4)
 /* 8044E778 00417D38  38 60 00 01 */	li r3, 1
 /* 8044E77C 00417D3C  4E 80 00 20 */	blr 
 .endfn func_8044E770
 
 .fn func_8044E780, global
-/* 8044E780 00417D40  80 8D BD C0 */	lwz r4, lbl_80667F40@sda21(r13)
+/* 8044E780 00417D40  80 8D BD C0 */	lwz r4, instance__11CDeviceFile@sda21(r13)
 /* 8044E784 00417D44  38 00 00 00 */	li r0, 0
 /* 8044E788 00417D48  38 60 00 01 */	li r3, 1
 /* 8044E78C 00417D4C  90 04 01 C8 */	stw r0, 0x1c8(r4)
@@ -587,7 +587,7 @@
 /* 8044E910 00417ED0  7C 7E 1B 78 */	mr r30, r3
 .L_8044E914:
 /* 8044E914 00417ED4  2C 1E 00 00 */	cmpwi r30, 0
-/* 8044E918 00417ED8  80 AD BD C0 */	lwz r5, lbl_80667F40@sda21(r13)
+/* 8044E918 00417ED8  80 AD BD C0 */	lwz r5, instance__11CDeviceFile@sda21(r13)
 /* 8044E91C 00417EDC  41 82 00 6C */	beq .L_8044E988
 /* 8044E920 00417EE0  81 05 01 D0 */	lwz r8, 0x1d0(r5)
 /* 8044E924 00417EE4  38 80 00 00 */	li r4, 0
@@ -871,7 +871,7 @@
 /* 8044ECF0 004182B0  7C 7E 1B 78 */	mr r30, r3
 .L_8044ECF4:
 /* 8044ECF4 004182B4  2C 1E 00 00 */	cmpwi r30, 0
-/* 8044ECF8 004182B8  80 AD BD C0 */	lwz r5, lbl_80667F40@sda21(r13)
+/* 8044ECF8 004182B8  80 AD BD C0 */	lwz r5, instance__11CDeviceFile@sda21(r13)
 /* 8044ECFC 004182BC  41 82 00 6C */	beq .L_8044ED68
 /* 8044ED00 004182C0  81 05 01 D0 */	lwz r8, 0x1d0(r5)
 /* 8044ED04 004182C4  38 80 00 00 */	li r4, 0
@@ -1118,7 +1118,7 @@
 /* 8044F040 00418600  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044F044 00418604  7C 7E 1B 78 */	mr r30, r3
 /* 8044F048 00418608  80 83 01 C4 */	lwz r4, 0x1c4(r3)
-/* 8044F04C 0041860C  80 6D BD C0 */	lwz r3, lbl_80667F40@sda21(r13)
+/* 8044F04C 0041860C  80 6D BD C0 */	lwz r3, instance__11CDeviceFile@sda21(r13)
 /* 8044F050 00418610  2C 04 00 00 */	cmpwi r4, 0
 /* 8044F054 00418614  40 82 00 0C */	bne .L_8044F060
 /* 8044F058 00418618  3B E0 00 00 */	li r31, 0
@@ -1422,14 +1422,14 @@
 /* 8044F420 004189E0  4E 80 00 20 */	blr 
 .endfn CDeviceFile_8044F414__FP17UnkClass_80451720
 
-.fn CDeviceFile_WorkThreadEvent4, global
+.fn CDeviceFile_wkStartup, global
 /* 8044F424 004189E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044F428 004189E8  7C 08 02 A6 */	mflr r0
 /* 8044F42C 004189EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8044F430 004189F0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044F434 004189F4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044F438 004189F8  7C 7E 1B 78 */	mr r30, r3
-/* 8044F43C 004189FC  4B FF DE 0D */	bl func_8044D248
+/* 8044F43C 004189FC  4B FF DE 0D */	bl func_8044D248__7CDeviceFv
 /* 8044F440 00418A00  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F444 00418A04  41 82 00 88 */	beq .L_8044F4CC
 /* 8044F448 00418A08  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
@@ -1465,7 +1465,7 @@
 /* 8044F4B8 00418A78  38 A0 00 00 */	li r5, 0
 /* 8044F4BC 00418A7C  4B FE 97 1D */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 8044F4C0 00418A80  7F C3 F3 78 */	mr r3, r30
-/* 8044F4C4 00418A84  4B FE 95 35 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8044F4C4 00418A84  4B FE 95 35 */	bl wkStartup__11CWorkThreadFv
 /* 8044F4C8 00418A88  48 00 00 08 */	b .L_8044F4D0
 .L_8044F4CC:
 /* 8044F4CC 00418A8C  38 60 00 00 */	li r3, 0
@@ -1476,9 +1476,9 @@
 /* 8044F4DC 00418A9C  7C 08 03 A6 */	mtlr r0
 /* 8044F4E0 00418AA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044F4E4 00418AA4  4E 80 00 20 */	blr 
-.endfn CDeviceFile_WorkThreadEvent4
+.endfn CDeviceFile_wkStartup
 
-.fn CDeviceFile_WorkThreadEvent5, global
+.fn CDeviceFile_wkShutdown, global
 /* 8044F4E8 00418AA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044F4EC 00418AAC  7C 08 02 A6 */	mflr r0
 /* 8044F4F0 00418AB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1495,7 +1495,7 @@
 /* 8044F51C 00418ADC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F520 00418AE0  40 82 00 10 */	bne .L_8044F530
 /* 8044F524 00418AE4  7F E3 FB 78 */	mr r3, r31
-/* 8044F528 00418AE8  4B FE 94 FD */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8044F528 00418AE8  4B FE 94 FD */	bl wkShutdown__11CWorkThreadFv
 /* 8044F52C 00418AEC  48 00 00 08 */	b .L_8044F534
 .L_8044F530:
 /* 8044F530 00418AF0  38 60 00 00 */	li r3, 0
@@ -1505,7 +1505,7 @@
 /* 8044F53C 00418AFC  7C 08 03 A6 */	mtlr r0
 /* 8044F540 00418B00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044F544 00418B04  4E 80 00 20 */	blr 
-.endfn CDeviceFile_WorkThreadEvent5
+.endfn CDeviceFile_wkShutdown
 
 .fn func_8044F548, global
 /* 8044F548 00418B08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1618,8 +1618,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CDeviceFile_WorkThreadEvent4
-	.4byte CDeviceFile_WorkThreadEvent5
+	.4byte CDeviceFile_wkStartup
+	.4byte CDeviceFile_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CDeviceFile
 
@@ -1683,9 +1683,9 @@
 
 .balign 8
 
-.obj lbl_80667F40, global
+.obj instance__11CDeviceFile, global
 	.skip 0x8
-.endobj lbl_80667F40
+.endobj instance__11CDeviceFile
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -1806,7 +1806,7 @@
 
 .obj "@eti_80034A0C", local
 .hidden "@eti_80034A0C"
-	.4byte __ct__CDeviceFile
+	.4byte __ct__11CDeviceFileFPCcP11CWorkThread
 	.4byte 0x00000178
 	.4byte "@etb_8001CD84"
 .endobj "@eti_80034A0C"
@@ -1897,14 +1897,14 @@
 
 .obj "@eti_80034AA8", local
 .hidden "@eti_80034AA8"
-	.4byte CDeviceFile_WorkThreadEvent4
+	.4byte CDeviceFile_wkStartup
 	.4byte 0x000000C4
 	.4byte "@etb_8001CE20"
 .endobj "@eti_80034AA8"
 
 .obj "@eti_80034AB4", local
 .hidden "@eti_80034AB4"
-	.4byte CDeviceFile_WorkThreadEvent5
+	.4byte CDeviceFile_wkShutdown
 	.4byte 0x00000060
 	.4byte "@etb_8001CE28"
 .endobj "@eti_80034AB4"

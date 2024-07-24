@@ -216,11 +216,11 @@
 /* 8048F008 004585C8  80 7A 00 08 */	lwz r3, 8(r26)
 /* 8048F00C 004585CC  38 84 FF 00 */	addi r4, r4, -256
 /* 8048F010 004585D0  38 A5 79 08 */	addi r5, r5, CScnRootNw4r_strpool@l
-/* 8048F014 004585D4  4B FA 50 2D */	bl heap_createRegion
+/* 8048F014 004585D4  4B FA 50 2D */	bl heap_createRegion__3mtlFiiPCc
 /* 8048F018 004585D8  90 7C 04 AC */	stw r3, 0x4ac(r28)
 /* 8048F01C 004585DC  48 00 00 0C */	b .L_8048F028
 .L_8048F020:
-/* 8048F020 004585E0  4B FA 53 81 */	bl Heap_getRegionIndex2
+/* 8048F020 004585E0  4B FA 53 81 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8048F024 004585E4  90 7C 04 AC */	stw r3, 0x4ac(r28)
 .L_8048F028:
 /* 8048F028 004585E8  C0 02 CE 34 */	lfs f0, float_8066D1B4@sda21(r2)
@@ -246,11 +246,11 @@
 /* 8048F078 00458638  80 C5 00 88 */	lwz r6, 0x88(r5)
 /* 8048F07C 0045863C  38 A3 00 09 */	addi r5, r3, 9
 /* 8048F080 00458640  80 66 00 08 */	lwz r3, 8(r6)
-/* 8048F084 00458644  4B FA 4F BD */	bl heap_createRegion
+/* 8048F084 00458644  4B FA 4F BD */	bl heap_createRegion__3mtlFiiPCc
 /* 8048F088 00458648  90 7C 04 B8 */	stw r3, 0x4b8(r28)
 /* 8048F08C 0045864C  48 00 00 0C */	b .L_8048F098
 .L_8048F090:
-/* 8048F090 00458650  4B FA 53 11 */	bl Heap_getRegionIndex2
+/* 8048F090 00458650  4B FA 53 11 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8048F094 00458654  90 7C 04 B8 */	stw r3, 0x4b8(r28)
 .L_8048F098:
 /* 8048F098 00458658  C0 02 CE 34 */	lfs f0, float_8066D1B4@sda21(r2)
@@ -276,11 +276,11 @@
 /* 8048F0E8 004586A8  80 C5 00 88 */	lwz r6, 0x88(r5)
 /* 8048F0EC 004586AC  38 A3 00 15 */	addi r5, r3, 0x15
 /* 8048F0F0 004586B0  80 66 00 08 */	lwz r3, 8(r6)
-/* 8048F0F4 004586B4  4B FA 4F 4D */	bl heap_createRegion
+/* 8048F0F4 004586B4  4B FA 4F 4D */	bl heap_createRegion__3mtlFiiPCc
 /* 8048F0F8 004586B8  90 7C 04 C4 */	stw r3, 0x4c4(r28)
 /* 8048F0FC 004586BC  48 00 00 0C */	b .L_8048F108
 .L_8048F100:
-/* 8048F100 004586C0  4B FA 52 A1 */	bl Heap_getRegionIndex2
+/* 8048F100 004586C0  4B FA 52 A1 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8048F104 004586C4  90 7C 04 C4 */	stw r3, 0x4c4(r28)
 .L_8048F108:
 /* 8048F108 004586C8  C0 02 CE 34 */	lfs f0, float_8066D1B4@sda21(r2)
@@ -305,11 +305,11 @@
 /* 8048F154 00458714  38 A5 79 08 */	addi r5, r5, CScnRootNw4r_strpool@l
 /* 8048F158 00458718  7C 04 0E 70 */	srawi r4, r0, 1
 /* 8048F15C 0045871C  38 A5 00 21 */	addi r5, r5, 0x21
-/* 8048F160 00458720  4B FA 4E E1 */	bl heap_createRegion
+/* 8048F160 00458720  4B FA 4E E1 */	bl heap_createRegion__3mtlFiiPCc
 /* 8048F164 00458724  90 7C 04 D0 */	stw r3, 0x4d0(r28)
 /* 8048F168 00458728  48 00 00 0C */	b .L_8048F174
 .L_8048F16C:
-/* 8048F16C 0045872C  4B FA 52 35 */	bl Heap_getRegionIndex2
+/* 8048F16C 0045872C  4B FA 52 35 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8048F170 00458730  90 7C 04 D0 */	stw r3, 0x4d0(r28)
 .L_8048F174:
 /* 8048F174 00458734  80 7C 04 D0 */	lwz r3, 0x4d0(r28)
@@ -331,7 +331,7 @@
 /* 8048F1B4 00458774  90 1C 04 8C */	stw r0, 0x48c(r28)
 /* 8048F1B8 00458778  93 FC 04 90 */	stw r31, 0x490(r28)
 /* 8048F1BC 0045877C  93 9C 04 94 */	stw r28, 0x494(r28)
-/* 8048F1C0 00458780  4B FA 51 D9 */	bl Heap_getRegionIndex1
+/* 8048F1C0 00458780  4B FA 51 D9 */	bl Heap_getRegionIndex1__3mtlFv
 /* 8048F1C4 00458784  38 1C 04 DC */	addi r0, r28, 0x4dc
 /* 8048F1C8 00458788  90 7C 04 98 */	stw r3, 0x498(r28)
 /* 8048F1CC 0045878C  93 5C 04 E4 */	stw r26, 0x4e4(r28)
@@ -339,7 +339,7 @@
 /* 8048F1D4 00458794  90 1C 04 9C */	stw r0, 0x49c(r28)
 /* 8048F1D8 00458798  93 FC 04 A0 */	stw r31, 0x4a0(r28)
 /* 8048F1DC 0045879C  93 9C 04 A4 */	stw r28, 0x4a4(r28)
-/* 8048F1E0 004587A0  4B FA 51 C1 */	bl Heap_getRegionIndex2
+/* 8048F1E0 004587A0  4B FA 51 C1 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8048F1E4 004587A4  90 7C 04 A8 */	stw r3, 0x4a8(r28)
 /* 8048F1E8 004587A8  7F C6 F3 78 */	mr r6, r30
 /* 8048F1EC 004587AC  38 7C 04 5C */	addi r3, r28, 0x45c

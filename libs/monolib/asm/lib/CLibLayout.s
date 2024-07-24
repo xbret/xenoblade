@@ -283,7 +283,7 @@
 /* 8045F31C 004288DC  4E 80 00 20 */	blr 
 .endfn CLibLayout_wkUpdate
 
-.fn CLibLayout_WorkThreadEvent4, global
+.fn CLibLayout_wkStartup, global
 /* 8045F320 004288E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F324 004288E4  7C 08 02 A6 */	mflr r0
 /* 8045F328 004288E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -293,12 +293,12 @@
 /* 8045F338 004288F8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045F33C 004288FC  41 82 00 80 */	beq .L_8045F3BC
 /* 8045F340 00428900  4B F9 F5 71 */	bl LytInit__Q24nw4r3lytFv
-/* 8045F344 00428904  4B FD 50 5D */	bl Heap_getRegionIndex2
+/* 8045F344 00428904  4B FD 50 5D */	bl Heap_getRegionIndex2__3mtlFv
 /* 8045F348 00428908  3C 80 00 04 */	lis r4, 0x0003FFE0@ha
 /* 8045F34C 0042890C  3C A0 80 52 */	lis r5, lbl_80526AE4@ha
 /* 8045F350 00428910  38 84 FF E0 */	addi r4, r4, 0x0003FFE0@l
 /* 8045F354 00428914  38 A5 6A E4 */	addi r5, r5, lbl_80526AE4@l
-/* 8045F358 00428918  4B FD 4C E9 */	bl heap_createRegion
+/* 8045F358 00428918  4B FD 4C E9 */	bl heap_createRegion__3mtlFiiPCc
 /* 8045F35C 0042891C  3C E0 80 46 */	lis r7, func_8045F438@ha
 /* 8045F360 00428920  3C C0 80 46 */	lis r6, func_8045F4E4@ha
 /* 8045F364 00428924  38 E7 F4 38 */	addi r7, r7, func_8045F438@l
@@ -321,7 +321,7 @@
 /* 8045F3A8 00428968  90 7F 02 34 */	stw r3, 0x234(r31)
 /* 8045F3AC 0042896C  7F E3 FB 78 */	mr r3, r31
 /* 8045F3B0 00428970  90 0D BB D8 */	stw r0, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
-/* 8045F3B4 00428974  4B FD 96 45 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8045F3B4 00428974  4B FD 96 45 */	bl wkStartup__11CWorkThreadFv
 /* 8045F3B8 00428978  48 00 00 08 */	b .L_8045F3C0
 .L_8045F3BC:
 /* 8045F3BC 0042897C  38 60 00 00 */	li r3, 0
@@ -331,9 +331,9 @@
 /* 8045F3C8 00428988  7C 08 03 A6 */	mtlr r0
 /* 8045F3CC 0042898C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F3D0 00428990  4E 80 00 20 */	blr 
-.endfn CLibLayout_WorkThreadEvent4
+.endfn CLibLayout_wkStartup
 
-.fn CLibLayout_WorkThreadEvent5, global
+.fn CLibLayout_wkShutdown, global
 /* 8045F3D4 00428994  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F3D8 00428998  7C 08 02 A6 */	mflr r0
 /* 8045F3DC 0042899C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -347,11 +347,11 @@
 /* 8045F3FC 004289BC  2C 03 00 00 */	cmpwi r3, 0
 /* 8045F400 004289C0  40 82 00 20 */	bne .L_8045F420
 /* 8045F404 004289C4  80 7F 01 DC */	lwz r3, 0x1dc(r31)
-/* 8045F408 004289C8  4B FD 4F A9 */	bl MemManager_804343B0
+/* 8045F408 004289C8  4B FD 4F A9 */	bl heap_deleteRegion__3mtlFi
 /* 8045F40C 004289CC  38 00 FF FF */	li r0, -1
 /* 8045F410 004289D0  90 1F 01 DC */	stw r0, 0x1dc(r31)
 /* 8045F414 004289D4  7F E3 FB 78 */	mr r3, r31
-/* 8045F418 004289D8  4B FD 96 0D */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8045F418 004289D8  4B FD 96 0D */	bl wkShutdown__11CWorkThreadFv
 /* 8045F41C 004289DC  48 00 00 08 */	b .L_8045F424
 .L_8045F420:
 /* 8045F420 004289E0  38 60 00 00 */	li r3, 0
@@ -361,7 +361,7 @@
 /* 8045F42C 004289EC  7C 08 03 A6 */	mtlr r0
 /* 8045F430 004289F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F434 004289F4  4E 80 00 20 */	blr
-.endfn CLibLayout_WorkThreadEvent5
+.endfn CLibLayout_wkShutdown
 
 .fn func_8045F438, global
 /* 8045F438 004289F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -485,7 +485,7 @@
 /* 8045F5CC 00428B8C  38 60 00 00 */	li r3, 0
 /* 8045F5D0 00428B90  4B FD 54 7D */	bl MemManager_80434A4C__FUc
 /* 8045F5D4 00428B94  80 7E 00 00 */	lwz r3, 0(r30)
-/* 8045F5D8 00428B98  4B FD 4D D9 */	bl MemManager_804343B0
+/* 8045F5D8 00428B98  4B FD 4D D9 */	bl heap_deleteRegion__3mtlFi
 /* 8045F5DC 00428B9C  38 60 00 01 */	li r3, 1
 /* 8045F5E0 00428BA0  4B FD 54 6D */	bl MemManager_80434A4C__FUc
 /* 8045F5E4 00428BA4  38 00 FF FF */	li r0, -1
@@ -553,7 +553,7 @@
 /* 8045F6B0 00428C70  3C 03 00 01 */	addis r0, r3, 1
 /* 8045F6B4 00428C74  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8045F6B8 00428C78  41 82 00 08 */	beq .L_8045F6C0
-/* 8045F6BC 00428C7C  4B FD 4C F5 */	bl MemManager_804343B0
+/* 8045F6BC 00428C7C  4B FD 4C F5 */	bl heap_deleteRegion__3mtlFi
 .L_8045F6C0:
 /* 8045F6C0 00428C80  2C 1E 00 00 */	cmpwi r30, 0
 /* 8045F6C4 00428C84  41 82 00 3C */	beq .L_8045F700
@@ -569,7 +569,7 @@
 /* 8045F6E8 00428CA8  7F 83 E3 78 */	mr r3, r28
 /* 8045F6EC 00428CAC  7F A4 EB 78 */	mr r4, r29
 /* 8045F6F0 00428CB0  7F C5 F3 78 */	mr r5, r30
-/* 8045F6F4 00428CB4  4B FD 49 4D */	bl heap_createRegion
+/* 8045F6F4 00428CB4  4B FD 49 4D */	bl heap_createRegion__3mtlFiiPCc
 /* 8045F6F8 00428CB8  90 7B 00 00 */	stw r3, 0(r27)
 /* 8045F6FC 00428CBC  48 00 00 48 */	b .L_8045F744
 .L_8045F700:
@@ -589,7 +589,7 @@
 /* 8045F730 00428CF0  38 A5 6A E4 */	addi r5, r5, lbl_80526AE4@l
 /* 8045F734 00428CF4  7F A4 EB 78 */	mr r4, r29
 /* 8045F738 00428CF8  38 A5 00 0B */	addi r5, r5, 0xb
-/* 8045F73C 00428CFC  4B FD 49 05 */	bl heap_createRegion
+/* 8045F73C 00428CFC  4B FD 49 05 */	bl heap_createRegion__3mtlFiiPCc
 /* 8045F740 00428D00  90 7B 00 00 */	stw r3, 0(r27)
 .L_8045F744:
 /* 8045F744 00428D04  38 60 00 01 */	li r3, 1
@@ -627,7 +627,7 @@
 /* 8045F7B4 00428D74  38 60 00 00 */	li r3, 0
 /* 8045F7B8 00428D78  4B FD 52 95 */	bl MemManager_80434A4C__FUc
 /* 8045F7BC 00428D7C  80 7F 00 00 */	lwz r3, 0(r31)
-/* 8045F7C0 00428D80  4B FD 4B F1 */	bl MemManager_804343B0
+/* 8045F7C0 00428D80  4B FD 4B F1 */	bl heap_deleteRegion__3mtlFi
 /* 8045F7C4 00428D84  38 60 00 01 */	li r3, 1
 /* 8045F7C8 00428D88  4B FD 52 85 */	bl MemManager_80434A4C__FUc
 /* 8045F7CC 00428D8C  38 00 FF FF */	li r0, -1
@@ -794,8 +794,8 @@
 	.4byte CLibLayout_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CLibLayout_WorkThreadEvent4
-	.4byte CLibLayout_WorkThreadEvent5
+	.4byte CLibLayout_wkStartup
+	.4byte CLibLayout_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__10CLibLayout
 
@@ -1003,14 +1003,14 @@
 
 .obj "@eti_8003542C", local
 .hidden "@eti_8003542C"
-	.4byte CLibLayout_WorkThreadEvent4
+	.4byte CLibLayout_wkStartup
 	.4byte 0x000000B4
 	.4byte "@etb_8001D854"
 .endobj "@eti_8003542C"
 
 .obj "@eti_80035438", local
 .hidden "@eti_80035438"
-	.4byte CLibLayout_WorkThreadEvent5
+	.4byte CLibLayout_wkShutdown
 	.4byte 0x00000064
 	.4byte "@etb_8001D85C"
 .endobj "@eti_80035438"

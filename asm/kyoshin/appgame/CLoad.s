@@ -66,7 +66,7 @@
 /* 802AE510 00277AD0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802AE514 00277AD4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802AE518 00277AD8  7C 7F 1B 78 */	mr r31, r3
-/* 802AE51C 00277ADC  48 18 5E 85 */	bl Heap_getRegionIndex2
+/* 802AE51C 00277ADC  48 18 5E 85 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802AE520 00277AE0  3C 80 80 51 */	lis r4, CLoad_strpool@ha
 /* 802AE524 00277AE4  7F E5 FB 78 */	mr r5, r31
 /* 802AE528 00277AE8  38 84 C2 D8 */	addi r4, r4, CLoad_strpool@l
@@ -371,7 +371,7 @@
 /* 802AE914 00277ED4  80 04 00 04 */	lwz r0, 4(r4)
 /* 802AE918 00277ED8  7C 05 00 40 */	cmplw r5, r0
 /* 802AE91C 00277EDC  40 82 01 54 */	bne .L_802AEA70
-/* 802AE920 00277EE0  48 18 5A 81 */	bl Heap_getRegionIndex2
+/* 802AE920 00277EE0  48 18 5A 81 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802AE924 00277EE4  3F E0 80 51 */	lis r31, CLoad_strpool@ha
 /* 802AE928 00277EE8  7C 64 1B 78 */	mr r4, r3
 /* 802AE92C 00277EEC  3B FF C2 D8 */	addi r31, r31, CLoad_strpool@l

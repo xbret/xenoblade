@@ -2,19 +2,27 @@
 
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
+#include "monolib/MemManager.hpp"
 
 //size: 0x1D0
 class CDeviceSC : public CDeviceBase {
 public:
 	CDeviceSC(const char* name, CWorkThread* workThread);
 	virtual ~CDeviceSC();
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	static CDeviceSC* getInstance();
 	static bool isWideAspectRatio();
 	static bool isSoundModeMono();
 	static u8 getLanguage();
 	static bool func_80447C60();
+
+	static inline CDeviceSC* init(const char* name, CWorkThread* workThread){
+		CDeviceSC* device = new CDeviceSC(name, workThread);
+		device->func_80438BD8(workThread, 0);
+		device->unk1C4 |= 1;
+		return device;
+	}
 
 	//0x0: vtable
 	//0x0-1C8: CDeviceBase

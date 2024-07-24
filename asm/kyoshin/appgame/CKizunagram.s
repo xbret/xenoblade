@@ -5215,7 +5215,7 @@
 /* 8025C518 00225AD8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8025C51C 00225ADC  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8025C520 00225AE0  7C 7E 1B 78 */	mr r30, r3
-/* 8025C524 00225AE4  48 1D 7E 7D */	bl Heap_getRegionIndex2
+/* 8025C524 00225AE4  48 1D 7E 7D */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025C528 00225AE8  3F E0 80 51 */	lis r31, CKizunagram_strpool@ha
 /* 8025C52C 00225AEC  7F C5 F3 78 */	mr r5, r30
 /* 8025C530 00225AF0  3B FF 81 A8 */	addi r31, r31, CKizunagram_strpool@l
@@ -5225,7 +5225,7 @@
 /* 8025C540 00225B00  48 1F 22 55 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8025C544 00225B04  90 7E 00 2C */	stw r3, 0x2c(r30)
 /* 8025C548 00225B08  48 1F 2E CD */	bl CDeviceFile_8044F414__FP17UnkClass_80451720
-/* 8025C54C 00225B0C  48 1D 7E 55 */	bl Heap_getRegionIndex2
+/* 8025C54C 00225B0C  48 1D 7E 55 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025C550 00225B10  7F C5 F3 78 */	mr r5, r30
 /* 8025C554 00225B14  38 9F 0D 02 */	addi r4, r31, 0xd02
 /* 8025C558 00225B18  38 C0 00 00 */	li r6, 0
@@ -6078,7 +6078,7 @@
 /* 8025D0C0 00226680  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 8025D0C4 00226684  7C 00 20 40 */	cmplw r0, r4
 /* 8025D0C8 00226688  40 82 01 94 */	bne .L_8025D25C
-/* 8025D0CC 0022668C  48 1D 72 D5 */	bl Heap_getRegionIndex2
+/* 8025D0CC 0022668C  48 1D 72 D5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025D0D0 00226690  3F A0 80 51 */	lis r29, CKizunagram_strpool@ha
 /* 8025D0D4 00226694  7C 64 1B 78 */	mr r4, r3
 /* 8025D0D8 00226698  3B BD 81 A8 */	addi r29, r29, CKizunagram_strpool@l
@@ -6184,7 +6184,7 @@
 /* 8025D25C 0022681C  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8025D260 00226820  7C 00 20 40 */	cmplw r0, r4
 /* 8025D264 00226824  40 82 00 88 */	bne .L_8025D2EC
-/* 8025D268 00226828  48 1D 71 39 */	bl Heap_getRegionIndex2
+/* 8025D268 00226828  48 1D 71 39 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8025D26C 0022682C  3F A0 80 51 */	lis r29, CKizunagram_strpool@ha
 /* 8025D270 00226830  7C 64 1B 78 */	mr r4, r3
 /* 8025D274 00226834  3B BD 81 A8 */	addi r29, r29, CKizunagram_strpool@l

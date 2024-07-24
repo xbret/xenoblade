@@ -319,7 +319,7 @@
 /* 801B29F8 0017BFB8  39 61 01 E0 */	addi r11, r1, 0x1e0
 /* 801B29FC 0017BFBC  48 10 77 39 */	bl _savegpr_19
 /* 801B2A00 0017BFC0  7C 7F 1B 78 */	mr r31, r3
-/* 801B2A04 0017BFC4  48 28 19 9D */	bl Heap_getRegionIndex2
+/* 801B2A04 0017BFC4  48 28 19 9D */	bl Heap_getRegionIndex2__3mtlFv
 /* 801B2A08 0017BFC8  7C 73 1B 78 */	mr r19, r3
 /* 801B2A0C 0017BFCC  3C C0 80 50 */	lis r6, CMenuGetItemMulti_strpool@ha
 /* 801B2A10 0017BFD0  7E 64 9B 78 */	mr r4, r19

@@ -16,7 +16,7 @@
 /* 80446788 0040FD48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8044678C 0040FD4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80446790 0040FD50  7C 7F 1B 78 */	mr r31, r3
-/* 80446794 0040FD54  4B FE DC 0D */	bl Heap_getRegionIndex2
+/* 80446794 0040FD54  4B FE DC 0D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80446798 0040FD58  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044679C 0040FD5C  2C 04 00 00 */	cmpwi r4, 0
 /* 804467A0 0040FD60  41 82 00 08 */	beq .L_804467A8
@@ -1263,7 +1263,7 @@
 /* 8044788C 00410E4C  4E 80 00 20 */	blr 
 .endfn func_804477E8__FPCc
 
-.fn __ct__CDeviceRemotePad, global
+.fn __ct__16CDeviceRemotePadFPCcP11CWorkThread, global
 /* 80447890 00410E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447894 00410E54  7C 08 02 A6 */	mflr r0
 /* 80447898 00410E58  38 C0 00 00 */	li r6, 0
@@ -1278,7 +1278,7 @@
 /* 804478BC 00410E7C  7F E3 FB 78 */	mr r3, r31
 /* 804478C0 00410E80  90 9F 00 00 */	stw r4, 0(r31)
 /* 804478C4 00410E84  90 1F 01 C8 */	stw r0, 0x1c8(r31)
-/* 804478C8 00410E88  93 ED BD 98 */	stw r31, lbl_80667F18@sda21(r13)
+/* 804478C8 00410E88  93 ED BD 98 */	stw r31, instance__16CDeviceRemotePad@sda21(r13)
 /* 804478CC 00410E8C  90 1F 01 CC */	stw r0, 0x1cc(r31)
 /* 804478D0 00410E90  90 1F 01 D0 */	stw r0, 0x1d0(r31)
 /* 804478D4 00410E94  90 1F 01 D4 */	stw r0, 0x1d4(r31)
@@ -1292,7 +1292,7 @@
 /* 804478F4 00410EB4  7C 08 03 A6 */	mtlr r0
 /* 804478F8 00410EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804478FC 00410EBC  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceRemotePad
+.endfn __ct__16CDeviceRemotePadFPCcP11CWorkThread
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1417,8 +1417,8 @@
 	.4byte CDeviceRemotePad_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CDeviceRemotePad_WorkThreadEvent4
-	.4byte CDeviceRemotePad_WorkThreadEvent5
+	.4byte CDeviceRemotePad_wkStartup
+	.4byte CDeviceRemotePad_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__16CDeviceRemotePad
 
@@ -1689,7 +1689,7 @@
 
 .obj "@eti_80034634", local
 .hidden "@eti_80034634"
-	.4byte __ct__CDeviceRemotePad
+	.4byte __ct__16CDeviceRemotePadFPCcP11CWorkThread
 	.4byte 0x00000070
 	.4byte "@etb_8001CA14"
 .endobj "@eti_80034634"

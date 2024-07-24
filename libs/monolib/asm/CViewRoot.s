@@ -104,14 +104,14 @@
 /* 80443210 0040C7D0  4E 80 00 20 */	blr 
 .endfn func_804430C4
 
-.fn CViewRoot_WorkThreadEvent4, global
+.fn CViewRoot_wkStartup, global
 /* 80443214 0040C7D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80443218 0040C7D8  7C 08 02 A6 */	mflr r0
 /* 8044321C 0040C7DC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80443220 0040C7E0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80443224 0040C7E4  7C 7F 1B 78 */	mr r31, r3
 /* 80443228 0040C7E8  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8044322C 0040C7EC  48 00 9E 3D */	bl func_8044D068
+/* 8044322C 0040C7EC  48 00 9E 3D */	bl func_8044D068__7CDeviceFv
 /* 80443230 0040C7F0  2C 03 00 00 */	cmpwi r3, 0
 /* 80443234 0040C7F4  41 82 01 38 */	beq .L_8044336C
 /* 80443238 0040C7F8  48 01 61 C1 */	bl func_804593F8
@@ -190,7 +190,7 @@
 /* 8044335C 0040C91C  48 00 7F 3D */	bl func_8044B298
 .L_80443360:
 /* 80443360 0040C920  7F E3 FB 78 */	mr r3, r31
-/* 80443364 0040C924  4B FF 56 95 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 80443364 0040C924  4B FF 56 95 */	bl wkStartup__11CWorkThreadFv
 /* 80443368 0040C928  48 00 00 08 */	b .L_80443370
 .L_8044336C:
 /* 8044336C 0040C92C  38 60 00 00 */	li r3, 0
@@ -201,9 +201,9 @@
 /* 8044337C 0040C93C  7C 08 03 A6 */	mtlr r0
 /* 80443380 0040C940  38 21 00 20 */	addi r1, r1, 0x20
 /* 80443384 0040C944  4E 80 00 20 */	blr 
-.endfn CViewRoot_WorkThreadEvent4
+.endfn CViewRoot_wkStartup
 
-.fn CViewRoot_WorkThreadEvent5, global
+.fn CViewRoot_wkShutdown, global
 /* 80443388 0040C948  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044338C 0040C94C  7C 08 02 A6 */	mflr r0
 /* 80443390 0040C950  90 01 00 24 */	stw r0, 0x24(r1)
@@ -291,7 +291,7 @@
 /* 804434CC 0040CA8C  48 00 7D CD */	bl func_8044B298
 .L_804434D0:
 /* 804434D0 0040CA90  7F E3 FB 78 */	mr r3, r31
-/* 804434D4 0040CA94  4B FF 55 51 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804434D4 0040CA94  4B FF 55 51 */	bl wkShutdown__11CWorkThreadFv
 /* 804434D8 0040CA98  48 00 00 08 */	b .L_804434E0
 .L_804434DC:
 /* 804434DC 0040CA9C  38 60 00 00 */	li r3, 0
@@ -303,7 +303,7 @@
 /* 804434F0 0040CAB0  7C 08 03 A6 */	mtlr r0
 /* 804434F4 0040CAB4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804434F8 0040CAB8  4E 80 00 20 */	blr 
-.endfn CViewRoot_WorkThreadEvent5
+.endfn CViewRoot_wkShutdown
 
 .fn __ct__804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -504,8 +504,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CViewRoot_WorkThreadEvent4
-	.4byte CViewRoot_WorkThreadEvent5
+	.4byte CViewRoot_wkStartup
+	.4byte CViewRoot_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CViewRoot
 
@@ -587,14 +587,14 @@
 
 .obj "@eti_800342E0", local
 .hidden "@eti_800342E0"
-	.4byte CViewRoot_WorkThreadEvent4
+	.4byte CViewRoot_wkStartup
 	.4byte 0x00000174
 	.4byte "@etb_8001C6C8"
 .endobj "@eti_800342E0"
 
 .obj "@eti_800342EC", local
 .hidden "@eti_800342EC"
-	.4byte CViewRoot_WorkThreadEvent5
+	.4byte CViewRoot_wkShutdown
 	.4byte 0x00000174
 	.4byte "@etb_8001C6D0"
 .endobj "@eti_800342EC"

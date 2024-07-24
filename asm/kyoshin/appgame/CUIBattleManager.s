@@ -112,12 +112,12 @@
 /* 8012E138 000F76F8  90 7D 00 3C */	stw r3, 0x3c(r29)
 /* 8012E13C 000F76FC  80 04 00 08 */	lwz r0, 8(r4)
 /* 8012E140 000F7700  90 1D 00 44 */	stw r0, 0x44(r29)
-/* 8012E144 000F7704  48 30 62 5D */	bl Heap_getRegionIndex2
+/* 8012E144 000F7704  48 30 62 5D */	bl Heap_getRegionIndex2__3mtlFv
 /* 8012E148 000F7708  3C 80 00 04 */	lis r4, 0x00044800@ha
 /* 8012E14C 000F770C  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012E150 000F7710  38 84 48 00 */	addi r4, r4, 0x00044800@l
 /* 8012E154 000F7714  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
-/* 8012E158 000F7718  48 30 5E E9 */	bl heap_createRegion
+/* 8012E158 000F7718  48 30 5E E9 */	bl heap_createRegion__3mtlFiiPCc
 /* 8012E15C 000F771C  90 7D 00 EC */	stw r3, 0xec(r29)
 /* 8012E160 000F7720  4B FD 42 71 */	bl func_801023D0
 /* 8012E164 000F7724  93 ED A7 C4 */	stw r31, lbl_80666944@sda21(r13)
@@ -459,7 +459,7 @@
 /* 8012E600 000F7BC0  3B E0 00 00 */	li r31, 0
 /* 8012E604 000F7BC4  93 FB 00 74 */	stw r31, 0x74(r27)
 /* 8012E608 000F7BC8  80 7B 00 EC */	lwz r3, 0xec(r27)
-/* 8012E60C 000F7BCC  48 30 5D A5 */	bl MemManager_804343B0
+/* 8012E60C 000F7BCC  48 30 5D A5 */	bl heap_deleteRegion__3mtlFi
 /* 8012E610 000F7BD0  38 00 FF FF */	li r0, -1
 /* 8012E614 000F7BD4  90 1B 00 EC */	stw r0, 0xec(r27)
 /* 8012E618 000F7BD8  93 ED A7 C0 */	stw r31, lbl_80666940@sda21(r13)
@@ -597,7 +597,7 @@
 /* 8012E7CC 000F7D8C  41 82 00 08 */	beq .L_8012E7D4
 /* 8012E7D0 000F7D90  48 00 0A B0 */	b .L_8012F280
 .L_8012E7D4:
-/* 8012E7D4 000F7D94  48 30 5B CD */	bl Heap_getRegionIndex2
+/* 8012E7D4 000F7D94  48 30 5B CD */	bl Heap_getRegionIndex2__3mtlFv
 /* 8012E7D8 000F7D98  88 1E 00 82 */	lbz r0, 0x82(r30)
 /* 8012E7DC 000F7D9C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8012E7E0 000F7DA0  41 82 00 20 */	beq .L_8012E800
@@ -1577,7 +1577,7 @@
 /* 8012F590 000F8B50  3C 05 00 01 */	addis r0, r5, 1
 /* 8012F594 000F8B54  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8012F598 000F8B58  40 82 00 0C */	bne .L_8012F5A4
-/* 8012F59C 000F8B5C  48 30 4E 05 */	bl Heap_getRegionIndex2
+/* 8012F59C 000F8B5C  48 30 4E 05 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8012F5A0 000F8B60  7C 7F 1B 78 */	mr r31, r3
 .L_8012F5A4:
 /* 8012F5A4 000F8B64  48 30 80 11 */	bl getHeapIndex__3mtlFv

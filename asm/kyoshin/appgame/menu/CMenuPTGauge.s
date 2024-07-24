@@ -105,7 +105,7 @@
 /* 8018706C 0015062C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80187070 00150630  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80187074 00150634  7C 7E 1B 78 */	mr r30, r3
-/* 80187078 00150638  48 2A D3 29 */	bl Heap_getRegionIndex2
+/* 80187078 00150638  48 2A D3 29 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8018707C 0015063C  3F E0 80 50 */	lis r31, CMenuPTGauge_strpool@ha
 /* 80187080 00150640  7C 64 1B 78 */	mr r4, r3
 /* 80187084 00150644  38 7E 00 64 */	addi r3, r30, 0x64

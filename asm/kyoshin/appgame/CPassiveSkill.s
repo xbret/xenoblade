@@ -10499,7 +10499,7 @@
 /* 8026D5B0 00236B70  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8026D5B4 00236B74  BF 61 00 4C */	stmw r27, 0x4c(r1)
 /* 8026D5B8 00236B78  7C 7C 1B 78 */	mr r28, r3
-/* 8026D5BC 00236B7C  48 1C 6D E5 */	bl Heap_getRegionIndex2
+/* 8026D5BC 00236B7C  48 1C 6D E5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8026D5C0 00236B80  3F A0 80 51 */	lis r29, CPassiveSkill_strpool@ha
 /* 8026D5C4 00236B84  7F 85 E3 78 */	mr r5, r28
 /* 8026D5C8 00236B88  3B BD 92 B8 */	addi r29, r29, CPassiveSkill_strpool@l
@@ -11204,7 +11204,7 @@
 /* 8026DEA8 00237468  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8026DEAC 0023746C  7C 00 20 40 */	cmplw r0, r4
 /* 8026DEB0 00237470  40 82 02 08 */	bne .L_8026E0B8
-/* 8026DEB4 00237474  48 1C 64 ED */	bl Heap_getRegionIndex2
+/* 8026DEB4 00237474  48 1C 64 ED */	bl Heap_getRegionIndex2__3mtlFv
 /* 8026DEB8 00237478  3F A0 80 51 */	lis r29, CPassiveSkill_strpool@ha
 /* 8026DEBC 0023747C  7C 64 1B 78 */	mr r4, r3
 /* 8026DEC0 00237480  3B BD 92 B8 */	addi r29, r29, CPassiveSkill_strpool@l

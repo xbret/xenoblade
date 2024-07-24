@@ -3,7 +3,6 @@
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/lib/CLib.hpp"
-#include "monolib/MemManager.hpp"
 #include <string.h>
 
 CDeviceClock* CDeviceClock::instance;
@@ -61,16 +60,16 @@ void CDeviceClock::wkUpdate(){
 	OSTicksToCalendarTime(unk1F8, &cal);
 }
 
-bool CDeviceClock::WorkThreadEvent4(){
+bool CDeviceClock::wkStartup(){
 	func_80447598();
-	return CWorkThread::WorkThreadEvent4(); //Call base
+	return CWorkThread::wkStartup(); //Call base
 }
 
-bool CDeviceClock::WorkThreadEvent5(){
-	if(unk5C.pStartNode->next == unk5C.pStartNode){
+bool CDeviceClock::wkShutdown(){
+	if(workThreadList.empty()){
 		if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
 		&& CLib::getInstance() == nullptr){
-			return CWorkThread::WorkThreadEvent5(); //Call base
+			return CWorkThread::wkShutdown(); //Call base
 		}
 	}
 

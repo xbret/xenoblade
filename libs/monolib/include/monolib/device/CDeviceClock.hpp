@@ -3,6 +3,7 @@
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/reslist.hpp"
+#include "monolib/MemManager.hpp"
 #include "revolution/OS.h"
 
 class IDeviceClockFrame {
@@ -18,13 +19,20 @@ public:
 	CDeviceClock(const char* name, CWorkThread* workThread);
 	virtual ~CDeviceClock();
 	virtual void wkUpdate();
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	static CDeviceClock* getInstance();
 	static bool func_8044DEE0();
 	static s64 getTimeNow();
 	static void func_8044DF8C();
 	static void func_8044DFF4();
+
+	static inline CDeviceClock* init(const char* name, CWorkThread* workThread){
+		CDeviceClock* device = new CDeviceClock(name, workThread);
+		device->func_80438BD8(workThread, 0);
+		device->unk1C4 |= 1;
+		return device;
+	}
 
 	//0x0: vtable
 	//0x0-1c8: CDeviceBase

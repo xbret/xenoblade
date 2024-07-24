@@ -18,8 +18,8 @@ public:
 	virtual void WorkThreadEvent2();
 	static void func_800395F4(bool r3);
 	static void func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height);
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	static void GameMain();
 	static void func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5);
 	virtual bool WorkThreadEvent6();

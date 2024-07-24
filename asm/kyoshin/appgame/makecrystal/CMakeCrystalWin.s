@@ -178,7 +178,7 @@
 /* 80212790 001DBD50  39 08 00 02 */	addi r8, r8, 2
 /* 80212794 001DBD54  B0 C3 00 0E */	sth r6, 0xe(r3)
 /* 80212798 001DBD58  42 00 FF F4 */	bdnz .L_8021278C
-/* 8021279C 001DBD5C  48 22 1C 05 */	bl Heap_getRegionIndex2
+/* 8021279C 001DBD5C  48 22 1C 05 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802127A0 001DBD60  7C 7D 1B 78 */	mr r29, r3
 /* 802127A4 001DBD64  48 22 9A 1D */	bl func_8043C1C0
 /* 802127A8 001DBD68  3F C0 80 50 */	lis r30, CMakeCrystalWin_strpool@ha

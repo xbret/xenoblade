@@ -611,7 +611,7 @@
 /* 804442E0 0040D8A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804442E4 0040D8A4  4B FE FA 35 */	bl heap_initialize
 /* 804442E8 0040D8A8  48 0A 9F 39 */	bl SetOSErrorHandlers1
-/* 804442EC 0040D8AC  48 00 96 DD */	bl func_8044D9C8
+/* 804442EC 0040D8AC  48 00 96 DD */	bl createRegions__7CDeviceFv
 /* 804442F0 0040D8B0  4B FF 30 9D */	bl func_8043738C
 /* 804442F4 0040D8B4  4B FF F8 15 */	bl __ct__CWorkRootThread
 /* 804442F8 0040D8B8  80 6D BD 68 */	lwz r3, cDesktopPointer@sda21(r13)
@@ -624,7 +624,7 @@
 /* 80444310 0040D8D0  48 00 8D 41 */	bl getInstance__7CDeviceFv
 /* 80444314 0040D8D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80444318 0040D8D8  41 82 FF F4 */	beq .L_8044430C
-/* 8044431C 0040D8DC  48 00 8F 2D */	bl func_8044D248
+/* 8044431C 0040D8DC  48 00 8F 2D */	bl func_8044D248__7CDeviceFv
 /* 80444320 0040D8E0  2C 03 00 00 */	cmpwi r3, 0
 /* 80444324 0040D8E4  40 82 FF E8 */	bne .L_8044430C
 /* 80444328 0040D8E8  3C 60 80 44 */	lis r3, CWorkRoot_PreRetraceCallback@ha
@@ -636,7 +636,7 @@
 /* 8044433C 0040D8FC  40 82 FF F8 */	bne .L_80444334
 /* 80444340 0040D900  4B FF F9 4D */	bl func_80443C8C
 /* 80444344 0040D904  4B FF 32 0D */	bl __dt__80437550
-/* 80444348 0040D908  48 00 96 FD */	bl func_8044DA44
+/* 80444348 0040D908  48 00 96 FD */	bl deleteRegions__7CDeviceFv
 /* 8044434C 0040D90C  48 0A 9F 65 */	bl SetOSErrorHandlers2
 /* 80444350 0040D910  4B FE FC 91 */	bl heap_finalize
 /* 80444354 0040D914  4B FF FE E1 */	bl ExitGame
@@ -666,7 +666,7 @@
 /* 80444388 0040D948  4E 80 00 20 */	blr 
 .endfn func_80444384
 
-.fn CWorkRootThread_WorkThreadEvent5, global
+.fn CWorkRootThread_wkShutdown, global
 /* 8044438C 0040D94C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444390 0040D950  7C 08 02 A6 */	mflr r0
 /* 80444394 0040D954  90 01 00 14 */	stw r0, 0x14(r1)
@@ -679,14 +679,14 @@
 /* 804443B0 0040D970  48 00 00 0C */	b .L_804443BC
 .L_804443B4:
 /* 804443B4 0040D974  7F E3 FB 78 */	mr r3, r31
-/* 804443B8 0040D978  4B FF 46 6D */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804443B8 0040D978  4B FF 46 6D */	bl wkShutdown__11CWorkThreadFv
 .L_804443BC:
 /* 804443BC 0040D97C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804443C0 0040D980  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804443C4 0040D984  7C 08 03 A6 */	mtlr r0
 /* 804443C8 0040D988  38 21 00 10 */	addi r1, r1, 0x10
 /* 804443CC 0040D98C  4E 80 00 20 */	blr
-.endfn CWorkRootThread_WorkThreadEvent5
+.endfn CWorkRootThread_wkShutdown
 
 
 .fn sinit_804443D0, local
@@ -777,8 +777,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__11CWorkThreadFv
-	.4byte CWorkRootThread_WorkThreadEvent5
+	.4byte wkStartup__11CWorkThreadFv
+	.4byte CWorkRootThread_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 
@@ -1038,7 +1038,7 @@
 
 .obj "@eti_80034418", local
 .hidden "@eti_80034418"
-	.4byte CWorkRootThread_WorkThreadEvent5
+	.4byte CWorkRootThread_wkShutdown
 	.4byte 0x00000044
 	.4byte "@etb_8001C828"
 .endobj "@eti_80034418"

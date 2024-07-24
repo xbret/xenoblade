@@ -16,8 +16,8 @@ public:
 	virtual void wkUpdate();
 	virtual void WorkThreadEvent2(){}
 	virtual void WorkThreadEvent3(){}
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	virtual bool WorkThreadEvent6(){ return true; }
 
 	void func_80437EF0(u32);
@@ -36,7 +36,7 @@ public:
 	u32 unk50;
 	u32 unk54;
 	u32 unk58;
-	reslist<CWorkThread*> unk5C;
+	reslist<CWorkThread*> workThreadList; //0x5C
 	u32 unk7C;
 	CMsgParam<8> unk80;
 	u32 unk1BC;

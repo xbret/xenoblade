@@ -66,7 +66,7 @@
 /* 8029F170 00268730  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8029F174 00268734  BF C1 00 18 */	stmw r30, 0x18(r1)
 /* 8029F178 00268738  7C 7E 1B 78 */	mr r30, r3
-/* 8029F17C 0026873C  48 19 52 25 */	bl Heap_getRegionIndex2
+/* 8029F17C 0026873C  48 19 52 25 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8029F180 00268740  3F E0 80 51 */	lis r31, CSkipTimer_strpool@ha
 /* 8029F184 00268744  7C 64 1B 78 */	mr r4, r3
 /* 8029F188 00268748  38 7E 00 04 */	addi r3, r30, 4
@@ -808,7 +808,7 @@
 /* 8029FBE8 002691A8  90 01 00 54 */	stw r0, 0x54(r1)
 /* 8029FBEC 002691AC  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 8029FBF0 002691B0  7C 7F 1B 78 */	mr r31, r3
-/* 8029FBF4 002691B4  48 19 47 AD */	bl Heap_getRegionIndex2
+/* 8029FBF4 002691B4  48 19 47 AD */	bl Heap_getRegionIndex2__3mtlFv
 /* 8029FBF8 002691B8  3C 80 80 51 */	lis r4, CSkipTimer_strpool@ha
 /* 8029FBFC 002691BC  7F E5 FB 78 */	mr r5, r31
 /* 8029FC00 002691C0  38 84 BB 58 */	addi r4, r4, CSkipTimer_strpool@l
@@ -1604,7 +1604,7 @@
 /* 802A0684 00269C44  80 04 00 04 */	lwz r0, 4(r4)
 /* 802A0688 00269C48  7C 05 00 40 */	cmplw r5, r0
 /* 802A068C 00269C4C  40 82 01 34 */	bne .L_802A07C0
-/* 802A0690 00269C50  48 19 3D 11 */	bl Heap_getRegionIndex2
+/* 802A0690 00269C50  48 19 3D 11 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802A0694 00269C54  3F C0 80 51 */	lis r30, CSkipTimer_strpool@ha
 /* 802A0698 00269C58  7C 64 1B 78 */	mr r4, r3
 /* 802A069C 00269C5C  3B DE BB 58 */	addi r30, r30, CSkipTimer_strpool@l

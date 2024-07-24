@@ -122,8 +122,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__11CWorkThreadFv
-	.4byte WorkThreadEvent5__11CWorkThreadFv
+	.4byte wkStartup__11CWorkThreadFv
+	.4byte wkShutdown__11CWorkThreadFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte func_80451EC0
 	.4byte func_80451EB0

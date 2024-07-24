@@ -59,7 +59,7 @@
 /* 801C3A2C 0018CFEC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 801C3A30 0018CFF0  BF C1 00 18 */	stmw r30, 0x18(r1)
 /* 801C3A34 0018CFF4  7C 7F 1B 78 */	mr r31, r3
-/* 801C3A38 0018CFF8  48 27 09 69 */	bl Heap_getRegionIndex2
+/* 801C3A38 0018CFF8  48 27 09 69 */	bl Heap_getRegionIndex2__3mtlFv
 /* 801C3A3C 0018CFFC  3F C0 80 50 */	lis r30, CBgTex_strpool@ha
 /* 801C3A40 0018D000  7C 64 1B 78 */	mr r4, r3
 /* 801C3A44 0018D004  38 7F 00 04 */	addi r3, r31, 4
@@ -266,7 +266,7 @@
 /* 801C3D14 0018D2D4  38 63 0B 88 */	addi r3, r3, CBgTex_strpool@l
 /* 801C3D18 0018D2D8  3B E3 00 CE */	addi r31, r3, 0xce
 .L_801C3D1C:
-/* 801C3D1C 0018D2DC  48 27 06 85 */	bl Heap_getRegionIndex2
+/* 801C3D1C 0018D2DC  48 27 06 85 */	bl Heap_getRegionIndex2__3mtlFv
 /* 801C3D20 0018D2E0  7F E4 FB 78 */	mr r4, r31
 /* 801C3D24 0018D2E4  7F C5 F3 78 */	mr r5, r30
 /* 801C3D28 0018D2E8  38 C0 00 00 */	li r6, 0

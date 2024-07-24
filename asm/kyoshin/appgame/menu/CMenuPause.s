@@ -51,7 +51,7 @@
 /* 80251E98 0021B458  4B E3 0A B5 */	bl func_8008294C
 /* 80251E9C 0021B45C  38 60 00 01 */	li r3, 1
 /* 80251EA0 0021B460  4B F3 69 F1 */	bl func_80188890
-/* 80251EA4 0021B464  48 1E 24 FD */	bl Heap_getRegionIndex2
+/* 80251EA4 0021B464  48 1E 24 FD */	bl Heap_getRegionIndex2__3mtlFv
 /* 80251EA8 0021B468  3F C0 80 50 */	lis r30, CMenuPause_strpool@ha
 /* 80251EAC 0021B46C  7C 64 1B 78 */	mr r4, r3
 /* 80251EB0 0021B470  38 7F 00 64 */	addi r3, r31, 0x64

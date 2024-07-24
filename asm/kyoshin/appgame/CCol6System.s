@@ -409,7 +409,7 @@
 /* 8015D640 00126C00  41 82 00 08 */	beq .L_8015D648
 /* 8015D644 00126C04  3B E3 00 6C */	addi r31, r3, 0x6c
 .L_8015D648:
-/* 8015D648 00126C08  48 2D 6D 59 */	bl Heap_getRegionIndex2
+/* 8015D648 00126C08  48 2D 6D 59 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8015D64C 00126C0C  80 8D 8A D0 */	lwz r4, lbl_80664C50@sda21(r13)
 /* 8015D650 00126C10  7F E5 FB 78 */	mr r5, r31
 /* 8015D654 00126C14  38 C0 00 00 */	li r6, 0
@@ -747,7 +747,7 @@
 /* 8015DB28 001270E8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8015DB2C 001270EC  7C 05 00 40 */	cmplw r5, r0
 /* 8015DB30 001270F0  40 82 00 B4 */	bne .L_8015DBE4
-/* 8015DB34 001270F4  48 2D 68 6D */	bl Heap_getRegionIndex2
+/* 8015DB34 001270F4  48 2D 68 6D */	bl Heap_getRegionIndex2__3mtlFv
 /* 8015DB38 001270F8  3F E0 80 50 */	lis r31, CCol6System_strpool@ha
 /* 8015DB3C 001270FC  7C 64 1B 78 */	mr r4, r3
 /* 8015DB40 00127100  3B FF D8 80 */	addi r31, r31, CCol6System_strpool@l
@@ -1929,7 +1929,7 @@
 /* 8015EC78 00128238  41 82 00 08 */	beq .L_8015EC80
 /* 8015EC7C 0012823C  3B C3 00 6C */	addi r30, r3, 0x6c
 .L_8015EC80:
-/* 8015EC80 00128240  48 2D 57 21 */	bl Heap_getRegionIndex2
+/* 8015EC80 00128240  48 2D 57 21 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8015EC84 00128244  80 8D 8A D0 */	lwz r4, lbl_80664C50@sda21(r13)
 /* 8015EC88 00128248  7F C5 F3 78 */	mr r5, r30
 /* 8015EC8C 0012824C  38 C0 00 00 */	li r6, 0
@@ -3352,7 +3352,7 @@
 /* 80160138 001296F8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8016013C 001296FC  7C 05 00 40 */	cmplw r5, r0
 /* 80160140 00129700  40 82 00 B4 */	bne .L_801601F4
-/* 80160144 00129704  48 2D 42 5D */	bl Heap_getRegionIndex2
+/* 80160144 00129704  48 2D 42 5D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80160148 00129708  3F E0 80 50 */	lis r31, CCol6System_strpool@ha
 /* 8016014C 0012970C  7C 64 1B 78 */	mr r4, r3
 /* 80160150 00129710  3B FF D8 80 */	addi r31, r31, CCol6System_strpool@l

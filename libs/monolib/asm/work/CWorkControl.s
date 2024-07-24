@@ -50,10 +50,10 @@
 /* 804437B8 0040CD78  4E 80 00 20 */	blr 
 .endfn __dt__12CWorkControlFv
 
-.fn func_804437BC, global
+.fn func_804437BC__Fv, global
 /* 804437BC 0040CD7C  80 6D BD 38 */	lwz r3, lbl_80667EB8@sda21(r13)
 /* 804437C0 0040CD80  4E 80 00 20 */	blr 
-.endfn func_804437BC
+.endfn func_804437BC__Fv
 
 .fn func_804437C4, global
 /* 804437C4 0040CD84  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -140,7 +140,7 @@
 /* 804438CC 0040CE8C  4E 80 00 20 */	blr 
 .endfn func_80443858
 
-.fn CWorkControl_WorkThreadEvent4, global
+.fn CWorkControl_wkStartup, global
 /* 804438D0 0040CE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804438D4 0040CE94  7C 08 02 A6 */	mflr r0
 /* 804438D8 0040CE98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -148,15 +148,15 @@
 /* 804438E0 0040CEA0  7C 7F 1B 78 */	mr r31, r3
 /* 804438E4 0040CEA4  4B FF FE E1 */	bl func_804437C4
 /* 804438E8 0040CEA8  7F E3 FB 78 */	mr r3, r31
-/* 804438EC 0040CEAC  4B FF 51 0D */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 804438EC 0040CEAC  4B FF 51 0D */	bl wkStartup__11CWorkThreadFv
 /* 804438F0 0040CEB0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804438F4 0040CEB4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804438F8 0040CEB8  7C 08 03 A6 */	mtlr r0
 /* 804438FC 0040CEBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443900 0040CEC0  4E 80 00 20 */	blr 
-.endfn CWorkControl_WorkThreadEvent4
+.endfn CWorkControl_wkStartup
 
-.fn CWorkControl_WorkThreadEvent5, global
+.fn CWorkControl_wkShutdown, global
 /* 80443904 0040CEC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443908 0040CEC8  7C 08 02 A6 */	mflr r0
 /* 8044390C 0040CECC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -170,7 +170,7 @@
 /* 8044392C 0040CEEC  2C 03 00 00 */	cmpwi r3, 0
 /* 80443930 0040CEF0  40 82 00 10 */	bne .L_80443940
 /* 80443934 0040CEF4  7F E3 FB 78 */	mr r3, r31
-/* 80443938 0040CEF8  4B FF 50 ED */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 80443938 0040CEF8  4B FF 50 ED */	bl wkShutdown__11CWorkThreadFv
 /* 8044393C 0040CEFC  48 00 00 08 */	b .L_80443944
 .L_80443940:
 /* 80443940 0040CF00  38 60 00 00 */	li r3, 0
@@ -180,7 +180,7 @@
 /* 8044394C 0040CF0C  7C 08 03 A6 */	mtlr r0
 /* 80443950 0040CF10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443954 0040CF14  4E 80 00 20 */	blr 
-.endfn CWorkControl_WorkThreadEvent5
+.endfn CWorkControl_wkShutdown
 
 .fn CWorkControl_create, global
 /* 80443958 0040CF18  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -279,8 +279,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CWorkControl_WorkThreadEvent4
-	.4byte CWorkControl_WorkThreadEvent5
+	.4byte CWorkControl_wkStartup
+	.4byte CWorkControl_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__12CWorkControl
 
@@ -391,14 +391,14 @@
 
 .obj "@eti_80034334", local
 .hidden "@eti_80034334"
-	.4byte CWorkControl_WorkThreadEvent4
+	.4byte CWorkControl_wkStartup
 	.4byte 0x00000034
 	.4byte "@etb_8001C744"
 .endobj "@eti_80034334"
 
 .obj "@eti_80034340", local
 .hidden "@eti_80034340"
-	.4byte CWorkControl_WorkThreadEvent5
+	.4byte CWorkControl_wkShutdown
 	.4byte 0x00000054
 	.4byte "@etb_8001C74C"
 .endobj "@eti_80034340"

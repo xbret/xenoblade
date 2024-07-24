@@ -7,6 +7,7 @@
 #include "monolib/reslist.hpp"
 #include "revolution/GX.h"
 #include "revolution/VI.h"
+#include "monolib/MemManager.hpp"
 
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {
@@ -37,8 +38,8 @@ public:
 	static void func_80448A44();
 	static void func_80448A84();
 	static u32 func_80448D10();
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	static void func_80448E78(bool state);
 	static bool func_80448E80();
 	void func_80448E88();
@@ -65,6 +66,13 @@ public:
 
 	static inline u16 getFbWidth(){
 		return getRenderModeObj()->fbWidth;
+	}
+
+	static inline CDeviceVI* init(const char* name, CWorkThread* workThread){
+		CDeviceVI* device = new CDeviceVI(name, workThread);
+		device->func_80438BD8(workThread, 0);
+		device->unk1C4 |= 1;
+		return device;
 	}
 
 	//0x0: vtable

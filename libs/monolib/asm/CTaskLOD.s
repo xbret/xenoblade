@@ -93,7 +93,7 @@
 /* 80462A4C 0042C00C  38 00 00 00 */	li r0, 0
 /* 80462A50 0042C010  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
 .L_80462A54:
-/* 80462A54 0042C014  4B FD 19 45 */	bl Heap_getRegionIndex1
+/* 80462A54 0042C014  4B FD 19 45 */	bl Heap_getRegionIndex1__3mtlFv
 /* 80462A58 0042C018  7C 64 1B 78 */	mr r4, r3
 /* 80462A5C 0042C01C  38 60 1C E0 */	li r3, 0x1ce0
 /* 80462A60 0042C020  4B FD 1F FD */	bl heap_malloc__3mtlFUli

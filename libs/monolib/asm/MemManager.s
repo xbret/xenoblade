@@ -967,7 +967,7 @@
 /* 8043403C 003FD5FC  4E 80 00 20 */	blr 
 .endfn heap_finalize
 
-.fn heap_createRegion, global
+.fn heap_createRegion__3mtlFiiPCc, global
 /* 80434040 003FD600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80434044 003FD604  7C 08 02 A6 */	mflr r0
 /* 80434048 003FD608  2C 04 00 00 */	cmpwi r4, 0
@@ -1078,7 +1078,7 @@
 /* 804341C4 003FD784  7C 08 03 A6 */	mtlr r0
 /* 804341C8 003FD788  38 21 00 20 */	addi r1, r1, 0x20
 /* 804341CC 003FD78C  4E 80 00 20 */	blr 
-.endfn heap_createRegion
+.endfn heap_createRegion__3mtlFiiPCc
 
 .fn MemManager_804341D0, global
 /* 804341D0 003FD790  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1209,22 +1209,22 @@
 /* 80434394 003FD954  4E 80 00 20 */	blr 
 .endfn MemManager_804341D0
 
-.fn Heap_getRegionIndex1, global
+.fn Heap_getRegionIndex1__3mtlFv, global
 /* 80434398 003FD958  80 6D 9C B0 */	lwz r3, regionIndex1@sda21(r13)
 /* 8043439C 003FD95C  4E 80 00 20 */	blr 
-.endfn Heap_getRegionIndex1
+.endfn Heap_getRegionIndex1__3mtlFv
 
-.fn Heap_getRegionIndex2, global
+.fn Heap_getRegionIndex2__3mtlFv, global
 /* 804343A0 003FD960  80 6D 9C B4 */	lwz r3, regionIndex2@sda21(r13)
 /* 804343A4 003FD964  4E 80 00 20 */	blr 
-.endfn Heap_getRegionIndex2
+.endfn Heap_getRegionIndex2__3mtlFv
 
 .fn Heap_getRegionIndex2_2__3mtlFv, global
 /* 804343A8 003FD968  80 6D 9C B4 */	lwz r3, regionIndex2@sda21(r13)
 /* 804343AC 003FD96C  4E 80 00 20 */	blr 
 .endfn Heap_getRegionIndex2_2__3mtlFv
 
-.fn MemManager_804343B0, global
+.fn heap_deleteRegion__3mtlFi, global
 /* 804343B0 003FD970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804343B4 003FD974  7C 08 02 A6 */	mflr r0
 /* 804343B8 003FD978  54 64 06 3E */	clrlwi r4, r3, 0x18
@@ -1260,7 +1260,7 @@
 /* 80434420 003FD9E0  7C 08 03 A6 */	mtlr r0
 /* 80434424 003FD9E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80434428 003FD9E8  4E 80 00 20 */	blr 
-.endfn MemManager_804343B0
+.endfn heap_deleteRegion__3mtlFi
 
 .fn MemManager_8043442C, global
 /* 8043442C 003FD9EC  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -2424,7 +2424,7 @@
 
 .obj "@eti_80033B84", local
 .hidden "@eti_80033B84"
-	.4byte heap_createRegion
+	.4byte heap_createRegion__3mtlFiiPCc
 	.4byte 0x00000190
 	.4byte "@etb_8001BFD0"
 .endobj "@eti_80033B84"
@@ -2438,7 +2438,7 @@
 
 .obj "@eti_80033B9C", local
 .hidden "@eti_80033B9C"
-	.4byte MemManager_804343B0
+	.4byte heap_deleteRegion__3mtlFi
 	.4byte 0x0000007C
 	.4byte "@etb_8001BFE0"
 .endobj "@eti_80033B9C"

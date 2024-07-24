@@ -28,7 +28,7 @@
 /* 8048EAF4 004580B4  38 84 1E 00 */	addi r4, r4, __vt__7CScnMem@l
 /* 8048EAF8 004580B8  90 83 00 00 */	stw r4, 0(r3)
 /* 8048EAFC 004580BC  80 63 00 08 */	lwz r3, 8(r3)
-/* 8048EB00 004580C0  4B FA 58 B1 */	bl MemManager_804343B0
+/* 8048EB00 004580C0  4B FA 58 B1 */	bl heap_deleteRegion__3mtlFi
 /* 8048EB04 004580C4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8048EB08 004580C8  40 81 00 0C */	ble .L_8048EB14
 /* 8048EB0C 004580CC  7F C3 F3 78 */	mr r3, r30
@@ -55,7 +55,7 @@
 /* 8048EB50 00458110  7C C4 33 78 */	mr r4, r6
 /* 8048EB54 00458114  38 A7 78 C0 */	addi r5, r7, lbl_805278C0@l
 /* 8048EB58 00458118  90 DF 00 0C */	stw r6, 0xc(r31)
-/* 8048EB5C 0045811C  4B FA 54 E5 */	bl heap_createRegion
+/* 8048EB5C 0045811C  4B FA 54 E5 */	bl heap_createRegion__3mtlFiiPCc
 /* 8048EB60 00458120  90 7F 00 08 */	stw r3, 8(r31)
 /* 8048EB64 00458124  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8048EB68 00458128  80 01 00 14 */	lwz r0, 0x14(r1)

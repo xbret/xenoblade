@@ -62,7 +62,7 @@
 /* 802443A4 0020D964  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802443A8 0020D968  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802443AC 0020D96C  7C 7F 1B 78 */	mr r31, r3
-/* 802443B0 0020D970  48 1E FF F1 */	bl Heap_getRegionIndex2
+/* 802443B0 0020D970  48 1E FF F1 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802443B4 0020D974  3C 80 80 50 */	lis r4, CFade_strpool@ha
 /* 802443B8 0020D978  7F E5 FB 78 */	mr r5, r31
 /* 802443BC 0020D97C  38 84 6C A0 */	addi r4, r4, CFade_strpool@l
@@ -263,7 +263,7 @@
 /* 80244624 0020DBE4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80244628 0020DBE8  7C 05 00 40 */	cmplw r5, r0
 /* 8024462C 0020DBEC  40 82 00 E0 */	bne .L_8024470C
-/* 80244630 0020DBF0  48 1E FD 71 */	bl Heap_getRegionIndex2
+/* 80244630 0020DBF0  48 1E FD 71 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80244634 0020DBF4  3F C0 80 50 */	lis r30, CFade_strpool@ha
 /* 80244638 0020DBF8  7C 64 1B 78 */	mr r4, r3
 /* 8024463C 0020DBFC  3B DE 6C A0 */	addi r30, r30, CFade_strpool@l

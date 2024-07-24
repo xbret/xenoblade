@@ -4,7 +4,6 @@
 #include "monolib/device/CDevice.hpp"
 #include "monolib/lib/CLib.hpp"
 #include "monolib/work/CWorkSystem.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/Math.hpp"
 #include <string.h>
 
@@ -108,7 +107,7 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
 	instance = this;
 	unk2A0 = 0;
 	unk2A2 = 0;
-	unk280 = mtl::allocateHeap(getSomeSize(), lbl_80667F2C ? mtl::Heap_getRegionIndex2_2() : func_8044D058(), 0x20);
+	unk280 = mtl::allocateHeap(getSomeSize(), lbl_80667F2C ? mtl::Heap_getRegionIndex2_2() : CDevice::func_8044D058(), 0x20);
 
 	memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
 	instance->unk4 |= 0x1;
@@ -281,7 +280,7 @@ u32 CDeviceVI::func_80448D10(){
 	return 1;
 }
 
-bool CDeviceVI::WorkThreadEvent4(){
+bool CDeviceVI::wkStartup(){
 	if(CDeviceSC::func_80447C60() != false){
 		//Initialize VI
 		VIInit();
@@ -294,19 +293,19 @@ bool CDeviceVI::WorkThreadEvent4(){
 		func_804486E4();
 		VIEnableDimming(VI_ENABLE);
 		VISetTrapFilter(VI_FALSE);
-		return CWorkThread::WorkThreadEvent4();
+		return CWorkThread::wkStartup();
 	}
 
 	return false;
 }
 
-bool CDeviceVI::WorkThreadEvent5(){
+bool CDeviceVI::wkShutdown(){
 	VISetBlack(VI_TRUE);
 	VIFlush();
-	if(unk5C.pStartNode->next == unk5C.pStartNode){
-		if(CDeviceGX::getInstance() == nullptr && func_8044D438() &&
+	if(workThreadList.empty()){
+		if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
 		CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
-			return CWorkThread::WorkThreadEvent5();
+			return CWorkThread::wkShutdown();
 		}
 	}
 

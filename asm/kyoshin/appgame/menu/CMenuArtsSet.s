@@ -4662,7 +4662,7 @@
 /* 80233534 001FCAF4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80233538 001FCAF8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8023353C 001FCAFC  7C 7F 1B 78 */	mr r31, r3
-/* 80233540 001FCB00  48 20 0E 61 */	bl Heap_getRegionIndex2
+/* 80233540 001FCB00  48 20 0E 61 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80233544 001FCB04  3C 80 80 50 */	lis r4, CMenuArtsSet_strpool@ha
 /* 80233548 001FCB08  7F E5 FB 78 */	mr r5, r31
 /* 8023354C 001FCB0C  38 84 63 6C */	addi r4, r4, CMenuArtsSet_strpool@l
@@ -6796,7 +6796,7 @@
 /* 802352C0 001FE880  80 04 00 04 */	lwz r0, 4(r4)
 /* 802352C4 001FE884  7C 05 00 40 */	cmplw r5, r0
 /* 802352C8 001FE888  40 82 04 28 */	bne .L_802356F0
-/* 802352CC 001FE88C  48 1F F0 D5 */	bl Heap_getRegionIndex2
+/* 802352CC 001FE88C  48 1F F0 D5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 802352D0 001FE890  3F C0 80 50 */	lis r30, CMenuArtsSet_strpool@ha
 /* 802352D4 001FE894  3C A0 00 01 */	lis r5, 0x00016000@ha
 /* 802352D8 001FE898  3B DE 63 6C */	addi r30, r30, CMenuArtsSet_strpool@l

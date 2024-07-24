@@ -582,7 +582,7 @@
 /* 8045ED88 00428348  4E 80 00 20 */	blr 
 .endfn __ct__8045ECC4
 
-.fn CLibHbmControl_WorkThreadEvent4, global
+.fn CLibHbmControl_wkStartup, global
 /* 8045ED8C 0042834C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8045ED90 00428350  7C 08 02 A6 */	mflr r0
 /* 8045ED94 00428354  90 01 00 74 */	stw r0, 0x74(r1)
@@ -682,16 +682,16 @@
 /* 8045EF08 004284C8  90 1E 04 50 */	stw r0, 0x450(r30)
 /* 8045EF0C 004284CC  4B FE 49 35 */	bl func_80443840
 /* 8045EF10 004284D0  7F A3 EB 78 */	mr r3, r29
-/* 8045EF14 004284D4  4B FD A7 8D */	bl WorkThreadEvent4__5CProcFv
+/* 8045EF14 004284D4  4B FD A7 8D */	bl wkStartup__5CProcFv
 /* 8045EF18 004284D8  39 61 00 70 */	addi r11, r1, 0x70
 /* 8045EF1C 004284DC  4B E5 B2 7D */	bl _restgpr_25
 /* 8045EF20 004284E0  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 8045EF24 004284E4  7C 08 03 A6 */	mtlr r0
 /* 8045EF28 004284E8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8045EF2C 004284EC  4E 80 00 20 */	blr 
-.endfn CLibHbmControl_WorkThreadEvent4
+.endfn CLibHbmControl_wkStartup
 
-.fn CLibHbmControl_WorkThreadEvent5, global
+.fn CLibHbmControl_wkShutdown, global
 /* 8045EF30 004284F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045EF34 004284F4  7C 08 02 A6 */	mflr r0
 /* 8045EF38 004284F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -705,7 +705,7 @@
 /* 8045EF58 00428518  38 60 00 00 */	li r3, 0
 /* 8045EF5C 0042851C  4B FE 48 E5 */	bl func_80443840
 /* 8045EF60 00428520  7F E3 FB 78 */	mr r3, r31
-/* 8045EF64 00428524  4B FD A7 41 */	bl WorkThreadEvent5__5CProcFv
+/* 8045EF64 00428524  4B FD A7 41 */	bl wkShutdown__5CProcFv
 /* 8045EF68 00428528  48 00 00 08 */	b .L_8045EF70
 .L_8045EF6C:
 /* 8045EF6C 0042852C  38 60 00 00 */	li r3, 0
@@ -715,7 +715,7 @@
 /* 8045EF78 00428538  7C 08 03 A6 */	mtlr r0
 /* 8045EF7C 0042853C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045EF80 00428540  4E 80 00 20 */	blr 
-.endfn CLibHbmControl_WorkThreadEvent5
+.endfn CLibHbmControl_wkShutdown
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -792,8 +792,8 @@
 	.4byte CLibHbmControl_wkUpdate
 	.4byte CLibHbmControl_WorkThreadEvent2
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CLibHbmControl_WorkThreadEvent4
-	.4byte CLibHbmControl_WorkThreadEvent5
+	.4byte CLibHbmControl_wkStartup
+	.4byte CLibHbmControl_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__14CLibHbmControl
 
@@ -961,14 +961,14 @@
 
 .obj "@eti_800353C0", local
 .hidden "@eti_800353C0"
-	.4byte CLibHbmControl_WorkThreadEvent4
+	.4byte CLibHbmControl_wkStartup
 	.4byte 0x000001A4
 	.4byte "@etb_8001D7B0"
 .endobj "@eti_800353C0"
 
 .obj "@eti_800353CC", local
 .hidden "@eti_800353CC"
-	.4byte CLibHbmControl_WorkThreadEvent5
+	.4byte CLibHbmControl_wkShutdown
 	.4byte 0x00000054
 	.4byte "@etb_8001D7B8"
 .endobj "@eti_800353CC"

@@ -16,10 +16,10 @@
 /* 804448E0 0040DEA0  90 7F 00 00 */	stw r3, 0(r31)
 /* 804448E4 0040DEA4  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 804448E8 0040DEA8  93 ED BD 80 */	stw r31, lbl_80667F00@sda21(r13)
-/* 804448EC 0040DEAC  4B FE FA B5 */	bl Heap_getRegionIndex2
+/* 804448EC 0040DEAC  4B FE FA B5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 804448F0 0040DEB0  38 BF 00 04 */	addi r5, r31, 4
 /* 804448F4 0040DEB4  38 80 0F E0 */	li r4, 0xfe0
-/* 804448F8 0040DEB8  4B FE F7 49 */	bl heap_createRegion
+/* 804448F8 0040DEB8  4B FE F7 49 */	bl heap_createRegion__3mtlFiiPCc
 /* 804448FC 0040DEBC  90 7F 01 C4 */	stw r3, 0x1c4(r31)
 /* 80444900 0040DEC0  7F E3 FB 78 */	mr r3, r31
 /* 80444904 0040DEC4  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -61,11 +61,11 @@
 /* 80444978 0040DF38  4E 80 00 20 */	blr 
 .endfn func_80444970
 
-.fn CWorkSystemMem_WorkThreadEvent4, global
-/* 8044497C 0040DF3C  4B FF 40 7C */	b WorkThreadEvent4__11CWorkThreadFv
-.endfn CWorkSystemMem_WorkThreadEvent4
+.fn CWorkSystemMem_wkStartup, global
+/* 8044497C 0040DF3C  4B FF 40 7C */	b wkStartup__11CWorkThreadFv
+.endfn CWorkSystemMem_wkStartup
 
-.fn CWorkSystemMem_WorkThreadEvent5, global
+.fn CWorkSystemMem_wkShutdown, global
 /* 80444980 0040DF40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444984 0040DF44  7C 08 02 A6 */	mflr r0
 /* 80444988 0040DF48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,11 +94,11 @@
 /* 804449DC 0040DF9C  7C 00 18 40 */	cmplw r0, r3
 /* 804449E0 0040DFA0  40 82 00 20 */	bne .L_80444A00
 /* 804449E4 0040DFA4  80 63 01 C4 */	lwz r3, 0x1c4(r3)
-/* 804449E8 0040DFA8  4B FE F9 C9 */	bl MemManager_804343B0
+/* 804449E8 0040DFA8  4B FE F9 C9 */	bl heap_deleteRegion__3mtlFi
 /* 804449EC 0040DFAC  38 00 FF FF */	li r0, -1
 /* 804449F0 0040DFB0  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 804449F4 0040DFB4  7F E3 FB 78 */	mr r3, r31
-/* 804449F8 0040DFB8  4B FF 40 2D */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804449F8 0040DFB8  4B FF 40 2D */	bl wkShutdown__11CWorkThreadFv
 /* 804449FC 0040DFBC  48 00 00 08 */	b .L_80444A04
 .L_80444A00:
 /* 80444A00 0040DFC0  38 60 00 00 */	li r3, 0
@@ -108,7 +108,7 @@
 /* 80444A0C 0040DFCC  7C 08 03 A6 */	mtlr r0
 /* 80444A10 0040DFD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444A14 0040DFD4  4E 80 00 20 */	blr 
-.endfn CWorkSystemMem_WorkThreadEvent5
+.endfn CWorkSystemMem_wkShutdown
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -162,8 +162,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CWorkSystemMem_WorkThreadEvent4
-	.4byte CWorkSystemMem_WorkThreadEvent5
+	.4byte CWorkSystemMem_wkStartup
+	.4byte CWorkSystemMem_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__14CWorkSystemMem
 
@@ -240,7 +240,7 @@
 
 .obj "@eti_8003449C", local
 .hidden "@eti_8003449C"
-	.4byte CWorkSystemMem_WorkThreadEvent5
+	.4byte CWorkSystemMem_wkShutdown
 	.4byte 0x00000098
 	.4byte "@etb_8001C894"
 .endobj "@eti_8003449C"

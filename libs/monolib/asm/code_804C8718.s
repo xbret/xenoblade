@@ -3590,11 +3590,11 @@
 /* 804CBA70 00495030  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 804CBA74 00495034  60 00 88 00 */	ori r0, r0, 0x8800
 /* 804CBA78 00495038  B0 1F 00 00 */	sth r0, 0(r31)
-/* 804CBA7C 0049503C  4B F6 89 1D */	bl Heap_getRegionIndex1
+/* 804CBA7C 0049503C  4B F6 89 1D */	bl Heap_getRegionIndex1__3mtlFv
 /* 804CBA80 00495040  3C A0 80 52 */	lis r5, lbl_80527E08@ha
 /* 804CBA84 00495044  3C 80 00 06 */	lis r4, 6
 /* 804CBA88 00495048  38 A5 7E 08 */	addi r5, r5, lbl_80527E08@l
-/* 804CBA8C 0049504C  4B F6 85 B5 */	bl heap_createRegion
+/* 804CBA8C 0049504C  4B F6 85 B5 */	bl heap_createRegion__3mtlFiiPCc
 /* 804CBA90 00495050  90 7F 00 04 */	stw r3, 4(r31)
 /* 804CBA94 00495054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804CBA98 00495058  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -4110,7 +4110,7 @@
 /* 804CC190 00495750  80 7F 00 04 */	lwz r3, 4(r31)
 /* 804CC194 00495754  54 00 04 E2 */	rlwinm r0, r0, 0, 0x13, 0x11
 /* 804CC198 00495758  B0 1F 00 00 */	sth r0, 0(r31)
-/* 804CC19C 0049575C  4B F6 82 15 */	bl MemManager_804343B0
+/* 804CC19C 0049575C  4B F6 82 15 */	bl heap_deleteRegion__3mtlFi
 /* 804CC1A0 00495760  38 00 FF FF */	li r0, -1
 /* 804CC1A4 00495764  90 1F 00 04 */	stw r0, 4(r31)
 .L_804CC1A8:

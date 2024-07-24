@@ -285,7 +285,7 @@
 /* 80102414 000CB9D4  7C 7F 1B 78 */	mr r31, r3
 /* 80102418 000CB9D8  3B 5A 88 F0 */	addi r26, r26, lbl_804F88F0@l
 /* 8010241C 000CB9DC  90 01 00 90 */	stw r0, 0x90(r1)
-/* 80102420 000CB9E0  48 33 1F 81 */	bl Heap_getRegionIndex2
+/* 80102420 000CB9E0  48 33 1F 81 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80102424 000CB9E4  3C A0 00 01 */	lis r5, 0x00017A00@ha
 /* 80102428 000CB9E8  3C C0 80 50 */	lis r6, CMenuArtsSelect_strpool@ha
 /* 8010242C 000CB9EC  7C 64 1B 78 */	mr r4, r3

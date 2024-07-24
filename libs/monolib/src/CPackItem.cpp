@@ -18,7 +18,7 @@ void CPackItem::func_804DE948() {
         u64* fileHashTable = mPackHeader->mFileHashTable;
         mFileHashTable = fileHashTable;
         r5 = (u16*)fileHashTable + packHeader->mFiles * 4;
-        unk5C = r5;
+        workThreadList = r5;
         r5 += packHeader->mFiles;
         
         if(packHeader->mPkhFilesize > (u32)r5 - (u32)packHeader){

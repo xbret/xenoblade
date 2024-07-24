@@ -259,7 +259,7 @@
 /* 8043A028 004035E8  4E 80 00 20 */	blr 
 .endfn CRsrcData_wkUpdate
 
-.fn CRsrcData_WorkThreadEvent4, global
+.fn CRsrcData_wkStartup, global
 /* 8043A02C 004035EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A030 004035F0  7C 08 02 A6 */	mflr r0
 /* 8043A034 004035F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -272,7 +272,7 @@
 /* 8043A050 00403610  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 8043A054 00403614  41 82 00 10 */	beq .L_8043A064
 /* 8043A058 00403618  7F E3 FB 78 */	mr r3, r31
-/* 8043A05C 0040361C  4B FF E9 9D */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8043A05C 0040361C  4B FF E9 9D */	bl wkStartup__11CWorkThreadFv
 /* 8043A060 00403620  48 00 00 08 */	b .L_8043A068
 .L_8043A064:
 /* 8043A064 00403624  38 60 00 00 */	li r3, 0
@@ -282,9 +282,9 @@
 /* 8043A070 00403630  7C 08 03 A6 */	mtlr r0
 /* 8043A074 00403634  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A078 00403638  4E 80 00 20 */	blr 
-.endfn CRsrcData_WorkThreadEvent4
+.endfn CRsrcData_wkStartup
 
-.fn CRsrcData_WorkThreadEvent5, global
+.fn CRsrcData_wkShutdown, global
 /* 8043A07C 0040363C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A080 00403640  7C 08 02 A6 */	mflr r0
 /* 8043A084 00403644  90 01 00 14 */	stw r0, 0x14(r1)
@@ -304,7 +304,7 @@
 /* 8043A0B8 00403678  41 82 00 10 */	beq .L_8043A0C8
 .L_8043A0BC:
 /* 8043A0BC 0040367C  7F E3 FB 78 */	mr r3, r31
-/* 8043A0C0 00403680  4B FF E9 65 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8043A0C0 00403680  4B FF E9 65 */	bl wkShutdown__11CWorkThreadFv
 /* 8043A0C4 00403684  48 00 00 08 */	b .L_8043A0CC
 .L_8043A0C8:
 /* 8043A0C8 00403688  38 60 00 00 */	li r3, 0
@@ -314,7 +314,7 @@
 /* 8043A0D4 00403694  7C 08 03 A6 */	mtlr r0
 /* 8043A0D8 00403698  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A0DC 0040369C  4E 80 00 20 */	blr 
-.endfn CRsrcData_WorkThreadEvent5
+.endfn CRsrcData_wkShutdown
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -374,8 +374,8 @@
 	.4byte CRsrcData_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CRsrcData_WorkThreadEvent4
-	.4byte CRsrcData_WorkThreadEvent5
+	.4byte CRsrcData_wkStartup
+	.4byte CRsrcData_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CRsrcData
 
@@ -502,14 +502,14 @@
 
 .obj "@eti_80033F38", local
 .hidden "@eti_80033F38"
-	.4byte CRsrcData_WorkThreadEvent4
+	.4byte CRsrcData_wkStartup
 	.4byte 0x00000050
 	.4byte "@etb_8001C2BC"
 .endobj "@eti_80033F38"
 
 .obj "@eti_80033F44", local
 .hidden "@eti_80033F44"
-	.4byte CRsrcData_WorkThreadEvent5
+	.4byte CRsrcData_wkShutdown
 	.4byte 0x00000064
 	.4byte "@etb_8001C2C4"
 .endobj "@eti_80033F44"

@@ -236,7 +236,7 @@
 /* 80149AE0 001130A0  7C 7F 1B 78 */	mr r31, r3
 /* 80149AE4 001130A4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80149AE8 001130A8  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80149AEC 001130AC  48 2E A8 B5 */	bl Heap_getRegionIndex2
+/* 80149AEC 001130AC  48 2E A8 B5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80149AF0 001130B0  3F C0 80 50 */	lis r30, CMenuGetItem_strpool@ha
 /* 80149AF4 001130B4  7C 64 1B 78 */	mr r4, r3
 /* 80149AF8 001130B8  38 7F 00 64 */	addi r3, r31, 0x64

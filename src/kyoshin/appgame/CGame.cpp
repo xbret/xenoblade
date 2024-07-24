@@ -108,14 +108,14 @@ void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
 	view->func_8043CB7C(CRect16(x, y, width, height));
 }
 
-bool CGame::WorkThreadEvent4(){
+bool CGame::wkStartup(){
 	u32 result = func_8045FB08();
 	if(result == 0) return false;
 	UNKTYPE* temp_r3_1 = func_80455AA0();
-	CProc::WorkThreadEvent4();
+	CProc::wkStartup();
 }
 
-bool CGame::WorkThreadEvent5(){
+bool CGame::wkShutdown(){
 
 }
 

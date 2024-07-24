@@ -1544,7 +1544,7 @@
 /* 801175C0 000E0B80  80 04 00 04 */	lwz r0, 4(r4)
 /* 801175C4 000E0B84  7C 05 00 40 */	cmplw r5, r0
 /* 801175C8 000E0B88  40 82 01 08 */	bne .L_801176D0
-/* 801175CC 000E0B8C  48 31 CD D5 */	bl Heap_getRegionIndex2
+/* 801175CC 000E0B8C  48 31 CD D5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 801175D0 000E0B90  3F C0 80 50 */	lis r30, CMinimap_strpool@ha
 /* 801175D4 000E0B94  7C 64 1B 78 */	mr r4, r3
 /* 801175D8 000E0B98  3B DE 9A 44 */	addi r30, r30, CMinimap_strpool@l
@@ -1811,7 +1811,7 @@
 /* 80117988 000E0F48  38 84 01 7E */	addi r4, r4, 0x17e
 /* 8011798C 000E0F4C  4C C6 31 82 */	crclr 6
 /* 80117990 000E0F50  4B F5 1C 71 */	bl func_80069600
-/* 80117994 000E0F54  48 31 CA 0D */	bl Heap_getRegionIndex2
+/* 80117994 000E0F54  48 31 CA 0D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80117998 000E0F58  7F E5 FB 78 */	mr r5, r31
 /* 8011799C 000E0F5C  38 81 00 14 */	addi r4, r1, 0x14
 /* 801179A0 000E0F60  38 C0 00 00 */	li r6, 0
@@ -6142,7 +6142,7 @@
 /* 8011B864 000E4E24  88 1F 00 7E */	lbz r0, 0x7e(r31)
 /* 8011B868 000E4E28  2C 00 00 00 */	cmpwi r0, 0
 /* 8011B86C 000E4E2C  40 82 00 28 */	bne .L_8011B894
-/* 8011B870 000E4E30  48 31 8B 31 */	bl Heap_getRegionIndex2
+/* 8011B870 000E4E30  48 31 8B 31 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8011B874 000E4E34  3C 80 80 50 */	lis r4, CMinimap_strpool@ha
 /* 8011B878 000E4E38  38 BF 00 64 */	addi r5, r31, 0x64
 /* 8011B87C 000E4E3C  38 84 9A 44 */	addi r4, r4, CMinimap_strpool@l
@@ -6238,9 +6238,9 @@
 /* 8011B9D8 000E4F98  88 1F 00 AA */	lbz r0, 0xaa(r31)
 /* 8011B9DC 000E4F9C  2C 00 00 00 */	cmpwi r0, 0
 /* 8011B9E0 000E4FA0  40 82 01 18 */	bne .L_8011BAF8
-/* 8011B9E4 000E4FA4  48 31 89 BD */	bl Heap_getRegionIndex2
+/* 8011B9E4 000E4FA4  48 31 89 BD */	bl Heap_getRegionIndex2__3mtlFv
 /* 8011B9E8 000E4FA8  7C 7C 1B 78 */	mr r28, r3
-/* 8011B9EC 000E4FAC  48 31 89 B5 */	bl Heap_getRegionIndex2
+/* 8011B9EC 000E4FAC  48 31 89 B5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8011B9F0 000E4FB0  3F A0 80 50 */	lis r29, CMinimap_strpool@ha
 /* 8011B9F4 000E4FB4  7F 84 E3 78 */	mr r4, r28
 /* 8011B9F8 000E4FB8  3B BD 9A 44 */	addi r29, r29, CMinimap_strpool@l
@@ -6266,7 +6266,7 @@
 /* 8011BA48 000E5008  7C BE 02 2E */	lhzx r5, r30, r0
 /* 8011BA4C 000E500C  4C C6 31 82 */	crclr 6
 /* 8011BA50 000E5010  48 1A 55 E9 */	bl sprintf
-/* 8011BA54 000E5014  48 31 89 4D */	bl Heap_getRegionIndex2
+/* 8011BA54 000E5014  48 31 89 4D */	bl Heap_getRegionIndex2__3mtlFv
 /* 8011BA58 000E5018  38 81 00 68 */	addi r4, r1, 0x68
 /* 8011BA5C 000E501C  38 BF 00 90 */	addi r5, r31, 0x90
 /* 8011BA60 000E5020  38 C0 00 00 */	li r6, 0

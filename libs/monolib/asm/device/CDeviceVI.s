@@ -65,7 +65,7 @@
 /* 80447EC0 00411480  4B FE C4 E9 */	bl Heap_getRegionIndex2_2__3mtlFv
 /* 80447EC4 00411484  48 00 00 08 */	b .L_80447ECC
 .L_80447EC8:
-/* 80447EC8 00411488  48 00 51 91 */	bl func_8044D058__Fv
+/* 80447EC8 00411488  48 00 51 91 */	bl func_8044D058__7CDeviceFv
 .L_80447ECC:
 /* 80447ECC 0041148C  3C A0 00 13 */	lis r5, 0x0012C000@ha
 /* 80447ED0 00411490  7C 64 1B 78 */	mr r4, r3
@@ -1171,7 +1171,7 @@
 /* 80448D14 004122D4  4E 80 00 20 */	blr 
 .endfn func_80448D10__9CDeviceVIFv
 
-.fn WorkThreadEvent4__9CDeviceVIFv, global
+.fn wkStartup__9CDeviceVIFv, global
 /* 80448D18 004122D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448D1C 004122DC  7C 08 02 A6 */	mflr r0
 /* 80448D20 004122E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1224,7 +1224,7 @@
 /* 80448DC8 00412388  38 60 00 00 */	li r3, 0
 /* 80448DCC 0041238C  4B F1 F7 05 */	bl VISetTrapFilter
 /* 80448DD0 00412390  7F E3 FB 78 */	mr r3, r31
-/* 80448DD4 00412394  4B FE FC 25 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 80448DD4 00412394  4B FE FC 25 */	bl wkStartup__11CWorkThreadFv
 /* 80448DD8 00412398  48 00 00 08 */	b .L_80448DE0
 .L_80448DDC:
 /* 80448DDC 0041239C  38 60 00 00 */	li r3, 0
@@ -1234,9 +1234,9 @@
 /* 80448DE8 004123A8  7C 08 03 A6 */	mtlr r0
 /* 80448DEC 004123AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448DF0 004123B0  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent4__9CDeviceVIFv
+.endfn wkStartup__9CDeviceVIFv
 
-.fn WorkThreadEvent5__9CDeviceVIFv, global
+.fn wkShutdown__9CDeviceVIFv, global
 /* 80448DF4 004123B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448DF8 004123B8  7C 08 02 A6 */	mflr r0
 /* 80448DFC 004123BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1252,7 +1252,7 @@
 /* 80448E24 004123E4  48 00 C4 89 */	bl getInstance__9CDeviceGXFv
 /* 80448E28 004123E8  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E2C 004123EC  40 82 00 34 */	bne .L_80448E60
-/* 80448E30 004123F0  48 00 46 09 */	bl func_8044D438__Fv
+/* 80448E30 004123F0  48 00 46 09 */	bl func_8044D438__7CDeviceFv
 /* 80448E34 004123F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E38 004123F8  41 82 00 28 */	beq .L_80448E60
 /* 80448E3C 004123FC  4B FF B6 99 */	bl getInstance__11CWorkSystemFv
@@ -1262,7 +1262,7 @@
 /* 80448E4C 0041240C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E50 00412410  40 82 00 10 */	bne .L_80448E60
 /* 80448E54 00412414  7F E3 FB 78 */	mr r3, r31
-/* 80448E58 00412418  4B FE FB CD */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 80448E58 00412418  4B FE FB CD */	bl wkShutdown__11CWorkThreadFv
 /* 80448E5C 0041241C  48 00 00 08 */	b .L_80448E64
 .L_80448E60:
 /* 80448E60 00412420  38 60 00 00 */	li r3, 0
@@ -1272,7 +1272,7 @@
 /* 80448E6C 0041242C  7C 08 03 A6 */	mtlr r0
 /* 80448E70 00412430  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448E74 00412434  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent5__9CDeviceVIFv
+.endfn wkShutdown__9CDeviceVIFv
 
 .fn func_80448E78__9CDeviceVIFb, global
 /* 80448E78 00412438  98 6D BD AC */	stb r3, lbl_80667F2C@sda21(r13)
@@ -1465,8 +1465,8 @@
 	.4byte wkUpdate__9CDeviceVIFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__9CDeviceVIFv
-	.4byte WorkThreadEvent5__9CDeviceVIFv
+	.4byte wkStartup__9CDeviceVIFv
+	.4byte wkShutdown__9CDeviceVIFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 	.4byte __RTTI__9CDeviceVI
 	.4byte 0xFFFFFE38
@@ -1801,14 +1801,14 @@
 
 .obj "@eti_80034748", local
 .hidden "@eti_80034748"
-	.4byte WorkThreadEvent4__9CDeviceVIFv
+	.4byte wkStartup__9CDeviceVIFv
 	.4byte 0x000000DC
 	.4byte "@etb_8001CB58"
 .endobj "@eti_80034748"
 
 .obj "@eti_80034754", local
 .hidden "@eti_80034754"
-	.4byte WorkThreadEvent5__9CDeviceVIFv
+	.4byte wkShutdown__9CDeviceVIFv
 	.4byte 0x00000084
 	.4byte "@etb_8001CB60"
 .endobj "@eti_80034754"

@@ -771,11 +771,11 @@
 /* 8043969C 00402C5C  4E 80 00 20 */	blr 
 .endfn func_804392F4
 
-.fn WorkThreadEvent4__5CProcFv, global
-/* 804396A0 00402C60  4B FF F3 58 */	b WorkThreadEvent4__11CWorkThreadFv
-.endfn WorkThreadEvent4__5CProcFv
+.fn wkStartup__5CProcFv, global
+/* 804396A0 00402C60  4B FF F3 58 */	b wkStartup__11CWorkThreadFv
+.endfn wkStartup__5CProcFv
 
-.fn WorkThreadEvent5__5CProcFv, global
+.fn wkShutdown__5CProcFv, global
 /* 804396A4 00402C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804396A8 00402C68  7C 08 02 A6 */	mflr r0
 /* 804396AC 00402C6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -815,14 +815,14 @@
 /* 80439724 00402CE4  90 84 00 04 */	stw r4, 4(r4)
 /* 80439728 00402CE8  48 00 8B 99 */	bl func_804422C0
 /* 8043972C 00402CEC  7F C3 F3 78 */	mr r3, r30
-/* 80439730 00402CF0  4B FF F2 F5 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 80439730 00402CF0  4B FF F2 F5 */	bl wkShutdown__11CWorkThreadFv
 /* 80439734 00402CF4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80439738 00402CF8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8043973C 00402CFC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80439740 00402D00  7C 08 03 A6 */	mtlr r0
 /* 80439744 00402D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439748 00402D08  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent5__5CProcFv
+.endfn wkShutdown__5CProcFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -887,8 +887,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__5CProcFv
-	.4byte WorkThreadEvent5__5CProcFv
+	.4byte wkStartup__5CProcFv
+	.4byte wkShutdown__5CProcFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__5CProc
 
@@ -1075,7 +1075,7 @@
 
 .obj "@eti_80033E78", local
 .hidden "@eti_80033E78"
-	.4byte WorkThreadEvent5__5CProcFv
+	.4byte wkShutdown__5CProcFv
 	.4byte 0x000000A8
 	.4byte "@etb_8001C228"
 .endobj "@eti_80033E78"

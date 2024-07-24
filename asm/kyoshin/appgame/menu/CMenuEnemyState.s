@@ -75,7 +75,7 @@
 /* 8010EB50 000D8110  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8010EB54 000D8114  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8010EB58 000D8118  7C 7E 1B 78 */	mr r30, r3
-/* 8010EB5C 000D811C  48 32 58 45 */	bl Heap_getRegionIndex2
+/* 8010EB5C 000D811C  48 32 58 45 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8010EB60 000D8120  3F E0 80 50 */	lis r31, CMenuEnemyState_strpool@ha
 /* 8010EB64 000D8124  7C 64 1B 78 */	mr r4, r3
 /* 8010EB68 000D8128  38 7E 00 08 */	addi r3, r30, 8
@@ -707,7 +707,7 @@
 /* 8010F464 000D8A24  F3 C1 00 C8 */	psq_st f30, 200(r1), 0, qr0
 /* 8010F468 000D8A28  48 1A AC B9 */	bl _savegpr_14
 /* 8010F46C 000D8A2C  7C 6F 1B 78 */	mr r15, r3
-/* 8010F470 000D8A30  48 32 4F 31 */	bl Heap_getRegionIndex2
+/* 8010F470 000D8A30  48 32 4F 31 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8010F474 000D8A34  3C 80 80 50 */	lis r4, CMenuEnemyState_strpool@ha
 /* 8010F478 000D8A38  3C A0 00 04 */	lis r5, 0x0003EC00@ha
 /* 8010F47C 000D8A3C  3A 64 94 40 */	addi r19, r4, CMenuEnemyState_strpool@l

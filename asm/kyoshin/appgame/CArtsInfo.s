@@ -82,7 +82,7 @@
 /* 8023581C 001FEDDC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80235820 001FEDE0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80235824 001FEDE4  7C 7E 1B 78 */	mr r30, r3
-/* 80235828 001FEDE8  48 1F EB 79 */	bl Heap_getRegionIndex2
+/* 80235828 001FEDE8  48 1F EB 79 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8023582C 001FEDEC  3F E0 80 50 */	lis r31, CArtsInfo_stringpool@ha
 /* 80235830 001FEDF0  7F C5 F3 78 */	mr r5, r30
 /* 80235834 001FEDF4  38 9F 67 0C */	addi r4, r31, CArtsInfo_stringpool@l
@@ -6446,7 +6446,7 @@
 /* 8023B484 00204A44  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8023B488 00204A48  7C 00 20 40 */	cmplw r0, r4
 /* 8023B48C 00204A4C  40 82 07 88 */	bne .L_8023BC14
-/* 8023B490 00204A50  48 1F 8F 11 */	bl Heap_getRegionIndex2
+/* 8023B490 00204A50  48 1F 8F 11 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8023B494 00204A54  3F A0 80 50 */	lis r29, CArtsInfo_stringpool@ha
 /* 8023B498 00204A58  3C A0 00 02 */	lis r5, 0x00018000@ha
 /* 8023B49C 00204A5C  3B BD 67 0C */	addi r29, r29, CArtsInfo_stringpool@l

@@ -35,7 +35,7 @@
 /* 804397B0 00402D70  4E 80 00 20 */	blr 
 .endfn func_804397AC
 
-.fn CProcRoot_WorkThreadEvent4, global
+.fn CProcRoot_wkStartup, global
 /* 804397B4 00402D74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804397B8 00402D78  7C 08 02 A6 */	mflr r0
 /* 804397BC 00402D7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,7 +45,7 @@
 /* 804397CC 00402D8C  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 804397D0 00402D90  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 804397D4 00402D94  41 82 00 0C */	beq .L_804397E0
-/* 804397D8 00402D98  4B FF F2 21 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 804397D8 00402D98  4B FF F2 21 */	bl wkStartup__11CWorkThreadFv
 /* 804397DC 00402D9C  48 00 00 64 */	b .L_80439840
 .L_804397E0:
 /* 804397E0 00402DA0  48 01 FC 19 */	bl func_804593F8
@@ -70,7 +70,7 @@
 /* 80439828 00402DE8  38 A0 00 00 */	li r5, 0
 /* 8043982C 00402DEC  4B FF F3 AD */	bl func_80438BD8__11CWorkThreadFP11CWorkThreadUl
 /* 80439830 00402DF0  7F C3 F3 78 */	mr r3, r30
-/* 80439834 00402DF4  4B FF F1 C5 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 80439834 00402DF4  4B FF F1 C5 */	bl wkStartup__11CWorkThreadFv
 /* 80439838 00402DF8  48 00 00 08 */	b .L_80439840
 .L_8043983C:
 /* 8043983C 00402DFC  38 60 00 00 */	li r3, 0
@@ -81,9 +81,9 @@
 /* 8043984C 00402E0C  7C 08 03 A6 */	mtlr r0
 /* 80439850 00402E10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439854 00402E14  4E 80 00 20 */	blr 
-.endfn CProcRoot_WorkThreadEvent4
+.endfn CProcRoot_wkStartup
 
-.fn CProcRoot_WorkThreadEvent5, global
+.fn CProcRoot_wkShutdown, global
 /* 80439858 00402E18  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 8043985C 00402E1C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80439860 00402E20  7C 00 20 40 */	cmplw r0, r4
@@ -91,9 +91,9 @@
 /* 80439868 00402E28  38 60 00 00 */	li r3, 0
 /* 8043986C 00402E2C  4E 80 00 20 */	blr
 .L_80439870:
-/* 80439870 00402E30  4B FF F1 B4 */	b WorkThreadEvent5__11CWorkThreadFv
+/* 80439870 00402E30  4B FF F1 B4 */	b wkShutdown__11CWorkThreadFv
 /* 80439874 00402E34  4E 80 00 20 */	blr 
-.endfn CProcRoot_WorkThreadEvent5
+.endfn CProcRoot_wkShutdown
 
 
 .fn __ct__80439878, global
@@ -486,8 +486,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CProcRoot_WorkThreadEvent4
-	.4byte CProcRoot_WorkThreadEvent5
+	.4byte CProcRoot_wkStartup
+	.4byte CProcRoot_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__9CProcRoot
 
@@ -601,7 +601,7 @@
 
 .obj "@eti_80033E90", local
 .hidden "@eti_80033E90"
-	.4byte CProcRoot_WorkThreadEvent4
+	.4byte CProcRoot_wkStartup
 	.4byte 0x000000A4
 	.4byte "@etb_8001C238"
 .endobj "@eti_80033E90"

@@ -45,7 +45,7 @@
 /* 80491F10 0045B4D0  3C A0 80 52 */	lis r5, lbl_8052796C@ha
 /* 80491F14 0045B4D4  3C 80 00 01 */	lis r4, 1
 /* 80491F18 0045B4D8  38 A5 79 6C */	addi r5, r5, lbl_8052796C@l
-/* 80491F1C 0045B4DC  4B FA 21 25 */	bl heap_createRegion
+/* 80491F1C 0045B4DC  4B FA 21 25 */	bl heap_createRegion__3mtlFiiPCc
 /* 80491F20 0045B4E0  90 7C 00 08 */	stw r3, 8(r28)
 /* 80491F24 0045B4E4  7C 64 1B 78 */	mr r4, r3
 /* 80491F28 0045B4E8  38 7C 00 0C */	addi r3, r28, 0xc
@@ -350,7 +350,7 @@
 /* 80492330 0045B8F0  80 7E 00 C4 */	lwz r3, 0xc4(r30)
 /* 80492334 0045B8F4  4B FA 21 A5 */	bl MemManager_804344D8
 /* 80492338 0045B8F8  80 7E 00 08 */	lwz r3, 8(r30)
-/* 8049233C 0045B8FC  4B FA 20 75 */	bl MemManager_804343B0
+/* 8049233C 0045B8FC  4B FA 20 75 */	bl heap_deleteRegion__3mtlFi
 /* 80492340 0045B900  38 7E 00 6C */	addi r3, r30, 0x6c
 /* 80492344 0045B904  38 80 FF FF */	li r4, -1
 /* 80492348 0045B908  4B BC 7D E9 */	bl __dt__reslist_CVirtualLightObj

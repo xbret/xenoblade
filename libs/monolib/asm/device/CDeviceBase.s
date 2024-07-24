@@ -39,7 +39,7 @@
 /* 80447974 00410F34  7C 7E 1B 78 */	mr r30, r3
 /* 80447978 00410F38  41 82 00 28 */	beq .L_804479A0
 /* 8044797C 00410F3C  38 00 00 00 */	li r0, 0
-/* 80447980 00410F40  90 0D BD 98 */	stw r0, lbl_80667F18@sda21(r13)
+/* 80447980 00410F40  90 0D BD 98 */	stw r0, instance__16CDeviceRemotePad@sda21(r13)
 /* 80447984 00410F44  41 82 00 0C */	beq .L_80447990
 /* 80447988 00410F48  38 80 00 00 */	li r4, 0
 /* 8044798C 00410F4C  4B FF 01 3D */	bl __dt__11CWorkThreadFv
@@ -58,13 +58,13 @@
 /* 804479B8 00410F78  4E 80 00 20 */	blr 
 .endfn __dt__16CDeviceRemotePadFv
 
-.fn func_804479BC, global
-/* 804479BC 00410F7C  80 6D BD 98 */	lwz r3, lbl_80667F18@sda21(r13)
+.fn getInstance__16CDeviceRemotePadFv, global
+/* 804479BC 00410F7C  80 6D BD 98 */	lwz r3, instance__16CDeviceRemotePad@sda21(r13)
 /* 804479C0 00410F80  4E 80 00 20 */	blr 
-.endfn func_804479BC
+.endfn getInstance__16CDeviceRemotePadFv
 
 .fn func_804479C4, global
-/* 804479C4 00410F84  80 8D BD 98 */	lwz r4, lbl_80667F18@sda21(r13)
+/* 804479C4 00410F84  80 8D BD 98 */	lwz r4, instance__16CDeviceRemotePad@sda21(r13)
 /* 804479C8 00410F88  54 60 10 3A */	slwi r0, r3, 2
 /* 804479CC 00410F8C  7C 64 02 14 */	add r3, r4, r0
 /* 804479D0 00410F90  80 63 01 CC */	lwz r3, 0x1cc(r3)
@@ -73,7 +73,7 @@
 .endfn func_804479C4
 
 .fn func_804479DC, global
-/* 804479DC 00410F9C  80 8D BD 98 */	lwz r4, lbl_80667F18@sda21(r13)
+/* 804479DC 00410F9C  80 8D BD 98 */	lwz r4, instance__16CDeviceRemotePad@sda21(r13)
 /* 804479E0 00410FA0  54 60 10 3A */	slwi r0, r3, 2
 /* 804479E4 00410FA4  7C 64 02 14 */	add r3, r4, r0
 /* 804479E8 00410FA8  80 63 01 CC */	lwz r3, 0x1cc(r3)
@@ -82,7 +82,7 @@
 .endfn func_804479DC
 
 .fn func_804479F4, global
-/* 804479F4 00410FB4  80 8D BD 98 */	lwz r4, lbl_80667F18@sda21(r13)
+/* 804479F4 00410FB4  80 8D BD 98 */	lwz r4, instance__16CDeviceRemotePad@sda21(r13)
 /* 804479F8 00410FB8  54 60 10 3A */	slwi r0, r3, 2
 /* 804479FC 00410FBC  7C 64 02 14 */	add r3, r4, r0
 /* 80447A00 00410FC0  80 63 01 CC */	lwz r3, 0x1cc(r3)
@@ -115,7 +115,7 @@
 /* 80447A3C 00410FFC  4E 80 04 20 */	bctr 
 .endfn CDeviceRemotePad_wkUpdate
 
-.fn CDeviceRemotePad_WorkThreadEvent4, global
+.fn CDeviceRemotePad_wkStartup, global
 /* 80447A40 00411000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80447A44 00411004  7C 08 02 A6 */	mflr r0
 /* 80447A48 00411008  90 01 00 24 */	stw r0, 0x24(r1)
@@ -124,10 +124,10 @@
 /* 80447A54 00411014  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80447A58 00411018  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80447A5C 0041101C  7C 7C 1B 78 */	mr r28, r3
-/* 80447A60 00411020  48 00 57 E9 */	bl func_8044D248
+/* 80447A60 00411020  48 00 57 E9 */	bl func_8044D248__7CDeviceFv
 /* 80447A64 00411024  2C 03 00 00 */	cmpwi r3, 0
 /* 80447A68 00411028  41 82 00 58 */	beq .L_80447AC0
-/* 80447A6C 0041102C  4B FE C9 35 */	bl Heap_getRegionIndex2
+/* 80447A6C 0041102C  4B FE C9 35 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80447A70 00411030  4B FF ED 85 */	bl func_804467F4
 /* 80447A74 00411034  90 7C 01 C8 */	stw r3, 0x1c8(r28)
 /* 80447A78 00411038  7F 9E E3 78 */	mr r30, r28
@@ -147,7 +147,7 @@
 /* 80447AAC 0041106C  3B DE 00 04 */	addi r30, r30, 4
 /* 80447AB0 00411070  41 80 FF D4 */	blt .L_80447A84
 /* 80447AB4 00411074  7F 83 E3 78 */	mr r3, r28
-/* 80447AB8 00411078  4B FF 0F 41 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 80447AB8 00411078  4B FF 0F 41 */	bl wkStartup__11CWorkThreadFv
 /* 80447ABC 0041107C  48 00 00 08 */	b .L_80447AC4
 .L_80447AC0:
 /* 80447AC0 00411080  38 60 00 00 */	li r3, 0
@@ -160,9 +160,9 @@
 /* 80447AD8 00411098  7C 08 03 A6 */	mtlr r0
 /* 80447ADC 0041109C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80447AE0 004110A0  4E 80 00 20 */	blr 
-.endfn CDeviceRemotePad_WorkThreadEvent4
+.endfn CDeviceRemotePad_wkStartup
 
-.fn CDeviceRemotePad_WorkThreadEvent5, global
+.fn CDeviceRemotePad_wkShutdown, global
 /* 80447AE4 004110A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447AE8 004110A8  7C 08 02 A6 */	mflr r0
 /* 80447AEC 004110AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -182,7 +182,7 @@
 /* 80447B24 004110E4  38 00 00 00 */	li r0, 0
 /* 80447B28 004110E8  90 1F 01 C8 */	stw r0, 0x1c8(r31)
 /* 80447B2C 004110EC  7F E3 FB 78 */	mr r3, r31
-/* 80447B30 004110F0  4B FF 0E F5 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 80447B30 004110F0  4B FF 0E F5 */	bl wkShutdown__11CWorkThreadFv
 /* 80447B34 004110F4  48 00 00 08 */	b .L_80447B3C
 .L_80447B38:
 /* 80447B38 004110F8  38 60 00 00 */	li r3, 0
@@ -192,7 +192,7 @@
 /* 80447B44 00411104  7C 08 03 A6 */	mtlr r0
 /* 80447B48 00411108  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447B4C 0041110C  4E 80 00 20 */	blr 
-.endfn CDeviceRemotePad_WorkThreadEvent5
+.endfn CDeviceRemotePad_wkShutdown
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -236,8 +236,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__11CWorkThreadFv
-	.4byte WorkThreadEvent5__11CWorkThreadFv
+	.4byte wkStartup__11CWorkThreadFv
+	.4byte wkShutdown__11CWorkThreadFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CDeviceBase
 
@@ -264,9 +264,9 @@
 
 .balign 8
 
-.obj lbl_80667F18, global
+.obj instance__16CDeviceRemotePad, global
 	.skip 0x8
-.endobj lbl_80667F18
+.endobj instance__16CDeviceRemotePad
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -316,14 +316,14 @@
 
 .obj "@eti_80034658", local
 .hidden "@eti_80034658"
-	.4byte CDeviceRemotePad_WorkThreadEvent4
+	.4byte CDeviceRemotePad_wkStartup
 	.4byte 0x000000A4
 	.4byte "@etb_8001CA2C"
 .endobj "@eti_80034658"
 
 .obj "@eti_80034664", local
 .hidden "@eti_80034664"
-	.4byte CDeviceRemotePad_WorkThreadEvent5
+	.4byte CDeviceRemotePad_wkShutdown
 	.4byte 0x0000006C
 	.4byte "@etb_8001CA34"
 .endobj "@eti_80034664"

@@ -9,8 +9,8 @@ class CProc : public CWorkThread {
 public:
 	CProc(const char* name, CWorkThread* workThread, int r6);
 	virtual ~CProc();
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 
 	void func_804391A8();
 

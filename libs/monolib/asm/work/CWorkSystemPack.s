@@ -686,7 +686,7 @@
 /* 804DE1C0 004A7780  4E 80 00 20 */	blr 
 .endfn CWorkSystemPack_wkUpdate
 
-.fn CWorkSystemPack_WorkThreadEvent4, global
+.fn CWorkSystemPack_wkStartup, global
 /* 804DE1C4 004A7784  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE1C8 004A7788  7C 08 02 A6 */	mflr r0
 /* 804DE1CC 004A778C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -728,16 +728,16 @@
 /* 804DE244 004A7804  7C 1F 00 40 */	cmplw r31, r0
 /* 804DE248 004A7808  40 82 FF D4 */	bne .L_804DE21C
 /* 804DE24C 004A780C  7F C3 F3 78 */	mr r3, r30
-/* 804DE250 004A7810  4B F5 A7 A9 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 804DE250 004A7810  4B F5 A7 A9 */	bl wkStartup__11CWorkThreadFv
 .L_804DE254:
 /* 804DE254 004A7814  BB C1 00 08 */	lmw r30, 8(r1)
 /* 804DE258 004A7818  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804DE25C 004A781C  7C 08 03 A6 */	mtlr r0
 /* 804DE260 004A7820  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DE264 004A7824  4E 80 00 20 */	blr 
-.endfn CWorkSystemPack_WorkThreadEvent4
+.endfn CWorkSystemPack_wkStartup
 
-.fn CWorkSystemPack_WorkThreadEvent5, global
+.fn CWorkSystemPack_wkShutdown, global
 /* 804DE268 004A7828  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DE26C 004A782C  7C 08 02 A6 */	mflr r0
 /* 804DE270 004A7830  90 01 00 24 */	stw r0, 0x24(r1)
@@ -815,13 +815,13 @@
 /* 804DE368 004A7928  38 00 00 00 */	li r0, 0
 /* 804DE36C 004A792C  90 1D 01 DC */	stw r0, 0x1dc(r29)
 /* 804DE370 004A7930  7F A3 EB 78 */	mr r3, r29
-/* 804DE374 004A7934  4B F5 A6 B1 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804DE374 004A7934  4B F5 A6 B1 */	bl wkShutdown__11CWorkThreadFv
 /* 804DE378 004A7938  BB A1 00 14 */	lmw r29, 0x14(r1)
 /* 804DE37C 004A793C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 804DE380 004A7940  7C 08 03 A6 */	mtlr r0
 /* 804DE384 004A7944  38 21 00 20 */	addi r1, r1, 0x20
 /* 804DE388 004A7948  4E 80 00 20 */	blr 
-.endfn CWorkSystemPack_WorkThreadEvent5
+.endfn CWorkSystemPack_wkShutdown
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -897,8 +897,8 @@
 	.4byte CWorkSystemPack_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CWorkSystemPack_WorkThreadEvent4
-	.4byte CWorkSystemPack_WorkThreadEvent5
+	.4byte CWorkSystemPack_wkStartup
+	.4byte CWorkSystemPack_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__15CWorkSystemPack
 
@@ -1207,14 +1207,14 @@
 
 .obj "@eti_80038930", local
 .hidden "@eti_80038930"
-	.4byte CWorkSystemPack_WorkThreadEvent4
+	.4byte CWorkSystemPack_wkStartup
 	.4byte 0x000000A4
 	.4byte "@etb_800208E4"
 .endobj "@eti_80038930"
 
 .obj "@eti_8003893C", local
 .hidden "@eti_8003893C"
-	.4byte CWorkSystemPack_WorkThreadEvent5
+	.4byte CWorkSystemPack_wkShutdown
 	.4byte 0x00000124
 	.4byte "@etb_800208EC"
 .endobj "@eti_8003893C"

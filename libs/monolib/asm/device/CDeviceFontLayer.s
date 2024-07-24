@@ -1522,7 +1522,7 @@
 /* 80454DB8 0041E378  4E 80 00 20 */	blr 
 .endfn CDeviceFontLayer_wkUpdate
 
-.fn CDeviceFontLayer_WorkThreadEvent5, global
+.fn CDeviceFontLayer_wkShutdown, global
 /* 80454DBC 0041E37C  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 80454DC0 0041E380  80 04 00 00 */	lwz r0, 0(r4)
 /* 80454DC4 0041E384  7C 00 20 40 */	cmplw r0, r4
@@ -1530,11 +1530,11 @@
 /* 80454DCC 0041E38C  88 03 02 F0 */	lbz r0, 0x2f0(r3)
 /* 80454DD0 0041E390  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DD4 0041E394  41 82 00 08 */	beq .L_80454DDC
-/* 80454DD8 0041E398  4B FE 3C 4C */	b WorkThreadEvent5__11CWorkThreadFv
+/* 80454DD8 0041E398  4B FE 3C 4C */	b wkShutdown__11CWorkThreadFv
 .L_80454DDC:
 /* 80454DDC 0041E39C  38 60 00 00 */	li r3, 0
 /* 80454DE0 0041E3A0  4E 80 00 20 */	blr 
-.endfn CDeviceFontLayer_WorkThreadEvent5
+.endfn CDeviceFontLayer_wkShutdown
 
 .fn func_80454DE4, global
 /* 80454DE4 0041E3A4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1543,7 +1543,7 @@
 /* 80454DF0 0041E3B0  80 0D BD E8 */	lwz r0, lbl_80667F68@sda21(r13)
 /* 80454DF4 0041E3B4  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DF8 0041E3B8  40 82 00 24 */	bne .L_80454E1C
-/* 80454DFC 0041E3BC  4B FF 82 5D */	bl func_8044D058__Fv
+/* 80454DFC 0041E3BC  4B FF 82 5D */	bl func_8044D058__7CDeviceFv
 /* 80454E00 0041E3C0  7C 64 1B 78 */	mr r4, r3
 /* 80454E04 0041E3C4  3C 60 00 01 */	lis r3, 1
 /* 80454E08 0041E3C8  38 A0 00 10 */	li r5, 0x10
@@ -1585,10 +1585,10 @@
 /* 80454E74 0041E434  4E 80 00 20 */	blr 
 .endfn func_80454E6C
 
-.fn func_80454E78, global
+.fn func_80454E78__Fv, global
 /* 80454E78 0041E438  3C 60 00 01 */	lis r3, 1
 /* 80454E7C 0041E43C  4E 80 00 20 */	blr 
-.endfn func_80454E78
+.endfn func_80454E78__Fv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1652,8 +1652,8 @@
 	.4byte CDeviceFontLayer_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__11CWorkThreadFv
-	.4byte CDeviceFontLayer_WorkThreadEvent5
+	.4byte wkStartup__11CWorkThreadFv
+	.4byte CDeviceFontLayer_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__16CDeviceFontLayer
 

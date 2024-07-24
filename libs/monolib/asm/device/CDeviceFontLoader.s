@@ -76,7 +76,7 @@
 /* 80454F7C 0041E53C  4E 80 00 20 */	blr 
 .endfn func_80454F30
 
-.fn CDeviceFontLoader_WorkThreadEvent4, global
+.fn CDeviceFontLoader_wkStartup, global
 /* 80454F80 0041E540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80454F84 0041E544  7C 08 02 A6 */	mflr r0
 /* 80454F88 0041E548  90 01 00 14 */	stw r0, 0x14(r1)
@@ -88,13 +88,13 @@
 /* 80454FA0 0041E560  38 60 00 00 */	li r3, 0
 /* 80454FA4 0041E564  48 00 00 58 */	b .L_80454FFC
 .L_80454FA8:
-/* 80454FA8 0041E568  4B FF 95 65 */	bl func_8044E50C
+/* 80454FA8 0041E568  4B FF 95 65 */	bl getInstance__11CDeviceFileFv
 /* 80454FAC 0041E56C  2C 03 00 00 */	cmpwi r3, 0
 /* 80454FB0 0041E570  41 82 00 48 */	beq .L_80454FF8
 /* 80454FB4 0041E574  4B FF 95 61 */	bl func_8044E514
 /* 80454FB8 0041E578  2C 03 00 00 */	cmpwi r3, 0
 /* 80454FBC 0041E57C  41 82 00 3C */	beq .L_80454FF8
-/* 80454FC0 0041E580  4B FD F3 D9 */	bl Heap_getRegionIndex1
+/* 80454FC0 0041E580  4B FD F3 D9 */	bl Heap_getRegionIndex1__3mtlFv
 /* 80454FC4 0041E584  7F E5 FB 78 */	mr r5, r31
 /* 80454FC8 0041E588  38 9F 01 C8 */	addi r4, r31, 0x1c8
 /* 80454FCC 0041E58C  38 C0 00 00 */	li r6, 0
@@ -106,7 +106,7 @@
 /* 80454FE4 0041E5A4  80 7F 02 0C */	lwz r3, 0x20c(r31)
 /* 80454FE8 0041E5A8  4B FF A4 1D */	bl func_8044F404
 /* 80454FEC 0041E5AC  7F E3 FB 78 */	mr r3, r31
-/* 80454FF0 0041E5B0  4B FE 3A 09 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 80454FF0 0041E5B0  4B FE 3A 09 */	bl wkStartup__11CWorkThreadFv
 /* 80454FF4 0041E5B4  48 00 00 08 */	b .L_80454FFC
 .L_80454FF8:
 /* 80454FF8 0041E5B8  38 60 00 00 */	li r3, 0
@@ -116,9 +116,9 @@
 /* 80455004 0041E5C4  7C 08 03 A6 */	mtlr r0
 /* 80455008 0041E5C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045500C 0041E5CC  4E 80 00 20 */	blr 
-.endfn CDeviceFontLoader_WorkThreadEvent4
+.endfn CDeviceFontLoader_wkStartup
 
-.fn CDeviceFontLoader_WorkThreadEvent5, global
+.fn CDeviceFontLoader_wkShutdown, global
 /* 80455010 0041E5D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455014 0041E5D4  7C 08 02 A6 */	mflr r0
 /* 80455018 0041E5D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -137,7 +137,7 @@
 /* 80455048 0041E608  7C 00 18 40 */	cmplw r0, r3
 /* 8045504C 0041E60C  40 82 00 10 */	bne .L_8045505C
 /* 80455050 0041E610  7F E3 FB 78 */	mr r3, r31
-/* 80455054 0041E614  4B FE 39 D1 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 80455054 0041E614  4B FE 39 D1 */	bl wkShutdown__11CWorkThreadFv
 /* 80455058 0041E618  48 00 00 08 */	b .L_80455060
 .L_8045505C:
 /* 8045505C 0041E61C  38 60 00 00 */	li r3, 0
@@ -147,7 +147,7 @@
 /* 80455068 0041E628  7C 08 03 A6 */	mtlr r0
 /* 8045506C 0041E62C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455070 0041E630  4E 80 00 20 */	blr 
-.endfn CDeviceFontLoader_WorkThreadEvent5
+.endfn CDeviceFontLoader_wkShutdown
 
 .fn CDeviceFontLoader_OnFileEvent, global
 /* 80455074 0041E634  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -236,8 +236,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CDeviceFontLoader_WorkThreadEvent4
-	.4byte CDeviceFontLoader_WorkThreadEvent5
+	.4byte CDeviceFontLoader_wkStartup
+	.4byte CDeviceFontLoader_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__17CDeviceFontLoader
 
@@ -326,14 +326,14 @@
 
 .obj "@eti_80034E98", local
 .hidden "@eti_80034E98"
-	.4byte CDeviceFontLoader_WorkThreadEvent4
+	.4byte CDeviceFontLoader_wkStartup
 	.4byte 0x00000090
 	.4byte "@etb_8001D20C"
 .endobj "@eti_80034E98"
 
 .obj "@eti_80034EA4", local
 .hidden "@eti_80034EA4"
-	.4byte CDeviceFontLoader_WorkThreadEvent5
+	.4byte CDeviceFontLoader_wkShutdown
 	.4byte 0x00000064
 	.4byte "@etb_8001D214"
 .endobj "@eti_80034EA4"

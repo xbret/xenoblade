@@ -986,7 +986,7 @@
 /* 80297930 00260EF0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80297934 00260EF4  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80297938 00260EF8  7C 7E 1B 78 */	mr r30, r3
-/* 8029793C 00260EFC  48 19 CA 65 */	bl Heap_getRegionIndex2
+/* 8029793C 00260EFC  48 19 CA 65 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80297940 00260F00  3F E0 80 51 */	lis r31, CMCGetItemBox_strpool@ha
 /* 80297944 00260F04  7F C5 F3 78 */	mr r5, r30
 /* 80297948 00260F08  3B FF B5 C4 */	addi r31, r31, CMCGetItemBox_strpool@l
@@ -995,7 +995,7 @@
 /* 80297954 00260F14  38 E0 00 00 */	li r7, 0
 /* 80297958 00260F18  48 1B 6E 3D */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8029795C 00260F1C  90 7E 00 24 */	stw r3, 0x24(r30)
-/* 80297960 00260F20  48 19 CA 41 */	bl Heap_getRegionIndex2
+/* 80297960 00260F20  48 19 CA 41 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80297964 00260F24  7F C5 F3 78 */	mr r5, r30
 /* 80297968 00260F28  38 9F 00 93 */	addi r4, r31, 0x93
 /* 8029796C 00260F2C  38 C0 00 00 */	li r6, 0
@@ -1009,7 +1009,7 @@
 /* 8029798C 00260F4C  38 E0 00 00 */	li r7, 0
 /* 80297990 00260F50  48 1B 71 D5 */	bl CDeviceFile_openFile2
 /* 80297994 00260F54  90 7E 00 2C */	stw r3, 0x2c(r30)
-/* 80297998 00260F58  48 19 CA 09 */	bl Heap_getRegionIndex2
+/* 80297998 00260F58  48 19 CA 09 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8029799C 00260F5C  7F C5 F3 78 */	mr r5, r30
 /* 802979A0 00260F60  38 9F 00 C2 */	addi r4, r31, 0xc2
 /* 802979A4 00260F64  38 C0 00 00 */	li r6, 0
@@ -3443,7 +3443,7 @@
 /* 80299B54 00263114  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 80299B58 00263118  7C 00 20 40 */	cmplw r0, r4
 /* 80299B5C 0026311C  40 82 03 BC */	bne .L_80299F18
-/* 80299B60 00263120  48 19 A8 41 */	bl Heap_getRegionIndex2
+/* 80299B60 00263120  48 19 A8 41 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80299B64 00263124  3C A0 80 51 */	lis r5, CMCGetItemBox_strpool@ha
 /* 80299B68 00263128  7C 64 1B 78 */	mr r4, r3
 /* 80299B6C 0026312C  38 A5 B5 C4 */	addi r5, r5, CMCGetItemBox_strpool@l
@@ -3688,7 +3688,7 @@
 /* 80299F18 002634D8  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 80299F1C 002634DC  7C 00 20 40 */	cmplw r0, r4
 /* 80299F20 002634E0  40 82 00 88 */	bne .L_80299FA8
-/* 80299F24 002634E4  48 19 A4 7D */	bl Heap_getRegionIndex2
+/* 80299F24 002634E4  48 19 A4 7D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80299F28 002634E8  3F A0 80 51 */	lis r29, CMCGetItemBox_strpool@ha
 /* 80299F2C 002634EC  7C 64 1B 78 */	mr r4, r3
 /* 80299F30 002634F0  3B BD B5 C4 */	addi r29, r29, CMCGetItemBox_strpool@l

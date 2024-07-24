@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CDeviceFont, global
+.fn __ct__11CDeviceFontFPCcP11CWorkThread, global
 /* 8045229C 0041B85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804522A0 0041B860  7C 08 02 A6 */	mflr r0
 /* 804522A4 0041B864  38 C0 02 00 */	li r6, 0x200
@@ -60,7 +60,7 @@
 /* 80452374 0041B934  7C 08 03 A6 */	mtlr r0
 /* 80452378 0041B938  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045237C 0041B93C  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceFont
+.endfn __ct__11CDeviceFontFPCcP11CWorkThread
 
 .fn __dt___reslist_base_IDeviceFontInfo, global
 /* 80452380 0041B940  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -231,10 +231,10 @@
 /* 804525C8 0041BB88  4E 80 00 20 */	blr 
 .endfn __dt__11CDeviceFontFv
 
-.fn func_804525CC, global
+.fn getInstance__11CDeviceFontFv, global
 /* 804525CC 0041BB8C  80 6D BD D8 */	lwz r3, lbl_80667F58@sda21(r13)
 /* 804525D0 0041BB90  4E 80 00 20 */	blr 
-.endfn func_804525CC
+.endfn getInstance__11CDeviceFontFv
 
 .fn func_804525D4, global
 /* 804525D4 0041BB94  80 6D BD D8 */	lwz r3, lbl_80667F58@sda21(r13)
@@ -975,7 +975,7 @@
 /* 80452F1C 0041C4DC  41 82 00 DC */	beq .L_80452FF8
 /* 80452F20 0041C4E0  48 00 01 44 */	b .L_80453064
 .L_80452F24:
-/* 80452F24 0041C4E4  4B FF B5 E9 */	bl func_8044E50C
+/* 80452F24 0041C4E4  4B FF B5 E9 */	bl getInstance__11CDeviceFileFv
 /* 80452F28 0041C4E8  2C 03 00 00 */	cmpwi r3, 0
 /* 80452F2C 0041C4EC  41 82 01 38 */	beq .L_80453064
 /* 80452F30 0041C4F0  4B FF B5 E5 */	bl func_8044E514
@@ -1092,7 +1092,7 @@
 /* 804530BC 0041C67C  4E 80 00 20 */	blr 
 .endfn __dt__80453080
 
-.fn CDeviceFont_WorkThreadEvent4, global
+.fn CDeviceFont_wkStartup, global
 /* 804530C0 0041C680  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804530C4 0041C684  7C 08 02 A6 */	mflr r0
 /* 804530C8 0041C688  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1100,7 +1100,7 @@
 /* 804530D0 0041C690  7C 3F 0B 78 */	mr r31, r1
 /* 804530D4 0041C694  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 804530D8 0041C698  7C 7E 1B 78 */	mr r30, r3
-/* 804530DC 0041C69C  4B FF A1 6D */	bl func_8044D248
+/* 804530DC 0041C69C  4B FF A1 6D */	bl func_8044D248__7CDeviceFv
 /* 804530E0 0041C6A0  2C 03 00 00 */	cmpwi r3, 0
 /* 804530E4 0041C6A4  41 82 00 B0 */	beq .L_80453194
 /* 804530E8 0041C6A8  48 00 1C FD */	bl func_80454DE4
@@ -1140,7 +1140,7 @@
 /* 80453160 0041C720  90 83 00 00 */	stw r4, 0(r3)
 /* 80453164 0041C724  90 89 00 04 */	stw r4, 4(r9)
 .L_80453168:
-/* 80453168 0041C728  4B FE 12 31 */	bl Heap_getRegionIndex1
+/* 80453168 0041C728  4B FE 12 31 */	bl Heap_getRegionIndex1__3mtlFv
 /* 8045316C 0041C72C  7C 64 1B 78 */	mr r4, r3
 /* 80453170 0041C730  38 60 00 04 */	li r3, 4
 /* 80453174 0041C734  4B FE 18 E9 */	bl heap_malloc__3mtlFUli
@@ -1150,7 +1150,7 @@
 .L_80453184:
 /* 80453184 0041C744  90 7E 01 E8 */	stw r3, 0x1e8(r30)
 /* 80453188 0041C748  7F C3 F3 78 */	mr r3, r30
-/* 8045318C 0041C74C  4B FE 58 6D */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8045318C 0041C74C  4B FE 58 6D */	bl wkStartup__11CWorkThreadFv
 /* 80453190 0041C750  48 00 00 08 */	b .L_80453198
 .L_80453194:
 /* 80453194 0041C754  38 60 00 00 */	li r3, 0
@@ -1163,9 +1163,9 @@
 /* 804531AC 0041C76C  7D 41 53 78 */	mr r1, r10
 /* 804531B0 0041C770  7C 08 03 A6 */	mtlr r0
 /* 804531B4 0041C774  4E 80 00 20 */	blr 
-.endfn CDeviceFont_WorkThreadEvent4
+.endfn CDeviceFont_wkStartup
 
-.fn CDeviceFont_WorkThreadEvent5, global
+.fn CDeviceFont_wkShutdown, global
 /* 804531B8 0041C778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804531BC 0041C77C  7C 08 02 A6 */	mflr r0
 /* 804531C0 0041C780  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1235,7 +1235,7 @@
 /* 804532A0 0041C860  7F A3 EB 78 */	mr r3, r29
 /* 804532A4 0041C864  80 9D 01 CC */	lwz r4, 0x1cc(r29)
 /* 804532A8 0041C868  90 84 00 04 */	stw r4, 4(r4)
-/* 804532AC 0041C86C  4B FE 57 79 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 804532AC 0041C86C  4B FE 57 79 */	bl wkShutdown__11CWorkThreadFv
 /* 804532B0 0041C870  48 00 00 08 */	b .L_804532B8
 .L_804532B4:
 /* 804532B4 0041C874  38 60 00 00 */	li r3, 0
@@ -1247,7 +1247,7 @@
 /* 804532C8 0041C888  7C 08 03 A6 */	mtlr r0
 /* 804532CC 0041C88C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804532D0 0041C890  4E 80 00 20 */	blr 
-.endfn CDeviceFont_WorkThreadEvent5
+.endfn CDeviceFont_wkShutdown
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1325,8 +1325,8 @@
 	.4byte CDeviceFont_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CDeviceFont_WorkThreadEvent4
-	.4byte CDeviceFont_WorkThreadEvent5
+	.4byte CDeviceFont_wkStartup
+	.4byte CDeviceFont_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__11CDeviceFont
 
@@ -1500,7 +1500,7 @@
 
 .obj "@eti_80034CDC", local
 .hidden "@eti_80034CDC"
-	.4byte __ct__CDeviceFont
+	.4byte __ct__11CDeviceFontFPCcP11CWorkThread
 	.4byte 0x000000E4
 	.4byte "@etb_8001CFEC"
 .endobj "@eti_80034CDC"
@@ -1570,14 +1570,14 @@
 
 .obj "@eti_80034D54", local
 .hidden "@eti_80034D54"
-	.4byte CDeviceFont_WorkThreadEvent4
+	.4byte CDeviceFont_wkStartup
 	.4byte 0x000000F8
 	.4byte "@etb_8001D070"
 .endobj "@eti_80034D54"
 
 .obj "@eti_80034D60", local
 .hidden "@eti_80034D60"
-	.4byte CDeviceFont_WorkThreadEvent5
+	.4byte CDeviceFont_wkShutdown
 	.4byte 0x0000011C
 	.4byte "@etb_8001D078"
 .endobj "@eti_80034D60"

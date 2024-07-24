@@ -303,7 +303,7 @@
 /* 8045D724 00426CE4  3C 03 00 01 */	addis r0, r3, 1
 /* 8045D728 00426CE8  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8045D72C 00426CEC  40 82 00 10 */	bne .L_8045D73C
-/* 8045D730 00426CF0  4B FD 6C 71 */	bl Heap_getRegionIndex2
+/* 8045D730 00426CF0  4B FD 6C 71 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8045D734 00426CF4  80 8D BE 50 */	lwz r4, lbl_80667FD0@sda21(r13)
 /* 8045D738 00426CF8  90 64 01 C4 */	stw r3, 0x1c4(r4)
 .L_8045D73C:
@@ -806,7 +806,7 @@
 .endfn func_8045DE00
 
 
-.fn CLibHbm_WorkThreadEvent4, global
+.fn CLibHbm_wkStartup, global
 /* 8045DE04 004273C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045DE08 004273C8  7C 08 02 A6 */	mflr r0
 /* 8045DE0C 004273CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -824,7 +824,7 @@
 /* 8045DE3C 004273FC  48 00 00 14 */	b .L_8045DE50
 .L_8045DE40:
 /* 8045DE40 00427400  7F E3 FB 78 */	mr r3, r31
-/* 8045DE44 00427404  4B FD AB B5 */	bl WorkThreadEvent4__11CWorkThreadFv
+/* 8045DE44 00427404  4B FD AB B5 */	bl wkStartup__11CWorkThreadFv
 /* 8045DE48 00427408  48 00 00 08 */	b .L_8045DE50
 .L_8045DE4C:
 /* 8045DE4C 0042740C  38 60 00 00 */	li r3, 0
@@ -834,9 +834,9 @@
 /* 8045DE58 00427418  7C 08 03 A6 */	mtlr r0
 /* 8045DE5C 0042741C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045DE60 00427420  4E 80 00 20 */	blr 
-.endfn CLibHbm_WorkThreadEvent4
+.endfn CLibHbm_wkStartup
 
-.fn CLibHbm_WorkThreadEvent5, global
+.fn CLibHbm_wkShutdown, global
 /* 8045DE64 00427424  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045DE68 00427428  7C 08 02 A6 */	mflr r0
 /* 8045DE6C 0042742C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -852,7 +852,7 @@
 /* 8045DE94 00427454  7F E3 FB 78 */	mr r3, r31
 /* 8045DE98 00427458  4B FF F7 39 */	bl func_8045D5D0
 /* 8045DE9C 0042745C  7F E3 FB 78 */	mr r3, r31
-/* 8045DEA0 00427460  4B FD AB 85 */	bl WorkThreadEvent5__11CWorkThreadFv
+/* 8045DEA0 00427460  4B FD AB 85 */	bl wkShutdown__11CWorkThreadFv
 /* 8045DEA4 00427464  48 00 00 08 */	b .L_8045DEAC
 .L_8045DEA8:
 /* 8045DEA8 00427468  38 60 00 00 */	li r3, 0
@@ -862,7 +862,7 @@
 /* 8045DEB4 00427474  7C 08 03 A6 */	mtlr r0
 /* 8045DEB8 00427478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045DEBC 0042747C  4E 80 00 20 */	blr 
-.endfn CLibHbm_WorkThreadEvent5
+.endfn CLibHbm_wkShutdown
 
 .fn CLibHbm_OnFileEvent, global
 /* 8045DEC0 00427480  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1381,8 +1381,8 @@
 	.4byte CLibHbm_wkUpdate
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CLibHbm_WorkThreadEvent4
-	.4byte CLibHbm_WorkThreadEvent5
+	.4byte CLibHbm_wkStartup
+	.4byte CLibHbm_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__7CLibHbm
 
@@ -1684,14 +1684,14 @@
 
 .obj "@eti_80035360", local
 .hidden "@eti_80035360"
-	.4byte CLibHbm_WorkThreadEvent4
+	.4byte CLibHbm_wkStartup
 	.4byte 0x00000060
 	.4byte "@etb_8001D750"
 .endobj "@eti_80035360"
 
 .obj "@eti_8003536C", local
 .hidden "@eti_8003536C"
-	.4byte CLibHbm_WorkThreadEvent5
+	.4byte CLibHbm_wkShutdown
 	.4byte 0x0000005C
 	.4byte "@etb_8001D758"
 .endobj "@eti_8003536C"

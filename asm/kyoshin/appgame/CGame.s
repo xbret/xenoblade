@@ -344,7 +344,7 @@
 /* 800396C4 00002C84  4E 80 00 20 */	blr 
 .endfn func_80039694__5CGameFP5CViewssss
 
-.fn WorkThreadEvent4__5CGameFv, global
+.fn wkStartup__5CGameFv, global
 /* 800396C8 00002C88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800396CC 00002C8C  7C 08 02 A6 */	mflr r0
 /* 800396D0 00002C90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -457,7 +457,7 @@
 /* 8003986C 00002E2C  48 0F D6 19 */	bl func_80136E84__FPPQ34nw4r3lyt6LayoutPQ34nw4r3lyt19ArcResourceAccessorPCc
 .L_80039870:
 /* 80039870 00002E30  7F A3 EB 78 */	mr r3, r29
-/* 80039874 00002E34  48 3F FE 2D */	bl WorkThreadEvent4__5CProcFv
+/* 80039874 00002E34  48 3F FE 2D */	bl wkStartup__5CProcFv
 .L_80039878:
 /* 80039878 00002E38  39 61 00 30 */	addi r11, r1, 0x30
 /* 8003987C 00002E3C  48 28 09 2D */	bl _restgpr_29
@@ -465,9 +465,9 @@
 /* 80039884 00002E44  7C 08 03 A6 */	mtlr r0
 /* 80039888 00002E48  38 21 00 30 */	addi r1, r1, 0x30
 /* 8003988C 00002E4C  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent4__5CGameFv
+.endfn wkStartup__5CGameFv
 
-.fn WorkThreadEvent5__5CGameFv, global
+.fn wkShutdown__5CGameFv, global
 /* 80039890 00002E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039894 00002E54  7C 08 02 A6 */	mflr r0
 /* 80039898 00002E58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -526,7 +526,7 @@
 /* 80039954 00002F14  90 0D A4 84 */	stw r0, lbl_80666604@sda21(r13)
 .L_80039958:
 /* 80039958 00002F18  7F E3 FB 78 */	mr r3, r31
-/* 8003995C 00002F1C  48 3F FD 49 */	bl WorkThreadEvent5__5CProcFv
+/* 8003995C 00002F1C  48 3F FD 49 */	bl wkShutdown__5CProcFv
 /* 80039960 00002F20  48 00 00 08 */	b .L_80039968
 .L_80039964:
 /* 80039964 00002F24  38 60 00 00 */	li r3, 0
@@ -536,7 +536,7 @@
 /* 80039970 00002F30  7C 08 03 A6 */	mtlr r0
 /* 80039974 00002F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039978 00002F38  4E 80 00 20 */	blr 
-.endfn WorkThreadEvent5__5CGameFv
+.endfn wkShutdown__5CGameFv
 
 .fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, weak
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1131,8 +1131,8 @@
 	.4byte "wkUpdate__Q219@unnamed@CGame_cpp@12CGameRestartFv"
 	.4byte WorkThreadEvent2__11CWorkThreadFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__5CProcFv
-	.4byte WorkThreadEvent5__5CProcFv
+	.4byte wkStartup__5CProcFv
+	.4byte wkShutdown__5CProcFv
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj "__vt__Q219@unnamed@CGame_cpp@12CGameRestart"
 
@@ -1187,8 +1187,8 @@
 	.4byte wkUpdate__5CGameFv
 	.4byte WorkThreadEvent2__5CGameFv
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte WorkThreadEvent4__5CGameFv
-	.4byte WorkThreadEvent5__5CGameFv
+	.4byte wkStartup__5CGameFv
+	.4byte wkShutdown__5CGameFv
 	.4byte WorkThreadEvent6__5CGameFv
 .endobj __vt__5CGame
 
@@ -1513,14 +1513,14 @@
 
 .obj "@eti_80021080", local
 .hidden "@eti_80021080"
-	.4byte WorkThreadEvent4__5CGameFv
+	.4byte wkStartup__5CGameFv
 	.4byte 0x000001C8
 	.4byte "@etb_80006758"
 .endobj "@eti_80021080"
 
 .obj "@eti_8002108C", local
 .hidden "@eti_8002108C"
-	.4byte WorkThreadEvent5__5CGameFv
+	.4byte wkShutdown__5CGameFv
 	.4byte 0x000000EC
 	.4byte "@etb_80006760"
 .endobj "@eti_8002108C"

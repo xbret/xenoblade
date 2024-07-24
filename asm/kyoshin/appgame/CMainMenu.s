@@ -291,7 +291,7 @@
 /* 800FEE20 000C83E0  41 82 00 08 */	beq .L_800FEE28
 /* 800FEE24 000C83E4  3B E3 00 58 */	addi r31, r3, 0x58
 .L_800FEE28:
-/* 800FEE28 000C83E8  48 33 55 79 */	bl Heap_getRegionIndex2
+/* 800FEE28 000C83E8  48 33 55 79 */	bl Heap_getRegionIndex2__3mtlFv
 /* 800FEE2C 000C83EC  80 8D 85 38 */	lwz r4, lbl_806646B8@sda21(r13)
 /* 800FEE30 000C83F0  7F E5 FB 78 */	mr r5, r31
 /* 800FEE34 000C83F4  38 C0 00 00 */	li r6, 0
@@ -649,7 +649,7 @@
 /* 800FF320 000C88E0  80 04 00 04 */	lwz r0, 4(r4)
 /* 800FF324 000C88E4  7C 05 00 40 */	cmplw r5, r0
 /* 800FF328 000C88E8  40 82 02 BC */	bne .L_800FF5E4
-/* 800FF32C 000C88EC  48 33 50 75 */	bl Heap_getRegionIndex2
+/* 800FF32C 000C88EC  48 33 50 75 */	bl Heap_getRegionIndex2__3mtlFv
 /* 800FF330 000C88F0  3F C0 80 50 */	lis r30, CMainMenu_strpool@ha
 /* 800FF334 000C88F4  3C A0 00 01 */	lis r5, 0x0000CC00@ha
 /* 800FF338 000C88F8  3B DE 86 DC */	addi r30, r30, CMainMenu_strpool@l

@@ -6,6 +6,7 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/CGXCache.hpp"
+#include "monolib/MemManager.hpp"
 #include "revolution/GX.h"
 
 enum EVerticalFilter {
@@ -31,10 +32,10 @@ public:
 	static void func_8045565C(void* r3);
 	static void func_8045579C();
 	static int func_804557A0();
-	virtual bool WorkThreadEvent4();
-	virtual bool WorkThreadEvent5();
+	virtual bool wkStartup();
+	virtual bool wkShutdown();
 	static void drawSyncCallback(u16 token);
-	static void init(GXPixelFmt format, u32 heapSize);
+	static void setValues(GXPixelFmt format, u32 heapSize);
 
 
 	static inline CGXCache* getCacheInstance(){
@@ -62,6 +63,13 @@ public:
 		float temp = CDeviceVI::func_8044842C();
 		float temp2 = func_804477E8(someString);
 		lbl_80667F70 = temp2/temp;
+	}
+
+	static inline CDeviceGX* init(const char* name, CWorkThread* workThread){
+		CDeviceGX* device = new CDeviceGX(name, workThread);
+		device->func_80438BD8(workThread, 0);
+		device->unk1C4 |= 1;
+		return device;
 	}
 
 	//0x0: vtable

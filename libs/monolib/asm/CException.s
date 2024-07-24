@@ -138,7 +138,7 @@
 /* 80457D70 00421330  7C 7E 1B 78 */	mr r30, r3
 /* 80457D74 00421334  48 00 00 60 */	b .L_80457DD4
 .L_80457D78:
-/* 80457D78 00421338  4B FF 5A A1 */	bl func_8044D818
+/* 80457D78 00421338  4B FF 5A A1 */	bl "getInstance__Q221@unnamed@CDevice_cpp@16CDeviceExceptionFv"
 /* 80457D7C 0042133C  3F 80 80 52 */	lis r28, lbl_80526894@ha
 /* 80457D80 00421340  7C 7E 1B 78 */	mr r30, r3
 /* 80457D84 00421344  3B 9C 68 94 */	addi r28, r28, lbl_80526894@l
@@ -1359,7 +1359,7 @@
 /* 80458ED4 00422494  4E 80 00 20 */	blr 
 .endfn func_80458CBC
 
-.fn CException_WorkThreadEvent4, global
+.fn CException_wkStartup, global
 /* 80458ED8 00422498  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80458EDC 0042249C  7C 08 02 A6 */	mflr r0
 /* 80458EE0 004224A0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1448,24 +1448,24 @@
 /* 80459024 004225E4  90 9E 01 FC */	stw r4, 0x1fc(r30)
 /* 80459028 004225E8  90 0D BE 20 */	stw r0, lbl_80667FA0@sda21(r13)
 /* 8045902C 004225EC  4B FF CF A9 */	bl func_80455FD4
-/* 80459030 004225F0  48 00 0A AD */	bl func_80459ADC
+/* 80459030 004225F0  48 00 0A AD */	bl getInstance__7CLibCriFv
 /* 80459034 004225F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80459038 004225F8  41 82 00 10 */	beq .L_80459048
-/* 8045903C 004225FC  48 00 0A A1 */	bl func_80459ADC
+/* 8045903C 004225FC  48 00 0A A1 */	bl getInstance__7CLibCriFv
 /* 80459040 00422600  38 80 00 0A */	li r4, 0xa
 /* 80459044 00422604  4B FD EE AD */	bl func_80437EF0__11CWorkThreadFUl
 .L_80459048:
 /* 80459048 00422608  7F C3 F3 78 */	mr r3, r30
-/* 8045904C 0042260C  4B FE 06 55 */	bl WorkThreadEvent4__5CProcFv
+/* 8045904C 0042260C  4B FE 06 55 */	bl wkStartup__5CProcFv
 /* 80459050 00422610  39 61 00 60 */	addi r11, r1, 0x60
 /* 80459054 00422614  4B E6 11 51 */	bl _restgpr_28
 /* 80459058 00422618  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 8045905C 0042261C  7C 08 03 A6 */	mtlr r0
 /* 80459060 00422620  38 21 00 60 */	addi r1, r1, 0x60
 /* 80459064 00422624  4E 80 00 20 */	blr 
-.endfn CException_WorkThreadEvent4
+.endfn CException_wkStartup
 
-.fn CException_WorkThreadEvent5, global
+.fn CException_wkShutdown, global
 /* 80459068 00422628  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045906C 0042262C  7C 08 02 A6 */	mflr r0
 /* 80459070 00422630  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1491,10 +1491,10 @@
 .L_804590C0:
 /* 804590C0 00422680  38 60 00 00 */	li r3, 0
 /* 804590C4 00422684  4B FF CF 11 */	bl func_80455FD4
-/* 804590C8 00422688  48 00 0A 15 */	bl func_80459ADC
+/* 804590C8 00422688  48 00 0A 15 */	bl getInstance__7CLibCriFv
 /* 804590CC 0042268C  2C 03 00 00 */	cmpwi r3, 0
 /* 804590D0 00422690  41 82 00 10 */	beq .L_804590E0
-/* 804590D4 00422694  48 00 0A 09 */	bl func_80459ADC
+/* 804590D4 00422694  48 00 0A 09 */	bl getInstance__7CLibCriFv
 /* 804590D8 00422698  38 80 00 0B */	li r4, 0xb
 /* 804590DC 0042269C  4B FD EE 15 */	bl func_80437EF0__11CWorkThreadFUl
 .L_804590E0:
@@ -1505,7 +1505,7 @@
 /* 804590F0 004226B0  4B FE B2 7D */	bl func_8044436C
 .L_804590F4:
 /* 804590F4 004226B4  7F E3 FB 78 */	mr r3, r31
-/* 804590F8 004226B8  4B FE 05 AD */	bl WorkThreadEvent5__5CProcFv
+/* 804590F8 004226B8  4B FE 05 AD */	bl wkShutdown__5CProcFv
 /* 804590FC 004226BC  48 00 00 08 */	b .L_80459104
 .L_80459100:
 /* 80459100 004226C0  38 60 00 00 */	li r3, 0
@@ -1515,7 +1515,7 @@
 /* 8045910C 004226CC  7C 08 03 A6 */	mtlr r0
 /* 80459110 004226D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459114 004226D4  4E 80 00 20 */	blr 
-.endfn CException_WorkThreadEvent5
+.endfn CException_wkShutdown
 
 .fn func_80459118, global
 /* 80459118 004226D8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1785,8 +1785,8 @@
 	.4byte wkUpdate__11CWorkThreadFv
 	.4byte CException_WorkThreadEvent2
 	.4byte WorkThreadEvent3__11CWorkThreadFv
-	.4byte CException_WorkThreadEvent4
-	.4byte CException_WorkThreadEvent5
+	.4byte CException_wkStartup
+	.4byte CException_wkShutdown
 	.4byte WorkThreadEvent6__11CWorkThreadFv
 .endobj __vt__10CException
 
@@ -2064,14 +2064,14 @@
 
 .obj "@eti_8003509C", local
 .hidden "@eti_8003509C"
-	.4byte CException_WorkThreadEvent4
+	.4byte CException_wkStartup
 	.4byte 0x00000190
 	.4byte "@etb_8001D458"
 .endobj "@eti_8003509C"
 
 .obj "@eti_800350A8", local
 .hidden "@eti_800350A8"
-	.4byte CException_WorkThreadEvent5
+	.4byte CException_wkShutdown
 	.4byte 0x000000B0
 	.4byte "@etb_8001D460"
 .endobj "@eti_800350A8"

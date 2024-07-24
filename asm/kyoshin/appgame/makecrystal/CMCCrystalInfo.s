@@ -72,7 +72,7 @@
 /* 8021A720 001E3CE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8021A724 001E3CE4  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8021A728 001E3CE8  7C 7E 1B 78 */	mr r30, r3
-/* 8021A72C 001E3CEC  48 21 9C 75 */	bl Heap_getRegionIndex2
+/* 8021A72C 001E3CEC  48 21 9C 75 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8021A730 001E3CF0  3F E0 80 50 */	lis r31, CMCCrystalInfo_strpool@ha
 /* 8021A734 001E3CF4  7F C5 F3 78 */	mr r5, r30
 /* 8021A738 001E3CF8  38 9F 45 10 */	addi r4, r31, CMCCrystalInfo_strpool@l
@@ -80,7 +80,7 @@
 /* 8021A740 001E3D00  38 E0 00 00 */	li r7, 0
 /* 8021A744 001E3D04  48 23 40 51 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 8021A748 001E3D08  90 7E 00 24 */	stw r3, 0x24(r30)
-/* 8021A74C 001E3D0C  48 21 9C 55 */	bl Heap_getRegionIndex2
+/* 8021A74C 001E3D0C  48 21 9C 55 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8021A750 001E3D10  38 9F 45 10 */	addi r4, r31, CMCCrystalInfo_strpool@l
 /* 8021A754 001E3D14  7F C5 F3 78 */	mr r5, r30
 /* 8021A758 001E3D18  38 84 00 18 */	addi r4, r4, 0x18
@@ -1255,7 +1255,7 @@
 /* 8021B764 001E4D24  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8021B768 001E4D28  7C 00 20 40 */	cmplw r0, r4
 /* 8021B76C 001E4D2C  40 82 03 B0 */	bne .L_8021BB1C
-/* 8021B770 001E4D30  48 21 8C 31 */	bl Heap_getRegionIndex2
+/* 8021B770 001E4D30  48 21 8C 31 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8021B774 001E4D34  3C 80 80 50 */	lis r4, CMCCrystalInfo_strpool@ha
 /* 8021B778 001E4D38  3C A0 00 02 */	lis r5, 0x00018000@ha
 /* 8021B77C 001E4D3C  3B A4 45 10 */	addi r29, r4, CMCCrystalInfo_strpool@l
@@ -1496,7 +1496,7 @@
 /* 8021BB1C 001E50DC  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 8021BB20 001E50E0  7C 00 20 40 */	cmplw r0, r4
 /* 8021BB24 001E50E4  40 82 00 88 */	bne .L_8021BBAC
-/* 8021BB28 001E50E8  48 21 88 79 */	bl Heap_getRegionIndex2
+/* 8021BB28 001E50E8  48 21 88 79 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8021BB2C 001E50EC  3F A0 80 50 */	lis r29, CMCCrystalInfo_strpool@ha
 /* 8021BB30 001E50F0  7C 64 1B 78 */	mr r4, r3
 /* 8021BB34 001E50F4  3B BD 45 10 */	addi r29, r29, CMCCrystalInfo_strpool@l

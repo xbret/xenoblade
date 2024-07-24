@@ -1755,7 +1755,7 @@
 /* 80254934 0021DEF4  90 01 28 24 */	stw r0, 0x2824(r1)
 /* 80254938 0021DEF8  BF C1 28 18 */	stmw r30, 0x2818(r1)
 /* 8025493C 0021DEFC  7C 7E 1B 78 */	mr r30, r3
-/* 80254940 0021DF00  48 1D FA 61 */	bl Heap_getRegionIndex2
+/* 80254940 0021DF00  48 1D FA 61 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80254944 0021DF04  3F E0 80 50 */	lis r31, CCollepedia_strpool@ha
 /* 80254948 0021DF08  7F C5 F3 78 */	mr r5, r30
 /* 8025494C 0021DF0C  3B FF 7D 78 */	addi r31, r31, CCollepedia_strpool@l
@@ -1764,7 +1764,7 @@
 /* 80254958 0021DF18  38 E0 00 00 */	li r7, 0
 /* 8025495C 0021DF1C  48 1F 9E 39 */	bl CDeviceFile_openFile1__FiPCcPvii
 /* 80254960 0021DF20  90 7E 00 24 */	stw r3, 0x24(r30)
-/* 80254964 0021DF24  48 1D FA 3D */	bl Heap_getRegionIndex2
+/* 80254964 0021DF24  48 1D FA 3D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80254968 0021DF28  7F C5 F3 78 */	mr r5, r30
 /* 8025496C 0021DF2C  38 9F 01 B1 */	addi r4, r31, 0x1b1
 /* 80254970 0021DF30  38 C0 00 00 */	li r6, 0
@@ -3010,7 +3010,7 @@
 /* 80255A6C 0021F02C  4B FD 65 5D */	bl func_8022BFC8
 /* 80255A70 0021F030  38 7F 00 9C */	addi r3, r31, 0x9c
 /* 80255A74 0021F034  4B FD 5E 45 */	bl func_8022B8B8
-/* 80255A78 0021F038  48 1D E9 29 */	bl Heap_getRegionIndex2
+/* 80255A78 0021F038  48 1D E9 29 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80255A7C 0021F03C  7C 7F 1B 78 */	mr r31, r3
 /* 80255A80 0021F040  4B F3 3B 6D */	bl func_801895EC
 /* 80255A84 0021F044  7F E5 FB 78 */	mr r5, r31
@@ -3111,7 +3111,7 @@
 /* 80255BE0 0021F1A0  4B EE 58 49 */	bl func_8013B428
 /* 80255BE4 0021F1A4  38 60 00 86 */	li r3, 0x86
 /* 80255BE8 0021F1A8  4B EE 58 41 */	bl func_8013B428
-/* 80255BEC 0021F1AC  48 1D E7 B5 */	bl Heap_getRegionIndex2
+/* 80255BEC 0021F1AC  48 1D E7 B5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80255BF0 0021F1B0  7C 7F 1B 78 */	mr r31, r3
 /* 80255BF4 0021F1B4  4B F3 39 F9 */	bl func_801895EC
 /* 80255BF8 0021F1B8  7F E5 FB 78 */	mr r5, r31
@@ -3753,7 +3753,7 @@
 /* 80256524 0021FAE4  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 80256528 0021FAE8  7C 00 20 40 */	cmplw r0, r4
 /* 8025652C 0021FAEC  40 82 03 38 */	bne .L_80256864
-/* 80256530 0021FAF0  48 1D DE 71 */	bl Heap_getRegionIndex2
+/* 80256530 0021FAF0  48 1D DE 71 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80256534 0021FAF4  3C C0 80 50 */	lis r6, CCollepedia_strpool@ha
 /* 80256538 0021FAF8  3C A0 00 02 */	lis r5, 0x00018000@ha
 /* 8025653C 0021FAFC  38 C6 7D 78 */	addi r6, r6, CCollepedia_strpool@l
@@ -3964,7 +3964,7 @@
 /* 80256864 0021FE24  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 80256868 0021FE28  7C 00 20 40 */	cmplw r0, r4
 /* 8025686C 0021FE2C  40 82 00 88 */	bne .L_802568F4
-/* 80256870 0021FE30  48 1D DB 31 */	bl Heap_getRegionIndex2
+/* 80256870 0021FE30  48 1D DB 31 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80256874 0021FE34  3F C0 80 50 */	lis r30, CCollepedia_strpool@ha
 /* 80256878 0021FE38  7C 64 1B 78 */	mr r4, r3
 /* 8025687C 0021FE3C  3B DE 7D 78 */	addi r30, r30, CCollepedia_strpool@l

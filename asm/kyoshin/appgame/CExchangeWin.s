@@ -62,7 +62,7 @@
 /* 8022CF34 001F64F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022CF38 001F64F8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022CF3C 001F64FC  7C 7F 1B 78 */	mr r31, r3
-/* 8022CF40 001F6500  48 20 74 61 */	bl Heap_getRegionIndex2
+/* 8022CF40 001F6500  48 20 74 61 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8022CF44 001F6504  3C 80 80 50 */	lis r4, CExchangeWin_strpool@ha
 /* 8022CF48 001F6508  7F E5 FB 78 */	mr r5, r31
 /* 8022CF4C 001F650C  38 84 5E 40 */	addi r4, r4, CExchangeWin_strpool@l
@@ -332,7 +332,7 @@
 /* 8022D2B0 001F6870  80 04 00 04 */	lwz r0, 4(r4)
 /* 8022D2B4 001F6874  7C 05 00 40 */	cmplw r5, r0
 /* 8022D2B8 001F6878  40 82 02 98 */	bne .L_8022D550
-/* 8022D2BC 001F687C  48 20 70 E5 */	bl Heap_getRegionIndex2
+/* 8022D2BC 001F687C  48 20 70 E5 */	bl Heap_getRegionIndex2__3mtlFv
 /* 8022D2C0 001F6880  3F C0 80 50 */	lis r30, CExchangeWin_strpool@ha
 /* 8022D2C4 001F6884  3C A0 00 01 */	lis r5, 1
 /* 8022D2C8 001F6888  3B DE 5E 40 */	addi r30, r30, CExchangeWin_strpool@l

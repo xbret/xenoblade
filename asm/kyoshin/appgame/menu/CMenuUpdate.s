@@ -198,7 +198,7 @@
 /* 80142800 0010BDC0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80142804 0010BDC4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80142808 0010BDC8  7C 7E 1B 78 */	mr r30, r3
-/* 8014280C 0010BDCC  48 2F 1B 95 */	bl Heap_getRegionIndex2
+/* 8014280C 0010BDCC  48 2F 1B 95 */	bl Heap_getRegionIndex2__3mtlFv
 /* 80142810 0010BDD0  3F E0 80 50 */	lis r31, CMenuUpdate_strpool@ha
 /* 80142814 0010BDD4  7C 64 1B 78 */	mr r4, r3
 /* 80142818 0010BDD8  38 7E 00 78 */	addi r3, r30, 0x78

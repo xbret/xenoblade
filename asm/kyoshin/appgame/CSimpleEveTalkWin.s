@@ -111,7 +111,7 @@
 /* 801A19E8 0016AFA8  7C 7F 1B 78 */	mr r31, r3
 /* 801A19EC 0016AFAC  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 801A19F0 0016AFB0  93 A1 00 24 */	stw r29, 0x24(r1)
-/* 801A19F4 0016AFB4  48 29 29 AD */	bl Heap_getRegionIndex2
+/* 801A19F4 0016AFB4  48 29 29 AD */	bl Heap_getRegionIndex2__3mtlFv
 /* 801A19F8 0016AFB8  7C 7D 1B 78 */	mr r29, r3
 /* 801A19FC 0016AFBC  3C C0 80 50 */	lis r6, CSimpleEveTalkWin_strpool@ha
 /* 801A1A00 0016AFC0  7F A4 EB 78 */	mr r4, r29
@@ -683,7 +683,7 @@
 .L_801A2218:
 /* 801A2218 0016B7D8  38 7F 00 74 */	addi r3, r31, 0x74
 /* 801A221C 0016B7DC  48 2B D5 5D */	bl func_8045F778__FP17UnkClass_8045F564
-/* 801A2220 0016B7E0  48 29 21 81 */	bl Heap_getRegionIndex2
+/* 801A2220 0016B7E0  48 29 21 81 */	bl Heap_getRegionIndex2__3mtlFv
 /* 801A2224 0016B7E4  7C 7D 1B 78 */	mr r29, r3
 /* 801A2228 0016B7E8  3C C0 80 50 */	lis r6, CSimpleEveTalkWin_strpool@ha
 /* 801A222C 0016B7EC  7F A4 EB 78 */	mr r4, r29
