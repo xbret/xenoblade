@@ -326,7 +326,7 @@ GAME_FILES :=\
 #$(GAME_FILES): INCLUDES += -i src/ -i libs/monolib/include/ -i libs/mm/include/ -i libs/nw4r/include/
 $(GAME_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
 $(BUILD_DIR)/src/kyoshin/appgame/CBattery.o: CFLAGS += -O4,s -func_align 4 #wont match otherwise
-$(BUILD_DIR)/src/kyoshin/appgame/ErrMesData.o: CFLAGS += -enc ascii #encoding bs
+$(BUILD_DIR)/src/kyoshin/appgame/ErrMesData.o: CFLAGS += -enc UTF8 #encoding bs
 
 DEPENDS += $(GAME_FILES:.o=.d)
 
