@@ -1,20 +1,21 @@
 #include "kyoshin/appgame/ErrMesData.hpp"
 
 //Error messages
+//TODO: fix encoding issues for this file
 
 //"Please insert the "Xenoblade" disc."
-static const wchar_t* noDiscErrorMessage = L"ƒ[ƒmƒuƒŒƒCƒh‚ÌƒfƒBƒXƒN‚ğƒZƒbƒg‚µ‚Ä‚­‚¾‚³‚¢B";
+static const wchar_t* noDiscErrorMessage = L"ã‚¼ãƒãƒ–ãƒ¬ã‚¤ãƒ‰ã®ãƒ‡ã‚£ã‚¹ã‚¯ã‚’ã‚»ãƒƒãƒˆã—ã¦ãã ã•ã„ã€‚";
 /*
 "The disc could not be read.
 For more details, please read the Wii System Manual."
 */
 static const wchar_t* discUnreadableErrorMessage =
-	L"ƒfƒBƒXƒN‚ğ“Ç‚ß‚Ü‚¹‚ñ‚Å‚µ‚½B&"
-	L"Ú‚µ‚­‚ÍWii–{‘Ì‚Ìæˆµà–¾‘‚ğ‚¨“Ç‚İ‚­‚¾‚³‚¢B";
+	L"ãƒ‡ã‚£ã‚¹ã‚¯ã‚’èª­ã‚ã¾ã›ã‚“ã§ã—ãŸã€‚&"
+	L"è©³ã—ãã¯Wiiæœ¬ä½“ã®å–æ‰±èª¬æ˜æ›¸ã‚’ãŠèª­ã¿ãã ã•ã„ã€‚";
 //"Reading the disc..."
-static const wchar_t* readingDiscErrorMessage = L"ƒfƒBƒXƒN‚Ì“Ç‚İ‚İ’†‚Å‚·B";
+static const wchar_t* readingDiscErrorMessage = L"ãƒ‡ã‚£ã‚¹ã‚¯ã®èª­ã¿è¾¼ã¿ä¸­ã§ã™ã€‚";
 //"Communication with the Wii Remote was interrupted."
-static const wchar_t* wiiRemoteDisconnectedErrorMessage = L"WiiƒŠƒ‚ƒRƒ“‚Ì’ÊM‚ªØ‚ê‚Ü‚µ‚½B";
+static const wchar_t* wiiRemoteDisconnectedErrorMessage = L"Wiiãƒªãƒ¢ã‚³ãƒ³ã®é€šä¿¡ãŒåˆ‡ã‚Œã¾ã—ãŸã€‚";
 /*
 "Please connect the Nunchuck to the Wii Remote.
 To change the extension controller to the Classic Controller,
@@ -22,11 +23,11 @@ after resetting the game once, at the title screen, please change
 the extension controller to the Classic Controller."
 */
 static const wchar_t* nunchuckDisconnectedErrorMessage =
-	L"WiiƒŠƒ‚ƒRƒ“‚Éƒkƒ“ƒ`ƒƒƒN‚ğÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B&&"
-	L"Šg’£ƒRƒ“ƒgƒ[ƒ‰‚ğƒNƒ‰ƒVƒbƒNƒRƒ“ƒgƒ[ƒ‰‚Ö&"
-	L"•ÏX‚·‚éê‡‚ÍAˆê“xƒQ[ƒ€‚ğƒŠƒZƒbƒg‚µ‚½ŒãA&"
-	L"ƒ^ƒCƒgƒ‹‰æ–Ê‚ÅŠg’£ƒRƒ“ƒgƒ[ƒ‰‚ğ&"
-	L"ƒNƒ‰ƒVƒbƒNƒRƒ“ƒgƒ[ƒ‰‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢B";
+	L"Wiiãƒªãƒ¢ã‚³ãƒ³ã«ãƒŒãƒ³ãƒãƒ£ã‚¯ã‚’æ¥ç¶šã—ã¦ãã ã•ã„ã€‚&&"
+	L"æ‹¡å¼µã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’ã‚¯ãƒ©ã‚·ãƒƒã‚¯ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã¸&"
+	L"å¤‰æ›´ã™ã‚‹å ´åˆã¯ã€ä¸€åº¦ã‚²ãƒ¼ãƒ ã‚’ãƒªã‚»ãƒƒãƒˆã—ãŸå¾Œã€&"
+	L"ã‚¿ã‚¤ãƒˆãƒ«ç”»é¢ã§æ‹¡å¼µã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’&"
+	L"ã‚¯ãƒ©ã‚·ãƒƒã‚¯ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã«å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚";
 /*
 "Please connect the Classic Controller to the Wii Remote.
 To change the extension controller to the Nunchuck,
@@ -34,39 +35,39 @@ after resetting the game once, at the title screen, please change
 the extension controller to the nunchuck."
 */
 static const wchar_t* classicControllerDisconnectedErrorMessage =
-	L"WiiƒŠƒ‚ƒRƒ“‚ÉƒNƒ‰ƒVƒbƒNƒRƒ“ƒgƒ[ƒ‰‚ğÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B&&"
-	L"Šg’£ƒRƒ“ƒgƒ[ƒ‰‚ğƒkƒ“ƒ`ƒƒƒN‚Ö&"
-	L"•ÏX‚·‚éê‡‚ÍAˆê“xƒQ[ƒ€‚ğƒŠƒZƒbƒg‚µ‚½ŒãA&"
-	L"ƒ^ƒCƒgƒ‹‰æ–Ê‚ÅŠg’£ƒRƒ“ƒgƒ[ƒ‰‚ğ&"
-	L"ƒkƒ“ƒ`ƒƒƒN‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢B";
+	L"Wiiãƒªãƒ¢ã‚³ãƒ³ã«ã‚¯ãƒ©ã‚·ãƒƒã‚¯ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’æ¥ç¶šã—ã¦ãã ã•ã„ã€‚&&"
+	L"æ‹¡å¼µã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’ãƒŒãƒ³ãƒãƒ£ã‚¯ã¸&"
+	L"å¤‰æ›´ã™ã‚‹å ´åˆã¯ã€ä¸€åº¦ã‚²ãƒ¼ãƒ ã‚’ãƒªã‚»ãƒƒãƒˆã—ãŸå¾Œã€&"
+	L"ã‚¿ã‚¤ãƒˆãƒ«ç”»é¢ã§æ‹¡å¼µã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’&"
+	L"ãƒŒãƒ³ãƒãƒ£ã‚¯ã«å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚";
 /*
 "There is no extension controller connected to the Wii Remote.
 Please connect either the Nunchuck or Classic Controller."
 */
 static const wchar_t* noExtensionErrorMessage =
-	L"WiiƒŠƒ‚ƒRƒ“‚ÉŠg’£ƒRƒ“ƒgƒ[ƒ‰‚ªÚ‘±‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB&"
-	L"ƒkƒ“ƒ`ƒƒƒN‚Ü‚½‚ÍƒNƒ‰ƒVƒbƒNƒRƒ“ƒgƒ[ƒ‰‚ğÚ‘±‚µ‚Ä‚­‚¾‚³‚¢B";
+	L"Wiiãƒªãƒ¢ã‚³ãƒ³ã«æ‹¡å¼µã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ãŒæ¥ç¶šã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚&"
+	L"ãƒŒãƒ³ãƒãƒ£ã‚¯ã¾ãŸã¯ã‚¯ãƒ©ã‚·ãƒƒã‚¯ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã‚’æ¥ç¶šã—ã¦ãã ã•ã„ã€‚";
 /*
 "The Wii Console's save memory has been damaged.
 For more details, please read the Wii System Manual."
 */
 static const wchar_t* memoryDamagedErrorMessage =
-	L"Wii–{‘Ì•Û‘¶ƒƒ‚ƒŠ‚ª‰ó‚ê‚Ü‚µ‚½B&"
-	L"‚­‚í‚µ‚­‚ÍWii–{‘Ì‚Ìæˆµà–¾‘‚ğ‚¨“Ç‚İ‚­‚¾‚³‚¢B";
+	L"Wiiæœ¬ä½“ä¿å­˜ãƒ¡ãƒ¢ãƒªãŒå£Šã‚Œã¾ã—ãŸã€‚&"
+	L"ãã‚ã—ãã¯Wiiæœ¬ä½“ã®å–æ‰±èª¬æ˜æ›¸ã‚’ãŠèª­ã¿ãã ã•ã„ã€‚";
 /*
 "Could not read from/write to the Wii Console's save memory.
 For more details, please read the Wii System Manual."
 */
 static const wchar_t* memoryReadWriteFailErrorMessage =
-	L"Wii–{‘Ì•Û‘¶ƒƒ‚ƒŠ‚Ì‘‚«‚İ/“Ç‚İo‚µ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B&"
-	L"‚­‚í‚µ‚­‚ÍWii–{‘Ì‚Ìæˆµà–¾‘‚ğ‚¨“Ç‚İ‚­‚¾‚³‚¢B";
+	L"Wiiæœ¬ä½“ä¿å­˜ãƒ¡ãƒ¢ãƒªã®æ›¸ãè¾¼ã¿/èª­ã¿å‡ºã—ãŒã§ãã¾ã›ã‚“ã§ã—ãŸã€‚&"
+	L"ãã‚ã—ãã¯Wiiæœ¬ä½“ã®å–æ‰±èª¬æ˜æ›¸ã‚’ãŠèª­ã¿ãã ã•ã„ã€‚";
 /*
 "An error occured while reading from/writing to the Wii Console's save memory.
 For more details, please read the Wii System Manual."
 */
 static const wchar_t* errorDuringMemoryReadWriteErrorMessage =
-	L"Wii–{‘Ì•Û‘¶ƒƒ‚ƒŠ‚Ì‘‚«‚İ/“Ç‚İo‚µ’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B&"
-	L"‚­‚í‚µ‚­‚ÍWii–{‘Ì‚Ìæˆµà–¾‘‚ğ‚¨“Ç‚İ‚­‚¾‚³‚¢B";
+	L"Wiiæœ¬ä½“ä¿å­˜ãƒ¡ãƒ¢ãƒªã®æ›¸ãè¾¼ã¿/èª­ã¿å‡ºã—ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚&"
+	L"ãã‚ã—ãã¯Wiiæœ¬ä½“ã®å–æ‰±èª¬æ˜æ›¸ã‚’ãŠèª­ã¿ãã ã•ã„ã€‚";
 
 const wchar_t* getNoDiscErrorMessage(){
     return noDiscErrorMessage;

@@ -295,7 +295,11 @@ LIBS = [
             ["kyoshin/appgame/CTutorialList", False],
             ["kyoshin/appgame/CLoad", False],
             ["kyoshin/appgame/NandData", False],
-            ["kyoshin/appgame/ErrMesData", True],
+            [
+                "kyoshin/appgame/ErrMesData",
+                True,
+                {"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc UTF8"},
+            ],
             ["kyoshin/appgame/plugin/pluginHelp", False],
             ["kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN", False],
             ["kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN", False],
