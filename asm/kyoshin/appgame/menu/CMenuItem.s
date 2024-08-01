@@ -17,7 +17,7 @@
 /* 8016791C 00130EDC  38 60 00 00 */	li r3, 0
 /* 80167920 00130EE0  48 00 00 E4 */	b .L_80167A04
 .L_80167924:
-/* 80167924 00130EE4  48 2C FC 91 */	bl getHeapIndex__3mtlFv
+/* 80167924 00130EE4  48 2C FC 91 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80167928 00130EE8  7C 64 1B 78 */	mr r4, r3
 /* 8016792C 00130EEC  38 60 4A C8 */	li r3, 0x4ac8
 /* 80167930 00130EF0  48 2C D1 2D */	bl heap_malloc__3mtlFUli

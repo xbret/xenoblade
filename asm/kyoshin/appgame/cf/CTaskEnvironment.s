@@ -1602,7 +1602,7 @@
 /* 80059C6C 0002322C  7C 9E 23 78 */	mr r30, r4
 /* 80059C70 00023230  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80059C74 00023234  7C 7D 1B 78 */	mr r29, r3
-/* 80059C78 00023238  48 3D D9 3D */	bl getHeapIndex__3mtlFv
+/* 80059C78 00023238  48 3D D9 3D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80059C7C 0002323C  7C 64 1B 78 */	mr r4, r3
 /* 80059C80 00023240  38 60 00 EC */	li r3, 0xec
 /* 80059C84 00023244  48 3D AD D9 */	bl heap_malloc__3mtlFUli

@@ -176,7 +176,7 @@
 /* 80295778 0025ED38  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8029577C 0025ED3C  7C 7D 1B 78 */	mr r29, r3
 /* 80295780 0025ED40  7C 9E 23 78 */	mr r30, r4
-/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex__3mtlFv
+/* 80295784 0025ED44  48 1A 1E 31 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80295788 0025ED48  7C 64 1B 78 */	mr r4, r3
 /* 8029578C 0025ED4C  38 60 00 64 */	li r3, 0x64
 /* 80295790 0025ED50  48 19 F2 CD */	bl heap_malloc__3mtlFUli

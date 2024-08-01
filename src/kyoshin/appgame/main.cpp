@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/main.hpp"
 #include "kyoshin/appgame/CGame.hpp"
-#include "kyoshin/appgame/code_802AEB74.hpp"
+#include "kyoshin/appgame/ErrMesData.hpp"
 
 FunctionStruct lbl_80528380 = {"ÉQÅ[ÉÄÉÅÉCÉì", &CGame::GameMain};
 const char* const staticArcStr = "static.arc";
@@ -72,28 +72,24 @@ void vmInitCallback(){
 }
 
 void main(int argc, char* argv[]) {
-	/*
-	The first two functions store the array pointers in variables,
-	which are then passed into the function func_80457CA4 in the register r4
-	through the function func_8044F744.
-	*/
-	func_80450B14(func_802AEB74());
-	func_80450B1C(func_802AEB7C());
-	func_80450B24(func_802AEB84());
-	func_804DAA90(func_802AEBAC());
-	func_804DAA98(func_802AEBB4());
-	func_804DAAA0(func_802AEBBC());
+	//Copy the error message string pointers
+	func_80450B14(getNoDiscErrorMessage());
+	func_80450B1C(getDiscUnreadableErrorMessage());
+	func_80450B24(getReadingDiscErrorMessage());
+	func_804DAA90(getMemoryDamagedErrorMessage());
+	func_804DAA98(getMemoryReadWriteFailErrorMessage());
+	func_804DAAA0(getErrorDuringMemoryReadWriteErrorMessage());
 	
 	lbl_80666438 = 0;
-	mtl::MemManager_setArenaMemorySize(0x680000, 0);
+	mtl::MemManager_setArenaMemorySize(0x680000, 0); //Set arena size to 6.5 mb
 	CDeviceVI::func_80448E78(false);
-	CDeviceGX::setValues(GX_PF_RGB8_Z24, 0x180000);
+	CDeviceGX::setValues(GX_PF_RGB8_Z24, 0x180000); //Set GX heap size to 1.5 mb
 	CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
-	func_8045FBB0(staticArcFiles);
+	CLibStaticData_saveStaticFileArray(staticArcFiles);
 	CLibVM_SetCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
 	SaveStaticArcFilenameStringPtr(&staticArcStr);
 	SavePkhFilenamesArrayPtr(pkhFilenames);
 	func_80057CDC();
-	func_8045D5C8(1);
+	CLibHbm_8045D5C8(1);
 	CWorkRoot_Run(); //Start up CWorkRoot, which later starts CGame
 }

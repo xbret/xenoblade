@@ -40,6 +40,10 @@ int CDevice::func_8044D060(){
 	return lbl_80665FA4;
 }
 
+bool CDevice::func_8044D438(){
+	return instance->inline1();
+}
+
 void CDevice::initDevices(){
 	if(CDeviceVI::getInstance() == nullptr){
 		CDeviceVI::init("CDeviceVI", instance);

@@ -49,8 +49,8 @@ GXRenderModeObj* renderModes[] = {
 	&GXNtsc480ProgSoft,
 	&GXPal264Ds,
 	&GXPal528Int,
-	nullptr,
-	nullptr,
+	nullptr, //GXPal528Prog
+	nullptr, //GXPal528ProgSoft
 	&GXEurgb60Hz240Ds,
 	&GXEurgb60Hz480Int,
 	&GXEurgb60Hz480Prog,

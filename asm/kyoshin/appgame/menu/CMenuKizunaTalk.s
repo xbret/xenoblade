@@ -341,7 +341,7 @@
 /* 801BCEE4 001864A4  38 60 00 00 */	li r3, 0
 /* 801BCEE8 001864A8  48 00 00 3C */	b .L_801BCF24
 .L_801BCEEC:
-/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getHeapIndex__3mtlFv
+/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 801BCEF0 001864B0  7C 64 1B 78 */	mr r4, r3
 /* 801BCEF4 001864B4  38 60 00 FC */	li r3, 0xfc
 /* 801BCEF8 001864B8  48 27 7B 65 */	bl heap_malloc__3mtlFUli

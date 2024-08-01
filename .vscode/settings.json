@@ -23,6 +23,17 @@
 		"dstypes.h": "c",
 		"cc_gdev.h": "c",
 		"exception": "c",
-		"__locale": "cpp"
+		"__locale": "cpp",
+		"cctype": "cpp",
+		"clocale": "cpp",
+		"cmath": "cpp",
+		"cstdarg": "cpp",
+		"cstddef": "cpp",
+		"cstdio": "cpp",
+		"cstdlib": "cpp",
+		"cstring": "cpp",
+		"cwchar": "cpp",
+		"new": "cpp",
+		"typeinfo": "cpp"
 	}
 }

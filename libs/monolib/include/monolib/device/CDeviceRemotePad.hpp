@@ -11,7 +11,7 @@ public:
 	static CDeviceRemotePad* getInstance();
 
 	static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
-		CDeviceRemotePad* device = new CDeviceRemotePad(name, workThread);
+		CDeviceRemotePad* device = new (WorkThreadSystem::getHeapIndex()) CDeviceRemotePad(name, workThread);
 		device->func_80438BD8(workThread, 0);
 		return device;
 	}

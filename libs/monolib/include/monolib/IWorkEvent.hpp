@@ -2,6 +2,10 @@
 
 #include "types.h"
 
+struct WorkThreadSystem {
+	static int getHeapIndex();
+};
+
 class CEventFile {
 public:
 	int unk0;

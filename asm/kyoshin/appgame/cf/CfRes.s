@@ -5105,7 +5105,7 @@
 /* 800659DC 0002EF9C  7C 9D 23 78 */	mr r29, r4
 /* 800659E0 0002EFA0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 800659E4 0002EFA4  7C 7C 1B 78 */	mr r28, r3
-/* 800659E8 0002EFA8  48 3D 1B CD */	bl getHeapIndex__3mtlFv
+/* 800659E8 0002EFA8  48 3D 1B CD */	bl getHeapIndex__16WorkThreadSystemFv
 /* 800659EC 0002EFAC  7C 64 1B 78 */	mr r4, r3
 /* 800659F0 0002EFB0  38 60 1F 64 */	li r3, 0x1f64
 /* 800659F4 0002EFB4  48 3C F0 69 */	bl heap_malloc__3mtlFUli

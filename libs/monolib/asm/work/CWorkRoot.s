@@ -13,7 +13,7 @@
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
-/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex__3mtlFv
+/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
 /* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc__3mtlFUli
@@ -95,7 +95,7 @@
 /* 80443C3C 0040D1FC  7C 7E 1B 78 */	mr r30, r3
 /* 80443C40 0040D200  1C 65 00 0C */	mulli r3, r5, 0xc
 /* 80443C44 0040D204  7C BF 2B 78 */	mr r31, r5
-/* 80443C48 0040D208  4B FF 0E 39 */	bl heap_malloc_1__3mtlFUli
+/* 80443C48 0040D208  4B FF 0E 39 */	bl heap_malloc_array__3mtlFUli
 /* 80443C4C 0040D20C  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 80443C50 0040D210  38 00 00 00 */	li r0, 0
 /* 80443C54 0040D214  38 60 00 00 */	li r3, 0

@@ -19,7 +19,7 @@
 /* 802B5E20 0027F3E0  38 60 00 00 */	li r3, 0
 /* 802B5E24 0027F3E4  48 00 00 C8 */	b .L_802B5EEC
 .L_802B5E28:
-/* 802B5E28 0027F3E8  48 18 17 8D */	bl getHeapIndex__3mtlFv
+/* 802B5E28 0027F3E8  48 18 17 8D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 802B5E2C 0027F3EC  7C 64 1B 78 */	mr r4, r3
 /* 802B5E30 0027F3F0  38 60 00 F0 */	li r3, 0xf0
 /* 802B5E34 0027F3F4  48 17 EC 29 */	bl heap_malloc__3mtlFUli

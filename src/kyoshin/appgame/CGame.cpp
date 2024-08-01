@@ -35,14 +35,14 @@ CGame::CGame(const char* name, CWorkThread* workThread) : CProc(name, workThread
 	unk224 = 1.0f;
 	unk228 = 0;
 	instance = this;
-	func_8045D5C8(1);
+	CLibHbm_8045D5C8(1);
 	func_80444874(func_80039D08);
 	this->func_80437EF0(4);
 }
 
 CGame::~CGame(){
 	func_80444874(nullptr);
-	func_8045D5C8(0);
+	CLibHbm_8045D5C8(0);
 	instance = nullptr;
 }
 
@@ -60,7 +60,7 @@ void CGame::func_80039364(){
 		if(CGameRestart::instance == nullptr){
 			CDesktop* desktop = CDesktop::getInstance();
 			const char* name = "CGameRestart";
-			CGameRestart* gameRestart = new CGameRestart(name, desktop, 8);
+			CGameRestart* gameRestart = new (WorkThreadSystem::getHeapIndex()) CGameRestart(name, desktop, 8);
 			gameRestart->func_80438BD8(desktop, 0);
 			UNKTYPE* temp_r3 = func_80455AA0();
 			u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
@@ -134,7 +134,7 @@ void CGame::GameMain(){
 		u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
 		CDesktop* desktop = CDesktop::getInstance();
 		const char* name = "‹_"; //"Bionis"
-		CGame* cGame = new CGame(name, desktop);
+		CGame* cGame = new (WorkThreadSystem::getHeapIndex()) CGame(name, desktop);
 		cGame->func_80438BD8(desktop, 0);
 		cGame->unk1E4 = r29;
 	}

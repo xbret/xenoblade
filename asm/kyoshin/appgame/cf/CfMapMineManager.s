@@ -199,7 +199,7 @@
 /* 80205D48 001CF308  4B E5 C2 B5 */	bl func_80061FFC
 /* 80205D4C 001CF30C  7C 64 1B 78 */	mr r4, r3
 /* 80205D50 001CF310  38 60 19 D8 */	li r3, 0x19d8
-/* 80205D54 001CF314  48 22 ED 2D */	bl heap_malloc_1__3mtlFUli
+/* 80205D54 001CF314  48 22 ED 2D */	bl heap_malloc_array__3mtlFUli
 /* 80205D58 001CF318  3C 80 80 20 */	lis r4, func_80205F78@ha
 /* 80205D5C 001CF31C  38 A0 00 00 */	li r5, 0
 /* 80205D60 001CF320  38 84 5F 78 */	addi r4, r4, func_80205F78@l

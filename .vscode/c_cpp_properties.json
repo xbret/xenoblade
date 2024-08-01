@@ -58,7 +58,7 @@
             "intelliSenseMode": "macos-clang-x86",
             "compilerPath": "",
             "configurationProvider": "ms-vscode.makefile-tools",
-            "forcedInclude": [".vscode/warnings.h"]
+            "forcedInclude": ["${workspaceFolder}/.vscode/warnings.h"]
         }
     ],
     "version": 4

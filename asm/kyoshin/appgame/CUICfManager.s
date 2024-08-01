@@ -2336,7 +2336,7 @@
 /* 80132038 000FB5F8  48 36 3F CD */	bl func_80496004
 /* 8013203C 000FB5FC  7C 64 1B 78 */	mr r4, r3
 /* 80132040 000FB600  38 60 00 90 */	li r3, 0x90
-/* 80132044 000FB604  48 30 2A 3D */	bl heap_malloc_1__3mtlFUli
+/* 80132044 000FB604  48 30 2A 3D */	bl heap_malloc_array__3mtlFUli
 /* 80132048 000FB608  90 7D 01 38 */	stw r3, 0x138(r29)
 /* 8013204C 000FB60C  38 00 00 0C */	li r0, 0xc
 /* 80132050 000FB610  3C A0 80 53 */	lis r5, lbl_80531A58@ha
@@ -2623,7 +2623,7 @@
 /* 8013242C 000FB9EC  90 77 01 14 */	stw r3, 0x114(r23)
 /* 80132430 000FB9F0  38 80 00 03 */	li r4, 3
 /* 80132434 000FB9F4  48 31 CD 21 */	bl CDeviceFile_8044F154__FP17UnkClass_80451720i
-/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex__3mtlFv
+/* 80132438 000FB9F8  48 30 51 7D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8013243C 000FB9FC  7C 64 1B 78 */	mr r4, r3
 /* 80132440 000FBA00  38 60 00 54 */	li r3, 0x54
 /* 80132444 000FBA04  48 30 26 19 */	bl heap_malloc__3mtlFUli
@@ -3950,7 +3950,7 @@
 /* 80133714 000FCCD4  48 30 0C 8D */	bl Heap_getRegionIndex2__3mtlFv
 /* 80133718 000FCCD8  7C 7F 1B 78 */	mr r31, r3
 .L_8013371C:
-/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex__3mtlFv
+/* 8013371C 000FCCDC  48 30 3E 99 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80133720 000FCCE0  7C 64 1B 78 */	mr r4, r3
 /* 80133724 000FCCE4  38 60 0C 94 */	li r3, 0xc94
 /* 80133728 000FCCE8  48 30 13 35 */	bl heap_malloc__3mtlFUli

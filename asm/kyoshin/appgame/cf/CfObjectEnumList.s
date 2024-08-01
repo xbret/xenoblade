@@ -86,7 +86,7 @@
 /* 800F48F0 000BDEB0  48 33 FA A9 */	bl Heap_getRegionIndex1__3mtlFv
 /* 800F48F4 000BDEB4  7C 64 1B 78 */	mr r4, r3
 /* 800F48F8 000BDEB8  38 60 20 E8 */	li r3, 0x20e8
-/* 800F48FC 000BDEBC  48 34 01 85 */	bl heap_malloc_1__3mtlFUli
+/* 800F48FC 000BDEBC  48 34 01 85 */	bl heap_malloc_array__3mtlFUli
 /* 800F4900 000BDEC0  38 00 00 57 */	li r0, 0x57
 /* 800F4904 000BDEC4  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 800F4908 000BDEC8  38 80 00 00 */	li r4, 0

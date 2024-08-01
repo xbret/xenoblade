@@ -550,7 +550,7 @@
 /* 8043A838 00403DF8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8043A83C 00403DFC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8043A840 00403E00  7C 7D 1B 78 */	mr r29, r3
-/* 8043A844 00403E04  4B FF CD 71 */	bl getHeapIndex__3mtlFv
+/* 8043A844 00403E04  4B FF CD 71 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043A848 00403E08  7C 64 1B 78 */	mr r4, r3
 /* 8043A84C 00403E0C  38 60 17 40 */	li r3, 0x1740
 /* 8043A850 00403E10  4B FF A2 0D */	bl heap_malloc__3mtlFUli

@@ -132,7 +132,7 @@
 /* 80490288 00459848  38 60 00 00 */	li r3, 0
 /* 8049028C 0045984C  48 00 00 38 */	b .L_804902C4
 .L_80490290:
-/* 80490290 00459850  4B FA 73 25 */	bl getHeapIndex__3mtlFv
+/* 80490290 00459850  4B FA 73 25 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80490294 00459854  7C 64 1B 78 */	mr r4, r3
 /* 80490298 00459858  38 60 00 2C */	li r3, 0x2c
 /* 8049029C 0045985C  4B FA 47 C1 */	bl heap_malloc__3mtlFUli

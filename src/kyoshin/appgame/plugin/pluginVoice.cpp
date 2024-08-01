@@ -12,10 +12,10 @@ int voice_play(_sVMThread* pThread) {
 	int r27 = vmArgIntGet(3, vmArgPtrGet(pThread, 2));
 	//TODO: make this an inline
 	reslist<cf::CfObject*>* list = func_800B6BA4();
-	node = list->pStartNode->next;
+	node = list->mStartNodePtr->next;
 	
 	//Iterate through the list until we hit the end
-	while((u32)node != (u32)list->pStartNode){
+	while((u32)node != (u32)list->mStartNodePtr){
 		cf::CfObjectPc* object = static_cast<cf::CfObjectPc*>(node->item);
 		if(object->CActorParam_vtableFunc138() == 0){
 			if(r30 == object->unk8C_3){

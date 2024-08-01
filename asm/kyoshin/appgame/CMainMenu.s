@@ -901,7 +901,7 @@
 /* 800FF6E4 000C8CA4  38 60 00 00 */	li r3, 0
 /* 800FF6E8 000C8CA8  48 00 00 38 */	b .L_800FF720
 .L_800FF6EC:
-/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getHeapIndex__3mtlFv
+/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 800FF6F0 000C8CB0  7C 64 1B 78 */	mr r4, r3
 /* 800FF6F4 000C8CB4  38 60 00 E4 */	li r3, 0xe4
 /* 800FF6F8 000C8CB8  48 33 53 65 */	bl heap_malloc__3mtlFUli

@@ -543,7 +543,7 @@
 /* 80295454 0025EA14  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 80295458 0025EA18  7C 7D 1B 78 */	mr r29, r3
 /* 8029545C 0025EA1C  7C 9E 23 78 */	mr r30, r4
-/* 80295460 0025EA20  48 1A 21 55 */	bl getHeapIndex__3mtlFv
+/* 80295460 0025EA20  48 1A 21 55 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80295464 0025EA24  7C 64 1B 78 */	mr r4, r3
 /* 80295468 0025EA28  38 60 00 C8 */	li r3, 0xc8
 /* 8029546C 0025EA2C  48 19 F5 F1 */	bl heap_malloc__3mtlFUli

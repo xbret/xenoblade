@@ -378,7 +378,7 @@
 /* 80294508 0025DAC8  38 60 00 00 */	li r3, 0
 /* 8029450C 0025DACC  48 00 00 F8 */	b .L_80294604
 .L_80294510:
-/* 80294510 0025DAD0  48 1A 30 A5 */	bl getHeapIndex__3mtlFv
+/* 80294510 0025DAD0  48 1A 30 A5 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80294514 0025DAD4  7C 64 1B 78 */	mr r4, r3
 /* 80294518 0025DAD8  38 60 00 E0 */	li r3, 0xe0
 /* 8029451C 0025DADC  48 1A 05 41 */	bl heap_malloc__3mtlFUli

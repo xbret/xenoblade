@@ -1052,7 +1052,7 @@
 /* 8017FCE0 001492A0  38 00 00 01 */	li r0, 1
 /* 8017FCE4 001492A4  98 06 00 BF */	stb r0, 0xbf(r6)
 .L_8017FCE8:
-/* 8017FCE8 001492A8  48 2B 78 CD */	bl getHeapIndex__3mtlFv
+/* 8017FCE8 001492A8  48 2B 78 CD */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8017FCEC 001492AC  7C 64 1B 78 */	mr r4, r3
 /* 8017FCF0 001492B0  38 60 00 C8 */	li r3, 0xc8
 /* 8017FCF4 001492B4  48 2B 4D 69 */	bl heap_malloc__3mtlFUli

@@ -5,7 +5,6 @@
 extern "C" {
 #endif
 
-
 /**
  * Pack value into bitfield.
  * Value is shifted to the specified bit position.

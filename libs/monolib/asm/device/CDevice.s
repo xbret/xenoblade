@@ -425,7 +425,7 @@
 /* 8044D544 00416B04  3F E0 80 52 */	lis r31, "@stringBase0"@ha
 /* 8044D548 00416B08  83 CD BD B0 */	lwz r30, instance__7CDevice@sda21(r13)
 /* 8044D54C 00416B0C  3B FF 63 E8 */	addi r31, r31, "@stringBase0"@l
-/* 8044D550 00416B10  4B FE A0 65 */	bl getHeapIndex__3mtlFv
+/* 8044D550 00416B10  4B FE A0 65 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D554 00416B14  7C 64 1B 78 */	mr r4, r3
 /* 8044D558 00416B18  38 60 02 C0 */	li r3, 0x2c0
 /* 8044D55C 00416B1C  4B FE 75 01 */	bl heap_malloc__3mtlFUli
@@ -452,7 +452,7 @@
 /* 8044D5A8 00416B68  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D5AC 00416B6C  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D5B0 00416B70  3B C3 00 0A */	addi r30, r3, 0xa
-/* 8044D5B4 00416B74  4B FE A0 01 */	bl getHeapIndex__3mtlFv
+/* 8044D5B4 00416B74  4B FE A0 01 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D5B8 00416B78  7C 64 1B 78 */	mr r4, r3
 /* 8044D5BC 00416B7C  38 60 07 98 */	li r3, 0x798
 /* 8044D5C0 00416B80  4B FE 74 9D */	bl heap_malloc__3mtlFUli
@@ -479,7 +479,7 @@
 /* 8044D60C 00416BCC  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D610 00416BD0  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D614 00416BD4  3B C3 00 14 */	addi r30, r3, 0x14
-/* 8044D618 00416BD8  4B FE 9F 9D */	bl getHeapIndex__3mtlFv
+/* 8044D618 00416BD8  4B FE 9F 9D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D61C 00416BDC  7C 64 1B 78 */	mr r4, r3
 /* 8044D620 00416BE0  38 60 01 F0 */	li r3, 0x1f0
 /* 8044D624 00416BE4  4B FE 74 39 */	bl heap_malloc__3mtlFUli
@@ -500,7 +500,7 @@
 /* 8044D658 00416C18  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D65C 00416C1C  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D660 00416C20  3B C3 00 25 */	addi r30, r3, 0x25
-/* 8044D664 00416C24  4B FE 9F 51 */	bl getHeapIndex__3mtlFv
+/* 8044D664 00416C24  4B FE 9F 51 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D668 00416C28  7C 64 1B 78 */	mr r4, r3
 /* 8044D66C 00416C2C  38 60 02 38 */	li r3, 0x238
 /* 8044D670 00416C30  4B FE 73 ED */	bl heap_malloc__3mtlFUli
@@ -527,7 +527,7 @@
 /* 8044D6BC 00416C7C  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D6C0 00416C80  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D6C4 00416C84  3B C3 00 32 */	addi r30, r3, 0x32
-/* 8044D6C8 00416C88  4B FE 9E ED */	bl getHeapIndex__3mtlFv
+/* 8044D6C8 00416C88  4B FE 9E ED */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D6CC 00416C8C  7C 64 1B 78 */	mr r4, r3
 /* 8044D6D0 00416C90  38 60 01 D0 */	li r3, 0x1d0
 /* 8044D6D4 00416C94  4B FE 73 89 */	bl heap_malloc__3mtlFUli
@@ -554,7 +554,7 @@
 /* 8044D720 00416CE0  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D724 00416CE4  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D728 00416CE8  3B C3 00 3C */	addi r30, r3, 0x3c
-/* 8044D72C 00416CEC  4B FE 9E 89 */	bl getHeapIndex__3mtlFv
+/* 8044D72C 00416CEC  4B FE 9E 89 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D730 00416CF0  7C 64 1B 78 */	mr r4, r3
 /* 8044D734 00416CF4  38 60 01 F0 */	li r3, 0x1f0
 /* 8044D738 00416CF8  4B FE 73 25 */	bl heap_malloc__3mtlFUli
@@ -575,7 +575,7 @@
 /* 8044D76C 00416D2C  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D770 00416D30  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D774 00416D34  3B C3 00 48 */	addi r30, r3, 0x48
-/* 8044D778 00416D38  4B FE 9E 3D */	bl getHeapIndex__3mtlFv
+/* 8044D778 00416D38  4B FE 9E 3D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D77C 00416D3C  7C 64 1B 78 */	mr r4, r3
 /* 8044D780 00416D40  38 60 01 F0 */	li r3, 0x1f0
 /* 8044D784 00416D44  4B FE 72 D9 */	bl heap_malloc__3mtlFUli
@@ -596,7 +596,7 @@
 /* 8044D7B8 00416D78  83 ED BD B0 */	lwz r31, instance__7CDevice@sda21(r13)
 /* 8044D7BC 00416D7C  38 63 63 E8 */	addi r3, r3, "@stringBase0"@l
 /* 8044D7C0 00416D80  3B C3 00 54 */	addi r30, r3, 0x54
-/* 8044D7C4 00416D84  4B FE 9D F1 */	bl getHeapIndex__3mtlFv
+/* 8044D7C4 00416D84  4B FE 9D F1 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D7C8 00416D88  7C 64 1B 78 */	mr r4, r3
 /* 8044D7CC 00416D8C  38 60 01 D0 */	li r3, 0x1d0
 /* 8044D7D0 00416D90  4B FE 72 8D */	bl heap_malloc__3mtlFUli
@@ -637,7 +637,7 @@
 /* 8044D83C 00416DFC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8044D840 00416E00  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044D844 00416E04  7C 7D 1B 78 */	mr r29, r3
-/* 8044D848 00416E08  4B FE 9D 6D */	bl getHeapIndex__3mtlFv
+/* 8044D848 00416E08  4B FE 9D 6D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D84C 00416E0C  7C 64 1B 78 */	mr r4, r3
 /* 8044D850 00416E10  38 60 01 C8 */	li r3, 0x1c8
 /* 8044D854 00416E14  4B FE 72 09 */	bl heap_malloc__3mtlFUli
@@ -713,7 +713,7 @@
 /* 8044D948 00416F08  7C 7E 1B 78 */	mr r30, r3
 /* 8044D94C 00416F0C  38 84 63 E8 */	addi r4, r4, "@stringBase0"@l
 /* 8044D950 00416F10  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 8044D954 00416F14  4B FE 9C 61 */	bl getHeapIndex__3mtlFv
+/* 8044D954 00416F14  4B FE 9C 61 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8044D958 00416F18  7C 64 1B 78 */	mr r4, r3
 /* 8044D95C 00416F1C  38 60 01 C8 */	li r3, 0x1c8
 /* 8044D960 00416F20  4B FE 70 FD */	bl heap_malloc__3mtlFUli

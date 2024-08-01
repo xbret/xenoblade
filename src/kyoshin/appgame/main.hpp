@@ -1,7 +1,6 @@
 #pragma once
 
 #include "types.h"
-#include "kyoshin/appgame/code_802AEB74.hpp"
 #include "kyoshin/appgame/plugin/pluginMain.hpp"
 #include "monolib/lib/CLibHbm.hpp"
 #include "monolib/device/CDeviceVI.hpp"
@@ -30,11 +29,11 @@ extern "C"{
 extern void func_80057CDC();
 extern void CWorkRoot_Run();
 extern void CDesktop_SaveStartFunctionCallback(FunctionStruct*, u32);
-extern void func_8045FBB0(StaticArcFile*);
+extern void CLibStaticData_saveStaticFileArray(StaticArcFile*);
 extern void CLibVM_SetCallbacks(void*, void*);
-extern void func_804DAA90(u16**);
-extern void func_804DAA98(u16**);
-extern void func_804DAAA0(u16**);
+extern void func_804DAA90(const wchar_t*);
+extern void func_804DAA98(const wchar_t*);
+extern void func_804DAAA0(const wchar_t*);
 extern void SavePkhFilenamesArrayPtr(const char* const[]);
 extern void SaveStaticArcFilenameStringPtr(const char* const*);
 extern void func_8003AA50();

@@ -95,7 +95,7 @@
 /* 804D6DB0 004A0370  38 84 24 D8 */	addi r4, r4, lbl_806624D8@l
 /* 804D6DB4 004A0374  80 84 00 04 */	lwz r4, 4(r4)
 /* 804D6DB8 004A0378  38 63 00 10 */	addi r3, r3, 0x10
-/* 804D6DBC 004A037C  4B F5 DC C5 */	bl heap_malloc_1__3mtlFUli
+/* 804D6DBC 004A037C  4B F5 DC C5 */	bl heap_malloc_array__3mtlFUli
 /* 804D6DC0 004A0380  3C 80 80 4D */	lis r4, func_804D70A0@ha
 /* 804D6DC4 004A0384  7F 27 CB 78 */	mr r7, r25
 /* 804D6DC8 004A0388  38 84 70 A0 */	addi r4, r4, func_804D70A0@l
@@ -206,7 +206,7 @@
 /* 804D6F44 004A0504  54 17 08 3C */	slwi r23, r0, 1
 /* 804D6F48 004A0508  1C 77 00 1C */	mulli r3, r23, 0x1c
 /* 804D6F4C 004A050C  38 63 00 10 */	addi r3, r3, 0x10
-/* 804D6F50 004A0510  4B F5 DB 31 */	bl heap_malloc_1__3mtlFUli
+/* 804D6F50 004A0510  4B F5 DB 31 */	bl heap_malloc_array__3mtlFUli
 /* 804D6F54 004A0514  3C 80 80 4D */	lis r4, func_804D6070@ha
 /* 804D6F58 004A0518  7E E7 BB 78 */	mr r7, r23
 /* 804D6F5C 004A051C  38 84 60 70 */	addi r4, r4, func_804D6070@l

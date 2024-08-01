@@ -51,7 +51,7 @@
 /* 8044DBD8 00417198  90 7E 01 F0 */	stw r3, 0x1f0(r30)
 /* 8044DBDC 0041719C  38 60 00 C0 */	li r3, 0xc0
 /* 8044DBE0 004171A0  90 1E 01 C8 */	stw r0, 0x1c8(r30)
-/* 8044DBE4 004171A4  4B FE 6E 9D */	bl heap_malloc_1__3mtlFUli
+/* 8044DBE4 004171A4  4B FE 6E 9D */	bl heap_malloc_array__3mtlFUli
 /* 8044DBE8 004171A8  90 7E 01 E0 */	stw r3, 0x1e0(r30)
 /* 8044DBEC 004171AC  38 00 00 10 */	li r0, 0x10
 /* 8044DBF0 004171B0  93 E3 00 00 */	stw r31, 0(r3)

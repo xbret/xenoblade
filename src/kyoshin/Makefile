@@ -282,7 +282,8 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorialList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorialList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CLoad.o\
-	$(BUILD_DIR)/src/kyoshin/appgame/code_802AEB74.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/NandData.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/ErrMesData.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/pluginHelp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.o\

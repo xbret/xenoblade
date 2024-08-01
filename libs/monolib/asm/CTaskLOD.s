@@ -12,7 +12,7 @@
 /* 8046291C 0042BEDC  7C BC 2B 78 */	mr r28, r5
 /* 80462920 0042BEE0  7C DD 33 78 */	mr r29, r6
 /* 80462924 0042BEE4  7C FE 3B 78 */	mr r30, r7
-/* 80462928 0042BEE8  4B FD 4C 8D */	bl getHeapIndex__3mtlFv
+/* 80462928 0042BEE8  4B FD 4C 8D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8046292C 0042BEEC  7C 64 1B 78 */	mr r4, r3
 /* 80462930 0042BEF0  38 60 1D 44 */	li r3, 0x1d44
 /* 80462934 0042BEF4  4B FD 21 29 */	bl heap_malloc__3mtlFUli

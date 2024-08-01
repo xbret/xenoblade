@@ -548,7 +548,7 @@
 .L_80251500:
 /* 80251500 0021AAC0  38 60 00 04 */	li r3, 4
 /* 80251504 0021AAC4  4B EE 6B 75 */	bl func_80138078
-/* 80251508 0021AAC8  48 1E 60 AD */	bl getHeapIndex__3mtlFv
+/* 80251508 0021AAC8  48 1E 60 AD */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8025150C 0021AACC  7C 64 1B 78 */	mr r4, r3
 /* 80251510 0021AAD0  38 60 34 10 */	li r3, 0x3410
 /* 80251514 0021AAD4  48 1E 35 49 */	bl heap_malloc__3mtlFUli

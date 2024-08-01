@@ -11,7 +11,7 @@ public:
 	static CDeviceFont* getInstance();
 
 	static inline CDeviceFont* init(const char* name, CWorkThread* workThread){
-		CDeviceFont* device = new CDeviceFont(name, workThread);
+		CDeviceFont* device = new (WorkThreadSystem::getHeapIndex()) CDeviceFont(name, workThread);
 		device->func_80438BD8(workThread, 0);
 		return device;
 	}

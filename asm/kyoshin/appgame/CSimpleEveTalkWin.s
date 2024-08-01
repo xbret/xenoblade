@@ -617,7 +617,7 @@
 /* 801A2134 0016B6F4  38 60 00 00 */	li r3, 0
 /* 801A2138 0016B6F8  48 00 00 44 */	b .L_801A217C
 .L_801A213C:
-/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex__3mtlFv
+/* 801A213C 0016B6FC  48 29 54 79 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 801A2140 0016B700  7C 64 1B 78 */	mr r4, r3
 /* 801A2144 0016B704  38 60 00 B0 */	li r3, 0xb0
 /* 801A2148 0016B708  48 29 29 15 */	bl heap_malloc__3mtlFUli

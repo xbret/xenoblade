@@ -169,7 +169,7 @@
 /* 804595A0 00422B60  41 82 01 38 */	beq .L_804596D8
 /* 804595A4 00422B64  3F E0 80 52 */	lis r31, lbl_805268A8@ha
 /* 804595A8 00422B68  3B FF 68 A8 */	addi r31, r31, lbl_805268A8@l
-/* 804595AC 00422B6C  4B FD E0 09 */	bl getHeapIndex__3mtlFv
+/* 804595AC 00422B6C  4B FD E0 09 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 804595B0 00422B70  7C 64 1B 78 */	mr r4, r3
 /* 804595B4 00422B74  38 60 02 68 */	li r3, 0x268
 /* 804595B8 00422B78  4B FD B4 A5 */	bl heap_malloc__3mtlFUli
@@ -185,7 +185,7 @@
 /* 804595DC 00422B9C  3C 60 80 52 */	lis r3, lbl_805268A8@ha
 /* 804595E0 00422BA0  38 63 68 A8 */	addi r3, r3, lbl_805268A8@l
 /* 804595E4 00422BA4  3B E3 00 08 */	addi r31, r3, 8
-/* 804595E8 00422BA8  4B FD DF CD */	bl getHeapIndex__3mtlFv
+/* 804595E8 00422BA8  4B FD DF CD */	bl getHeapIndex__16WorkThreadSystemFv
 /* 804595EC 00422BAC  7C 64 1B 78 */	mr r4, r3
 /* 804595F0 00422BB0  38 60 01 C8 */	li r3, 0x1c8
 /* 804595F4 00422BB4  4B FD B4 69 */	bl heap_malloc__3mtlFUli
@@ -201,7 +201,7 @@
 /* 80459618 00422BD8  3C 60 80 52 */	lis r3, lbl_805268A8@ha
 /* 8045961C 00422BDC  38 63 68 A8 */	addi r3, r3, lbl_805268A8@l
 /* 80459620 00422BE0  3B E3 00 10 */	addi r31, r3, 0x10
-/* 80459624 00422BE4  4B FD DF 91 */	bl getHeapIndex__3mtlFv
+/* 80459624 00422BE4  4B FD DF 91 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80459628 00422BE8  7C 64 1B 78 */	mr r4, r3
 /* 8045962C 00422BEC  38 60 02 C0 */	li r3, 0x2c0
 /* 80459630 00422BF0  4B FD B4 2D */	bl heap_malloc__3mtlFUli
@@ -217,7 +217,7 @@
 /* 80459654 00422C14  3C 60 80 52 */	lis r3, lbl_805268A8@ha
 /* 80459658 00422C18  38 63 68 A8 */	addi r3, r3, lbl_805268A8@l
 /* 8045965C 00422C1C  3B E3 00 1B */	addi r31, r3, 0x1b
-/* 80459660 00422C20  4B FD DF 55 */	bl getHeapIndex__3mtlFv
+/* 80459660 00422C20  4B FD DF 55 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80459664 00422C24  7C 64 1B 78 */	mr r4, r3
 /* 80459668 00422C28  38 60 01 C8 */	li r3, 0x1c8
 /* 8045966C 00422C2C  4B FD B3 F1 */	bl heap_malloc__3mtlFUli
@@ -233,7 +233,7 @@
 /* 80459690 00422C50  3C 60 80 52 */	lis r3, lbl_805268A8@ha
 /* 80459694 00422C54  38 63 68 A8 */	addi r3, r3, lbl_805268A8@l
 /* 80459698 00422C58  3B E3 00 22 */	addi r31, r3, 0x22
-/* 8045969C 00422C5C  4B FD DF 19 */	bl getHeapIndex__3mtlFv
+/* 8045969C 00422C5C  4B FD DF 19 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 804596A0 00422C60  7C 64 1B 78 */	mr r4, r3
 /* 804596A4 00422C64  38 60 01 D8 */	li r3, 0x1d8
 /* 804596A8 00422C68  4B FD B3 B5 */	bl heap_malloc__3mtlFUli
@@ -317,7 +317,7 @@
 /* 804597B0 00422D70  7C 7E 1B 78 */	mr r30, r3
 /* 804597B4 00422D74  38 84 68 A8 */	addi r4, r4, lbl_805268A8@l
 /* 804597B8 00422D78  3B E4 00 4A */	addi r31, r4, 0x4a
-/* 804597BC 00422D7C  4B FD DD F9 */	bl getHeapIndex__3mtlFv
+/* 804597BC 00422D7C  4B FD DD F9 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 804597C0 00422D80  7C 64 1B 78 */	mr r4, r3
 /* 804597C4 00422D84  38 60 01 C8 */	li r3, 0x1c8
 /* 804597C8 00422D88  4B FD B2 95 */	bl heap_malloc__3mtlFUli

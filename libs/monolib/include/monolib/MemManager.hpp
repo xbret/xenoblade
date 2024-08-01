@@ -3,7 +3,6 @@
 #include "types.h"
 #include <string.h>
 #include <stddef.h>
-#include <new>
 
 namespace mtl{
 
@@ -87,7 +86,7 @@ MemBlock* MemManager_80433AA8(Heap*, MemBlock*);
 void MemManager_setArenaMemorySize(u32, u32);
 void heap_deleteRegion(int regionIndex);
 void* heap_malloc(size_t size, int memBlockIndex);
-void* heap_malloc_1(size_t size, int memBlockIndex);
+void* heap_malloc_array(size_t size, int memBlockIndex);
 int getHeapIndex();
 int Heap_getRegionIndex1();
 int Heap_getRegionIndex2();
@@ -103,25 +102,10 @@ static inline Heap* getHeap(u32 index){
 
 }
 
-//Why did Monolithsoft enable exceptions but also use nothrow everywhere???
-
-inline void* operator new(size_t size, const std::nothrow_t&) {
-	return mtl::heap_malloc(size, mtl::getHeapIndex());
+inline void* operator new(size_t size, int index) {
+	return mtl::heap_malloc(size, index);
 }
 
-#define USE_STUPID_NEW 1
-
-#if USE_STUPID_NEW
-/*
-Since doing "return operator new(size, std::nothrow)" in a standard new operator
-overload doesn't work, the only other options to disable exceptions in the new operator
-besides using std::nothrow everywhere are either to use a macro, or to just redefine
-new itself. While this is horrible practice, it seems like this is what Monolithsoft
-originally did, so unfortunately this is necessary. :p
-*/
-#define new new (std::nothrow)
-#else
-inline void* operator new(size_t size){
-	return mtl::heap_malloc(size, mtl::getHeapIndex());
+inline void* operator new[](size_t size, int index){
+	return mtl::heap_malloc_array(size, index);
 }
-#endif

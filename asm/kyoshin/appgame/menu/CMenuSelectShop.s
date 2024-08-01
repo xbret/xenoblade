@@ -563,7 +563,7 @@
 /* 8018A5B4 00153B74  38 60 00 00 */	li r3, 0
 /* 8018A5B8 00153B78  48 00 00 3C */	b .L_8018A5F4
 .L_8018A5BC:
-/* 8018A5BC 00153B7C  48 2A CF F9 */	bl getHeapIndex__3mtlFv
+/* 8018A5BC 00153B7C  48 2A CF F9 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8018A5C0 00153B80  7C 64 1B 78 */	mr r4, r3
 /* 8018A5C4 00153B84  38 60 00 D4 */	li r3, 0xd4
 /* 8018A5C8 00153B88  48 2A A4 95 */	bl heap_malloc__3mtlFUli

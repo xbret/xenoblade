@@ -15,11 +15,11 @@ class _reslist_base{
 public:
 	_reslist_base(){
 		mList = nullptr;
-		capacity = 0;
+		mCapacity = 0;
 		unk1C = 0;
-		pStartNode = &startNode;
-		pStartNode->next = &startNode;
-		pStartNode->prev = startNode.next;
+		mStartNodePtr = &mStartNode;
+		mStartNodePtr->next = &mStartNode;
+		mStartNodePtr->prev = mStartNode.next;
 	}
 
 	virtual ~_reslist_base(){
@@ -40,24 +40,24 @@ public:
 
 	//func_8049CAF4
 	void clear(){
-		_reslist_node<T>* r5 = pStartNode->next;
+		_reslist_node<T>* r5 = mStartNodePtr->next;
 		
-		while (r5 != pStartNode) {
+		while (r5 != mStartNodePtr) {
 			_reslist_node<T>* r4 = r5;
 			r5 = r5->next;
 			func_8049CB6C(&r4->item);
 			func_8049CB70(r4);
 		}
 	
-		pStartNode->next = pStartNode;
-		pStartNode->prev = pStartNode;
+		mStartNodePtr->next = mStartNodePtr;
+		mStartNodePtr->prev = mStartNodePtr;
 	}
 
 	//0x0: vtable
-	_reslist_node<T>* pStartNode; //0x4
-	_reslist_node<T> startNode; //0x8
+	_reslist_node<T>* mStartNodePtr; //0x4
+	_reslist_node<T> mStartNode; //0x8
 	_reslist_node<T>* mList; //0x14
-	u32 capacity; //0x18
+	u32 mCapacity; //0x18
 	u8 unk1C; //0x1C
 	u8 unk1D[3];
 };
@@ -72,7 +72,7 @@ public:
 	}
 
 	void remove(const T& item) {
-		_reslist_node<T>* startNode = pStartNode;
+		_reslist_node<T>* startNode = mStartNodePtr;
 		_reslist_node<T>* curNode = startNode->next;
 		
 		//Walk through the list
@@ -90,12 +90,12 @@ public:
 	}
 
 	void push_back(const T& item){
-		_reslist_node<T>* r9 = pStartNode;
-		u32 r8 = capacity;
+		_reslist_node<T>* r9 = mStartNodePtr;
+		u32 r8 = mCapacity;
 		int i = 0;
 
 		//Go through the list until we find an empty slot
-		while(i < capacity){
+		while(i < mCapacity){
 			if(mList[i].next == 0) break;
 			i++;
 		}
@@ -116,17 +116,17 @@ public:
 	void end();
 
 	inline void initList(int capacity, int heapIndex) {
-		mList = (_reslist_node<T>*)mtl::heap_malloc_1(sizeof(_reslist_node<T>) * capacity, heapIndex);
+		mList = new (heapIndex) _reslist_node<T>[capacity];
 
 		for(int i = 0; i < capacity; i++){
 			mList[i].next = nullptr;
 		}
 
-		this->capacity = capacity;
+		mCapacity = capacity;
 	}
 
 	inline bool empty(){
-		return pStartNode->next == pStartNode;
+		return mStartNodePtr->next == mStartNodePtr;
 	}
 
 };

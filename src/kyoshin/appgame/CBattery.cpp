@@ -29,7 +29,7 @@ CBattery::~CBattery(){
 }
 
 void CBattery::func_802B92A4(){
-	int heapIndex = mtl::getHeapIndex();
+	int heapIndex = WorkThreadSystem::getHeapIndex();
 	unk14 = CDeviceFile_openFile1(heapIndex, "/menu/Battery.arc", (void*)this, 0, 0);
 	//likely member functions of the class
 	CDeviceFile_8044F154(unk14, 3);
@@ -100,7 +100,7 @@ bool CBattery::OnFileEvent(CEventFile* eventFile){
 			func_802B9364();
 			return true;
 		}
-		int heapIndex = mtl::getHeapIndex();
+		int heapIndex = WorkThreadSystem::getHeapIndex();
 		CLibLayout_addLayoutHeapEntry(&unk4, heapIndex, 0xC00, "CBattery", 0); //Add the class to the layout heap
 		Class_8045F858 sp8 = Class_8045F858(&unk4);
 		void* r29 = unk14->unk4;

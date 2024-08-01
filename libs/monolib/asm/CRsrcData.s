@@ -185,7 +185,7 @@
 /* 80439F24 004034E4  7C FC 3B 78 */	mr r28, r7
 /* 80439F28 004034E8  7D 1D 43 78 */	mr r29, r8
 /* 80439F2C 004034EC  3B FF 5E 4C */	addi r31, r31, lbl_80525E4C@l
-/* 80439F30 004034F0  4B FF D6 85 */	bl getHeapIndex__3mtlFv
+/* 80439F30 004034F0  4B FF D6 85 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80439F34 004034F4  7C 64 1B 78 */	mr r4, r3
 /* 80439F38 004034F8  38 60 04 E8 */	li r3, 0x4e8
 /* 80439F3C 004034FC  4B FF AB 21 */	bl heap_malloc__3mtlFUli

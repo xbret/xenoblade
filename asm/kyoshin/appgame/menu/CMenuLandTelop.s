@@ -700,7 +700,7 @@
 /* 80144F64 0010E524  38 60 00 00 */	li r3, 0
 /* 80144F68 0010E528  48 00 00 40 */	b .L_80144FA8
 .L_80144F6C:
-/* 80144F6C 0010E52C  48 2F 26 49 */	bl getHeapIndex__3mtlFv
+/* 80144F6C 0010E52C  48 2F 26 49 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80144F70 0010E530  7C 64 1B 78 */	mr r4, r3
 /* 80144F74 0010E534  38 60 00 E4 */	li r3, 0xe4
 /* 80144F78 0010E538  48 2E FA E5 */	bl heap_malloc__3mtlFUli

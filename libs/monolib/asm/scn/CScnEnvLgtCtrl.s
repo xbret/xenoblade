@@ -38,7 +38,7 @@
 /* 804C0C64 0048A224  4B FD 53 B5 */	bl func_80496018
 /* 804C0C68 0048A228  7C 64 1B 78 */	mr r4, r3
 /* 804C0C6C 0048A22C  38 60 00 60 */	li r3, 0x60
-/* 804C0C70 0048A230  4B F7 3E 11 */	bl heap_malloc_1__3mtlFUli
+/* 804C0C70 0048A230  4B F7 3E 11 */	bl heap_malloc_array__3mtlFUli
 /* 804C0C74 0048A234  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 804C0C78 0048A238  38 00 00 08 */	li r0, 8
 /* 804C0C7C 0048A23C  93 E3 00 00 */	stw r31, 0(r3)

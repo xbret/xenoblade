@@ -189,10 +189,10 @@
 /* 8045FBAC 0042916C  4E 80 00 20 */	blr 
 .endfn func_8045FB08
 
-.fn func_8045FBB0, global
+.fn CLibStaticData_saveStaticFileArray, global
 /* 8045FBB0 00429170  90 6D BE 74 */	stw r3, lbl_80667FF4@sda21(r13)
 /* 8045FBB4 00429174  4E 80 00 20 */	blr 
-.endfn func_8045FBB0
+.endfn CLibStaticData_saveStaticFileArray
 
 .fn func_8045FBB8, global
 /* 8045FBB8 00429178  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -292,7 +292,7 @@
 /* 8045FCF8 004292B8  41 82 00 50 */	beq .L_8045FD48
 /* 8045FCFC 004292BC  48 00 00 40 */	b .L_8045FD3C
 .L_8045FD00:
-/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex__3mtlFv
+/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8045FD04 004292C4  7C 64 1B 78 */	mr r4, r3
 /* 8045FD08 004292C8  38 60 00 18 */	li r3, 0x18
 /* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc__3mtlFUli

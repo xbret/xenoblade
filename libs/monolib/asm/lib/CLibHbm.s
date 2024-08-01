@@ -195,10 +195,10 @@
 /* 8045D5C4 00426B84  4E 80 00 20 */	blr 
 .endfn func_8045D554
 
-.fn func_8045D5C8__FUl, global
+.fn CLibHbm_8045D5C8__FUl, global
 /* 8045D5C8 00426B88  98 6D BE 54 */	stb r3, lbl_80667FD4@sda21(r13)
 /* 8045D5CC 00426B8C  4E 80 00 20 */	blr 
-.endfn func_8045D5C8__FUl
+.endfn CLibHbm_8045D5C8__FUl
 
 .fn func_8045D5D0, global
 /* 8045D5D0 00426B90  94 21 FF F0 */	stwu r1, -0x10(r1)

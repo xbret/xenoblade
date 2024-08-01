@@ -29,7 +29,7 @@
 /* 8003927C 0000283C  D0 1F 02 24 */	stfs f0, 0x224(r31)
 /* 80039280 00002840  90 BF 02 28 */	stw r5, 0x228(r31)
 /* 80039284 00002844  93 ED A4 80 */	stw r31, instance__5CGame@sda21(r13)
-/* 80039288 00002848  48 42 43 41 */	bl func_8045D5C8__FUl
+/* 80039288 00002848  48 42 43 41 */	bl CLibHbm_8045D5C8__FUl
 /* 8003928C 0000284C  3C 60 80 04 */	lis r3, func_80039D08__5CGameFv@ha
 /* 80039290 00002850  38 63 9D 08 */	addi r3, r3, func_80039D08__5CGameFv@l
 /* 80039294 00002854  48 40 B5 E1 */	bl func_80444874__FPv
@@ -59,7 +59,7 @@
 /* 800392E8 000028A8  38 60 00 00 */	li r3, 0
 /* 800392EC 000028AC  48 40 B5 89 */	bl func_80444874__FPv
 /* 800392F0 000028B0  38 60 00 00 */	li r3, 0
-/* 800392F4 000028B4  48 42 42 D5 */	bl func_8045D5C8__FUl
+/* 800392F4 000028B4  48 42 42 D5 */	bl CLibHbm_8045D5C8__FUl
 /* 800392F8 000028B8  38 00 00 00 */	li r0, 0
 /* 800392FC 000028BC  90 0D A4 80 */	stw r0, instance__5CGame@sda21(r13)
 /* 80039300 000028C0  7F C3 F3 78 */	mr r3, r30
@@ -114,7 +114,7 @@
 /* 80039398 00002958  3F E0 80 4F */	lis r31, "@stringBase0"@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
 /* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, "@stringBase0"@l
-/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__3mtlFv
+/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
 /* 800393B0 00002970  48 3F B6 AD */	bl heap_malloc__3mtlFUli
@@ -610,7 +610,7 @@
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
 /* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, "@stringBase0"@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
-/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__3mtlFv
+/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
 /* 80039A78 00003038  38 60 02 30 */	li r3, 0x230
 /* 80039A7C 0000303C  48 3F AF E1 */	bl heap_malloc__3mtlFUli

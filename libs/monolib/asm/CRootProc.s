@@ -11,7 +11,7 @@
 /* 8043BC90 00405250  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8043BC94 00405254  48 00 91 61 */	bl func_80444DF4
 /* 8043BC98 00405258  48 00 92 25 */	bl func_80444EBC
-/* 8043BC9C 0040525C  4B FF B9 19 */	bl getHeapIndex__3mtlFv
+/* 8043BC9C 0040525C  4B FF B9 19 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043BCA0 00405260  7C 64 1B 78 */	mr r4, r3
 /* 8043BCA4 00405264  38 60 00 54 */	li r3, 0x54
 /* 8043BCA8 00405268  4B FF 8D B5 */	bl heap_malloc__3mtlFUli
@@ -45,7 +45,7 @@
 /* 8043BD14 004052D4  38 80 00 00 */	li r4, 0
 /* 8043BD18 004052D8  38 A0 00 00 */	li r5, 0
 /* 8043BD1C 004052DC  48 00 8F 59 */	bl func_80444C74
-/* 8043BD20 004052E0  4B FF B8 95 */	bl getHeapIndex__3mtlFv
+/* 8043BD20 004052E0  4B FF B8 95 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043BD24 004052E4  7C 64 1B 78 */	mr r4, r3
 /* 8043BD28 004052E8  38 60 00 54 */	li r3, 0x54
 /* 8043BD2C 004052EC  4B FF 8D 31 */	bl heap_malloc__3mtlFUli
@@ -79,7 +79,7 @@
 /* 8043BD98 00405358  38 80 00 00 */	li r4, 0
 /* 8043BD9C 0040535C  38 A0 00 00 */	li r5, 0
 /* 8043BDA0 00405360  48 00 8E D5 */	bl func_80444C74
-/* 8043BDA4 00405364  4B FF B8 11 */	bl getHeapIndex__3mtlFv
+/* 8043BDA4 00405364  4B FF B8 11 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043BDA8 00405368  7C 64 1B 78 */	mr r4, r3
 /* 8043BDAC 0040536C  38 60 00 54 */	li r3, 0x54
 /* 8043BDB0 00405370  4B FF 8C AD */	bl heap_malloc__3mtlFUli
@@ -113,7 +113,7 @@
 /* 8043BE1C 004053DC  38 80 00 00 */	li r4, 0
 /* 8043BE20 004053E0  38 A0 00 00 */	li r5, 0
 /* 8043BE24 004053E4  48 00 8E 51 */	bl func_80444C74
-/* 8043BE28 004053E8  4B FF B7 8D */	bl getHeapIndex__3mtlFv
+/* 8043BE28 004053E8  4B FF B7 8D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043BE2C 004053EC  7C 64 1B 78 */	mr r4, r3
 /* 8043BE30 004053F0  38 60 00 54 */	li r3, 0x54
 /* 8043BE34 004053F4  4B FF 8C 29 */	bl heap_malloc__3mtlFUli
@@ -219,7 +219,7 @@
 /* 8043BF80 00405540  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8043BF84 00405544  48 00 CA C1 */	bl func_80448A44__9CDeviceVIFv
 /* 8043BF88 00405548  48 00 8F 35 */	bl func_80444EBC
-/* 8043BF8C 0040554C  4B FF B6 29 */	bl getHeapIndex__3mtlFv
+/* 8043BF8C 0040554C  4B FF B6 29 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043BF90 00405550  7C 64 1B 78 */	mr r4, r3
 /* 8043BF94 00405554  38 60 00 54 */	li r3, 0x54
 /* 8043BF98 00405558  4B FF 8A C5 */	bl heap_malloc__3mtlFUli
@@ -253,7 +253,7 @@
 /* 8043C004 004055C4  38 80 00 00 */	li r4, 0
 /* 8043C008 004055C8  38 A0 00 00 */	li r5, 0
 /* 8043C00C 004055CC  48 00 8C 69 */	bl func_80444C74
-/* 8043C010 004055D0  4B FF B5 A5 */	bl getHeapIndex__3mtlFv
+/* 8043C010 004055D0  4B FF B5 A5 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043C014 004055D4  7C 64 1B 78 */	mr r4, r3
 /* 8043C018 004055D8  38 60 00 54 */	li r3, 0x54
 /* 8043C01C 004055DC  4B FF 8A 41 */	bl heap_malloc__3mtlFUli
@@ -287,7 +287,7 @@
 /* 8043C088 00405648  38 80 00 00 */	li r4, 0
 /* 8043C08C 0040564C  38 A0 00 00 */	li r5, 0
 /* 8043C090 00405650  48 00 8B E5 */	bl func_80444C74
-/* 8043C094 00405654  4B FF B5 21 */	bl getHeapIndex__3mtlFv
+/* 8043C094 00405654  4B FF B5 21 */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043C098 00405658  7C 64 1B 78 */	mr r4, r3
 /* 8043C09C 0040565C  38 60 00 54 */	li r3, 0x54
 /* 8043C0A0 00405660  4B FF 89 BD */	bl heap_malloc__3mtlFUli
@@ -321,7 +321,7 @@
 /* 8043C10C 004056CC  38 80 00 00 */	li r4, 0
 /* 8043C110 004056D0  38 A0 00 00 */	li r5, 0
 /* 8043C114 004056D4  48 00 8B 61 */	bl func_80444C74
-/* 8043C118 004056D8  4B FF B4 9D */	bl getHeapIndex__3mtlFv
+/* 8043C118 004056D8  4B FF B4 9D */	bl getHeapIndex__16WorkThreadSystemFv
 /* 8043C11C 004056DC  7C 64 1B 78 */	mr r4, r3
 /* 8043C120 004056E0  38 60 00 54 */	li r3, 0x54
 /* 8043C124 004056E4  4B FF 89 39 */	bl heap_malloc__3mtlFUli

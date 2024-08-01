@@ -13,7 +13,7 @@ public:
 	virtual void UnkVirtualFunc2();
 
 	static inline CLibCri* init(const char* name, CWorkThread* workThread){
-		CLibCri* lib = new CLibCri(name, workThread);
+		CLibCri* lib = new (WorkThreadSystem::getHeapIndex()) CLibCri(name, workThread);
 		lib->func_80438BD8(workThread, 0);
 		return lib;
 	}

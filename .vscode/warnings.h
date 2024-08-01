@@ -6,3 +6,5 @@
 #pragma diag_suppress 1767
 // disables the "invalid union member" error (thanks JASTrack)
 #pragma diag_suppress 294
+// disables the "first parameter of allocation function" error (thanks MemManager)
+#pragma diag_suppress 351
