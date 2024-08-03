@@ -14,7 +14,7 @@ if sys.platform == "cygwin":
 		f"\n(Current path: {sys.executable})"
 	)
 
-HARDLINK = "https://files.decomp.dev/compilers_20230715.zip"
+HARDLINK = "https://files.decomp.dev/compilers_20231018.zip"
 
 
 def main() -> None:

@@ -1,16 +1,52 @@
+
+# Helper function for Dolphin libraries
+def DolphinLib(lib_name, objects, version = "1.1", extra_cflags=""):
+    return {
+        "lib": lib_name,
+        "mw_console": "Wii",
+        "mw_version": version,
+        "root_dir": "libs/RVL_SDK",
+        "cflags": "$cflags_sdk" + " " + extra_cflags,
+        "host": False,
+        "objects": objects,
+    }
+
+def criwareLib(lib_name, objects, extra_cflags=""):
+    return {
+        "lib": lib_name,
+        "mw_console": "GC",
+        "mw_version": "3.0a5.2",
+        "root_dir": "libs/CriWare",
+        "cflags": "$cflags_criware" + " " + extra_cflags,
+        "host": False,
+        "objects": objects,
+    }
+
+def nw4rLib(lib_name, objects, extra_cflags=""):
+    return {
+        "lib": lib_name,
+        "mw_console": "GC",
+        "mw_version": "3.0a5.2",
+        "root_dir": "libs/nw4r",
+        "cflags": "$cflags_nw4r" + " " + extra_cflags,
+        "host": False,
+        "objects": objects,
+    }
+
+
 LIBS = [
     {
         "lib": "kyoshin",
         "mw_console": "Wii",
         "mw_version": "1.1",
         "root_dir": "",
-        "cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS",
+        "cflags": "$cflags_game",
         "host": True,
         "objects": [
             [
                 "kyoshin/appgame/CGame", 
                 False,
-                {"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s -func_align 4"},
+                {"cflags": "$cflags_game -O4,s -func_align 4"},
             ],
             ["kyoshin/appgame/main", True],
             ["kyoshin/appgame/plugin/pluginDeb", True],
@@ -298,7 +334,7 @@ LIBS = [
             [
                 "kyoshin/appgame/ErrMesData",
                 True,
-                {"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc UTF8"},
+                {"cflags": "$cflags_game -enc UTF8"},
             ],
             ["kyoshin/appgame/plugin/pluginHelp", False],
             ["kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN", False],
@@ -340,7 +376,7 @@ LIBS = [
             [
                 "kyoshin/appgame/CBattery", 
                 True,
-                {"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s -func_align 4"},
+                {"cflags": "$cflags_game -O4,s -func_align 4"},
             ],
         ],
     },
@@ -349,7 +385,7 @@ LIBS = [
         "mw_console": "Wii",
         "mw_version": "1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
-        "cflags": "$cflags_base -Cpp_exceptions off -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4",
+        "cflags": "$cflags_runtime",
         "host": True,
         "objects": [
             ["Runtime/__mem", True],
@@ -358,25 +394,25 @@ LIBS = [
             [
                 "Runtime/New",
                 True,
-                {"cflags": "$cflags_base -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4 -Cpp_exceptions on"},
+                {"cflags": "$cflags_runtime -Cpp_exceptions on -RTTI on"},
             ],
             [
                 "Runtime/NMWException",
                 True,
-                {"cflags": "$cflags_base -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4 -Cpp_exceptions on"},
+                {"cflags": "$cflags_runtime -Cpp_exceptions on"},
             ],
             ["Runtime/ptmf", True],
             [
                 "Runtime/MWRTTI",
                 True,
-                {"cflags": "$cflags_base -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4 -Cpp_exceptions on"},
+                {"cflags": "$cflags_runtime -Cpp_exceptions on -RTTI on"},
             ],
             ["Runtime/runtime", True],
             ["Runtime/__init_cpp_exceptions", True],
             [
                 "Runtime/Gecko_ExceptionPPC", 
                 True,
-                {"cflags": "$cflags_base -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4 -Cpp_exceptions on"},
+                {"cflags": "$cflags_runtime -Cpp_exceptions on"},
             ],
             ["Runtime/GCN_mem_alloc", True],
         ],
@@ -386,7 +422,7 @@ LIBS = [
         "mw_console": "Wii",
         "mw_version": "1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
-        "cflags": "$cflags_base -Cpp_exceptions off -inline on -str pool,readonly,reuse -ipa file",
+        "cflags": "$cflags_mslc",
         "host": True,
         "objects": [
             ["MSL_C/MSL_Common/alloc", True],
@@ -466,7 +502,7 @@ LIBS = [
         "mw_console": "Wii",
         "mw_version": "1.0a",
         "root_dir": "libs/PowerPC_EABI_Support",
-        "cflags": "$cflags_base -Cpp_exceptions off -inline on",
+        "cflags": "$cflags_trk",
         "host": True,
         "objects": [
             ["MetroTRK/__exception", True],
@@ -483,7 +519,7 @@ LIBS = [
             [
                 "MetroTRK/dolphin_trk_glue",
                 True,
-                {"cflags": "$cflags_base -Cpp_exceptions off -inline on -str pool"},
+                {"cflags": "$cflags_trk -str pool"},
             ],
             ["MetroTRK/notify", True],
             ["MetroTRK/nubevent", True],
@@ -493,7 +529,7 @@ LIBS = [
             [
                 "MetroTRK/support",
                 True,
-                {"cflags": "$cflags_base -Cpp_exceptions off -inline on -str pool"},
+                {"cflags": "$cflags_trk -str pool"},
             ],
             ["MetroTRK/targcont", True],
             ["MetroTRK/mpc_7xx_603e", True],
@@ -502,13 +538,13 @@ LIBS = [
             [
                 "MetroTRK/msghndlr",
                 True,
-                {"cflags": "$cflags_base -Cpp_exceptions off -inline on -str pool"},
+                {"cflags": "$cflags_trk -str pool"},
             ],
             ["MetroTRK/mslsupp", True],
             [
                 "MetroTRK/targimpl",
                 True,
-                {"cflags": "$cflags_base -Cpp_exceptions off -inline auto -pool off"},
+                {"cflags": "$cflags_trk -inline auto -pool off"},
             ],
             ["MetroTRK/target_options", True],
         ],
@@ -518,43 +554,28 @@ LIBS = [
         "mw_console": "GC",
         "mw_version": "3.0a5.2",
         "root_dir": "libs/NdevExi2A",
-        "cflags": "$cflags_base -use_lmw_stmw off -inline auto -ipa file -Cpp_exceptions off",
+        "cflags": "$cflags_ndev",
         "host": True,
         "objects": [
             ["DebuggerDriver", True],
             ["exi2", True],
         ],
     },
-    {
-        "lib": "ai",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    DolphinLib(
+        "ai",
+        [
             ["revolution/ai/ai", True],
         ],
-    },
-    {
-        "lib": "arc",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "arc",
+        [
             ["revolution/arc/arc", True],
         ],
-    },
-    {
-        "lib": "ax",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "ax",
+        [
             ["revolution/ax/AX", True],
             ["revolution/ax/AXAlloc", False],
             ["revolution/ax/AXAux", False],
@@ -566,15 +587,10 @@ LIBS = [
             ["revolution/ax/AXComp", True],
             ["revolution/ax/DSPCode", True],
         ],
-    },
-    {
-        "lib": "axfx",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "axfx",
+        [
             ["revolution/axfx/AXFXReverbHi", False],
             ["revolution/axfx/AXFXReverbHiExp", False],
             ["revolution/axfx/AXFXDelayExp", False],
@@ -587,26 +603,16 @@ LIBS = [
             ["revolution/axfx/AXFXSrcCoef", True],
             ["revolution/axfx/AXFXHooks", True],
         ],
-    },
-    {
-        "lib": "base",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "base",
+        [
             ["revolution/base/PPCArch", True],
         ],
-    },
-    {
-        "lib": "bte",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_base -Cpp_exceptions off -enum int -inline auto -ipa file",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "bte",
+        [
             ["revolution/bte/gki/gki_buffer", False],
             ["revolution/bte/gki/gki_time", False],
             ["revolution/bte/gki/gki_ppc", False],
@@ -676,52 +682,32 @@ LIBS = [
             ["revolution/bte/stack/sdp/sdp_server", False],
             ["revolution/bte/stack/sdp/sdp_utils", False],
         ],
-    },
-    {
-        "lib": "cx",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "cx",
+        [
             ["revolution/cx/CXStreamingUncompression", False],
             ["revolution/cx/CXUncompression", False],
             ["revolution/cx/CXSecureUncompression", True],
         ],
-    },
-    {
-        "lib": "db",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "db",
+        [
             ["revolution/db/db", True],
         ],
-    },
-    {
-        "lib": "dsp",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "dsp",
+        [
             ["revolution/dsp/dsp", True],
             ["revolution/dsp/dsp_debug", True],
             ["revolution/dsp/dsp_task", True],
         ],
-    },
-    {
-        "lib": "dvd",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "dvd",
+        [
             ["revolution/dvd/dvdfs", True],
             ["revolution/dvd/dvd", True],
             ["revolution/dvd/dvdqueue", True],
@@ -731,73 +717,43 @@ LIBS = [
             ["revolution/dvd/dvdDeviceError", True],
             ["revolution/dvd/dvd_broadway", True],
         ],
-    },
-    {
-        "lib": "enc",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "enc",
+        [
             ["revolution/enc/encutility", False],
             ["revolution/enc/encjapanese", False],
         ],
-    },
-    {
-        "lib": "esp",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "esp",
+        [
             ["revolution/esp/esp", True],
         ],
-    },
-    {
-        "lib": "euart",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "euart",
+        [
             ["revolution/euart/euart", True],
         ],
-    },
-    {
-        "lib": "exi",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "exi",
+        [
             ["revolution/exi/EXIBios", False],
             ["revolution/exi/EXIUart", True],
             ["revolution/exi/EXICommon", True],
         ],
-    },
-    {
-        "lib": "fs",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "fs",
+        [
             ["revolution/fs/fs", True],
         ],
-    },
-    {
-        "lib": "gx",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "gx",
+        [
             ["revolution/gx/GXInit", False],
             ["revolution/gx/GXFifo", False],
             ["revolution/gx/GXAttr", False],
@@ -813,15 +769,10 @@ LIBS = [
             ["revolution/gx/GXTransform", True],
             ["revolution/gx/GXPerf", False],
         ],
-    },
-    {
-        "lib": "homebuttonLib",
-        "mw_console": "Wii",
-        "mw_version": "1.0a",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk -sdata 0 -sdata2 0 -i libs/RVL_SDK/src/revolution/hbm/include/",
-        "host": True,
-        "objects": [
+    ),
+    DolphinLib(
+        "homebuttonLib",
+        [
             ["revolution/hbm/HBMFrameController", False],
             ["revolution/hbm/HBMAnmController", False],
             ["revolution/hbm/HBMGUIManager", False],
@@ -864,97 +815,64 @@ LIBS = [
             ["revolution/hbm/synvoice", False],
             ["revolution/hbm/seq", False],
         ],
-    },
-    {
-        "lib": "ipc",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": True,
-        "objects": [
+        "1.0a",
+        "-sdata 0 -sdata2 0 -RTTI on -i libs/RVL_SDK/src/revolution/hbm/include/"
+    ),
+    DolphinLib(
+        "ipc",
+        [
             ["revolution/ipc/ipcMain", True],
             ["revolution/ipc/ipcclt", False],
             ["revolution/ipc/memory", False],
             ["revolution/ipc/ipcProfile", True],
         ],
-    },
-    {
-        "lib": "kpad",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "kpad",
+        [
             ["revolution/kpad/KPAD", False],
         ],
-    },
-    {
-        "lib": "mem",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "mem",
+        [
             ["revolution/mem/mem_heapCommon", True],
             ["revolution/mem/mem_expHeap", False],
             ["revolution/mem/mem_frameHeap", True],
             ["revolution/mem/mem_allocator", True],
             ["revolution/mem/mem_list", True],
         ],
-    },
-    {
-        "lib": "mix",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "mix",
+        [
             ["revolution/mix/mix", False],
             ["revolution/mix/remote", False],
         ],
-    },
-    {
-        "lib": "mtx",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "mtx",
+        [
             ["revolution/mtx/mtx", True],
             ["revolution/mtx/mtxvec", True],
             ["revolution/mtx/mtx44", True],
             ["revolution/mtx/vec", True],
             ["revolution/mtx/quat", True],
         ],
-    },
-    {
-        "lib": "nand",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "nand",
+        [
             ["revolution/nand/nand", False],
             ["revolution/nand/NANDOpenClose", False],
             ["revolution/nand/NANDCore", False],
             ["revolution/nand/NANDCheck", False],
             ["revolution/nand/NANDLogging", False],
         ],
-    },
-    {
-        "lib": "os",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "os",
+        [
             ["revolution/os/OS", True],
             ["revolution/os/OSAlarm", True],
             ["revolution/os/OSAlloc", True],
@@ -990,125 +908,75 @@ LIBS = [
             ["revolution/os/OSLaunch", False],
             ["revolution/os/__ppc_eabi_init", True],
         ],
-    },
-    {
-        "lib": "pad",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "pad",
+        [
             ["revolution/pad/Pad", True],
         ],
-    },
-    {
-        "lib": "sc",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "sc",
+        [
             ["revolution/sc/scsystem", False],
             ["revolution/sc/scapi", True],
             ["revolution/sc/scapi_prdinfo", True, {"mw_console" : "GC", "mw_version" : "3.0a5.2"}],
         ],
-    },
-    {
-        "lib": "si",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "si",
+        [
             ["revolution/si/SIBios", False],
             ["revolution/si/SISamplingRate", True],
         ],
-    },
-    {
-        "lib": "tpl",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "tpl",
+        [
             ["revolution/tpl/TPL", True],
         ],
-    },
-    {
-        "lib": "usb",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "usb",
+        [
             ["revolution/usb/usb", True],
         ],
-    },
-    {
-        "lib": "vi",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "vi",
+        [
             ["revolution/vi/vi", False],
             ["revolution/vi/i2c", False],
             ["revolution/vi/vi3in1", False],
         ],
-    },
-    {
-        "lib": "wenc",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "wenc",
+        [
             ["revolution/wenc/wenc", False],
         ],
-    },
-    {
-        "lib": "wpad",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "wpad",
+        [
             ["revolution/wpad/WPAD", False],
             ["revolution/wpad/WPADHIDParser", False],
             ["revolution/wpad/WPADEncrypt", False],
             ["revolution/wpad/WPADMem", False],
             ["revolution/wpad/debug_msg", True],
         ],
-    },
-    {
-        "lib": "wud",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/RVL_SDK",
-        "cflags": "$cflags_sdk",
-        "host": False,
-        "objects": [
+    ),
+    DolphinLib(
+        "wud",
+        [
             ["revolution/wud/WUD", False],
             ["revolution/wud/WUDHidHost", False],
             ["revolution/wud/debug_msg", True],
         ],
-    },
-    {
-        "lib": "libadxwii",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/CriWare",
-        "cflags": "$cflags_criware",
-        "host": False,
-        "objects": [
+    ),
+    criwareLib(
+        "libadxwii",
+        [
             ["adx/adxf/adx_fini", False],
             ["adx/adxf/adx_fs", False],
             ["adx/adxf/adx_fcch", True],
@@ -1174,15 +1042,10 @@ LIBS = [
             ["adx/adxt/srcwii/adx_rnawii", False],
             ["adx/std/cri_crw_std", False],
         ],
-    },
-    {
-        "lib": "libmwsfdwii",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
-        "root_dir": "libs/CriWare",
-        "cflags": "$cflags_criware",
-        "host": False,
-        "objects": [
+    ),
+    criwareLib(
+        "libmwsfdwii",
+        [
             ["sofdec/cft/srcgc/cftyp422_ppc", False],
             ["sofdec/cft/cft_common", False],
             ["sofdec/mwply/mwsfdfrm", False],
@@ -1270,27 +1133,17 @@ LIBS = [
             ["sofdec/sfx/sfx_cnv_to_Y84C44", False],
             ["sofdec/sud/sud_lib", False],
         ],
-    },
-    {
-        "lib": "libnw4r_db",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_db",
+        [
             ["db/db_console", False],
             ["db/db_assert", False],
         ],
-    },
-    {
-        "lib": "libnw4r_g3d",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_g3d",
+        [
             ["g3d/res/g3d_rescommon", False],
             ["g3d/res/g3d_resdict", False],
             ["g3d/res/g3d_resfile", False],
@@ -1348,15 +1201,10 @@ LIBS = [
             ["g3d/g3d_light", False],
             ["g3d/g3d_calcvtx", False],
         ],
-    },
-    {
-        "lib": "libnw4r_lyt",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_lyt",
+        [
             ["lyt/lyt_init", True],
             ["lyt/lyt_pane", False],
             ["lyt/lyt_group", False],
@@ -1374,29 +1222,19 @@ LIBS = [
             ["lyt/lyt_common", False],
             ["lyt/lyt_util", False],
         ],
-    },
-    {
-        "lib": "libnw4r_math",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_math",
+        [
             ["math/math_arithmetic", False],
             ["math/math_triangular", False],
             ["math/math_types", False],
             ["math/math_geometry", False],
         ],
-    },
-    {
-        "lib": "libnw4r_snd",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_snd",
+        [
             ["snd/snd_AxManager", False],
             ["snd/snd_AxVoice", False],
             ["snd/snd_AxVoiceManager", False],
@@ -1455,15 +1293,10 @@ LIBS = [
             ["snd/snd_WsdPlayer", False],
             ["snd/snd_adpcm", True],
         ],
-    },
-    {
-        "lib": "libnw4r_ut",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
-        "root_dir": "libs/nw4r",
-        "cflags": "$cflags_nw4r",
-        "host": False,
-        "objects": [
+    ),
+    nw4rLib(
+        "libnw4r_ut",
+        [
             ["ut/ut_LinkList", True],
             ["ut/ut_binaryFileFormat", True],
             ["ut/ut_CharStrmReader", True],
@@ -1480,13 +1313,13 @@ LIBS = [
             ["ut/ut_CharWriter", False],
             ["ut/ut_TextWriterBase", False],
         ],
-    },
+    ),
     {
         "lib": "monolib",
         "mw_console": "Wii",
         "mw_version": "1.1",
         "root_dir": "libs/monolib",
-        "cflags": "$cflags_base -ipa file -inline auto -str pool,readonly,reuse -RTTI on -enc SJIS",
+        "cflags": "$cflags_game",
         "host": True,
         "objects": [
             ["CAttrTransform", False],
@@ -1769,16 +1602,24 @@ def main():
         sys.exit(f'Invalid version "{version}"')
     build_path = args.build_dir / f"xenoblade.{version}"
 
-    cflags_base = f"-proc gekko -nodefaults -fp hard -O4,p -enum int -use_lmw_stmw on -sdata 8 -sdata2 8 -func_align 4 -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/ -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/"
+    cflags_base = f"-nodefaults -proc gekko -align powerpc -enum int -fp hard -Cpp_exceptions off -O4,p -inline auto -nosyspath -RTTI off \
+            -fp_contract on -enc SJIS -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/ \
+             -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/"
     if args.debug:
         cflags_base += " -sym on -D_DEBUG"
     else:
         cflags_base += " -DNDEBUG -w off"
     cflags_base += " -lang=c99" #TODO: add c99 lang flag on per lib basis
     n.variable("cflags_base", cflags_base)
-    n.variable("cflags_criware", "$cflags_base -sdata 0 -sdata2 0 -Cpp_exceptions off -i libs/CriWare/src/")
-    n.variable("cflags_nw4r", "$cflags_base -inline auto -Cpp_exceptions off -RTTI off")
-    n.variable("cflags_sdk", "$cflags_base -use_lmw_stmw off -Cpp_exceptions off -enum int -inline auto -ipa file -func_align 16")
+    n.variable("cflags_game", "$cflags_base -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4")
+    n.variable("cflags_runtime", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -gccinc -common off -inline on -func_align 4")
+    n.variable("cflags_mslc", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -fp_contract off -inline on -ipa file -func_align 4")
+    n.variable("cflags_trk", "$cflags_base -use_lmw_stmw on -inline on -func_align 4")
+    n.variable("cflags_sdk",  "$cflags_base -inline auto -ipa file -fp_contract off -func_align 16")
+    n.variable("cflags_ndev", "$cflags_base -inline auto -ipa file -func_align 4")
+    n.variable("cflags_nw4r", "$cflags_base -inline auto -use_lmw_stmw on -fp_contract off -func_align 4")
+    n.variable("cflags_criware", "$cflags_base -sdata 0 -sdata2 0 -use_lmw_stmw on -i libs/CriWare/src/ -func_align 4")
+
 
     asflags = f"-mgekko -I include -W --strip-local-absolute -gdwarf-2"
     n.variable("asflags", asflags)
