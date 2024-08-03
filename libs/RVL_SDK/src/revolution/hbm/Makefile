@@ -46,7 +46,7 @@ DEPENDS += $(HBM_FILES:.o=.d)
 $(HBM_FILES): INCLUDES += -i libs/RVL_SDK/src/revolution/hbm/include/
 
 #HBM uses Wii 1.0
-$(HBM_FILES): MWCC_VERSION := 1.0
+$(HBM_FILES): MWCC_VERSION := 1.0a
 
 #HBM doesn't use the small data sections
 $(HBM_FILES): CFLAGS += -sdata 0 -sdata2 0

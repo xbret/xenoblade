@@ -17,7 +17,7 @@ GX_FILES:=\
 DEPENDS += $(GX_FILES:.o=.d)
 
 #GXBump.c needs 1.0 for one function
-$(BUILD_DIR)/libs/RVL_SDK/src/revolution/gx/GXBump.o: MWCC_VERSION := 1.0
+$(BUILD_DIR)/libs/RVL_SDK/src/revolution/gx/GXBump.o: MWCC_VERSION := 1.0a
 
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/gx/gx.a: $(GX_FILES)
 	@echo Linking... $@
