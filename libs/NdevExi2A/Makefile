@@ -5,7 +5,7 @@ NDEV_FILES:=\
 $(NDEV_FILES): INCLUDES += -i libs/NdevExi2A/include/
 $(NDEV_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
 #Ndev uses GC 3.0
-$(NDEV_FILES): MWCC_VERSION := 3.0
+$(NDEV_FILES): MWCC_VERSION := 3.0a5.2
 $(NDEV_FILES): CONSOLE := GC
 
 ifeq ($(NON_MATCHING),1)

@@ -8,7 +8,7 @@ NW4R_FILES:=\
 
 
 #NW4R uses GC 3.0
-#$(NW4R_FILES): MWCC_VERSION := 3.0
+#$(NW4R_FILES): MWCC_VERSION := 3.0a5.2
 #$(NW4R_FILES): CONSOLE := GC
 
 #$(NW4R_FILES): INCLUDES += -i libs/nw4r/include/

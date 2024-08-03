@@ -40,7 +40,7 @@ DEPENDS += $(OS_FILES:.o=.d)
 
 
 #OSUtf only matches on 3.0?
-$(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/OSUtf.o: MWCC_VERSION := 3.0
+$(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/OSUtf.o: MWCC_VERSION := 3.0a5.2
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/OSUtf.o: CONSOLE := GC
 
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/os.a: $(OS_FILES)

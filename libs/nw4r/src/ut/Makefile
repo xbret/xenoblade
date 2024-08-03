@@ -19,7 +19,7 @@ NW4R_UT_FILES:=\
 DEPENDS += $(NW4R_UT_FILES:.o=.d)
 
 #NW4R uses GC 3.0
-$(NW4R_UT_FILES): MWCC_VERSION := 3.0
+$(NW4R_UT_FILES): MWCC_VERSION := 3.0a5.2
 $(NW4R_UT_FILES): CONSOLE := GC
 
 $(BUILD_DIR)/libs/nw4r/src/ut/libnw4r_ut.a: $(NW4R_UT_FILES)

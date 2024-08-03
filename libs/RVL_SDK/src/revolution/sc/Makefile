@@ -6,7 +6,7 @@ SC_FILES:=\
 DEPENDS += $(SC_FILES:.o=.d)
 
 
-$(BUILD_DIR)/libs/RVL_SDK/src/revolution/sc/scapi_prdinfo.o: MWCC_VERSION := 3.0
+$(BUILD_DIR)/libs/RVL_SDK/src/revolution/sc/scapi_prdinfo.o: MWCC_VERSION := 3.0a5.2
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/sc/scapi_prdinfo.o: CONSOLE := GC
 
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/sc/sc.a: $(SC_FILES)

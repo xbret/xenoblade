@@ -464,7 +464,7 @@ LIBS = [
     {
         "lib": "TRK_Hollywood_Revolution",
         "mw_console": "Wii",
-        "mw_version": "1.0",
+        "mw_version": "1.0a",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": "$cflags_base -Cpp_exceptions off -inline on",
         "host": True,
@@ -516,7 +516,7 @@ LIBS = [
     {
         "lib": "NdevExi2A",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/NdevExi2A",
         "cflags": "$cflags_base -use_lmw_stmw off -inline auto -ipa file -Cpp_exceptions off",
         "host": True,
@@ -806,7 +806,7 @@ LIBS = [
             ["revolution/gx/GXFrameBuf", False],
             ["revolution/gx/GXLight", True],
             ["revolution/gx/GXTexture", False],
-            ["revolution/gx/GXBump", True, {"mw_version" : "1.0"}],
+            ["revolution/gx/GXBump", True, {"mw_version" : "1.0a"}],
             ["revolution/gx/GXTev", False],
             ["revolution/gx/GXPixel", False],
             ["revolution/gx/GXDisplayList", True],
@@ -817,7 +817,7 @@ LIBS = [
     {
         "lib": "homebuttonLib",
         "mw_console": "Wii",
-        "mw_version": "1.0",
+        "mw_version": "1.0a",
         "root_dir": "libs/RVL_SDK",
         "cflags": "$cflags_sdk -sdata 0 -sdata2 0 -i libs/RVL_SDK/src/revolution/hbm/include/",
         "host": True,
@@ -977,7 +977,7 @@ LIBS = [
             ["revolution/os/OSSync", True],
             ["revolution/os/OSThread", True],
             ["revolution/os/OSTime", True],
-            ["revolution/os/OSUtf", True, {"mw_console" : "GC", "mw_version" : "3.0"}],
+            ["revolution/os/OSUtf", True, {"mw_console" : "GC", "mw_version" : "3.0a5.2"}],
             ["revolution/os/OSIpc", True],
             ["revolution/os/OSStateTM", True],
             ["revolution/os/__start", True],
@@ -1012,7 +1012,7 @@ LIBS = [
         "objects": [
             ["revolution/sc/scsystem", False],
             ["revolution/sc/scapi", True],
-            ["revolution/sc/scapi_prdinfo", True, {"mw_console" : "GC", "mw_version" : "3.0"}],
+            ["revolution/sc/scapi_prdinfo", True, {"mw_console" : "GC", "mw_version" : "3.0a5.2"}],
         ],
     },
     {
@@ -1104,7 +1104,7 @@ LIBS = [
     {
         "lib": "libadxwii",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/CriWare",
         "cflags": "$cflags_criware",
         "host": False,
@@ -1274,7 +1274,7 @@ LIBS = [
     {
         "lib": "libnw4r_db",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,
@@ -1286,7 +1286,7 @@ LIBS = [
     {
         "lib": "libnw4r_g3d",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,
@@ -1352,7 +1352,7 @@ LIBS = [
     {
         "lib": "libnw4r_lyt",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,
@@ -1378,7 +1378,7 @@ LIBS = [
     {
         "lib": "libnw4r_math",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,
@@ -1392,7 +1392,7 @@ LIBS = [
     {
         "lib": "libnw4r_snd",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,
@@ -1459,7 +1459,7 @@ LIBS = [
     {
         "lib": "libnw4r_ut",
         "mw_console": "GC",
-        "mw_version": "3.0",
+        "mw_version": "3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": "$cflags_nw4r",
         "host": False,

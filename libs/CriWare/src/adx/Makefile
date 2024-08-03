@@ -65,7 +65,7 @@ ADX_FILES :=\
 	$(BUILD_DIR)/libs/CriWare/asm/adx/std/cri_crw_std.o\
 
 #Criware uses GC 3.0 (maybe)
-$(ADX_FILES): MWCC_VERSION := 3.0
+$(ADX_FILES): MWCC_VERSION := 3.0a5.2
 $(ADX_FILES): CONSOLE := GC
 
 DEPENDS += $(ADX_FILES:.o=.d)
