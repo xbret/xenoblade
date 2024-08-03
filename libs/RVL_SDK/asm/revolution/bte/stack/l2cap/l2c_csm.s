@@ -1521,10 +1521,10 @@
 	.4byte .L_802F7514
 .endobj jumptable_80547370
 
-
+.obj lbl_80547394, global
 	.asciz "L2CAP - st: CLOSED evt: %d"
 	.balign 4
-
+.endobj lbl_80547394
 
 .obj lbl_805473B0, global
 	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  No Conf Needed"
@@ -1567,10 +1567,10 @@
 	.4byte .L_802F7730
 .endobj jumptable_80547430
 
-
+.obj lbl_805474AC, global
 	.asciz "L2CAP - st: ORIG_W4_SEC_COMP evt: %d"
 	.balign 4
-
+.endobj lbl_805474AC
 
 .obj jumptable_805474D4, global
 	.4byte .L_802F7830
@@ -1645,7 +1645,7 @@
 	.4byte .L_802F7A2C
 .endobj jumptable_80547598
 
-	#0x80547604
+.obj lbl_80547604, global
 	.asciz "L2CAP - st: W4_L2CAP_CON_RSP evt: %d"
 	.balign 4
 	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Success"
@@ -1655,7 +1655,7 @@
 	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Failure Code: %d"
 	.asciz "L2CAP - Calling Connect_Cfm_Cb(), CID: 0x%04x, Timeout"
 	.balign 4
-
+.endobj lbl_80547604
 
 .obj jumptable_80547700, global
 	.4byte .L_802F7B08
@@ -1725,7 +1725,7 @@
 	.4byte .L_802F7E08
 .endobj jumptable_80547794
 
-
+.obj lbl_80547804, global
 	.asciz "L2CAP - st: CONFIG evt: %d"
 	.balign 4
 	.asciz "L2CAP - Calling Config_Req_Cb(), CID: 0x%04x"
@@ -1738,7 +1738,7 @@
 	.balign 4
 	.asciz "L2CAP - Calling DataInd_Cb(), CID: 0x%04x"
 	.balign 4
-
+.endobj lbl_80547804
 
 .obj jumptable_80547928, global
 	.4byte .L_802F7F20
@@ -1771,10 +1771,10 @@
 	.4byte .L_802F820C
 .endobj jumptable_80547928
 
-
+.obj lbl_80547998, global
 	.asciz "L2CAP - st: OPEN evt: %d"
 	.balign 4
-
+.endobj lbl_80547998
 
 .obj jumptable_805479B4, global
 	.4byte .L_802F82E8
@@ -1806,11 +1806,11 @@
 	.4byte .L_802F8460
 .endobj jumptable_805479B4
 
-
+.obj lbl_80547A20, global
 	.asciz "L2CAP - st: W4_L2CAP_DISC_RSP evt: %d"
 	.balign 4
 	.asciz "L2CAP - Calling DisconnectCfm_Cb(), CID: 0x%04x"
-
+.endobj lbl_80547A20
 
 .obj jumptable_80547A78, global
 	.4byte .L_802F8548

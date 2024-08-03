@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/Vector.hpp"
+#include "monolib/Math.hpp"
 
 namespace cf{
 using namespace ml;

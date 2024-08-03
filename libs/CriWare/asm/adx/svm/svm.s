@@ -1230,8 +1230,7 @@
 	.skip 0x4
 .endobj svm_locking_type
 
-.skip 0x4
-
+.balign 8
 .obj svm_lock_func, local
 	.skip 0x8
 .endobj svm_lock_func
@@ -1275,5 +1274,3 @@
 .obj svm_tas_fptr, local
 	.skip 0x4
 .endobj svm_tas_fptr
-
-.skip 0x4

@@ -3456,9 +3456,9 @@
 	.4byte 0x00FF00FF
 .endobj DefaultWhiteColor
 
-
+.obj lbl_80518A78, global
 	.float 0.5
-
+.endobj lbl_80518A78
 
 .obj lbl_80518A7C, global
 	.float 0.7111111 #0x3F360B61

@@ -830,11 +830,12 @@
 	.asciz "wt\\HomeButtonSe.pcm"
 .endobj "@unnamed@HBMAxSound_cpp@::PCM_FILENAME"
 
-
+.obj lbl_805186B8, global
 	.4byte 0
 	.float 10.0
 	.float 20.0
 	.4byte 0
+.endobj lbl_805186B8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -1010,8 +1011,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj "sWork__24@unnamed@HBMAxSound_cpp@", local
 	.skip 0x4
 .endobj "sWork__24@unnamed@HBMAxSound_cpp@"
-
-.skip 4

@@ -945,12 +945,12 @@
 	.skip 0x4c
 .endobj usb
 
-.skip 0x14
-
+.balign 32
 .obj __uusb_ppc_stack1, global
 	.skip 0x1000
 .endobj __uusb_ppc_stack1
 
+.balign 32
 .obj __uusb_ppc_stack2, global
 	.skip 0x1000
 .endobj __uusb_ppc_stack2

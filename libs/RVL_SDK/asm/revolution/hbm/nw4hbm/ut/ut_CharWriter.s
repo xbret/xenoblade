@@ -1805,12 +1805,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj "@GUARD@fog$5416", global
 	.skip 0x1
 .endobj "@GUARD@fog$5416"
 
-.skip 3
-
+.balign 4
 .obj "fog$5416", global
 	.skip 0x4
 .endobj "fog$5416"

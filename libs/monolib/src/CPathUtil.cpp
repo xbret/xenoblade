@@ -1,6 +1,5 @@
 #include "monolib/CPathUtil.hpp"
 #include "monolib/FixStr.hpp"
-#include <cstring>
 
 namespace ml{
 

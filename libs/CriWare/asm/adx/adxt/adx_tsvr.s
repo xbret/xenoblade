@@ -1131,6 +1131,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj adxt_enddecinfo_cbfn, local
 	.skip 0x4
 .endobj adxt_enddecinfo_cbfn

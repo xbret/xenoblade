@@ -270,6 +270,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sAllocator, local
 	.skip 0x10
 .endobj sAllocator

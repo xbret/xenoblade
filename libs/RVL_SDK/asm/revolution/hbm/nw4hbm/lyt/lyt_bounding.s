@@ -203,5 +203,3 @@
 .obj typeInfo__Q36nw4hbm3lyt8Bounding, global
 	.skip 0x4
 .endobj typeInfo__Q36nw4hbm3lyt8Bounding
-
-.skip 4

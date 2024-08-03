@@ -670,8 +670,7 @@
 	.skip 0x4
 .endobj adxm_init_ex
 
-.skip 0x4
-
+.balign 8
 .obj adxm_save_tprm, local
 	.skip 0x30
 .endobj adxm_save_tprm
@@ -712,8 +711,7 @@
 	.skip 0x4
 .endobj adxm_mwidle_exec_flag
 
-.skip 0x4
-
+.balign 8
 .obj adxm_mwidle_sleep_cb, global
 	.skip 0x8
 .endobj adxm_mwidle_sleep_cb
@@ -734,8 +732,7 @@
 	.skip 0x4
 .endobj adxm_mwidle_end
 
-.skip 0x4
-
+.balign 8
 .obj adxm_mwidle_thread, global
 	.skip 0x318
 .endobj adxm_mwidle_thread
@@ -744,8 +741,7 @@
 	.skip 0x4
 .endobj adxm_usridle_end
 
-.skip 0x4
-
+.balign 8
 .obj adxm_usridle_thread, global
 	.skip 0x318
 .endobj adxm_usridle_thread
@@ -786,8 +782,7 @@
 	.skip 0x4
 .endobj adxm_usridle_act
 
-.skip 0x4
-
+.balign 8
 .obj adxm_stack_safe, local
 	.skip 0x1000
 .endobj adxm_stack_safe

@@ -38,6 +38,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj rnaerr_func, global
 	.skip 0x4
 .endobj rnaerr_func

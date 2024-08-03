@@ -5240,6 +5240,7 @@
 	.4byte 0
 .endobj lbl_805286A8
 
+.obj lbl_805286B8, global
 	.4byte lbl_806684E0
 	.4byte func_8003C0D0
 	.4byte func_8003C560
@@ -5278,6 +5279,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_805286B8
 
 .obj lbl_80528738, global
 	.4byte lbl_80668508

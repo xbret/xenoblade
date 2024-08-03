@@ -904,13 +904,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
+.balign 8
 .obj sBatteryFlag__Q210homebutton10Controller, global
 	.skip 0x4
 .endobj sBatteryFlag__Q210homebutton10Controller
 
-.skip 4
-
+.balign 8
 .obj sAlarm__Q210homebutton10Controller, global
 	.skip 0xC0
 .endobj sAlarm__Q210homebutton10Controller

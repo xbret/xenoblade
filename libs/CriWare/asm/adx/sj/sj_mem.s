@@ -1095,6 +1095,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sjmem_init_cnt, global
 	.skip 0x8
 .endobj sjmem_init_cnt

@@ -244,12 +244,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj dctac_version_dummy, local
 	.skip 0x4
 .endobj dctac_version_dummy
 
-.skip 0x4
-
+.balign 8
 .obj dctac_i_const, local
 	.skip 0x200
 .endobj dctac_i_const

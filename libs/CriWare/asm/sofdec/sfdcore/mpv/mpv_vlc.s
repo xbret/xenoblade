@@ -3094,8 +3094,7 @@
 	.skip 0x4
 .endobj mpvvlc_y_dcsiz
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_y_dcsiz, local
 	.skip 0x80
 .endobj mpvvlt_y_dcsiz
@@ -3104,8 +3103,7 @@
 	.skip 0x4
 .endobj mpvvlc_c_dcsiz
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_c_dcsiz, local
 	.skip 0x80
 .endobj mpvvlt_c_dcsiz
@@ -3114,8 +3112,7 @@
 	.skip 0x4
 .endobj mpvvlc_motion_0
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_motion_0, local
 	.skip 0x100
 .endobj mpvvlt_motion_0
@@ -3124,8 +3121,7 @@
 	.skip 0x4
 .endobj mpvvlc_motion_1
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_motion_1, local
 	.skip 0x40
 .endobj mpvvlt_motion_1
@@ -3134,8 +3130,7 @@
 	.skip 0x4
 .endobj mpvvlc_p_mbtype
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_p_mbtype, local
 	.skip 0x40
 .endobj mpvvlt_p_mbtype
@@ -3144,8 +3139,7 @@
 	.skip 0x4
 .endobj mpvvlc_b_mbtype
 
-.skip 0x4
-
+.balign 8
 .obj mpvvlt_b_mbtype, local
 	.skip 0x80
 .endobj mpvvlt_b_mbtype

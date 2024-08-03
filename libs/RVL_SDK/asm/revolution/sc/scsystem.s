@@ -1840,7 +1840,6 @@
 
 .obj ProductInfoFileName, local
 	.asciz "/title/00000001/00000002/data/setting.txt"
-	.balign 4
 .endobj ProductInfoFileName
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -2132,12 +2131,12 @@
 	.skip 0x190
 .endobj Control
 
-.skip 0x10
-
+.balign 32
 .obj ConfBuf, local
 	.skip 0x4000
 .endobj ConfBuf
 
+.balign 32
 .obj ConfBufForFlush, local
 	.skip 0x4000
 .endobj ConfBufForFlush
@@ -2151,8 +2150,7 @@
 	.skip 0x1
 .endobj BgJobStatus
 
-.skip 3
-
+.balign 4
 .obj ItemRestSize, local
 	.skip 0x4
 .endobj ItemRestSize

@@ -1993,11 +1993,12 @@
 .endobj VIProgressiveACPType
 
 
-
+.obj lbl_80560584, global
 	.asciz "vi3in1.c"
 	.balign 4
 	.asciz "VISetCGMS(): Tried to set APS Trigger bit(WORD2[3:2]) \nwhen the scan is progressive in DTV mode, which is forbidden\n"
 	.balign 4
+.endobj lbl_80560584
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -2060,10 +2061,8 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj VIZeroACPType, global
-	.skip 0x1A
+	.skip 0x30
 .endobj VIZeroACPType
-
-.skip 0x16
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

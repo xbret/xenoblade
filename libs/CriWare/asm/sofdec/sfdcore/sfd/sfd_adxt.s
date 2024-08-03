@@ -1645,15 +1645,17 @@
 	.4byte 0
 .endobj sfadxt_silence
 
+.obj lbl_8051FF2C, global
 .4byte 0x44D8677D
 .float 0.01
 .float 0.5
 .8byte 0x4330000080000000
 .asciz "(c)CRI"
-.balign 4
+.endobj lbl_8051FF2C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sfadxt_para, local
 	.skip 0x1C
 .endobj sfadxt_para

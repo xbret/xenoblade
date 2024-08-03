@@ -4850,7 +4850,7 @@
 	.skip 0x15
 .endobj _wpadExtRawData
 
-.skip 0x1b
+.balign 32
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

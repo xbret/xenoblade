@@ -1207,12 +1207,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sfmpv_para, local
 	.skip 0x24
 .endobj sfmpv_para
 
-.skip 0x4
-
+.balign 8
 .obj sfmpv_rfb_adr_tbl, local
 	.skip 0x8
 .endobj sfmpv_rfb_adr_tbl
@@ -1232,5 +1232,3 @@
 .obj sfmpv_picusr_buf1siz, local
 	.skip 0x4
 .endobj sfmpv_picusr_buf1siz
-
-.skip 0x4

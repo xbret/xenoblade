@@ -137,5 +137,3 @@
 .obj "@LOCAL@LogMsg__FUlPCce@tmp", global
 	.skip 0x7D0
 .endobj "@LOCAL@LogMsg__FUlPCce@tmp"
-
-.skip 0x10

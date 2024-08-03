@@ -66,16 +66,7 @@ struct Heap{
 	}
 };
 
-extern Heap heapArray[80]; 
-extern int arenaMemorySize;
-extern int lbl_80665E28;
-extern int lbl_80665E2C;
-extern int regionIndex1;
-extern int regionIndex2;
-extern bool lbl_80665E38;
-extern bool lbl_80665E39;
-extern s32 lbl_80667E50;
-extern bool lbl_80667E54;
+extern Heap heapArray[80];
 
 #define MEM2_END_ADDR 0x935E0000
 

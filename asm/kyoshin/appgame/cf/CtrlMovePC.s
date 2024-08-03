@@ -6932,12 +6932,13 @@
 	.4byte 0
 .endobj cf_CtrlMovePC_hierarchy
 
-
+.obj lbl_80536528, global
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
 	.asciz "arithmetic.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80536528
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

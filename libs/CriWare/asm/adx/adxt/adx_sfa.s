@@ -23,5 +23,3 @@
 .obj sfa_init_cnt, global
 	.skip 0x4
 .endobj sfa_init_cnt
-
-.skip 0x4

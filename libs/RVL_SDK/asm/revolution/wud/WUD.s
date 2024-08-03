@@ -7593,7 +7593,7 @@
 	.4byte .L_8037B2F0
 .endobj jumptable_80562FA0
 
-
+.obj lbl_80562FC4, global
 	.asciz "INQUIRY RESULT: %02x:%02x:%02x:%02x:%02x:%02x   %02x%02x%02x   %d\n"
 	.balign 4
 	.asciz "INQUIRY_COMPLETED\n"
@@ -7607,7 +7607,7 @@
 	.balign 4
 	.asciz "__wudProcDeleteEvent()\n"
 	.asciz "MODULE FATAL ERROR\n"
-
+.endobj lbl_80562FC4
 
 .obj lbl_805630F4, global
 	.asciz "__wudDeviceStatusEventStackCallback\n"
@@ -7700,8 +7700,7 @@
 	.skip 0x461
 .endobj _scArray
 
-.skip 0x7
-
+.balign 32
 .obj _wudNandWbcInfo, local
 	.skip 0xA0
 .endobj _wudNandWbcInfo
@@ -7718,8 +7717,7 @@
 	.skip 0xBC
 .endobj _wudNandBlock
 
-.skip 0x18
-
+.balign 32
 .obj _wudHandlerStack, local
 	.skip 0x1000
 .endobj _wudHandlerStack
@@ -7728,8 +7726,7 @@
 	.skip 0x205
 .endobj _spArray
 
-.skip 0x3
-
+.balign 4
 .obj _dev_handle_queue_size, local
 	.skip 0x20
 .endobj _dev_handle_queue_size

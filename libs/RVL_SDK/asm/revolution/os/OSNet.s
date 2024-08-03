@@ -484,26 +484,29 @@
 	.skip 0x10
 .endobj ShutdownFuncInfo
 
-.skip 0x10
-
+.balign 32
 .obj "@LOCAL@NWC24SuspendScheduler__Fv@susResult", local
 	.skip 0x20
 .endobj "@LOCAL@NWC24SuspendScheduler__Fv@susResult"
 
 #@LOCAL@NWC24ResumeScheduler__Fv@susResult (unused)
 
+.balign 32
 .obj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer", local
 	.skip 0x20
 .endobj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer"
 
+.balign 32
 .obj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0", local
 	.skip 0x20
 .endobj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0"
 
+.balign 32
 .obj nwc24TimeCommonBuffer, local
 	.skip 0x20
 .endobj nwc24TimeCommonBuffer
 
+.balign 32
 .obj nwc24TimeCommonResult, local
 	.skip 0x20
 .endobj nwc24TimeCommonResult

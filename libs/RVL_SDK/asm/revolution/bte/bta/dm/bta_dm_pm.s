@@ -754,5 +754,3 @@
 .obj bta_dm_conn_srvcs, global
 	.skip 0x2E
 .endobj bta_dm_conn_srvcs
-
-.skip 2

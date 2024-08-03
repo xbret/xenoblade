@@ -187,6 +187,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sftmr_tmrunit, local
 	.skip 0x8
 .endobj sftmr_tmrunit

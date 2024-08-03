@@ -1983,6 +1983,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj skg_init_count, local
 	.skip 0x4
 .endobj skg_init_count
@@ -1995,8 +1996,7 @@
 	.skip 0x4
 .endobj ahxdcd_init_cnt
 
-.skip 0x4
-
+.balign 8
 .obj "buf$338", local
 	.skip 0x200
 .endobj "buf$338"

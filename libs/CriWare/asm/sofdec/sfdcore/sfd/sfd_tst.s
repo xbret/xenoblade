@@ -1111,5 +1111,3 @@
 .obj sftst_last, global
 	.skip 0x4
 .endobj sftst_last
-
-.skip 0x4

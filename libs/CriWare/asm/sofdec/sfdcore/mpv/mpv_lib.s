@@ -841,8 +841,7 @@
 	.skip 0x5C
 .endobj mpvlib_libwork
 
-.skip 0x4
-
+.balign 8
 .obj mpv_clip_0_255_tbl, local
 	.skip 0x400
 .endobj mpv_clip_0_255_tbl

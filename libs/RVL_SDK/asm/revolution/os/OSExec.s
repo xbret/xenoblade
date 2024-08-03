@@ -1596,8 +1596,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.balign 16
-
+.balign 32
 .obj id, local
 	.skip 0x20
 .endobj id

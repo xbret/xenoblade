@@ -346,5 +346,3 @@
 .obj gqr_save, local
 	.skip 0x4
 .endobj gqr_save
-
-.skip 0x4

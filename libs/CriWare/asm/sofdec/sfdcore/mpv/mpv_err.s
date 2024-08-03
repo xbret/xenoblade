@@ -118,5 +118,3 @@
 .obj mpverrinf, local
 	.skip 0x14
 .endobj mpverrinf
-
-.skip 0x4

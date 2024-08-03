@@ -1967,6 +1967,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj sIndex2IdTable, local
 	.skip 0x10
 .endobj sIndex2IdTable
@@ -1990,5 +1991,3 @@
 .obj __init, local
 	.skip 0x4
 .endobj __init
-
-.skip 4

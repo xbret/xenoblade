@@ -3,7 +3,7 @@
 #include "nw4r/ut/ut_IOStream.h"
 #include "nw4r/ut/ut_FileStream.h"
 #include "nw4r/ut/ut_algorithm.h"
-#include "revolution/dvd/dvd.h"
+#include "revolution/DVD.h"
 
 namespace nw4r
 {
@@ -47,7 +47,7 @@ namespace nw4r
 
 				if (DVDFastOpen(r4, &mFileInfo))
 				{
-					mPosition.SetFileSize(mFileInfo.mFileSize);
+					mPosition.SetFileSize(mFileInfo.length);
 					mPosition.Seek(0, 0);
 					BOOL_0x6D = true;
 					BOOL_0x6E = true;
@@ -65,7 +65,7 @@ namespace nw4r
 				}
 
 				mFileInfo = *pInfo;
-				mPosition.SetFileSize(mFileInfo.mFileSize);
+				mPosition.SetFileSize(mFileInfo.length);
 				mPosition.Seek(0, 0);
 				BOOL_0x6D = false;
 				BOOL_0x6E = b;
@@ -104,7 +104,7 @@ namespace nw4r
 			virtual int Peek(void *, u32);
 			virtual bool PeekAsync(void *, u32, AsyncFunctor, void *);
 			void Seek(s32, u32);
-			void Cancel();
+			bool Cancel();
 			bool CancelAsync(AsyncFunctor, void *);
 			u32 GetBufferAlign() const;
 			u32 GetSizeAlign() const;

@@ -1692,7 +1692,6 @@
 	.4byte 0x92E28E7E
 	.2byte 0x9286
 	.byte 0x00
-.endobj lbl_8052693C
 
 	#"再生準備中"
 	.byte 0x8D
@@ -1718,6 +1717,7 @@
 
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
+.endobj lbl_8052693C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

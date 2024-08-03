@@ -109,7 +109,7 @@ static s32 _ES_GetTicketViews(s32* fd, u64 tid, void* pViews, u32* count) {
         pVectors[1].length = sizeof(u32);
 
         result =
-            IOS_Ioctlv(*fd, ES_IOCTLV_GET_NUM_TICKET_VIEWS, 1, 1, pVectors);
+            IOS_Ioctlv(*fd, IPC_IOCTLV_GET_NUM_TICKET_VIEWS, 1, 1, pVectors);
         if (result == IPC_RESULT_OK) {
             *count = *pCount;
         }
@@ -129,7 +129,7 @@ static s32 _ES_GetTicketViews(s32* fd, u64 tid, void* pViews, u32* count) {
     pVectors[1].length = sizeof(u32);
     pVectors[2].base = pViews;
     pVectors[2].length = *count * TICKET_VIEW_SIZE;
-    return IOS_Ioctlv(*fd, ES_IOCTLV_GET_TICKET_VIEWS, 2, 1, pVectors);
+    return IOS_Ioctlv(*fd, IPC_IOCTLV_GET_TICKET_VIEWS, 2, 1, pVectors);
 }
 
 static s32 _ES_LaunchTitle(s32* fd, u64 tid, void* pViews) {
@@ -154,5 +154,5 @@ static s32 _ES_LaunchTitle(s32* fd, u64 tid, void* pViews) {
     pVectors[1].base = pViews;
     pVectors[1].length = TICKET_VIEW_SIZE;
 
-    return IOS_IoctlvReboot(*fd, ES_IOCTLV_LAUNCH_TITLE, 2, 0, pVectors);
+    return IOS_IoctlvReboot(*fd, IPC_IOCTLV_LAUNCH_TITLE, 2, 0, pVectors);
 }

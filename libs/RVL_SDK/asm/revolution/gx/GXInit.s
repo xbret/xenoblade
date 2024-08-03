@@ -1181,16 +1181,9 @@
 
 .obj lbl_8054B680, global
 	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
-	.balign 4
 .endobj lbl_8054B680
 
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
+.balign 32
 .obj DefaultTexData, local
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF

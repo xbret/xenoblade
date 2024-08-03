@@ -121,6 +121,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 32
 .obj __BTUInterruptHandlerStack, global
 	.skip 0x1000
 .endobj __BTUInterruptHandlerStack

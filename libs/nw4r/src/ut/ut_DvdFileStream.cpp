@@ -91,7 +91,7 @@ namespace nw4r
             return result;
         }
 
-        u32 DvdFileStream::Peek(void *pData, u32 len)
+        int DvdFileStream::Peek(void *pData, u32 len)
         {
             len = AdjustReadLength_(len);
             u32 pos = mPosition.Tell();
@@ -114,7 +114,7 @@ namespace nw4r
         {
             mPosition.Seek(offset, origin);
         }
-
+/*
         UNKTYPE DvdFileStream::Cancel()
         {
             DVDCancel(&mFileInfo);
@@ -132,7 +132,7 @@ namespace nw4r
 
             return (result != 0);
         }
-
+*/
         u32 DvdFileStream::GetBufferAlign() const
         {
             return 32;

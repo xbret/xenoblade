@@ -8531,13 +8531,13 @@
 	.4byte .L_80369858
 .endobj jumptable_805606E4
 
-
+.obj lbl_80560718, global
 	.asciz "Reconnect Start!!\n"
 	.balign 4
 	.4byte 0
 	.asciz "Check the update of WiFi using channel\n"
 	.asciz "WiFi uses channel = %d\n"
-
+.endobj lbl_80560718
 
 .obj lbl_80560770, global
 	.asciz "WPADInit()\n"
@@ -8752,6 +8752,7 @@
 	.skip 0x10
 .endobj __rvl_p_wpadcb
 
+.balign 32
 .obj __wpadManageHandlerStack, local
 	.skip 0x1000
 .endobj __wpadManageHandlerStack
@@ -8760,8 +8761,7 @@
 	.skip 0x10
 .endobj _wpadHandle2PortTable
 
-.skip 0x10
-
+.balign 32
 .obj __rvl_wpadcb, global
 	.skip 0x2700
 .endobj __rvl_wpadcb

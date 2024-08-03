@@ -1781,12 +1781,12 @@
 	.4byte .L_802E2B54
 .endobj jumptable_80544418
 
-	
+.obj lbl_80544440, global
 	.asciz "Ctrl DATA received w4: event[%s]"
 	.balign 4
 	.asciz "invalid  transaction type for DATA payload: 4_evt[%s]"
 	.balign 4
-
+.endobj lbl_80544440
 
 .obj jumptable_8054449C, global
 	.4byte .L_802E2EBC

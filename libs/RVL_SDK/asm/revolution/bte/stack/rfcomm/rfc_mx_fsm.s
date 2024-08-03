@@ -916,14 +916,14 @@
 	.4byte .L_802FEDC0
 .endobj jumptable_805487B8
 
-
+.obj lbl_805487D4, global
 	.asciz "rfc_mx_sm_state_idle - evt:%d"
 	.balign 4
 	.asciz "Mx error state %d event %d"
 	.balign 4
 	.asciz "rfc_mx_send_config_req"
 	.balign 4
-
+.endobj lbl_805487D4
 
 .obj lbl_80548828, global
 	.asciz "RFCOMM MX ignored - evt:%d in state:%d"
@@ -947,12 +947,12 @@
 	.4byte .L_802FEE84
 .endobj jumptable_80548850
 
-
+.obj lbl_80548884, global
 	.asciz "rfc_mx_sm_state_wait_conn_cnf - evt:%d"
 	.balign 4
 	.asciz "rfc_mx_sm_state_configure - evt:%d"
 	.balign 4
-
+.endobj lbl_80548884
 
 .obj jumptable_805488D0, global
 	.4byte .L_802FF214
@@ -966,10 +966,10 @@
 	.4byte .L_802FF260
 .endobj jumptable_805488D0
 
-
+.obj lbl_805488F4, global
 	.asciz "rfc_mx_sm_sabme_wait_ua - evt:%d"
 	.balign 4
-
+.endobj lbl_805488F4
 
 .obj jumptable_80548918, global
 	.4byte .L_802FF3E8

@@ -443,6 +443,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj cri_verstr_ptr, local
 	.skip 0x4
 .endobj cri_verstr_ptr
@@ -454,5 +455,3 @@
 .obj mpslib_hn_last, global
 	.skip 0x4
 .endobj mpslib_hn_last
-
-.skip 0x4

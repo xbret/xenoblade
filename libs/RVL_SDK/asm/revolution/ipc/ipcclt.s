@@ -1848,6 +1848,7 @@
 	.skip 0x30
 .endobj __timeout_alarm
 
+.balign 32
 .obj __rpcBuf, local
 	.skip 0x40
 .endobj __rpcBuf

@@ -634,14 +634,17 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 32
 .obj __AXBufferAuxA, local
 	.skip 0x1200
 .endobj __AXBufferAuxA
 
+.balign 32
 .obj __AXBufferAuxB, local
 	.skip 0x1200
 .endobj __AXBufferAuxB
 
+.balign 32
 .obj __AXBufferAuxC, local
 	.skip 0xD80
 .endobj __AXBufferAuxC

@@ -32073,8 +32073,9 @@
 	.4byte 0x0000012A
 .endobj lbl_804F8310
 
-
+.obj lbl_804F8380, global
 	.asciz "cf::CfObjectEff"
+.endobj lbl_804F8380
 
 .obj cf_CBattleManager_typestr, global
 	.asciz "cf::CBattleManager"

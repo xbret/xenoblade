@@ -5871,5 +5871,3 @@
 .obj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>", local
 	.skip 0x1
 .endobj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"
-
-.skip 6

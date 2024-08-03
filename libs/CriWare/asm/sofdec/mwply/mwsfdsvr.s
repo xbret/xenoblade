@@ -1116,5 +1116,3 @@
 .obj mwsfd_hn_last, global
 	.skip 0x4
 .endobj mwsfd_hn_last
-
-.skip 0x4

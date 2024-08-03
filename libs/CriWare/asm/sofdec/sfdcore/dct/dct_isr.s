@@ -2092,12 +2092,14 @@
 	.4byte 0
 .endobj dctisr_line_descale_bit
 
+.obj lbl_8051FE00, global
 	.8byte 0x3FE0000000000000
 	.8byte 0x4100000000000000
 	.8byte 0x4140000000000000
 	.8byte 0x4330000080000000
 	.8byte 0x4150000000000000
 	.8byte 0
+.endobj lbl_8051FE00
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -2141,8 +2143,7 @@
 	.skip 0x4
 .endobj dctisr_version_dummy
 
-.skip 0x4
-
+.balign 8
 .obj sfsd_scale_tbl_f, local
 	.skip 0x200
 .endobj sfsd_scale_tbl_f

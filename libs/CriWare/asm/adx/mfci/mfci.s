@@ -1008,6 +1008,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj mfci_err_func, global
 	.skip 0x4
 .endobj mfci_err_func
@@ -1023,5 +1024,3 @@
 .obj mfci_err_str, global
 .skip 0x12C
 .endobj mfci_err_str
-
-.skip 0x4

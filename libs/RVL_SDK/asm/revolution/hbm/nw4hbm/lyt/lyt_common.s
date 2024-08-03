@@ -1040,12 +1040,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj "@GUARD@texCoords$7412", global
 	.skip 0x1
 .endobj "@GUARD@texCoords$7412"
 
-.skip 7
-
+.balign 8
 .obj "texCoords$7412", global
 	.skip 0x20
 .endobj "texCoords$7412"

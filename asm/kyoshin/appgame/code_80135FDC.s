@@ -7310,9 +7310,10 @@
 
 .obj lbl_804FBC18, global
 	.asciz "minimaplist2401"
-	.4byte 0
 .endobj lbl_804FBC18
 
+.obj lbl_804FBC28, global
+	.4byte 0
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
 	.4byte lbl_804FBAC8
@@ -7348,7 +7349,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-
+.endobj lbl_804FBC28
 
 .obj lbl_804FBCB0, global
 	.4byte 0
@@ -7363,6 +7364,7 @@
 	.4byte 0
 .endobj lbl_804FBCB0
 
+.obj lbl_804FBCD8, global
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
 	.4byte lbl_804FBB48
@@ -7386,6 +7388,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_804FBCD8
 
 .obj lbl_804FBD30, global
 	.asciz "minimaplist0801"
@@ -7393,9 +7396,10 @@
 
 .obj lbl_804FBD40, global
 	.asciz "minimaplist1801"
-	.4byte 0
 .endobj lbl_804FBD40
 
+.obj lbl_804FBD50, global
+	.4byte 0
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
 	.4byte lbl_804FBAC8
@@ -7429,7 +7433,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-
+.endobj lbl_804FBD50
 
 .obj lbl_804FBDD8, global
 	.4byte 0
@@ -7444,6 +7448,7 @@
 	.4byte 0
 .endobj lbl_804FBDD8
 
+.obj lbl_804FBE00, global
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
 	.4byte lbl_804FBB48
@@ -7469,6 +7474,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_804FBE00
 
 .obj lbl_804FBE60, global
 	.float 1.5

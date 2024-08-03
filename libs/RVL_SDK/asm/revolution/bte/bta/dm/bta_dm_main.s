@@ -208,6 +208,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 4
 .obj bta_dm_search_cb, global
 	.skip 0x7C
 .endobj bta_dm_search_cb

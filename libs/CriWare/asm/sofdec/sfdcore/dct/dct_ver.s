@@ -25,5 +25,3 @@
 .obj cri_verstr_ptr, local
 	.skip 0x4
 .endobj cri_verstr_ptr
-
-.skip 0x4

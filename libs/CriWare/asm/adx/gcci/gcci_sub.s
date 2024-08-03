@@ -14,8 +14,7 @@
 	.skip 0x4
 .endobj gcg_ci_rdmode
 
-.skip 0x4
-
+.balign 8
 .obj gcg_ci_root_dir, global
 	.skip 0x100
 .endobj gcg_ci_root_dir

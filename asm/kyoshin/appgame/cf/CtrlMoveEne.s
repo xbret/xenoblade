@@ -10451,12 +10451,12 @@
 	.4byte 0
 .endobj cf_CtrlMoveEne_hierarchy
 
-
+.obj lbl_8052B1E4, global
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
 	.asciz "arithmetic.h"
 	.balign 4
-
+.endobj lbl_8052B1E4
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

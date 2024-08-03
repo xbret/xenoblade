@@ -2215,7 +2215,6 @@
 	.4byte 0x90B68F80
 	.4byte 0x94F59286
 	.byte 0x00
-.endobj lbl_805269D8
 
 	#"デコード＆再生中"
 	.byte 0x83,0x66,0x83
@@ -2244,6 +2243,7 @@
 	
 	.byte 0
 	.4byte 0
+.endobj lbl_805269D8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

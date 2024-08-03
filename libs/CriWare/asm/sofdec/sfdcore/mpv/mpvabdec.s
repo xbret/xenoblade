@@ -12125,5 +12125,3 @@
 .obj mpvabdec_funcs_idct, global
 	.skip 0xC
 .endobj mpvabdec_funcs_idct
-
-.skip 0x4

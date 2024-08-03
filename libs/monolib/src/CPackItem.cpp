@@ -1,6 +1,5 @@
 #include "monolib/CPackItem.hpp"
 
-
 bool CPackItem::func_804DE920() {
     bool result = false;
     if(this->unk74 != 3 && this->unk7A == 0) result = true;
@@ -18,7 +17,7 @@ void CPackItem::func_804DE948() {
         u64* fileHashTable = mPackHeader->mFileHashTable;
         mFileHashTable = fileHashTable;
         r5 = (u16*)fileHashTable + packHeader->mFiles * 4;
-        workThreadList = r5;
+        //workThreadList = r5;
         r5 += packHeader->mFiles;
         
         if(packHeader->mPkhFilesize > (u32)r5 - (u32)packHeader){
@@ -75,9 +74,9 @@ bool CPackItem::CalculatePackFileHash(const char* filename) {
             bool bit = (u8)filename[length - 1 - byteIndex] & mask;
             //If the index is more than 32, write to the high 32 bit variable
             if (i >= 32) {
-                hashUpperHalf |= (1 << (i - 32)) * bit;
+                mHashUpperHalf |= (1 << (i - 32)) * bit;
             } else {
-                hashLowerHalf |= (1 << i) * bit;
+                mHashLowerHalf |= (1 << i) * bit;
             }
         }
     }

@@ -2153,8 +2153,6 @@
 	.4byte 0x78202F20
 	.4byte 0x8DC591E5
 	.asciz " %x\n"
-.endobj lbl_80525D28
-
 	#"プログラム領域が限界を超えました"
 	.byte 0x83, 0x76, 0x83
 	.4byte 0x8D834F83
@@ -2165,6 +2163,7 @@
 	.4byte 0xB482A682
 	.4byte 0xDC82B582
 	.2byte 0xBD00
+.endobj lbl_80525D28
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

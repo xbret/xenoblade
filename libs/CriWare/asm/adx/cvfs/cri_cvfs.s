@@ -1572,8 +1572,7 @@
 .skip 0x4
 .endobj cvfs_init_cnt
 
-.skip 0x4
-
+.balign 8
 .obj cvfs_obj, local
 .skip 0x140
 .endobj cvfs_obj
@@ -1586,10 +1585,7 @@
 .skip 0x1
 .endobj cvfs_defdev
 
-.skip 0xB
-
+.balign 8
 .obj add_dev_tmp, local
 .skip 0x129
 .endobj add_dev_tmp
-
-.skip 0x3

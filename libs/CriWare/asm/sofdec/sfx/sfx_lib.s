@@ -326,8 +326,7 @@
 	.skip 0x4
 .endobj sfx_dummy
 
-.skip 0x4
-
+.balign 8
 .obj sfx_libwork, global
 	.skip 0x528
 .endobj sfx_libwork

@@ -9592,10 +9592,10 @@
 	.4byte 0x000000B4
 .endobj scWaitDisConnectTime__Q210homebutton10HomeButton
 
-
+.obj lbl_805189A4, global
 	.float 1.2
 	.4byte 0
-
+.endobj lbl_805189A4
 
 .obj lbl_805189AC, global
 	.float 1.0
@@ -10555,7 +10555,7 @@
 .endobj scBatteryPaneName__Q210homebutton10HomeButton
 
 
-
+.obj lbl_8054D3F8, global
 	.asciz "arc"
 	.4byte 0
 	.asciz "back_01"
@@ -10564,7 +10564,7 @@
 	.4byte 0
 	.asciz "back_00"
 	.asciz "back_02"
-
+.endobj lbl_8054D3F8
 
 .obj jumptable_8054D428, global
 	.4byte .L_80324E0C
@@ -10688,8 +10688,7 @@
 	.skip 0x4
 .endobj spHomeButtonObj__Q210homebutton10HomeButton
 
-.skip 4
-
+.balign 8
 .obj sMutex__Q210homebutton10HomeButton, global
 	.skip 0x18
 .endobj sMutex__Q210homebutton10HomeButton

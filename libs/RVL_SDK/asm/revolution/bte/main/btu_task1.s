@@ -351,8 +351,6 @@
 	.skip 0x84
 .endobj btu_cb
 
-.skip 4
-
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8

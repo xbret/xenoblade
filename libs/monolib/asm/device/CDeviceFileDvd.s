@@ -1439,7 +1439,6 @@
 	.4byte 0x82B582BD
 	.2byte 0x8142
 	.byte 0x00
-.endobj lbl_805265D0
 
 	#Please insert the Bionis disc.
 	#"巨神のディスクをセットしてください。"
@@ -1481,6 +1480,7 @@
 	.2byte 0x4500
 	.2byte 0
 	.4byte 0
+.endobj lbl_805265D0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

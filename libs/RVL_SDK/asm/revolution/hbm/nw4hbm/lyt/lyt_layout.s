@@ -1004,5 +1004,3 @@
 .obj mspAllocator__Q36nw4hbm3lyt6Layout, global
 	.skip 0x4
 .endobj mspAllocator__Q36nw4hbm3lyt6Layout
-
-.skip 4

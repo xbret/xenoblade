@@ -422,8 +422,6 @@
 	.skip 0x80
 .endobj __AXStackTail
 
-.skip 0x18
-
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8
@@ -431,5 +429,3 @@
 .obj __AXCallbackStack, local
 	.skip 0x4
 .endobj __AXCallbackStack
-
-.skip 0x4

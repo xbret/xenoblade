@@ -615,7 +615,7 @@
 	.skip 0x30
 .endobj __OSExpireAlarm
 
-.skip 0x10
+.balign 32
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

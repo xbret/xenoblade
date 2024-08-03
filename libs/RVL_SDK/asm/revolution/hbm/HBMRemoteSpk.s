@@ -685,5 +685,3 @@
 .obj spInstance__Q210homebutton9RemoteSpk, global
 	.skip 0x4
 .endobj spInstance__Q210homebutton9RemoteSpk
-
-.skip 4

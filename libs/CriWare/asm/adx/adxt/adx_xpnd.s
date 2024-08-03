@@ -323,5 +323,3 @@
 .obj adxpd_internal_error, global
 	.skip 0x4
 .endobj adxpd_internal_error
-
-.skip 0x4

@@ -103,8 +103,7 @@
 	.skip 0x4
 .endobj lsc_init_cnt
 
-.skip 0x4
-
+.balign 8
 .obj lsc_obj, global
 	.skip 0x4700
 .endobj lsc_obj

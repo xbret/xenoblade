@@ -109,6 +109,8 @@ typedef struct DVDPartitionParams {
 } DVDPartitionParams;
 
 void DVDInit(void);
+s32 DVDCancel(DVDCommandBlock* block);
+BOOL DVDCancelAsync(DVDCommandBlock* block, DVDCBCallback callback);
 BOOL DVDInquiryAsync(DVDCommandBlock*, DVDDriveInfo*, DVDCBCallback);
 u32 __DVDGetCoverStatus(void);
 void __DVDPrepareReset(void);

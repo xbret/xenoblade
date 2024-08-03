@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+#include "monolib/IWorkEvent.hpp"
 #include <cstring>
 
 struct PackHeader{

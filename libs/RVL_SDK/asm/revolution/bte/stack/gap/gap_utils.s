@@ -513,12 +513,12 @@
 	.4byte .L_802F09FC
 .endobj jumptable_8054646C
 
-
+.obj lbl_80546490, global
 	.asciz "GAP Inquiry Results Callback (bdaddr [%02x%02x%02x%02x%02x%02x])"
 	.balign 4
 	.asciz "                             (COD [%02x%02x%02x], clkoff 0x%04x)"
 	.balign 4
-
+.endobj lbl_80546490
 
 .obj lbl_80546518, global
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x, Name [%s])"
@@ -604,8 +604,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj gap_cb, global
 	.skip 0x3AC
 .endobj gap_cb
-
-.skip 4

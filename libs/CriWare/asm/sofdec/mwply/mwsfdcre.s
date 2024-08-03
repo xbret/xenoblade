@@ -3588,5 +3588,7 @@
 	.skip 0x4
 .endobj mwsfd_sisjadr
 
-.skip 0x90
+.obj lbl_806028C8, local
+	.skip 0x90
+.endobj lbl_806028C8
 

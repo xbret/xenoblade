@@ -1366,11 +1366,11 @@
 	.4byte .L_802FFC68
 .endobj jumptable_80548B30
 
-
+.obj lbl_80548B6C, global
 	.asciz "Port error state Term Wait Sec event Data"
 	.balign 4
 	.asciz "Port state term_wait_sec_check Event ignored %d"
-
+.endobj lbl_80548B6C
 
 .obj jumptable_80548BC8, global
 	.4byte .L_802FFE64
@@ -1391,12 +1391,12 @@
 	.4byte .L_802FFDAC
 .endobj jumptable_80548BC8
 
-
+.obj lbl_80548C08, global
 	.asciz "Port error state Orig Wait Sec event Data"
 	.balign 4
 	.4byte 0
 	.asciz "Port state orig_wait_sec_check Event ignored %d"
-
+.endobj lbl_80548C08
 
 .obj jumptable_80548C68, global
 	.4byte .L_802FFFB8

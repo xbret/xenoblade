@@ -2569,8 +2569,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj typeInfo__Q36nw4hbm3lyt6Window, global
 	.skip 0x4
 .endobj typeInfo__Q36nw4hbm3lyt6Window
-
-.skip 4

@@ -1991,5 +1991,3 @@
 .obj suIDCounter__Q310homebutton3gui11PaneManager, global
 	.skip 0x4
 .endobj suIDCounter__Q310homebutton3gui11PaneManager
-
-.skip 4

@@ -1309,5 +1309,3 @@
 .obj sfxz_work, global
 	.skip 0x26C
 .endobj sfxz_work
-
-.skip 0x4

@@ -5582,5 +5582,3 @@
 .obj sfmpv_discard_wsiz, global
 	.skip 0x4
 .endobj sfmpv_discard_wsiz
-
-.skip 0x4

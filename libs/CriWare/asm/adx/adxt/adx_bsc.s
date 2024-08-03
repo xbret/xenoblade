@@ -2023,14 +2023,12 @@
 	.skip 0x2
 .endobj adxb_def_ka
 
-.skip 0x2
-
+.balign 4
 .obj adxb_dec_err_mode, global
 	.skip 0x4
 .endobj adxb_dec_err_mode
 
-.skip 0x4
-
+.balign 8
 .obj adxb_obj, local
 	.skip 0xFC0
 .endobj adxb_obj

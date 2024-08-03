@@ -2537,6 +2537,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj adxt_svr_start_cb, local
 	.skip 0x4
 .endobj adxt_svr_start_cb
@@ -2605,8 +2606,7 @@
 	.skip 0x4
 .endobj adxt_diff_av
 
-.skip 0x4
-
+.balign 8
 .obj adxt_fileid_buf, local
 	.skip 0x10
 .endobj adxt_fileid_buf
@@ -2646,5 +2646,3 @@
 .obj adxt_mviop_f, global
 	.skip 0x4
 .endobj adxt_mviop_f
-
-.skip 0x4

@@ -437,15 +437,17 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
+.balign 64
 .obj s_message, local
 	.skip 0x100
 .endobj s_message
 
+.balign 64
 .obj "@LOCAL@asyncRoutine__FlPv@s_rBuf", local
 .skip 0x100
 .endobj "@LOCAL@asyncRoutine__FlPv@s_rBuf"
 
+.balign 64
 .obj "@LOCAL@asyncRoutine__FlPv@s_wBuf@0", local
 .skip 0x100
 .endobj "@LOCAL@asyncRoutine__FlPv@s_wBuf@0"

@@ -1482,8 +1482,7 @@
 	.skip 0x4
 .endobj sjrbf_init_cnt
 
-.skip 0x4
-
+.balign 8
 .obj sjrbf_obj, global
 	.skip 0x4800
 .endobj sjrbf_obj

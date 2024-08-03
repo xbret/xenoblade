@@ -33,5 +33,3 @@
 .obj btm_cb, global
 	.skip 0x27C4
 .endobj btm_cb
-
-.skip 4

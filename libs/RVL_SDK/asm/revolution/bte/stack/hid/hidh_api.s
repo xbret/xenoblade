@@ -1009,8 +1009,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
 .obj hh_cb, global
 	.skip 0x404
 .endobj hh_cb
-
-.skip 4

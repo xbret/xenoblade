@@ -1599,5 +1599,3 @@
 .obj adxstm_sj_internal_error_cnt, global
 	.skip 0x4
 .endobj adxstm_sj_internal_error_cnt
-
-.skip 0x4

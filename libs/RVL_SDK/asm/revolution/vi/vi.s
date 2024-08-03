@@ -3456,6 +3456,7 @@
 	.4byte .L_80365134
 .endobj jumptable_8055FE38
 
+.obj lbl_8055FE5C, global
 	.asciz "***************************************\n"
 	.balign 4
 	.asciz " ! ! ! C A U T I O N ! ! !             \n"
@@ -3470,7 +3471,7 @@
 	.balign 4
 	.asciz "VIConfigure(): Tried to change mode from (%d) to (%d), which is forbidden\n"
 	.balign 4
-
+.endobj lbl_8055FE5C
 
 .obj jumptable_8055FFB0, global
 	.4byte .L_80366538
@@ -3544,14 +3545,12 @@
 	.skip 0x76
 .endobj shdwRegs
 
-.skip 2
-
+.balign 4
 .obj regs, local
 	.skip 0x76
 .endobj regs
 
-.skip 2
-
+.balign 4
 .obj HorVer, local
 	.skip 0x58
 .endobj HorVer

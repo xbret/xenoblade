@@ -248,8 +248,7 @@
 	.skip 0x4
 .endobj cri_verstr_ptr
 
-.skip 0x4
-
+.balign 8
 .obj adxt_obj, global
 	.skip 0xC40
 .endobj adxt_obj

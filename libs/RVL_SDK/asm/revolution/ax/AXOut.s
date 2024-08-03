@@ -651,16 +651,17 @@
 	.skip 0x38
 .endobj __AXLocalProfile
 
-.skip 8
-
+.balign 32
 .obj __AXRmtOutBuffer, local
 	.skip 0x5A0
 .endobj __AXRmtOutBuffer
 
+.balign 32
 .obj __AXOutSBuffer, local
 	.skip 0x300
 .endobj __AXOutSBuffer
 
+.balign 32
 .obj __AXOutBuffer, local
 	.skip 0x480
 .endobj __AXOutBuffer
@@ -669,8 +670,7 @@
 	.skip 0x50
 .endobj __AXDSPTask
 
-.skip 0x10
-
+.balign 32
 .obj __AXDramImage, local
 	.skip 0x40
 .endobj __AXDramImage

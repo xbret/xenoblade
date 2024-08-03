@@ -1400,17 +1400,10 @@
 
 .obj lbl_80551080, global
 	.asciz "<< RVL_SDK - NAND \trelease build: Feb 27 2009 10:05:16 (0x4302_145) >>"
-	.balign 4
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
 .endobj lbl_80551080
 
 
-
+.balign 32
 .obj s_currentDir, local
 	.4byte 0x2F000000
 	.4byte 0
@@ -1511,6 +1504,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 32
 .obj s_homeDir, local
 	.skip 0x40
 .endobj s_homeDir

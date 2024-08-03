@@ -1218,8 +1218,7 @@
 	.skip 0x4
 .endobj sjuni_init_cnt
 
-.skip 0x4
-
+.balign 8
 .obj sjuni_obj, global
 	.skip 0xC00
 .endobj sjuni_obj

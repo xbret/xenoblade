@@ -2184,5 +2184,3 @@
 .obj sftim_v_sample, global
 	.skip 0x4
 .endobj sftim_v_sample
-
-.skip 0x4

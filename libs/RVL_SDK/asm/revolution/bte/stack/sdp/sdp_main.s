@@ -911,5 +911,3 @@
 .obj sdp_cb, global
 	.skip 0x4634
 .endobj sdp_cb
-
-.skip 0xC

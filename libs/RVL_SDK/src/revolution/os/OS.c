@@ -556,7 +556,7 @@ void OSInit(void) {
                  */
                 if (BootInfo->arenaLo == NULL && BI2DebugFlag != NULL &&
                     *BI2DebugFlag < 2) {
-                    mem1lo = ROUND_UP_PTR(__ArenaLo, 32);
+                    mem1lo = ROUND_UP_PTR(_db_stack_end, 32);
                 }
             } else {
                 // ???

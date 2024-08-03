@@ -2292,13 +2292,13 @@
 	.4byte 0
 .endobj cf_CREvtModelObj_hierarchy
 
-
+.obj lbl_80535910, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
 	.asciz "g3d_resfile_ac.h"
 	.balign 4
 	.4byte 0
-
+.endobj lbl_80535910
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

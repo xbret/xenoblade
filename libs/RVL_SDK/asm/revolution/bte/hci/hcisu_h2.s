@@ -534,5 +534,4 @@
 .obj hcisu_h2_cb, local
 	.skip 0x24
 .endobj hcisu_h2_cb
-
-.skip 0x1c
+.balign 32

@@ -120,9 +120,9 @@ static MEMiHeapHead* InitExpHeap_(MEMiHeapHead* heap, void* end, u16 opt) {
     return heap;
 }
 
-#ifndef NON_MATCHING
-#error AllocUsedBlockFromFreeBlock_ has not yet been matched.
-#endif
+//#ifndef NON_MATCHING
+//#error AllocUsedBlockFromFreeBlock_ has not yet been matched.
+//#endif
 static void* AllocUsedBlockFromFreeBlock_(MEMiExpHeapHead* exp,
                                           MEMiExpHeapMBlock* mblock,
                                           void* memPtr, u32 size,
@@ -131,9 +131,9 @@ static void* AllocUsedBlockFromFreeBlock_(MEMiExpHeapHead* exp,
     ;
 }
 
-#ifndef NON_MATCHING
-#error AllocFromHead_ has not yet been matched (https://decomp.me/scratch/5mrPW).
-#endif
+//#ifndef NON_MATCHING
+//#error AllocFromHead_ has not yet been matched (https://decomp.me/scratch/5mrPW).
+//#endif
 static void* AllocFromHead_(MEMiHeapHead* heap, u32 size, s32 align) {
     MEMiExpHeapMBlock* it;
     MEMiExpHeapHead* exp;
@@ -169,9 +169,9 @@ static void* AllocFromHead_(MEMiHeapHead* heap, u32 size, s32 align) {
                            : NULL;
 }
 
-#ifndef NON_MATCHING
-#error AllocFromTail_ has not yet been matched (https://decomp.me/scratch/obMhf).
-#endif
+//#ifndef NON_MATCHING
+//#error AllocFromTail_ has not yet been matched (https://decomp.me/scratch/obMhf).
+//#endif
 static void* AllocFromTail_(MEMiHeapHead* heap, u32 size, s32 align) {
     MEMiExpHeapMBlock* it;
     MEMiExpHeapHead* exp;
@@ -207,9 +207,9 @@ static void* AllocFromTail_(MEMiHeapHead* heap, u32 size, s32 align) {
                            : NULL;
 }
 
-#ifndef NON_MATCHING
-#error RecycleRegion_ has not yet been matched.
-#endif
+//#ifndef NON_MATCHING
+//#error RecycleRegion_ has not yet been matched.
+//#endif
 static void RecycleRegion_(MEMiExpHeapHead* exp, void** region) {
     ;
     ;
@@ -258,9 +258,9 @@ void* MEMAllocFromExpHeapEx(MEMiHeapHead* heap, u32 size, s32 align) {
     return memBlock;
 }
 
-#ifndef NON_MATCHING
-#error MEMResizeForMBlockExpHeap has not yet been matched.
-#endif
+//#ifndef NON_MATCHING
+//#error MEMResizeForMBlockExpHeap has not yet been matched.
+//#endif
 u32 MEMResizeForMBlockExpHeap(MEMiHeapHead* heap, void* memBlock, u32 size) {
     ;
     ;

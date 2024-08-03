@@ -831,5 +831,3 @@
 .obj lsc_stat_obj2, global
 	.skip 0x4
 .endobj lsc_stat_obj2
-
-.skip 0x4
