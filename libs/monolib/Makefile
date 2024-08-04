@@ -161,7 +161,7 @@ MONOLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolib/asm/nand/CNBanner.o\
 
 #$(MONOLIB_FILES): INCLUDES += -i libs/monolib/include/ -i libs/nw4r/include/
-$(MONOLIB_FILES): CFLAGS += -ipa file -inline auto -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MONOLIB_FILES): CFLAGS += -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4
 
 DEPENDS += $(MONOLIB_FILES:.o=.d)
 

@@ -72,7 +72,7 @@ MSLC_FILES:=\
 
 DEPENDS += $(MSLC_FILES:.o=.d)
 
-$(MSLC_FILES): CFLAGS += -Cpp_exceptions off -inline on -str pool,readonly,reuse -ipa file
+$(MSLC_FILES): CFLAGS += -use_lmw_stmw on -str reuse,pool,readonly -fp_contract off -inline on -ipa file -func_align 4
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MSL_C/MSL_C.PPCEABI.bare.H.a: $(MSLC_FILES)
 	@echo Linking... $@

@@ -324,7 +324,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/src/kyoshin/appgame/CBattery.o\
 
 #$(GAME_FILES): INCLUDES += -i src/ -i libs/monolib/include/ -i libs/mm/include/ -i libs/nw4r/include/
-$(GAME_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
+$(GAME_FILES): CFLAGS += -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4
 $(BUILD_DIR)/src/kyoshin/appgame/CBattery.o: CFLAGS += -O4,s -func_align 4 #wont match otherwise
 $(BUILD_DIR)/src/kyoshin/appgame/ErrMesData.o: CFLAGS += -enc UTF8 #encoding bs
 

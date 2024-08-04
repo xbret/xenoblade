@@ -29,7 +29,7 @@ TRK_FILES:=\
 DEPENDS += $(TRK_FILES:.o=.d)
 
 #$(TRK_FILES): INCLUDES += -i libs/NdevExi2A/include/
-$(TRK_FILES): CFLAGS += -Cpp_exceptions off -inline on
+$(TRK_FILES): CFLAGS += -use_lmw_stmw on -inline on -func_align 4
 $(TRK_FILES): MWCC_VERSION = 1.0a
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o: CFLAGS += -str pool

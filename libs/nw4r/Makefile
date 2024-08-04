@@ -12,7 +12,7 @@ NW4R_FILES:=\
 #$(NW4R_FILES): CONSOLE := GC
 
 #$(NW4R_FILES): INCLUDES += -i libs/nw4r/include/
-$(NW4R_FILES): CFLAGS += -inline auto -Cpp_exceptions off -RTTI off
+$(NW4R_FILES): CFLAGS += -inline auto -use_lmw_stmw on -fp_contract off -func_align 4
 
 
 $(BUILD_DIR)/libs/nw4r/nw4r.a: $(NW4R_FILES)

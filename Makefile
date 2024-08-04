@@ -92,7 +92,7 @@ TRANSFORM_DEP := tools/transform-win.py
 endif
 
 # Options
-INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl
+INCLUDES := -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl
 ASM_INCLUDES := -I include/
 
 # TODO: fix the makefile to make objdiff work without this
@@ -108,7 +108,8 @@ ifeq ($(VERBOSE),0)
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
 LIBRARY_LDFLAGS := -nodefaults -fp hard -proc gekko
-CFLAGS = -enum int -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 -MMD $(INCLUDES)
+CFLAGS = -nodefaults -proc gekko -align powerpc -enum int -fp hard -Cpp_exceptions off -O4,p -inline auto \
+-nosyspath -RTTI off -fp_contract on -enc SJIS -MMD $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
