@@ -35,7 +35,7 @@ $(TRK_FILES): MWCC_VERSION = 1.0a
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o: CFLAGS += -str pool
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msghndlr.o: CFLAGS += -str pool
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/support.o: CFLAGS += -str pool
-$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targimpl.o: CFLAGS += -pool off
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targimpl.o: CFLAGS += inline auto -pool off
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/TRK_Hollywood_Revolution.a: $(TRK_FILES)
 	@echo Linking... $@

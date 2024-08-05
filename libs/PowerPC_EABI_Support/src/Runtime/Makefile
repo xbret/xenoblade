@@ -11,12 +11,12 @@ RUNTIME_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/GCN_mem_alloc.o\
 
-$(RUNTIME_FILES): CFLAGS += -use_lmw_stmw on -str reuse,pool,readonly -gccinc -common off -inline on -func_align 4 $(INCLUDES)
+$(RUNTIME_FILES): CFLAGS += -use_lmw_stmw on -str reuse,pool,readonly -gccinc -common off -inline on -func_align 4
 
 #Runtime has exceptions turned on for 4 specific files
-$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/New.o: CFLAGS += -Cpp_exceptions on
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/New.o: CFLAGS += -Cpp_exceptions on -RTTI on
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/NMWException.o: CFLAGS += -Cpp_exceptions on
-$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/MWRTTI.o: CFLAGS += -Cpp_exceptions on
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/MWRTTI.o: CFLAGS += -Cpp_exceptions on -RTTI on
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.o: CFLAGS += -Cpp_exceptions on
 
 DEPENDS += $(RUNTIME_FILES:.o=.d)

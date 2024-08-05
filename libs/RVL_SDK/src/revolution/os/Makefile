@@ -36,9 +36,6 @@ OS_FILES:=\
 
 DEPENDS += $(OS_FILES:.o=.d)
 
-#$(OS_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
-
-
 #OSUtf only matches on 3.0?
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/OSUtf.o: MWCC_VERSION := 3.0a5.2
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/os/OSUtf.o: CONSOLE := GC
