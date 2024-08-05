@@ -1,7 +1,7 @@
 #include "kyoshin/appgame/NandData.hpp"
 
-static const char* nandTitleText = "ã‚¼ãƒãƒ–ãƒ¬ã‚¤ãƒ‰";
-static const char* nandDescriptionText = "å·¨ç¥ã¨æ©Ÿç¥ã€€ãƒ¢ãƒŠãƒ‰ãŒæœªæ¥ã‚’æ–¬ã‚Šé–‹ã";
+static const char* nandTitleText = "ƒ[ƒmƒuƒŒƒCƒh";
+static const char* nandDescriptionText = "‹_‚Æ‹@_@ƒ‚ƒiƒh‚ª–¢—ˆ‚ğa‚èŠJ‚­";
 static const char* nandBannerFilename = "bannerTexture.tpl";
 static const char* nandIconTextureFilenames[] = {
 	"iconTexture[0].tpl",
