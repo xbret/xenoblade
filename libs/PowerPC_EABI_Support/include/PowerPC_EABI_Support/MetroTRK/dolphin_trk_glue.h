@@ -1,8 +1,8 @@
 #ifndef _TRK_DOLPHIN_TRK_GLUE_H
 #define _TRK_DOLPHIN_TRK_GLUE_H
 
-#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "revolution/OS.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/UART.h"
 
 typedef enum{
@@ -10,6 +10,8 @@ typedef enum{
     HARDWARE_NDEV = 1,
     HARDWARE_BBA = 2
 } HardwareType;
+
+typedef signed long OSInterrupt;
 
 typedef int (*DBCommFunc)();
 typedef int (*DBCommInitFunc)(void*, OSInterruptHandler);

@@ -2,19 +2,19 @@
 
 extern "C" {
 
-void MWInitializeCriticalSection(uint* section){
+void MWInitializeCriticalSection(unsigned int* section){
 }
 
-void MWEnterCriticalSection(uint* section){
+void MWEnterCriticalSection(unsigned int* section){
 	*section = OSDisableInterrupts();
 }
 
-void MWExitCriticalSection(uint* section){
+void MWExitCriticalSection(unsigned int* section){
 	OSRestoreInterrupts(*section);
 }
 
 //unused
-void MWTerminateCriticalSection(uint* section){
+void MWTerminateCriticalSection(unsigned int* section){
 }
 
 }

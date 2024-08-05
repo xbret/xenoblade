@@ -17,8 +17,9 @@ static void ppc_writebyte1(ui8* ptr, ui8 val){
 void* TRK_memcpy(void* dst, const void* src, int size){
     ui8* srcTemp = (ui8*)src;
     ui8* dstTemp = (ui8*)dst;
+	int i;
     
-    for(int i = 0; i != size; i++){
+    for(i = 0; i != size; i++){
 		ppc_writebyte1(dstTemp, ppc_readbyte1(srcTemp));
 		srcTemp++;
 		dstTemp++;
@@ -29,8 +30,9 @@ void* TRK_memcpy(void* dst, const void* src, int size){
 
 void TRK_fill_mem(ui8* dst, int val, int size){
 	ui8 b = val;
+	int i;
 
-    for(int i = 0; i != size; i++){
+    for(i = 0; i != size; i++){
 		ppc_writebyte1(dst, b);
 		dst++;
 	}

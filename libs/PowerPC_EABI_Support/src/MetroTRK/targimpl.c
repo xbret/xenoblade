@@ -204,7 +204,7 @@ DSError TRKValidMemory32(const void* addr, size_t length, ValidMemoryOptions rea
 	DSError err = kInvalidMemory;
 	const ui8* start;
 	const ui8* end;
-	s32 i;
+	int i;
 
 	start = (const ui8*)addr;
 	end = ((const ui8*)addr + (length - 1));
@@ -213,7 +213,7 @@ DSError TRKValidMemory32(const void* addr, size_t length, ValidMemoryOptions rea
 		return kInvalidMemory;
 	}
 
-	for(i = 0; i < (s32)(sizeof(gTRKMemMap)/sizeof(memRange)); i++){
+	for(i = 0; i < (int)(sizeof(gTRKMemMap)/sizeof(memRange)); i++){
 		if(start <= (const ui8*)gTRKMemMap[i].end && end >= (const ui8*)gTRKMemMap[i].start){
 			if((readWriteable == kValidMemoryReadable && !gTRKMemMap[i].readable) || (readWriteable == kValidMemoryWriteable && !gTRKMemMap[i].writeable)){
 				err = kInvalidMemory;
@@ -861,7 +861,7 @@ DSError TRKTargetAddStopInfo(MessageBuffer* b){
 	error = TRKAppendBuffer_ui8(b, (ui8*)&reply, TRK_MSG_HEADER_LENGTH);
 
 	if (error == kNoError) {
-		s32 i;
+		int i;
 
 		for(i = 0; i < 0x20; i++) {
 			TRKAppendBuffer1_ui32(b, gTRKCPUState.Default.GPR[i]);
@@ -890,7 +890,7 @@ DSError TRKTargetAddStopInfo(MessageBuffer* b){
 	}
 
 	if (error == kNoError) {
-		s8 writeData[1024];
+		char writeData[1024];
 		size_t length = sizeof(writeData);
 
 		error = TRKTargetAccessMemory((void*)writeData, (void*)(gTRKCPUState.Default.PC & 0xfffffc00),&length,kUserMemory,true);

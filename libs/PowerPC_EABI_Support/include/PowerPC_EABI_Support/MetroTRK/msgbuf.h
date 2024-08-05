@@ -3,6 +3,7 @@
 
 #include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include <stddef.h>
 
 
 typedef int MessageBufferID;

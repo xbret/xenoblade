@@ -10,7 +10,7 @@ typedef struct CircleBuffer {
     ui32 unkC;
     ui32 mBytesToRead;
     ui32 mBytesToWrite;
-    uint mSection;
+    unsigned int mSection;
     ui32 unk1C;
 } CircleBuffer;
 

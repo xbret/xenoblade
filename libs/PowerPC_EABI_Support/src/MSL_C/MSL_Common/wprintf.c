@@ -17,9 +17,6 @@
 
 typedef long long intmax_t;
 
-#define PTRDIFF __typeof__((char*)0-(char*)0)
-typedef PTRDIFF ptrdiff_t;
-
 enum justification_options {
 	left_justification,
 	right_justification,

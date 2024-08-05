@@ -40,11 +40,12 @@ int convertFileMode(){
 
 DSIOResult __access_file(__file_handle handle, ui8* buffer, size_t* count, __ref_con ref_con, MessageCommandID id){
     size_t countTemp;
+    ui32 r0;
 
     if(!GetTRKConnected()) return kDSIOError;
 
     countTemp = *count;
-    ui32 r0 = TRKAccessFile(id, handle, &countTemp, buffer);
+    r0 = TRKAccessFile(id, handle, &countTemp, buffer);
     *count = countTemp;
 
     switch((ui8)r0){

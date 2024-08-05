@@ -28,11 +28,13 @@ void CircleBufferTerminate(CircleBuffer* cb){
 }
 
 int CircleBufferWriteBytes(CircleBuffer* cb, ui8* buf, ui32 size){
+	ui32 r29;
+	
 	if(size > cb->mBytesToWrite) return -1;
 
 	MWEnterCriticalSection(&(cb->mSection));
 
-	ui32 r29 = cb->unkC - (cb->unk4 - cb->unk8);
+	r29 = cb->unkC - (cb->unk4 - cb->unk8);
 
 	if(r29 >= size){
 		memcpy(cb->unk4, buf, size);
@@ -56,11 +58,13 @@ int CircleBufferWriteBytes(CircleBuffer* cb, ui8* buf, ui32 size){
 }
 
 int CircleBufferReadBytes(CircleBuffer* cb, ui8* buf, ui32 size){
+	ui32 r29;
+
 	if(size > cb->mBytesToRead) return -1;
 
 	MWEnterCriticalSection(&(cb->mSection));
 
-	ui32 r29 = cb->unkC - (cb->unk0 - cb->unk8);
+	r29 = cb->unkC - (cb->unk0 - cb->unk8);
 
 	if(size < r29){
 		memcpy(buf, cb->unk0, size);

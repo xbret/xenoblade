@@ -56,7 +56,7 @@ L_802CC250:
 	b TRK_InterruptHandler
 }
 
-void TRKEXICallBack(s32 r3, OSContext* ctx){
+void TRKEXICallBack(OSInterrupt r3, OSContext* ctx){
 	OSEnableScheduler();
 	TRKLoadContext(ctx, 0x500);
 }

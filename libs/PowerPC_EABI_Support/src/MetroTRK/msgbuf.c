@@ -14,7 +14,8 @@ static void TRK_SetBufferUsed(MessageBuffer* b, bool state){
 }
 
 DSError TRK_InitializeMessageBuffers(){
-	for(int i = 0; i < NUM_BUFFERS; i++){
+	int i;
+	for(i = 0; i < NUM_BUFFERS; i++){
 		TRK_SetBufferUsed(&gTRKMsgBufs.buffers[i],false);
 	}
 
@@ -23,9 +24,10 @@ DSError TRK_InitializeMessageBuffers(){
 
 DSError TRK_GetFreeBuffer(int* bufferIndexPtr, MessageBuffer** destBufPtr){
 	DSError error = kNoMessageBufferAvailable;
+	int i;
 	*destBufPtr = NULL;
 
-	for(int i = 0; i < NUM_BUFFERS; i++){
+	for(i = 0; i < NUM_BUFFERS; i++){
 		MessageBuffer* buf = TRKGetBuffer(i);
 
 		if(!buf->fInUse){

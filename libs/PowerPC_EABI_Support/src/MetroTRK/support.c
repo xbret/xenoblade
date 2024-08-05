@@ -237,7 +237,7 @@ DSError HandlePositionFileSupportRequest(ui32 param_1, ui32* param_2, ui8 param_
 	reply.command[0] = kDSPositionFile;
 	reply.msg_length = TRK_MSG_HEADER_LENGTH;
 	*(DSFileHandle *)reply.handle = param_1;
-	*(s32*)reply.length = *param_2;
+	*(int*)reply.length = *param_2;
 	reply.data[0] = param_3;
 	error = TRK_GetFreeBuffer(&bufferId1,&buffer1);
 	

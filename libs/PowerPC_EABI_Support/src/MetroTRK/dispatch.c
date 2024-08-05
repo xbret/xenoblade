@@ -3,10 +3,11 @@
 DSError TRK_DispatchMessage(MessageBuffer* buffer) {
     DSError result = kDispatchError;
     MessageBuffer* temp = buffer;
+    ui8 command;
     
     TRK_SetBufferPosition(buffer, 0);
     
-    ui8 command = temp->fData[4];
+    command = temp->fData[4];
     
     switch(command){
         case kDSConnect:

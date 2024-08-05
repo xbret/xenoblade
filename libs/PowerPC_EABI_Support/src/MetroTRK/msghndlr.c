@@ -434,6 +434,7 @@ DSError TRKDoStep(MessageBuffer *b){
 	ui8 count;
 	ui32 rangeStart;
 	ui32 rangeEnd;
+	ui32 pc;
 
 	TRK_SetBufferPosition(b, 0);
 
@@ -454,7 +455,7 @@ DSError TRKDoStep(MessageBuffer *b){
 	//Range step
 	case kDSStepIntoRange:
 	case kDSStepOverRange:
-		ui32 pc = TRKTargetGetPC();
+		pc = TRKTargetGetPC();
 		//Continue if the current pc is within the step range
 		if(pc >= rangeStart && pc <= rangeEnd){
 			break;

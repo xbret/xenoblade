@@ -51,8 +51,9 @@ int gdev_cc_read(ui8* dest, int size){
     }
 
     while(CBGetBytesAvailableForRead(&gRecvCB) < size){
+        int r29;
         r30 = 0;
-        int r29 = DBQueryData();
+        r29 = DBQueryData();
         if(r29 != 0){
             r30 = DBRead(buf, size);
             if(r30 == 0){

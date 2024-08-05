@@ -124,16 +124,15 @@ def main():
         cflags_base += " -sym on -D_DEBUG"
     else:
         cflags_base += " -DNDEBUG -w off"
-    cflags_base += " -lang=c99" #TODO: add c99 lang flag on per lib basis
     n.variable("cflags_base", cflags_base)
-    n.variable("cflags_game", "$cflags_base -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4")
+    n.variable("cflags_game", "$cflags_base -lang=c99 -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4")
     n.variable("cflags_runtime", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -gccinc -common off -inline on -func_align 4")
     n.variable("cflags_mslc", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -fp_contract off -inline on -ipa file -func_align 4")
     n.variable("cflags_trk", "$cflags_base -use_lmw_stmw on -inline on -func_align 4")
-    n.variable("cflags_sdk",  "$cflags_base -inline auto -ipa file -fp_contract off -func_align 16")
-    n.variable("cflags_ndev", "$cflags_base -inline auto -ipa file -func_align 4")
+    n.variable("cflags_sdk",  "$cflags_base -lang=c99 -inline auto -ipa file -fp_contract off -func_align 16")
+    n.variable("cflags_ndev", "$cflags_base -lang=c99 -inline auto -ipa file -func_align 4")
     n.variable("cflags_nw4r", "$cflags_base -inline auto -use_lmw_stmw on -fp_contract off -func_align 4")
-    n.variable("cflags_criware", "$cflags_base -sdata 0 -sdata2 0 -use_lmw_stmw on -func_align 4 -i libs/CriWare/src/")
+    n.variable("cflags_criware", "$cflags_base -lang=c99 -sdata 0 -sdata2 0 -use_lmw_stmw on -func_align 4 -i libs/CriWare/src/")
 
 
     asflags = f"-mgekko -I include -W --strip-local-absolute -gdwarf-2"

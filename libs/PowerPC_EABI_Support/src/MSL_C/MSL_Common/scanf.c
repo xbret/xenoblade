@@ -5,9 +5,6 @@
 
 typedef long long intmax_t;
 
-#define PTRDIFF __typeof__((char*)0-(char*)0)
-typedef PTRDIFF ptrdiff_t;
-
 enum argument_options {
 	normal_argument,
 	char_argument,

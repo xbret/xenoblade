@@ -2,7 +2,7 @@
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
 
-FunctionStruct lbl_80528380 = {"ÉQÅ[ÉÄÉÅÉCÉì", &CGame::GameMain};
+FunctionStruct lbl_80528380 = {"„Ç≤„Éº„É†„É°„Ç§„É≥", &CGame::GameMain};
 const char* const staticArcStr = "static.arc";
 
 const char* const pkhFilenames[13] = {
