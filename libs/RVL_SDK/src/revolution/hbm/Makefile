@@ -49,7 +49,7 @@ $(HBM_FILES): INCLUDES += -i libs/RVL_SDK/src/revolution/hbm/include/
 $(HBM_FILES): MWCC_VERSION := 1.0a
 
 #HBM doesn't use the small data sections
-$(HBM_FILES): CFLAGS += -sdata 0 -sdata2 0
+$(HBM_FILES): CFLAGS += -sdata 0 -sdata2 0 -RTTI on
 
 $(BUILD_DIR)/libs/RVL_SDK/src/revolution/hbm/homebuttonLib.a: $(HBM_FILES)
 	@echo Linking... $@
