@@ -33,19 +33,3 @@ jobs:
       with:
         name: xenoblade.jp.MAP
         path: build/*/xenoblade.jp.MAP
-  
-  build_make:
-    name: Build (legacy)
-    runs-on: ubuntu-latest
-    container: ghcr.io/xbret/build:main
-    strategy:
-      fail-fast: false
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Git config
-      run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-    - name: Build
-      run: |
-        python configure.py --map --compilers /compilers
-        make -j$(nproc) COMPILERS=/compilers
