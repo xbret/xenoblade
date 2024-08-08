@@ -92,7 +92,7 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
 	unk27A = 0;
 	unk27C = 0;
 	unk27E = 0;
-	unk280 = 0;
+	mXfbBuffersPtr = nullptr;
 	unk284 = 2;
 	unk294 = 0;
 	unk298 = 0;
@@ -107,7 +107,7 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
 	instance = this;
 	unk2A0 = 0;
 	unk2A2 = 0;
-	unk280 = mtl::allocateHeap(getSomeSize(), lbl_80667F2C ? mtl::Heap_getRegionIndex2_2() : CDevice::func_8044D058(), 0x20);
+	mXfbBuffersPtr = mtl::allocateArray(getXfbBuffersSize(), lbl_80667F2C ? mtl::Heap_getRegionIndex2_2() : CDevice::func_8044D058(), 0x20);
 
 	memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
 	instance->unk4 |= 0x1;
@@ -122,9 +122,9 @@ CDeviceVI::~CDeviceVI(){
 	UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
 	func_804EE1B0(ptr);
 
-	if(unk280 != nullptr){
-		delete[](unk280);
-		unk280 = nullptr;
+	if(mXfbBuffersPtr != nullptr){
+		delete[](mXfbBuffersPtr);
+		mXfbBuffersPtr = nullptr;
 	}
 
 	instance = nullptr;
@@ -201,8 +201,9 @@ bool CDeviceVI::isTvFormatPal(){
 	return VIGetTvFormat() == VI_PAL;
 }
 
-u32 CDeviceVI::getSomeSize(){
-	return 0x12C000;
+u32 CDeviceVI::getXfbBuffersSize(){
+	//2 bytes per pixel
+	return XFB_WIDTH * XFB_HEIGHT * NUM_XFB_BUFFERS * 2;
 }
 
 float CDeviceVI::getSomeRatio(){

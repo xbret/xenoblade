@@ -82,7 +82,7 @@ int getHeapIndex();
 int Heap_getRegionIndex1();
 int Heap_getRegionIndex2();
 int Heap_getRegionIndex2_2();
-void* allocateHeap(u32 r3, int index, u32 r5);
+void* allocateArray(u32 r3, int index, u32 r5);
 int heap_createRegion(int regionIndex, int offset, const char* name);
 
 #define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)

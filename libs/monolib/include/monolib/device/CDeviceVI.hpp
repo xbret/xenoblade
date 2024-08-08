@@ -29,7 +29,7 @@ public:
 	static bool removeCallback(CDeviceVICb* entry);
 	static bool isWideAspectRatio();
 	static bool isTvFormatPal();
-	static u32 getSomeSize();
+	static u32 getXfbBuffersSize();
 	static float getSomeRatio();
 	static void func_8044857C(u32 r3, u32 r4);
 	void func_804486E4();
@@ -89,7 +89,7 @@ public:
 	u16 unk27A;
 	u16 unk27C;
 	u16 unk27E;
-	void* unk280;
+	void* mXfbBuffersPtr; //0x280
 	u32 unk284;
 	u32 unk288;
 	u8 unk28C[0x8]; //padding?
@@ -111,3 +111,17 @@ public:
 protected:
 	static CDeviceVI* instance;
 };
+
+//XFB defines
+
+//XFB dimensions
+//JP: 640x480, US: 640x456, PAL: 640x542
+#define XFB_WIDTH 640
+#if VERSION == VERSION_JPN
+#define XFB_HEIGHT 480
+#elif VERSION == VERSION_PAL
+#define XFB_HEIGHT 542
+#elif VERSION == VERSION_USA
+#define XFB_HEIGHT 456
+#endif
+#define NUM_XFB_BUFFERS 2 //double buffered

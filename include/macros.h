@@ -50,4 +50,8 @@
 #define __declspec(x)
 #endif
 
+#define VERSION_JPN 0
+#define VERSION_PAL 1
+#define VERSION_USA 2
+
 #endif

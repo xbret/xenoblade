@@ -1,0 +1,8 @@
+object: orig/eu/sys/main.dol
+hash: 10d34dbf901e5d6547718176303a6073ee80dda2
+symbols: config/eu/symbols.txt
+splits: config/eu/splits.txt
+
+mw_comment_version: 15
+symbols_known: false
+fill_gaps: true

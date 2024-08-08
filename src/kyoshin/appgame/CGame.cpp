@@ -133,7 +133,7 @@ void CGame::GameMain(){
 		UNKTYPE* temp_r3 = func_80455AA0();
 		u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
 		CDesktop* desktop = CDesktop::getInstance();
-		const char* name = "‹_"; //"Bionis"
+		const char* name = "å·¨ç¥"; //"Bionis"
 		CGame* cGame = new (WorkThreadSystem::getHeapIndex()) CGame(name, desktop);
 		cGame->func_80438BD8(desktop, 0);
 		cGame->unk1E4 = r29;

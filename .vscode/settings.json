@@ -1,39 +1,28 @@
 {
-	"[c]": {
-	  "files.encoding": "shiftjis",
-	  "editor.defaultFormatter": "ms-vscode.cpptools"
-	},
-	"[cpp]": {
-	  "files.encoding": "shiftjis",
-	  "editor.defaultFormatter": "ms-vscode.cpptools"
-	},
-	"editor.tabSize": 4,
+    "[c]": {
+        "files.encoding": "utf8"
+    },
+    "[cpp]": {
+        "files.encoding": "utf8"
+    },
+    "editor.tabSize": 4,
 	"files.exclude": {
         "**/CVS": false,
 		"**/*.ctx": true
 	},
-	"files.associations": {
-		"*.cp": "cpp",
-		"*.asm": "wla-dx-asm",
-		"__tuple": "c",
-		"array": "c",
-		"ppc_version.h": "c",
-		"bitset": "c",
-		"optional": "c",
-		"dstypes.h": "c",
-		"cc_gdev.h": "c",
-		"exception": "c",
-		"__locale": "cpp",
-		"cctype": "cpp",
-		"clocale": "cpp",
-		"cmath": "cpp",
-		"cstdarg": "cpp",
-		"cstddef": "cpp",
-		"cstdio": "cpp",
-		"cstdlib": "cpp",
-		"cstring": "cpp",
-		"cwchar": "cpp",
-		"new": "cpp",
-		"typeinfo": "cpp"
-	}
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.cp": "cpp",
+        "*.asm": "wla-dx-asm",
+        "*.inc": "cpp",
+        "dstypes.h": "c"
+    },
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "build/*/config.json": true,
+        "build/**/*.MAP": true,
+        "build.ninja": true,
+        ".ninja_*": true,
+        "objdiff.json": true
+    }
 }

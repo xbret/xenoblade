@@ -1,602 +1,1746 @@
-def main():
-    import os
-    import io
-    import sys
-    import argparse
-    import json
+#!/usr/bin/env python3
 
-    from pathlib import Path
-    from shutil import which
-    from tools import ninja_syntax
+###
+# Generates build files for the project.
+# This file also includes the project configuration,
+# such as compiler flags and the object matching status.
+#
+# Usage:
+#   python3 configure.py
+#   ninja
+#
+# Append --help to see available options.
+###
 
-    if sys.version_info < (3, 8):
-        sys.exit("Python 3.8 or later required.")
+import argparse
+import sys
+from pathlib import Path
+from typing import Any, Dict, List
 
-    parser = argparse.ArgumentParser()
+from tools.project import (
+    Object,
+    ProjectConfig,
+    calculate_progress,
+    generate_build,
+    is_windows,
+)
+
+# Game versions
+DEFAULT_VERSION = 0
+VERSIONS = [
+    "jp",  # 0
+    "eu",  # 1
+    "us",  # 2
+]
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "mode",
+    choices=["configure", "progress"],
+    default="configure",
+    help="script mode (default: configure)",
+    nargs="?",
+)
+parser.add_argument(
+    "-v",
+    "--version",
+    choices=VERSIONS,
+    type=str.lower,
+    default=VERSIONS[DEFAULT_VERSION],
+    help="version to build",
+)
+parser.add_argument(
+    "--build-dir",
+    metavar="DIR",
+    type=Path,
+    default=Path("build"),
+    help="base build directory (default: build)",
+)
+parser.add_argument(
+    "--binutils",
+    metavar="BINARY",
+    type=Path,
+    help="path to binutils (optional)",
+)
+parser.add_argument(
+    "--compilers",
+    metavar="DIR",
+    type=Path,
+    help="path to compilers (optional)",
+)
+parser.add_argument(
+    "--map",
+    action="store_true",
+    help="generate map file(s)",
+)
+parser.add_argument(
+    "--no-asm",
+    action="store_true",
+    help="don't incorporate .s files from asm directory",
+)
+parser.add_argument(
+    "--debug",
+    action="store_true",
+    help="build with debug info (non-matching)",
+)
+if not is_windows():
     parser.add_argument(
-        "--version",
-        "-v",
-        dest="version",
-        default="jp",
-        help="version to build (jp)",
-    )
-    parser.add_argument(
-        "--map",
-        "-m",
-        dest="map",
-        default=True,
-        action="store_true",
-        help="generate map file",
-    )
-    parser.add_argument(
-        "--no-check",
-        dest="check",
-        action="store_false",
-        help="don't check hash of resulting dol",
-    )
-    parser.add_argument(
-        "--no-static-libs",
-        dest="static_libs",
-        action="store_false",
-        help="don't build and use static libs",
-    )
-    parser.add_argument(
-        "--powerpc",
-        dest="powerpc",
+        "--wrapper",
+        metavar="BINARY",
         type=Path,
-        default=Path("tools/powerpc"),
-        help="path to powerpc-eabi tools",
+        help="path to wibo or wine (optional)",
     )
-    if os.name != "nt" and not "_NT-" in os.uname().sysname:
-        parser.add_argument(
-            "--wine",
-            dest="wine",
-            type=Path,
-            help="path to wine (or wibo)",
-        )
-    parser.add_argument(
-        "--build-dtk",
-        dest="build_dtk",
-        type=Path,
-        help="path to decomp-toolkit source",
-    )
-    parser.add_argument(
-        "--debug",
-        "-d",
-        dest="debug",
-        action="store_true",
-        help="build with debug info (non-matching)",
-    )
-    parser.add_argument(
-        "--compilers",
-        dest="compilers",
-        type=Path,
-        default=Path("tools/mwcc_compiler"),
-        help="path to compilers",
-    )
-    parser.add_argument(
-        "--build-dir",
-        dest="build_dir",
-        type=Path,
-        default=Path("build"),
-        help="base build directory",
-    )
-    parser.add_argument(
-        "--context",
-        "-c",
-        dest="context",
-        action="store_true",
-        help="generate context files for decomp.me",
-    )
-    args = parser.parse_args()
+parser.add_argument(
+    "--dtk",
+    metavar="BINARY | DIR",
+    type=Path,
+    help="path to decomp-toolkit binary or source (optional)",
+)
+parser.add_argument(
+    "--sjiswrap",
+    metavar="EXE",
+    type=Path,
+    help="path to sjiswrap.exe (optional)",
+)
+parser.add_argument(
+    "--verbose",
+    action="store_true",
+    help="print verbose output",
+)
+parser.add_argument(
+    "--non-matching",
+    dest="non_matching",
+    action="store_true",
+    help="builds equivalent (but non-matching) or modded objects",
+)
+args = parser.parse_args()
 
-    with open(Path("libs.json"), "r") as f:
-        LIBS = json.load(f)
+config = ProjectConfig()
+config.version = str(args.version)
+version_num = VERSIONS.index(config.version)
 
-    # On Windows, we need this to use && in commands
-    chain = "cmd /c " if os.name == "nt" else ""
+# Apply arguments
+config.build_dir = args.build_dir
+config.dtk_path = args.dtk
+config.binutils_path = args.binutils
+config.compilers_path = args.compilers
+config.debug = args.debug
+config.generate_map = args.map
+config.non_matching = args.non_matching
+config.sjiswrap_path = args.sjiswrap
+if not is_windows():
+    config.wrapper = args.wrapper
+if args.no_asm:
+    config.asm_dir = None
 
-    out = io.StringIO()
-    n = ninja_syntax.Writer(out)
+# Tool versions
+config.binutils_tag = "2.42-1"
+config.compilers_tag = "20231018"
+config.dtk_tag = "v0.9.0"
+config.sjiswrap_tag = "v1.1.1"
+config.wibo_tag = "0.6.11"
 
-    n.variable("ninja_required_version", "1.3")
-    n.newline()
+# Project
+config.config_path = Path("config") / config.version / "config.yml"
+config.check_sha_path = Path("config") / config.version / "build.sha1"
+config.asflags = [
+    "-mgekko",
+    "--strip-local-absolute",
+    "-I include",
+    f"-I build/{config.version}/include",
+    f"--defsym version={version_num}",
+]
+config.linker_console = "Wii"
+config.linker_version = "1.1"
+config.ldflags = [
+    "-fp fmadd",
+    "-nodefaults",
+    "-warn off",
+    # "-listclosure", # Uncomment for Wii linkers
+]
+# Use for any additional files that should cause a re-configure when modified
+config.reconfig_deps = []
 
-    n.comment("The arguments passed to configure.py, for rerunning it.")
-    configure_args = sys.argv[1:]
-    n.variable("configure_args", configure_args)
-    n.variable("python", f'"{sys.executable}"')
-    n.newline()
+# Base flags, common to most GC/Wii games.
+# Generally leave untouched, with overrides added below.
+cflags_base = [
+    "-nodefaults",
+    "-proc gekko",
+    "-align powerpc",
+    "-enum int",
+    "-fp hard",
+    "-Cpp_exceptions off",
+    # "-W all",
+    "-O4,p",
+    "-inline auto",
+    '-pragma "cats off"',
+    '-pragma "warn_notinlined off"',
+    "-maxerrors 1",
+    "-nosyspath",
+    "-RTTI off",
+    "-fp_contract on",
+    #"-str reuse",
+    "-enc SJIS",
+    "-i include",
+    "-i libs/RVL_SDK/include/",
+    "-i libs/PowerPC_EABI_Support/include/stl",
+    "-i libs/nw4r/include/",
+    "-i libs/monolib/include/",
+    "-i src/",
+    "-i libs/NdevExi2A/include/",
+    "-i libs/PowerPC_EABI_Support/include/",
+    f"-i build/{config.version}/include",
+    f"-DVERSION={version_num}",
+]
 
-    ###
-    # Variables
-    ###
-    n.comment("Variables")
-    version = args.version.lower()
-    if version != "jp":
-        sys.exit(f'Invalid version "{version}"')
-    build_path = args.build_dir / f"xenoblade.{version}"
+# Debug flags
+if config.debug:
+    cflags_base.extend(["-sym on", "-DDEBUG=1"])
+else:
+    cflags_base.append("-DNDEBUG=1")
 
-    cflags_base = f"-nodefaults -proc gekko -align powerpc -enum int -fp hard -Cpp_exceptions off -O4,p -inline auto -nosyspath -RTTI off \
-            -fp_contract on -enc SJIS -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/ \
-             -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/"
-    if args.debug:
-        cflags_base += " -sym on -D_DEBUG"
-    else:
-        cflags_base += " -DNDEBUG -w off"
-    n.variable("cflags_base", cflags_base)
-    n.variable("cflags_game", "$cflags_base -lang=c99 -ipa file -inline auto -use_lmw_stmw on -str reuse,pool,readonly -RTTI on -Cpp_exceptions on -func_align 4")
-    n.variable("cflags_runtime", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -gccinc -common off -inline on -func_align 4")
-    n.variable("cflags_mslc", "$cflags_base -use_lmw_stmw on -str reuse,pool,readonly -fp_contract off -inline on -ipa file -func_align 4")
-    n.variable("cflags_trk", "$cflags_base -use_lmw_stmw on -inline on -func_align 4")
-    n.variable("cflags_sdk",  "$cflags_base -lang=c99 -inline auto -ipa file -fp_contract off -func_align 16")
-    n.variable("cflags_ndev", "$cflags_base -lang=c99 -inline auto -ipa file -func_align 4")
-    n.variable("cflags_nw4r", "$cflags_base -inline auto -use_lmw_stmw on -fp_contract off -func_align 4")
-    n.variable("cflags_criware", "$cflags_base -lang=c99 -sdata 0 -sdata2 0 -use_lmw_stmw on -func_align 4 -i libs/CriWare/src/")
+# Game/Monolithlib Flags
+cflags_game = [
+    *cflags_base,
+    "-lang=c99",
+    "-ipa file",
+    "-inline auto",
+    "-use_lmw_stmw on",
+    "-str reuse,pool,readonly",
+    "-RTTI on",
+    "-Cpp_exceptions on",
+    "-func_align 4",
+]
+
+# Metrowerks library flags
+cflags_runtime = [
+    *cflags_base,
+    "-use_lmw_stmw on",
+    "-str reuse,pool,readonly",
+    "-gccinc",
+    "-common off",
+    "-inline on",
+    "-func_align 4",
+]
+
+cflags_mslc = [
+    *cflags_base,
+    "-use_lmw_stmw on",
+    "-str reuse,pool,readonly",
+    "-fp_contract off",
+    "-inline on",
+    "-ipa file",
+    "-func_align 4",
+]
+
+cflags_trk = [
+    *cflags_base,
+    "-use_lmw_stmw on",
+    "-inline on",
+    "-func_align 4",
+]
+
+# Dolphin library flags
+cflags_sdk = [
+    *cflags_base,
+    "-lang=c99",
+    "-inline auto",
+    "-ipa file",
+    "-fp_contract off",
+    "-func_align 16",
+]
+
+# Ndev flags
+cflags_ndev = [
+    *cflags_base,
+    "-lang=c99",
+    "-inline auto",
+    "-ipa file",
+    "-func_align 4",
+]
 
 
-    asflags = f"-mgekko -I include -W --strip-local-absolute -gdwarf-2"
-    n.variable("asflags", asflags)
+# nw4r flags
+cflags_nw4r = [
+    *cflags_base,
+    "-inline auto",
+    "-use_lmw_stmw on",
+    "-fp_contract off",
+    "-func_align 4",
+]
 
-    ldflags = "-fp fmadd -nodefaults -lcf ldscript.lcf"
-    if args.map:
-        map_path = build_path / "xenoblade.jp.MAP"
-        ldflags += f" -map {map_path} -mapunused"
-    if args.debug:
-        ldflags += " -g"
-    else:
-        ldflags += " -w off"
-    n.variable("ldflags", ldflags)
+# Criware flags
+cflags_criware = [
+    *cflags_base,
+    "-lang=c99",
+    "-sdata 0",
+    "-sdata2 0",
+    "-use_lmw_stmw on",
+    "-i libs/CriWare/src/",
+    "-func_align 4",
+]
 
-    mw_link_console = "Wii"
-    mw_link_version = "1.1"
-    n.variable("mw_console", mw_link_console)
-    n.variable("mw_version", mw_link_version)
-    if os.name == "nt":
-        exe = ".exe"
-        wine = ""
-    else:
-        if "_NT-" in os.uname().sysname:
-            # MSYS2
-            wine = ""
-        elif args.wine:
-            wine = f"{args.wine} "
-        elif which("wibo") is not None:
-            wine = "wibo "
-        else:
-            wine = "wine "
-        exe = ""
-    n.newline()
-
-    ###
-    # Tooling
-    ###
-    tools_path = Path("tools")
-
-    def path(input):
-        if input is None:
-            return None
-        elif isinstance(input, list):
-            return list(map(str, input))
-        else:
-            return [str(input)]
-
-    n.comment("decomp-toolkit")
-    if args.build_dtk:
-        dtk = tools_path / "release" / f"dtk{exe}"
-        n.rule(
-            name="cargo",
-            command="cargo build --release --manifest-path $in --bin $bin --target-dir $target",
-            description="CARGO $bin",
-            depfile=path(Path("$target") / "release" / "$bin.d"),
-            deps="gcc",
-        )
-        n.build(
-            outputs=path(dtk),
-            rule="cargo",
-            inputs=path(args.build_dtk / "Cargo.toml"),
-            variables={
-                "bin": "dtk",
-                "target": tools_path,
-            },
-        )
-    else:
-        dtk = tools_path / f"dtk{exe}"
-        download_dtk = tools_path / "download_dtk.py"
-        n.rule(
-            name="download_dtk",
-            command=f"$python {download_dtk} $in $out",
-            description="DOWNLOAD $out",
-        )
-        n.build(
-            outputs=path(dtk),
-            rule="download_dtk",
-            inputs=path([tools_path / "dtk_version"]),
-            implicit=path([download_dtk]),
-        )
-    n.newline()
-
-    # FIXME: Manual downloads because ninja doesn't play nice with directories,
-    # replace with automated system like dtk uses if workaround is found
-    if args.powerpc == Path("tools/powerpc") and not Path("tools/powerpc").exists():
-        import tools.download_ppc
-
-        tools.download_ppc.main()
-
-    if args.compilers == Path("tools/mwcc_compiler") and not Path("tools/mwcc_compiler").exists():
-        import tools.download_mwcc
-
-        tools.download_mwcc.main()
-
-    ###
-    # Rules
-    ###
-    compiler_path = args.compilers / "$mw_console" / "$mw_version"
-    mwcc = compiler_path / "mwcceppc.exe"
-    mwld = compiler_path / "mwldeppc.exe"
-    gnu_as = args.powerpc / f"powerpc-eabi-as{exe}"
-
-    mwcc_cmd = f"{chain}{wine}{mwcc} $cflags -MMD -c $in -o $basedir"
-    if args.context:
-        mwcc_cmd += " && $python tools/decompctx.py $cfile -r -q"
-    mwld_cmd = f"{wine}{mwld} $ldflags -o $out @$out.rsp"
-    as_cmd = (
-        f"{chain}{gnu_as} $asflags -o $out $in -MD $out.d"
-        + f" && {dtk} elf fixup $out $out"
-    )
-    ar_cmd = f"{dtk} ar create $out @$out.rsp"
-
-    if os.name != "nt":
-        transform_dep = tools_path / "transform-dep.py"
-        transform_dep_cmd = f" && $python {transform_dep} $basefile.d $basefile.d"
-        mwcc_cmd += transform_dep_cmd
-
-    n.comment("Link ELF file")
-    n.rule(
-        name="link",
-        command=mwld_cmd,
-        description="LINK $out",
-        rspfile="$out.rsp",
-        rspfile_content="$in_newline",
-    )
-    n.newline()
-
-    n.comment("MWCC build")
-    n.rule(
-        name="mwcc",
-        command=mwcc_cmd,
-        description="MWCC $out",
-        depfile="$basefile.d",
-        deps="gcc",
-    )
-    n.newline()
-
-    n.comment("Assemble asm")
-    n.rule(
-        name="as",
-        command=as_cmd,
-        description="AS $out",
-        depfile="$out.d",
-        deps="gcc",
-    )
-    n.newline()
-
-    n.comment("Create static library")
-    n.rule(
-        name="ar",
-        command=ar_cmd,
-        description="AR $out",
-        rspfile="$out.rsp",
-        rspfile_content="$in_newline",
-    )
-    n.newline()
-
-    n.comment("Host build")
-    n.variable("host_cflags", "-I include -Wno-trigraphs")
-    n.variable(
-        "host_cppflags",
-        "-std=c++98 -I include -fno-exceptions -fno-rtti -D_CRT_SECURE_NO_WARNINGS -Wno-trigraphs -Wno-c++11-extensions",
-    )
-    n.rule(
-        name="host_cc",
-        command="clang $host_cflags -c -o $out $in",
-        description="CC $out",
-    )
-    n.rule(
-        name="host_cpp",
-        command="clang++ $host_cppflags -c -o $out $in",
-        description="CXX $out",
-    )
-    n.newline()
-
-    ###
-    # Rules for source files
-    ###
-    n.comment("Source files")
-    build_host_path = build_path / "host"
-    build_lib_path = build_path / "lib"
-
-    objdiff_config = {
-        "min_version": "0.4.3",
-        "custom_make": "ninja",
-        "build_target": True,
-        "watch_patterns": [
-            "*.c",
-            "*.cp",
-            "*.cpp",
-            "*.h",
-            "*.hpp",
-            "*.py",
-        ],
-        "units": [],
+# Helper function for Dolphin libraries
+def DolphinLib(lib_name: str, objects: List[Object], version="1.1", extra_cflags=[]) -> Dict[str, Any]:
+    return {
+        "lib": lib_name,
+        "mw_console": "Wii",
+        "mw_version": version,
+        "root_dir": "libs/RVL_SDK",
+        "cflags": cflags_sdk + extra_cflags,
+        "host": False,
+        "objects": objects,
     }
 
-    source_inputs = []
-    host_source_inputs = []
-    link_inputs = []
-    used_compiler_versions = set()
-    for lib in LIBS:
-        inputs = []
-        if "lib" in lib:
-            lib_name = lib["lib"]
-            n.comment(f"{lib_name}.a")
-        else:
-            n.comment("Loose files")
-        
-        root_dir = lib["root_dir"]
-        src_path = Path(root_dir) / Path("src")
-        asm_path = Path(root_dir) / Path("asm")
-        build_src_path = build_path / src_path
-        build_asm_path = build_path / asm_path
+def criwareLib(lib_name, objects, extra_cflags=[]):
+    return {
+        "lib": lib_name,
+        "mw_console": "GC",
+        "mw_version": "3.0a5.2",
+        "root_dir": "libs/CriWare",
+        "cflags": cflags_criware + extra_cflags,
+        "host": False,
+        "objects": objects,
+    }
 
-        for object in lib["objects"]:
-            completed = False
-            options = {
-                "add_to_all": True,
-                "mw_console": None,
-                "mw_version": None,
-                "root_dir": None,
-                "cflags": None,
-            }
-            if type(object) is list:
-                if len(object) > 1:
-                    completed = object[1]
-                if len(object) > 2:
-                    options.update(object[2])
-                object = object[0]
+def nw4rLib(lib_name, objects, extra_cflags=[]):
+    return {
+        "lib": lib_name,
+        "mw_console": "GC",
+        "mw_version": "3.0a5.2",
+        "root_dir": "libs/nw4r",
+        "cflags": cflags_nw4r + extra_cflags,
+        "host": False,
+        "objects": objects,
+    }
 
-            cflags = options["cflags"] or lib["cflags"]
-            mw_console = options["mw_console"] or lib["mw_console"]
-            mw_version = options["mw_version"] or lib["mw_version"]
-            used_compiler_versions.add((mw_console, mw_version))
 
-            # objdiff config
-            unit_config = {
-                "name": object,
-                "complete": completed,
-            }
+Matching = True                   # Object matches and should be linked
+NonMatching = False               # Object does not match and should not be linked
+Equivalent = config.non_matching  # Object should be linked when configured with --non-matching
 
-            c_file = None
-            if os.path.exists(src_path / f"{object}.cpp"):
-                c_file = src_path / f"{object}.cpp"
-            elif os.path.exists(src_path / f"{object}.cp"):
-                c_file = src_path / f"{object}.cp"
-            elif os.path.exists(src_path / f"{object}.c"):
-                c_file = src_path / f"{object}.c"
-            elif os.path.exists(src_path / f"{object}.C"):
-                c_file = src_path / f"{object}.C"
-            elif os.path.exists(src_path / f"{object}.s"): # specifically for __exception.s
-                n.build(
-                    outputs=path(build_src_path / f"{object}.o"),
-                    rule="as",
-                    inputs=path(src_path / f"{object}.s"),
-                    implicit=path(dtk),
-                )
-            if c_file is not None:
-                n.build(
-                    outputs=path(build_src_path / f"{object}.o"),
-                    rule="mwcc",
-                    inputs=path(c_file),
-                    variables={
-                        "mw_console": mw_console,
-                        "mw_version": mw_version,
-                        "cflags": options["cflags"] or lib["cflags"],
-                        "basedir": os.path.dirname(build_src_path / f"{object}"),
-                        "basefile": path(build_src_path / f"{object}"),
-                        "cfile": path(c_file),
-                    },
-                    implicit_outputs = None if not args.context else (str(c_file) + ".ctx")
-                )
-                if lib["host"]:
-                    n.build(
-                        outputs=path(build_host_path / f"{object}.o"),
-                        rule="host_cc" if c_file.suffix == ".c" else "host_cpp",
-                        inputs=path(c_file),
-                        variables={
-                            "basedir": os.path.dirname(build_host_path / object),
-                            "basefile": path(build_host_path / object),
-                        },
-                    )
-                    if options["add_to_all"]:
-                        host_source_inputs.append(build_host_path / f"{object}.o")
-                if options["add_to_all"]:
-                    source_inputs.append(build_src_path / f"{object}.o")
-                unit_config["base_path"] = str(build_src_path / f"{object}.o")
-            if os.path.exists(asm_path / f"{object}.s"):
-                n.build(
-                    outputs=path(build_asm_path / f"{object}.o"),
-                    rule="as",
-                    inputs=path(asm_path / f"{object}.s"),
-                    implicit=path(dtk),
-                )
-            unit_config["target_path"] = str(build_asm_path / f"{object}.o")
-            objdiff_config["units"].append(unit_config)
-            if completed:
-                inputs.append(build_src_path / f"{object}.o")
-            else:
-                inputs.append(build_asm_path / f"{object}.o")
-        if args.static_libs and "lib" in lib:
-            lib_name = lib["lib"]
-            n.build(
-                outputs=path(build_lib_path / f"{lib_name}.a"),
-                rule="ar",
-                inputs=path(inputs),
-                implicit=path(dtk),
-            )
-            link_inputs.append(build_lib_path / f"{lib_name}.a")
-        else:
-            link_inputs.extend(inputs)
-        n.newline()
+config.warn_missing_config = True
+config.warn_missing_source = False
+config.libs = [
+    {
+        "lib": "kyoshin",
+        "mw_console": "Wii",
+        "mw_version": "1.1",
+        "root_dir": "",
+        "cflags": cflags_game,
+        "host": True,
+        "objects": [
+            Object(NonMatching, "kyoshin/appgame/CGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+            Object(Matching, "kyoshin/appgame/main.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginDeb.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginWait.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocBuiltin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocThread.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocMsg.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocBdat.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocUnit.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTaskGame.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskGameCf.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTaskGameEff.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/ocCfp.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginMain.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginUi.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginEve.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginCfs.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginMath.cpp"),
+            Object(NonMatching, "kyoshin/action/CActParamAnim.cpp"),
+            Object(NonMatching, "kyoshin/action/CActParamData.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CMcaFile.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskEnvironment.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTimeLightGrp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CActParamAnimGame.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginCam.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskGameEffAfter.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginPad.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfRes.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/IResInfo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfScript.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfTaskMain.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfTFile.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCamEvent.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCamDirectionIntf.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCamLookatIntf.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCamTargetIntf.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCam.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCamEvent_1.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_8007C0F8.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlEnemy.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlMoveBase.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlMoveEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlNpc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlPc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlRemote.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlObjectParam.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_800A3B24.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_800AA008.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCollCircleImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCollSphereImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCollAABBImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCollCylinderImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfCollCapsuleImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectColl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectEff.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_800B06A4.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectMap.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectModel.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectMove.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectNpc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectObj.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectPc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectPoint.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/code_800C17DC.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplWalker.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplPc.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplObj.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplNpc.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplMove.cpp"),
+            Object(NonMatching, "kyoshin/cfsys/CfObjectImplEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlAct.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CBattleManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/code_800F42AC.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectEnumList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectSelectorObj.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CMainMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuArtsSelect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleDamage.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattlePlayerState.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuEnemyState.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuFade.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuKeyAssign.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CMiniMap.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuQuestLog.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuSymbolMark.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CQuestWindow.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSystemWindow.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSysWinSelect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTagProcessor.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTalkWindow.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CUIBattleManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CUICfManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_80135FDC.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CUIWindowManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfBdat.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuUpdate.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuLandTelop.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CBattleState.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuGetItem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CAIAction.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CArtsSet.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CArtsParam.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CItem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CCharEffect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CCharEffectEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CCol6System.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CCol6Invite.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskREvent.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CInfoCf.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuItem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtMem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskREvtSequence.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfResObjImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfResReloadImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfMapEffectManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectActor.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtModel.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfMapItemManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CActorParam.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuZeal.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtCamera.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtModelMap.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtModelObj.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtModelPc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtEffect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtObj.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginTime.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginBtl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_801862C0.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPTGauge.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/code_80187F14.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuSelectShop.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuShopSell.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuShopBuy.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/code_8018C5FC.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfResPcImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/code_8018F8D8.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPTState.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CPartsChange.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlMovePC.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CtrlMoveNpc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleMode.cpp"),
+            Object(NonMatching, "kyoshin/appgame/COccCulling.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSimpleEveTalkWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CTaskCulling.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CVision.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_801A929C.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginSnd.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginGame.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuVision.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleCommu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CPcEffect07.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuGetItemMulti.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CSuddenCommu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuKizunaTalk.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuItemExchange.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfSoundMan.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfPadTask.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/code_801C2C14.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtLight.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CBgTex.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTitleAHelp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CItemBoxGrid.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CCur.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSortMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CItemBoxInfo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CNumSelect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CItemBoxLine.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CScrollBar.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_801F3BE0.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickObject.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfObjectTbox.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfResTboxImpl.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CPartyStateWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CModelDisp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CPartyState.cpp"),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginUnit.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/parts/CModelDispEquip.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CEquipChange.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfMapMineManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CItemBoxGridSubMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmick.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickElv.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickLock.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickWarp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickJump.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickItem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMenuMakeCrystal.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMakeCrystalWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/code_80213488.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalBox.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalInfo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCylinderGauge.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCEffStart.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuQstCnt.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CQstLogList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CQstLogInfo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSysWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSelShopWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CExchangeWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CPresentWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalSupport.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuArtsSet.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CArtsInfo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfNandManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_802405F4.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuMapSelect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CMapSel.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CFade.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CFloorMap.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuMapSelectSC.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPause.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuCollepedia.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CCollepedia.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuKizunagram.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CKizunagram.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CPcKizunagram.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_8025FB10.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPassiveSkill.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CPassiveSkill.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleEnd.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPlayAward.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuKizunaTalkList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CKizunaTalkList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSysWinBuff.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/ICamControlRemote.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/ICamControlGc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/ICamControlClassic.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_8027513C.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuLvUp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActor.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActorList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainTime.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainTimer.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSysWinScenarioLog.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActorEne.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActorPc.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CEquipItemBox.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuSave.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSaveLoad.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuPTChangeNotice.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainCombo.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSysWinSave.cpp"),
+            Object(NonMatching, "kyoshin/appgame/realtimeevt/CREvtMovie.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTaskGamePic.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTaskGameEvt.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CHelpManager.cpp"),
+            Object(Matching, "kyoshin/appgame/code_80296898.cpp"),
+            Object(NonMatching, "kyoshin/appgame/makecrystal/CMCGetItemBox.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuTutorial.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTutorial.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuOption.cpp"),
+            Object(NonMatching, "kyoshin/appgame/COption.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuSkipTimer.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CSkipTimer.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainEffect.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/CCharVoice.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/CCharVoiceMan.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_EHP.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleChain.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfGimmickSaveOff.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuTutorialList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTutorialList.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CLoad.cpp"),
+            Object(Matching, "kyoshin/appgame/CNandData.cpp"),
+            Object(Matching, "kyoshin/appgame/ErrMesData.cpp", shift_jis = False, extra_cflags=["-enc UTF8"]),
+            Object(NonMatching, "kyoshin/appgame/plugin/pluginHelp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuGCItem.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuGameClear.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/CfHikariItemManager.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CUIErrMesWin.cpp"),
+            Object(NonMatching, "kyoshin/appgame/menu/CMenuTitle.cpp"),
+            Object(NonMatching, "kyoshin/appgame/CTitle.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ArtsAttack.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ArtsSet.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_CkKizuna.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_CloseItemMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_CloseSysMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_EndEvent.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_EnemyCount.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_EnemyEnable.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_EtherMake.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_Exchange.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_GameOver.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ItemCole.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_Kizuna.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_LandMark.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_LearnArts.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ClosePartyMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_OpenPartyMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_Pg.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_CloseQuestMenu.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ShopBuy.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_ShopSel.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_Sp.cpp"),
+            Object(NonMatching, "kyoshin/appgame/help/CHelp_Talk.cpp"),
+            Object(Matching, "kyoshin/appgame/help/CHelp_Target.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_802B8A3C.cpp"),
+            Object(Matching, "kyoshin/appgame/plugin/pluginVoice.cpp"),
+            Object(NonMatching, "kyoshin/appgame/code_802B9064.cpp"),
+            Object(Matching, "kyoshin/appgame/CBattery.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+        ],
+    },
+    {
+        "lib": "Runtime.PPCEABI.H.a",
+        "mw_console": "Wii",
+        "mw_version": "1.1",
+        "root_dir": "libs/PowerPC_EABI_Support",
+        "cflags": cflags_runtime,
+        "host": True,
+        "objects": [
+            Object(Matching, "Runtime/__mem.c"),
+            Object(Matching, "Runtime/__va_arg.c"),
+            Object(Matching, "Runtime/global_destructor_chain.c"),
+            Object(Matching, "Runtime/New.cp", extra_cflags = ["-Cpp_exceptions on", "-RTTI on"]),
+            Object(Matching, "Runtime/NMWException.cp", extra_cflags = ["-Cpp_exceptions on"]),
+            Object(Matching, "Runtime/ptmf.c"),
+            Object(Matching, "Runtime/MWRTTI.cp", extra_cflags = ["-Cpp_exceptions on", "-RTTI on"]),
+            Object(Matching, "Runtime/runtime.c"),
+            Object(Matching, "Runtime/__init_cpp_exceptions.cpp"),
+            Object(Matching, "Runtime/Gecko_ExceptionPPC.cp", extra_cflags = ["-Cpp_exceptions on"]),
+            Object(Matching, "Runtime/GCN_mem_alloc.c"),
+        ],
+    },
+    {
+        "lib": "MSL_C.PPCEABI.bare.H",
+        "mw_console": "Wii",
+        "mw_version": "1.1",
+        "root_dir": "libs/PowerPC_EABI_Support",
+        "cflags": cflags_mslc,
+        "host": True,
+        "objects": [
+            Object(Matching, "MSL_C/MSL_Common/alloc.c"),
+            Object(Matching, "MSL_C/MSL_Common/ansi_files.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/ansi_fp.c"),
+            Object(Matching, "MSL_C/MSL_Common/arith.c"),
+            Object(Matching, "MSL_C/MSL_Common/assert.c"),
+            Object(Matching, "MSL_C/MSL_Common/buffer_io.c"),
+            Object(Matching, "MSL_C/MSL_Common/ctype.c"),
+            Object(Matching, "MSL_C/MSL_Common/direct_io.c"),
+            Object(Matching, "MSL_C/MSL_Common/errno.c"),
+            Object(Matching, "MSL_C/MSL_Common/file_io.c"),
+            Object(Matching, "MSL_C/MSL_Common/FILE_POS.c"),
+            Object(Matching, "MSL_C/MSL_Common/locale.c"),
+            Object(Matching, "MSL_C/MSL_Common/mbstring.c"),
+            Object(Matching, "MSL_C/MSL_Common/mem.c"),
+            Object(Matching, "MSL_C/MSL_Common/mem_funcs.c"),
+            Object(Matching, "MSL_C/MSL_Common/math_api.c"),
+            Object(Matching, "MSL_C/MSL_Common/misc_io.c"),
+            Object(Matching, "MSL_C/MSL_Common/printf.c"),
+            Object(Matching, "MSL_C/MSL_Common/rand.c"),
+            Object(Matching, "MSL_C/MSL_Common/float.c"),
+            Object(Matching, "MSL_C/MSL_Common/scanf.c"),
+            Object(Matching, "MSL_C/MSL_Common/signal.c"),
+            Object(Matching, "MSL_C/MSL_Common/string.c"),
+            Object(Matching, "MSL_C/MSL_Common/strtold.c"),
+            Object(Matching, "MSL_C/MSL_Common/strtoul.c"),
+            Object(Matching, "MSL_C/MSL_Common/wcstoul.c"),
+            Object(Matching, "MSL_C/MSL_Common/wctype.c"),
+            Object(Matching, "MSL_C/MSL_Common/wmem.c"),
+            Object(Matching, "MSL_C/MSL_Common/wprintf.c"),
+            Object(Matching, "MSL_C/MSL_Common/wscanf.c"),
+            Object(Matching, "MSL_C/MSL_Common/wstring.c"),
+            Object(Matching, "MSL_C/MSL_Common/wchar_io.c"),
+            Object(Matching, "MSL_C/PPC_EABI/uart_console_io_gcn.c"),
+            Object(Matching, "MSL_C/PPC_EABI/abort_exit_ppc_eabi.c"),
+            Object(Matching, "MSL_C/MSL_Common/secure_error.c"),
+            Object(Matching, "MSL_C/MSL_Common/math_double.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/math_sun.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c"),
+            Object(Matching, "MSL_C/PPC_EABI/math_ppc.c"),
+            Object(Matching, "MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c"),
+            Object(Matching, "MSL_C/MSL_Common/extras.c"),
+        ],
+    },
+    {
+        "lib": "TRK_Hollywood_Revolution",
+        "mw_console": "Wii",
+        "mw_version": "1.0a",
+        "root_dir": "libs/PowerPC_EABI_Support",
+        "cflags": cflags_trk,
+        "host": True,
+        "objects": [
+            Object(Matching, "MetroTRK/__exception.s"),
+            Object(Matching, "MetroTRK/targsupp.s"),
+            Object(Matching, "MetroTRK/custconn/cc_gdev.c"),
+            Object(Matching, "MetroTRK/custconn/MWCriticalSection_gc.cpp"),
+            Object(Matching, "MetroTRK/custconn/CircleBuffer.c"),
+            Object(Matching, "MetroTRK/flush_cache.c"),
+            Object(Matching, "MetroTRK/main_TRK.c"),
+            Object(Matching, "MetroTRK/mainloop.c"),
+            Object(Matching, "MetroTRK/mem_TRK.c"),
+            Object(Matching, "MetroTRK/dispatch.c"),
+            Object(Matching, "MetroTRK/dolphin_trk.c"),
+            Object(Matching, "MetroTRK/dolphin_trk_glue.c", extra_cflags = ["-str pool"]),
+            Object(Matching, "MetroTRK/notify.c"),
+            Object(Matching, "MetroTRK/nubevent.c"),
+            Object(Matching, "MetroTRK/nubinit.c"),
+            Object(Matching, "MetroTRK/serpoll.c"),
+            Object(Matching, "MetroTRK/string_TRK.c"),
+            Object(Matching, "MetroTRK/support.c", extra_cflags = ["-str pool"]),
+            Object(Matching, "MetroTRK/targcont.c"),
+            Object(Matching, "MetroTRK/mpc_7xx_603e.c"),
+            Object(Matching, "MetroTRK/msg.c"),
+            Object(Matching, "MetroTRK/msgbuf.c"),
+            Object(Matching, "MetroTRK/msghndlr.c", extra_cflags = ["-str pool"]),
+            Object(Matching, "MetroTRK/mslsupp.c"),
+            Object(Matching, "MetroTRK/targimpl.c", extra_cflags = ["-inline auto", "-pool off"]),
+            Object(Matching, "MetroTRK/target_options.c"),
+        ],
+    },
+    {
+        "lib": "NdevExi2A",
+        "mw_console": "GC",
+        "mw_version": "3.0a5.2",
+        "root_dir": "libs/NdevExi2A",
+        "cflags": cflags_ndev,
+        "host": True,
+        "objects": [
+            Object(Matching, "DebuggerDriver.c"),
+            Object(Matching, "exi2.c"),
+        ],
+    },
+    DolphinLib(
+        "ai",
+        [
+            Object(Matching, "revolution/ai/ai.c"),
+        ],
+    ),
+    DolphinLib(
+        "arc",
+        [
+            Object(Matching, "revolution/arc/arc.c"),
+        ],
+    ),
+    DolphinLib(
+        "ax",
+        [
+            Object(Matching, "revolution/ax/AX.c"),
+            Object(NonMatching, "revolution/ax/AXAlloc.c"),
+            Object(NonMatching, "revolution/ax/AXAux.c"),
+            Object(NonMatching, "revolution/ax/AXCL.c"),
+            Object(NonMatching, "revolution/ax/AXOut.c"),
+            Object(NonMatching, "revolution/ax/AXSPB.c"),
+            Object(NonMatching, "revolution/ax/AXVPB.c"),
+            Object(Matching, "revolution/ax/AXProf.c"),
+            Object(Matching, "revolution/ax/AXComp.c"),
+            Object(Matching, "revolution/ax/DSPCode.c"),
+        ],
+    ),
+    DolphinLib(
+        "axfx",
+        [
+            Object(NonMatching, "revolution/axfx/AXFXReverbHi.c"),
+            Object(NonMatching, "revolution/axfx/AXFXReverbHiExp.c"),
+            Object(NonMatching, "revolution/axfx/AXFXDelayExp.c"),
+            Object(NonMatching, "revolution/axfx/AXFXDelayExpDpl2.c"),
+            Object(NonMatching, "revolution/axfx/AXFXReverbStdExp.c"),
+            Object(NonMatching, "revolution/axfx/AXFXReverbStdExpDpl2.c"),
+            Object(NonMatching, "revolution/axfx/AXFXChorusExp.c"),
+            Object(NonMatching, "revolution/axfx/AXFXChorusExpDpl2.c"),
+            Object(Matching, "revolution/axfx/AXFXLfoTable.c"),
+            Object(Matching, "revolution/axfx/AXFXSrcCoef.c"),
+            Object(Matching, "revolution/axfx/AXFXHooks.c"),
+        ],
+    ),
+    DolphinLib(
+        "base",
+        [
+            Object(Matching, "revolution/base/PPCArch.c"),
+        ],
+    ),
+    DolphinLib(
+        "bte",
+        [
+            Object(NonMatching, "revolution/bte/gki/gki_buffer.c"),
+            Object(NonMatching, "revolution/bte/gki/gki_time.c"),
+            Object(NonMatching, "revolution/bte/gki/gki_ppc.c"),
+            Object(NonMatching, "revolution/bte/hci/hcisu_h2.c"),
+            Object(NonMatching, "revolution/bte/hci/uusb_ppc.c"),
+            Object(NonMatching, "revolution/bte/bta/dm/bta_dm_cfg.c"),
+            Object(NonMatching, "revolution/bte/bta/hh/bta_hh_cfg.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/bta_sys_cfg.c"),
+            Object(NonMatching, "revolution/bte/main/bte_hcisu.c"),
+            Object(NonMatching, "revolution/bte/main/bte_init.c"),
+            Object(NonMatching, "revolution/bte/main/bte_logmsg.c"),
+            Object(NonMatching, "revolution/bte/main/bte_main.c"),
+            Object(NonMatching, "revolution/bte/main/btu_task1.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/bd.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/bta_sys_conn.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/bta_sys_main.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/ptim.c"),
+            Object(NonMatching, "revolution/bte/bta/sys/utl.c"),
+            Object(NonMatching, "revolution/bte/bta/dm/bta_dm_act.c"),
+            Object(NonMatching, "revolution/bte/bta/dm/bta_dm_api.c"),
+            Object(NonMatching, "revolution/bte/bta/dm/bta_dm_main.c"),
+            Object(NonMatching, "revolution/bte/bta/dm/bta_dm_pm.c"),
+            Object(NonMatching, "revolution/bte/bta/hh/bta_hh_act.c"),
+            Object(NonMatching, "revolution/bte/bta/hh/bta_hh_api.c"),
+            Object(NonMatching, "revolution/bte/bta/hh/bta_hh_main.c"),
+            Object(NonMatching, "revolution/bte/bta/hh/bta_hh_utils.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_acl.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_dev.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_devctl.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_discovery.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_inq.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_main.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_pm.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_sco.c"),
+            Object(NonMatching, "revolution/bte/stack/btm/btm_sec.c"),
+            Object(NonMatching, "revolution/bte/stack/btu/btu_hcif.c"),
+            Object(NonMatching, "revolution/bte/stack/btu/btu_init.c"),
+            Object(NonMatching, "revolution/bte/stack/wbt/wbt_ext.c"),
+            Object(NonMatching, "revolution/bte/stack/gap/gap_api.c"),
+            Object(NonMatching, "revolution/bte/stack/gap/gap_conn.c"),
+            Object(NonMatching, "revolution/bte/stack/gap/gap_utils.c"),
+            Object(NonMatching, "revolution/bte/stack/hcic/hcicmds.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidd_api.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidd_conn.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidd_mgmt.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidd_pm.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidh_api.c"),
+            Object(NonMatching, "revolution/bte/stack/hid/hidh_conn.c"),
+            Object(NonMatching, "revolution/bte/stack/l2cap/l2c_api.c"),
+            Object(NonMatching, "revolution/bte/stack/l2cap/l2c_csm.c"),
+            Object(NonMatching, "revolution/bte/stack/l2cap/l2c_link.c"),
+            Object(NonMatching, "revolution/bte/stack/l2cap/l2c_main.c"),
+            Object(NonMatching, "revolution/bte/stack/l2cap/l2c_utils.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/port_api.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/port_rfc.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/port_utils.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_l2cap_if.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_mx_fsm.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_port_fsm.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_port_if.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_ts_frames.c"),
+            Object(NonMatching, "revolution/bte/stack/rfcomm/rfc_utils.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_api.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_db.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_discovery.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_main.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_server.c"),
+            Object(NonMatching, "revolution/bte/stack/sdp/sdp_utils.c"),
+        ],
+    ),
+    DolphinLib(
+        "cx",
+        [
+            Object(NonMatching, "revolution/cx/CXStreamingUncompression.c"),
+            Object(NonMatching, "revolution/cx/CXUncompression.c"),
+            Object(Matching, "revolution/cx/CXSecureUncompression.c"),
+        ],
+    ),
+    DolphinLib(
+        "db",
+        [
+            Object(Matching, "revolution/db/db.c"),
+        ],
+    ),
+    DolphinLib(
+        "dsp",
+        [
+            Object(Matching, "revolution/dsp/dsp.c"),
+            Object(Matching, "revolution/dsp/dsp_debug.c"),
+            Object(Matching, "revolution/dsp/dsp_task.c"),
+        ],
+    ),
+    DolphinLib(
+        "dvd",
+        [
+            Object(Matching, "revolution/dvd/dvdfs.c"),
+            Object(Matching, "revolution/dvd/dvd.c"),
+            Object(Matching, "revolution/dvd/dvdqueue.c"),
+            Object(Matching, "revolution/dvd/dvderror.c"),
+            Object(Matching, "revolution/dvd/dvdidutils.c"),
+            Object(Matching, "revolution/dvd/dvdFatal.c"),
+            Object(Matching, "revolution/dvd/dvdDeviceError.c"),
+            Object(Matching, "revolution/dvd/dvd_broadway.c"),
+        ],
+    ),
+    DolphinLib(
+        "enc",
+        [
+            Object(NonMatching, "revolution/enc/encutility.c"),
+            Object(NonMatching, "revolution/enc/encjapanese.c"),
+        ],
+    ),
+    DolphinLib(
+        "esp",
+        [
+            Object(Matching, "revolution/esp/esp.c"),
+        ],
+    ),
+    DolphinLib(
+        "euart",
+        [
+            Object(Matching, "revolution/euart/euart.c"),
+        ],
+    ),
+    DolphinLib(
+        "exi",
+        [
+            Object(NonMatching, "revolution/exi/EXIBios.c"),
+            Object(Matching, "revolution/exi/EXIUart.c"),
+            Object(Matching, "revolution/exi/EXICommon.c"),
+        ],
+    ),
+    DolphinLib(
+        "fs",
+        [
+            Object(Matching, "revolution/fs/fs.c"),
+        ],
+    ),
+    DolphinLib(
+        "gx",
+        [
+            Object(NonMatching, "revolution/gx/GXInit.c"),
+            Object(NonMatching, "revolution/gx/GXFifo.c"),
+            Object(NonMatching, "revolution/gx/GXAttr.c"),
+            Object(NonMatching, "revolution/gx/GXMisc.c"),
+            Object(NonMatching, "revolution/gx/GXGeometry.c"),
+            Object(NonMatching, "revolution/gx/GXFrameBuf.c"),
+            Object(Matching, "revolution/gx/GXLight.c"),
+            Object(NonMatching, "revolution/gx/GXTexture.c"),
+            Object(Matching, "revolution/gx/GXBump.c", mw_version = "1.0"),
+            Object(NonMatching, "revolution/gx/GXTev.c"),
+            Object(NonMatching, "revolution/gx/GXPixel.c"),
+            Object(Matching, "revolution/gx/GXDisplayList.c"),
+            Object(Matching, "revolution/gx/GXTransform.c"),
+            Object(NonMatching, "revolution/gx/GXPerf.c"),
+        ],
+    ),
+    DolphinLib(
+        "homebuttonLib",
+        [
+            Object(NonMatching, "revolution/hbm/HBMFrameController.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMAnmController.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMGUIManager.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMController.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMRemoteSpk.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMAxSound.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMCommon.cpp"),
+            Object(NonMatching, "revolution/hbm/HBMBase.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_animation.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_common.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/lyt/lyt_drawInfo.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_group.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_layout.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_material.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_pane.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_picture.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_window.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/math/math_triangular.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/ut/ut_CharWriter.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/ut/ut_Font.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/ut/ut_LinkList.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/ut/ut_list.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/ut/ut_ResFont.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/ut/ut_ResFontBase.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.cpp"),
+            Object(NonMatching, "revolution/hbm/nw4hbm/ut/ut_TextWriterBase.cpp"),
+            Object(NonMatching, "revolution/hbm/mix.c"),
+            Object(NonMatching, "revolution/hbm/syn.c"),
+            Object(NonMatching, "revolution/hbm/synctrl.c"),
+            Object(NonMatching, "revolution/hbm/synenv.c"),
+            Object(NonMatching, "revolution/hbm/synmix.c"),
+            Object(NonMatching, "revolution/hbm/synpitch.c"),
+            Object(NonMatching, "revolution/hbm/synsample.c"),
+            Object(NonMatching, "revolution/hbm/synvoice.c"),
+            Object(NonMatching, "revolution/hbm/seq.c"),
+        ],
+        "1.0a",
+        [   
+            "-sdata 0",
+            "-sdata2 0",
+            "-RTTI on",
+            "-i libs/RVL_SDK/src/revolution/hbm/include/",
+        ]
+    ),
+    DolphinLib(
+        "ipc",
+        [
+            Object(Matching, "revolution/ipc/ipcMain.c"),
+            Object(NonMatching, "revolution/ipc/ipcclt.c"),
+            Object(NonMatching, "revolution/ipc/memory.c"),
+            Object(Matching, "revolution/ipc/ipcProfile.c"),
+        ],
+    ),
+    DolphinLib(
+        "kpad",
+        [
+            Object(NonMatching, "revolution/kpad/KPAD.c"),
+        ],
+    ),
+    DolphinLib(
+        "mem",
+        [
+            Object(Matching, "revolution/mem/mem_heapCommon.c"),
+            Object(NonMatching, "revolution/mem/mem_expHeap.c"),
+            Object(Matching, "revolution/mem/mem_frameHeap.c"),
+            Object(Matching, "revolution/mem/mem_allocator.c"),
+            Object(Matching, "revolution/mem/mem_list.c"),
+        ],
+    ),
+    DolphinLib(
+        "mix",
+        [
+            Object(NonMatching, "revolution/mix/mix.c"),
+            Object(NonMatching, "revolution/mix/remote.c"),
+        ],
+    ),
+    DolphinLib(
+        "mtx",
+        [
+            Object(Matching, "revolution/mtx/mtx.c"),
+            Object(Matching, "revolution/mtx/mtxvec.c"),
+            Object(Matching, "revolution/mtx/mtx44.c"),
+            Object(Matching, "revolution/mtx/vec.c"),
+            Object(Matching, "revolution/mtx/quat.c"),
+        ],
+    ),
+    DolphinLib(
+        "nand",
+        [
+            Object(NonMatching, "revolution/nand/nand.c"),
+            Object(NonMatching, "revolution/nand/NANDOpenClose.c"),
+            Object(NonMatching, "revolution/nand/NANDCore.c"),
+            Object(NonMatching, "revolution/nand/NANDCheck.c"),
+            Object(NonMatching, "revolution/nand/NANDLogging.c"),
+        ],
+    ),
+    DolphinLib(
+        "os",
+        [
+            Object(Matching, "revolution/os/OS.c"),
+            Object(Matching, "revolution/os/OSAlarm.c"),
+            Object(Matching, "revolution/os/OSAlloc.c"),
+            Object(Matching, "revolution/os/OSArena.c"),
+            Object(Matching, "revolution/os/OSAudioSystem.c"),
+            Object(Matching, "revolution/os/OSCache.c"),
+            Object(Matching, "revolution/os/OSContext.c"),
+            Object(Matching, "revolution/os/OSError.c"),
+            Object(NonMatching, "revolution/os/OSExec.c"),
+            Object(Matching, "revolution/os/OSFatal.c"),
+            Object(Matching, "revolution/os/OSFont.c"),
+            Object(Matching, "revolution/os/OSInterrupt.c"),
+            Object(Matching, "revolution/os/OSLink.c"),
+            Object(Matching, "revolution/os/OSMessage.c"),
+            Object(Matching, "revolution/os/OSMemory.c"),
+            Object(Matching, "revolution/os/OSMutex.c"),
+            Object(Matching, "revolution/os/OSReboot.c"),
+            Object(NonMatching, "revolution/os/OSReset.c"),
+            Object(Matching, "revolution/os/OSRtc.c"),
+            Object(Matching, "revolution/os/OSSync.c"),
+            Object(Matching, "revolution/os/OSThread.c"),
+            Object(Matching, "revolution/os/OSTime.c"),
+            Object(Matching, "revolution/os/OSUtf.c", mw_console = "GC", mw_version = "3.0a5.2"),
+            Object(Matching, "revolution/os/OSIpc.c"),
+            Object(Matching, "revolution/os/OSStateTM.c"),
+            Object(Matching, "revolution/os/__start.c"),
+            Object(Matching, "revolution/os/OSPlayRecord.c"),
+            Object(Matching, "revolution/os/OSStateFlags.c"),
+            Object(NonMatching, "revolution/os/OSNet.c"),
+            Object(Matching, "revolution/os/OSNandbootInfo.c"),
+            Object(NonMatching, "revolution/os/OSPlayTime.c"),
+            Object(Matching, "revolution/os/OSCrc.c"),
+            Object(NonMatching, "revolution/os/OSLaunch.c"),
+            Object(Matching, "revolution/os/__ppc_eabi_init.c"),
+        ],
+    ),
+    DolphinLib(
+        "pad",
+        [
+            Object(Matching, "revolution/pad/Pad.c"),
+        ],
+    ),
+    DolphinLib(
+        "sc",
+        [
+            Object(NonMatching, "revolution/sc/scsystem.c"),
+            Object(Matching, "revolution/sc/scapi.c"),
+            Object(Matching, "revolution/sc/scapi_prdinfo.c", mw_console = "GC", mw_version = "3.0a5.2"),
+        ],
+    ),
+    DolphinLib(
+        "si",
+        [
+            Object(NonMatching, "revolution/si/SIBios.c"),
+            Object(Matching, "revolution/si/SISamplingRate.c"),
+        ],
+    ),
+    DolphinLib(
+        "tpl",
+        [
+            Object(Matching, "revolution/tpl/TPL.c"),
+        ],
+    ),
+    DolphinLib(
+        "usb",
+        [
+            Object(Matching, "revolution/usb/usb.c"),
+        ],
+    ),
+    DolphinLib(
+        "vi",
+        [
+            Object(NonMatching, "revolution/vi/vi.c"),
+            Object(NonMatching, "revolution/vi/i2c.c"),
+            Object(NonMatching, "revolution/vi/vi3in1.c"),
+        ],
+    ),
+    DolphinLib(
+        "wenc",
+        [
+            Object(NonMatching, "revolution/wenc/wenc.c"),
+        ],
+    ),
+    DolphinLib(
+        "wpad",
+        [
+            Object(NonMatching, "revolution/wpad/WPAD.c"),
+            Object(NonMatching, "revolution/wpad/WPADHIDParser.c"),
+            Object(NonMatching, "revolution/wpad/WPADEncrypt.c"),
+            Object(NonMatching, "revolution/wpad/WPADMem.c"),
+            Object(Matching, "revolution/wpad/debug_msg.c"),
+        ],
+    ),
+    DolphinLib(
+        "wud",
+        [
+            Object(NonMatching, "revolution/wud/WUD.c"),
+            Object(NonMatching, "revolution/wud/WUDHidHost.c"),
+            Object(Matching, "revolution/wud/debug_msg.c"),
+        ],
+    ),
+    criwareLib(
+        "libadxwii",
+        [
+            Object(NonMatching, "adx/adxf/adx_fini.c"),
+            Object(NonMatching, "adx/adxf/adx_fs.c"),
+            Object(Matching, "adx/adxf/adx_fcch.c"),
+            Object(NonMatching, "adx/adxt/adx_fsvr.c"),
+            Object(NonMatching, "adx/adxt/adx_inis.c"),
+            Object(NonMatching, "adx/adxt/adx_lsc.c"),
+            Object(NonMatching, "adx/adxt/adx_mng.c"),
+            Object(NonMatching, "adx/adxt/adx_sfa.c"),
+            Object(NonMatching, "adx/adxt/adx_sjd.c"),
+            Object(NonMatching, "adx/adxt/adx_stmc.c"),
+            Object(NonMatching, "adx/adxt/adx_tlk2.c"),
+            Object(NonMatching, "adx/adxt/adx_tlk.c"),
+            Object(NonMatching, "adx/adxt/adx_tsvr.c"),
+            Object(NonMatching, "adx/adxt/adx_xpnd.c"),
+            Object(NonMatching, "adx/adxt/adx_amp.c"),
+            Object(NonMatching, "adx/adxt/adx_bahx.c"),
+            Object(NonMatching, "adx/adxt/adx_baif.c"),
+            Object(NonMatching, "adx/adxt/adx_bsc.c"),
+            Object(NonMatching, "adx/adxt/adx_bwav.c"),
+            Object(NonMatching, "adx/adxt/code_80389300.c"),
+            Object(NonMatching, "adx/adxt/adx_crs.c"),
+            Object(NonMatching, "adx/adxt/adx_dcd5.c"),
+            Object(NonMatching, "adx/adxt/adx_dcd.c"),
+            Object(NonMatching, "adx/adxt/adx_errs.c"),
+            Object(Matching, "adx/ahx/ahx_ftbl.c"),
+            Object(NonMatching, "adx/ahx/ahx_link.c"),
+            Object(NonMatching, "adx/ahx/ahx_mflt_c.c"),
+            Object(NonMatching, "adx/ahx/ahx_mwin2_c.c"),
+            Object(NonMatching, "adx/ahx/ahx_sbf2.c"),
+            Object(NonMatching, "adx/ahx/ahx_sbf.c"),
+            Object(NonMatching, "adx/ahx/ahx_sjd.c"),
+            Object(Matching, "adx/ahx/ahx_wtbl.c"),
+            Object(NonMatching, "adx/ahx/adx_hdr.c"),
+            Object(Matching, "adx/ahx/ahx_atbl.c"),
+            Object(NonMatching, "adx/ahx/ahx_bsr.c"),
+            Object(NonMatching, "adx/ahx/ahx_cmn.c"),
+            Object(NonMatching, "adx/ahx/ahx_dcd.c"),
+            Object(NonMatching, "adx/cricfg/cfg_lib.c"),
+            Object(NonMatching, "adx/cvfs/cri_cvfs.c"),
+            Object(NonMatching, "adx/gcci/gcci.c"),
+            Object(NonMatching, "adx/gcci/gcci_sub.c"),
+            Object(NonMatching, "adx/lsc/lsc_err.c"),
+            Object(NonMatching, "adx/lsc/lsc_ini.c"),
+            Object(NonMatching, "adx/lsc/lsc_svr.c"),
+            Object(NonMatching, "adx/lsc/lsc.c"),
+            Object(NonMatching, "adx/lsc/lsc_crs.c"),
+            Object(NonMatching, "adx/mfci/mfci.c"),
+            Object(NonMatching, "adx/sj/sj_mem.c"),
+            Object(NonMatching, "adx/sj/sj_rbf.c"),
+            Object(NonMatching, "adx/sj/sj_uni.c"),
+            Object(NonMatching, "adx/sj/sj_utl.c"),
+            Object(Matching, "adx/sj/sj_crs.c"),
+            Object(NonMatching, "adx/sj/sj_err.c"),
+            Object(NonMatching, "adx/svm/svm.c"),
+            Object(NonMatching, "adx/adxt/adx_dcd3.c"),
+            Object(NonMatching, "adx/adxt/adx_bsps.c"),
+            Object(NonMatching, "adx/adxt/adx_bau.c"),
+            Object(NonMatching, "adx/wiirna/rna_crs.c"),
+            Object(NonMatching, "adx/wiirna/rna_err.c"),
+            Object(NonMatching, "adx/wiirna/ax_rna.c"),
+            Object(NonMatching, "adx/adxt/srcwii/adx_mwii.c"),
+            Object(NonMatching, "adx/adxt/srcwii/adx_suwii.c"),
+            Object(NonMatching, "adx/adxt/srcwii/adx_rnawii.c"),
+            Object(NonMatching, "adx/std/cri_crw_std.c"),
+        ],
+    ),
+    criwareLib(
+        "libmwsfdwii",
+        [
+            Object(NonMatching, "sofdec/cft/srcgc/cftyp422_ppc.c"),
+            Object(NonMatching, "sofdec/cft/cft_common.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdfrm.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdrna.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdrsc.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsl.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsvm.c"),
+            Object(NonMatching, "sofdec/mwply/mwstm.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsee.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsfx.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdcre.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdlib.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdply.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdset.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsvr.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfdsst.c"),
+            Object(NonMatching, "sofdec/mwply/mwsfx_Y84C44.c"),
+            Object(NonMatching, "sofdec/mwply/code_803A3AE4.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_bdec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_cdec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_cmc.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_dec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_deli.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_emp.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_err.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_frm.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_get.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_hdec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_lib.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_mc.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_vlc.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_umc.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_mcy.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_m2v.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpvabdec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mpv/mpv_slice.c"),
+            Object(NonMatching, "sofdec/sfdcore/dct/dct_ac.c"),
+            Object(NonMatching, "sofdec/sfdcore/dct/dct_isr.c"),
+            Object(NonMatching, "sofdec/sfdcore/dct/dct_ver.c"),
+            Object(NonMatching, "sofdec/sfdcore/memcpy/mcp_not.c"),
+            Object(NonMatching, "sofdec/sfdcore/mps/mps_dec.c"),
+            Object(NonMatching, "sofdec/sfdcore/mps/mps_del.c"),
+            Object(NonMatching, "sofdec/sfdcore/mps/mps_get.c"),
+            Object(NonMatching, "sofdec/sfdcore/mps/mps_lib.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_adxt.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_aoap.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_buf.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/code_803BFD20.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_con.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_hds.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_lib.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_mem.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_mps.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_mpv.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_mpvf.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_pl2.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_ply.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_pts.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_see.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_set.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_tim.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_trn.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_uo.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_vom.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_tmr.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_tst.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfd/sfd_seeki.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfh/sfh_local.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfh/sfh_main.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfh/sfh_ver1.c"),
+            Object(NonMatching, "sofdec/sfdcore/sfh/sfh_ver2.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/cmptime.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/memcpyd.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/memsetd.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/muldiv.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/muldivr.c"),
+            Object(NonMatching, "sofdec/sfdcore/uty/uty_tmr.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_set.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_cnv.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_inf.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_lib.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_alp.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_zmv.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_sud.c"),
+            Object(NonMatching, "sofdec/sfx/sfx_cnv_to_Y84C44.c"),
+            Object(NonMatching, "sofdec/sud/sud_lib.c"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_db",
+        [
+            Object(NonMatching, "db/db_console.cpp"),
+            Object(NonMatching, "db/db_assert.cpp"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_g3d",
+        [
+            Object(NonMatching, "g3d/res/g3d_rescommon.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resdict.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resfile.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resmdl.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resshp.cpp"),
+            Object(NonMatching, "g3d/res/g3d_restev.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resmat.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resvtx.cpp"),
+            Object(NonMatching, "g3d/res/g3d_restex.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resnode.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanm.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmclr.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmtexpat.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmtexsrt.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmchr.cpp"),
+            Object(NonMatching, "g3d/res/g3d_reslightset.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmamblight.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmlight.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmfog.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmcamera.cpp"),
+            Object(NonMatching, "g3d/res/g3d_resanmscn.cpp"),
+            Object(NonMatching, "g3d/g3d_transform.cpp"),
+            Object(NonMatching, "g3d/g3d_anmvis.cpp"),
+            Object(NonMatching, "g3d/g3d_anmclr.cpp"),
+            Object(NonMatching, "g3d/g3d_anmtexpat.cpp"),
+            Object(NonMatching, "g3d/g3d_anmtexsrt.cpp"),
+            Object(NonMatching, "g3d/g3d_anmchr.cpp"),
+            Object(NonMatching, "g3d/g3d_anmshp.cpp"),
+            Object(NonMatching, "g3d/g3d_anmscn.cpp"),
+            Object(NonMatching, "g3d/g3d_obj.cpp"),
+            Object(NonMatching, "g3d/g3d_anmobj.cpp"),
+            Object(NonMatching, "g3d/platform/g3d_gpu.cpp"),
+            Object(NonMatching, "g3d/platform/g3d_cpu.cpp"),
+            Object(NonMatching, "g3d/g3d_state.cpp"),
+            Object(NonMatching, "g3d/g3d_draw1mat1shp.cpp"),
+            Object(NonMatching, "g3d/g3d_calcview.cpp"),
+            Object(NonMatching, "g3d/g3d_dcc.cpp"),
+            Object(NonMatching, "g3d/g3d_workmem.cpp"),
+            Object(NonMatching, "g3d/g3d_calcworld.cpp"),
+            Object(NonMatching, "g3d/g3d_draw.cpp"),
+            Object(NonMatching, "g3d/g3d_camera.cpp"),
+            Object(NonMatching, "g3d/dcc/g3d_basic.cpp"),
+            Object(NonMatching, "g3d/dcc/g3d_maya.cpp"),
+            Object(NonMatching, "g3d/dcc/g3d_xsi.cpp"),
+            Object(NonMatching, "g3d/dcc/g3d_3dsmax.cpp"),
+            Object(NonMatching, "g3d/g3d_scnobj.cpp"),
+            Object(NonMatching, "g3d/g3d_scnroot.cpp"),
+            Object(NonMatching, "g3d/g3d_scnmdlsmpl.cpp"),
+            Object(NonMatching, "g3d/g3d_scnmdl.cpp"),
+            Object(NonMatching, "g3d/g3d_scnmdlexpand.cpp"),
+            Object(NonMatching, "g3d/g3d_calcmaterial.cpp"),
+            Object(NonMatching, "g3d/g3d_init.cpp"),
+            Object(NonMatching, "g3d/g3d_scnproc.cpp"),
+            Object(NonMatching, "g3d/g3d_fog.cpp"),
+            Object(NonMatching, "g3d/g3d_light.cpp"),
+            Object(NonMatching, "g3d/g3d_calcvtx.cpp"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_lyt",
+        [
+            Object(Matching, "lyt/lyt_init.cpp"),
+            Object(NonMatching, "lyt/lyt_pane.cpp"),
+            Object(NonMatching, "lyt/lyt_group.cpp"),
+            Object(NonMatching, "lyt/lyt_layout.cpp"),
+            Object(NonMatching, "lyt/lyt_picture.cpp"),
+            Object(NonMatching, "lyt/lyt_textBox.cpp"),
+            Object(NonMatching, "lyt/lyt_window.cpp"),
+            Object(NonMatching, "lyt/lyt_bounding.cpp"),
+            Object(NonMatching, "lyt/lyt_material.cpp"),
+            Object(NonMatching, "lyt/lyt_texMap.cpp"),
+            Object(Matching, "lyt/lyt_drawInfo.cpp"),
+            Object(NonMatching, "lyt/lyt_animation.cpp"),
+            Object(Matching, "lyt/lyt_resourceAccessor.cpp"),
+            Object(NonMatching, "lyt/lyt_arcResourceAccessor.cpp"),
+            Object(NonMatching, "lyt/lyt_common.cpp"),
+            Object(NonMatching, "lyt/lyt_util.cpp"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_math",
+        [
+            Object(NonMatching, "math/math_arithmetic.cpp"),
+            Object(NonMatching, "math/math_triangular.cpp"),
+            Object(NonMatching, "math/math_types.cpp"),
+            Object(NonMatching, "math/math_geometry.cpp"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_snd",
+        [
+            Object(NonMatching, "snd/snd_AxManager.cpp"),
+            Object(NonMatching, "snd/snd_AxVoice.cpp"),
+            Object(NonMatching, "snd/snd_AxVoiceManager.cpp"),
+            Object(NonMatching, "snd/snd_AxfxImpl.cpp"),
+            Object(NonMatching, "snd/snd_Bank.cpp"),
+            Object(NonMatching, "snd/snd_BankFile.cpp"),
+            Object(NonMatching, "snd/snd_BasicPlayer.cpp"),
+            Object(NonMatching, "snd/snd_BasicSound.cpp"),
+            Object(NonMatching, "snd/snd_BiquadFilterPreset.cpp"),
+            Object(NonMatching, "snd/snd_Channel.cpp"),
+            Object(NonMatching, "snd/snd_DisposeCallbackManager.cpp"),
+            Object(NonMatching, "snd/snd_EnvGenerator.cpp"),
+            Object(NonMatching, "snd/snd_ExternalSoundPlayer.cpp"),
+            Object(NonMatching, "snd/snd_FxChorusDpl2.cpp"),
+            Object(NonMatching, "snd/snd_FxDelayDpl2.cpp"),
+            Object(NonMatching, "snd/snd_FxReverbStdDpl2.cpp"),
+            Object(NonMatching, "snd/snd_InstancePool.cpp"),
+            Object(NonMatching, "snd/snd_Lfo.cpp"),
+            Object(NonMatching, "snd/snd_McsSoundArchive.cpp"),
+            Object(NonMatching, "snd/snd_MemorySoundArchive.cpp"),
+            Object(NonMatching, "snd/snd_MidiSeqPlayer.cpp"),
+            Object(NonMatching, "snd/snd_MmlParser.cpp"),
+            Object(NonMatching, "snd/snd_MmlSeqTrack.cpp"),
+            Object(NonMatching, "snd/snd_MmlSeqTrackAllocator.cpp"),
+            Object(NonMatching, "snd/snd_PlayerHeap.cpp"),
+            Object(NonMatching, "snd/snd_RemoteSpeaker.cpp"),
+            Object(NonMatching, "snd/snd_RemoteSpeakerManager.cpp"),
+            Object(NonMatching, "snd/snd_SeqFile.cpp"),
+            Object(NonMatching, "snd/snd_SeqPlayer.cpp"),
+            Object(NonMatching, "snd/snd_SeqSound.cpp"),
+            Object(NonMatching, "snd/snd_SeqSoundHandle.cpp"),
+            Object(NonMatching, "snd/snd_SeqTrack.cpp"),
+            Object(NonMatching, "snd/snd_SoundArchive.cpp"),
+            Object(NonMatching, "snd/snd_SoundArchiveFile.cpp"),
+            Object(NonMatching, "snd/snd_SoundArchivePlayer.cpp"),
+            Object(NonMatching, "snd/snd_SoundHandle.cpp"),
+            Object(NonMatching, "snd/snd_SoundPlayer.cpp"),
+            Object(NonMatching, "snd/snd_SoundStartable.cpp"),
+            Object(NonMatching, "snd/snd_SoundSystem.cpp"),
+            Object(NonMatching, "snd/snd_SoundThread.cpp"),
+            Object(NonMatching, "snd/snd_StrmChannel.cpp"),
+            Object(NonMatching, "snd/snd_StrmFile.cpp"),
+            Object(NonMatching, "snd/snd_StrmPlayer.cpp"),
+            Object(NonMatching, "snd/snd_StrmSound.cpp"),
+            Object(NonMatching, "snd/snd_StrmSoundHandle.cpp"),
+            Object(NonMatching, "snd/snd_Task.cpp"),
+            Object(NonMatching, "snd/snd_TaskManager.cpp"),
+            Object(NonMatching, "snd/snd_TaskThread.cpp"),
+            Object(NonMatching, "snd/snd_Voice.cpp"),
+            Object(NonMatching, "snd/snd_VoiceManager.cpp"),
+            Object(NonMatching, "snd/snd_Util.cpp"),
+            Object(NonMatching, "snd/snd_WaveFile.cpp"),
+            Object(NonMatching, "snd/snd_WaveSound.cpp"),
+            Object(NonMatching, "snd/snd_WaveSoundHandle.cpp"),
+            Object(NonMatching, "snd/snd_WsdFile.cpp"),
+            Object(NonMatching, "snd/snd_WsdPlayer.cpp"),
+            Object(Matching, "snd/snd_adpcm.cpp"),
+        ],
+    ),
+    nw4rLib(
+        "libnw4r_ut",
+        [
+            Object(Matching, "ut/ut_LinkList.cpp"),
+            Object(Matching, "ut/ut_binaryFileFormat.cpp"),
+            Object(Matching, "ut/ut_CharStrmReader.cpp"),
+            Object(Matching, "ut/ut_TagProcessorBase.cpp"),
+            Object(Matching, "ut/ut_IOStream.cpp"),
+            Object(Matching, "ut/ut_FileStream.cpp"),
+            Object(NonMatching, "ut/ut_DvdFileStream.cpp"),
+            Object(Matching, "ut/ut_LockedCache.cpp"),
+            Object(Matching, "ut/ut_Font.cpp"),
+            Object(NonMatching, "ut/ut_ResFontBase.cpp"),
+            Object(Matching, "ut/ut_ResFont.cpp"),
+            Object(NonMatching, "ut/ut_ArchiveFontBase.cpp"),
+            Object(NonMatching, "ut/ut_PackedFont.cpp"),
+            Object(NonMatching, "ut/ut_CharWriter.cpp"),
+            Object(NonMatching, "ut/ut_TextWriterBase.cpp"),
+        ],
+    ),
+    {
+        "lib": "monolib",
+        "mw_console": "Wii",
+        "mw_version": "1.1",
+        "root_dir": "libs/monolib",
+        "cflags": cflags_game,
+        "host": True,
+        "objects": [
+            Object(NonMatching, "CAttrTransform.cpp"),
+            Object(NonMatching, "MemManager.cpp"),
+            Object(NonMatching, "CPathUtil.cpp"),
+            Object(Matching, "MTRand.cpp"),
+            Object(Matching, "CRect16.cpp"),
+            Object(Matching, "CVec3.cpp"),
+            Object(Matching, "CVec4.cpp"),
+            Object(Matching, "FastCast.cpp"),
+            Object(Matching, "MathConstants.cpp"),
+            Object(Matching, "Random.cpp"),
+            Object(Matching, "FloatUtils.cpp"),
+            Object(Matching, "CCol3.cpp"),
+            Object(Matching, "CCol4.cpp"),
+            Object(NonMatching, "CMat34.cpp"),
+            Object(Matching, "CMat44.cpp"),
+            Object(NonMatching, "CQuat.cpp"),
+            Object(NonMatching, "work/CWorkThread.cpp"),
+            Object(NonMatching, "CProc.cpp"),
+            Object(NonMatching, "CProcRoot.cpp"),
+            Object(NonMatching, "CRsrcData.cpp"),
+            Object(NonMatching, "CScriptCode.cpp"),
+            Object(NonMatching, "CToken.cpp"),
+            Object(NonMatching, "CRootProc.cpp"),
+            Object(NonMatching, "CView.cpp"),
+            Object(NonMatching, "CViewFrame.cpp"),
+            Object(NonMatching, "CViewRoot.cpp"),
+            Object(NonMatching, "work/CWorkControl.cpp"),
+            Object(NonMatching, "work/CWorkFlowSetup.cpp"),
+            Object(NonMatching, "work/CWorkRoot.cpp"),
+            Object(NonMatching, "work/CWorkSystem.cpp"),
+            Object(NonMatching, "work/CWorkSystemMem.cpp"),
+            Object(NonMatching, "CProcess.cpp"),
+            Object(NonMatching, "CDoubleListNode.cpp"),
+            Object(NonMatching, "CChildListNode.cpp"),
+            Object(NonMatching, "device/CDeviceRemotePad.cpp"),
+            Object(NonMatching, "device/CDeviceBase.cpp"),
+            Object(Matching, "device/CDeviceSC.cpp"),
+            Object(NonMatching, "device/CDeviceVI.cpp"),
+			Object(Matching, "device/CDeviceVICb.cpp"),
+            Object(NonMatching, "CFontLayer.cpp"),
+            Object(NonMatching, "CGXCache.cpp"),
+            Object(NonMatching, "device/CDevice.cpp"),
+            Object(NonMatching, "device/CDeviceClock.cpp"),
+            Object(NonMatching, "device/CDeviceFile.cpp"),
+            Object(NonMatching, "device/CDeviceFileCri.cpp"),
+            Object(Matching, "code_80450B14.cpp"),
+            Object(NonMatching, "device/code_80450B2C.cpp"),
+            Object(NonMatching, "device/CDeviceFileDvd.cpp"),
+            Object(NonMatching, "device/CDeviceFileJob.cpp"),
+            Object(NonMatching, "device/CDeviceFileJobReadDvd.cpp"),
+            Object(NonMatching, "device/CDeviceFont.cpp"),
+            Object(NonMatching, "device/CDeviceFontInfoExt.cpp"),
+            Object(NonMatching, "device/CDeviceFontInfoRom.cpp"),
+            Object(NonMatching, "device/CDeviceFontLayer.cpp"),
+            Object(NonMatching, "device/CDeviceFontLoader.cpp"),
+            Object(Matching, "device/CDeviceGX.cpp"),
+            Object(NonMatching, "CDesktop.cpp"),
+            Object(NonMatching, "code_80456134.cpp"),
+            Object(NonMatching, "CException.cpp"),
+            Object(NonMatching, "lib/CLib.cpp"),
+            Object(NonMatching, "lib/CLibCri.cpp"),
+            Object(NonMatching, "lib/CLibCriMoviePlay.cpp"),
+            Object(NonMatching, "lib/CLibCriStreamingPlay.cpp"),
+            Object(NonMatching, "lib/CLibG3d.cpp"),
+            Object(NonMatching, "lib/CLibHbm.cpp"),
+            Object(NonMatching, "lib/CLibHbmControl.cpp"),
+            Object(NonMatching, "lib/CLibLayout.cpp"),
+            Object(NonMatching, "lib/CLibStaticData.cpp"),
+            Object(NonMatching, "lib/CLibVM.cpp"),
+            Object(NonMatching, "CTaskLOD.cpp"),
+            Object(NonMatching, "code_8046376C.cpp"),
+            Object(NonMatching, "code_804645CC.cpp"),
+            Object(NonMatching, "code_80468434.cpp"),
+            Object(NonMatching, "code_8046A530.cpp"),
+            Object(NonMatching, "LOD/LODMemMan.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawDisplayList.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawMdlNoColor.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawMdlColor.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawBillboard.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawCross.cpp"),
+            Object(NonMatching, "mpfsys/MPFDrawBillLayTex.cpp"),
+            Object(NonMatching, "mpfsys/code_8047BB54.cpp"),
+            Object(NonMatching, "code_8047CA88.cpp"),
+            Object(NonMatching, "code_8047D2AC.cpp"),
+            Object(NonMatching, "scn/CScnItemCameraNw4r.cpp"),
+            Object(NonMatching, "scn/CScnItemId.cpp"),
+            Object(NonMatching, "scn/CScnItemLight.cpp"),
+            Object(NonMatching, "scn/CScnItemLightNw4r.cpp"),
+            Object(NonMatching, "scn/CScnItemModel.cpp"),
+            Object(NonMatching, "scn/CScnItemModelNw4r.cpp"),
+            Object(NonMatching, "scn/CScnItemPool.cpp"),
+            Object(NonMatching, "scn/CScnLightMan.cpp"),
+            Object(NonMatching, "scn/CScnMaruShadowNw4r.cpp"),
+            Object(NonMatching, "scn/CScnMem.cpp"),
+            Object(NonMatching, "scn/CScnRoot.cpp"),
+            Object(NonMatching, "scn/CScnRootNw4r.cpp"),
+            Object(NonMatching, "scn/CScnTexWorkMan.cpp"),
+            Object(NonMatching, "scn/CScnVirtualLight.cpp"),
+            Object(NonMatching, "code_8049431C.cpp"),
+            Object(NonMatching, "CVirtualLightAmb.cpp"),
+            Object(NonMatching, "CVirtualLightDir.cpp"),
+            Object(NonMatching, "CVirtualLightObj.cpp"),
+            Object(NonMatching, "scn/CScn.cpp"),
+            Object(NonMatching, "scn/CScn_80496B0C.cpp"),
+            Object(NonMatching, "scn/CScnBlend.cpp"),
+            Object(NonMatching, "scn/CScnBloom.cpp"),
+            Object(NonMatching, "scn/CScnCameraMan.cpp"),
+            Object(NonMatching, "scn/CScnEffectActNw4r.cpp"),
+            Object(NonMatching, "scn/CScnFadeMan.cpp"),
+            Object(NonMatching, "scn/CScnFilter.cpp"),
+            Object(NonMatching, "scn/CScnFilterMan.cpp"),
+            Object(NonMatching, "scn/CScnFogMan.cpp"),
+            Object(NonMatching, "scn/CScnFrame.cpp"),
+            Object(NonMatching, "scn/CScnIdMan.cpp"),
+            Object(NonMatching, "scn/CScnItemAnim.cpp"),
+            Object(NonMatching, "scn/CScnItemCamera.cpp"),
+            Object(NonMatching, "vm/yvm.cpp"),
+            Object(NonMatching, "code_804A6C60.cpp"),
+            Object(NonMatching, "CColiProc.cpp"),
+            Object(NonMatching, "code_804B2FF0.cpp"),
+            Object(NonMatching, "code_804B59C8.cpp"),
+            Object(NonMatching, "code_804BAE10.cpp"),
+            Object(NonMatching, "code_804BC9EC.cpp"),
+            Object(NonMatching, "code_804BD8E8.cpp"),
+            Object(NonMatching, "code_804BF59C.cpp"),
+            Object(NonMatching, "CLight.cpp"),
+            Object(NonMatching, "scn/CScnEnvLgtCtrl.cpp"),
+            Object(Matching, "Unknown1.cpp"),
+            Object(NonMatching, "code_804C8684.cpp"),
+            Object(NonMatching, "code_804C8718.cpp"),
+            Object(NonMatching, "code_804CC2B8.cpp"),
+            Object(NonMatching, "effect/CETrail.cpp"),
+            Object(NonMatching, "effect/code_804D854C.cpp"),
+            Object(NonMatching, "work/CWorkSystemCache.cpp"),
+            Object(NonMatching, "code_804D9274.cpp"),
+            Object(NonMatching, "nand/CNand.cpp"),
+            Object(NonMatching, "nand/CNReqtaskSave.cpp"),
+            Object(NonMatching, "nand/CNReqtaskLoad.cpp"),
+            Object(NonMatching, "nand/CNReqtaskReaddir.cpp"),
+            Object(NonMatching, "nand/CNReqtaskRemove.cpp"),
+            Object(NonMatching, "nand/CNReqtaskCheck.cpp"),
+            Object(Matching, "effect/CERand.cpp"),
+            Object(NonMatching, "code_804DB938.cpp"),
+            Object(NonMatching, "work/CWorkSystemPack.cpp"),
+            Object(NonMatching, "CPackItem.cpp"),
+            Object(NonMatching, "CArcItem.cpp"),
+            Object(NonMatching, "code_804DEDA8.cpp"),
+            Object(NonMatching, "CSchedule.cpp"),
+            Object(NonMatching, "code_804E36DC.cpp"),
+            Object(NonMatching, "ScheduleList.cpp"),
+            Object(NonMatching, "scn/CMdlMaterial.cpp"),
+            Object(NonMatching, "scn/CMdlMouth.cpp"),
+            Object(NonMatching, "scn/CMdlAnmUV.cpp"),
+            Object(NonMatching, "scn/CMdlAnmEye.cpp"),
+            Object(NonMatching, "scn/CMdlLook.cpp"),
+            Object(NonMatching, "scn/CMdlDynamics.cpp"),
+            Object(NonMatching, "code_804EE0F4.cpp"),
+            Object(NonMatching, "code_804F0258.cpp"),
+            Object(NonMatching, "nand/CNReqtaskSaveBanner.cpp"),
+            Object(NonMatching, "nand/CNBanner.cpp"),
+        ],
+    }
+]
 
-    # Check if all compiler versions exist
-    for (mw_console, mw_version) in used_compiler_versions:
-        mw_path = args.compilers / mw_console / mw_version / "mwcceppc.exe"
-        if not os.path.exists(mw_path):
-            print(f"Compiler {mw_path} does not exist")
-            exit(1)
-
-    # Check if linker exists
-    mw_path = args.compilers / mw_link_console / mw_link_version / "mwldeppc.exe"
-    if not os.path.exists(mw_path):
-        print(f"Linker {mw_path} does not exist")
-        exit(1)
-
-    ###
-    # Link
-    ###
-    n.comment("Link")
-    if args.map:
-        n.build(
-            outputs=path(build_path / "main.elf"),
-            rule="link",
-            inputs=path(link_inputs),
-            implicit_outputs=path(map_path),
-        )
-    else:
-        n.build(
-            outputs=path(build_path / "main.elf"),
-            rule="link",
-            inputs=path(link_inputs),
-        )
-    n.newline()
-
-    ###
-    # Helper rule for building all source files
-    ###
-    n.comment("Build all source files")
-    n.build(
-        outputs="all_source",
-        rule="phony",
-        inputs=path(source_inputs),
-    )
-    n.newline()
-
-    ###
-    # Helper rule for building all source files, with a host compiler
-    ###
-    n.comment("Build all source files with a host compiler")
-    n.build(
-        outputs="all_source_host",
-        rule="phony",
-        inputs=path(host_source_inputs),
-    )
-    n.newline()
-
-    ###
-    # Generate DOL
-    ###
-    n.comment("Generate DOL")
-    n.rule(
-        name="elf2dol",
-        command=f"{dtk} elf2dol $in $out",
-        description="DOL $out",
-    )
-    n.build(
-        outputs=path(build_path / "main.dol"),
-        rule="elf2dol",
-        inputs=path(build_path / "main.elf"),
-        implicit=path(dtk),
-    )
-    n.newline()
-
-    ###
-    # Check DOL hash
-    ###
-    if args.check:
-        n.comment("Check DOL hash")
-        n.rule(
-            name="check",
-            command=f"{dtk} shasum -c $in -o $out",
-            description="CHECK $in",
-        )
-        n.build(
-            outputs=path(build_path / "main.dol.ok"),
-            rule="check",
-            inputs=f"sha1/xenoblade.{version}.sha1",
-            implicit=path([build_path / "main.dol", dtk]),
-        )
-        n.newline()
-
-    ###
-    # Progress script
-    ###
-    if args.map:
-        n.comment("Check progress")
-        calc_progress = tools_path / "calcprogress.py"
-        n.rule(
-            name="progress",
-            command=f"$python {calc_progress} $in -o $out",
-            description="PROGRESS $in",
-        )
-        n.build(
-            outputs=path(build_path / "main.dol.progress"),
-            rule="progress",
-            inputs=path([build_path / "main.dol", map_path]),
-            implicit=path([calc_progress, build_path / "main.dol.ok"]),
-        )
-        n.newline()
-
-    ###
-    # Regenerate on change
-    ###
-    n.comment("Reconfigure on change")
-    n.rule(
-        name="configure",
-        command="$python configure.py $configure_args",
-        generator=True,
-    )
-    n.build(
-        outputs="build.ninja",
-        rule="configure",
-        implicit=path(["configure.py", tools_path / "ninja_syntax.py"]),
-    )
-    n.newline()
-
-    ###
-    # Default rule
-    ###
-    n.comment("Default rule")
-    if args.check:
-        dol_out = build_path / "main.dol.ok"
-    else:
-        dol_out = build_path / "main.dol"
-    if args.map:
-        n.default(path([dol_out, build_path / "main.dol.progress"]))
-    else:
-        n.default(path([dol_out]))
-
-    ###
-    # Write build.ninja
-    ###
-    with open("build.ninja", "w") as f:
-        f.write(out.getvalue())
-    n.close()
-
-    ###
-    # Write objdiff config
-    ###
-    with open("objdiff.json", "w") as w:
-        json.dump(objdiff_config, w, indent=4)
-
-if __name__ == "__main__":
-    main()
+if args.mode == "configure":
+    # Write build.ninja and objdiff.json
+    generate_build(config)
+elif args.mode == "progress":
+    # Print progress and write progress.json
+    config.progress_each_module = args.verbose
+    config.progress_all = False
+    calculate_progress(config)
+else:
+    sys.exit("Unknown mode: " + args.mode)

@@ -99,7 +99,7 @@ CDevice* CDevice::create(){
 
 void CDevice::createRegions(){
 	int deviceRegion1Offset = CDeviceGX::func_804557A0() + func_80454E78() + 0x80;
-	deviceRegion1Offset += CDeviceVI::func_80448E80() ? 0 : CDeviceVI::getSomeSize();
+	deviceRegion1Offset += CDeviceVI::func_80448E80() ? 0 : CDeviceVI::getXfbBuffersSize();
 	lbl_80665FA0 = mtl::heap_createRegion(mtl::Heap_getRegionIndex1(), deviceRegion1Offset, devSys1String);
 	lbl_80665FA4 = mtl::heap_createRegion(mtl::Heap_getRegionIndex2(), 0x1A0000, devSys2String);
 }

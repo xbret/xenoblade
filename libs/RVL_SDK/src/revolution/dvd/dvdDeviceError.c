@@ -152,8 +152,8 @@ fatal:
 }
 
 const char* const __DVDDeviceErrorMessage[] = {
-    "\n\n\nƒGƒ‰[ƒR[ƒh‚O‚O‚PB\n"
-    "•s–¾‚ÈƒfƒoƒCƒX‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½B",
+    "\n\n\nã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ï¼ï¼ï¼‘ã€‚\n"
+    "ä¸æ˜ãªãƒ‡ãƒã‚¤ã‚¹ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸã€‚",
 
     "\n\n\nError #001,\n"
     "unauthorized device has been detected.",

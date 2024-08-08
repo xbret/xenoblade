@@ -1,75 +1,121 @@
-Xenoblade[![Build Status]][actions] ![Code Progress] ![Data Progress]
+Xenoblade  
+[![Build Status]][actions] ![Code Progress] ![Data Progress] [![Discord Badge]][discord]
+=============
+
+<!--
+Replace with your repository's URL.
+-->
+[Build Status]: https://github.com/xbret/xenoblade-dtk/actions/workflows/build.yml/badge.svg
+[actions]: https://github.com/xbret/xenoblade-dtk/actions/workflows/build.yml
+<!---
+Code progress URL:
+https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=code
+URL encoded then appended to: https://img.shields.io/endpoint?label=Code&url=
+-->
+[Code Progress]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
+<!---
+Data progress URL:
+https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=data
+URL encoded then appended to: https://img.shields.io/endpoint?label=Data&url=
+-->
+[Data Progress]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+<!--
+Replace with your Discord server's ID and invite URL.
+-->
+[Discord Badge]: https://img.shields.io/discord/727908905392275526?color=%237289DA&logo=discord&logoColor=%23FFFFFF
+[discord]: https://discord.gg/ACfG9PB9Nc
+
+A work-in-progress decompilation of Xenoblade.
+
+This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
+
+Supported versions:
+
+- `jp`: Rev 0 (JP)
+- `eu`: Rev 0 (EU)
+- `us`: Rev 0 (US)
+
+Dependencies
+============
+
+Windows
+--------
+
+On Windows, it's **highly recommended** to use native tooling. WSL or msys2 are **not** required.  
+When running under WSL, [objdiff](#diffing) is unable to get filesystem notifications for automatic rebuilds.
+
+- Install [Python](https://www.python.org/downloads/) and add it to `%PATH%`.
+  - Also available from the [Windows Store](https://apps.microsoft.com/store/detail/python-311/9NRWMJP3717K).
+- Download [ninja](https://github.com/ninja-build/ninja/releases) and add it to `%PATH%`.
+  - Quick install via pip: `pip install ninja`
+
+macOS
+------
+
+- Install [ninja](https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages):
+
+  ```sh
+  brew install ninja
+  ```
+
+- Install [wine-crossover](https://github.com/Gcenx/homebrew-wine):
+
+  ```sh
+  brew install --cask --no-quarantine gcenx/wine/wine-crossover
+  ```
+
+After OS upgrades, if macOS complains about `Wine Crossover.app` being unverified, you can unquarantine it using:
+
+```sh
+sudo xattr -rd com.apple.quarantine '/Applications/Wine Crossover.app'
+```
+
+Linux
+------
+
+- Install [ninja](https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages).
+- For non-x86(_64) platforms: Install wine from your package manager.
+  - For x86(_64), [wibo](https://github.com/decompals/wibo), a minimal 32-bit Windows binary wrapper, will be automatically downloaded and used.
+
+Building
 ========
 
-[Build Status]: https://github.com/xbret/xenoblade/actions/workflows/build.yml/badge.svg
-[actions]: https://github.com/xbret/xenoblade/actions/workflows/build.yml
-[Code Progress]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.deco.mp%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
-[Data Progress]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.deco.mp%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+- Clone the repository:
 
-Decompilation of Xenoblade (JP)
+  ```sh
+  git clone https://github.com/my/repo.git
+  ```
 
+- Using [Dolphin Emulator](https://dolphin-emu.org/), extract your game to `orig/jp`.
+![](assets/dolphin-extract.png)
+  - To save space, the only necessary files are the following. Any others can be deleted.
+    - `sys/main.dol`
+    - `files/rels/*.rel`
+- Configure:
 
+  ```sh
+  python configure.py
+  ```
 
-It builds the following DOL:
+  To use a version other than `jp`, specify it with `--version`.
+- Build:
 
-xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
+  ```sh
+  ninja
+  ```
 
-> **Note**  
-> The ROM this repository builds can be shifted. You are able to add
-> and remove code as you see fit, for modding or research purposes.
+Visual Studio Code
+==================
 
+If desired, use the recommended Visual Studio Code settings by renaming the `.vscode.example` directory to `.vscode`.
 
-## Building
+Diffing
+=======
 
-### Required Tools
-[Python 3.8+](https://www.python.org/downloads/)
+Once the initial build succeeds, an `objdiff.json` should exist in the project root.
 
-### Instructions
+Download the latest release from [encounter/objdiff](https://github.com/encounter/objdiff). Under project settings, set `Project directory`. The configuration should be loaded automatically.
 
-1. Clone the repo using `git clone https://github.com/xbret/xenoblade/`
+Select an object from the left sidebar to begin diffing. Changes to the project will rebuild automatically: changes to source files, headers, `configure.py`, `splits.txt` or `symbols.txt`.
 
-2. Run `configure.py` to automatically download/build any other necessary files for the project.
-
-3. Enter `ninja` (recommended) or `make -j` in a command prompt or terminal.
-	- `-j` Allows `make` to use multiple threads, speeding up the process.
-	- `ninja` already implicitly uses the max amount of cores available, only use `-j` to *decrease* the thread count.
-	- If just `-j` gives errors on your setup, try specifying a set number of threads, e.g. `make -j 4`.
-
-* OPTIONAL STEPS:
-	- To generate a linker map (takes a considerable amount of time), run `ninja -m` or  `make MAPGENFLAG=1 -j`.
-
-* See [this video](https://youtu.be/CZXNQagqpkw) for a walkthrough of the steps on Windows (thanks Altafen for making this!).
-
-### Decompilation workflow
-
-- The project is compatible with [objdiff](https://github.com/encounter/objdiff), which is highly recommended for local decompilation testing. Objdiff can be built from source, or the latest stable build obtained from GitHub actions (recommended).
-
-- To obtain the latest stable build:
-	1. Navigate to the `Actions` tab of the objdiff repo.
-	2. Select the latest `main` workflow.
-	3. Scroll to the bottom of the page and download the `stable` release for your platform (Mac, Linux, Windows).
-	4. Extract contents of `.zip` to obtain an executable version.
-
-- To set up objdiff for this project:
-	1. Run `objdiff.exe`.
-	2. Set:
-		- Project dir: `/path/to/cloned/xenoblade`.
-		- Custom make program: `ninja` or `make`, depending on what was used to build previously.
-			- If specifying the name isn't enough, it's likely the program isn't on your `PATH`; try an absolute path instead.
-		- (`make` only) Build config: `None`.
-		- (`make` only) Select target build dir: `/path/to/cloned/xenoblade/build/xenoblade.jp/asm`.
-		- (`make` only) Select base build dir: `/path/to/cloned/xenoblade/build/xenoblade.jp/src`.
-	3. Select desired object file to diff:
-		- With `ninja`, an explorer viewer is provided after applying the previous settings.
-		- With `make`, you must explicitly select the object each time (likely from `xenoblade/build/xenoblade.jp/asm/LIBRARY/OBJECTFILE.o`).
-	4. Decomp it!
-
-### Generating Context for decomp.me Scratches
-
-- [decomp.me](https://decomp.me/) is an online decompilation sharing hub, allowing 'scratches' of functions to be generated and collaborated on.
-- Stand-alone decompilation packages and tools such as decomp.me require information on the functions and structures of the project in order to parse extracted blocks correctly. The easiest way to do this is to pass the tool just the necessary 'context' for the file, i.e. a set of all the headers used by the file that's being worked on.
-- A recursive context processing script is included in the repo ([tools/decompctx.py](https://github.com/xbret/xenoblade/tree/main/tools/decompctx.py)), which generates a `ctx.c` file in the root directory.
-	- The contents of this can then be copied and pasted into the 'Context' section of a decomp.me scratch or similar.
-- To use, call the generator via the terminal/command line from the root directory (replacing DIRECTORY and FILE as required):
-	```python tools/decompctx.py src/DIRECTORY/FILE.cpp```
-- Credit to encounter and the [Metroid Prime decomp project](https://github.com/PrimeDecomp/prime) for the script!
+![](assets/objdiff.png)

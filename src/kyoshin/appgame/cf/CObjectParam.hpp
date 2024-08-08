@@ -11,7 +11,7 @@ namespace cf{
 		virtual void CObjectParam_vtableFunc2();
 		virtual void CObjectParam_vtableFunc3();
 		virtual void CObjectParam_vtableFunc4();
-		virtual void CObjectParam_vtableFunc5();
+		virtual BOOL CObjectParam_vtableFunc5();
 		virtual void CObjectParam_vtableFunc6();
 
 		//0x0: vtable

@@ -16,10 +16,10 @@ static FatalFuncType FatalFunc = NULL;
 // TODO: Fix text formatting (SJIS)
 const char* const __DVDErrorMessageDefault[] = {
     // SC_LANG_JP
-    "\n\n\nƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B\n\n"
-    "ƒCƒWƒFƒNƒgƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚ÄƒfƒBƒXƒN‚ðŽæ‚èo‚µ‚Ä‚©\n"
-    "‚çA–{‘Ì‚Ì“dŒ¹‚ðOFF‚É‚µ‚ÄA–{‘Ì‚ÌŽæˆµà–¾‘‚Ì\n"
-    "ŽwŽ¦‚É]‚Á‚Ä‚­‚¾‚³‚¢B",
+    "\n\n\nã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚\n\n"
+    "ã‚¤ã‚¸ã‚§ã‚¯ãƒˆãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ãƒ‡ã‚£ã‚¹ã‚¯ã‚’å–ã‚Šå‡ºã—ã¦ã‹\n"
+    "ã‚‰ã€æœ¬ä½“ã®é›»æºã‚’OFFã«ã—ã¦ã€æœ¬ä½“ã®å–æ‰±èª¬æ˜Žæ›¸ã®\n"
+    "æŒ‡ç¤ºã«å¾“ã£ã¦ãã ã•ã„ã€‚",
 
     // SC_LANG_EN
     "\n\n\nAn error has occurred.\n"
@@ -66,10 +66,10 @@ const char* const __DVDErrorMessageDefault[] = {
 // TODO: Fix text formatting (SJIS)
 const char* const __DVDErrorMessageEurope[] = {
     // SC_LANG_JP
-    "\n\n\nƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B\n\n"
-    "ƒCƒWƒFƒNƒgƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚ÄƒfƒBƒXƒN‚ðŽæ‚èo‚µ‚Ä‚©\n"
-    "‚çA–{‘Ì‚Ì“dŒ¹‚ðOFF‚É‚µ‚ÄA–{‘Ì‚ÌŽæˆµà–¾‘‚Ì\n"
-    "ŽwŽ¦‚É]‚Á‚Ä‚­‚¾‚³‚¢B",
+    "\n\n\nã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚\n\n"
+    "ã‚¤ã‚¸ã‚§ã‚¯ãƒˆãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ãƒ‡ã‚£ã‚¹ã‚¯ã‚’å–ã‚Šå‡ºã—ã¦ã‹\n"
+    "ã‚‰ã€æœ¬ä½“ã®é›»æºã‚’OFFã«ã—ã¦ã€æœ¬ä½“ã®å–æ‰±èª¬æ˜Žæ›¸ã®\n"
+    "æŒ‡ç¤ºã«å¾“ã£ã¦ãã ã•ã„ã€‚",
 
     // SC_LANG_EN
     "\n\n\nAn error has occurred.\n"
@@ -117,11 +117,11 @@ const char* const __DVDErrorMessageEurope[] = {
 // TODO: Fix text formatting (SJIS)
 char* __DVDErrorMessageChinaKorea[] = {
     // SC_LANG_CN
-    "\n\nƒGƒ‰[ƒR[ƒh‚P‚O‚SB\n"
-    "ƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B\n\n"
-    "ƒCƒWƒFƒNƒgƒ{ƒ^ƒ“‚ð‰Ÿ‚µ‚ÄƒfƒBƒXƒN‚ðŽæ‚èo‚µ‚Ä‚©\n"
-    "‚çA–{‘Ì‚Ì“dŒ¹‚ðOFF‚É‚µ‚ÄA–{‘Ì‚ÌŽæˆµà–¾‘‚Ì\n"
-    "ŽwŽ¦‚É]‚Á‚Ä‚­‚¾‚³‚¢B",
+    "\n\nã‚¨ãƒ©ãƒ¼ã‚³ãƒ¼ãƒ‰ï¼‘ï¼ï¼”ã€‚\n"
+    "ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚\n\n"
+    "ã‚¤ã‚¸ã‚§ã‚¯ãƒˆãƒœã‚¿ãƒ³ã‚’æŠ¼ã—ã¦ãƒ‡ã‚£ã‚¹ã‚¯ã‚’å–ã‚Šå‡ºã—ã¦ã‹\n"
+    "ã‚‰ã€æœ¬ä½“ã®é›»æºã‚’OFFã«ã—ã¦ã€æœ¬ä½“ã®å–æ‰±èª¬æ˜Žæ›¸ã®\n"
+    "æŒ‡ç¤ºã«å¾“ã£ã¦ãã ã•ã„ã€‚",
 
     // SC_LANG_KO
     "\n\nError #104,\n"
