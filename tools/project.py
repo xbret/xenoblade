@@ -1125,7 +1125,7 @@ def generate_objdiff_config(
         unit_config["complete"] = obj.completed
         compiler_version = COMPILER_MAP.get(options["mw_console"] + "/" + options["mw_version"])
         if compiler_version is None:
-            print(f"Missing scratch compiler mapping for {options['mw_console'] + "/" + options['mw_version']}")
+            print(f"Missing scratch compiler mapping for {options['mw_console'] + '/' + options['mw_version']}")
         else:
             cflags_str = make_flags_str(cflags)
             if options["extra_cflags"] is not None:
