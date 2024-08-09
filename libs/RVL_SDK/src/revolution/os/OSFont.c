@@ -581,7 +581,6 @@ const char* OSGetFontTexture(const char* str, void** texOut, u32* xOut,
     return str;
 }
 
-//unused
 const char* OSGetFontWidth(const char* str, u32* widthOut) {
     OSFontHeader* font;
     u8* font_u8;
