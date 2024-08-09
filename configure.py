@@ -319,7 +319,7 @@ Matching = True                   # Object matches and should be linked
 NonMatching = False               # Object does not match and should not be linked
 Equivalent = config.non_matching  # Object should be linked when configured with --non-matching
 
-config.warn_missing_config = True
+config.warn_missing_config = False
 config.warn_missing_source = False
 config.libs = [
     {
@@ -688,7 +688,7 @@ config.libs = [
             Object(Matching, "MSL_C/MSL_Common/ansi_files.c"),
             Object(Matching, "MSL_C/MSL_Common_Embedded/ansi_fp.c"),
             Object(Matching, "MSL_C/MSL_Common/arith.c"),
-            Object(Matching, "MSL_C/MSL_Common/assert.c"),
+            Object(Matching, "MSL_C/MSL_Common/assert.c"), #JP only
             Object(Matching, "MSL_C/MSL_Common/buffer_io.c"),
             Object(Matching, "MSL_C/MSL_Common/ctype.c"),
             Object(Matching, "MSL_C/MSL_Common/direct_io.c"),
@@ -965,7 +965,8 @@ config.libs = [
         "enc",
         [
             Object(NonMatching, "revolution/enc/encutility.c"),
-            Object(NonMatching, "revolution/enc/encjapanese.c"),
+            Object(NonMatching, "revolution/enc/encunicode.c"), #EU/US only
+            Object(NonMatching, "revolution/enc/encjapanese.c"), #JP only
         ],
     ),
     DolphinLib(
