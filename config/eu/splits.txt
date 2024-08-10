@@ -92,288 +92,387 @@ Runtime/GCN_mem_alloc.c:
 	.text       start:0x802BE770 end:0x802BE828
 	.rodata     start:0x80513A68 end:0x80513AD8
 
-sdk.s:
-	.dtors      start:0x804FA1C8 end:0x804FA1C8
-	.rodata     start:0x80513AD8 end:0x80522990
-	.data       start:0x8053B9D8 end:0x8056BDF8
-	.bss        start:0x80577910 end:0x806574B8
-	.sdata      start:0x80662F50 end:0x80663600
-	.sbss       start:0x80664C48 end:0x80665648
-	.sdata2     start:0x80669020 end:0x8066A360
-	.sbss2      start:0x8066B540 end:0x8066B55C
-
 MetroTRK/__exception.s:
 	.init       start:0x80004380 end:0x800062C0
 
 revolution/os/__start.temp.c:
 	.init       start:0x800062C0 end:0x800065C0
 
-MSL_C/MSL_Common/alloc.temp.c:
+MSL_C/MSL_Common/alloc.c:
 	.text       start:0x802BE828 end:0x802BED3C
+	.rodata     start:0x80513AD8 end:0x80513AF0
+	.bss        start:0x80577910 end:0x80577948
+	.sbss       start:0x80664C48 end:0x80664C50
 
-MSL_C/MSL_Common/ansi_files.temp.c:
+MSL_C/MSL_Common/errno.c:
+	.sbss       start:0x80664C50 end:0x80664C58
+
+MSL_C/MSL_Common/ansi_files.c:
 	.text       start:0x802BED3C end:0x802BEE4C
+	.data       start:0x8053B9D8 end:0x8053BB18
+	.bss        start:0x80577948 end:0x80577C48
 
-MSL_C/MSL_Common_Embedded/ansi_fp.temp.c:
+MSL_C/MSL_Common_Embedded/ansi_fp.c:
 	.text       start:0x802BEE4C end:0x802C06CC
+	.rodata     start:0x80513AF0 end:0x80513BD0
+	.data       start:0x8053BB18 end:0x8053BC80
+	.sdata2     start:0x80669020 end:0x80669058
 
-MSL_C/MSL_Common/arith.temp.c:
+MSL_C/MSL_Common/ctype.c:
+	.rodata     start:0x80513BD0 end:0x80513FD0
+
+MSL_C/MSL_Common/locale.c:
+	.rodata     start:0x80513FD0 end:0x805140D8
+	.data       start:0x8053BC80 end:0x8053BE78
+	.sdata2     start:0x80669058 end:0x80669070
+
+MSL_C/MSL_Common/arith.c:
 	.text       start:0x802C06CC end:0x802C06EC
 
-MSL_C/MSL_Common/buffer_io.temp.c:
+MSL_C/MSL_Common/buffer_io.c:
 	.text       start:0x802C06EC end:0x802C07CC
 
-MSL_C/MSL_Common/direct_io.temp.c:
+MSL_C/MSL_Common/direct_io.c:
 	.text       start:0x802C07CC end:0x802C0AD4
 
-MSL_C/MSL_Common/file_io.temp.c:
+MSL_C/MSL_Common/file_io.c:
 	.text       start:0x802C0AD4 end:0x802C0CC4
 
-MSL_C/MSL_Common/FILE_POS.temp.c:
+MSL_C/MSL_Common/FILE_POS.c:
 	.text       start:0x802C0CC4 end:0x802C0F34
 
-MSL_C/MSL_Common/mbstring.temp.c:
+MSL_C/MSL_Common/mbstring.c:
 	.text       start:0x802C0F34 end:0x802C112C
 
-MSL_C/MSL_Common/mem.temp.c:
+MSL_C/MSL_Common/mem.c:
 	.text       start:0x802C112C end:0x802C129C
 
-MSL_C/MSL_Common/mem_funcs.temp.c:
+MSL_C/MSL_Common/mem_funcs.c:
 	.text       start:0x802C129C end:0x802C156C
 
-MSL_C/MSL_Common/math_api.temp.c:
+MSL_C/MSL_Common/math_api.c:
 	.text       start:0x802C156C end:0x802C1660
 
-MSL_C/MSL_Common/misc_io.temp.c:
+MSL_C/MSL_Common/misc_io.c:
 	.text       start:0x802C1660 end:0x802C1670
 
-MSL_C/MSL_Common/printf.temp.c:
+MSL_C/MSL_Common/printf.c:
 	.text       start:0x802C1670 end:0x802C3A68
+	.rodata     start:0x805140D8 end:0x80514100
+	.data       start:0x8053BE78 end:0x8053C0A8
+	.sdata      start:0x80662F50 end:0x80662F58
+	.sdata2     start:0x80669070 end:0x80669078
 
-MSL_C/MSL_Common/rand.temp.c:
+MSL_C/MSL_Common/rand.c:
 	.text       start:0x802C3A68 end:0x802C3A88
+	.sdata      start:0x80662F58 end:0x80662F60
 
-MSL_C/MSL_Common/scanf.temp.c:
+MSL_C/MSL_Common/float.c:
+	.sdata      start:0x80662F60 end:0x80662F70
+
+MSL_C/MSL_Common/scanf.c:
 	.text       start:0x802C3A88 end:0x802C4F6C
+	.rodata     start:0x80514100 end:0x80514128
+	.data       start:0x8053C0A8 end:0x8053C318
 
-MSL_C/MSL_Common/signal.temp.c:
+MSL_C/MSL_Common/signal.c:
 	.text       start:0x802C4F6C end:0x802C5014
+	.bss        start:0x80577C48 end:0x80577C68
 
-MSL_C/MSL_Common/string.temp.c:
+MSL_C/MSL_Common/string.c:
 	.text       start:0x802C5014 end:0x802C5388
 
-MSL_C/MSL_Common/strtold.temp.c:
+MSL_C/MSL_Common/strtold.c:
 	.text       start:0x802C5388 end:0x802C6708
+	.rodata     start:0x80514128 end:0x80514138
+	.sdata2     start:0x80669078 end:0x80669098
 
-MSL_C/MSL_Common/strtoul.temp.c:
+MSL_C/MSL_Common/wctype.c:
+	.rodata     start:0x80514138 end:0x80514738
+
+MSL_C/MSL_Common/strtoul.c:
 	.text       start:0x802C6708 end:0x802C7130
 
-MSL_C/MSL_Common/wcstoul.temp.c:
+MSL_C/MSL_Common/wcstoul.c:
 	.text       start:0x802C7130 end:0x802C7638
 
-MSL_C/MSL_Common/wmem.temp.c:
+MSL_C/MSL_Common/wmem.c:
 	.text       start:0x802C7638 end:0x802C7668
 
-MSL_C/MSL_Common/wprintf.temp.c:
+MSL_C/MSL_Common/wprintf.c:
 	.text       start:0x802C7668 end:0x802C9888
+	.rodata     start:0x80514738 end:0x80514740
+	.data       start:0x8053C318 end:0x8053C5B8
+	.sdata2     start:0x80669098 end:0x806690A0
 
-MSL_C/MSL_Common/wscanf.temp.c:
+MSL_C/MSL_Common/wscanf.c:
 	.text       start:0x802C9888 end:0x802C9918
 
-MSL_C/MSL_Common/wstring.temp.c:
+MSL_C/MSL_Common/wstring.c:
 	.text       start:0x802C9918 end:0x802C99F4
 
-MSL_C/MSL_Common/wchar_io.temp.c:
+MSL_C/MSL_Common/wchar_io.c:
 	.text       start:0x802C99F4 end:0x802C9A6C
 
-MSL_C/PPC_EABI/uart_console_io_gcn.temp.c:
+MSL_C/PPC_EABI/uart_console_io_gcn.c:
 	.text       start:0x802C9A6C end:0x802C9B44
+	.sbss       start:0x80664C58 end:0x80664C60
 
-MSL_C/PPC_EABI/abort_exit_ppc_eabi.temp.c:
+MSL_C/PPC_EABI/abort_exit_ppc_eabi.c:
 	.text       start:0x802C9B44 end:0x802C9B78
+	.sbss       start:0x80664C60 end:0x80664C68
 
-MSL_C/MSL_Common/secure_error.temp.c:
+MSL_C/MSL_Common/secure_error.c:
 	.text       start:0x802C9B78 end:0x802C9B90
+	.sbss       start:0x80664C68 end:0x80664C70
 
-MSL_C/MSL_Common/math_double.temp.c:
+MSL_C/MSL_Common/math_double.c:
 	.text       start:0x802C9B90 end:0x802C9BB4
 
-MSL_C/MSL_Common_Embedded/math_sun.temp.c:
+MSL_C/MSL_Common_Embedded/math_sun.c:
 	.text       start:0x802C9BB4 end:0x802C9BF4
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c:
 	.text       start:0x802C9BF4 end:0x802C9EC0
+	.sdata2     start:0x806690A0 end:0x80669128
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c:
 	.text       start:0x802C9EC0 end:0x802CA158
+	.sdata2     start:0x80669128 end:0x806691B0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c:
 	.text       start:0x802CA158 end:0x802CA3B0
+	.sdata2     start:0x806691B0 end:0x80669208
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c:
 	.text       start:0x802CA3B0 end:0x802CA730
+	.rodata     start:0x80514740 end:0x80514750
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c:
 	.text       start:0x802CA730 end:0x802CA9E4
+	.sbss       start:0x80664C70 end:0x80664C78
+	.sdata2     start:0x80669208 end:0x80669288
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c:
 	.text       start:0x802CA9E4 end:0x802CAAF8
+	.sbss       start:0x80664C78 end:0x80664C80
+	.sdata2     start:0x80669288 end:0x806692B8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c:
 	.text       start:0x802CAAF8 end:0x802CB30C
+	.rodata     start:0x80514750 end:0x80514780
+	.sdata2     start:0x806692B8 end:0x806693C8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c:
 	.text       start:0x802CB30C end:0x802CB690
+	.rodata     start:0x80514780 end:0x80514908
+	.sdata2     start:0x806693C8 end:0x80669420
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c:
 	.text       start:0x802CB690 end:0x802CB7A0
+	.sdata2     start:0x80669420 end:0x80669468
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c:
 	.text       start:0x802CB7A0 end:0x802CCE58
+	.rodata     start:0x80514908 end:0x80514958
+	.sdata2     start:0x80669468 end:0x806694A8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c:
 	.text       start:0x802CCE58 end:0x802CCF18
+	.sdata2     start:0x806694A8 end:0x806694E0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c:
 	.text       start:0x802CCF18 end:0x802CD168
+	.rodata     start:0x80514958 end:0x805149C0
+	.sdata2     start:0x806694E0 end:0x80669518
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c:
 	.text       start:0x802CD168 end:0x802CD398
+	.rodata     start:0x805149C0 end:0x80514A58
+	.sdata2     start:0x80669518 end:0x80669540
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c:
 	.text       start:0x802CD398 end:0x802CD4E4
+	.sdata2     start:0x80669540 end:0x80669550
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c:
 	.text       start:0x802CD4E4 end:0x802CD510
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c:
 	.text       start:0x802CD510 end:0x802CD5D8
+	.sdata2     start:0x80669550 end:0x80669558
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c:
 	.text       start:0x802CD5D8 end:0x802CD728
+	.sdata2     start:0x80669558 end:0x80669568
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c:
 	.text       start:0x802CD728 end:0x802CD7B0
+	.sdata2     start:0x80669568 end:0x80669570
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c:
 	.text       start:0x802CD7B0 end:0x802CD91C
+	.sdata2     start:0x80669570 end:0x80669598
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c:
 	.text       start:0x802CD91C end:0x802CDA18
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c:
 	.text       start:0x802CDA18 end:0x802CDAE4
+	.sdata2     start:0x80669598 end:0x806695A0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c:
 	.text       start:0x802CDAE4 end:0x802CDB5C
+	.sdata2     start:0x806695A0 end:0x806695A8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c:
 	.text       start:0x802CDB5C end:0x802CDB60
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c:
 	.text       start:0x802CDB60 end:0x802CDB64
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c:
 	.text       start:0x802CDB64 end:0x802CDB68
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c:
 	.text       start:0x802CDB68 end:0x802CDB6C
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c:
 	.text       start:0x802CDB6C end:0x802CDB70
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c:
 	.text       start:0x802CDB70 end:0x802CDB74
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c:
 	.text       start:0x802CDB74 end:0x802CDB78
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c:
 	.text       start:0x802CDB78 end:0x802CDDC0
+	.sdata2     start:0x806695A8 end:0x806695B0
 
-MSL_C/PPC_EABI/math_ppc.temp.c:
+MSL_C/PPC_EABI/math_ppc.c:
 	.text       start:0x802CDDC0 end:0x802CDDC4
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.temp.c:
+MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c:
 	.text       start:0x802CDDC4 end:0x802CDDC8
 
-MSL_C/MSL_Common/extras.temp.c:
+MSL_C/MSL_Common/extras.c:
 	.text       start:0x802CDDC8 end:0x802CDE68
 
 MetroTRK/targsupp.s:
 	.text       start:0x802CDE68 end:0x802CDE88
 
-MetroTRK/custconn/cc_gdev.temp.c:
+MetroTRK/custconn/cc_gdev.c:
 	.text       start:0x802CDE88 end:0x802CE100
+	.bss        start:0x80577C68 end:0x80578188
+	.sbss       start:0x80664C80 end:0x80664C88
 
-MetroTRK/custconn/MWCriticalSection_gc.temp.cpp:
+MetroTRK/custconn/MWCriticalSection_gc.cpp:
 	.text       start:0x802CE100 end:0x802CE13C
 
-MetroTRK/custconn/CircleBuffer.temp.c:
+MetroTRK/custconn/CircleBuffer.c:
 	.text       start:0x802CE13C end:0x802CE378
 
-MetroTRK/flush_cache.temp.c:
+MetroTRK/flush_cache.c:
 	.text       start:0x802CE378 end:0x802CE3B0
 
-MetroTRK/main_TRK.temp.c:
+MetroTRK/main_TRK.c:
 	.text       start:0x802CE3B0 end:0x802CE3EC
+	.sbss       start:0x80664C88 end:0x80664C90
 
-MetroTRK/mainloop.temp.c:
+MetroTRK/mainloop.c:
 	.text       start:0x802CE3EC end:0x802CE4D8
 
-MetroTRK/mem_TRK.temp.c:
+MetroTRK/mem_TRK.c:
 	.text       start:0x802CE4D8 end:0x802CE73C
 
-MetroTRK/dispatch.temp.c:
+MetroTRK/dispatch.c:
 	.text       start:0x802CE73C end:0x802CE85C
+	.data       start:0x8053C5B8 end:0x8053C628
 
-MetroTRK/dolphin_trk.temp.c:
+MetroTRK/dolphin_trk.c:
 	.text       start:0x802CE85C end:0x802CEB80
+	.data       start:0x8053C628 end:0x8053C668
+	.sbss       start:0x80664C90 end:0x80664C98
 
-MetroTRK/dolphin_trk_glue.temp.c:
+MetroTRK/dolphin_trk_glue.c:
 	.text       start:0x802CEB80 end:0x802CEF1C
+	.data       start:0x8053C668 end:0x8053C750
+	.bss        start:0x80578188 end:0x805781B0
+	.sbss       start:0x80664C98 end:0x80664CA0
+	.sdata2     start:0x806695B0 end:0x806695B8
 
-MetroTRK/notify.temp.c:
+MetroTRK/notify.c:
 	.text       start:0x802CEF1C end:0x802CEFAC
 
-MetroTRK/nubevent.temp.c:
+MetroTRK/nubevent.c:
 	.text       start:0x802CEFAC end:0x802CF148
+	.data       start:0x8053C750 end:0x8053C770
+	.bss        start:0x805781B0 end:0x805781D8
 
-MetroTRK/nubinit.temp.c:
+MetroTRK/nubinit.c:
 	.text       start:0x802CF148 end:0x802CF298
+	.data       start:0x8053C770 end:0x8053C790
+	.sbss       start:0x80664CA0 end:0x80664CA8
 
-MetroTRK/serpoll.temp.c:
+MetroTRK/serpoll.c:
 	.text       start:0x802CF298 end:0x802CF3E0
+	.sbss       start:0x80664CA8 end:0x80664CB0
 
-MetroTRK/string_TRK.temp.c:
+MetroTRK/string_TRK.c:
 	.text       start:0x802CF3E0 end:0x802CF3FC
 
-MetroTRK/support.temp.c:
+MetroTRK/support.c:
 	.text       start:0x802CF3FC end:0x802CFA20
+	.data       start:0x8053C790 end:0x8053C7D8
 
-MetroTRK/targcont.temp.c:
+MetroTRK/targcont.c:
 	.text       start:0x802CFA20 end:0x802CFA54
 
-MetroTRK/mpc_7xx_603e.temp.c:
+MetroTRK/mpc_7xx_603e.c:
 	.text       start:0x802CFA54 end:0x802CFD7C
 
-MetroTRK/msg.temp.c:
+MetroTRK/msg.c:
 	.text       start:0x802CFD7C end:0x802CFDE0
+	.data       start:0x8053C7D8 end:0x8053C800
+	.sbss       start:0x80664CB0 end:0x80664CB8
 
-MetroTRK/msgbuf.temp.c:
+MetroTRK/msgbuf.c:
 	.text       start:0x802CFDE0 end:0x802D05EC
+	.data       start:0x8053C800 end:0x8053C828
+	.bss        start:0x805781D8 end:0x80579B80
 
-MetroTRK/msghndlr.temp.c:
+MetroTRK/msghndlr.c:
 	.text       start:0x802D05EC end:0x802D1570
+	.data       start:0x8053C828 end:0x8053C890
+	.sbss       start:0x80664CB8 end:0x80664CC0
 
-MetroTRK/mslsupp.temp.c:
+MetroTRK/mslsupp.c:
 	.text       start:0x802D1570 end:0x802D16FC
 
-MetroTRK/targimpl.temp.c:
+MetroTRK/targimpl.c:
 	.text       start:0x802D16FC end:0x802D2F20
+	.rodata     start:0x80514A58 end:0x80514AE0
+	.data       start:0x8053C890 end:0x8053C8A0
+	.bss        start:0x80579B80 end:0x8057A128
+	.sbss       start:0x80664CC0 end:0x80664CC8
 
-MetroTRK/target_options.temp.c:
+MetroTRK/target_options.c:
 	.text       start:0x802D2F20 end:0x802D2F30
+	.sbss       start:0x80664CC8 end:0x80664CD0
+
+ndev_data.s:
+	.sdata      start:0x80662F70 end:0x80662F78
+	.sbss       start:0x80664CD0 end:0x80664CE8
+
+sdk_data.s:
+	.rodata     start:0x80514AE0 end:0x80522990
+	.data       start:0x8053C8A0 end:0x8056BDF8
+	.bss        start:0x8057A128 end:0x806574B8
+	.sdata      start:0x80662F78 end:0x80663600
+	.sbss       start:0x80664CE8 end:0x80665648
+	.sdata2     start:0x806695B8 end:0x8066A360
+	.sbss2      start:0x8066B540 end:0x8066B55C
 
 DebuggerDriver.temp.c:
 	.text       start:0x802D2F30 end:0x802D3264
