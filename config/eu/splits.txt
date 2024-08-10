@@ -1108,12 +1108,922 @@ revolution/wud/WUDHidHost.temp.c:
 revolution/wud/debug_msg.temp.c:
 	.text       start:0x8037F350 end:0x8037F3A0 align:16
 
-criware.s:
-	.text       start:0x8037F3A0 end:0x803D9884
+adx/adxf/adx_fini.temp.c:
+	.text       start:0x8037F3A0 end:0x8037F4F8
 
-nw4r.s:
-	.text       start:0x803D9884 end:0x80435010
-	.ctors      start:0x804FA0C0 end:0x804FA104
+adx/adxf/adx_fs.temp.c:
+	.text       start:0x8037F4F8 end:0x803822E8
+
+adx/adxf/adx_fcch.temp.c:
+	.text       start:0x803822E8 end:0x803822EC
+
+adx/adxt/adx_fsvr.temp.c:
+	.text       start:0x803822EC end:0x803823E4
+
+adx/adxt/adx_inis.temp.c:
+	.text       start:0x803823E4 end:0x80382690
+
+adx/adxt/adx_lsc.temp.c:
+	.text       start:0x80382690 end:0x803826F8
+
+adx/adxt/adx_mng.temp.c:
+	.text       start:0x803826F8 end:0x80382798
+
+adx/adxt/adx_sfa.temp.c:
+	.text       start:0x80382798 end:0x803827C0
+
+adx/adxt/adx_sjd.temp.c:
+	.text       start:0x803827C0 end:0x80383CC8
+
+adx/adxt/adx_stmc.temp.c:
+	.text       start:0x80383CC8 end:0x80385390
+
+adx/adxt/adx_tlk2.temp.c:
+	.text       start:0x80385390 end:0x803855A0
+
+adx/adxt/adx_tlk.temp.c:
+	.text       start:0x803855A0 end:0x803878BC
+
+adx/adxt/adx_tsvr.temp.c:
+	.text       start:0x803878BC end:0x803888A8
+
+adx/adxt/adx_xpnd.temp.c:
+	.text       start:0x803888A8 end:0x80388C90
+
+adx/adxt/adx_amp.temp.c:
+	.text       start:0x80388C90 end:0x80388EA8
+
+adx/adxt/adx_bahx.temp.c:
+	.text       start:0x80388EA8 end:0x80388F78
+
+adx/adxt/adx_baif.temp.c:
+	.text       start:0x80388F78 end:0x80389B08
+
+adx/adxt/adx_bsc.temp.c:
+	.text       start:0x80389B08 end:0x8038B640
+
+adx/adxt/adx_bwav.temp.c:
+	.text       start:0x8038B640 end:0x8038C584
+
+adx/adxt/code_80389300.temp.c:
+	.text       start:0x8038C584 end:0x8038C628
+
+adx/adxt/adx_crs.temp.c:
+	.text       start:0x8038C628 end:0x8038C690
+
+adx/adxt/adx_dcd5.temp.c:
+	.text       start:0x8038C690 end:0x8038CD48
+
+adx/adxt/adx_dcd.temp.c:
+	.text       start:0x8038CD48 end:0x8038D40C
+
+adx/adxt/adx_errs.temp.c:
+	.text       start:0x8038D40C end:0x8038D8EC
+
+adx/ahx/ahx_ftbl.temp.c:
+	.text       start:0x8038D8EC end:0x8038D918
+
+adx/ahx/ahx_link.temp.c:
+	.text       start:0x8038D918 end:0x8038DC50
+
+adx/ahx/ahx_mflt_c.temp.c:
+	.text       start:0x8038DC50 end:0x8038E148
+
+adx/ahx/ahx_mwin2_c.temp.c:
+	.text       start:0x8038E148 end:0x8038F608
+
+adx/ahx/ahx_sbf2.temp.c:
+	.text       start:0x8038F608 end:0x8038F6CC
+
+adx/ahx/ahx_sbf.temp.c:
+	.text       start:0x8038F6CC end:0x8038FA00
+
+adx/ahx/ahx_sjd.temp.c:
+	.text       start:0x8038FA00 end:0x803901C4
+
+adx/ahx/ahx_wtbl.temp.c:
+	.text       start:0x803901C4 end:0x803901F0
+
+adx/ahx/adx_hdr.temp.c:
+	.text       start:0x803901F0 end:0x80390548
+
+adx/ahx/ahx_atbl.temp.c:
+	.text       start:0x80390548 end:0x803905A0
+
+adx/ahx/ahx_bsr.temp.c:
+	.text       start:0x803905A0 end:0x80390C64
+
+adx/ahx/ahx_cmn.temp.c:
+	.text       start:0x80390C64 end:0x80390C84
+
+adx/ahx/ahx_dcd.temp.c:
+	.text       start:0x80390C84 end:0x80392748
+
+adx/cricfg/cfg_lib.temp.c:
+	.text       start:0x80392748 end:0x803927FC
+
+adx/cvfs/cri_cvfs.temp.c:
+	.text       start:0x803927FC end:0x80393B8C
+
+adx/gcci/gcci.temp.c:
+	.text       start:0x80393B8C end:0x803949AC
+
+adx/gcci/gcci_sub.temp.c:
+	.text       start:0x803949AC end:0x803949B8
+
+adx/lsc/lsc_err.temp.c:
+	.text       start:0x803949B8 end:0x80394AB0
+
+adx/lsc/lsc_ini.temp.c:
+	.text       start:0x80394AB0 end:0x80394BC4
+
+adx/lsc/lsc_svr.temp.c:
+	.text       start:0x80394BC4 end:0x80394F58
+
+adx/lsc/lsc.temp.c:
+	.text       start:0x80394F58 end:0x80395A0C
+
+adx/lsc/lsc_crs.temp.c:
+	.text       start:0x80395A0C end:0x80395A1C
+
+adx/mfci/mfci.temp.c:
+	.text       start:0x80395A1C end:0x8039669C
+
+adx/sj/sj_mem.temp.c:
+	.text       start:0x8039669C end:0x803974BC
+
+adx/sj/sj_rbf.temp.c:
+	.text       start:0x803974BC end:0x80398810
+
+adx/sj/sj_uni.temp.c:
+	.text       start:0x80398810 end:0x803997D4
+
+adx/sj/sj_utl.temp.c:
+	.text       start:0x803997D4 end:0x80399A3C
+
+adx/sj/sj_crs.temp.c:
+	.text       start:0x80399A3C end:0x80399B08
+
+adx/sj/sj_err.temp.c:
+	.text       start:0x80399B08 end:0x80399B0C
+
+adx/svm/svm.temp.c:
+	.text       start:0x80399B0C end:0x8039AD88
+
+adx/adxt/adx_bsps.temp.c:
+	.text       start:0x8039AD88 end:0x8039B2E8
+
+adx/adxt/adx_bau.temp.c:
+	.text       start:0x8039B2E8 end:0x8039C310
+
+adx/wiirna/rna_crs.temp.c:
+	.text       start:0x8039C310 end:0x8039C318
+
+adx/wiirna/rna_err.temp.c:
+	.text       start:0x8039C318 end:0x8039C384
+
+adx/wiirna/ax_rna.temp.c:
+	.text       start:0x8039C384 end:0x8039DD7C
+
+adx/adxt/srcwii/adx_mwii.temp.c:
+	.text       start:0x8039DD7C end:0x8039E5F4
+
+adx/adxt/srcwii/adx_suwii.temp.c:
+	.text       start:0x8039E5F4 end:0x8039E6C4
+
+adx/adxt/srcwii/adx_rnawii.temp.c:
+	.text       start:0x8039E6C4 end:0x8039E76C
+
+adx/std/cri_crw_std.temp.c:
+	.text       start:0x8039E76C end:0x8039EB5C
+
+sofdec/cft/srcgc/cftyp422_ppc.temp.c:
+	.text       start:0x8039EB5C end:0x8039EF4C
+
+sofdec/cft/cft_common.temp.c:
+	.text       start:0x8039EF4C end:0x8039EF60
+
+sofdec/mwply/mwsfdfrm.temp.c:
+	.text       start:0x8039EF60 end:0x803A02BC
+
+sofdec/mwply/mwsfdrna.temp.c:
+	.text       start:0x803A02BC end:0x803A02CC
+
+sofdec/mwply/mwsfdrsc.temp.c:
+	.text       start:0x803A02CC end:0x803A02D4
+
+sofdec/mwply/mwsfdsl.temp.c:
+	.text       start:0x803A02D4 end:0x803A0F7C
+
+sofdec/mwply/mwsfdsvm.temp.c:
+	.text       start:0x803A0F7C end:0x803A122C
+
+sofdec/mwply/mwstm.temp.c:
+	.text       start:0x803A122C end:0x803A1328
+
+sofdec/mwply/mwsfdsee.temp.c:
+	.text       start:0x803A1328 end:0x803A1330
+
+sofdec/mwply/mwsfdsfx.temp.c:
+	.text       start:0x803A1330 end:0x803A20C0
+
+sofdec/mwply/mwsfdcre.temp.c:
+	.text       start:0x803A20C0 end:0x803A41C0
+
+sofdec/mwply/mwsfdlib.temp.c:
+	.text       start:0x803A41C0 end:0x803A48DC
+
+sofdec/mwply/mwsfdply.temp.c:
+	.text       start:0x803A48DC end:0x803A54AC
+
+sofdec/mwply/mwsfdset.temp.c:
+	.text       start:0x803A54AC end:0x803A5A18
+
+sofdec/mwply/mwsfdsvr.temp.c:
+	.text       start:0x803A5A18 end:0x803A693C
+
+sofdec/mwply/mwsfdsst.temp.c:
+	.text       start:0x803A693C end:0x803A7128
+
+sofdec/mwply/mwsfx_Y84C44.temp.c:
+	.text       start:0x803A7128 end:0x803A71C4
+
+sofdec/mwply/code_803A3AE4.temp.c:
+	.text       start:0x803A71C4 end:0x803A7330
+
+sofdec/sfdcore/mpv/mpv_bdec.temp.c:
+	.text       start:0x803A7330 end:0x803A7710
+
+sofdec/sfdcore/mpv/mpv_cdec.temp.c:
+	.text       start:0x803A7710 end:0x803A7DA8
+
+sofdec/sfdcore/mpv/mpv_cmc.temp.c:
+	.text       start:0x803A7DA8 end:0x803A7EA0
+
+sofdec/sfdcore/mpv/mpv_dec.temp.c:
+	.text       start:0x803A7EA0 end:0x803A90A4
+
+sofdec/sfdcore/mpv/mpv_deli.temp.c:
+	.text       start:0x803A90A4 end:0x803A9288
+
+sofdec/sfdcore/mpv/mpv_emp.temp.c:
+	.text       start:0x803A9288 end:0x803A98E0
+
+sofdec/sfdcore/mpv/mpv_err.temp.c:
+	.text       start:0x803A98E0 end:0x803A9A30
+
+sofdec/sfdcore/mpv/mpv_frm.temp.c:
+	.text       start:0x803A9A30 end:0x803A9C70
+
+sofdec/sfdcore/mpv/mpv_get.temp.c:
+	.text       start:0x803A9C70 end:0x803A9E88
+
+sofdec/sfdcore/mpv/mpv_hdec.temp.c:
+	.text       start:0x803A9E88 end:0x803AB68C
+
+sofdec/sfdcore/mpv/mpv_lib.temp.c:
+	.text       start:0x803AB68C end:0x803AC184
+
+sofdec/sfdcore/mpv/mpv_mc.temp.c:
+	.text       start:0x803AC184 end:0x803ACE78
+
+sofdec/sfdcore/mpv/mpv_vlc.temp.c:
+	.text       start:0x803ACE78 end:0x803AFBC8
+
+sofdec/sfdcore/mpv/mpv_umc.temp.c:
+	.text       start:0x803AFBC8 end:0x803B15B0
+
+sofdec/sfdcore/mpv/mpv_mcy.temp.c:
+	.text       start:0x803B15B0 end:0x803B273C
+
+sofdec/sfdcore/mpv/mpv_m2v.temp.c:
+	.text       start:0x803B273C end:0x803B276C
+
+sofdec/sfdcore/mpv/mpvabdec.temp.c:
+	.text       start:0x803B276C end:0x803BCE64
+
+sofdec/sfdcore/mpv/mpv_slice.temp.c:
+	.text       start:0x803BCE64 end:0x803BD250
+
+sofdec/sfdcore/dct/dct_ac.temp.c:
+	.text       start:0x803BD250 end:0x803BD574
+
+sofdec/sfdcore/dct/dct_isr.temp.c:
+	.text       start:0x803BD574 end:0x803BDF28
+
+sofdec/sfdcore/dct/dct_ver.temp.c:
+	.text       start:0x803BDF28 end:0x803BDF50
+
+sofdec/sfdcore/memcpy/mcp_not.temp.c:
+	.text       start:0x803BDF50 end:0x803BDF54
+
+sofdec/sfdcore/mps/mps_dec.temp.c:
+	.text       start:0x803BDF54 end:0x803BF200
+
+sofdec/sfdcore/mps/mps_del.temp.c:
+	.text       start:0x803BF200 end:0x803BF274
+
+sofdec/sfdcore/mps/mps_get.temp.c:
+	.text       start:0x803BF274 end:0x803BF4E0
+
+sofdec/sfdcore/mps/mps_lib.temp.c:
+	.text       start:0x803BF4E0 end:0x803BFAB0
+
+sofdec/sfdcore/sfd/sfd_adxt.temp.c:
+	.text       start:0x803BFAB0 end:0x803C10C8
+
+sofdec/sfdcore/sfd/sfd_aoap.temp.c:
+	.text       start:0x803C10C8 end:0x803C1500
+
+sofdec/sfdcore/sfd/sfd_buf.temp.c:
+	.text       start:0x803C1500 end:0x803C25C0
+
+sofdec/sfdcore/sfd/code_803BFD20.temp.c:
+	.text       start:0x803C25C0 end:0x803C25D8
+
+sofdec/sfdcore/sfd/sfd_con.temp.c:
+	.text       start:0x803C25D8 end:0x803C28FC
+
+sofdec/sfdcore/sfd/sfd_hds.temp.c:
+	.text       start:0x803C28FC end:0x803C3310
+
+sofdec/sfdcore/sfd/sfd_lib.temp.c:
+	.text       start:0x803C3310 end:0x803C36E8
+
+sofdec/sfdcore/sfd/sfd_mem.temp.c:
+	.text       start:0x803C36E8 end:0x803C3798
+
+sofdec/sfdcore/sfd/sfd_mps.temp.c:
+	.text       start:0x803C3798 end:0x803C570C
+
+sofdec/sfdcore/sfd/sfd_mpv.temp.c:
+	.text       start:0x803C570C end:0x803CA4A0
+
+sofdec/sfdcore/sfd/sfd_mpvf.temp.c:
+	.text       start:0x803CA4A0 end:0x803CB49C
+
+sofdec/sfdcore/sfd/sfd_pl2.temp.c:
+	.text       start:0x803CB49C end:0x803CB938
+
+sofdec/sfdcore/sfd/sfd_ply.temp.c:
+	.text       start:0x803CB938 end:0x803CE16C
+
+sofdec/sfdcore/sfd/sfd_pts.temp.c:
+	.text       start:0x803CE16C end:0x803CE5A0
+
+sofdec/sfdcore/sfd/sfd_see.temp.c:
+	.text       start:0x803CE5A0 end:0x803CEC14
+
+sofdec/sfdcore/sfd/sfd_set.temp.c:
+	.text       start:0x803CEC14 end:0x803CF034
+
+sofdec/sfdcore/sfd/sfd_tim.temp.c:
+	.text       start:0x803CF034 end:0x803D0D9C
+
+sofdec/sfdcore/sfd/sfd_trn.temp.c:
+	.text       start:0x803D0D9C end:0x803D1400
+
+sofdec/sfdcore/sfd/sfd_uo.temp.c:
+	.text       start:0x803D1400 end:0x803D1648
+
+sofdec/sfdcore/sfd/sfd_vom.temp.c:
+	.text       start:0x803D1648 end:0x803D180C
+
+sofdec/sfdcore/sfd/sfd_tmr.temp.c:
+	.text       start:0x803D180C end:0x803D1A94
+
+sofdec/sfdcore/sfd/sfd_tst.temp.c:
+	.text       start:0x803D1A94 end:0x803D29E0
+
+sofdec/sfdcore/sfd/sfd_seeki.temp.c:
+	.text       start:0x803D29E0 end:0x803D2AF4
+
+sofdec/sfdcore/sfh/sfh_local.temp.c:
+	.text       start:0x803D2AF4 end:0x803D2E40
+
+sofdec/sfdcore/sfh/sfh_main.temp.c:
+	.text       start:0x803D2E40 end:0x803D35A8
+
+sofdec/sfdcore/sfh/sfh_ver1.temp.c:
+	.text       start:0x803D35A8 end:0x803D53CC
+
+sofdec/sfdcore/sfh/sfh_ver2.temp.c:
+	.text       start:0x803D53CC end:0x803D6AA4
+
+sofdec/sfdcore/uty/cmptime.temp.c:
+	.text       start:0x803D6AA4 end:0x803D6AD4
+
+sofdec/sfdcore/uty/memcpyd.temp.c:
+	.text       start:0x803D6AD4 end:0x803D6B98
+
+sofdec/sfdcore/uty/memsetd.temp.c:
+	.text       start:0x803D6B98 end:0x803D6C10
+
+sofdec/sfdcore/uty/muldiv.temp.c:
+	.text       start:0x803D6C10 end:0x803D6C68
+
+sofdec/sfdcore/uty/muldivr.temp.c:
+	.text       start:0x803D6C68 end:0x803D6DC0
+
+sofdec/sfdcore/uty/uty_tmr.temp.c:
+	.text       start:0x803D6DC0 end:0x803D6F2C
+
+sofdec/sfx/sfx_set.temp.c:
+	.text       start:0x803D6F2C end:0x803D70DC
+
+sofdec/sfx/sfx_cnv.temp.c:
+	.text       start:0x803D70DC end:0x803D7E64
+
+sofdec/sfx/sfx_inf.temp.c:
+	.text       start:0x803D7E64 end:0x803D7E6C
+
+sofdec/sfx/sfx_lib.temp.c:
+	.text       start:0x803D7E6C end:0x803D825C
+
+sofdec/sfx/sfx_alp.temp.c:
+	.text       start:0x803D825C end:0x803D8408
+
+sofdec/sfx/sfx_zmv.temp.c:
+	.text       start:0x803D8408 end:0x803D964C
+
+sofdec/sfx/sfx_sud.temp.c:
+	.text       start:0x803D964C end:0x803D9650
+
+sofdec/sfx/sfx_cnv_to_Y84C44.temp.c:
+	.text       start:0x803D9650 end:0x803D96F0
+
+sofdec/sud/sud_lib.temp.c:
+	.text       start:0x803D96F0 end:0x803D9884
+
+db/db_console.temp.cpp:
+	.text       start:0x803D9884 end:0x803D997C
+
+db/db_assert.temp.cpp:
+	.text       start:0x803D997C end:0x803D9B74
+
+g3d/res/g3d_rescommon.temp.cpp:
+	.text       start:0x803D9B74 end:0x803D9CC4
+
+g3d/res/g3d_resdict.temp.cpp:
+	.text       start:0x803D9CC4 end:0x803DA048
+
+g3d/res/g3d_resfile.temp.cpp:
+	.text       start:0x803DA048 end:0x803DB918
+
+g3d/res/g3d_resmdl.temp.cpp:
+	.text       start:0x803DB918 end:0x803DC9C4
+
+g3d/res/g3d_resshp.temp.cpp:
+	.text       start:0x803DC9C4 end:0x803DD258
+
+g3d/res/g3d_restev.temp.cpp:
+	.text       start:0x803DD258 end:0x803DDAE4
+
+g3d/res/g3d_resmat.temp.cpp:
+	.text       start:0x803DDAE4 end:0x803DF524
+
+g3d/res/g3d_resvtx.temp.cpp:
+	.text       start:0x803DF524 end:0x803DF8E4
+
+g3d/res/g3d_restex.temp.cpp:
+	.text       start:0x803DF8E4 end:0x803DFAE8
+
+g3d/res/g3d_resnode.temp.cpp:
+	.text       start:0x803DFAE8 end:0x803DFE0C
+
+g3d/res/g3d_resanm.temp.cpp:
+	.text       start:0x803DFE0C end:0x803E0038
+
+g3d/res/g3d_resanmclr.temp.cpp:
+	.text       start:0x803E0038 end:0x803E01A4
+
+g3d/res/g3d_resanmtexpat.temp.cpp:
+	.text       start:0x803E01A4 end:0x803E0540
+
+g3d/res/g3d_resanmtexsrt.temp.cpp:
+	.text       start:0x803E0540 end:0x803E0954
+
+g3d/res/g3d_resanmchr.temp.cpp:
+	.text       start:0x803E0954 end:0x803E2680
+
+g3d/res/g3d_reslightset.temp.cpp:
+	.text       start:0x803E2680 end:0x803E27EC
+
+g3d/res/g3d_resanmamblight.temp.cpp:
+	.text       start:0x803E27EC end:0x803E28BC
+
+g3d/res/g3d_resanmlight.temp.cpp:
+	.text       start:0x803E28BC end:0x803E2CB4
+
+g3d/res/g3d_resanmfog.temp.cpp:
+	.text       start:0x803E2CB4 end:0x803E2E14
+
+g3d/res/g3d_resanmcamera.temp.cpp:
+	.text       start:0x803E2E14 end:0x803E312C
+
+g3d/res/g3d_resanmscn.temp.cpp:
+	.text       start:0x803E312C end:0x803E3B14
+
+g3d/g3d_transform.temp.cpp:
+	.text       start:0x803E3B14 end:0x803E3E04
+
+g3d/g3d_anmvis.temp.cpp:
+	.text       start:0x803E3E04 end:0x803E3F4C
+
+g3d/g3d_anmclr.temp.cpp:
+	.text       start:0x803E3F4C end:0x803E4CD0
+
+g3d/g3d_anmtexpat.temp.cpp:
+	.text       start:0x803E4CD0 end:0x803E56FC
+
+g3d/g3d_anmtexsrt.temp.cpp:
+	.text       start:0x803E56FC end:0x803E6178
+
+g3d/g3d_anmchr.temp.cpp:
+	.text       start:0x803E6178 end:0x803E8070
+
+g3d/g3d_anmshp.temp.cpp:
+	.text       start:0x803E8070 end:0x803E808C
+
+g3d/g3d_anmscn.temp.cpp:
+	.text       start:0x803E808C end:0x803E95F8
+
+g3d/g3d_obj.temp.cpp:
+	.text       start:0x803E95F8 end:0x803E9714
+
+g3d/g3d_anmobj.temp.cpp:
+	.text       start:0x803E9714 end:0x803E97CC
+
+g3d/platform/g3d_gpu.temp.cpp:
+	.text       start:0x803E97CC end:0x803E9CDC
+
+g3d/platform/g3d_cpu.temp.cpp:
+	.text       start:0x803E9CDC end:0x803E9F00
+
+g3d/g3d_state.temp.cpp:
+	.text       start:0x803E9F00 end:0x803EDA14
+	.ctors      start:0x804FA0C0 end:0x804FA0C4
+
+g3d/g3d_draw1mat1shp.temp.cpp:
+	.text       start:0x803EDA14 end:0x803EE748
+
+g3d/g3d_calcview.temp.cpp:
+	.text       start:0x803EE748 end:0x803F0924
+
+g3d/g3d_dcc.temp.cpp:
+	.text       start:0x803F0924 end:0x803F0A00
+
+g3d/g3d_workmem.temp.cpp:
+	.text       start:0x803F0A00 end:0x803F0A40
+
+g3d/g3d_calcworld.temp.cpp:
+	.text       start:0x803F0A40 end:0x803F1504
+
+g3d/g3d_draw.temp.cpp:
+	.text       start:0x803F1504 end:0x803F3360
+
+g3d/g3d_camera.temp.cpp:
+	.text       start:0x803F3360 end:0x803F417C
+
+g3d/dcc/g3d_basic.temp.cpp:
+	.text       start:0x803F417C end:0x803F4440
+
+g3d/dcc/g3d_maya.temp.cpp:
+	.text       start:0x803F4440 end:0x803F5100
+
+g3d/dcc/g3d_xsi.temp.cpp:
+	.text       start:0x803F5100 end:0x803F5CC0
+
+g3d/dcc/g3d_3dsmax.temp.cpp:
+	.text       start:0x803F5CC0 end:0x803F6770
+
+g3d/g3d_scnobj.temp.cpp:
+	.text       start:0x803F6770 end:0x803F7FA4
+
+g3d/g3d_scnroot.temp.cpp:
+	.text       start:0x803F7FA4 end:0x803F99B8
+
+g3d/g3d_scnmdlsmpl.temp.cpp:
+	.text       start:0x803F99B8 end:0x803FB86C
+
+g3d/g3d_scnmdl.temp.cpp:
+	.text       start:0x803FB86C end:0x803FE2E0
+
+g3d/g3d_scnmdlexpand.temp.cpp:
+	.text       start:0x803FE2E0 end:0x803FEC90
+
+g3d/g3d_calcmaterial.temp.cpp:
+	.text       start:0x803FEC90 end:0x803FF0A0
+
+g3d/g3d_init.temp.cpp:
+	.text       start:0x803FF0A0 end:0x803FF19C
+
+g3d/g3d_scnproc.temp.cpp:
+	.text       start:0x803FF19C end:0x803FF48C
+
+g3d/g3d_fog.temp.cpp:
+	.text       start:0x803FF48C end:0x803FF688
+
+g3d/g3d_light.temp.cpp:
+	.text       start:0x803FF688 end:0x8040041C
+
+g3d/g3d_calcvtx.temp.cpp:
+	.text       start:0x8040041C end:0x80400C14
+
+lyt/lyt_init.temp.cpp:
+	.text       start:0x80400C14 end:0x80400C68
+
+lyt/lyt_pane.temp.cpp:
+	.text       start:0x80400C68 end:0x80401C98
+	.ctors      start:0x804FA0C4 end:0x804FA0C8
+
+lyt/lyt_group.temp.cpp:
+	.text       start:0x80401C98 end:0x80401FD8
+
+lyt/lyt_layout.temp.cpp:
+	.text       start:0x80401FD8 end:0x80402FC4
+
+lyt/lyt_picture.temp.cpp:
+	.text       start:0x80402FC4 end:0x80403620
+	.ctors      start:0x804FA0C8 end:0x804FA0CC
+
+lyt/lyt_textBox.temp.cpp:
+	.text       start:0x80403620 end:0x8040518C
+	.ctors      start:0x804FA0CC end:0x804FA0D0
+
+lyt/lyt_window.temp.cpp:
+	.text       start:0x8040518C end:0x80407740
+	.ctors      start:0x804FA0D0 end:0x804FA0D4
+
+lyt/lyt_bounding.temp.cpp:
+	.text       start:0x80407740 end:0x804077EC
+	.ctors      start:0x804FA0D4 end:0x804FA0D8
+
+lyt/lyt_material.temp.cpp:
+	.text       start:0x804077EC end:0x8040A660
+
+lyt/lyt_texMap.temp.cpp:
+	.text       start:0x8040A660 end:0x8040A9CC
+
+lyt/lyt_drawInfo.temp.cpp:
+	.text       start:0x8040A9CC end:0x8040AA80
+
+lyt/lyt_animation.temp.cpp:
+	.text       start:0x8040AA80 end:0x8040BFAC
+
+lyt/lyt_resourceAccessor.temp.cpp:
+	.text       start:0x8040BFAC end:0x8040C004
+
+lyt/lyt_arcResourceAccessor.temp.cpp:
+	.text       start:0x8040C004 end:0x8040C38C
+
+lyt/lyt_common.temp.cpp:
+	.text       start:0x8040C38C end:0x8040CEE4
+
+lyt/lyt_util.temp.cpp:
+	.text       start:0x8040CEE4 end:0x8040CF54
+
+math/math_arithmetic.temp.cpp:
+	.text       start:0x8040CF54 end:0x8040D090
+
+math/math_triangular.temp.cpp:
+	.text       start:0x8040D090 end:0x8040D364
+
+math/math_types.temp.cpp:
+	.text       start:0x8040D364 end:0x8040D7EC
+
+math/math_geometry.temp.cpp:
+	.text       start:0x8040D7EC end:0x8040E7C8
+
+snd/snd_AxManager.temp.cpp:
+	.text       start:0x8040E7C8 end:0x80410224
+	.ctors      start:0x804FA0D8 end:0x804FA0DC
+
+snd/snd_AxVoice.temp.cpp:
+	.text       start:0x80410224 end:0x80412EE4
+
+snd/snd_AxVoiceManager.temp.cpp:
+	.text       start:0x80412EE4 end:0x80413918
+
+snd/snd_AxfxImpl.temp.cpp:
+	.text       start:0x80413918 end:0x80413AE4
+
+snd/snd_Bank.temp.cpp:
+	.text       start:0x80413AE4 end:0x80413D54
+
+snd/snd_BankFile.temp.cpp:
+	.text       start:0x80413D54 end:0x80414410
+
+snd/snd_BasicPlayer.temp.cpp:
+	.text       start:0x80414410 end:0x80414804
+
+snd/snd_BasicSound.temp.cpp:
+	.text       start:0x80414804 end:0x80415E78
+	.ctors      start:0x804FA0DC end:0x804FA0E0
+
+snd/snd_BiquadFilterPreset.temp.cpp:
+	.text       start:0x80415E78 end:0x80416144
+
+snd/snd_Channel.temp.cpp:
+	.text       start:0x80416144 end:0x80417398
+
+snd/snd_DisposeCallbackManager.temp.cpp:
+	.text       start:0x80417398 end:0x80417728
+
+snd/snd_EnvGenerator.temp.cpp:
+	.text       start:0x80417728 end:0x80417AC4
+
+snd/snd_ExternalSoundPlayer.temp.cpp:
+	.text       start:0x80417AC4 end:0x80417D70
+
+snd/snd_FxChorusDpl2.temp.cpp:
+	.text       start:0x80417D70 end:0x80418314
+
+snd/snd_FxDelayDpl2.temp.cpp:
+	.text       start:0x80418314 end:0x80418914
+
+snd/snd_FxReverbStdDpl2.temp.cpp:
+	.text       start:0x80418914 end:0x8041900C
+
+snd/snd_InstancePool.temp.cpp:
+	.text       start:0x8041900C end:0x804192C4
+
+snd/snd_Lfo.temp.cpp:
+	.text       start:0x804192C4 end:0x804194B4
+
+snd/snd_McsSoundArchive.temp.cpp:
+	.text       start:0x804194B4 end:0x804194CC
+
+snd/snd_MemorySoundArchive.temp.cpp:
+	.text       start:0x804194CC end:0x80419900
+
+snd/snd_MidiSeqPlayer.temp.cpp:
+	.text       start:0x80419900 end:0x80419954
+
+snd/snd_MmlParser.temp.cpp:
+	.text       start:0x80419954 end:0x8041AAF8
+
+snd/snd_MmlSeqTrack.temp.cpp:
+	.text       start:0x8041AAF8 end:0x8041ABA0
+
+snd/snd_MmlSeqTrackAllocator.temp.cpp:
+	.text       start:0x8041ABA0 end:0x8041ACCC
+
+snd/snd_PlayerHeap.temp.cpp:
+	.text       start:0x8041ACCC end:0x8041AECC
+
+snd/snd_RemoteSpeaker.temp.cpp:
+	.text       start:0x8041AECC end:0x8041B6B8
+
+snd/snd_RemoteSpeakerManager.temp.cpp:
+	.text       start:0x8041B6B8 end:0x8041B938
+
+snd/snd_SeqFile.temp.cpp:
+	.text       start:0x8041B938 end:0x8041BA6C
+
+snd/snd_SeqPlayer.temp.cpp:
+	.text       start:0x8041BA6C end:0x8041CF20
+
+snd/snd_SeqSound.temp.cpp:
+	.text       start:0x8041CF20 end:0x8041D668
+	.ctors      start:0x804FA0E0 end:0x804FA0E4
+
+snd/snd_SeqSoundHandle.temp.cpp:
+	.text       start:0x8041D668 end:0x8041D6A0
+
+snd/snd_SeqTrack.temp.cpp:
+	.text       start:0x8041D6A0 end:0x8041EAE0
+
+snd/snd_SoundArchive.temp.cpp:
+	.text       start:0x8041EAE0 end:0x8041EE38
+
+snd/snd_SoundArchiveFile.temp.cpp:
+	.text       start:0x8041EE38 end:0x8041FEE8
+
+snd/snd_SoundArchivePlayer.temp.cpp:
+	.text       start:0x8041FEE8 end:0x80422694
+
+snd/snd_SoundHandle.temp.cpp:
+	.text       start:0x80422694 end:0x8042277C
+
+snd/snd_SoundPlayer.temp.cpp:
+	.text       start:0x8042277C end:0x80423324
+
+snd/snd_SoundStartable.temp.cpp:
+	.text       start:0x80423324 end:0x80423384
+
+snd/snd_SoundSystem.temp.cpp:
+	.text       start:0x80423384 end:0x80423648
+	.ctors      start:0x804FA0E4 end:0x804FA0E8
+
+snd/snd_SoundThread.temp.cpp:
+	.text       start:0x80423648 end:0x80423D2C
+
+snd/snd_StrmChannel.temp.cpp:
+	.text       start:0x80423D2C end:0x80423F4C
+
+snd/snd_StrmFile.temp.cpp:
+	.text       start:0x80423F4C end:0x804248FC
+
+snd/snd_StrmPlayer.temp.cpp:
+	.text       start:0x804248FC end:0x80427320
+
+snd/snd_StrmSound.temp.cpp:
+	.text       start:0x80427320 end:0x80427AB0
+	.ctors      start:0x804FA0E8 end:0x804FA0EC
+
+snd/snd_StrmSoundHandle.temp.cpp:
+	.text       start:0x80427AB0 end:0x80427AE8
+
+snd/snd_Task.temp.cpp:
+	.text       start:0x80427AE8 end:0x80427B28
+
+snd/snd_TaskManager.temp.cpp:
+	.text       start:0x80427B28 end:0x80428294
+
+snd/snd_TaskThread.temp.cpp:
+	.text       start:0x80428294 end:0x804284B0
+
+snd/snd_Voice.temp.cpp:
+	.text       start:0x804284B0 end:0x8042AFBC
+
+snd/snd_VoiceManager.temp.cpp:
+	.text       start:0x8042AFBC end:0x8042B734
+
+snd/snd_Util.temp.cpp:
+	.text       start:0x8042B734 end:0x8042BBB0
+
+snd/snd_WaveFile.temp.cpp:
+	.text       start:0x8042BBB0 end:0x8042BF3C
+
+snd/snd_WaveSound.temp.cpp:
+	.text       start:0x8042BF3C end:0x8042C29C
+	.ctors      start:0x804FA0EC end:0x804FA0F0
+
+snd/snd_WaveSoundHandle.temp.cpp:
+	.text       start:0x8042C29C end:0x8042C2D4
+
+snd/snd_WsdFile.temp.cpp:
+	.text       start:0x8042C2D4 end:0x8042C690
+
+snd/snd_WsdPlayer.temp.cpp:
+	.text       start:0x8042C690 end:0x8042D6E8
+
+snd/snd_adpcm.temp.cpp:
+	.text       start:0x8042D6E8 end:0x8042D774
+
+ut/ut_LinkList.temp.cpp:
+	.text       start:0x8042D774 end:0x8042D8E0
+
+ut/ut_binaryFileFormat.temp.cpp:
+	.text       start:0x8042D8E0 end:0x8042D954
+
+ut/ut_CharStrmReader.temp.cpp:
+	.text       start:0x8042D954 end:0x8042DA64
+
+ut/ut_TagProcessorBase.temp.cpp:
+	.text       start:0x8042DA64 end:0x8042E134
+
+ut/ut_IOStream.temp.cpp:
+	.text       start:0x8042E134 end:0x8042E160
+	.ctors      start:0x804FA0F0 end:0x804FA0F4
+
+ut/ut_FileStream.temp.cpp:
+	.text       start:0x8042E160 end:0x8042E178
+	.ctors      start:0x804FA0F4 end:0x804FA0F8
+
+ut/ut_DvdFileStream.temp.cpp:
+	.text       start:0x8042E178 end:0x8042E184
+	.ctors      start:0x804FA0F8 end:0x804FA0FC
+
+ut/ut_LockedCache.temp.cpp:
+	.text       start:0x8042E184 end:0x8042E330
+	.ctors      start:0x804FA0FC end:0x804FA100
+
+ut/ut_Font.temp.cpp:
+	.text       start:0x8042E330 end:0x8042E3D8
+
+ut/ut_RomFont.temp.cpp:
+	.text       start:0x8042E3D8 end:0x8042EA0C
+
+ut/ut_ResFontBase.temp.cpp:
+	.text       start:0x8042EA0C end:0x8042F2C0
+
+ut/ut_ResFont.temp.cpp:
+	.text       start:0x8042F2C0 end:0x8042F5C4
+
+ut/ut_ArchiveFontBase.temp.cpp:
+	.text       start:0x8042F5C4 end:0x80430478
+
+ut/ut_PackedFont.temp.cpp:
+	.text       start:0x80430478 end:0x80431878
+
+ut/ut_CharWriter.temp.cpp:
+	.text       start:0x80431878 end:0x80432FBC
+
+ut/ut_TextWriterBase.temp.cpp:
+	.text       start:0x80432FBC end:0x80435010
+	.ctors      start:0x804FA100 end:0x804FA104
 
 monolib1.s:
 	extab       start:0x8001C02C end:0x8001CB24
