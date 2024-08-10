@@ -461,23 +461,35 @@ MetroTRK/target_options.c:
 	.text       start:0x802D2F20 end:0x802D2F30
 	.sbss       start:0x80664CC8 end:0x80664CD0
 
-ndev_data.s:
+DebuggerDriver.c:
+	.text       start:0x802D2F30 end:0x802D3264
 	.sdata      start:0x80662F70 end:0x80662F78
 	.sbss       start:0x80664CD0 end:0x80664CE8
 
 sdk_data.s:
-	.rodata     start:0x80514AE0 end:0x80522990
-	.data       start:0x8053C8A0 end:0x8056BDF8
-	.bss        start:0x8057A128 end:0x806574B8
-	.sdata      start:0x80662F78 end:0x80663600
-	.sbss       start:0x80664CE8 end:0x80665648
-	.sdata2     start:0x806695B8 end:0x8066A360
-	.sbss2      start:0x8066B540 end:0x8066B55C
+	.rodata     start:0x80514AE0 end:0x80515788
+	.data       start:0x8053C8A0 end:0x80560028
+	.bss        start:0x8057A128 end:0x805DFDA8
+	.sdata      start:0x80662F78 end:0x80663450
+	.sbss       start:0x80664CE8 end:0x80665438
+	.sdata2     start:0x806695B8 end:0x80669A68
+	.sbss2      start:0x8066B540 end:0x8066B550
 
-DebuggerDriver.temp.c:
-	.text       start:0x802D2F30 end:0x802D3264
+criware_data.s:
+	.rodata     start:0x80515788 end:0x8051D4A0
+	.data       start:0x80560028 end:0x80568F38
+	.bss        start:0x805DFDA8 end:0x8061A4D8
 
-exi2.temp.c:
+nw4r_data.s:
+	.rodata     start:0x8051D4A0 end:0x80522410
+	.data       start:0x80568F38 end:0x8056B0E0
+	.bss        start:0x8061A4D8 end:0x80653EE0
+	.sdata      start:0x80663450 end:0x80663500
+	.sbss       start:0x80665438 end:0x80665570
+	.sdata2     start:0x80669A68 end:0x8066A178
+	.sbss2      start:0x8066B550 end:0x8066B558
+
+exi2.c:
 	.text       start:0x802D3264 end:0x802D39F0
 
 revolution/ai/ai.temp.c:
@@ -2129,6 +2141,13 @@ monolib1.s:
 	extabindex  start:0x80033DCC end:0x8003496C
 	.text       start:0x80435010 end:0x8044A7B8
 	.ctors      start:0x804FA104 end:0x804FA130
+	.rodata     start:0x80522410 end:0x80522990
+	.data       start:0x8056B0E0 end:0x8056BDF8
+	.bss        start:0x80653EE0 end:0x806574B8
+	.sdata      start:0x80663500 end:0x80663600
+	.sbss       start:0x80665570 end:0x80665648
+	.sdata2     start:0x8066A178 end:0x8066A360
+	.sbss2      start:0x8066B558 end:0x8066B55C
 
 device/CDeviceVI.cpp:
 	extab       start:0x8001CB24 end:0x8001CC1C
