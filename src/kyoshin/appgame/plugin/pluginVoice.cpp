@@ -16,7 +16,7 @@ int voice_play(_sVMThread* pThread) {
 	
 	//Iterate through the list until we hit the end
 	while((u32)node != (u32)list->mStartNodePtr){
-		cf::CfObjectPc* object = static_cast<cf::CfObjectPc*>(node->item);
+		cf::CfObjectPc* object = static_cast<cf::CfObjectPc*>(node->mItem);
 		if(object->CActorParam_vtableFunc138() == 0){
 			if(r30 == object->unk8C_3){
 				object->func_800BE898(r27, 0x14, 1.0f, 30.0f);
