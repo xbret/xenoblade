@@ -30,13 +30,13 @@ public:
     }
 
 	//0x0: vtable
-	FixStr<64> name; //0x4
+	FixStr<64> mName; //0x4
 	int unk48;
 	u32 unk4C;
 	u32 unk50;
 	u32 unk54;
 	u32 unk58;
-	reslist<CWorkThread*> workThreadList; //0x5C
+	reslist<CWorkThread*> mWorkThreadList; //0x5C
 	u32 unk7C;
 	CMsgParam<8> unk80;
 	u32 unk1BC;

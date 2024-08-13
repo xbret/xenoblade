@@ -12,8 +12,8 @@ template <int N>
 class CMsgParam{
 public:
 	CMsgParam(u32 r4){
-		size = N;
-		pArray = entries;
+		mSize = N;
+		mArrayPtr = mEntries;
 		field4 = 0;
 		field3 = 0;
 		field6 = 0;
@@ -24,7 +24,7 @@ public:
 
 	inline int someInline() const {
 		for(int i = 0; i < field4; i++){
-			if(pArray[(field3 + i) % size].unk0 == 2){
+			if(mArrayPtr[(field3 + i) % mSize].unk0 == 2){
 				return i;
             }
 		}
@@ -33,11 +33,11 @@ public:
 	}
 
 	//0x0: vtable
-	CMsgParamEntry entries[N]; //0x4
-	CMsgParamEntry* pArray;
+	CMsgParamEntry mEntries[N]; //0x4
+	CMsgParamEntry* mArrayPtr;
 	u32 field3;
 	u32 field4;
-	u32 size;
+	u32 mSize;
 	u32 field6;
 	u32 field7;
 };

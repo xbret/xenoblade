@@ -30,8 +30,8 @@ public:
     
     UnkClass_8045F564 unk4;
     UnkClass_80451720* unk14;
-    nw4r::lyt::ArcResourceAccessor* accessor; //0x18
-    nw4r::lyt::Layout* layout; //0x1C
+    nw4r::lyt::ArcResourceAccessor* mAccessor; //0x18
+    nw4r::lyt::Layout* mLayout; //0x1C
     bool unk20;
     s8 unk21;
     bool unk22;

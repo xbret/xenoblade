@@ -12,11 +12,11 @@ public:
     TChildListHeader() { Reset(); }
     virtual ~TChildListHeader() {}
     
-    void Reset() { head = NULL; }
+    void Reset() { mHead = NULL; }
 
     T* Front() const { return static_cast<T*>(Head()); }
     T* Back() const { 
-        return Head() != NULL ? static_cast<T*>(head->GetPrev()) : NULL;
+        return Head() != NULL ? static_cast<T*>(mHead->GetPrev()) : NULL;
     }
 };
 

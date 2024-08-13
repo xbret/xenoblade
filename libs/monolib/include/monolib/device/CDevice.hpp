@@ -36,11 +36,11 @@ public:
 		bool r0 = CWorkThread_inline1();
 		if(r0 == false) return false;
 		bool result = true;
-		_reslist_node<CWorkThread*>* curNode = workThreadList.mStartNodePtr->next;
-		while(curNode != workThreadList.mStartNodePtr){
+		_reslist_node<CWorkThread*>* curNode = mWorkThreadList.mStartNodePtr->mNext;
+		while(curNode != mWorkThreadList.mStartNodePtr){
 			CDeviceBase* deviceBase = static_cast<CDeviceBase*>(curNode->item);
 			if((deviceBase->unk1C4 & 1) == 0) result = false;
-			curNode = curNode->next;
+			curNode = curNode->mNext;
 		}
 		return result;
 	}

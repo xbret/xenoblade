@@ -5,9 +5,9 @@
 
 template <typename T>
 struct _reslist_node{
-	_reslist_node<T>* next; //0x00
-	_reslist_node<T>* prev; //0x04
-	T item; //0x8
+	_reslist_node<T>* mNext; //0x00
+	_reslist_node<T>* mPrev; //0x04
+	T mItem; //0x8
 };
 
 template <typename T>
@@ -18,8 +18,8 @@ public:
 		mCapacity = 0;
 		unk1C = 0;
 		mStartNodePtr = &mStartNode;
-		mStartNodePtr->next = &mStartNode;
-		mStartNodePtr->prev = mStartNode.next;
+		mStartNodePtr->mNext = &mStartNode;
+		mStartNodePtr->mPrev = mStartNode.mNext;
 	}
 
 	virtual ~_reslist_base(){
@@ -35,22 +35,22 @@ public:
 	}
 
 	void func_8049CB70(_reslist_node<T>* r4){
-		r4->next = nullptr;
+		r4->mNext = nullptr;
 	}
 
 	//func_8049CAF4
 	void clear(){
-		_reslist_node<T>* r5 = mStartNodePtr->next;
+		_reslist_node<T>* r5 = mStartNodePtr->mNext;
 		
 		while (r5 != mStartNodePtr) {
 			_reslist_node<T>* r4 = r5;
-			r5 = r5->next;
-			func_8049CB6C(&r4->item);
+			r5 = r5->mNext;
+			func_8049CB6C(&r4->mItem);
 			func_8049CB70(r4);
 		}
 	
-		mStartNodePtr->next = mStartNodePtr;
-		mStartNodePtr->prev = mStartNodePtr;
+		mStartNodePtr->mNext = mStartNodePtr;
+		mStartNodePtr->mPrev = mStartNodePtr;
 	}
 
 	//0x0: vtable
@@ -73,17 +73,17 @@ public:
 
 	void remove(const T& item) {
 		_reslist_node<T>* startNode = mStartNodePtr;
-		_reslist_node<T>* curNode = startNode->next;
+		_reslist_node<T>* curNode = startNode->mNext;
 		
 		//Walk through the list
 		while(curNode != startNode){
-			_reslist_node<T>* next = curNode->next;
+			_reslist_node<T>* next = curNode->mNext;
 			//If we find an entry containing the item, remove the entry
-			if(curNode->item == item){
-				_reslist_node<T>* prev = curNode->prev;
-				prev->next = next;
-				next->prev = prev;
-				curNode->next = nullptr;
+			if(curNode->mItem == item){
+				_reslist_node<T>* prev = curNode->mPrev;
+				prev->mNext = next;
+				next->mPrev = prev;
+				curNode->mNext = nullptr;
 			}
 			curNode = next;
 		}
@@ -106,9 +106,9 @@ public:
 		}
 
 		mList[i].next = r9;
-		mList[i].prev = r9->prev;
-		r9->prev->next = mList[i].next;
-		r9->prev = mList[i].next;
+		mList[i].prev = r9->mPrev;
+		r9->mPrev->mNext = mList[i].next;
+		r9->mPrev = mList[i].next;
 	}
 
 

@@ -43,7 +43,7 @@ public:
 	s64 unk1F8;
 	s64 unk200;
 	s64 unk208;
-	OSCalendarTime cal; //0x210
+	OSCalendarTime mCalendar; //0x210
 
 	static CDeviceClock* instance;
 };
