@@ -20,7 +20,7 @@ CDeviceVICb(), unk1CC(false), mGxHeap(nullptr), mGxHeapEndAddr(nullptr), unk264(
 unk270(0), unk274(1), mFilter(VFILTER_NONE){
 	instance = this;
 	cacheInstance = &unk27C;
-	mGxHeap = mtl::allocateArray(gxHeapSize, CDevice::func_8044D058(), 0x20);
+	mGxHeap = (u8*)mtl::allocateArray(gxHeapSize, CDevice::func_8044D058(), 0x20);
 	mGxHeapEndAddr = (void*)((u32)mGxHeap + gxHeapSize);
 	cacheInstance->unk50C = 0;
 	updateVerticalFilter(VFILTER_NONE);

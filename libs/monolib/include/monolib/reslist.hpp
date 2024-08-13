@@ -126,7 +126,7 @@ public:
 	}
 
 	inline bool empty(){
-		return mStartNodePtr->next == mStartNodePtr;
+		return mStartNodePtr->mNext == mStartNodePtr;
 	}
 
 };

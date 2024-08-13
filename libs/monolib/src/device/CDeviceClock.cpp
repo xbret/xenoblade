@@ -40,7 +40,7 @@ void CDeviceClock::func_8044DF8C(){
 	instance->unk200 = time;
 	_reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
 	while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-		curNode->item->virtualFunc2();
+		curNode->mItem->virtualFunc2();
 		curNode = curNode->mNext;
 	}
 }
@@ -50,7 +50,7 @@ void CDeviceClock::func_8044DFF4(){
 	instance->unk208 = time - instance->unk200;
 	_reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
 	while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-		curNode->item->virtualFunc3();
+		curNode->mItem->virtualFunc3();
 		curNode = curNode->mNext;
 	}
 }

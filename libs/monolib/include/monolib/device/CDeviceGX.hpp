@@ -77,7 +77,7 @@ public:
 	//0x1c8-1cc: CDeviceVICb
 	BOOL unk1CC;
 	GXFifoObj mFifo; //0x1D0
-	void* mGxHeap; //0x250
+	u8* mGxHeap; //0x250
 	void* mGxHeapEndAddr; //0x254
 	u8 mVFilter[8]; //0x258
 	float unk260;

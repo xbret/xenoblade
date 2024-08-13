@@ -38,7 +38,7 @@ public:
 		bool result = true;
 		_reslist_node<CWorkThread*>* curNode = mWorkThreadList.mStartNodePtr->mNext;
 		while(curNode != mWorkThreadList.mStartNodePtr){
-			CDeviceBase* deviceBase = static_cast<CDeviceBase*>(curNode->item);
+			CDeviceBase* deviceBase = static_cast<CDeviceBase*>(curNode->mItem);
 			if((deviceBase->unk1C4 & 1) == 0) result = false;
 			curNode = curNode->mNext;
 		}
