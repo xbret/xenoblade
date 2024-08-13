@@ -96,19 +96,19 @@ public:
 
 		//Go through the list until we find an empty slot
 		while(i < mCapacity){
-			if(mList[i].next == 0) break;
+			if(mList[i].mNext == 0) break;
 			i++;
 		}
 
 
-		if(&mList[i].item != nullptr){
-			mList[i].item = item;
+		if(&mList[i].mItem != nullptr){
+			mList[i].mItem = item;
 		}
 
-		mList[i].next = r9;
-		mList[i].prev = r9->mPrev;
-		r9->mPrev->mNext = mList[i].next;
-		r9->mPrev = mList[i].next;
+		mList[i].mNext = r9;
+		mList[i].mPrev = r9->mPrev;
+		r9->mPrev->mNext = mList[i].mNext;
+		r9->mPrev = mList[i].mNext;
 	}
 
 
@@ -119,7 +119,7 @@ public:
 		mList = new (heapIndex) _reslist_node<T>[capacity];
 
 		for(int i = 0; i < capacity; i++){
-			mList[i].next = nullptr;
+			mList[i].mNext = nullptr;
 		}
 
 		mCapacity = capacity;
