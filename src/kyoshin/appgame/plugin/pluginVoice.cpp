@@ -12,7 +12,7 @@ int voice_play(_sVMThread* pThread) {
 	int r27 = vmArgIntGet(3, vmArgPtrGet(pThread, 2));
 	//TODO: make this an inline
 	reslist<cf::CfObject*>* list = func_800B6BA4();
-	node = list->mStartNodePtr->next;
+	node = list->mStartNodePtr->mNext;
 	
 	//Iterate through the list until we hit the end
 	while((u32)node != (u32)list->mStartNodePtr){
@@ -23,7 +23,7 @@ int voice_play(_sVMThread* pThread) {
 				break;
 			}
 		}
-		node = node->next;
+		node = node->mNext;
 	}
 
 	return 0;

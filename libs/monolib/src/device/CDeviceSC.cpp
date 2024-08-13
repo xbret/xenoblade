@@ -6,11 +6,11 @@
 CDeviceSC* CDeviceSC::instance;
 
 CDeviceSC::CDeviceSC(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8) {
-	aspectRatio = 0;
-	euRgb60Mode = 0;
-	language = 0;
-	progMode = 0;
-	soundMode = 1;
+	mAspectRatio = 0;
+	mEuRgb60Mode = 0;
+	mLanguage = 0;
+	mProgMode = 0;
+	mSoundMode = 1;
 	unk1CD = 0;
 	instance = this;
 	SCInit();
@@ -25,15 +25,15 @@ CDeviceSC* CDeviceSC::getInstance(){
 }
 
 bool CDeviceSC::isWideAspectRatio(){
-	return instance->aspectRatio == SC_ASPECT_WIDE;
+	return instance->mAspectRatio == SC_ASPECT_WIDE;
 }
 
 bool CDeviceSC::isSoundModeMono(){
-	return instance->soundMode == SC_SND_MONO;
+	return instance->mSoundMode == SC_SND_MONO;
 }
 
 u8 CDeviceSC::getLanguage(){
-	return instance->language;
+	return instance->mLanguage;
 }
 
 bool CDeviceSC::func_80447C60(){
@@ -45,11 +45,11 @@ bool CDeviceSC::wkStartup(){
 		u32 r3 = CDeviceClock::func_8044DEE0();
 		if(r3 != 0){
 			//Update SC values
-			aspectRatio = SCGetAspectRatio();
-			euRgb60Mode = SCGetEuRgb60Mode();
-			language = SCGetLanguage();
-			progMode = SCGetProgressiveMode();
-			soundMode = SCGetSoundMode();
+			mAspectRatio = SCGetAspectRatio();
+			mEuRgb60Mode = SCGetEuRgb60Mode();
+			mLanguage = SCGetLanguage();
+			mProgMode = SCGetProgressiveMode();
+			mSoundMode = SCGetSoundMode();
 			return CWorkThread::wkStartup(); //Call the base method
 		}
 	}
@@ -58,7 +58,7 @@ bool CDeviceSC::wkStartup(){
 }
 
 bool CDeviceSC::wkShutdown(){
-	if(workThreadList.empty()){
+	if(mWorkThreadList.empty()){
 		if(CDeviceVI::getInstance() == nullptr){
 			return CWorkThread::wkShutdown();
 		}

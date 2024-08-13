@@ -26,11 +26,11 @@ public:
 
 	//0x0: vtable
 	//0x0-1C8: CDeviceBase
-	u8 aspectRatio; //0x1c8
-	u8 euRgb60Mode; //0x1c9
-	u8 language; //0x1ca
-	u8 progMode; //0x1cb
-	u8 soundMode; //0x1cc
+	u8 mAspectRatio; //0x1c8
+	u8 mEuRgb60Mode; //0x1c9
+	u8 mLanguage; //0x1ca
+	u8 mProgMode; //0x1cb
+	u8 mSoundMode; //0x1cc
 	u8 unk1CD;
 	u8 unk1CE[2];
 

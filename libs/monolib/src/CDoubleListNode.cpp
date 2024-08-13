@@ -5,8 +5,8 @@ CDoubleListNode::CDoubleListNode() {
 }
 
 void CDoubleListNode::Reset() {
-    next = NULL;
-    prev = NULL;
+    mNext = NULL;
+    mPrev = NULL;
     unk8 = 0;
     unkC = -1;
 }
@@ -20,19 +20,19 @@ CDoubleListNode* CDoubleListHeader::InsertTop(CDoubleListNode* node) {
         
         //No list, create a new one
         if (oldHead == NULL) {
-            head = node;
+            mHead = node;
             node->SetNext(node);
             node->SetPrev(node);
         }
         //Insert node at top of existing list
         else {
             //Needed because list is circular
-            headPrev = head->GetPrev();
+            headPrev = mHead->GetPrev();
             //Fix link
             node->SetPrev(headPrev);
             node->SetNext(oldHead);
             headPrev->SetNext(node);
-            head->SetPrev(node);
+            mHead->SetPrev(node);
         }
     }
 
@@ -43,7 +43,7 @@ CDoubleListNode* CDoubleListHeader::InsertEnd(CDoubleListNode* node) {
     if (node != NULL) {
         //List is circular
         InsertTop(node);
-        head = node;   
+        mHead = node;   
     }
 
     return node;
@@ -70,7 +70,7 @@ CDoubleListNode* CDoubleListHeader::Remove(CDoubleListNode* child) {
             }
 
             //The child was the only element
-            head = NULL;
+            mHead = NULL;
         }
         //More than one element
         else {
@@ -84,8 +84,8 @@ CDoubleListNode* CDoubleListHeader::Remove(CDoubleListNode* child) {
             }
 
             //Fix head if child was the head
-            if (child == head) {
-                head = child->GetNext();
+            if (child == mHead) {
+                mHead = child->GetNext();
             }
         }
     

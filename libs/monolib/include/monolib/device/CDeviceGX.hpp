@@ -50,10 +50,10 @@ public:
 
 	static inline void someInline(void* r3){
 		CDeviceGX* gx = instance;
-		GXBool vf = gx->filter != VFILTER_NONE;
+		GXBool vf = gx->mFilter != VFILTER_NONE;
 		GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
 		GXBool aa = CDeviceVI::getRenderModeObj()->aa;
-		u8* vfilter = gx->vfilter;
+		u8* vfilter = gx->mVFilter;
 		GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
 		GXCopyDisp(r3, instance->unk274);
 	}
@@ -76,10 +76,10 @@ public:
 	//0x0-1c8: CDeviceBase
 	//0x1c8-1cc: CDeviceVICb
 	BOOL unk1CC;
-	GXFifoObj fifo; //0x1D0
-	void* gxHeap; //0x250
-	void* gxHeapEndAddress; //0x254
-	u8 vfilter[8]; //0x258
+	GXFifoObj mFifo; //0x1D0
+	void* mGxHeap; //0x250
+	void* mGxHeapEndAddr; //0x254
+	u8 mVFilter[8]; //0x258
 	float unk260;
 	float unk264;
 	u8 unk268[4];
@@ -87,7 +87,7 @@ public:
 	u32 unk270;
 	u8 unk274;
 	u8 unk275[3];
-	EVerticalFilter filter; //0x278
+	EVerticalFilter mFilter; //0x278
 	CGXCache unk27C;
 
 protected:

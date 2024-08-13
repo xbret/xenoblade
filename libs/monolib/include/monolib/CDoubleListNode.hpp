@@ -4,8 +4,8 @@
 
 class CDoubleListNode {
 public:
-    CDoubleListNode* next; //0x0
-    CDoubleListNode* prev; //0x4
+    CDoubleListNode* mNext; //0x0
+    CDoubleListNode* mPrev; //0x4
     u8 unk8;
     int unkC;
 
@@ -14,20 +14,20 @@ public:
     virtual ~CDoubleListNode() {}
     virtual void Reset();
 
-    CDoubleListNode* GetNext() const { return next; }
-    CDoubleListNode* GetPrev() const { return prev; }
-    void SetNext(CDoubleListNode* newNext) { next = newNext; }
-    void SetPrev(CDoubleListNode* newPrev) { prev = newPrev; }
+    CDoubleListNode* GetNext() const { return mNext; }
+    CDoubleListNode* GetPrev() const { return mPrev; }
+    void SetNext(CDoubleListNode* newNext) { mNext = newNext; }
+    void SetPrev(CDoubleListNode* newPrev) { mPrev = newPrev; }
 };
 
 class CDoubleListHeader {
 protected:
-    CDoubleListNode* head; //0x0
-    CDoubleListNode* tail; //0x4
+    CDoubleListNode* mHead; //0x0
+    CDoubleListNode* mTail; //0x4
 
 public:
-    CDoubleListNode* Head() const { return head; }
-    CDoubleListNode* Tail() const { return tail; }
+    CDoubleListNode* Head() const { return mHead; }
+    CDoubleListNode* Tail() const { return mTail; }
 
     CDoubleListNode* InsertTop(CDoubleListNode* node);
     CDoubleListNode* InsertEnd(CDoubleListNode* node);

@@ -17,8 +17,8 @@ extern void func_8045F810(UnkClass_8045F564*);
 
 CBattery::CBattery(u8 r4) : unk4(){
     unk14 = nullptr;
-    accessor = nullptr;
-    layout = nullptr;
+    mAccessor = nullptr;
+    mLayout = nullptr;
     unk20 = false;
     unk21 = 1;
     unk22 = false;
@@ -38,25 +38,25 @@ void CBattery::func_802B92A4(){
 
 void CBattery::func_802B92FC(){
 	if(unk22 == false || unk20 == false) return;
-	layout->Animate(0);
+	mLayout->Animate(0);
 }
 
 //r4 inherits from DrawInfo
 void CBattery::func_802B9334(void* r4){
 	if(unk22 == false || unk20 == false) return;
-	func_80137038(layout, r4, 0, 1);
+	func_80137038(mLayout, r4, 0, 1);
 }
 
 void CBattery::func_802B9364(){
 	CDeviceVI::func_80448A44();
 	func_801390E0(&unk14);
 	unk20 = false;
-	if(layout != nullptr){
-		delete layout;
-		layout = nullptr;
+	if(mLayout != nullptr){
+		delete mLayout;
+		mLayout = nullptr;
 	}
-	func_80139124(accessor);
-	accessor = nullptr;
+	func_80139124(mAccessor);
+	mAccessor = nullptr;
 	func_8045F778(&unk4);
 }
 
@@ -68,14 +68,14 @@ void CBattery::func_802B93E4(u8 r4){
 /* Iterates through each of the four image objects, and enables the ones with indexes
 starting from 1 to unk24. This corresponds to the battery level? */
 void CBattery::func_802B93EC(){
-	if(layout != nullptr){
+	if(mLayout != nullptr){
 		if(unk24 > 4) unk24 = 4;
 
 		char name[16];
 
 		for(u8 num = 1; num <= 4; num++){
 			sprintf(name, "pic_%02d", num);
-			nw4r::lyt::Pane* pane = layout->unk10->FindPaneByName(name, true);
+			nw4r::lyt::Pane* pane = mLayout->unk10->FindPaneByName(name, true);
 			if(pane != nullptr){
 				int v = num <= unk24;
 				pane->mFlags &= ~1; //Disable by default
@@ -86,7 +86,7 @@ void CBattery::func_802B93EC(){
 }
 
 void CBattery::func_802B94B0(){
-	if(layout != nullptr){
+	if(mLayout != nullptr){
 		unk22 = true;
 		unk20 = true;
 		func_802B93EC();
@@ -106,9 +106,9 @@ bool CBattery::OnFileEvent(CEventFile* eventFile){
 		void* r29 = unk14->unk4;
 		unk14->unk4 = 0;
 		MemManager_80434A4C(0);
-		accessor = CLibLayout_getArcResourceAccessorInstance();
-		accessor->Attach(r29, "arc");
-		func_80136E84(&layout, accessor, "mf00_btry.brlyt"); //Open the layout file
+		mAccessor = CLibLayout_getArcResourceAccessorInstance();
+		mAccessor->Attach(r29, "arc");
+		func_80136E84(&mLayout, mAccessor, "mf00_btry.brlyt"); //Open the layout file
 		func_802B94B0();
 		unk14 = nullptr;
 		func_8045F810(&unk4);

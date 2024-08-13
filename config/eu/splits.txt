@@ -25,17 +25,25 @@ kyoshin/appgame/CGame.cpp:
 	.sbss       start:0x80663D00 end:0x80663D10
 	.sdata2     start:0x80665AA0 end:0x80665AB8
 
+kyoshin/appgame/main.cpp:
+	extab       start:0x800067C4 end:0x800067D4
+	extabindex  start:0x800212A4 end:0x800212BC
+	.text       start:0x8003A2A8 end:0x8003A414
+	.rodata     start:0x804FA258 end:0x804FA410
+	.data       start:0x80524A80 end:0x80524B98
+	.sdata2     start:0x80665AB8 end:0x80665B80
+
 split1.s:
-	extab       start:0x800067C4 end:0x8001BF94
-	extabindex  start:0x800212A4 end:0x80033D3C
-	.text       start:0x8003A2A8 end:0x802BC028
+	extab       start:0x800067D4 end:0x8001BF94
+	extabindex  start:0x800212BC end:0x80033D3C
+	.text       start:0x8003A414 end:0x802BC028
 	.ctors      start:0x804F9FC8 end:0x804FA0A8
-	.rodata     start:0x804FA258 end:0x805139D8
-	.data       start:0x80524A80 end:0x8053B928
+	.rodata     start:0x804FA410 end:0x805139D8
+	.data       start:0x80524B98 end:0x8053B928
 	.bss        start:0x805704C8 end:0x80577790
 	.sdata      start:0x806618B8 end:0x80662F30
 	.sbss       start:0x80663D10 end:0x80664C40
-	.sdata2     start:0x80665AB8 end:0x80669020
+	.sdata2     start:0x80665B80 end:0x80669020
 
 Runtime/__mem.c:
 	.init       start:0x80004000 end:0x80004380
