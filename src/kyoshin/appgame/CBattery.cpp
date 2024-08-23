@@ -8,7 +8,6 @@ extern void func_80136E84(nw4r::lyt::Layout**, nw4r::lyt::ArcResourceAccessor*, 
 extern void func_80137038(nw4r::lyt::Layout*, void*, int, int);
 extern void func_801390E0(UnkClass_80451720**);
 extern void func_80139124(nw4r::lyt::ArcResourceAccessor*);
-extern void MemManager_80434A4C(u8);
 extern UnkClass_80451720* CDeviceFile_openFile1(int, const char*, void*, int, int);
 extern void CDeviceFile_8044F154(UnkClass_80451720*, int);
 extern void CDeviceFile_8044F414(UnkClass_80451720*);
@@ -105,7 +104,7 @@ bool CBattery::OnFileEvent(CEventFile* eventFile){
 		Class_8045F858 sp8 = Class_8045F858(&unk4);
 		void* r29 = unk14->unk4;
 		unk14->unk4 = 0;
-		MemManager_80434A4C(0);
+		mtl::MemManager::func_80434A4C(0);
 		mAccessor = CLibLayout_getArcResourceAccessorInstance();
 		mAccessor->Attach(r29, "arc");
 		func_80136E84(&mLayout, mAccessor, "mf00_btry.brlyt"); //Open the layout file
