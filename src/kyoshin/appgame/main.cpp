@@ -136,7 +136,7 @@ void main(int argc, char* argv[]) {
 	func_804DAAA0(getErrorDuringMemoryReadWriteErrorMessage());
 	
 	lbl_80666438 = 0;
-	mtl::MemManager_setArenaMemorySize(0x680000, 0); //Set arena size to 6.5 mb
+	mtl::MemManager::setArenaMemorySize(0x680000, 0); //Set arena size to 6.5 mb
 	CDeviceVI::func_80448E78(false);
 	CDeviceGX::setValues(GX_PF_RGB8_Z24, 0x180000); //Set GX heap size to 1.5 mb
 	CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later

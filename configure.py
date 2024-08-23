@@ -1573,7 +1573,7 @@ config.libs = [
         "host": True,
         "objects": [
             Object(NonMatching, "CAttrTransform.cpp"),
-            Object(NonMatching, "MemManager.cpp"),
+            Object(NonMatching, "MemManager.cpp", extra_cflags=["-lang=ec++"]),
             Object(NonMatching, "CPathUtil.cpp"),
             Object(Matching, "MTRand.cpp"),
             Object(Matching, "CRect16.cpp"),

@@ -1,330 +1,295 @@
 #include "monolib/MemManager.hpp"
 
-/*Compiled with the ec++ flag? without it the compiler requires throw()
-to be added for the operators, which messes them up*/
-
-
 namespace mtl{
 
-Heap heapArray[80]; 
-int arenaMemorySize;
-int lbl_80665E28;
-int lbl_80665E2C;
-u32 regionIndex1;
-u32 regionIndex2;
-bool lbl_80665E38;
-bool lbl_80665E39;
-s32 lbl_80667E50;
+Region MemManager::regionArray[80]; 
+s32 MemManager::lbl_80667E50;
 bool lbl_80667E54;
 BOOL lbl_80667E58;
 
+int MemManager::lbl_80665E28 = 1;
+int MemManager::lbl_80665E2C = 1;
+u32 MemManager::regionIndex1 = -1;
+u32 MemManager::regionIndex2 = -1;
+bool MemManager::lbl_80665E38 = true;
+bool MemManager::lbl_80665E39 = true;
+int MemManager::arenaMemorySize = 0x600000;
 
+#define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)
 
-/*Attempts to add a new memory region entry into the array, looking for the first unused slot. If
-successful, it returns the corresponding index.*/
-static inline int addHeap(MemBlock* head, u32 size, const char* name){
-    //Find the first unused entry to use for the new region
-    for(int i = 0; i < 0x50; i++){
-        Heap* entry = getHeap(i);
-       //Check if this slot is empty
-        if (entry->startAddress == 0) {
-            i = (lbl_80667E50++ << 8) | i;
-            entry->regionIndex = i;
-            entry->startAddress = (u32)head;
-            entry->endAddress = (u32)head + size;
-            entry->unk8 = nullptr;
-            entry->unkC = nullptr;
+Region::~Region(){
+	u32 regionIndex = mRegionIndex;
+	if(regionIndex != MemManager::regionIndex1 && regionIndex != MemManager::regionIndex2 && mStartAddress != 0){
+		MemManager::deallocate((void*)mStartAddress);
+	}
 
-            //Initialize the head entry of the heap
-            head->init(size,i);
-            
-            entry->head = head;
-            entry->tail = head;
-            entry->unk18 = 0;
-            entry->size = size;
-            entry->freeBytes = size;
-            entry->unk6C = 0;
-            entry->nameLength = strlen(name);
-            strcpy(entry->name, name); //Copy the name to the struct variable
-            return i;
-        }
-    }
-    
-    return -1; //No available slot was found, return -1
+	regionIndex = mRegionIndex;
+	if(regionIndex == MemManager::regionIndex1){
+		MemManager::regionIndex1 = -1;
+	}else if(regionIndex == MemManager::regionIndex2){
+		MemManager::regionIndex2 = -1;
+	}
+
+	unk8 = nullptr;
+	unkC = nullptr;
+	mHead = nullptr;
+	mTail = nullptr;
+	mStartAddress = 0;
+	mEndAddress = 0;
+	mSize = 0;
+	unk18 = 0;
+	mFreeBytes = 0;
 }
 
-static inline MemBlock* findLargestEntry(u32 heapIndex){
-    MemBlock* regionHead = getHeap(heapIndex)->head;      
-        
-        if (regionHead == nullptr) {
-            return nullptr;
-        } else {
-            MemBlock* temp = regionHead;
-            
-            while(temp != nullptr) {
-                if (regionHead->size < temp->size) {
-                    regionHead = temp;
-                }
-                temp = temp->next;
-            }
-        }
-    return regionHead;
+void MemManager::setArenaMemorySize(u32 val, bool b){
+	arenaMemorySize = val;
+	lbl_80667E58 = b;
 }
 
-static inline MemBlock* createRegionHeadMemBlock(u32 heapIndex, u32 size){
-    return (MemBlock *)allocate(getHeap(heapIndex),0,size,0x10);
-}
+MemBlock* Region::func_804339B8(MemBlock* arg1) {
+	MemBlock* entryTemp = arg1;
+	MemBlock* tempEntry1 = entryTemp->next;
+	
+	if (tempEntry1 != entryTemp) {
+		memmove((void*)tempEntry1, entryTemp, sizeof(MemBlock));
+		entryTemp = tempEntry1;
+	}
+	
+	entryTemp->next = (MemBlock*)MemBlock::dummyDataPtr(); //set the pointer to a random known value
+	MemBlock* currentEntry = mHead;
 
-static inline MemBlock* unkInline1(Heap* heap, MemBlock* entry){
-     MemBlock* prevEntry = entry->prev;
-            
-    if (entry->prev != nullptr) {
-        if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
-            prevEntry->size += entry->size;
-                    
-            if (entry == heap->tail) {
-                heap->tail = prevEntry;
-            }
-                    
-            prevEntry->next = entry->next;
-                    
-            if (entry->next != nullptr) {
-                entry->next->prev = prevEntry;
-                entry = prevEntry;
-            }
-        }
-    }
+	//Go to the end of the list
+	while(currentEntry != nullptr){
+		//Check if entryTemp comes before currentEntry in memory
+		if (entryTemp < currentEntry) {
+			if (currentEntry->prev != nullptr) {
+				currentEntry->prev->next = entryTemp;
+			}
+			
+			entryTemp->prev = currentEntry->prev;
+			currentEntry->prev = entryTemp;
+			entryTemp->next = currentEntry;
+		
+			if (currentEntry == mHead) {
+				mHead = entryTemp;
+			}
+			
+			return entryTemp;
+		}
 
-    return entry->next;
-}
+		//If we're not at the end, keep going
+		currentEntry = currentEntry->next;
+	}
 
-void MemManager_setArenaMemorySize(u32 val, bool b){
-    arenaMemorySize = val;
-    lbl_80667E58 = b;
-}
-
-
-//requires func_align 4
-MemBlock* MemManager_804339B8(Heap* heap, MemBlock* arg1) {
-    MemBlock* entryTemp = arg1;
-    MemBlock* tempEntry1 = entryTemp->next;
-    
-    if (tempEntry1 != entryTemp) {
-        memmove((void*)tempEntry1, entryTemp, sizeof(MemBlock));
-        entryTemp = tempEntry1;
-    }
-    
-    entryTemp->next = (MemBlock*)MemBlock::dummyDataPtr(); //set the pointer to a random known value
-    MemBlock* currentEntry = heap->head;
-
-    //Go to the end of the list
-    while(currentEntry != nullptr){
-        //Check if entryTemp comes before currentEntry in memory
-        if (entryTemp < currentEntry) {
-            if (currentEntry->prev != nullptr) {
-                currentEntry->prev->next = entryTemp;
-            }
-            
-            entryTemp->prev = currentEntry->prev;
-            currentEntry->prev = entryTemp;
-            entryTemp->next = currentEntry;
-        
-            if (currentEntry == heap->head) {
-                heap->head = entryTemp;
-            }
-            
-            return entryTemp;
-        }
-
-        //If we're not at the end, keep going
-        currentEntry = currentEntry->next;
-    }
-
-    if (heap->head == nullptr) {
-        heap->head = entryTemp;
-        heap->tail = entryTemp;
-        entryTemp->prev = nullptr;
-        entryTemp->next = nullptr;
-    } else {
-        heap->tail->next = entryTemp;
-        entryTemp->prev = heap->tail;
-        entryTemp->next = nullptr;
-        heap->tail = entryTemp;
-    }
-    
-    return entryTemp;
+	if (mHead == nullptr) {
+		mHead = entryTemp;
+		mTail = entryTemp;
+		entryTemp->prev = nullptr;
+		entryTemp->next = nullptr;
+	} else {
+		mTail->next = entryTemp;
+		entryTemp->prev = mTail;
+		entryTemp->next = nullptr;
+		mTail = entryTemp;
+	}
+	
+	return entryTemp;
 }
 
 
-MemBlock* MemManager_80433AA8(Heap* heap, MemBlock* entry) {
+MemBlock* Region::func_80433AA8(MemBlock* entry) {
 
-    MemBlock* temp_r6 = entry->prev;
+	MemBlock* temp_r6 = entry->prev;
 
-    if (entry->prev != nullptr) {
-        if ((u32)entry == (u32)temp_r6 + temp_r6->size) {
-            temp_r6->size += entry->size;
-            if (entry == heap->tail) {
-                heap->tail = temp_r6;
-            }
-            temp_r6->next = entry->next;
+	if (entry->prev != nullptr) {
+		if ((u32)entry == (u32)temp_r6 + temp_r6->size) {
+			temp_r6->size += entry->size;
+			if (entry == mTail) {
+				mTail = temp_r6;
+			}
+			temp_r6->next = entry->next;
 
-            if (entry->next != nullptr) {
-                entry->next->prev = temp_r6;
-                entry = temp_r6;
-            }
-        }
-    }
+			if (entry->next != nullptr) {
+				entry->next->prev = temp_r6;
+				entry = temp_r6;
+			}
+		}
+	}
 
-    //var_r5 = unkInline1(menEntry,entry);
-    MemBlock* var_r5 = entry->next;
-    
-    if (var_r5 != nullptr) {
-        MemBlock* temp_r6_2 = var_r5->prev;
-        if (temp_r6_2 != nullptr) {
-            if ((u32)var_r5 == (u32)temp_r6_2 + temp_r6_2->size) {
-                temp_r6_2->size += var_r5->size;
-                if (var_r5 == heap->tail) {
-                    heap->tail = temp_r6_2;
-                }
-                temp_r6_2->next = var_r5->next;
-                if (var_r5->next != nullptr) {
-                    var_r5->next->prev = temp_r6_2;
-                    var_r5 = temp_r6_2;
-                }
-            }
-        }
+	//var_r5 = unkInline1(menEntry,entry);
+	MemBlock* var_r5 = entry->next;
+	
+	if (var_r5 != nullptr) {
+		MemBlock* temp_r6_2 = var_r5->prev;
+		if (temp_r6_2 != nullptr) {
+			if ((u32)var_r5 == (u32)temp_r6_2 + temp_r6_2->size) {
+				temp_r6_2->size += var_r5->size;
+				if (var_r5 == mTail) {
+					mTail = temp_r6_2;
+				}
+				temp_r6_2->next = var_r5->next;
+				if (var_r5->next != nullptr) {
+					var_r5->next->prev = temp_r6_2;
+					var_r5 = temp_r6_2;
+				}
+			}
+		}
 
-        //var_r5 = unkInline1(menEntry,entry);
-        var_r5 = var_r5->next;
-        
-        if (var_r5 != nullptr) {
-            var_r5 = MemManager_80433AA8(heap, var_r5);
-        }
-    }
-    
-    return entry;
+		//var_r5 = unkInline1(menEntry,entry);
+		var_r5 = var_r5->next;
+		
+		if (var_r5 != nullptr) {
+			var_r5 = func_80433AA8(var_r5);
+		}
+	}
+	
+	return entry;
 }
 
+void* Region::allocate(u32 param2, u32 size, u32 param4){
 
-int createRegion(u32 heapIndex, u32 size, const char* name) {
-    u32 newSize = size + sizeof(MemBlock);
-    
-    
-    if (size == 0) {
-        MemBlock* temp;
-        MemBlock* pLargestEntry = findLargestEntry(heapIndex);
-      
-        if (pLargestEntry == nullptr) newSize = 0;
-        else newSize = pLargestEntry->size - sizeof(MemBlock);
-    }
-
-    int regionIndex = addHeap(createRegionHeadMemBlock(heapIndex,newSize), newSize, name);
-    lbl_80667E54 = false;
-    return regionIndex;
 }
 
-
-static inline u32 unkInline(u32 var_r5){
-    for(int j = 0; j < 8; j++){
-        var_r5 *= 2;
-        if (var_r5 & 0x01000000) {
-            var_r5 ^= 0x01100000 ^ 0x2100;
-        }
-    }
-    return var_r5;
+void MemManager::initialize(){
 }
 
-//requires func_align 4
-u32 MemManager_804348C0(u8* arg0, u32 arg1) {
-    if (arg0 == NULL) {
-        return 0xFFFF;
-    }
-
-    u32 var_r5 = 0;
-    
-    for(int i = 0; i < arg1; i++){
-        var_r5 |= (s8)*arg0;
-        for(int j = 0; j < 8; j++){
-            var_r5 *= 2;
-            if (var_r5 & 0x01000000) {
-                var_r5 ^= 0x01100000 ^ 0x2100;
-            }
-        }
-        arg0++;
-    }
-
-    for(int i = 0; i < 2; i++){
-        for(int j = 0; j < 8; j++){
-            var_r5 *= 2;
-            if (var_r5 & 0x01000000) {
-                var_r5 ^= 0x01100000 ^ 0x2100;
-            }
-        }
-    }
-    return (var_r5 >> 8) & 0xFFFF;
+void MemManager::terminate(){
+	//Do cleanup for any active regions
+	for(int i = 79; i >= 0; i--){
+		Region* entry = &regionArray[i & 0xFF];
+		if(entry->mStartAddress != 0){
+			delete entry;
+		}
+	}
 }
 
-extern void log(bool status);
+int MemManager::createRegion(int regionIndex, int offset, const char* name) {
+	u32 newSize = offset + sizeof(MemBlock);
+	
+	
+	if (offset == 0) {
+		MemBlock* temp;
+		MemBlock* pLargestEntry = findLargestEntry(regionIndex);
+	  
+		if (pLargestEntry == nullptr) newSize = 0;
+		else newSize = pLargestEntry->size - sizeof(MemBlock);
+	}
 
-static inline void deallocate(void* p){
-    if(p != nullptr){
-        if(regionIndex1 != -1){
-            MemBlock* entryToDelete = VoidToMemBlock(p);
-            Heap* heap = &(heapArray[(u8)entryToDelete->heapIndex]);
+	int index = addRegion(createRegionHeadMemBlock(regionIndex,newSize), newSize, name);
+	lbl_80667E54 = false;
+	return index;
+}
 
-            //this doesn't seem right
-            if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
-                log(true); //Since monolithsoft removed their log function, this calls the math log lol
-                return;
-            }
-        
-            heap->freeBytes += entryToDelete->size;
+int MemManager::getRegionIndex1(){
+}
 
-            //Remove the entry from the linked list
-            if(entryToDelete->prev != nullptr){
-                entryToDelete->prev->next = entryToDelete->next;
-            }
-            if(entryToDelete->next != nullptr) {
-                entryToDelete->next->prev = entryToDelete->prev;
-            }
-        
-            if (heap->unk8 == entryToDelete) {
-                heap->unk8 = entryToDelete->next;
-            }
-        
-            if (heap->unkC == entryToDelete) {
-                heap->unkC = entryToDelete->prev;
-            }
-        
-            MemBlock* entry = MemManager_804339B8(heap, entryToDelete);
-            entry = unkInline1(heap, entry);
-        
-            if (entry != nullptr) {
-                entry = unkInline1(heap, entry);
-            
-                if (entry != NULL) {
-                    MemManager_80433AA8(heap, entry);
-                }
-            }
-            
-            heap->unk18--;
-        }
-    }
+int MemManager::getRegionIndex2(){
+}
+
+int MemManager::getRegionIndex2_2(){
+}
+
+void MemManager::deleteRegion(int regionIndex){
+}
+
+u32 MemManager::func_804348C0(u8* arg0, u32 arg1) {
+	if (arg0 == NULL) {
+		return 0xFFFF;
+	}
+
+	u32 var_r5 = 0;
+	
+	for(int i = 0; i < arg1; i++){
+		var_r5 |= (s8)*arg0;
+		for(int j = 0; j < 8; j++){
+			var_r5 *= 2;
+			if (var_r5 & 0x01000000) {
+				var_r5 ^= 0x01100000 ^ 0x2100;
+			}
+		}
+		arg0++;
+	}
+
+	for(int i = 0; i < 2; i++){
+		for(int j = 0; j < 8; j++){
+			var_r5 *= 2;
+			if (var_r5 & 0x01000000) {
+				var_r5 ^= 0x01100000 ^ 0x2100;
+			}
+		}
+	}
+	return (var_r5 >> 8) & 0xFFFF;
+}
+
+void* MemManager::malloc(size_t size, int memBlockIndex){
+}
+
+void* MemManager::malloc_array(size_t size, int memBlockIndex){
+}
+
+inline void MemManager::deallocate(void* p){
+	if(p != nullptr){
+		if(regionIndex1 != -1){
+			MemBlock* entryToDelete = VoidToMemBlock(p);
+			Region* region = &(regionArray[(u8)entryToDelete->regionIndex]);
+
+			//this doesn't seem right
+			if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
+				log(true); //Since monolithsoft removed their log function, this calls the math log lol
+				return;
+			}
+		
+			region->mFreeBytes += entryToDelete->size;
+
+			//Remove the entry from the linked list
+			if(entryToDelete->prev != nullptr){
+				entryToDelete->prev->next = entryToDelete->next;
+			}
+			if(entryToDelete->next != nullptr) {
+				entryToDelete->next->prev = entryToDelete->prev;
+			}
+		
+			if (region->unk8 == entryToDelete) {
+				region->unk8 = entryToDelete->next;
+			}
+		
+			if (region->unkC == entryToDelete) {
+				region->unkC = entryToDelete->prev;
+			}
+		
+			MemBlock* entry = region->func_804339B8(entryToDelete);
+			entry = unkInline1(region, entry);
+		
+			if (entry != nullptr) {
+				entry = unkInline1(region, entry);
+			
+				if (entry != NULL) {
+					region->func_80433AA8(entry);
+				}
+			}
+			
+			region->unk18--;
+		}
+	}
+}
+
+void* MemManager::allocateArray(u32 r3, int index, u32 r5){
+
 }
 
 }
 
 //dummy operator new
-void* operator new(u32 arg0) {
-    return 0;
+void* operator new(u32 arg0){
+	return 0;
 }
 
-void operator delete(void* p) throw() {
-    mtl::deallocate(p);
+void operator delete(void* p){
+	mtl::MemManager::deallocate(p);
 }
 
 
 
-void operator delete[](void* p) throw() {
-    mtl::deallocate(p);
+void operator delete[](void* p){
+	mtl::MemManager::deallocate(p);
 }
