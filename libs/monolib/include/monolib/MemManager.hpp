@@ -4,8 +4,10 @@
 #include <string.h>
 #include <stddef.h>
 #include <math.h> //Only included to make mwcc use log from math.h lol
+#include "monolib/FixStr.hpp"
 
 #define MEM2_END_ADDR 0x935E0000
+#define MAX_REGIONS 80
 
 namespace mtl{
 
@@ -23,7 +25,7 @@ namespace mtl{
 		return (void*)0xA7FB94C7;
 		}
 
-		void init(u32 size, int regionIndex){
+		MemBlock(u32 size, int regionIndex){
 			memset(this, 0, sizeof(MemBlock)); //Wipe all values in the struct
 			prev = nullptr;
 			next = 0;
@@ -35,8 +37,10 @@ namespace mtl{
 
 	struct Region{
 		~Region();
+		MemBlock* func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4);
 		MemBlock* func_804339B8(MemBlock* arg1);
 		MemBlock* func_80433AA8(MemBlock* entry);
+		void func_80434704(u32 r4, u32 r5, u32* r6);
 		void* allocate(u32 param2, u32 size, u32 param4);
 
 		//Region();
@@ -51,11 +55,34 @@ namespace mtl{
 			unk18 = 0;
 			mSize = 0;
 			mFreeBytes = 0;
-			mName[0] = '\0'; //Set the first character to 0 to mark it as empty
-			mNameLength = 0;
+			mName.string[0] = '\0'; //Set the first character to 0 to mark it as empty
+			mName.length = 0;
 			mRegionIndex = -1;
 			//temp_r1->unk1C = temp_r1;
 			unk6C = 0;
+		}
+
+		inline MemBlock* unkInline1(MemBlock* entry){
+			 MemBlock* prevEntry = entry->prev;
+
+			if (entry->prev != nullptr) {
+				if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
+					prevEntry->size += entry->size;
+
+					if (entry == mTail) {
+						mTail = prevEntry;
+					}
+
+					prevEntry->next = entry->next;
+
+					if (entry->next != nullptr) {
+						entry->next->prev = prevEntry;
+						entry = prevEntry;
+					}
+				}
+			}
+
+			return entry->next;
 		}
 
 		MemBlock* mHead; //0x0
@@ -67,35 +94,44 @@ namespace mtl{
 		u32 unk18;
 		u32 mSize; //0x1C
 		u32 mFreeBytes; //0x20
-		char mName[64]; //0x24
-		int mNameLength; //0x64
+		ml::FixStr<64> mName; //0x24
 		u32 mRegionIndex; //0x68
 		u8 unk6C;
-		u8 unk6D[3];
 	};
 
 	class MemManager {
-	protected:
-		static u32 func_804348C0(u8* arg0, u32 arg1);
-		//static void log(bool status);
-
 	public:
 		static void setArenaMemorySize(u32 val, bool b);
 		static void initialize();
 		static void terminate();
 		static int createRegion(int regionIndex, int offset, const char* name);
-		static void deleteRegion(int regionIndex);
+		static void func_804341D0(int r3, int r4, const char* r5);
 		static int getHeapIndex();
 		static int getRegionIndex1();
 		static int getRegionIndex2();
 		static int getRegionIndex2_2();
-		static inline void deallocate(void* p);
-		static void* malloc(size_t size, int memBlockIndex);
-		static void* malloc_array(size_t size, int memBlockIndex);
+		static bool deleteRegion(int regionIndex);
+		static void func_8043442C(int regionIndex, u32 r4, u32 r5);
+		static void func_80434450(int regionIndex, u32 r4, u32 r5);
+		static void func_804344D8(void* r3);
+		static u32 func_804346A0(int regionIndex);
+		static void func_804346BC(int regionIndex);
+		static void func_80434770(int regionIndex);
+		static void func_804347D8(int regionIndex);
+		static void func_80434830(int regionIndex);
+		static void func_804348A4(int regionIndex, u8 val);
+		static u32 func_804348C0(u8* arg0, u32 arg1);
+		static void func_80434A4C(u8 r3);
+		static void func_80434A54(u8 r3);
+		static void* malloc(size_t size, int regionIndex);
+		static void* malloc_array(size_t size, int regionIndex);
+		static void func_80434AA4(u32 r3, int regionIndex, u32 r5);
 		static void* allocateArray(u32 r3, int index, u32 r5);
+		static inline void deallocate(void* p);
+		//static void log(bool status);
 
 		static inline Region* getRegion(u32 index){
-			return &(regionArray[index & 0xFF]);
+			return (Region*)((u32)regionArray + (index & 0xFF) * sizeof(Region));
 		}
 
 		/*
@@ -104,7 +140,8 @@ namespace mtl{
 		*/
 		static inline int addRegion(MemBlock* head, u32 size, const char* name){
 			//Find the first unused entry to use for the new region
-			for(int i = 0; i < 0x50; i++){
+			u32 i = 0;
+			do{
 				Region* entry = getRegion(i);
 			   //Check if this slot is empty
 				if (entry->mStartAddress == 0) {
@@ -116,7 +153,7 @@ namespace mtl{
 					entry->unkC = nullptr;
 
 					//Initialize the head entry of the heap
-					head->init(size,i);
+					head = &MemBlock(size,i);
 
 					entry->mHead = head;
 					entry->mTail = head;
@@ -124,16 +161,15 @@ namespace mtl{
 					entry->mSize = size;
 					entry->mFreeBytes = size;
 					entry->unk6C = 0;
-					entry->mNameLength = strlen(name);
-					strcpy(entry->mName, name); //Copy the name to the struct variable
+					entry->mName.length = strlen(name);
+					strcpy(entry->mName.string, name); //Copy the name to the struct variable
 					return i;
 				}
-			}
+				i++;
+			}while(i < MAX_REGIONS);
 
 			return -1; //No available slot was found, return -1
 		}
-
-
 
 		static inline MemBlock* findLargestEntry(u32 regionIndex){
 			MemBlock* regionHead = getRegion(regionIndex)->mHead;      
@@ -168,31 +204,8 @@ namespace mtl{
 			return var_r5;
 		}
 
-
-		static inline MemBlock* unkInline1(Region* region, MemBlock* entry){
-			 MemBlock* prevEntry = entry->prev;
-
-			if (entry->prev != nullptr) {
-				if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
-					prevEntry->size += entry->size;
-
-					if (entry == region->mTail) {
-						region->mTail = prevEntry;
-					}
-
-					prevEntry->next = entry->next;
-
-					if (entry->next != nullptr) {
-						entry->next->prev = prevEntry;
-						entry = prevEntry;
-					}
-				}
-			}
-
-			return entry->next;
-		}
-
-		static Region regionArray[80];
+		//TODO: is there a way to have this be a normal array without generating sinit stuff?
+		static u8 regionArray[MAX_REGIONS * sizeof(Region)];
 		static s32 lbl_80667E50;
 
 		static int lbl_80665E28;
