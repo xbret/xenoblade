@@ -25,7 +25,7 @@ kyoshin/appgame/CGame.cpp:
 	.sbss       start:0x80663D00 end:0x80663D10
 	.sdata2     start:0x80665AA0 end:0x80665AB8
 
-kyoshin/appgame/main.cpp:
+kyoshin/appgame/main.cpp.temp:
 	extab       start:0x800067C4 end:0x800067D4
 	extabindex  start:0x800212A4 end:0x800212BC
 	.text       start:0x8003A2A8 end:0x8003A414
