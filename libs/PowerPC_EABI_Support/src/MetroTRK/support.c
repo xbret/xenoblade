@@ -1,6 +1,6 @@
 #include "PowerPC_EABI_Support/MetroTRK/support.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgcmd.h"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 
 // Custom structure used as temporary buffer for message data transmission

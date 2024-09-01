@@ -1,6 +1,6 @@
 #ifndef NW4R_SND_SEQ_SOUND_H
 #define NW4R_SND_SEQ_SOUND_H
-#include "revolution/os/OSMutex.h"
+#include <revolution/os/OSMutex.h>
 #include "types_nw4r.h"
 #include "snd_BasicSound.h"
 #include "snd_SeqPlayer.h"

@@ -1,5 +1,5 @@
-#include "revolution/MEM.h"
-#include "revolution/OS.h"
+#include <revolution/MEM.h>
+#include <revolution/OS.h>
 
 static BOOL sRootListInitialized;
 static MEMList sRootList;

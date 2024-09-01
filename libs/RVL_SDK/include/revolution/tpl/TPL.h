@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_TPL_H
 #define RVL_SDK_TPL_H
-#include "revolution/gx/GXTexture.h"
+#include <revolution/gx/GXTexture.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

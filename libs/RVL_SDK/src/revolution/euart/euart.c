@@ -1,6 +1,6 @@
-#include "revolution/euart/euart.h"
-#include "revolution/OS.h"
-#include "revolution/EXI.h"
+#include <revolution/euart/euart.h>
+#include <revolution/OS.h>
+#include <revolution/EXI.h>
 
 static u32 Enabled;
 static BOOL __EUARTSendStop;

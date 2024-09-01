@@ -1,7 +1,7 @@
 
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
-#include "revolution/DB.h"
-#include "revolution/OS.h"
+#include <revolution/DB.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 static u8 Debug_BBA;

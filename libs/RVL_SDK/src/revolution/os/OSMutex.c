@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 void OSInitMutex(OSMutex* mutex) {
     OSInitThreadQueue(&mutex->queue);

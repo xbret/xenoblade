@@ -1,5 +1,5 @@
 #include "nw4hbm/ut/ut_ResFontBase.h"
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 namespace nw4hbm
 {

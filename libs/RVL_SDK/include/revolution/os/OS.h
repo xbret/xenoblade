@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_OS_H
 #define RVL_SDK_OS_H
-#include "revolution/os/OSContext.h"
-#include "revolution/os/OSExec.h"
+#include <revolution/os/OSContext.h>
+#include <revolution/os/OSExec.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

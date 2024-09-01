@@ -6,7 +6,7 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "kyoshin/appgame/cf/CTaskREvent.hpp"
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
-#include "nw4r/lyt/lyt_arcResourceAccessor.h"
+#include <nw4r/lyt/lyt_arcResourceAccessor.h>
 
 extern u32 func_8045FB08();
 extern u32 func_8007E1B4();

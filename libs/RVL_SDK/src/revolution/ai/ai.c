@@ -1,7 +1,7 @@
-#include "revolution/AI.h"
-#include "revolution/DSP.h"
-#include "revolution/OS.h"
-//#include "revolution/build_version.h"
+#include <revolution/AI.h>
+#include <revolution/DSP.h>
+#include <revolution/OS.h>
+//#include <revolution/build_version.h>
 
 //#define BUILD_DATE "Feb 27 2009"
 //#define BUILD_TIME "10:01:30"

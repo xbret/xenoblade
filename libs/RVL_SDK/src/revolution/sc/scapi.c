@@ -1,4 +1,4 @@
-#include "revolution/SC.h"
+#include <revolution/SC.h>
 
 u8 SCGetAspectRatio(void) {
     u8 item;

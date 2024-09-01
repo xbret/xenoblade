@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_NAND_OPEN_CLOSE_H
 #define RVL_SDK_NAND_OPEN_CLOSE_H
-#include "revolution/nand/nand.h"
+#include <revolution/nand/nand.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

@@ -1,5 +1,5 @@
 #include "adx/sj/sj_crs.h"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 volatile int sjcrs_lvl;
 BOOL sjcrs_msk; // maybe also volatile

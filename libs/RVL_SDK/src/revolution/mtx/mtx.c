@@ -1,5 +1,5 @@
-#include "revolution/math.h"
-#include "revolution/MTX.h"
+#include <revolution/math.h>
+#include <revolution/MTX.h>
 
 static float Unit01[] = { 0.0f, 1.0f };
 

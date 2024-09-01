@@ -1,8 +1,8 @@
 #ifndef RVL_SDK_OS_HARDWARE_H
 #define RVL_SDK_OS_HARDWARE_H
-#include "revolution/os/OSAddress.h"
-#include "revolution/os/OSThread.h"
-#include "revolution/dvd/dvdidutils.h"
+#include <revolution/os/OSAddress.h>
+#include <revolution/os/OSThread.h>
+#include <revolution/dvd/dvdidutils.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

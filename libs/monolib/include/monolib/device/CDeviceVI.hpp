@@ -5,8 +5,8 @@
 #include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/reslist.hpp"
-#include "revolution/GX.h"
-#include "revolution/VI.h"
+#include <revolution/GX.h>
+#include <revolution/VI.h>
 #include "monolib/MemManager.hpp"
 
 //size: 0x2c0

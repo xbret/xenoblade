@@ -1,5 +1,5 @@
-#include "revolution/math.h"
-#include "revolution/MTX.h"
+#include <revolution/math.h>
+#include <revolution/MTX.h>
 
 //TODO: get it to match with a register var instead of f3
 void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2, register Quaternion* out) {

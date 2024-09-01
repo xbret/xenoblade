@@ -1,4 +1,4 @@
-#include "revolution/AXFX.h"
+#include <revolution/AXFX.h>
 
 static SrcCoef __SrcTab12khz[128] = {
 {0.09750366, 0.8022156, 0.10159302, -0.0009765625},

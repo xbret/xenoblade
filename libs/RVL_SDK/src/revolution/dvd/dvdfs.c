@@ -1,5 +1,5 @@
-#include "revolution/DVD.h"
-#include "revolution/OS.h"
+#include <revolution/DVD.h>
+#include <revolution/OS.h>
 #include <ctype.h>
 
 extern u32  __DVDLayoutFormat;

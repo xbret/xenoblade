@@ -1,4 +1,4 @@
-#include "revolution/IPC.h"
+#include <revolution/IPC.h>
 
 #define REQUEST_MAX 32
 

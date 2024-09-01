@@ -1,4 +1,4 @@
-#include "revolution/cx/CXSecureUncompression.h"
+#include <revolution/cx/CXSecureUncompression.h>
 
 //unused
 void CXSecureUncompressAny(){

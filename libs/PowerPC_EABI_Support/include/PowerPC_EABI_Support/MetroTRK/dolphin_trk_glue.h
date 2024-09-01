@@ -1,7 +1,7 @@
 #ifndef _TRK_DOLPHIN_TRK_GLUE_H
 #define _TRK_DOLPHIN_TRK_GLUE_H
 
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 #include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/UART.h"
 

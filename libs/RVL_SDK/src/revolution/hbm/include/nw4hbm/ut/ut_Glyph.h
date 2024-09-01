@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 namespace nw4hbm
 {

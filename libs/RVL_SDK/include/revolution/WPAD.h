@@ -4,8 +4,8 @@
 extern "C" {
 #endif
 
-#include "revolution/wpad/debug_msg.h"
-#include "revolution/wpad/WPAD.h"
+#include <revolution/wpad/debug_msg.h>
+#include <revolution/wpad/WPAD.h>
 
 #ifdef __cplusplus
 }

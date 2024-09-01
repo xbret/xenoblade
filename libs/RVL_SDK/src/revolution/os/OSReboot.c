@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 static u32 SaveEnd;
 static u32 SaveStart;

@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_IPC_PROFILE_H
 #define RVL_SDK_IPC_PROFILE_H
-#include "revolution/ipc/ipcclt.h"
+#include <revolution/ipc/ipcclt.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

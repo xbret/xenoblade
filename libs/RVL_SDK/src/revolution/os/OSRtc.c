@@ -1,5 +1,5 @@
-#include "revolution/EXI.h"
-#include "revolution/OS.h"
+#include <revolution/EXI.h>
+#include <revolution/OS.h>
 
 #define OS_SRAM_SIZE (sizeof(OSSram) + sizeof(OSSramEx))
 

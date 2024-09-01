@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include "revolution/si/SIBios.h"
+#include <revolution/si/SIBios.h>
 
 #ifdef __cplusplus
 }

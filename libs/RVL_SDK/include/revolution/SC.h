@@ -4,9 +4,9 @@
 extern "C" {
 #endif
 
-#include "revolution/sc/scapi.h"
-#include "revolution/sc/scapi_prdinfo.h"
-#include "revolution/sc/scsystem.h"
+#include <revolution/sc/scapi.h>
+#include <revolution/sc/scapi_prdinfo.h>
+#include <revolution/sc/scsystem.h>
 
 #ifdef __cplusplus
 }

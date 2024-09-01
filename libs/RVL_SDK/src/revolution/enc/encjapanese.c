@@ -1,4 +1,4 @@
-#include "revolution/enc/encjapanese.h"
+#include <revolution/enc/encjapanese.h>
 
 //Shift-JIS -> Unicode table (starts from 0x8140 in Shift-JIS)
 wchar_t enc_tbl_jp_mbtowc[] = {

@@ -4,9 +4,9 @@
 extern "C" {
 #endif
 
-#include "revolution/cx/CXUncompression.h"
-#include "revolution/cx/CXSecureUncompression.h"
-#include "revolution/cx/CXStreamingUncompression.h"
+#include <revolution/cx/CXUncompression.h>
+#include <revolution/cx/CXSecureUncompression.h>
+#include <revolution/cx/CXStreamingUncompression.h>
 
 #ifdef __cplusplus
 }

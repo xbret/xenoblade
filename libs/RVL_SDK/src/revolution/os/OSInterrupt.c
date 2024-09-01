@@ -1,8 +1,8 @@
-#include "revolution/AI.h"
-#include "revolution/BASE.h"
-#include "revolution/DSP.h"
-#include "revolution/EXI.h"
-#include "revolution/OS.h"
+#include <revolution/AI.h>
+#include <revolution/BASE.h>
+#include <revolution/DSP.h>
+#include <revolution/EXI.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 static OSInterruptHandler* InterruptHandlerTable;

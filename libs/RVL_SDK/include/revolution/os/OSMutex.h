@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_OS_MUTEX_H
 #define RVL_SDK_OS_MUTEX_H
-#include "revolution/os/OSThread.h"
+#include <revolution/os/OSThread.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

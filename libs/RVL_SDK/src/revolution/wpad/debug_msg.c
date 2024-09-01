@@ -1,4 +1,4 @@
-#include "revolution/WPAD.h"
+#include <revolution/WPAD.h>
 
 //Stubbed for release
 void DEBUGPrint(const char* fmt, ...){

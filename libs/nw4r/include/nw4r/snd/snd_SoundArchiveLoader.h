@@ -3,7 +3,7 @@
 #include "snd_SoundMemoryAllocatable.h"
 #include "ut_FileStream.h"
 #include "types_nw4r.h"
-#include "revolution/os/OSMutex.h"
+#include <revolution/os/OSMutex.h>
 
 namespace nw4r
 {

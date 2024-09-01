@@ -1,4 +1,4 @@
-#include "revolution/DSP.h"
+#include <revolution/DSP.h>
 
 // Stubbed for release
 void __DSP_debug_printf(const char* fmt, ...) {

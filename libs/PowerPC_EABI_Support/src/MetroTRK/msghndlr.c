@@ -6,7 +6,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/msg.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 #include "PowerPC_EABI_Support/MetroTRK/target_options.h"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 extern void __TRK_copy_vectors();
 extern void __TRKreset();

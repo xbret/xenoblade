@@ -1,6 +1,6 @@
-#include "revolution/BASE.h"
-#include "revolution/DVD.h"
-#include "revolution/OS.h"
+#include <revolution/BASE.h>
+#include <revolution/DVD.h>
+#include <revolution/OS.h>
 
 static BOOL OnReset(u32 pass, u32 event);
 static void DecrementerExceptionHandler(u8 type, OSContext* ctx);

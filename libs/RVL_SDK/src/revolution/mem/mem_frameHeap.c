@@ -1,5 +1,5 @@
-#include "revolution/MEM.h"
-#include "revolution/OS.h"
+#include <revolution/MEM.h>
+#include <revolution/OS.h>
 
 #define MEM_FRM_HEAP_MAGIC 'FRMH'
 

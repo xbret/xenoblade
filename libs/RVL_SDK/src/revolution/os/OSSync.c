@@ -1,5 +1,5 @@
-#include "revolution/BASE.h"
-#include "revolution/OS.h"
+#include <revolution/BASE.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 #define OS_PHYS_SYSCALL_INTR 0xC00

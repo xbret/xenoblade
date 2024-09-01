@@ -1,4 +1,4 @@
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 // TODO: Fake inline
 inline void LoadProjPS(register float* dst) {

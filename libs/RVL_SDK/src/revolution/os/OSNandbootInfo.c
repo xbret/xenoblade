@@ -1,5 +1,5 @@
-#include "revolution/OS.h"
-#include "revolution/NAND.h"
+#include <revolution/OS.h>
+#include <revolution/NAND.h>
 
 static s32 CheckSum(s32* array){
     s32* var_r8 = array + 1;

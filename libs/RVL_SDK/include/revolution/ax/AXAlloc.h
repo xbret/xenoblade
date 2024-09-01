@@ -1,6 +1,6 @@
 #ifndef AX_AXALLOC_H
 #define AX_AXALLOC_H
-#include "revolution/ax/AXVPB.h"
+#include <revolution/ax/AXVPB.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

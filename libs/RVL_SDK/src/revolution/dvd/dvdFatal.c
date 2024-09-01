@@ -1,6 +1,6 @@
-#include "revolution/DVD.h"
-#include "revolution/OS.h"
-#include "revolution/SC.h"
+#include <revolution/DVD.h>
+#include <revolution/OS.h>
+#include <revolution/SC.h>
 
 typedef void (*FatalFuncType)(void);
 static FatalFuncType FatalFunc = NULL;
