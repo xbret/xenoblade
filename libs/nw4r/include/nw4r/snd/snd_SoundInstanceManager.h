@@ -1,6 +1,6 @@
 #ifndef NW4R_SND_SOUND_INSTANCE_MANAGER_H
 #define NW4R_SND_SOUND_INSTANCE_MANAGER_H
-#include <OSMutex.h>
+#include "revolution/os/OSMutex.h"
 #include "types_nw4r.h"
 #include "ut_lock.h"
 #include "ut_LinkList.h"

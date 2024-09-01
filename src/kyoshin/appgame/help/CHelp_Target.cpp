@@ -18,19 +18,22 @@ namespace cf{
 		if(func_8006EF04(0x4000000) != 0) return false;
 		if(objPc == nullptr) return false;
 		if(objPc->CObjectParam_vtableFunc5() == false) return false;
+
+		UNKTYPE* smthElse;
+		UNKTYPE* smthElse1;
 		
 		switch(unkC){
 			case 1:
 				if(objPc->unkInline1() == nullptr) return false;
 			break;
 			case 2:
-				UNKTYPE* smthElse = objPc->unkInline1();
+				smthElse = objPc->unkInline1();
 				if(smthElse == nullptr) return false;
 				if(*(int*)((u32)smthElse + 0x15F0) == 2) break;
 				else return false;
 			break;
 			case 3:
-				UNKTYPE* smthElse1 = objPc->unkInline2();
+				smthElse1 = objPc->unkInline2();
 				if(smthElse1 == nullptr) return false;
 				if(*(s8*)((u32)smthElse1 + 0x91) == 0xC) break;
 				else return false;
