@@ -14,14 +14,14 @@ extern void CDeviceFile_8044F414(UnkClass_80451720*);
 extern void func_8045F778(UnkClass_8045F564*);
 extern void func_8045F810(UnkClass_8045F564*);
 
-CBattery::CBattery(u8 r4) : unk4(){
+CBattery::CBattery(u8 batteryLevel) : unk4(){
     unk14 = nullptr;
     mAccessor = nullptr;
     mLayout = nullptr;
     unk20 = false;
     unk21 = 1;
     unk22 = false;
-    unk24 = r4;
+    mBatteryLevel = batteryLevel;
 }
 
 CBattery::~CBattery(){
@@ -59,24 +59,26 @@ void CBattery::func_802B9364(){
 	func_8045F778(&unk4);
 }
 
-void CBattery::func_802B93E4(u8 r4){
-	unk24 = r4;
-	func_802B93EC();
+void CBattery::setBatteryLevel(u8 level){
+	mBatteryLevel = level;
+	updateBatteryImage();
 }
 
-/* Iterates through each of the four image objects, and enables the ones with indexes
-starting from 1 to unk24. This corresponds to the battery level? */
-void CBattery::func_802B93EC(){
+/* Updates the current battery images by going through the individual images
+for each bar, and only showing the ones for the current battery level. */
+void CBattery::updateBatteryImage(){
 	if(mLayout != nullptr){
-		if(unk24 > 4) unk24 = 4;
+		//Cap the battery level at 4
+		if(mBatteryLevel > 4) mBatteryLevel = 4;
 
 		char name[16];
 
+		//Go through each image, and enable it if the index is <= battery level
 		for(u8 num = 1; num <= 4; num++){
-			sprintf(name, "pic_%02d", num);
+			sprintf(name, "pic_%02d", num); //Calculate the image name
 			nw4r::lyt::Pane* pane = mLayout->unk10->FindPaneByName(name, true);
 			if(pane != nullptr){
-				pane->SetVisible(num <= unk24);
+				pane->SetVisible(num <= mBatteryLevel);
 			}
 		}
 	}
@@ -86,7 +88,7 @@ void CBattery::func_802B94B0(){
 	if(mLayout != nullptr){
 		unk22 = true;
 		unk20 = true;
-		func_802B93EC();
+		updateBatteryImage();
 	}
 }
 
