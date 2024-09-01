@@ -6,20 +6,15 @@
 extern "C" {
 #endif
 
-extern volatile s32 __OSCurrHeap;
+typedef void* (*AXFXAllocHook)(size_t size);
+typedef void (*AXFXFreeHook)(void* block);
 
-typedef void* (*AXFXAlloc)(u32);
-typedef void (*AXFXFree)(void*);
+extern AXFXAllocHook __AXFXAlloc;
+extern AXFXFreeHook __AXFXFree;
 
-void* __AXFXAllocFunction(u32 param);
-void __AXFXFreeFunction(void* param);
+void AXFXSetHooks(AXFXAllocHook alloc, AXFXFreeHook free);
+void AXFXGetHooks(AXFXAllocHook* alloc, AXFXFreeHook* free);
 
-AXFXAlloc __AXFXAlloc = __AXFXAllocFunction;
-AXFXFree __AXFXFree = __AXFXFreeFunction;
-
-
-void AXFXSetHooks(AXFXAlloc allocHook, AXFXFree freeHook);
-void AXFXGetHooks(AXFXAlloc* allocHook, AXFXFree* freeHook);
 
 #ifdef __cplusplus
 }

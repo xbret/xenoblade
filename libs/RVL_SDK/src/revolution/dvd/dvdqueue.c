@@ -113,7 +113,7 @@ DVDCommandBlock* __DVDGetNextWaitingQueue(void) {
     return NULL;
 }
 
-BOOL __DVDDequeueWaitingQueue(DVDCommandBlock* block) {
+BOOL __DVDDequeueWaitingQueue(const DVDCommandBlock* block) {
     BOOL enabled;
     DVDCommandBlock* prev, *next;
 

@@ -27,22 +27,6 @@ extern "C" {
 
 #define LONG_TAU 6.2831854820251465
 
-inline float cosf(float x){
-    return (float)cos(x);
-}
-
-inline float sinf(float x){
-    return (float)sin(x);
-}
-
-inline float tanf(float x){
-    return (float)tan(x);
-}
-
-inline float acosf(float x){
-    return (float)acos(x);
-}
-
 inline float sqrtf(float x){
     return (float)sqrt(x);
 }

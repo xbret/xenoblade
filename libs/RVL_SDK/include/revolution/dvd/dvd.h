@@ -7,25 +7,36 @@
 extern "C" {
 #endif
 
-#define DVD_STATE_FATAL_ERROR -1
-#define DVD_STATE_END 0
-#define DVD_STATE_BUSY 1
-#define DVD_STATE_WAITING 2
-#define DVD_STATE_COVER_CLOSED 3 //deprecated for wii
-#define DVD_STATE_NO_DISK 4
-#define DVD_STATE_COVER_OPEN 5 //deprecated for wii
-#define DVD_STATE_WRONG_DISK 6
-#define DVD_STATE_MOTOR_STOPPED 7
-#define DVD_STATE_PAUSING 8
-#define DVD_STATE_IGNORED 9
-#define DVD_STATE_CANCELED 10
-#define DVD_STATE_RETRY 11
-#define DVD_STATE_12 12
+typedef enum {
+    DVD_RESULT_COVER_CLOSED = -4,
+    DVD_RESULT_CANCELED,
+    DVD_RESULT_M2,
+    DVD_RESULT_FATAL,
+    DVD_RESULT_OK,
+} DVDResult;
 
-#define DVD_RESULT_GOOD 0
-#define DVD_RESULT_FATAL_ERROR -1
-#define DVD_RESULT_IGNORED -2
-#define DVD_RESULT_CANCELED -3
+typedef enum {
+    DVD_STATE_FATAL = -1,
+    DVD_STATE_IDLE,
+    DVD_STATE_BUSY,
+    DVD_STATE_WAITING,
+    DVD_STATE_COVER_CLOSED,
+    DVD_STATE_NO_DISK,
+    DVD_STATE_COVER_OPENED,
+    DVD_STATE_WRONG_DISK_ID,
+    DVD_STATE_7,
+    DVD_STATE_PAUSED,
+    DVD_STATE_9,
+    DVD_STATE_CANCELED,
+    DVD_STATE_DISK_ERROR,
+    DVD_STATE_MOTOR_STOPPED,
+} DVDAsyncState;
+
+typedef enum {
+    DVD_COVER_BUSY,
+    DVD_COVER_OPENED,
+    DVD_COVER_CLOSED,
+} DVDCoverState;
 
 // Forward declarations
 typedef struct DVDDiskID;
@@ -115,6 +126,7 @@ BOOL DVDInquiryAsync(DVDCommandBlock*, DVDDriveInfo*, DVDCBCallback);
 u32 __DVDGetCoverStatus(void);
 void __DVDPrepareReset(void);
 BOOL __DVDTestAlarm(const OSAlarm*);
+s32 DVDGetDriveStatus(void);
 
 #ifdef __cplusplus
 }

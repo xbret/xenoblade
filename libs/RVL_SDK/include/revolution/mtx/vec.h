@@ -1,29 +1,21 @@
-#ifndef _REVOSDK_VEC_H
-#define _REVOSDK_VEC_H
-
+#ifndef RVL_SDK_MTX_VEC_H
+#define RVL_SDK_MTX_VEC_H
+#include "revolution/mtx/mtx.h"
 #include "types.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif // ifdef __cplusplus
 
-typedef struct Vec {
-	float x;
-	float y;
-	float z;
-} Vec;
-
-void PSVECAdd(const Vec*, const Vec*, Vec*);
-void PSVECScale(const Vec*, Vec*, float);
-void PSVECNormalize(const Vec*, Vec*);
-float PSVECSquareDistance(const Vec*, const Vec*);
-float PSVECMag(const Vec*);
-float PSVECDotProduct(const Vec*, const Vec*);
-void PSVECCrossProduct(const Vec*, const Vec*, Vec*);
-void C_VECHalfAngle(const Vec*, const Vec*, Vec*);
+void PSVECAdd(const Vec* a, const Vec* b, Vec* sum);
+void PSVECScale(const Vec* in, Vec* out, float scale);
+void PSVECNormalize(const Vec* in, Vec* out);
+float PSVECMag(const Vec* v);
+float PSVECDotProduct(const Vec* a, const Vec* b);
+void PSVECCrossProduct(const Vec* a, const Vec* b, Vec* prod);
+float PSVECSquareDistance(const Vec* a, const Vec* b);
+void C_VECHalfAngle(const Vec* a, const Vec* b, Vec* half);
 
 #ifdef __cplusplus
 }
 #endif
-
 #endif

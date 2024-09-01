@@ -67,7 +67,7 @@ void SISetSamplingRate(u32 msec) {
             break;
     }
 
-    progressive = VI_HW_REGS[VI_REG_VICLK] & 1;
+    progressive = VI_HW_REGS[VI_VICLK] & 1;
     SISetXY((progressive ? 2 : 1) * xy[msec].line, xy[msec].count);
     OSRestoreInterrupts(enabled);
 }

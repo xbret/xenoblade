@@ -1,9 +1,9 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
-#include "nw4r/ut/ut_LinkList.h"
-#include "nw4r/lyt/lyt_resourceAccessor.h"
-#include "nw4r/lyt/lyt_common.h"
+#ifndef NW4R_LYT_ANIMATION_H
+#define NW4R_LYT_ANIMATION_H
+#include "types_nw4r.h"
+#include "ut_LinkList.h"
+#include "lyt_resourceAccessor.h"
+#include "lyt_common.h"
 
 namespace nw4r
 {
@@ -34,7 +34,7 @@ namespace nw4r
 
             ut::LinkListNode mNode; // at 0x0
             AnimationBlock *mResource; // at 0xC
-            float mFrame; // at 0x10
+            f32 mFrame; // at 0x10
         };
 
         struct AnimTransformBasic : AnimTransform
@@ -78,3 +78,5 @@ namespace nw4r
         };
     }
 }
+
+#endif

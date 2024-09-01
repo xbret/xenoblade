@@ -3,12 +3,18 @@
         {
             "name": "Linux",
             "includePath": [
-				"${workspaceFolder}/src",
+                "${workspaceFolder}/src",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/libs/CriWare/src",
                 "${workspaceFolder}/libs/monolib/include",
                 "${workspaceFolder}/libs/NdevExi2A/include",
                 "${workspaceFolder}/libs/nw4r/include",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/g3d",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/ut",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/lyt",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/snd",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/math",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include/stl",
                 "${workspaceFolder}/libs/RVL_SDK/include"
@@ -18,17 +24,25 @@
             "intelliSenseMode": "linux-clang-x86",
             "compilerPath": "",
             "configurationProvider": "ms-vscode.makefile-tools",
-            "forcedInclude": [".vscode/warnings.h"]
+            "forcedInclude": [
+                ".vscode/warnings.h"
+            ]
         },
         {
             "name": "Win32",
             "includePath": [
-				"${workspaceFolder}/src",
+                "${workspaceFolder}/src",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/libs/CriWare/src",
                 "${workspaceFolder}/libs/monolib/include",
                 "${workspaceFolder}/libs/NdevExi2A/include",
                 "${workspaceFolder}/libs/nw4r/include",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/g3d",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/ut",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/lyt",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/snd",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/math",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include/stl",
                 "${workspaceFolder}/libs/RVL_SDK/include"
@@ -38,17 +52,25 @@
             "intelliSenseMode": "windows-clang-x86",
             "compilerPath": "",
             "configurationProvider": "ms-vscode.makefile-tools",
-            "forcedInclude": [".vscode/warnings.h"]
+            "forcedInclude": [
+                "${workspaceFolder}/.vscode/warnings.h"
+            ]
         },
         {
             "name": "Mac",
             "includePath": [
-				"${workspaceFolder}/src",
+                "${workspaceFolder}/src",
                 "${workspaceFolder}/include",
                 "${workspaceFolder}/libs/CriWare/src",
                 "${workspaceFolder}/libs/monolib/include",
                 "${workspaceFolder}/libs/NdevExi2A/include",
                 "${workspaceFolder}/libs/nw4r/include",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/g3d",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/ut",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/lyt",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/snd",
+                "${workspaceFolder}/libs/nw4r/include/nw4r/math",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include",
                 "${workspaceFolder}/libs/PowerPC_EABI_Support/include/stl",
                 "${workspaceFolder}/libs/RVL_SDK/include"
@@ -58,7 +80,9 @@
             "intelliSenseMode": "macos-clang-x86",
             "compilerPath": "",
             "configurationProvider": "ms-vscode.makefile-tools",
-            "forcedInclude": ["${workspaceFolder}/.vscode/warnings.h"]
+            "forcedInclude": [
+                "${workspaceFolder}/.vscode/warnings.h"
+            ]
         }
     ],
     "version": 4

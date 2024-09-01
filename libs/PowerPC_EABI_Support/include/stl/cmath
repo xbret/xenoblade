@@ -1,22 +1,28 @@
 #ifndef MSL_CPP_CMATH_H
 #define MSL_CPP_CMATH_H
 #include <math.h>
+#ifdef __cplusplus
 
 namespace std {
 using ::acos;
+using ::acosf;
 using ::asin;
 using ::atan;
 using ::atan2;
 using ::ceil;
+using ::ceilf;
 using ::copysign;
 using ::cos;
 using ::cosf;
 using ::fabsf;
 using ::floor;
+using ::floorf;
 using ::fmod;
+using ::fmodf;
 using ::frexp;
 using ::ldexp;
 using ::modf;
+using ::modff;
 using ::nan;
 using ::pow;
 using ::scalbn;
@@ -28,4 +34,5 @@ using ::tan;
 using ::tanf;
 } // namespace std
 
+#endif 
 #endif

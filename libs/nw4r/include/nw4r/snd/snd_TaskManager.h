@@ -1,0 +1,52 @@
+#ifndef NW4R_SND_TASK_MANAGER_H
+#define NW4R_SND_TASK_MANAGER_H
+#include "types_nw4r.h"
+#include "snd_Task.h"
+#include "ut_LinkList.h"
+#include "ut_lock.h"
+#include <revolution/OS/OSThread.h>
+
+namespace nw4r
+{
+	namespace snd
+	{
+		namespace detail
+		{
+			struct TaskManager
+			{
+				enum TaskPriority
+				{
+					PRIORITY_LOW = 0,
+					PRIORITY_MIDDLE = 1,
+					PRIORITY_HIGH = 2
+				};
+				
+				inline TaskManager() : mTaskStacks(), WORD_0x24(0), BYTE_0x28(0)
+				{
+					OSInitThreadQueue(&mQueue_0x2C);
+					OSInitThreadQueue(&mQueue_0x34);
+				}
+
+				static TaskManager& GetInstance();
+
+				~TaskManager();
+				void AppendTask(Task *, TaskPriority = PRIORITY_MIDDLE);
+				Task * PopTask();
+				UNKTYPE GetNextTask();
+				UNKTYPE ExecuteTask();
+				UNKTYPE CancelTask(Task *);
+				UNKTYPE CancelAllTask();
+				UNKTYPE WaitTask();
+				UNKTYPE CancelWaitTask();
+
+				ut::LinkList<Task, 4> mTaskStacks[3];
+				u32 WORD_0x24;
+				u8 BYTE_0x28;
+				OSThreadQueue mQueue_0x2C;
+				OSThreadQueue mQueue_0x34;
+			};
+		}
+	}
+}
+
+#endif

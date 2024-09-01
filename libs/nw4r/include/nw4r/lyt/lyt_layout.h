@@ -1,19 +1,15 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
-#include "nw4r/lyt/lyt_resourceAccessor.h"
-#include "nw4r/lyt/lyt_drawInfo.h"
-#include "nw4r/lyt/lyt_pane.h"
-#include "nw4r/ut/ut_TagProcessorBase.h"
+#ifndef NW4R_LYT_LAYOUT_H
+#define NW4R_LYT_LAYOUT_H
+#include "types_nw4r.h"
 #include <new>
-#include "revolution/MEM/mem_allocator.h"
+#include <revolution/MEM/mem_allocator.h>
 
 namespace nw4r
 {
-    namespace lyt
-    {
-        struct Layout
-        {
+	namespace lyt
+	{
+		struct Layout
+		{
 			// TO-DO: Class members
 			Layout();
 			virtual ~Layout();
@@ -39,51 +35,53 @@ namespace nw4r
 			float unk18;
 			float unk1C;
 
-            static void FreeMemory(void *p)
-            {
-                MEMFreeToAllocator(mspAllocator, p);
-            }
+			static void FreeMemory(void *p)
+			{
+				MEMFreeToAllocator(mspAllocator, p);
+			}
 
-            static void * AllocMemory(size_t n)
-            {
-                return MEMAllocFromAllocator(mspAllocator, n);
-            }
+			static void * AllocMemory(size_t n)
+			{
+				return MEMAllocFromAllocator(mspAllocator, n);
+			}
 
-            template <typename T>
-            static void DeleteArray(T *p, size_t n)
-            {
-                for (size_t i = 0; i < n; i++)
-                    p[i].~T();
+			template <typename T>
+			static void DeleteArray(T *p, size_t n)
+			{
+				for (size_t i = 0; i < n; i++)
+					p[i].~T();
 
-                FreeMemory(p);
-            }
+				FreeMemory(p);
+			}
 
-            template <typename T>
-            static T * NewArray(size_t n)
-            {
-                T *array = (T *)AllocMemory(n * sizeof(T));
+			template <typename T>
+			static T * NewArray(size_t n)
+			{
+				T *array = (T *)AllocMemory(n * sizeof(T));
 
-                for (size_t i = 0; i < n; i++)
-                    new (&array[i]) T();
+				for (size_t i = 0; i < n; i++)
+					new (&array[i]) T();
 
-                return array;
-            }
+				return array;
+			}
 
-            template <typename T>
-            static void DeleteObj(T *t)
-            {
-                t->~T();
-                FreeMemory(t);
-            }
+			template <typename T>
+			static void DeleteObj(T *t)
+			{
+				t->~T();
+				FreeMemory(t);
+			}
 
-            template <typename T>
-            static T * NewObj()
-            {
-                T *obj = (T *)AllocMemory(sizeof(T));
-                return new (obj) T();
-            }
+			template <typename T>
+			static T * NewObj()
+			{
+				T *obj = (T *)AllocMemory(sizeof(T));
+				return new (obj) T();
+			}
 
-            static MEMAllocator *mspAllocator;
-        };
-    }
+			static MEMAllocator *mspAllocator;
+		};
+	}
 }
+
+#endif

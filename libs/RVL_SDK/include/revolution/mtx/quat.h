@@ -1,15 +1,11 @@
-#ifndef _REVOSDK_QUAT_H
-#define _REVOSDK_QUAT_H
-
+#ifndef RVL_SDK_MTX_QUAT_H
+#define RVL_SDK_MTX_QUAT_H
+#include "revolution/MTX/mtx.h"
 #include "types.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif // ifdef __cplusplus
 
-typedef struct {
-  float x, y, z, w;
-} Quaternion;
 
 void PSQUATAdd(const Quaternion*, const Quaternion*, Quaternion*);
 void PSQUATMultiply(const Quaternion*, const Quaternion*, Quaternion*);

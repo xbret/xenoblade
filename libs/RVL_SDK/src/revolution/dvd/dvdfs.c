@@ -385,16 +385,16 @@ u32 DVDGetTransferredSize(DVDCommandBlock* block){
 	s32 size;
 
 	switch(block->state){
-		case DVD_STATE_FATAL_ERROR:
-		case DVD_STATE_END:
+		case DVD_STATE_FATAL:
+		case DVD_STATE_IDLE:
 		case DVD_STATE_COVER_CLOSED:
 		case DVD_STATE_NO_DISK:
-		case DVD_STATE_COVER_OPEN:
-		case DVD_STATE_WRONG_DISK:
-		case DVD_STATE_MOTOR_STOPPED:
+		case DVD_STATE_COVER_OPENED:
+		case DVD_STATE_WRONG_DISK_ID:
+		case DVD_STATE_7:
 		case DVD_STATE_CANCELED:
-		case DVD_STATE_RETRY:
-		case DVD_STATE_12:
+		case DVD_STATE_DISK_ERROR:
+		case DVD_STATE_MOTOR_STOPPED:
 		size = block->transferredSize;
 		break;
 		case DVD_STATE_WAITING:

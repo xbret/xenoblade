@@ -18,7 +18,7 @@ void AXInit(){
 }
 
 //unused
-void AXInitEx(){
+void AXInitEx(u32 mode){
 }
 
 //unused

@@ -11,7 +11,6 @@ namespace ml{
 		return MTRand::getInstance()->rand();
 	}
 
-
 	//Random range (max only)
 	//Max is exclusive
 	int mtRand(int max){

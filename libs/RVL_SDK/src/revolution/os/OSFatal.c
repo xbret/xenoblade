@@ -124,7 +124,7 @@ static void ConfigureVideo(u16 width, u16 height) {
     switch ((u32)VIGetTvFormat()) {
     case VI_NTSC:
     case VI_MPAL:
-        if (VI_HW_REGS[VI_REG_VICLK] & VI_VICLK_54MHZ) {
+        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_54MHZ) {
             // Progressive mode
             rmode.viTVmode = VI_TVMODE(VI_NTSC, VI_PROGRESSIVE);
             rmode.viYOrigin = 0;
@@ -137,7 +137,7 @@ static void ConfigureVideo(u16 width, u16 height) {
         }
         break;
     case VI_EURGB60:
-        if (VI_HW_REGS[VI_REG_VICLK] & VI_VICLK_54MHZ) {
+        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_54MHZ) {
             // Progressive mode
             rmode.viTVmode = VI_TVMODE(VI_EURGB60, VI_PROGRESSIVE);
             rmode.viYOrigin = 0;

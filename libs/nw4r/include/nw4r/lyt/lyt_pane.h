@@ -1,12 +1,12 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
-#include "nw4r/math/math_types.h"
-#include "nw4r/ut/ut_LinkList.h"
-#include "nw4r/ut/ut_RuntimeTypeInfo.h"
-#include "nw4r/ut/ut_Color.h"
-#include "nw4r/ut/ut_algorithm.h"
-#include "nw4r/lyt/lyt_animation.h"
+#ifndef NW4R_LYT_PANE_H
+#define NW4R_LYT_PANE_H
+#include "types_nw4r.h"
+#include "math_types.h"
+#include "ut_LinkList.h"
+#include "ut_RuntimeTypeInfo.h"
+#include "ut_Color.h"
+#include "ut_algorithm.h"
+#include "lyt_animation.h"
 #include <string.h>
 
 #define PANE_NAME_SIZE 17
@@ -30,10 +30,9 @@ namespace nw4r
                 return *this;
             }
 
-            float x, y;
+            f32 x, y;
         };
 
-		/*
         namespace detail
         {
             struct PaneBase
@@ -43,7 +42,7 @@ namespace nw4r
                 virtual ~PaneBase();
                 ut::LinkListNode mNode; // at 0x4
             };
-        }*/
+        }
 
         namespace res
         {
@@ -97,7 +96,7 @@ namespace nw4r
             inline void InsertChild(ut::LinkList<lyt::Pane, 4>::Iterator iter, lyt::Pane *pChild)
             {
                 mChildren.Insert(iter, pChild);
-            	pChild->mParent = this;
+                pChild->mParent = this;
             }
 
             Pane(const res::Pane *);
@@ -120,21 +119,20 @@ namespace nw4r
             virtual UNKTYPE UnbindAnimation(AnimTransform *, bool); // at 0x48
             virtual UNKTYPE UnbindAllAnimation(bool); // at 0x4C
             virtual UNKTYPE UnbindAnimationSelf(AnimTransform *); // at 0x50
-            virtual UNKTYPE FindAnimationLinkSelf(AnimTransform*);
-			virtual UNKTYPE FindAnimationLinkSelf(const AnimResource&);
-            virtual UNKTYPE SetAnimationEnable(AnimTransform *, bool, bool); // at 0x58
-			virtual UNKTYPE SetAnimationEnable(AnimResource *, bool, bool);
-            virtual UNKTYPE GetMaterialNum() const;
-			virtual UNKTYPE GetMaterialNum(u32) const;
-			virtual UNKTYPE GetMaterial() const; // at 0x5C
-            virtual UNKTYPE LoadMtx(const DrawInfo&); // at 0x60
+            virtual UNKTYPE FindAnimationLink(AnimTransform *); // at 0x54
+            virtual UNKTYPE FindAnimationLinkSelf(const AnimResource &); // at 0x58
+            virtual UNKTYPE SetAnimationEnable(AnimTransform *, bool, bool); // at 0x5C
+            virtual UNKTYPE SetAnimationEnable(const AnimResource &, bool, bool); // at 0x60
+            virtual UNKTYPE GetMaterialNum() const; // at 0x64
+            virtual UNKTYPE GetMaterial() const; // at 0x68
+            virtual UNKTYPE GetMaterial(u32) const; // at 0x6C
+            virtual UNKTYPE LoadMtx(const DrawInfo&); // at 0x70
             void AppendChild(Pane *);
             void RemoveChild(Pane *);
             UNKTYPE GetPaneRect(const DrawInfo&) const;
             UNKTYPE AddAnimationLink(AnimationLink *);
             UNKTYPE GetVtxPos() const;
             
-			
             ut::LinkListNode mNode; // at 0x4
             Pane *mParent; // at 0x8
             ut::LinkList<Pane, 4> mChildren; // at 0x14
@@ -159,3 +157,5 @@ namespace nw4r
         };
     }
 }
+
+#endif

@@ -1,5 +1,5 @@
-#include "nw4r/lyt/lyt_init.h"
-#include "nw4r/build_version.h"
+#include "lyt_init.h"
+#include "build_version.h"
 #include "revolution/OS.h"
 
 namespace {

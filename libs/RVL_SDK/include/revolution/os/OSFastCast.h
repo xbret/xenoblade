@@ -27,6 +27,21 @@ static inline void OSInitFastCast(){
     }
 }
 
+static void OSSetGQR6(register u32 type, register u32 scale) {
+    register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
+
+    asm {
+        mtspr 0x396, val
+    }
+}
+
+static void OSSetGQR7(register u32 type, register u32 scale) {
+    register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
+
+    asm {
+        mtspr 0x397, val
+    }
+}
 
 static inline float __OSu16tof32(register const u16* arg) {
     register float ret;

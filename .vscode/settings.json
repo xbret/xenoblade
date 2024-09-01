@@ -15,7 +15,11 @@
         "*.cp": "cpp",
         "*.asm": "wla-dx-asm",
         "*.inc": "cpp",
-        "dstypes.h": "c"
+        "dstypes.h": "c",
+        "cwchar": "cpp",
+        "axfxhooks.h": "c",
+        "dspcode.h": "c",
+        "algorithm": "cpp"
     },
     "search.useIgnoreFiles": false,
     "search.exclude": {

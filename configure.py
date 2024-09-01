@@ -184,13 +184,10 @@ cflags_base = [
     "-i include",
     "-i libs/RVL_SDK/include/",
     "-i libs/PowerPC_EABI_Support/include/stl",
-    "-i libs/nw4r/include/",
-    "-i libs/monolib/include/",
     "-i src/",
     "-i libs/NdevExi2A/include/",
     "-i libs/PowerPC_EABI_Support/include/",
     f"-i build/{config.version}/include",
-    f"-DVERSION={version_num}",
 ]
 
 # Debug flags
@@ -210,6 +207,9 @@ cflags_game = [
     "-RTTI on",
     "-Cpp_exceptions on",
     "-func_align 4",
+    "-ir libs/nw4r/include/",
+    "-i libs/monolib/include/",
+    f"-DVERSION={version_num}",
 ]
 
 # Metrowerks library flags
@@ -264,9 +264,9 @@ cflags_ndev = [
 cflags_nw4r = [
     *cflags_base,
     "-inline auto",
-    "-use_lmw_stmw on",
     "-fp_contract off",
     "-func_align 4",
+    "-ir libs/nw4r/include/",
 ]
 
 # Criware flags
@@ -1415,22 +1415,22 @@ config.libs = [
             Object(NonMatching, "g3d/res/g3d_resanmcamera.cpp"),
             Object(NonMatching, "g3d/res/g3d_resanmscn.cpp"),
             Object(NonMatching, "g3d/g3d_transform.cpp"),
-            Object(NonMatching, "g3d/g3d_anmvis.cpp"),
+            Object(Matching, "g3d/g3d_anmvis.cpp"),
             Object(NonMatching, "g3d/g3d_anmclr.cpp"),
             Object(NonMatching, "g3d/g3d_anmtexpat.cpp"),
             Object(NonMatching, "g3d/g3d_anmtexsrt.cpp"),
             Object(NonMatching, "g3d/g3d_anmchr.cpp"),
             Object(NonMatching, "g3d/g3d_anmshp.cpp"),
             Object(NonMatching, "g3d/g3d_anmscn.cpp"),
-            Object(NonMatching, "g3d/g3d_obj.cpp"),
-            Object(NonMatching, "g3d/g3d_anmobj.cpp"),
+            Object(Matching, "g3d/g3d_obj.cpp"),
+            Object(Matching, "g3d/g3d_anmobj.cpp"),
             Object(NonMatching, "g3d/platform/g3d_gpu.cpp"),
             Object(NonMatching, "g3d/platform/g3d_cpu.cpp"),
             Object(NonMatching, "g3d/g3d_state.cpp"),
             Object(NonMatching, "g3d/g3d_draw1mat1shp.cpp"),
             Object(NonMatching, "g3d/g3d_calcview.cpp"),
             Object(NonMatching, "g3d/g3d_dcc.cpp"),
-            Object(NonMatching, "g3d/g3d_workmem.cpp"),
+            Object(Matching, "g3d/g3d_workmem.cpp"),
             Object(NonMatching, "g3d/g3d_calcworld.cpp"),
             Object(NonMatching, "g3d/g3d_draw.cpp"),
             Object(NonMatching, "g3d/g3d_camera.cpp"),
@@ -1444,8 +1444,8 @@ config.libs = [
             Object(NonMatching, "g3d/g3d_scnmdl.cpp"),
             Object(NonMatching, "g3d/g3d_scnmdlexpand.cpp"),
             Object(NonMatching, "g3d/g3d_calcmaterial.cpp"),
-            Object(NonMatching, "g3d/g3d_init.cpp"),
-            Object(NonMatching, "g3d/g3d_scnproc.cpp"),
+            Object(Matching, "g3d/g3d_init.cpp"),
+            Object(Matching, "g3d/g3d_scnproc.cpp"),
             Object(NonMatching, "g3d/g3d_fog.cpp"),
             Object(NonMatching, "g3d/g3d_light.cpp"),
             Object(NonMatching, "g3d/g3d_calcvtx.cpp"),
@@ -1461,13 +1461,13 @@ config.libs = [
             Object(NonMatching, "lyt/lyt_picture.cpp"),
             Object(NonMatching, "lyt/lyt_textBox.cpp"),
             Object(NonMatching, "lyt/lyt_window.cpp"),
-            Object(NonMatching, "lyt/lyt_bounding.cpp"),
+            Object(Matching, "lyt/lyt_bounding.cpp"),
             Object(NonMatching, "lyt/lyt_material.cpp"),
             Object(NonMatching, "lyt/lyt_texMap.cpp"),
             Object(Matching, "lyt/lyt_drawInfo.cpp"),
             Object(NonMatching, "lyt/lyt_animation.cpp"),
             Object(Matching, "lyt/lyt_resourceAccessor.cpp"),
-            Object(NonMatching, "lyt/lyt_arcResourceAccessor.cpp"),
+            Object(Matching, "lyt/lyt_arcResourceAccessor.cpp"),
             Object(NonMatching, "lyt/lyt_common.cpp"),
             Object(NonMatching, "lyt/lyt_util.cpp"),
         ],
@@ -1475,7 +1475,7 @@ config.libs = [
     nw4rLib(
         "libnw4r_math",
         [
-            Object(NonMatching, "math/math_arithmetic.cpp"),
+            Object(Matching, "math/math_arithmetic.cpp"),
             Object(NonMatching, "math/math_triangular.cpp"),
             Object(NonMatching, "math/math_types.cpp"),
             Object(NonMatching, "math/math_geometry.cpp"),
@@ -1552,7 +1552,7 @@ config.libs = [
             Object(Matching, "ut/ut_TagProcessorBase.cpp"),
             Object(Matching, "ut/ut_IOStream.cpp"),
             Object(Matching, "ut/ut_FileStream.cpp"),
-            Object(NonMatching, "ut/ut_DvdFileStream.cpp"),
+            Object(Matching, "ut/ut_DvdFileStream.cpp"),
             Object(Matching, "ut/ut_LockedCache.cpp"),
             Object(Matching, "ut/ut_Font.cpp"),
             Object(NonMatching, "ut/ut_RomFont.cpp"), #EU/US only

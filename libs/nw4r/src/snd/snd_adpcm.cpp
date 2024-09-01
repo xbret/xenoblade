@@ -1,32 +1,40 @@
-#include "nw4r/snd/snd_adpcm.h"
-#include <limits.h>
+#pragma ipa file // TODO: REMOVE AFTER REFACTOR
 
-namespace nw4r
-{
-    namespace snd
-    {
-        namespace detail
-        {
-            s16 DecodeDspAdpcm(AXPBADPCM* pcm, u8 param2){
-                int a1 = pcm->a[(s16)(pcm->pred_scale >> 4)][0];
-                int a2 = pcm->a[(s16)(pcm->pred_scale >> 4)][1];
-                int val = (s16)a1 * (s16)pcm->yn1;
-                val += (s16)a2 * (s16)pcm->yn2;
-                val += ((s16)(1 << (pcm->pred_scale & 0xF))) * ((s16)(param2  << 12) >> 1);
-                val >>= 10;
-                val += 1;
-                val >>= 1;
-                
-                if(val > SHRT_MAX){
-                    val = SHRT_MAX;
-                }else if(val < SHRT_MIN){
-                    val = SHRT_MIN;
-                }
+#include <nw4r/snd.h>
 
-                pcm->yn2 = pcm->yn1;
-                pcm->yn1 = val;
-                return val;
-            }
-        }
+namespace nw4r {
+namespace snd {
+namespace detail {
+
+s16 DecodeDspAdpcm(AXPBADPCM* adpcm, u8 bits) {
+    s16 yn1 = adpcm->yn1;
+    s16 yn2 = adpcm->yn2;
+
+    s16 scale = 1 << (adpcm->pred_scale & 0x0F);
+    s16 bits2 = bits << 12;
+    s16 index = adpcm->pred_scale >> 4;
+
+    s16 coef0 = adpcm->a[index][0];
+    s16 coef1 = adpcm->a[index][1];
+
+    s32 sample = coef0 * yn1;
+    sample += coef1 * yn2;
+    sample += scale * (bits2 >> 1);
+    sample >>= 10;
+    sample += 1;
+    sample >>= 1;
+
+    if (sample > 32767) {
+        sample = 32767;
+    } else if (sample < -32768) {
+        sample = -32768;
     }
+
+    adpcm->yn2 = adpcm->yn1;
+    adpcm->yn1 = sample;
+    return sample;
 }
+
+} // namespace detail
+} // namespace snd
+} // namespace nw4r
