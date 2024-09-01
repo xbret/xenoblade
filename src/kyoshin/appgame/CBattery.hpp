@@ -18,14 +18,14 @@ public:
 
 class CBattery : public IWorkEvent {
 public:
-    CBattery(u8 r4);
+    CBattery(u8 batteryLevel);
     virtual ~CBattery();
 	void func_802B92A4();
 	void func_802B92FC();
 	void func_802B9334(void*);
 	void func_802B9364();
-	void func_802B93E4(u8);
-	void func_802B93EC();
+	void setBatteryLevel(u8 level);
+	void updateBatteryImage();
 	void func_802B94B0();
     virtual bool OnFileEvent(CEventFile* eventFile);
     
@@ -37,5 +37,5 @@ public:
     s8 unk21;
     bool unk22;
     char pad23[1];
-    u8 unk24;
+    u8 mBatteryLevel; //0x24
 };
