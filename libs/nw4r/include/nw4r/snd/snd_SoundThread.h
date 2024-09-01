@@ -1,8 +1,8 @@
 #ifndef NW4R_SND_SOUND_THREAD_H
 #define NW4R_SND_SOUND_THREAD_H
-#include <revolution/OS/OSMessage.h>
-#include <revolution/OS/OSThread.h>
-#include <revolution/OS/OSMutex.h>
+#include <revolution/os/OSMessage.h>
+#include <revolution/os/OSThread.h>
+#include <revolution/os/OSMutex.h>
 #include "types_nw4r.h"
 #include "ut_LinkList.h"
 #include "snd_AxManager.h"

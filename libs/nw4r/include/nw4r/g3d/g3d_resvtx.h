@@ -1,6 +1,6 @@
 #ifndef NW4R_G3D_RESVTX_H
 #define NW4R_G3D_RESVTX_H
-#include <GXAttr.h>
+#include <revolution/gx/GXAttr.h>
 #include "g3d_rescommon.h"
 
 namespace nw4r

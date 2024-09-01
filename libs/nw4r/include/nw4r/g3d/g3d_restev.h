@@ -1,7 +1,7 @@
 #ifndef NW4R_G3D_RESTEV_H
 #define NW4R_G3D_RESTEV_H
-#include <GXTev.h>
-#include <GXTexture.h>
+#include <revolution/gx/GXTev.h>
+#include <revolution/gx/GXTexture.h>
 #include "g3d_cpu.h"
 #include "g3d_rescommon.h"
 

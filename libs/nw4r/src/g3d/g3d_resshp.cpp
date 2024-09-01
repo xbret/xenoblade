@@ -1,7 +1,7 @@
 #pragma ipa file
 #include <string.h>
-#include <OSCache.h>
-#include <GXDisplayList.h>
+#include <revolution/os/OSCache.h>
+#include <revolution/GX/GXDisplayList.h>
 #include "g3d_resshp.h"
 
 namespace nw4r

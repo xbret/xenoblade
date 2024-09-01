@@ -2,7 +2,7 @@
 #include "snd_FrameHeap.h"
 #include "snd_SoundThread.h"
 #include "snd_DisposeCallbackManager.h"
-#include <OSMutex.h>
+#include <revolution/os/OSMutex.h>
 
 namespace nw4r
 {

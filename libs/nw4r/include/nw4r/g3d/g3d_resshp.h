@@ -1,6 +1,6 @@
 #ifndef NW4R_G3D_RESSHP_H
 #define NW4R_G3D_RESSHP_H
-#include <GXAttr.h>
+#include <revolution/gx/GXAttr.h>
 #include "types_nw4r.h"
 #include "g3d_rescommon.h"
 #include "g3d_resmdl.h"
