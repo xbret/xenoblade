@@ -7,6 +7,7 @@ namespace mtl{
 	s32 MemManager::lbl_80667E50;
 	bool lbl_80667E54;
 	BOOL lbl_80667E58;
+	bool lbl_80667E5C;
 
 	int MemManager::lbl_80665E28 = 1;
 	int MemManager::lbl_80665E2C = 1;
@@ -15,8 +16,6 @@ namespace mtl{
 	bool MemManager::lbl_80665E38 = true;
 	bool MemManager::lbl_80665E39 = true;
 	int MemManager::arenaMemorySize = 0x600000;
-
-	#define VoidToMemBlock(p) (MemBlock*)((u32)p - 0x20)
 
 	Region::~Region(){
 		u32 regionIndex = mRegionIndex;
@@ -159,14 +158,12 @@ namespace mtl{
 	    lbl_80665E39 = true;
 
 	    //Initialize the mem region array
-	    u8 i = 0;
-	    do{
+	    for(u8 i = 0; i < MAX_REGIONS; i++){
 	        Region* entry = getRegion(i);
 	        if (entry != nullptr) {
 	            entry->init();
 	        }
-	        i++;
-	    }while(i < MAX_REGIONS);
+	    }
 	
 	    u32 arenaLo = (u32)OSGetMEM1ArenaLo();
 	    u32 maxMemoryAddress = arenaMemorySize + 0x80000000;
@@ -193,7 +190,7 @@ namespace mtl{
 		for(int i = 79; i >= 0; i--){
 			Region* entry = MemManager::getRegion(i);
 			if(entry->mStartAddress != 0){
-				delete entry;
+				entry->~Region();
 			}
 		}
 	}
@@ -203,7 +200,6 @@ namespace mtl{
 
 
 		if (offset == 0) {
-			MemBlock* temp;
 			MemBlock* pLargestEntry = findLargestEntry(regionIndex);
 
 			if (pLargestEntry == nullptr) newSize = 0;
@@ -215,7 +211,21 @@ namespace mtl{
 		return index;
 	}
 
-	void MemManager::func_804341D0(int r3, int r4, const char* r5){
+	int MemManager::func_804341D0(int regionIndex, int offset, const char* name){
+		u32 newSize = offset + sizeof(MemBlock);
+
+
+		if (offset == 0) {
+			MemBlock* pLargestEntry = findLargestEntry(regionIndex);
+
+			if (pLargestEntry == nullptr) newSize = 0;
+			else newSize = pLargestEntry->size - sizeof(MemBlock);
+		}
+		
+		
+		int index = addRegion(createRegionHeadMemBlock1(regionIndex, newSize), newSize, name);
+		lbl_80667E54 = false;
+		return index;
 	}
 
 	int MemManager::getRegionIndex1(){
@@ -245,7 +255,7 @@ namespace mtl{
 		}
 
 		Region* region = getRegion(tempIndex);
-		delete region;
+		region->~Region();
 		return true;
 	}
 
@@ -266,8 +276,8 @@ namespace mtl{
 	void MemManager::func_804346BC(int regionIndex){
 	}
 
-	void Region::func_80434704(u32 r4, u32 r5, u32* r6){
-	}
+	//int Region::func_80434704(u32 r4, u32 r5, u32* r6){
+	//}
 
 	void MemManager::func_80434770(int regionIndex){
 	}
@@ -313,9 +323,11 @@ namespace mtl{
 	}
 
 	void MemManager::func_80434A4C(u8 r3){
+		lbl_80665E39 = r3;
 	}
 
 	void MemManager::func_80434A54(u8 r3){
+		lbl_80667E5C = r3;
 	}
 
 	void* MemManager::malloc(size_t size, int regionIndex){
@@ -331,52 +343,6 @@ namespace mtl{
 	void MemManager::func_80434AA4(u32 r3, int regionIndex, u32 r5){
 	}
 
-	inline void MemManager::deallocate(void* p){
-		if(p != nullptr){
-			if(regionIndex1 != -1){
-				MemBlock* entryToDelete = VoidToMemBlock(p);
-				Region* region = MemManager::getRegion(entryToDelete->regionIndex);
-
-				//this doesn't seem right
-				if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
-					log(true); //Since monolithsoft removed their log function, this calls the math log lol
-					return;
-				}
-
-				region->mFreeBytes += entryToDelete->size;
-
-				//Remove the entry from the linked list
-				if(entryToDelete->prev != nullptr){
-					entryToDelete->prev->next = entryToDelete->next;
-				}
-				if(entryToDelete->next != nullptr) {
-					entryToDelete->next->prev = entryToDelete->prev;
-				}
-
-				if (region->unk8 == entryToDelete) {
-					region->unk8 = entryToDelete->next;
-				}
-
-				if (region->unkC == entryToDelete) {
-					region->unkC = entryToDelete->prev;
-				}
-
-				MemBlock* entry = region->func_804339B8(entryToDelete);
-				entry = region->unkInline1(entry);
-
-				if (entry != nullptr) {
-					entry = region->unkInline1(entry);
-
-					if (entry != NULL) {
-						region->func_80433AA8(entry);
-					}
-				}
-
-				region->unk18--;
-			}
-		}
-	}
-
 	void* MemManager::allocateArray(u32 r3, int index, u32 r5){
 
 	}
@@ -384,7 +350,7 @@ namespace mtl{
 }
 
 //dummy operator new
-void* operator new(u32 arg0){
+void* operator new(size_t size){
 	return 0;
 }
 

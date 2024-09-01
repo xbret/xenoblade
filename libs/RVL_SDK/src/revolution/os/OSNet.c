@@ -194,7 +194,7 @@ static BOOL NWC24Shutdown_(u32 pass, u32 event){
 	return FALSE;
 }
 
-static s32 NWC24iSetRtcCounter_(u32 rtc, u32 param_2) DONT_INLINE {
+static s32 NWC24iSetRtcCounter_(u32 rtc, u32 param_2) DECOMP_DONT_INLINE {
 	s32 result;
 	s32 iVar2;
 	s32 ipcResult;

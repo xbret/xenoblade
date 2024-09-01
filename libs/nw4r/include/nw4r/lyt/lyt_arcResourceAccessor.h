@@ -1,10 +1,10 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
-#include "nw4r/ut/ut_LinkList.h"
-#include "nw4r/ut/ut_Font.h"
-#include "nw4r/lyt/lyt_resourceAccessor.h"
-#include "revolution/ARC/arc.h"
+#ifndef NW4R_LYT_ARC_RESOURCE_ACCESSOR_H
+#define NW4R_LYT_ARC_RESOURCE_ACCESSOR_H
+#include "types_nw4r.h"
+#include "ut_LinkList.h"
+#include "ut_Font.h"
+#include "lyt_resourceAccessor.h"
+#include <revolution/ARC/arc.h>
 #include <string.h>
 
 #define FONTNAMEBUF_MAX 127
@@ -42,17 +42,11 @@ namespace nw4r
         public:
             ArcResourceAccessor();
             virtual ~ArcResourceAccessor() {} // at 0x8
-            virtual UNKWORD * GetResource(u32, const char *, u32 *); // at 0xC
+            virtual UNKTYPE * GetResource(u32, const char *, u32 *); // at 0xC
             virtual ut::Font * GetFont(const char *); // at 0x10
             
             bool Attach(void *, const char *);
-            void * Detach()
-            {
-                void *old = mArchive;
-                mArchive = NULL;
-                
-                return old;
-            }
+            void * Detach();
 
             bool IsAttached() const { return (mArchive != NULL); }
 
@@ -87,3 +81,5 @@ namespace nw4r
         }
     }
 }
+
+#endif

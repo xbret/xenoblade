@@ -25,13 +25,17 @@ namespace mtl{
 		return (void*)0xA7FB94C7;
 		}
 
-		MemBlock(u32 size, int regionIndex){
+		void init(u32 size, int regionIndex){
 			memset(this, 0, sizeof(MemBlock)); //Wipe all values in the struct
 			prev = nullptr;
 			next = 0;
 			this->size = size;
 			data = dummyDataPtr();
 			this->regionIndex = regionIndex & 0xFF;
+		}
+
+		static MemBlock* fromVoidPointer(void* ptr){
+			return (MemBlock*)((u32)ptr - 0x20);
 		}
 	};
 
@@ -40,7 +44,7 @@ namespace mtl{
 		MemBlock* func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4);
 		MemBlock* func_804339B8(MemBlock* arg1);
 		MemBlock* func_80433AA8(MemBlock* entry);
-		void func_80434704(u32 r4, u32 r5, u32* r6);
+		int func_80434704(u32 r4, u32 r5, u32* r6);
 		void* allocate(u32 param2, u32 size, u32 param4);
 
 		//Region();
@@ -105,7 +109,7 @@ namespace mtl{
 		static void initialize();
 		static void terminate();
 		static int createRegion(int regionIndex, int offset, const char* name);
-		static void func_804341D0(int r3, int r4, const char* r5);
+		static int func_804341D0(int r3, int r4, const char* r5);
 		static int getHeapIndex();
 		static int getRegionIndex1();
 		static int getRegionIndex2();
@@ -127,11 +131,14 @@ namespace mtl{
 		static void* malloc_array(size_t size, int regionIndex);
 		static void func_80434AA4(u32 r3, int regionIndex, u32 r5);
 		static void* allocateArray(u32 r3, int index, u32 r5);
-		static inline void deallocate(void* p);
 		//static void log(bool status);
 
 		static inline Region* getRegion(u32 index){
-			return (Region*)((u32)regionArray + (index & 0xFF) * sizeof(Region));
+			return (Region*)((u32)regionArray + (u8)index * sizeof(Region));
+		}
+
+		static inline Region* getRegionU32(u32 index){
+			return (Region*)((u32)regionArray + (index * sizeof(Region)));
 		}
 
 		/*
@@ -140,10 +147,9 @@ namespace mtl{
 		*/
 		static inline int addRegion(MemBlock* head, u32 size, const char* name){
 			//Find the first unused entry to use for the new region
-			u32 i = 0;
-			do{
+			for(u32 i = 0; i < MAX_REGIONS; i++){
 				Region* entry = getRegion(i);
-			   //Check if this slot is empty
+				//Check if this slot is empty
 				if (entry->mStartAddress == 0) {
 					i = (lbl_80667E50++ << 8) | i;
 					entry->mRegionIndex = i;
@@ -153,7 +159,7 @@ namespace mtl{
 					entry->unkC = nullptr;
 
 					//Initialize the head entry of the heap
-					head = &MemBlock(size,i);
+					head->init(size,i);
 
 					entry->mHead = head;
 					entry->mTail = head;
@@ -165,8 +171,7 @@ namespace mtl{
 					strcpy(entry->mName.string, name); //Copy the name to the struct variable
 					return i;
 				}
-				i++;
-			}while(i < MAX_REGIONS);
+			}
 
 			return -1; //No available slot was found, return -1
 		}
@@ -194,14 +199,74 @@ namespace mtl{
 			return (MemBlock *)region->allocate(0,size,0x10);
 		}
 
-		static inline u32 unkInline(u32 var_r5){
+		static inline MemBlock* createRegionHeadMemBlock1(u32 regionIndex, u32 size){
+			Region* region = getRegion(regionIndex);
+			u32 temp = 0;
+			if(region->func_80434704(size, 0x10, &temp) == 0){
+				return nullptr;
+			}else{
+				return (MemBlock*)region->allocate(temp, size, 0x10);
+			}
+		}
+
+		static inline u32 unkInline(u32 param){
+			u32 result = param;
+
 			for(int j = 0; j < 8; j++){
-				var_r5 *= 2;
-				if (var_r5 & 0x01000000) {
-					var_r5 ^= 0x01100000 ^ 0x2100;
+				result <<= 1;
+				if (result & 0x01000000) {
+					result ^= 0x01100000 ^ 0x2100;
 				}
 			}
-			return var_r5;
+			
+			return result;
+		}
+
+
+		static inline void deallocate(void* p){
+			if(p != nullptr){
+				if(regionIndex1 != -1){
+					MemBlock* entryToDelete = MemBlock::fromVoidPointer(p);
+					Region* region = MemManager::getRegion(entryToDelete->regionIndex);
+
+					//this doesn't seem right
+					if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
+						log(true); //Since monolithsoft removed their log function, this calls the math log lol
+						return;
+					}
+
+					region->mFreeBytes += entryToDelete->size;
+
+					//Remove the entry from the linked list
+					if(entryToDelete->prev != nullptr){
+						entryToDelete->prev->next = entryToDelete->next;
+					}
+					if(entryToDelete->next != nullptr) {
+						entryToDelete->next->prev = entryToDelete->prev;
+					}
+
+					if (region->unk8 == entryToDelete) {
+						region->unk8 = entryToDelete->next;
+					}
+
+					if (region->unkC == entryToDelete) {
+						region->unkC = entryToDelete->prev;
+					}
+
+					MemBlock* entry = region->func_804339B8(entryToDelete);
+					entry = region->unkInline1(entry);
+
+					if (entry != nullptr) {
+						entry = region->unkInline1(entry);
+
+						if (entry != NULL) {
+							region->func_80433AA8(entry);
+						}
+					}
+
+					region->unk18--;
+				}
+			}
 		}
 
 		//TODO: is there a way to have this be a normal array without generating sinit stuff?

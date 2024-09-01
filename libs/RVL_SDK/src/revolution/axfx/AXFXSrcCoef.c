@@ -131,6 +131,6 @@ static SrcCoef __SrcTab12khz[128] = {
 {-0.0009765625, 0.10159302, 0.8022156, 0.09750366}
 };
 
-SrcCoef* __AXFXGetSrcCoef(int index){
+SrcCoef* __AXFXGetSrcCoef(u32 index){
 	return &(__SrcTab12khz[index]);
 }

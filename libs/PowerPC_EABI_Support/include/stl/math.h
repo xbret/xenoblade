@@ -7,6 +7,13 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
+#ifdef __MWERKS__
+#define fabs(x) __fabs(x)
+#else
+#define fabs(x)
+#endif
+
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_double.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 
 extern int __float_nan[];
@@ -17,18 +24,18 @@ extern int __double_huge[];
 #define NAN (*(float*) __float_nan)
 #define HUGE_VAL (*(double*) __double_huge)
 
-
 #define FP_NAN 1
 #define FP_INFINITE 2
 #define FP_ZERO 3
 #define FP_NORMAL 4
-#define FP_SUBNORMAL 5
+#define FP_SUBNORMAL 
+
+#define M_SQRT3 1.73205f
 
 int __signbitf(float);
 int __fpclassifyf(float);
 int __signbitd(double);
 int __fpclassifyd(double);
-
 
 #define fpclassify(x) ((sizeof(x) == sizeof(float)) ? __fpclassifyf((float)(x)) : __fpclassifyd((double)(x)))
 #define signbit(x) ((sizeof(x) == sizeof(float)) ? __signbitf((float)(x)) : __signbitd((double)(x)))
@@ -38,26 +45,8 @@ int __fpclassifyd(double);
 #define isnormal(x) (fpclassify(x) == FP_NORMAL)
 
 inline long double fabsl(long double x) {
-    return  __fabs((double)x);
+    return fabs((double)x);
 }
-
-double acos(double);
-double asin(double);
-double atan(double);
-double atan2(double, double);
-double ceil(double);
-double floor(double);
-double frexp(double, int *);
-double ldexp(double, int);
-double sqrt(double);
-double pow(double, double);
-double log(double);
-double log10(double);
-double fmod(double, double);
-double sin(double x);
-double cos(double x);
-double tan(double x);
-double nan(const char*);
 
 double __ieee754_acos(double);
 double __ieee754_fmod(double, double);
@@ -77,12 +66,7 @@ double __kernel_tan(double, double, int);
 
 int __ieee754_rem_pio2(double, double *);
 
-float sqrtf(float);
-float cosf(float);
-float sinf(float);
-float tanf(float);
-double modf(double, double*);
-float fabsf(float);
+double nan(const char* arg);
 
 #ifdef __cplusplus
 };

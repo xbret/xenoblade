@@ -1,19 +1,22 @@
-#pragma once
+#ifndef NW4R_UT_RES_FONT_H
+#define NW4R_UT_RES_FONT_H
+#include <nw4r/types_nw4r.h>
+#include <nw4r/ut/ut_ResFontBase.h>
 
-#include "nw4r/ut/ut_ResFontBase.h"
-#include "nw4r/ut/ut_binaryFileFormat.h"
+namespace nw4r {
+namespace ut {
 
-namespace nw4r
-{
-	namespace ut
-	{
-		struct ResFont : detail::ResFontBase
-		{
-			ResFont();
-			~ResFont();
-			
-			bool SetResource(void *);
-			static FontInformation * Rebuild(BinaryFileHeader *);
-		};
-	}
-}
+class ResFont : public detail::ResFontBase {
+public:
+    static FontInformation* Rebuild(BinaryFileHeader* header);
+
+    ResFont();
+    ~ResFont();
+
+    bool SetResource(void* buffer);
+};
+
+} // namespace ut
+} // namespace nw4r
+
+#endif

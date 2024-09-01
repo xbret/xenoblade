@@ -139,7 +139,7 @@ void __OSFinalizeSTM(){
 void __OSShutdownToSBY(void) {
 #define in_args ((u32*)StmImInBuf)
 
-    VI_HW_REGS[VI_REG_DCR] = 0;
+    VI_HW_REGS[VI_DCR] = 0;
 
 #line 347
     OSAssert(StmReady,
@@ -158,7 +158,7 @@ void __OSShutdownToIDL(){
 }
 
 void __OSHotReset(void) {
-    VI_HW_REGS[VI_REG_DCR] = 0;
+    VI_HW_REGS[VI_DCR] = 0;
 
 #line 412
     OSAssert(StmReady, "Error: The firmware doesn't support reboot feature.\n");

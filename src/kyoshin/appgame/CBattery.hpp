@@ -6,6 +6,7 @@
 #include "monolib/UnkClass_8045F564.hpp"
 #include "nw4r/lyt/lyt_arcResourceAccessor.h"
 #include "nw4r/lyt/lyt_layout.h"
+#include "nw4r/lyt/lyt_pane.h"
 
 class UnkClass_80451720 {
 public:

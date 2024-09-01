@@ -1,7 +1,6 @@
 #ifndef _EXCEPTION
 #define _EXCEPTION
 
-
 namespace std{
 	class exception{
 	public:

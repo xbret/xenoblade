@@ -1,8 +1,8 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
-#include "nw4r/math/math_types.h"
-#include "nw4r/ut/ut_binaryFileFormat.h"
+#ifndef NW4R_LYT_COMMON_H
+#define NW4R_LYT_COMMON_H
+#include "types_nw4r.h"
+#include "math_types.h"
+#include "ut_binaryFileFormat.h"
 
 #define NW4R_RES_NAME_SIZE 16
 #define NW4R_MAT_NAME_SIZE 20
@@ -56,3 +56,5 @@ namespace nw4r
         }
     }
 }
+
+#endif

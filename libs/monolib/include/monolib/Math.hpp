@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "nw4r/math/triangular.h"
+#include "nw4r/math.h"
 
 //Basic math utility structs/definitions.
 

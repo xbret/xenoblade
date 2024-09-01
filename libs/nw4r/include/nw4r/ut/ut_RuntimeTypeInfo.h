@@ -1,6 +1,6 @@
-#pragma once
-
-#include "nw4r/types_nw4r.h"
+#ifndef NW4R_UT_RUNTIME_TYPE_INFO_H
+#define NW4R_UT_RUNTIME_TYPE_INFO_H
+#include <nw4r/types_nw4r.h>
 
 // Declare type RTTI and accessor function
 #define NW4R_UT_RTTI_DECL(T)                                                   \
@@ -61,3 +61,5 @@ inline TDerived DynamicCast(TBase* ptr) {
 
 } // namespace ut
 } // namespace nw4r
+
+#endif

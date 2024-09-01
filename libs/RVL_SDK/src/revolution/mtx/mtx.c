@@ -114,8 +114,8 @@ asm void PSMTXConcat(const register Mtx mA, const register Mtx mB,
 void C_MTXConcatArray(){
 }
 
-void PSMTXConcatArray(const register Mtx mtx1, const register Mtx* mtx2,
-                      register Mtx* mtx3, register u32 vv4) {
+void PSMTXConcatArray(const register Mtx mtx1, const register Mtx mtx2,
+                      register Mtx mtx3, register u32 vv4) {
   register float va0, va1, va2, va3, va4, va5;
   register float vb0, vb1, vb2, vb3, vb4, vb5;
   register float vd0, vd1, vd2, vd3, vd4, vd5;
@@ -242,7 +242,7 @@ void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
 void C_MTXInverse(){
 }
 
-asm u32 PSMTXInverse(const register Mtx src, register Mtx inv) {
+asm void PSMTXInverse(const register Mtx src, register Mtx inv) {
   nofralloc;
   psq_l fp0, 0(src), 1, 0;
   psq_l fp1, 4(src), 0, 0;
@@ -553,7 +553,7 @@ asm void PSMTXScaleApply(const register Mtx in, register Mtx out,
 void C_MTXQuat(){
 }
 
-void PSMTXQuat(register Mtx m, const register PSQuaternion* quat) {
+void PSMTXQuat(register Mtx m, const register Quaternion* quat) {
   register float vv0, vv1, vv2, vv3;
   register float tmp0, tmp1, tmp2, tmp3, tmp4;
   register float tmp5, tmp6, tmp7, tmp8, tmp9;

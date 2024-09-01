@@ -13,7 +13,7 @@ typedef struct SrcCoef{
     float unkC;
 } SrcCoef;
 
-SrcCoef* __AXFXGetSrcCoef(int index);
+SrcCoef* __AXFXGetSrcCoef(u32 i);
 
 
 #ifdef __cplusplus
