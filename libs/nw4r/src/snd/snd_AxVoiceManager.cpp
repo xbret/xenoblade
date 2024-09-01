@@ -2,7 +2,6 @@
 
 #include <nw4r/snd.h>
 #include <revolution/AX.h>
-#include <new>
 
 namespace nw4r {
 namespace snd {
