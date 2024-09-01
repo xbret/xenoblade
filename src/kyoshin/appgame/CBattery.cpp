@@ -76,9 +76,7 @@ void CBattery::func_802B93EC(){
 			sprintf(name, "pic_%02d", num);
 			nw4r::lyt::Pane* pane = mLayout->unk10->FindPaneByName(name, true);
 			if(pane != nullptr){
-				int v = num <= unk24;
-				pane->mFlags &= ~1; //Disable by default
-				pane->mFlags |= v; //If the index is less or equal to unk24, enable the image
+				pane->SetVisible(num <= unk24);
 			}
 		}
 	}

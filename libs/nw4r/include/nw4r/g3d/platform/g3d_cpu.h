@@ -10,6 +10,7 @@ namespace nw4r
         {
             void Copy32ByteBlocks(void *, const void *, u32);
             void ZeroMemory32ByteBlocks(void *, u32);
+            void ZeroMemory16ByteBlocks(void *, u32);
         }
     }
 }

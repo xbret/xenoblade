@@ -93,6 +93,11 @@ namespace nw4r
                 mUserData[PANE_USERDATA_SIZE - 1] = '\0';
             }
 
+            inline void SetVisible(bool bVisible){
+                mFlags &= ~(1 << VISIBLE);
+                mFlags |= bVisible << VISIBLE;
+            }
+
             inline void InsertChild(ut::LinkList<lyt::Pane, 4>::Iterator iter, lyt::Pane *pChild)
             {
                 mChildren.Insert(iter, pChild);

@@ -53,6 +53,23 @@ namespace nw4r
                     cdest += 32;
                 }
             }
+
+            void ZeroMemory16ByteBlocks(void *dest, u32 n){
+                n /= 16;
+                register char *cdest = (char *)dest;
+
+                while (n-- > 0)
+                {
+                    register f32 zero = 0.0f;
+                    asm
+                    {
+                        psq_st zero, 0(cdest), 0, 0
+                        psq_st zero, 8(cdest), 0, 0
+                    }
+
+                    cdest += 16;
+                }
+            }
         }
     }
 }
