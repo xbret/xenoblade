@@ -4,7 +4,7 @@
 #include "snd_Task.h"
 #include "ut_LinkList.h"
 #include "ut_lock.h"
-#include <revolution/OS/OSThread.h>
+#include <revolution/os/OSThread.h>
 
 namespace nw4r
 {

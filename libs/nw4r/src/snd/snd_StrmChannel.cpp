@@ -1,7 +1,7 @@
 #include "snd_StrmChannel.h"
 #include "ut_lock.h"
 #include "ut_algorithm.h"
-#include <revolution/OS/OSThread.h>
+#include <revolution/os/OSThread.h>
 #include <string.h>
 
 namespace nw4r

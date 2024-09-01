@@ -1,5 +1,5 @@
 #include "g3d_restex.h"
-#include <revolution/OS/OSCache.h>
+#include <revolution/os/OSCache.h>
 
 namespace nw4r
 {

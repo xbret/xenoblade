@@ -1,7 +1,7 @@
 #ifndef NW4R_SND_REMOTE_SPEAKER_H
 #define NW4R_SND_REMOTE_SPEAKER_H
-#include <OS.h>
-#include <OSAlarm.h>
+#include <revolution/os/OS.h>
+#include <revolution/os/OSAlarm.h>
 #include <revolution/WENC.h>
 #include "types_nw4r.h"
 

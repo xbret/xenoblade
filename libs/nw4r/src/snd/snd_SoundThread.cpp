@@ -1,5 +1,5 @@
 #pragma ipa file
-#include <revolution/OS/OSTime.h>
+#include <revolution/os/OSTime.h>
 #include "ut_lock.h"
 #include "snd_SoundThread.h"
 #include "snd_VoiceManager.h"

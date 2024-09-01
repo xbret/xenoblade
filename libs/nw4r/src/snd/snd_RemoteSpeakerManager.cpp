@@ -1,6 +1,6 @@
-#include <OS.h>
-#include <OSTime.h>
-#include <AXOut.h>
+#include <revolution/os/OS.h>
+#include <revolution/os/OSTime.h>
+#include <revolution/AX/AXOut.h>
 #include "snd_RemoteSpeakerManager.h"
 
 namespace nw4r

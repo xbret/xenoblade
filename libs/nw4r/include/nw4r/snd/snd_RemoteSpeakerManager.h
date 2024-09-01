@@ -1,6 +1,6 @@
 #ifndef NW4R_SND_REMOTE_SPEAKER_MANAGER_H
 #define NW4R_SND_REMOTE_SPEAKER_MANAGER_H
-#include <OSAlarm.h>
+#include <revolution/os/OSAlarm.h>
 #include "snd_RemoteSpeaker.h"
 
 namespace nw4r

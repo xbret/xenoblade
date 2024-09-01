@@ -1,6 +1,6 @@
 #include <revolution/BASE.h>
-#include <OSCache.h>
-#include <GXDisplayList.h>
+#include <revolution/os/OSCache.h>
+#include <revolution/gx/GXDisplayList.h>
 #include "g3d_restev.h"
 
 namespace nw4r
