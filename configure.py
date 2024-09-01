@@ -1494,7 +1494,7 @@ config.libs = [
             Object(NonMatching, "snd/snd_BasicSound.cpp"),
             Object(NonMatching, "snd/snd_BiquadFilterPreset.cpp"),
             Object(NonMatching, "snd/snd_Channel.cpp"),
-            Object(NonMatching, "snd/snd_DisposeCallbackManager.cpp"),
+            Object(Matching, "snd/snd_DisposeCallbackManager.cpp"),
             Object(NonMatching, "snd/snd_EnvGenerator.cpp"),
             Object(NonMatching, "snd/snd_ExternalSoundPlayer.cpp"),
             Object(NonMatching, "snd/snd_FxChorusDpl2.cpp"),
