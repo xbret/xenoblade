@@ -28,6 +28,8 @@ void DisposeCallbackManager::Dispose(void* pData, u32 size, void* pArg) {
     const void* start = pData;
     const void* end = static_cast<u8*>(pData) + size;
 
+    SoundThread::GetInstance().Lock();
+
     DisposeCallbackList::Iterator it =
         GetInstance().mCallbackList.GetBeginIter();
 
@@ -35,11 +37,15 @@ void DisposeCallbackManager::Dispose(void* pData, u32 size, void* pArg) {
         DisposeCallbackList::Iterator curr = it++;
         curr++->InvalidateData(start, end);
     }
+
+    SoundThread::GetInstance().Unlock();
 }
 
 void DisposeCallbackManager::DisposeWave(void* pData, u32 size, void* pArg) {
     const void* start = pData;
     const void* end = static_cast<u8*>(pData) + size;
+
+    SoundThread::GetInstance().Lock();
 
     DisposeCallbackList::Iterator it =
         GetInstance().mCallbackList.GetBeginIter();
@@ -48,6 +54,8 @@ void DisposeCallbackManager::DisposeWave(void* pData, u32 size, void* pArg) {
         DisposeCallbackList::Iterator curr = it++;
         curr++->InvalidateWaveData(start, end);
     }
+
+    SoundThread::GetInstance().Unlock();
 }
 
 } // namespace detail

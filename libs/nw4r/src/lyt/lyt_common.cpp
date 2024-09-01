@@ -28,7 +28,7 @@ namespace nw4r
 
             bool TestFileHeader(const res::BinaryFileHeader& header)
             {
-                return ((header.byteOrder == NW4R_BYTEORDER_BIG) && (header.version == 8));
+                return header.byteOrder == NW4R_BYTEORDER_BIG;
             }
 
             bool TestFileHeader(const res::BinaryFileHeader& header, u32 magic)
