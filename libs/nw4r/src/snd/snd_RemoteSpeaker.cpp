@@ -1,6 +1,6 @@
 #include <revolution/os/OSTime.h>
-#include <WPAD.h>
-#include <wenc.h>
+#include <revolution/WPAD.h>
+#include <revolution/wenc/wenc.h>
 #include <string.h>
 #include "snd_RemoteSpeaker.h"
 #include "snd_RemoteSpeakerManager.h"
