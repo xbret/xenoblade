@@ -1,5 +1,5 @@
-#include "revolution/dvd/dvdqueue.h"
-#include "revolution/OS.h"
+#include <revolution/dvd/dvdqueue.h>
+#include <revolution/OS.h>
 
 typedef struct  {
     DVDCommandBlock* next;

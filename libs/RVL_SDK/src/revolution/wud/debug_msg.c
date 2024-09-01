@@ -1,4 +1,4 @@
-#include "revolution/WUD.h"
+#include <revolution/WUD.h>
 
 //Stubbed for release
 void WUD_DEBUGPrint(const char* fmt, ...){

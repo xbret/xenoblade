@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 /* CRC-16 parameters:
 Polynomial: 0x8005, initial value = 0, xor out = 0, reflect in, reflect out */

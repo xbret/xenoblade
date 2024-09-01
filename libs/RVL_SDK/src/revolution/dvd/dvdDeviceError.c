@@ -1,6 +1,6 @@
-#include "revolution/OS.h"
-#include "revolution/DVD.h"
-#include "revolution/SC.h"
+#include <revolution/OS.h>
+#include <revolution/DVD.h>
+#include <revolution/SC.h>
 
 extern u16 OSSetFontEncode(u16);
 extern void __DVDShowFatalMessage(void);

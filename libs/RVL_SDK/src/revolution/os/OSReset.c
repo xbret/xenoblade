@@ -1,8 +1,8 @@
-#include "revolution/DVD.h"
-#include "revolution/OS.h"
-#include "revolution/PAD.h"
-#include "revolution/SC.h"
-#include "revolution/VI.h"
+#include <revolution/DVD.h>
+#include <revolution/OS.h>
+#include <revolution/PAD.h>
+#include <revolution/SC.h>
+#include <revolution/VI.h>
 #include <string.h>
 
 static OSShutdownFunctionQueue ShutdownFunctionQueue;

@@ -1,4 +1,4 @@
-#include "revolution/cx/CXUncompression.h"
+#include <revolution/cx/CXUncompression.h>
 
 //unused
 void CXGetUncompressedSize(){

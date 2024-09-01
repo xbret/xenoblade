@@ -1,5 +1,5 @@
-#include "revolution/math.h"
-#include "revolution/MTX.h"
+#include <revolution/math.h>
+#include <revolution/MTX.h>
 
 
 void C_MTXFrustum(Mtx44 m, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6) {

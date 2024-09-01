@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_FS_H
 #define RVL_SDK_FS_H
-#include "revolution/IPC.h"
+#include <revolution/IPC.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

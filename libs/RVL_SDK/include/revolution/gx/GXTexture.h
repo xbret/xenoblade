@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_GX_TEXTURE_H
 #define RVL_SDK_GX_TEXTURE_H
-#include "revolution/gx/GXInternal.h"
-#include "revolution/gx/GXTypes.h"
+#include <revolution/gx/GXInternal.h>
+#include <revolution/gx/GXTypes.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

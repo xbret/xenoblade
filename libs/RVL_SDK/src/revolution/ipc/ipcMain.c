@@ -1,5 +1,5 @@
-#include "revolution/IPC.h"
-#include "revolution/OS.h"
+#include <revolution/IPC.h>
+#include <revolution/OS.h>
 
 static u8 Initialized = FALSE;
 static void* IPCCurrentBufferLo = NULL;

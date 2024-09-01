@@ -1,5 +1,5 @@
-#include "revolution/exi/EXIBios.h"
-#include "revolution/exi/EXICommon.h"
+#include <revolution/exi/EXIBios.h>
+#include <revolution/exi/EXICommon.h>
 
 const u32 __EXIFreq = 4;
 

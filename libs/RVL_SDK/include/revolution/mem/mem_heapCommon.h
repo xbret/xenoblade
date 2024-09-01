@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_MEM_HEAP_COMMON_H
 #define RVL_SDK_MEM_HEAP_COMMON_H
-#include "revolution/mem/mem_list.h"
-#include "revolution/OS.h"
+#include <revolution/mem/mem_list.h>
+#include <revolution/OS.h>
 #include "types.h"
 #include <string.h>
 #ifdef __cplusplus

@@ -7,7 +7,7 @@
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/CGXCache.hpp"
 #include "monolib/MemManager.hpp"
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 enum EVerticalFilter {
 	VFILTER_NONE,

@@ -1,5 +1,5 @@
-#include "revolution/DSP.h"
-#include "revolution/OS.h"
+#include <revolution/DSP.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 #define DSP_CODE_WORK_MEM ((void*)0x81000000)

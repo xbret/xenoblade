@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_OS_FATAL_H
 #define RVL_SDK_OS_FATAL_H
-#include "revolution/gx/GXTypes.h"
+#include <revolution/gx/GXTypes.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

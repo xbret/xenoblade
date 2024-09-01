@@ -1,5 +1,5 @@
-#include "revolution/DSP.h"
-#include "revolution/OS.h"
+#include <revolution/DSP.h>
+#include <revolution/OS.h>
 
 const char* __DSPVersion =
     "<< RVL_SDK - DSP \trelease build: Feb 27 2009 10:01:57 (0x4302_145) >>";

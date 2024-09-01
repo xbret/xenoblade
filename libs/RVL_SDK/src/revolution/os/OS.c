@@ -1,13 +1,13 @@
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
-#include "revolution/BASE.h"
-#include "revolution/DB.h"
-#include "revolution/DVD.h"
-#include "revolution/EXI.h"
-#include "revolution/IPC.h"
-#include "revolution/OS.h"
-#include "revolution/PAD.h"
-#include "revolution/SC.h"
-#include "revolution/SI.h"
+#include <revolution/BASE.h>
+#include <revolution/DB.h>
+#include <revolution/DVD.h>
+#include <revolution/EXI.h>
+#include <revolution/IPC.h>
+#include <revolution/OS.h>
+#include <revolution/PAD.h>
+#include <revolution/SC.h>
+#include <revolution/SI.h>
 #include <string.h>
 
 #define INVALID_NAME_CHAR(c) ('0' > c || ('9' < c && c < 'A') || c > 'Z')

@@ -1,4 +1,4 @@
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 void GXSetTevIndirect(GXTevStageID tevStage, GXIndTexStageID texStage,
                       GXIndTexFormat texFmt, GXIndTexBiasSel biasSel,

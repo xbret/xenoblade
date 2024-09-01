@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include "revolution/enc/encjapanese.h"
+#include <revolution/enc/encjapanese.h>
 
 #ifdef __cplusplus
 }

@@ -1,6 +1,6 @@
-#include "revolution/OS.h"
-#include "revolution/SI.h"
-#include "revolution/PAD.h"
+#include <revolution/OS.h>
+#include <revolution/SI.h>
+#include <revolution/PAD.h>
 
 s8 UnkVal : (OS_BASE_CACHED | 0x30e3);
 

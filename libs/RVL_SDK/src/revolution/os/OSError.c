@@ -1,6 +1,6 @@
-#include "revolution/BASE.h"
-#include "revolution/DSP.h"
-#include "revolution/OS.h"
+#include <revolution/BASE.h>
+#include <revolution/DSP.h>
+#include <revolution/OS.h>
 
 OSErrorHandler __OSErrorTable[OS_ERR_MAX];
 u32 __OSFpscrEnableBits =

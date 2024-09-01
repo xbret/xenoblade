@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_OS_CACHE_H
 #define RVL_SDK_OS_CACHE_H
-#include "revolution/os/OSError.h"
+#include <revolution/os/OSError.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

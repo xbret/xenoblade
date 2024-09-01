@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include "revolution/db/db.h"
+#include <revolution/db/db.h>
 
 #ifdef __cplusplus
 }

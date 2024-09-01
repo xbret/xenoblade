@@ -1,4 +1,4 @@
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 inline void __GXSetAmbMat(u32 dirtyFlags) {
     if (dirtyFlags & GX_DIRTY_AMB_COLOR0) {

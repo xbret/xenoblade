@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 static void DefaultSwitchThreadCallback(OSThread* currThread,
                                         OSThread* newThread);

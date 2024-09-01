@@ -1,5 +1,5 @@
-#include "revolution/DSP.h"
-#include "revolution/OS.h"
+#include <revolution/DSP.h>
+#include <revolution/OS.h>
 
 // Helper macro to make code less ugly
 #define SEND_TO_DSP_SYNC(x)                                                    \

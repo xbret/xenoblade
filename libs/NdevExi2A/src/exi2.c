@@ -1,6 +1,6 @@
-#include "revolution/EXI.h"
+#include <revolution/EXI.h>
 #include "NdevExi2A/exi2.h"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 //In regular NdevExi2, EXI_CHAN_CTRL instead points to 0xCC006800 (GC address?).
 

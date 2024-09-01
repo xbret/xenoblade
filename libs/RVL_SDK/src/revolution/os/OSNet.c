@@ -1,7 +1,7 @@
-#include "revolution/NWC24.h"
-#include "revolution/OS.h"
-#include "revolution/IPC.h"
-#include "revolution/SC.h"
+#include <revolution/NWC24.h>
+#include <revolution/OS.h>
+#include <revolution/IPC.h>
+#include <revolution/SC.h>
 
 
 static OSShutdownFunctionInfo ShutdownFuncInfo;

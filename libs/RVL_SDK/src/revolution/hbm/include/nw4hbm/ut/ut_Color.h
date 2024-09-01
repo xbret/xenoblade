@@ -1,7 +1,7 @@
 #pragma once
 
 #include "nw4hbm/types_nw4hbm.h"
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 /*
 #define r channels[0]
 #define g channels[1]

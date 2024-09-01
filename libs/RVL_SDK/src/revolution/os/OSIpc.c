@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 static void* IpcBufferLo = (void*)-1;
 static void* IpcBufferHi = NULL;

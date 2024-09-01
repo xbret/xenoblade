@@ -4,7 +4,7 @@
 #include "nw4hbm/math/math_types.h"
 #include "nw4hbm/ut/ut_Color.h"
 #include "nw4hbm/ut/ut_Font.h"
-#include "revolution/GX.h"
+#include <revolution/GX.h>
 
 namespace nw4hbm
 {

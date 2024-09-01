@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include "revolution/usb/usb.h"
+#include <revolution/usb/usb.h>
 
 #ifdef __cplusplus
 }

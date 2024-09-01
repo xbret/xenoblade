@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 typedef struct OSHeapDescriptor {
     s32 size;                    // at 0x0

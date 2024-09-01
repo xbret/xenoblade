@@ -1,6 +1,6 @@
-#include "revolution/IPC.h"
-#include "revolution/OS.h"
-#include "revolution/VI.h"
+#include <revolution/IPC.h>
+#include <revolution/OS.h>
+#include <revolution/VI.h>
 
 typedef enum {
     STM_IOCTL_REG_STM_EVENT = 0x1000,

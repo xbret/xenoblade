@@ -1,4 +1,4 @@
-#include "revolution/axfx/AXFXLfoTable.h"
+#include <revolution/axfx/AXFXLfoTable.h>
 
 static s32 __SinTableFixedPoint[128] = {
 0x00000000,

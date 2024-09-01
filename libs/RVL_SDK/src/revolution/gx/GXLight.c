@@ -1,5 +1,5 @@
-#include "revolution/math.h"
-#include "revolution/GX.h"
+#include <revolution/math.h>
+#include <revolution/GX.h>
 
 #define XF_MEM_LOBJ_SIZE 16
 

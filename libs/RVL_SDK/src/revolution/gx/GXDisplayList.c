@@ -1,5 +1,5 @@
-#include "revolution/GX.h"
-#include "revolution/OS.h"
+#include <revolution/GX.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 //unused

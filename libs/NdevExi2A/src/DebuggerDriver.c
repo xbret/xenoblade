@@ -3,7 +3,7 @@
 #include "NdevExi2A/ODEMU.h"
 #include "NdevExi2A/exi2.h"
 
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 static u32 __DBRecvDataSize;
 static u32 __DBRecvMail;

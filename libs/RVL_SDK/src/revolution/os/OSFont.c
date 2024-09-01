@@ -1,6 +1,6 @@
-#include "revolution/GX.h"
-#include "revolution/OS.h"
-#include "revolution/VI.h"
+#include <revolution/GX.h>
+#include <revolution/OS.h>
+#include <revolution/VI.h>
 
 #define ROM_FONT_SJIS_START ((void*)0x001AFF00)
 #define ROM_FONT_SJIS_SIZE 0x0004D000

@@ -1,5 +1,5 @@
-#include "revolution/AXFX.h"
-#include "revolution/OS.h"
+#include <revolution/AXFX.h>
+#include <revolution/OS.h>
 
 static void* __AXFXAllocFunction(size_t size);
 static void __AXFXFreeFunction(void* block);

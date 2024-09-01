@@ -1,4 +1,4 @@
-#include "revolution/ax/AXProf.h"
+#include <revolution/ax/AXProf.h>
 
 static AXPROFILE* __AXProfile;
 static u32 __AXMaxProfiles;

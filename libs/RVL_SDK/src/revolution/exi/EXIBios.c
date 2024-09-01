@@ -1,5 +1,5 @@
-#include "revolution/EXI.h"
-#include "revolution/OS.h"
+#include <revolution/EXI.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 const char* __EXIVersion =

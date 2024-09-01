@@ -1,8 +1,8 @@
-#include "revolution/BASE.h"
-#include "revolution/EXI.h"
-#include "revolution/GX.h"
-#include "revolution/OS.h"
-#include "revolution/VI.h"
+#include <revolution/BASE.h>
+#include <revolution/EXI.h>
+#include <revolution/GX.h>
+#include <revolution/OS.h>
+#include <revolution/VI.h>
 #include <string.h>
 
 /**

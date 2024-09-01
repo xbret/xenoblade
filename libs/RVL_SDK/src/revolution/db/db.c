@@ -1,6 +1,6 @@
-#include "revolution/BASE.h"
-#include "revolution/DB.h"
-#include "revolution/OS.h"
+#include <revolution/BASE.h>
+#include <revolution/DB.h>
+#include <revolution/OS.h>
 
 BOOL DBVerbose;
 OSDebugInterface* __DBInterface;

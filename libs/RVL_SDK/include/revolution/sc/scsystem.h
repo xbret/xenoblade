@@ -1,8 +1,8 @@
 #ifndef RVL_SDK_SC_SCSYSTEM_H
 #define RVL_SDK_SC_SCSYSTEM_H
-#include "revolution/FS.h"
-#include "revolution/NAND.h"
-#include "revolution/OS.h"
+#include <revolution/FS.h>
+#include <revolution/NAND.h>
+#include <revolution/OS.h>
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

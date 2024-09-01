@@ -1,4 +1,4 @@
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 extern wchar_t UcsAnsiTable[32];
 extern wchar_t* UcsSjisTable[256];

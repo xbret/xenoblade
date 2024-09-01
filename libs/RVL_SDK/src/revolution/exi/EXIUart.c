@@ -1,5 +1,5 @@
 
-#include "revolution/EXI.h"
+#include <revolution/EXI.h>
 
 static s32 Chan;
 static u32 Dev;

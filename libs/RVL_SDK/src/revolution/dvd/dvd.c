@@ -1,5 +1,5 @@
-#include "revolution/DVD.h"
-#include "revolution/OS.h"
+#include <revolution/DVD.h>
+#include <revolution/OS.h>
 #include <string.h>
 
 #define MY_MIN(a, b) (((a) > (b))? (b) : (a))

@@ -1,5 +1,5 @@
-#include "revolution/NAND.h"
-#include "revolution/OS.h"
+#include <revolution/NAND.h>
+#include <revolution/OS.h>
 
 // Why?!? :(
 #define MY_SEC_TO_TICKS(x) (x * (s64)OSSecondsToTicks(1))

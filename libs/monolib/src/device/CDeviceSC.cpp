@@ -1,7 +1,7 @@
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceClock.hpp"
 #include "monolib/device/CDeviceVI.hpp"
-#include "revolution/SC.h"
+#include <revolution/SC.h>
 
 CDeviceSC* CDeviceSC::instance;
 

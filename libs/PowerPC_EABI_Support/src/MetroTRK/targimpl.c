@@ -7,7 +7,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/msghndlr.h"
 #include "PowerPC_EABI_Support/MetroTRK/support.h"
 #include "PowerPC_EABI_Support/MetroTRK/rvl_mem.h"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 typedef struct ExceptionStatus{
 	StopInfo_PPC exceptionInfo;

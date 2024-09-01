@@ -2,8 +2,8 @@
 #define _NW4R_TRIANGULAR_H
 
 #include <cmath>
-#include "nw4r/math/math_triangular.h"
-#include "nw4r/db/db_assert.h"
+#include <nw4r/math/math_triangular.h>
+#include <nw4r/db/db_assert.h>
 
 namespace nw4r{
 	namespace math{

@@ -1,6 +1,6 @@
-#include "revolution/OS.h"
-#include "revolution/IPC.h"
-#include "revolution/DVD.h"
+#include <revolution/OS.h>
+#include <revolution/IPC.h>
+#include <revolution/DVD.h>
 #include <string.h>
 #include <stdbool.h>
 

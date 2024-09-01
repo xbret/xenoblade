@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include "revolution/fs/fs.h"
+#include <revolution/fs/fs.h>
 
 #ifdef __cplusplus
 }

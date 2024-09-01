@@ -4,7 +4,7 @@
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/MemManager.hpp"
-#include "revolution/OS.h"
+#include <revolution/OS.h>
 
 class IDeviceClockFrame {
 public:

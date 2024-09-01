@@ -1,4 +1,4 @@
-#include "revolution/cx/CXStreamingUncompression.h"
+#include <revolution/cx/CXStreamingUncompression.h>
 
 //unused
 void CXInitUncompContextRL(){
