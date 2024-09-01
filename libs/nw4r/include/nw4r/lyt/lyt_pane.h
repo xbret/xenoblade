@@ -115,11 +115,11 @@ namespace nw4r
             virtual void SetVtxColorElement(u32, u8); // at 0x38
             virtual Pane * FindPaneByName(const char *, bool); // at 0x3C
             virtual UNKTYPE FindMaterialByName(const char *, bool); // at 0x40
-            virtual UNKTYPE BindAnimation(AnimTransform *, bool); // at 0x44
+            virtual UNKTYPE BindAnimation(AnimTransform *, bool, bool); // at 0x44
             virtual UNKTYPE UnbindAnimation(AnimTransform *, bool); // at 0x48
             virtual UNKTYPE UnbindAllAnimation(bool); // at 0x4C
             virtual UNKTYPE UnbindAnimationSelf(AnimTransform *); // at 0x50
-            virtual UNKTYPE FindAnimationLink(AnimTransform *); // at 0x54
+            virtual UNKTYPE FindAnimationLinkSelf(AnimTransform *); // at 0x54
             virtual UNKTYPE FindAnimationLinkSelf(const AnimResource &); // at 0x58
             virtual UNKTYPE SetAnimationEnable(AnimTransform *, bool, bool); // at 0x5C
             virtual UNKTYPE SetAnimationEnable(const AnimResource &, bool, bool); // at 0x60
