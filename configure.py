@@ -1393,7 +1393,7 @@ config.libs = [
     nw4rLib(
         "libnw4r_g3d",
         [
-            Object(NonMatching, "g3d/res/g3d_rescommon.cpp"),
+            Object(Matching, "g3d/res/g3d_rescommon.cpp"),
             Object(NonMatching, "g3d/res/g3d_resdict.cpp"),
             Object(NonMatching, "g3d/res/g3d_resfile.cpp"),
             Object(NonMatching, "g3d/res/g3d_resmdl.cpp"),
@@ -1425,7 +1425,7 @@ config.libs = [
             Object(Matching, "g3d/g3d_obj.cpp"),
             Object(Matching, "g3d/g3d_anmobj.cpp"),
             Object(NonMatching, "g3d/platform/g3d_gpu.cpp"),
-            Object(NonMatching, "g3d/platform/g3d_cpu.cpp"),
+            Object(Matching, "g3d/platform/g3d_cpu.cpp"),
             Object(NonMatching, "g3d/g3d_state.cpp"),
             Object(NonMatching, "g3d/g3d_draw1mat1shp.cpp"),
             Object(NonMatching, "g3d/g3d_calcview.cpp"),
@@ -1433,7 +1433,7 @@ config.libs = [
             Object(Matching, "g3d/g3d_workmem.cpp"),
             Object(NonMatching, "g3d/g3d_calcworld.cpp"),
             Object(NonMatching, "g3d/g3d_draw.cpp"),
-            Object(NonMatching, "g3d/g3d_camera.cpp"),
+            Object(Matching, "g3d/g3d_camera.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_basic.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_maya.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_xsi.cpp"),
