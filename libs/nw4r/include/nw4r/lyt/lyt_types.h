@@ -9,10 +9,10 @@ namespace nw4r
         namespace detail
         {
             template <typename T>
-            void SetBit(T* pBits, int pos, T val) {
-                //u8 mask = 
+            void SetBit(T* pBits, int pos, u8 val) {
+                T mask = ~(1 << pos);
 
-                *pBits &= ~(1 << pos);
+                *pBits &= mask;
                 *pBits |= val << pos;
             }
         }
