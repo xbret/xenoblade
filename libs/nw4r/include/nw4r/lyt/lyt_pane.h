@@ -7,6 +7,7 @@
 #include "ut_Color.h"
 #include "ut_algorithm.h"
 #include "lyt_animation.h"
+#include "lyt_types.h"
 #include <string.h>
 
 #define PANE_NAME_SIZE 17
@@ -94,8 +95,7 @@ namespace nw4r
             }
 
             inline void SetVisible(bool bVisible){
-                mFlags &= ~(1 << VISIBLE);
-                mFlags |= bVisible << VISIBLE;
+                detail::SetBit<u8>(&mFlags, VISIBLE, bVisible);
             }
 
             inline void InsertChild(ut::LinkList<lyt::Pane, 4>::Iterator iter, lyt::Pane *pChild)
