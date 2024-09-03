@@ -1402,7 +1402,7 @@ revolution/os/OSContext.c:
 	.text       start:0x80357280 end:0x80357B60 align:16
 	.data       start:0x8054E390 end:0x8054E570
 
-revolution/os/OSError.temp.c:
+revolution/os/OSError.c:
 	.text       start:0x80357B60 end:0x80358180 align:16
 	.data       start:0x8054E570 end:0x8054E850
 	.bss        start:0x805D0D30 end:0x805D0D80
@@ -1488,18 +1488,18 @@ revolution/os/OSStateTM.c:
 	.bss        start:0x805D1AE0 end:0x805D1BA0
 	.sbss       start:0x80665200 end:0x80665220
 
-revolution/os/__start.temp.c:
+revolution/os/__start.c:
 	.init       start:0x800062C0 end:0x800065C0
 	.sbss       start:0x80665220 end:0x80665228
 
-revolution/os/OSPlayRecord.temp.c:
+revolution/os/OSPlayRecord.c:
 	.text       start:0x803604A0 end:0x80360BC0 align:16
 	.data       start:0x8055B5E0 end:0x8055B628
 	.bss        start:0x805D1BA0 end:0x805D1DA0
 	.sdata      start:0x80663270 end:0x80663278
 	.sbss       start:0x80665228 end:0x80665248
 
-revolution/os/OSStateFlags.temp.c:
+revolution/os/OSStateFlags.c:
 	.text       start:0x80360BC0 end:0x80360DE0 align:16
 	.data       start:0x8055B628 end:0x8055B650
 	.bss        start:0x805D1DA0 end:0x805D1DC0
