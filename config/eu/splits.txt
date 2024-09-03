@@ -103,9 +103,6 @@ Runtime/GCN_mem_alloc.c:
 MetroTRK/__exception.s:
 	.init       start:0x80004380 end:0x800062C0
 
-revolution/os/__start.temp.c:
-	.init       start:0x800062C0 end:0x800065C0
-
 MSL_C/MSL_Common/alloc.c:
 	.text       start:0x802BE828 end:0x802BED3C
 	.rodata     start:0x80513AD8 end:0x80513AF0
@@ -474,14 +471,1176 @@ DebuggerDriver.c:
 	.sdata      start:0x80662F70 end:0x80662F78
 	.sbss       start:0x80664CD0 end:0x80664CE8
 
-sdk_data.s:
-	.rodata     start:0x80514AE0 end:0x80515788
-	.data       start:0x8053C8A0 end:0x80560028
-	.bss        start:0x8057A128 end:0x805DFDA8
-	.sdata      start:0x80662F78 end:0x80663450
-	.sbss       start:0x80664CE8 end:0x80665438
-	.sdata2     start:0x806695B8 end:0x80669A68
-	.sbss2      start:0x8066B540 end:0x8066B550
+exi2.c:
+	.text       start:0x802D3264 end:0x802D39F0
+
+revolution/ai/ai.temp.c:
+	.text       start:0x802D39F0 end:0x802D3FC0 align:16
+	.data       start:0x8053C8A0 end:0x8053C8E8
+	.sdata      start:0x80662F78 end:0x80662F80
+	.sbss       start:0x80664CE8 end:0x80664D28
+
+revolution/arc/arc.temp.c:
+	.text       start:0x802D3FC0 end:0x802D49A0 align:16
+	.data       start:0x8053C8E8 end:0x8053C958
+	.sdata      start:0x80662F80 end:0x80662F88
+
+revolution/ax/AX.temp.c:
+	.text       start:0x802D49A0 end:0x802D4A60 align:16
+	.data       start:0x8053C958 end:0x8053C9A0
+	.sdata      start:0x80662F88 end:0x80662F90
+	.sbss       start:0x80664D28 end:0x80664D30
+
+revolution/ax/AXAlloc.temp.c:
+	.text       start:0x802D4A60 end:0x802D5000 align:16
+	.bss        start:0x8057A128 end:0x8057A240
+	.sbss       start:0x80664D30 end:0x80664D38
+
+revolution/ax/AXAux.temp.c:
+	.text       start:0x802D5000 end:0x802D58C0 align:16
+	.bss        start:0x8057A240 end:0x8057D3C0
+	.sbss       start:0x80664D38 end:0x80664D80
+
+revolution/ax/AXCL.temp.c:
+	.text       start:0x802D58C0 end:0x802D63C0 align:16
+	.bss        start:0x8057D3C0 end:0x8057D4C0
+	.sbss       start:0x80664D80 end:0x80664DA8
+
+revolution/ax/AXOut.temp.c:
+	.text       start:0x802D63C0 end:0x802D6C70 align:16
+	.bss        start:0x8057D4C0 end:0x8057E2C0
+	.sdata      start:0x80662F90 end:0x80662F98
+	.sbss       start:0x80664DA8 end:0x80664DE8
+
+revolution/ax/AXSPB.temp.c:
+	.text       start:0x802D6C70 end:0x802D70B0 align:16
+	.bss        start:0x8057E2C0 end:0x8057E340
+	.sbss       start:0x80664DE8 end:0x80664E38
+
+revolution/ax/AXVPB.temp.c:
+	.text       start:0x802D70B0 end:0x802D8020 align:16
+	.data       start:0x8053C9A0 end:0x8053CA40
+	.bss        start:0x8057E340 end:0x8058FA40
+	.sbss       start:0x80664E38 end:0x80664E58
+	.sdata2     start:0x806695B8 end:0x806695D8
+
+revolution/ax/AXComp.temp.c:
+	.data       start:0x8053CA40 end:0x8053DA00
+
+revolution/ax/DSPCode.temp.c:
+	.data       start:0x8053DA00 end:0x8053FA00
+
+revolution/ax/AXProf.temp.c:
+	.text       start:0x802D8020 end:0x802D8060 align:16
+	.sbss       start:0x80664E58 end:0x80664E68
+
+revolution/axfx/AXFXReverbHi.temp.c:
+	.text       start:0x802D8060 end:0x802D8110 align:16
+	.sdata2     start:0x806695D8 end:0x806695E0
+
+revolution/axfx/AXFXReverbHiExp.temp.c:
+	.text       start:0x802D8110 end:0x802D8F40 align:16
+	.data       start:0x8053FA00 end:0x8053FBA0
+	.sdata2     start:0x806695E0 end:0x80669620
+
+revolution/axfx/AXFXDelayExp.temp.c:
+	.text       start:0x802D8F40 end:0x802D9A10 align:16
+	.sdata2     start:0x80669620 end:0x80669638
+
+revolution/axfx/AXFXDelayExpDpl2.temp.c:
+	.text       start:0x802D9A10 end:0x802DA2E0 align:16
+	.sdata2     start:0x80669638 end:0x80669650
+
+revolution/axfx/AXFXReverbStdExp.temp.c:
+	.text       start:0x802DA2E0 end:0x802DB010 align:16
+	.data       start:0x8053FBA0 end:0x8053FC30
+	.sdata2     start:0x80669650 end:0x80669690
+
+revolution/axfx/AXFXReverbStdExpDpl2.temp.c:
+	.text       start:0x802DB010 end:0x802DBD80 align:16
+	.data       start:0x8053FC30 end:0x8053FCC0
+	.sdata2     start:0x80669690 end:0x806696D0
+
+revolution/axfx/AXFXChorusExp.temp.c:
+	.text       start:0x802DBD80 end:0x802DC8A0 align:16
+	.sdata2     start:0x806696D0 end:0x80669700
+
+revolution/axfx/AXFXChorusExpDpl2.temp.c:
+	.text       start:0x802DC8A0 end:0x802DD420 align:16
+	.sdata2     start:0x80669700 end:0x80669730
+
+revolution/axfx/AXFXLfoTable.temp.c:
+	.text       start:0x802DD420 end:0x802DD430 align:16
+	.data       start:0x8053FCC0 end:0x8053FEC0
+
+revolution/axfx/AXFXSrcCoef.temp.c:
+	.text       start:0x802DD430 end:0x802DD450 align:16
+	.data       start:0x8053FEC0 end:0x805406C0
+
+revolution/axfx/AXFXHooks.temp.c:
+	.text       start:0x802DD450 end:0x802DD4A0 align:16
+	.sdata      start:0x80662F98 end:0x80662FA0
+
+revolution/base/PPCArch.temp.c:
+	.text       start:0x802DD4A0 end:0x802DD6B0 align:16
+	.data       start:0x805406C0 end:0x805406F8
+
+revolution/bte/gki/gki_buffer.temp.c:
+	.text       start:0x802DD6B0 end:0x802DEB50 align:16
+	.data       start:0x805406F8 end:0x80540840
+
+revolution/bte/gki/gki_time.temp.c:
+	.text       start:0x802DEB50 end:0x802DF0E0 align:16
+
+revolution/bte/gki/gki_ppc.temp.c:
+	.text       start:0x802DF0E0 end:0x802DF3F0 align:16
+	.bss        start:0x8058FA40 end:0x805B8520
+
+revolution/bte/hci/hcisu_h2.temp.c:
+	.text       start:0x802DF3F0 end:0x802DFAB0 align:16
+	.rodata     start:0x80514AE0 end:0x80514AF8
+	.data       start:0x80540840 end:0x805408B0
+	.bss        start:0x805B8520 end:0x805B8560
+	.sdata2     start:0x80669730 end:0x80669740
+
+revolution/bte/hci/uusb_ppc.temp.c:
+	.text       start:0x802DFAB0 end:0x802E0730 align:16
+	.bss        start:0x805B8560 end:0x805BA5C0
+	.sdata      start:0x80662FA0 end:0x80662FB0
+	.sbss       start:0x80664E68 end:0x80664E80
+
+revolution/bte/bta/dm/bta_dm_cfg.temp.c:
+	.rodata     start:0x80514AF8 end:0x80514B88
+	.sdata      start:0x80662FB0 end:0x80662FC8
+	.sbss2      start:0x8066B540 end:0x8066B548
+
+revolution/bte/bta/hh/bta_hh_cfg.temp.c:
+	.rodata     start:0x80514B88 end:0x80514B98
+	.sdata      start:0x80662FC8 end:0x80662FD8
+
+revolution/bte/bta/sys/bta_sys_cfg.temp.c:
+	.sdata      start:0x80662FD8 end:0x80662FE0
+	.sdata2     start:0x80669740 end:0x80669748
+
+revolution/bte/main/bte_hcisu.temp.c:
+	.text       start:0x802E0730 end:0x802E0800 align:16
+	.sbss       start:0x80664E80 end:0x80664E88
+
+revolution/bte/main/bte_init.temp.c:
+	.text       start:0x802E0800 end:0x802E0830 align:16
+
+revolution/bte/main/bte_logmsg.temp.c:
+	.text       start:0x802E0830 end:0x802E09D0 align:16
+	.bss        start:0x805BA5C0 end:0x805BADA0
+	.sdata      start:0x80662FE0 end:0x80662FE8
+
+revolution/bte/main/bte_main.temp.c:
+	.text       start:0x802E09D0 end:0x802E0B40 align:16
+	.bss        start:0x805BADA0 end:0x805BBDD0
+	.sdata      start:0x80662FE8 end:0x80662FF0
+	.sbss       start:0x80664E88 end:0x80664E90
+
+revolution/bte/main/btu_task1.temp.c:
+	.text       start:0x802E0B40 end:0x802E0F84 align:16
+	.bss        start:0x805BBDD0 end:0x805BBE58
+	.sdata      start:0x80662FF0 end:0x80662FF8
+	.sbss       start:0x80664E90 end:0x80664E98
+
+revolution/bte/bta/sys/bd.temp.c:
+	.text       start:0x802E0F84 end:0x802E1058
+	.sbss2      start:0x8066B548 end:0x8066B550
+
+revolution/bte/bta/sys/bta_sys_conn.temp.c:
+	.text       start:0x802E1058 end:0x802E12AC
+
+revolution/bte/bta/sys/bta_sys_main.temp.c:
+	.text       start:0x802E12AC end:0x802E14F0
+	.data       start:0x805408B0 end:0x805408E8
+	.bss        start:0x805BBE58 end:0x805BBEE8
+	.sbss       start:0x80664E98 end:0x80664EA0
+
+revolution/bte/bta/sys/ptim.temp.c:
+	.text       start:0x802E14F0 end:0x802E16D0
+
+revolution/bte/bta/sys/utl.temp.c:
+	.text       start:0x802E16D0 end:0x802E1714
+
+revolution/bte/bta/dm/bta_dm_act.temp.c:
+	.text       start:0x802E1714 end:0x802E3A50
+	.rodata     start:0x80514B98 end:0x80514C40
+	.data       start:0x805408E8 end:0x80540A28
+	.bss        start:0x805BBEE8 end:0x805BBF18
+	.sdata2     start:0x80669748 end:0x80669750
+
+revolution/bte/bta/dm/bta_dm_api.temp.c:
+	.text       start:0x802E3A50 end:0x802E3EBC
+	.sdata2     start:0x80669750 end:0x80669760
+
+revolution/bte/bta/dm/bta_dm_main.temp.c:
+	.text       start:0x802E3EBC end:0x802E401C
+	.rodata     start:0x80514C40 end:0x80514D68
+	.bss        start:0x805BBF18 end:0x805BC098
+
+revolution/bte/bta/dm/bta_dm_pm.temp.c:
+	.text       start:0x802E401C end:0x802E4A38
+	.data       start:0x80540A28 end:0x80540A78
+	.bss        start:0x805BC098 end:0x805BC0C8
+
+revolution/bte/bta/hh/bta_hh_act.temp.c:
+	.text       start:0x802E4A38 end:0x802E6180
+	.data       start:0x80540A78 end:0x80540F70
+	.sdata      start:0x80662FF8 end:0x80663000
+
+revolution/bte/bta/hh/bta_hh_api.temp.c:
+	.text       start:0x802E6180 end:0x802E6550
+	.data       start:0x80540F70 end:0x80540FA0
+	.sdata2     start:0x80669760 end:0x80669768
+
+revolution/bte/bta/hh/bta_hh_main.temp.c:
+	.text       start:0x802E6550 end:0x802E6AA4
+	.rodata     start:0x80514D68 end:0x80514DF0
+	.data       start:0x80540FA0 end:0x80541280
+	.bss        start:0x805BC0C8 end:0x805BC2F8
+
+revolution/bte/bta/hh/bta_hh_utils.temp.c:
+	.text       start:0x802E6AA4 end:0x802E6E50
+	.data       start:0x80541280 end:0x80541540
+
+revolution/bte/stack/btm/btm_acl.temp.c:
+	.text       start:0x802E6E50 end:0x802E8B94
+	.data       start:0x80541540 end:0x80541960
+
+revolution/bte/stack/btm/btm_dev.temp.c:
+	.text       start:0x802E8B94 end:0x802E9260
+
+revolution/bte/stack/btm/btm_devctl.temp.c:
+	.text       start:0x802E9260 end:0x802EABE8
+	.data       start:0x80541960 end:0x80541BC0
+	.sdata      start:0x80663000 end:0x80663018
+
+revolution/bte/stack/btm/btm_discovery.temp.c:
+	.text       start:0x802EABE8 end:0x802EAD1C
+
+revolution/bte/stack/btm/btm_inq.temp.c:
+	.text       start:0x802EAD1C end:0x802EC7B4
+	.data       start:0x80541BC0 end:0x80541DD0
+	.sdata2     start:0x80669768 end:0x80669770
+
+revolution/bte/stack/btm/btm_main.temp.c:
+	.text       start:0x802EC7B4 end:0x802EC810
+	.bss        start:0x805BC2F8 end:0x805BEAC0
+
+revolution/bte/stack/btm/btm_pm.temp.c:
+	.text       start:0x802EC810 end:0x802ED4A4
+	.rodata     start:0x80514DF0 end:0x80514E00
+	.data       start:0x80541DD0 end:0x80541E10
+	.sdata2     start:0x80669770 end:0x80669778
+
+revolution/bte/stack/btm/btm_sco.temp.c:
+	.text       start:0x802ED4A4 end:0x802EE2DC
+	.rodata     start:0x80514E00 end:0x80514E10
+	.data       start:0x80541E10 end:0x80542110
+
+revolution/bte/stack/btm/btm_sec.temp.c:
+	.text       start:0x802EE2DC end:0x802F12A0
+	.data       start:0x80542110 end:0x80542B20
+	.sdata2     start:0x80669778 end:0x80669780
+
+revolution/bte/stack/btu/btu_hcif.temp.c:
+	.text       start:0x802F12A0 end:0x802F24FC
+	.data       start:0x80542B20 end:0x80542BB0
+
+revolution/bte/stack/btu/btu_init.temp.c:
+	.text       start:0x802F24FC end:0x802F2574
+	.sdata2     start:0x80669780 end:0x80669788
+
+revolution/bte/stack/wbt/wbt_ext.temp.c:
+	.text       start:0x802F2574 end:0x802F2654
+
+revolution/bte/stack/gap/gap_api.temp.c:
+	.text       start:0x802F2654 end:0x802F26B4
+
+revolution/bte/stack/gap/gap_conn.temp.c:
+	.text       start:0x802F26B4 end:0x802F31F0
+	.data       start:0x80542BB0 end:0x80542C80
+	.sdata      start:0x80663018 end:0x80663020
+
+revolution/bte/stack/gap/gap_utils.temp.c:
+	.text       start:0x802F31F0 end:0x802F380C
+	.data       start:0x80542C80 end:0x80542F70
+	.bss        start:0x805BEAC0 end:0x805BEE70
+
+revolution/bte/stack/hcic/hcicmds.temp.c:
+	.text       start:0x802F380C end:0x802F5F28
+	.rodata     start:0x80514E10 end:0x80514E20
+
+revolution/bte/stack/hid/hidd_api.temp.c:
+	.text       start:0x802F5F28 end:0x802F5F90
+
+revolution/bte/stack/hid/hidd_conn.temp.c:
+	.text       start:0x802F5F90 end:0x802F6050
+	.data       start:0x80542F70 end:0x80542FA0
+
+revolution/bte/stack/hid/hidd_mgmt.temp.c:
+	.text       start:0x802F6050 end:0x802F6118
+	.data       start:0x80542FA0 end:0x80542FC0
+	.bss        start:0x805BEE70 end:0x805BEFB8
+
+revolution/bte/stack/hid/hidd_pm.temp.c:
+	.text       start:0x802F6118 end:0x802F6494
+
+revolution/bte/stack/hid/hidh_api.temp.c:
+	.text       start:0x802F6494 end:0x802F7214
+	.data       start:0x80542FC0 end:0x805430D8
+	.bss        start:0x805BEFB8 end:0x805BF3C0
+
+revolution/bte/stack/hid/hidh_conn.temp.c:
+	.text       start:0x802F7214 end:0x802F9254
+	.rodata     start:0x80514E20 end:0x80514E48
+	.data       start:0x805430D8 end:0x805434C0
+
+revolution/bte/stack/l2cap/l2c_api.temp.c:
+	.text       start:0x802F9254 end:0x802F9E20
+	.data       start:0x805434C0 end:0x80543C50
+
+revolution/bte/stack/l2cap/l2c_csm.temp.c:
+	.text       start:0x802F9E20 end:0x802FB2FC
+	.data       start:0x80543C50 end:0x80544488
+
+revolution/bte/stack/l2cap/l2c_link.temp.c:
+	.text       start:0x802FB2FC end:0x802FC488
+	.data       start:0x80544488 end:0x805446F8
+
+revolution/bte/stack/l2cap/l2c_main.temp.c:
+	.text       start:0x802FC488 end:0x802FD4B8
+	.data       start:0x805446F8 end:0x805449F8
+	.bss        start:0x805BF3C0 end:0x805BFBA8
+
+revolution/bte/stack/l2cap/l2c_utils.temp.c:
+	.text       start:0x802FD4B8 end:0x802FF37C
+	.data       start:0x805449F8 end:0x80544AE0
+	.sdata      start:0x80663020 end:0x80663030
+
+revolution/bte/stack/rfcomm/port_api.temp.c:
+	.text       start:0x802FF37C end:0x802FF3CC
+
+revolution/bte/stack/rfcomm/port_rfc.temp.c:
+	.text       start:0x802FF3CC end:0x803007C8
+	.data       start:0x80544AE0 end:0x80544E10
+
+revolution/bte/stack/rfcomm/port_utils.temp.c:
+	.text       start:0x803007C8 end:0x80300DA0
+	.data       start:0x80544E10 end:0x80544F58
+
+revolution/bte/stack/rfcomm/rfc_l2cap_if.temp.c:
+	.text       start:0x80300DA0 end:0x803016D4
+	.data       start:0x80544F58 end:0x80545098
+
+revolution/bte/stack/rfcomm/rfc_mx_fsm.temp.c:
+	.text       start:0x803016D4 end:0x80302318
+	.data       start:0x80545098 end:0x80545350
+
+revolution/bte/stack/rfcomm/rfc_port_fsm.temp.c:
+	.text       start:0x80302318 end:0x803034B8
+	.data       start:0x80545350 end:0x80545678
+
+revolution/bte/stack/rfcomm/rfc_port_if.temp.c:
+	.text       start:0x803034B8 end:0x803039E4
+	.bss        start:0x805BFBA8 end:0x805BFFC0
+
+revolution/bte/stack/rfcomm/rfc_ts_frames.temp.c:
+	.text       start:0x803039E4 end:0x8030502C
+	.data       start:0x80545678 end:0x80545750
+	.sdata      start:0x80663030 end:0x80663040
+
+revolution/bte/stack/rfcomm/rfc_utils.temp.c:
+	.text       start:0x8030502C end:0x8030580C
+	.rodata     start:0x80514E48 end:0x80514F48
+	.data       start:0x80545750 end:0x805457E0
+
+revolution/bte/stack/sdp/sdp_api.temp.c:
+	.text       start:0x8030580C end:0x80306674
+	.data       start:0x805457E0 end:0x80545830
+
+revolution/bte/stack/sdp/sdp_db.temp.c:
+	.text       start:0x80306674 end:0x80307340
+	.data       start:0x80545830 end:0x805458C8
+
+revolution/bte/stack/sdp/sdp_discovery.temp.c:
+	.text       start:0x80307340 end:0x803085B8
+	.data       start:0x805458C8 end:0x80545A28
+
+revolution/bte/stack/sdp/sdp_main.temp.c:
+	.text       start:0x803085B8 end:0x80309124
+	.data       start:0x80545A28 end:0x80545D88
+	.bss        start:0x805BFFC0 end:0x805C4600
+
+revolution/bte/stack/sdp/sdp_server.temp.c:
+	.text       start:0x80309124 end:0x80309E34
+	.data       start:0x80545D88 end:0x80545DC8
+
+revolution/bte/stack/sdp/sdp_utils.temp.c:
+	.text       start:0x80309E34 end:0x8030AE80
+	.rodata     start:0x80514F48 end:0x80514F58
+	.data       start:0x80545DC8 end:0x80545EC0
+
+revolution/cx/CXStreamingUncompression.temp.c:
+	.text       start:0x8030AE80 end:0x8030B6C0 align:16
+
+revolution/cx/CXUncompression.temp.c:
+	.text       start:0x8030B6C0 end:0x8030B860 align:16
+
+revolution/cx/CXSecureUncompression.temp.c:
+	.text       start:0x8030B860 end:0x8030BA60 align:16
+
+revolution/db/db.temp.c:
+	.text       start:0x8030BA60 end:0x8030BB60 align:16
+	.data       start:0x80545EC0 end:0x80545ED8
+	.sbss       start:0x80664EA0 end:0x80664EA8
+
+revolution/dsp/dsp.temp.c:
+	.text       start:0x8030BB60 end:0x8030BE00 align:16
+	.data       start:0x80545ED8 end:0x80545F58
+	.sdata      start:0x80663040 end:0x80663048
+	.sbss       start:0x80664EA8 end:0x80664EB0
+
+revolution/dsp/dsp_debug.temp.c:
+	.text       start:0x8030BE00 end:0x8030BE50 align:16
+
+revolution/dsp/dsp_task.temp.c:
+	.text       start:0x8030BE50 end:0x8030C6F0 align:16
+	.data       start:0x80545F58 end:0x80546098
+	.sbss       start:0x80664EB0 end:0x80664EC8
+
+revolution/dvd/dvdfs.temp.c:
+	.text       start:0x8030C6F0 end:0x8030D1F0 align:16
+	.data       start:0x80546098 end:0x80546200
+	.sdata      start:0x80663048 end:0x80663058
+	.sbss       start:0x80664EC8 end:0x80664F00
+
+revolution/dvd/dvd.temp.c:
+	.text       start:0x8030D1F0 end:0x80311DC0 align:16
+	.data       start:0x80546200 end:0x80546610
+	.bss        start:0x805C4600 end:0x805C92B0
+	.sdata      start:0x80663058 end:0x80663070
+	.sbss       start:0x80664F00 end:0x80664F98
+
+revolution/dvd/dvdqueue.temp.c:
+	.text       start:0x80311DC0 end:0x80312040 align:16
+	.bss        start:0x805C92B0 end:0x805C92E0
+
+revolution/dvd/dvderror.temp.c:
+	.text       start:0x80312040 end:0x80312A60 align:16
+	.data       start:0x80546610 end:0x80546640
+	.bss        start:0x805C92E0 end:0x805C9540
+	.sbss       start:0x80664F98 end:0x80664FA8
+
+revolution/dvd/dvdidutils.temp.c:
+	.text       start:0x80312A60 end:0x80312B50 align:16
+
+revolution/dvd/dvdFatal.temp.c:
+	.text       start:0x80312B50 end:0x80312CC0 align:16
+	.rodata     start:0x80514F58 end:0x80514F90
+	.data       start:0x80546640 end:0x80546E08
+	.sdata      start:0x80663070 end:0x80663078
+	.sbss       start:0x80664FA8 end:0x80664FB0
+	.sdata2     start:0x80669788 end:0x80669790
+
+revolution/dvd/dvdDeviceError.temp.c:
+	.text       start:0x80312CC0 end:0x80312F50 align:16
+	.rodata     start:0x80514F90 end:0x80514FB0
+	.data       start:0x80546E08 end:0x80546FA0
+	.bss        start:0x805C9540 end:0x805C9560
+	.sdata      start:0x80663078 end:0x80663080
+	.sbss       start:0x80664FB0 end:0x80664FB8
+	.sdata2     start:0x80669790 end:0x80669798
+
+revolution/dvd/dvd_broadway.temp.c:
+	.text       start:0x80312F50 end:0x80315600 align:16
+	.data       start:0x80546FA0 end:0x80547EA8
+	.bss        start:0x805C9560 end:0x805C9720
+	.sdata      start:0x80663080 end:0x80663090
+	.sbss       start:0x80664FB8 end:0x80664FE0
+
+revolution/enc/encutility.temp.c:
+	.text       start:0x80315600 end:0x80315840 align:16
+	.data       start:0x80547EA8 end:0x80547EF0
+	.sdata      start:0x80663090 end:0x80663098
+	.sbss       start:0x80664FE0 end:0x80664FE8
+
+revolution/enc/encunicode.c:
+	.text       start:0x80315840 end:0x80315C20 align:16
+
+revolution/esp/esp.temp.c:
+	.text       start:0x80315C20 end:0x80316240 align:16
+	.sdata      start:0x80663098 end:0x806630A8
+
+revolution/euart/euart.temp.c:
+	.text       start:0x80316240 end:0x803165C0 align:16
+	.sbss       start:0x80664FE8 end:0x80664FF8
+
+revolution/exi/EXIBios.temp.c:
+	.text       start:0x803165C0 end:0x80317EC0 align:16
+	.data       start:0x80547EF0 end:0x80547F38
+	.bss        start:0x805C9720 end:0x805C97E0
+	.sdata      start:0x806630A8 end:0x806630B0
+	.sbss       start:0x80664FF8 end:0x80665000
+
+revolution/exi/EXIUart.temp.c:
+	.text       start:0x80317EC0 end:0x80318200 align:16
+	.sbss       start:0x80665000 end:0x80665010
+
+revolution/exi/EXICommon.temp.c:
+	.text       start:0x80318200 end:0x80318390 align:16
+	.sdata2     start:0x80669798 end:0x806697A0
+
+revolution/fs/fs.temp.c:
+	.text       start:0x80318390 end:0x80319940 align:16
+	.data       start:0x80547F38 end:0x80547F60
+	.sdata      start:0x806630B0 end:0x806630C0
+	.sbss       start:0x80665010 end:0x80665028
+
+revolution/gx/GXInit.temp.c:
+	.text       start:0x80319940 end:0x8031AAD0 align:16
+	.data       start:0x80547F60 end:0x805481A0
+	.bss        start:0x805C97E0 end:0x805C9E60
+	.sdata      start:0x806630C0 end:0x806630C8
+	.sbss       start:0x80665028 end:0x80665050
+	.sdata2     start:0x806697A0 end:0x806697C8
+
+revolution/gx/GXFifo.temp.c:
+	.text       start:0x8031AAD0 end:0x8031B700 align:16
+	.data       start:0x805481A0 end:0x805481D0
+	.bss        start:0x805C9E60 end:0x805C9EA8
+	.sbss       start:0x80665050 end:0x80665070
+
+revolution/gx/GXAttr.temp.c:
+	.text       start:0x8031B700 end:0x8031C250 align:16
+	.data       start:0x805481D0 end:0x80548318
+	.sdata      start:0x806630C8 end:0x806630D8
+
+revolution/gx/GXMisc.temp.c:
+	.text       start:0x8031C250 end:0x8031CC30 align:16
+	.sbss       start:0x80665070 end:0x80665088
+
+revolution/gx/GXGeometry.temp.c:
+	.text       start:0x8031CC30 end:0x8031D240 align:16
+
+revolution/gx/GXFrameBuf.temp.c:
+	.text       start:0x8031D240 end:0x8031DE20 align:16
+	.data       start:0x80548318 end:0x80548750
+	.sdata2     start:0x806697C8 end:0x806697D8
+
+revolution/gx/GXLight.temp.c:
+	.text       start:0x8031DE20 end:0x8031E590 align:16
+	.sdata2     start:0x806697D8 end:0x80669810
+
+revolution/gx/GXTexture.temp.c:
+	.text       start:0x8031E590 end:0x8031F720 align:16
+	.data       start:0x80548750 end:0x80548978
+	.sdata      start:0x806630D8 end:0x80663120
+	.sdata2     start:0x80669810 end:0x80669848
+
+revolution/gx/GXBump.temp.c:
+	.text       start:0x8031F720 end:0x8031FBE0 align:16
+	.sdata2     start:0x80669848 end:0x80669850
+
+revolution/gx/GXTev.temp.c:
+	.text       start:0x8031FBE0 end:0x803202B0 align:16
+	.data       start:0x80548978 end:0x805489F0
+
+revolution/gx/GXPixel.temp.c:
+	.text       start:0x803202B0 end:0x80320A30 align:16
+	.data       start:0x805489F0 end:0x80548A10
+	.sdata2     start:0x80669850 end:0x806698A0
+
+revolution/gx/GXDisplayList.temp.c:
+	.text       start:0x80320A30 end:0x80320AB0 align:16
+
+revolution/gx/GXTransform.temp.c:
+	.text       start:0x80320AB0 end:0x80321030 align:16
+	.sdata2     start:0x806698A0 end:0x806698B0
+
+revolution/gx/GXPerf.temp.c:
+	.text       start:0x80321030 end:0x80321860 align:16
+	.data       start:0x80548A10 end:0x80548AF8
+
+revolution/hbm/HBMFrameController.temp.cpp:
+	.text       start:0x80321860 end:0x80321A10 align:16
+	.rodata     start:0x80514FB0 end:0x80514FB8
+	.data       start:0x80548AF8 end:0x80548B20
+
+revolution/hbm/HBMAnmController.temp.cpp:
+	.text       start:0x80321A10 end:0x80321B20 align:16
+	.data       start:0x80548B20 end:0x80548B68
+
+revolution/hbm/HBMGUIManager.temp.cpp:
+	.text       start:0x80321B20 end:0x80323340 align:16
+	.rodata     start:0x80514FB8 end:0x80514FC8
+	.data       start:0x80548B68 end:0x80548DD8
+	.bss        start:0x805C9EA8 end:0x805C9EB0
+
+revolution/hbm/HBMController.temp.cpp:
+	.text       start:0x80323340 end:0x80323F80 align:16
+	.rodata     start:0x80514FC8 end:0x80514FD8
+	.bss        start:0x805C9EB0 end:0x805CA050
+
+revolution/hbm/HBMRemoteSpk.temp.cpp:
+	.text       start:0x80323F80 end:0x803248A0 align:16
+	.data       start:0x80548DD8 end:0x80548E08
+	.bss        start:0x805CA050 end:0x805CA058
+
+revolution/hbm/HBMAxSound.temp.cpp:
+	.text       start:0x803248A0 end:0x803253D0 align:16
+	.rodata     start:0x80514FD8 end:0x80515010
+	.data       start:0x80548E08 end:0x80549158
+	.bss        start:0x805CA058 end:0x805CA060
+
+revolution/hbm/HBMCommon.temp.cpp:
+	.text       start:0x803253D0 end:0x80325700 align:16
+	.data       start:0x80549158 end:0x805491A8
+	.bss        start:0x805CA060 end:0x805CA070
+
+revolution/hbm/HBMBase.temp.cpp:
+	.text       start:0x80325700 end:0x8032DDE0 align:16
+	.rodata     start:0x80515010 end:0x80515390
+	.data       start:0x805491A8 end:0x80549EC0
+	.bss        start:0x805CA070 end:0x805CA0F0
+
+revolution/hbm/nw4hbm/lyt/lyt_animation.temp.cpp:
+	.text       start:0x8032DDE0 end:0x8032E990 align:16
+	.rodata     start:0x80515390 end:0x805153B0
+	.data       start:0x80549EC0 end:0x80549F40
+
+revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.temp.cpp:
+	.text       start:0x8032E990 end:0x8032ED30 align:16
+	.data       start:0x80549F40 end:0x80549FC0
+
+revolution/hbm/nw4hbm/lyt/lyt_bounding.temp.cpp:
+	.text       start:0x8032ED30 end:0x8032EEB0 align:16
+	.ctors      start:0x804FA0A8 end:0x804FA0AC
+	.data       start:0x80549FC0 end:0x8054A0A8
+	.bss        start:0x805CA0F0 end:0x805CA0F8
+
+revolution/hbm/nw4hbm/lyt/lyt_common.temp.cpp:
+	.text       start:0x8032EEB0 end:0x8032FD30 align:16
+	.rodata     start:0x805153B0 end:0x805153C0
+	.bss        start:0x805CA0F8 end:0x805CA120
+
+revolution/hbm/nw4hbm/lyt/lyt_drawInfo.temp.cpp:
+	.text       start:0x8032FD30 end:0x8032FDF0 align:16
+	.rodata     start:0x805153C0 end:0x805153C8
+	.data       start:0x8054A0A8 end:0x8054A0D8
+
+revolution/hbm/nw4hbm/lyt/lyt_group.temp.cpp:
+	.text       start:0x8032FDF0 end:0x80330140 align:16
+	.data       start:0x8054A0D8 end:0x8054A100
+
+revolution/hbm/nw4hbm/lyt/lyt_layout.temp.cpp:
+	.text       start:0x80330140 end:0x80330DE0 align:16
+	.rodata     start:0x805153C8 end:0x805153D0
+	.data       start:0x8054A100 end:0x8054A150
+	.bss        start:0x805CA120 end:0x805CA128
+
+revolution/hbm/nw4hbm/lyt/lyt_material.temp.cpp:
+	.text       start:0x80330DE0 end:0x80334050 align:16
+	.rodata     start:0x805153D0 end:0x80515400
+	.data       start:0x8054A150 end:0x8054A1D8
+
+revolution/hbm/nw4hbm/lyt/lyt_pane.temp.cpp:
+	.text       start:0x80334050 end:0x803351A0 align:16
+	.ctors      start:0x804FA0AC end:0x804FA0B0
+	.rodata     start:0x80515400 end:0x80515420
+	.data       start:0x8054A1D8 end:0x8054A240
+	.bss        start:0x805CA128 end:0x805CA130
+
+revolution/hbm/nw4hbm/lyt/lyt_picture.temp.cpp:
+	.text       start:0x803351A0 end:0x80335700 align:16
+	.ctors      start:0x804FA0B0 end:0x804FA0B4
+	.rodata     start:0x80515420 end:0x80515428
+	.data       start:0x8054A240 end:0x8054A2E0
+	.bss        start:0x805CA130 end:0x805CA138
+
+revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.temp.cpp:
+	.text       start:0x80335700 end:0x80335760 align:16
+	.data       start:0x8054A2E0 end:0x8054A2F8
+
+revolution/hbm/nw4hbm/lyt/lyt_textBox.temp.cpp:
+	.text       start:0x80335760 end:0x80336BB0 align:16
+	.ctors      start:0x804FA0B4 end:0x804FA0B8
+	.rodata     start:0x80515428 end:0x80515440
+	.data       start:0x8054A2F8 end:0x8054A3A8
+	.bss        start:0x805CA138 end:0x805CA140
+
+revolution/hbm/nw4hbm/lyt/lyt_window.temp.cpp:
+	.text       start:0x80336BB0 end:0x803391E0 align:16
+	.ctors      start:0x804FA0B8 end:0x804FA0BC
+	.rodata     start:0x80515440 end:0x80515458
+	.data       start:0x8054A3A8 end:0x8054A490
+	.bss        start:0x805CA140 end:0x805CA148
+
+revolution/hbm/nw4hbm/math/math_triangular.temp.cpp:
+	.text       start:0x803391E0 end:0x80339490 align:16
+	.rodata     start:0x80515458 end:0x80515480
+	.data       start:0x8054A490 end:0x8054B5A8
+
+revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.temp.cpp:
+	.text       start:0x80339490 end:0x80339510 align:16
+
+revolution/hbm/nw4hbm/ut/ut_CharStrmReader.temp.cpp:
+	.text       start:0x80339510 end:0x80339630 align:16
+
+revolution/hbm/nw4hbm/ut/ut_CharWriter.temp.cpp:
+	.text       start:0x80339630 end:0x8033B030 align:16
+	.rodata     start:0x80515480 end:0x805154A0
+	.bss        start:0x805CA148 end:0x805CA160
+
+revolution/hbm/nw4hbm/ut/ut_Font.temp.cpp:
+	.text       start:0x8033B030 end:0x8033B0E0 align:16
+	.data       start:0x8054B5A8 end:0x8054B5D8
+
+revolution/hbm/nw4hbm/ut/ut_LinkList.temp.cpp:
+	.text       start:0x8033B0E0 end:0x8033B1F0 align:16
+
+revolution/hbm/nw4hbm/ut/ut_list.temp.cpp:
+	.text       start:0x8033B1F0 end:0x8033B360 align:16
+
+revolution/hbm/nw4hbm/ut/ut_ResFont.temp.cpp:
+	.text       start:0x8033B360 end:0x8033B660 align:16
+	.data       start:0x8054B5D8 end:0x8054B6B8
+
+revolution/hbm/nw4hbm/ut/ut_ResFontBase.temp.cpp:
+	.text       start:0x8033B660 end:0x8033BCB0 align:16
+	.data       start:0x8054B6B8 end:0x8054B778
+
+revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.temp.cpp:
+	.text       start:0x8033BCB0 end:0x8033C770 align:16
+	.rodata     start:0x805154A0 end:0x805154A8
+	.data       start:0x8054B778 end:0x8054B800
+
+revolution/hbm/nw4hbm/ut/ut_TextWriterBase.temp.cpp:
+	.text       start:0x8033C770 end:0x80341BE0 align:16
+	.ctors      start:0x804FA0BC end:0x804FA0C0
+	.rodata     start:0x805154A8 end:0x805154C0
+	.data       start:0x8054B800 end:0x8054B808
+	.bss        start:0x805CA160 end:0x805CA190
+
+revolution/hbm/mix.temp.c:
+	.text       start:0x80341BE0 end:0x80343550 align:16
+	.data       start:0x8054B808 end:0x8054C398
+	.bss        start:0x805CA190 end:0x805CA850
+
+revolution/hbm/syn.temp.c:
+	.text       start:0x80343550 end:0x803439F0 align:16
+	.bss        start:0x805CA850 end:0x805CAD20
+
+revolution/hbm/synctrl.temp.c:
+	.text       start:0x803439F0 end:0x80343E90 align:16
+	.data       start:0x8054C398 end:0x8054C598
+
+revolution/hbm/synenv.temp.c:
+	.text       start:0x80343E90 end:0x80344270 align:16
+	.rodata     start:0x805154C0 end:0x805154E0
+
+revolution/hbm/synmix.temp.c:
+	.text       start:0x80344270 end:0x803443B0 align:16
+	.data       start:0x8054C598 end:0x8054C928
+
+revolution/hbm/synpitch.temp.c:
+	.text       start:0x803443B0 end:0x80344630 align:16
+	.rodata     start:0x805154E0 end:0x805154F8
+	.data       start:0x8054C928 end:0x8054CD18
+
+revolution/hbm/synsample.temp.c:
+	.text       start:0x80344630 end:0x80344AB0 align:16
+
+revolution/hbm/synvoice.temp.c:
+	.text       start:0x80344AB0 end:0x80344C60 align:16
+
+revolution/hbm/seq.temp.c:
+	.text       start:0x80344C60 end:0x80345590 align:16
+	.rodata     start:0x805154F8 end:0x80515520
+	.data       start:0x8054CD18 end:0x8054CD98
+	.bss        start:0x805CAD20 end:0x805CAD40
+
+revolution/ipc/ipcMain.temp.c:
+	.text       start:0x80345590 end:0x80345680 align:16
+	.sbss       start:0x80665088 end:0x806650A0
+
+revolution/ipc/ipcclt.temp.c:
+	.text       start:0x80345680 end:0x80346F80 align:16
+	.bss        start:0x805CAD40 end:0x805CAE00
+	.sdata      start:0x80663120 end:0x80663128
+	.sbss       start:0x806650A0 end:0x806650B0
+
+revolution/ipc/memory.temp.c:
+	.text       start:0x80346F80 end:0x803474B0 align:16
+	.bss        start:0x805CAE00 end:0x805CAE80
+
+revolution/ipc/ipcProfile.temp.c:
+	.text       start:0x803474B0 end:0x80347690 align:16
+	.bss        start:0x805CAE80 end:0x805CAF80
+	.sbss       start:0x806650B0 end:0x806650B8
+
+revolution/kpad/KPAD.temp.c:
+	.text       start:0x80347690 end:0x8034B720 align:16
+	.data       start:0x8054CD98 end:0x8054CDF8
+	.bss        start:0x805CAF80 end:0x805CC5D0
+	.sdata      start:0x80663128 end:0x806631A8
+	.sbss       start:0x806650B8 end:0x806650F0
+	.sdata2     start:0x806698B0 end:0x80669920
+
+revolution/mem/mem_heapCommon.temp.c:
+	.text       start:0x8034B720 end:0x8034BB90 align:16
+	.bss        start:0x805CC5D0 end:0x805CC5F8
+	.sbss       start:0x806650F0 end:0x806650F8
+
+revolution/mem/mem_expHeap.temp.c:
+	.text       start:0x8034BB90 end:0x8034C340 align:16
+
+revolution/mem/mem_frameHeap.temp.c:
+	.text       start:0x8034C340 end:0x8034C640 align:16
+
+revolution/mem/mem_allocator.temp.c:
+	.text       start:0x8034C640 end:0x8034C6A0 align:16
+	.sdata2     start:0x80669920 end:0x80669928
+
+revolution/mem/mem_list.temp.c:
+	.text       start:0x8034C6A0 end:0x8034C7C0 align:16
+
+revolution/mix/mix.temp.c:
+	.text       start:0x8034C7C0 end:0x8034F860 align:16
+	.data       start:0x8054CDF8 end:0x8054D9A0
+	.bss        start:0x805CC5F8 end:0x805CEFF8
+	.sbss       start:0x806650F8 end:0x80665108
+
+revolution/mix/remote.temp.c:
+	.text       start:0x8034F860 end:0x8034FDB0 align:16
+	.bss        start:0x805CEFF8 end:0x805D0980
+	.sbss       start:0x80665108 end:0x80665110
+
+revolution/mtx/mtx.temp.c:
+	.text       start:0x8034FDB0 end:0x803509C0 align:16
+	.sdata      start:0x806631A8 end:0x806631B0
+	.sdata2     start:0x80669928 end:0x80669948
+
+revolution/mtx/mtxvec.temp.c:
+	.text       start:0x803509C0 end:0x80350A20 align:16
+
+revolution/mtx/mtx44.temp.c:
+	.text       start:0x80350A20 end:0x80350C50 align:16
+	.sdata2     start:0x80669948 end:0x80669960
+
+revolution/mtx/vec.temp.c:
+	.text       start:0x80350C50 end:0x80350E60 align:16
+	.sdata2     start:0x80669960 end:0x80669970
+
+revolution/mtx/quat.temp.c:
+	.text       start:0x80350E60 end:0x80351300 align:16
+	.rodata     start:0x80515520 end:0x80515530
+	.sdata2     start:0x80669970 end:0x80669988
+
+revolution/nand/nand.temp.c:
+	.text       start:0x80351300 end:0x803525A0 align:16
+	.sdata      start:0x806631B0 end:0x806631B8
+
+revolution/nand/NANDOpenClose.temp.c:
+	.text       start:0x803525A0 end:0x80352AB0 align:16
+
+revolution/nand/NANDCore.temp.c:
+	.text       start:0x80352AB0 end:0x80353C10 align:16
+	.rodata     start:0x80515530 end:0x80515678
+	.data       start:0x8054D9A0 end:0x8054DAF0
+	.bss        start:0x805D0980 end:0x805D09C0
+	.sdata      start:0x806631B8 end:0x806631E0
+	.sbss       start:0x80665110 end:0x80665118
+
+revolution/nand/NANDCheck.temp.c:
+	.text       start:0x80353C10 end:0x80353F00 align:16
+	.data       start:0x8054DAF0 end:0x8054DBD8
+	.sdata      start:0x806631E0 end:0x806631F0
+
+revolution/nand/NANDLogging.temp.c:
+	.text       start:0x80353F00 end:0x803544F0 align:16
+	.data       start:0x8054DBD8 end:0x8054DC20
+	.bss        start:0x805D09C0 end:0x805D0CC0
+	.sdata      start:0x806631F0 end:0x806631F8
+	.sbss       start:0x80665118 end:0x80665120
+
+revolution/os/OS.temp.c:
+	.text       start:0x803544F0 end:0x80355A30 align:16
+	.data       start:0x8054DC20 end:0x8054E0C8
+	.bss        start:0x805D0CC0 end:0x805D0D30
+	.sdata      start:0x806631F8 end:0x80663228
+	.sbss       start:0x80665120 end:0x80665168
+	.sdata2     start:0x80669988 end:0x80669990
+
+revolution/os/OSAlarm.temp.c:
+	.text       start:0x80355A30 end:0x803562F0 align:16
+	.data       start:0x8054E0C8 end:0x8054E0D8
+	.sbss       start:0x80665168 end:0x80665170
+
+revolution/os/OSAlloc.temp.c:
+	.text       start:0x803562F0 end:0x80356610 align:16
+	.sdata      start:0x80663228 end:0x80663230
+	.sbss       start:0x80665170 end:0x80665180
+
+revolution/os/OSArena.temp.c:
+	.text       start:0x80356610 end:0x80356710 align:16
+	.sdata      start:0x80663230 end:0x80663238
+	.sbss       start:0x80665180 end:0x80665188
+
+revolution/os/OSAudioSystem.temp.c:
+	.text       start:0x80356710 end:0x80356BD0 align:16
+	.data       start:0x8054E0D8 end:0x8054E158
+
+revolution/os/OSCache.temp.c:
+	.text       start:0x80356BD0 end:0x80357280 align:16
+	.data       start:0x8054E158 end:0x8054E390
+
+revolution/os/OSContext.temp.c:
+	.text       start:0x80357280 end:0x80357B60 align:16
+	.data       start:0x8054E390 end:0x8054E570
+
+revolution/os/OSError.temp.c:
+	.text       start:0x80357B60 end:0x80358180 align:16
+	.data       start:0x8054E570 end:0x8054E850
+	.bss        start:0x805D0D30 end:0x805D0D80
+	.sdata      start:0x80663238 end:0x80663240
+
+revolution/os/OSExec.temp.c:
+	.text       start:0x80358180 end:0x80359760 align:16
+	.data       start:0x8054E850 end:0x8054E8C0
+	.bss        start:0x805D0D80 end:0x805D0DA0
+	.sdata      start:0x80663240 end:0x80663250
+	.sbss       start:0x80665188 end:0x806651A0
+
+revolution/os/OSFatal.temp.c:
+	.text       start:0x80359760 end:0x8035A390 align:16
+	.bss        start:0x805D0DA0 end:0x805D1080
+	.sdata      start:0x80663250 end:0x80663258
+	.sdata2     start:0x80669990 end:0x806699D0
+
+revolution/os/OSFont.temp.c:
+	.text       start:0x8035A390 end:0x8035B720 align:16
+	.data       start:0x8054E8C0 end:0x8054F3D0
+	.sdata      start:0x80663258 end:0x80663260
+	.sbss       start:0x806651A0 end:0x806651B0
+	.sdata2     start:0x806699D0 end:0x806699D8
+
+revolution/os/OSInterrupt.temp.c:
+	.text       start:0x8035B720 end:0x8035BEF0 align:16
+	.data       start:0x8054F3D0 end:0x8054F400
+	.sbss       start:0x806651B0 end:0x806651C8
+
+revolution/os/OSLink.temp.c:
+	.text       start:0x8035BEF0 end:0x8035BF10 align:16
+
+revolution/os/OSMessage.temp.c:
+	.text       start:0x8035BF10 end:0x8035C1F0 align:16
+
+revolution/os/OSMemory.temp.c:
+	.text       start:0x8035C1F0 end:0x8035C990 align:16
+	.data       start:0x8054F400 end:0x8054F410
+	.sbss       start:0x806651C8 end:0x806651D0
+
+revolution/os/OSMutex.temp.c:
+	.text       start:0x8035C990 end:0x8035CBF0 align:16
+
+revolution/os/OSReboot.temp.c:
+	.text       start:0x8035CBF0 end:0x8035CC80 align:16
+	.sbss       start:0x806651D0 end:0x806651D8
+
+revolution/os/OSReset.temp.c:
+	.text       start:0x8035CC80 end:0x8035D570 align:16
+	.data       start:0x8054F410 end:0x8054F678
+	.sbss       start:0x806651D8 end:0x806651E8
+
+revolution/os/OSRtc.temp.c:
+	.text       start:0x8035D570 end:0x8035E020 align:16
+	.bss        start:0x805D1080 end:0x805D10D8
+
+revolution/os/OSSync.temp.c:
+	.text       start:0x8035E020 end:0x8035E0A0 align:16
+
+revolution/os/OSThread.temp.c:
+	.text       start:0x8035E0A0 end:0x8035F6D0 align:16
+	.bss        start:0x805D10D8 end:0x805D1AE0
+	.sdata      start:0x80663260 end:0x80663268
+	.sbss       start:0x806651E8 end:0x806651F8
+
+revolution/os/OSTime.temp.c:
+	.text       start:0x8035F6D0 end:0x8035FB00 align:16
+	.data       start:0x8054F678 end:0x8054F6D8
+
+revolution/os/OSUtf.temp.c:
+	.text       start:0x8035FB00 end:0x8035FD50 align:16
+	.data       start:0x8054F6D8 end:0x8055B518
+
+revolution/os/OSIpc.temp.c:
+	.text       start:0x8035FD50 end:0x8035FD90 align:16
+	.sdata      start:0x80663268 end:0x80663270
+	.sbss       start:0x806651F8 end:0x80665200
+
+revolution/os/OSStateTM.temp.c:
+	.text       start:0x8035FD90 end:0x803604A0 align:16
+	.data       start:0x8055B518 end:0x8055B5E0
+	.bss        start:0x805D1AE0 end:0x805D1BA0
+	.sbss       start:0x80665200 end:0x80665220
+
+revolution/os/__start.temp.c:
+	.init       start:0x800062C0 end:0x800065C0
+	.sbss       start:0x80665220 end:0x80665228
+
+revolution/os/OSPlayRecord.temp.c:
+	.text       start:0x803604A0 end:0x80360BC0 align:16
+	.data       start:0x8055B5E0 end:0x8055B628
+	.bss        start:0x805D1BA0 end:0x805D1DA0
+	.sdata      start:0x80663270 end:0x80663278
+	.sbss       start:0x80665228 end:0x80665248
+
+revolution/os/OSStateFlags.temp.c:
+	.text       start:0x80360BC0 end:0x80360DE0 align:16
+	.data       start:0x8055B628 end:0x8055B650
+	.bss        start:0x805D1DA0 end:0x805D1DC0
+
+revolution/os/OSNet.temp.c:
+	.text       start:0x80360DE0 end:0x80361380 align:16
+	.data       start:0x8055B650 end:0x8055B7B8
+	.bss        start:0x805D1DC0 end:0x805D1E80
+	.sdata      start:0x80663278 end:0x80663280
+	.sbss       start:0x80665248 end:0x80665258
+
+revolution/os/OSNandbootInfo.temp.c:
+	.text       start:0x80361380 end:0x80361590 align:16
+	.data       start:0x8055B7B8 end:0x8055B7D8
+
+revolution/os/OSPlayTime.temp.c:
+	.text       start:0x80361590 end:0x80361D70 align:16
+	.data       start:0x8055B7D8 end:0x8055B818
+	.bss        start:0x805D1E80 end:0x805D1EC0
+	.sdata      start:0x80663280 end:0x80663288
+	.sbss       start:0x80665258 end:0x80665270
+	.sdata2     start:0x806699D8 end:0x806699E8
+
+revolution/os/OSCrc.temp.c:
+	.text       start:0x80361D70 end:0x80361EB0 align:16
+	.rodata     start:0x80515678 end:0x80515698
+
+revolution/os/OSLaunch.temp.c:
+	.text       start:0x80361EB0 end:0x803620C0 align:16
+
+revolution/os/__ppc_eabi_init.temp.c:
+	.init       start:0x800065C0 end:0x80006624
+	.text       start:0x803620C0 end:0x80362180 align:16
+
+revolution/pad/Pad.temp.c:
+	.text       start:0x80362180 end:0x803622A0 align:16
+	.sdata      start:0x80663288 end:0x80663290
+	.sbss       start:0x80665270 end:0x80665278
+
+revolution/sc/scsystem.temp.c:
+	.text       start:0x803622A0 end:0x80363C30 align:16
+	.rodata     start:0x80515698 end:0x805156F0
+	.data       start:0x8055B818 end:0x8055B9F8
+	.bss        start:0x805D1EC0 end:0x805DA060
+	.sdata      start:0x80663290 end:0x806633A0
+	.sbss       start:0x80665278 end:0x80665290
+
+revolution/sc/scapi.temp.c:
+	.text       start:0x80363C30 end:0x80364140 align:16
+
+revolution/sc/scapi_prdinfo.temp.c:
+	.text       start:0x80364140 end:0x803643D0 align:16
+	.data       start:0x8055B9F8 end:0x8055BA58
+	.sdata      start:0x806633A0 end:0x806633B0
+
+revolution/si/SIBios.temp.c:
+	.text       start:0x803643D0 end:0x80365440 align:16
+	.data       start:0x8055BA58 end:0x8055BAC8
+	.bss        start:0x805DA060 end:0x805DA280
+	.sdata      start:0x806633B0 end:0x806633B8
+	.sbss       start:0x80665290 end:0x806652A0
+
+revolution/si/SISamplingRate.temp.c:
+	.text       start:0x80365440 end:0x80365530 align:16
+	.data       start:0x8055BAC8 end:0x8055BB60
+	.sbss       start:0x806652A0 end:0x806652A8
+
+revolution/tpl/TPL.temp.c:
+	.text       start:0x80365530 end:0x80365750 align:16
+	.data       start:0x8055BB60 end:0x8055BB90
+	.sdata      start:0x806633B8 end:0x806633C0
+	.sdata2     start:0x806699E8 end:0x806699F0
+
+revolution/usb/usb.temp.c:
+	.text       start:0x80365750 end:0x80366CA0 align:16
+	.data       start:0x8055BB90 end:0x8055C3C0
+	.sdata      start:0x806633C0 end:0x806633D0
+	.sbss       start:0x806652A8 end:0x806652B8
+
+revolution/vi/vi.temp.c:
+	.text       start:0x80366CA0 end:0x80369770 align:16
+	.data       start:0x8055C3C0 end:0x8055C918
+	.bss        start:0x805DA280 end:0x805DA3F0
+	.sdata      start:0x806633D0 end:0x806633F0
+	.sbss       start:0x806652B8 end:0x80665368
+
+revolution/vi/i2c.temp.c:
+	.text       start:0x80369770 end:0x8036A090 align:16
+	.sdata      start:0x806633F0 end:0x806633F8
+	.sbss       start:0x80665368 end:0x80665370
+
+revolution/vi/vi3in1.temp.c:
+	.text       start:0x8036A090 end:0x8036B7FC align:16
+	.data       start:0x8055C918 end:0x8055CF28
+	.bss        start:0x805DA3F0 end:0x805DA420
+	.sdata      start:0x806633F8 end:0x80663408
+	.sbss       start:0x80665370 end:0x80665388
+
+revolution/wenc/wenc.temp.c:
+	.text       start:0x8036B7FC end:0x8036BAE0
+	.rodata     start:0x805156F0 end:0x80515730
+	.sdata2     start:0x806699F0 end:0x806699F8
+
+revolution/wpad/WPAD.temp.c:
+	.text       start:0x8036BAE0 end:0x80373480 align:16
+	.rodata     start:0x80515730 end:0x80515770
+	.data       start:0x8055CF28 end:0x8055D350
+	.bss        start:0x805DA420 end:0x805DDB80
+	.sdata      start:0x80663408 end:0x80663450
+	.sbss       start:0x80665388 end:0x806653E0
+	.sdata2     start:0x806699F8 end:0x80669A00
+
+revolution/wpad/WPADHIDParser.temp.c:
+	.text       start:0x80373480 end:0x80377750 align:16
+	.rodata     start:0x80515770 end:0x80515788
+	.data       start:0x8055D350 end:0x8055D8C0
+	.bss        start:0x805DDB80 end:0x805DDC00
+	.sbss       start:0x806653E0 end:0x806653F8
+	.sdata2     start:0x80669A00 end:0x80669A60
+
+revolution/wpad/WPADEncrypt.temp.c:
+	.text       start:0x80377750 end:0x80378810 align:16
+	.data       start:0x8055D8C0 end:0x8055EBE8
+	.sbss       start:0x806653F8 end:0x80665400
+
+revolution/wpad/WPADMem.temp.c:
+	.text       start:0x80378810 end:0x80378910 align:16
+
+revolution/wpad/debug_msg.temp.c:
+	.text       start:0x80378910 end:0x80378960 align:16
+
+revolution/wud/WUD.temp.c:
+	.text       start:0x80378960 end:0x8037ED60 align:16
+	.data       start:0x8055EBE8 end:0x8055FD90
+	.bss        start:0x805DDC00 end:0x805DFDA8
+	.sbss       start:0x80665400 end:0x80665438
+	.sdata2     start:0x80669A60 end:0x80669A68
+
+revolution/wud/WUDHidHost.temp.c:
+	.text       start:0x8037ED60 end:0x8037F350 align:16
+	.data       start:0x8055FD90 end:0x80560028
 
 criware_data.s:
 	.rodata     start:0x80515788 end:0x8051D4A0
@@ -496,733 +1655,6 @@ nw4r_data.s:
 	.sbss       start:0x80665438 end:0x80665570
 	.sdata2     start:0x80669A68 end:0x8066A178
 	.sbss2      start:0x8066B550 end:0x8066B558
-
-exi2.c:
-	.text       start:0x802D3264 end:0x802D39F0
-
-revolution/ai/ai.temp.c:
-	.text       start:0x802D39F0 end:0x802D3FC0 align:16
-
-revolution/arc/arc.temp.c:
-	.text       start:0x802D3FC0 end:0x802D49A0 align:16
-
-revolution/ax/AX.temp.c:
-	.text       start:0x802D49A0 end:0x802D4A60 align:16
-
-revolution/ax/AXAlloc.temp.c:
-	.text       start:0x802D4A60 end:0x802D5000 align:16
-
-revolution/ax/AXAux.temp.c:
-	.text       start:0x802D5000 end:0x802D58C0 align:16
-
-revolution/ax/AXCL.temp.c:
-	.text       start:0x802D58C0 end:0x802D63C0 align:16
-
-revolution/ax/AXOut.temp.c:
-	.text       start:0x802D63C0 end:0x802D6C70 align:16
-
-revolution/ax/AXSPB.temp.c:
-	.text       start:0x802D6C70 end:0x802D70B0 align:16
-
-revolution/ax/AXVPB.temp.c:
-	.text       start:0x802D70B0 end:0x802D8020 align:16
-
-revolution/ax/AXProf.temp.c:
-	.text       start:0x802D8020 end:0x802D8060 align:16
-
-revolution/axfx/AXFXReverbHi.temp.c:
-	.text       start:0x802D8060 end:0x802D8110 align:16
-
-revolution/axfx/AXFXReverbHiExp.temp.c:
-	.text       start:0x802D8110 end:0x802D8F40 align:16
-
-revolution/axfx/AXFXDelayExp.temp.c:
-	.text       start:0x802D8F40 end:0x802D9A10 align:16
-
-revolution/axfx/AXFXDelayExpDpl2.temp.c:
-	.text       start:0x802D9A10 end:0x802DA2E0 align:16
-
-revolution/axfx/AXFXReverbStdExp.temp.c:
-	.text       start:0x802DA2E0 end:0x802DB010 align:16
-
-revolution/axfx/AXFXReverbStdExpDpl2.temp.c:
-	.text       start:0x802DB010 end:0x802DBD80 align:16
-
-revolution/axfx/AXFXChorusExp.temp.c:
-	.text       start:0x802DBD80 end:0x802DC8A0 align:16
-
-revolution/axfx/AXFXChorusExpDpl2.temp.c:
-	.text       start:0x802DC8A0 end:0x802DD420 align:16
-
-revolution/axfx/AXFXLfoTable.temp.c:
-	.text       start:0x802DD420 end:0x802DD430 align:16
-
-revolution/axfx/AXFXSrcCoef.temp.c:
-	.text       start:0x802DD430 end:0x802DD450 align:16
-
-revolution/axfx/AXFXHooks.temp.c:
-	.text       start:0x802DD450 end:0x802DD4A0 align:16
-
-revolution/base/PPCArch.temp.c:
-	.text       start:0x802DD4A0 end:0x802DD6B0 align:16
-
-revolution/bte/gki/gki_buffer.temp.c:
-	.text       start:0x802DD6B0 end:0x802DEB50 align:16
-
-revolution/bte/gki/gki_time.temp.c:
-	.text       start:0x802DEB50 end:0x802DF0E0 align:16
-
-revolution/bte/gki/gki_ppc.temp.c:
-	.text       start:0x802DF0E0 end:0x802DF3F0 align:16
-
-revolution/bte/hci/hcisu_h2.temp.c:
-	.text       start:0x802DF3F0 end:0x802DFAB0 align:16
-
-revolution/bte/hci/uusb_ppc.temp.c:
-	.text       start:0x802DFAB0 end:0x802E0730 align:16
-
-revolution/bte/main/bte_hcisu.temp.c:
-	.text       start:0x802E0730 end:0x802E0800 align:16
-
-revolution/bte/main/bte_init.temp.c:
-	.text       start:0x802E0800 end:0x802E0830 align:16
-
-revolution/bte/main/bte_logmsg.temp.c:
-	.text       start:0x802E0830 end:0x802E09D0 align:16
-
-revolution/bte/main/bte_main.temp.c:
-	.text       start:0x802E09D0 end:0x802E0B40 align:16
-
-revolution/bte/main/btu_task1.temp.c:
-	.text       start:0x802E0B40 end:0x802E0F84 align:16
-
-revolution/bte/bta/sys/bd.temp.c:
-	.text       start:0x802E0F84 end:0x802E1058
-
-revolution/bte/bta/sys/bta_sys_conn.temp.c:
-	.text       start:0x802E1058 end:0x802E12AC
-
-revolution/bte/bta/sys/bta_sys_main.temp.c:
-	.text       start:0x802E12AC end:0x802E14F0
-
-revolution/bte/bta/sys/ptim.temp.c:
-	.text       start:0x802E14F0 end:0x802E16D0
-
-revolution/bte/bta/sys/utl.temp.c:
-	.text       start:0x802E16D0 end:0x802E1714
-
-revolution/bte/bta/dm/bta_dm_act.temp.c:
-	.text       start:0x802E1714 end:0x802E3A50
-
-revolution/bte/bta/dm/bta_dm_api.temp.c:
-	.text       start:0x802E3A50 end:0x802E3EBC
-
-revolution/bte/bta/dm/bta_dm_main.temp.c:
-	.text       start:0x802E3EBC end:0x802E401C
-
-revolution/bte/bta/dm/bta_dm_pm.temp.c:
-	.text       start:0x802E401C end:0x802E4A38
-
-revolution/bte/bta/hh/bta_hh_act.temp.c:
-	.text       start:0x802E4A38 end:0x802E6180
-
-revolution/bte/bta/hh/bta_hh_api.temp.c:
-	.text       start:0x802E6180 end:0x802E6550
-
-revolution/bte/bta/hh/bta_hh_main.temp.c:
-	.text       start:0x802E6550 end:0x802E6AA4
-
-revolution/bte/bta/hh/bta_hh_utils.temp.c:
-	.text       start:0x802E6AA4 end:0x802E6E50
-
-revolution/bte/stack/btm/btm_acl.temp.c:
-	.text       start:0x802E6E50 end:0x802E8B94
-
-revolution/bte/stack/btm/btm_dev.temp.c:
-	.text       start:0x802E8B94 end:0x802E9260
-
-revolution/bte/stack/btm/btm_devctl.temp.c:
-	.text       start:0x802E9260 end:0x802EABE8
-
-revolution/bte/stack/btm/btm_discovery.temp.c:
-	.text       start:0x802EABE8 end:0x802EAD1C
-
-revolution/bte/stack/btm/btm_inq.temp.c:
-	.text       start:0x802EAD1C end:0x802EC7B4
-
-revolution/bte/stack/btm/btm_main.temp.c:
-	.text       start:0x802EC7B4 end:0x802EC810
-
-revolution/bte/stack/btm/btm_pm.temp.c:
-	.text       start:0x802EC810 end:0x802ED4A4
-
-revolution/bte/stack/btm/btm_sco.temp.c:
-	.text       start:0x802ED4A4 end:0x802EE2DC
-
-revolution/bte/stack/btm/btm_sec.temp.c:
-	.text       start:0x802EE2DC end:0x802F12A0
-
-revolution/bte/stack/btu/btu_hcif.temp.c:
-	.text       start:0x802F12A0 end:0x802F24FC
-
-revolution/bte/stack/btu/btu_init.temp.c:
-	.text       start:0x802F24FC end:0x802F2574
-
-revolution/bte/stack/wbt/wbt_ext.temp.c:
-	.text       start:0x802F2574 end:0x802F2654
-
-revolution/bte/stack/gap/gap_api.temp.c:
-	.text       start:0x802F2654 end:0x802F26B4
-
-revolution/bte/stack/gap/gap_conn.temp.c:
-	.text       start:0x802F26B4 end:0x802F31F0
-
-revolution/bte/stack/gap/gap_utils.temp.c:
-	.text       start:0x802F31F0 end:0x802F380C
-
-revolution/bte/stack/hcic/hcicmds.temp.c:
-	.text       start:0x802F380C end:0x802F5F28
-
-revolution/bte/stack/hid/hidd_api.temp.c:
-	.text       start:0x802F5F28 end:0x802F5F90
-
-revolution/bte/stack/hid/hidd_conn.temp.c:
-	.text       start:0x802F5F90 end:0x802F6050
-
-revolution/bte/stack/hid/hidd_mgmt.temp.c:
-	.text       start:0x802F6050 end:0x802F6118
-
-revolution/bte/stack/hid/hidd_pm.temp.c:
-	.text       start:0x802F6118 end:0x802F6494
-
-revolution/bte/stack/hid/hidh_api.temp.c:
-	.text       start:0x802F6494 end:0x802F7214
-
-revolution/bte/stack/hid/hidh_conn.temp.c:
-	.text       start:0x802F7214 end:0x802F9254
-
-revolution/bte/stack/l2cap/l2c_api.temp.c:
-	.text       start:0x802F9254 end:0x802F9E20
-
-revolution/bte/stack/l2cap/l2c_csm.temp.c:
-	.text       start:0x802F9E20 end:0x802FB2FC
-
-revolution/bte/stack/l2cap/l2c_link.temp.c:
-	.text       start:0x802FB2FC end:0x802FC488
-
-revolution/bte/stack/l2cap/l2c_main.temp.c:
-	.text       start:0x802FC488 end:0x802FD4B8
-
-revolution/bte/stack/l2cap/l2c_utils.temp.c:
-	.text       start:0x802FD4B8 end:0x802FF37C
-
-revolution/bte/stack/rfcomm/port_api.temp.c:
-	.text       start:0x802FF37C end:0x802FF3CC
-
-revolution/bte/stack/rfcomm/port_rfc.temp.c:
-	.text       start:0x802FF3CC end:0x803007C8
-
-revolution/bte/stack/rfcomm/port_utils.temp.c:
-	.text       start:0x803007C8 end:0x80300DA0
-
-revolution/bte/stack/rfcomm/rfc_l2cap_if.temp.c:
-	.text       start:0x80300DA0 end:0x803016D4
-
-revolution/bte/stack/rfcomm/rfc_mx_fsm.temp.c:
-	.text       start:0x803016D4 end:0x80302318
-
-revolution/bte/stack/rfcomm/rfc_port_fsm.temp.c:
-	.text       start:0x80302318 end:0x803034B8
-
-revolution/bte/stack/rfcomm/rfc_port_if.temp.c:
-	.text       start:0x803034B8 end:0x803039E4
-
-revolution/bte/stack/rfcomm/rfc_ts_frames.temp.c:
-	.text       start:0x803039E4 end:0x8030502C
-
-revolution/bte/stack/rfcomm/rfc_utils.temp.c:
-	.text       start:0x8030502C end:0x8030580C
-
-revolution/bte/stack/sdp/sdp_api.temp.c:
-	.text       start:0x8030580C end:0x80306674
-
-revolution/bte/stack/sdp/sdp_db.temp.c:
-	.text       start:0x80306674 end:0x80307340
-
-revolution/bte/stack/sdp/sdp_discovery.temp.c:
-	.text       start:0x80307340 end:0x803085B8
-
-revolution/bte/stack/sdp/sdp_main.temp.c:
-	.text       start:0x803085B8 end:0x80309124
-
-revolution/bte/stack/sdp/sdp_server.temp.c:
-	.text       start:0x80309124 end:0x80309E34
-
-revolution/bte/stack/sdp/sdp_utils.temp.c:
-	.text       start:0x80309E34 end:0x8030AE80
-
-revolution/cx/CXStreamingUncompression.temp.c:
-	.text       start:0x8030AE80 end:0x8030B6C0 align:16
-
-revolution/cx/CXUncompression.temp.c:
-	.text       start:0x8030B6C0 end:0x8030B860 align:16
-
-revolution/cx/CXSecureUncompression.temp.c:
-	.text       start:0x8030B860 end:0x8030BA60 align:16
-
-revolution/db/db.temp.c:
-	.text       start:0x8030BA60 end:0x8030BB60 align:16
-
-revolution/dsp/dsp.temp.c:
-	.text       start:0x8030BB60 end:0x8030BE00 align:16
-
-revolution/dsp/dsp_debug.temp.c:
-	.text       start:0x8030BE00 end:0x8030BE50 align:16
-
-revolution/dsp/dsp_task.temp.c:
-	.text       start:0x8030BE50 end:0x8030C6F0 align:16
-
-revolution/dvd/dvdfs.temp.c:
-	.text       start:0x8030C6F0 end:0x8030D1F0 align:16
-
-revolution/dvd/dvd.temp.c:
-	.text       start:0x8030D1F0 end:0x80311DC0 align:16
-
-revolution/dvd/dvdqueue.temp.c:
-	.text       start:0x80311DC0 end:0x80312040 align:16
-
-revolution/dvd/dvderror.temp.c:
-	.text       start:0x80312040 end:0x80312A60 align:16
-
-revolution/dvd/dvdidutils.temp.c:
-	.text       start:0x80312A60 end:0x80312B50 align:16
-
-revolution/dvd/dvdFatal.temp.c:
-	.text       start:0x80312B50 end:0x80312CC0 align:16
-
-revolution/dvd/dvdDeviceError.temp.c:
-	.text       start:0x80312CC0 end:0x80312F50 align:16
-
-revolution/dvd/dvd_broadway.temp.c:
-	.text       start:0x80312F50 end:0x80315600 align:16
-
-revolution/enc/encutility.temp.c:
-	.text       start:0x80315600 end:0x80315840 align:16
-
-revolution/enc/encunicode.c:
-	.text       start:0x80315840 end:0x80315C20 align:16
-
-revolution/esp/esp.temp.c:
-	.text       start:0x80315C20 end:0x80316240 align:16
-
-revolution/euart/euart.temp.c:
-	.text       start:0x80316240 end:0x803165C0 align:16
-
-revolution/exi/EXIBios.temp.c:
-	.text       start:0x803165C0 end:0x80317EC0 align:16
-
-revolution/exi/EXIUart.temp.c:
-	.text       start:0x80317EC0 end:0x80318200 align:16
-
-revolution/exi/EXICommon.temp.c:
-	.text       start:0x80318200 end:0x80318390 align:16
-
-revolution/fs/fs.temp.c:
-	.text       start:0x80318390 end:0x80319940 align:16
-
-revolution/gx/GXInit.temp.c:
-	.text       start:0x80319940 end:0x8031AAD0 align:16
-
-revolution/gx/GXFifo.temp.c:
-	.text       start:0x8031AAD0 end:0x8031B700 align:16
-
-revolution/gx/GXAttr.temp.c:
-	.text       start:0x8031B700 end:0x8031C250 align:16
-
-revolution/gx/GXMisc.temp.c:
-	.text       start:0x8031C250 end:0x8031CC30 align:16
-
-revolution/gx/GXGeometry.temp.c:
-	.text       start:0x8031CC30 end:0x8031D240 align:16
-
-revolution/gx/GXFrameBuf.temp.c:
-	.text       start:0x8031D240 end:0x8031DE20 align:16
-
-revolution/gx/GXLight.temp.c:
-	.text       start:0x8031DE20 end:0x8031E590 align:16
-
-revolution/gx/GXTexture.temp.c:
-	.text       start:0x8031E590 end:0x8031F720 align:16
-
-revolution/gx/GXBump.temp.c:
-	.text       start:0x8031F720 end:0x8031FBE0 align:16
-
-revolution/gx/GXTev.temp.c:
-	.text       start:0x8031FBE0 end:0x803202B0 align:16
-
-revolution/gx/GXPixel.temp.c:
-	.text       start:0x803202B0 end:0x80320A30 align:16
-
-revolution/gx/GXDisplayList.temp.c:
-	.text       start:0x80320A30 end:0x80320AB0 align:16
-
-revolution/gx/GXTransform.temp.c:
-	.text       start:0x80320AB0 end:0x80321030 align:16
-
-revolution/gx/GXPerf.temp.c:
-	.text       start:0x80321030 end:0x80321860 align:16
-
-revolution/hbm/HBMFrameController.temp.cpp:
-	.text       start:0x80321860 end:0x80321A10 align:16
-
-revolution/hbm/HBMAnmController.temp.cpp:
-	.text       start:0x80321A10 end:0x80321B20 align:16
-
-revolution/hbm/HBMGUIManager.temp.cpp:
-	.text       start:0x80321B20 end:0x80323340 align:16
-
-revolution/hbm/HBMController.temp.cpp:
-	.text       start:0x80323340 end:0x80323F80 align:16
-
-revolution/hbm/HBMRemoteSpk.temp.cpp:
-	.text       start:0x80323F80 end:0x803248A0 align:16
-
-revolution/hbm/HBMAxSound.temp.cpp:
-	.text       start:0x803248A0 end:0x803253D0 align:16
-
-revolution/hbm/HBMCommon.temp.cpp:
-	.text       start:0x803253D0 end:0x80325700 align:16
-
-revolution/hbm/HBMBase.temp.cpp:
-	.text       start:0x80325700 end:0x8032DDE0 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_animation.temp.cpp:
-	.text       start:0x8032DDE0 end:0x8032E990 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.temp.cpp:
-	.text       start:0x8032E990 end:0x8032ED30 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_bounding.temp.cpp:
-	.text       start:0x8032ED30 end:0x8032EEB0 align:16
-	.ctors      start:0x804FA0A8 end:0x804FA0AC
-
-revolution/hbm/nw4hbm/lyt/lyt_common.temp.cpp:
-	.text       start:0x8032EEB0 end:0x8032FD30 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_drawInfo.temp.cpp:
-	.text       start:0x8032FD30 end:0x8032FDF0 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_group.temp.cpp:
-	.text       start:0x8032FDF0 end:0x80330140 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_layout.temp.cpp:
-	.text       start:0x80330140 end:0x80330DE0 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_material.temp.cpp:
-	.text       start:0x80330DE0 end:0x80334050 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_pane.temp.cpp:
-	.text       start:0x80334050 end:0x803351A0 align:16
-	.ctors      start:0x804FA0AC end:0x804FA0B0
-
-revolution/hbm/nw4hbm/lyt/lyt_picture.temp.cpp:
-	.text       start:0x803351A0 end:0x80335700 align:16
-	.ctors      start:0x804FA0B0 end:0x804FA0B4
-
-revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.temp.cpp:
-	.text       start:0x80335700 end:0x80335760 align:16
-
-revolution/hbm/nw4hbm/lyt/lyt_textBox.temp.cpp:
-	.text       start:0x80335760 end:0x80336BB0 align:16
-	.ctors      start:0x804FA0B4 end:0x804FA0B8
-
-revolution/hbm/nw4hbm/lyt/lyt_window.temp.cpp:
-	.text       start:0x80336BB0 end:0x803391E0 align:16
-	.ctors      start:0x804FA0B8 end:0x804FA0BC
-
-revolution/hbm/nw4hbm/math/math_triangular.temp.cpp:
-	.text       start:0x803391E0 end:0x80339490 align:16
-
-revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.temp.cpp:
-	.text       start:0x80339490 end:0x80339510 align:16
-
-revolution/hbm/nw4hbm/ut/ut_CharStrmReader.temp.cpp:
-	.text       start:0x80339510 end:0x80339630 align:16
-
-revolution/hbm/nw4hbm/ut/ut_CharWriter.temp.cpp:
-	.text       start:0x80339630 end:0x8033B030 align:16
-
-revolution/hbm/nw4hbm/ut/ut_Font.temp.cpp:
-	.text       start:0x8033B030 end:0x8033B0E0 align:16
-
-revolution/hbm/nw4hbm/ut/ut_LinkList.temp.cpp:
-	.text       start:0x8033B0E0 end:0x8033B1F0 align:16
-
-revolution/hbm/nw4hbm/ut/ut_list.temp.cpp:
-	.text       start:0x8033B1F0 end:0x8033B360 align:16
-
-revolution/hbm/nw4hbm/ut/ut_ResFont.temp.cpp:
-	.text       start:0x8033B360 end:0x8033B660 align:16
-
-revolution/hbm/nw4hbm/ut/ut_ResFontBase.temp.cpp:
-	.text       start:0x8033B660 end:0x8033BCB0 align:16
-
-revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.temp.cpp:
-	.text       start:0x8033BCB0 end:0x8033C770 align:16
-
-revolution/hbm/nw4hbm/ut/ut_TextWriterBase.temp.cpp:
-	.text       start:0x8033C770 end:0x80341BE0 align:16
-	.ctors      start:0x804FA0BC end:0x804FA0C0
-
-revolution/hbm/mix.temp.c:
-	.text       start:0x80341BE0 end:0x80343550 align:16
-
-revolution/hbm/syn.temp.c:
-	.text       start:0x80343550 end:0x803439F0 align:16
-
-revolution/hbm/synctrl.temp.c:
-	.text       start:0x803439F0 end:0x80343E90 align:16
-
-revolution/hbm/synenv.temp.c:
-	.text       start:0x80343E90 end:0x80344270 align:16
-
-revolution/hbm/synmix.temp.c:
-	.text       start:0x80344270 end:0x803443B0 align:16
-
-revolution/hbm/synpitch.temp.c:
-	.text       start:0x803443B0 end:0x80344630 align:16
-
-revolution/hbm/synsample.temp.c:
-	.text       start:0x80344630 end:0x80344AB0 align:16
-
-revolution/hbm/synvoice.temp.c:
-	.text       start:0x80344AB0 end:0x80344C60 align:16
-
-revolution/hbm/seq.temp.c:
-	.text       start:0x80344C60 end:0x80345590 align:16
-
-revolution/ipc/ipcMain.temp.c:
-	.text       start:0x80345590 end:0x80345680 align:16
-
-revolution/ipc/ipcclt.temp.c:
-	.text       start:0x80345680 end:0x80346F80 align:16
-
-revolution/ipc/memory.temp.c:
-	.text       start:0x80346F80 end:0x803474B0 align:16
-
-revolution/ipc/ipcProfile.temp.c:
-	.text       start:0x803474B0 end:0x80347690 align:16
-
-revolution/kpad/KPAD.temp.c:
-	.text       start:0x80347690 end:0x8034B720 align:16
-
-revolution/mem/mem_heapCommon.temp.c:
-	.text       start:0x8034B720 end:0x8034BB90 align:16
-
-revolution/mem/mem_expHeap.temp.c:
-	.text       start:0x8034BB90 end:0x8034C340 align:16
-
-revolution/mem/mem_frameHeap.temp.c:
-	.text       start:0x8034C340 end:0x8034C640 align:16
-
-revolution/mem/mem_allocator.temp.c:
-	.text       start:0x8034C640 end:0x8034C6A0 align:16
-
-revolution/mem/mem_list.temp.c:
-	.text       start:0x8034C6A0 end:0x8034C7C0 align:16
-
-revolution/mix/mix.temp.c:
-	.text       start:0x8034C7C0 end:0x8034F860 align:16
-
-revolution/mix/remote.temp.c:
-	.text       start:0x8034F860 end:0x8034FDB0 align:16
-
-revolution/mtx/mtx.temp.c:
-	.text       start:0x8034FDB0 end:0x803509C0 align:16
-
-revolution/mtx/mtxvec.temp.c:
-	.text       start:0x803509C0 end:0x80350A20 align:16
-
-revolution/mtx/mtx44.temp.c:
-	.text       start:0x80350A20 end:0x80350C50 align:16
-
-revolution/mtx/vec.temp.c:
-	.text       start:0x80350C50 end:0x80350E60 align:16
-
-revolution/mtx/quat.temp.c:
-	.text       start:0x80350E60 end:0x80351300 align:16
-
-revolution/nand/nand.temp.c:
-	.text       start:0x80351300 end:0x803525A0 align:16
-
-revolution/nand/NANDOpenClose.temp.c:
-	.text       start:0x803525A0 end:0x80352AB0 align:16
-
-revolution/nand/NANDCore.temp.c:
-	.text       start:0x80352AB0 end:0x80353C10 align:16
-
-revolution/nand/NANDCheck.temp.c:
-	.text       start:0x80353C10 end:0x80353F00 align:16
-
-revolution/nand/NANDLogging.temp.c:
-	.text       start:0x80353F00 end:0x803544F0 align:16
-
-revolution/os/OS.temp.c:
-	.text       start:0x803544F0 end:0x80355A30 align:16
-
-revolution/os/OSAlarm.temp.c:
-	.text       start:0x80355A30 end:0x803562F0 align:16
-
-revolution/os/OSAlloc.temp.c:
-	.text       start:0x803562F0 end:0x80356610 align:16
-
-revolution/os/OSArena.temp.c:
-	.text       start:0x80356610 end:0x80356710 align:16
-
-revolution/os/OSAudioSystem.temp.c:
-	.text       start:0x80356710 end:0x80356BD0 align:16
-
-revolution/os/OSCache.temp.c:
-	.text       start:0x80356BD0 end:0x80357280 align:16
-
-revolution/os/OSContext.temp.c:
-	.text       start:0x80357280 end:0x80357B60 align:16
-
-revolution/os/OSError.temp.c:
-	.text       start:0x80357B60 end:0x80358180 align:16
-
-revolution/os/OSExec.temp.c:
-	.text       start:0x80358180 end:0x80359760 align:16
-
-revolution/os/OSFatal.temp.c:
-	.text       start:0x80359760 end:0x8035A390 align:16
-
-revolution/os/OSFont.temp.c:
-	.text       start:0x8035A390 end:0x8035B720 align:16
-
-revolution/os/OSInterrupt.temp.c:
-	.text       start:0x8035B720 end:0x8035BEF0 align:16
-
-revolution/os/OSLink.temp.c:
-	.text       start:0x8035BEF0 end:0x8035BF10 align:16
-
-revolution/os/OSMessage.temp.c:
-	.text       start:0x8035BF10 end:0x8035C1F0 align:16
-
-revolution/os/OSMemory.temp.c:
-	.text       start:0x8035C1F0 end:0x8035C990 align:16
-
-revolution/os/OSMutex.temp.c:
-	.text       start:0x8035C990 end:0x8035CBF0 align:16
-
-revolution/os/OSReboot.temp.c:
-	.text       start:0x8035CBF0 end:0x8035CC80 align:16
-
-revolution/os/OSReset.temp.c:
-	.text       start:0x8035CC80 end:0x8035D570 align:16
-
-revolution/os/OSRtc.temp.c:
-	.text       start:0x8035D570 end:0x8035E020 align:16
-
-revolution/os/OSSync.temp.c:
-	.text       start:0x8035E020 end:0x8035E0A0 align:16
-
-revolution/os/OSThread.temp.c:
-	.text       start:0x8035E0A0 end:0x8035F6D0 align:16
-
-revolution/os/OSTime.temp.c:
-	.text       start:0x8035F6D0 end:0x8035FB00 align:16
-
-revolution/os/OSUtf.temp.c:
-	.text       start:0x8035FB00 end:0x8035FD50 align:16
-
-revolution/os/OSIpc.temp.c:
-	.text       start:0x8035FD50 end:0x8035FD90 align:16
-
-revolution/os/OSStateTM.temp.c:
-	.text       start:0x8035FD90 end:0x803604A0 align:16
-
-revolution/os/OSPlayRecord.temp.c:
-	.text       start:0x803604A0 end:0x80360BC0 align:16
-
-revolution/os/OSStateFlags.temp.c:
-	.text       start:0x80360BC0 end:0x80360DE0 align:16
-
-revolution/os/OSNet.temp.c:
-	.text       start:0x80360DE0 end:0x80361380 align:16
-
-revolution/os/OSNandbootInfo.temp.c:
-	.text       start:0x80361380 end:0x80361590 align:16
-
-revolution/os/OSPlayTime.temp.c:
-	.text       start:0x80361590 end:0x80361D70 align:16
-
-revolution/os/OSCrc.temp.c:
-	.text       start:0x80361D70 end:0x80361EB0 align:16
-
-revolution/os/OSLaunch.temp.c:
-	.text       start:0x80361EB0 end:0x803620C0 align:16
-
-revolution/os/__ppc_eabi_init.temp.c:
-	.init       start:0x800065C0 end:0x80006624
-	.text       start:0x803620C0 end:0x80362180 align:16
-
-revolution/pad/Pad.temp.c:
-	.text       start:0x80362180 end:0x803622A0 align:16
-
-revolution/sc/scsystem.temp.c:
-	.text       start:0x803622A0 end:0x80363C30 align:16
-
-revolution/sc/scapi.temp.c:
-	.text       start:0x80363C30 end:0x80364140 align:16
-
-revolution/sc/scapi_prdinfo.temp.c:
-	.text       start:0x80364140 end:0x803643D0 align:16
-
-revolution/si/SIBios.temp.c:
-	.text       start:0x803643D0 end:0x80365440 align:16
-
-revolution/si/SISamplingRate.temp.c:
-	.text       start:0x80365440 end:0x80365530 align:16
-
-revolution/tpl/TPL.temp.c:
-	.text       start:0x80365530 end:0x80365750 align:16
-
-revolution/usb/usb.temp.c:
-	.text       start:0x80365750 end:0x80366CA0 align:16
-
-revolution/vi/vi.temp.c:
-	.text       start:0x80366CA0 end:0x80369770 align:16
-
-revolution/vi/i2c.temp.c:
-	.text       start:0x80369770 end:0x8036A090 align:16
-
-revolution/vi/vi3in1.temp.c:
-	.text       start:0x8036A090 end:0x8036B7FC align:16
-
-revolution/wenc/wenc.temp.c:
-	.text       start:0x8036B7FC end:0x8036BAE0
-
-revolution/wpad/WPAD.temp.c:
-	.text       start:0x8036BAE0 end:0x80373480 align:16
-
-revolution/wpad/WPADHIDParser.temp.c:
-	.text       start:0x80373480 end:0x80377750 align:16
-
-revolution/wpad/WPADEncrypt.temp.c:
-	.text       start:0x80377750 end:0x80378810 align:16
-
-revolution/wpad/WPADMem.temp.c:
-	.text       start:0x80378810 end:0x80378910 align:16
-
-revolution/wpad/debug_msg.temp.c:
-	.text       start:0x80378910 end:0x80378960 align:16
-
-revolution/wud/WUD.temp.c:
-	.text       start:0x80378960 end:0x8037ED60 align:16
-
-revolution/wud/WUDHidHost.temp.c:
-	.text       start:0x8037ED60 end:0x8037F350 align:16
 
 revolution/wud/debug_msg.temp.c:
 	.text       start:0x8037F350 end:0x8037F3A0 align:16
