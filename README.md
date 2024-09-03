@@ -35,10 +35,6 @@ This is a work-in-progress decompilation of Xenoblade.
 
 It builds the following executables:
 
-- `jp`: Rev 0 (JP)
-- `eu`: Rev 0 (EU)
-- `us`: Rev 0 (US)
-
 | Region | SHA1 hash                                  | Code Progress       | Data Progress       |
 |:------:|--------------------------------------------|:-------------------:|:-------------------:|
 | JP     | `a564033aee46988743d8f5e6fdc50a8c65791160` | ![code-progress-jp] | ![data-progress-jp] |
