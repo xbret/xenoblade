@@ -74,11 +74,6 @@ parser.add_argument(
     help="generate map file(s)",
 )
 parser.add_argument(
-    "--no-asm",
-    action="store_true",
-    help="don't incorporate .s files from asm directory",
-)
-parser.add_argument(
     "--debug",
     action="store_true",
     help="build with debug info (non-matching)",
@@ -95,6 +90,12 @@ parser.add_argument(
     metavar="BINARY | DIR",
     type=Path,
     help="path to decomp-toolkit binary or source (optional)",
+)
+parser.add_argument(
+    "--objdiff",
+    metavar="BINARY | DIR",
+    type=Path,
+    help="path to objdiff-cli binary or source (optional)",
 )
 parser.add_argument(
     "--sjiswrap",
@@ -122,6 +123,7 @@ version_num = VERSIONS.index(config.version)
 # Apply arguments
 config.build_dir = args.build_dir
 config.dtk_path = args.dtk
+config.objdiff_path = args.objdiff
 config.binutils_path = args.binutils
 config.compilers_path = args.compilers
 config.debug = args.debug
@@ -130,13 +132,15 @@ config.non_matching = args.non_matching
 config.sjiswrap_path = args.sjiswrap
 if not is_windows():
     config.wrapper = args.wrapper
-if args.no_asm:
+# Don't build asm unless we're --non-matching
+if not config.non_matching:
     config.asm_dir = None
 
 # Tool versions
 config.binutils_tag = "2.42-1"
-config.compilers_tag = "20231018"
-config.dtk_tag = "v0.9.0"
+config.compilers_tag = "20240706"
+config.dtk_tag = "v0.9.4"
+config.objdiff_tag = "v2.0.0-beta.3"
 config.sjiswrap_tag = "v1.1.1"
 config.wibo_tag = "0.6.11"
 
@@ -150,8 +154,6 @@ config.asflags = [
     f"-I build/{config.version}/include",
     f"--defsym version={version_num}",
 ]
-config.linker_console = "Wii"
-config.linker_version = "1.1"
 config.ldflags = [
     "-fp fmadd",
     "-nodefaults",
@@ -280,11 +282,12 @@ cflags_criware = [
     "-func_align 4",
 ]
 
+config.linker_version = "Wii/1.1"
+
 # Helper function for Dolphin libraries
-def DolphinLib(lib_name: str, objects: List[Object], version="1.1", extra_cflags=[]) -> Dict[str, Any]:
+def DolphinLib(lib_name: str, objects: List[Object], version="Wii/1.1", extra_cflags=[]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
-        "mw_console": "Wii",
         "mw_version": version,
         "root_dir": "libs/RVL_SDK",
         "cflags": cflags_sdk + extra_cflags,
@@ -295,8 +298,7 @@ def DolphinLib(lib_name: str, objects: List[Object], version="1.1", extra_cflags
 def criwareLib(lib_name, objects, extra_cflags=[]):
     return {
         "lib": lib_name,
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
+        "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/CriWare",
         "cflags": cflags_criware + extra_cflags,
         "host": False,
@@ -306,8 +308,7 @@ def criwareLib(lib_name, objects, extra_cflags=[]):
 def nw4rLib(lib_name, objects, extra_cflags=[]):
     return {
         "lib": lib_name,
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
+        "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": cflags_nw4r + extra_cflags,
         "host": False,
@@ -324,8 +325,7 @@ config.warn_missing_source = False
 config.libs = [
     {
         "lib": "kyoshin",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
+        "mw_version": "Wii/1.1",
         "root_dir": "",
         "cflags": cflags_game,
         "host": True,
@@ -657,8 +657,7 @@ config.libs = [
     },
     {
         "lib": "Runtime.PPCEABI.H.a",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
+        "mw_version": "Wii/1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_runtime,
         "host": True,
@@ -678,8 +677,7 @@ config.libs = [
     },
     {
         "lib": "MSL_C.PPCEABI.bare.H",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
+        "mw_version": "Wii/1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_mslc,
         "host": True,
@@ -758,8 +756,7 @@ config.libs = [
     },
     {
         "lib": "TRK_Hollywood_Revolution",
-        "mw_console": "Wii",
-        "mw_version": "1.0a",
+        "mw_version": "Wii/1.0a",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_trk,
         "host": True,
@@ -794,8 +791,7 @@ config.libs = [
     },
     {
         "lib": "NdevExi2A",
-        "mw_console": "GC",
-        "mw_version": "3.0a5.2",
+        "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/NdevExi2A",
         "cflags": cflags_ndev,
         "host": True,
@@ -1006,7 +1002,7 @@ config.libs = [
             Object(NonMatching, "revolution/gx/GXFrameBuf.c"),
             Object(Matching, "revolution/gx/GXLight.c"),
             Object(NonMatching, "revolution/gx/GXTexture.c"),
-            Object(Matching, "revolution/gx/GXBump.c", mw_version = "1.0"),
+            Object(Matching, "revolution/gx/GXBump.c", mw_version = "Wii/1.0"),
             Object(NonMatching, "revolution/gx/GXTev.c"),
             Object(NonMatching, "revolution/gx/GXPixel.c"),
             Object(Matching, "revolution/gx/GXDisplayList.c"),
@@ -1059,7 +1055,7 @@ config.libs = [
             Object(NonMatching, "revolution/hbm/synvoice.c"),
             Object(NonMatching, "revolution/hbm/seq.c"),
         ],
-        "1.0a",
+        "Wii/1.0a",
         [   
             "-sdata 0",
             "-sdata2 0",
@@ -1144,7 +1140,7 @@ config.libs = [
             Object(Matching, "revolution/os/OSSync.c"),
             Object(Matching, "revolution/os/OSThread.c"),
             Object(Matching, "revolution/os/OSTime.c"),
-            Object(Matching, "revolution/os/OSUtf.c", mw_console = "GC", mw_version = "3.0a5.2"),
+            Object(Matching, "revolution/os/OSUtf.c", mw_version = "GC/3.0a5.2"),
             Object(Matching, "revolution/os/OSIpc.c"),
             Object(Matching, "revolution/os/OSStateTM.c"),
             Object(Matching, "revolution/os/__start.c"),
@@ -1169,7 +1165,7 @@ config.libs = [
         [
             Object(NonMatching, "revolution/sc/scsystem.c"),
             Object(Matching, "revolution/sc/scapi.c"),
-            Object(Matching, "revolution/sc/scapi_prdinfo.c", mw_console = "GC", mw_version = "3.0a5.2"),
+            Object(Matching, "revolution/sc/scapi_prdinfo.c", mw_version = "GC/3.0a5.2"),
         ],
     ),
     DolphinLib(
@@ -1566,8 +1562,7 @@ config.libs = [
     ),
     {
         "lib": "monolib",
-        "mw_console": "Wii",
-        "mw_version": "1.1",
+        "mw_version": "Wii/1.1",
         "root_dir": "libs/monolib",
         "cflags": cflags_game,
         "host": True,
