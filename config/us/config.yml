@@ -4,5 +4,5 @@ symbols: config/us/symbols.txt
 splits: config/us/splits.txt
 
 mw_comment_version: 15
-symbols_known: false
+symbols_known: true
 fill_gaps: true

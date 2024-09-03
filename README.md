@@ -1,5 +1,5 @@
 Xenoblade  
-[![Build Status]][actions] ![Code Progress] ![Data Progress] [![Discord Badge]][discord]
+[![Build Status]][actions] [![Discord Badge]][discord]
 =============
 
 <!--
@@ -12,28 +12,41 @@ Code progress URL:
 https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=code
 URL encoded then appended to: https://img.shields.io/endpoint?label=Code&url=
 -->
-[Code Progress]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
 <!---
 Data progress URL:
 https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=data
 URL encoded then appended to: https://img.shields.io/endpoint?label=Data&url=
 -->
-[Data Progress]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+
+[code-progress-jp]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
+[data-progress-jp]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+[code-progress-eu]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Feu%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
+[data-progress-eu]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Feu%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+[code-progress-us]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fus%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
+[data-progress-us]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fus%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+
 <!--
 Replace with your Discord server's ID and invite URL.
 -->
 [Discord Badge]: https://img.shields.io/discord/727908905392275526?color=%237289DA&logo=discord&logoColor=%23FFFFFF
 [discord]: https://discord.gg/ACfG9PB9Nc
 
-A work-in-progress decompilation of Xenoblade.
+This is a work-in-progress decompilation of Xenoblade.
 
-This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
-
-Supported versions:
+It builds the following executables:
 
 - `jp`: Rev 0 (JP)
 - `eu`: Rev 0 (EU)
 - `us`: Rev 0 (US)
+
+| Region | SHA1 hash                                  | Code Progress       | Data Progress       |
+|:------:|--------------------------------------------|:-------------------:|:-------------------:|
+| JP     | `a564033aee46988743d8f5e6fdc50a8c65791160` | ![code-progress-jp] | ![data-progress-jp] |
+| EU     | `10d34dbf901e5d6547718176303a6073ee80dda2` | ![code-progress-eu] | ![data-progress-eu] |
+| US     | `214b15173fa3bad23a067476d58d3933ad7037b7` | ![code-progress-us] | ![data-progress-us] |
+
+
+This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
 Dependencies
 ============
