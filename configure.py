@@ -17,13 +17,7 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List
 
-from tools.project import (
-    Object,
-    ProjectConfig,
-    calculate_progress,
-    generate_build,
-    is_windows,
-)
+from tools.project import *
 
 # Game versions
 DEFAULT_VERSION = 0
@@ -140,7 +134,7 @@ if not config.non_matching:
 config.binutils_tag = "2.42-1"
 config.compilers_tag = "20240706"
 config.dtk_tag = "v0.9.4"
-config.objdiff_tag = "v2.0.0-beta.3"
+config.objdiff_tag = "v2.0.0-beta.5"
 config.sjiswrap_tag = "v1.1.1"
 config.wibo_tag = "0.6.11"
 
@@ -291,7 +285,7 @@ def DolphinLib(lib_name: str, objects: List[Object], version="Wii/1.1", extra_cf
         "mw_version": version,
         "root_dir": "libs/RVL_SDK",
         "cflags": cflags_sdk + extra_cflags,
-        "host": False,
+        "progress_category": "sdk",
         "objects": objects,
     }
 
@@ -301,7 +295,7 @@ def criwareLib(lib_name, objects, extra_cflags=[]):
         "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/CriWare",
         "cflags": cflags_criware + extra_cflags,
-        "host": False,
+        "progress_category": "criware",
         "objects": objects,
     }
 
@@ -311,7 +305,7 @@ def nw4rLib(lib_name, objects, extra_cflags=[]):
         "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/nw4r",
         "cflags": cflags_nw4r + extra_cflags,
-        "host": False,
+        "progress_category": "nw4r",
         "objects": objects,
     }
 
@@ -328,7 +322,7 @@ config.libs = [
         "mw_version": "Wii/1.1",
         "root_dir": "",
         "cflags": cflags_game,
-        "host": True,
+        "progress_category": "game",
         "objects": [
             Object(NonMatching, "kyoshin/appgame/CGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(Matching, "kyoshin/appgame/main.cpp"),
@@ -660,7 +654,7 @@ config.libs = [
         "mw_version": "Wii/1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_runtime,
-        "host": True,
+        "progress_category": "mw",
         "objects": [
             Object(Matching, "Runtime/__mem.c"),
             Object(Matching, "Runtime/__va_arg.c"),
@@ -680,7 +674,7 @@ config.libs = [
         "mw_version": "Wii/1.1",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_mslc,
-        "host": True,
+        "progress_category": "mw",
         "objects": [
             Object(Matching, "MSL_C/MSL_Common/alloc.c"),
             Object(Matching, "MSL_C/MSL_Common/ansi_files.c"),
@@ -759,7 +753,7 @@ config.libs = [
         "mw_version": "Wii/1.0a",
         "root_dir": "libs/PowerPC_EABI_Support",
         "cflags": cflags_trk,
-        "host": True,
+        "progress_category": "mw",
         "objects": [
             Object(Matching, "MetroTRK/__exception.s"),
             Object(Matching, "MetroTRK/targsupp.s"),
@@ -794,7 +788,7 @@ config.libs = [
         "mw_version": "GC/3.0a5.2",
         "root_dir": "libs/NdevExi2A",
         "cflags": cflags_ndev,
-        "host": True,
+        "progress_category": "sdk",
         "objects": [
             Object(Matching, "DebuggerDriver.c"),
             Object(Matching, "exi2.c"),
@@ -1565,7 +1559,7 @@ config.libs = [
         "mw_version": "Wii/1.1",
         "root_dir": "libs/monolib",
         "cflags": cflags_game,
-        "host": True,
+        "progress_category": "monolib",
         "objects": [
             Object(NonMatching, "CAttrTransform.cpp"),
             Object(NonMatching, "MemManager.cpp", extra_cflags=["-lang=ec++"]),
@@ -1731,17 +1725,22 @@ config.libs = [
     }
 ]
 
-# Update the object names in each library with the root path prefix
-# TODO: find a better way
-config.update_lib_obj_names()
+# Optional extra categories for progress tracking
+# Adjust as desired for your project
+config.progress_categories = [
+    ProgressCategory("game", "Game Code"),
+    ProgressCategory("mw", "Metrowerks Code"),
+    ProgressCategory("sdk", "SDK Code"),
+    ProgressCategory("criware", "Criware Code"),
+    ProgressCategory("monolib", "Monolithlib Code"),
+]
+config.progress_each_module = args.verbose
 
 if args.mode == "configure":
     # Write build.ninja and objdiff.json
     generate_build(config)
 elif args.mode == "progress":
     # Print progress and write progress.json
-    config.progress_each_module = args.verbose
-    config.progress_all = False
     calculate_progress(config)
 else:
     sys.exit("Unknown mode: " + args.mode)
