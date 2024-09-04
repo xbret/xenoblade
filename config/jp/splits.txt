@@ -2863,32 +2863,35 @@ kyoshin/appgame/CBattery.cpp:
 	.data       start:0x8053EFA8 end:0x8053F040
 	.sdata      start:0x80665850 end:0x80665858
 
-Runtime/__mem.c:
-	.init       start:0x80004000 end:0x80004380
-	.text       start:0x802B95B8 end:0x802B95D4
-
-Runtime/__va_arg.c:
-	.text       start:0x802B95D4 end:0x802B969C
-
-Runtime/global_destructor_chain.c:
-	.text       start:0x802B969C end:0x802B96FC
-	.sbss       start:0x80667520 end:0x80667528
-
-Runtime/New.cp:
+libs/PowerPC_EABI_Support/Runtime/New.cp:
 	.rodata     start:0x8050CE00 end:0x8050CE10
 	.sdata      start:0x80665858 end:0x80665860
 
-Runtime/NMWException.cp:
+libs/PowerPC_EABI_Support/Runtime/__mem.c:
+	.init       start:0x80004000 end:0x80004380
+	.text       start:0x802B95B8 end:0x802B95D4
+
+libs/PowerPC_EABI_Support/Runtime/__va_arg.c:
+	.text       start:0x802B95D4 end:0x802B969C
+
+libs/PowerPC_EABI_Support/Runtime/global_destructor_chain.c:
+	.text       start:0x802B969C end:0x802B96FC
+	.sbss       start:0x80667520 end:0x80667528
+
+libs/PowerPC_EABI_Support/MetroTRK/__exception.s:
+	.init       start:0x80004380 end:0x800062C0
+
+libs/PowerPC_EABI_Support/Runtime/NMWException.cp:
 	extab       start:0x8001BEE8 end:0x8001BF30
 	extabindex  start:0x80033A7C end:0x80033AB8
 	.text       start:0x802B96FC end:0x802B9CF0
 	.sdata      start:0x80665860 end:0x80665868
 
-Runtime/ptmf.c:
+libs/PowerPC_EABI_Support/Runtime/ptmf.c:
 	.text       start:0x802B9CF0 end:0x802B9D84
 	.rodata     start:0x8050CE10 end:0x8050CE20
 
-Runtime/MWRTTI.cp:
+libs/PowerPC_EABI_Support/Runtime/MWRTTI.cp:
 	extab       start:0x8001BF30 end:0x8001BF40
 	extabindex  start:0x80033AB8 end:0x80033AD0
 	.text       start:0x802B9D84 end:0x802BA02C
@@ -2896,871 +2899,868 @@ Runtime/MWRTTI.cp:
 	.data       start:0x8053F040 end:0x8053F068
 	.sdata      start:0x80665868 end:0x80665870
 
-Runtime/runtime.c:
+libs/PowerPC_EABI_Support/Runtime/runtime.c:
 	.text       start:0x802BA02C end:0x802BA774
 	.rodata     start:0x8050CE78 end:0x8050CE90
 
-Runtime/__init_cpp_exceptions.cpp:
+libs/PowerPC_EABI_Support/Runtime/__init_cpp_exceptions.cpp:
 	.text       start:0x802BA774 end:0x802BA7E4
 	.ctors      start:0x804F5900 end:0x804F5904 rename:.ctors$10
 	.dtors      start:0x804F5B00 end:0x804F5B04 rename:.dtors$10
 	.dtors      start:0x804F5B04 end:0x804F5B08 rename:.dtors$15
 	.sdata      start:0x80665870 end:0x80665878
 
-Runtime/Gecko_ExceptionPPC.cp:
+libs/PowerPC_EABI_Support/Runtime/Gecko_ExceptionPPC.cp:
 	extab       start:0x8001BF40 end:0x8001BF80
 	extabindex  start:0x80033AD0 end:0x80033B0C
 	.text       start:0x802BA7E4 end:0x802BBD00
 	.data       start:0x8053F068 end:0x8053F0F0
 	.bss        start:0x8057AE90 end:0x8057B010
 
-Runtime/GCN_mem_alloc.c:
+libs/PowerPC_EABI_Support/Runtime/GCN_mem_alloc.c:
 	.text       start:0x802BBD00 end:0x802BBDB8
 	.rodata     start:0x8050CE90 end:0x8050CF00
 
-MetroTRK/__exception.s:
-	.init       start:0x80004380 end:0x800062C0
-
-MSL_C/MSL_Common/alloc.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/alloc.c:
 	.text       start:0x802BBDB8 end:0x802BC2CC
 	.rodata     start:0x8050CF00 end:0x8050CF18
 	.bss        start:0x8057B010 end:0x8057B048
 	.sbss       start:0x80667528 end:0x80667530
 
-MSL_C/MSL_Common/errno.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/errno.c:
 	.sbss       start:0x80667530 end:0x80667538
 
-MSL_C/MSL_Common/ansi_files.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.c:
 	.text       start:0x802BC2CC end:0x802BC3DC
 	.data       start:0x8053F0F0 end:0x8053F230
 	.bss        start:0x8057B048 end:0x8057B348
 
-MSL_C/MSL_Common_Embedded/ansi_fp.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/ansi_fp.c:
 	.text       start:0x802BC3DC end:0x802BDC5C
 	.rodata     start:0x8050CF18 end:0x8050CFF8
 	.data       start:0x8053F230 end:0x8053F398
 	.sdata2     start:0x8066B820 end:0x8066B858
 
-MSL_C/MSL_Common/arith.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/arith.c:
 	.text       start:0x802BDC5C end:0x802BDC7C
 
-MSL_C/MSL_Common/assert.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/assert.c:
 	.text       start:0x802BDC7C end:0x802BDCC8
 	.rodata     start:0x8050CFF8 end:0x8050D020
 
-MSL_C/MSL_Common/ctype.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/ctype.c:
 	.rodata     start:0x8050D020 end:0x8050D420
 
-MSL_C/MSL_Common/locale.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/locale.c:
 	.rodata     start:0x8050D420 end:0x8050D528
 	.data       start:0x8053F398 end:0x8053F590
 	.sdata2     start:0x8066B858 end:0x8066B870
 
-MSL_C/MSL_Common/buffer_io.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.c:
 	.text       start:0x802BDCC8 end:0x802BDDA8
 
-MSL_C/MSL_Common/direct_io.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/direct_io.c:
 	.text       start:0x802BDDA8 end:0x802BE0B0
 
-MSL_C/MSL_Common/file_io.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/file_io.c:
 	.text       start:0x802BE0B0 end:0x802BE2A0
 
-MSL_C/MSL_Common/FILE_POS.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.c:
 	.text       start:0x802BE2A0 end:0x802BE510
 
-MSL_C/MSL_Common/mbstring.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/mbstring.c:
 	.text       start:0x802BE510 end:0x802BE708
 
-MSL_C/MSL_Common/mem.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/mem.c:
 	.text       start:0x802BE708 end:0x802BE878
 
-MSL_C/MSL_Common/mem_funcs.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.c:
 	.text       start:0x802BE878 end:0x802BEB48
 
-MSL_C/MSL_Common/math_api.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.c:
 	.text       start:0x802BEB48 end:0x802BEC3C
 
-MSL_C/MSL_Common/misc_io.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.c:
 	.text       start:0x802BEC3C end:0x802BEC4C
 
-MSL_C/MSL_Common/printf.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/printf.c:
 	.text       start:0x802BEC4C end:0x802C110C
 	.rodata     start:0x8050D528 end:0x8050D550
 	.data       start:0x8053F590 end:0x8053F7C0
 	.sdata      start:0x80665878 end:0x80665880
 	.sdata2     start:0x8066B870 end:0x8066B878
 
-MSL_C/MSL_Common/rand.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/rand.c:
 	.text       start:0x802C110C end:0x802C112C
 	.sdata      start:0x80665880 end:0x80665888
 
-MSL_C/MSL_Common/float.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/float.c:
 	.sdata      start:0x80665888 end:0x80665898
 
-MSL_C/MSL_Common/scanf.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.c:
 	.text       start:0x802C112C end:0x802C2610
 	.rodata     start:0x8050D550 end:0x8050D578
 	.data       start:0x8053F7C0 end:0x8053FA30
 
-MSL_C/MSL_Common/signal.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/signal.c:
 	.text       start:0x802C2610 end:0x802C26B8
 	.bss        start:0x8057B348 end:0x8057B368
 
-MSL_C/MSL_Common/string.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/string.c:
 	.text       start:0x802C26B8 end:0x802C2A2C
 
-MSL_C/MSL_Common/strtold.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.c:
 	.text       start:0x802C2A2C end:0x802C3DAC
 	.rodata     start:0x8050D578 end:0x8050D588
 	.sdata2     start:0x8066B878 end:0x8066B898
 
-MSL_C/MSL_Common/wctype.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wctype.c:
 	.rodata     start:0x8050D588 end:0x8050DB88
 
-MSL_C/MSL_Common/strtoul.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/strtoul.c:
 	.text       start:0x802C3DAC end:0x802C47D4
 
-MSL_C/MSL_Common/wcstoul.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wcstoul.c:
 	.text       start:0x802C47D4 end:0x802C4CDC
 
-MSL_C/MSL_Common/wmem.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wmem.c:
 	.text       start:0x802C4CDC end:0x802C4D0C
 
-MSL_C/MSL_Common/wprintf.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.c:
 	.text       start:0x802C4D0C end:0x802C6F2C
 	.rodata     start:0x8050DB88 end:0x8050DB90
 	.data       start:0x8053FA30 end:0x8053FCD0
 	.sdata2     start:0x8066B898 end:0x8066B8A0
 
-MSL_C/MSL_Common/wscanf.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wscanf.c:
 	.text       start:0x802C6F2C end:0x802C6FBC
 
-MSL_C/MSL_Common/wstring.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.c:
 	.text       start:0x802C6FBC end:0x802C7098
 
-MSL_C/MSL_Common/wchar_io.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.c:
 	.text       start:0x802C7098 end:0x802C7110
 
-MSL_C/PPC_EABI/uart_console_io_gcn.c:
+libs/PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.c:
 	.text       start:0x802C7110 end:0x802C71E8
 	.sbss       start:0x80667538 end:0x80667540
 
-MSL_C/PPC_EABI/abort_exit_ppc_eabi.c:
+libs/PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.c:
 	.text       start:0x802C71E8 end:0x802C721C
 	.sbss       start:0x80667540 end:0x80667548
 
-MSL_C/MSL_Common/secure_error.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.c:
 	.text       start:0x802C721C end:0x802C7234
 	.sbss       start:0x80667548 end:0x80667550
 
-MSL_C/MSL_Common/math_double.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/math_double.c:
 	.text       start:0x802C7234 end:0x802C7258
 
-MSL_C/MSL_Common_Embedded/math_sun.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_sun.c:
 	.text       start:0x802C7258 end:0x802C7298
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c:
 	.text       start:0x802C7298 end:0x802C7564
 	.sdata2     start:0x8066B8A0 end:0x8066B928
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c:
 	.text       start:0x802C7564 end:0x802C77FC
 	.sdata2     start:0x8066B928 end:0x8066B9B0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c:
 	.text       start:0x802C77FC end:0x802C7A54
 	.sdata2     start:0x8066B9B0 end:0x8066BA08
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c:
 	.text       start:0x802C7A54 end:0x802C7DD4
 	.rodata     start:0x8050DB90 end:0x8050DBA0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c:
 	.text       start:0x802C7DD4 end:0x802C8088
 	.sbss       start:0x80667550 end:0x80667558
 	.sdata2     start:0x8066BA08 end:0x8066BA88
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c:
 	.text       start:0x802C8088 end:0x802C819C
 	.sbss       start:0x80667558 end:0x80667560
 	.sdata2     start:0x8066BA88 end:0x8066BAB8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c:
 	.text       start:0x802C819C end:0x802C89B0
 	.rodata     start:0x8050DBA0 end:0x8050DBD0
 	.sdata2     start:0x8066BAB8 end:0x8066BBC8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c:
 	.text       start:0x802C89B0 end:0x802C8D34
 	.rodata     start:0x8050DBD0 end:0x8050DD58
 	.sdata2     start:0x8066BBC8 end:0x8066BC20
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c:
 	.text       start:0x802C8D34 end:0x802C8E44
 	.sdata2     start:0x8066BC20 end:0x8066BC68
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c:
 	.text       start:0x802C8E44 end:0x802CA4FC
 	.rodata     start:0x8050DD58 end:0x8050DDA8
 	.sdata2     start:0x8066BC68 end:0x8066BCA8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c:
 	.text       start:0x802CA4FC end:0x802CA5BC
 	.sdata2     start:0x8066BCA8 end:0x8066BCE0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c:
 	.text       start:0x802CA5BC end:0x802CA80C
 	.rodata     start:0x8050DDA8 end:0x8050DE10
 	.sdata2     start:0x8066BCE0 end:0x8066BD18
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c:
 	.text       start:0x802CA80C end:0x802CAA3C
 	.rodata     start:0x8050DE10 end:0x8050DEA8
 	.sdata2     start:0x8066BD18 end:0x8066BD40
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c:
 	.text       start:0x802CAA3C end:0x802CAB88
 	.sdata2     start:0x8066BD40 end:0x8066BD50
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c:
 	.text       start:0x802CAB88 end:0x802CABB4
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c:
 	.text       start:0x802CABB4 end:0x802CAC7C
 	.sdata2     start:0x8066BD50 end:0x8066BD58
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c:
 	.text       start:0x802CAC7C end:0x802CADCC
 	.sdata2     start:0x8066BD58 end:0x8066BD68
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c:
 	.text       start:0x802CADCC end:0x802CAE54
 	.sdata2     start:0x8066BD68 end:0x8066BD70
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c:
 	.text       start:0x802CAE54 end:0x802CAFC0
 	.sdata2     start:0x8066BD70 end:0x8066BD98
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c:
 	.text       start:0x802CAFC0 end:0x802CB0BC
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c:
 	.text       start:0x802CB0BC end:0x802CB188
 	.sdata2     start:0x8066BD98 end:0x8066BDA0
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c:
 	.text       start:0x802CB188 end:0x802CB200
 	.sdata2     start:0x8066BDA0 end:0x8066BDA8
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c:
 	.text       start:0x802CB200 end:0x802CB204
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c:
 	.text       start:0x802CB204 end:0x802CB208
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c:
 	.text       start:0x802CB208 end:0x802CB20C
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c:
 	.text       start:0x802CB20C end:0x802CB210
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c:
 	.text       start:0x802CB210 end:0x802CB214
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c:
 	.text       start:0x802CB214 end:0x802CB218
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c:
 	.text       start:0x802CB218 end:0x802CB21C
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c:
 	.text       start:0x802CB21C end:0x802CB464
 	.sdata2     start:0x8066BDA8 end:0x8066BDB0
 
-MSL_C/PPC_EABI/math_ppc.c:
+libs/PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.c:
 	.text       start:0x802CB464 end:0x802CB468
 
-MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c:
 	.text       start:0x802CB468 end:0x802CB46C
 
-MSL_C/MSL_Common/extras.c:
+libs/PowerPC_EABI_Support/MSL_C/MSL_Common/extras.c:
 	.text       start:0x802CB46C end:0x802CB50C
 
-MetroTRK/targsupp.s:
+libs/PowerPC_EABI_Support/MetroTRK/targsupp.s:
 	.text       start:0x802CB50C end:0x802CB52C
 
-MetroTRK/custconn/cc_gdev.c:
+libs/PowerPC_EABI_Support/MetroTRK/custconn/cc_gdev.c:
 	.text       start:0x802CB52C end:0x802CB7A4
 	.bss        start:0x8057B368 end:0x8057B888
 	.sbss       start:0x80667560 end:0x80667568
 
-MetroTRK/custconn/MWCriticalSection_gc.cpp:
+libs/PowerPC_EABI_Support/MetroTRK/custconn/MWCriticalSection_gc.cpp:
 	.text       start:0x802CB7A4 end:0x802CB7E0
 
-MetroTRK/custconn/CircleBuffer.c:
+libs/PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.c:
 	.text       start:0x802CB7E0 end:0x802CBA1C
 
-MetroTRK/flush_cache.c:
+libs/PowerPC_EABI_Support/MetroTRK/flush_cache.c:
 	.text       start:0x802CBA1C end:0x802CBA54
 
-MetroTRK/main_TRK.c:
+libs/PowerPC_EABI_Support/MetroTRK/main_TRK.c:
 	.text       start:0x802CBA54 end:0x802CBA90
 	.sbss       start:0x80667568 end:0x80667570
 
-MetroTRK/mainloop.c:
+libs/PowerPC_EABI_Support/MetroTRK/mainloop.c:
 	.text       start:0x802CBA90 end:0x802CBB7C
 
-MetroTRK/mem_TRK.c:
+libs/PowerPC_EABI_Support/MetroTRK/mem_TRK.c:
 	.text       start:0x802CBB7C end:0x802CBDE0
 
-MetroTRK/dispatch.c:
+libs/PowerPC_EABI_Support/MetroTRK/dispatch.c:
 	.text       start:0x802CBDE0 end:0x802CBF00
 	.data       start:0x8053FCD0 end:0x8053FD40
 
-MetroTRK/dolphin_trk.c:
+libs/PowerPC_EABI_Support/MetroTRK/dolphin_trk.c:
 	.text       start:0x802CBF00 end:0x802CC224
 	.data       start:0x8053FD40 end:0x8053FD80
 	.sbss       start:0x80667570 end:0x80667578
 
-MetroTRK/dolphin_trk_glue.c:
+libs/PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.c:
 	.text       start:0x802CC224 end:0x802CC5C0
 	.data       start:0x8053FD80 end:0x8053FE68
 	.bss        start:0x8057B888 end:0x8057B8B0
 	.sbss       start:0x80667578 end:0x80667580
 	.sdata2     start:0x8066BDB0 end:0x8066BDB8
 
-MetroTRK/notify.c:
+libs/PowerPC_EABI_Support/MetroTRK/notify.c:
 	.text       start:0x802CC5C0 end:0x802CC650
 
-MetroTRK/nubevent.c:
+libs/PowerPC_EABI_Support/MetroTRK/nubevent.c:
 	.text       start:0x802CC650 end:0x802CC7EC
 	.data       start:0x8053FE68 end:0x8053FE88
 	.bss        start:0x8057B8B0 end:0x8057B8D8
 
-MetroTRK/nubinit.c:
+libs/PowerPC_EABI_Support/MetroTRK/nubinit.c:
 	.text       start:0x802CC7EC end:0x802CC93C
 	.data       start:0x8053FE88 end:0x8053FEA8
 	.sbss       start:0x80667580 end:0x80667588
 
-MetroTRK/serpoll.c:
+libs/PowerPC_EABI_Support/MetroTRK/serpoll.c:
 	.text       start:0x802CC93C end:0x802CCA84
 	.sbss       start:0x80667588 end:0x80667590
 
-MetroTRK/string_TRK.c:
+libs/PowerPC_EABI_Support/MetroTRK/string_TRK.c:
 	.text       start:0x802CCA84 end:0x802CCAA0
 
-MetroTRK/support.c:
+libs/PowerPC_EABI_Support/MetroTRK/support.c:
 	.text       start:0x802CCAA0 end:0x802CD0C4
 	.data       start:0x8053FEA8 end:0x8053FEF0
 
-MetroTRK/targcont.c:
+libs/PowerPC_EABI_Support/MetroTRK/targcont.c:
 	.text       start:0x802CD0C4 end:0x802CD0F8
 
-MetroTRK/mpc_7xx_603e.c:
+libs/PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.c:
 	.text       start:0x802CD0F8 end:0x802CD420
 
-MetroTRK/msg.c:
+libs/PowerPC_EABI_Support/MetroTRK/msg.c:
 	.text       start:0x802CD420 end:0x802CD484
 	.data       start:0x8053FEF0 end:0x8053FF18
 	.sbss       start:0x80667590 end:0x80667598
 
-MetroTRK/msgbuf.c:
+libs/PowerPC_EABI_Support/MetroTRK/msgbuf.c:
 	.text       start:0x802CD484 end:0x802CDC90
 	.data       start:0x8053FF18 end:0x8053FF40
 	.bss        start:0x8057B8D8 end:0x8057D280
 
-MetroTRK/msghndlr.c:
+libs/PowerPC_EABI_Support/MetroTRK/msghndlr.c:
 	.text       start:0x802CDC90 end:0x802CEC14
 	.data       start:0x8053FF40 end:0x8053FFA8
 	.sbss       start:0x80667598 end:0x806675A0
 
-MetroTRK/mslsupp.c:
+libs/PowerPC_EABI_Support/MetroTRK/mslsupp.c:
 	.text       start:0x802CEC14 end:0x802CEDA0
 
-MetroTRK/targimpl.c:
+libs/PowerPC_EABI_Support/MetroTRK/targimpl.c:
 	.text       start:0x802CEDA0 end:0x802D05C4
 	.rodata     start:0x8050DEA8 end:0x8050DF30
 	.data       start:0x8053FFA8 end:0x8053FFB8
 	.bss        start:0x8057D280 end:0x8057D828
 	.sbss       start:0x806675A0 end:0x806675A8
 
-MetroTRK/target_options.c:
+libs/PowerPC_EABI_Support/MetroTRK/target_options.c:
 	.text       start:0x802D05C4 end:0x802D05D4
 	.sbss       start:0x806675A8 end:0x806675B0
 
-DebuggerDriver.c:
+libs/NdevExi2A/DebuggerDriver.c:
 	.text       start:0x802D05D4 end:0x802D0908
 	.sdata      start:0x80665898 end:0x806658A0
 	.sbss       start:0x806675B0 end:0x806675C8
 
-exi2.c:
+libs/NdevExi2A/exi2.c:
 	.text       start:0x802D0908 end:0x802D10A0
 
-revolution/ai/ai.c:
+libs/RVL_SDK/revolution/ai/ai.c:
 	.text       start:0x802D10A0 end:0x802D1670 align:16
 	.data       start:0x8053FFB8 end:0x80540000
 	.sdata      start:0x806658A0 end:0x806658A8
 	.sbss       start:0x806675C8 end:0x80667608
 
-revolution/arc/arc.c:
+libs/RVL_SDK/revolution/arc/arc.c:
 	.text       start:0x802D1670 end:0x802D2050 align:16
 	.data       start:0x80540000 end:0x80540070
 	.sdata      start:0x806658A8 end:0x806658B0
 
-revolution/ax/AX.c:
+libs/RVL_SDK/revolution/ax/AX.c:
 	.text       start:0x802D2050 end:0x802D2110 align:16
 	.data       start:0x80540070 end:0x805400B8
 	.sdata      start:0x806658B0 end:0x806658B8
 	.sbss       start:0x80667608 end:0x80667610
 
-revolution/ax/AXAlloc.c:
+libs/RVL_SDK/revolution/ax/AXAlloc.c:
 	.text       start:0x802D2110 end:0x802D26B0 align:16
 	.bss        start:0x8057D828 end:0x8057D940
 	.sbss       start:0x80667610 end:0x80667618
 
-revolution/ax/AXAux.c:
+libs/RVL_SDK/revolution/ax/AXAux.c:
 	.text       start:0x802D26B0 end:0x802D2F70 align:16
 	.bss        start:0x8057D940 end:0x80580AC0
 	.sbss       start:0x80667618 end:0x80667660
 
-revolution/ax/AXCL.c:
+libs/RVL_SDK/revolution/ax/AXCL.c:
 	.text       start:0x802D2F70 end:0x802D3A70 align:16
 	.bss        start:0x80580AC0 end:0x80580BC0
 	.sbss       start:0x80667660 end:0x80667688
 
-revolution/ax/AXOut.c:
+libs/RVL_SDK/revolution/ax/AXOut.c:
 	.text       start:0x802D3A70 end:0x802D4320 align:16
 	.bss        start:0x80580BC0 end:0x805819C0
 	.sdata      start:0x806658B8 end:0x806658C0
 	.sbss       start:0x80667688 end:0x806676C8
 
-revolution/ax/AXSPB.c:
+libs/RVL_SDK/revolution/ax/AXSPB.c:
 	.text       start:0x802D4320 end:0x802D4760 align:16
 	.bss        start:0x805819C0 end:0x80581A40
 	.sbss       start:0x806676C8 end:0x80667718
 
-revolution/ax/AXVPB.c:
+libs/RVL_SDK/revolution/ax/AXVPB.c:
 	.text       start:0x802D4760 end:0x802D56D0 align:16
 	.data       start:0x805400B8 end:0x80540160
 	.bss        start:0x80581A40 end:0x80593140
 	.sbss       start:0x80667718 end:0x80667738
 	.sdata2     start:0x8066BDB8 end:0x8066BDD8
 
-revolution/ax/AXComp.c:
+libs/RVL_SDK/revolution/ax/AXComp.c:
 	.data       start:0x80540160 end:0x80541120
 
-revolution/ax/DSPCode.c:
+libs/RVL_SDK/revolution/ax/DSPCode.c:
 	.data       start:0x80541120 end:0x80543120
 
-revolution/ax/AXProf.c:
+libs/RVL_SDK/revolution/ax/AXProf.c:
 	.text       start:0x802D56D0 end:0x802D5710 align:16
 	.sbss       start:0x80667738 end:0x80667748
 
-revolution/axfx/AXFXReverbHi.c:
+libs/RVL_SDK/revolution/axfx/AXFXReverbHi.c:
 	.text       start:0x802D5710 end:0x802D57C0 align:16
 	.sdata2     start:0x8066BDD8 end:0x8066BDE0
 
-revolution/axfx/AXFXReverbHiExp.c:
+libs/RVL_SDK/revolution/axfx/AXFXReverbHiExp.c:
 	.text       start:0x802D57C0 end:0x802D65F0 align:16
 	.data       start:0x80543120 end:0x805432C0
 	.sdata2     start:0x8066BDE0 end:0x8066BE20
 
-revolution/axfx/AXFXDelayExp.c:
+libs/RVL_SDK/revolution/axfx/AXFXDelayExp.c:
 	.text       start:0x802D65F0 end:0x802D70C0 align:16
 	.sdata2     start:0x8066BE20 end:0x8066BE38
 
-revolution/axfx/AXFXDelayExpDpl2.c:
+libs/RVL_SDK/revolution/axfx/AXFXDelayExpDpl2.c:
 	.text       start:0x802D70C0 end:0x802D7990 align:16
 	.sdata2     start:0x8066BE38 end:0x8066BE50
 
-revolution/axfx/AXFXReverbStdExp.c:
+libs/RVL_SDK/revolution/axfx/AXFXReverbStdExp.c:
 	.text       start:0x802D7990 end:0x802D86C0 align:16
 	.data       start:0x805432C0 end:0x80543350
 	.sdata2     start:0x8066BE50 end:0x8066BE90
 
-revolution/axfx/AXFXReverbStdExpDpl2.c:
+libs/RVL_SDK/revolution/axfx/AXFXReverbStdExpDpl2.c:
 	.text       start:0x802D86C0 end:0x802D9430 align:16
 	.data       start:0x80543350 end:0x805433E0
 	.sdata2     start:0x8066BE90 end:0x8066BED0
 
-revolution/axfx/AXFXChorusExp.c:
+libs/RVL_SDK/revolution/axfx/AXFXChorusExp.c:
 	.text       start:0x802D9430 end:0x802D9F50 align:16
 	.sdata2     start:0x8066BED0 end:0x8066BF00
 
-revolution/axfx/AXFXChorusExpDpl2.c:
+libs/RVL_SDK/revolution/axfx/AXFXChorusExpDpl2.c:
 	.text       start:0x802D9F50 end:0x802DAAD0 align:16
 	.sdata2     start:0x8066BF00 end:0x8066BF30
 
-revolution/axfx/AXFXLfoTable.c:
+libs/RVL_SDK/revolution/axfx/AXFXLfoTable.c:
 	.text       start:0x802DAAD0 end:0x802DAAE0 align:16
 	.data       start:0x805433E0 end:0x805435E0
 
-revolution/axfx/AXFXSrcCoef.c:
+libs/RVL_SDK/revolution/axfx/AXFXSrcCoef.c:
 	.text       start:0x802DAAE0 end:0x802DAB00 align:16
 	.data       start:0x805435E0 end:0x80543DE0
 
-revolution/axfx/AXFXHooks.c:
+libs/RVL_SDK/revolution/axfx/AXFXHooks.c:
 	.text       start:0x802DAB00 end:0x802DAB50 align:16
 	.sdata      start:0x806658C0 end:0x806658C8
 
-revolution/base/PPCArch.c:
+libs/RVL_SDK/revolution/base/PPCArch.c:
 	.text       start:0x802DAB50 end:0x802DAD60 align:16
 	.data       start:0x80543DE0 end:0x80543E18
 
-revolution/bte/gki/gki_buffer.c:
+libs/RVL_SDK/revolution/bte/gki/gki_buffer.c:
 	.text       start:0x802DAD60 end:0x802DC200 align:16
 	.data       start:0x80543E18 end:0x80543F60
 
-revolution/bte/gki/gki_time.c:
+libs/RVL_SDK/revolution/bte/gki/gki_time.c:
 	.text       start:0x802DC200 end:0x802DC790 align:16
 
-revolution/bte/gki/gki_ppc.c:
+libs/RVL_SDK/revolution/bte/gki/gki_ppc.c:
 	.text       start:0x802DC790 end:0x802DCAA0 align:16
 	.bss        start:0x80593140 end:0x805BBC20
 
-revolution/bte/hci/hcisu_h2.c:
+libs/RVL_SDK/revolution/bte/hci/hcisu_h2.c:
 	.text       start:0x802DCAA0 end:0x802DD160 align:16
 	.rodata     start:0x8050DF30 end:0x8050DF48
 	.data       start:0x80543F60 end:0x80543FD0
 	.bss        start:0x805BBC20 end:0x805BBC60
 	.sdata2     start:0x8066BF30 end:0x8066BF40
 
-revolution/bte/hci/uusb_ppc.c:
+libs/RVL_SDK/revolution/bte/hci/uusb_ppc.c:
 	.text       start:0x802DD160 end:0x802DDDE0 align:16
 	.bss        start:0x805BBC60 end:0x805BDCC0
 	.sdata      start:0x806658C8 end:0x806658D8
 	.sbss       start:0x80667748 end:0x80667760
 
-revolution/bte/bta/dm/bta_dm_cfg.c:
+libs/RVL_SDK/revolution/bte/bta/dm/bta_dm_cfg.c:
 	.rodata     start:0x8050DF48 end:0x8050DFD8
 	.sdata      start:0x806658D8 end:0x806658F0
 	.sbss2      start:0x8066DCE0 end:0x8066DCE8
 
-revolution/bte/bta/hh/bta_hh_cfg.c:
+libs/RVL_SDK/revolution/bte/bta/hh/bta_hh_cfg.c:
 	.rodata     start:0x8050DFD8 end:0x8050DFE8
 	.sdata      start:0x806658F0 end:0x80665900
 
-revolution/bte/bta/sys/bta_sys_cfg.c:
+libs/RVL_SDK/revolution/bte/bta/sys/bta_sys_cfg.c:
 	.sdata      start:0x80665900 end:0x80665908
 	.sdata2     start:0x8066BF40 end:0x8066BF48
 
-revolution/bte/main/bte_hcisu.c:
+libs/RVL_SDK/revolution/bte/main/bte_hcisu.c:
 	.text       start:0x802DDDE0 end:0x802DDEB0 align:16
 	.sbss       start:0x80667760 end:0x80667768
 
-revolution/bte/main/bte_init.c:
+libs/RVL_SDK/revolution/bte/main/bte_init.c:
 	.text       start:0x802DDEB0 end:0x802DDEE0 align:16
 
-revolution/bte/main/bte_logmsg.c:
+libs/RVL_SDK/revolution/bte/main/bte_logmsg.c:
 	.text       start:0x802DDEE0 end:0x802DE080 align:16
 	.bss        start:0x805BDCC0 end:0x805BE4A0
 	.sdata      start:0x80665908 end:0x80665910
 
-revolution/bte/main/bte_main.c:
+libs/RVL_SDK/revolution/bte/main/bte_main.c:
 	.text       start:0x802DE080 end:0x802DE1F0 align:16
 	.bss        start:0x805BE4A0 end:0x805BF4D0
 	.sdata      start:0x80665910 end:0x80665918
 	.sbss       start:0x80667768 end:0x80667770
 
-revolution/bte/main/btu_task1.c:
+libs/RVL_SDK/revolution/bte/main/btu_task1.c:
 	.text       start:0x802DE1F0 end:0x802DE634 align:16
 	.bss        start:0x805BF4D0 end:0x805BF558
 	.sdata      start:0x80665918 end:0x80665920
 	.sbss       start:0x80667770 end:0x80667778
 
-revolution/bte/bta/sys/bd.c:
+libs/RVL_SDK/revolution/bte/bta/sys/bd.c:
 	.text       start:0x802DE634 end:0x802DE708
 	.sbss2      start:0x8066DCE8 end:0x8066DCF0
 
-revolution/bte/bta/sys/bta_sys_conn.c:
+libs/RVL_SDK/revolution/bte/bta/sys/bta_sys_conn.c:
 	.text       start:0x802DE708 end:0x802DE95C
 
-revolution/bte/bta/sys/bta_sys_main.c:
+libs/RVL_SDK/revolution/bte/bta/sys/bta_sys_main.c:
 	.text       start:0x802DE95C end:0x802DEBA0
 	.data       start:0x80543FD0 end:0x80544008
 	.bss        start:0x805BF558 end:0x805BF5E8
 	.sbss       start:0x80667778 end:0x80667780
 
-revolution/bte/bta/sys/ptim.c:
+libs/RVL_SDK/revolution/bte/bta/sys/ptim.c:
 	.text       start:0x802DEBA0 end:0x802DED80
 
-revolution/bte/bta/sys/utl.c:
+libs/RVL_SDK/revolution/bte/bta/sys/utl.c:
 	.text       start:0x802DED80 end:0x802DEDC4
 
-revolution/bte/bta/dm/bta_dm_act.c:
+libs/RVL_SDK/revolution/bte/bta/dm/bta_dm_act.c:
 	.text       start:0x802DEDC4 end:0x802E1100
 	.rodata     start:0x8050DFE8 end:0x8050E090
 	.data       start:0x80544008 end:0x80544148
 	.bss        start:0x805BF5E8 end:0x805BF618
 	.sdata2     start:0x8066BF48 end:0x8066BF50
 
-revolution/bte/bta/dm/bta_dm_api.c:
+libs/RVL_SDK/revolution/bte/bta/dm/bta_dm_api.c:
 	.text       start:0x802E1100 end:0x802E156C
 	.sdata2     start:0x8066BF50 end:0x8066BF60
 
-revolution/bte/bta/dm/bta_dm_main.c:
+libs/RVL_SDK/revolution/bte/bta/dm/bta_dm_main.c:
 	.text       start:0x802E156C end:0x802E16CC
 	.rodata     start:0x8050E090 end:0x8050E1B8
 	.bss        start:0x805BF618 end:0x805BF798
 
-revolution/bte/bta/dm/bta_dm_pm.c:
+libs/RVL_SDK/revolution/bte/bta/dm/bta_dm_pm.c:
 	.text       start:0x802E16CC end:0x802E20E8
 	.data       start:0x80544148 end:0x80544198
 	.bss        start:0x805BF798 end:0x805BF7C8
 
-revolution/bte/bta/hh/bta_hh_act.c:
+libs/RVL_SDK/revolution/bte/bta/hh/bta_hh_act.c:
 	.text       start:0x802E20E8 end:0x802E3830
 	.data       start:0x80544198 end:0x80544690
 	.sdata      start:0x80665920 end:0x80665928
 
-revolution/bte/bta/hh/bta_hh_api.c:
+libs/RVL_SDK/revolution/bte/bta/hh/bta_hh_api.c:
 	.text       start:0x802E3830 end:0x802E3C00
 	.data       start:0x80544690 end:0x805446C0
 	.sdata2     start:0x8066BF60 end:0x8066BF68
 
-revolution/bte/bta/hh/bta_hh_main.c:
+libs/RVL_SDK/revolution/bte/bta/hh/bta_hh_main.c:
 	.text       start:0x802E3C00 end:0x802E4154
 	.rodata     start:0x8050E1B8 end:0x8050E240
 	.data       start:0x805446C0 end:0x805449A0
 	.bss        start:0x805BF7C8 end:0x805BF9F8
 
-revolution/bte/bta/hh/bta_hh_utils.c:
+libs/RVL_SDK/revolution/bte/bta/hh/bta_hh_utils.c:
 	.text       start:0x802E4154 end:0x802E4500
 	.data       start:0x805449A0 end:0x80544C60
 
-revolution/bte/stack/btm/btm_acl.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_acl.c:
 	.text       start:0x802E4500 end:0x802E6244
 	.data       start:0x80544C60 end:0x80545080
 
-revolution/bte/stack/btm/btm_dev.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_dev.c:
 	.text       start:0x802E6244 end:0x802E6910
 
-revolution/bte/stack/btm/btm_devctl.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_devctl.c:
 	.text       start:0x802E6910 end:0x802E8298
 	.data       start:0x80545080 end:0x805452E0
 	.sdata      start:0x80665928 end:0x80665940
 
-revolution/bte/stack/btm/btm_discovery.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_discovery.c:
 	.text       start:0x802E8298 end:0x802E83CC
 
-revolution/bte/stack/btm/btm_inq.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_inq.c:
 	.text       start:0x802E83CC end:0x802E9E64
 	.data       start:0x805452E0 end:0x805454F0
 	.sdata2     start:0x8066BF68 end:0x8066BF70
 
-revolution/bte/stack/btm/btm_main.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_main.c:
 	.text       start:0x802E9E64 end:0x802E9EC0
 	.bss        start:0x805BF9F8 end:0x805C21C0
 
-revolution/bte/stack/btm/btm_pm.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_pm.c:
 	.text       start:0x802E9EC0 end:0x802EAB54
 	.rodata     start:0x8050E240 end:0x8050E250
 	.data       start:0x805454F0 end:0x80545530
 	.sdata2     start:0x8066BF70 end:0x8066BF78
 
-revolution/bte/stack/btm/btm_sco.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_sco.c:
 	.text       start:0x802EAB54 end:0x802EB98C
 	.rodata     start:0x8050E250 end:0x8050E260
 	.data       start:0x80545530 end:0x80545830
 
-revolution/bte/stack/btm/btm_sec.c:
+libs/RVL_SDK/revolution/bte/stack/btm/btm_sec.c:
 	.text       start:0x802EB98C end:0x802EE950
 	.data       start:0x80545830 end:0x80546240
 	.sdata2     start:0x8066BF78 end:0x8066BF80
 
-revolution/bte/stack/btu/btu_hcif.c:
+libs/RVL_SDK/revolution/bte/stack/btu/btu_hcif.c:
 	.text       start:0x802EE950 end:0x802EFBAC
 	.data       start:0x80546240 end:0x805462D0
 
-revolution/bte/stack/btu/btu_init.c:
+libs/RVL_SDK/revolution/bte/stack/btu/btu_init.c:
 	.text       start:0x802EFBAC end:0x802EFC24
 	.sdata2     start:0x8066BF80 end:0x8066BF88
 
-revolution/bte/stack/wbt/wbt_ext.c:
+libs/RVL_SDK/revolution/bte/stack/wbt/wbt_ext.c:
 	.text       start:0x802EFC24 end:0x802EFD04
 
-revolution/bte/stack/gap/gap_api.c:
+libs/RVL_SDK/revolution/bte/stack/gap/gap_api.c:
 	.text       start:0x802EFD04 end:0x802EFD64
 
-revolution/bte/stack/gap/gap_conn.c:
+libs/RVL_SDK/revolution/bte/stack/gap/gap_conn.c:
 	.text       start:0x802EFD64 end:0x802F08A0
 	.data       start:0x805462D0 end:0x805463A0
 	.sdata      start:0x80665940 end:0x80665948
 
-revolution/bte/stack/gap/gap_utils.c:
+libs/RVL_SDK/revolution/bte/stack/gap/gap_utils.c:
 	.text       start:0x802F08A0 end:0x802F0EBC
 	.data       start:0x805463A0 end:0x80546690
 	.bss        start:0x805C21C0 end:0x805C2570
 
-revolution/bte/stack/hcic/hcicmds.c:
+libs/RVL_SDK/revolution/bte/stack/hcic/hcicmds.c:
 	.text       start:0x802F0EBC end:0x802F35D8
 	.rodata     start:0x8050E260 end:0x8050E270
 
-revolution/bte/stack/hid/hidd_api.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidd_api.c:
 	.text       start:0x802F35D8 end:0x802F3640
 
-revolution/bte/stack/hid/hidd_conn.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidd_conn.c:
 	.text       start:0x802F3640 end:0x802F3700
 	.data       start:0x80546690 end:0x805466C0
 
-revolution/bte/stack/hid/hidd_mgmt.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidd_mgmt.c:
 	.text       start:0x802F3700 end:0x802F37C8
 	.data       start:0x805466C0 end:0x805466E0
 	.bss        start:0x805C2570 end:0x805C26B8
 
-revolution/bte/stack/hid/hidd_pm.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidd_pm.c:
 	.text       start:0x802F37C8 end:0x802F3B44
 
-revolution/bte/stack/hid/hidh_api.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidh_api.c:
 	.text       start:0x802F3B44 end:0x802F48C4
 	.data       start:0x805466E0 end:0x805467F8
 	.bss        start:0x805C26B8 end:0x805C2AC0
 
-revolution/bte/stack/hid/hidh_conn.c:
+libs/RVL_SDK/revolution/bte/stack/hid/hidh_conn.c:
 	.text       start:0x802F48C4 end:0x802F6904
 	.rodata     start:0x8050E270 end:0x8050E298
 	.data       start:0x805467F8 end:0x80546BE0
 
-revolution/bte/stack/l2cap/l2c_api.c:
+libs/RVL_SDK/revolution/bte/stack/l2cap/l2c_api.c:
 	.text       start:0x802F6904 end:0x802F74D0
 	.data       start:0x80546BE0 end:0x80547370
 
-revolution/bte/stack/l2cap/l2c_csm.c:
+libs/RVL_SDK/revolution/bte/stack/l2cap/l2c_csm.c:
 	.text       start:0x802F74D0 end:0x802F89AC
 	.data       start:0x80547370 end:0x80547BA8
 
-revolution/bte/stack/l2cap/l2c_link.c:
+libs/RVL_SDK/revolution/bte/stack/l2cap/l2c_link.c:
 	.text       start:0x802F89AC end:0x802F9B38
 	.data       start:0x80547BA8 end:0x80547E18
 
-revolution/bte/stack/l2cap/l2c_main.c:
+libs/RVL_SDK/revolution/bte/stack/l2cap/l2c_main.c:
 	.text       start:0x802F9B38 end:0x802FAB68
 	.data       start:0x80547E18 end:0x80548118
 	.bss        start:0x805C2AC0 end:0x805C32A8
 
-revolution/bte/stack/l2cap/l2c_utils.c:
+libs/RVL_SDK/revolution/bte/stack/l2cap/l2c_utils.c:
 	.text       start:0x802FAB68 end:0x802FCA2C
 	.data       start:0x80548118 end:0x80548200
 	.sdata      start:0x80665948 end:0x80665958
 
-revolution/bte/stack/rfcomm/port_api.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/port_api.c:
 	.text       start:0x802FCA2C end:0x802FCA7C
 
-revolution/bte/stack/rfcomm/port_rfc.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/port_rfc.c:
 	.text       start:0x802FCA7C end:0x802FDE78
 	.data       start:0x80548200 end:0x80548530
 
-revolution/bte/stack/rfcomm/port_utils.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/port_utils.c:
 	.text       start:0x802FDE78 end:0x802FE450
 	.data       start:0x80548530 end:0x80548678
 
-revolution/bte/stack/rfcomm/rfc_l2cap_if.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_l2cap_if.c:
 	.text       start:0x802FE450 end:0x802FED84
 	.data       start:0x80548678 end:0x805487B8
 
-revolution/bte/stack/rfcomm/rfc_mx_fsm.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_mx_fsm.c:
 	.text       start:0x802FED84 end:0x802FF9C8
 	.data       start:0x805487B8 end:0x80548A70
 
-revolution/bte/stack/rfcomm/rfc_port_fsm.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_port_fsm.c:
 	.text       start:0x802FF9C8 end:0x80300B68
 	.data       start:0x80548A70 end:0x80548D98
 
-revolution/bte/stack/rfcomm/rfc_port_if.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_port_if.c:
 	.text       start:0x80300B68 end:0x80301094
 	.bss        start:0x805C32A8 end:0x805C36C0
 
-revolution/bte/stack/rfcomm/rfc_ts_frames.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_ts_frames.c:
 	.text       start:0x80301094 end:0x803026DC
 	.data       start:0x80548D98 end:0x80548E70
 	.sdata      start:0x80665958 end:0x80665968
 
-revolution/bte/stack/rfcomm/rfc_utils.c:
+libs/RVL_SDK/revolution/bte/stack/rfcomm/rfc_utils.c:
 	.text       start:0x803026DC end:0x80302EBC
 	.rodata     start:0x8050E298 end:0x8050E398
 	.data       start:0x80548E70 end:0x80548F00
 
-revolution/bte/stack/sdp/sdp_api.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_api.c:
 	.text       start:0x80302EBC end:0x80303D24
 	.data       start:0x80548F00 end:0x80548F50
 
-revolution/bte/stack/sdp/sdp_db.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_db.c:
 	.text       start:0x80303D24 end:0x803049F0
 	.data       start:0x80548F50 end:0x80548FE8
 
-revolution/bte/stack/sdp/sdp_discovery.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_discovery.c:
 	.text       start:0x803049F0 end:0x80305C68
 	.data       start:0x80548FE8 end:0x80549148
 
-revolution/bte/stack/sdp/sdp_main.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_main.c:
 	.text       start:0x80305C68 end:0x803067D4
 	.data       start:0x80549148 end:0x805494A8
 	.bss        start:0x805C36C0 end:0x805C7D00
 
-revolution/bte/stack/sdp/sdp_server.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_server.c:
 	.text       start:0x803067D4 end:0x803074E4
 	.data       start:0x805494A8 end:0x805494E8
 
-revolution/bte/stack/sdp/sdp_utils.c:
+libs/RVL_SDK/revolution/bte/stack/sdp/sdp_utils.c:
 	.text       start:0x803074E4 end:0x80308530
 	.rodata     start:0x8050E398 end:0x8050E3A8
 	.data       start:0x805494E8 end:0x805495E0
 
-revolution/cx/CXStreamingUncompression.c:
+libs/RVL_SDK/revolution/cx/CXStreamingUncompression.c:
 	.text       start:0x80308530 end:0x80308D70 align:16
 
-revolution/cx/CXUncompression.c:
+libs/RVL_SDK/revolution/cx/CXUncompression.c:
 	.text       start:0x80308D70 end:0x80308F10 align:16
 
-revolution/cx/CXSecureUncompression.c:
+libs/RVL_SDK/revolution/cx/CXSecureUncompression.c:
 	.text       start:0x80308F10 end:0x80309110 align:16
 
-revolution/db/db.c:
+libs/RVL_SDK/revolution/db/db.c:
 	.text       start:0x80309110 end:0x80309210 align:16
 	.data       start:0x805495E0 end:0x805495F8
 	.sbss       start:0x80667780 end:0x80667788
 
-revolution/dsp/dsp.c:
+libs/RVL_SDK/revolution/dsp/dsp.c:
 	.text       start:0x80309210 end:0x803094B0 align:16
 	.data       start:0x805495F8 end:0x80549678
 	.sdata      start:0x80665968 end:0x80665970
 	.sbss       start:0x80667788 end:0x80667790
 
-revolution/dsp/dsp_debug.c:
+libs/RVL_SDK/revolution/dsp/dsp_debug.c:
 	.text       start:0x803094B0 end:0x80309500 align:16
 
-revolution/dsp/dsp_task.c:
+libs/RVL_SDK/revolution/dsp/dsp_task.c:
 	.text       start:0x80309500 end:0x80309DA0 align:16
 	.data       start:0x80549678 end:0x805497B8
 	.sbss       start:0x80667790 end:0x806677A8
 
-revolution/dvd/dvdfs.c:
+libs/RVL_SDK/revolution/dvd/dvdfs.c:
 	.text       start:0x80309DA0 end:0x8030A8A0 align:16
 	.data       start:0x805497B8 end:0x80549920
 	.sdata      start:0x80665970 end:0x80665980
 	.sbss       start:0x806677A8 end:0x806677E0
 
-revolution/dvd/dvd.c:
+libs/RVL_SDK/revolution/dvd/dvd.c:
 	.text       start:0x8030A8A0 end:0x8030F470 align:16
 	.data       start:0x80549920 end:0x80549D30
 	.bss        start:0x805C7D00 end:0x805CC9B0
 	.sdata      start:0x80665980 end:0x80665998
 	.sbss       start:0x806677E0 end:0x80667878
 
-revolution/dvd/dvdqueue.c:
+libs/RVL_SDK/revolution/dvd/dvdqueue.c:
 	.text       start:0x8030F470 end:0x8030F6F0 align:16
 	.bss        start:0x805CC9B0 end:0x805CC9E0
 
-revolution/dvd/dvderror.c:
+libs/RVL_SDK/revolution/dvd/dvderror.c:
 	.text       start:0x8030F6F0 end:0x80310110 align:16
 	.data       start:0x80549D30 end:0x80549D60
 	.bss        start:0x805CC9E0 end:0x805CCC40
 	.sbss       start:0x80667878 end:0x80667888
 
-revolution/dvd/dvdidutils.c:
+libs/RVL_SDK/revolution/dvd/dvdidutils.c:
 	.text       start:0x80310110 end:0x80310200 align:16
 
-revolution/dvd/dvdFatal.c:
+libs/RVL_SDK/revolution/dvd/dvdFatal.c:
 	.text       start:0x80310200 end:0x80310370 align:16
 	.rodata     start:0x8050E3A8 end:0x8050E3E0
 	.data       start:0x80549D60 end:0x8054A528
@@ -3768,7 +3768,7 @@ revolution/dvd/dvdFatal.c:
 	.sbss       start:0x80667888 end:0x80667890
 	.sdata2     start:0x8066BF88 end:0x8066BF90
 
-revolution/dvd/dvdDeviceError.c:
+libs/RVL_SDK/revolution/dvd/dvdDeviceError.c:
 	.text       start:0x80310370 end:0x80310600 align:16
 	.rodata     start:0x8050E3E0 end:0x8050E400
 	.data       start:0x8054A528 end:0x8054A6C0
@@ -3777,54 +3777,54 @@ revolution/dvd/dvdDeviceError.c:
 	.sbss       start:0x80667890 end:0x80667898
 	.sdata2     start:0x8066BF90 end:0x8066BF98
 
-revolution/dvd/dvd_broadway.c:
+libs/RVL_SDK/revolution/dvd/dvd_broadway.c:
 	.text       start:0x80310600 end:0x80312CB0 align:16
 	.data       start:0x8054A6C0 end:0x8054B5C8
 	.bss        start:0x805CCC60 end:0x805CCE20
 	.sdata      start:0x806659A8 end:0x806659B8
 	.sbss       start:0x80667898 end:0x806678C0
 
-revolution/enc/encutility.c:
+libs/RVL_SDK/revolution/enc/encutility.c:
 	.text       start:0x80312CB0 end:0x80312EF0 align:16
 	.data       start:0x8054B5C8 end:0x8054B610
 	.sdata      start:0x806659B8 end:0x806659C0
 	.sbss       start:0x806678C0 end:0x806678C8
 
-revolution/enc/encjapanese.c:
+libs/RVL_SDK/revolution/enc/encjapanese.c:
 	.text       start:0x80312EF0 end:0x80313750 align:16
 	.rodata     start:0x8050E400 end:0x80518668
 	.sdata      start:0x806659C0 end:0x806659C8
 
-revolution/esp/esp.c:
+libs/RVL_SDK/revolution/esp/esp.c:
 	.text       start:0x80313750 end:0x80313D70 align:16
 	.sdata      start:0x806659C8 end:0x806659D8
 
-revolution/euart/euart.c:
+libs/RVL_SDK/revolution/euart/euart.c:
 	.text       start:0x80313D70 end:0x803140F0 align:16
 	.sbss       start:0x806678C8 end:0x806678D8
 
-revolution/exi/EXIBios.c:
+libs/RVL_SDK/revolution/exi/EXIBios.c:
 	.text       start:0x803140F0 end:0x803159F0 align:16
 	.data       start:0x8054B610 end:0x8054B658
 	.bss        start:0x805CCE20 end:0x805CCEE0
 	.sdata      start:0x806659D8 end:0x806659E0
 	.sbss       start:0x806678D8 end:0x806678E0
 
-revolution/exi/EXIUart.c:
+libs/RVL_SDK/revolution/exi/EXIUart.c:
 	.text       start:0x803159F0 end:0x80315D30 align:16
 	.sbss       start:0x806678E0 end:0x806678F0
 
-revolution/exi/EXICommon.c:
+libs/RVL_SDK/revolution/exi/EXICommon.c:
 	.text       start:0x80315D30 end:0x80315EC0 align:16
 	.sdata2     start:0x8066BF98 end:0x8066BFA0
 
-revolution/fs/fs.c:
+libs/RVL_SDK/revolution/fs/fs.c:
 	.text       start:0x80315EC0 end:0x80317470 align:16
 	.data       start:0x8054B658 end:0x8054B680
 	.sdata      start:0x806659E0 end:0x806659F0
 	.sbss       start:0x806678F0 end:0x80667908
 
-revolution/gx/GXInit.c:
+libs/RVL_SDK/revolution/gx/GXInit.c:
 	.text       start:0x80317470 end:0x80318600 align:16
 	.data       start:0x8054B680 end:0x8054B8C0
 	.bss        start:0x805CCEE0 end:0x805CD560
@@ -3832,281 +3832,281 @@ revolution/gx/GXInit.c:
 	.sbss       start:0x80667908 end:0x80667930
 	.sdata2     start:0x8066BFA0 end:0x8066BFC8
 
-revolution/gx/GXFifo.c:
+libs/RVL_SDK/revolution/gx/GXFifo.c:
 	.text       start:0x80318600 end:0x80319230 align:16
 	.data       start:0x8054B8C0 end:0x8054B8F0
 	.bss        start:0x805CD560 end:0x805CD5A8
 	.sbss       start:0x80667930 end:0x80667950
 
-revolution/gx/GXAttr.c:
+libs/RVL_SDK/revolution/gx/GXAttr.c:
 	.text       start:0x80319230 end:0x80319D80 align:16
 	.data       start:0x8054B8F0 end:0x8054BA38
 	.sdata      start:0x806659F8 end:0x80665A08
 
-revolution/gx/GXMisc.c:
+libs/RVL_SDK/revolution/gx/GXMisc.c:
 	.text       start:0x80319D80 end:0x8031A760 align:16
 	.sbss       start:0x80667950 end:0x80667968
 
-revolution/gx/GXGeometry.c:
+libs/RVL_SDK/revolution/gx/GXGeometry.c:
 	.text       start:0x8031A760 end:0x8031AD70 align:16
 
-revolution/gx/GXFrameBuf.c:
+libs/RVL_SDK/revolution/gx/GXFrameBuf.c:
 	.text       start:0x8031AD70 end:0x8031B950 align:16
 	.data       start:0x8054BA38 end:0x8054BE70
 	.sdata2     start:0x8066BFC8 end:0x8066BFD8
 
-revolution/gx/GXLight.c:
+libs/RVL_SDK/revolution/gx/GXLight.c:
 	.text       start:0x8031B950 end:0x8031C0C0 align:16
 	.sdata2     start:0x8066BFD8 end:0x8066C010
 
-revolution/gx/GXTexture.c:
+libs/RVL_SDK/revolution/gx/GXTexture.c:
 	.text       start:0x8031C0C0 end:0x8031D160 align:16
 	.data       start:0x8054BE70 end:0x8054C098
 	.sdata      start:0x80665A08 end:0x80665A50
 	.sdata2     start:0x8066C010 end:0x8066C048
 
-revolution/gx/GXBump.c:
+libs/RVL_SDK/revolution/gx/GXBump.c:
 	.text       start:0x8031D160 end:0x8031D620 align:16
 	.sdata2     start:0x8066C048 end:0x8066C050
 
-revolution/gx/GXTev.c:
+libs/RVL_SDK/revolution/gx/GXTev.c:
 	.text       start:0x8031D620 end:0x8031DCF0 align:16
 	.data       start:0x8054C098 end:0x8054C110
 
-revolution/gx/GXPixel.c:
+libs/RVL_SDK/revolution/gx/GXPixel.c:
 	.text       start:0x8031DCF0 end:0x8031E470 align:16
 	.data       start:0x8054C110 end:0x8054C130
 	.sdata2     start:0x8066C050 end:0x8066C0A0
 
-revolution/gx/GXDisplayList.c:
+libs/RVL_SDK/revolution/gx/GXDisplayList.c:
 	.text       start:0x8031E470 end:0x8031E4F0 align:16
 
-revolution/gx/GXTransform.c:
+libs/RVL_SDK/revolution/gx/GXTransform.c:
 	.text       start:0x8031E4F0 end:0x8031EA70 align:16
 	.sdata2     start:0x8066C0A0 end:0x8066C0B0
 
-revolution/gx/GXPerf.c:
+libs/RVL_SDK/revolution/gx/GXPerf.c:
 	.text       start:0x8031EA70 end:0x8031F2A0 align:16
 	.data       start:0x8054C130 end:0x8054C218
 
-revolution/hbm/HBMFrameController.cpp:
+libs/RVL_SDK/revolution/hbm/HBMFrameController.cpp:
 	.text       start:0x8031F2A0 end:0x8031F450 align:16
 	.rodata     start:0x80518668 end:0x80518670
 	.data       start:0x8054C218 end:0x8054C240
 
-revolution/hbm/HBMAnmController.cpp:
+libs/RVL_SDK/revolution/hbm/HBMAnmController.cpp:
 	.text       start:0x8031F450 end:0x8031F560 align:16
 	.data       start:0x8054C240 end:0x8054C288
 
-revolution/hbm/HBMGUIManager.cpp:
+libs/RVL_SDK/revolution/hbm/HBMGUIManager.cpp:
 	.text       start:0x8031F560 end:0x80320D80 align:16
 	.rodata     start:0x80518670 end:0x80518680
 	.data       start:0x8054C288 end:0x8054C4F8
 	.bss        start:0x805CD5A8 end:0x805CD5B0
 
-revolution/hbm/HBMController.cpp:
+libs/RVL_SDK/revolution/hbm/HBMController.cpp:
 	.text       start:0x80320D80 end:0x80321990 align:16
 	.rodata     start:0x80518680 end:0x80518690
 	.bss        start:0x805CD5B0 end:0x805CD748
 
-revolution/hbm/HBMRemoteSpk.cpp:
+libs/RVL_SDK/revolution/hbm/HBMRemoteSpk.cpp:
 	.text       start:0x80321990 end:0x803222B0 align:16
 	.data       start:0x8054C4F8 end:0x8054C528
 	.bss        start:0x805CD748 end:0x805CD750
 
-revolution/hbm/HBMAxSound.cpp:
+libs/RVL_SDK/revolution/hbm/HBMAxSound.cpp:
 	.text       start:0x803222B0 end:0x80322DE0 align:16
 	.rodata     start:0x80518690 end:0x805186C8
 	.data       start:0x8054C528 end:0x8054C878
 	.bss        start:0x805CD750 end:0x805CD758
 
-revolution/hbm/HBMCommon.cpp:
+libs/RVL_SDK/revolution/hbm/HBMCommon.cpp:
 	.text       start:0x80322DE0 end:0x80323110 align:16
 	.data       start:0x8054C878 end:0x8054C8C8
 	.bss        start:0x805CD758 end:0x805CD768
 
-revolution/hbm/HBMBase.cpp:
+libs/RVL_SDK/revolution/hbm/HBMBase.cpp:
 	.text       start:0x80323110 end:0x8032B4C0 align:16
 	.rodata     start:0x805186C8 end:0x80518A28
 	.data       start:0x8054C8C8 end:0x8054D5B8
 	.bss        start:0x805CD768 end:0x805CD788
 
-revolution/hbm/nw4hbm/lyt/lyt_animation.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_animation.cpp:
 	.text       start:0x8032B4C0 end:0x8032C070 align:16
 	.rodata     start:0x80518A28 end:0x80518A48
 	.data       start:0x8054D5B8 end:0x8054D638
 
-revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp:
 	.text       start:0x8032C070 end:0x8032C410 align:16
 	.data       start:0x8054D638 end:0x8054D6B8
 
-revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp:
 	.text       start:0x8032C410 end:0x8032C590 align:16
 	.ctors      start:0x804F59E8 end:0x804F59EC
 	.data       start:0x8054D6B8 end:0x8054D7A0
 	.bss        start:0x805CD788 end:0x805CD790
 
-revolution/hbm/nw4hbm/lyt/lyt_common.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_common.cpp:
 	.text       start:0x8032C590 end:0x8032D420 align:16
 	.rodata     start:0x80518A48 end:0x80518A58
 	.bss        start:0x805CD790 end:0x805CD7B8
 
-revolution/hbm/nw4hbm/lyt/lyt_drawInfo.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_drawInfo.cpp:
 	.text       start:0x8032D420 end:0x8032D4E0 align:16
 	.rodata     start:0x80518A58 end:0x80518A60
 	.data       start:0x8054D7A0 end:0x8054D7D0
 
-revolution/hbm/nw4hbm/lyt/lyt_group.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_group.cpp:
 	.text       start:0x8032D4E0 end:0x8032D830 align:16
 	.data       start:0x8054D7D0 end:0x8054D7F8
 
-revolution/hbm/nw4hbm/lyt/lyt_layout.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_layout.cpp:
 	.text       start:0x8032D830 end:0x8032E4D0 align:16
 	.rodata     start:0x80518A60 end:0x80518A68
 	.data       start:0x8054D7F8 end:0x8054D848
 	.bss        start:0x805CD7B8 end:0x805CD7C0
 
-revolution/hbm/nw4hbm/lyt/lyt_material.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_material.cpp:
 	.text       start:0x8032E4D0 end:0x80331740 align:16
 	.rodata     start:0x80518A68 end:0x80518A98
 	.data       start:0x8054D848 end:0x8054D8D0
 
-revolution/hbm/nw4hbm/lyt/lyt_pane.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_pane.cpp:
 	.text       start:0x80331740 end:0x80332730 align:16
 	.ctors      start:0x804F59EC end:0x804F59F0
 	.rodata     start:0x80518A98 end:0x80518AB8
 	.data       start:0x8054D8D0 end:0x8054D938
 	.bss        start:0x805CD7C0 end:0x805CD7C8
 
-revolution/hbm/nw4hbm/lyt/lyt_picture.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_picture.cpp:
 	.text       start:0x80332730 end:0x80332C90 align:16
 	.ctors      start:0x804F59F0 end:0x804F59F4
 	.rodata     start:0x80518AB8 end:0x80518AC0
 	.data       start:0x8054D938 end:0x8054D9D8
 	.bss        start:0x805CD7C8 end:0x805CD7D0
 
-revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp:
 	.text       start:0x80332C90 end:0x80332CF0 align:16
 	.data       start:0x8054D9D8 end:0x8054D9F0
 
-revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp:
 	.text       start:0x80332CF0 end:0x80334140 align:16
 	.ctors      start:0x804F59F4 end:0x804F59F8
 	.rodata     start:0x80518AC0 end:0x80518AD8
 	.data       start:0x8054D9F0 end:0x8054DAA0
 	.bss        start:0x805CD7D0 end:0x805CD7D8
 
-revolution/hbm/nw4hbm/lyt/lyt_window.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/lyt/lyt_window.cpp:
 	.text       start:0x80334140 end:0x80336640 align:16
 	.ctors      start:0x804F59F8 end:0x804F59FC
 	.rodata     start:0x80518AD8 end:0x80518AF0
 	.data       start:0x8054DAA0 end:0x8054DB88
 	.bss        start:0x805CD7D8 end:0x805CD7E0
 
-revolution/hbm/nw4hbm/math/math_triangular.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/math/math_triangular.cpp:
 	.text       start:0x80336640 end:0x803368F0 align:16
 	.rodata     start:0x80518AF0 end:0x80518B18
 	.data       start:0x8054DB88 end:0x8054ECA0
 
-revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp:
 	.text       start:0x803368F0 end:0x80336970 align:16
 
-revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp:
 	.text       start:0x80336970 end:0x80336A90 align:16
 
-revolution/hbm/nw4hbm/ut/ut_CharWriter.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_CharWriter.cpp:
 	.text       start:0x80336A90 end:0x80338490 align:16
 	.rodata     start:0x80518B18 end:0x80518B38
 	.bss        start:0x805CD7E0 end:0x805CD7F8
 
-revolution/hbm/nw4hbm/ut/ut_Font.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_Font.cpp:
 	.text       start:0x80338490 end:0x80338540 align:16
 	.data       start:0x8054ECA0 end:0x8054ECD0
 
-revolution/hbm/nw4hbm/ut/ut_LinkList.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_LinkList.cpp:
 	.text       start:0x80338540 end:0x80338650 align:16
 
-revolution/hbm/nw4hbm/ut/ut_list.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_list.cpp:
 	.text       start:0x80338650 end:0x803387C0 align:16
 
-revolution/hbm/nw4hbm/ut/ut_ResFont.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_ResFont.cpp:
 	.text       start:0x803387C0 end:0x80338AC0 align:16
 	.data       start:0x8054ECD0 end:0x8054EDB0
 
-revolution/hbm/nw4hbm/ut/ut_ResFontBase.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_ResFontBase.cpp:
 	.text       start:0x80338AC0 end:0x80339110 align:16
 	.data       start:0x8054EDB0 end:0x8054EE70
 
-revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.cpp:
 	.text       start:0x80339110 end:0x80339BD0 align:16
 	.rodata     start:0x80518B38 end:0x80518B40
 	.data       start:0x8054EE70 end:0x8054EEF8
 
-revolution/hbm/nw4hbm/ut/ut_TextWriterBase.cpp:
+libs/RVL_SDK/revolution/hbm/nw4hbm/ut/ut_TextWriterBase.cpp:
 	.text       start:0x80339BD0 end:0x8033F040 align:16
 	.ctors      start:0x804F59FC end:0x804F5A00
 	.rodata     start:0x80518B40 end:0x80518B58
 	.data       start:0x8054EEF8 end:0x8054EF00
 	.bss        start:0x805CD7F8 end:0x805CD828
 
-revolution/hbm/mix.c:
+libs/RVL_SDK/revolution/hbm/mix.c:
 	.text       start:0x8033F040 end:0x803409B0 align:16
 	.data       start:0x8054EF00 end:0x8054FA90
 	.bss        start:0x805CD828 end:0x805CDEE8
 
-revolution/hbm/syn.c:
+libs/RVL_SDK/revolution/hbm/syn.c:
 	.text       start:0x803409B0 end:0x80340E50 align:16
 	.bss        start:0x805CDEE8 end:0x805CE3B8
 
-revolution/hbm/synctrl.c:
+libs/RVL_SDK/revolution/hbm/synctrl.c:
 	.text       start:0x80340E50 end:0x803412F0 align:16
 	.data       start:0x8054FA90 end:0x8054FC90
 
-revolution/hbm/synenv.c:
+libs/RVL_SDK/revolution/hbm/synenv.c:
 	.text       start:0x803412F0 end:0x803416D0 align:16
 	.rodata     start:0x80518B58 end:0x80518B78
 
-revolution/hbm/synmix.c:
+libs/RVL_SDK/revolution/hbm/synmix.c:
 	.text       start:0x803416D0 end:0x80341810 align:16
 	.data       start:0x8054FC90 end:0x80550020
 
-revolution/hbm/synpitch.c:
+libs/RVL_SDK/revolution/hbm/synpitch.c:
 	.text       start:0x80341810 end:0x80341A90 align:16
 	.rodata     start:0x80518B78 end:0x80518B90
 	.data       start:0x80550020 end:0x80550410
 
-revolution/hbm/synsample.c:
+libs/RVL_SDK/revolution/hbm/synsample.c:
 	.text       start:0x80341A90 end:0x80341F10 align:16
 
-revolution/hbm/synvoice.c:
+libs/RVL_SDK/revolution/hbm/synvoice.c:
 	.text       start:0x80341F10 end:0x803420C0 align:16
 
-revolution/hbm/seq.c:
+libs/RVL_SDK/revolution/hbm/seq.c:
 	.text       start:0x803420C0 end:0x803429C0 align:16
 	.rodata     start:0x80518B90 end:0x80518BB8
 	.data       start:0x80550410 end:0x80550490
 	.bss        start:0x805CE3B8 end:0x805CE3C0
 
-revolution/ipc/ipcMain.c:
+libs/RVL_SDK/revolution/ipc/ipcMain.c:
 	.text       start:0x803429C0 end:0x80342AB0 align:16
 	.sbss       start:0x80667968 end:0x80667980
 
-revolution/ipc/ipcclt.c:
+libs/RVL_SDK/revolution/ipc/ipcclt.c:
 	.text       start:0x80342AB0 end:0x803443B0 align:16
 	.bss        start:0x805CE3C0 end:0x805CE480
 	.sdata      start:0x80665A50 end:0x80665A58
 	.sbss       start:0x80667980 end:0x80667990
 
-revolution/ipc/memory.c:
+libs/RVL_SDK/revolution/ipc/memory.c:
 	.text       start:0x803443B0 end:0x803448E0 align:16
 	.bss        start:0x805CE480 end:0x805CE500
 
-revolution/ipc/ipcProfile.c:
+libs/RVL_SDK/revolution/ipc/ipcProfile.c:
 	.text       start:0x803448E0 end:0x80344AC0 align:16
 	.bss        start:0x805CE500 end:0x805CE600
 	.sbss       start:0x80667990 end:0x80667998
 
-revolution/kpad/KPAD.c:
+libs/RVL_SDK/revolution/kpad/KPAD.c:
 	.text       start:0x80344AC0 end:0x80348B50 align:16
 	.data       start:0x80550490 end:0x805504F0
 	.bss        start:0x805CE600 end:0x805CFC50
@@ -4114,64 +4114,64 @@ revolution/kpad/KPAD.c:
 	.sbss       start:0x80667998 end:0x806679D0
 	.sdata2     start:0x8066C0B0 end:0x8066C120
 
-revolution/mem/mem_heapCommon.c:
+libs/RVL_SDK/revolution/mem/mem_heapCommon.c:
 	.text       start:0x80348B50 end:0x80348FC0 align:16
 	.bss        start:0x805CFC50 end:0x805CFC78
 	.sbss       start:0x806679D0 end:0x806679D8
 
-revolution/mem/mem_expHeap.c:
+libs/RVL_SDK/revolution/mem/mem_expHeap.c:
 	.text       start:0x80348FC0 end:0x80349770 align:16
 
-revolution/mem/mem_frameHeap.c:
+libs/RVL_SDK/revolution/mem/mem_frameHeap.c:
 	.text       start:0x80349770 end:0x80349A70 align:16
 
-revolution/mem/mem_allocator.c:
+libs/RVL_SDK/revolution/mem/mem_allocator.c:
 	.text       start:0x80349A70 end:0x80349AD0 align:16
 	.sdata2     start:0x8066C120 end:0x8066C128
 
-revolution/mem/mem_list.c:
+libs/RVL_SDK/revolution/mem/mem_list.c:
 	.text       start:0x80349AD0 end:0x80349BF0 align:16
 
-revolution/mix/mix.c:
+libs/RVL_SDK/revolution/mix/mix.c:
 	.text       start:0x80349BF0 end:0x8034CC90 align:16
 	.data       start:0x805504F0 end:0x80551080
 	.bss        start:0x805CFC78 end:0x805D2678
 	.sbss       start:0x806679D8 end:0x806679E8
 
-revolution/mix/remote.c:
+libs/RVL_SDK/revolution/mix/remote.c:
 	.text       start:0x8034CC90 end:0x8034D1E0 align:16
 	.bss        start:0x805D2678 end:0x805D4000
 	.sbss       start:0x806679E8 end:0x806679F0
 
-revolution/mtx/mtx.c:
+libs/RVL_SDK/revolution/mtx/mtx.c:
 	.text       start:0x8034D1E0 end:0x8034DDF0 align:16
 	.sdata      start:0x80665AD8 end:0x80665AE0
 	.sdata2     start:0x8066C128 end:0x8066C148
 
-revolution/mtx/mtxvec.c:
+libs/RVL_SDK/revolution/mtx/mtxvec.c:
 	.text       start:0x8034DDF0 end:0x8034DE50 align:16
 
-revolution/mtx/mtx44.c:
+libs/RVL_SDK/revolution/mtx/mtx44.c:
 	.text       start:0x8034DE50 end:0x8034E080 align:16
 	.sdata2     start:0x8066C148 end:0x8066C160
 
-revolution/mtx/vec.c:
+libs/RVL_SDK/revolution/mtx/vec.c:
 	.text       start:0x8034E080 end:0x8034E290 align:16
 	.sdata2     start:0x8066C160 end:0x8066C170
 
-revolution/mtx/quat.c:
+libs/RVL_SDK/revolution/mtx/quat.c:
 	.text       start:0x8034E290 end:0x8034E730 align:16
 	.rodata     start:0x80518BB8 end:0x80518BC8
 	.sdata2     start:0x8066C170 end:0x8066C188
 
-revolution/nand/nand.c:
+libs/RVL_SDK/revolution/nand/nand.c:
 	.text       start:0x8034E730 end:0x8034F8B0 align:16
 	.sdata      start:0x80665AE0 end:0x80665AE8
 
-revolution/nand/NANDOpenClose.c:
+libs/RVL_SDK/revolution/nand/NANDOpenClose.c:
 	.text       start:0x8034F8B0 end:0x8034FDC0 align:16
 
-revolution/nand/NANDCore.c:
+libs/RVL_SDK/revolution/nand/NANDCore.c:
 	.text       start:0x8034FDC0 end:0x80350FA0 align:16
 	.rodata     start:0x80518BC8 end:0x80518D10
 	.data       start:0x80551080 end:0x805511D0
@@ -4179,19 +4179,19 @@ revolution/nand/NANDCore.c:
 	.sdata      start:0x80665AE8 end:0x80665B10
 	.sbss       start:0x806679F0 end:0x806679F8
 
-revolution/nand/NANDCheck.c:
+libs/RVL_SDK/revolution/nand/NANDCheck.c:
 	.text       start:0x80350FA0 end:0x80351290 align:16
 	.data       start:0x805511D0 end:0x805512B8
 	.sdata      start:0x80665B10 end:0x80665B20
 
-revolution/nand/NANDLogging.c:
+libs/RVL_SDK/revolution/nand/NANDLogging.c:
 	.text       start:0x80351290 end:0x80351880 align:16
 	.data       start:0x805512B8 end:0x80551300
 	.bss        start:0x805D4040 end:0x805D4340
 	.sdata      start:0x80665B20 end:0x80665B28
 	.sbss       start:0x806679F8 end:0x80667A00
 
-revolution/os/OS.c:
+libs/RVL_SDK/revolution/os/OS.c:
 	.text       start:0x80351880 end:0x80352DC0 align:16
 	.data       start:0x80551300 end:0x805517A8
 	.bss        start:0x805D4340 end:0x805D43B0
@@ -4199,147 +4199,147 @@ revolution/os/OS.c:
 	.sbss       start:0x80667A00 end:0x80667A48
 	.sdata2     start:0x8066C188 end:0x8066C190
 
-revolution/os/OSAlarm.c:
+libs/RVL_SDK/revolution/os/OSAlarm.c:
 	.text       start:0x80352DC0 end:0x80353680 align:16
 	.data       start:0x805517A8 end:0x805517B8
 	.sbss       start:0x80667A48 end:0x80667A50
 
-revolution/os/OSAlloc.c:
+libs/RVL_SDK/revolution/os/OSAlloc.c:
 	.text       start:0x80353680 end:0x803539A0 align:16
 	.sdata      start:0x80665B58 end:0x80665B60
 	.sbss       start:0x80667A50 end:0x80667A60
 
-revolution/os/OSArena.c:
+libs/RVL_SDK/revolution/os/OSArena.c:
 	.text       start:0x803539A0 end:0x80353AA0 align:16
 	.sdata      start:0x80665B60 end:0x80665B68
 	.sbss       start:0x80667A60 end:0x80667A68
 
-revolution/os/OSAudioSystem.c:
+libs/RVL_SDK/revolution/os/OSAudioSystem.c:
 	.text       start:0x80353AA0 end:0x80353F60 align:16
 	.data       start:0x805517B8 end:0x80551838
 
-revolution/os/OSCache.c:
+libs/RVL_SDK/revolution/os/OSCache.c:
 	.text       start:0x80353F60 end:0x80354610 align:16
 	.data       start:0x80551838 end:0x80551A70
 
-revolution/os/OSContext.c:
+libs/RVL_SDK/revolution/os/OSContext.c:
 	.text       start:0x80354610 end:0x80354EF0 align:16
 	.data       start:0x80551A70 end:0x80551C50
 
-revolution/os/OSError.c:
+libs/RVL_SDK/revolution/os/OSError.c:
 	.text       start:0x80354EF0 end:0x80355510 align:16
 	.data       start:0x80551C50 end:0x80551F30
 	.bss        start:0x805D43B0 end:0x805D4400
 	.sdata      start:0x80665B68 end:0x80665B70
 
-revolution/os/OSExec.c:
+libs/RVL_SDK/revolution/os/OSExec.c:
 	.text       start:0x80355510 end:0x80356AF0 align:16
 	.data       start:0x80551F30 end:0x80551FA0
 	.bss        start:0x805D4400 end:0x805D4420
 	.sdata      start:0x80665B70 end:0x80665B80
 	.sbss       start:0x80667A68 end:0x80667A80
 
-revolution/os/OSFatal.c:
+libs/RVL_SDK/revolution/os/OSFatal.c:
 	.text       start:0x80356AF0 end:0x80357720 align:16
 	.bss        start:0x805D4420 end:0x805D4700
 	.sdata      start:0x80665B80 end:0x80665B88
 	.sdata2     start:0x8066C190 end:0x8066C1D0
 
-revolution/os/OSFont.c:
+libs/RVL_SDK/revolution/os/OSFont.c:
 	.text       start:0x80357720 end:0x803589B0 align:16
 	.data       start:0x80551FA0 end:0x80552AB0
 	.sdata      start:0x80665B88 end:0x80665B90
 	.sbss       start:0x80667A80 end:0x80667A90
 	.sdata2     start:0x8066C1D0 end:0x8066C1D8
 
-revolution/os/OSInterrupt.c:
+libs/RVL_SDK/revolution/os/OSInterrupt.c:
 	.text       start:0x803589B0 end:0x80359180 align:16
 	.data       start:0x80552AB0 end:0x80552AE0
 	.sbss       start:0x80667A90 end:0x80667AA8
 
-revolution/os/OSLink.c:
+libs/RVL_SDK/revolution/os/OSLink.c:
 	.text       start:0x80359180 end:0x803591A0 align:16
 
-revolution/os/OSMessage.c:
+libs/RVL_SDK/revolution/os/OSMessage.c:
 	.text       start:0x803591A0 end:0x80359480 align:16
 
-revolution/os/OSMemory.c:
+libs/RVL_SDK/revolution/os/OSMemory.c:
 	.text       start:0x80359480 end:0x80359C20 align:16
 	.data       start:0x80552AE0 end:0x80552AF0
 	.sbss       start:0x80667AA8 end:0x80667AB0
 
-revolution/os/OSMutex.c:
+libs/RVL_SDK/revolution/os/OSMutex.c:
 	.text       start:0x80359C20 end:0x80359E80 align:16
 
-revolution/os/OSReboot.c:
+libs/RVL_SDK/revolution/os/OSReboot.c:
 	.text       start:0x80359E80 end:0x80359F10 align:16
 	.sbss       start:0x80667AB0 end:0x80667AB8
 
-revolution/os/OSReset.c:
+libs/RVL_SDK/revolution/os/OSReset.c:
 	.text       start:0x80359F10 end:0x8035A800 align:16
 	.data       start:0x80552AF0 end:0x80552D58
 	.sbss       start:0x80667AB8 end:0x80667AC8
 
-revolution/os/OSRtc.c:
+libs/RVL_SDK/revolution/os/OSRtc.c:
 	.text       start:0x8035A800 end:0x8035B2B0 align:16
 	.bss        start:0x805D4700 end:0x805D4758
 
-revolution/os/OSSync.c:
+libs/RVL_SDK/revolution/os/OSSync.c:
 	.text       start:0x8035B2B0 end:0x8035B330 align:16
 
-revolution/os/OSThread.c:
+libs/RVL_SDK/revolution/os/OSThread.c:
 	.text       start:0x8035B330 end:0x8035C960 align:16
 	.bss        start:0x805D4758 end:0x805D5160
 	.sdata      start:0x80665B90 end:0x80665B98
 	.sbss       start:0x80667AC8 end:0x80667AD8
 
-revolution/os/OSTime.c:
+libs/RVL_SDK/revolution/os/OSTime.c:
 	.text       start:0x8035C960 end:0x8035CD90 align:16
 	.data       start:0x80552D58 end:0x80552DB8
 
-revolution/os/OSUtf.c:
+libs/RVL_SDK/revolution/os/OSUtf.c:
 	.text       start:0x8035CD90 end:0x8035CFE0 align:16
 	.data       start:0x80552DB8 end:0x8055EBF8
 
-revolution/os/OSIpc.c:
+libs/RVL_SDK/revolution/os/OSIpc.c:
 	.text       start:0x8035CFE0 end:0x8035D020 align:16
 	.sdata      start:0x80665B98 end:0x80665BA0
 	.sbss       start:0x80667AD8 end:0x80667AE0
 
-revolution/os/OSStateTM.c:
+libs/RVL_SDK/revolution/os/OSStateTM.c:
 	.text       start:0x8035D020 end:0x8035D730 align:16
 	.data       start:0x8055EBF8 end:0x8055ECC0
 	.bss        start:0x805D5160 end:0x805D5220
 	.sbss       start:0x80667AE0 end:0x80667B00
 
-revolution/os/__start.c:
+libs/RVL_SDK/revolution/os/__start.c:
 	.init       start:0x800062C0 end:0x800065C0
 	.sbss       start:0x80667B00 end:0x80667B08
 
-revolution/os/OSPlayRecord.c:
+libs/RVL_SDK/revolution/os/OSPlayRecord.c:
 	.text       start:0x8035D730 end:0x8035DE50 align:16
 	.data       start:0x8055ECC0 end:0x8055ED08
 	.bss        start:0x805D5220 end:0x805D5420
 	.sdata      start:0x80665BA0 end:0x80665BA8
 	.sbss       start:0x80667B08 end:0x80667B28
 
-revolution/os/OSStateFlags.c:
+libs/RVL_SDK/revolution/os/OSStateFlags.c:
 	.text       start:0x8035DE50 end:0x8035E070 align:16
 	.data       start:0x8055ED08 end:0x8055ED30
 	.bss        start:0x805D5420 end:0x805D5440
 
-revolution/os/OSNet.c:
+libs/RVL_SDK/revolution/os/OSNet.c:
 	.text       start:0x8035E070 end:0x8035E610 align:16
 	.data       start:0x8055ED30 end:0x8055EE98
 	.bss        start:0x805D5440 end:0x805D5500
 	.sdata      start:0x80665BA8 end:0x80665BB0
 	.sbss       start:0x80667B28 end:0x80667B38
 
-revolution/os/OSNandbootInfo.c:
+libs/RVL_SDK/revolution/os/OSNandbootInfo.c:
 	.text       start:0x8035E610 end:0x8035E820 align:16
 	.data       start:0x8055EE98 end:0x8055EEB8
 
-revolution/os/OSPlayTime.c:
+libs/RVL_SDK/revolution/os/OSPlayTime.c:
 	.text       start:0x8035E820 end:0x8035F000 align:16
 	.data       start:0x8055EEB8 end:0x8055EEF8
 	.bss        start:0x805D5500 end:0x805D5540
@@ -4347,23 +4347,23 @@ revolution/os/OSPlayTime.c:
 	.sbss       start:0x80667B38 end:0x80667B50
 	.sdata2     start:0x8066C1D8 end:0x8066C1E8
 
-revolution/os/OSCrc.c:
+libs/RVL_SDK/revolution/os/OSCrc.c:
 	.text       start:0x8035F000 end:0x8035F140 align:16
 	.rodata     start:0x80518D10 end:0x80518D30
 
-revolution/os/OSLaunch.c:
+libs/RVL_SDK/revolution/os/OSLaunch.c:
 	.text       start:0x8035F140 end:0x8035F350 align:16
 
-revolution/os/__ppc_eabi_init.c:
+libs/RVL_SDK/revolution/os/__ppc_eabi_init.c:
 	.init       start:0x800065C0 end:0x80006624
 	.text       start:0x8035F350 end:0x8035F410 align:16
 
-revolution/pad/Pad.c:
+libs/RVL_SDK/revolution/pad/Pad.c:
 	.text       start:0x8035F410 end:0x8035F530 align:16
 	.sdata      start:0x80665BB8 end:0x80665BC0
 	.sbss       start:0x80667B50 end:0x80667B58
 
-revolution/sc/scsystem.c:
+libs/RVL_SDK/revolution/sc/scsystem.c:
 	.text       start:0x8035F530 end:0x80360EC0 align:16
 	.rodata     start:0x80518D30 end:0x80518D88
 	.data       start:0x8055EEF8 end:0x8055F0D8
@@ -4371,63 +4371,63 @@ revolution/sc/scsystem.c:
 	.sdata      start:0x80665BC0 end:0x80665CD0
 	.sbss       start:0x80667B58 end:0x80667B70
 
-revolution/sc/scapi.c:
+libs/RVL_SDK/revolution/sc/scapi.c:
 	.text       start:0x80360EC0 end:0x803613D0 align:16
 
-revolution/sc/scapi_prdinfo.c:
+libs/RVL_SDK/revolution/sc/scapi_prdinfo.c:
 	.text       start:0x803613D0 end:0x80361660 align:16
 	.data       start:0x8055F0D8 end:0x8055F138
 	.sdata      start:0x80665CD0 end:0x80665CE0
 
-revolution/si/SIBios.c:
+libs/RVL_SDK/revolution/si/SIBios.c:
 	.text       start:0x80361660 end:0x803626D0 align:16
 	.data       start:0x8055F138 end:0x8055F1A8
 	.bss        start:0x805DD6E0 end:0x805DD900
 	.sdata      start:0x80665CE0 end:0x80665CE8
 	.sbss       start:0x80667B70 end:0x80667B80
 
-revolution/si/SISamplingRate.c:
+libs/RVL_SDK/revolution/si/SISamplingRate.c:
 	.text       start:0x803626D0 end:0x803627C0 align:16
 	.data       start:0x8055F1A8 end:0x8055F240
 	.sbss       start:0x80667B80 end:0x80667B88
 
-revolution/tpl/TPL.c:
+libs/RVL_SDK/revolution/tpl/TPL.c:
 	.text       start:0x803627C0 end:0x803629E0 align:16
 	.data       start:0x8055F240 end:0x8055F270
 	.sdata      start:0x80665CE8 end:0x80665CF0
 	.sdata2     start:0x8066C1E8 end:0x8066C1F0
 
-revolution/usb/usb.c:
+libs/RVL_SDK/revolution/usb/usb.c:
 	.text       start:0x803629E0 end:0x80363F30 align:16
 	.data       start:0x8055F270 end:0x8055FAA0
 	.sdata      start:0x80665CF0 end:0x80665D00
 	.sbss       start:0x80667B88 end:0x80667B98
 
-revolution/vi/vi.c:
+libs/RVL_SDK/revolution/vi/vi.c:
 	.text       start:0x80363F30 end:0x80366A00 align:16
 	.data       start:0x8055FAA0 end:0x8055FFF8
 	.bss        start:0x805DD900 end:0x805DDA70
 	.sdata      start:0x80665D00 end:0x80665D20
 	.sbss       start:0x80667B98 end:0x80667C48
 
-revolution/vi/i2c.c:
+libs/RVL_SDK/revolution/vi/i2c.c:
 	.text       start:0x80366A00 end:0x80367320 align:16
 	.sdata      start:0x80665D20 end:0x80665D28
 	.sbss       start:0x80667C48 end:0x80667C50
 
-revolution/vi/vi3in1.c:
+libs/RVL_SDK/revolution/vi/vi3in1.c:
 	.text       start:0x80367320 end:0x80368A8C align:16
 	.data       start:0x8055FFF8 end:0x80560608
 	.bss        start:0x805DDA70 end:0x805DDAA0
 	.sdata      start:0x80665D28 end:0x80665D38
 	.sbss       start:0x80667C50 end:0x80667C68
 
-revolution/wenc/wenc.c:
+libs/RVL_SDK/revolution/wenc/wenc.c:
 	.text       start:0x80368A8C end:0x80368D70
 	.rodata     start:0x80518D88 end:0x80518DC8
 	.sdata2     start:0x8066C1F0 end:0x8066C1F8
 
-revolution/wpad/WPAD.c:
+libs/RVL_SDK/revolution/wpad/WPAD.c:
 	.text       start:0x80368D70 end:0x80370700 align:16
 	.rodata     start:0x80518DC8 end:0x80518E08
 	.data       start:0x80560608 end:0x80560A30
@@ -4436,7 +4436,7 @@ revolution/wpad/WPAD.c:
 	.sbss       start:0x80667C68 end:0x80667CC0
 	.sdata2     start:0x8066C1F8 end:0x8066C200
 
-revolution/wpad/WPADHIDParser.c:
+libs/RVL_SDK/revolution/wpad/WPADHIDParser.c:
 	.text       start:0x80370700 end:0x803749D0 align:16
 	.rodata     start:0x80518E08 end:0x80518E20
 	.data       start:0x80560A30 end:0x80560FA0
@@ -4444,815 +4444,815 @@ revolution/wpad/WPADHIDParser.c:
 	.sbss       start:0x80667CC0 end:0x80667CD8
 	.sdata2     start:0x8066C200 end:0x8066C260
 
-revolution/wpad/WPADEncrypt.c:
+libs/RVL_SDK/revolution/wpad/WPADEncrypt.c:
 	.text       start:0x803749D0 end:0x80375A90 align:16
 	.data       start:0x80560FA0 end:0x805622C8
 	.sbss       start:0x80667CD8 end:0x80667CE0
 
-revolution/wpad/WPADMem.c:
+libs/RVL_SDK/revolution/wpad/WPADMem.c:
 	.text       start:0x80375A90 end:0x80375B90 align:16
 
-revolution/wpad/debug_msg.c:
+libs/RVL_SDK/revolution/wpad/debug_msg.c:
 	.text       start:0x80375B90 end:0x80375BE0 align:16
 
-revolution/wud/WUD.c:
+libs/RVL_SDK/revolution/wud/WUD.c:
 	.text       start:0x80375BE0 end:0x8037BFE0 align:16
 	.data       start:0x805622C8 end:0x80563470
 	.bss        start:0x805E1280 end:0x805E3428
 	.sbss       start:0x80667CE0 end:0x80667D18
 	.sdata2     start:0x8066C260 end:0x8066C268
 
-revolution/wud/WUDHidHost.c:
+libs/RVL_SDK/revolution/wud/WUDHidHost.c:
 	.text       start:0x8037BFE0 end:0x8037C5D0 align:16
 	.data       start:0x80563470 end:0x80563708
 
-revolution/wud/debug_msg.c:
+libs/RVL_SDK/revolution/wud/debug_msg.c:
 	.text       start:0x8037C5D0 end:0x8037C620 align:16
 
-adx/adxf/adx_fini.c:
+libs/CriWare/adx/adxf/adx_fini.c:
 	.text       start:0x8037C620 end:0x8037C778
 	.rodata     start:0x80518E20 end:0x80518E78
 	.bss        start:0x805E3428 end:0x805E3CA8
 
-adx/adxf/adx_fs.c:
+libs/CriWare/adx/adxf/adx_fs.c:
 	.text       start:0x8037C778 end:0x8037F578
 	.rodata     start:0x80518E78 end:0x80519650
 	.bss        start:0x805E3CA8 end:0x805E5D30
 
-adx/adxf/adx_fcch.c:
+libs/CriWare/adx/adxf/adx_fcch.c:
 	.text       start:0x8037F578 end:0x8037F57C
 
-adx/adxt/adx_fsvr.c:
+libs/CriWare/adx/adxt/adx_fsvr.c:
 	.text       start:0x8037F57C end:0x8037F674
 	.bss        start:0x805E5D30 end:0x805E5D48
 
-adx/adxt/adx_inis.c:
+libs/CriWare/adx/adxt/adx_inis.c:
 	.text       start:0x8037F674 end:0x8037F920
 	.rodata     start:0x80519650 end:0x80519750
 	.bss        start:0x805E5D48 end:0x805E69A8
 
-adx/adxt/adx_lsc.c:
+libs/CriWare/adx/adxt/adx_lsc.c:
 	.text       start:0x8037F920 end:0x8037F988
 	.bss        start:0x805E69A8 end:0x805E69B8
 
-adx/adxt/adx_mng.c:
+libs/CriWare/adx/adxt/adx_mng.c:
 	.text       start:0x8037F988 end:0x8037F994
 	.data       start:0x80563708 end:0x80563710
 
-adx/adxt/adx_sfa.c:
+libs/CriWare/adx/adxt/adx_sfa.c:
 	.text       start:0x8037F994 end:0x8037F9BC
 	.bss        start:0x805E69B8 end:0x805E69C0
 
-adx/adxt/adx_sjd.c:
+libs/CriWare/adx/adxt/adx_sjd.c:
 	.text       start:0x8037F9BC end:0x80380E70
 	.rodata     start:0x80519750 end:0x805197E0
 	.bss        start:0x805E69C0 end:0x805E7518
 
-adx/adxt/adx_stmc.c:
+libs/CriWare/adx/adxt/adx_stmc.c:
 	.text       start:0x80380E70 end:0x8038238C
 	.rodata     start:0x805197E0 end:0x80519838
 	.data       start:0x80563710 end:0x80563720
 	.bss        start:0x805E7518 end:0x805E8570
 
-adx/adxt/adx_tlk2.c:
+libs/CriWare/adx/adxt/adx_tlk2.c:
 	.text       start:0x8038238C end:0x8038259C
 	.rodata     start:0x80519838 end:0x80519968
 
-adx/adxt/adx_tlk.c:
+libs/CriWare/adx/adxt/adx_tlk.c:
 	.text       start:0x8038259C end:0x80384748
 	.rodata     start:0x80519968 end:0x8051A120
 	.data       start:0x80563720 end:0x80563728
 	.bss        start:0x805E8570 end:0x805E85F0
 
-adx/adxt/adx_tsvr.c:
+libs/CriWare/adx/adxt/adx_tsvr.c:
 	.text       start:0x80384748 end:0x80385720
 	.rodata     start:0x8051A120 end:0x8051A1B8
 	.bss        start:0x805E85F0 end:0x805E8600
 
-adx/adxt/adx_xpnd.c:
+libs/CriWare/adx/adxt/adx_xpnd.c:
 	.text       start:0x80385720 end:0x80385B08
 	.bss        start:0x805E8600 end:0x805E89C8
 
-adx/adxt/adx_amp.c:
+libs/CriWare/adx/adxt/adx_amp.c:
 	.text       start:0x80385B08 end:0x80385D20
 
-adx/adxt/adx_bahx.c:
+libs/CriWare/adx/adxt/adx_bahx.c:
 	.text       start:0x80385D20 end:0x80385DE4
 	.bss        start:0x805E89C8 end:0x805E89D8
 
-adx/adxt/adx_baif.c:
+libs/CriWare/adx/adxt/adx_baif.c:
 	.text       start:0x80385DE4 end:0x80386970
 	.rodata     start:0x8051A1B8 end:0x8051A1C8
 
-adx/adxt/adx_bsc.c:
+libs/CriWare/adx/adxt/adx_bsc.c:
 	.text       start:0x80386970 end:0x803883BC
 	.rodata     start:0x8051A1C8 end:0x8051AA78
 	.bss        start:0x805E89D8 end:0x805E99B8
 
-adx/adxt/adx_bwav.c:
+libs/CriWare/adx/adxt/adx_bwav.c:
 	.text       start:0x803883BC end:0x80389300
 	.rodata     start:0x8051AA78 end:0x8051AA98
 	.data       start:0x80563728 end:0x80563730
 
-adx/adxt/code_80389300.c:
+libs/CriWare/adx/adxt/code_80389300.c:
 	.text       start:0x80389300 end:0x803893A4
 
-adx/adxt/adx_crs.c:
+libs/CriWare/adx/adxt/adx_crs.c:
 	.text       start:0x803893A4 end:0x8038940C
 	.bss        start:0x805E99B8 end:0x805E99C0
 
-adx/adxt/adx_dcd5.c:
+libs/CriWare/adx/adxt/adx_dcd5.c:
 	.text       start:0x8038940C end:0x80389AC4
 	.rodata     start:0x8051AA98 end:0x8051AAD8
 
-adx/adxt/adx_dcd.c:
+libs/CriWare/adx/adxt/adx_dcd.c:
 	.text       start:0x80389AC4 end:0x8038A188
 	.rodata     start:0x8051AAD8 end:0x8051AB08
 
-adx/adxt/adx_errs.c:
+libs/CriWare/adx/adxt/adx_errs.c:
 	.text       start:0x8038A188 end:0x8038A668
 	.rodata     start:0x8051AB08 end:0x8051AB10
 	.bss        start:0x805E99C0 end:0x805E9AE8
 
-adx/ahx/ahx_ftbl.c:
+libs/CriWare/adx/ahx/ahx_ftbl.c:
 	.text       start:0x8038A668 end:0x8038A694
 	.data       start:0x80563730 end:0x805657B8
 
-adx/ahx/ahx_link.c:
+libs/CriWare/adx/ahx/ahx_link.c:
 	.text       start:0x8038A694 end:0x8038A9B0
 	.rodata     start:0x8051AB10 end:0x8051ABB8
 
-adx/ahx/ahx_mflt_c.c:
+libs/CriWare/adx/ahx/ahx_mflt_c.c:
 	.text       start:0x8038A9B0 end:0x8038AEA8
 	.rodata     start:0x8051ABB8 end:0x8051ABC0
 
-adx/ahx/ahx_mwin2_c.c:
+libs/CriWare/adx/ahx/ahx_mwin2_c.c:
 	.text       start:0x8038AEA8 end:0x8038C368
 	.rodata     start:0x8051ABC0 end:0x8051ABD0
 
-adx/ahx/ahx_sbf2.c:
+libs/CriWare/adx/ahx/ahx_sbf2.c:
 	.text       start:0x8038C368 end:0x8038C42C
 	.data       start:0x805657B8 end:0x805657F8
 
-adx/ahx/ahx_sbf.c:
+libs/CriWare/adx/ahx/ahx_sbf.c:
 	.text       start:0x8038C42C end:0x8038C760
 	.rodata     start:0x8051ABD0 end:0x8051ABD8
 	.bss        start:0x805E9AE8 end:0x805E9B00
 
-adx/ahx/ahx_sjd.c:
+libs/CriWare/adx/ahx/ahx_sjd.c:
 	.text       start:0x8038C760 end:0x8038CF24
 	.rodata     start:0x8051ABD8 end:0x8051AC10
 	.bss        start:0x805E9B00 end:0x805E9B08
 
-adx/ahx/ahx_wtbl.c:
+libs/CriWare/adx/ahx/ahx_wtbl.c:
 	.text       start:0x8038CF24 end:0x8038CF50
 	.data       start:0x805657F8 end:0x80566080
 
-adx/ahx/adx_hdr.c:
+libs/CriWare/adx/ahx/adx_hdr.c:
 	.text       start:0x8038CF50 end:0x8038D2A8
 
-adx/ahx/ahx_atbl.c:
+libs/CriWare/adx/ahx/ahx_atbl.c:
 	.text       start:0x8038D2A8 end:0x8038D300
 	.data       start:0x80566080 end:0x80569190
 
-adx/ahx/ahx_bsr.c:
+libs/CriWare/adx/ahx/ahx_bsr.c:
 	.text       start:0x8038D300 end:0x8038D9C8
 	.rodata     start:0x8051AC10 end:0x8051AC98
 
-adx/ahx/ahx_cmn.c:
+libs/CriWare/adx/ahx/ahx_cmn.c:
 	.text       start:0x8038D9C8 end:0x8038D9E8
 	.bss        start:0x805E9B08 end:0x805E9B10
 
-adx/ahx/ahx_dcd.c:
+libs/CriWare/adx/ahx/ahx_dcd.c:
 	.text       start:0x8038D9E8 end:0x8038F4E0
 	.rodata     start:0x8051AC98 end:0x8051ACB0
 	.data       start:0x80569190 end:0x80569208
 	.bss        start:0x805E9B10 end:0x805E9D20
 
-adx/cricfg/cfg_lib.c:
+libs/CriWare/adx/cricfg/cfg_lib.c:
 	.text       start:0x8038F4E0 end:0x8038F594
 	.bss        start:0x805E9D20 end:0x805E9D28
 
-adx/cvfs/cri_cvfs.c:
+libs/CriWare/adx/cvfs/cri_cvfs.c:
 	.text       start:0x8038F594 end:0x80390978
 	.rodata     start:0x8051ACB0 end:0x8051B830
 	.bss        start:0x805E9D28 end:0x805EA1B0
 
-adx/gcci/gcci.c:
+libs/CriWare/adx/gcci/gcci.c:
 	.text       start:0x80390978 end:0x8039179C
 	.rodata     start:0x8051B830 end:0x8051BA28
 	.data       start:0x80569208 end:0x80569270
 	.bss        start:0x805EA1B0 end:0x805EB168
 
-adx/gcci/gcci_sub.c:
+libs/CriWare/adx/gcci/gcci_sub.c:
 	.text       start:0x8039179C end:0x803917A8
 	.bss        start:0x805EB168 end:0x805EB270
 
-adx/lsc/lsc_err.c:
+libs/CriWare/adx/lsc/lsc_err.c:
 	.text       start:0x803917A8 end:0x803918AC
 	.bss        start:0x805EB270 end:0x805EB378
 
-adx/lsc/lsc_ini.c:
+libs/CriWare/adx/lsc/lsc_ini.c:
 	.text       start:0x803918AC end:0x803919C0
 	.rodata     start:0x8051BA28 end:0x8051BA60
 	.bss        start:0x805EB378 end:0x805EFA80
 
-adx/lsc/lsc_svr.c:
+libs/CriWare/adx/lsc/lsc_svr.c:
 	.text       start:0x803919C0 end:0x80391D58
 	.rodata     start:0x8051BA60 end:0x8051BAB8
 
-adx/lsc/lsc.c:
+libs/CriWare/adx/lsc/lsc.c:
 	.text       start:0x80391D58 end:0x8039280C
 	.rodata     start:0x8051BAB8 end:0x8051BE50
 	.bss        start:0x805EFA80 end:0x805EFA90
 
-adx/lsc/lsc_crs.c:
+libs/CriWare/adx/lsc/lsc_crs.c:
 	.text       start:0x8039280C end:0x8039281C
 
-adx/mfci/mfci.c:
+libs/CriWare/adx/mfci/mfci.c:
 	.text       start:0x8039281C end:0x8039349C
 	.rodata     start:0x8051BE50 end:0x8051C098
 	.data       start:0x80569270 end:0x805692D8
 	.bss        start:0x805EFA90 end:0x805F0488
 
-adx/sj/sj_mem.c:
+libs/CriWare/adx/sj/sj_mem.c:
 	.text       start:0x8039349C end:0x803942F0
 	.rodata     start:0x8051C098 end:0x8051C1F8
 	.data       start:0x805692D8 end:0x80569308
 	.bss        start:0x805F0488 end:0x805F0910
 
-adx/sj/sj_rbf.c:
+libs/CriWare/adx/sj/sj_rbf.c:
 	.text       start:0x803942F0 end:0x80395678
 	.rodata     start:0x8051C1F8 end:0x8051C430
 	.data       start:0x80569308 end:0x80569338
 	.bss        start:0x805F0910 end:0x805F5118
 
-adx/sj/sj_uni.c:
+libs/CriWare/adx/sj/sj_uni.c:
 	.text       start:0x80395678 end:0x80396664
 	.rodata     start:0x8051C430 end:0x8051C590
 	.data       start:0x80569338 end:0x80569368
 	.bss        start:0x805F5118 end:0x805F5D20
 
-adx/sj/sj_utl.c:
+libs/CriWare/adx/sj/sj_utl.c:
 	.text       start:0x80396664 end:0x803968CC
 	.data       start:0x80569368 end:0x80569528
 
-adx/sj/sj_crs.c:
+libs/CriWare/adx/sj/sj_crs.c:
 	.text       start:0x803968CC end:0x80396998
 	.bss        start:0x805F5D20 end:0x805F5D30
 
-adx/sj/sj_err.c:
+libs/CriWare/adx/sj/sj_err.c:
 	.text       start:0x80396998 end:0x8039699C
 
-adx/svm/svm.c:
+libs/CriWare/adx/svm/svm.c:
 	.text       start:0x8039699C end:0x80397A0C
 	.rodata     start:0x8051C590 end:0x8051C748
 	.bss        start:0x805F5D30 end:0x805F60B0
 
-adx/adxt/adx_dcd3.c:
+libs/CriWare/adx/adxt/adx_dcd3.c:
 	.bss        start:0x805F60B0 end:0x805F60B8
 
-adx/adxt/adx_bsps.c:
+libs/CriWare/adx/adxt/adx_bsps.c:
 	.text       start:0x80397A0C end:0x80397F70
 	.rodata     start:0x8051C748 end:0x8051C750
 
-adx/adxt/adx_bau.c:
+libs/CriWare/adx/adxt/adx_bau.c:
 	.text       start:0x80397F70 end:0x80398FA0
 	.rodata     start:0x8051C750 end:0x8051C760
 	.data       start:0x80569528 end:0x80569728
 
-adx/wiirna/rna_crs.c:
+libs/CriWare/adx/wiirna/rna_crs.c:
 	.text       start:0x80398FA0 end:0x80398FA8
 
-adx/wiirna/rna_err.c:
+libs/CriWare/adx/wiirna/rna_err.c:
 	.text       start:0x80398FA8 end:0x80399014
 	.bss        start:0x805F60B8 end:0x805F61C0
 
-adx/wiirna/ax_rna.c:
+libs/CriWare/adx/wiirna/ax_rna.c:
 	.text       start:0x80399014 end:0x8039AA18
 	.rodata     start:0x8051C760 end:0x8051CCE0
 	.data       start:0x80569728 end:0x805697A8
 	.bss        start:0x805F61C0 end:0x805F7010
 
-adx/adxt/srcwii/adx_mwii.c:
+libs/CriWare/adx/adxt/srcwii/adx_mwii.c:
 	.text       start:0x8039AA18 end:0x8039B290
 	.rodata     start:0x8051CCE0 end:0x8051CD48
 	.bss        start:0x805F7010 end:0x80601360
 
-adx/adxt/srcwii/adx_suwii.c:
+libs/CriWare/adx/adxt/srcwii/adx_suwii.c:
 	.text       start:0x8039B290 end:0x8039B360
 	.rodata     start:0x8051CD48 end:0x8051CD90
 
-adx/adxt/srcwii/adx_rnawii.c:
+libs/CriWare/adx/adxt/srcwii/adx_rnawii.c:
 	.text       start:0x8039B360 end:0x8039B408
 
-adx/std/cri_crw_std.c:
+libs/CriWare/adx/std/cri_crw_std.c:
 	.text       start:0x8039B408 end:0x8039B7F8
 	.rodata     start:0x8051CD90 end:0x8051CDF0
 	.bss        start:0x80601360 end:0x80601380
 
-sofdec/cft/srcgc/cftyp422_ppc.c:
+libs/CriWare/sofdec/cft/srcgc/cftyp422_ppc.c:
 	.text       start:0x8039B7F8 end:0x8039BBE8
 	.rodata     start:0x8051CDF0 end:0x8051CE58
 	.bss        start:0x80601380 end:0x80602788
 
-sofdec/cft/cft_common.c:
+libs/CriWare/sofdec/cft/cft_common.c:
 	.text       start:0x8039BBE8 end:0x8039BBFC
 	.rodata     start:0x8051CE58 end:0x8051CEB0
 	.bss        start:0x80602788 end:0x80602790
 
-sofdec/mwply/mwsfdfrm.c:
+libs/CriWare/sofdec/mwply/mwsfdfrm.c:
 	.text       start:0x8039BBFC end:0x8039CE58
 	.rodata     start:0x8051CEB0 end:0x8051D1D0
 	.data       start:0x805697A8 end:0x805697D0
 
-sofdec/mwply/mwsfdrna.c:
+libs/CriWare/sofdec/mwply/mwsfdrna.c:
 	.text       start:0x8039CE58 end:0x8039CE68
 
-sofdec/mwply/mwsfdrsc.c:
+libs/CriWare/sofdec/mwply/mwsfdrsc.c:
 	.text       start:0x8039CE68 end:0x8039CE70
 
-sofdec/mwply/mwsfdsl.c:
+libs/CriWare/sofdec/mwply/mwsfdsl.c:
 	.text       start:0x8039CE70 end:0x8039DB20
 	.rodata     start:0x8051D1D0 end:0x8051D508
 
-sofdec/mwply/mwsfdsvm.c:
+libs/CriWare/sofdec/mwply/mwsfdsvm.c:
 	.text       start:0x8039DB20 end:0x8039DDD0
 	.bss        start:0x80602790 end:0x806028A0
 
-sofdec/mwply/mwstm.c:
+libs/CriWare/sofdec/mwply/mwstm.c:
 	.text       start:0x8039DDD0 end:0x8039DECC
 
-sofdec/mwply/mwsfdsee.c:
+libs/CriWare/sofdec/mwply/mwsfdsee.c:
 	.text       start:0x8039DECC end:0x8039DED4
 
-sofdec/mwply/mwsfdsfx.c:
+libs/CriWare/sofdec/mwply/mwsfdsfx.c:
 	.text       start:0x8039DED4 end:0x8039ECA4
 	.rodata     start:0x8051D508 end:0x8051DA00
 
-sofdec/mwply/mwsfdcre.c:
+libs/CriWare/sofdec/mwply/mwsfdcre.c:
 	.text       start:0x8039ECA4 end:0x803A0C60
 	.rodata     start:0x8051DA00 end:0x8051E0E0
 	.data       start:0x805697D0 end:0x8056A918
 	.bss        start:0x806028A0 end:0x80602958
 
-sofdec/mwply/mwsfdlib.c:
+libs/CriWare/sofdec/mwply/mwsfdlib.c:
 	.text       start:0x803A0C60 end:0x803A1338
 	.rodata     start:0x8051E0E0 end:0x8051E7B0
 	.bss        start:0x80602958 end:0x80605EB0
 
-sofdec/mwply/mwsfdply.c:
+libs/CriWare/sofdec/mwply/mwsfdply.c:
 	.text       start:0x803A1338 end:0x803A1D54
 	.rodata     start:0x8051E7B0 end:0x8051ED98
 
-sofdec/mwply/mwsfdset.c:
+libs/CriWare/sofdec/mwply/mwsfdset.c:
 	.text       start:0x803A1D54 end:0x803A22D0
 	.rodata     start:0x8051ED98 end:0x8051F450
 
-sofdec/mwply/mwsfdsvr.c:
+libs/CriWare/sofdec/mwply/mwsfdsvr.c:
 	.text       start:0x803A22D0 end:0x803A31C0
 	.rodata     start:0x8051F450 end:0x8051F510
 	.bss        start:0x80605EB0 end:0x80605EC0
 
-sofdec/mwply/mwsfdsst.c:
+libs/CriWare/sofdec/mwply/mwsfdsst.c:
 	.text       start:0x803A31C0 end:0x803A39AC
 	.bss        start:0x80605EC0 end:0x80605ED0
 
-sofdec/mwply/mwsfx_Y84C44.c:
+libs/CriWare/sofdec/mwply/mwsfx_Y84C44.c:
 	.text       start:0x803A39AC end:0x803A3A48
 
-sofdec/mwply/code_803A3AE4.c:
+libs/CriWare/sofdec/mwply/code_803A3AE4.c:
 	.text       start:0x803A3A48 end:0x803A3BAC
 	.rodata     start:0x8051F510 end:0x8051F538
 
-sofdec/sfdcore/mpv/mpv_bdec.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_bdec.c:
 	.text       start:0x803A3BAC end:0x803A3F8C
 	.rodata     start:0x8051F538 end:0x8051F5F8
 	.bss        start:0x80605ED0 end:0x80605F28
 
-sofdec/sfdcore/mpv/mpv_cdec.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_cdec.c:
 	.text       start:0x803A3F8C end:0x803A460C
 	.rodata     start:0x8051F5F8 end:0x8051F600
 	.bss        start:0x80605F28 end:0x80605F38
 
-sofdec/sfdcore/mpv/mpv_cmc.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_cmc.c:
 	.text       start:0x803A460C end:0x803A4704
 
-sofdec/sfdcore/mpv/mpv_dec.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_dec.c:
 	.text       start:0x803A4704 end:0x803A5908
 	.rodata     start:0x8051F600 end:0x8051F608
 
-sofdec/sfdcore/mpv/mpv_deli.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_deli.c:
 	.text       start:0x803A5908 end:0x803A5AEC
 	.rodata     start:0x8051F608 end:0x8051F708
 
-sofdec/sfdcore/mpv/mpv_emp.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_emp.c:
 	.text       start:0x803A5AEC end:0x803A6154
 	.rodata     start:0x8051F708 end:0x8051F750
 
-sofdec/sfdcore/mpv/mpv_err.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_err.c:
 	.text       start:0x803A6154 end:0x803A62C4
 	.bss        start:0x80605F38 end:0x80605F50
 
-sofdec/sfdcore/mpv/mpv_frm.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_frm.c:
 	.text       start:0x803A62C4 end:0x803A6504
 
-sofdec/sfdcore/mpv/mpv_get.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_get.c:
 	.text       start:0x803A6504 end:0x803A671C
 
-sofdec/sfdcore/mpv/mpv_hdec.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_hdec.c:
 	.text       start:0x803A671C end:0x803A7F30
 	.rodata     start:0x8051F750 end:0x8051F778
 	.bss        start:0x80605F50 end:0x80606040
 
-sofdec/sfdcore/mpv/mpv_lib.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_lib.c:
 	.text       start:0x803A7F30 end:0x803A8A0C
 	.rodata     start:0x8051F778 end:0x8051F820
 	.bss        start:0x80606040 end:0x806064B8
 
-sofdec/sfdcore/mpv/mpv_mc.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_mc.c:
 	.text       start:0x803A8A0C end:0x803A9710
 	.rodata     start:0x8051F820 end:0x8051F830
 	.data       start:0x8056A918 end:0x8056A938
 
-sofdec/sfdcore/mpv/mpv_vlc.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_vlc.c:
 	.text       start:0x803A9710 end:0x803AC468
 	.rodata     start:0x8051F830 end:0x8051F8E0
 	.bss        start:0x806064B8 end:0x80607B28
 
-sofdec/sfdcore/mpv/mpv_umc.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_umc.c:
 	.text       start:0x803AC468 end:0x803ADE5C
 	.bss        start:0x80607B28 end:0x80607B68
 
-sofdec/sfdcore/mpv/mpv_mcy.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_mcy.c:
 	.text       start:0x803ADE5C end:0x803AEFC8
 	.rodata     start:0x8051F8E0 end:0x8051F8F0
 	.data       start:0x8056A938 end:0x8056A958
 
-sofdec/sfdcore/mpv/mpv_m2v.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_m2v.c:
 	.text       start:0x803AEFC8 end:0x803AEFF8
 
-sofdec/sfdcore/mpv/mpvabdec.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpvabdec.c:
 	.text       start:0x803AEFF8 end:0x803B96F4
 	.rodata     start:0x8051F8F0 end:0x8051F900
 	.data       start:0x8056A958 end:0x8056B558
 	.bss        start:0x80607B68 end:0x80607B78
 
-sofdec/sfdcore/mpv/mpv_slice.c:
+libs/CriWare/sofdec/sfdcore/mpv/mpv_slice.c:
 	.text       start:0x803B96F4 end:0x803B9AC8
 
-sofdec/sfdcore/dct/dct_ac.c:
+libs/CriWare/sofdec/sfdcore/dct/dct_ac.c:
 	.text       start:0x803B9AC8 end:0x803B9DEC
 	.rodata     start:0x8051F900 end:0x8051F928
 	.bss        start:0x80607B78 end:0x80607F80
 
-sofdec/sfdcore/dct/dct_isr.c:
+libs/CriWare/sofdec/sfdcore/dct/dct_isr.c:
 	.text       start:0x803B9DEC end:0x803BB718
 	.rodata     start:0x8051F928 end:0x8051FE30
 	.data       start:0x8056B558 end:0x8056B5B8
 	.bss        start:0x80607F80 end:0x8060A288
 
-sofdec/sfdcore/dct/dct_ver.c:
+libs/CriWare/sofdec/sfdcore/dct/dct_ver.c:
 	.text       start:0x803BB718 end:0x803BB72C
 	.rodata     start:0x8051FE30 end:0x8051FE88
 	.bss        start:0x8060A288 end:0x8060A290
 
-sofdec/sfdcore/memcpy/mcp_not.c:
+libs/CriWare/sofdec/sfdcore/memcpy/mcp_not.c:
 	.text       start:0x803BB72C end:0x803BB730
 
-sofdec/sfdcore/mps/mps_dec.c:
+libs/CriWare/sofdec/sfdcore/mps/mps_dec.c:
 	.text       start:0x803BB730 end:0x803BCA04
 
-sofdec/sfdcore/mps/mps_del.c:
+libs/CriWare/sofdec/sfdcore/mps/mps_del.c:
 	.text       start:0x803BCA04 end:0x803BCA80
 
-sofdec/sfdcore/mps/mps_get.c:
+libs/CriWare/sofdec/sfdcore/mps/mps_get.c:
 	.text       start:0x803BCA80 end:0x803BCCEC
 
-sofdec/sfdcore/mps/mps_lib.c:
+libs/CriWare/sofdec/sfdcore/mps/mps_lib.c:
 	.text       start:0x803BCCEC end:0x803BD2A8
 	.rodata     start:0x8051FE88 end:0x8051FEE0
 	.bss        start:0x8060A290 end:0x8060A2A0
 
-sofdec/sfdcore/sfd/sfd_adxt.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_adxt.c:
 	.text       start:0x803BD2A8 end:0x803BE8C8
 	.rodata     start:0x8051FEE0 end:0x8051FF48
 	.bss        start:0x8060A2A0 end:0x8060A2C8
 
-sofdec/sfdcore/sfd/sfd_aoap.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_aoap.c:
 	.text       start:0x803BE8C8 end:0x803BED00
 	.rodata     start:0x8051FF48 end:0x8051FF80
 
-sofdec/sfdcore/sfd/sfd_buf.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_buf.c:
 	.text       start:0x803BED00 end:0x803BFD20
 	.bss        start:0x8060A2C8 end:0x8060A2D0
 
-sofdec/sfdcore/sfd/code_803BFD20.c:
+libs/CriWare/sofdec/sfdcore/sfd/code_803BFD20.c:
 	.text       start:0x803BFD20 end:0x803BFD38
 	.bss        start:0x8060A2D0 end:0x8060A2D8
 
-sofdec/sfdcore/sfd/sfd_con.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_con.c:
 	.text       start:0x803BFD38 end:0x803C005C
 
-sofdec/sfdcore/sfd/sfd_hds.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_hds.c:
 	.text       start:0x803C005C end:0x803C0A60
 
-sofdec/sfdcore/sfd/sfd_lib.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_lib.c:
 	.text       start:0x803C0A60 end:0x803C0E40
 	.rodata     start:0x8051FF80 end:0x805202A0
 	.data       start:0x8056B5B8 end:0x8056C5F0
 	.bss        start:0x8060A2D8 end:0x8060A518
 
-sofdec/sfdcore/sfd/sfd_mem.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_mem.c:
 	.text       start:0x803C0E40 end:0x803C0EF0
 	.rodata     start:0x805202A0 end:0x805202D8
 
-sofdec/sfdcore/sfd/sfd_mps.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_mps.c:
 	.text       start:0x803C0EF0 end:0x803C2E98
 	.rodata     start:0x805202D8 end:0x80520320
 	.bss        start:0x8060A518 end:0x8060AD30
 
-sofdec/sfdcore/sfd/sfd_mpv.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_mpv.c:
 	.text       start:0x803C2E98 end:0x803C7BB0
 	.rodata     start:0x80520320 end:0x805203F0
 	.bss        start:0x8060AD30 end:0x8061CD58
 
-sofdec/sfdcore/sfd/sfd_mpvf.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_mpvf.c:
 	.text       start:0x803C7BB0 end:0x803C8BA8
 	.bss        start:0x8061CD58 end:0x8061CDD8
 
-sofdec/sfdcore/sfd/sfd_pl2.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_pl2.c:
 	.text       start:0x803C8BA8 end:0x803C901C
 
-sofdec/sfdcore/sfd/sfd_ply.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_ply.c:
 	.text       start:0x803C901C end:0x803CB858
 	.rodata     start:0x805203F0 end:0x805205D8
 	.data       start:0x8056C5F0 end:0x8056C610
 	.bss        start:0x8061CDD8 end:0x8061CDE8
 
-sofdec/sfdcore/sfd/sfd_pts.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_pts.c:
 	.text       start:0x803CB858 end:0x803CBC88
 
-sofdec/sfdcore/sfd/sfd_see.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_see.c:
 	.text       start:0x803CBC88 end:0x803CC2FC
 
-sofdec/sfdcore/sfd/sfd_set.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_set.c:
 	.text       start:0x803CC2FC end:0x803CC71C
 
-sofdec/sfdcore/sfd/sfd_tim.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_tim.c:
 	.text       start:0x803CC71C end:0x803CE3F0
 	.rodata     start:0x805205D8 end:0x80520678
 	.bss        start:0x8061CDE8 end:0x8061CE00
 
-sofdec/sfdcore/sfd/sfd_trn.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_trn.c:
 	.text       start:0x803CE3F0 end:0x803CEA54
 
-sofdec/sfdcore/sfd/sfd_uo.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_uo.c:
 	.text       start:0x803CEA54 end:0x803CEC9C
 	.rodata     start:0x80520678 end:0x805206B0
 
-sofdec/sfdcore/sfd/sfd_vom.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_vom.c:
 	.text       start:0x803CEC9C end:0x803CEE60
 	.rodata     start:0x805206B0 end:0x805206E8
 
-sofdec/sfdcore/sfd/sfd_tmr.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_tmr.c:
 	.text       start:0x803CEE60 end:0x803CF0E8
 	.bss        start:0x8061CE00 end:0x8061CE08
 
-sofdec/sfdcore/sfd/sfd_tst.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_tst.c:
 	.text       start:0x803CF0E8 end:0x803D0030
 	.rodata     start:0x805206E8 end:0x80520778
 	.data       start:0x8056C610 end:0x8056C728
 	.bss        start:0x8061CE08 end:0x8061CE20
 
-sofdec/sfdcore/sfd/sfd_seeki.c:
+libs/CriWare/sofdec/sfdcore/sfd/sfd_seeki.c:
 	.text       start:0x803D0030 end:0x803D0144
 	.rodata     start:0x80520778 end:0x80520798
 
-sofdec/sfdcore/sfh/sfh_local.c:
+libs/CriWare/sofdec/sfdcore/sfh/sfh_local.c:
 	.text       start:0x803D0144 end:0x803D0610
 	.rodata     start:0x80520798 end:0x805207F8
 
-sofdec/sfdcore/sfh/sfh_main.c:
+libs/CriWare/sofdec/sfdcore/sfh/sfh_main.c:
 	.text       start:0x803D0610 end:0x803D0D78
 	.bss        start:0x8061CE20 end:0x8061CE28
 
-sofdec/sfdcore/sfh/sfh_ver1.c:
+libs/CriWare/sofdec/sfdcore/sfh/sfh_ver1.c:
 	.text       start:0x803D0D78 end:0x803D2D0C
 	.rodata     start:0x805207F8 end:0x80520818
 	.data       start:0x8056C728 end:0x8056C768
 
-sofdec/sfdcore/sfh/sfh_ver2.c:
+libs/CriWare/sofdec/sfdcore/sfh/sfh_ver2.c:
 	.text       start:0x803D2D0C end:0x803D43DC
 	.rodata     start:0x80520818 end:0x80520838
 	.data       start:0x8056C768 end:0x8056C7B0
 
-sofdec/sfdcore/uty/cmptime.c:
+libs/CriWare/sofdec/sfdcore/uty/cmptime.c:
 	.text       start:0x803D43DC end:0x803D440C
 
-sofdec/sfdcore/uty/memcpyd.c:
+libs/CriWare/sofdec/sfdcore/uty/memcpyd.c:
 	.text       start:0x803D440C end:0x803D44D0
 
-sofdec/sfdcore/uty/memsetd.c:
+libs/CriWare/sofdec/sfdcore/uty/memsetd.c:
 	.text       start:0x803D44D0 end:0x803D4548
 
-sofdec/sfdcore/uty/muldiv.c:
+libs/CriWare/sofdec/sfdcore/uty/muldiv.c:
 	.text       start:0x803D4548 end:0x803D45A0
 
-sofdec/sfdcore/uty/muldivr.c:
+libs/CriWare/sofdec/sfdcore/uty/muldivr.c:
 	.text       start:0x803D45A0 end:0x803D46F8
 
-sofdec/sfdcore/uty/uty_tmr.c:
+libs/CriWare/sofdec/sfdcore/uty/uty_tmr.c:
 	.text       start:0x803D46F8 end:0x803D4864
 	.rodata     start:0x80520838 end:0x80520840
 	.bss        start:0x8061CE28 end:0x8061CE38
 
-sofdec/sfx/sfx_set.c:
+libs/CriWare/sofdec/sfx/sfx_set.c:
 	.text       start:0x803D4864 end:0x803D4A14
 	.rodata     start:0x80520840 end:0x80520850
 
-sofdec/sfx/sfx_cnv.c:
+libs/CriWare/sofdec/sfx/sfx_cnv.c:
 	.text       start:0x803D4A14 end:0x803D5820
 	.rodata     start:0x80520850 end:0x80520A90
 
-sofdec/sfx/sfx_inf.c:
+libs/CriWare/sofdec/sfx/sfx_inf.c:
 	.text       start:0x803D5820 end:0x803D5828
 
-sofdec/sfx/sfx_lib.c:
+libs/CriWare/sofdec/sfx/sfx_lib.c:
 	.text       start:0x803D5828 end:0x803D5C18
 	.rodata     start:0x80520A90 end:0x80520B30
 	.bss        start:0x8061CE38 end:0x8061D370
 
-sofdec/sfx/sfx_alp.c:
+libs/CriWare/sofdec/sfx/sfx_alp.c:
 	.text       start:0x803D5C18 end:0x803D5DC4
 	.bss        start:0x8061D370 end:0x8061D498
 
-sofdec/sfx/sfx_zmv.c:
+libs/CriWare/sofdec/sfx/sfx_zmv.c:
 	.text       start:0x803D5DC4 end:0x803D700C
 	.rodata     start:0x80520B30 end:0x80520D60
 	.bss        start:0x8061D498 end:0x8061D708
 
-sofdec/sfx/sfx_sud.c:
+libs/CriWare/sofdec/sfx/sfx_sud.c:
 	.text       start:0x803D700C end:0x803D7010
 
-sofdec/sfx/sfx_cnv_to_Y84C44.c:
+libs/CriWare/sofdec/sfx/sfx_cnv_to_Y84C44.c:
 	.text       start:0x803D7010 end:0x803D70B0
 
-sofdec/sud/sud_lib.c:
+libs/CriWare/sofdec/sud/sud_lib.c:
 	.text       start:0x803D70B0 end:0x803D7244
 	.rodata     start:0x80520D60 end:0x80520DB8
 	.bss        start:0x8061D708 end:0x8061D710
 
-db/db_console.cpp:
+libs/nw4r/db/db_console.cpp:
 	.text       start:0x803D7244 end:0x803D733C
 
-db/db_assert.cpp:
+libs/nw4r/db/db_assert.cpp:
 	.text       start:0x803D733C end:0x803D7810
 	.data       start:0x8056C7B0 end:0x8056C840
 	.bss        start:0x8061D710 end:0x8061D740
 	.sdata      start:0x80665D80 end:0x80665D88
 	.sbss       start:0x80667D18 end:0x80667D28
 
-g3d/res/g3d_rescommon.cpp:
+libs/nw4r/g3d/res/g3d_rescommon.cpp:
 	.text       start:0x803D7810 end:0x803D7960
 
-g3d/res/g3d_resdict.cpp:
+libs/nw4r/g3d/res/g3d_resdict.cpp:
 	.text       start:0x803D7960 end:0x803D7CE4
 
-g3d/res/g3d_resfile.cpp:
+libs/nw4r/g3d/res/g3d_resfile.cpp:
 	.text       start:0x803D7CE4 end:0x803D95B4
 	.data       start:0x8056C840 end:0x8056C9A0
 
-g3d/res/g3d_resmdl.cpp:
+libs/nw4r/g3d/res/g3d_resmdl.cpp:
 	.text       start:0x803D95B4 end:0x803DA660
 
-g3d/res/g3d_resshp.cpp:
+libs/nw4r/g3d/res/g3d_resshp.cpp:
 	.text       start:0x803DA660 end:0x803DAEF4
 
-g3d/res/g3d_restev.cpp:
+libs/nw4r/g3d/res/g3d_restev.cpp:
 	.text       start:0x803DAEF4 end:0x803DB780
 	.rodata     start:0x80520DB8 end:0x80520E18
 	.data       start:0x8056C9A0 end:0x8056C9C0
 
-g3d/res/g3d_resmat.cpp:
+libs/nw4r/g3d/res/g3d_resmat.cpp:
 	.text       start:0x803DB780 end:0x803DD1C0
 	.sdata2     start:0x8066C268 end:0x8066C2A0
 
-g3d/res/g3d_resvtx.cpp:
+libs/nw4r/g3d/res/g3d_resvtx.cpp:
 	.text       start:0x803DD1C0 end:0x803DD580
 
-g3d/res/g3d_restex.cpp:
+libs/nw4r/g3d/res/g3d_restex.cpp:
 	.text       start:0x803DD580 end:0x803DD784
 
-g3d/res/g3d_resnode.cpp:
+libs/nw4r/g3d/res/g3d_resnode.cpp:
 	.text       start:0x803DD784 end:0x803DDAA8
 	.sdata2     start:0x8066C2A0 end:0x8066C2B0
 
-g3d/res/g3d_resanm.cpp:
+libs/nw4r/g3d/res/g3d_resanm.cpp:
 	.text       start:0x803DDAA8 end:0x803DDCD4
 	.sdata2     start:0x8066C2B0 end:0x8066C2C8
 
-g3d/res/g3d_resanmclr.cpp:
+libs/nw4r/g3d/res/g3d_resanmclr.cpp:
 	.text       start:0x803DDCD4 end:0x803DDE40
 	.sdata2     start:0x8066C2C8 end:0x8066C2D8
 
-g3d/res/g3d_resanmtexpat.cpp:
+libs/nw4r/g3d/res/g3d_resanmtexpat.cpp:
 	.text       start:0x803DDE40 end:0x803DE1DC
 
-g3d/res/g3d_resanmtexsrt.cpp:
+libs/nw4r/g3d/res/g3d_resanmtexsrt.cpp:
 	.text       start:0x803DE1DC end:0x803DE5F0
 	.sdata2     start:0x8066C2D8 end:0x8066C2E0
 
-g3d/res/g3d_resanmchr.cpp:
+libs/nw4r/g3d/res/g3d_resanmchr.cpp:
 	.text       start:0x803DE5F0 end:0x803E031C
 	.rodata     start:0x80520E18 end:0x80520E38
 	.sdata2     start:0x8066C2E0 end:0x8066C310
 
-g3d/res/g3d_reslightset.cpp:
+libs/nw4r/g3d/res/g3d_reslightset.cpp:
 	.text       start:0x803E031C end:0x803E0488
 
-g3d/res/g3d_resanmamblight.cpp:
+libs/nw4r/g3d/res/g3d_resanmamblight.cpp:
 	.text       start:0x803E0488 end:0x803E0558
 	.sdata2     start:0x8066C310 end:0x8066C320
 
-g3d/res/g3d_resanmlight.cpp:
+libs/nw4r/g3d/res/g3d_resanmlight.cpp:
 	.text       start:0x803E0558 end:0x803E0950
 	.sdata2     start:0x8066C320 end:0x8066C330
 
-g3d/res/g3d_resanmfog.cpp:
+libs/nw4r/g3d/res/g3d_resanmfog.cpp:
 	.text       start:0x803E0950 end:0x803E0AB0
 	.sdata2     start:0x8066C330 end:0x8066C340
 
-g3d/res/g3d_resanmcamera.cpp:
+libs/nw4r/g3d/res/g3d_resanmcamera.cpp:
 	.text       start:0x803E0AB0 end:0x803E0DC8
 
-g3d/res/g3d_resanmscn.cpp:
+libs/nw4r/g3d/res/g3d_resanmscn.cpp:
 	.text       start:0x803E0DC8 end:0x803E17B0
 	.data       start:0x8056C9C0 end:0x8056CA60
 
-g3d/g3d_transform.cpp:
+libs/nw4r/g3d/g3d_transform.cpp:
 	.text       start:0x803E17B0 end:0x803E1AA0
 	.sdata2     start:0x8066C340 end:0x8066C348
 
-g3d/g3d_anmvis.cpp:
+libs/nw4r/g3d/g3d_anmvis.cpp:
 	.text       start:0x803E1AA0 end:0x803E1BE8
 	.rodata     start:0x80520E38 end:0x80520E48
 
-g3d/g3d_anmclr.cpp:
+libs/nw4r/g3d/g3d_anmclr.cpp:
 	.text       start:0x803E1BE8 end:0x803E296C
 	.rodata     start:0x80520E48 end:0x80520E78
 	.data       start:0x8056CA60 end:0x8056CAF0
 	.sdata      start:0x80665D88 end:0x80665D90
 	.sdata2     start:0x8066C348 end:0x8066C358
 
-g3d/g3d_anmtexpat.cpp:
+libs/nw4r/g3d/g3d_anmtexpat.cpp:
 	.text       start:0x803E296C end:0x803E3398
 	.rodata     start:0x80520E78 end:0x80520EA8
 	.data       start:0x8056CAF0 end:0x8056CB80
 	.sdata2     start:0x8066C358 end:0x8066C368
 
-g3d/g3d_anmtexsrt.cpp:
+libs/nw4r/g3d/g3d_anmtexsrt.cpp:
 	.text       start:0x803E3398 end:0x803E3E14
 	.rodata     start:0x80520EA8 end:0x80520ED8
 	.data       start:0x8056CB80 end:0x8056CC10
 	.sdata2     start:0x8066C368 end:0x8066C388
 
-g3d/g3d_anmchr.cpp:
+libs/nw4r/g3d/g3d_anmchr.cpp:
 	.text       start:0x803E3E14 end:0x803E5D0C
 	.rodata     start:0x80520ED8 end:0x80520F28
 	.data       start:0x8056CC10 end:0x8056CD70
 	.sdata2     start:0x8066C388 end:0x8066C3A0
 
-g3d/g3d_anmshp.cpp:
+libs/nw4r/g3d/g3d_anmshp.cpp:
 	.text       start:0x803E5D0C end:0x803E5D28
 	.rodata     start:0x80520F28 end:0x80520F38
 
-g3d/g3d_anmscn.cpp:
+libs/nw4r/g3d/g3d_anmscn.cpp:
 	.text       start:0x803E5D28 end:0x803E7294
 	.rodata     start:0x80520F38 end:0x80520F58
 	.data       start:0x8056CD70 end:0x8056CE90
 	.sdata2     start:0x8066C3A0 end:0x8066C3C0
 
-g3d/g3d_obj.cpp:
+libs/nw4r/g3d/g3d_obj.cpp:
 	.text       start:0x803E7294 end:0x803E73B0
 	.rodata     start:0x80520F58 end:0x80520F68
 	.data       start:0x8056CE90 end:0x8056CEB0
 
-g3d/g3d_anmobj.cpp:
+libs/nw4r/g3d/g3d_anmobj.cpp:
 	.text       start:0x803E73B0 end:0x803E7468
 	.rodata     start:0x80520F68 end:0x80520F78
 	.sdata      start:0x80665D90 end:0x80665D98
 	.sdata2     start:0x8066C3C0 end:0x8066C3C8
 
-g3d/platform/g3d_gpu.cpp:
+libs/nw4r/g3d/platform/g3d_gpu.cpp:
 	.text       start:0x803E7468 end:0x803E7978
 	.sdata2     start:0x8066C3C8 end:0x8066C3E0
 
-g3d/platform/g3d_cpu.cpp:
+libs/nw4r/g3d/platform/g3d_cpu.cpp:
 	.text       start:0x803E7978 end:0x803E7B9C
 	.sdata2     start:0x8066C3E0 end:0x8066C3E8
 
-g3d/g3d_state.cpp:
+libs/nw4r/g3d/g3d_state.cpp:
 	.text       start:0x803E7B9C end:0x803EB6B0
 	.ctors      start:0x804F5A00 end:0x804F5A04
 	.rodata     start:0x80520F78 end:0x80520FA8
@@ -5262,145 +5262,145 @@ g3d/g3d_state.cpp:
 	.sbss       start:0x80667D28 end:0x80667D48
 	.sdata2     start:0x8066C3E8 end:0x8066C410
 
-g3d/g3d_draw1mat1shp.cpp:
+libs/nw4r/g3d/g3d_draw1mat1shp.cpp:
 	.text       start:0x803EB6B0 end:0x803EC3E4
 	.rodata     start:0x80520FA8 end:0x80520FB8
 	.sdata2     start:0x8066C410 end:0x8066C430
 
-g3d/g3d_calcview.cpp:
+libs/nw4r/g3d/g3d_calcview.cpp:
 	.text       start:0x803EC3E4 end:0x803EE5C0
 	.rodata     start:0x80520FB8 end:0x80520FD8
 	.sdata2     start:0x8066C430 end:0x8066C440
 
-g3d/g3d_dcc.cpp:
+libs/nw4r/g3d/g3d_dcc.cpp:
 	.text       start:0x803EE5C0 end:0x803EE69C
 
-g3d/g3d_workmem.cpp:
+libs/nw4r/g3d/g3d_workmem.cpp:
 	.text       start:0x803EE69C end:0x803EE6DC
 	.bss        start:0x80622D00 end:0x8063AD00
 
-g3d/g3d_calcworld.cpp:
+libs/nw4r/g3d/g3d_calcworld.cpp:
 	.text       start:0x803EE6DC end:0x803EF1A0
 	.data       start:0x8056CEC8 end:0x8056CED8
 	.sdata      start:0x80665DA0 end:0x80665DA8
 	.sdata2     start:0x8066C440 end:0x8066C448
 
-g3d/g3d_draw.cpp:
+libs/nw4r/g3d/g3d_draw.cpp:
 	.text       start:0x803EF1A0 end:0x803F0FFC
 	.sdata      start:0x80665DA8 end:0x80665DB0
 	.sdata2     start:0x8066C448 end:0x8066C458
 
-g3d/g3d_camera.cpp:
+libs/nw4r/g3d/g3d_camera.cpp:
 	.text       start:0x803F0FFC end:0x803F1E18
 	.sdata2     start:0x8066C458 end:0x8066C488
 
-g3d/dcc/g3d_basic.cpp:
+libs/nw4r/g3d/dcc/g3d_basic.cpp:
 	.text       start:0x803F1E18 end:0x803F20DC
 	.sdata2     start:0x8066C488 end:0x8066C498
 
-g3d/dcc/g3d_maya.cpp:
+libs/nw4r/g3d/dcc/g3d_maya.cpp:
 	.text       start:0x803F20DC end:0x803F2D9C
 	.rodata     start:0x80520FD8 end:0x80521010
 	.sdata2     start:0x8066C498 end:0x8066C4B0
 
-g3d/dcc/g3d_xsi.cpp:
+libs/nw4r/g3d/dcc/g3d_xsi.cpp:
 	.text       start:0x803F2D9C end:0x803F395C
 	.rodata     start:0x80521010 end:0x80521048
 	.sdata2     start:0x8066C4B0 end:0x8066C4C0
 
-g3d/dcc/g3d_3dsmax.cpp:
+libs/nw4r/g3d/dcc/g3d_3dsmax.cpp:
 	.text       start:0x803F395C end:0x803F440C
 	.rodata     start:0x80521048 end:0x80521080
 	.sdata2     start:0x8066C4C0 end:0x8066C4D8
 
-g3d/g3d_scnobj.cpp:
+libs/nw4r/g3d/g3d_scnobj.cpp:
 	.text       start:0x803F440C end:0x803F5C40
 	.rodata     start:0x80521080 end:0x805210B0
 	.data       start:0x8056CED8 end:0x8056CFA0
 	.sbss       start:0x80667D48 end:0x80667D50
 	.sdata2     start:0x8066C4D8 end:0x8066C4E0
 
-g3d/g3d_scnroot.cpp:
+libs/nw4r/g3d/g3d_scnroot.cpp:
 	.text       start:0x803F5C40 end:0x803F7654
 	.rodata     start:0x805210B0 end:0x805210C0
 	.data       start:0x8056CFA0 end:0x8056D010
 	.sdata      start:0x80665DB0 end:0x80665DC0
 	.sdata2     start:0x8066C4E0 end:0x8066C4E8
 
-g3d/g3d_scnmdlsmpl.cpp:
+libs/nw4r/g3d/g3d_scnmdlsmpl.cpp:
 	.text       start:0x803F7654 end:0x803F9508
 	.rodata     start:0x805210C0 end:0x805210D8
 	.data       start:0x8056D010 end:0x8056D080
 	.sdata      start:0x80665DC0 end:0x80665DD8
 	.sdata2     start:0x8066C4E8 end:0x8066C4F0
 
-g3d/g3d_scnmdl.cpp:
+libs/nw4r/g3d/g3d_scnmdl.cpp:
 	.text       start:0x803F9508 end:0x803FBF7C
 	.rodata     start:0x805210D8 end:0x805210E8
 	.data       start:0x8056D080 end:0x8056D0C8
 
-g3d/g3d_scnmdlexpand.cpp:
+libs/nw4r/g3d/g3d_scnmdlexpand.cpp:
 	.text       start:0x803FBF7C end:0x803FC92C
 	.rodata     start:0x805210E8 end:0x80521100
 	.data       start:0x8056D0C8 end:0x8056D108
 	.sdata      start:0x80665DD8 end:0x80665DE0
 
-g3d/g3d_calcmaterial.cpp:
+libs/nw4r/g3d/g3d_calcmaterial.cpp:
 	.text       start:0x803FC92C end:0x803FCD3C
 
-g3d/g3d_init.cpp:
+libs/nw4r/g3d/g3d_init.cpp:
 	.text       start:0x803FCD3C end:0x803FCE38
 	.data       start:0x8056D108 end:0x8056D150
 	.sdata      start:0x80665DE0 end:0x80665DE8
 
-g3d/g3d_scnproc.cpp:
+libs/nw4r/g3d/g3d_scnproc.cpp:
 	.text       start:0x803FCE38 end:0x803FD128
 	.rodata     start:0x80521100 end:0x80521110
 	.data       start:0x8056D150 end:0x8056D188
 	.sdata2     start:0x8066C4F0 end:0x8066C4F8
 
-g3d/g3d_fog.cpp:
+libs/nw4r/g3d/g3d_fog.cpp:
 	.text       start:0x803FD128 end:0x803FD324
 	.sdata2     start:0x8066C4F8 end:0x8066C500
 
-g3d/g3d_light.cpp:
+libs/nw4r/g3d/g3d_light.cpp:
 	.text       start:0x803FD324 end:0x803FE0B8
 	.sdata2     start:0x8066C500 end:0x8066C530
 
-g3d/g3d_calcvtx.cpp:
+libs/nw4r/g3d/g3d_calcvtx.cpp:
 	.text       start:0x803FE0B8 end:0x803FE8B0
 	.sdata2     start:0x8066C530 end:0x8066C538
 
-lyt/lyt_init.cpp:
+libs/nw4r/lyt/lyt_init.cpp:
 	.text       start:0x803FE8B0 end:0x803FE904
 	.data       start:0x8056D188 end:0x8056D1D0
 	.sdata      start:0x80665DE8 end:0x80665DF0
 
-lyt/lyt_pane.cpp:
+libs/nw4r/lyt/lyt_pane.cpp:
 	.text       start:0x803FE904 end:0x803FF934
 	.ctors      start:0x804F5A04 end:0x804F5A08
 	.data       start:0x8056D1D0 end:0x8056D248
 	.sbss       start:0x80667D50 end:0x80667D58
 	.sdata2     start:0x8066C538 end:0x8066C558
 
-lyt/lyt_group.cpp:
+libs/nw4r/lyt/lyt_group.cpp:
 	.text       start:0x803FF934 end:0x803FFC74
 	.data       start:0x8056D248 end:0x8056D258
 
-lyt/lyt_layout.cpp:
+libs/nw4r/lyt/lyt_layout.cpp:
 	.text       start:0x803FFC74 end:0x80400C60
 	.data       start:0x8056D258 end:0x8056D298
 	.sbss       start:0x80667D58 end:0x80667D60
 	.sdata2     start:0x8066C558 end:0x8066C560
 
-lyt/lyt_picture.cpp:
+libs/nw4r/lyt/lyt_picture.cpp:
 	.text       start:0x80400C60 end:0x804012BC
 	.ctors      start:0x804F5A08 end:0x804F5A0C
 	.data       start:0x8056D298 end:0x8056D310
 	.sbss       start:0x80667D60 end:0x80667D68
 	.sdata2     start:0x8066C560 end:0x8066C568
 
-lyt/lyt_textBox.cpp:
+libs/nw4r/lyt/lyt_textBox.cpp:
 	.text       start:0x804012BC end:0x80402E28
 	.ctors      start:0x804F5A0C end:0x804F5A10
 	.data       start:0x8056D310 end:0x8056D398
@@ -5408,251 +5408,251 @@ lyt/lyt_textBox.cpp:
 	.sbss       start:0x80667D68 end:0x80667D70
 	.sdata2     start:0x8066C568 end:0x8066C580
 
-lyt/lyt_window.cpp:
+libs/nw4r/lyt/lyt_window.cpp:
 	.text       start:0x80402E28 end:0x804053DC
 	.ctors      start:0x804F5A10 end:0x804F5A14
 	.data       start:0x8056D398 end:0x8056D460
 	.sbss       start:0x80667D70 end:0x80667D78
 	.sdata2     start:0x8066C580 end:0x8066C598
 
-lyt/lyt_bounding.cpp:
+libs/nw4r/lyt/lyt_bounding.cpp:
 	.text       start:0x804053DC end:0x80405488
 	.ctors      start:0x804F5A14 end:0x804F5A18
 	.data       start:0x8056D460 end:0x8056D4D8
 	.sbss       start:0x80667D78 end:0x80667D80
 
-lyt/lyt_material.cpp:
+libs/nw4r/lyt/lyt_material.cpp:
 	.text       start:0x80405488 end:0x804082FC
 	.data       start:0x8056D4D8 end:0x8056D548
 	.sdata2     start:0x8066C598 end:0x8066C5B8
 	.sbss2      start:0x8066DCF0 end:0x8066DCF8
 
-lyt/lyt_texMap.cpp:
+libs/nw4r/lyt/lyt_texMap.cpp:
 	.text       start:0x804082FC end:0x80408668
 	.sdata2     start:0x8066C5B8 end:0x8066C5D0
 
-lyt/lyt_drawInfo.cpp:
+libs/nw4r/lyt/lyt_drawInfo.cpp:
 	.text       start:0x80408668 end:0x8040871C
 	.data       start:0x8056D548 end:0x8056D558
 	.sdata2     start:0x8066C5D0 end:0x8066C5D8
 
-lyt/lyt_animation.cpp:
+libs/nw4r/lyt/lyt_animation.cpp:
 	.text       start:0x8040871C end:0x80409C48
 	.data       start:0x8056D558 end:0x8056D580
 	.sdata2     start:0x8066C5D8 end:0x8066C5F8
 
-lyt/lyt_resourceAccessor.cpp:
+libs/nw4r/lyt/lyt_resourceAccessor.cpp:
 	.text       start:0x80409C48 end:0x80409CA0
 	.data       start:0x8056D580 end:0x8056D598
 
-lyt/lyt_arcResourceAccessor.cpp:
+libs/nw4r/lyt/lyt_arcResourceAccessor.cpp:
 	.text       start:0x80409CA0 end:0x8040A028
 	.data       start:0x8056D598 end:0x8056D5B0
 	.sdata      start:0x80665DF8 end:0x80665E00
 
-lyt/lyt_common.cpp:
+libs/nw4r/lyt/lyt_common.cpp:
 	.text       start:0x8040A028 end:0x8040AB80
 	.bss        start:0x8063AD00 end:0x8063AD20
 	.sbss       start:0x80667D80 end:0x80667D88
 	.sdata2     start:0x8066C5F8 end:0x8066C600
 
-lyt/lyt_util.cpp:
+libs/nw4r/lyt/lyt_util.cpp:
 	.text       start:0x8040AB80 end:0x8040ABF0
 
-math/math_arithmetic.cpp:
+libs/nw4r/math/math_arithmetic.cpp:
 	.text       start:0x8040ABF0 end:0x8040AD2C
 	.data       start:0x8056D5B0 end:0x8056DEC0
 	.sdata2     start:0x8066C600 end:0x8066C620
 
-math/math_triangular.cpp:
+libs/nw4r/math/math_triangular.cpp:
 	.text       start:0x8040AD2C end:0x8040B000
 	.rodata     start:0x80521110 end:0x80522120
 	.data       start:0x8056DEC0 end:0x8056DFC8
 	.sdata2     start:0x8066C620 end:0x8066C640
 
-math/math_types.cpp:
+libs/nw4r/math/math_types.cpp:
 	.text       start:0x8040B000 end:0x8040B488
 	.sdata2     start:0x8066C640 end:0x8066C658
 
-math/math_geometry.cpp:
+libs/nw4r/math/math_geometry.cpp:
 	.text       start:0x8040B488 end:0x8040C464
 	.sdata      start:0x80665E00 end:0x80665E08
 	.sdata2     start:0x8066C658 end:0x8066C678
 
-snd/snd_AxManager.cpp:
+libs/nw4r/snd/snd_AxManager.cpp:
 	.text       start:0x8040C464 end:0x8040DEC0
 	.ctors      start:0x804F5A18 end:0x804F5A1C
 	.bss        start:0x8063AD20 end:0x8063B168
 	.sbss       start:0x80667D88 end:0x80667DA0
 	.sdata2     start:0x8066C678 end:0x8066C690
 
-snd/snd_AxVoice.cpp:
+libs/nw4r/snd/snd_AxVoice.cpp:
 	.text       start:0x8040DEC0 end:0x80410B80
 	.sdata2     start:0x8066C690 end:0x8066C6B8
 
-snd/snd_AxVoiceManager.cpp:
+libs/nw4r/snd/snd_AxVoiceManager.cpp:
 	.text       start:0x80410B80 end:0x804115B4
 	.bss        start:0x8063B168 end:0x8063B1A0
 	.sbss       start:0x80667DA0 end:0x80667DA8
 
-snd/snd_AxfxImpl.cpp:
+libs/nw4r/snd/snd_AxfxImpl.cpp:
 	.text       start:0x804115B4 end:0x80411780
 	.sbss       start:0x80667DA8 end:0x80667DB0
 
-snd/snd_Bank.cpp:
+libs/nw4r/snd/snd_Bank.cpp:
 	.text       start:0x80411780 end:0x804119F0
 	.sdata2     start:0x8066C6B8 end:0x8066C6D8
 
-snd/snd_BankFile.cpp:
+libs/nw4r/snd/snd_BankFile.cpp:
 	.text       start:0x804119F0 end:0x804120AC
 	.sdata2     start:0x8066C6D8 end:0x8066C6E0
 
-snd/snd_BasicPlayer.cpp:
+libs/nw4r/snd/snd_BasicPlayer.cpp:
 	.text       start:0x804120AC end:0x804124A0
 	.data       start:0x8056DFC8 end:0x8056DFF0
 	.sdata2     start:0x8066C6E0 end:0x8066C6E8
 
-snd/snd_BasicSound.cpp:
+libs/nw4r/snd/snd_BasicSound.cpp:
 	.text       start:0x804124A0 end:0x80413B14
 	.ctors      start:0x804F5A1C end:0x804F5A20
 	.data       start:0x8056DFF0 end:0x8056E028
 	.sbss       start:0x80667DB0 end:0x80667DB8
 	.sdata2     start:0x8066C6E8 end:0x8066C6F8
 
-snd/snd_BiquadFilterPreset.cpp:
+libs/nw4r/snd/snd_BiquadFilterPreset.cpp:
 	.text       start:0x80413B14 end:0x80413DE0
 	.rodata     start:0x80522120 end:0x80523558
 	.data       start:0x8056E028 end:0x8056E078
 	.sdata2     start:0x8066C6F8 end:0x8066C708
 
-snd/snd_Channel.cpp:
+libs/nw4r/snd/snd_Channel.cpp:
 	.text       start:0x80413DE0 end:0x80415034
 	.bss        start:0x8063B1A0 end:0x8063B1D0
 	.sbss       start:0x80667DB8 end:0x80667DC0
 	.sdata2     start:0x8066C708 end:0x8066C730
 
-snd/snd_DisposeCallbackManager.cpp:
+libs/nw4r/snd/snd_DisposeCallbackManager.cpp:
 	.text       start:0x80415034 end:0x804153C4
 	.bss        start:0x8063B1D0 end:0x8063B1E8
 	.sbss       start:0x80667DC0 end:0x80667DC8
 
-snd/snd_EnvGenerator.cpp:
+libs/nw4r/snd/snd_EnvGenerator.cpp:
 	.text       start:0x804153C4 end:0x80415760
 	.rodata     start:0x80523558 end:0x80523858
 	.sdata2     start:0x8066C730 end:0x8066C760
 
-snd/snd_ExternalSoundPlayer.cpp:
+libs/nw4r/snd/snd_ExternalSoundPlayer.cpp:
 	.text       start:0x80415760 end:0x80415A0C
 
-snd/snd_FxChorusDpl2.cpp:
+libs/nw4r/snd/snd_FxChorusDpl2.cpp:
 	.text       start:0x80415A0C end:0x80415FB0
 	.data       start:0x8056E078 end:0x8056E0A0
 	.sdata2     start:0x8066C760 end:0x8066C780
 
-snd/snd_FxDelayDpl2.cpp:
+libs/nw4r/snd/snd_FxDelayDpl2.cpp:
 	.text       start:0x80415FB0 end:0x804165B0
 	.data       start:0x8056E0A0 end:0x8056E0C8
 	.sdata2     start:0x8066C780 end:0x8066C798
 
-snd/snd_FxReverbStdDpl2.cpp:
+libs/nw4r/snd/snd_FxReverbStdDpl2.cpp:
 	.text       start:0x804165B0 end:0x80416CA8
 	.data       start:0x8056E0C8 end:0x8056E0F0
 	.sdata2     start:0x8066C798 end:0x8066C7B0
 
-snd/snd_InstancePool.cpp:
+libs/nw4r/snd/snd_InstancePool.cpp:
 	.text       start:0x80416CA8 end:0x80416F60
 
-snd/snd_Lfo.cpp:
+libs/nw4r/snd/snd_Lfo.cpp:
 	.text       start:0x80416F60 end:0x80417150
 	.rodata     start:0x80523858 end:0x80523880
 	.sdata2     start:0x8066C7B0 end:0x8066C7E0
 
-snd/snd_McsSoundArchive.cpp:
+libs/nw4r/snd/snd_McsSoundArchive.cpp:
 	.text       start:0x80417150 end:0x80417168
 
-snd/snd_MemorySoundArchive.cpp:
+libs/nw4r/snd/snd_MemorySoundArchive.cpp:
 	.text       start:0x80417168 end:0x8041759C
 	.data       start:0x8056E0F0 end:0x8056E170
 
-snd/snd_MidiSeqPlayer.cpp:
+libs/nw4r/snd/snd_MidiSeqPlayer.cpp:
 	.text       start:0x8041759C end:0x804175F0
 
-snd/snd_MmlParser.cpp:
+libs/nw4r/snd/snd_MmlParser.cpp:
 	.text       start:0x804175F0 end:0x80418794
 	.data       start:0x8056E170 end:0x8056E390
 	.sdata      start:0x80665E08 end:0x80665E18
 	.sbss       start:0x80667DC8 end:0x80667DD0
 	.sdata2     start:0x8066C7E0 end:0x8066C800
 
-snd/snd_MmlSeqTrack.cpp:
+libs/nw4r/snd/snd_MmlSeqTrack.cpp:
 	.text       start:0x80418794 end:0x8041883C
 	.data       start:0x8056E390 end:0x8056E3B0
 
-snd/snd_MmlSeqTrackAllocator.cpp:
+libs/nw4r/snd/snd_MmlSeqTrackAllocator.cpp:
 	.text       start:0x8041883C end:0x80418968
 	.data       start:0x8056E3B0 end:0x8056E3C8
 
-snd/snd_PlayerHeap.cpp:
+libs/nw4r/snd/snd_PlayerHeap.cpp:
 	.text       start:0x80418968 end:0x80418B68
 	.data       start:0x8056E3C8 end:0x8056E3D8
 
-snd/snd_RemoteSpeaker.cpp:
+libs/nw4r/snd/snd_RemoteSpeaker.cpp:
 	.text       start:0x80418B68 end:0x80419354
 
-snd/snd_RemoteSpeakerManager.cpp:
+libs/nw4r/snd/snd_RemoteSpeakerManager.cpp:
 	.text       start:0x80419354 end:0x804195D4
 	.bss        start:0x8063B1E8 end:0x8063B4C0
 	.sbss       start:0x80667DD0 end:0x80667DD8
 
-snd/snd_SeqFile.cpp:
+libs/nw4r/snd/snd_SeqFile.cpp:
 	.text       start:0x804195D4 end:0x80419708
 
-snd/snd_SeqPlayer.cpp:
+libs/nw4r/snd/snd_SeqPlayer.cpp:
 	.text       start:0x80419708 end:0x8041ABBC
 	.data       start:0x8056E3D8 end:0x8056E440
 	.bss        start:0x8063B4C0 end:0x8063B4E0
 	.sdata2     start:0x8066C800 end:0x8066C818
 
-snd/snd_SeqSound.cpp:
+libs/nw4r/snd/snd_SeqSound.cpp:
 	.text       start:0x8041ABBC end:0x8041B304
 	.ctors      start:0x804F5A20 end:0x804F5A24
 	.data       start:0x8056E440 end:0x8056E490
 	.sbss       start:0x80667DD8 end:0x80667DE0
 
-snd/snd_SeqSoundHandle.cpp:
+libs/nw4r/snd/snd_SeqSoundHandle.cpp:
 	.text       start:0x8041B304 end:0x8041B33C
 
-snd/snd_SeqTrack.cpp:
+libs/nw4r/snd/snd_SeqTrack.cpp:
 	.text       start:0x8041B33C end:0x8041C77C
 	.rodata     start:0x80523880 end:0x805238A8
 	.data       start:0x8056E490 end:0x8056E4A0
 	.sdata2     start:0x8066C818 end:0x8066C848
 
-snd/snd_SoundArchive.cpp:
+libs/nw4r/snd/snd_SoundArchive.cpp:
 	.text       start:0x8041C77C end:0x8041CAD4
 	.data       start:0x8056E4A0 end:0x8056E4C0
 
-snd/snd_SoundArchiveFile.cpp:
+libs/nw4r/snd/snd_SoundArchiveFile.cpp:
 	.text       start:0x8041CAD4 end:0x8041DB84
 
-snd/snd_SoundArchivePlayer.cpp:
+libs/nw4r/snd/snd_SoundArchivePlayer.cpp:
 	.text       start:0x8041DB84 end:0x80420330
 	.data       start:0x8056E4C0 end:0x8056E510
 	.sdata2     start:0x8066C848 end:0x8066C858
 
-snd/snd_SoundHandle.cpp:
+libs/nw4r/snd/snd_SoundHandle.cpp:
 	.text       start:0x80420330 end:0x80420418
 
-snd/snd_SoundPlayer.cpp:
+libs/nw4r/snd/snd_SoundPlayer.cpp:
 	.text       start:0x80420418 end:0x80420FC0
 	.bss        start:0x8063B4E0 end:0x8063BB00
 	.sbss       start:0x80667DE0 end:0x80667DE8
 	.sdata2     start:0x8066C858 end:0x8066C860
 
-snd/snd_SoundStartable.cpp:
+libs/nw4r/snd/snd_SoundStartable.cpp:
 	.text       start:0x80420FC0 end:0x80421020
 
-snd/snd_SoundSystem.cpp:
+libs/nw4r/snd/snd_SoundSystem.cpp:
 	.text       start:0x80421020 end:0x804212E4
 	.ctors      start:0x804F5A24 end:0x804F5A28
 	.data       start:0x8056E510 end:0x8056E558
@@ -5660,161 +5660,161 @@ snd/snd_SoundSystem.cpp:
 	.sdata      start:0x80665E18 end:0x80665E20
 	.sbss       start:0x80667DE8 end:0x80667DF0
 
-snd/snd_SoundThread.cpp:
+libs/nw4r/snd/snd_SoundThread.cpp:
 	.text       start:0x804212E4 end:0x804219C8
 	.bss        start:0x80652C40 end:0x80653000
 	.sbss       start:0x80667DF0 end:0x80667DF8
 
-snd/snd_StrmChannel.cpp:
+libs/nw4r/snd/snd_StrmChannel.cpp:
 	.text       start:0x804219C8 end:0x80421BE8
 
-snd/snd_StrmFile.cpp:
+libs/nw4r/snd/snd_StrmFile.cpp:
 	.text       start:0x80421BE8 end:0x80422598
 
-snd/snd_StrmPlayer.cpp:
+libs/nw4r/snd/snd_StrmPlayer.cpp:
 	.text       start:0x80422598 end:0x80424FBC
 	.data       start:0x8056E558 end:0x8056E5D0
 	.bss        start:0x80653000 end:0x80657018
 	.sbss       start:0x80667DF8 end:0x80667E00
 	.sdata2     start:0x8066C860 end:0x8066C888
 
-snd/snd_StrmSound.cpp:
+libs/nw4r/snd/snd_StrmSound.cpp:
 	.text       start:0x80424FBC end:0x8042574C
 	.ctors      start:0x804F5A28 end:0x804F5A2C
 	.data       start:0x8056E5D0 end:0x8056E608
 	.sbss       start:0x80667E00 end:0x80667E08
 	.sdata2     start:0x8066C888 end:0x8066C898
 
-snd/snd_StrmSoundHandle.cpp:
+libs/nw4r/snd/snd_StrmSoundHandle.cpp:
 	.text       start:0x8042574C end:0x80425784
 
-snd/snd_Task.cpp:
+libs/nw4r/snd/snd_Task.cpp:
 	.text       start:0x80425784 end:0x804257C4
 
-snd/snd_TaskManager.cpp:
+libs/nw4r/snd/snd_TaskManager.cpp:
 	.text       start:0x804257C4 end:0x80425F30
 	.bss        start:0x80657018 end:0x80657060
 	.sbss       start:0x80667E08 end:0x80667E10
 
-snd/snd_TaskThread.cpp:
+libs/nw4r/snd/snd_TaskThread.cpp:
 	.text       start:0x80425F30 end:0x8042614C
 
-snd/snd_Voice.cpp:
+libs/nw4r/snd/snd_Voice.cpp:
 	.text       start:0x8042614C end:0x80428C58
 	.data       start:0x8056E608 end:0x8056E640
 	.sdata2     start:0x8066C898 end:0x8066C8D0
 
-snd/snd_VoiceManager.cpp:
+libs/nw4r/snd/snd_VoiceManager.cpp:
 	.text       start:0x80428C58 end:0x804293D0
 	.bss        start:0x80657060 end:0x80657088
 	.sbss       start:0x80667E10 end:0x80667E18
 
-snd/snd_Util.cpp:
+libs/nw4r/snd/snd_Util.cpp:
 	.text       start:0x804293D0 end:0x8042984C
 	.rodata     start:0x805238A8 end:0x80525D28
 	.data       start:0x8056E640 end:0x8056E650
 	.sdata      start:0x80665E20 end:0x80665E28
 	.sdata2     start:0x8066C8D0 end:0x8066C900
 
-snd/snd_WaveFile.cpp:
+libs/nw4r/snd/snd_WaveFile.cpp:
 	.text       start:0x8042984C end:0x80429BD8
 
-snd/snd_WaveSound.cpp:
+libs/nw4r/snd/snd_WaveSound.cpp:
 	.text       start:0x80429BD8 end:0x80429F38
 	.ctors      start:0x804F5A2C end:0x804F5A30
 	.data       start:0x8056E650 end:0x8056E688
 	.sbss       start:0x80667E18 end:0x80667E20
 
-snd/snd_WaveSoundHandle.cpp:
+libs/nw4r/snd/snd_WaveSoundHandle.cpp:
 	.text       start:0x80429F38 end:0x80429F70
 
-snd/snd_WsdFile.cpp:
+libs/nw4r/snd/snd_WsdFile.cpp:
 	.text       start:0x80429F70 end:0x8042A32C
 	.sdata2     start:0x8066C900 end:0x8066C908
 
-snd/snd_WsdPlayer.cpp:
+libs/nw4r/snd/snd_WsdPlayer.cpp:
 	.text       start:0x8042A32C end:0x8042B384
 	.data       start:0x8056E688 end:0x8056E6E8
 	.sdata2     start:0x8066C908 end:0x8066C930
 
-snd/snd_adpcm.cpp:
+libs/nw4r/snd/snd_adpcm.cpp:
 	.text       start:0x8042B384 end:0x8042B410
 
-ut/ut_LinkList.cpp:
+libs/nw4r/ut/ut_LinkList.cpp:
 	.text       start:0x8042B410 end:0x8042B57C
 
-ut/ut_binaryFileFormat.cpp:
+libs/nw4r/ut/ut_binaryFileFormat.cpp:
 	.text       start:0x8042B57C end:0x8042B5F0
 
-ut/ut_CharStrmReader.cpp:
+libs/nw4r/ut/ut_CharStrmReader.cpp:
 	.text       start:0x8042B5F0 end:0x8042B700
 
-ut/ut_TagProcessorBase.cpp:
+libs/nw4r/ut/ut_TagProcessorBase.cpp:
 	.text       start:0x8042B700 end:0x8042BDD0
 	.data       start:0x8056E6E8 end:0x8056E710
 	.sdata2     start:0x8066C930 end:0x8066C938
 
-ut/ut_IOStream.cpp:
+libs/nw4r/ut/ut_IOStream.cpp:
 	.text       start:0x8042BDD0 end:0x8042BDFC
 	.ctors      start:0x804F5A30 end:0x804F5A34
 	.sbss       start:0x80667E20 end:0x80667E28
 
-ut/ut_FileStream.cpp:
+libs/nw4r/ut/ut_FileStream.cpp:
 	.text       start:0x8042BDFC end:0x8042BE14
 	.ctors      start:0x804F5A34 end:0x804F5A38
 	.sbss       start:0x80667E28 end:0x80667E30
 
-ut/ut_DvdFileStream.cpp:
+libs/nw4r/ut/ut_DvdFileStream.cpp:
 	.text       start:0x8042BE14 end:0x8042BE20
 	.ctors      start:0x804F5A38 end:0x804F5A3C
 	.sbss       start:0x80667E30 end:0x80667E38
 
-ut/ut_LockedCache.cpp:
+libs/nw4r/ut/ut_LockedCache.cpp:
 	.text       start:0x8042BE20 end:0x8042BFCC
 	.ctors      start:0x804F5A3C end:0x804F5A40
 	.bss        start:0x80657088 end:0x806570A8
 
-ut/ut_Font.cpp:
+libs/nw4r/ut/ut_Font.cpp:
 	.text       start:0x8042BFCC end:0x8042C074
 	.data       start:0x8056E710 end:0x8056E740
 
-ut/ut_ResFontBase.cpp:
+libs/nw4r/ut/ut_ResFontBase.cpp:
 	.text       start:0x8042C074 end:0x8042C928
 	.data       start:0x8056E740 end:0x8056E808
 
-ut/ut_ResFont.cpp:
+libs/nw4r/ut/ut_ResFont.cpp:
 	.text       start:0x8042C928 end:0x8042CC2C
 	.data       start:0x8056E808 end:0x8056E868
 
-ut/ut_ArchiveFontBase.cpp:
+libs/nw4r/ut/ut_ArchiveFontBase.cpp:
 	.text       start:0x8042CC2C end:0x8042DAE0
 	.data       start:0x8056E868 end:0x8056E8C8
 
-ut/ut_PackedFont.cpp:
+libs/nw4r/ut/ut_PackedFont.cpp:
 	.text       start:0x8042DAE0 end:0x8042EEE0
 	.data       start:0x8056E8C8 end:0x8056E958
 	.sdata2     start:0x8066C938 end:0x8066C940
 
-ut/ut_CharWriter.cpp:
+libs/nw4r/ut/ut_CharWriter.cpp:
 	.text       start:0x8042EEE0 end:0x80430624
 	.bss        start:0x806570A8 end:0x806570C8
 	.sbss       start:0x80667E38 end:0x80667E40
 	.sdata2     start:0x8066C940 end:0x8066C960
 
-ut/ut_TextWriterBase.cpp:
+libs/nw4r/ut/ut_TextWriterBase.cpp:
 	.text       start:0x80430624 end:0x80432678
 	.ctors      start:0x804F5A40 end:0x804F5A44
 	.bss        start:0x806570C8 end:0x806570E0
 	.sbss       start:0x80667E40 end:0x80667E50
 	.sdata2     start:0x8066C960 end:0x8066C978
 
-CAttrTransform.cpp:
+libs/monolib/CAttrTransform.cpp:
 	extab       start:0x8001BF80 end:0x8001BF98
 	extabindex  start:0x80033B0C end:0x80033B30
 	.text       start:0x80432678 end:0x80433300
 	.sdata2     start:0x8066C978 end:0x8066C9A8
 
-MemManager.cpp:
+libs/monolib/MemManager.cpp:
 	extab       start:0x8001BF98 end:0x8001C020
 	extabindex  start:0x80033B30 end:0x80033BFC
 	.text       start:0x80433300 end:0x80434F94
@@ -5824,13 +5824,13 @@ MemManager.cpp:
 	.sbss       start:0x80667E50 end:0x80667E60
 	.sdata2     start:0x8066C9A8 end:0x8066C9D0
 
-CPathUtil.cpp:
+libs/monolib/CPathUtil.cpp:
 	extab       start:0x8001C020 end:0x8001C040
 	extabindex  start:0x80033BFC end:0x80033C2C
 	.text       start:0x80434F94 end:0x8043539C
 	.rodata     start:0x80525D70 end:0x80525D78
 
-MTRand.cpp:
+libs/monolib/MTRand.cpp:
 	extab       start:0x8001C040 end:0x8001C070
 	extabindex  start:0x80033C2C end:0x80033C74
 	.text       start:0x8043539C end:0x80435C9C
@@ -5838,12 +5838,12 @@ MTRand.cpp:
 	.sbss       start:0x80667E60 end:0x80667E68
 	.sdata2     start:0x8066C9D0 end:0x8066C9E8
 
-CRect16.cpp:
+libs/monolib/CRect16.cpp:
 	.text       start:0x80435C9C end:0x80435D28
 	.ctors      start:0x804F5A44 end:0x804F5A48
 	.sbss       start:0x80667E68 end:0x80667E70
 
-CVec3.cpp:
+libs/monolib/CVec3.cpp:
 	extab       start:0x8001C070 end:0x8001C078
 	extabindex  start:0x80033C74 end:0x80033C80
 	.text       start:0x80435D28 end:0x80435DF8
@@ -5851,29 +5851,29 @@ CVec3.cpp:
 	.bss        start:0x80659DB0 end:0x80659DF0
 	.sdata2     start:0x8066C9E8 end:0x8066C9F0
 
-CVec4.cpp:
+libs/monolib/CVec4.cpp:
 	.text       start:0x80435DF8 end:0x80435E70
 	.ctors      start:0x804F5A4C end:0x804F5A50
 	.bss        start:0x80659DF0 end:0x80659E40
 	.sdata2     start:0x8066C9F0 end:0x8066C9F8
 
-MathConstants.cpp:
+libs/monolib/MathConstants.cpp:
 	.sdata2     start:0x8066C9F8 end:0x8066CA20
 
-FastCast.cpp:
+libs/monolib/FastCast.cpp:
 	.text       start:0x80435E70 end:0x80435EA4
 
-Random.cpp:
+libs/monolib/Random.cpp:
 	extab       start:0x8001C078 end:0x8001C098
 	extabindex  start:0x80033C80 end:0x80033CB0
 	.text       start:0x80435EA4 end:0x80435FA4
 
-FloatUtils.cpp:
+libs/monolib/FloatUtils.cpp:
 	extab       start:0x8001C098 end:0x8001C0A0
 	extabindex  start:0x80033CB0 end:0x80033CBC
 	.text       start:0x80435FA4 end:0x80436058
 
-CCol3.cpp:
+libs/monolib/CCol3.cpp:
 	extab       start:0x8001C0A0 end:0x8001C0A8
 	extabindex  start:0x80033CBC end:0x80033CC8
 	.text       start:0x80436058 end:0x80436138
@@ -5881,7 +5881,7 @@ CCol3.cpp:
 	.bss        start:0x80659E40 end:0x80659EC8
 	.sdata2     start:0x8066CA20 end:0x8066CA30
 
-CCol4.cpp:
+libs/monolib/CCol4.cpp:
 	extab       start:0x8001C0A8 end:0x8001C0B0
 	extabindex  start:0x80033CC8 end:0x80033CD4
 	.text       start:0x80436138 end:0x80436260
@@ -5889,7 +5889,7 @@ CCol4.cpp:
 	.bss        start:0x80659EC8 end:0x80659F88
 	.sdata2     start:0x8066CA30 end:0x8066CA40
 
-CMat34.cpp:
+libs/monolib/CMat34.cpp:
 	extab       start:0x8001C0B0 end:0x8001C0D0
 	extabindex  start:0x80033CD4 end:0x80033D04
 	.text       start:0x80436260 end:0x80436E84
@@ -5897,13 +5897,13 @@ CMat34.cpp:
 	.bss        start:0x80659F88 end:0x80659FE8
 	.sdata2     start:0x8066CA40 end:0x8066CA58
 
-CMat44.cpp:
+libs/monolib/CMat44.cpp:
 	.text       start:0x80436E84 end:0x80436F20
 	.ctors      start:0x804F5A5C end:0x804F5A60
 	.bss        start:0x80659FE8 end:0x8065A068
 	.sdata2     start:0x8066CA58 end:0x8066CA60
 
-CQuat.cpp:
+libs/monolib/CQuat.cpp:
 	extab       start:0x8001C0D0 end:0x8001C0F0
 	extabindex  start:0x80033D04 end:0x80033D34
 	.text       start:0x80436F20 end:0x8043738C
@@ -5911,7 +5911,7 @@ CQuat.cpp:
 	.bss        start:0x8065A068 end:0x8065A088
 	.sdata2     start:0x8066CA60 end:0x8066CA78
 
-work/CWorkThread.cpp:
+libs/monolib/work/CWorkThread.cpp:
 	extab       start:0x8001C0F0 end:0x8001C1B4
 	extabindex  start:0x80033D34 end:0x80033E18
 	.text       start:0x8043738C end:0x80438C30
@@ -5920,7 +5920,7 @@ work/CWorkThread.cpp:
 	.sdata      start:0x80665E40 end:0x80665E60
 	.sbss       start:0x80667E70 end:0x80667E80
 
-CProc.cpp:
+libs/monolib/CProc.cpp:
 	extab       start:0x8001C1B4 end:0x8001C230
 	extabindex  start:0x80033E18 end:0x80033E84
 	.text       start:0x80438C30 end:0x8043974C
@@ -5929,7 +5929,7 @@ CProc.cpp:
 	.sdata      start:0x80665E60 end:0x80665E70
 	.sdata2     start:0x8066CA78 end:0x8066CA88
 
-CProcRoot.cpp:
+libs/monolib/CProcRoot.cpp:
 	extab       start:0x8001C230 end:0x8001C278
 	extabindex  start:0x80033E84 end:0x80033EF0
 	.text       start:0x8043974C end:0x80439CB4
@@ -5939,7 +5939,7 @@ CProcRoot.cpp:
 	.sdata      start:0x80665E70 end:0x80665E78
 	.sbss       start:0x80667E80 end:0x80667E90
 
-CRsrcData.cpp:
+libs/monolib/CRsrcData.cpp:
 	extab       start:0x8001C278 end:0x8001C2CC
 	extabindex  start:0x80033EF0 end:0x80033F50
 	.text       start:0x80439CB4 end:0x8043A0E0
@@ -5947,7 +5947,7 @@ CRsrcData.cpp:
 	.data       start:0x8056EBD8 end:0x8056EC90
 	.sdata      start:0x80665E78 end:0x80665E80
 
-CScriptCode.cpp:
+libs/monolib/CScriptCode.cpp:
 	extab       start:0x8001C2CC end:0x8001C340
 	extabindex  start:0x80033F50 end:0x80033FA4
 	.text       start:0x8043A0E0 end:0x8043A984
@@ -5956,7 +5956,7 @@ CScriptCode.cpp:
 	.sdata      start:0x80665E80 end:0x80665E88
 	.sbss       start:0x80667E90 end:0x80667E98
 
-CToken.cpp:
+libs/monolib/CToken.cpp:
 	extab       start:0x8001C340 end:0x8001C380
 	extabindex  start:0x80033FA4 end:0x80034004
 	.text       start:0x8043A984 end:0x8043BC84
@@ -5965,7 +5965,7 @@ CToken.cpp:
 	.sdata      start:0x80665E88 end:0x80665E90
 	.sdata2     start:0x8066CA88 end:0x8066CAD0
 
-CRootProc.cpp:
+libs/monolib/CRootProc.cpp:
 	extab       start:0x8001C380 end:0x8001C3C0
 	extabindex  start:0x80034004 end:0x80034064
 	.text       start:0x8043BC84 end:0x8043C2C4
@@ -5974,7 +5974,7 @@ CRootProc.cpp:
 	.sdata      start:0x80665E90 end:0x80665EA0
 	.sbss       start:0x80667E98 end:0x80667EA8
 
-CView.cpp:
+libs/monolib/CView.cpp:
 	extab       start:0x8001C3C0 end:0x8001C5E0
 	extabindex  start:0x80034064 end:0x800341F0
 	.text       start:0x8043C2C4 end:0x8043FBC4
@@ -5986,7 +5986,7 @@ CView.cpp:
 	.sbss       start:0x80667EA8 end:0x80667EB0
 	.sdata2     start:0x8066CAD0 end:0x8066CAE8
 
-CViewFrame.cpp:
+libs/monolib/CViewFrame.cpp:
 	extab       start:0x8001C5E0 end:0x8001C6C0
 	extabindex  start:0x800341F0 end:0x800342D4
 	.text       start:0x8043FBC4 end:0x804430C4
@@ -5996,7 +5996,7 @@ CViewFrame.cpp:
 	.sbss       start:0x80667EB0 end:0x80667EB8
 	.sdata2     start:0x8066CAE8 end:0x8066CB20
 
-CViewRoot.cpp:
+libs/monolib/CViewRoot.cpp:
 	extab       start:0x8001C6C0 end:0x8001C724
 	extabindex  start:0x800342D4 end:0x80034304
 	.text       start:0x804430C4 end:0x80443718
@@ -6004,7 +6004,7 @@ CViewRoot.cpp:
 	.data       start:0x8056EF88 end:0x8056F040
 	.sdata      start:0x80665ED0 end:0x80665ED8
 
-work/CWorkControl.cpp:
+libs/monolib/work/CWorkControl.cpp:
 	extab       start:0x8001C724 end:0x8001C75C
 	extabindex  start:0x80034304 end:0x80034358
 	.text       start:0x80443718 end:0x804439CC
@@ -6013,7 +6013,7 @@ work/CWorkControl.cpp:
 	.sdata      start:0x80665ED8 end:0x80665EE0
 	.sbss       start:0x80667EB8 end:0x80667EC0
 
-work/CWorkFlowSetup.cpp:
+libs/monolib/work/CWorkFlowSetup.cpp:
 	extab       start:0x8001C75C end:0x8001C774
 	extabindex  start:0x80034358 end:0x8003437C
 	.text       start:0x804439CC end:0x80443B08
@@ -6022,7 +6022,7 @@ work/CWorkFlowSetup.cpp:
 	.sdata      start:0x80665EE0 end:0x80665EE8
 	.sbss       start:0x80667EC0 end:0x80667EE8
 
-work/CWorkRoot.cpp:
+libs/monolib/work/CWorkRoot.cpp:
 	extab       start:0x8001C774 end:0x8001C838
 	extabindex  start:0x8003437C end:0x80034430
 	.text       start:0x80443B08 end:0x80444418
@@ -6033,7 +6033,7 @@ work/CWorkRoot.cpp:
 	.sdata      start:0x80665EE8 end:0x80665EF0
 	.sbss       start:0x80667EE8 end:0x80667EF8
 
-work/CWorkSystem.cpp:
+libs/monolib/work/CWorkSystem.cpp:
 	extab       start:0x8001C838 end:0x8001C870
 	extabindex  start:0x80034430 end:0x80034484
 	.text       start:0x80444418 end:0x804448B8
@@ -6042,7 +6042,7 @@ work/CWorkSystem.cpp:
 	.sdata      start:0x80665EF0 end:0x80665EF8
 	.sbss       start:0x80667EF8 end:0x80667F00
 
-work/CWorkSystemMem.cpp:
+libs/monolib/work/CWorkSystemMem.cpp:
 	extab       start:0x8001C870 end:0x8001C89C
 	extabindex  start:0x80034484 end:0x800344A8
 	.text       start:0x804448B8 end:0x80444A18
@@ -6051,7 +6051,7 @@ work/CWorkSystemMem.cpp:
 	.sdata      start:0x80665EF8 end:0x80665F00
 	.sbss       start:0x80667F00 end:0x80667F08
 
-CProcess.cpp:
+libs/monolib/CProcess.cpp:
 	extab       start:0x8001C89C end:0x8001C9A4
 	extabindex  start:0x800344A8 end:0x8003458C
 	.text       start:0x80444A18 end:0x80446578
@@ -6062,11 +6062,11 @@ CProcess.cpp:
 	.sdata      start:0x80665F00 end:0x80665F08
 	.sbss       start:0x80667F08 end:0x80667F10
 
-CDoubleListNode.cpp:
+libs/monolib/CDoubleListNode.cpp:
 	.text       start:0x80446578 end:0x804466E0
 	.data       start:0x8056F408 end:0x8056F418
 
-CChildListNode.cpp:
+libs/monolib/CChildListNode.cpp:
 	extab       start:0x8001C9A4 end:0x8001C9B4
 	extabindex  start:0x8003458C end:0x800345A4
 	.text       start:0x804466E0 end:0x8044676C
@@ -6074,7 +6074,7 @@ CChildListNode.cpp:
 	.data       start:0x8056F418 end:0x8056F438
 	.sdata      start:0x80665F08 end:0x80665F10
 
-device/CDeviceRemotePad.cpp:
+libs/monolib/device/CDeviceRemotePad.cpp:
 	extab       start:0x8001C9B4 end:0x8001CA1C
 	extabindex  start:0x800345A4 end:0x80034640
 	.text       start:0x8044676C end:0x80447900
@@ -6085,7 +6085,7 @@ device/CDeviceRemotePad.cpp:
 	.sbss       start:0x80667F10 end:0x80667F18
 	.sdata2     start:0x8066CB20 end:0x8066CB60
 
-device/CDeviceBase.cpp:
+libs/monolib/device/CDeviceBase.cpp:
 	extab       start:0x8001CA1C end:0x8001CA3C
 	extabindex  start:0x80034640 end:0x80034670
 	.text       start:0x80447900 end:0x80447B50
@@ -6093,7 +6093,7 @@ device/CDeviceBase.cpp:
 	.sdata      start:0x80665F18 end:0x80665F20
 	.sbss       start:0x80667F18 end:0x80667F20
 
-device/CDeviceSC.cpp:
+libs/monolib/device/CDeviceSC.cpp:
 	extab       start:0x8001CA3C end:0x8001CA70
 	extabindex  start:0x80034670 end:0x800346A0
 	.text       start:0x80447B50 end:0x80447DD4
@@ -6102,7 +6102,7 @@ device/CDeviceSC.cpp:
 	.sdata      start:0x80665F20 end:0x80665F28
 	.sbss       start:0x80667F20 end:0x80667F28
 
-device/CDeviceVI.cpp:
+libs/monolib/device/CDeviceVI.cpp:
 	extab       start:0x8001CA70 end:0x8001CB68
 	extabindex  start:0x800346A0 end:0x80034760
 	.text       start:0x80447DD4 end:0x80448F40
@@ -6114,7 +6114,7 @@ device/CDeviceVI.cpp:
 	.sbss       start:0x80667F28 end:0x80667F30
 	.sdata2     start:0x8066CB60 end:0x8066CB78
 
-device/CDeviceVICb.cpp:
+libs/monolib/device/CDeviceVICb.cpp:
 	extab       start:0x8001CB68 end:0x8001CB78
 	extabindex  start:0x80034760 end:0x80034778
 	.text       start:0x80448F40 end:0x80448FDC
@@ -6122,13 +6122,13 @@ device/CDeviceVICb.cpp:
 	.data       start:0x8056F7A8 end:0x8056F7C0
 	.sdata      start:0x80665F40 end:0x80665F48
 
-CFontLayer.cpp:
+libs/monolib/CFontLayer.cpp:
 	extab       start:0x8001CB78 end:0x8001CB90
 	extabindex  start:0x80034778 end:0x8003479C
 	.text       start:0x80448FDC end:0x80449164
 	.data       start:0x8056F7C0 end:0x8056F7D0
 
-CGXCache.cpp:
+libs/monolib/CGXCache.cpp:
 	extab       start:0x8001CB90 end:0x8001CCB8
 	extabindex  start:0x8003479C end:0x80034928
 	.text       start:0x80449164 end:0x8044CFF0
@@ -6137,7 +6137,7 @@ CGXCache.cpp:
 	.sdata      start:0x80665F48 end:0x80665F98
 	.sdata2     start:0x8066CB78 end:0x8066CBB0
 
-device/CDevice.cpp:
+libs/monolib/device/CDevice.cpp:
 	extab       start:0x8001CCB8 end:0x8001CD08
 	extabindex  start:0x80034928 end:0x800349A0
 	.text       start:0x8044CFF0 end:0x8044DB24
@@ -6148,7 +6148,7 @@ device/CDevice.cpp:
 	.sdata      start:0x80665F98 end:0x80665FB8
 	.sbss       start:0x80667F30 end:0x80667F38
 
-device/CDeviceClock.cpp:
+libs/monolib/device/CDeviceClock.cpp:
 	extab       start:0x8001CD08 end:0x8001CD84
 	extabindex  start:0x800349A0 end:0x80034A0C
 	.text       start:0x8044DB24 end:0x8044E148
@@ -6157,7 +6157,7 @@ device/CDeviceClock.cpp:
 	.sdata      start:0x80665FB8 end:0x80665FD0
 	.sbss       start:0x80667F38 end:0x80667F40
 
-device/CDeviceFile.cpp:
+libs/monolib/device/CDeviceFile.cpp:
 	extab       start:0x8001CD84 end:0x8001CE38
 	extabindex  start:0x80034A0C end:0x80034ACC
 	.text       start:0x8044E148 end:0x8044F5C4
@@ -6166,7 +6166,7 @@ device/CDeviceFile.cpp:
 	.sdata      start:0x80665FD0 end:0x80665FF0
 	.sbss       start:0x80667F40 end:0x80667F48
 
-device/CDeviceFileCri.cpp:
+libs/monolib/device/CDeviceFileCri.cpp:
 	extab       start:0x8001CE38 end:0x8001CF14
 	extabindex  start:0x80034ACC end:0x80034B98
 	.text       start:0x8044F5C4 end:0x80450B14
@@ -6176,15 +6176,15 @@ device/CDeviceFileCri.cpp:
 	.sbss       start:0x80667F48 end:0x80667F50
 	.sdata2     start:0x8066CBB0 end:0x8066CBB8
 
-code_80450B14.cpp:
+libs/monolib/code_80450B14.cpp:
 	.text       start:0x80450B14 end:0x80450B2C
 
-device/code_80450B2C.cpp:
+libs/monolib/device/code_80450B2C.cpp:
 	.text       start:0x80450B2C end:0x80450B54
 	.ctors      start:0x804F5A78 end:0x804F5A7C
 	.bss        start:0x8065A780 end:0x8065A808
 
-device/CDeviceFileDvd.cpp:
+libs/monolib/device/CDeviceFileDvd.cpp:
 	extab       start:0x8001CF14 end:0x8001CF9C
 	extabindex  start:0x80034B98 end:0x80034C64
 	.text       start:0x80450B54 end:0x80451E50
@@ -6193,7 +6193,7 @@ device/CDeviceFileDvd.cpp:
 	.sdata      start:0x80666008 end:0x80666010
 	.sbss       start:0x80667F50 end:0x80667F58
 
-device/CDeviceFileJob.cpp:
+libs/monolib/device/CDeviceFileJob.cpp:
 	extab       start:0x8001CF9C end:0x8001CFAC
 	extabindex  start:0x80034C64 end:0x80034C7C
 	.text       start:0x80451E50 end:0x80451F20
@@ -6201,7 +6201,7 @@ device/CDeviceFileJob.cpp:
 	.data       start:0x8056FD20 end:0x8056FDE0
 	.sdata      start:0x80666010 end:0x80666018
 
-device/CDeviceFileJobReadDvd.cpp:
+libs/monolib/device/CDeviceFileJobReadDvd.cpp:
 	extab       start:0x8001CFAC end:0x8001CFEC
 	extabindex  start:0x80034C7C end:0x80034CDC
 	.text       start:0x80451F20 end:0x8045229C
@@ -6209,7 +6209,7 @@ device/CDeviceFileJobReadDvd.cpp:
 	.data       start:0x8056FDE0 end:0x8056FEA8
 	.sdata      start:0x80666018 end:0x80666020
 
-device/CDeviceFont.cpp:
+libs/monolib/device/CDeviceFont.cpp:
 	extab       start:0x8001CFEC end:0x8001D080
 	extabindex  start:0x80034CDC end:0x80034D6C
 	.text       start:0x8045229C end:0x804532D4
@@ -6219,7 +6219,7 @@ device/CDeviceFont.cpp:
 	.sbss       start:0x80667F58 end:0x80667F60
 	.sdata2     start:0x8066CBB8 end:0x8066CBC0
 
-device/CDeviceFontInfoExt.cpp:
+libs/monolib/device/CDeviceFontInfoExt.cpp:
 	extab       start:0x8001D080 end:0x8001D0E8
 	extabindex  start:0x80034D6C end:0x80034D9C
 	.text       start:0x804532D4 end:0x8045365C
@@ -6229,7 +6229,7 @@ device/CDeviceFontInfoExt.cpp:
 	.sdata2     start:0x8066CBC0 end:0x8066CBC8
 	.sbss2      start:0x8066DCF8 end:0x8066DCFC
 
-device/CDeviceFontInfoRom.cpp:
+libs/monolib/device/CDeviceFontInfoRom.cpp:
 	extab       start:0x8001D0E8 end:0x8001D120
 	extabindex  start:0x80034D9C end:0x80034DB4
 	.text       start:0x8045365C end:0x80453838
@@ -6238,7 +6238,7 @@ device/CDeviceFontInfoRom.cpp:
 	.sdata      start:0x80666050 end:0x80666058
 	.sbss       start:0x80667F60 end:0x80667F68
 
-device/CDeviceFontLayer.cpp:
+libs/monolib/device/CDeviceFontLayer.cpp:
 	extab       start:0x8001D120 end:0x8001D1F4
 	extabindex  start:0x80034DB4 end:0x80034E74
 	.text       start:0x80453838 end:0x80454E80
@@ -6248,7 +6248,7 @@ device/CDeviceFontLayer.cpp:
 	.sbss       start:0x80667F68 end:0x80667F70
 	.sdata2     start:0x8066CBC8 end:0x8066CBE8
 
-device/CDeviceFontLoader.cpp:
+libs/monolib/device/CDeviceFontLoader.cpp:
 	extab       start:0x8001D1F4 end:0x8001D224
 	extabindex  start:0x80034E74 end:0x80034EBC
 	.text       start:0x80454E80 end:0x804550E4
@@ -6256,7 +6256,7 @@ device/CDeviceFontLoader.cpp:
 	.data       start:0x805700F0 end:0x805701A8
 	.sdata      start:0x80666070 end:0x80666078
 
-device/CDeviceGX.cpp:
+libs/monolib/device/CDeviceGX.cpp:
 	extab       start:0x8001D224 end:0x8001D2E4
 	extabindex  start:0x80034EBC end:0x80034F1C
 	.text       start:0x804550E4 end:0x804559CC
@@ -6266,7 +6266,7 @@ device/CDeviceGX.cpp:
 	.sbss       start:0x80667F70 end:0x80667F80
 	.sdata2     start:0x8066CBE8 end:0x8066CC10
 
-CDesktop.cpp:
+libs/monolib/CDesktop.cpp:
 	extab       start:0x8001D2E4 end:0x8001D360
 	extabindex  start:0x80034F1C end:0x80034FB8
 	.text       start:0x804559CC end:0x80456134
@@ -6276,14 +6276,14 @@ CDesktop.cpp:
 	.sbss       start:0x80667F80 end:0x80667F98
 	.sdata2     start:0x8066CC10 end:0x8066CC28
 
-code_80456134.cpp:
+libs/monolib/code_80456134.cpp:
 	extab       start:0x8001D360 end:0x8001D3C0
 	extabindex  start:0x80034FB8 end:0x80035048
 	.text       start:0x80456134 end:0x80457B9C
 	.data       start:0x805704D0 end:0x80570528
 	.sdata2     start:0x8066CC28 end:0x8066CC40
 
-CException.cpp:
+libs/monolib/CException.cpp:
 	extab       start:0x8001D3C0 end:0x8001D478
 	extabindex  start:0x80035048 end:0x800350CC
 	.text       start:0x80457B9C end:0x80459390
@@ -6294,7 +6294,7 @@ CException.cpp:
 	.sbss       start:0x80667F98 end:0x80667FA8
 	.sdata2     start:0x8066CC40 end:0x8066CC88
 
-lib/CLib.cpp:
+libs/monolib/lib/CLib.cpp:
 	extab       start:0x8001D478 end:0x8001D4A8
 	extabindex  start:0x800350CC end:0x80035114
 	.text       start:0x80459390 end:0x80459864
@@ -6303,7 +6303,7 @@ lib/CLib.cpp:
 	.sbss       start:0x80667FA8 end:0x80667FB0
 	.sdata2     start:0x8066CC88 end:0x8066CC90
 
-lib/CLibCri.cpp:
+libs/monolib/lib/CLibCri.cpp:
 	extab       start:0x8001D4A8 end:0x8001D564
 	extabindex  start:0x80035114 end:0x80035150
 	.text       start:0x80459864 end:0x80459C98
@@ -6313,7 +6313,7 @@ lib/CLibCri.cpp:
 	.sbss       start:0x80667FB0 end:0x80667FB8
 	.sdata2     start:0x8066CC90 end:0x8066CC98
 
-lib/CLibCriMoviePlay.cpp:
+libs/monolib/lib/CLibCriMoviePlay.cpp:
 	extab       start:0x8001D564 end:0x8001D614
 	extabindex  start:0x80035150 end:0x80035204
 	.text       start:0x80459C98 end:0x8045B3EC
@@ -6323,7 +6323,7 @@ lib/CLibCriMoviePlay.cpp:
 	.sbss       start:0x80667FB8 end:0x80667FC0
 	.sdata2     start:0x8066CC98 end:0x8066CCC0
 
-lib/CLibCriStreamingPlay.cpp:
+libs/monolib/lib/CLibCriStreamingPlay.cpp:
 	extab       start:0x8001D614 end:0x8001D6E0
 	extabindex  start:0x80035204 end:0x800352B8
 	.text       start:0x8045B3EC end:0x8045D150
@@ -6333,7 +6333,7 @@ lib/CLibCriStreamingPlay.cpp:
 	.sbss       start:0x80667FC0 end:0x80667FC8
 	.sdata2     start:0x8066CCC0 end:0x8066CCE8
 
-lib/CLibG3d.cpp:
+libs/monolib/lib/CLibG3d.cpp:
 	extab       start:0x8001D6E0 end:0x8001D700
 	extabindex  start:0x800352B8 end:0x800352E8
 	.text       start:0x8045D150 end:0x8045D354
@@ -6342,7 +6342,7 @@ lib/CLibG3d.cpp:
 	.sbss       start:0x80667FC8 end:0x80667FD0
 	.sdata2     start:0x8066CCE8 end:0x8066CCF0
 
-lib/CLibHbm.cpp:
+libs/monolib/lib/CLibHbm.cpp:
 	extab       start:0x8001D700 end:0x8001D788
 	extabindex  start:0x800352E8 end:0x8003539C
 	.text       start:0x8045D354 end:0x8045E558
@@ -6353,7 +6353,7 @@ lib/CLibHbm.cpp:
 	.sbss       start:0x80667FD0 end:0x80667FE8
 	.sdata2     start:0x8066CCF0 end:0x8066CD30
 
-lib/CLibHbmControl.cpp:
+libs/monolib/lib/CLibHbmControl.cpp:
 	extab       start:0x8001D788 end:0x8001D7C0
 	extabindex  start:0x8003539C end:0x800353D8
 	.text       start:0x8045E558 end:0x8045EF84
@@ -6362,7 +6362,7 @@ lib/CLibHbmControl.cpp:
 	.sdata      start:0x806660F0 end:0x806660F8
 	.sdata2     start:0x8066CD30 end:0x8066CD70
 
-lib/CLibLayout.cpp:
+libs/monolib/lib/CLibLayout.cpp:
 	extab       start:0x8001D7C0 end:0x8001D89C
 	extabindex  start:0x800353D8 end:0x80035498
 	.text       start:0x8045EF84 end:0x8045F930
@@ -6371,7 +6371,7 @@ lib/CLibLayout.cpp:
 	.sdata      start:0x806660F8 end:0x80666100
 	.sbss       start:0x80667FE8 end:0x80667FF0
 
-lib/CLibStaticData.cpp:
+libs/monolib/lib/CLibStaticData.cpp:
 	extab       start:0x8001D89C end:0x8001D940
 	extabindex  start:0x80035498 end:0x80035504
 	.text       start:0x8045F930 end:0x804600E0
@@ -6380,7 +6380,7 @@ lib/CLibStaticData.cpp:
 	.sdata      start:0x80666100 end:0x80666110
 	.sbss       start:0x80667FF0 end:0x80667FF8
 
-lib/CLibVM.cpp:
+libs/monolib/lib/CLibVM.cpp:
 	extab       start:0x8001D940 end:0x8001D9C4
 	extabindex  start:0x80035504 end:0x800355AC
 	.text       start:0x804600E0 end:0x80462904
@@ -6390,7 +6390,7 @@ lib/CLibVM.cpp:
 	.sbss       start:0x80667FF8 end:0x80668008
 	.sdata2     start:0x8066CD70 end:0x8066CD78
 
-CTaskLOD.cpp:
+libs/monolib/CTaskLOD.cpp:
 	extab       start:0x8001D9C4 end:0x8001DA6C
 	extabindex  start:0x800355AC end:0x8003566C
 	.text       start:0x80462904 end:0x8046376C
@@ -6400,7 +6400,7 @@ CTaskLOD.cpp:
 	.sbss       start:0x80668008 end:0x80668040
 	.sdata2     start:0x8066CD78 end:0x8066CDA8
 
-code_8046376C.cpp:
+libs/monolib/code_8046376C.cpp:
 	extab       start:0x8001DA6C end:0x8001DABC
 	extabindex  start:0x8003566C end:0x800356E4
 	.text       start:0x8046376C end:0x804645CC
@@ -6409,7 +6409,7 @@ code_8046376C.cpp:
 	.sbss       start:0x80668040 end:0x806680A8
 	.sdata2     start:0x8066CDA8 end:0x8066CDC8
 
-code_804645CC.cpp:
+libs/monolib/code_804645CC.cpp:
 	extab       start:0x8001DABC end:0x8001DC74
 	extabindex  start:0x800356E4 end:0x80035978
 	.text       start:0x804645CC end:0x80468434
@@ -6420,7 +6420,7 @@ code_804645CC.cpp:
 	.sbss       start:0x806680A8 end:0x80668100
 	.sdata2     start:0x8066CDC8 end:0x8066CE08
 
-code_80468434.cpp:
+libs/monolib/code_80468434.cpp:
 	extab       start:0x8001DC74 end:0x8001DCEC
 	extabindex  start:0x80035978 end:0x80035A2C
 	.text       start:0x80468434 end:0x8046A530
@@ -6429,14 +6429,14 @@ code_80468434.cpp:
 	.bss        start:0x8065AC98 end:0x8065ACC8
 	.sdata2     start:0x8066CE08 end:0x8066CE18
 
-code_8046A530.cpp:
+libs/monolib/code_8046A530.cpp:
 	extab       start:0x8001DCEC end:0x8001DD2C
 	extabindex  start:0x80035A2C end:0x80035A8C
 	.text       start:0x8046A530 end:0x8046CFE0
 	.sdata      start:0x80666138 end:0x80666148
 	.sdata2     start:0x8066CE18 end:0x8066CE80
 
-LOD/LODMemMan.cpp:
+libs/monolib/LOD/LODMemMan.cpp:
 	extab       start:0x8001DD2C end:0x8001DFA8
 	extabindex  start:0x80035A8C end:0x80035DF8
 	.text       start:0x8046CFE0 end:0x80474F80
@@ -6447,7 +6447,7 @@ LOD/LODMemMan.cpp:
 	.sbss       start:0x80668100 end:0x80668160
 	.sdata2     start:0x8066CE80 end:0x8066CFA0
 
-mpfsys/MPFDrawDisplayList.cpp:
+libs/monolib/mpfsys/MPFDrawDisplayList.cpp:
 	extab       start:0x8001DFA8 end:0x8001E020
 	extabindex  start:0x80035DF8 end:0x80035EAC
 	.text       start:0x80474F80 end:0x80479844
@@ -6458,11 +6458,11 @@ mpfsys/MPFDrawDisplayList.cpp:
 	.sbss       start:0x80668160 end:0x80668168
 	.sdata2     start:0x8066CFA0 end:0x8066D008
 
-mpfsys/MPFDrawMdlNoColor.cpp:
+libs/monolib/mpfsys/MPFDrawMdlNoColor.cpp:
 	.text       start:0x80479844 end:0x8047986C
 	.sbss       start:0x80668168 end:0x80668170
 
-mpfsys/MPFDrawMdlColor.cpp:
+libs/monolib/mpfsys/MPFDrawMdlColor.cpp:
 	extab       start:0x8001E020 end:0x8001E040
 	extabindex  start:0x80035EAC end:0x80035EDC
 	.text       start:0x8047986C end:0x80479EDC
@@ -6471,22 +6471,22 @@ mpfsys/MPFDrawMdlColor.cpp:
 	.sdata      start:0x80666198 end:0x806661C8
 	.sbss       start:0x80668170 end:0x80668178
 
-mpfsys/MPFDrawBillboard.cpp:
+libs/monolib/mpfsys/MPFDrawBillboard.cpp:
 	.text       start:0x80479EDC end:0x80479F04
 	.sbss       start:0x80668178 end:0x80668180
 
-mpfsys/MPFDrawCross.cpp:
+libs/monolib/mpfsys/MPFDrawCross.cpp:
 	.text       start:0x80479F04 end:0x80479F2C
 	.sbss       start:0x80668180 end:0x80668188
 
-mpfsys/MPFDrawBillLayTex.cpp:
+libs/monolib/mpfsys/MPFDrawBillLayTex.cpp:
 	extab       start:0x8001E040 end:0x8001E090
 	extabindex  start:0x80035EDC end:0x80035F54
 	.text       start:0x80479F2C end:0x8047BB54
 	.sbss       start:0x80668188 end:0x80668190
 	.sdata2     start:0x8066D008 end:0x8066D018
 
-mpfsys/code_8047BB54.cpp:
+libs/monolib/mpfsys/code_8047BB54.cpp:
 	extab       start:0x8001E090 end:0x8001E0E0
 	extabindex  start:0x80035F54 end:0x80035FCC
 	.text       start:0x8047BB54 end:0x8047CA88
@@ -6495,7 +6495,7 @@ mpfsys/code_8047BB54.cpp:
 	.sbss       start:0x80668190 end:0x80668198
 	.sdata2     start:0x8066D018 end:0x8066D030
 
-code_8047CA88.cpp:
+libs/monolib/code_8047CA88.cpp:
 	extab       start:0x8001E0E0 end:0x8001E130
 	extabindex  start:0x80035FCC end:0x80036044
 	.text       start:0x8047CA88 end:0x8047D2AC
@@ -6504,7 +6504,7 @@ code_8047CA88.cpp:
 	.sbss       start:0x80668198 end:0x806681A8
 	.sdata2     start:0x8066D030 end:0x8066D038
 
-code_8047D2AC.cpp:
+libs/monolib/code_8047D2AC.cpp:
 	extab       start:0x8001E130 end:0x8001E210
 	extabindex  start:0x80036044 end:0x80036194
 	.text       start:0x8047D2AC end:0x80481E6C
@@ -6514,7 +6514,7 @@ code_8047D2AC.cpp:
 	.sbss       start:0x806681A8 end:0x806681B0
 	.sdata2     start:0x8066D038 end:0x8066D080
 
-scn/CScnItemCameraNw4r.cpp:
+libs/monolib/scn/CScnItemCameraNw4r.cpp:
 	extab       start:0x8001E210 end:0x8001E238
 	extabindex  start:0x80036194 end:0x800361D0
 	.text       start:0x80481E6C end:0x80482094
@@ -6522,7 +6522,7 @@ scn/CScnItemCameraNw4r.cpp:
 	.data       start:0x805714D8 end:0x80571520
 	.sdata      start:0x806661C8 end:0x806661D8
 
-scn/CScnItemId.cpp:
+libs/monolib/scn/CScnItemId.cpp:
 	extab       start:0x8001E238 end:0x8001E284
 	extabindex  start:0x800361D0 end:0x800361E8
 	.text       start:0x80482094 end:0x804822A0
@@ -6530,7 +6530,7 @@ scn/CScnItemId.cpp:
 	.data       start:0x80571520 end:0x80571550
 	.sdata      start:0x806661D8 end:0x806661E0
 
-scn/CScnItemLight.cpp:
+libs/monolib/scn/CScnItemLight.cpp:
 	extab       start:0x8001E284 end:0x8001E2B8
 	extabindex  start:0x800361E8 end:0x80036218
 	.text       start:0x804822A0 end:0x80482440
@@ -6538,7 +6538,7 @@ scn/CScnItemLight.cpp:
 	.data       start:0x80571550 end:0x80571580
 	.sdata      start:0x806661E0 end:0x806661E8
 
-scn/CScnItemLightNw4r.cpp:
+libs/monolib/scn/CScnItemLightNw4r.cpp:
 	extab       start:0x8001E2B8 end:0x8001E2C0
 	extabindex  start:0x80036218 end:0x80036224
 	.text       start:0x80482440 end:0x80482528
@@ -6546,14 +6546,14 @@ scn/CScnItemLightNw4r.cpp:
 	.data       start:0x80571580 end:0x805715B8
 	.sdata      start:0x806661E8 end:0x806661F0
 
-scn/CScnItemModel.cpp:
+libs/monolib/scn/CScnItemModel.cpp:
 	extab       start:0x8001E2C0 end:0x8001E444
 	extabindex  start:0x80036224 end:0x800363B0
 	.text       start:0x80482528 end:0x80486098
 	.data       start:0x805715B8 end:0x80571698
 	.sdata2     start:0x8066D080 end:0x8066D090
 
-scn/CScnItemModelNw4r.cpp:
+libs/monolib/scn/CScnItemModelNw4r.cpp:
 	extab       start:0x8001E444 end:0x8001E990
 	extabindex  start:0x800363B0 end:0x8003662C
 	.text       start:0x80486098 end:0x8048BD94
@@ -6563,7 +6563,7 @@ scn/CScnItemModelNw4r.cpp:
 	.sbss       start:0x806681B0 end:0x806681B8
 	.sdata2     start:0x8066D090 end:0x8066D0F0
 
-scn/CScnItemPool.cpp:
+libs/monolib/scn/CScnItemPool.cpp:
 	extab       start:0x8001E990 end:0x8001EB70
 	extabindex  start:0x8003662C end:0x80036740
 	.text       start:0x8048BD94 end:0x8048D024
@@ -6571,7 +6571,7 @@ scn/CScnItemPool.cpp:
 	.data       start:0x80571CD0 end:0x80571DB0
 	.sdata      start:0x80666258 end:0x80666270
 
-scn/CScnLightMan.cpp:
+libs/monolib/scn/CScnLightMan.cpp:
 	extab       start:0x8001EB70 end:0x8001EB90
 	extabindex  start:0x80036740 end:0x80036770
 	.text       start:0x8048D024 end:0x8048D1C4
@@ -6579,7 +6579,7 @@ scn/CScnLightMan.cpp:
 	.data       start:0x80571DB0 end:0x80571DC0
 	.sdata      start:0x80666270 end:0x80666278
 
-scn/CScnMaruShadowNw4r.cpp:
+libs/monolib/scn/CScnMaruShadowNw4r.cpp:
 	extab       start:0x8001EB90 end:0x8001EBC8
 	extabindex  start:0x80036770 end:0x800367C4
 	.text       start:0x8048D1C4 end:0x8048EAA8
@@ -6591,7 +6591,7 @@ scn/CScnMaruShadowNw4r.cpp:
 	.sbss       start:0x806681B8 end:0x806681C0
 	.sdata2     start:0x8066D0F0 end:0x8066D198
 
-scn/CScnMem.cpp:
+libs/monolib/scn/CScnMem.cpp:
 	extab       start:0x8001EBC8 end:0x8001EBF0
 	extabindex  start:0x800367C4 end:0x80036800
 	.text       start:0x8048EAA8 end:0x8048ED24
@@ -6600,7 +6600,7 @@ scn/CScnMem.cpp:
 	.sdata      start:0x80666298 end:0x806662B8
 	.sdata2     start:0x8066D198 end:0x8066D1A8
 
-scn/CScnRoot.cpp:
+libs/monolib/scn/CScnRoot.cpp:
 	extab       start:0x8001EBF0 end:0x8001EC30
 	extabindex  start:0x80036800 end:0x80036830
 	.text       start:0x8048ED24 end:0x8048F338
@@ -6609,7 +6609,7 @@ scn/CScnRoot.cpp:
 	.sdata      start:0x806662B8 end:0x806662C0
 	.sdata2     start:0x8066D1A8 end:0x8066D1C0
 
-scn/CScnRootNw4r.cpp:
+libs/monolib/scn/CScnRootNw4r.cpp:
 	extab       start:0x8001EC30 end:0x8001ECBC
 	extabindex  start:0x80036830 end:0x800368B4
 	.text       start:0x8048F338 end:0x804900BC
@@ -6617,7 +6617,7 @@ scn/CScnRootNw4r.cpp:
 	.data       start:0x80571FB0 end:0x80572018
 	.sdata      start:0x806662C0 end:0x806662C8
 
-scn/CScnTexWorkMan.cpp:
+libs/monolib/scn/CScnTexWorkMan.cpp:
 	extab       start:0x8001ECBC end:0x8001ED44
 	extabindex  start:0x800368B4 end:0x80036944
 	.text       start:0x804900BC end:0x80491E74
@@ -6627,7 +6627,7 @@ scn/CScnTexWorkMan.cpp:
 	.sbss       start:0x806681C0 end:0x806681E0
 	.sdata2     start:0x8066D1C0 end:0x8066D1D0
 
-scn/CScnVirtualLight.cpp:
+libs/monolib/scn/CScnVirtualLight.cpp:
 	extab       start:0x8001ED44 end:0x8001EEEC
 	extabindex  start:0x80036944 end:0x80036A88
 	.text       start:0x80491E74 end:0x8049431C
@@ -6638,12 +6638,12 @@ scn/CScnVirtualLight.cpp:
 	.sdata      start:0x806662E0 end:0x806662E8
 	.sdata2     start:0x8066D1D0 end:0x8066D240
 
-code_8049431C.cpp:
+libs/monolib/code_8049431C.cpp:
 	extab       start:0x8001EEEC end:0x8001EF14
 	extabindex  start:0x80036A88 end:0x80036AC4
 	.text       start:0x8049431C end:0x80494678
 
-CVirtualLightAmb.cpp:
+libs/monolib/CVirtualLightAmb.cpp:
 	extab       start:0x8001EF14 end:0x8001EF24
 	extabindex  start:0x80036AC4 end:0x80036ADC
 	.text       start:0x80494678 end:0x804946FC
@@ -6651,7 +6651,7 @@ CVirtualLightAmb.cpp:
 	.data       start:0x805720C0 end:0x805720E0
 	.sdata      start:0x806662E8 end:0x806662F0
 
-CVirtualLightDir.cpp:
+libs/monolib/CVirtualLightDir.cpp:
 	extab       start:0x8001EF24 end:0x8001EF34
 	extabindex  start:0x80036ADC end:0x80036AF4
 	.text       start:0x804946FC end:0x80494798
@@ -6659,14 +6659,14 @@ CVirtualLightDir.cpp:
 	.sdata      start:0x806662F0 end:0x80666300
 	.sdata2     start:0x8066D240 end:0x8066D248
 
-CVirtualLightObj.cpp:
+libs/monolib/CVirtualLightObj.cpp:
 	extab       start:0x8001EF34 end:0x8001F168
 	extabindex  start:0x80036AF4 end:0x80036BB4
 	.text       start:0x80494798 end:0x80495C2C
 	.data       start:0x80572100 end:0x80572118
 	.sdata2     start:0x8066D248 end:0x8066D270
 
-scn/CScn.cpp:
+libs/monolib/scn/CScn.cpp:
 	extab       start:0x8001F168 end:0x8001F214
 	extabindex  start:0x80036BB4 end:0x80036C68
 	.text       start:0x80495C2C end:0x80496B0C
@@ -6675,7 +6675,7 @@ scn/CScn.cpp:
 	.sbss       start:0x806681E0 end:0x806681E8
 	.sdata2     start:0x8066D270 end:0x8066D280
 
-scn/CScn_80496B0C.cpp:
+libs/monolib/scn/CScn_80496B0C.cpp:
 	extab       start:0x8001F214 end:0x8001F2CC
 	extabindex  start:0x80036C68 end:0x80036D40
 	.text       start:0x80496B0C end:0x80498C6C
@@ -6683,7 +6683,7 @@ scn/CScn_80496B0C.cpp:
 	.sdata      start:0x80666300 end:0x80666308
 	.sdata2     start:0x8066D280 end:0x8066D2A0
 
-scn/CScnBlend.cpp:
+libs/monolib/scn/CScnBlend.cpp:
 	extab       start:0x8001F2CC end:0x8001F2E4
 	extabindex  start:0x80036D40 end:0x80036D64
 	.text       start:0x80498C6C end:0x804991D8
@@ -6692,7 +6692,7 @@ scn/CScnBlend.cpp:
 	.sdata      start:0x80666308 end:0x80666318
 	.sdata2     start:0x8066D2A0 end:0x8066D2B0
 
-scn/CScnBloom.cpp:
+libs/monolib/scn/CScnBloom.cpp:
 	extab       start:0x8001F2E4 end:0x8001F374
 	extabindex  start:0x80036D64 end:0x80036E00
 	.text       start:0x804991D8 end:0x8049ACBC
@@ -6701,7 +6701,7 @@ scn/CScnBloom.cpp:
 	.sdata      start:0x80666318 end:0x80666328
 	.sdata2     start:0x8066D2B0 end:0x8066D308
 
-scn/CScnCameraMan.cpp:
+libs/monolib/scn/CScnCameraMan.cpp:
 	extab       start:0x8001F374 end:0x8001F42C
 	extabindex  start:0x80036E00 end:0x80036EB4
 	.text       start:0x8049ACBC end:0x8049B994
@@ -6710,7 +6710,7 @@ scn/CScnCameraMan.cpp:
 	.sdata      start:0x80666328 end:0x80666338
 	.sdata2     start:0x8066D308 end:0x8066D330
 
-scn/CScnEffectActNw4r.cpp:
+libs/monolib/scn/CScnEffectActNw4r.cpp:
 	extab       start:0x8001F42C end:0x8001F48C
 	extabindex  start:0x80036EB4 end:0x80036F44
 	.text       start:0x8049B994 end:0x8049C438
@@ -6719,7 +6719,7 @@ scn/CScnEffectActNw4r.cpp:
 	.sdata      start:0x80666338 end:0x80666358
 	.sdata2     start:0x8066D330 end:0x8066D338
 
-scn/CScnFadeMan.cpp:
+libs/monolib/scn/CScnFadeMan.cpp:
 	extab       start:0x8001F48C end:0x8001F4E4
 	extabindex  start:0x80036F44 end:0x80036F74
 	.text       start:0x8049C438 end:0x8049C7F8
@@ -6728,14 +6728,14 @@ scn/CScnFadeMan.cpp:
 	.sdata      start:0x80666358 end:0x80666360
 	.sdata2     start:0x8066D338 end:0x8066D350
 
-scn/CScnFilter.cpp:
+libs/monolib/scn/CScnFilter.cpp:
 	extab       start:0x8001F4E4 end:0x8001F4F4
 	extabindex  start:0x80036F74 end:0x80036F8C
 	.text       start:0x8049C7F8 end:0x8049C948
 	.data       start:0x805723A8 end:0x805723C0
 	.sdata2     start:0x8066D350 end:0x8066D360
 
-scn/CScnFilterMan.cpp:
+libs/monolib/scn/CScnFilterMan.cpp:
 	extab       start:0x8001F4F4 end:0x8001F698
 	extabindex  start:0x80036F8C end:0x80037160
 	.text       start:0x8049C948 end:0x8049DD8C
@@ -6743,7 +6743,7 @@ scn/CScnFilterMan.cpp:
 	.data       start:0x805723C0 end:0x80572418
 	.sdata      start:0x80666360 end:0x80666388
 
-scn/CScnFogMan.cpp:
+libs/monolib/scn/CScnFogMan.cpp:
 	extab       start:0x8001F698 end:0x8001F6A8
 	extabindex  start:0x80037160 end:0x80037178
 	.text       start:0x8049DD8C end:0x8049E380
@@ -6752,7 +6752,7 @@ scn/CScnFogMan.cpp:
 	.sdata      start:0x80666388 end:0x80666390
 	.sdata2     start:0x8066D360 end:0x8066D390
 
-scn/CScnFrame.cpp:
+libs/monolib/scn/CScnFrame.cpp:
 	extab       start:0x8001F6A8 end:0x8001F6B8
 	extabindex  start:0x80037178 end:0x80037190
 	.text       start:0x8049E380 end:0x8049E458
@@ -6761,7 +6761,7 @@ scn/CScnFrame.cpp:
 	.sdata      start:0x80666390 end:0x80666398
 	.sdata2     start:0x8066D390 end:0x8066D3A0
 
-scn/CScnIdMan.cpp:
+libs/monolib/scn/CScnIdMan.cpp:
 	extab       start:0x8001F6B8 end:0x8001F700
 	extabindex  start:0x80037190 end:0x800371C0
 	.text       start:0x8049E458 end:0x8049E5DC
@@ -6769,7 +6769,7 @@ scn/CScnIdMan.cpp:
 	.data       start:0x805724C8 end:0x805724D8
 	.sdata      start:0x80666398 end:0x806663A0
 
-scn/CScnItemAnim.cpp:
+libs/monolib/scn/CScnItemAnim.cpp:
 	extab       start:0x8001F700 end:0x8001F75C
 	extabindex  start:0x800371C0 end:0x800371E4
 	.text       start:0x8049E5DC end:0x8049E8C4
@@ -6777,7 +6777,7 @@ scn/CScnItemAnim.cpp:
 	.data       start:0x805724D8 end:0x80572508
 	.sdata      start:0x806663A0 end:0x806663B0
 
-scn/CScnItemCamera.cpp:
+libs/monolib/scn/CScnItemCamera.cpp:
 	extab       start:0x8001F75C end:0x8001F850
 	extabindex  start:0x800371E4 end:0x80037280
 	.text       start:0x8049E8C4 end:0x8049FCAC
@@ -6787,7 +6787,7 @@ scn/CScnItemCamera.cpp:
 	.bss        start:0x8065AF10 end:0x8065AF38
 	.sdata2     start:0x8066D3A0 end:0x8066D3F0
 
-vm/yvm.cpp:
+libs/monolib/vm/yvm.cpp:
 	extab       start:0x8001F850 end:0x8001F9D0
 	extabindex  start:0x80037280 end:0x800374C0
 	.text       start:0x8049FCAC end:0x804A6C60
@@ -6796,7 +6796,7 @@ vm/yvm.cpp:
 	.bss        start:0x8065AF38 end:0x8065F860
 	.sdata2     start:0x8066D3F0 end:0x8066D5D0
 
-code_804A6C60.cpp:
+libs/monolib/code_804A6C60.cpp:
 	extab       start:0x8001F9D0 end:0x8001FC50
 	extabindex  start:0x800374C0 end:0x80037880
 	.text       start:0x804A6C60 end:0x804B2578
@@ -6808,7 +6808,7 @@ code_804A6C60.cpp:
 	.sbss       start:0x806681E8 end:0x80668218
 	.sdata2     start:0x8066D5D0 end:0x8066D658
 
-CColiProc.cpp:
+libs/monolib/CColiProc.cpp:
 	extab       start:0x8001FC50 end:0x8001FC88
 	extabindex  start:0x80037880 end:0x800378D4
 	.text       start:0x804B2578 end:0x804B2FF0
@@ -6820,7 +6820,7 @@ CColiProc.cpp:
 	.sbss       start:0x80668218 end:0x80668238
 	.sdata2     start:0x8066D658 end:0x8066D660
 
-code_804B2FF0.cpp:
+libs/monolib/code_804B2FF0.cpp:
 	extab       start:0x8001FC88 end:0x8001FD84
 	extabindex  start:0x800378D4 end:0x80037A30
 	.text       start:0x804B2FF0 end:0x804B59C8
@@ -6831,7 +6831,7 @@ code_804B2FF0.cpp:
 	.sdata      start:0x806663C8 end:0x806663E8
 	.sdata2     start:0x8066D660 end:0x8066D680
 
-code_804B59C8.cpp:
+libs/monolib/code_804B59C8.cpp:
 	extab       start:0x8001FD84 end:0x8001FEDC
 	extabindex  start:0x80037A30 end:0x80037BF8
 	.text       start:0x804B59C8 end:0x804BAE10
@@ -6841,7 +6841,7 @@ code_804B59C8.cpp:
 	.sdata      start:0x806663E8 end:0x806663F0
 	.sdata2     start:0x8066D680 end:0x8066D6A0
 
-code_804BAE10.cpp:
+libs/monolib/code_804BAE10.cpp:
 	extab       start:0x8001FEDC end:0x8001FF2C
 	extabindex  start:0x80037BF8 end:0x80037C70
 	.text       start:0x804BAE10 end:0x804BC9EC
@@ -6849,7 +6849,7 @@ code_804BAE10.cpp:
 	.sbss       start:0x80668238 end:0x80668240
 	.sdata2     start:0x8066D6A0 end:0x8066D6C0
 
-code_804BC9EC.cpp:
+libs/monolib/code_804BC9EC.cpp:
 	extab       start:0x8001FF2C end:0x8001FF44
 	extabindex  start:0x80037C70 end:0x80037C94
 	.text       start:0x804BC9EC end:0x804BD8E8
@@ -6859,7 +6859,7 @@ code_804BC9EC.cpp:
 	.sbss       start:0x80668240 end:0x80668248
 	.sdata2     start:0x8066D6C0 end:0x8066D708
 
-code_804BD8E8.cpp:
+libs/monolib/code_804BD8E8.cpp:
 	extab       start:0x8001FF44 end:0x8001FF94
 	extabindex  start:0x80037C94 end:0x80037D0C
 	.text       start:0x804BD8E8 end:0x804BF59C
@@ -6869,7 +6869,7 @@ code_804BD8E8.cpp:
 	.sbss       start:0x80668248 end:0x80668270
 	.sdata2     start:0x8066D708 end:0x8066D730
 
-code_804BF59C.cpp:
+libs/monolib/code_804BF59C.cpp:
 	extab       start:0x8001FF94 end:0x80020020
 	extabindex  start:0x80037D0C end:0x80037D60
 	.text       start:0x804BF59C end:0x804C0280
@@ -6877,7 +6877,7 @@ code_804BF59C.cpp:
 	.sbss       start:0x80668270 end:0x80668278
 	.sdata2     start:0x8066D730 end:0x8066D758
 
-CLight.cpp:
+libs/monolib/CLight.cpp:
 	extab       start:0x80020020 end:0x80020058
 	extabindex  start:0x80037D60 end:0x80037DB4
 	.text       start:0x804C0280 end:0x804C0BE4
@@ -6885,7 +6885,7 @@ CLight.cpp:
 	.sdata      start:0x80666400 end:0x80666408
 	.sdata2     start:0x8066D758 end:0x8066D780
 
-scn/CScnEnvLgtCtrl.cpp:
+libs/monolib/scn/CScnEnvLgtCtrl.cpp:
 	extab       start:0x80020058 end:0x800202E8
 	extabindex  start:0x80037DB4 end:0x80038114
 	.text       start:0x804C0BE4 end:0x804C8684
@@ -6896,17 +6896,17 @@ scn/CScnEnvLgtCtrl.cpp:
 	.sdata      start:0x80666408 end:0x80666438
 	.sdata2     start:0x8066D780 end:0x8066D838
 
-Unknown1.cpp:
+libs/monolib/Unknown1.cpp:
 	.sdata      start:0x80666438 end:0x80666440
 
-code_804C8684.cpp:
+libs/monolib/code_804C8684.cpp:
 	.text       start:0x804C8684 end:0x804C8718
 	.ctors      start:0x804F5AC4 end:0x804F5AC8
 	.bss        start:0x806624A8 end:0x806624D8
 	.sbss       start:0x80668278 end:0x80668280
 	.sdata2     start:0x8066D838 end:0x8066D850
 
-code_804C8718.cpp:
+libs/monolib/code_804C8718.cpp:
 	extab       start:0x800202E8 end:0x800203B8
 	extabindex  start:0x80038114 end:0x8003824C
 	.text       start:0x804C8718 end:0x804CC2B8
@@ -6914,7 +6914,7 @@ code_804C8718.cpp:
 	.rodata     start:0x80527E08 end:0x80527E20
 	.sdata2     start:0x8066D850 end:0x8066D888
 
-code_804CC2B8.cpp:
+libs/monolib/code_804CC2B8.cpp:
 	extab       start:0x800203B8 end:0x80020518
 	extabindex  start:0x8003824C end:0x8003845C
 	.text       start:0x804CC2B8 end:0x804D6C60
@@ -6924,7 +6924,7 @@ code_804CC2B8.cpp:
 	.sbss       start:0x80668280 end:0x80668290
 	.sdata2     start:0x8066D888 end:0x8066D920
 
-effect/CETrail.cpp:
+libs/monolib/effect/CETrail.cpp:
 	extab       start:0x80020518 end:0x8002059C
 	extabindex  start:0x8003845C end:0x80038504
 	.text       start:0x804D6C60 end:0x804D854C
@@ -6935,7 +6935,7 @@ effect/CETrail.cpp:
 	.sbss       start:0x80668290 end:0x80668298
 	.sdata2     start:0x8066D920 end:0x8066D960
 
-effect/code_804D854C.cpp:
+libs/monolib/effect/code_804D854C.cpp:
 	extab       start:0x8002059C end:0x800205C4
 	extabindex  start:0x80038504 end:0x80038540
 	.text       start:0x804D854C end:0x804D8D90
@@ -6943,7 +6943,7 @@ effect/code_804D854C.cpp:
 	.sbss       start:0x80668298 end:0x806682A0
 	.sdata2     start:0x8066D960 end:0x8066D990
 
-work/CWorkSystemCache.cpp:
+libs/monolib/work/CWorkSystemCache.cpp:
 	extab       start:0x800205C4 end:0x80020628
 	extabindex  start:0x80038540 end:0x80038588
 	.text       start:0x804D8D90 end:0x804D9274
@@ -6952,13 +6952,13 @@ work/CWorkSystemCache.cpp:
 	.sdata      start:0x80666460 end:0x80666478
 	.sbss       start:0x806682A0 end:0x806682A8
 
-code_804D9274.cpp:
+libs/monolib/code_804D9274.cpp:
 	extab       start:0x80020628 end:0x80020650
 	extabindex  start:0x80038588 end:0x800385C4
 	.text       start:0x804D9274 end:0x804DA0B8
 	.sdata2     start:0x8066D990 end:0x8066D9C0
 
-nand/CNand.cpp:
+libs/monolib/nand/CNand.cpp:
 	extab       start:0x80020650 end:0x800206A0
 	extabindex  start:0x800385C4 end:0x8003863C
 	.text       start:0x804DA0B8 end:0x804DA4CC
@@ -6969,7 +6969,7 @@ nand/CNand.cpp:
 	.sdata      start:0x80666478 end:0x80666480
 	.sdata2     start:0x8066D9C0 end:0x8066D9C8
 
-nand/CNReqtaskSave.cpp:
+libs/monolib/nand/CNReqtaskSave.cpp:
 	extab       start:0x800206A0 end:0x80020768
 	extabindex  start:0x8003863C end:0x80038768
 	.text       start:0x804DA4CC end:0x804DAF70
@@ -6981,7 +6981,7 @@ nand/CNReqtaskSave.cpp:
 	.sbss       start:0x806682A8 end:0x806682C0
 	.sdata2     start:0x8066D9C8 end:0x8066D9D8
 
-nand/CNReqtaskLoad.cpp:
+libs/monolib/nand/CNReqtaskLoad.cpp:
 	extab       start:0x80020768 end:0x80020778
 	extabindex  start:0x80038768 end:0x80038780
 	.text       start:0x804DAF70 end:0x804DB0F0
@@ -6991,7 +6991,7 @@ nand/CNReqtaskLoad.cpp:
 	.sdata      start:0x806664B0 end:0x806664B8
 	.sbss       start:0x806682C0 end:0x806682C8
 
-nand/CNReqtaskReaddir.cpp:
+libs/monolib/nand/CNReqtaskReaddir.cpp:
 	extab       start:0x80020778 end:0x80020780
 	extabindex  start:0x80038780 end:0x8003878C
 	.text       start:0x804DB0F0 end:0x804DB240
@@ -7001,7 +7001,7 @@ nand/CNReqtaskReaddir.cpp:
 	.sdata      start:0x806664B8 end:0x806664C0
 	.sbss       start:0x806682C8 end:0x806682D0
 
-nand/CNReqtaskRemove.cpp:
+libs/monolib/nand/CNReqtaskRemove.cpp:
 	extab       start:0x80020780 end:0x80020790
 	extabindex  start:0x8003878C end:0x800387A4
 	.text       start:0x804DB240 end:0x804DB348
@@ -7011,7 +7011,7 @@ nand/CNReqtaskRemove.cpp:
 	.sdata      start:0x806664C0 end:0x806664C8
 	.sbss       start:0x806682D0 end:0x806682D8
 
-nand/CNReqtaskCheck.cpp:
+libs/monolib/nand/CNReqtaskCheck.cpp:
 	extab       start:0x80020790 end:0x80020798
 	extabindex  start:0x800387A4 end:0x800387B0
 	.text       start:0x804DB348 end:0x804DB438
@@ -7021,7 +7021,7 @@ nand/CNReqtaskCheck.cpp:
 	.sdata      start:0x806664C8 end:0x806664D0
 	.sbss       start:0x806682D8 end:0x806682E0
 
-effect/CERand.cpp:
+libs/monolib/effect/CERand.cpp:
 	extab       start:0x80020798 end:0x800207E8
 	extabindex  start:0x800387B0 end:0x80038828
 	.text       start:0x804DB438 end:0x804DB980
@@ -7033,13 +7033,13 @@ effect/CERand.cpp:
 	.sbss       start:0x806682E0 end:0x806682E8
 	.sdata2     start:0x8066D9D8 end:0x8066DA08
 
-code_804DB938.cpp:
+libs/monolib/code_804DB938.cpp:
 	extab       start:0x800207E8 end:0x80020830
 	extabindex  start:0x80038828 end:0x80038894
 	.text       start:0x804DB980 end:0x804DD8F4
 	.sdata2     start:0x8066DA08 end:0x8066DA30
 
-work/CWorkSystemPack.cpp:
+libs/monolib/work/CWorkSystemPack.cpp:
 	extab       start:0x80020830 end:0x800208F4
 	extabindex  start:0x80038894 end:0x80038948
 	.text       start:0x804DD8F4 end:0x804DE38C
@@ -7048,14 +7048,14 @@ work/CWorkSystemPack.cpp:
 	.sdata      start:0x806664E8 end:0x80666510
 	.sbss       start:0x806682E8 end:0x806682F8
 
-CPackItem.cpp:
+libs/monolib/CPackItem.cpp:
 	extab       start:0x800208F4 end:0x80020938
 	extabindex  start:0x80038948 end:0x80038990
 	.text       start:0x804DE38C end:0x804DEB14
 	.data       start:0x805737A0 end:0x80573828
 	.sdata      start:0x80666510 end:0x80666518
 
-CArcItem.cpp:
+libs/monolib/CArcItem.cpp:
 	extab       start:0x80020938 end:0x80020980
 	extabindex  start:0x80038990 end:0x800389C0
 	.text       start:0x804DEB14 end:0x804DEDA8
@@ -7063,7 +7063,7 @@ CArcItem.cpp:
 	.data       start:0x80573828 end:0x805738B0
 	.sdata      start:0x80666518 end:0x80666520
 
-code_804DEDA8.cpp:
+libs/monolib/code_804DEDA8.cpp:
 	extab       start:0x80020980 end:0x80020B08
 	extabindex  start:0x800389C0 end:0x80038C0C
 	.text       start:0x804DEDA8 end:0x804E3294
@@ -7071,7 +7071,7 @@ code_804DEDA8.cpp:
 	.sbss       start:0x806682F8 end:0x80668328
 	.sdata2     start:0x8066DA30 end:0x8066DA88
 
-CSchedule.cpp:
+libs/monolib/CSchedule.cpp:
 	extab       start:0x80020B08 end:0x80020B20
 	extabindex  start:0x80038C0C end:0x80038C30
 	.text       start:0x804E3294 end:0x804E36DC
@@ -7079,13 +7079,13 @@ CSchedule.cpp:
 	.data       start:0x805738B0 end:0x805738C0
 	.sdata      start:0x80666520 end:0x80666528
 
-code_804E36DC.cpp:
+libs/monolib/code_804E36DC.cpp:
 	extab       start:0x80020B20 end:0x80020B78
 	extabindex  start:0x80038C30 end:0x80038CB4
 	.text       start:0x804E36DC end:0x804E4334
 	.sdata2     start:0x8066DA88 end:0x8066DAA0
 
-ScheduleList.cpp:
+libs/monolib/ScheduleList.cpp:
 	extab       start:0x80020B78 end:0x80020C88
 	extabindex  start:0x80038CB4 end:0x80038D8C
 	.text       start:0x804E4334 end:0x804E5444
@@ -7094,7 +7094,7 @@ ScheduleList.cpp:
 	.sdata      start:0x80666528 end:0x80666548
 	.sbss       start:0x80668328 end:0x80668330
 
-scn/CMdlMaterial.cpp:
+libs/monolib/scn/CMdlMaterial.cpp:
 	extab       start:0x80020C88 end:0x80020CD0
 	extabindex  start:0x80038D8C end:0x80038DF8
 	.text       start:0x804E5444 end:0x804E6544
@@ -7103,7 +7103,7 @@ scn/CMdlMaterial.cpp:
 	.sdata      start:0x80666548 end:0x80666570
 	.sdata2     start:0x8066DAA0 end:0x8066DAB0
 
-scn/CMdlMouth.cpp:
+libs/monolib/scn/CMdlMouth.cpp:
 	extab       start:0x80020CD0 end:0x80020CF8
 	extabindex  start:0x80038DF8 end:0x80038E34
 	.text       start:0x804E6544 end:0x804E6C14
@@ -7112,7 +7112,7 @@ scn/CMdlMouth.cpp:
 	.sdata      start:0x80666570 end:0x80666588
 	.sdata2     start:0x8066DAB0 end:0x8066DAE8
 
-scn/CMdlAnmUV.cpp:
+libs/monolib/scn/CMdlAnmUV.cpp:
 	extab       start:0x80020CF8 end:0x80020D10
 	extabindex  start:0x80038E34 end:0x80038E58
 	.text       start:0x804E6C14 end:0x804E7544
@@ -7121,7 +7121,7 @@ scn/CMdlAnmUV.cpp:
 	.sdata      start:0x80666588 end:0x806665A0
 	.sdata2     start:0x8066DAE8 end:0x8066DB00
 
-scn/CMdlAnmEye.cpp:
+libs/monolib/scn/CMdlAnmEye.cpp:
 	extab       start:0x80020D10 end:0x80020D28
 	extabindex  start:0x80038E58 end:0x80038E7C
 	.text       start:0x804E7544 end:0x804E7A80
@@ -7130,7 +7130,7 @@ scn/CMdlAnmEye.cpp:
 	.sdata      start:0x806665A0 end:0x806665B8
 	.sdata2     start:0x8066DB00 end:0x8066DB18
 
-scn/CMdlLook.cpp:
+libs/monolib/scn/CMdlLook.cpp:
 	extab       start:0x80020D28 end:0x80020D50
 	extabindex  start:0x80038E7C end:0x80038EB8
 	.text       start:0x804E7A80 end:0x804E942C
@@ -7140,7 +7140,7 @@ scn/CMdlLook.cpp:
 	.sbss       start:0x80668330 end:0x80668338
 	.sdata2     start:0x8066DB18 end:0x8066DB60
 
-scn/CMdlDynamics.cpp:
+libs/monolib/scn/CMdlDynamics.cpp:
 	extab       start:0x80020D50 end:0x80020EB4
 	extabindex  start:0x80038EB8 end:0x80039008
 	.text       start:0x804E942C end:0x804EE0F4
@@ -7149,7 +7149,7 @@ scn/CMdlDynamics.cpp:
 	.sdata      start:0x806665C8 end:0x806665E8
 	.sdata2     start:0x8066DB60 end:0x8066DBA8
 
-code_804EE0F4.cpp:
+libs/monolib/code_804EE0F4.cpp:
 	extab       start:0x80020EB4 end:0x80020F2C
 	extabindex  start:0x80039008 end:0x800390BC
 	.text       start:0x804EE0F4 end:0x804F0258
@@ -7160,7 +7160,7 @@ code_804EE0F4.cpp:
 	.sbss       start:0x80668338 end:0x80668340
 	.sdata2     start:0x8066DBA8 end:0x8066DBE8
 
-code_804F0258.cpp:
+libs/monolib/code_804F0258.cpp:
 	extab       start:0x80020F2C end:0x80020FBC
 	extabindex  start:0x800390BC end:0x80039194
 	.text       start:0x804F0258 end:0x804F4D7C
@@ -7168,7 +7168,7 @@ code_804F0258.cpp:
 	.sbss       start:0x80668340 end:0x80668368
 	.sdata2     start:0x8066DBE8 end:0x8066DCD0
 
-nand/CNReqtaskSaveBanner.cpp:
+libs/monolib/nand/CNReqtaskSaveBanner.cpp:
 	extab       start:0x80020FBC end:0x80020FD4
 	extabindex  start:0x80039194 end:0x800391B8
 	.text       start:0x804F4D7C end:0x804F5158
@@ -7180,7 +7180,7 @@ nand/CNReqtaskSaveBanner.cpp:
 	.sbss       start:0x80668368 end:0x80668370
 	.sdata2     start:0x8066DCD0 end:0x8066DCD8
 
-nand/CNBanner.cpp:
+libs/monolib/nand/CNBanner.cpp:
 	extab       start:0x80020FD4 end:0x80021018
 	extabindex  start:0x800391B8 end:0x80039200
 	.text       start:0x804F5158 end:0x804F58EC
