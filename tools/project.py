@@ -47,6 +47,10 @@ class Object:
             "source": name,
         }
         self.options.update(options)
+    
+    def add_root_dir_prefix(self, root_dir: str) -> None:
+        self.name = root_dir + "/" + self.name
+        self.base_name = Path(self.name).with_suffix("")
 
 
 class ProjectConfig:
@@ -143,6 +147,11 @@ class ProjectConfig:
 
     def out_path(self) -> Path:
         return self.build_dir / str(self.version)
+    
+    def update_lib_obj_names(self) -> None:
+        for lib in self.libs:
+            for obj in lib["objects"]:
+                obj.add_root_dir_prefix(lib["root_dir"])
 
 
 def is_windows() -> bool:

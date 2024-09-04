@@ -1731,6 +1731,10 @@ config.libs = [
     }
 ]
 
+# Update the object names in each library with the root path prefix
+# TODO: find a better way
+config.update_lib_obj_names()
+
 if args.mode == "configure":
     # Write build.ninja and objdiff.json
     generate_build(config)
