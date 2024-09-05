@@ -1,6 +1,7 @@
 #include <revolution/OS.h>
 #include <revolution/IPC.h>
 #include <revolution/DVD.h>
+#include <revolution/ESP.h>
 #include <string.h>
 #include <stdbool.h>
 
@@ -73,6 +74,10 @@ typedef struct DVDLowRegister{
 	u32 reg; // at 0x0
 	char padding[32 - 0x4];
 } DVDLowRegister;
+
+typedef struct DVDVideoReportKey {
+    u8 data[32];
+} DVDVideoReportKey;
 
 IOSFd DiFD = -1;
 
@@ -387,7 +392,7 @@ static inline DVDLowContext* newContext(const DVDLowCallback callback, const cal
     return(dvdContexts + returnIndex);
 }
 
-BOOL DVDLowOpenPartition(const u32 partitionWordOffset, const ESTicket* const eTicket, const u32 numCertBytes, const u8* const certificates, ESTitleMeta* tmd, DVDLowCallback callback) {
+BOOL DVDLowOpenPartition(const u32 offset, const ESTicket* const eTicket, const u32 numCertBytes, const u8* const certificates, ESTitleMeta* tmd, DVDLowCallback callback) {
     DVDLowContext* dvdContext;
     IOSError rv;
     
@@ -411,7 +416,7 @@ BOOL DVDLowOpenPartition(const u32 partitionWordOffset, const ESTicket* const eT
     dvdContext = newContext(callback, 1);
     nextCommandBuf(&freeCommandBuf);
     diCommand[freeCommandBuf].theCommand = 0x8B;
-    diCommand[freeCommandBuf].arg[0] = partitionWordOffset;
+    diCommand[freeCommandBuf].arg[0] = offset;
     ioVec[0].base = (u8*)&diCommand[freeCommandBuf];
     ioVec[0].length = sizeof(DVDLowDICommand);
 
@@ -449,7 +454,7 @@ BOOL DVDLowOpenPartition(const u32 partitionWordOffset, const ESTicket* const eT
 }
 
 //unused
-BOOL DVDLowOpenPartitionWithTmdAndTicket(const u32 partitionWordOffset, const ESTicket* const eTicket, const u32 numTmdBytes, const ESTitleMeta* const tmd, const u32 numCertBytes, const u8* const certificates, DVDLowCallback callback){
+BOOL DVDLowOpenPartitionWithTmdAndTicket(const u32 offset, const ESTicket* const eTicket, const u32 numTmdBytes, const ESTitleMeta* const tmd, const u32 numCertBytes, const u8* const certificates, DVDLowCallback callback){
 	DVDLowContext* dvdContext;
     IOSError rv;
 
@@ -482,7 +487,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicket(const u32 partitionWordOffset, const ES
     dvdContext = newContext(callback, 1);
     nextCommandBuf(&freeCommandBuf);
     diCommand[freeCommandBuf].theCommand = 0x93;
-    diCommand[freeCommandBuf].arg[0] = partitionWordOffset;
+    diCommand[freeCommandBuf].arg[0] = offset;
     ioVec[0].base = (u8*)&diCommand[freeCommandBuf];
     ioVec[0].length = sizeof(DVDLowDICommand);
 
@@ -513,7 +518,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicket(const u32 partitionWordOffset, const ES
 	return TRUE;
 }
 
-BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 partitionWordOffset, const ESTicketView* const eTicketView, const u32 numTmdBytes, const ESTitleMeta* const tmd, const u32 numCertBytes, const u8* const certificates, DVDLowCallback callback) {
+BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 offset, const ESTicketView* const eTicketView, const u32 numTmdBytes, const ESTitleMeta* const tmd, const u32 numCertBytes, const u8* const certificates, DVDLowCallback callback) {
     DVDLowContext* dvdContext;
     IOSError rv;
     
@@ -543,7 +548,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 partitionWordOffset, cons
     dvdContext = newContext(callback, 1);
     nextCommandBuf(&freeCommandBuf);
     diCommand[freeCommandBuf].theCommand = 0x94;
-    diCommand[freeCommandBuf].arg[0] = partitionWordOffset;
+    diCommand[freeCommandBuf].arg[0] = offset;
     ioVec[0].base = (u8*)&diCommand[freeCommandBuf];
     ioVec[0].length = sizeof(DVDLowDICommand);
 
@@ -575,7 +580,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 partitionWordOffset, cons
     return TRUE;
 }
 
-BOOL DVDLowGetNoDiscBufferSizes(const u32 partitionWordOffset, u32* numTmdBytes, u32* numCertBytes, DVDLowCallback callback) {
+BOOL DVDLowGetNoDiscBufferSizes(const u32 offset, u32* numTmdBytes, u32* numCertBytes, DVDLowCallback callback) {
     DVDLowContext* dvdContext;
     IOSError rv;
 
@@ -598,7 +603,7 @@ BOOL DVDLowGetNoDiscBufferSizes(const u32 partitionWordOffset, u32* numTmdBytes,
     dvdContext = newContext(callback, 1);
     nextCommandBuf(&freeCommandBuf);
     diCommand[freeCommandBuf].theCommand = 0x92;
-    diCommand[freeCommandBuf].arg[0] = partitionWordOffset;
+    diCommand[freeCommandBuf].arg[0] = offset;
 
     ioVec[0].base = (u8*)&diCommand[freeCommandBuf];
     ioVec[0].length = sizeof(DVDLowDICommand);
@@ -620,7 +625,7 @@ BOOL DVDLowGetNoDiscBufferSizes(const u32 partitionWordOffset, u32* numTmdBytes,
     return TRUE;
 }
 
-BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 partitionWordOffset, ESTicket* eTicket, u32* numTmdBytes, ESTitleMeta* tmd, u32* numCertBytes, u8* certificates, u32* dataWordOffset, u8* h3HashPtr, DVDLowCallback callback) {
+BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 offset, ESTicket* eTicket, u32* numTmdBytes, ESTitleMeta* tmd, u32* numCertBytes, u8* certificates, u32* dataWordOffset, u8* h3HashPtr, DVDLowCallback callback) {
     DVDLowContext* dvdContext;
     IOSError rv;
 
@@ -638,7 +643,7 @@ BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 partitionWordOffset, ESTicket*
     dvdContext = newContext(callback, 1);
     nextCommandBuf(&freeCommandBuf);
     diCommand[freeCommandBuf].theCommand = 0x90;
-    diCommand[freeCommandBuf].arg[0] = partitionWordOffset;
+    diCommand[freeCommandBuf].arg[0] = offset;
 
     ioVec[0].base = (u8*)&diCommand[freeCommandBuf];
     ioVec[0].length = sizeof(DVDLowDICommand);

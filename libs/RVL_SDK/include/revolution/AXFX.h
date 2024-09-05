@@ -4,17 +4,17 @@
 extern "C" {
 #endif
 
-#include <revolution/AXFX/AXFXChorus.h>
-#include <revolution/AXFX/AXFXChorusExp.h>
-#include <revolution/AXFX/AXFXCommon.h>
-#include <revolution/AXFX/AXFXDelay.h>
-#include <revolution/AXFX/AXFXHooks.h>
-#include <revolution/AXFX/AXFXLfoTable.h>
-#include <revolution/AXFX/AXFXReverbHi.h>
-#include <revolution/AXFX/AXFXReverbHiDpl2.h>
-#include <revolution/AXFX/AXFXReverbHiExp.h>
-#include <revolution/AXFX/AXFXReverbHiExpDpl2.h>
-#include <revolution/AXFX/AXFXSrcCoef.h>
+#include <revolution/axfx/AXFXChorus.h>
+#include <revolution/axfx/AXFXChorusExp.h>
+#include <revolution/axfx/AXFXCommon.h>
+#include <revolution/axfx/AXFXDelay.h>
+#include <revolution/axfx/AXFXHooks.h>
+#include <revolution/axfx/AXFXLfoTable.h>
+#include <revolution/axfx/AXFXReverbHi.h>
+#include <revolution/axfx/AXFXReverbHiDpl2.h>
+#include <revolution/axfx/AXFXReverbHiExp.h>
+#include <revolution/axfx/AXFXReverbHiExpDpl2.h>
+#include <revolution/axfx/AXFXSrcCoef.h>
 
 #ifdef __cplusplus
 }

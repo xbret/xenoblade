@@ -1,18 +1,10 @@
 #ifndef RVL_SDK_TPL_H
 #define RVL_SDK_TPL_H
-#include <revolution/gx/GXTexture.h>
-#include "types.h"
+#include <revolution/GX.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-
-/**
- * Documentation from:
- * https://github.com/soopercool101/BrawlCrate/blob/master/BrawlLib/SSBB/Types/TPL.cs
- * https://wiki.tockdom.com/wiki/TPL_(File_Format)
- * DWARF debugging info
- */
 
 typedef struct TPLHeader {
     u16 height;          // at 0x0

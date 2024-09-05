@@ -1,22 +1,23 @@
-#ifndef RVL_SDK_OS_HARDWARE_H
-#define RVL_SDK_OS_HARDWARE_H
-#include <revolution/os/OSAddress.h>
-#include <revolution/os/OSThread.h>
-#include <revolution/dvd/dvdidutils.h>
-#include "types.h"
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-typedef struct OSContext;
-typedef struct OSExecParams;
-
 /**
  * For more details, see:
  * https://www.gc-forever.com/yagcd/chap4.html#sec4
  * https://www.gc-forever.com/yagcd/chap13.html#sec13
  * https://wiibrew.org/wiki/Memory_map
  */
+
+#ifndef RVL_SDK_OS_HARDWARE_H
+#define RVL_SDK_OS_HARDWARE_H
+#include <revolution/dvd/dvd.h>
+#include <revolution/os/OSAddress.h>
+#include <revolution/os/OSThread.h>
+#include <types.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Forward declarations
+typedef struct OSContext;
+typedef struct OSExecParams;
 
 // Derive offsets for use with OSAddress functions
 #define __DEF_ADDR_OFFSETS(name, addr)                                         \
@@ -43,16 +44,21 @@ typedef struct OSExecParams;
     /* Memory-mapped value for direct access */                                \
     type OS_##name : (addr);
 
-typedef struct OSBootInfo_s {
-	DVDDiskID DVDDiskID;  // at 0x0
-    u32 bootMagic;        // at 0x20
-    u32 version;          // at 0x24
-    u32 memorySize;       // at 0x28
-    u32 consoleType;      // at 0x2C
-    void* arenaLo;        // at 0x30
-    void* arenaHi;        // at 0x34
-    void* FSTLocation;    // at 0x38
-    u32 FSTMaxLength;     // at 0x3C
+typedef enum {
+    OS_BOOT_MAGIC_BOOTROM = 0xD15EA5E,
+    OS_BOOT_MAGIC_JTAG = 0xE5207C22,
+} OSBootMagic;
+
+typedef struct OSBootInfo {
+    DVDDiskID diskID; // at 0x0
+    u32 bootMagic;    // at 0x20
+    u32 aplVersion;   // at 0x24
+    u32 physMemSize;  // at 0x28
+    u32 consoleType;  // at 0x2C
+    void* arenaLo;    // at 0x30
+    void* arenaHi;    // at 0x34
+    void* fstStart;   // at 0x38
+    u32 fstSize;      // at 0x3C
 } OSBootInfo;
 
 typedef struct OSDebugInterface {
@@ -71,7 +77,7 @@ typedef struct OSBI2 {
     u32 trackSize;        // at 0x14
     u32 countryCode;      // at 0x18
     u32 WORD_0x1C;
-    u32 WORD_0x20;
+    u32 lastInsert;
     u32 padSpec;            // at 0x24
     u32 totalTextDataLimit; // at 0x28
     u32 simulatedMem2Size;  // at 0x2C
@@ -104,14 +110,15 @@ OS_DEF_GLOBAL_VAR(u32, CPU_CLOCK_SPEED,                    0x800000FC);
  */
 OS_DEF_GLOBAL_ARR(void*, EXCEPTION_TABLE, [15],          0x80003000);
 OS_DEF_GLOBAL_VAR(void*, INTR_HANDLER_TABLE,             0x80003040);
-OS_DEF_GLOBAL_ARR(volatile s32, EXI_800030C0, [],        0x800030C0);
+OS_DEF_GLOBAL_ARR(volatile s32, EXI_LAST_INSERT, [],     0x800030C0);
 OS_DEF_GLOBAL_VAR(void*, FIRST_REL,                      0x800030C8);
 OS_DEF_GLOBAL_VAR(void*, LAST_REL,                       0x800030CC);
 OS_DEF_GLOBAL_VAR(void*, REL_NAME_TABLE,                 0x800030D0);
 OS_DEF_GLOBAL_VAR(u32, DOL_TOTAL_TEXT_DATA,              0x800030D4);
 OS_DEF_GLOBAL_VAR(s64, SYSTEM_TIME,                      0x800030D8);
+OS_DEF_GLOBAL_VAR(u8, PAD_FLAGS,                         0x800030E3);
 OS_DEF_GLOBAL_VAR(u16, GC_PAD_3_BTN,                     0x800030E4);
-OS_DEF_GLOBAL_VAR(volatile u16, DVD_DEVICE_CODE_ADDR,    0x800030E6);
+OS_DEF_GLOBAL_VAR(volatile u16, DVD_DEVICE_CODE,         0x800030E6);
 OS_DEF_GLOBAL_VAR(u8, BI2_DEBUG_FLAG,                    0x800030E8);
 OS_DEF_GLOBAL_VAR(u8, PAD_SPEC,                          0x800030E9);
 OS_DEF_GLOBAL_VAR(struct OSExecParams*, DOL_EXEC_PARAMS, 0x800030F0);
@@ -135,14 +142,17 @@ OS_DEF_GLOBAL_VAR(u32, GDDR_VENDOR_CODE,                 0x80003158);
 OS_DEF_GLOBAL_VAR(u8, BOOT_PROGRAM_TARGET,               0x8000315C);
 OS_DEF_GLOBAL_VAR(u8, APPLOADER_TARGET,                  0x8000315D);
 OS_DEF_GLOBAL_VAR(BOOL, MIOS_SHUTDOWN_FLAG,              0x80003164);
-OS_DEF_GLOBAL_VAR(u8, CURRENT_APP_NAME,                  0x80003180);
+OS_DEF_GLOBAL_VAR(u32, CURRENT_APP_NAME,                 0x80003180);
 OS_DEF_GLOBAL_VAR(u8, CURRENT_APP_TYPE,                  0x80003184);
 OS_DEF_GLOBAL_VAR(u8, LOCKED_FLAG,                       0x80003187);
 OS_DEF_GLOBAL_VAR(u32, MINIMUM_IOS_VERSION,              0x80003188);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_LAUNCH_CODE,           0x8000318C);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_RETURN_CODE,           0x80003190);
-OS_DEF_GLOBAL_VAR(u32, CURRENT_APP_NAME_1,               0x80003194);
-OS_DEF_GLOBAL_VAR(u8, DEVICE_CHECK_CODE,                 0x8000319C);
+OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_TYPE,              0x80003194);
+OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_OFFSET,            0x80003198);
+OS_DEF_GLOBAL_VAR(u8, BOOT_PARTITION_319C,               0x8000319C);
+OS_DEF_GLOBAL_ARR(u8, NWC24_USER_ID_BUFFER, [32],        0x800031C0);
+OS_DEF_GLOBAL_VAR(u64, NWC24_USER_ID,                    0x800031C0);
 OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
 
 /**
@@ -199,8 +209,7 @@ typedef enum {
 #define PI_INTMR_ACR (1 << 14)
 
 /**
- * MI Hardware Registers
- * https://www.gc-forever.com/yagcd/chap5.html#sec5.5
+ * MI hardware registers
  */
 volatile u16 MI_HW_REGS[] : 0xCC004000;
 typedef enum {

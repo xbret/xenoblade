@@ -1,12 +1,11 @@
-#ifndef AXFX_HOOKS_H
-#define AXFX_HOOKS_H
-
-#include "types.h"
+#ifndef RVL_SDK_AXFX_LFO_TABLE_H
+#define RVL_SDK_AXFX_LFO_TABLE_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-s32* __AXFXGetLfoSinTable();
+s32* __AXFXGetLfoSinTable(void);
 
 #ifdef __cplusplus
 }

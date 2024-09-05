@@ -5,6 +5,7 @@ extern "C" {
 #endif
 
 #include <revolution/pad/Pad.h>
+
 #ifdef __cplusplus
 }
 #endif

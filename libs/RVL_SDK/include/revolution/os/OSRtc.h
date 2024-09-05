@@ -1,14 +1,9 @@
 #ifndef RVL_SDK_OS_RTC_H
 #define RVL_SDK_OS_RTC_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
- * Documentation from:
- * https://www.gc-forever.com/yagcd/chap10.html#sec10.5
- */
 
 typedef struct OSSram {
     u16 checksum;    // at 0x0

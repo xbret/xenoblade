@@ -1,7 +1,7 @@
 #ifndef _RVL_SDK_OS_OSUTIL_H
 #define _RVL_SDK_OS_OSUTIL_H
 
-#include "types.h"
+#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {

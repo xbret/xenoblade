@@ -201,9 +201,9 @@ void __DSPHandler(s32 intr, OSContext* ctx) {
 
 void __DSP_exec_task(DSPTask* task1, DSPTask* task2) {
     if (task1 != NULL) {
-        SEND_TO_DSP_SYNC(task1->iramDspLen);
+        SEND_TO_DSP_SYNC(task1->dramMmemAddr);
         SEND_TO_DSP_SYNC(task1->dramMmemLen);
-        SEND_TO_DSP_SYNC(task1->WORD_0x20);
+        SEND_TO_DSP_SYNC(task1->dramDspAddr);
     } else {
         SEND_TO_DSP_SYNC(0);
         SEND_TO_DSP_SYNC(0);
@@ -221,9 +221,9 @@ void __DSP_exec_task(DSPTask* task1, DSPTask* task2) {
         SEND_TO_DSP_SYNC(0);
     } else {
         SEND_TO_DSP_SYNC(task2->resumeVector);
-        SEND_TO_DSP_SYNC(task2->iramDspLen);
+        SEND_TO_DSP_SYNC(task2->dramMmemAddr);
         SEND_TO_DSP_SYNC(task2->dramMmemLen);
-        SEND_TO_DSP_SYNC(task2->WORD_0x20);
+        SEND_TO_DSP_SYNC(task2->dramDspAddr);
     }
 }
 

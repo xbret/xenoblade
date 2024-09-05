@@ -65,7 +65,7 @@ bool DvdFileStream::Open(s32 entrynum) {
     }
 
     if (DVDFastOpen(entrynum, &mAsyncContext.info)) {
-        mFilePosition.SetFileSize(mAsyncContext.info.length);
+        mFilePosition.SetFileSize(mAsyncContext.info.size);
         mFilePosition.Seek(0, SEEK_ORIGIN_BEG);
 
         mCloseOnDestroy = true;
@@ -84,7 +84,7 @@ bool DvdFileStream::Open(const DVDFileInfo* info, bool close) {
     }
 
     mAsyncContext.info = *info;
-    mFilePosition.SetFileSize(mAsyncContext.info.length);
+    mFilePosition.SetFileSize(mAsyncContext.info.size);
     mFilePosition.Seek(0, SEEK_ORIGIN_BEG);
 
     mCloseOnDestroy = false;
@@ -152,14 +152,14 @@ void DvdFileStream::Seek(s32 offset, u32 origin) {
     mFilePosition.Seek(offset, origin);
 }
 
-void DvdFileStream::Cancel() { DVDCancel(&mAsyncContext.info.cb); }
+void DvdFileStream::Cancel() { DVDCancel(&mAsyncContext.info.block); }
 
 bool DvdFileStream::CancelAsync(AsyncCallback callback, void* arg) {
     mCancelCallback = callback;
     mCancelCallbackArg = arg;
 
     BOOL success =
-        DVDCancelAsync(&mAsyncContext.info.cb, DvdCBAsyncCallback_);
+        DVDCancelAsync(&mAsyncContext.info.block, DvdCBAsyncCallback_);
 
     if (success) {
         mIsCancelling = true;

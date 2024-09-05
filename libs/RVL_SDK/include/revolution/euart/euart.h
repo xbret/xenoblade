@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_EUART_H
 #define RVL_SDK_EUART_H
-#include "types.h"
+#include <types.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
 
 typedef enum {

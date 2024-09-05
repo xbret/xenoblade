@@ -2,11 +2,10 @@
 #define RVL_SDK_GX_TRANSFORM_H
 #include <revolution/gx/GXTypes.h>
 #include <revolution/MTX.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 void GXSetProjection(const Mtx44 proj, GXProjectionType type);
 void GXSetProjectionv(const float proj[7]);

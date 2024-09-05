@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_OS_MESSAGE_H
 #define RVL_SDK_OS_MESSAGE_H
 #include <revolution/os/OSThread.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

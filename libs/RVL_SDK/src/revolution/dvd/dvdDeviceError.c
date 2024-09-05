@@ -32,7 +32,7 @@ BOOL __DVDCheckDevice(void) {
         return TRUE;
     }
 
-    if (OS_DEVICE_CHECK_CODE == 129) {
+    if (OS_BOOT_PARTITION_319C == 129) {
         checkCode = 0x7ED40000;
     }
 
@@ -88,7 +88,7 @@ BOOL __DVDCheckDevice(void) {
     }
 
     lowDone = FALSE;
-    DVDLowReportKey((DVDVideoReportKey*)CheckBuffer, 0x40000, 0, lowCallback);
+    DVDLowReportKey((struct DVDVideoReportKey*)CheckBuffer, 0x40000, 0, lowCallback);
 
     while (!lowDone) {
 

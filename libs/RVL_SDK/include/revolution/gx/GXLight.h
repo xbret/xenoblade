@@ -2,7 +2,7 @@
 #define RVL_SDK_GX_LIGHT_H
 #include <revolution/gx/GXInternal.h>
 #include <revolution/gx/GXTypes.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -14,7 +14,8 @@ void GXInitLightAttn(GXLightObj* light, float aa, float ab, float ac, float ka, 
 void GXInitLightAttnA(GXLightObj* light, float a, float b, float c);
 void GXInitLightAttnK(GXLightObj* light, float a, float b, float c);
 void GXInitLightSpot(GXLightObj* light, float angle, GXSpotFn fn);
-void GXInitLightDistAttn(GXLightObj* light, float distance, float brightness, GXDistAttnFn fn);
+void GXInitLightDistAttn(GXLightObj* light, float distance, float brightness,
+                         GXDistAttnFn fn);
 void GXInitLightPos(GXLightObj* light, float x, float y, float z);
 void GXGetLightPos(const GXLightObj* light, float* x, float* y, float* z);
 void GXInitLightDir(GXLightObj* light, float x, float y, float z);

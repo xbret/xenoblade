@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_VI_TYPES
 #define RVL_SDK_VI_TYPES
 
-#include "types.h"
+#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {

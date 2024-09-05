@@ -1,6 +1,6 @@
 #ifndef REVOSDK_WPAD_H
 #define REVOSDK_WPAD_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

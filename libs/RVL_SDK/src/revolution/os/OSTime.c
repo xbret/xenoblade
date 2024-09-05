@@ -21,7 +21,7 @@ static s32 LeapYearDays[MONTH_MAX] = {0,   31,  60,  91,  121, 152,
                                       182, 213, 244, 274, 305, 335};
 
 asm s64 OSGetTime(void) {
-        nofralloc
+    nofralloc
 
     mftbu r3
     mftb r4
@@ -35,7 +35,7 @@ asm s64 OSGetTime(void) {
 }
 
 asm s32 OSGetTick(void){
-        nofralloc
+    nofralloc
 
     mftb r3
     blr
@@ -88,7 +88,7 @@ static void GetDates(s32 days, OSCalendarTime* cal) {
     s32* p_days;
     s32 month;
 
-    cal->week_day = (days + 6) % WEEK_DAY_MAX;
+    cal->wday = (days + 6) % WEEK_DAY_MAX;
     year = days / YEAR_DAY_MAX;
 
     // WTF??
@@ -97,14 +97,14 @@ static void GetDates(s32 days, OSCalendarTime* cal) {
     }
     days -= totalDays;
     cal->year = year;
-    cal->year_day = days;
+    cal->yday = days;
 
     p_days = IsLeapYear(year) ? LeapYearDays : YearDays;
     for (month = MONTH_MAX; days < p_days[--month];) {
         ;
     }
     cal->month = month;
-    cal->month_day = days - p_days[month] + 1;
+    cal->mday = days - p_days[month] + 1;
 }
 
 void OSTicksToCalendarTime(s64 ticks, OSCalendarTime* cal) {
@@ -151,7 +151,7 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
     year = cal->year + ovMon;
 
         seconds = (s64)SECS_IN_YEAR * year +
-              (s64)SECS_IN_DAY * (cal->month_day + GetLeapDays(year) + GetYearDays(year, month) - 1) +
+              (s64)SECS_IN_DAY * (cal->mday + GetLeapDays(year) + GetYearDays(year, month) - 1) +
               (s64)SECS_IN_HOUR * cal->hour +
               (s64)SECS_IN_MIN * cal->min +
               cal->sec -

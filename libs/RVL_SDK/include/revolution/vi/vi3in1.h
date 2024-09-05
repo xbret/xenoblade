@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_VI_VI3IN1_H
 #define RVL_SDK_VI_VI3IN1_H
-#include "types.h"
+#include <types.h>
 #include <revolution/vi/vitypes.h>
 #ifdef __cplusplus
 extern "C" {

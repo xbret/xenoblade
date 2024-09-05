@@ -1,7 +1,6 @@
-#ifndef AX_DSPCODE_H
-#define AX_DSPCODE_H
-
-#include "types.h"
+#ifndef RVL_SDK_AX_DSP_CODE_H
+#define RVL_SDK_AX_DSP_CODE_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

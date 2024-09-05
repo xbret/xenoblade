@@ -1,11 +1,9 @@
-#ifndef AX_AXPROF_H
-#define AX_AXPROF_H
-
-#include "types.h"
+#ifndef RVL_SDK_AX_PROF_H
+#define RVL_SDK_AX_PROF_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 typedef struct _AXPROFILE {
     s64 timeBegin;           // at 0x0

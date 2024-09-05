@@ -4,7 +4,7 @@
 static BOOL ExistFlag = FALSE;
 static NANDCommandBlock NandCb;
 static NANDFileInfo NandInfo;
-static DVDCBCallback Callback;
+static DVDErrorCallback Callback;
 static u32 NextOffset;
 DVDErrorInfo __ErrorInfo ALIGN(32);
 DVDErrorInfo __FirstErrorInfo ALIGN(32);
@@ -26,7 +26,7 @@ static void cbForNandWrite(s32 result, NANDCommandBlock* block) {
 static void cbForNandSeek(s32 result, NANDCommandBlock* block) {
     if (result == (NextOffset + 1) * sizeof(DVDErrorInfo)) {
 		if(NextOffset == 0){
-			__ErrorInfo.nextOffset = (NextOffset + 1) % 7;
+			__ErrorInfo.next = (NextOffset + 1) % 7;
 		}
         DCFlushRange((void*)&__ErrorInfo, sizeof(__ErrorInfo));
 
@@ -56,7 +56,7 @@ static void cbForNandWrite0(s32 result, NANDCommandBlock* block) {
 
 static void cbForNandSeek2(s32 result, NANDCommandBlock* block) {
     if (result == sizeof(DVDErrorInfo)) {
-        __FirstErrorInfo.nextOffset = (__FirstErrorInfo.nextOffset + 1) % 7;
+        __FirstErrorInfo.next = (__FirstErrorInfo.next + 1) % 7;
 
         if (NANDWriteAsync(&NandInfo, (void*)&__FirstErrorInfo, sizeof(__FirstErrorInfo), cbForNandWrite0, &NandCb) != 0) {
             cbForNandWrite0(-1, NULL);
@@ -71,14 +71,14 @@ static void cbForNandSeek2(s32 result, NANDCommandBlock* block) {
 
 static void cbForNandRead(s32 result, NANDCommandBlock* block) {
     if (result == sizeof(DVDErrorInfo)) {
-        NextOffset = __FirstErrorInfo.nextOffset;
+        NextOffset = __FirstErrorInfo.next;
 
         if (NANDSeekAsync(&NandInfo, sizeof(DVDErrorInfo), 0, cbForNandSeek2, &NandCb) != 0) {
             cbForNandSeek2(-1, NULL);
         }
     }
     else {
-        __ErrorInfo.nextOffset = 1;
+        __ErrorInfo.next = 1;
         if (NANDWriteAsync(&NandInfo, (void*)&__ErrorInfo, sizeof(__ErrorInfo), cbForNandWrite, &NandCb) != 0) {
             cbForNandWrite(-1, NULL);
         }
@@ -88,7 +88,7 @@ static void cbForNandRead(s32 result, NANDCommandBlock* block) {
 static void cbForNandSeek0(s32 result, NANDCommandBlock* block) {
     if (result == 0) {
         NextOffset = 0;
-        __ErrorInfo.nextOffset = 1;
+        __ErrorInfo.next = 1;
 
         if (NANDWriteAsync(&NandInfo, (void*)&__FirstErrorInfo, sizeof(__FirstErrorInfo), cbForNandWrite0, &NandCb) != 0) {
             cbForNandWrite0(-1, NULL);
@@ -123,7 +123,7 @@ static void cbForNandOpen(s32 result, NANDCommandBlock* block) {
         }
         else {
             NextOffset = 0;
-            __ErrorInfo.nextOffset = 1;
+            __ErrorInfo.next = 1;
             if (NANDWriteAsync(&NandInfo, (void*)&__FirstErrorInfo, sizeof(__FirstErrorInfo), cbForNandWrite0, &NandCb) != 0) {
                 cbForNandWrite0(-1, NULL);
             }
@@ -172,9 +172,9 @@ static void cbForNandCreateDir(s32 result, NANDCommandBlock* block) {
 
 static void cbForPrepareControlRegister(u32 intType){
     if (intType == 1) {
-        __ErrorInfo.status2 = DVDLowGetControlRegister();
+        __ErrorInfo.dicr = DVDLowGetControlRegister();
     }else {
-        __ErrorInfo.status2 = 0xffffffff;
+        __ErrorInfo.dicr = 0xffffffff;
     }
 
     if (NANDPrivateCreateDirAsync("/shared2/test2", 0x3f, 0, cbForNandCreateDir, &NandCb) != 0){
@@ -187,9 +187,9 @@ static void cbForPrepareControlRegister(u32 intType){
 
 static void cbForPrepareStatusRegister(u32 intType) {
     if (intType == 1) {
-        __ErrorInfo.status = DVDLowGetStatusRegister();
+        __ErrorInfo.disr = DVDLowGetStatusRegister();
     }else {
-        __ErrorInfo.status = 0xFFFFFFFF;
+        __ErrorInfo.disr = 0xFFFFFFFF;
     }
 
     if (!DVDLowPrepareControlRegister(cbForPrepareControlRegister)) {
@@ -199,9 +199,9 @@ static void cbForPrepareStatusRegister(u32 intType) {
     }
 }
 
-void __DVDStoreErrorCode(u32 error, DVDCBCallback callback) {
+void __DVDStoreErrorCode(u32 error, DVDErrorCallback callback) {
     __ErrorInfo.error = error;
-    __ErrorInfo.dateTime = (u32)OSTicksToSeconds(OSGetTime());
+    __ErrorInfo.sec = (u32)OSTicksToSeconds(OSGetTime());
     Callback = callback;
     DVDLowPrepareStatusRegister(cbForPrepareStatusRegister);
 }

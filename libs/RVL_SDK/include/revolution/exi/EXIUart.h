@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_EXI_UART_H
 #define RVL_SDK_EXI_UART_H
 #include <revolution/exi/EXIBios.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

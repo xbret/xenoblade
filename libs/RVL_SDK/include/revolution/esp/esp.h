@@ -1,9 +1,9 @@
 #ifndef RVL_SDK_ESP_H
 #define RVL_SDK_ESP_H
-#include "types.h"
+#include <types.h>
 #include <revolution/ARC.h>
 #include <revolution/IPC.h>
-#include "private/iostypes.h"
+#include <private/iostypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -24,7 +24,7 @@ typedef u8 ESCidxMask[64];
 
 #pragma pack(push, 4)
 
-typedef struct {
+typedef struct ESTmdViewHeader {
     ESVersion version;
     ESSysVersion sysVersion;
     ESTitleId titleId;
@@ -35,19 +35,19 @@ typedef struct {
     u16 numContents;
 } ESTmdViewHeader;
 
-typedef struct {
+typedef struct ESCmdView {
     ESContentId cid;
     u16 index;
     ESContentType type;
     u64 size;
 } ESCmdView;
 
-typedef struct {
+typedef struct ESLpEntry {
     u32 code;
     u32 limit;
 } ESLpEntry;
 
-typedef struct {
+typedef struct ESTicketView {
     ESVersion version;
     ESTicketId ticketID;
     ESId devID;
@@ -76,7 +76,7 @@ typedef struct {
     IOSCHash hash;
 } ESContentMeta;
 
-typedef struct {
+typedef struct ESTitleMetaHeader {
     ESVersion version;
     ESVersion caCrlVersion;
     ESVersion signerCrlVersion;
@@ -91,13 +91,13 @@ typedef struct {
     u16 bootIndex;
 } ESTitleMetaHeader;
 
-typedef struct {
+typedef struct ESTitleMeta {
     IOSCSigRsa2048 sig;
     ESTitleMetaHeader head;
     ESContentMeta contents[512];
 } ESTitleMeta;
 
-typedef struct {
+typedef struct ESTicket {
     IOSCSigRsa2048 sig; 
     IOSCEccPublicKey serverPubKey;
     ESVersion version;

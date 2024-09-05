@@ -3,21 +3,16 @@
 #include <revolution/FS.h>
 #include <revolution/NAND.h>
 #include <revolution/OS.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/**
- * SC/SYSCONF documentation from:
- * https://wiibrew.org/wiki//shared2/sys/SYSCONF
- */
-
 typedef enum {
-    SC_STATUS_0,
-    SC_STATUS_1,
-    SC_STATUS_2,
-    SC_STATUS_3,
+    SC_STATUS_READY,
+    SC_STATUS_BUSY,
+    SC_STATUS_FATAL,
+    SC_STATUS_PARSE
 } SCStatus;
 
 typedef enum {

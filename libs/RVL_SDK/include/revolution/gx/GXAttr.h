@@ -1,11 +1,10 @@
 #ifndef RVL_SDK_GX_ATTR_H
 #define RVL_SDK_GX_ATTR_H
 #include <revolution/gx/GXTypes.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 typedef struct _GXVtxDescList {
     GXAttr attr;     // at 0x0
