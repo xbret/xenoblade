@@ -1,11 +1,9 @@
-#ifndef _REVOSDK_OSFASTCAST_H
-#define _REVOSDK_OSFASTCAST_H
-
-#include "types.h"
-
+#ifndef RVL_SDK_OS_FAST_CAST_H
+#define RVL_SDK_OS_FAST_CAST_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
-#endif // ifdef __cplusplus
+#endif
 
 static inline void OSInitFastCast(){
     asm{
@@ -98,7 +96,6 @@ static inline s16 __OSf32tos16(register float arg) {
 static inline void OSf32tos16(const float* in, s16* out) { *out = __OSf32tos16(*in); }
 
 #ifdef __cplusplus
-};
-#endif // ifdef __cplusplus
-
+}
+#endif
 #endif

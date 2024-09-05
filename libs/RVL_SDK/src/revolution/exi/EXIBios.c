@@ -163,7 +163,7 @@ BOOL EXISync(EXIChannel chan) {
                     (EXI_CHAN_CTRL[chan].imm != 0x01010000 &&
                      EXI_CHAN_CTRL[chan].imm != 0x05070000 &&
                      EXI_CHAN_CTRL[chan].imm != 0x04220001) ||
-                    OS_DVD_DEVICE_CODE_ADDR == 0x8200) {
+                    OS_DVD_DEVICE_CODE == 0x8200) {
                     ret = TRUE;
                 }
             }

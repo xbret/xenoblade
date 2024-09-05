@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include "types.h"
+#include <types.h>
 
 typedef struct CXUncompContextLH {
 	u8* destp;

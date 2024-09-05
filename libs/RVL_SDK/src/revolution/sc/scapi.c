@@ -62,8 +62,8 @@ u8 SCGetEuRgb60Mode(void) {
 void SCSetEuRgb60Mode(){
 }
 
-void SCGetIdleMode(SCIdleMode* mode) {
-    SCFindByteArrayItem(mode, sizeof(SCIdleMode), SC_ITEM_IPL_IDL);
+void SCGetIdleMode(SCIdleModeInfo* mode) {
+    SCFindByteArrayItem(mode, sizeof(SCIdleModeInfo), SC_ITEM_IPL_IDL);
 }
 
 //unused

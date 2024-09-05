@@ -11,7 +11,7 @@ void __OSReboot(u32 r3, u32 r4){
     OSSetArenaLo((void*)0x81280000);
     OSSetArenaHi((void*)0x812F0000);
     r1_8[0] = 0;
-    __OSNextPartitionType = *(void**)OSPhysicalToCached(OS_PHYS_CURRENT_APP_NAME_1);
+    __OSNextPartitionType = *(void**)OSPhysicalToCached(OS_PHYS_BOOT_PARTITION_TYPE);
     __OSBootDol(r4, r3 | 0x80000000, r1_8);
 }
 

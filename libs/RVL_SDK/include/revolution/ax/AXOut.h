@@ -1,7 +1,6 @@
-#ifndef AX_AXOUT_H
-#define AX_AXOUT_H
-
-#include "types.h"
+#ifndef RVL_SDK_AX_OUT_H
+#define RVL_SDK_AX_OUT_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

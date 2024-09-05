@@ -2,7 +2,7 @@
 #define RVL_SDK_GX_FIFO_H
 #include <revolution/gx/GXInternal.h>
 #include <revolution/gx/GXTypes.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

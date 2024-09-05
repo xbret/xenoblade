@@ -1,10 +1,9 @@
 #ifndef RVL_SDK_OS_CONTEXT_H
 #define RVL_SDK_OS_CONTEXT_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 typedef enum {
     OS_CONTEXT_STATE_FP_SAVED = (1 << 0),

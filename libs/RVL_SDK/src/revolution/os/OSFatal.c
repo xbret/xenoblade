@@ -234,8 +234,8 @@ void OSFatal(GXColor textColor, GXColor bgColor, const char* msg) {
     GXAbortFrame();
 
     OSSetArenaLo((void*)0x81400000);
-    if(bootInfo->FSTLocation == NULL) OSSetArenaHi(*(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM1_END));
-    else OSSetArenaHi(bootInfo->FSTLocation);
+    if(bootInfo->fstStart == NULL) OSSetArenaHi(*(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM1_END));
+    else OSSetArenaHi(bootInfo->fstStart);
 
     FatalParam.textColor = textColor;
     FatalParam.bgColor = bgColor;

@@ -1,14 +1,9 @@
 #ifndef RVL_SDK_OS_FONT_H
 #define RVL_SDK_OS_FONT_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
- * Documentation from:
- * https://www.gc-forever.com/yagcd/chap16.html#sec16.1.3
- */
 
 typedef enum {
     OS_FONT_ENCODE_ANSI,

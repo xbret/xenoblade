@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_GX_DRAW_H
 #define RVL_SDK_GX_DRAW_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

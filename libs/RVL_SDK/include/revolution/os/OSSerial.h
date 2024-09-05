@@ -1,13 +1,12 @@
 #ifndef REVOSDK_OSSERIAL
 #define REVOSDK_OSSERIAL
 
-#include "types.h"
+#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define SI_MAX_CHAN 4
 #define SI_MAX_COMCSR_INLNGTH 128
 #define SI_MAX_COMCSR_OUTLNGTH 128
 #define SI_ERROR_UNDER_RUN 0x0001

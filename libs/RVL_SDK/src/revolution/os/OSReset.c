@@ -153,13 +153,13 @@ static void KillThreads(void) {
 }
 
 void OSShutdownSystem(void) {
-    SCIdleMode idleMode;
+    SCIdleModeInfo idleMode;
     OSStateFlags stateFlags;
     OSIOSRev iosRev;
 
-    memset(&idleMode, 0, sizeof(SCIdleMode));
+    memset(&idleMode, 0, sizeof(SCIdleModeInfo));
     SCInit();
-    while (SCCheckStatus() == SC_STATUS_1) {
+    while (SCCheckStatus() == SC_STATUS_BUSY) {
         ;
     }
     SCGetIdleMode(&idleMode);

@@ -1,6 +1,6 @@
 #ifndef RVL_SDK_ENCJAPANESE_H
 #define RVL_SDK_ENCJAPANESE_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

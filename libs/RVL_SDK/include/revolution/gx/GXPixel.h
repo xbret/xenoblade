@@ -2,7 +2,7 @@
 #define RVL_SDK_GX_PIXEL_H
 #include <revolution/gx/GXTypes.h>
 #include <revolution/MTX.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -26,7 +26,6 @@ void GXSetDither(GXBool enable);
 void GXSetDstAlpha(GXBool enable, u8 alpha);
 void GXSetFieldMask(GXBool enableEven, GXBool enableOdd);
 void GXSetFieldMode(GXBool texLOD, GXBool adjustAR);
-
 
 #ifdef __cplusplus
 }

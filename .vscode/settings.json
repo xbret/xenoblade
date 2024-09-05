@@ -19,7 +19,10 @@
         "cwchar": "cpp",
         "axfxhooks.h": "c",
         "dspcode.h": "c",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "gxpixel.h": "c",
+        "mtx.h": "c",
+        "dolphin_trk.h": "c"
     },
     "search.useIgnoreFiles": false,
     "search.exclude": {

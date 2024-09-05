@@ -4,10 +4,12 @@
 #include <revolution/OS.h>
 #include <string.h>
 
+int main(int argc, char** argv);
+
 static u8 Debug_BBA;
 
-DECL_SECTION(".init") DECL_WEAK void __start(void);
-int main(int argc, char** argv);
+DECL_SECTION(".init") static void __init_registers(void);
+DECL_SECTION(".init") static void __init_data(void);
 
 DECL_SECTION(".init") static void __check_pad3(void) {
     if ((OS_GC_PAD_3_BTN & 0x0EEF) == 0x0EEF) {
@@ -19,7 +21,7 @@ DECL_SECTION(".init") static void __set_debug_bba(void) { Debug_BBA = TRUE; }
 
 DECL_SECTION(".init") static BOOL __get_debug_bba(void) { return Debug_BBA; }
 
-asm void __start(void) {
+DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
         nofralloc
 
     // Setup hardware
@@ -243,8 +245,8 @@ _init_os:
     bl OSInit
 
     // Load DVD device code address
-    lis r4, OS_DVD_DEVICE_CODE_ADDR@ha
-    addi r4, r4, OS_DVD_DEVICE_CODE_ADDR@l
+    lis r4, OS_DVD_DEVICE_CODE@ha
+    addi r4, r4, OS_DVD_DEVICE_CODE@l
     lhz r3, 0(r4)
     // Checking bit 0 in the device code address
     andi. r5, r3, 0x8000
@@ -277,7 +279,7 @@ _after_init_metro_trk_bba:
     mr r4, r15
     bl main
     b exit // <- Will halt CPU
-    }
+}
 
 DECL_SECTION(".init") static void __copy_rom_section(void* dst, const void* src, size_t size) {
     if (size == 0 || dst == src) {
@@ -337,11 +339,11 @@ DECL_SECTION(".init") static asm void __init_registers(void) {
     ori r13, r13, _SDA_BASE_@l
 
     blr
-    }
+}
 
 DECL_SECTION(".init") static void __init_data(void) {
-    const __rom_copy_info* rs;
-    const __bss_init_info* bs;
+    const RomSection* rs;
+    const BssSection* bs;
 
     rs = _rom_copy_info;
     while (TRUE) {
@@ -349,7 +351,7 @@ DECL_SECTION(".init") static void __init_data(void) {
             break;
         }
 
-        __copy_rom_section(rs->addr, rs->rom, rs->size);
+        __copy_rom_section(rs->virt, rs->phys, rs->size);
         rs++;
     }
 
@@ -359,7 +361,7 @@ DECL_SECTION(".init") static void __init_data(void) {
             break;
         }
 
-        __init_bss_section(bs->addr, bs->size);
+        __init_bss_section(bs->virt, bs->size);
         bs++;
     }
 }

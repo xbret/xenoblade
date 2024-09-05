@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_GX_INIT_H
 #define RVL_SDK_GX_INIT_H
 #include <revolution/gx/GXFifo.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10,7 +10,7 @@ typedef struct _GXData {
     union {
         UNKWORD WORD_0x0;
         struct {
-            u16 SHORT_0x0; // at 0x0
+            u16 SHORT_0x0;      // at 0x0
             u16 lastWriteWasXF; // at 0x2
         };
     }; // at 0x0
@@ -38,10 +38,10 @@ typedef struct _GXData {
     u32 scissorTL; // at 0x148
     u32 scissorBR; // at 0x14C
     char UNK_0x150[0x170 - 0x150];
-    u32 ras1_iref;
-    u32 ind_imask;
-    u32 ras1_ss0;
-    u32 ras1_ss1;
+    u32 ras1_iref; // at 0x170
+    u32 ind_imask; // at 0x174
+    u32 ras1_ss0;  // at 0x178
+    u32 ras1_ss1;  // at 0x17C
     char UNK_0x180[0x220 - 0x180];
     u32 blendMode; // at 0x220
     u32 dstAlpha;  // at 0x224
@@ -81,7 +81,7 @@ extern GXData* const __GXData;
 // I hate typing this name out
 #define gxdt __GXData
 
-GXFifoObj* GXInit(void* base, u32 size);
+GXFifoObj* GXInit(void*, u32);
 
 #ifdef __cplusplus
 }

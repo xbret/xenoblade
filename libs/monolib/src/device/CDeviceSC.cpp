@@ -41,7 +41,7 @@ bool CDeviceSC::func_80447C60(){
 }
 
 bool CDeviceSC::wkStartup(){
-	if(SCCheckStatus() == SC_STATUS_0){
+	if(SCCheckStatus() == SC_STATUS_READY){
 		u32 r3 = CDeviceClock::func_8044DEE0();
 		if(r3 != 0){
 			//Update SC values

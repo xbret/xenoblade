@@ -1,11 +1,18 @@
 #ifndef RVL_SDK_DVD_H
 #define RVL_SDK_DVD_H
-#include "types.h"
-#include <revolution/OS.h>
-#include <revolution/ESP.h>
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+// OS sets MSB to signal that the device code was successfully read
+#define DVD_DEVICE_CODE_READ (1 << 15)
+#define MAKE_DVD_DEVICE_CODE(x) (DVD_DEVICE_CODE_READ | (x))
+
+// Forward declarations
+typedef struct DVDCommandBlock;
+typedef struct DVDFileInfo;
+typedef struct OSAlarm;
 
 typedef enum {
     DVD_RESULT_COVER_CLOSED = -4,
@@ -38,9 +45,35 @@ typedef enum {
     DVD_COVER_CLOSED,
 } DVDCoverState;
 
-// Forward declarations
-typedef struct DVDDiskID;
-typedef struct DVDCommandBlock;
+typedef void (*DVDAsyncCallback)(s32 result, struct DVDFileInfo* info);
+typedef void (*DVDCommandCallback)(s32 result, struct DVDCommandBlock* block);
+
+typedef struct DVDDiskID {
+    char game[4];    // at 0x0
+    char company[2]; // at 0x4
+    u8 disk;         // at 0x6
+    u8 version;      // at 0x7
+    u8 strmEnable;   // at 0x8
+    u8 strmBufSize;  // at 0x9
+    u8 padding[14];  // at 0xA
+    u32 rvlMagic;    // at 0x18
+    u32 gcMagic;     // at 0x1C
+} DVDDiskID;
+
+typedef struct DVDCommandBlock {
+    struct DVDCommandBlock* next; // at 0x0
+    struct DVDCommandBlock* prev; // at 0x4
+    u32 command;                  // at 0x8
+    volatile s32 state;           // at 0xC
+    u32 offset;                   // at 0x10
+    u32 length;                   // at 0x14
+    void* addr;                   // at 0x18
+    u32 transferSize;             // at 0x1C
+    u32 transferTotal;            // at 0x20
+    DVDDiskID* id;                // at 0x24
+    DVDCommandCallback callback;  // at 0x28
+    void* userData;               // at 0x2C
+} DVDCommandBlock;
 
 typedef struct DVDDriveInfo {
     u16 revision;    // at 0x0
@@ -49,84 +82,47 @@ typedef struct DVDDriveInfo {
     char padding[32 - 0x8];
 } DVDDriveInfo;
 
+typedef struct DVDFileInfo {
+    DVDCommandBlock block;     // at 0x0
+    u32 offset;                // at 0x30
+    u32 size;                  // at 0x34
+    DVDAsyncCallback callback; // at 0x38
+} DVDFileInfo;
 
-typedef void (*DVDCBCallback)(s32 result, struct DVDCommandBlock* block);
+typedef struct DVDDir{
+    u32 entryNum; // at 0x0
+    u32 location; // at 0x4
+    u32 next;     // at 0x8
+} DVDDir;
 
-typedef struct DVDCommandBlock {
-    struct DVDCommandBlock* next;
-    struct DVDCommandBlock* prev;
-    u32 command;
-    s32 state;
-    u32 offset;
-    u32 length;
-    void* addr;
-    u32 currTransferSize;
-    u32 transferredSize;
-    struct DVDDiskID* id;
-    DVDCBCallback callback;
-    void* userData;
-} DVDCommandBlock;
+typedef struct DVDDirEntry{
+    u32 entryNum; // at 0x0
+    BOOL isDir;   // at 0x4
+    char* name;   // at 0x8
+} DVDDirEntry;
 
-
-typedef void (*DVDOptionalCommandChecker)(DVDCommandBlock* block, void (*cb)(u32));
-
-
-typedef struct DVDBB2 {
-    u32 bootFilePosition;
-    u32 FSTPosition;
-    u32 FSTLength;
-    u32 FSTMaxLength;
-    void* FSTAddress;
-    u32 userPosition;
-    u32 userLength;
-    u32 padding0;
-} DVDBB2;
-
-typedef struct DVDGamePartition {
-    ESTicket ticket;
-    u32 tmdSize;
-    ESTitleMeta* tmd;
-    u32 certBlobSize;
-    void* certBlob;      
-    u8* h3Hashes;
-    u8* encryptedArea;
-} DVDGamePartition;
-
-typedef struct DVDPartitionInfo {
-    DVDGamePartition* gamePartition;
-    u32 type;
-} DVDPartitionInfo;
-
-typedef struct DVDGameTOC {
-    u32 numGamePartitions;
-    DVDPartitionInfo* partitionInfos;
-} DVDGameTOC;
-
-typedef struct DVDPartitionParams {
-    ESTicket ticket;
-    u8 padding0[OSRoundUp32B(sizeof(ESTicket)) - sizeof(ESTicket)];
-    ESTicketView ticketView;
-    u8 padding1[OSRoundUp32B(sizeof(ESTicketView)) - sizeof(ESTicketView)];
-    u32 numTmdBytes;
-    u8 padding2[28];
-    ESTitleMeta tmd;
-    u8 padding3[OSRoundUp32B(sizeof(ESTitleMeta)) - sizeof(ESTitleMeta)];
-    u32 numCertBytes;
-    u8 padding4[28];
-    u8 certificates[4096];
-    u32 dataWordOffset;
-    u8 padding5[28];
-    u8 h3Hash[98304];
-} DVDPartitionParams;
+extern volatile u32 __DVDLayoutFormat;
 
 void DVDInit(void);
-s32 DVDCancel(DVDCommandBlock* block);
-BOOL DVDCancelAsync(DVDCommandBlock* block, DVDCBCallback callback);
-BOOL DVDInquiryAsync(DVDCommandBlock*, DVDDriveInfo*, DVDCBCallback);
-u32 __DVDGetCoverStatus(void);
-void __DVDPrepareReset(void);
-BOOL __DVDTestAlarm(const OSAlarm*);
+BOOL DVDReadAbsAsyncPrio(DVDCommandBlock* block, void* dst, u32 size,
+                         u32 offset, DVDCommandCallback callback, s32 prio);
+BOOL DVDInquiryAsync(DVDCommandBlock* block, DVDDriveInfo* info,
+                     DVDCommandCallback callback);
+s32 DVDGetCommandBlockStatus(const DVDCommandBlock* block);
 s32 DVDGetDriveStatus(void);
+void DVDPause(void);
+void DVDResume(void);
+BOOL DVDCancelAsync(DVDCommandBlock* block, DVDCommandCallback callback);
+s32 DVDCancel(DVDCommandBlock* block);
+BOOL DVDCancelAllAsync(DVDCommandCallback callback);
+const DVDDiskID* DVDGetCurrentDiskID(void);
+u32 __DVDGetCoverStatus(void);
+void __DVDPrepareResetAsync(DVDCommandCallback callback);
+void __DVDPrepareReset(void);
+BOOL __DVDTestAlarm(const struct OSAlarm* alarm);
+BOOL __DVDLowBreak(void);
+BOOL __DVDStopMotorAsync(DVDCommandBlock* block, DVDCommandCallback callback);
+void __DVDRestartMotor(void);
 
 #ifdef __cplusplus
 }

@@ -2,8 +2,6 @@
 #include <revolution/OS.h>
 #include <ctype.h>
 
-extern u32  __DVDLayoutFormat;
-
 typedef struct FSTEntry {
 	u32 isDirAndStringOff;
 	u32 parentOrPosition;
@@ -27,7 +25,7 @@ BOOL __DVDLongFileNameFlag = TRUE;
 
 void __DVDFSInit(void) {
 	BootInfo = (OSBootInfo*)OSPhysicalToCached(0);
-	FstStart = (FSTEntry*)BootInfo->FSTLocation;
+	FstStart = (FSTEntry*)BootInfo->fstStart;
 
 	if (FstStart != NULL) {
 		MaxEntryNum = FstStart[0].nextEntryOrLength;
@@ -160,10 +158,10 @@ BOOL DVDFastOpen(s32 entrynum, DVDFileInfo* fileInfo) {
 		return FALSE;
 	}
 
-	fileInfo->startAddr = filePosition(entrynum) >> __DVDLayoutFormat;
-	fileInfo->length = fileLength(entrynum);
-	fileInfo->callback = (DVDCallback)NULL;
-	fileInfo->cb.state = 0;
+	fileInfo->offset = filePosition(entrynum) >> __DVDLayoutFormat;
+	fileInfo->size = fileLength(entrynum);
+	fileInfo->callback = (DVDAsyncCallback)NULL;
+	fileInfo->block.state = 0;
 	return TRUE;
 }
 
@@ -183,15 +181,15 @@ BOOL DVDOpen(const char* fileName, DVDFileInfo* fileInfo) {
 		return FALSE;
 	}
 
-	fileInfo->startAddr = filePosition(entry) >> __DVDLayoutFormat;
-	fileInfo->length = fileLength(entry);
-	fileInfo->callback = (DVDCallback)NULL;
-	fileInfo->cb.state = 0;
+	fileInfo->offset = filePosition(entry) >> __DVDLayoutFormat;
+	fileInfo->size = fileLength(entry);
+	fileInfo->callback = (DVDAsyncCallback)NULL;
+	fileInfo->block.state = 0;
 	return TRUE;
 }
 
 BOOL DVDClose(DVDFileInfo* fileInfo) {
-	DVDCancel(&fileInfo->cb);
+	DVDCancel(&fileInfo->block);
 	return TRUE;
 }
 
@@ -258,24 +256,24 @@ void DVDChangeDir(){
 
 static void cbForReadAsync(s32 result, DVDCommandBlock* block);
 
-BOOL DVDReadAsyncPrio(DVDFileInfo* fileInfo, void* addr, s32 length, s32 offset, DVDCallback callback, s32 prio) {
-	if (!((0 <= offset) && (offset <= fileInfo->length))) {
+BOOL DVDReadAsyncPrio(DVDFileInfo* fileInfo, void* addr, s32 length, s32 offset, DVDAsyncCallback callback, s32 prio) {
+	if (!((0 <= offset) && (offset <= fileInfo->size))) {
 	#line 823
 		OSError("DVDReadAsync(): specified area is out of the file  ");
 	}
 
-	if (!((0 <= offset + length) && (offset + length < fileInfo->length + 32))) {
+	if (!((0 <= offset + length) && (offset + length < fileInfo->size + 32))) {
 	#line 829
 		OSError("DVDReadAsync(): specified area is out of the file  ");
 	}
 
 	fileInfo->callback = callback;
-	DVDReadAbsAsyncPrio(&fileInfo->cb, addr, length, (u32)(fileInfo->startAddr + (offset >> 2)), cbForReadAsync, prio);
+	DVDReadAbsAsyncPrio(&fileInfo->block, addr, length, (u32)(fileInfo->offset + (offset >> 2)), cbForReadAsync, prio);
 	return TRUE;
 }
 
 static void cbForReadAsync(s32 result, DVDCommandBlock* block) {
-	DVDFileInfo* fileInfo = (DVDFileInfo*)((char*)block - offsetof(DVDFileInfo, cb));
+	DVDFileInfo* fileInfo = (DVDFileInfo*)((char*)block - offsetof(DVDFileInfo, block));
 
 	if (fileInfo->callback) {
 		(fileInfo->callback)(result, fileInfo);
@@ -289,18 +287,18 @@ s32 DVDReadPrio(DVDFileInfo* fileInfo, void* addr, s32 length, s32 offset, s32 p
 	DVDCommandBlock* block;
 	s32 state, retVal;
 
-	if (!((0 <= offset) && (offset <= fileInfo->length))) {
+	if (!((0 <= offset) && (offset <= fileInfo->size))) {
 	#line 893
 		OSError("DVDRead(): specified area is out of the file  ");
 	}
 
-	if (!((0 <= offset + length) && (offset + length < fileInfo->length + 32))) {
+	if (!((0 <= offset + length) && (offset + length < fileInfo->size + 32))) {
 	#line 899
 		 OSError("DVDRead(): specified area is out of the file  ");
 	}
 
-	block = &fileInfo->cb;
-	result = DVDReadAbsAsyncPrio(block, addr, length, (u32)(fileInfo->startAddr + (offset >> 2)), cbForReadSync, prio);
+	block = &fileInfo->block;
+	result = DVDReadAbsAsyncPrio(block, addr, length, (u32)(fileInfo->offset + (offset >> 2)), cbForReadSync, prio);
 	
 	if (result == FALSE) {
 		return -1;
@@ -312,7 +310,7 @@ s32 DVDReadPrio(DVDFileInfo* fileInfo, void* addr, s32 length, s32 offset, s32 p
 		state = ((DVDCommandBlock*)block)->state;
 
 		if (state == 0) {
-			retVal = (s32)block->transferredSize;
+			retVal = (s32)block->transferTotal;
 			break;
 		}
 
@@ -395,13 +393,13 @@ u32 DVDGetTransferredSize(DVDCommandBlock* block){
 		case DVD_STATE_CANCELED:
 		case DVD_STATE_DISK_ERROR:
 		case DVD_STATE_MOTOR_STOPPED:
-		size = block->transferredSize;
+		size = block->transferTotal;
 		break;
 		case DVD_STATE_WAITING:
 		size = 0;
 		break;
 		case DVD_STATE_BUSY:
-		size = block->transferredSize;
+		size = block->transferTotal;
 		break;
 		default:
 		break;

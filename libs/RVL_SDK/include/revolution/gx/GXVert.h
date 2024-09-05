@@ -1,11 +1,10 @@
 #ifndef RVL_SDK_GX_VERT_H
 #define RVL_SDK_GX_VERT_H
 #include <revolution/gx/GXHardware.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 static inline void GXCmd1u8(u8 uc) {
     WGPIPE.c = uc;

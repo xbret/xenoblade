@@ -1,7 +1,7 @@
 #ifndef _REVOSDK_MATH_H
 #define _REVOSDK_MATH_H
 
-#include "types.h"
+#include <types.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 

@@ -1,13 +1,12 @@
 #ifndef RVL_SDK_AI_HARDWARE_H
 #define RVL_SDK_AI_HARDWARE_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /**
- * AI Hardware Registers
- * https://www.gc-forever.com/yagcd/chap5.html#sec5.10
+ * AI hardware registers
  */
 volatile u32 AI_HW_REGS[] : 0xCD006C00;
 
@@ -15,11 +14,11 @@ volatile u32 AI_HW_REGS[] : 0xCD006C00;
  * Hardware register indexes
  */
 typedef enum {
-    AI_AICR,   //!< 0xCC006C00
-    AI_AIVR,   //!< 0xCC006C04
-    AI_AISCNT, //!< 0xCC006C08
-    AI_AIIT,   //!< 0xCC006C0C
-} AIHwReg;
+    AI_AICR,   //!< 0xCD006C00
+    AI_AIVR,   //!< 0xCD006C04
+    AI_AISCNT, //!< 0xCD006C08
+    AI_AIIT,   //!< 0xCD006C0C
+};
 
 // AICR - AI Control Register
 #define AI_AICR_SAMPLERATE (1 << 6)

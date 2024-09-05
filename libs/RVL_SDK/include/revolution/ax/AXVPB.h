@@ -1,8 +1,7 @@
-#ifndef AX_AXVPB_H
-#define AX_AXVPB_H
-
+#ifndef RVL_SDK_AX_VPB_H
+#define RVL_SDK_AX_VPB_H
 #include <revolution/ax/AXPB.h>
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

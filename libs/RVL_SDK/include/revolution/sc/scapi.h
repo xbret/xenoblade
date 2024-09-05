@@ -1,14 +1,9 @@
 #ifndef RVL_SDK_SC_SCAPI_H
 #define RVL_SDK_SC_SCAPI_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-/**
- * SC/SYSCONF documentation from:
- * https://wiibrew.org/wiki//shared2/sys/SYSCONF
- */
 
 typedef enum { SC_ASPECT_STD, SC_ASPECT_WIDE } SCAspectRatio;
 
@@ -31,10 +26,10 @@ typedef enum { SC_SND_MONO, SC_SND_STEREO, SC_SND_SURROUND } SCSoundMode;
 
 typedef enum { SC_SENSOR_BAR_BOTTOM, SC_SENSOR_BAR_TOP } SCSensorBarPos;
 
-typedef struct SCIdleMode {
+typedef struct SCIdleModeInfo {
     u8 wc24;      // at 0x0
     u8 slotLight; // at 0x1
-} SCIdleMode;
+} SCIdleModeInfo;
 
 typedef struct SCBtDeviceInfo {
     u8 mac[6];     // at 0x0
@@ -42,9 +37,9 @@ typedef struct SCBtDeviceInfo {
 } SCBtDeviceInfo;
 
 typedef struct SCBtDeviceInfoArray {
-    u8 numRemotes;                 // at 0x0
-    SCBtDeviceInfo registered[10]; // at 0x1
-    SCBtDeviceInfo active[6];      // at 0x2BD
+    u8 numRegist;              // at 0x0
+    SCBtDeviceInfo regist[10]; // at 0x1
+    SCBtDeviceInfo active[6];  // at 0x2BD
 } SCBtDeviceInfoArray;
 
 typedef struct SCBtCmpDevInfoArray {
@@ -54,7 +49,7 @@ typedef struct SCBtCmpDevInfoArray {
 u8 SCGetAspectRatio(void);
 s8 SCGetDisplayOffsetH(void);
 u8 SCGetEuRgb60Mode(void);
-void SCGetIdleMode(SCIdleMode* mode);
+void SCGetIdleMode(SCIdleModeInfo* mode);
 u8 SCGetLanguage(void);
 u8 SCGetProgressiveMode(void);
 u8 SCGetScreenSaverMode(void);
