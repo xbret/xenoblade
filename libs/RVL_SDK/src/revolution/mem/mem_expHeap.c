@@ -4,8 +4,6 @@
 #define MEM_EXP_HEAP_MBLOCK_FREE 'FR'
 #define MEM_EXP_HEAP_MBLOCK_USED 'UD'
 
-// Base heap must be >= 16 bytes in size
-#define MEM_EXP_HEAP_MIN_SIZE 20
 // Size of base and expandable heap head
 #define MEM_EXP_HEAP_HEAD_SIZE (sizeof(MEMiHeapHead) + sizeof(MEMiExpHeapHead))
 // Minimum buffer size for an expandable heap

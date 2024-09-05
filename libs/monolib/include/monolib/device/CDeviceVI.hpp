@@ -89,7 +89,7 @@ public:
 	u16 unk27A;
 	u16 unk27C;
 	u16 unk27E;
-	void* mXfbBuffersPtr; //0x280
+	u8* mXfbBuffersPtr; //0x280
 	u32 unk284;
 	u32 unk288;
 	u8 unk28C[0x8]; //padding?
