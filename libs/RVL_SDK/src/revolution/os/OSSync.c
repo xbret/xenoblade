@@ -9,7 +9,8 @@ void __OSSystemCallVectorStart(void);
 void __OSSystemCallVectorEnd(void);
 
 static asm void SystemCallVector(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     entry __OSSystemCallVectorStart
     mfhid0 r9
@@ -23,7 +24,8 @@ static asm void SystemCallVector(void) {
 
     entry __OSSystemCallVectorEnd
     nop
-    }
+    // clang-format on
+}
 
 void __OSInitSystemCall(void) {
     memcpy(OSPhysicalToCached(OS_PHYS_SYSCALL_INTR), __OSSystemCallVectorStart,

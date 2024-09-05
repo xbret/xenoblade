@@ -257,8 +257,8 @@ void GXGetViewportv(float view[6]) {
 
 //unused
 void GXSetZScaleOffset(float scale, float offset) {
-    gxdt->offsetZ = (f32)0xFFFFFF * offset;      // ???
-    gxdt->scaleZ = 1.0f + (f32)0xFFFFFF * scale; // ???
+    gxdt->offsetZ = (float)0xFFFFFF * offset;      // ???
+    gxdt->scaleZ = 1.0f + (float)0xFFFFFF * scale; // ???
     gxdt->gxDirtyFlags |= GX_DIRTY_VIEWPORT;
 }
 

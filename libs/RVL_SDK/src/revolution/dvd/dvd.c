@@ -1,7 +1,6 @@
 #include <revolution/DVD.h>
-#include <revolution/OS.h>
 #include <revolution/ESP.h>
-
+#include <revolution/OS.h>
 
 #define DISK_TOC_OFFSET 0x40000
 #define DISK_TOC_SIZE ROUND_UP(sizeof(DVDGameToc), 32)
@@ -142,13 +141,13 @@ typedef struct DVDGameToc {
 
 typedef struct DVDPartitionParams {
     ESTicket ticket;
-    u8 padding0[OSRoundUp32B(sizeof(ESTicket)) - sizeof(ESTicket)];
+    u8 padding0[ROUND_UP(sizeof(ESTicket), 32) - sizeof(ESTicket)];
     ESTicketView ticketView;
-    u8 padding1[OSRoundUp32B(sizeof(ESTicketView)) - sizeof(ESTicketView)];
+    u8 padding1[ROUND_UP(sizeof(ESTicketView), 32) - sizeof(ESTicketView)];
     u32 numTmdBytes;
     u8 padding2[28];
     ESTitleMeta tmd;
-    u8 padding3[OSRoundUp32B(sizeof(ESTitleMeta)) - sizeof(ESTitleMeta)];
+    u8 padding3[ROUND_UP(sizeof(ESTitleMeta), 32) - sizeof(ESTitleMeta)];
     u32 numCertBytes;
     u8 padding4[28];
     u8 certificates[4096];
@@ -219,7 +218,7 @@ extern BOOL __OSInIPL;
 
 static u8  __DVDGameTocBuffer[DISK_TOC_SIZE] ALIGN(32);
 static u8  __DVDPartInfoBuffer[DISK_PART_SIZE] ALIGN(32);
-static u8 __DVDTmdBuffer[OSRoundUp32B(sizeof(ESTitleMeta))] ALIGN(64);
+static u8 __DVDTmdBuffer[ROUND_UP(sizeof(ESTitleMeta), 32)] ALIGN(64);
 static u8 __DVDTicketViewBuffer[ROUND_UP(sizeof(ESTicketView), 32)] ALIGN(64);
 
 const char* __DVDVersion = "<< RVL_SDK - DVD \trelease build: Feb 27 2009 10:01:59 (0x4302_145) >>";
@@ -713,8 +712,8 @@ static void cbForUnrecoveredErrorRetry(u32 intType) {
 }
 
 static void stateGoToRetry(void) {
-	StampCommand(16, 0, 0);
-	DVDLowStopMotor(FALSE, FALSE, cbForStateGoToRetry);
+    StampCommand(COMMAND_STOP_MOTOR, 0, 0);
+    DVDLowStopMotor(FALSE, FALSE, cbForStateGoToRetry);
 }
 
 static void cbForStateGoToRetry(u32 intType) {
@@ -990,8 +989,8 @@ static void stateOpenPartition2(DVDCommandBlock* block) {
 
 static void stateCheckID2(DVDCommandBlock* block) {
 	DVDLowClearCoverInterrupt(0);
-	StampCommand(1, (u32)(0x420 >> 2), OSRoundUp32B(sizeof(DVDBB2)));
-	DVDLowRead(&BB2, OSRoundDown32B(sizeof(DVDBB2)), (u32)(0x420 >> 2), cbForStateCheckID2);
+	StampCommand(1, (u32)(0x420 >> 2), ROUND_UP(sizeof(DVDBB2), 32));
+	DVDLowRead(&BB2, ROUND_DOWN(sizeof(DVDBB2), 32), (u32)(0x420 >> 2), cbForStateCheckID2);
 }
 
 static void cbForStateCheckID1(u32 intType) {

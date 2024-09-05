@@ -30,6 +30,7 @@ extern int __double_huge[];
 #define FP_NORMAL 4
 #define FP_SUBNORMAL 
 
+#define M_PI    3.1415927f
 #define M_SQRT3 1.73205f
 
 int __signbitf(float);

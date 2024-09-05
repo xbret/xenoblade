@@ -1,7 +1,7 @@
-#include <revolution/OS.h>
-#include <revolution/IPC.h>
 #include <revolution/DVD.h>
 #include <revolution/ESP.h>
+#include <revolution/IPC.h>
+#include <revolution/OS.h>
 #include <string.h>
 #include <stdbool.h>
 
@@ -53,7 +53,6 @@ typedef struct DVDLowDiRegs {
     u32 dicvr;    // at 0x4
     char padding[32 - 0x8];
 } DVDLowDiRegs;
-
 
 typedef struct DVDLowRegBuffer {
     u32 reg; // at 0x0

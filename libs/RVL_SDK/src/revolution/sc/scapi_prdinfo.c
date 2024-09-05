@@ -4,6 +4,16 @@
 
 #define XOR_KEY 0x73B5DBFA
 
+typedef struct SCArea {
+    s8 area;      // at 0x0
+    char name[4]; // at 0x1
+} SCArea;
+
+typedef struct SCRegion {
+    s8 region;    // at 0x0
+    char name[3]; // at 0x1
+} SCRegion;
+
 static SCArea ProductAreaAndStringTbl[] = {
     {SC_AREA_JPN, "JPN"},
     {SC_AREA_USA, "USA"},

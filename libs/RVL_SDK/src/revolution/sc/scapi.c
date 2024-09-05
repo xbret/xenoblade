@@ -155,7 +155,8 @@ u32 SCGetCounterBias(void) {
     u32 item;
 
     if (!SCFindU32Item(&item, SC_ITEM_IPL_CB)) {
-        item = 0x0B49D800;
+        // 2,192 days?
+        item = 2192 * 24 * 60 * 60;
     }
 
     return item;
@@ -264,7 +265,9 @@ u8 SCGetWpadMotorMode(void) {
     return item;
 }
 
-void SCSetWpadMotorMode(u8 mode) { SCReplaceU8Item(mode, SC_ITEM_BT_MOT); }
+void SCSetWpadMotorMode(u8 mode) {
+    SCReplaceU8Item(mode, SC_ITEM_BT_MOT);
+}
 
 u8 SCGetWpadSensorBarPosition(void) {
     u8 item;

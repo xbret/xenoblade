@@ -23,7 +23,6 @@ void GXSetTevIndirect(GXTevStageID tevStage, GXIndTexStageID texStage,
     gxdt->lastWriteWasXF = FALSE;
 }
 
-//only matches on 1.0
 void GXSetIndTexMtx(GXIndTexMtxID id, const float offset[2][3], s8 scaleExp) {
     u32 index;
     u32 cmd;
@@ -77,7 +76,6 @@ void GXSetIndTexMtx(GXIndTexMtxID id, const float offset[2][3], s8 scaleExp) {
 
     gxdt->lastWriteWasXF = FALSE;
 }
-
 
 void GXSetIndTexCoordScale(GXIndTexStageID stage, GXIndTexScale scaleS,
                            GXIndTexScale scaleT) {

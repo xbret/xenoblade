@@ -2,7 +2,7 @@
 #include <revolution/DVD.h>
 #include <revolution/OS.h>
 
-static BOOL OnReset(u32 pass, u32 event);
+static BOOL OnReset(BOOL final, u32 event);
 static void DecrementerExceptionHandler(u8 type, OSContext* ctx);
 
 static OSAlarmQueue AlarmQueue;
@@ -10,7 +10,7 @@ static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnReset, 0xFFFFFFFF, 0,
                                                       0};
 
 static void SetTimer(const OSAlarm* alarm) {
-    const s64 timeLeft = alarm->end - __OSGetSystemTime();
+    s64 timeLeft = alarm->end - __OSGetSystemTime();
 
     if (timeLeft < 0) {
         PPCMtdec(0);
@@ -46,11 +46,11 @@ static void InsertAlarm(OSAlarm* alarm, s64 end, OSAlarmHandler handler) {
 
     // Calculate periodic alarm end time (caller makes 'end' 0)
     if (alarm->period > 0) {
-        const s64 time = __OSGetSystemTime();
+        s64 time = __OSGetSystemTime();
         end = alarm->start;
 
         if (alarm->start < time) {
-            const s64 periodLeft = ((time - alarm->start) / alarm->period);
+            s64 periodLeft = ((time - alarm->start) / alarm->period);
             end += alarm->period * (periodLeft + 1);
         }
     }
@@ -94,7 +94,7 @@ static void InsertAlarm(OSAlarm* alarm, s64 end, OSAlarmHandler handler) {
 }
 
 void OSSetAlarm(OSAlarm* alarm, s64 tick, OSAlarmHandler handler) {
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     alarm->period = 0;
     InsertAlarm(alarm, __OSGetSystemTime() + tick, handler);
@@ -108,7 +108,7 @@ void OSSetAbsAlarm(){
 
 void OSSetPeriodicAlarm(OSAlarm* alarm, s64 tick, s64 period,
                         OSAlarmHandler handler) {
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     alarm->period = period;
     alarm->start = __OSTimeToSystemTime(tick);
@@ -120,7 +120,7 @@ void OSSetPeriodicAlarm(OSAlarm* alarm, s64 tick, s64 period,
 void OSCancelAlarm(OSAlarm* alarm) {
     OSAlarm* next;
 
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     if (alarm->handler == NULL) {
         OSRestoreInterrupts(enabled);
@@ -156,7 +156,7 @@ static void DecrementerExceptionCallback(u8 type, OSContext* ctx) {
     OSAlarm* alarm;
     OSAlarm* next;
 
-    const s64 time = __OSGetSystemTime();
+    s64 time = __OSGetSystemTime();
     alarm = AlarmQueue.head;
 
     if (alarm == NULL) {
@@ -201,6 +201,7 @@ static void DecrementerExceptionCallback(u8 type, OSContext* ctx) {
 
 static asm void DecrementerExceptionHandler(register u8 type,
                                             register OSContext* ctx) {
+    // clang-format off
     nofralloc
 
     stw r0, ctx->gprs[0]
@@ -208,19 +209,19 @@ static asm void DecrementerExceptionHandler(register u8 type,
     stw r2, ctx->gprs[2]
     stmw r6, ctx->gprs[6]
 
-    mfgqr1 r0
+    mfspr r0, GQR1
     stw r0, ctx->gqrs[1]
-    mfgqr2 r0
+    mfspr r0, GQR2
     stw r0, ctx->gqrs[2]
-    mfgqr3 r0
+    mfspr r0, GQR3
     stw r0, ctx->gqrs[3]
-    mfgqr4 r0
+    mfspr r0, GQR4
     stw r0, ctx->gqrs[4]
-    mfgqr5 r0
+    mfspr r0, GQR5
     stw r0, ctx->gqrs[5]
-    mfgqr6 r0
+    mfspr r0, GQR6
     stw r0, ctx->gqrs[6]
-    mfgqr7 r0
+    mfspr r0, GQR7
     stw r0, ctx->gqrs[7]
 
     stwu r1, -8(r1)
@@ -233,11 +234,11 @@ void OSSetAlarmTag(OSAlarm* alarm, u32 tag) { alarm->tag = tag; }
 void OSCancelAlarms(){
 }
 
-static BOOL OnReset(u32 pass, u32 event) {
+static BOOL OnReset(BOOL final, u32 event) {
     OSAlarm* iter;
     OSAlarm* next;
 
-    if (pass != OS_SD_PASS_FIRST) {
+    if (final != OS_SD_PASS_FIRST) {
         iter = AlarmQueue.head;
         next = (iter != NULL) ? iter->next : NULL;
 

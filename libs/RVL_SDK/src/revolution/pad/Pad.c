@@ -2,8 +2,6 @@
 #include <revolution/SI.h>
 #include <revolution/PAD.h>
 
-s8 UnkVal : (OS_BASE_CACHED | 0x30e3);
-
 static u32 AnalogMode = 0x00000300u;
 static u32 Spec = 5;
 static u32 EnabledBits;
@@ -66,16 +64,16 @@ void PADControlMotor(s32 chan, u32 command) {
   enabled = OSDisableInterrupts();
   chanBit = PAD_CHAN0_BIT >> chan;
   if ((EnabledBits & chanBit) && !(SIGetType(chan) & SI_GC_NOMOTOR)) {
-    if (Spec < PAD_SPEC_2 && command == PAD_MOTOR_STOP_HARD) {
-      command = PAD_MOTOR_STOP;
-    }
+	if (Spec < PAD_SPEC_2 && command == PAD_MOTOR_STOP_HARD) {
+	  command = PAD_MOTOR_STOP;
+	}
 
-    if(UnkVal & 0x20){
-        command = PAD_MOTOR_STOP;
-    }
+	if(OS_PAD_FLAGS & 0x20){
+		command = PAD_MOTOR_STOP;
+	}
 
-    SISetCommand(chan, (0x40 << 16) | AnalogMode | (command & (0x00000001 | 0x00000002)));
-    SITransferCommands();
+	SISetCommand(chan, (0x40 << 16) | AnalogMode | (command & (0x00000001 | 0x00000002)));
+	SITransferCommands();
   }
   OSRestoreInterrupts(enabled);
 }
@@ -130,17 +128,17 @@ void PADSetSamplingCallback(){
 
 
 BOOL __PADDisableRecalibration(BOOL disable) {
-  BOOL enabled;
-  BOOL prev;
+    BOOL enabled = OSDisableInterrupts();
+    BOOL old = (OS_PAD_FLAGS & PAD_FLAG_NO_RECALIBRATE) ? TRUE : FALSE;
 
-  enabled = OSDisableInterrupts();
-  prev = (UnkVal & 0x40) ? TRUE : FALSE;
-  UnkVal &= (u8)~0x40;
-  if (disable) {
-    UnkVal |= 0x40;
-  }
-  OSRestoreInterrupts(enabled);
-  return prev;
+    OS_PAD_FLAGS &= ~PAD_FLAG_NO_RECALIBRATE;
+
+    if (disable) {
+        OS_PAD_FLAGS |= PAD_FLAG_NO_RECALIBRATE;
+    }
+
+    OSRestoreInterrupts(enabled);
+    return old;
 }
 
 //unused

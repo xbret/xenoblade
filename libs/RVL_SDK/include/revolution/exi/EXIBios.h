@@ -6,16 +6,6 @@
 extern "C" {
 #endif
 
-
-typedef enum {
-    EXI_FREQ_1MHZ,
-    EXI_FREQ_2MHZ,
-    EXI_FREQ_4MHZ,
-    EXI_FREQ_8MHZ,
-    EXI_FREQ_16MHZ,
-    EXI_FREQ_32HZ,
-} EXIFreq;
-
 typedef struct EXIItem {
     u32 dev;              // at 0x0
     EXICallback callback; // at 0x4

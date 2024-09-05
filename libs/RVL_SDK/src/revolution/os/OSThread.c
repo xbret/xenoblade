@@ -23,7 +23,7 @@ static void DefaultSwitchThreadCallback(OSThread* currThread,
 
 OSSwitchThreadCallback OSSetSwitchThreadCallback(OSSwitchThreadCallback newCb) {
     OSSwitchThreadCallback oldCb;
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     oldCb = SwitchThreadCallback;
     SwitchThreadCallback =
@@ -98,7 +98,9 @@ void OSInitThreadQueue(OSThreadQueue* queue) {
     queue->head = NULL;
 }
 
-OSThread* OSGetCurrentThread(void) { return OS_CURRENT_THREAD; }
+OSThread* OSGetCurrentThread(void) {
+    return OS_CURRENT_THREAD;
+}
 
 static void __OSSwitchThread(OSThread* thread) {
     OSSetCurrentThread(thread);
@@ -135,7 +137,7 @@ static BOOL __OSIsThreadActive(OSThread* thread) {
 
 s32 OSDisableScheduler(void) {
     s32 old;
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     old = Reschedule++;
 
@@ -146,7 +148,7 @@ s32 OSDisableScheduler(void) {
 
 s32 OSEnableScheduler(void) {
     s32 old;
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     old = Reschedule--;
 
@@ -415,7 +417,7 @@ void __OSReschedule(void) {
 }
 
 void OSYieldThread(void) {
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
     SelectThread(TRUE);
     OSRestoreInterrupts(enabled);
 }
@@ -985,5 +987,4 @@ void OSSleepTicks(s64 ticks) {
     OSRestoreInterrupts(enabled);
 }
 
-
-CW_FORCE_BSS(OSThread_c, IdleThread);
+DECOMP_FORCEACTIVE(OSThread_c, IdleThread);

@@ -2,7 +2,6 @@
 #include <revolution/OS.h>
 #include <string.h>
 
-//unused
 static GXFifoObj DisplayListFifo;
 static GXData __savedGXdata;
 static GXFifoObj OldCPUFifo;

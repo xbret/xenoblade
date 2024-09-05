@@ -1,68 +1,59 @@
-#include <revolution/dvd/dvdqueue.h>
-#include <revolution/OS.h>
+#include <revolution/DVD.h>
 
-typedef struct  {
-    DVDCommandBlock* next;
-    DVDCommandBlock* prev;
-} Queue;
+typedef struct DVDWaitingQueue {
+    struct DVDWaitingQueue* next; // at 0x0
+    struct DVDWaitingQueue* prev; // at 0x4
+} DVDWaitingQueue;
 
-static Queue WaitingQueue[4];
+static DVDWaitingQueue WaitingQueue[DVD_PRIO_MAX];
 
 void __DVDClearWaitingQueue(void) {
     u32 i;
 
-    for (i = 0; i < 4; i++) {
-        DVDCommandBlock* q = (DVDCommandBlock*)&(WaitingQueue[i]);
-        q->next = q;
-        q->prev = q;
+    for (i = 0; i < DVD_PRIO_MAX; i++) {
+        DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[i];
+        head->next = head;
+        head->prev = head;
     }
 }
 
 BOOL __DVDPushWaitingQueue(s32 prio, DVDCommandBlock* block) {
-    BOOL enabled;
-    DVDCommandBlock* q;
+    BOOL enabled = OSDisableInterrupts();
+    DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[prio];
 
-    enabled = OSDisableInterrupts();
-
-    q = (DVDCommandBlock*)&(WaitingQueue[prio]);
-    q->prev->next = block;
-    block->prev = q->prev;
-    block->next = q;
-    q->prev = block;
+    head->prev->next = block;
+    block->prev = head->prev;
+    block->next = head;
+    head->prev = block;
 
     OSRestoreInterrupts(enabled);
     return TRUE;
 }
 
 static DVDCommandBlock* PopWaitingQueuePrio(s32 prio) {
-    DVDCommandBlock* tmp, *q;
-    BOOL enabled;
+    BOOL enabled = OSDisableInterrupts();
 
-    enabled = OSDisableInterrupts();
-    q = (DVDCommandBlock*)&(WaitingQueue[prio]);
+    DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[prio];
+    DVDCommandBlock* block = head->next;
 
-    tmp = q->next;
-    q->next = tmp->next;
-    tmp->next->prev = q;
+    head->next = block->next;
+    block->next->prev = head;
 
     OSRestoreInterrupts(enabled);
 
-    tmp->next = NULL;
-    tmp->prev = NULL;
-    return tmp;
+    block->next = NULL;
+    block->prev = NULL;
+    return block;
 }
 
 DVDCommandBlock* __DVDPopWaitingQueue(void) {
     u32 i;
-    BOOL enabled;
-    DVDCommandBlock* q;
+    BOOL enabled = OSDisableInterrupts();
 
-    enabled = OSDisableInterrupts();
+    for (i = 0; i < DVD_PRIO_MAX; i++) {
+        DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[i];
 
-    for (i = 0; i < 4; i++) {
-        q = (DVDCommandBlock*)&(WaitingQueue[i]);
-
-        if (q->next != q) {
+        if (head->next != head) {
             OSRestoreInterrupts(enabled);
             return PopWaitingQueuePrio(i);
         }
@@ -74,15 +65,12 @@ DVDCommandBlock* __DVDPopWaitingQueue(void) {
 
 BOOL __DVDCheckWaitingQueue(void) {
     u32 i;
-    BOOL enabled;
-    DVDCommandBlock* q;
+    BOOL enabled = OSDisableInterrupts();
 
-    enabled = OSDisableInterrupts();
+    for (i = 0; i < DVD_PRIO_MAX; i++) {
+        DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[i];
 
-    for (i = 0; i < 4; i++) {
-        q = (DVDCommandBlock*)&(WaitingQueue[i]);
-
-        if (q->next != q) {
+        if (head->next != head) {
             OSRestoreInterrupts(enabled);
             return TRUE;
         }
@@ -94,18 +82,15 @@ BOOL __DVDCheckWaitingQueue(void) {
 
 DVDCommandBlock* __DVDGetNextWaitingQueue(void) {
     u32 i;
-    BOOL enabled;
-    DVDCommandBlock* q, *tmp;
+    BOOL enabled = OSDisableInterrupts();
 
-    enabled = OSDisableInterrupts();
+    for (i = 0; i < DVD_PRIO_MAX; i++) {
+        DVDCommandBlock* head = (DVDCommandBlock*)&WaitingQueue[i];
+        DVDCommandBlock* block = head->next;
 
-    for (i = 0; i < 4; i++) {
-        q = (DVDCommandBlock*)&(WaitingQueue[i]);
-
-        if (q->next != q) {
-            tmp = q->next;
+        if (block != head) {
             OSRestoreInterrupts(enabled);
-            return tmp;
+            return block;
         }
     }
 
@@ -114,13 +99,10 @@ DVDCommandBlock* __DVDGetNextWaitingQueue(void) {
 }
 
 BOOL __DVDDequeueWaitingQueue(const DVDCommandBlock* block) {
-    BOOL enabled;
-    DVDCommandBlock* prev, *next;
+    BOOL enabled = OSDisableInterrupts();
 
-    enabled = OSDisableInterrupts();
-
-    prev = block->prev;
-    next = block->next;
+    DVDCommandBlock* prev = block->prev;
+    DVDCommandBlock* next = block->next;
 
     if (prev == NULL || next == NULL) {
         OSRestoreInterrupts(enabled);
@@ -129,6 +111,7 @@ BOOL __DVDDequeueWaitingQueue(const DVDCommandBlock* block) {
 
     prev->next = next;
     next->prev = prev;
+
     OSRestoreInterrupts(enabled);
     return TRUE;
 }

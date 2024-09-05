@@ -1,7 +1,7 @@
 #include <revolution/exi/EXIBios.h>
 #include <revolution/exi/EXICommon.h>
 
-const u32 __EXIFreq = 4;
+const u32 __EXIFreq = EXI_FREQ_16MHZ;
 
 //unused
 void EXIGetConsoleType(){
@@ -15,7 +15,7 @@ void EXIWait(){
 void EXIReadReg(){
 }
 
-BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 r5, const void* buf,
+BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 cmd, const void* buf,
                  s32 len) {
     BOOL error = FALSE;
     u32 write_val;
@@ -43,7 +43,7 @@ BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 r5, const void* buf,
         return FALSE;
     }
 
-    error |= !EXIImm(chan, &r5, sizeof(r5), EXI_WRITE, NULL);
+    error |= !EXIImm(chan, &cmd, sizeof(cmd), EXI_WRITE, NULL);
     error |= !EXISync(chan);
     error |= !EXIImm(chan, &write_val, sizeof(write_val), EXI_WRITE, NULL);
     error |= !EXISync(chan);

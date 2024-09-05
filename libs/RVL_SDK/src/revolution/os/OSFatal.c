@@ -164,12 +164,11 @@ static void ConfigureVideo(u16 width, u16 height) {
 static GXColor RGB2YUV(GXColor rgb) {
     GXColor yuv;
 
-    const float y =
-        (0.257f * rgb.r + 0.504f * rgb.g + 0.098f * rgb.b + 16.0f) + 0.5f;
-    const float cb =
-        (-0.148f * rgb.r - 0.291f * rgb.g + 0.439f * rgb.b + 128.0f) + 0.5f;
-    const float cr =
-        (0.439f * rgb.r - 0.368f * rgb.g - 0.071f * rgb.b + 128.0f) + 0.5f;
+    // clang-format off
+    float y =  ( 0.257f * rgb.r + 0.504f * rgb.g + 0.098f * rgb.b + 16.0f)  + 0.5f;
+    float cb = (-0.148f * rgb.r - 0.291f * rgb.g + 0.439f * rgb.b + 128.0f) + 0.5f;
+    float cr = ( 0.439f * rgb.r - 0.368f * rgb.g - 0.071f * rgb.b + 128.0f) + 0.5f;
+    // clang-format on
 
     yuv.r = CLAMP(16.0f, 235.0f, y);
     yuv.g = CLAMP(16.0f, 240.0f, cb);
@@ -219,13 +218,14 @@ void OSFatal(GXColor textColor, GXColor bgColor, const char* msg) {
 
     EXISetExiCallback(EXI_CHAN_0, NULL);
     EXISetExiCallback(EXI_CHAN_2, NULL);
-    while (!EXILock(EXI_CHAN_0, 1, NULL)) {
+    while (!EXILock(EXI_CHAN_0, EXI_DEV_INT, NULL)) {
         EXISync(EXI_CHAN_0);
         EXIDeselect(EXI_CHAN_0);
         EXIUnlock(EXI_CHAN_0);
     }
     EXIUnlock(EXI_CHAN_0);
-    while ((EXI_CHAN_CTRL[EXI_CHAN_0].cr & 1) == 1) {
+
+    while ((EXI_CHAN_PARAMS[EXI_CHAN_0].cr & EXI_CR_TSTART) == 1) {
         ;
     }
 
