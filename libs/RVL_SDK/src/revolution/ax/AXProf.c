@@ -1,9 +1,9 @@
-#include <revolution/ax/AXProf.h>
+#include <revolution/AX.h>
 
+static BOOL __AXProfileInitialized = FALSE;
 static AXPROFILE* __AXProfile;
 static u32 __AXMaxProfiles;
 static u32 __AXCurrentProfile;
-static BOOL __AXProfileInitialized;
 
 AXPROFILE* __AXGetCurrentProfile(void) {
     if (__AXProfileInitialized) {

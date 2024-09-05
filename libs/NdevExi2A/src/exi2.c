@@ -2,22 +2,22 @@
 #include "NdevExi2A/exi2.h"
 #include <revolution/OS.h>
 
-//In regular NdevExi2, EXI_CHAN_CTRL instead points to 0xCC006800 (GC address?).
+//In regular NdevExi2, EXI_CHAN_PARAMS instead points to 0xCC006800 (GC address?).
 
 static BOOL __EXI2Select(void) {
-    u32 temp = EXI_CHAN_CTRL[EXI_CHAN_2].csr;
-    EXI_CHAN_CTRL[EXI_CHAN_2].csr = ((temp & 0x405) | 0xC0);
+    u32 temp = EXI_CHAN_PARAMS[EXI_CHAN_2].cpr;
+    EXI_CHAN_PARAMS[EXI_CHAN_2].cpr = ((temp & 0x405) | 0xC0);
     return TRUE;
 }
 
 static BOOL __EXI2Deselect(void) {
-    u32 temp = EXI_CHAN_CTRL[EXI_CHAN_2].csr;
-    EXI_CHAN_CTRL[EXI_CHAN_2].csr = temp & 0x405;
+    u32 temp = EXI_CHAN_PARAMS[EXI_CHAN_2].cpr;
+    EXI_CHAN_PARAMS[EXI_CHAN_2].cpr = temp & 0x405;
     return TRUE;
 }
 
 static BOOL __EXI2Sync(void) {
-    while (EXI_CHAN_CTRL[EXI_CHAN_2].cr & 0x1) {
+    while (EXI_CHAN_PARAMS[EXI_CHAN_2].cr & 0x1) {
     }
     return TRUE;
 }
@@ -33,14 +33,14 @@ BOOL __EXI2Imm(void* mem, s32 size, u32 type) {
             imm |= bmem[i] << (3 - i) * 8;
         }
 
-        EXI_CHAN_CTRL[EXI_CHAN_2].imm = imm;
+        EXI_CHAN_PARAMS[EXI_CHAN_2].data = imm;
     }
 
-    EXI_CHAN_CTRL[EXI_CHAN_2].cr = type << 2 | 1 | (size - 1) * 16;
+    EXI_CHAN_PARAMS[EXI_CHAN_2].cr = type << 2 | 1 | (size - 1) * 16;
     __EXI2Sync();
 
     if (type == EXI_READ) {
-        u32 imm = EXI_CHAN_CTRL[EXI_CHAN_2].imm;
+        u32 imm = EXI_CHAN_PARAMS[EXI_CHAN_2].data;
 
         u8* bmem = (u8*)mem;
         for (i = 0; i < size; i++, bmem++) {
@@ -56,9 +56,9 @@ void __DBEXIInit(void) {
 
     __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_2_EXI) |
                        OS_INTR_MASK(OS_INTR_EXI_2_TC));
-    while ((EXI_CHAN_CTRL[EXI_CHAN_2].cr & 1) == 1U) {
+    while ((EXI_CHAN_PARAMS[EXI_CHAN_2].cr & 1) == 1U) {
     }
-    EXI_CHAN_CTRL[EXI_CHAN_2].csr = 0;
+    EXI_CHAN_PARAMS[EXI_CHAN_2].cpr = 0;
 
     val0 = 0xB4000000;
     val1 = 0xD4000000;

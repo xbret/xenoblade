@@ -1,3 +1,4 @@
+#include <revolution/DVD.h>
 #include <revolution/EXI.h>
 #include <revolution/OS.h>
 #include <string.h>
@@ -52,7 +53,7 @@ static void CompleteTransfer(EXIChannel chan) {
             int i;
 
             buf = (u8*)exi->buffer;
-            data = EXI_CHAN_CTRL[chan].imm;
+            data = EXI_CHAN_PARAMS[chan].data;
             for (i = 0; i < len; i++) {
                 *buf++ = data >> (3 - i) * 8;
             }
@@ -88,12 +89,12 @@ BOOL EXIImm(EXIChannel chan, void* buf, s32 len, u32 type,
             word |= ((u8*)buf)[i] << (3 - i) * 8;
         }
 
-        EXI_CHAN_CTRL[chan].imm = word;
+        EXI_CHAN_PARAMS[chan].data = word;
     }
 
     exi->buffer = buf;
     exi->bytesRead = (type != EXI_WRITE) ? len : 0;
-    EXI_CHAN_CTRL[chan].cr = type << 2 | 1 | (len - 1) * 16;
+    EXI_CHAN_PARAMS[chan].cr = EXI_CR_TSTART | type << 2 | (len - 1) << 4;
 
     OSRestoreInterrupts(enabled);
     return TRUE;
@@ -137,9 +138,9 @@ BOOL EXIDma(EXIChannel chan, void* buf, s32 len, u32 type,
 
     exi->state |= EXI_STATE_DMA_ACCESS;
 
-    EXI_CHAN_CTRL[chan].dmaAddr = ROUND_DOWN_PTR(buf, 32);
-    EXI_CHAN_CTRL[chan].dmaLen = len;
-    EXI_CHAN_CTRL[chan].cr = type << 2 | 3;
+    EXI_CHAN_PARAMS[chan].mar = ROUND_DOWN_PTR(buf, 32);
+    EXI_CHAN_PARAMS[chan].length = len;
+    EXI_CHAN_PARAMS[chan].cr = type << 2 | EXI_CR_TSTART | EXI_CR_DMA;
 
     OSRestoreInterrupts(enabled);
     return TRUE;
@@ -150,7 +151,7 @@ BOOL EXISync(EXIChannel chan) {
     BOOL ret = FALSE;
 
     while (exi->state & EXI_STATE_SELECTED) {
-        if (!(EXI_CHAN_CTRL[chan].cr & 1)) {
+        if (!(EXI_CHAN_PARAMS[chan].cr & EXI_CR_TSTART)) {
             BOOL enabled = OSDisableInterrupts();
 
             if (exi->state & EXI_STATE_SELECTED) {
@@ -159,11 +160,12 @@ BOOL EXISync(EXIChannel chan) {
                 if (__OSGetDIConfig() != 0xFF ||
                     (OSGetConsoleType() & OS_CONSOLE_MASK) ==
                         OS_CONSOLE_MASK_TDEV ||
-                    exi->bytesRead != 4 || EXI_CHAN_CTRL[chan].csr & 0x70 ||
-                    (EXI_CHAN_CTRL[chan].imm != 0x01010000 &&
-                     EXI_CHAN_CTRL[chan].imm != 0x05070000 &&
-                     EXI_CHAN_CTRL[chan].imm != 0x04220001) ||
-                    OS_DVD_DEVICE_CODE == 0x8200) {
+                    exi->bytesRead != 4 ||
+                    EXI_CHAN_PARAMS[chan].cpr & EXI_CPR_CLK ||
+                    (EXI_CHAN_PARAMS[chan].data != EXI_ID_USB_ADAPTER &&
+                     EXI_CHAN_PARAMS[chan].data != EXI_ID_IS_DOL_VIEWER &&
+                     EXI_CHAN_PARAMS[chan].data != 0x04220001) ||
+                    OS_DVD_DEVICE_CODE == MAKE_DVD_DEVICE_CODE(0x0200)) {
                     ret = TRUE;
                 }
             }
@@ -177,21 +179,22 @@ BOOL EXISync(EXIChannel chan) {
 }
 
 void EXIClearInterrupts(EXIChannel chan, BOOL exi, BOOL tc, BOOL ext) {
-    u32 val = EXI_CHAN_CTRL[chan].csr & 0x7F5;
+    u32 cpr = EXI_CHAN_PARAMS[chan].cpr & 0xFFF &
+              ~(EXI_CPR_EXIINT | EXI_CPR_TCINT | EXI_CPR_EXTINT);
 
     if (exi) {
-        val |= 0x2;
+        cpr |= EXI_CPR_EXIINT;
     }
 
     if (tc) {
-        val |= 0x8;
+        cpr |= EXI_CPR_TCINT;
     }
 
     if (ext) {
-        val |= 0x800;
+        cpr |= EXI_CPR_EXTINT;
     }
 
-    EXI_CHAN_CTRL[chan].csr = val;
+    EXI_CHAN_PARAMS[chan].cpr = cpr;
 }
 
 EXICallback EXISetExiCallback(EXIChannel chan, EXICallback callback) {
@@ -217,7 +220,7 @@ EXICallback EXISetExiCallback(EXIChannel chan, EXICallback callback) {
 
 void EXIProbeReset(void) {
     OS_EXI_LAST_INSERT[0] = OS_EXI_LAST_INSERT[1] = 0;
-    Ecb[EXI_CHAN_0].WORD_0x20 = Ecb[EXI_CHAN_1].WORD_0x20 = 0;
+    Ecb[EXI_CHAN_0].lastInsert = Ecb[EXI_CHAN_1].lastInsert = 0;
     __EXIProbe(EXI_CHAN_0);
     __EXIProbe(EXI_CHAN_1);
 }
@@ -226,7 +229,7 @@ static BOOL __EXIProbe(EXIChannel chan) {
     EXIData* exi = &Ecb[chan];
     BOOL enabled;
     BOOL ret;
-    u32 flag;
+    u32 cpr;
 
     if (chan == EXI_CHAN_2) {
         return TRUE;
@@ -234,17 +237,17 @@ static BOOL __EXIProbe(EXIChannel chan) {
 
     ret = TRUE;
     enabled = OSDisableInterrupts();
-    flag = EXI_CHAN_CTRL[chan].csr;
+    cpr = EXI_CHAN_PARAMS[chan].cpr;
 
     if (!(exi->state & EXI_STATE_ATTACHED)) {
-        if (flag & 0x800) {
+        if (cpr & EXI_CPR_EXTINT) {
             EXIClearInterrupts(chan, FALSE, FALSE, TRUE);
-            exi->WORD_0x20 = 0;
+            exi->lastInsert = 0;
             OS_EXI_LAST_INSERT[chan] = 0;
         }
 
-        if (flag & 0x1000) {
-            s32 time = (s32)(OSTicksToMilliseconds(OSGetTime()) / 100) + 1;
+        if (cpr & EXI_CPR_EXT) {
+            s32 time = (s32)(OS_TICKS_TO_MSEC(OSGetTime()) / 100) + 1;
             if (OS_EXI_LAST_INSERT[chan] == 0) {
                 OS_EXI_LAST_INSERT[chan] = time;
             }
@@ -253,12 +256,12 @@ static BOOL __EXIProbe(EXIChannel chan) {
                 ret = FALSE;
             }
         } else {
-            exi->WORD_0x20 = 0;
+            exi->lastInsert = 0;
             OS_EXI_LAST_INSERT[chan] = 0;
             ret = FALSE;
         }
-    } else if (!(flag & 0x1000) || flag & 0x800) {
-        exi->WORD_0x20 = 0;
+    } else if (!(cpr & EXI_CPR_EXT) || cpr & EXI_CPR_EXTINT) {
+        exi->lastInsert = 0;
         OS_EXI_LAST_INSERT[chan] = 0;
         ret = FALSE;
     }
@@ -271,9 +274,9 @@ BOOL EXIProbe(EXIChannel chan) {
     EXIData* exi = &Ecb[chan];
 
     BOOL ret = __EXIProbe(chan);
-    if (ret && exi->WORD_0x20 == 0) {
+    if (ret && exi->lastInsert == 0) {
         u32 id;
-        return EXIGetID(chan, 0, &id);
+        return EXIGetID(chan, EXI_DEV_EXT, &id);
     }
 
     return FALSE;
@@ -311,7 +314,7 @@ BOOL EXIAttach(EXIChannel chan, EXICallback callback) {
     EXIProbe(chan);
     enabled = OSDisableInterrupts();
 
-    if (exi->WORD_0x20 == 0) {
+    if (exi->lastInsert == 0) {
         OSRestoreInterrupts(enabled);
         return FALSE;
     }
@@ -332,7 +335,7 @@ BOOL EXIDetach(EXIChannel chan) {
         return TRUE;
     }
 
-    if (exi->state & EXI_STATE_LOCKED && exi->dev == 0) {
+    if (exi->state & EXI_STATE_LOCKED && exi->dev == EXI_DEV_EXT) {
         OSRestoreInterrupts(enabled);
         return FALSE;
     }
@@ -351,13 +354,13 @@ void EXISelectSD(){
 BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq) {
     EXIData* exi = &Ecb[chan];
     BOOL enabled;
-    u32 flag;
+    u32 cpr;
 
     enabled = OSDisableInterrupts();
 
     if (exi->state & EXI_STATE_SELECTED ||
         chan != EXI_CHAN_2 &&
-            (dev == 0 && !(exi->state & EXI_STATE_ATTACHED) &&
+            (dev == EXI_DEV_EXT && !(exi->state & EXI_STATE_ATTACHED) &&
                  !__EXIProbe(chan) ||
              !(exi->state & EXI_STATE_LOCKED) || exi->dev != dev)) {
         OSRestoreInterrupts(enabled);
@@ -366,10 +369,10 @@ BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq) {
 
     exi->state |= EXI_STATE_SELECTED;
 
-    flag = EXI_CHAN_CTRL[chan].csr;
-    flag &= 0x405;
-    flag |= (1 << dev) << 7 | freq << 4;
-    EXI_CHAN_CTRL[chan].csr = flag;
+    cpr = EXI_CHAN_PARAMS[chan].cpr;
+    cpr &= (EXI_CPR_EXIINTMASK | EXI_CPR_TCINTMASK | EXI_CPR_EXTINTMASK);
+    cpr |= (1 << dev) << 7 | freq << 4;
+    EXI_CHAN_PARAMS[chan].cpr = cpr;
 
     if (exi->state & EXI_STATE_ATTACHED) {
         switch (chan) {
@@ -392,7 +395,7 @@ static inline void EXISelectEx(){
 
 BOOL EXIDeselect(EXIChannel chan) {
     EXIData* exi = &Ecb[chan];
-    u32 flag;
+    u32 cpr;
     BOOL enabled;
 
     enabled = OSDisableInterrupts();
@@ -403,8 +406,9 @@ BOOL EXIDeselect(EXIChannel chan) {
     }
 
     exi->state &= ~EXI_STATE_SELECTED;
-    flag = EXI_CHAN_CTRL[chan].csr;
-    EXI_CHAN_CTRL[chan].csr = flag & 0x405;
+    cpr = EXI_CHAN_PARAMS[chan].cpr;
+    EXI_CHAN_PARAMS[chan].cpr =
+        cpr & (EXI_CPR_EXIINTMASK | EXI_CPR_TCINTMASK | EXI_CPR_EXTINTMASK);
 
     if (exi->state & EXI_STATE_ATTACHED) {
         switch (chan) {
@@ -419,7 +423,7 @@ BOOL EXIDeselect(EXIChannel chan) {
 
     OSRestoreInterrupts(enabled);
 
-    if (chan != EXI_CHAN_2 && flag & 0x80) {
+    if (chan != EXI_CHAN_2 && cpr & EXI_CPR_CS0B) {
         return __EXIProbe(chan) != FALSE;
     }
 
@@ -506,9 +510,10 @@ void EXIInit(void) {
 
     do {
         do {
-        } while ((EXI_CHAN_CTRL[EXI_CHAN_0].cr & 1) == 1);
-    } while ((EXI_CHAN_CTRL[EXI_CHAN_1].cr & 1) == 1 ||
-             (EXI_CHAN_CTRL[EXI_CHAN_2].cr & 1) == 1);
+            ;
+        } while ((EXI_CHAN_PARAMS[EXI_CHAN_0].cr & EXI_CR_TSTART) == 1);
+    } while ((EXI_CHAN_PARAMS[EXI_CHAN_1].cr & EXI_CR_TSTART) == 1 ||
+             (EXI_CHAN_PARAMS[EXI_CHAN_2].cr & EXI_CR_TSTART) == 1);
 
     __OSMaskInterrupts(
         OS_INTR_MASK(OS_INTR_EXI_0_EXI) | OS_INTR_MASK(OS_INTR_EXI_0_TC) |
@@ -516,11 +521,11 @@ void EXIInit(void) {
         OS_INTR_MASK(OS_INTR_EXI_1_TC) | OS_INTR_MASK(OS_INTR_EXI_1_EXT) |
         OS_INTR_MASK(OS_INTR_EXI_2_EXI) | OS_INTR_MASK(OS_INTR_EXI_2_TC));
 
-    EXI_CHAN_CTRL[EXI_CHAN_0].csr = 0;
-    EXI_CHAN_CTRL[EXI_CHAN_1].csr = 0;
-    EXI_CHAN_CTRL[EXI_CHAN_2].csr = 0;
+    EXI_CHAN_PARAMS[EXI_CHAN_0].cpr = 0;
+    EXI_CHAN_PARAMS[EXI_CHAN_1].cpr = 0;
+    EXI_CHAN_PARAMS[EXI_CHAN_2].cpr = 0;
 
-    EXI_CHAN_CTRL[EXI_CHAN_0].csr = 0x2000;
+    EXI_CHAN_PARAMS[EXI_CHAN_0].cpr = EXI_CPR_ROMDIS;
 
     __OSSetInterruptHandler(OS_INTR_EXI_0_EXI, EXIIntrruptHandler);
     __OSSetInterruptHandler(OS_INTR_EXI_0_TC, TCIntrruptHandler);
@@ -531,15 +536,15 @@ void EXIInit(void) {
     __OSSetInterruptHandler(OS_INTR_EXI_2_EXI, EXIIntrruptHandler);
     __OSSetInterruptHandler(OS_INTR_EXI_2_TC, TCIntrruptHandler);
 
-    EXIGetID(EXI_CHAN_0, 2, &IDSerialPort1);
+    EXIGetID(EXI_CHAN_0, EXI_DEV_NET, &IDSerialPort1);
 
     if (__OSInIPL) {
         EXIProbeReset();
     } else {
-        if ((EXIGetID(EXI_CHAN_0, 0, &id) && id == 0x07010000)) {
-            __OSEnableBarnacle(EXI_CHAN_1, 0);
-        } else if (EXIGetID(EXI_CHAN_1, 0, &id) && id == 0x07010000) {
-            __OSEnableBarnacle(EXI_CHAN_0, 2);
+        if ((EXIGetID(EXI_CHAN_0, EXI_DEV_EXT, &id) && id == 0x07010000)) {
+            __OSEnableBarnacle(EXI_CHAN_1, EXI_DEV_EXT);
+        } else if (EXIGetID(EXI_CHAN_1, EXI_DEV_EXT, &id) && id == 0x07010000) {
+            __OSEnableBarnacle(EXI_CHAN_0, EXI_DEV_NET);
         }
     }
 
@@ -616,44 +621,46 @@ void EXIGetState(){
 static void UnlockedHandler(EXIChannel chan, OSContext* ctx) {
 #pragma unused(ctx)
     u32 id;
-    EXIGetID(chan, 0, &id);
+    EXIGetID(chan, EXI_DEV_EXT, &id);
 }
 
 s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
     EXIData* exi = &Ecb[chan];
     u32 imm;
     s32 ret;
-    s32 val;
+    s32 time;
     BOOL enabled;
 
-    if (chan == EXI_CHAN_0 && dev == 2 && IDSerialPort1 != 0) {
+    if (chan == EXI_CHAN_0 && dev == EXI_DEV_NET && IDSerialPort1 != 0) {
         *out = IDSerialPort1;
         return 1;
     }
 
-    if (chan < EXI_CHAN_2 && dev == 0) {
+    if (chan < EXI_CHAN_2 && dev == EXI_DEV_EXT) {
         if (!__EXIProbe(chan)) {
             return 0;
         }
 
-        if (exi->WORD_0x20 == OS_EXI_LAST_INSERT[chan]) {
+        if (exi->lastInsert == OS_EXI_LAST_INSERT[chan]) {
             *out = exi->id;
-            return exi->WORD_0x20;
+            return exi->lastInsert;
         }
 
         if (!__EXIAttach(chan, NULL)) {
             return 0;
         }
 
-        val = OS_EXI_LAST_INSERT[chan];
+        time = OS_EXI_LAST_INSERT[chan];
     }
 
     enabled = OSDisableInterrupts();
-    ret = !EXILock(chan, dev, (chan < 2 && dev == 0) ? UnlockedHandler : NULL);
+    ret = !EXILock(chan, dev,
+                   (chan < EXI_CHAN_2 && dev == EXI_DEV_EXT) ? UnlockedHandler
+                                                             : NULL);
     if (ret == 0) {
         ret = !EXISelect(chan, dev, EXI_FREQ_1MHZ);
         if (ret == 0) {
-            imm = 0;
+            imm = 0x00000000;
             ret |= !EXIImm(chan, &imm, sizeof(u16), EXI_WRITE, NULL);
             ret |= !EXISync(chan);
             ret |= !EXIImm(chan, out, sizeof(u32), EXI_READ, NULL);
@@ -665,18 +672,18 @@ s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
 
     OSRestoreInterrupts(enabled);
 
-    if (chan < EXI_CHAN_2 && dev == 0) {
+    if (chan < EXI_CHAN_2 && dev == EXI_DEV_EXT) {
         EXIDetach(chan);
 
         enabled = OSDisableInterrupts();
-        ret |= val != OS_EXI_LAST_INSERT[chan];
+        ret |= time != OS_EXI_LAST_INSERT[chan];
         if (ret == 0) {
             exi->id = *out;
-            exi->WORD_0x20 = val;
+            exi->lastInsert = time;
         }
 
         OSRestoreInterrupts(enabled);
-        return ret != 0 ? 0 : exi->WORD_0x20;
+        return ret != 0 ? 0 : exi->lastInsert;
     }
 
     return ret == 0;

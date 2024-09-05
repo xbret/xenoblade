@@ -1,11 +1,10 @@
-#include <revolution/arc/arc.h>
-#include <revolution/OS.h>
 #include <ctype.h>
+#include <revolution/ARC.h>
+#include <revolution/os/OSError.h>
 
 /**
  * Modified from decompilation by riidefi in WiiCore
- * https://github.com/riidefi/WiiCore/tree/master/source/rx
-*/
+ */
 
 #define ARC_FILE_MAGIC 0x55AA382D
 
@@ -36,15 +35,14 @@ BOOL ARCInitHandle(void* bin, ARCHandle* handle) {
     return TRUE;
 }
 
-
 BOOL ARCOpen(ARCHandle* handle, const char* path, ARCFileInfo* info) {
     ARCNode* nodes = handle->nodes;
     s32 entrynum = ARCConvertPathToEntrynum(handle, path);
 
     if (entrynum < 0) {
         char dir[128];
-
         ARCGetCurrentDir(handle, dir, sizeof(dir));
+
         OSReport("Warning: ARCOpen(): file '%s' was not found under %s in the "
                  "archive.\n",
                  path, dir);
@@ -91,7 +89,7 @@ static inline BOOL isSame(const char* lhs, const char* rhs) {
 
 s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
     const char* name_end;
-    int name_delimited_by_slash;
+    BOOL name_delimited_by_slash;
     s32 name_length;
     u32 anchor;
     u32 it = handle->entrynum;
@@ -99,8 +97,9 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
 
     while (TRUE) {
         // End of string -> return what we have
-        if (path[0] == '\0')
+        if (path[0] == '\0') {
             return it;
+        }
 
         // Ignore initial slash: /Path/File vs Path/File
         if (path[0] == '/') {
@@ -120,8 +119,9 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
                     continue;
                 }
                 // Return parent folder immediately
-                if (path[2] == '\0')
+                if (path[2] == '\0') {
                     return nodes[it].folder.parent;
+                }
                 // Malformed: fall through, causing infinite loop
                 goto compare;
             }
@@ -133,16 +133,18 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
             }
 
             // Ignore trailing dot
-            if (path[1] == '\0')
+            if (path[1] == '\0') {
                 return it;
+            }
         }
 
     compare:
         // We've ensured the directory is not special.
         // Isolate the name of the current item in the path string.
         name_end = path;
-        while (name_end[0] != '\0' && name_end[0] != '/')
+        while (name_end[0] != '\0' && name_end[0] != '/') {
             ++name_end;
+        }
 
         // If the name was delimited by a '/' rather than truncated.
         // This must be expressed as a ternary, and an enum cannot be used..
@@ -187,8 +189,9 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
         // If the path was truncated, there is nowhere else to go
         // These basic blocks have to go here right at the end, accessed via a
         // goto. An odd choice.
-        if (!name_delimited_by_slash)
+        if (!name_delimited_by_slash) {
             return it;
+        }
 
         path += name_length + 1;
     }
@@ -212,12 +215,17 @@ static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
     u32 written;
     ARCNode* nodes = handle->nodes;
 
-    if (entrynum == 0) return 0;
+    if (entrynum == 0) {
+        return 0;
+    }
 
     name = ((char*)handle->strings) + nodes[entrynum].name;
-    written = entryToPath(handle, nodes[entrynum].folder.parent, string, maxlen);
 
-    if (written == maxlen) return written;
+    written =
+        entryToPath(handle, nodes[entrynum].folder.parent, string, maxlen);
+    if (written == maxlen) {
+        return written;
+    }
 
     string[written++] = '/';
     return written + myStrncpy(string + written, name, maxlen - written);
@@ -261,22 +269,24 @@ u32 ARCGetLength(ARCFileInfo* info) { return info->size; }
 BOOL ARCClose(ARCFileInfo* info) { return TRUE; }
 
 BOOL ARCChangeDir(ARCHandle* info, const char* path) {
-    const s32 entrynum = ARCConvertPathToEntrynum(info, path);
+    s32 entrynum = ARCConvertPathToEntrynum(info, path);
     ARCNode* nodes = info->nodes;
 
-    if (entrynum < 0 || !ARCNodeIsFolder(nodes[entrynum]))
+    if (entrynum < 0 || !ARCNodeIsFolder(nodes[entrynum])) {
         return FALSE;
+    }
 
     info->entrynum = entrynum;
     return TRUE;
 }
 
 BOOL ARCOpenDir(ARCHandle* info, const char* path, ARCDir* dir) {
-    const s32 entrynum = ARCConvertPathToEntrynum(info, path);
+    s32 entrynum = ARCConvertPathToEntrynum(info, path);
     ARCNode* nodes = info->nodes;
 
-    if (entrynum < 0 || !ARCNodeIsFolder(nodes[entrynum]))
+    if (entrynum < 0 || !ARCNodeIsFolder(nodes[entrynum])) {
         return FALSE;
+    }
 
     dir->handle = info;
     dir->path_begin = entrynum;
@@ -294,8 +304,9 @@ BOOL ARCReadDir(ARCDir* dir, ARCEntry* entry) {
     it = dir->path_it;
 
     while (TRUE) {
-        if (it <= dir->path_begin || dir->path_end <= it)
+        if (it <= dir->path_begin || dir->path_end <= it) {
             return FALSE;
+        }
 
         entry->handle = arc;
         entry->path = it;
@@ -311,9 +322,14 @@ BOOL ARCReadDir(ARCDir* dir, ARCEntry* entry) {
             continue;
         }
 
-        dir->path_it = ARCNodeIsFolder(nodes[it]) ? nodes[it].folder.sibling_next : it + 1;
+        dir->path_it =
+            ARCNodeIsFolder(nodes[it]) ? nodes[it].folder.sibling_next : it + 1;
         return TRUE;
     }
 }
 
-BOOL ARCCloseDir(ARCDir* dir) { return TRUE; }
+BOOL ARCCloseDir(ARCDir* dir) {
+#pragma unused(dir)
+
+    return TRUE;
+}

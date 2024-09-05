@@ -17,7 +17,8 @@ static u32 InterruptPrioTable[] = {
 static void ExternalInterruptHandler(u8 type, OSContext* ctx);
 
 asm BOOL OSDisableInterrupts(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     entry __RAS_OSDisableInterrupts_begin
 
@@ -31,10 +32,12 @@ asm BOOL OSDisableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    }
+    // clang-format on
+}
 
 asm BOOL OSEnableInterrupts(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     mfmsr r3
     // Set external interrupts bit
@@ -44,10 +47,12 @@ asm BOOL OSEnableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    }
+    // clang-format on
+}
 
 asm BOOL OSRestoreInterrupts(register BOOL status){
-        nofralloc
+    // clang-format off
+    nofralloc
 
     cmpwi status, 0
     mfmsr r4
@@ -66,11 +71,12 @@ set_msr:
     // Return old interrupt status
     rlwinm r3, r4, 17, 31, 31
     blr
-    }
+    // clang-format on
+}
 
 OSInterruptHandler
     __OSSetInterruptHandler(OSInterruptType type, OSInterruptHandler handler) {
-    const OSInterruptHandler old = InterruptHandlerTable[type];
+    OSInterruptHandler old = InterruptHandlerTable[type];
     InterruptHandlerTable[type] = handler;
     return old;
 }
@@ -192,22 +198,22 @@ static u32 SetInterruptMask(u32 type, u32 mask) {
     case OS_INTR_EXI_0_EXI:
     case OS_INTR_EXI_0_TC:
     case OS_INTR_EXI_0_EXT:
-        exi0Mask = EXI_CHAN_CTRL[EXI_CHAN_0].csr;
-        exi0Mask &= ~(EXI_CSR_EXIINTMASK | EXI_CSR_EXIINT | EXI_CSR_TCINTMASK |
-                      EXI_CSR_TCINT | EXI_CSR_EXTINTMASK | EXI_CSR_EXTINT |
-                      EXI_CSR_ROMDIS);
+        exi0Mask = EXI_CHAN_PARAMS[EXI_CHAN_0].cpr;
+        exi0Mask &= ~(EXI_CPR_EXIINTMASK | EXI_CPR_EXIINT | EXI_CPR_TCINTMASK |
+                      EXI_CPR_TCINT | EXI_CPR_EXTINTMASK | EXI_CPR_EXTINT |
+                      EXI_CPR_ROMDIS);
 
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_0_EXI))) {
-            exi0Mask |= EXI_CSR_EXIINTMASK;
+            exi0Mask |= EXI_CPR_EXIINTMASK;
         }
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_0_TC))) {
-            exi0Mask |= EXI_CSR_TCINTMASK;
+            exi0Mask |= EXI_CPR_TCINTMASK;
         }
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_0_EXT))) {
-            exi0Mask |= EXI_CSR_EXTINTMASK;
+            exi0Mask |= EXI_CPR_EXTINTMASK;
         }
 
-        EXI_CHAN_CTRL[EXI_CHAN_0].csr = exi0Mask;
+        EXI_CHAN_PARAMS[EXI_CHAN_0].cpr = exi0Mask;
         return type & ~(OS_INTR_MASK(OS_INTR_EXI_0_EXI) |
                         OS_INTR_MASK(OS_INTR_EXI_0_TC) |
                         OS_INTR_MASK(OS_INTR_EXI_0_EXT));
@@ -217,21 +223,21 @@ static u32 SetInterruptMask(u32 type, u32 mask) {
     case OS_INTR_EXI_1_EXI:
     case OS_INTR_EXI_1_TC:
     case OS_INTR_EXI_1_EXT:
-        exi1Mask = EXI_CHAN_CTRL[EXI_CHAN_1].csr;
-        exi1Mask &= ~(EXI_CSR_EXIINTMASK | EXI_CSR_EXIINT | EXI_CSR_TCINTMASK |
-                      EXI_CSR_TCINT | EXI_CSR_EXTINTMASK | EXI_CSR_EXTINT);
+        exi1Mask = EXI_CHAN_PARAMS[EXI_CHAN_1].cpr;
+        exi1Mask &= ~(EXI_CPR_EXIINTMASK | EXI_CPR_EXIINT | EXI_CPR_TCINTMASK |
+                      EXI_CPR_TCINT | EXI_CPR_EXTINTMASK | EXI_CPR_EXTINT);
 
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_1_EXI))) {
-            exi1Mask |= EXI_CSR_EXIINTMASK;
+            exi1Mask |= EXI_CPR_EXIINTMASK;
         }
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_1_TC))) {
-            exi1Mask |= EXI_CSR_TCINTMASK;
+            exi1Mask |= EXI_CPR_TCINTMASK;
         }
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_1_EXT))) {
-            exi1Mask |= EXI_CSR_EXTINTMASK;
+            exi1Mask |= EXI_CPR_EXTINTMASK;
         }
 
-        EXI_CHAN_CTRL[EXI_CHAN_1].csr = exi1Mask;
+        EXI_CHAN_PARAMS[EXI_CHAN_1].cpr = exi1Mask;
         return type & ~(OS_INTR_MASK(OS_INTR_EXI_1_EXI) |
                         OS_INTR_MASK(OS_INTR_EXI_1_TC) |
                         OS_INTR_MASK(OS_INTR_EXI_1_EXT));
@@ -240,18 +246,18 @@ static u32 SetInterruptMask(u32 type, u32 mask) {
      */
     case OS_INTR_EXI_2_EXI:
     case OS_INTR_EXI_2_TC:
-        exi2Mask = EXI_CHAN_CTRL[EXI_CHAN_2].csr;
-        exi2Mask &= ~(EXI_CSR_EXIINTMASK | EXI_CSR_EXIINT | EXI_CSR_TCINTMASK |
-                      EXI_CSR_TCINT);
+        exi2Mask = EXI_CHAN_PARAMS[EXI_CHAN_2].cpr;
+        exi2Mask &= ~(EXI_CPR_EXIINTMASK | EXI_CPR_EXIINT | EXI_CPR_TCINTMASK |
+                      EXI_CPR_TCINT);
 
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_2_EXI))) {
-            exi2Mask |= EXI_CSR_EXIINTMASK;
+            exi2Mask |= EXI_CPR_EXIINTMASK;
         }
         if (!(mask & OS_INTR_MASK(OS_INTR_EXI_2_TC))) {
-            exi2Mask |= EXI_CSR_TCINTMASK;
+            exi2Mask |= EXI_CPR_TCINTMASK;
         }
 
-        EXI_CHAN_CTRL[EXI_CHAN_2].csr = exi2Mask;
+        EXI_CHAN_PARAMS[EXI_CHAN_2].cpr = exi2Mask;
         return type & ~(OS_INTR_MASK(OS_INTR_EXI_2_EXI) |
                         OS_INTR_MASK(OS_INTR_EXI_2_TC));
     /**
@@ -327,9 +333,9 @@ void OSSetInterruptMask(){
 }
 
 u32 __OSMaskInterrupts(u32 userMask) {
-    const BOOL enabled = OSDisableInterrupts();
-    const u32 prevMask = *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK);
-    const u32 currMask = *(u32*)OSPhysicalToCached(OS_PHYS_CURRENT_INTR_MASK);
+    BOOL enabled = OSDisableInterrupts();
+    u32 prevMask = *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK);
+    u32 currMask = *(u32*)OSPhysicalToCached(OS_PHYS_CURRENT_INTR_MASK);
 
     u32 workMask = userMask & ~(prevMask | currMask);
     userMask = prevMask | userMask;
@@ -344,9 +350,9 @@ u32 __OSMaskInterrupts(u32 userMask) {
 }
 
 u32 __OSUnmaskInterrupts(u32 userMask) {
-    const BOOL enabled = OSDisableInterrupts();
-    const u32 prevMask = *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK);
-    const u32 currMask = *(u32*)OSPhysicalToCached(OS_PHYS_CURRENT_INTR_MASK);
+    BOOL enabled = OSDisableInterrupts();
+    u32 prevMask = *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK);
+    u32 currMask = *(u32*)OSPhysicalToCached(OS_PHYS_CURRENT_INTR_MASK);
 
     u32 workMask = userMask & (prevMask | currMask);
     userMask = prevMask & ~userMask;
@@ -428,33 +434,33 @@ void __OSDispatchInterrupt(u8 intr, OSContext* ctx) {
      * EXI interrupts
      */
     if (intsr & PI_INTSR_EXI) {
-        exi0Cause = EXI_CHAN_CTRL[EXI_CHAN_0].csr;
-        if (exi0Cause & EXI_CSR_EXIINT) {
+        exi0Cause = EXI_CHAN_PARAMS[EXI_CHAN_0].cpr;
+        if (exi0Cause & EXI_CPR_EXIINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_0_EXI);
         }
-        if (exi0Cause & EXI_CSR_TCINT) {
+        if (exi0Cause & EXI_CPR_TCINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_0_TC);
         }
-        if (exi0Cause & EXI_CSR_EXTINT) {
+        if (exi0Cause & EXI_CPR_EXTINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_0_EXT);
         }
 
-        exi1Cause = EXI_CHAN_CTRL[EXI_CHAN_1].csr;
-        if (exi1Cause & EXI_CSR_EXIINT) {
+        exi1Cause = EXI_CHAN_PARAMS[EXI_CHAN_1].cpr;
+        if (exi1Cause & EXI_CPR_EXIINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_1_EXI);
         }
-        if (exi1Cause & EXI_CSR_TCINT) {
+        if (exi1Cause & EXI_CPR_TCINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_1_TC);
         }
-        if (exi1Cause & EXI_CSR_EXTINT) {
+        if (exi1Cause & EXI_CPR_EXTINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_1_EXT);
         }
 
-        exi2Cause = EXI_CHAN_CTRL[EXI_CHAN_2].csr;
-        if (exi2Cause & EXI_CSR_EXIINT) {
+        exi2Cause = EXI_CHAN_PARAMS[EXI_CHAN_2].cpr;
+        if (exi2Cause & EXI_CPR_EXIINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_2_EXI);
         }
-        if (exi2Cause & EXI_CSR_TCINT) {
+        if (exi2Cause & EXI_CPR_TCINT) {
             mask |= OS_INTR_MASK(OS_INTR_EXI_2_TC);
         }
     }
@@ -532,28 +538,30 @@ void __OSDispatchInterrupt(u8 intr, OSContext* ctx) {
 
 static asm void ExternalInterruptHandler(register u8 type,
                                          register OSContext* ctx) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     stw r0, ctx->gprs[0]
     stw r1, ctx->gprs[1]
     stw r2, ctx->gprs[2]
     stmw r6, ctx->gprs[6]
 
-    mfgqr1 r0
+    mfspr r0, GQR1
     stw r0, ctx->gqrs[1]
-    mfgqr2 r0
+    mfspr r0, GQR2
     stw r0, ctx->gqrs[2]
-    mfgqr3 r0
+    mfspr r0, GQR3
     stw r0, ctx->gqrs[3]
-    mfgqr4 r0
+    mfspr r0, GQR4
     stw r0, ctx->gqrs[4]
-    mfgqr5 r0
+    mfspr r0, GQR5
     stw r0, ctx->gqrs[5]
-    mfgqr6 r0
+    mfspr r0, GQR6
     stw r0, ctx->gqrs[6]
-    mfgqr7 r0
+    mfspr r0, GQR7
     stw r0, ctx->gqrs[7]
 
     stwu r1, -8(r1)
     b __OSDispatchInterrupt
-    }
+    // clang-format on
+}

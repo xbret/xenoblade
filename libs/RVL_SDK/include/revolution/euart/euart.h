@@ -1,24 +1,24 @@
-#ifndef RVL_SDK_EUART_H
-#define RVL_SDK_EUART_H
+#ifndef RVL_SDK_EUART_EUART_H
+#define RVL_SDK_EUART_EUART_H
 #include <types.h>
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef enum {
-	EUART_ERROR_NONE = 0,
-	EUART_ERROR_UNINITIALIZED,
-	EUART_ERROR_CANNOT_USE,
-	EUART_ERROR_CHANNEL_FULL,
-	EUART_ERROR_NOT_FIND,
-	EUART_ERROR_INTERNAL,
-	EUART_ERROR_INVALID_PARAMETER,
-	EUART_ERROR_INVALID_HANDLE,
-	EUART_ERROR_COM_OPEN,
-	EUART_ERROR_COMM
+    EUART_ERROR_OK,
+    EUART_ERROR_FATAL,
+    EUART_ERROR_INVALID,
+    EUART_ERROR_BUSY,
+    EUART_ERROR_4,
+    EUART_ERROR_EXI,
 } EUARTError;
 
+BOOL EUARTInit(void);
+EUARTError InitializeUART(void);
+EUARTError WriteUARTN(const char* msg, u32 n);
 
-UARTError InitializeUART(UARTBaudRate);
-UARTError WriteUARTN(const void *, unsigned long);
-
-
+#ifdef __cplusplus
+}
+#endif
 #endif

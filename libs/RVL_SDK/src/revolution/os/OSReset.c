@@ -77,13 +77,13 @@ void __OSShutdownDevices(u32 event) {
 
     switch (event) {
     case 0:
-    case 4:
-    case 5:
-    case 6:
+    case OS_SD_EVENT_RESTART:
+    case OS_SD_EVENT_RETURN_TO_MENU:
+    case OS_SD_EVENT_LAUNCH_APP:
         keepEnable = FALSE;
         break;
     case 1:
-    case 2:
+    case OS_SD_EVENT_SHUTDOWN:
     case 3:
     default:
         keepEnable = TRUE;
@@ -96,7 +96,7 @@ void __OSShutdownDevices(u32 event) {
         padIntr = __PADDisableRecalibration(TRUE);
     }
 
-    while (!__OSCallShutdownFunctions(OS_SD_PASS_FIRST, event)) {
+    while (!__OSCallShutdownFunctions(FALSE, event)) {
         ;
     }
 
@@ -105,7 +105,7 @@ void __OSShutdownDevices(u32 event) {
     }
 
     osIntr = OSDisableInterrupts();
-    __OSCallShutdownFunctions(OS_SD_PASS_SECOND, event);
+    __OSCallShutdownFunctions(TRUE, event);
     LCDisable();
 
     if (!keepEnable) {
@@ -119,7 +119,7 @@ void __OSShutdownDevices(u32 event) {
 void __OSGetDiscState(u8* out) {
     u32 flags;
 
-    if (__DVDGetCoverStatus() != 2) {
+    if (__DVDGetCoverStatus() != DVD_COVER_CLOSED) {
         *out = 3;
     } else if (*out == 1) {
         if (!__OSGetRTCFlags(&flags) || flags == 0) {
@@ -182,12 +182,12 @@ void OSShutdownSystem(void) {
 
     if (idleMode.wc24 == TRUE) {
         OSDisableScheduler();
-        __OSShutdownDevices(5);
+        __OSShutdownDevices(OS_SD_EVENT_RETURN_TO_MENU);
         OSEnableScheduler();
         __OSLaunchMenu();
     } else {
         OSDisableScheduler();
-        __OSShutdownDevices(2);
+        __OSShutdownDevices(OS_SD_EVENT_SHUTDOWN);
         __OSShutdownToSBY();
     }
 }
@@ -206,7 +206,7 @@ void OSReturnToMenu(void) {
     __OSWriteStateFlags(&stateFlags);
 
     OSDisableScheduler();
-    __OSShutdownDevices(5);
+    __OSShutdownDevices(OS_SD_EVENT_RETURN_TO_MENU);
     OSEnableScheduler();
 
     __OSLaunchMenu();
@@ -214,8 +214,10 @@ void OSReturnToMenu(void) {
     __VISetRGBModeImm();
     __OSHotReset();
 
+    // clang-format off
 #line 843
     OSError("OSReturnToMenu(): Falied to boot system menu.\n");
+    // clang-format on
 }
 
 u32 OSGetResetCode(void) {
@@ -231,6 +233,8 @@ void OSResetSystem(BOOL reset, u32 resetCode, BOOL forceMenu) {
 #pragma unused(resetCode)
 #pragma unused(forceMenu)
 
+    // clang-format off
 #line 1020
     OSError("OSResetSystem() is obsoleted. It doesn't work any longer.\n");
+    // clang-format on
 }

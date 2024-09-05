@@ -29,19 +29,18 @@ void MEMFreeToAllocator(MEMAllocator* allocator, void* block) {
 
 void MEMInitAllocatorForExpHeap(MEMAllocator* allocator, MEMiHeapHead* heap,
                                 s32 align) {
-    const static MEMAllocatorFuncs sAllocatorFunc = {AllocatorAllocForExpHeap_,
-                                               AllocatorFreeForExpHeap_};
+    static const MEMAllocatorFuncs sAllocatorFunc = {AllocatorAllocForExpHeap_,
+                                                     AllocatorFreeForExpHeap_};
     allocator->funcs = &sAllocatorFunc;
     allocator->heap = heap;
     allocator->heapParam1 = align;
     allocator->heapParam2 = 0;
 }
 
-//unused
 void MEMInitAllocatorForFrmHeap(MEMAllocator* allocator, MEMiHeapHead* heap,
                                 s32 align) {
-    const static MEMAllocatorFuncs sAllocatorFunc = {AllocatorAllocForFrmHeap_,
-                                               AllocatorFreeForFrmHeap_};
+    static const MEMAllocatorFuncs sAllocatorFunc = {AllocatorAllocForFrmHeap_,
+                                                     AllocatorFreeForFrmHeap_};
     allocator->funcs = &sAllocatorFunc;
     allocator->heap = heap;
     allocator->heapParam1 = align;

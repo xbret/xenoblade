@@ -21,6 +21,7 @@ static s32 LeapYearDays[MONTH_MAX] = {0,   31,  60,  91,  121, 152,
                                       182, 213, 244, 274, 305, 335};
 
 asm s64 OSGetTime(void) {
+    // clang-format off
     nofralloc
 
     mftbu r3
@@ -32,9 +33,11 @@ asm s64 OSGetTime(void) {
     bne OSGetTime
 
     blr
+    // clang-format on
 }
 
-asm s32 OSGetTick(void){
+asm u32 OSGetTick(void){
+    // clang-format off
     nofralloc
 
     mftb r3
@@ -50,15 +53,15 @@ void __OSSetTime(){
 }
 
 s64 __OSGetSystemTime(void) {
-    const BOOL enabled = OSDisableInterrupts();
-    const s64 time = OSGetTime() + OS_SYSTEM_TIME;
+    BOOL enabled = OSDisableInterrupts();
+    s64 time = OSGetTime() + OS_SYSTEM_TIME;
     OSRestoreInterrupts(enabled);
     return time;
 }
 
 s64 __OSTimeToSystemTime(s64 time) {
-    const BOOL enabled = OSDisableInterrupts();
-    const s64 sysTime = OS_SYSTEM_TIME + time;
+    BOOL enabled = OSDisableInterrupts();
+    s64 sysTime = OS_SYSTEM_TIME + time;
     OSRestoreInterrupts(enabled);
     return sysTime;
 }
@@ -89,11 +92,11 @@ static void GetDates(s32 days, OSCalendarTime* cal) {
     s32 month;
 
     cal->wday = (days + 6) % WEEK_DAY_MAX;
-    year = days / YEAR_DAY_MAX;
 
     // WTF??
-    while (days < (totalDays = year * YEAR_DAY_MAX + GetLeapDays(year))) {
-        year--;
+    for (year = days / YEAR_DAY_MAX;
+         days < (totalDays = year * YEAR_DAY_MAX + GetLeapDays(year)); year--) {
+        ;
     }
     days -= totalDays;
     cal->year = year;
@@ -150,13 +153,14 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
 
     year = cal->year + ovMon;
 
-        seconds = (s64)SECS_IN_YEAR * year +
+    // clang-format off
+    seconds = (s64)SECS_IN_YEAR * year +
               (s64)SECS_IN_DAY * (cal->mday + GetLeapDays(year) + GetYearDays(year, month) - 1) +
               (s64)SECS_IN_HOUR * cal->hour +
               (s64)SECS_IN_MIN * cal->min +
               cal->sec -
               (s64)0xEB1E1BF80ULL;
-    
+    // clang-format on
     return OSSecondsToTicks(seconds) + OSMillisecondsToTicks((s64)cal->msec) +
            OSMicrosecondsToTicks((s64)cal->usec);
 }

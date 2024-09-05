@@ -1,4 +1,4 @@
-#include <revolution/math.h>
+#include <math.h>
 #include <revolution/GX.h>
 
 #define XF_MEM_LOBJ_SIZE 16
@@ -182,7 +182,7 @@ void GXInitSpecularDir(GXLightObj* light, float x, float y, float z) {
 
     mag = dirX * dirX + dirY * dirY + dirZ * dirZ;
     if (mag != 0.0f) {
-        mag = 1.0f / sqrtf(mag);
+        mag = 1.0f / (float)sqrt(mag);
     }
 
     impl->dirX = dirX * mag;

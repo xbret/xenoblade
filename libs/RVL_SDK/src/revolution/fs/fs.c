@@ -3,12 +3,6 @@
 #include <revolution/OS.h>
 #include <string.h>
 
-/**
- * Ioctl arguments/filesystem specifications adapted from:
- * https://wiibrew.org/wiki//dev/fs
- * https://wiibrew.org/wiki/Hardware/NAND
- */
-
 #define FS_HEAP_SIZE 0x1500
 
 // Longest name obtainable from ReadDir ioctl
@@ -37,6 +31,19 @@ typedef enum {
     CB_STATE_GET_USAGE,
     CB_STATE_GET_FILE_STATS,
 } FSCallbackState;
+
+typedef enum {
+    FS_IOCTL_CREATE_DIR = 3,
+    FS_IOCTL_READ_DIR = 4,
+    FS_IOCTL_GET_ATTR = 6,
+    FS_IOCTL_DELETE_PATH = 7,
+    FS_IOCTL_RENAME_PATH = 8,
+    FS_IOCTL_CREATE_FILE = 9,
+    FS_IOCTL_GET_FILE_STATS = 11,
+    FS_IOCTL_SHUTDOWN_FS = 13,
+
+    FS_IOCTLV_GET_USAGE = 12
+} FSIoctl;
 
 /**
  * Ioctl data for FS functions.
@@ -138,8 +145,7 @@ static s32 _FSGetUsageCb(s32 result, FSCommandBlock* block);
 static s32 _FSGetFileStatsCb(s32 result, FSCommandBlock* block);
 
 // Not part of MSL, but implemented in IPC.
-size_t strnlen(const char*, size_t);
-
+size_t strnlen(const char* str, size_t maxlen);
 
 s32 ISFS_OpenLib(void) {
     static void* lo;
@@ -283,7 +289,7 @@ s32 ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm,
     block->fileIoctl.groupPerm = groupPerm;
     block->fileIoctl.otherPerm = otherPerm;
 
-    ret = IOS_Ioctl(__fsFd, IPC_IOCTL_CREATE_DIR, &block->fileIoctl,
+    ret = IOS_Ioctl(__fsFd, FS_IOCTL_CREATE_DIR, &block->fileIoctl,
                     sizeof(FSFileIoctl), NULL, 0);
 
 end:
@@ -295,8 +301,8 @@ end:
 }
 
 s32 ISFS_CreateDirAsync(const char* path, u32 attr, u32 ownerPerm,
-                              u32 groupPerm, u32 otherPerm,
-                              FSAsyncCallback callback, void* callbackArg) {
+                        u32 groupPerm, u32 otherPerm, FSAsyncCallback callback,
+                        void* callbackArg) {
     FSCommandBlock* block;
     size_t len;
 
@@ -321,7 +327,7 @@ s32 ISFS_CreateDirAsync(const char* path, u32 attr, u32 ownerPerm,
     block->fileIoctl.groupPerm = groupPerm;
     block->fileIoctl.otherPerm = otherPerm;
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_CREATE_DIR, &block->fileIoctl,
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_CREATE_DIR, &block->fileIoctl,
                           sizeof(FSFileIoctl), NULL, 0, _isfsFuncCb, block);
 }
 
@@ -381,7 +387,7 @@ s32 ISFS_ReadDir(const char* path, char* filesOut, u32* fileCountOut) {
         outCount = 1;
     }
 
-    ret = IOS_Ioctlv(__fsFd, IPC_IOCTL_READ_DIR, inCount, outCount, vectors);
+    ret = IOS_Ioctlv(__fsFd, FS_IOCTL_READ_DIR, inCount, outCount, vectors);
     if (ret == IPC_RESULT_OK) {
         *fileCountOut = *countWork;
     }
@@ -407,7 +413,7 @@ static s32 _FSReadDirCb(s32 result, FSCommandBlock* block) {
 }
 
 s32 ISFS_ReadDirAsync(const char* path, char* filesOut, u32* fileCountOut,
-                            FSAsyncCallback callback, void* callbackArg) {
+                      FSAsyncCallback callback, void* callbackArg) {
     FSCommandBlock* block;
     char* pathWork;
     IPCIOVector* vectors;
@@ -466,7 +472,7 @@ s32 ISFS_ReadDirAsync(const char* path, char* filesOut, u32* fileCountOut,
         outCount = 1;
     }
 
-    return IOS_IoctlvAsync(__fsFd, IPC_IOCTL_READ_DIR, inCount, outCount,
+    return IOS_IoctlvAsync(__fsFd, FS_IOCTL_READ_DIR, inCount, outCount,
                            vectors, _isfsFuncCb, block);
 }
 
@@ -479,8 +485,8 @@ void ISFS_SetAttrAsync(){
 }
 
 s32 ISFS_GetAttr(const char* path, u32* ownerIdOut, u16* groupIdOut,
-                       u32* attrOut, u32* ownerPermOut, u32* groupPermOut,
-                       u32* otherPermOut) {
+                 u32* attrOut, u32* ownerPermOut, u32* groupPermOut,
+                 u32* otherPermOut) {
     s32 ret;
     FSFileIoctl* fileIoctl;
     size_t len;
@@ -505,7 +511,7 @@ s32 ISFS_GetAttr(const char* path, u32* ownerIdOut, u16* groupIdOut,
     memcpy(block->ioctlWork, path, len + 1);
     fileIoctl = ROUND_UP_PTR(block->ioctlWork + FS_MAX_PATH, 32);
 
-    ret = IOS_Ioctl(__fsFd, IPC_IOCTL_GET_ATTR, block->ioctlWork, FS_MAX_PATH,
+    ret = IOS_Ioctl(__fsFd, FS_IOCTL_GET_ATTR, block->ioctlWork, FS_MAX_PATH,
                     fileIoctl, sizeof(FSFileIoctl));
 
     if (ret == IPC_RESULT_OK) {
@@ -544,9 +550,9 @@ static s32 _FSGetAttrCb(s32 result, FSCommandBlock* block) {
 }
 
 s32 ISFS_GetAttrAsync(const char* path, u32* ownerIdOut, u16* groupIdOut,
-                            u32* attrOut, u32* ownerPermOut, u32* groupPermOut,
-                            u32* otherPermOut, FSAsyncCallback callback,
-                            void* callbackArg) {
+                      u32* attrOut, u32* ownerPermOut, u32* groupPermOut,
+                      u32* otherPermOut, FSAsyncCallback callback,
+                      void* callbackArg) {
     size_t len;
     FSCommandBlock* block;
 
@@ -577,7 +583,7 @@ s32 ISFS_GetAttrAsync(const char* path, u32* ownerIdOut, u16* groupIdOut,
 
     memcpy(block->ioctlWork, path, len + 1);
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_GET_ATTR, block->ioctlWork,
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_GET_ATTR, block->ioctlWork,
                           FS_MAX_PATH,
                           ROUND_UP_PTR(block->ioctlWork + FS_MAX_PATH, 32),
                           sizeof(FSFileIoctl), _isfsFuncCb, block);
@@ -604,8 +610,8 @@ s32 ISFS_Delete(const char* path) {
 
     memcpy(block->ioctlWork, path, len + 1);
 
-    ret = IOS_Ioctl(__fsFd, IPC_IOCTL_DELETE_PATH, block->ioctlWork,
-                    FS_MAX_PATH, 0, 0);
+    ret = IOS_Ioctl(__fsFd, FS_IOCTL_DELETE_PATH, block->ioctlWork, FS_MAX_PATH,
+                    0, NULL);
 
 end:
     if (block != NULL) {
@@ -616,7 +622,7 @@ end:
 }
 
 s32 ISFS_DeleteAsync(const char* path, FSAsyncCallback callback,
-                           void* callbackArg) {
+                     void* callbackArg) {
     size_t len;
     FSCommandBlock* block;
 
@@ -637,8 +643,8 @@ s32 ISFS_DeleteAsync(const char* path, FSAsyncCallback callback,
     block->callbackArg = callbackArg;
     block->callbackState = CB_STATE_NONE;
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_DELETE_PATH, block->ioctlWork,
-                          FS_MAX_PATH, 0, 0, _isfsFuncCb, block);
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_DELETE_PATH, block->ioctlWork,
+                          FS_MAX_PATH, 0, NULL, _isfsFuncCb, block);
 }
 
 s32 ISFS_Rename(const char* from, const char* to) {
@@ -665,8 +671,8 @@ s32 ISFS_Rename(const char* from, const char* to) {
     memcpy(block->renameIoctl.from, from, lenFrom + 1);
     memcpy(block->renameIoctl.to, to, lenTo + 1);
 
-    ret = IOS_Ioctl(__fsFd, IPC_IOCTL_RENAME_PATH, &block->renameIoctl,
-                    sizeof(FSRenameIoctl), 0, 0);
+    ret = IOS_Ioctl(__fsFd, FS_IOCTL_RENAME_PATH, &block->renameIoctl,
+                    sizeof(FSRenameIoctl), 0, NULL);
 
 end:
     if (block != NULL) {
@@ -676,8 +682,8 @@ end:
     return ret;
 }
 
-s32 ISFS_RenameAsync(const char* from, const char* to,
-                           FSAsyncCallback callback, void* callbackArg) {
+s32 ISFS_RenameAsync(const char* from, const char* to, FSAsyncCallback callback,
+                     void* callbackArg) {
     size_t lenFrom;
     size_t lenTo;
     FSCommandBlock* block;
@@ -702,8 +708,8 @@ s32 ISFS_RenameAsync(const char* from, const char* to,
     memcpy(block->renameIoctl.from, from, lenFrom + 1);
     memcpy(block->renameIoctl.to, to, lenTo + 1);
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_RENAME_PATH, &block->renameIoctl,
-                          sizeof(FSRenameIoctl), 0, 0, _isfsFuncCb, block);
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_RENAME_PATH, &block->renameIoctl,
+                          sizeof(FSRenameIoctl), 0, NULL, _isfsFuncCb, block);
 }
 
 
@@ -736,7 +742,6 @@ s32 ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
     FSCommandBlock* block;
     char* pathWork;
     size_t len;
-
 
     block = NULL;
 
@@ -778,7 +783,7 @@ s32 ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
     vectors[2].base = fileCountWork;
     vectors[2].length = sizeof(u32);
 
-    ret = IOS_IoctlvAsync(__fsFd, IPC_IOCTLV_GET_USAGE, 1, 2, vectors, _isfsFuncCb, block);
+    ret = IOS_IoctlvAsync(__fsFd, FS_IOCTLV_GET_USAGE, 1, 2, vectors, _isfsFuncCb, block);
 
 
 end:
@@ -813,7 +818,7 @@ s32 ISFS_CreateFile(const char* path, u32 attr, u32 ownerPerm,
     block->fileIoctl.groupPerm = groupPerm;
     block->fileIoctl.otherPerm = otherPerm;
 
-    ret = IOS_Ioctl(__fsFd, IPC_IOCTL_CREATE_FILE, &block->fileIoctl,
+    ret = IOS_Ioctl(__fsFd, FS_IOCTL_CREATE_FILE, &block->fileIoctl,
                     sizeof(FSFileIoctl), NULL, 0);
 
 end:
@@ -825,8 +830,8 @@ end:
 }
 
 s32 ISFS_CreateFileAsync(const char* path, u32 attr, u32 ownerPerm,
-                               u32 groupPerm, u32 otherPerm,
-                               FSAsyncCallback callback, void* callbackArg) {
+                         u32 groupPerm, u32 otherPerm, FSAsyncCallback callback,
+                         void* callbackArg) {
     FSCommandBlock* block;
     size_t len;
 
@@ -851,7 +856,7 @@ s32 ISFS_CreateFileAsync(const char* path, u32 attr, u32 ownerPerm,
     block->fileIoctl.groupPerm = groupPerm;
     block->fileIoctl.otherPerm = otherPerm;
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_CREATE_FILE, &block->fileIoctl,
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_CREATE_FILE, &block->fileIoctl,
                           sizeof(FSFileIoctl), NULL, 0, _isfsFuncCb, block);
 }
 
@@ -893,8 +898,8 @@ end:
     return ret;
 }
 
-s32 ISFS_OpenAsync(const char* path, IPCOpenMode mode,
-                         FSAsyncCallback callback, void* callbackArg) {
+s32 ISFS_OpenAsync(const char* path, IPCOpenMode mode, FSAsyncCallback callback,
+                   void* callbackArg) {
     size_t len;
     FSCommandBlock* block;
 
@@ -925,7 +930,7 @@ s32 ISFS_GetFileStats(s32 fd, FSFileStats* statsOut) {
         return IPC_RESULT_INVALID;
     }
 
-    return IOS_Ioctl(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, statsOut,
+    return IOS_Ioctl(fd, FS_IOCTL_GET_FILE_STATS, NULL, 0, statsOut,
                      sizeof(FSFileStats));
 }
 
@@ -938,15 +943,15 @@ static s32 _FSGetFileStatsCb(s32 result, FSCommandBlock* block){
 }
 
 s32 ISFS_GetFileStatsAsync(s32 fd, FSFileStats* statsOut,
-                                 FSAsyncCallback callback, void* callbackArg) {
+                           FSAsyncCallback callback, void* callbackArg) {
     FSCommandBlock* block;
 
-    if (statsOut == 0 || (u32)statsOut % 32 != 0) {
+    if (statsOut == NULL || (u32)statsOut % 32 != 0) {
         return IPC_RESULT_INVALID;
     }
 
     block = (FSCommandBlock*)iosAllocAligned(hId, sizeof(FSCommandBlock), 32);
-    if (block == 0) {
+    if (block == NULL) {
         return IPC_RESULT_BUSY;
     }
 
@@ -955,7 +960,7 @@ s32 ISFS_GetFileStatsAsync(s32 fd, FSFileStats* statsOut,
     block->callbackState = CB_STATE_GET_FILE_STATS;
     block->getFileStatsCtx.statsOut = statsOut;
 
-    return IOS_IoctlAsync(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, block,
+    return IOS_IoctlAsync(fd, FS_IOCTL_GET_FILE_STATS, NULL, 0, block,
                           sizeof(FSFileStats), _isfsFuncCb, block);
 }
 
@@ -965,7 +970,7 @@ s32 ISFS_Seek(s32 fd, s32 offset, IPCSeekMode mode) {
 }
 
 s32 ISFS_SeekAsync(s32 fd, s32 offset, IPCSeekMode mode,
-                         FSAsyncCallback callback, void* callbackArg) {
+                   FSAsyncCallback callback, void* callbackArg) {
     FSCommandBlock* block;
 
     block = (FSCommandBlock*)iosAllocAligned(hId, sizeof(FSCommandBlock), 32);
@@ -989,7 +994,7 @@ s32 ISFS_Read(s32 fd, void* dst, s32 len) {
 }
 
 s32 ISFS_ReadAsync(s32 fd, void* dst, s32 len, FSAsyncCallback callback,
-                         void* callbackArg) {
+                   void* callbackArg) {
     FSCommandBlock* block;
 
     if (dst == NULL || (u32)dst % 32 != 0) {
@@ -1016,8 +1021,8 @@ s32 ISFS_Write(s32 fd, const void* src, s32 len) {
     return IOS_Write(fd, src, len);
 }
 
-s32 ISFS_WriteAsync(s32 fd, const void* src, s32 len,
-                          FSAsyncCallback callback, void* callbackArg) {
+s32 ISFS_WriteAsync(s32 fd, const void* src, s32 len, FSAsyncCallback callback,
+                    void* callbackArg) {
     FSCommandBlock* block;
 
     if (src == NULL || (u32)src % 32 != 0) {
@@ -1036,7 +1041,9 @@ s32 ISFS_WriteAsync(s32 fd, const void* src, s32 len,
     return IOS_WriteAsync(fd, src, len, _isfsFuncCb, block);
 }
 
-s32 ISFS_Close(s32 fd) { return IOS_Close(fd); }
+s32 ISFS_Close(s32 fd) {
+    return IOS_Close(fd);
+}
 
 s32 ISFS_CloseAsync(s32 fd, FSAsyncCallback callback, void* callbackArg) {
     FSCommandBlock* block;
@@ -1062,6 +1069,7 @@ s32 ISFS_ShutdownAsync(FSAsyncCallback callback, void* callbackArg) {
 
     // @bug Memory allocation result is not validated
     block = (FSCommandBlock*)iosAllocAligned(hId, sizeof(FSCommandBlock), 32);
+
     if (__fsFd < 0) {
         return IPC_RESULT_INVALID;
     }
@@ -1070,6 +1078,6 @@ s32 ISFS_ShutdownAsync(FSAsyncCallback callback, void* callbackArg) {
     block->callbackArg = callbackArg;
     block->callbackState = CB_STATE_NONE;
 
-    return IOS_IoctlAsync(__fsFd, IPC_IOCTL_SHUTDOWN_FS, NULL, 0, NULL, 0,
+    return IOS_IoctlAsync(__fsFd, FS_IOCTL_SHUTDOWN_FS, NULL, 0, NULL, 0,
                           _isfsFuncCb, block);
 }

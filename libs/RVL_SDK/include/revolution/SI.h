@@ -9,6 +9,8 @@ extern "C" {
 #endif
 
 #include <revolution/si/SIBios.h>
+#include <revolution/si/SIHardware.h>
+#include <revolution/si/SISamplingRate.h>
 
 #ifdef __cplusplus
 }

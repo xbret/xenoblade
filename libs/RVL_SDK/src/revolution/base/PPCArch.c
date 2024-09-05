@@ -1,8 +1,6 @@
 #include <revolution/BASE.h>
 #include <revolution/OS.h>
 
-
-
 asm u32 PPCMfmsr(void) {
     nofralloc
     mfmsr r3

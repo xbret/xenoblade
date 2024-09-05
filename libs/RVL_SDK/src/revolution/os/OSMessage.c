@@ -1,6 +1,7 @@
 #include <revolution/OS.h>
 
-void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* buffer, s32 capacity) {
+void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* buffer,
+                        s32 capacity) {
     OSInitThreadQueue(&queue->sendQueue);
     OSInitThreadQueue(&queue->recvQueue);
     queue->buffer = buffer;
@@ -11,7 +12,7 @@ void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* buffer, s32 capacity) 
 
 BOOL OSSendMessage(OSMessageQueue* queue, OSMessage mesg, u32 flags) {
     s32 mesgId;
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     while (queue->capacity <= queue->size) {
         if (!(flags & OS_MSG_PERSISTENT)) {
@@ -32,7 +33,7 @@ BOOL OSSendMessage(OSMessageQueue* queue, OSMessage mesg, u32 flags) {
 }
 
 BOOL OSReceiveMessage(OSMessageQueue* queue, OSMessage* mesg, u32 flags) {
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     while (queue->size == 0) {
         if (!(flags & OS_MSG_PERSISTENT)) {
@@ -57,7 +58,7 @@ BOOL OSReceiveMessage(OSMessageQueue* queue, OSMessage* mesg, u32 flags) {
 
 BOOL OSJamMessage(OSMessageQueue* queue, OSMessage mesg, u32 flags) {
     s32 lastMesg;
-    const BOOL enabled = OSDisableInterrupts();
+    BOOL enabled = OSDisableInterrupts();
 
     while (queue->capacity <= queue->size) {
         if (!(flags & OS_MSG_PERSISTENT)) {

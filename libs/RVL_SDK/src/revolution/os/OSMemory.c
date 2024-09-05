@@ -1,22 +1,28 @@
 #include <revolution/OS.h>
 
-static BOOL OnShutdown(u32 pass, u32 event);
+static BOOL OnShutdown(BOOL final, u32 event);
 static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127, NULL,
                                                       NULL};
 
 //unused
 u32 OSGetPhysicalMem1Size(void) { return OS_PHYSICAL_MEM1_SIZE; }
 
-u32 OSGetPhysicalMem2Size(void) { return OS_PHYSICAL_MEM2_SIZE; }
+u32 OSGetPhysicalMem2Size(void) {
+    return OS_PHYSICAL_MEM2_SIZE;
+}
 
-u32 OSGetConsoleSimulatedMem1Size(void) { return OS_SIMULATED_MEM1_SIZE; }
+u32 OSGetConsoleSimulatedMem1Size(void) {
+    return OS_SIMULATED_MEM1_SIZE;
+}
 
-u32 OSGetConsoleSimulatedMem2Size(void) { return OS_SIMULATED_MEM2_SIZE; }
+u32 OSGetConsoleSimulatedMem2Size(void) {
+    return OS_SIMULATED_MEM2_SIZE;
+}
 
-static BOOL OnShutdown(u32 pass, u32 event) {
+static BOOL OnShutdown(BOOL final, u32 event) {
 #pragma unused(event)
 
-    if (pass != OS_SD_PASS_FIRST) {
+    if (final != OS_SD_PASS_FIRST) {
         MI_HW_REGS[MI_PROT_MEM0] = 0xFF;
         __OSMaskInterrupts(
             OS_INTR_MASK(OS_INTR_MEM_0) | OS_INTR_MASK(OS_INTR_MEM_1) |
@@ -46,7 +52,8 @@ void OSProtectRange(){
 }
 
 static asm void ConfigMEM1_24MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x00000002@ha
@@ -83,7 +90,8 @@ static asm void ConfigMEM1_24MB(void) {
     }
 
 static asm void ConfigMEM2_52MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -138,10 +146,12 @@ static asm void ConfigMEM2_52MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 static asm void ConfigMEM2_56MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -196,10 +206,12 @@ static asm void ConfigMEM2_56MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 static asm void ConfigMEM2_64MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -246,7 +258,8 @@ static asm void ConfigMEM2_64MB(void) {
     }
 
 static asm void ConfigMEM2_112MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -301,10 +314,12 @@ static asm void ConfigMEM2_112MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 static asm void ConfigMEM2_128MB(void) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -367,7 +382,8 @@ void EnableInstsOnMEM2Lo16MB(){
 }
 
 static asm void RealMode(register void* config) {
-        nofralloc
+    // clang-format off
+    nofralloc
 
     clrlwi config, config, 2
     mtsrr0 config

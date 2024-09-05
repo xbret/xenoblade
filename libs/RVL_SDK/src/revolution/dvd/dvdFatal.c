@@ -2,8 +2,7 @@
 #include <revolution/OS.h>
 #include <revolution/SC.h>
 
-typedef void (*FatalFuncType)(void);
-static FatalFuncType FatalFunc = NULL;
+static funcptr_t FatalFunc = NULL;
 
 /* Unsupported characters to fix:
 ? (E9)
@@ -182,7 +181,9 @@ BOOL DVDSetAutoFatalMessaging(BOOL enable) {
     return old;
 }
 
-BOOL __DVDGetAutoFatalMessaging(void) { return FatalFunc != NULL; }
+BOOL __DVDGetAutoFatalMessaging(void) {
+    return FatalFunc != NULL;
+}
 
 void __DVDPrintFatalMessage(void) {
     if (FatalFunc != NULL) {

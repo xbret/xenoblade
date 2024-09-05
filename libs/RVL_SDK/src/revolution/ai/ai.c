@@ -189,14 +189,13 @@ static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
 
     }
 
-void __AI_SRC_INIT(void) {
-     s64 start = 0;
+static void __AI_SRC_INIT(void) {
+    s64 start = 0;
     s64 end = 0;
     BOOL exit = FALSE;
-    u32 samples = 0;
     s64 diff = 0;
     s64 wait = 0;
-    
+    u32 samples = 0;
 
     while (!exit) {
         AI_HW_REGS[AI_AICR] =

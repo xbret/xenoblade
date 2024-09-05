@@ -56,6 +56,7 @@ void __OSIsDebuggerPresent(){
 }
 
 asm void __OSFPRInit(void) {
+	// clang-format off
 	nofralloc
 
 	// Set FP available bit
@@ -64,7 +65,7 @@ asm void __OSFPRInit(void) {
 	mtmsr r3
 
 	// Check if paired-singles are enabled in HID2
-	mfspr r3, 0x398 //HID2
+	mfspr r3, 0x398
 	rlwinm. r3, r3, 3, 31, 31
 	beq paired_singles_disabled
 
@@ -139,9 +140,12 @@ paired_singles_disabled:
 	mtfsf 0xff, f0
 
 	blr
-	}
+	// clang-format on
+}
 
-static void DisableWriteGatherPipe(void) { PPCMthid2(PPCMfhid2() & ~HID2_WPE); }
+static void DisableWriteGatherPipe(void) {
+	PPCMthid2(PPCMfhid2() & ~HID2_WPE);
+}
 
 //unused
 void __OSGetBroadwayRev(){
@@ -156,8 +160,8 @@ void __OSGetGDDRVendorCode(){
 }
 
 void __OSGetIOSRev(OSIOSRev* rev) {
-	const u32 version = *(u32*)OSPhysicalToUncached(OS_PHYS_IOS_VERSION);
-	const u32 builddate = *(u32*)OSPhysicalToUncached(OS_PHYS_IOS_BUILD_DATE);
+	u32 version = *(u32*)OSPhysicalToUncached(OS_PHYS_IOS_VERSION);
+	u32 builddate = *(u32*)OSPhysicalToUncached(OS_PHYS_IOS_BUILD_DATE);
 
 	rev->idHi = version >> 24 & 0xFF;
 	rev->idLo = version >> 16 & 0xFF;
@@ -201,6 +205,7 @@ u32 OSGetConsoleType(void) {
 			if (hollywood > 0x00000011) {
 				return 0x00000021;
 			}
+
 		case 0x0202:
 		case 0x0201:
 			switch (hollywood) {
@@ -270,7 +275,6 @@ static void MemClear(void* mem, u32 size) {
 	DCFlushRange(flush, 0x40000);
 }
 
-
 static void ClearArena(void) DECOMP_DONT_INLINE {
 	// System reset
 	if (!((OSGetResetCode() >> 31) & 1)) {
@@ -338,14 +342,44 @@ static void ClearMEM2Arena(void) DECOMP_DONT_INLINE {
 	}
 }
 
-static void InquiryCallback(s32 arg0, DVDCommandBlock* block) {
-#pragma unused(arg0)
+static void InquiryCallback(s32 result, DVDCommandBlock* block) {
+#pragma unused(result)
+
 	switch (block->state) {
-	case 0:
-		OS_DVD_DEVICE_CODE = DriveInfo.deviceCode | 0x8000;
+	case DVD_STATE_IDLE:
+		OS_DVD_DEVICE_CODE = MAKE_DVD_DEVICE_CODE(DriveInfo.deviceCode);
 		break;
 	default:
 		OS_DVD_DEVICE_CODE = 0x0001;
+		break;
+	}
+}
+
+static void CheckTargets(void) {
+	switch (*(u8*)OSPhysicalToCached(OS_PHYS_BOOT_PROGRAM_TARGET)) {
+	case 0x81:
+		OSReport("OS ERROR: boot program is not for RVL target. Please use "
+				 "correct boot program.\n");
+		// clang-format off
+#line 1153
+		OSError("Failed to run app");
+		// clang-format on
+		break;
+	case 0x80:
+	default:
+		break;
+	}
+
+	switch (*(u8*)OSPhysicalToCached(OS_PHYS_APPLOADER_TARGET)) {
+	case 0x81:
+		OSReport("OS ERROR: apploader[D].img is not for RVL target. Please use "
+				 "correct apploader[D].img.\n");
+#line 1171
+		OSError("Failed to run app");
+		// clang-format on
+		break;
+	case 0x80:
+	default:
 		break;
 	}
 }
@@ -426,33 +460,6 @@ static void ReportOSInfo(void) {
 			 OSGetMEM1ArenaHi());
 	OSReport("MEM2 Arena : 0x%x - 0x%x\n", OSGetMEM2ArenaLo(),
 			 OSGetMEM2ArenaHi());
-}
-
-
-static void CheckTargets(void) {
-	switch (*(u8*)OSPhysicalToCached(OS_PHYS_BOOT_PROGRAM_TARGET)) {
-	case 0x81:
-		OSReport("OS ERROR: boot program is not for RVL target. Please use "
-				 "correct boot program.\n");
-#line 1153
-		OSError("Failed to run app");
-		break;
-	case 0x80:
-	default:
-		break;
-	}
-
-	switch (*(u8*)OSPhysicalToCached(OS_PHYS_APPLOADER_TARGET)) {
-	case 0x81:
-		OSReport("OS ERROR: apploader[D].img is not for RVL target. Please use "
-				 "correct apploader[D].img.\n");
-#line 1171
-		OSError("Failed to run app");
-		break;
-	case 0x80:
-	default:
-		break;
-	}
 }
 
 static void CheckFirmare(void){
@@ -536,10 +543,10 @@ void OSInit(void) {
 		mem1lo = *(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM1_START);
 		if (mem1lo == NULL) {
 			// Use the linker-generated arena if it is in MEM1...
-			if (OSIsMEM1Region(_db_stack_addr)) {
+			if (OSIsMEM1Region(__ArenaLo)) {
 				// ...and if the OS boot info does not specify one
 				mem1lo =
-					BootInfo->arenaLo == NULL ? _db_stack_addr : BootInfo->arenaLo;
+					BootInfo->arenaLo == NULL ? __ArenaLo : BootInfo->arenaLo;
 
 				/**
 				 * Linker generates stack/arena in this order:
@@ -578,12 +585,12 @@ void OSInit(void) {
 		mem2lo = *(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM2_START);
 		if (mem2lo != NULL) {
 			// Use the linker-generated arena if it is in MEM2
-			if (OSIsMEM2Region(_db_stack_addr)) {
-				mem2lo = _db_stack_addr;
+			if (OSIsMEM2Region(__ArenaLo)) {
+				mem2lo = __ArenaLo;
 
 				// Use debugger stack if it would be wasted
 				if (BI2DebugFlag != NULL && *BI2DebugFlag < 2) {
-					mem2lo = ROUND_UP_PTR(_stack_addr, 32);
+					mem2lo = ROUND_UP_PTR(_db_stack_end, 32);
 				}
 			}
 			// First 2K of MEM2 is reserved?
@@ -622,7 +629,7 @@ void OSInit(void) {
 		}
 
 		ReportOSInfo();
-		__OSRegisterVersion(__OSVersion);
+		OSRegisterVersion(__OSVersion);
 
 		// Check for debugger just like earlier
 		if (BI2DebugFlag != NULL && *BI2DebugFlag >= 2) {
@@ -654,7 +661,7 @@ void OSInit(void) {
 			DVDInit();
 
 			if (__OSIsGcam) {
-				OS_DVD_DEVICE_CODE = 0x9000;
+				OS_DVD_DEVICE_CODE = MAKE_DVD_DEVICE_CODE(0x1000);
 			} else if (OS_DVD_DEVICE_CODE == 0) {
 				DCInvalidateRange(&DriveInfo, sizeof(DVDDriveInfo));
 				DVDInquiryAsync(&DriveBlock, &DriveInfo, InquiryCallback);
@@ -751,6 +758,7 @@ static void OSExceptionInit(void) {
 }
 
 static asm void __OSDBIntegrator(void) {
+	// clang-format off
 	nofralloc
 
 	entry __OSDBINTSTART
@@ -776,9 +784,11 @@ static asm void __OSDBIntegrator(void) {
 	blr
 
 	entry __OSDBINTEND
-	}
+	// clang-format on
+}
 
 static asm void __OSDBJump(void){
+	// clang-format off
 	nofralloc
 
 	entry __OSDBJUMPSTART
@@ -786,11 +796,12 @@ static asm void __OSDBJump(void){
 	bla 0x60
 
 	entry __OSDBJUMPEND
-	}
+	// clang-format on
+}
 
 OSExceptionHandler
 	__OSSetExceptionHandler(u8 type, OSExceptionHandler handler) {
-	const OSExceptionHandler old = OSExceptionTable[type];
+	OSExceptionHandler old = OSExceptionTable[type];
 	OSExceptionTable[type] = handler;
 	return old;
 }
@@ -800,13 +811,14 @@ OSExceptionHandler __OSGetExceptionHandler(u8 type) {
 }
 
 static asm void OSExceptionVector(void) {
+	// clang-format off
 	nofralloc
 
 	entry __OSEVStart
 
 	mtsprg0 r4
 	
-	// Currrent OS context (physical address)
+	// Current OS context (physical address)
 	lwz r4, 0x000000C0(0)
 	stw r3, OSContext.gprs[3](r4)
 	mfsprg0 r3
@@ -860,9 +872,11 @@ lbl_800ECF70:
 	entry __OSEVEnd
 
 	nop
+	// clang-format on
 }
 
 asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
+	// clang-format off
 	nofralloc
 
 	stw r0, ctx->gprs[0]
@@ -870,19 +884,19 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
 	stw r2, ctx->gprs[2]
 	stmw r6, ctx->gprs[6]
 
-	mfgqr1 r0
+	mfspr r0, GQR1
 	stw r0, ctx->gqrs[1]
-	mfgqr2 r0
+	mfspr r0, GQR2
 	stw r0, ctx->gqrs[2]
-	mfgqr3 r0
+	mfspr r0, GQR3
 	stw r0, ctx->gqrs[3]
-	mfgqr4 r0
+	mfspr r0, GQR4
 	stw r0, ctx->gqrs[4]
-	mfgqr5 r0
+	mfspr r0, GQR5
 	stw r0, ctx->gqrs[5]
-	mfgqr6 r0
+	mfspr r0, GQR6
 	stw r0, ctx->gqrs[6]
-	mfgqr7 r0
+	mfspr r0, GQR7
 	stw r0, ctx->gqrs[7]
 
 	mfdsisr r5
@@ -890,12 +904,14 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
 
 	stwu r1, -8(r1)
 	b __OSUnhandledException
+	// clang-format on
 }
 
 void __OSPSInit(void) {
 	PPCMthid2(PPCMfhid2() | (1 << 31) | HID2_PSE);
 	ICFlashInvalidate();
 
+	// clang-format off
 	asm {
 		sync
 		li r3, 0
@@ -908,9 +924,12 @@ void __OSPSInit(void) {
 		mtgqr6 r3
 		mtgqr7 r3
 	}
+	// clang-format on
 }
 
-u32 __OSGetDIConfig(void) { return OS_DI_CONFIG & 0xFF; }
+u32 __OSGetDIConfig(void) {
+	return OS_DI_CONFIG & 0xFF;
+}
 
 void OSRegisterVersion(const char* ver) { __OSRegisterVersion(ver); }
 

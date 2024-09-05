@@ -1,6 +1,6 @@
 #include <revolution/ESP.h>
 
-s32 __esFd = -1;
+static s32 __esFd = -1;
 
 s32 ESP_InitLib(void) {
     s32 ret = 0;

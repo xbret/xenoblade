@@ -7,20 +7,20 @@ static void __AXFXFreeFunction(void* block);
 AXFXAllocHook __AXFXAlloc = __AXFXAllocFunction;
 AXFXFreeHook __AXFXFree = __AXFXFreeFunction;
 
-void* __AXFXAllocFunction(u32 param){
-    return OSAllocFromHeap(__OSCurrHeap, param);
+static void* __AXFXAllocFunction(size_t size) {
+    return OSAllocFromHeap(__OSCurrHeap, size);
 }
 
-void __AXFXFreeFunction(void* param){
-    OSFreeToHeap(__OSCurrHeap, param);
+static void __AXFXFreeFunction(void* block) {
+    OSFreeToHeap(__OSCurrHeap, block);
 }
 
-void AXFXSetHooks(AXFXAllocHook allocHook, AXFXFreeHook freeHook){
-    __AXFXAlloc = allocHook;
-    __AXFXFree = freeHook;
+void AXFXSetHooks(AXFXAllocHook alloc, AXFXFreeHook free) {
+    __AXFXAlloc = alloc;
+    __AXFXFree = free;
 }
 
-void AXFXGetHooks(AXFXAllocHook* allocHook, AXFXFreeHook* freeHook){
-    *allocHook = __AXFXAlloc;
-    *freeHook = __AXFXFree;
+void AXFXGetHooks(AXFXAllocHook* alloc, AXFXFreeHook* free) {
+    *alloc = __AXFXAlloc;
+    *free = __AXFXFree;
 }
