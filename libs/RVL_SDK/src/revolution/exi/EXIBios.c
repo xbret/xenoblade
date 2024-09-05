@@ -216,7 +216,7 @@ EXICallback EXISetExiCallback(EXIChannel chan, EXICallback callback) {
 }
 
 void EXIProbeReset(void) {
-    OS_EXI_800030C0[0] = OS_EXI_800030C0[1] = 0;
+    OS_EXI_LAST_INSERT[0] = OS_EXI_LAST_INSERT[1] = 0;
     Ecb[EXI_CHAN_0].WORD_0x20 = Ecb[EXI_CHAN_1].WORD_0x20 = 0;
     __EXIProbe(EXI_CHAN_0);
     __EXIProbe(EXI_CHAN_1);
@@ -240,26 +240,26 @@ static BOOL __EXIProbe(EXIChannel chan) {
         if (flag & 0x800) {
             EXIClearInterrupts(chan, FALSE, FALSE, TRUE);
             exi->WORD_0x20 = 0;
-            OS_EXI_800030C0[chan] = 0;
+            OS_EXI_LAST_INSERT[chan] = 0;
         }
 
         if (flag & 0x1000) {
             s32 time = (s32)(OSTicksToMilliseconds(OSGetTime()) / 100) + 1;
-            if (OS_EXI_800030C0[chan] == 0) {
-                OS_EXI_800030C0[chan] = time;
+            if (OS_EXI_LAST_INSERT[chan] == 0) {
+                OS_EXI_LAST_INSERT[chan] = time;
             }
 
-            if (time - OS_EXI_800030C0[chan] < 3) {
+            if (time - OS_EXI_LAST_INSERT[chan] < 3) {
                 ret = FALSE;
             }
         } else {
             exi->WORD_0x20 = 0;
-            OS_EXI_800030C0[chan] = 0;
+            OS_EXI_LAST_INSERT[chan] = 0;
             ret = FALSE;
         }
     } else if (!(flag & 0x1000) || flag & 0x800) {
         exi->WORD_0x20 = 0;
-        OS_EXI_800030C0[chan] = 0;
+        OS_EXI_LAST_INSERT[chan] = 0;
         ret = FALSE;
     }
 
@@ -636,7 +636,7 @@ s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
             return 0;
         }
 
-        if (exi->WORD_0x20 == OS_EXI_800030C0[chan]) {
+        if (exi->WORD_0x20 == OS_EXI_LAST_INSERT[chan]) {
             *out = exi->id;
             return exi->WORD_0x20;
         }
@@ -645,7 +645,7 @@ s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
             return 0;
         }
 
-        val = OS_EXI_800030C0[chan];
+        val = OS_EXI_LAST_INSERT[chan];
     }
 
     enabled = OSDisableInterrupts();
@@ -669,7 +669,7 @@ s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
         EXIDetach(chan);
 
         enabled = OSDisableInterrupts();
-        ret |= val != OS_EXI_800030C0[chan];
+        ret |= val != OS_EXI_LAST_INSERT[chan];
         if (ret == 0) {
             exi->id = *out;
             exi->WORD_0x20 = val;
