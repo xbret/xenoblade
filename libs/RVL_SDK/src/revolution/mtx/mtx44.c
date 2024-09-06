@@ -1,7 +1,6 @@
 #include <math.h>
 #include <revolution/MTX.h>
 
-
 void C_MTXFrustum(Mtx44 mtx, float t, float b, float l, float r, float n, float f) {
     float invrange;
 

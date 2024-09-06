@@ -126,7 +126,7 @@ static void* AllocUsedBlockFromFreeBlock_(MEMiExpHeapHead* exp,
     ;
 }
 #else
-#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
 #endif
 
 #ifdef __DECOMP_NON_MATCHING
@@ -165,7 +165,7 @@ static void* AllocFromHead_(MEMiHeapHead* heap, u32 size, s32 align) {
                            : NULL;
 }
 #else
-#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
 #endif
 
 #ifdef __DECOMP_NON_MATCHING
@@ -204,7 +204,7 @@ static void* AllocFromTail_(MEMiHeapHead* heap, u32 size, s32 align) {
                            : NULL;
 }
 #else
-#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
 #endif
 
 #ifdef __DECOMP_NON_MATCHING
@@ -213,9 +213,10 @@ static void RecycleRegion_(MEMiExpHeapHead* exp, void** region) {
     ;
 }
 #else
-#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
 #endif
 
+#ifdef __DECOMP_NON_MATCHING
 MEMiHeapHead* MEMCreateExpHeapEx(void* start, u32 size, u16 opt) {
     void* end = AddU32ToPtr(start, size);
 
@@ -231,12 +232,20 @@ MEMiHeapHead* MEMCreateExpHeapEx(void* start, u32 size, u16 opt) {
 
     return InitExpHeap_(start, end, opt);
 }
+#else
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+#endif
 
+#ifdef __DECOMP_NON_MATCHING
 MEMiHeapHead* MEMDestroyExpHeap(MEMiHeapHead* heap) {
     MEMiFinalizeHeap(heap);
     return heap;
 }
+#else
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+#endif
 
+#ifdef __DECOMP_NON_MATCHING
 void* MEMAllocFromExpHeapEx(MEMiHeapHead* heap, u32 size, s32 align) {
     void* memBlock;
 
@@ -258,6 +267,9 @@ void* MEMAllocFromExpHeapEx(MEMiHeapHead* heap, u32 size, s32 align) {
 
     return memBlock;
 }
+#else
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+#endif
 
 #ifdef __DECOMP_NON_MATCHING
 u32 MEMResizeForMBlockExpHeap(MEMiHeapHead* heap, void* memBlock, u32 size) {
@@ -265,7 +277,7 @@ u32 MEMResizeForMBlockExpHeap(MEMiHeapHead* heap, void* memBlock, u32 size) {
     ;
 }
 #else
-#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
+//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
 #endif
 
 void MEMFreeToExpHeap(MEMiHeapHead* heap, void* memBlock) {

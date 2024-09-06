@@ -20,9 +20,9 @@ typedef struct EXIData {
     void* buffer;            // at 0x14
     u32 dev;                 // at 0x18
     u32 id;                  // at 0x1C
-    u32 WORD_0x20;
-    s32 numItems;     // at 0x24
-    EXIItem items[3]; // at 0x28
+    s32 lastInsert;          // at 0x20
+    s32 numItems;            // at 0x24
+    EXIItem items[3];        // at 0x28
 } EXIData;
 
 BOOL EXIImm(EXIChannel chan, void* buf, s32 len, u32 type,

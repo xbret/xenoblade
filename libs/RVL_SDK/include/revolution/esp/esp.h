@@ -22,6 +22,16 @@ typedef u8 ESTicketReserved[48];
 typedef u8 ESSysAccessMask[2];
 typedef u8 ESCidxMask[64];
 
+typedef enum {
+    ES_IOCTLV_LAUNCH_TITLE = 8,
+    ES_IOCTLV_READ_CONTENT_FILE = 10,
+    ES_IOCTLV_GET_NUM_TICKET_VIEWS = 18,
+    ES_IOCTLV_GET_TICKET_VIEWS = 19,
+    ES_IOCTLV_GET_DATA_DIR = 29,
+    ES_IOCTLV_GET_TITLE_ID = 32,
+    ES_IOCTLV_SEEK_CONTENT_FILE = 35,
+} ESIoctl;
+
 #pragma pack(push, 4)
 
 typedef struct ESTmdViewHeader {
