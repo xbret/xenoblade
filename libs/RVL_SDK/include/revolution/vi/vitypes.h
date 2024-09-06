@@ -113,7 +113,7 @@ typedef enum _VIGamma {
 } VIGamma;
 
 typedef enum _VIOverDrive {
-	VI_ODV_L1 = 0,
+    VI_ODV_L1 = 0,
     VI_ODV_L2 = 1,
     VI_ODV_L3 = 2,
     VI_ODV_L4 = 3,

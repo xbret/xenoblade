@@ -63,7 +63,7 @@ namespace nw4r
 
             if (r31->INT_0x8)
             {
-				const char *cmp = r31->INT_0x8 ? (const char *)mDict.ptr() + r31->INT_0x8 : NULL;
+                const char *cmp = r31->INT_0x8 ? (const char *)mDict.ptr() + r31->INT_0x8 : NULL;
                 
                 if (strcmp(name, cmp) == 0) return r31;
             }
@@ -77,7 +77,7 @@ namespace nw4r
             {
                 ResDicEntry *entry = Get(key, strlen(key));
                 
-				if (entry) return (void *)mDict.ofs_to_ptr_raw<void>(entry->INT_0xC);
+                if (entry) return (void *)mDict.ofs_to_ptr_raw<void>(entry->INT_0xC);
             }
 
             return NULL;
@@ -85,22 +85,22 @@ namespace nw4r
 
         void * ResDic::operator[](ResName rn) const
         {
-			if (mDict.IsValid() && rn.mRes.IsValid())
+            if (mDict.IsValid() && rn.mRes.IsValid())
             {
-				ResDicEntry *entry = Get(rn.mRes.ptr());
+                ResDicEntry *entry = Get(rn.mRes.ptr());
                 
-				if (entry) return (void *)mDict.ofs_to_ptr_raw<void>(entry->INT_0xC);
+                if (entry) return (void *)mDict.ofs_to_ptr_raw<void>(entry->INT_0xC);
             }
-			
+            
             return NULL;
         }
-		
-		s32 ResDic::GetIndex(ResName rn) const
+        
+        s32 ResDic::GetIndex(ResName rn) const
         {
             if (mDict.IsValid() && rn.mRes.IsValid())
             {
                 ResDicEntry *entry = Get(rn.mRes.ptr());
-				
+                
                 if (entry) return entry - (mDict.ref().mEntries + 1);
             }
 

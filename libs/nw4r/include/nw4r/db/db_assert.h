@@ -4,9 +4,9 @@
 #include "types.h"
 
 namespace nw4r{
-	namespace db{
-	    void Warning(const char* file, int line, const char* msg, ...);
-	}
+    namespace db{
+        void Warning(const char* file, int line, const char* msg, ...);
+    }
 }
 
 #endif

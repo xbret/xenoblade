@@ -4,19 +4,19 @@
 DECOMP_FORCELITERAL(quat_c, 0.00001f, 1.0f, 0.0f);
 
 //TODO: get it to match with a register var instead of f3
-void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2, register Quaternion* out) {
-	register f32 vv1, vv2, vv3, vv4;
-	asm
-	{
-		psq_l vv1, 0(quat1), 0, 0;
-		psq_l vv2, 0(quat2), 0, 0;
-		psq_l vv3, 8(quat1), 0, 0;
-		ps_add vv1, vv1, vv2;
-		psq_l fp3, 8(quat2), 0, 0;
-		ps_add vv2, vv3, fp3;
-		psq_st vv1, 0(out), 0, 0;
-		psq_st vv2, 8(out), 0, 0;
-	}
+void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2,
+               register Quaternion* out) {
+    register f32 vv1, vv2, vv3, vv4;
+    asm {
+        psq_l vv1, 0(quat1), 0, 0;
+        psq_l vv2, 0(quat2), 0, 0;
+        psq_l vv3, 8(quat1), 0, 0;
+        ps_add vv1, vv1, vv2;
+        psq_l fp3, 8(quat2), 0, 0;
+        ps_add vv2, vv3, fp3;
+        psq_st vv1, 0(out), 0, 0;
+        psq_st vv2, 8(out), 0, 0;
+    }
 }
 
 void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
@@ -65,33 +65,31 @@ void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
 }
 
 void PSQUATScale(const register Quaternion* quat1, register Quaternion* quat2,
-								 register f32 ff1) {
-	register f32 vv1, vv2;
-	asm
-	{
-		psq_l    vv1, 0(quat1), 0, 0;
-		psq_l    vv2, 8(quat1), 0, 0;
-		ps_muls0 vv1, vv1, ff1;
-		psq_st   vv1, 0(quat2), 0, 0;
-		ps_muls0 vv2, vv2, ff1;
-		psq_st   vv2, 8(quat2), 0, 0;
-	}
+                 register f32 ff1) {
+    register f32 vv1, vv2;
+    asm {
+        psq_l    vv1, 0(quat1), 0, 0;
+        psq_l    vv2, 8(quat1), 0, 0;
+        ps_muls0 vv1, vv1, ff1;
+        psq_st   vv1, 0(quat2), 0, 0;
+        ps_muls0 vv2, vv2, ff1;
+        psq_st   vv2, 8(quat2), 0, 0;
+    }
 }
 
 f32 PSQUATDotProduct(const register Quaternion* quat1,
-										 const register Quaternion* quat2) {
-	register f32 vv1, vv2, vv3, vv4, out;
-	asm
-	{
-		psq_l vv1, 0(quat1), 0, 0;
-		psq_l vv3, 0(quat2), 0, 0;
-		ps_mul out, vv1, vv3;
-		psq_l vv2, 8(quat1), 0, 0;
-		psq_l vv4, 8(quat2), 0, 0;
-		ps_madd out, vv2, vv4, out;
-		ps_sum0 out, out, out, out;
-	}
-	return out;
+                     const register Quaternion* quat2) {
+    register f32 vv1, vv2, vv3, vv4, out;
+    asm {
+        psq_l vv1, 0(quat1), 0, 0;
+        psq_l vv3, 0(quat2), 0, 0;
+        ps_mul out, vv1, vv3;
+        psq_l vv2, 8(quat1), 0, 0;
+        psq_l vv4, 8(quat2), 0, 0;
+        ps_madd out, vv2, vv4, out;
+        ps_sum0 out, out, out, out;
+    }
+    return out;
 }
 
 void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
@@ -145,98 +143,98 @@ void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
 //unused
 /*
 void PSQUATInverse(const register Quaternion* src, register Quaternion* inv) {
-	register f32 vv1, vv2, vv3, vv4;
-	register f32 vv5, vv6, vv7, vv8, vv9, vvA, vvB;
-	register f32 vvC = 1.0F;
-	asm {
-		psq_l       vv1, 0(src), 0, 0;
-		ps_mul      vv5, vv1, vv1;
-		ps_sub      vvB, vvC, vvC;
-		psq_l       vv2, 8(src), 0, 0;
-		ps_madd     vv5, vv2, vv2, vv5;
-		ps_add      vvA, vvC, vvC;
-		ps_sum0     vv5, vv5, vv5, vv5;
-		fcmpu       cr0, vv5, vvB;
-		beq-        loc0;
-		fres        vv7, vv5;
-		ps_neg      vv6, vv5;
-		ps_nmsub    vv9, vv5, vv7, vvA;
-		ps_mul      vv7, vv7, vv9;
-		b           loc1;
+    register f32 vv1, vv2, vv3, vv4;
+    register f32 vv5, vv6, vv7, vv8, vv9, vvA, vvB;
+    register f32 vvC = 1.0F;
+    asm {
+        psq_l       vv1, 0(src), 0, 0;
+        ps_mul      vv5, vv1, vv1;
+        ps_sub      vvB, vvC, vvC;
+        psq_l       vv2, 8(src), 0, 0;
+        ps_madd     vv5, vv2, vv2, vv5;
+        ps_add      vvA, vvC, vvC;
+        ps_sum0     vv5, vv5, vv5, vv5;
+        fcmpu       cr0, vv5, vvB;
+        beq-        loc0;
+        fres        vv7, vv5;
+        ps_neg      vv6, vv5;
+        ps_nmsub    vv9, vv5, vv7, vvA;
+        ps_mul      vv7, vv7, vv9;
+        b           loc1;
 loc0:
-		fmr         vv7, vvC;
+        fmr         vv7, vvC;
 loc1:
-		ps_neg      vv8, vv7;
-		ps_muls1    vv4, vv7, vv2;
-		ps_muls0    vv1, vv1, vv8;
-		psq_st      vv4, 12(inv), 1, 0;
-		ps_muls0    vv3, vv2, vv8;
-		psq_st      vv1, 0(inv), 0, 0;
-		psq_st      vv3, 8(inv), 1, 0;
-	}
+        ps_neg      vv8, vv7;
+        ps_muls1    vv4, vv7, vv2;
+        ps_muls0    vv1, vv1, vv8;
+        psq_st      vv4, 12(inv), 1, 0;
+        ps_muls0    vv3, vv2, vv8;
+        psq_st      vv1, 0(inv), 0, 0;
+        psq_st      vv3, 8(inv), 1, 0;
+    }
 }
 */
 
 inline f32 mySqrtf(f32 x){
-	return sqrt(x);
+    return sqrt(x);
 }
 
 void C_QUATMtx(Quaternion* quat, const Mtx mtx) {
-	f32 root, trace;
-	u32 dmax, dnext, dlast;
-	u32 next[3] = {1, 2, 0};
-	f32 temp[3];
+    f32 root, trace;
+    u32 dmax, dnext, dlast;
+    u32 next[3] = {1, 2, 0};
+    f32 temp[3];
 
-	trace = mtx[0][0] + mtx[1][1] + mtx[2][2];
+    trace = mtx[0][0] + mtx[1][1] + mtx[2][2];
 
-	if (trace > 0.0f) {
-		root = mySqrtf(1.0f + trace); // Inline required for matching
-		quat->w = root * 0.5f;
+    if (trace > 0.0f) {
+        root = mySqrtf(1.0f + trace); // Inline required for matching
+        quat->w = root * 0.5f;
 
-		root = 0.5f / root;
-		quat->x = root * (mtx[2][1] - mtx[1][2]);
-		quat->y = root * (mtx[0][2] - mtx[2][0]);
-		quat->z = root * (mtx[1][0] - mtx[0][1]);
-	} else {
-		dmax = 0;
+        root = 0.5f / root;
+        quat->x = root * (mtx[2][1] - mtx[1][2]);
+        quat->y = root * (mtx[0][2] - mtx[2][0]);
+        quat->z = root * (mtx[1][0] - mtx[0][1]);
+    } else {
+        dmax = 0;
 
-		if (mtx[1][1] > mtx[dmax][dmax]) {
-				dmax = 1;
-		}
+        if (mtx[1][1] > mtx[dmax][dmax]) {
+                dmax = 1;
+        }
 
-		if (mtx[2][2] > mtx[dmax][dmax]) {
-				dmax = 2;
-		}
+        if (mtx[2][2] > mtx[dmax][dmax]) {
+                dmax = 2;
+        }
 
-		dnext = next[dmax];
-		dlast = next[dnext];
+        dnext = next[dmax];
+        dlast = next[dnext];
 
-		root = sqrt(mtx[dmax][dmax] - (mtx[dnext][dnext] + mtx[dlast][dlast]) +
-		1.0f);
-		temp[dmax] = 0.5f * root;
+        root = sqrt(mtx[dmax][dmax] - (mtx[dnext][dnext] + mtx[dlast][dlast]) +
+        1.0f);
+        temp[dmax] = 0.5f * root;
 
-		if (0.0f != root) {
-			root = 0.5f / root;
-		}
+        if (0.0f != root) {
+            root = 0.5f / root;
+        }
 
-		quat->w = root * (mtx[dlast][dnext] - mtx[dnext][dlast]);
-		temp[dnext] = root * (mtx[dmax][dnext] + mtx[dnext][dmax]);
-		temp[dlast] = root * (mtx[dmax][dlast] + mtx[dlast][dmax]);
+        quat->w = root * (mtx[dlast][dnext] - mtx[dnext][dlast]);
+        temp[dnext] = root * (mtx[dmax][dnext] + mtx[dnext][dmax]);
+        temp[dlast] = root * (mtx[dmax][dlast] + mtx[dlast][dmax]);
 
-		quat->x = temp[0];
-		quat->y = temp[1];
-		quat->z = temp[2];
-	}
+        quat->x = temp[0];
+        quat->y = temp[1];
+        quat->z = temp[2];
+    }
 }
 
 //unused
 /*
 void C_QUATLerp(const Quaternion* quat1, const Quaternion* quat2,
-								Quaternion* out, f32 f) {
-	out->x = f * (quat2->x - quat1->x) + quat1->x;
-	out->y = f * (quat2->y - quat1->y) + quat1->y;
-	out->z = f * (quat2->z - quat1->z) + quat1->z;
-	out->w = f * (quat2->w - quat1->w) + quat1->w;
+                Quaternion* out, f32 f) {
+    out->x = f * (quat2->x - quat1->x) + quat1->x;
+    out->y = f * (quat2->y - quat1->y) + quat1->y;
+    out->z = f * (quat2->z - quat1->z) + quat1->z;
+    out->w = f * (quat2->w - quat1->w) + quat1->w;
 }*/
 
 void C_QUATSlerp(const Quaternion* a, const Quaternion* b, Quaternion* out,

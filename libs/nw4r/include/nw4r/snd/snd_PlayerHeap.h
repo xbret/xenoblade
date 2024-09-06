@@ -5,17 +5,17 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		namespace detail
-		{
-			struct PlayerHeap : SoundHeap
-			{
-				~PlayerHeap();
-				UNKTYPE * Alloc(u32);
-			};
-		}
-	}
+    namespace snd
+    {
+        namespace detail
+        {
+            struct PlayerHeap : SoundHeap
+            {
+                ~PlayerHeap();
+                UNKTYPE * Alloc(u32);
+            };
+        }
+    }
 }
 
 #endif

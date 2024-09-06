@@ -5,18 +5,18 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		using namespace detail;
-		
-		struct SeqSoundHandle
-		{
-			detail::SeqSound * mSound; // at 0x0
-			
-			SeqSoundHandle(SoundHandle *);
-			void DetachSound();
-		};
-	}
+    namespace snd
+    {
+        using namespace detail;
+        
+        struct SeqSoundHandle
+        {
+            detail::SeqSound * mSound; // at 0x0
+            
+            SeqSoundHandle(SoundHandle *);
+            void DetachSound();
+        };
+    }
 }
 
 #endif

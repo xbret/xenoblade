@@ -5,8 +5,8 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
+    namespace snd
+    {
         struct SoundSystem
         {
             struct SoundSystemParam
@@ -30,7 +30,7 @@ namespace nw4r
             static void WaitForResetReady();
             UNKWORD GetRequiredMemSize(const SoundSystemParam &);
         };
-	}
+    }
 }
 
 #endif

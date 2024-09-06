@@ -14,7 +14,7 @@ void GXBeginDisplayList(void* list, u32 size) {
 
 //unused
 u32 GXEndDisplayList(void) {
-	return 0;
+    return 0;
 }
 
 void GXCallDisplayList(void* list, u32 size) {

@@ -63,13 +63,13 @@ EUARTError EUARTGetLastError(){
 
 
 EUARTError InitializeUART(void){
-	if((OSGetConsoleType() & OS_CONSOLE_MASK_EMU) == 0) {
-		Enabled = 0;
-		return EUART_ERROR_INVALID;
-	}else{
-		Enabled = 0xA5FF005A;
-		return EUART_ERROR_OK;
-	}
+    if((OSGetConsoleType() & OS_CONSOLE_MASK_EMU) == 0) {
+        Enabled = 0;
+        return EUART_ERROR_INVALID;
+    }else{
+        Enabled = 0xA5FF005A;
+        return EUART_ERROR_OK;
+    }
 }
 
 //unused

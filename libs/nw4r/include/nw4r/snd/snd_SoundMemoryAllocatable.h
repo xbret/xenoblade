@@ -4,14 +4,14 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		struct SoundMemoryAllocatable
-		{
-			virtual ~SoundMemoryAllocatable() {} // at 0x8
-			virtual void * Alloc(u32) = 0; // at 0xc
-		};
-	}
+    namespace snd
+    {
+        struct SoundMemoryAllocatable
+        {
+            virtual ~SoundMemoryAllocatable() {} // at 0x8
+            virtual void * Alloc(u32) = 0; // at 0xc
+        };
+    }
 }
 
 #endif

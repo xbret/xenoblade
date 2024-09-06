@@ -64,16 +64,16 @@ void PADControlMotor(s32 chan, u32 command) {
   enabled = OSDisableInterrupts();
   chanBit = PAD_CHAN0_BIT >> chan;
   if ((EnabledBits & chanBit) && !(SIGetType(chan) & SI_GC_NOMOTOR)) {
-	if (Spec < PAD_SPEC_2 && command == PAD_MOTOR_STOP_HARD) {
-	  command = PAD_MOTOR_STOP;
-	}
+  if (Spec < PAD_SPEC_2 && command == PAD_MOTOR_STOP_HARD) {
+    command = PAD_MOTOR_STOP;
+  }
 
-	if(OS_PAD_FLAGS & 0x20){
-		command = PAD_MOTOR_STOP;
-	}
+  if(OS_PAD_FLAGS & 0x20){
+    command = PAD_MOTOR_STOP;
+  }
 
-	SISetCommand(chan, (0x40 << 16) | AnalogMode | (command & (0x00000001 | 0x00000002)));
-	SITransferCommands();
+  SISetCommand(chan, (0x40 << 16) | AnalogMode | (command & (0x00000001 | 0x00000002)));
+  SITransferCommands();
   }
   OSRestoreInterrupts(enabled);
 }

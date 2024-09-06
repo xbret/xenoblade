@@ -8,46 +8,46 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		struct SoundArchivePlayer : detail::DisposeCallback, SoundStartable
-		{
-			SoundArchivePlayer();
-			~SoundArchivePlayer();
+    namespace snd
+    {
+        struct SoundArchivePlayer : detail::DisposeCallback, SoundStartable
+        {
+            SoundArchivePlayer();
+            ~SoundArchivePlayer();
 
-			bool IsAvailable() const;
-			bool Setup(const SoundArchive *, void *, u32, void *, u32);
+            bool IsAvailable() const;
+            bool Setup(const SoundArchive *, void *, u32, void *, u32);
 
-			void Shutdown();
-			u32 GetRequiredMemSize(const SoundArchive *);
-			u32 GetRequiredStrmBufferSize(const SoundArchive *);
+            void Shutdown();
+            u32 GetRequiredMemSize(const SoundArchive *);
+            u32 GetRequiredStrmBufferSize(const SoundArchive *);
 
-			void Update();
+            void Update();
 
-			SoundArchive * GetSoundArchive() const;
-			SoundPlayer * GetSoundPlayer(u32);
+            SoundArchive * GetSoundArchive() const;
+            SoundPlayer * GetSoundPlayer(u32);
 
-			UNKWORD detail_SetupSound(SoundHandle *,
-				u32,
-				detail::BasicSound::AmbientArgInfo *,
-				detail::ExternalSoundPlayer *,
-				bool,
-				const StartInfo *);
+            UNKWORD detail_SetupSound(SoundHandle *,
+                u32,
+                detail::BasicSound::AmbientArgInfo *,
+                detail::ExternalSoundPlayer *,
+                bool,
+                const StartInfo *);
 
-			UNKWORD LoadGroup(u32, SoundMemoryAllocatable *, u32);
-			UNKWORD LoadGroup(const char *, SoundMemoryAllocatable *, u32);
+            UNKWORD LoadGroup(u32, SoundMemoryAllocatable *, u32);
+            UNKWORD LoadGroup(const char *, SoundMemoryAllocatable *, u32);
 
-			virtual void InvalidateData(const void *, const void *);
-			virtual void InvalidateWaveData(const void *, const void *);
-			virtual UNKWORD detail_ConvertLabelStringToSoundId(const char *);
+            virtual void InvalidateData(const void *, const void *);
+            virtual void InvalidateWaveData(const void *, const void *);
+            virtual UNKWORD detail_ConvertLabelStringToSoundId(const char *);
 
-			char UNK_0x4[0x8];
-			SoundHandle mHandle; // at 0xC
-			char UNK_0x1C[0x14];
-			u32 WORD_0x30;
-			char UNK_0x34[0xAC];
-		};
-	}
+            char UNK_0x4[0x8];
+            SoundHandle mHandle; // at 0xC
+            char UNK_0x1C[0x14];
+            u32 WORD_0x30;
+            char UNK_0x34[0xAC];
+        };
+    }
 }
 
 #endif
