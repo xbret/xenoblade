@@ -11,9 +11,9 @@ namespace nw4r
 		{
 			math::MTX34 mMatrix; // at 0x0
 			
-			float mInteriorSize; // at 0x30
-			float mMaxVolumeDistance; // at 0x34
-			float mUnitDistance; // at 0x38
+			f32 mInteriorSize; // at 0x30
+			f32 mMaxVolumeDistance; // at 0x34
+			f32 mUnitDistance; // at 0x38
 			
 			Sound3DListener();
 		};

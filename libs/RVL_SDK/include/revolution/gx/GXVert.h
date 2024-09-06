@@ -18,7 +18,7 @@ static inline void GXCmd1u32(u32 ul) {
     WGPIPE.i = ul;
 }
 
-static inline void GXPosition3f32(float x, float y, float z) {
+static inline void GXPosition3f32(f32 x, f32 y, f32 z) {
     WGPIPE.f = x;
     WGPIPE.f = y;
     WGPIPE.f = z;
@@ -48,7 +48,7 @@ static inline void GXPosition3s16(s16 x, s16 y, s16 z) {
     WGPIPE.s = z;
 }
 
-static inline void GXPosition2f32(float x, float y) {
+static inline void GXPosition2f32(f32 x, f32 y) {
     WGPIPE.f = x;
     WGPIPE.f = y;
 }
@@ -81,7 +81,7 @@ static inline void GXPosition1x8(u8 uc) {
     WGPIPE.c = uc;
 }
 
-static inline void GXNormal3f32(float x, float y, float z) {
+static inline void GXNormal3f32(f32 x, f32 y, f32 z) {
     WGPIPE.f = x;
     WGPIPE.f = y;
     WGPIPE.f = z;
@@ -136,7 +136,7 @@ static inline void GXColor1x8(u8 uc) {
     WGPIPE.c = uc;
 }
 
-static inline void GXTexCoord2f32(float x, float y) {
+static inline void GXTexCoord2f32(f32 x, f32 y) {
     WGPIPE.f = x;
     WGPIPE.f = y;
 }
@@ -161,7 +161,7 @@ static inline void GXTexCoord2u8(u8 x, u8 y) {
     WGPIPE.c = y;
 }
 
-static inline void GXTexCoord1f32(float f) {
+static inline void GXTexCoord1f32(f32 f) {
     WGPIPE.f = f;
 }
 

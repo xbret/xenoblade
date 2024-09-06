@@ -213,7 +213,7 @@ namespace nw4r
 				}
 			}
 			
-			void SeqPlayer::SetTempoRatio(float tempoRatio)
+			void SeqPlayer::SetTempoRatio(f32 tempoRatio)
 			{
 				mTempoRatio = tempoRatio;
 			}
@@ -250,14 +250,14 @@ namespace nw4r
 				mGlobalVariable[i] = value;
 			}
 			
-			void SeqPlayer::SetTrackVolume(u32 flags, float volume)
+			void SeqPlayer::SetTrackVolume(u32 flags, f32 volume)
 			{
-				SetTrackParam<float>(flags, &SeqTrack::SetVolume, volume);
+				SetTrackParam<f32>(flags, &SeqTrack::SetVolume, volume);
 			}
 			
-			void SeqPlayer::SetTrackPitch(u32 flags, float pitch)
+			void SeqPlayer::SetTrackPitch(u32 flags, f32 pitch)
 			{
-				SetTrackParam<float>(flags, &SeqTrack::SetPitch, pitch);
+				SetTrackParam<f32>(flags, &SeqTrack::SetPitch, pitch);
 			}
 			
 			void SeqPlayer::InvalidateData(const void * pStart, const void * pEnd)
@@ -361,13 +361,13 @@ namespace nw4r
 			void SeqPlayer::UpdateTick(int ticks)
 			{
 				//8003EF1C
-				float f1 = GetBaseTempo();
+				f32 f1 = GetBaseTempo();
 				
 				if (0.0f == f1) return;
 				
 				//8003EF50
-				float f2 = FLOAT_0x98 / f1;
-				float f27 = ticks;
+				f32 f2 = FLOAT_0x98 / f1;
+				f32 f27 = ticks;
 				
 				while (f2 < f27) //8003F0CC
 				{

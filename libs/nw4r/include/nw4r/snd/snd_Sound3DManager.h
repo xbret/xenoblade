@@ -28,11 +28,11 @@ namespace nw4r
 			detail::InstancePool<Sound3DActorParam> mPool; // at 0x8
 			Sound3DListener * mListener; // at 0xc
 			int INT_0x10;
-			float FLOAT_0x14;
-			float FLOAT_0x18;
-			float FLOAT_0x1C;
-			float FLOAT_0x20;
-			float FLOAT_0x24;
+			f32 FLOAT_0x14;
+			f32 FLOAT_0x18;
+			f32 FLOAT_0x1C;
+			f32 FLOAT_0x20;
+			f32 FLOAT_0x24;
 			
 			Sound3DManager();
 			

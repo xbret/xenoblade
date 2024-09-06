@@ -42,9 +42,9 @@ void C_VECScale(){
 }
 
 //unused
-void PSVECScale(register const Vec* in, register Vec* out, register float scale) {
-    register float xy, z;
-    register float sxy, sz;
+void PSVECScale(register const Vec* in, register Vec* out, register f32 scale) {
+    register f32 xy, z;
+    register f32 sxy, sz;
 
     // clang-format off
     asm {
@@ -68,11 +68,11 @@ void C_VECNormalize(){
 }
 
 void PSVECNormalize(register const Vec* in, register Vec* out) {
-    register float c_half, c_three;
-    register float xy, z;
-    register float z2;
-    register float dot;
-    register float work0, work1, work2;
+    register f32 c_half, c_three;
+    register f32 xy, z;
+    register f32 z2;
+    register f32 dot;
+    register f32 work0, work1, work2;
 
     c_half = 0.5f;
     c_three = 3.0f;
@@ -121,13 +121,13 @@ asm void PSVECSquareMag(){
 void C_VECMag(){
 }
 
-float PSVECMag(register const Vec* v) {
-    register float xy, xy2;
-    register float z, z2;
-    register float dot;
+f32 PSVECMag(register const Vec* v) {
+    register f32 xy, xy2;
+    register f32 z, z2;
+    register f32 dot;
     register f64 rsqrt;
-    register float work0, work1;
-    register float c_three, c_half, c_zero;
+    register f32 work0, work1;
+    register f32 c_three, c_half, c_zero;
 
     c_half = 0.5f;
     // clang-format off
@@ -177,7 +177,7 @@ float PSVECMag(register const Vec* v) {
 void C_VECDotProduct(){
 }
 
-asm float PSVECDotProduct(register const Vec* a, register const Vec* b) {
+asm f32 PSVECDotProduct(register const Vec* a, register const Vec* b) {
     // clang-format off
     nofralloc
 
@@ -271,11 +271,11 @@ void C_VECSquareDistance(){
 }
 
 //unused
-float PSVECSquareDistance(register const Vec* a, register const Vec* b) {
-    register float ayz, byz;
-    register float axy, bxy;
-    register float dxy, dyz;
-    register float dist;
+f32 PSVECSquareDistance(register const Vec* a, register const Vec* b) {
+    register f32 ayz, byz;
+    register f32 axy, bxy;
+    register f32 dxy, dyz;
+    register f32 dist;
 
     // clang-format off
     asm {

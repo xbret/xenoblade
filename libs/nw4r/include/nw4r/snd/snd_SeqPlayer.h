@@ -62,11 +62,11 @@ namespace nw4r
 				bool mPauseFlag; // at 0x8e
 				
 				bool mReleasePriorityFixFlag; // at 0x8f
-				float FLOAT_0x90;
-				float mTempoRatio; // at 0x94
-				float FLOAT_0x98;
+				f32 FLOAT_0x90;
+				f32 mTempoRatio; // at 0x94
+				f32 FLOAT_0x98;
 				int OFFSET_0x9C;
-				float OFFSET_0xA0;
+				f32 OFFSET_0xA0;
 				int INT_0xA4;
 
 				ParserPlayerParam mParserPlayerParam; // at 0xA8
@@ -87,7 +87,7 @@ namespace nw4r
 				void SetSeqData(const void *, s32);
 				void Skip(OffsetType, int);
 				
-				void SetTempoRatio(float);
+				void SetTempoRatio(f32);
 				void SetChannelPriority(int);
 				void SetReleasePriorityFix(bool);
 				void SetLocalVariable(int, short);
@@ -110,8 +110,8 @@ namespace nw4r
 					}
 				}
 				
-				void SetTrackVolume(u32, float);
-				void SetTrackPitch(u32, float);
+				void SetTrackVolume(u32, f32);
+				void SetTrackPitch(u32, f32);
 				
 				void SetPlayerTrack(int, SeqTrack *); //inlined
 				SeqTrack * GetPlayerTrack(int);
@@ -132,7 +132,7 @@ namespace nw4r
 					Stop();
 				}
 				
-				inline float GetBaseTempo() const
+				inline f32 GetBaseTempo() const
 				{
 					return mTempoRatio *
 						(mParserPlayerParam.timebase * mParserPlayerParam.tempo) / 60000.0f;

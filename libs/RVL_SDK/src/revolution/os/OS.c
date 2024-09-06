@@ -23,8 +23,8 @@ static u32 BI2DebugFlagHolder;
 
 static char GameNameBuffer[sizeof('ABCD') + 1];
 
-static double ZeroF;     // for lfd
-static float ZeroPS[2]; // for psl_l
+static f64 ZeroF;     // for lfd
+static f32 ZeroPS[2]; // for psl_l
 
 static OSExceptionHandler* OSExceptionTable;
 

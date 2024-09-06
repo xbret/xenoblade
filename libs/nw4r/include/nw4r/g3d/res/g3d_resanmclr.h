@@ -60,7 +60,7 @@ namespace nw4r
 				return static_cast<const ResAnmClrMatData *>(mAnmClr.ofs_to_obj<ResDic>(ref().mMatDictOffset)[i]);
 			}
 			
-			void GetAnmResult(ClrAnmResult *, u32, float) const;
+			void GetAnmResult(ClrAnmResult *, u32, f32) const;
 		};
 	}
 }

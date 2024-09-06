@@ -14,7 +14,7 @@ namespace nw4r
 	{
 		namespace
 		{
-			const ResAnmTexPatAnmFramesData * SearchFrame(const ResAnmTexPatAnmData * pData, float time)
+			const ResAnmTexPatAnmFramesData * SearchFrame(const ResAnmTexPatAnmData * pData, f32 time)
 			{
 				const ResAnmTexPatAnmFramesData * pFirst = pData->mFrames;
 				const ResAnmTexPatAnmFramesData * pLast = pData->mFrames + (pData->mCount - 1);
@@ -23,7 +23,7 @@ namespace nw4r
 				
 				if (pLast->mTime <= time) return pLast;
 				
-				float t = time - pFirst->mTime;
+				f32 t = time - pFirst->mTime;
 				
 				const ResAnmTexPatAnmFramesData * pCur = pData->mFrames + F32ToU16(pData->FLOAT_0x4 * (t * U16ToF32(pData->mCount)));
 				
@@ -53,7 +53,7 @@ namespace nw4r
 			}
 		}
 		
-		void ResAnmTexPat::GetAnmResult(TexPatAnmResult * pResult, u32 i, float time) const
+		void ResAnmTexPat::GetAnmResult(TexPatAnmResult * pResult, u32 i, f32 time) const
 		{
 			const ResTex * pTexArray;
 			const ResPltt * pPlttArray;

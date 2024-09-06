@@ -1,7 +1,7 @@
 #include <math.h>
 #include <revolution/MTX.h>
 
-static float Unit01[] = { 0.0f, 1.0f };
+static f32 Unit01[] = { 0.0f, 1.0f };
 
 //unused
 void C_MTXIdentity(){
@@ -12,10 +12,10 @@ void PSMTXIdentity(register Mtx m) {
   (void)1.0f;
   (void)0.0f;
 
-  register float tmp0 = 0.0F;
-  register float tmp1 = 1.0F;
-  register float tmp2;
-  register float tmp3;
+  register f32 tmp0 = 0.0F;
+  register f32 tmp1 = 1.0F;
+  register f32 tmp2;
+  register f32 tmp3;
   asm
   {
     psq_st tmp0, 8(m), 0, 0;
@@ -116,11 +116,11 @@ void C_MTXConcatArray(){
 
 void PSMTXConcatArray(const register Mtx mtx1, const register Mtx mtx2,
                       register Mtx mtx3, register u32 vv4) {
-  register float va0, va1, va2, va3, va4, va5;
-  register float vb0, vb1, vb2, vb3, vb4, vb5;
-  register float vd0, vd1, vd2, vd3, vd4, vd5;
-  register float u01;
-  register float* u01Ptr = Unit01;
+  register f32 va0, va1, va2, va3, va4, va5;
+  register f32 vb0, vb1, vb2, vb3, vb4, vb5;
+  register f32 vd0, vd1, vd2, vd3, vd4, vd5;
+  register f32 u01;
+  register f32* u01Ptr = Unit01;
 
   asm {
     psq_l va0, 0(mtx1), 0, 0;
@@ -211,9 +211,9 @@ void C_MTXTranspose(){
 
 void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
 {
-    register float c_zero = 0.0f;
-    register float row0a, row1a, row0b, row1b;
-    register float trns0, trns1, trns2;
+    register f32 c_zero = 0.0f;
+    register f32 row0a, row1a, row0b, row1b;
+    register f32 trns0, trns1, trns2;
 
     asm
     {
@@ -313,8 +313,8 @@ loc0:
 void C_MTXRotRad(){
 }
 
-void PSMTXRotRad(Mtx m, char axis, float rad) {
-  float sinA, cosA;
+void PSMTXRotRad(Mtx m, char axis, f32 rad) {
+  f32 sinA, cosA;
   sinA = sinf(rad);
   cosA = cosf(rad);
   PSMTXRotTrig(m, axis, sinA, cosA);
@@ -324,10 +324,10 @@ void PSMTXRotRad(Mtx m, char axis, float rad) {
 void C_MTXRotTrig(){
 }
 
-void PSMTXRotTrig(register Mtx m, register char arg2, register float arg3,
-                  register float arg4) {
-  register float vv1, vv2, vv3;
-  register float vv4, vv5, vv6, vv7;
+void PSMTXRotTrig(register Mtx m, register char arg2, register f32 arg3,
+                  register f32 arg4) {
+  register f32 vv1, vv2, vv3;
+  register f32 vv4, vv5, vv6, vv7;
 
   asm {
     frsp arg3, arg3;
@@ -389,10 +389,10 @@ void C_MTXRotAxisRad(){
 }
 
 void __PSMTXRotAxisRadInternal(register Mtx m, const register Vec* arg2,
-                               register float arg3, register float arg4) {
-  register float vv1, vv2;
-  register float tmp0, tmp1, tmp2, tmp3, tmp4;
-  register float tmp5, tmp6, tmp7, tmp8, tmp9;
+                               register f32 arg3, register f32 arg4) {
+  register f32 vv1, vv2;
+  register f32 tmp0, tmp1, tmp2, tmp3, tmp4;
+  register f32 tmp5, tmp6, tmp7, tmp8, tmp9;
   tmp9 = 0.5F;
   tmp8 = 3.0F;
   asm
@@ -441,9 +441,9 @@ void __PSMTXRotAxisRadInternal(register Mtx m, const register Vec* arg2,
   }
 }
 
-void PSMTXRotAxisRad(Mtx m, const Vec* arg2, float arg3) {
-  float arg2sin = sinf(arg3);
-  float arg2cos = cosf(arg3);
+void PSMTXRotAxisRad(Mtx m, const Vec* arg2, f32 arg3) {
+  f32 arg2sin = sinf(arg3);
+  f32 arg2cos = cosf(arg3);
   __PSMTXRotAxisRadInternal(m, arg2, arg2sin, arg2cos);
 }
 
@@ -451,10 +451,10 @@ void PSMTXRotAxisRad(Mtx m, const Vec* arg2, float arg3) {
 void C_MTXTrans(){
 }
 
-void PSMTXTrans(register Mtx m, register float _x, register float _y,
-                register float _z) {
-  register float vv0 = 0.0f;
-  register float vv1 = 1.0f;
+void PSMTXTrans(register Mtx m, register f32 _x, register f32 _y,
+                register f32 _z) {
+  register f32 vv0 = 0.0f;
+  register f32 vv1 = 1.0f;
   asm
   {
     stfs _x, 12(m);
@@ -475,7 +475,7 @@ void C_MTXTransApply(){
 }
 
 asm void PSMTXTransApply(const register Mtx in, register Mtx out,
-                         register float _x, register float _y, register float _z) {
+                         register f32 _x, register f32 _y, register f32 _z) {
   nofralloc;
   psq_l fp4, 0(in), 0, 0;
   frsp _x, _x;
@@ -502,9 +502,9 @@ asm void PSMTXTransApply(const register Mtx in, register Mtx out,
 void C_MTXScale(){
 }
 
-void PSMTXScale(register Mtx m, register float _x, register float _y,
-                register float _z) {
-  register float vv0 = 0.0F;
+void PSMTXScale(register Mtx m, register f32 _x, register f32 _y,
+                register f32 _z) {
+  register f32 vv0 = 0.0F;
   asm
   {
     stfs _x, 0(m);
@@ -523,7 +523,7 @@ void C_MTXScaleApply(){
 }
 
 asm void PSMTXScaleApply(const register Mtx in, register Mtx out,
-                         register float _x, register float _y, register float _z) {
+                         register f32 _x, register f32 _y, register f32 _z) {
   nofralloc;
   frsp _x, _x;
   psq_l fp4, 0(in), 0, 0;
@@ -554,9 +554,9 @@ void C_MTXQuat(){
 }
 
 void PSMTXQuat(register Mtx m, const register Quaternion* quat) {
-  register float vv0, vv1, vv2, vv3;
-  register float tmp0, tmp1, tmp2, tmp3, tmp4;
-  register float tmp5, tmp6, tmp7, tmp8, tmp9;
+  register f32 vv0, vv1, vv2, vv3;
+  register f32 tmp0, tmp1, tmp2, tmp3, tmp4;
+  register f32 tmp5, tmp6, tmp7, tmp8, tmp9;
   vv1 = 1.0f;
   asm
   {
@@ -633,10 +633,10 @@ void C_MTXLookAt(Mtx m, const Vec* _pos, const Vec* _up, const Vec* _dest) {
   m[2][3] = -(_pos->x * vv0.x + _pos->y * vv0.y + _pos->z * vv0.z);
 }
 
-void C_MTXLightFrustum(Mtx m, float arg1, float arg2, float arg3, float arg4,
-                       float arg5, float arg6, float arg7, float arg8,
-                       float arg9) {
-  float tmp = 1.0f / (arg4 - arg3);
+void C_MTXLightFrustum(Mtx m, f32 arg1, f32 arg2, f32 arg3, f32 arg4,
+                       f32 arg5, f32 arg6, f32 arg7, f32 arg8,
+                       f32 arg9) {
+  f32 tmp = 1.0f / (arg4 - arg3);
   m[0][0] = ((2 * arg5) * tmp) * arg6;
   m[0][1] = 0.0f;
   m[0][2] = (((arg4 + arg3) * tmp) * arg6) - arg8;
@@ -652,10 +652,10 @@ void C_MTXLightFrustum(Mtx m, float arg1, float arg2, float arg3, float arg4,
   m[2][3] = 0.0f;
 }
 
-void C_MTXLightPerspective(Mtx m, float arg1, float arg2, float arg3, float arg4,
-                           float arg5, float arg6) {
-  float angle = arg1 * 0.5f * 0.01745329252f;
-  float cot = 1.0f / tanf(angle);
+void C_MTXLightPerspective(Mtx m, f32 arg1, f32 arg2, f32 arg3, f32 arg4,
+                           f32 arg5, f32 arg6) {
+  f32 angle = arg1 * 0.5f * 0.01745329252f;
+  f32 cot = 1.0f / tanf(angle);
   m[0][0] = (cot / arg2) * arg3;
   m[0][1] = 0.0f;
   m[0][2] = -arg5;
@@ -670,9 +670,9 @@ void C_MTXLightPerspective(Mtx m, float arg1, float arg2, float arg3, float arg4
   m[2][3] = 0.0f;
 }
 
-void C_MTXLightOrtho(Mtx m, float arg2, float arg3, float arg4, float arg5, float arg6,
-                     float arg7, float arg8, float arg9) {
-  float tmp;
+void C_MTXLightOrtho(Mtx m, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6,
+                     f32 arg7, f32 arg8, f32 arg9) {
+  f32 tmp;
   tmp = 1.0f / (arg5 - arg4);
   m[0][0] = (2.0f * tmp * arg6);
   m[0][1] = 0.0f;

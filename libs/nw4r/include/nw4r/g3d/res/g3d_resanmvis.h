@@ -74,7 +74,7 @@ namespace nw4r
 				return ref().mInfo.mNumNodes;
 			}
 			
-			bool GetAnmResult(u32, float) const;
+			bool GetAnmResult(u32, f32) const;
 		};
 	}
 }

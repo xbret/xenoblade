@@ -7,7 +7,7 @@ namespace nw4r
 	{
 		using namespace detail;
 		
-		void ResAnmClr::GetAnmResult(ClrAnmResult * pResult, u32 i, float time) const
+		void ResAnmClr::GetAnmResult(ClrAnmResult * pResult, u32 i, f32 time) const
 		{
 			const ResAnmClrMatData * pMatAnm = GetMatAnm(i);
 			
@@ -19,7 +19,7 @@ namespace nw4r
 			
 			if (!flags) return;
 			
-			float t = ClipFrame<const ResAnmClrInfoData>(anmClr.mInfo, time);
+			f32 t = ClipFrame<const ResAnmClrInfoData>(anmClr.mInfo, time);
 			
 			for (int i = 0; i < ClrAnmResult::ANM_COUNT; i++, flags >>= 2)
 			{

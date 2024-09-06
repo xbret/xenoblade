@@ -21,11 +21,11 @@ namespace nw4r
 					f'(x1)	= d1
 				The value returned is f(x).
 				*/
-				float HermiteInterpolation(float y0, float d0, float y1, float d1, float x, float x1)
+				f32 HermiteInterpolation(f32 y0, f32 d0, f32 y1, f32 d1, f32 x, f32 x1)
 				{
 					// Linear factors
-					float lf0 = x * FInv(x1); // x / x1
-					float lf1 = lf0 - 1.0f; // (x - x1) / x1
+					f32 lf0 = x * FInv(x1); // x / x1
+					f32 lf1 = lf0 - 1.0f; // (x - x1) / x1
 					
 					return y0 + lf0 * (lf0 * ((2.0f * lf0 - 3.0f) * (y0 - y1))) + x * lf1 * (lf1 * d0 + lf0 * d1);
 				}
@@ -42,7 +42,7 @@ namespace nw4r
 				}
 			}
 			
-			float GetResKeyFrameAnmResult(const ResKeyFrameAnmData * pData, float time)
+			f32 GetResKeyFrameAnmResult(const ResKeyFrameAnmData * pData, f32 time)
 			{
 				const ResKeyFrameAnmFramesData * pLast = pData->mFrames + (pData->mCount - 1);
 				
@@ -50,7 +50,7 @@ namespace nw4r
 				
 				if (pLast->mTime <= time) return pLast->mValue;
 				
-				float t = time - pData->mFrames[0].mTime;
+				f32 t = time - pData->mFrames[0].mTime;
 				
 				const ResKeyFrameAnmFramesData * pCur = pData->mFrames + F32ToU16(pData->FLOAT_0x4 * (t * U16ToF32(pData->mCount)));
 				
@@ -73,18 +73,18 @@ namespace nw4r
 				
 				if (pCur->mTime == time) return pCur->mValue;
 				
-				float x = time - pCur[0].mTime;
-				float x1 = pCur[1].mTime - pCur[0].mTime;
+				f32 x = time - pCur[0].mTime;
+				f32 x1 = pCur[1].mTime - pCur[0].mTime;
 				
 				return HermiteInterpolation(pCur[0].mValue, pCur[0].mDerivative, pCur[1].mValue, pCur[1].mDerivative, x, x1);
 			}
 			
-			u32 GetResColorAnmResult(const ResColorAnmFramesData * pData, float time)
+			u32 GetResColorAnmResult(const ResColorAnmFramesData * pData, f32 time)
 			{
-				float integralPart;
+				f32 integralPart;
 				int i;
 				s16 t;
-				float fractionalPart = FModf(time, &integralPart);
+				f32 fractionalPart = FModf(time, &integralPart);
 				
 				i = integralPart;
 				

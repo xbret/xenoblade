@@ -10,7 +10,7 @@ typedef struct AXFX_BUS;
 typedef struct AXFX_BUFFERUPDATE;
 
 typedef struct AXFX_CHORUS_EXP_DELAY {
-    float* line[3]; // at 0x0
+    f32* line[3]; // at 0x0
     u32 inPos;    // at 0xC
     u32 outPos;   // at 0x10
     u32 lastPos;  // at 0x14
@@ -34,17 +34,17 @@ typedef struct AXFX_CHORUS_EXP_LFO {
 typedef struct AXFX_CHORUS_EXP {
     AXFX_CHORUS_EXP_DELAY delay; // at 0x0
     AXFX_CHORUS_EXP_LFO lfo;     // at 0x20
-    float history[3][4];           // at 0x48
+    f32 history[3][4];           // at 0x48
     u32 histIndex;               // at 0x78
     u32 active;                  // at 0x7C
-    float delayTime;               // at 0x80
-    float depth;                   // at 0x84
-    float rate;                    // at 0x88
-    float feedback;                // at 0x8C
+    f32 delayTime;               // at 0x80
+    f32 depth;                   // at 0x84
+    f32 rate;                    // at 0x88
+    f32 feedback;                // at 0x8C
     struct AXFX_BUS* busIn;      // at 0x90
     struct AXFX_BUS* busOut;     // at 0x94
-    float outGain;                 // at 0x98
-    float sendGain;                // at 0x9C
+    f32 outGain;                 // at 0x98
+    f32 sendGain;                // at 0x9C
 } AXFX_CHORUS_EXP;
 
 u32 AXFXChorusExpGetMemSize(const AXFX_CHORUS_EXP* fx);

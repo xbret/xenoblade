@@ -41,7 +41,7 @@ extern volatile union {
     int i;
     unsigned int ui;
     void* p;
-    float f;
+    f32 f;
 } WGPIPE : 0xCC008000;
 
 /**

@@ -117,7 +117,7 @@ namespace nw4r
 				mManager->Free(this);
 			}
 			
-			UNKTYPE SeqSound::SetTempoRatio(float tempoRatio)
+			UNKTYPE SeqSound::SetTempoRatio(f32 tempoRatio)
 			{
 				mPlayer.SetTempoRatio(tempoRatio);
 			}
@@ -139,12 +139,12 @@ namespace nw4r
 				mManager->UpdatePriority(this, BasicSound::CalcCurrentPlayerPriority());
 			}
 			
-			UNKTYPE SeqSound::SetTrackVolume(u32 r_3, float f_1)
+			UNKTYPE SeqSound::SetTrackVolume(u32 r_3, f32 f_1)
 			{
 				mPlayer.SetTrackVolume(r_3, f_1);
 			}
 			
-			UNKTYPE SeqSound::SetTrackPitch(u32 r_3, float f_1)
+			UNKTYPE SeqSound::SetTrackPitch(u32 r_3, f32 f_1)
 			{
 				mPlayer.SetTrackPitch(r_3, f_1);
 			}

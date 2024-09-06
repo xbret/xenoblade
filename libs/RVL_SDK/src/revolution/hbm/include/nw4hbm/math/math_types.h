@@ -16,7 +16,7 @@ namespace nw4hbm
 	{
 		struct _VEC2
 		{
-			float x, y;
+			f32 x, y;
 		};
 		
 		struct VEC2
@@ -25,7 +25,7 @@ namespace nw4hbm
 
 			inline VEC2() {}
 
-			inline VEC2(float x, float y)
+			inline VEC2(f32 x, f32 y)
 			{
 				mCoords.x = x;
 				mCoords.y = y;
@@ -34,7 +34,7 @@ namespace nw4hbm
 		
 		struct _VEC3
 		{
-			float x, y, z;
+			f32 x, y, z;
 		};
 		
 		inline void VEC3Add(register VEC3 * destVec, register const VEC3 * srcVec1, register const VEC3 * srcVec2)
@@ -67,7 +67,7 @@ namespace nw4hbm
 			}
 		}
 		
-		inline void VEC3Scale(register VEC3 * outVec, register const VEC3 * inVec, register float scalar)
+		inline void VEC3Scale(register VEC3 * outVec, register const VEC3 * inVec, register f32 scalar)
 		{
 			asm
 			{
@@ -80,9 +80,9 @@ namespace nw4hbm
 			}
 		}
 		
-		inline float VEC3Dot(register const VEC3 * vec1, register const VEC3 * vec2)
+		inline f32 VEC3Dot(register const VEC3 * vec1, register const VEC3 * vec2)
 		{
-			register float a, b, d, c, e;
+			register f32 a, b, d, c, e;
 			asm
 			{
 				psq_l a, 0x4(vec1), 0, 0
@@ -110,7 +110,7 @@ namespace nw4hbm
 				return *this;
 			}
 			
-			inline VEC3(float x, float y, float z)
+			inline VEC3(f32 x, f32 y, f32 z)
 			{
 				mCoords.x = x;
 				mCoords.y = y;
@@ -144,15 +144,15 @@ namespace nw4hbm
 		
 		struct _MTX33
 		{
-			float tbl[3][3];
+			f32 tbl[3][3];
 		};
 
 		struct MTX33
 		{
 			_MTX33 mEntries;
 
-			typedef float (* MtxRef)[3];
-			typedef const float (* MtxRefConst)[3];
+			typedef f32 (* MtxRef)[3];
+			typedef const f32 (* MtxRefConst)[3];
 			
 			inline operator MtxRef()
 			{
@@ -167,15 +167,15 @@ namespace nw4hbm
 
 		struct _MTX34
 		{
-			float tbl[3][4];
+			f32 tbl[3][4];
 		};
 		
 		struct MTX34
 		{
 			_MTX34 mEntries;
 			
-			typedef float (* MtxRef)[4];
-			typedef const float (* MtxRefConst)[4];
+			typedef f32 (* MtxRef)[4];
+			typedef const f32 (* MtxRefConst)[4];
 			
 			inline operator MtxRef()
 			{
@@ -190,15 +190,15 @@ namespace nw4hbm
 
 		struct _MTX44
 		{
-			float tbl[4][4];
+			f32 tbl[4][4];
 		};
 
 		struct MTX44
 		{
 			_MTX44 mEntries;
 
-			typedef float (* MtxRef)[4];
-			typedef const float (* MtxRefConst)[4];
+			typedef f32 (* MtxRef)[4];
+			typedef const f32 (* MtxRefConst)[4];
 			
 			inline operator MtxRef()
 			{
@@ -224,7 +224,7 @@ namespace nw4hbm
 			PSVECNormalize(*in, *out);
 		}
 		
-		inline float VEC3DistSq(const VEC3 * point1, const VEC3 * point2)
+		inline f32 VEC3DistSq(const VEC3 * point1, const VEC3 * point2)
 		{
 			return PSVECSquareDistance(*point1, *point2);
 		}
@@ -254,15 +254,15 @@ namespace nw4hbm
 
 		void MTX34Add(MTX34* out, const MTX34* mtx1, const MTX34* mtx2);
 
-		void MTX34Mult(MTX34* out, const MTX34* in, float factor);
+		void MTX34Mult(MTX34* out, const MTX34* in, f32 factor);
 
 		void MTX34Scale(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
 		void MTX34Trans(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
-		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, float );
+		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, f32 );
 
-		MTX34 * MTX34RotXYZFIdx(MTX34 *, float, float, float);
+		MTX34 * MTX34RotXYZFIdx(MTX34 *, f32, f32, f32);
 
 		inline void MTX34Identity(MTX34 * mtx)
 		{
@@ -282,7 +282,7 @@ namespace nw4hbm
 
 		//UNKTYPE GetDirMtxY(MTX34 *, const VEC3 &);
 		
-		MTX34 * MTX34RotXYZFIdx(MTX34 *, float, float, float);
+		MTX34 * MTX34RotXYZFIdx(MTX34 *, f32, f32, f32);
 		
 		inline void MTX34Scale(MTX34 * outMtx, const VEC3 * vec, const MTX34 * inMtx)
 		{
@@ -291,14 +291,14 @@ namespace nw4hbm
 		
 		//UNKTYPE MtxGetRotation(const MTX34 &, VEC3 *);
 		
-		float FrSqrt(float);
+		f32 FrSqrt(f32);
 		
-		inline float FSqrt(float f)
+		inline f32 FSqrt(f32 f)
 		{
 			return f * FrSqrt(f);
 		}
 		
-		inline float VEC3Len(const VEC3 * in)
+		inline f32 VEC3Len(const VEC3 * in)
 		{
 			return PSVECMag(*in);
 		}

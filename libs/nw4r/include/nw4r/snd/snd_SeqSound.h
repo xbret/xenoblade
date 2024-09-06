@@ -62,14 +62,14 @@ namespace nw4r
 				
 				void Shutdown();
 				
-				UNKTYPE SetTempoRatio(float);
+				UNKTYPE SetTempoRatio(f32);
 				UNKTYPE SetChannelPriority(int);
 				UNKTYPE SetReleasePriorityFix(bool);
 				
 				UNKTYPE SetPlayerPriority(int);
 				
-				UNKTYPE SetTrackVolume(u32, float);
-				UNKTYPE SetTrackPitch(u32, float);
+				UNKTYPE SetTrackVolume(u32, f32);
+				UNKTYPE SetTrackPitch(u32, f32);
 				
 				bool WriteVariable(int, short);
 				static bool WriteGlobalVariable(int, short);

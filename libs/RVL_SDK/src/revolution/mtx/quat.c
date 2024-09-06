@@ -5,7 +5,7 @@ DECOMP_FORCELITERAL(quat_c, 0.00001f, 1.0f, 0.0f);
 
 //TODO: get it to match with a register var instead of f3
 void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2, register Quaternion* out) {
-	register float vv1, vv2, vv3, vv4;
+	register f32 vv1, vv2, vv3, vv4;
 	asm
 	{
 		psq_l vv1, 0(quat1), 0, 0;
@@ -21,10 +21,10 @@ void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat
 
 void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
                     register Quaternion* prod) {
-    register float axy, azw;
-    register float bxy, bzw;
-    register float naxay, naxy, nazw;
-    register float work1, work2, work3, work4, work5;
+    register f32 axy, azw;
+    register f32 bxy, bzw;
+    register f32 naxay, naxy, nazw;
+    register f32 work1, work2, work3, work4, work5;
 
     // clang-format off
     asm {
@@ -65,8 +65,8 @@ void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
 }
 
 void PSQUATScale(const register Quaternion* quat1, register Quaternion* quat2,
-								 register float ff1) {
-	register float vv1, vv2;
+								 register f32 ff1) {
+	register f32 vv1, vv2;
 	asm
 	{
 		psq_l    vv1, 0(quat1), 0, 0;
@@ -78,9 +78,9 @@ void PSQUATScale(const register Quaternion* quat1, register Quaternion* quat2,
 	}
 }
 
-float PSQUATDotProduct(const register Quaternion* quat1,
+f32 PSQUATDotProduct(const register Quaternion* quat1,
 										 const register Quaternion* quat2) {
-	register float vv1, vv2, vv3, vv4, out;
+	register f32 vv1, vv2, vv3, vv4, out;
 	asm
 	{
 		psq_l vv1, 0(quat1), 0, 0;
@@ -95,10 +95,10 @@ float PSQUATDotProduct(const register Quaternion* quat1,
 }
 
 void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
-    register float xy, zw;
-    register float xy2, dot;
-    register float work0, work1, work2, work3;
-    register float c_epsilon, c_half, c_three;
+    register f32 xy, zw;
+    register f32 xy2, dot;
+    register f32 work0, work1, work2, work3;
+    register f32 c_epsilon, c_half, c_three;
 
     c_epsilon = 0.00001f;
     c_half = 0.5f;
@@ -145,9 +145,9 @@ void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
 //unused
 /*
 void PSQUATInverse(const register Quaternion* src, register Quaternion* inv) {
-	register float vv1, vv2, vv3, vv4;
-	register float vv5, vv6, vv7, vv8, vv9, vvA, vvB;
-	register float vvC = 1.0F;
+	register f32 vv1, vv2, vv3, vv4;
+	register f32 vv5, vv6, vv7, vv8, vv9, vvA, vvB;
+	register f32 vvC = 1.0F;
 	asm {
 		psq_l       vv1, 0(src), 0, 0;
 		ps_mul      vv5, vv1, vv1;
@@ -177,15 +177,15 @@ loc1:
 }
 */
 
-inline float mySqrtf(float x){
+inline f32 mySqrtf(f32 x){
 	return sqrt(x);
 }
 
 void C_QUATMtx(Quaternion* quat, const Mtx mtx) {
-	float root, trace;
+	f32 root, trace;
 	u32 dmax, dnext, dlast;
 	u32 next[3] = {1, 2, 0};
-	float temp[3];
+	f32 temp[3];
 
 	trace = mtx[0][0] + mtx[1][1] + mtx[2][2];
 
@@ -232,7 +232,7 @@ void C_QUATMtx(Quaternion* quat, const Mtx mtx) {
 //unused
 /*
 void C_QUATLerp(const Quaternion* quat1, const Quaternion* quat2,
-								Quaternion* out, float f) {
+								Quaternion* out, f32 f) {
 	out->x = f * (quat2->x - quat1->x) + quat1->x;
 	out->y = f * (quat2->y - quat1->y) + quat1->y;
 	out->z = f * (quat2->z - quat1->z) + quat1->z;
@@ -240,10 +240,10 @@ void C_QUATLerp(const Quaternion* quat1, const Quaternion* quat2,
 }*/
 
 void C_QUATSlerp(const Quaternion* a, const Quaternion* b, Quaternion* out,
-                 float t) {
-    float dot;
-    float coeffa, coeffb;
-    float theta, sintheta;
+                 f32 t) {
+    f32 dot;
+    f32 coeffa, coeffb;
+    f32 theta, sintheta;
 
     dot = a->x * b->x + a->y * b->y + a->z * b->z + a->w * b->w;
     coeffb = 1.0f;

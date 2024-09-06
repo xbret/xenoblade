@@ -23,11 +23,11 @@ namespace nw4r
 				FLAG_ANM_EXISTS,
 			};
 
-			float mScaleX; // at 0x0
-			float mScaleY; // at 0x4
-			float mRotation; // at 0x8
-			float mTranslationX; // at 0xc
-			float mTranslationY; // at 0x10
+			f32 mScaleX; // at 0x0
+			f32 mScaleY; // at 0x4
+			f32 mRotation; // at 0x8
+			f32 mTranslationX; // at 0xc
+			f32 mTranslationY; // at 0x10
 		};
 		
 		struct TexSrtAnmResult

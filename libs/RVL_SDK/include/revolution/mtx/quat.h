@@ -9,13 +9,13 @@ extern "C" {
 
 void PSQUATAdd(const Quaternion*, const Quaternion*, Quaternion*);
 void PSQUATMultiply(const Quaternion*, const Quaternion*, Quaternion*);
-void PSQUATScale(const Quaternion*, Quaternion*, float);
-float PSQUATDotProduct(const Quaternion*, const Quaternion*);
+void PSQUATScale(const Quaternion*, Quaternion*, f32);
+f32 PSQUATDotProduct(const Quaternion*, const Quaternion*);
 void PSQUATNormalize(const Quaternion*, Quaternion*);
 void PSQUATInverse(const Quaternion*, Quaternion*);
 void C_QUATMtx(Quaternion*, const Mtx);
-void C_QUATLerp(const Quaternion*, const Quaternion*, Quaternion*, float);
-void C_QUATSlerp(const Quaternion*, const Quaternion*, Quaternion*, float);
+void C_QUATLerp(const Quaternion*, const Quaternion*, Quaternion*, f32);
+void C_QUATSlerp(const Quaternion*, const Quaternion*, Quaternion*, f32);
 
 
 #ifdef __cplusplus

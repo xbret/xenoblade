@@ -27,11 +27,11 @@ namespace nw4r
 				c = cAngle * cFactor
 				d = dAngle * dFactor
 			*/
-			float SolveLinerFunction(float x, float dAngle, float cAngle, float dFactor, float cFactor) // typo
+			f32 SolveLinerFunction(f32 x, f32 dAngle, f32 cAngle, f32 dFactor, f32 cFactor) // typo
 			{
 				if (dAngle == cAngle) return (dFactor + cFactor) / 2;
 				
-				float b = dAngle - cAngle;
+				f32 b = dAngle - cAngle;
 				
 				return x * (cFactor - dFactor) / b + (dAngle * dFactor - cAngle * cFactor) / b;
 			}
@@ -83,13 +83,13 @@ namespace nw4r
 			//r28 <- this
 			//r29 <- pParam
 			const Sound3DActorParam * pActorParam = static_cast<const Sound3DActorParam *>(r30_7);
-			float angle;
-			float f30;
-			float distance;
-			float f29;
-			float f28;
-			float f_5;
-			float f_0;
+			f32 angle;
+			f32 f30;
+			f32 distance;
+			f32 f29;
+			f32 f28;
+			f32 f_5;
+			f32 f_0;
 			
 			Sound3DListener * pListener = mListener;
 			
@@ -107,10 +107,10 @@ namespace nw4r
 			f29 = 1.0f;
 			if (r31_8 & 9 && distance > pListener->mMaxVolumeDistance)
 			{
-				float f2_0;
-				float f2_1;
-				float f2;
-				float f1;
+				f32 f2_0;
+				f32 f2_1;
+				f32 f2;
+				f32 f1;
 				//800414CC
 				switch (pActorParam->mSound3DParam.BYTE_0x4)
 				{
@@ -127,7 +127,7 @@ namespace nw4r
 						f2_1 = pListener->mUnitDistance;
 						f2 = f2_0 / f2_1 * pActorParam->mSound3DParam.BYTE_0x5;
 						f2 = f2 / 256.0f;
-						f29 = Max<float>(0.0f, 1.0f - f2);
+						f29 = Max<f32>(0.0f, 1.0f - f2);
 						break;
 				}
 				//80041570
@@ -157,14 +157,14 @@ namespace nw4r
 					stack_0x8.z = stack_0x20.z;
 					*/
 					//800415C4
-					float f1_1 = VEC3Len(&stack_0x8);
+					f32 f1_1 = VEC3Len(&stack_0x8);
 					if (f1_1 > pListener->mInteriorSize)
 					{
 						stack_0x8.x *= pListener->mInteriorSize / f1_1;
 						stack_0x8.z *= pListener->mInteriorSize / f1_1;
 					}
 					//800415F8
-					float f1_2 = VEC3Len(&stack_0x8);
+					f32 f1_2 = VEC3Len(&stack_0x8);
 					
 					stack_0x14.x = stack_0x20.x * f1_2 / distance;
 					stack_0x14.y = 0.0f;
@@ -177,25 +177,25 @@ namespace nw4r
 				
 				f28 = VEC3Len(&stack_0x14) / pListener->mInteriorSize;
 				
-				float f31_0;
-				float f31_1;
-				float f31;
-				float f27;
-				float f4;
-				float f3;
+				f32 f31_0;
+				f32 f31_1;
+				f32 f31;
+				f32 f27;
+				f32 f4;
+				f32 f3;
 				
 				switch (AxManager::GetInstance().GetOutputMode())
 				{
 					case OUTPUT_MODE_SURROUND:
 					case OUTPUT_MODE_DPL2:
 					{	//80041670
-						static float angleRearLeft = -FLOAT_0x1C; // at 0x804BEAC0
-						static float angleFrontLeft = -FLOAT_0x18; // at 0x804BEAC8
-						static float angleFrontRight = FLOAT_0x18; // at 0x804BEAD0
-						static float angleRearRight = FLOAT_0x1C; // at 0x804BEAD8
+						static f32 angleRearLeft = -FLOAT_0x1C; // at 0x804BEAC0
+						static f32 angleFrontLeft = -FLOAT_0x18; // at 0x804BEAC8
+						static f32 angleFrontRight = FLOAT_0x18; // at 0x804BEAD0
+						static f32 angleRearRight = FLOAT_0x1C; // at 0x804BEAD8
 						
 						//800416E8
-						//float f30, f27;
+						//f32 f30, f27;
 						if (angle < angleRearLeft)
 						{
 							//800416F4
@@ -270,10 +270,10 @@ namespace nw4r
 					case OUTPUT_MODE_STEREO:
 					{
 						//8004195C
-						static float angleRearLeft = -NW4R_MATH_PI + FLOAT_0x14; // at 0x804BEAE0
-						static float angleFrontLeft = -FLOAT_0x14; // at 0x804BEAE8
-						static float angleFrontRight = FLOAT_0x14; // at 0x804BEAF0
-						static float angleRearRight = NW4R_MATH_PI - FLOAT_0x14; // at 0x804BEAF8
+						static f32 angleRearLeft = -NW4R_MATH_PI + FLOAT_0x14; // at 0x804BEAE0
+						static f32 angleFrontLeft = -FLOAT_0x14; // at 0x804BEAE8
+						static f32 angleFrontRight = FLOAT_0x14; // at 0x804BEAF0
+						static f32 angleRearRight = NW4R_MATH_PI - FLOAT_0x14; // at 0x804BEAF8
 						//800419E0
 						if (angle < angleRearLeft)
 						{

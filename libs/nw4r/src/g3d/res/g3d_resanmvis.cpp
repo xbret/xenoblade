@@ -9,7 +9,7 @@ namespace nw4r
 	{
 		using namespace detail;
 		
-		bool ResAnmVis::GetAnmResult(u32 i, float time) const
+		bool ResAnmVis::GetAnmResult(u32 i, f32 time) const
 		{
 			const ResAnmVisNodeData * pNodeAnm = GetNodeAnm(i);
 			
@@ -17,7 +17,7 @@ namespace nw4r
 			
 			if (pNodeAnm->mFlags & 0x2) return pNodeAnm->mFlags & 0x1;
 			
-			float t = ClipFrame<const ResAnmVisInfoData>(anmVis.mInfo, time);
+			f32 t = ClipFrame<const ResAnmVisInfoData>(anmVis.mInfo, time);
 			
 			return GetResBoolAnmFramesResult(pNodeAnm->mBoolFrames, FFloor(t));
 		}
