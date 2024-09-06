@@ -56,7 +56,7 @@ void __OSSyncTimeWithNetRM(){
 void REXInit(){
 }
 
-static BOOL NWC24Shutdown_(u32 pass, u32 event);
+static BOOL NWC24Shutdown_(BOOL final, u32 event);
 static s32 NWC24iOpenResourceManager_(const char* funcName, const char* path, s32* resultPtr, IPCOpenMode mode);
 static s32 NWC24iIoctlResourceManager_(const char* funcName, s32 fd, s32 type, void* in, s32 inSize, void* out, s32 outSize);
 static s32 NWC24iIoctlResourceManagerAsync_(const char* funcName, s32 fd, s32 type, void* in, s32 inSize, void* out, s32 outSize, void* callbackArg);
@@ -158,13 +158,13 @@ static s32 NWC24iRequestShutdown(u32 param_1, s32* callbackArg){
 
 static BOOL NWC24iIsAsyncRequestPending_();
 
-static BOOL NWC24Shutdown_(u32 pass, u32 event){
+static BOOL NWC24Shutdown_(BOOL final, u32 event){
 	static BOOL shuttingdown = FALSE;
 	static s32 result = 0;
 
 	int iVar1;
 	
-	if (pass != 0) {
+	if (final != FALSE) {
 		return TRUE;
 	}
 	if (!shuttingdown) {

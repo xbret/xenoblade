@@ -29,7 +29,7 @@ typedef struct OSShutdownFunctionQueue {
 } OSShutdownFunctionQueue;
 
 void OSRegisterShutdownFunction(OSShutdownFunctionInfo* info);
-BOOL __OSCallShutdownFunctions(u32 pass, u32 event);
+BOOL __OSCallShutdownFunctions(BOOL final, u32 event);
 void __OSShutdownDevices(u32 event);
 void __OSGetDiscState(u8* out);
 void OSShutdownSystem(void);

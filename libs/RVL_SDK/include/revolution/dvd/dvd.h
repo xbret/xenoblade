@@ -9,6 +9,8 @@ extern "C" {
 #define DVD_DEVICE_CODE_READ (1 << 15)
 #define MAKE_DVD_DEVICE_CODE(x) (DVD_DEVICE_CODE_READ | (x))
 
+#define H3_HASH_TABLE_SIZE 0x18000
+
 // Forward declarations
 typedef struct DVDCommandBlock;
 typedef struct DVDFileInfo;

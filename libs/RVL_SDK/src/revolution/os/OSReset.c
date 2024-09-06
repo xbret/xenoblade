@@ -48,7 +48,7 @@ void OSRegisterShutdownFunction(OSShutdownFunctionInfo* info) {
     }
 }
 
-BOOL __OSCallShutdownFunctions(u32 pass, u32 event) {
+BOOL __OSCallShutdownFunctions(BOOL final, u32 event) {
     OSShutdownFunctionInfo* iter;
     BOOL failure;
     u32 prio;
@@ -61,7 +61,7 @@ BOOL __OSCallShutdownFunctions(u32 pass, u32 event) {
             break;
         }
 
-        failure |= !iter->func(pass, event);
+        failure |= !iter->func(final, event);
         prio = iter->prio;
     }
 

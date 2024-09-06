@@ -11,7 +11,7 @@ static s32 IpcFdArray[IPC_REQUEST_MAX];
 static void AddReqInfo(IPCRequestEx* req, s32 fd);
 static void DelReqInfo(IPCRequestEx* req, s32 fd);
 
-CW_FORCE_BSS(IPCPROFILE_c, IpcFdArray);
+DECOMP_FORCEACTIVE(ipcProfile_c, IpcFdArray);
 
 //unused
 void IPCGetNumPendingReqs(){
