@@ -23,7 +23,7 @@ void GXSetTevIndirect(GXTevStageID tevStage, GXIndTexStageID texStage,
     gxdt->lastWriteWasXF = FALSE;
 }
 
-void GXSetIndTexMtx(GXIndTexMtxID id, const float offset[2][3], s8 scaleExp) {
+void GXSetIndTexMtx(GXIndTexMtxID id, const f32 offset[2][3], s8 scaleExp) {
     u32 index;
     u32 cmd;
 

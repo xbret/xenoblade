@@ -11,9 +11,9 @@ namespace nw4hbm
 		{
 			TextWriterBase<T> * r31;
 			
-			float f0;
-			float f31;
-			float f30;
+			f32 f0;
+			f32 f31;
+			f32 f30;
 			
 			r31 = pContext->mTextWriter;
 			f31 = pContext->FLOAT_0x8;
@@ -31,10 +31,10 @@ namespace nw4hbm
 			s32 r30;
 			TextWriterBase<T> * r31;
 			
-			float f0;
-			float f1;
-			float f4;
-			float f3;
+			f32 f0;
+			f32 f1;
+			f32 f4;
+			f32 f3;
 			
 			r31 = pContext->mTextWriter;
 			r30 = r31->GetTabWidth();
@@ -88,19 +88,19 @@ namespace nw4hbm
 					
 					pRect->FLOAT_0xC = r30_newline->GetCursorY() + pContext->mTextWriter->GetFontHeight();
 					
-					register float out_0x4;
+					register f32 out_0x4;
 					
-					register float dif1;
-					register float dif2;
+					register f32 dif1;
+					register f32 dif2;
 					
-					register float out_0x0;
-					register float out_0x8;
-					register float out_0xc;
+					register f32 out_0x0;
+					register f32 out_0x8;
+					register f32 out_0xc;
 					
-					register float in_0xc;
-					register float in_0x8;
-					register float in_0x4;
-					register float in_0x0;
+					register f32 in_0xc;
+					register f32 in_0x8;
+					register f32 in_0x4;
+					register f32 in_0x0;
 					
 					in_0x0 = pRect->FLOAT_0x0;
 					in_0x4 = pRect->FLOAT_0x4;
@@ -139,20 +139,20 @@ namespace nw4hbm
 					
 					pRect->FLOAT_0xC = pRect->FLOAT_0x4 + r29_tab->GetFontHeight();
 					
-					register float out_0x4;
+					register f32 out_0x4;
 					
-					register float dif1;
-					register float dif2;
+					register f32 dif1;
+					register f32 dif2;
 					
-					register float in_0x8;
+					register f32 in_0x8;
 					
-					register float out_0x0;
-					register float out_0x8;
-					register float out_0xc;
+					register f32 out_0x0;
+					register f32 out_0x8;
+					register f32 out_0xc;
 					
-					register float in_0xc;
-					register float in_0x4;
-					register float in_0x0;
+					register f32 in_0xc;
+					register f32 in_0x4;
+					register f32 in_0x0;
 					
 					in_0x0 = pRect->FLOAT_0x0;
 					in_0x4 = pRect->FLOAT_0x4;

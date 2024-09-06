@@ -1,8 +1,8 @@
 #include <math.h>
 #include <revolution/MTX.h>
 
-void C_MTXFrustum(Mtx44 mtx, float t, float b, float l, float r, float n, float f) {
-    float invrange;
+void C_MTXFrustum(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f) {
+    f32 invrange;
 
     invrange = 1.0f / (r - l);
     mtx[0][0] = 2.0f * n * invrange;
@@ -28,10 +28,10 @@ void C_MTXFrustum(Mtx44 mtx, float t, float b, float l, float r, float n, float 
     mtx[3][3] = 0.0f;
 }
 
-void C_MTXPerspective(Mtx44 mtx, float fovy, float aspect, float n, float f) {
-    float rad, cot;
-    float invrange;
-    float fov;
+void C_MTXPerspective(Mtx44 mtx, f32 fovy, f32 aspect, f32 n, f32 f) {
+    f32 rad, cot;
+    f32 invrange;
+    f32 fov;
 
     fov = 0.5f * fovy;
 
@@ -60,8 +60,8 @@ void C_MTXPerspective(Mtx44 mtx, float fovy, float aspect, float n, float f) {
     mtx[3][3] = 0.0f;
 }
 
-void C_MTXOrtho(Mtx44 mtx, float t, float b, float l, float r, float n, float f) {
-    float invrange;
+void C_MTXOrtho(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f) {
+    f32 invrange;
 
     invrange = 1.0f / (r - l);
     mtx[0][0] = 2.0f * invrange;

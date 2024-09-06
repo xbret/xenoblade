@@ -55,7 +55,7 @@ namespace nw4r
 				return static_cast<const ResAnmTexSrtMatData *>(mAnmTexSrt.ofs_to_obj<ResDic>(ref().mMatDictOffset)[i]);
 			}
 			
-			void GetAnmResult(TexSrtAnmResult *, u32, float) const;
+			void GetAnmResult(TexSrtAnmResult *, u32, f32) const;
 		};
 	}
 }

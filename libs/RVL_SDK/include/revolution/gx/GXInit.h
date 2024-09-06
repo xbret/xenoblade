@@ -54,20 +54,20 @@ typedef struct _GXData {
     GXBool normal;             // at 0x524
     GXBool binormal;           // at 0x525
     GXProjectionType projType; // at 0x528
-    float proj[6];               // at 0x52C
+    f32 proj[6];               // at 0x52C
     union {
         struct {
-            float vpOx;   // at 0x544
-            float vpOy;   // at 0x548
-            float vpSx;   // at 0x54C
-            float vpSy;   // at 0x550
-            float vpNear; // at 0x554
-            float vpFar;  // at 0x558
+            f32 vpOx;   // at 0x544
+            f32 vpOy;   // at 0x548
+            f32 vpSx;   // at 0x54C
+            f32 vpSy;   // at 0x550
+            f32 vpNear; // at 0x554
+            f32 vpFar;  // at 0x558
         };
-        float view[6];
+        f32 view[6];
     };           // at 0x544
-    float offsetZ; // at 0x55C
-    float scaleZ;  // at 0x560
+    f32 offsetZ; // at 0x55C
+    f32 scaleZ;  // at 0x560
     char UNK_0x564[0x5F8 - 0x564];
     GXBool dlistActive; // at 0x5F8
     GXBool dlistSave;   // at 0x5F9

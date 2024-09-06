@@ -11,7 +11,7 @@ void GXSetTevIndirect(GXTevStageID tevStage, GXIndTexStageID texStage,
                       GXIndTexMtxID mtxId, GXIndTexWrap wrapS,
                       GXIndTexWrap wrapT, GXBool addPrev, GXBool utcLod,
                       GXIndTexAlphaSel alphaSel);
-void GXSetIndTexMtx(GXIndTexMtxID id, const float offset[2][3], s8 scaleExp);
+void GXSetIndTexMtx(GXIndTexMtxID id, const f32 offset[2][3], s8 scaleExp);
 void GXSetIndTexCoordScale(GXIndTexStageID stage, GXIndTexScale scaleS,
                            GXIndTexScale scaleT);
 void GXSetIndTexOrder(GXIndTexStageID stage, GXTexCoordID coord,

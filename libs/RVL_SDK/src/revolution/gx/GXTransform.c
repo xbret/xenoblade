@@ -1,8 +1,8 @@
 #include <revolution/GX.h>
 
 // TODO: Fake inline
-inline void LoadProjPS(register float* dst) {
-    register float ps_0, ps_1, ps_2;
+inline void LoadProjPS(register f32* dst) {
+    register f32 ps_0, ps_1, ps_2;
     register GXData* src;
 
     asm volatile {
@@ -16,8 +16,8 @@ inline void LoadProjPS(register float* dst) {
     }
 }
 
-inline void WriteProjPS(register volatile void* dst, register const float* src) {
-    register float ps_0, ps_1, ps_2;
+inline void WriteProjPS(register volatile void* dst, register const f32* src) {
+    register f32 ps_0, ps_1, ps_2;
 
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
@@ -29,8 +29,8 @@ inline void WriteProjPS(register volatile void* dst, register const float* src) 
     }
 }
 
-inline void Copy6Floats(register float* dst, register const float* src) {
-    register float ps_0, ps_1, ps_2;
+inline void Copy6Floats(register f32* dst, register const f32* src) {
+    register f32 ps_0, ps_1, ps_2;
 
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
@@ -74,20 +74,20 @@ void GXSetProjection(const Mtx44 proj, GXProjectionType type) {
     gxdt->gxDirtyFlags |= GX_DIRTY_PROJECTION;
 }
 
-void GXSetProjectionv(const float proj[7]) {
+void GXSetProjectionv(const f32 proj[7]) {
     gxdt->projType = proj[0] == 0.0f ? GX_PERSPECTIVE : GX_ORTHOGRAPHIC;
     Copy6Floats(gxdt->proj, proj + 1);
     gxdt->gxDirtyFlags |= GX_DIRTY_PROJECTION;
 }
 
 //unused
-void GXGetProjectionv(float proj[7]) {
+void GXGetProjectionv(f32 proj[7]) {
     proj[0] = gxdt->projType != GX_PERSPECTIVE ? 1.0f : 0.0f;
     LoadProjPS(proj + 1);
 }
 
 inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
-    register float ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
+    register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
@@ -107,7 +107,7 @@ inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
 }
 
 inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
-    register float ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
+    register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
@@ -127,7 +127,7 @@ inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
 }
 
 inline void WriteMTXPS4x2(register volatile void* dst, register const Mtx src) {
-    register float ps_0, ps_1, ps_2, ps_3;
+    register f32 ps_0, ps_1, ps_2, ps_3;
 
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
@@ -199,8 +199,8 @@ void GXLoadTexMtxIndx(){
 }
 
 void __GXSetViewport(void) {
-    float a, b, c, d, e, f;
-    float near, far;
+    f32 a, b, c, d, e, f;
+    f32 near, far;
 
     a = gxdt->vpSx / 2.0f;
     b = -gxdt->vpSy / 2.0f;
@@ -222,7 +222,7 @@ void __GXSetViewport(void) {
     WGPIPE.f = f;
 }
 
-void GXSetViewportJitter(float ox, float oy, float sx, float sy, float near, float far,
+void GXSetViewportJitter(f32 ox, f32 oy, f32 sx, f32 sy, f32 near, f32 far,
                          u32 nextField) {
     // "Field" as in VI field
     // TODO: Is this an enum? I don't know anything about the return value other
@@ -240,7 +240,7 @@ void GXSetViewportJitter(float ox, float oy, float sx, float sy, float near, flo
     gxdt->gxDirtyFlags |= GX_DIRTY_VIEWPORT;
 }
 
-void GXSetViewport(float ox, float oy, float sx, float sy, float near, float far) {
+void GXSetViewport(f32 ox, f32 oy, f32 sx, f32 sy, f32 near, f32 far) {
     gxdt->vpOx = ox;
     gxdt->vpOy = oy;
     gxdt->vpSx = sx;
@@ -251,14 +251,14 @@ void GXSetViewport(float ox, float oy, float sx, float sy, float near, float far
 }
 
 //unused
-void GXGetViewportv(float view[6]) {
+void GXGetViewportv(f32 view[6]) {
     Copy6Floats(view, gxdt->view);
 }
 
 //unused
-void GXSetZScaleOffset(float scale, float offset) {
-    gxdt->offsetZ = (float)0xFFFFFF * offset;      // ???
-    gxdt->scaleZ = 1.0f + (float)0xFFFFFF * scale; // ???
+void GXSetZScaleOffset(f32 scale, f32 offset) {
+    gxdt->offsetZ = (f32)0xFFFFFF * offset;      // ???
+    gxdt->scaleZ = 1.0f + (f32)0xFFFFFF * scale; // ???
     gxdt->gxDirtyFlags |= GX_DIRTY_VIEWPORT;
 }
 

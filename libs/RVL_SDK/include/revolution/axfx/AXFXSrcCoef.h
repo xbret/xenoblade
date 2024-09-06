@@ -6,10 +6,10 @@ extern "C" {
 #endif
 
 typedef struct SrcCoef{
-    float unk0;
-    float unk4;
-    float unk8;
-    float unkC;
+    f32 unk0;
+    f32 unk4;
+    f32 unk8;
+    f32 unkC;
 } SrcCoef;
 
 SrcCoef* __AXFXGetSrcCoef(u32 i);

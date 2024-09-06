@@ -10,7 +10,7 @@ namespace nw4r{
 
 		using namespace db;
 
-		inline float AsinRad(float x){
+		inline f32 AsinRad(f32 x){
 			bool inRange = x <= 1.0f && x >= -1.0f;
 	
 			if(!inRange){
@@ -20,7 +20,7 @@ namespace nw4r{
 			return asin(x);
 		}
 
-		inline float AcosRad(float x){
+		inline f32 AcosRad(f32 x){
 			bool inRange = x <= 1.0f && x >= -1.0f;
 	
 			if(!inRange){

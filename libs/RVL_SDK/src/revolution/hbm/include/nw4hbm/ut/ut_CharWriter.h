@@ -84,7 +84,7 @@ namespace nw4hbm
 			u8 BYTE_0x41;
 			u8 BYTE_0x42;
 			bool mWidthFixedFlag;
-			float mFixedWidth;
+			f32 mFixedWidth;
 			Font * mFont; // at 0x48
 			
 			CharWriter();
@@ -95,47 +95,47 @@ namespace nw4hbm
 			
 			void UpdateVertexColor();
 			
-			float GetFontWidth() const;
-			float GetFontHeight() const;
+			f32 GetFontWidth() const;
+			f32 GetFontHeight() const;
 			
-			float GetFontAscent() const;
-			float GetFontDescent() const;
+			f32 GetFontAscent() const;
+			f32 GetFontDescent() const;
 			
 			void EnableLinearFilter(bool, bool);
 			
-			float Print(u16);
+			f32 Print(u16);
 			
 			void LoadTexture(const Glyph &);//inlined
 			
-			void PrintGlyph(float, float, float, const Glyph &);
+			void PrintGlyph(f32, f32, f32, const Glyph &);
 			
-			inline float GetFixedWidth() const { return mFixedWidth; }
+			inline f32 GetFixedWidth() const { return mFixedWidth; }
 			inline bool IsWidthFixed() const { return mWidthFixedFlag; }
-			inline void SetCursorX(float x) { mCursor.mCoords.x = x; }
-			inline void SetCursorY(float y) { mCursor.mCoords.y = y; }
-			inline void MoveCursorX(float x) { mCursor.mCoords.x += x; }
-			inline void MoveCursorY(float y) { mCursor.mCoords.y += y; }
-			inline float GetCursorX() const { return mCursor.mCoords.x; }
-			inline float GetCursorY() const { return mCursor.mCoords.y; }
+			inline void SetCursorX(f32 x) { mCursor.mCoords.x = x; }
+			inline void SetCursorY(f32 y) { mCursor.mCoords.y = y; }
+			inline void MoveCursorX(f32 x) { mCursor.mCoords.x += x; }
+			inline void MoveCursorY(f32 y) { mCursor.mCoords.y += y; }
+			inline f32 GetCursorX() const { return mCursor.mCoords.x; }
+			inline f32 GetCursorY() const { return mCursor.mCoords.y; }
 			
 			void SetupGX();
 			static void SetupGXWithColorMapping(Color, Color);
 			void SetupGXDefault(); //inlined
 			
-			void SetFontSize(float, float);
+			void SetFontSize(f32, f32);
 			
-			inline void SetScale(float x, float y)
+			inline void SetScale(f32 x, f32 y)
 			{
 				mScale.mCoords.x = x;
 				mScale.mCoords.y = y;
 			}
 			
-			inline void SetCursor(float x, float y)
+			inline void SetCursor(f32 x, f32 y)
 			{
 				mCursor.mCoords.x = x;
 				mCursor.mCoords.y = y;
 			}
-			inline void SetCursor(float x, float y, float z)
+			inline void SetCursor(f32 x, f32 y, f32 z)
 			{
 				mCursor.mCoords.x = x;
 				mCursor.mCoords.y = y;

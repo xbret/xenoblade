@@ -31,8 +31,8 @@ namespace nw4r
 			u32 unkC;
 			Pane* unk10;
 			u32 unk14;
-			float unk18;
-			float unk1C;
+			f32 unk18;
+			f32 unk1C;
 
 			static void FreeMemory(void *p)
 			{

@@ -3,8 +3,8 @@
 
 #define XF_MEM_LOBJ_SIZE 16
 
-void GXInitLightAttn(GXLightObj* light, float aa, float ab, float ac, float ka, float kb,
-                     float kc) {
+void GXInitLightAttn(GXLightObj* light, f32 aa, f32 ab, f32 ac, f32 ka, f32 kb,
+                     f32 kc) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     impl->aa = aa;
@@ -15,7 +15,7 @@ void GXInitLightAttn(GXLightObj* light, float aa, float ab, float ac, float ka, 
     impl->kc = kc;
 }
 
-void GXInitLightAttnA(GXLightObj* light, float a, float b, float c) {
+void GXInitLightAttnA(GXLightObj* light, f32 a, f32 b, f32 c) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     impl->aa = a;
@@ -27,7 +27,7 @@ void GXInitLightAttnA(GXLightObj* light, float a, float b, float c) {
 void GXGetLightAttnA(){
 }
 
-void GXInitLightAttnK(GXLightObj* light, float a, float b, float c) {
+void GXInitLightAttnK(GXLightObj* light, f32 a, f32 b, f32 c) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     impl->ka = a;
@@ -39,10 +39,10 @@ void GXInitLightAttnK(GXLightObj* light, float a, float b, float c) {
 void GXGetLightAttnK(){
 }
 
-void GXInitLightSpot(GXLightObj* light, float angle, GXSpotFn fn) {
+void GXInitLightSpot(GXLightObj* light, f32 angle, GXSpotFn fn) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
-    float a, b, c, d;
-    float rad;
+    f32 a, b, c, d;
+    f32 rad;
 
     if (angle <= 0.0f || angle > 90.0f) {
         fn = GX_SP_OFF;
@@ -97,10 +97,10 @@ void GXInitLightSpot(GXLightObj* light, float angle, GXSpotFn fn) {
     impl->ac = c;
 }
 
-void GXInitLightDistAttn(GXLightObj* light, float distance, float brightness,
+void GXInitLightDistAttn(GXLightObj* light, f32 distance, f32 brightness,
                          GXDistAttnFn fn) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
-    float a, b, c;
+    f32 a, b, c;
 
     if (distance < 0.0f) {
         fn = GX_DA_OFF;
@@ -139,7 +139,7 @@ void GXInitLightDistAttn(GXLightObj* light, float distance, float brightness,
     impl->kc = c;
 }
 
-void GXInitLightPos(GXLightObj* light, float x, float y, float z) {
+void GXInitLightPos(GXLightObj* light, f32 x, f32 y, f32 z) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     impl->posX = x;
@@ -147,7 +147,7 @@ void GXInitLightPos(GXLightObj* light, float x, float y, float z) {
     impl->posZ = z;
 }
 
-void GXGetLightPos(const GXLightObj* light, float* x, float* y, float* z) {
+void GXGetLightPos(const GXLightObj* light, f32* x, f32* y, f32* z) {
     const GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     *x = impl->posX;
@@ -155,7 +155,7 @@ void GXGetLightPos(const GXLightObj* light, float* x, float* y, float* z) {
     *z = impl->posZ;
 }
 
-void GXInitLightDir(GXLightObj* light, float x, float y, float z) {
+void GXInitLightDir(GXLightObj* light, f32 x, f32 y, f32 z) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     impl->dirX = -x;
@@ -163,7 +163,7 @@ void GXInitLightDir(GXLightObj* light, float x, float y, float z) {
     impl->dirZ = -z;
 }
 
-void GXGetLightDir(const GXLightObj* light, float* x, float* y, float* z) {
+void GXGetLightDir(const GXLightObj* light, f32* x, f32* y, f32* z) {
     const GXLightObjImpl* impl = (GXLightObjImpl*)light;
 
     *x = -impl->dirX;
@@ -171,10 +171,10 @@ void GXGetLightDir(const GXLightObj* light, float* x, float* y, float* z) {
     *z = -impl->dirZ;
 }
 
-void GXInitSpecularDir(GXLightObj* light, float x, float y, float z) {
+void GXInitSpecularDir(GXLightObj* light, f32 x, f32 y, f32 z) {
     GXLightObjImpl* impl = (GXLightObjImpl*)light;
-    float dirX, dirY, dirZ;
-    float mag;
+    f32 dirX, dirY, dirZ;
+    f32 mag;
 
     dirX = -x;
     dirY = -y;
@@ -182,7 +182,7 @@ void GXInitSpecularDir(GXLightObj* light, float x, float y, float z) {
 
     mag = dirX * dirX + dirY * dirY + dirZ * dirZ;
     if (mag != 0.0f) {
-        mag = 1.0f / (float)sqrt(mag);
+        mag = 1.0f / (f32)sqrt(mag);
     }
 
     impl->dirX = dirX * mag;
@@ -212,7 +212,7 @@ void GXGetLightColor(){
 inline void WriteLightObj(register volatile void* dst,
                           register const GXLightObjImpl* src) {
     register u32 color;
-    register float ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
+    register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     // clang-format off
     asm volatile {

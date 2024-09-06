@@ -5,15 +5,15 @@
 extern "C" {
 #endif
 
-typedef float Mtx[3][4];
-typedef float Mtx44[4][4];
+typedef f32 Mtx[3][4];
+typedef f32 Mtx44[4][4];
 
 typedef struct Vec {
-    float x, y, z;
+    f32 x, y, z;
 } Vec;
 
 typedef struct Quaternion {
-    float x, y, z, w;
+    f32 x, y, z, w;
 } Quaternion;
 
 #define MTXDegToRad(a) ((a)*0.01745329252f)
@@ -25,19 +25,19 @@ void PSMTXConcatArray(const Mtx, const Mtx, Mtx, u32);
 void PSMTXTranspose(const Mtx, Mtx);
 void PSMTXInverse(const Mtx, Mtx);
 void PSMTXInvXpose(const Mtx, Mtx);
-void PSMTXRotRad(Mtx, char, float);
-void PSMTXRotTrig(Mtx, char, float, float);
-void PSMTXRotAxisRad(Mtx, const struct Vec*, float);
-void PSMTXTrans(Mtx, float, float, float);
-void PSMTXTransApply(const Mtx, Mtx, float, float, float);
-void PSMTXScale(Mtx, float, float, float);
-void PSMTXScaleApply(const Mtx, Mtx, float, float, float);
+void PSMTXRotRad(Mtx, char, f32);
+void PSMTXRotTrig(Mtx, char, f32, f32);
+void PSMTXRotAxisRad(Mtx, const struct Vec*, f32);
+void PSMTXTrans(Mtx, f32, f32, f32);
+void PSMTXTransApply(const Mtx, Mtx, f32, f32, f32);
+void PSMTXScale(Mtx, f32, f32, f32);
+void PSMTXScaleApply(const Mtx, Mtx, f32, f32, f32);
 void PSMTXQuat(Mtx, const Quaternion*);
 
 void C_MTXLookAt(Mtx, const Vec*, const Vec*, const Vec*);
-void C_MTXLightFrustum(Mtx, float, float, float, float, float, float, float, float, float);
-void C_MTXLightPerspective(Mtx, float, float, float, float, float, float);
-void C_MTXLightOrtho(Mtx, float, float, float, float, float, float, float, float);
+void C_MTXLightFrustum(Mtx, f32, f32, f32, f32, f32, f32, f32, f32, f32);
+void C_MTXLightPerspective(Mtx, f32, f32, f32, f32, f32, f32);
+void C_MTXLightOrtho(Mtx, f32, f32, f32, f32, f32, f32, f32, f32);
 
 #ifdef __cplusplus
 }

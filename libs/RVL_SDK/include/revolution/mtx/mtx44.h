@@ -8,9 +8,9 @@ extern "C" {
 
 void PSMTX44Copy(Mtx44, Mtx44);
 
-void C_MTXFrustum(Mtx44 mtx, float t, float b, float l, float r, float n, float f);
-void C_MTXPerspective(Mtx44 mtx, float fovy, float aspect, float n, float f);
-void C_MTXOrtho(Mtx44 mtx, float t, float b, float l, float r, float n, float f);
+void C_MTXFrustum(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f);
+void C_MTXPerspective(Mtx44 mtx, f32 fovy, f32 aspect, f32 n, f32 f);
+void C_MTXOrtho(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f);
 
 #ifdef __cplusplus
 }

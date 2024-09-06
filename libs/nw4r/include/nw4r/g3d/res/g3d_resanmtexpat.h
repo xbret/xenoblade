@@ -9,7 +9,7 @@ namespace nw4r
 	{
 		struct ResAnmTexPatAnmFramesData
 		{
-			float mTime; // at 0x0
+			f32 mTime; // at 0x0
 			u16 mTexIndex; // at 0x4
 			u16 mPlttIndex; // at 0x6
 		};
@@ -17,7 +17,7 @@ namespace nw4r
 		struct ResAnmTexPatAnmData
 		{
 			u16 mCount; // at 0x0
-			float FLOAT_0x4;
+			f32 FLOAT_0x4;
 			ResAnmTexPatAnmFramesData mFrames[]; // at 0x8
 		};
 		
@@ -79,7 +79,7 @@ namespace nw4r
 				return static_cast<const ResAnmTexPatMatData *>(mAnmTexPat.ofs_to_obj<ResDic>(ref().mMatDictOffset)[i]);
 			}
 			
-			void GetAnmResult(TexPatAnmResult *, u32, float) const;
+			void GetAnmResult(TexPatAnmResult *, u32, f32) const;
 			
 			bool Bind(ResFile);
 			void Release();

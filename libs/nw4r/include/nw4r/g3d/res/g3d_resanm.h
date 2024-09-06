@@ -8,15 +8,15 @@ namespace nw4r
 	{
 		struct ResKeyFrameAnmFramesData
 		{
-			float mTime; // at 0x0
-			float mValue; // at 0x4
-			float mDerivative; // at 0x8
+			f32 mTime; // at 0x0
+			f32 mValue; // at 0x4
+			f32 mDerivative; // at 0x8
 		};
 		
 		struct ResKeyFrameAnmData
 		{
 			u16 mCount; // at 0x0
-			float FLOAT_0x4;
+			f32 FLOAT_0x4;
 			ResKeyFrameAnmFramesData mFrames[]; // at 0x8
 		};
 		
@@ -38,17 +38,17 @@ namespace nw4r
 		
 		union ResAnmData
 		{
-			float mValue;
+			f32 mValue;
 			s32 mOffset;
 		};
 		
 		namespace detail
 		{
-			float GetResKeyFrameAnmResult(const ResKeyFrameAnmData *, float);
+			f32 GetResKeyFrameAnmResult(const ResKeyFrameAnmData *, f32);
 			
-			u32 GetResColorAnmResult(const ResColorAnmFramesData *, float);
+			u32 GetResColorAnmResult(const ResColorAnmFramesData *, f32);
 			
-			inline u32 GetResColorAnmResult(const ResColorAnmData * pData, float time, bool b)
+			inline u32 GetResColorAnmResult(const ResColorAnmData * pData, f32 time, bool b)
 			{
 				if (b) return pData->mColor;
 				
@@ -66,7 +66,7 @@ namespace nw4r
 			}
 			
 			template <typename T>
-			inline float ClipFrame(T & info, float time)
+			inline f32 ClipFrame(T & info, f32 time)
 			{
 				if (time <= 0.0f) return 0.0f;
 				
@@ -75,7 +75,7 @@ namespace nw4r
 				return time;
 			}
 			
-			inline float GetResAnmResult(const ResAnmData * pData, float time, bool b)
+			inline f32 GetResAnmResult(const ResAnmData * pData, f32 time, bool b)
 			{
 				if (b) return pData->mValue;
 				

@@ -7,12 +7,12 @@ extern "C" {
 #endif // ifdef __cplusplus
 
 void PSVECAdd(const Vec* a, const Vec* b, Vec* sum);
-void PSVECScale(const Vec* in, Vec* out, float scale);
+void PSVECScale(const Vec* in, Vec* out, f32 scale);
 void PSVECNormalize(const Vec* in, Vec* out);
-float PSVECMag(const Vec* v);
-float PSVECDotProduct(const Vec* a, const Vec* b);
+f32 PSVECMag(const Vec* v);
+f32 PSVECDotProduct(const Vec* a, const Vec* b);
 void PSVECCrossProduct(const Vec* a, const Vec* b, Vec* prod);
-float PSVECSquareDistance(const Vec* a, const Vec* b);
+f32 PSVECSquareDistance(const Vec* a, const Vec* b);
 void C_VECHalfAngle(const Vec* a, const Vec* b, Vec* half);
 
 #ifdef __cplusplus

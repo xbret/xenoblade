@@ -14,8 +14,8 @@ namespace nw4hbm
 			
 			const T * PTR_0x4;
 			
-			float FLOAT_0x8;
-			float FLOAT_0xC;
+			f32 FLOAT_0x8;
+			f32 FLOAT_0xC;
 			int WORD_0x10;
 		};
 		

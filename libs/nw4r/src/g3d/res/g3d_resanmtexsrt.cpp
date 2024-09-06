@@ -16,7 +16,7 @@ namespace nw4r
 		
 		namespace
 		{
-			inline u32 MakeResult(TexSrt * pSrt, const ResAnmTexSrtTexData * pData, float time)
+			inline u32 MakeResult(TexSrt * pSrt, const ResAnmTexSrtTexData * pData, f32 time)
 			{
 				// register/address information is for the first loop in GetAnmResult
 				u32 flags = pData->mFlags; // for the first loop: r31
@@ -74,7 +74,7 @@ namespace nw4r
 			}
 		}
 		
-		void ResAnmTexSrt::GetAnmResult(TexSrtAnmResult * pResult, u32 i, float time) const
+		void ResAnmTexSrt::GetAnmResult(TexSrtAnmResult * pResult, u32 i, f32 time) const
 		{
 			const ResAnmTexSrtMatData * pMatAnm = GetMatAnm(i); // at r30
 			//80057934
