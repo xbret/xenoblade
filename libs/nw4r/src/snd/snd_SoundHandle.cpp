@@ -3,8 +3,8 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
+    namespace snd
+    {
         void SoundHandle::detail_AttachSoundAsTempHandle(detail::BasicSound *pBasicSound)
         {
             mSound = pBasicSound;
@@ -44,5 +44,5 @@ namespace nw4r
                 mSound = NULL;
             }
         }
-	}
+    }
 }

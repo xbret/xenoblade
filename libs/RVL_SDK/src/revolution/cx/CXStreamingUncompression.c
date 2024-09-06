@@ -36,17 +36,17 @@ static void GetNextNode(){
 
 
 void CXInitUncompContextLH(CXUncompContextLH* context, void* dest){
-	context->destp = (u8*)dest;
-	context->destCount = -1;
-	context->nodep = context->huffTable9 + 1;
-	context->tableSize9 = -1;
-	context->tableSize12 = -1;
-	context->headerSize = 8;
-	context->length = 0;
-	context->stream = 0;
-	context->stream_len = 0;
-	context->offset_bits = -1;
-	context->forceDestCount = 0;
+    context->destp = (u8*)dest;
+    context->destCount = -1;
+    context->nodep = context->huffTable9 + 1;
+    context->tableSize9 = -1;
+    context->tableSize12 = -1;
+    context->headerSize = 8;
+    context->length = 0;
+    context->stream = 0;
+    context->stream_len = 0;
+    context->offset_bits = -1;
+    context->forceDestCount = 0;
 }
 
 void CXReadUncompLH(CXUncompContextLH* context, const void* data, u32 len){

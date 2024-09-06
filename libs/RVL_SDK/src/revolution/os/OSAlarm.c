@@ -263,8 +263,8 @@ void* OSGetAlarmUserData(const OSAlarm* alarm) { return alarm->userData; }
 
 //unused
 void __OSSetInternalAlarmUserData(OSAlarm* alarm, void* userData){
-	alarm->userData = userData;
-	alarm->tag = -1;
+    alarm->userData = userData;
+    alarm->tag = -1;
 }
 
 void __OSCancelInternalAlarms(OSThread* thread) {

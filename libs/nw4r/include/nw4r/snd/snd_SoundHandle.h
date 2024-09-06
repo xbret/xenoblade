@@ -5,35 +5,35 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		struct SoundHandle
-		{
-			detail::BasicSound * mSound; // at 0x0
-			
-			void detail_AttachSound(detail::BasicSound *);
-			void detail_AttachSoundAsTempHandle(detail::BasicSound *);
-			void DetachSound();
-			
-			inline SoundHandle() : mSound(NULL) {}
-			
-			inline ~SoundHandle()
-			{
-				DetachSound();
-			}
+    namespace snd
+    {
+        struct SoundHandle
+        {
+            detail::BasicSound * mSound; // at 0x0
+            
+            void detail_AttachSound(detail::BasicSound *);
+            void detail_AttachSoundAsTempHandle(detail::BasicSound *);
+            void DetachSound();
+            
+            inline SoundHandle() : mSound(NULL) {}
+            
+            inline ~SoundHandle()
+            {
+                DetachSound();
+            }
 
-			inline detail::BasicSound * detail_GetAttachedSound() { return mSound; }
+            inline detail::BasicSound * detail_GetAttachedSound() { return mSound; }
 
-			inline bool IsAttachedSound() const { return mSound != NULL; }
+            inline bool IsAttachedSound() const { return mSound != NULL; }
 
-			inline void StartPrepared() 
-			{
-				if (IsAttachedSound()) mSound->StartPrepared();
-			}
+            inline void StartPrepared() 
+            {
+                if (IsAttachedSound()) mSound->StartPrepared();
+            }
 
-			inline u32 GetId() const { return IsAttachedSound() ? mSound->GetId() : -1; }
-		};
-	}
+            inline u32 GetId() const { return IsAttachedSound() ? mSound->GetId() : -1; }
+        };
+    }
 }
 
 #endif

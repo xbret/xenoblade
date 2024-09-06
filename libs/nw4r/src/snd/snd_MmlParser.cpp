@@ -378,12 +378,12 @@ void MmlParser::CommandProc(MmlSeqTrack* pTrack, u32 command, s32 arg1,
 
             // Convert absolute index into variable type-relative index
             int varNo = arg1 >= SeqPlayer::VARIABLE_NUM       ? arg1 - SeqPlayer::VARIABLE_NUM
-					 : (arg1 >= SeqPlayer::LOCAL_VARIABLE_NUM ? arg1 - SeqPlayer::LOCAL_VARIABLE_NUM : arg1);
+                     : (arg1 >= SeqPlayer::LOCAL_VARIABLE_NUM ? arg1 - SeqPlayer::LOCAL_VARIABLE_NUM : arg1);
 
-			// Determine variable type prefix from absolute index
-			// 'T' = Track variable, 'G' = Global (player) variable
+            // Determine variable type prefix from absolute index
+            // 'T' = Track variable, 'G' = Global (player) variable
             const char* pVarType = arg1 >= SeqPlayer::VARIABLE_NUM       ? "T"
-                				: (arg1 >= SeqPlayer::LOCAL_VARIABLE_NUM ? "G" : "");
+                                : (arg1 >= SeqPlayer::LOCAL_VARIABLE_NUM ? "G" : "");
 
             // clang-format on
 

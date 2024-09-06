@@ -25,9 +25,9 @@ static void cbForNandWrite(s32 result, NANDCommandBlock* block) {
 
 static void cbForNandSeek(s32 result, NANDCommandBlock* block) {
     if (result == (NextOffset + 1) * sizeof(DVDErrorInfo)) {
-		if(NextOffset == 0){
-			__ErrorInfo.next = (NextOffset + 1) % 7;
-		}
+        if(NextOffset == 0){
+            __ErrorInfo.next = (NextOffset + 1) % 7;
+        }
         DCFlushRange((void*)&__ErrorInfo, sizeof(__ErrorInfo));
 
         if (NANDWriteAsync(&NandInfo, (void*)&__ErrorInfo, sizeof(__ErrorInfo), cbForNandWrite, &NandCb) != 0) {
@@ -178,9 +178,9 @@ static void cbForPrepareControlRegister(u32 intType){
     }
 
     if (NANDPrivateCreateDirAsync("/shared2/test2", 0x3f, 0, cbForNandCreateDir, &NandCb) != 0){
-		if(Callback){
-        	Callback(2, NULL);
-		}
+        if(Callback){
+            Callback(2, NULL);
+        }
     }
     return;
 }

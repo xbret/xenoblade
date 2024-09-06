@@ -158,12 +158,12 @@ const char* const __DVDDeviceErrorMessage[] = {
     "\n\n\nError #001,\n"
     "unauthorized device has been detected.",
 
-	//"\n\n\nFehler #001:\nEs wurde eine unzul?ssige Komponente\nentdeckt.
+    //"\n\n\nFehler #001:\nEs wurde eine unzul?ssige Komponente\nentdeckt.
     "\n\n\nFehler #001:\n"
     "Es wurde eine unzul\xE4ssige Komponente\n"
     "entdeckt.",
 
-	//"\n\n\nErreur 001:\nun dispositif non autoris? a ?t? d?tect?."
+    //"\n\n\nErreur 001:\nun dispositif non autoris? a ?t? d?tect?."
     "\n\n\nErreur 001:\n"
     "un dispositif non autoris\xE9 a \xE9t\xE9 d\xE9tect\xE9.",
 

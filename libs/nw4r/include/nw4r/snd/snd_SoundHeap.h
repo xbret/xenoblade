@@ -7,27 +7,27 @@
 
 namespace nw4r
 {
-	namespace snd
-	{
-		struct SoundHeap : SoundMemoryAllocatable
-		{
-			SoundHeap();
-			virtual ~SoundHeap();      // VMT 0x8
-			bool Create(void *, u32);
-			void Destroy();
-			virtual void * Alloc(u32); // VMT 0xC
-			void* Alloc(u32, detail::FrameHeap::AllocCallback, void *);
-			void Clear();
-			int SaveState();
-			void LoadState(int);
-			static void DisposeCallbackFunc(void *, u32, void *);
+    namespace snd
+    {
+        struct SoundHeap : SoundMemoryAllocatable
+        {
+            SoundHeap();
+            virtual ~SoundHeap();      // VMT 0x8
+            bool Create(void *, u32);
+            void Destroy();
+            virtual void * Alloc(u32); // VMT 0xC
+            void* Alloc(u32, detail::FrameHeap::AllocCallback, void *);
+            void Clear();
+            int SaveState();
+            void LoadState(int);
+            static void DisposeCallbackFunc(void *, u32, void *);
 
-			bool IsValid() { return mFrameHeap.IsValid(); }
+            bool IsValid() { return mFrameHeap.IsValid(); }
 
-			OSMutex mMutex;               // 0x00
-			detail::FrameHeap mFrameHeap; // 0x1C
-		};
-	}
+            OSMutex mMutex;               // 0x00
+            detail::FrameHeap mFrameHeap; // 0x1C
+        };
+    }
 }
 
 #endif
