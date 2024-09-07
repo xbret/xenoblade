@@ -31,6 +31,7 @@ if sys.platform == "cygwin":
 
 Library = Dict[str, Any]
 
+
 class Object:
     def __init__(self, completed: bool, name: str, **options: Any) -> None:
         self.name = name
@@ -46,7 +47,6 @@ class Object:
             "lib": None,
             "mw_version": None,
             "progress_category": None,
-            "root_dir": None,
             "shift_jis": None,
             "source": name,
             "src_dir": None,
@@ -136,7 +136,6 @@ class ProjectConfig:
         self.build_rels: bool = True  # Build REL files
         self.check_sha_path: Optional[Path] = None  # Path to version.sha1
         self.config_path: Optional[Path] = None  # Path to config.yml
-        self.debug: bool = False  # Build with debug info
         self.generate_map: bool = False  # Generate map file(s)
         self.asflags: Optional[List[str]] = None  # Assembler flags
         self.ldflags: Optional[List[str]] = None  # Linker flags
@@ -288,12 +287,7 @@ def generate_build_ninja(
     # Variables
     ###
     n.comment("Variables")
-    ldflags = " ".join(config.ldflags or [])
-    if config.generate_map:
-        ldflags += " -mapunused"
-    if config.debug:
-        ldflags += " -g"
-    n.variable("ldflags", ldflags)
+    n.variable("ldflags", " ".join(config.ldflags or []))
     if config.linker_version is None:
         sys.exit("ProjectConfig.linker_version missing")
     n.variable("mw_version", Path(config.linker_version))
@@ -637,7 +631,7 @@ def generate_build_ninja(
     # Source files
     ###
     n.comment("Source files")
-    
+
     def map_path(path: Path) -> Path:
         return path.parent / (path.name + ".MAP")
 
@@ -1246,10 +1240,10 @@ def generate_objdiff_config(
         }
 
         obj = objects.get(obj_name)
-        if obj is None or not obj.src_path or not obj.src_path.exists():
+        if obj is None:
             objdiff_config["units"].append(unit_config)
             return
-        
+
         src_exists = obj.src_path is not None and obj.src_path.exists()
         if src_exists:
             unit_config["base_path"] = obj.src_obj_path
@@ -1306,7 +1300,7 @@ def generate_objdiff_config(
             progress_categories.extend(category_opt)
         elif category_opt is not None:
             progress_categories.append(category_opt)
-            unit_config["metadata"].update(
+        unit_config["metadata"].update(
             {
                 "complete": obj.completed,
                 "reverse_fn_order": reverse_fn_order,
@@ -1412,14 +1406,12 @@ def calculate_progress(config: ProjectConfig) -> None:
 
         def code_frac(self) -> float:
             if self.code_total == 0:
-                print(f"Code total for progress section {self.name} is 0")
-                return 0
+                return 1.0
             return self.code_progress / self.code_total
 
         def data_frac(self) -> float:
             if self.data_total == 0:
-                print(f"Data total for progress section {self.name} is 0")
-                return 0
+                return 1.0
             return self.data_progress / self.data_total
     
     progress_units: Dict[str, ProgressUnit] = {}
@@ -1472,9 +1464,9 @@ def calculate_progress(config: ProjectConfig) -> None:
     # Print human-readable progress
     print("Progress:")
 
-    def print_category(unit: Optional[ProgressUnit]) -> None:
-        if unit is None:
-            return
+    for unit in progress_units.values():
+        if unit.objects_total == 0:
+            continue
 
         code_frac = unit.code_frac()
         data_frac = unit.data_frac()
@@ -1495,21 +1487,18 @@ def calculate_progress(config: ProjectConfig) -> None:
                 )
             )
 
-    for progress in progress_units.values():
-        print_category(progress)
-
     # Generate and write progress.json
     progress_json: Dict[str, Any] = {}
 
-    def add_category(category: str, unit: ProgressUnit) -> None:
-        progress_json[category] = {
+    for id, unit in progress_units.items():
+        if unit.objects_total == 0:
+            continue
+        progress_json[id] = {
             "code": unit.code_progress,
             "code/total": unit.code_total,
             "data": unit.data_progress,
             "data/total": unit.data_total,
         }
 
-    for id, progress in progress_units.items():
-        add_category(id, progress)
     with open(out_path / "progress.json", "w", encoding="utf-8") as w:
         json.dump(progress_json, w, indent=4)
