@@ -4,7 +4,37 @@
 //Defines for DSP opcodes.
 //https://github.com/dolphin-emu/dolphin/blob/master/Source/Core/Core/DSP/DSPTables.cpp
 
-//nop - 0000
+
+
+//Extension opcodes
+#define EXT_XXX(P_VAL)    (0x0000 | (P_VAL & 0x00FF))
+#define EXT_DR(P_REG)     (0x0004 | (P_REG & 0x0003))
+#define EXT_IR(P_REG)     (0x0008 | (P_REG & 0x0003))
+#define EXT_NR(P_REG)     (0x000c | (P_REG & 0x0003))
+#define EXT_MV(P_REG18, P_REG1C)     (0x0010 | ((P_REG18 << 2) & 0x000C) | ((P_REG1C << 0) & 0x0003))
+#define EXT_S(P_PRG, P_REG1C)        (0x0020 | ((P_PRG << 0) & 0x0003) | ((P_REG1C << 3) & 0x0018))
+#define EXT_SN(P_PRG, P_REG1C)       (0x0024 | ((P_PRG << 0) & 0x0003) | ((P_REG1C << 3) & 0x0018))
+#define EXT_L(P_REG18, P_PRG)        (0x0040 | ((P_REG18 << 3) & 0x0038) | ((P_PRG << 0) & 0x0003))
+#define EXT_LN(P_REG18, P_PRG)       (0x0044 | ((P_REG18 << 3) & 0x0038) | ((P_PRG << 0) & 0x0003))
+#define EXT_LS(P_REG18, P_ACCM)      (0x0080 | ((P_REG18 << 4) & 0x0030) | ((P_ACCM << 0) & 0x0001))
+#define EXT_SL(P_ACCM, P_REG18)      (0x0082 | ((P_ACCM << 0) & 0x0001) | ((P_REG18 << 4) & 0x0030))
+#define EXT_LSN(P_REG18, P_ACCM)     (0x0084 | ((P_REG18 << 4) & 0x0030) | ((P_ACCM << 0) & 0x0001))
+#define EXT_SLN(P_ACCM, P_REG18)     (0x0086 | ((P_ACCM << 0) & 0x0001) | ((P_REG18 << 4) & 0x0030))
+#define EXT_LSM(P_REG18, P_ACCM)     (0x0088 | ((P_REG18 << 4) & 0x0030) | ((P_ACCM << 0) & 0x0001))
+#define EXT_SLM(P_ACCM, P_REG18)     (0x008a | ((P_ACCM << 0) & 0x0001) | ((P_REG18 << 4) & 0x0030))
+#define EXT_LSNM(P_REG18, P_ACCM)    (0x008c | ((P_REG18 << 4) & 0x0030) | ((P_ACCM << 0) & 0x0001))
+#define EXT_SLNM(P_ACCM, P_REG18)    (0x008e | ((P_ACCM << 0) & 0x0001) | ((P_REG18 << 4) & 0x0030))
+#define EXT_LDAX(P_AX, P_PRG)        (0x00c3 | ((P_AX << 4) & 0x0010) | ((P_PRG << 5) & 0x0020))
+#define EXT_LDAXN(P_AX, P_PRG)       (0x00c7 | ((P_AX << 4) & 0x0010) | ((P_PRG << 5) & 0x0020))
+#define EXT_LDAXM(P_AX, P_PRG)       (0x00cb | ((P_AX << 4) & 0x0010) | ((P_PRG << 5) & 0x0020))
+#define EXT_LDAXNM(P_AX, P_PRG)      (0x00cf | ((P_AX << 4) & 0x0010) | ((P_PRG << 5) & 0x0020))
+#define EXT_LD(P_REGM18, P_REGM19, P_PRG)     (0x00c0 | ((P_REGM18 << 4) & 0x20) | ((P_REGM19 << 3) & 0x10) | (P_PRG & 0b11))
+#define EXT_LDN(P_REGM18, P_REGM19, P_PRG)    (0x00c4 | ((P_REGM18 << 4) & 0x20) | ((P_REGM19 << 3) & 0x10) | (P_PRG & 0b11))
+#define EXT_LDM(P_REGM18, P_REGM19, P_PRG)    (0x00c8 | ((P_REGM18 << 4) & 0x20) | ((P_REGM19 << 3) & 0x10) | (P_PRG & 0b11))
+#define EXT_LDNM(P_REGM18, P_REGM19, P_PRG)   (0x00cc | ((P_REGM18 << 4) & 0x20) | ((P_REGM19 << 3) & 0x10) | (P_PRG & 0b11))
+
+//DSP opcodes
+
 #define DSP_NOP (0x0000)
 
 #define DSP_DAR(reg) (0x0004 | (reg & 0b11))
@@ -150,10 +180,10 @@
 #define DSP_SBCLR(imm) (0x1200 | (imm & 0b111))
 #define DSP_SBSET(imm) (0x1300 | (imm & 0b111))
 
-#define DSP_LSL(acc, imm) (0x1400 | ((acc & 0b1) << 8) | (imm & 0b11111))
-#define DSP_LSR(acc, imm) (0x1440 | ((acc & 0b1) << 8) | (imm & 0b11111))
-#define DSP_ASL(acc, imm) (0x1480 | ((acc & 0b1) << 8) | (imm & 0b11111))
-#define DSP_ASR(acc, imm) (0x14C0 | ((acc & 0b1) << 8) | (imm & 0b11111))
+#define DSP_LSL(acc, imm) (0x1400 | ((acc & 0b1) << 8) | (imm & 0b111111))
+#define DSP_LSR(acc, imm) (0x1440 | ((acc & 0b1) << 8) | (imm & 0b111111))
+#define DSP_ASL(acc, imm) (0x1480 | ((acc & 0b1) << 8) | (imm & 0b111111))
+#define DSP_ASR(acc, imm) (0x14C0 | ((acc & 0b1) << 8) | (imm & 0b111111))
 
 #define DSP_LSRN (0x02CA)
 #define DSP_ASRN (0x02CB)
@@ -162,7 +192,7 @@
 #define DSP_LR(reg, mem) (0x00C0 | (reg & 0b11111)), (mem & 0xFFFF)
 #define DSP_SR(mem, reg) (0x00E0 | (reg & 0b11111)), (mem & 0xFFFF)
 
-#define DSP_MRR(reg1, reg2) (0x1C00 | ((reg1 & 0b11111) << 5) | (reg2 & 0b1111))
+#define DSP_MRR(reg1, reg2) (0x1C00 | ((reg1 & 0b11111) << 5) | (reg2 & 0b11111))
 
 #define DSP_SI(mem, imm) (0x1600 | (mem & 0xFF)), (imm & 0xFFFF)
 
@@ -208,95 +238,95 @@
 //Other opcodes
 
 //3 - main opcode defined by 9 bits, extension defined by last 7 bits!!
-#define DSP_XORR(accm, reg1a)     (0x3000 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9))
-#define DSP_ANDR(accm, reg1a)     (0x3400 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9))
-#define DSP_ORR(accm, reg1a)      (0x3800 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9))
-#define DSP_ANDC(accm, accmd)     (0x3C00 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8))
-#define DSP_ORC(accm, accmd)      (0x3E00 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8))
-#define DSP_XORC(accm, accmd)     (0x3080 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8))
-#define DSP_NOT(accm)             (0x3280 | ((accm & 0b1) << 8))
-#define DSP_LSRNRX(acc, reg1a)    (0x3480 | ((acc & 0b1) << 8) | ((reg1a & 0b1) << 9))
-#define DSP_ASRNRX(acc, reg1a)    (0x3880 | ((acc & 0b1) << 8) | ((reg1a & 0b1) << 9))
-#define DSP_LSRNR(acc, accmd)     (0x3C80 | ((acc & 0b1) << 8) | ((accmd & 0b1) << 8))
-#define DSP_ASRNR(acc, accmd)     (0x3E80 | ((acc & 0b1) << 8) | ((accmd & 0b1) << 8))
+#define DSP_XORR(accm, reg1a, ext)     (0x3000 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9) | (ext))
+#define DSP_ANDR(accm, reg1a, ext)     (0x3400 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9) | (ext))
+#define DSP_ORR(accm, reg1a, ext)      (0x3800 | ((accm & 0b1) << 8) | ((reg1a & 0b1) << 9) | (ext))
+#define DSP_ANDC(accm, accmd, ext)     (0x3C00 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8) | (ext))
+#define DSP_ORC(accm, accmd, ext)      (0x3E00 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8) | (ext))
+#define DSP_XORC(accm, accmd, ext)     (0x3080 | ((accm & 0b1) << 8) | ((accmd & 0b1) << 8) | (ext))
+#define DSP_NOT(accm, ext)             (0x3280 | ((accm & 0b1) << 8) | (ext))
+#define DSP_LSRNRX(acc, reg1a, ext)    (0x3480 | ((acc & 0b1) << 8) | ((reg1a & 0b1) << 9) | (ext))
+#define DSP_ASRNRX(acc, reg1a, ext)    (0x3880 | ((acc & 0b1) << 8) | ((reg1a & 0b1) << 9) | (ext))
+#define DSP_LSRNR(acc, accmd, ext)     (0x3C80 | ((acc & 0b1) << 8) | ((accmd & 0b1) << 8) | (ext))
+#define DSP_ASRNR(acc, accmd, ext)     (0x3E80 | ((acc & 0b1) << 8) | ((accmd & 0b1) << 8) | (ext))
 
 //4
-#define DSP_ADDR(acc, reg18)     (0x4000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9))
-#define DSP_ADDAX(acc, ax)       (0x4800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9))
-#define DSP_ADD(acc, accd)       (0x4c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8))
-#define DSP_ADDP(acc)            (0x4e00 | ((acc & 0b1) << 8))
+#define DSP_ADDR(acc, reg18, ext)     (0x4000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9) | (ext))
+#define DSP_ADDAX(acc, ax, ext)       (0x4800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9) | (ext))
+#define DSP_ADD(acc, accd, ext)       (0x4c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8) | (ext))
+#define DSP_ADDP(acc, ext)            (0x4e00 | ((acc & 0b1) << 8) | (ext))
 
 //5
-#define DSP_SUBR(acc, reg18)     (0x5000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9))
-#define DSP_SUBAX(acc, ax)       (0x5800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9))
-#define DSP_SUB(acc, accd)       (0x5c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8))
-#define DSP_SUBP(acc)            (0x5e00 | ((acc & 0b1) << 8))
+#define DSP_SUBR(acc, reg18, ext)     (0x5000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9) | (ext))
+#define DSP_SUBAX(acc, ax, ext)       (0x5800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9) | (ext))
+#define DSP_SUB(acc, accd, ext)       (0x5c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8) | (ext))
+#define DSP_SUBP(acc, ext)            (0x5e00 | ((acc & 0b1) << 8) | (ext))
 
 //6
-#define DSP_MOVR(acc, reg18)     (0x6000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9))
-#define DSP_MOVAX(acc, ax)       (0x6800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9))
-#define DSP_MOV(acc, accd)       (0x6c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8))
-#define DSP_MOVP(acc)            (0x6e00 | ((acc & 0b1) << 8))
+#define DSP_MOVR(acc, reg18, ext)     (0x6000 | ((acc & 0b1) << 8) | ((reg18 & 0b11) << 9) | (ext))
+#define DSP_MOVAX(acc, ax, ext)       (0x6800 | ((acc & 0b1) << 8) | ((ax & 0b1) << 9) | (ext))
+#define DSP_MOV(acc, accd, ext)       (0x6c00 | ((acc & 0b1) << 8) | ((accd & 0b1) << 8) | (ext))
+#define DSP_MOVP(acc, ext)            (0x6e00 | ((acc & 0b1) << 8) | (ext))
 
 //7
-#define DSP_ADDAXL(acc, reg18)   (0x7000 | ((acc & 0b1) << 8) | ((reg18 & 0b1) << 9))
-#define DSP_INCM(accm)           (0x7400 | ((accm & 0b1) << 8))
-#define DSP_INC(acc)             (0x7600 | ((acc & 0b1) << 8))
-#define DSP_DECM(accm)           (0x7800 | ((accm & 0b1) << 8))
-#define DSP_DEC(acc)             (0x7a00 | ((acc & 0b1) << 8))
-#define DSP_NEG(acc)             (0x7c00 | ((acc & 0b1) << 8))
-#define DSP_MOVNP(acc)           (0x7e00 | ((acc & 0b1) << 8))
+#define DSP_ADDAXL(acc, reg18, ext)   (0x7000 | ((acc & 0b1) << 8) | ((reg18 & 0b1) << 9) | (ext))
+#define DSP_INCM(accm, ext)           (0x7400 | ((accm & 0b1) << 8) | (ext))
+#define DSP_INC(acc, ext)             (0x7600 | ((acc & 0b1) << 8) | (ext))
+#define DSP_DECM(accm, ext)           (0x7800 | ((accm & 0b1) << 8) | (ext))
+#define DSP_DEC(acc, ext)             (0x7a00 | ((acc & 0b1) << 8) | (ext))
+#define DSP_NEG(acc, ext)             (0x7c00 | ((acc & 0b1) << 8) | (ext))
+#define DSP_MOVNP(acc, ext)           (0x7e00 | ((acc & 0b1) << 8) | (ext))
 
 //8
-#define DSP_NX            (0x8000)
-#define DSP_CLR(acc)      (0x8100 | ((acc & 0b1) << 11))
-#define DSP_CMP           (0x8200)
-#define DSP_MULAXH        (0x8300)
-#define DSP_CLRP          (0x8400)
-#define DSP_TSTPROD       (0x8500)
-#define DSP_TSTAXH(reg1a) (0x8600 | ((reg1a & 0b1) << 8))
-#define DSP_M2            (0x8A00)
-#define DSP_M0            (0x8B00)
-#define DSP_CLR15         (0x8C00)
-#define DSP_SET15         (0x8D00)
-#define DSP_SET16         (0x8E00)
-#define DSP_SET40         (0x8F00)
+#define DSP_NX(ext)            (0x8000 | (ext))
+#define DSP_CLR(acc, ext)      (0x8100 | ((acc & 0b1) << 11) | (ext))
+#define DSP_CMP(ext)           (0x8200 | (ext))
+#define DSP_MULAXH(ext)        (0x8300 | (ext))
+#define DSP_CLRP(ext)          (0x8400 | (ext))
+#define DSP_TSTPROD(ext)       (0x8500 | (ext))
+#define DSP_TSTAXH(reg1a, ext) (0x8600 | ((reg1a & 0b1) << 8) | (ext))
+#define DSP_M2(ext)            (0x8A00 | (ext))
+#define DSP_M0(ext)            (0x8B00 | (ext))
+#define DSP_CLR15(ext)         (0x8C00 | (ext))
+#define DSP_SET15(ext)         (0x8D00 | (ext))
+#define DSP_SET16(ext)         (0x8E00 | (ext))
+#define DSP_SET40(ext)         (0x8F00 | (ext))
 
 //9
-#define DSP_MUL(reg18, reg1a)      (0x9000 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11))
-#define DSP_ASR16(acc)    (0x9100 | ((acc & 0b1) << 11))
-#define DSP_MULMVZ(reg18, reg1a, acc)   (0x9200 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8))
-#define DSP_MULAC(reg18, reg1a, acc)    (0x9400 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8))
-#define DSP_MULMV(reg18, reg1a, acc)    (0x9600 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8))
+#define DSP_MUL(reg18, reg1a, ext)      (0x9000 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | (ext))
+#define DSP_ASR16(acc, ext)    (0x9100 | ((acc & 0b1) << 11) | (ext))
+#define DSP_MULMVZ(reg18, reg1a, acc, ext)   (0x9200 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8) | (ext))
+#define DSP_MULAC(reg18, reg1a, acc, ext)    (0x9400 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8) | (ext))
+#define DSP_MULMV(reg18, reg1a, acc, ext)    (0x9600 | ((reg18 & 0b1) << 11) | ((reg1a & 0b1) << 11) | ((acc & 0b1) << 8) | (ext))
 
 //a-b
-#define DSP_MULX(P_REGM18, P_REGM19)     (0xA000 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800))
-#define DSP_ABS(acc)      (0xa100 | ((acc & 0b1) << 11))
-#define DSP_MULXMVZ(P_REGM18, P_REGM19, P_ACC)  (0xA200 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100))
-#define DSP_MULXAC(P_REGM18, P_REGM19, P_ACC)   (0xA400 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100))
-#define DSP_MULXMV(P_REGM18, P_REGM19, P_ACC)   (0xA600 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100))
-#define DSP_TST(acc)      (0xb100 | ((acc & 0b1) << 11))
+#define DSP_MULX(P_REGM18, P_REGM19, ext)     (0xA000 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | (ext))
+#define DSP_ABS(acc, ext)      (0xa100 | ((acc & 0b1) << 11) | (ext))
+#define DSP_MULXMVZ(P_REGM18, P_REGM19, P_ACC, ext)  (0xA200 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MULXAC(P_REGM18, P_REGM19, P_ACC, ext)   (0xA400 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MULXMV(P_REGM18, P_REGM19, P_ACC, ext)   (0xA600 | ((P_REGM18 << 11) & 0x1000) | ((P_REGM19 << 10) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_TST(acc, ext)      (0xb100 | ((acc & 0b1) << 11) | (ext))
 
 //c-d
-#define DSP_MULC(P_ACCM, P_REG1A)     (0xC000 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800))
-#define DSP_CMPAXH(P_ACC, P_REG1A)   (0xC100 | ((P_ACC << 11) & 0x0800) | ((P_REG1A << 12) & 0x1000))
-#define DSP_MULCMVZ(P_ACCM, P_REG1A, P_ACC)  (0xC200 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100))
-#define DSP_MULCAC(P_ACCM, P_REG1A, P_ACC)   (0xC400 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100))
-#define DSP_MULCMV(P_ACCM, P_REG1A, P_ACC)   (0xC600 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100))
+#define DSP_MULC(P_ACCM, P_REG1A, ext)     (0xC000 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | (ext))
+#define DSP_CMPAXH(P_ACC, P_REG1A, ext)   (0xC100 | ((P_ACC << 11) & 0x0800) | ((P_REG1A << 12) & 0x1000) | (ext))
+#define DSP_MULCMVZ(P_ACCM, P_REG1A, P_ACC, ext)  (0xC200 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MULCAC(P_ACCM, P_REG1A, P_ACC, ext)   (0xC400 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MULCMV(P_ACCM, P_REG1A, P_ACC, ext)   (0xC600 | ((P_ACCM << 12) & 0x1000) | ((P_REG1A << 11) & 0x0800) | ((P_ACC << 8) & 0x0100) | (ext))
 
 //e
-#define DSP_MADDX(P_REGM18, P_REGM19)    (0xE000 | ((P_REGM18 << 8) & 0x0200) | ((P_REGM19 << 7) & 0x0100))
-#define DSP_MSUBX(P_REGM18, P_REGM19)    (0xE400 | ((P_REGM18 << 8) & 0x0200) | ((P_REGM19 << 7) & 0x0100))
-#define DSP_MADDC(P_ACCM, P_REG19)    (0xE800 | ((P_ACCM << 9) & 0x0200) | ((P_REG19 << 7) & 0x0100))
-#define DSP_MSUBC(P_ACCM, P_REG19)    (0xEC00 | ((P_ACCM << 9) & 0x0200) | ((P_REG19 << 7) & 0x0100))
+#define DSP_MADDX(P_REGM18, P_REGM19, ext)    (0xE000 | ((P_REGM18 << 8) & 0x0200) | ((P_REGM19 << 7) & 0x0100) | (ext))
+#define DSP_MSUBX(P_REGM18, P_REGM19, ext)    (0xE400 | ((P_REGM18 << 8) & 0x0200) | ((P_REGM19 << 7) & 0x0100) | (ext))
+#define DSP_MADDC(P_ACCM, P_REG19, ext)    (0xE800 | ((P_ACCM << 9) & 0x0200) | ((P_REG19 << 7) & 0x0100) | (ext))
+#define DSP_MSUBC(P_ACCM, P_REG19, ext)    (0xEC00 | ((P_ACCM << 9) & 0x0200) | ((P_REG19 << 7) & 0x0100) | (ext))
 
 //f
-#define DSP_LSL16(P_ACC)    (0xF000 | ((P_ACC << 8) & 0x0100))
-#define DSP_MADD(P_REG18, P_REG1A)     (0xF200 | ((P_REG18 << 8) & 0x0100) | ((P_REG1A << 8) & 0x0100))
-#define DSP_LSR16(P_ACC)    (0xF400 | ((P_ACC << 8) & 0x0100))
-#define DSP_MSUB(P_REG18, P_REG1A)     (0xF600 | ((P_REG18 << 8) & 0x0100) | ((P_REG1A << 8) & 0x0100))
-#define DSP_ADDPAXZ(P_ACC, P_AX)  (0xF800 | ((P_ACC << 9) & 0x0200) | ((P_AX << 8) & 0x0100))
-#define DSP_CLRL(P_ACCL)     (0xFC00 | ((P_ACCL << 11) & 0x0800))
-#define DSP_MOVPZ(P_ACC)    (0xFE00 | ((P_ACC << 8) & 0x0100))  
+#define DSP_LSL16(P_ACC, ext)    (0xF000 | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MADD(P_REG18, P_REG1A, ext)     (0xF200 | ((P_REG18 << 8) & 0x0100) | ((P_REG1A << 8) & 0x0100) | (ext))
+#define DSP_LSR16(P_ACC, ext)    (0xF400 | ((P_ACC << 8) & 0x0100) | (ext))
+#define DSP_MSUB(P_REG18, P_REG1A, ext)     (0xF600 | ((P_REG18 << 8) & 0x0100) | ((P_REG1A << 8) & 0x0100) | (ext))
+#define DSP_ADDPAXZ(P_ACC, P_AX, ext)  (0xF800 | ((P_ACC << 9) & 0x0200) | ((P_AX << 8) & 0x0100) | (ext))
+#define DSP_CLRL(P_ACCL, ext)     (0xFC00 | ((P_ACCL << 11) & 0x0800) | (ext))
+#define DSP_MOVPZ(P_ACC, ext)    (0xFE00 | ((P_ACC << 8) & 0x0100))  | (ext)
 
 #endif
