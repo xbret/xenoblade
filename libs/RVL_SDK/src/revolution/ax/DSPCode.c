@@ -1,6 +1,4 @@
 #include <revolution/ax/DSPCode.h>
-#include "private/dspopcodes.h"
-#include "private/dspregs.h"
 
 //DSP microcode
 u16 axDspSlave[] ALIGN(32) = {
