@@ -957,7 +957,7 @@ config.libs = [
     DolphinLib(
         "enc",
         [
-            Object(NonMatching, "revolution/enc/encutility.c"),
+            Object(Matching, "revolution/enc/encutility.c"),
             Object(NonMatching, "revolution/enc/encunicode.c"), #EU/US only
             Object(NonMatching, "revolution/enc/encjapanese.c"), #JP only
         ],
