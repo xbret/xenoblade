@@ -1319,14 +1319,14 @@ static wchar_t kana_array[] = {
 BOOL enc_tbl_jp_loaded = TRUE;
 
 
-void ENCiConvertStringSjisToUnicode(u32 r3, u32 r4, u32 r5, u32 r6, u32 r7);
-void ENCiConvertStringUnicodeToSjis(u32 r3, u32 r4, u32 r5, u32 r6, u32 r7);
+ENCResult ENCiConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7);
+ENCResult ENCiConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7);
 
-void ENCConvertStringSjisToUnicode(u32 r3, u32 r4, u32 r5, u32 r6){
+void ENCConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6){
     ENCiConvertStringSjisToUnicode(r3,r4,r5,r6,0);
 }
 
-void ENCConvertStringUnicodeToSjis(u32 r3, u32 r4, u32 r5, u32 r6){
+void ENCConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6){
     ENCiConvertStringUnicodeToSjis(r3,r4,r5,r6,0);
 }
 
@@ -1347,10 +1347,10 @@ void ENCConvertStringSjisToJis(){
 }
 
 
-void ENCiConvertStringSjisToUnicode(u32 r3, u32 r4, u32 r5, u32 r6, u32 r7){
+ENCResult ENCiConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7){
 }
 
-void ENCiConvertStringUnicodeToSjis(u32 r3, u32 r4, u32 r5, u32 r6, u32 r7){
+ENCResult ENCiConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7){
 }
 
 //unused
