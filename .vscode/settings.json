@@ -13,16 +13,6 @@
     "files.insertFinalNewline": true,
     "files.associations": {
         "*.cp": "cpp",
-        "*.asm": "wla-dx-asm",
-        "*.inc": "cpp",
-        "dstypes.h": "c",
-        "cwchar": "cpp",
-        "axfxhooks.h": "c",
-        "dspcode.h": "c",
-        "algorithm": "cpp",
-        "gxpixel.h": "c",
-        "mtx.h": "c",
-        "dolphin_trk.h": "c"
     },
     "search.useIgnoreFiles": false,
     "search.exclude": {

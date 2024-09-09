@@ -1,12 +1,13 @@
-#ifndef RVL_SDK_ENCJAPANESE_H
-#define RVL_SDK_ENCJAPANESE_H
+#ifndef RVL_SDK_ENC_JAPANESE_H
+#define RVL_SDK_ENC_JAPANESE_H
 #include <types.h>
+#include <revolution/enc/encutility.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void ENCConvertStringSjisToUnicode(u32 r3, u32 r4, u32 r5, u32 r6);
-void ENCConvertStringUnicodeToSjis(u32 r3, u32 r4, u32 r5, u32 r6);
+ENCResult ENCConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6);
+ENCResult ENCConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6);
 
 #ifdef __cplusplus
 }
