@@ -37,10 +37,11 @@ BOOL CXiLHVerifyTable(u16* r3, u32 r4) {
     u16 r7 = (1 << (r4 - 2)) - 1;
     u16 r8 = 1 << (r4 - 1);
     u16 r9 = 1 << (r4 - 2);
+    u32 i, j;
 
     u8 array[0x80];
     
-    for(u32 j = 0; j < 0x80; j++){
+    for(j = 0; j < 0x80; j++){
         array[j] = 0;
     }
 
@@ -48,7 +49,7 @@ BOOL CXiLHVerifyTable(u16* r3, u32 r4) {
         return FALSE;
     }
 
-    u32 i = 1;
+    i = 1;
     r30 = r31_28;
     
     while (r30 < r31_20) {

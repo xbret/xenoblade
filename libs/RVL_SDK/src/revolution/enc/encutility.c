@@ -12,7 +12,7 @@ static void ENCiRegisterVersion(){
     }
 }
 
-ENCResult ENCiCheckParameters(u32 r3, u32* r4, u32* r5, u32* r6, u32 r7,
+ENCResult ENCiCheckParameters(BOOL r3, u32* r4, u32* r5, u32* r6, BOOL r7,
 u32* r8, int* r9, u32* r10){
     ENCResult result = ENC_RESULT_OK;
 
@@ -30,14 +30,14 @@ u32* r8, int* r9, u32* r10){
         *r5 = *r4;
     }else{
         *r5 = -1;
-        result = ENC_RESULT_3;
+        result = ENC_RESULT_ERROR_3;
     }
 
-    if(r7 == 0){
-        result = ENC_RESULT_3;
+    if(!r7){
+        result = ENC_RESULT_ERROR_3;
     }
 
-    if(r3 == 0){
+    if(!r3){
         *r6 = 0;
         *r5 = -1;
     }
@@ -54,48 +54,51 @@ u32* r8, int* r9, u32* r10){
     return result;
 }
 
-ENCBreakType ENCiCheckBreakType(u8 char1, u8 char2){
+//Returns size of break character
+u32 ENCiCheckBreakType(u8 char1, u8 char2){
     if(char1 == '\n'){ //LF
         return 1;
-    }
-    else if(char1 == '\r'){ //CR
-        return (char2 == '\n') + 1; //CRLF if second character is LF
+    }else if(char1 == '\r'){
+        return (char2 == '\n') ? 2 : 1; //CRLF if second character is LF, otherwise CR
     }
 
     return 0; //Not a break character
 }
 
-ENCBreakType ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL r6){
+//Returns size of break character
+u32 ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL r6){
     u8* ptr;
 
     if(r6 != 0){
         memset(dest, 0, size - 1);
 
         switch(breakType){
-        //CRLF?
-        case ENC_BREAK_TYPE_LF:
+        case ENC_BR_CRLF:
+            //CRLF
             ptr = dest + size;
             ptr[-1] = '\r';
             memset(ptr, 0, size - 1);
             ptr = dest + (size * 2);
             ptr[-1] = '\n';
-            return ENC_BREAK_TYPE_CR;
-        case ENC_BREAK_TYPE_CR:
+            return 2;
+        case ENC_BR_CR:
+            //CR
             ptr = dest + size;
             ptr[-1] = '\r';
-            return ENC_BREAK_TYPE_LF;
-        case ENC_BREAK_TYPE_CRLF:
+            return 1;
+        case ENC_BR_LF:
+            //LF
             ptr = dest + size;
             ptr[-1] = '\n';
-            return ENC_BREAK_TYPE_LF;
+            return 1;
         }
     }else{
         switch(breakType){
-        case ENC_BREAK_TYPE_LF: return ENC_BREAK_TYPE_CR;
-        case ENC_BREAK_TYPE_CR: return ENC_BREAK_TYPE_LF;
-        case ENC_BREAK_TYPE_CRLF: return ENC_BREAK_TYPE_LF;
+        case ENC_BR_CRLF: return 2;
+        case ENC_BR_CR: return 1;
+        case ENC_BR_LF: return 1;
         }
     }
 
-    return ENC_BREAK_TYPE_NONE;
+    return 0;
 }

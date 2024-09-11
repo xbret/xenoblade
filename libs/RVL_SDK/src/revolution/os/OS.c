@@ -464,12 +464,13 @@ static void ReportOSInfo(void) {
 
 static void CheckFirmare(void){
     OSIOSRev rev;
+    u32 myVersion;
     const GXColor bgColor = {0,0,255,0};
     const GXColor textColor = {255,255,255,0};
 
     __OSGetIOSRev(&rev);
 
-    const u32 myVersion = rev.idLo << 16 | rev.verMajor << 8 | rev.verMinor;
+    myVersion = rev.idLo << 16 | rev.verMajor << 8 | rev.verMinor;
     
     if (rev.idLo != (OS_MINIMUM_IOS_VERSION >> 16)
         || rev.idLo == (OS_MINIMUM_IOS_VERSION >> 16) && myVersion < OS_MINIMUM_IOS_VERSION) {
