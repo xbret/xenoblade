@@ -12,43 +12,44 @@ static void ENCiRegisterVersion(){
     }
 }
 
-ENCResult ENCiCheckParameters(BOOL r3, u32* r4, u32* r5, u32* r6, BOOL r7,
-u32* r8, int* r9, u32* r10){
+ENCResult ENCiCheckParameters(BOOL destNotNull, u32* destLength, s32* newDestLength, BOOL* destParamsValid,
+BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
     ENCResult result = ENC_RESULT_OK;
 
     //Register ENC if it hasn't been already. This feels like a silly design choice, but
     //since it is an optional library there isn't really an easy alternative.
     ENCiRegisterVersion();
 
-    if(r8 != NULL){
-        *r9 = *r8;
+    if(srcLength != NULL){
+        *newSrcLength = *srcLength;
     }else{
-        *r9 = -1;
+        *newSrcLength = -1;
     }
 
-    if(r4 != NULL){
-        *r5 = *r4;
+    if(destLength != NULL){
+        *newDestLength = *destLength;
     }else{
-        *r5 = -1;
-        result = ENC_RESULT_ERROR_3;
+        *newDestLength = -1;
+        result = ENC_RESULT_ERROR_INVALID_PARAM;
     }
 
-    if(!r7){
-        result = ENC_RESULT_ERROR_3;
+    if(!srcNotNull){
+        result = ENC_RESULT_ERROR_INVALID_PARAM;
     }
 
-    if(!r3){
-        *r6 = 0;
-        *r5 = -1;
+    if(!destNotNull){
+        *destParamsValid = FALSE;
+        *newDestLength = -1;
     }
 
-    if(*r9 < 0){
-        *r10 = 0;
+    //Why is source stuff handled differently than destination stuff???
+    if(*newSrcLength < 0){
+        *srcParamsValid = FALSE;
     }
 
     if(result != ENC_RESULT_OK){
-        *r4 = 0;
-        *r8 = 0;
+        *destLength = 0;
+        *srcLength = 0;
     }
 
     return result;
