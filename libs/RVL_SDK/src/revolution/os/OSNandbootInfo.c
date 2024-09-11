@@ -4,8 +4,9 @@
 static s32 CheckSum(s32* array){
     s32* var_r8 = array + 1;
     s32 total = 0;
+    s32 i;
     
-    for(s32 i = 0; i < 0x407; i++){
+    for(i = 0; i < 0x407; i++){
         total += *var_r8;
         var_r8++;
     };

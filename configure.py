@@ -242,11 +242,24 @@ cflags_trk = [
 # Dolphin library flags
 cflags_sdk = [
     *cflags_base,
-    "-lang=c99",
+    "-lang=c",
     "-inline auto",
     "-ipa file",
     "-fp_contract off",
     "-func_align 16",
+]
+
+# Home Button library flags
+cflags_hbm = [
+    *cflags_base,
+    "-lang=c99",
+    "-inline auto",
+    "-ipa file",
+    "-fpa_contract off",
+    "-func_align 16",
+    "-sdata 0",
+    "-sdata2 0",
+    "-i libs/RVL_SDK/src/revolution/hbm/include/",
 ]
 
 # Ndev flags
@@ -1007,9 +1020,13 @@ config.libs = [
             Object(NonMatching, "revolution/gx/GXPerf.c"),
         ],
     ),
-    DolphinLib(
-        "homebuttonLib",
-        [
+    {
+        "lib": "homebuttonLib",
+        "mw_version": "Wii/1.0a",
+        "root_dir": "libs/RVL_SDK/",
+        "cflags": cflags_hbm,
+        "progress_category": "sdk",
+        "objects": [
             Object(NonMatching, "revolution/hbm/HBMFrameController.cpp"),
             Object(NonMatching, "revolution/hbm/HBMAnmController.cpp"),
             Object(NonMatching, "revolution/hbm/HBMGUIManager.cpp"),
@@ -1052,14 +1069,7 @@ config.libs = [
             Object(NonMatching, "revolution/hbm/synvoice.c"),
             Object(NonMatching, "revolution/hbm/seq.c"),
         ],
-        "Wii/1.0a",
-        [   
-            "-sdata 0",
-            "-sdata2 0",
-            "-RTTI on",
-            "-i libs/RVL_SDK/src/revolution/hbm/include/",
-        ]
-    ),
+    },
     DolphinLib(
         "ipc",
         [

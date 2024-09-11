@@ -8,14 +8,14 @@ void C_MTXIdentity(){
 }
 
 void PSMTXIdentity(register Mtx m) {
+    register f32 tmp0, tmp1, tmp2, tmp3;
+
     // sdata2 ordering
     (void)1.0f;
     (void)0.0f;
 
-    register f32 tmp0 = 0.0F;
-    register f32 tmp1 = 1.0F;
-    register f32 tmp2;
-    register f32 tmp3;
+    tmp0 = 0.0F;
+    tmp1 = 1.0F;
     asm {
         psq_st tmp0, 8(m), 0, 0
         ps_merge01 tmp2, tmp0, tmp1
