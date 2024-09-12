@@ -1319,15 +1319,15 @@ static wchar_t kana_array[] = {
 BOOL enc_tbl_jp_loaded = TRUE;
 
 
-ENCResult ENCiConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7);
-ENCResult ENCiConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7);
+ENCResult ENCiConvertStringSjisToUnicode(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType);
+ENCResult ENCiConvertStringUnicodeToSjis(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
 
-ENCResult ENCConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6){
-    ENCiConvertStringSjisToUnicode(r3,r4,r5,r6,0);
+ENCResult ENCConvertStringSjisToUnicode(u8* dest, u32* destLength, const u16* src, u32* srcLength){
+    ENCiConvertStringSjisToUnicode(dest, destLength, src, srcLength, ENC_BR_KEEP);
 }
 
-ENCResult ENCConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6){
-    ENCiConvertStringUnicodeToSjis(r3,r4,r5,r6,0);
+ENCResult ENCConvertStringUnicodeToSjis(u16* dest, u32* destLength, const u8* src, u32* srcLength){
+    ENCiConvertStringUnicodeToSjis(dest, destLength, src, srcLength, ENC_BR_KEEP);
 }
 
 //unused
@@ -1347,10 +1347,10 @@ void ENCConvertStringSjisToJis(){
 }
 
 
-ENCResult ENCiConvertStringSjisToUnicode(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7){
+ENCResult ENCiConvertStringSjisToUnicode(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType){
 }
 
-ENCResult ENCiConvertStringUnicodeToSjis(UNKWORD r3, UNKWORD r4, UNKWORD r5, UNKWORD r6, UNKWORD r7){
+ENCResult ENCiConvertStringUnicodeToSjis(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType){
 }
 
 //unused
