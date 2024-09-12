@@ -24,9 +24,9 @@ typedef enum ENCBreakType {
 } ENCBreakType;
 
 typedef struct ENCContext {
-    UNKWORD encoding;
+    u32 encoding;
     ENCBreakType brtype;
-    UNKWORD state;
+    u32 state;
     u16 nomap;
     u16 invalid;
 } ENCContext;
@@ -34,7 +34,7 @@ typedef struct ENCContext {
 ENCResult ENCiCheckParameters(BOOL destNotNull, u32* destLength, s32* newDestLength, BOOL* destParamsValid,
 BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid);
 u32 ENCiCheckBreakType(u8 char1, u8 char2);
-u32 ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL r6);
+u32 ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL write);
 
 #ifdef __cplusplus
 }

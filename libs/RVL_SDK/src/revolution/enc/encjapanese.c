@@ -1,7 +1,7 @@
 #include <revolution/enc/encjapanese.h>
 
 //Shift-JIS -> Unicode table (starts from 0x8140 in Shift-JIS)
-wchar_t enc_tbl_jp_mbtowc[] = {
+const wchar_t enc_tbl_jp_mbtowc[] = {
     0x3000, 0x3001, 0x3002, 0xFF0C, 0xFF0E, 0x30FB, 0xFF1A, 0xFF1B, 0xFF1F, 0xFF01, 0x309B, 0x309C, 0x00B4, 0xFF40, 0x00A8, 0xFF3E,
     0xFFE3, 0xFF3F, 0x30FD, 0x30FE, 0x309D, 0x309E, 0x3003, 0x4EDD, 0x3005, 0x3006, 0x3007, 0x30FC, 0x2015, 0x2010, 0xFF0F, 0xFF3C,
     0xFF5E, 0x2225, 0xFF5C, 0x2026, 0x2025, 0x2018, 0x2019, 0x201C, 0x201D, 0xFF08, 0xFF09, 0x3014, 0x3015, 0xFF3B, 0xFF3D, 0xFF5B,
@@ -593,7 +593,7 @@ wchar_t enc_tbl_jp_mbtowc[] = {
 };
 
 
-wchar_t enc_tbl_jp_wctomb[] = {
+const wchar_t enc_tbl_jp_wctomb[] = {
     0x2281, 0xCD25, 0x849F, 0x3081, 0x404E, 0x88EA, 0x4FFA, 0x6B51, 0x8B56, 0x5293, 0x8153, 0xFA89, 0x579A, 0x9B58, 0x9678, 0x619C,
     0xB562, 0x9CF6, 0x659D, 0xB366, 0xFACE, 0x678D, 0xC569, 0x986F, 0x7A8B, 0x487C, 0xE2C5, 0x7D8B, 0x4980, 0x9773, 0x858E, 0xC187,
     0xE586, 0x8A8C, 0xBE8B, 0x9664, 0x9091, 0xDE97, 0x8EF9, 0x9CFC, 0x4604, 0x8446, 0x2584, 0xAA30, 0x8141, 0x4E92, 0x9A4F, 0x8AE9,
@@ -1292,7 +1292,7 @@ wchar_t enc_tbl_jp_wctomb[] = {
     0xE4F0, 0x8DE6, 0xF391, 0xE7E1, 0x92FB, 0xDC97, 0x8BBF, 0x998F, 0x7800, 0x0000, 0x0000
 };
 
-wchar_t enc_offset_jp[] = {
+const wchar_t enc_offset_jp[] = {
     0x001B, 0x0039, 0x0056, 0x0075, 0x008F, 0x00AB, 0x00CC, 0x00E9, 0x0107, 0x012B, 0x014B, 0x016B, 0x0185, 0x01A4, 0x01C2, 0x01E2,
     0x0201, 0x0221, 0x0241, 0x0262, 0x0285, 0x02A6, 0x02C8, 0x02E5, 0x0304, 0x0324, 0x0345, 0x0367, 0x0383, 0x03A0, 0x03BB, 0x03E0,
     0x03FC, 0x0421, 0x0438, 0x0451, 0x0465, 0x0482, 0x04A0, 0x04BB, 0x04D8, 0x04F4, 0x0517, 0x0539, 0x0558, 0x056E, 0x0586, 0x05A2,
@@ -1312,22 +1312,22 @@ wchar_t enc_offset_jp[] = {
 };
 
 //unused
-static wchar_t kana_array[] = {
+static const wchar_t kana_array[] = {
     0
 };
 
 BOOL enc_tbl_jp_loaded = TRUE;
 
 
-ENCResult ENCiConvertStringSjisToUnicode(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType);
-ENCResult ENCiConvertStringUnicodeToSjis(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
+ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
+ENCResult ENCiConvertStringUnicodeToSjis(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType);
 
-ENCResult ENCConvertStringSjisToUnicode(u8* dest, u32* destLength, const u16* src, u32* srcLength){
-    ENCiConvertStringSjisToUnicode(dest, destLength, src, srcLength, ENC_BR_KEEP);
+ENCResult ENCConvertStringSjisToUnicode(u16* dest, u32* destLength, const u8* src, u32* srcLength){
+    return ENCiConvertStringSjisToUnicode(dest, destLength, src, srcLength, ENC_BR_KEEP);
 }
 
-ENCResult ENCConvertStringUnicodeToSjis(u16* dest, u32* destLength, const u8* src, u32* srcLength){
-    ENCiConvertStringUnicodeToSjis(dest, destLength, src, srcLength, ENC_BR_KEEP);
+ENCResult ENCConvertStringUnicodeToSjis(u8* dest, u32* destLength, const u16* src, u32* srcLength){
+    return ENCiConvertStringUnicodeToSjis(dest, destLength, src, srcLength, ENC_BR_KEEP);
 }
 
 //unused
@@ -1347,10 +1347,143 @@ void ENCConvertStringSjisToJis(){
 }
 
 
-ENCResult ENCiConvertStringSjisToUnicode(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType){
+ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType){
+    s32 srcLength = -1;
+    s32 destLength = -1;
+    BOOL destParamsValid = TRUE;
+    BOOL srcParamsValid = TRUE;
+    s32 srcOffset = 0;
+    s32 destOffset = 0;
+    ENCResult result;
+
+    result = ENCiCheckParameters(dest != NULL, destLengthPtr, &destLength, &destParamsValid,
+    src != NULL, srcLengthPtr, &srcLength, &srcParamsValid);
+
+    if(result != ENC_OK){
+        return result;
+    }
+
+    //Return early if the table loaded variable isn't true. This shouldn't happen as the value
+    //is always set to true.
+    if(!enc_tbl_jp_loaded){
+        return ENC_ERR_NO_MAP_RULE;
+    }
+    
+    while(*src != 0x0 && (srcOffset < srcLength || !srcParamsValid)){
+        u8 curByte = *src;
+        u8 byte2;
+        u16 charVal;
+
+        //If the current destination offset is past the length, return an error
+        if (destOffset >= destLength && destParamsValid) {
+            result = ENC_ERR_NO_BUF_LEFT;
+            break;
+        }
+
+        //If the break type isn't ENC_BR_KEEP, change the break characters
+        if (brType > ENC_BR_KEEP){
+            s32 srcBreakSize;
+            s32 destBreakSize;
+
+            //Determine the size of the break character sequence. If there is more than
+            //a single character left, read the next character as well.
+            byte2 = (srcLength - srcOffset) > 1 || !srcParamsValid ? src[1] : 0;
+            srcBreakSize = ENCiCheckBreakType(curByte, byte2);
+
+            //If the there is a break at the current offset, try writing it to the destination.
+            if (srcBreakSize > 0){
+                destBreakSize = ENCiWriteBreakType((u8*)dest, 2, brType, destParamsValid);
+
+                //If there isn't enough space for the current break character, return an error
+                if (destLength - destOffset < destBreakSize && destParamsValid) {
+                    result = ENC_ERR_NO_BUF_LEFT;
+                    break;
+                }
+        
+                src += srcBreakSize;
+                srcOffset += srcBreakSize;
+                destOffset += destBreakSize;
+        
+                if (destParamsValid) {
+                    dest += destBreakSize;
+                }
+
+                //Go to the next character
+                continue;
+            }
+        }
+
+        if((u8)(curByte + 0x7F) <= 0x1E || (u8)(curByte + 0x20) <= 0x1C){
+            if(srcLength - srcOffset < 2 && srcParamsValid){
+                break;
+            }
+
+            byte2 = src[1];
+            src++;
+
+            if((u8)(byte2 + 0xC0) <= 0x3E || (u8)(byte2 + 0x80) <= 0x7C){
+                if(curByte < 0xF0){
+                    u32 r3 = (curByte < 0xA0 ? curByte - 0x81 : curByte - 0xC1) * 0xBC;
+                    u32 r0 = byte2 < 0x7F ? byte2 - 0x40 : byte2 - 0x41;
+                    charVal = enc_tbl_jp_mbtowc[r3 + r0];
+                }else if(curByte >= 0xFA){
+                    u32 r3 = (curByte - 0xCB) * 0xBC;
+                    u32 r0 = byte2 < 0x7F ? byte2 - 0x40 : byte2 - 0x41;
+                    charVal = enc_tbl_jp_mbtowc[r3 + r0];
+                }else{
+                    u32 r3 = (curByte - 0xF0) * 0xBC;
+                    r3 += byte2 < 0x7F ? byte2 - 0x40 : byte2 - 0x41;
+                    charVal = (u16)(r3 + 0xE000);
+                }
+            }else{
+                //The format for the character is invalid, break
+                result = ENC_ERR_INVALID_FORMAT;
+                break;
+            }
+
+            srcOffset++;
+        }else{
+            if(curByte <= 0x80){
+                charVal = curByte;
+            }else if(curByte == 0xA0){
+                charVal = 0xF8F0;
+            }else if(curByte < 0xE0){
+                charVal = ((curByte + 0x10000) - 0x140) & 0xFFFF;
+            }else if(curByte >= 0xFD){
+                charVal = ((curByte + 0x10000) - 0x80C) & 0xFFFF;
+            }else{
+                result = ENC_ERR_INVALID_FORMAT;
+                break;
+            }
+        }
+
+        if((u16)charVal == 0){
+            result = ENC_ERR_NO_MAP_RULE;
+            break;
+        }
+
+        if(destParamsValid){
+            *dest = charVal;
+            dest++;
+        }
+
+        destOffset++;
+        src++;
+        srcOffset++;
+    }
+   
+   if(srcLengthPtr != NULL){
+    *srcLengthPtr = srcOffset;
+   }
+
+   if(destLengthPtr != NULL){
+    *destLengthPtr = destOffset;
+   }
+
+   return result;
 }
 
-ENCResult ENCiConvertStringUnicodeToSjis(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType){
+ENCResult ENCiConvertStringUnicodeToSjis(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType){
 }
 
 //unused

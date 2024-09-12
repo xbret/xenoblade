@@ -6,8 +6,8 @@
 extern "C" {
 #endif
 
-ENCResult ENCConvertStringSjisToUnicode(u8* dest, u32* destLength, const u16* src, u32* srcLength);
-ENCResult ENCConvertStringUnicodeToSjis(u16* dest, u32* destLength, const u8* src, u32* srcLength);
+ENCResult ENCConvertStringSjisToUnicode(u16* dest, u32* destLength, const u8* src, u32* srcLength);
+ENCResult ENCConvertStringUnicodeToSjis(u8* dest, u32* destLength, const u16* src, u32* srcLength);
 
 #ifdef __cplusplus
 }

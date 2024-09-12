@@ -20,13 +20,19 @@ root_dir = os.path.abspath(os.path.join(script_dir, ".."))
 src_dir = os.path.join(root_dir, "src")
 include_dirs = [
     os.path.join(root_dir, "include"),
-    # Add additional include directories here
+    os.path.join(root_dir, "libs/PowerPC_EABI_Support/include"),
+    os.path.join(root_dir, "libs/monolib/include"),
+    os.path.join(root_dir, "libs/nw4r/include"),
+    os.path.join(root_dir, "libs/RVL_SDK/include"),
+    os.path.join(root_dir, "libs/PowerPC_EABI_Support/include/stl"),
 ]
 
 include_pattern = re.compile(r'^#\s*include\s*[<"](.+?)[>"]$')
 guard_pattern = re.compile(r"^#\s*ifndef\s+(.*)$")
+pragmaonce_pattern = re.compile(r'^#pragma once.*$')
 
 defines = set()
+files = set()
 
 
 def import_h_file(in_file: str, r_path: str, deps: List[str]) -> str:
@@ -60,11 +66,16 @@ def process_file(in_file: str, lines: List[str], deps: List[str]) -> str:
     out_text = ""
     for idx, line in enumerate(lines):
         guard_match = guard_pattern.match(line.strip())
+        pragmaonce_match = pragmaonce_pattern.match(line.strip())
         if idx == 0:
             if guard_match:
                 if guard_match[1] in defines:
                     break
                 defines.add(guard_match[1])
+            if pragmaonce_match:
+                if in_file in files:
+                    break
+                files.add(in_file)
             print("Processing file", in_file)
         include_match = include_pattern.match(line.strip())
         if include_match and not include_match[1].endswith(".s"):
