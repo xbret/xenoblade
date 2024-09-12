@@ -5,7 +5,7 @@ static char base64_array[] = {
     0
 };
 
-ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u32* srcLengthPtr, ENCBreakType brType);
+ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
 u32 ENCiConvertUtf8To32(const u8* src, s32 size);
 void ENCiConvertUtf32To16(u16* dest, s32 size, u32 val);
 
@@ -37,7 +37,7 @@ void ENCConvertStringUtf8ToUtf32(){
 void ENCConvertStringUtf16ToUtf8(){
 }
 
-ENCResult ENCConvertStringUtf8ToUtf16(u16* dest, u32* destLength, u8* src, u32* srcLength){
+ENCResult ENCConvertStringUtf8ToUtf16(u16* dest, u32* destLength, const u8* src, u32* srcLength){
     return ENCiConvertStringUtf8ToUtf16(dest, destLength, src, srcLength, ENC_BR_KEEP);
 }
 
@@ -98,7 +98,7 @@ void ENCiConvertStringUtf16ToUtf8(){
 }
 
 
-ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u32* srcLengthPtr, ENCBreakType brType){
+ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType){
     s32 srcOffset = 0;
     s32 destOffset = 0;
     s32 srcLength = -1;
@@ -113,12 +113,12 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u
     src != NULL, srcLengthPtr, &srcLength, &srcParamsValid);
 
     //If one of the parameters is invalid, return
-    if (result != ENC_RESULT_OK) {
+    if (result != ENC_OK) {
         return result;
     }
 
     //Check if the text starts with a BOM mark (EF BB B8 in UTF-8)
-    if ((srcLength >= 3 || !srcParamsValid) && src[0] == 0xEf && src[1] == 0xBB && src[2] == 0xBF) {
+    if ((srcLength >= 3 || !srcParamsValid) && src[0] == 0xEF && src[1] == 0xBB && src[2] == 0xBF) {
         src += 3;
         srcOffset = 3;
     }
@@ -128,7 +128,7 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u
 
         //If the current destination offset is past the length, return an error
         if (destOffset >= destLength && destParamsValid) {
-            result = ENC_RESULT_ERROR_OUT_OF_RANGE;
+            result = ENC_ERR_NO_BUF_LEFT;
             break;
         }
 
@@ -145,7 +145,7 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u
 
                 //If there isn't enough space for the current break character, return an error
                 if (destLength - destOffset < destBreakSize && destParamsValid) {
-                    result = ENC_RESULT_ERROR_OUT_OF_RANGE;
+                    result = ENC_ERR_NO_BUF_LEFT;
                     break;
                 }
         
@@ -193,7 +193,7 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u
                 destCharSize = 2;
             }else{
                 //Invalid character
-                result = ENC_RESULT_ERROR_INVALID_CHAR;
+                result = ENC_ERR_INVALID_FORMAT;
                 break;
             }
 
@@ -204,14 +204,14 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, u8* src, u
 
             //If the conversion failed, return an error
             if (utf32Char == 0) {
-                result = ENC_RESULT_ERROR_INVALID_CHAR;
+                result = ENC_ERR_INVALID_FORMAT;
                 break;
             }
             
             if (destParamsValid != 0) {
                 //If there isn't enough bytes left for this character, return an error
                 if (destLength - destOffset < destCharSize) {
-                    result = ENC_RESULT_ERROR_OUT_OF_RANGE;
+                    result = ENC_ERR_NO_BUF_LEFT;
                     break;
                 }
             
@@ -244,7 +244,8 @@ void ENCiConvertStringUtf7ToUtf16(){
 void ENCiConvertStringUtf16ToUtf16(){
 }
 
-//Converts a set of UTF-8 character bytes to the equivalent UTF-32 value.
+//Converts a set of UTF-8 character bytes to the equivalent UTF-32 value. Returns
+//0 if conversion fails.
 static u32 ENCiConvertUtf8To32(const u8* src, s32 size){
     s32 i;
     u32 result;
@@ -263,11 +264,13 @@ static u32 ENCiConvertUtf8To32(const u8* src, s32 size){
         result = *src & 0x7;
         break;
         default:
+        //Invalid size passed, return 0
         return 0;
     }
 
     for(i = 1; i < size; i++){
         if((u8)(src[i] & 0xC0) != 0x80){
+            //Invalid UTF-8 byte, return 0
             return 0;
         }
         

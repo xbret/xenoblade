@@ -14,7 +14,7 @@ static void ENCiRegisterVersion(){
 
 ENCResult ENCiCheckParameters(BOOL destNotNull, u32* destLength, s32* newDestLength, BOOL* destParamsValid,
 BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
-    ENCResult result = ENC_RESULT_OK;
+    ENCResult result = ENC_OK;
 
     //Register ENC if it hasn't been already. This feels like a silly design choice, but
     //since it is an optional library there isn't really an easy alternative.
@@ -30,11 +30,11 @@ BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
         *newDestLength = *destLength;
     }else{
         *newDestLength = -1;
-        result = ENC_RESULT_ERROR_INVALID_PARAM;
+        result = ENC_ERR_INVALID_PARAM;
     }
 
     if(!srcNotNull){
-        result = ENC_RESULT_ERROR_INVALID_PARAM;
+        result = ENC_ERR_INVALID_PARAM;
     }
 
     if(!destNotNull){
@@ -47,7 +47,7 @@ BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
         *srcParamsValid = FALSE;
     }
 
-    if(result != ENC_RESULT_OK){
+    if(result != ENC_OK){
         *destLength = 0;
         *srcLength = 0;
     }

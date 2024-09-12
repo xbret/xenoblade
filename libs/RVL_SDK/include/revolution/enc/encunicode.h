@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-ENCResult ENCConvertStringUtf8ToUtf16(u16* dest, u32* destLength, u8* src, u32* srcLength);
+ENCResult ENCConvertStringUtf8ToUtf16(u16* dest, u32* destLength, const u8* src, u32* srcLength);
 
 #ifdef __cplusplus
 }
