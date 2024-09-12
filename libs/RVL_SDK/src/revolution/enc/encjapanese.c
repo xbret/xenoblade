@@ -1321,6 +1321,7 @@ BOOL enc_tbl_jp_loaded = TRUE;
 
 ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
 ENCResult ENCiConvertStringUnicodeToSjis(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType);
+void ENCiConvertUnicodeToSjis(u8* dest, const u16 val);
 
 ENCResult ENCConvertStringSjisToUnicode(u16* dest, u32* destLength, const u8* src, u32* srcLength){
     return ENCiConvertStringSjisToUnicode(dest, destLength, src, srcLength, ENC_BR_KEEP);
@@ -1348,15 +1349,17 @@ void ENCConvertStringSjisToJis(){
 
 
 ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType){
+    s32 srcOffset = 0;
+    s32 destOffset = 0;
     s32 srcLength = -1;
     s32 destLength = -1;
     BOOL destParamsValid = TRUE;
     BOOL srcParamsValid = TRUE;
-    s32 srcOffset = 0;
-    s32 destOffset = 0;
-    ENCResult result;
 
-    result = ENCiCheckParameters(dest != NULL, destLengthPtr, &destLength, &destParamsValid,
+    //Check the parameters for possible errors. This also handles copying the length from the parameters
+    //to our temporary variables rather than directly using those. It seems a bit overkill but if it works
+    //it works :p
+    ENCResult result = ENCiCheckParameters(dest != NULL, destLengthPtr, &destLength, &destParamsValid,
     src != NULL, srcLengthPtr, &srcLength, &srcParamsValid);
 
     if(result != ENC_OK){
@@ -1484,6 +1487,145 @@ ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8
 }
 
 ENCResult ENCiConvertStringUnicodeToSjis(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType){
+    s32 srcOffset = 0; //r31
+    s32 destOffset = 0; //r30
+    s32 srcLength = -1; //r1_18
+    s32 destLength = -1; //r1_14
+    BOOL destParamsValid = TRUE; //r1_10
+    BOOL srcParamsValid = TRUE; //r1_c
+
+    //Check the parameters for possible errors. This also handles copying the length from the parameters
+    //to our temporary variables rather than directly using those. It seems a bit overkill but if it works
+    //it works :p
+    ENCResult result = ENCiCheckParameters(dest != NULL, destLengthPtr, &destLength, &destParamsValid,
+    src != NULL, srcLengthPtr, &srcLength, &srcParamsValid);
+
+    if(result != ENC_OK){
+        return result;
+    }
+
+    //Return early if the table loaded variable isn't true. This shouldn't happen as the value
+    //is always set to true.
+    if(!enc_tbl_jp_loaded){
+        return ENC_ERR_NO_MAP_RULE;
+    }
+
+    if(srcLength > 0 || !srcParamsValid){
+        u16 val = *src;
+
+        //Check for UTF-16 BOM
+        if(val == 0xFEFF){
+            srcOffset = 1;
+            src++;
+        }else if(val == 0xFFFE){
+            //FFFE BOM is not supported
+            if(destLengthPtr != NULL){
+                *destLengthPtr = 0;
+            }
+
+            *srcLengthPtr = 0;
+            return ENC_ERR_INVALID_FORMAT;
+        }
+    }
+    
+    while(*src != 0x0000 && (srcOffset < srcLength || !srcParamsValid)){
+        u16 curChar = *src;
+        u16 char2;
+        u8 sjisCharBytes[2];
+        u8 hi;
+        u8 lo;
+
+        if (destOffset >= destLength && destParamsValid) {
+            //If the current destination offset is past the length, return an error
+            result = ENC_ERR_NO_BUF_LEFT;
+            break;
+        }
+
+        //If the break type isn't ENC_BR_KEEP, change the break characters
+        if (brType > ENC_BR_KEEP){
+            s32 srcBreakSize;
+            s32 destBreakSize;
+
+            //Determine the size of the break character sequence. If there is more than
+            //a single character left, read the next character as well.
+            char2 = (srcLength - srcOffset) > 1 || !srcParamsValid ? src[1] : 0;
+            srcBreakSize = ENCiCheckBreakType(curChar, char2);
+
+            //If the there is a break at the current offset, try writing it to the destination.
+            if (srcBreakSize > 0){
+                destBreakSize = ENCiWriteBreakType(dest, 2, brType, destParamsValid);
+
+                //If there isn't enough space for the current break character, return an error
+                if (destLength - destOffset < destBreakSize && destParamsValid) {
+                    result = ENC_ERR_NO_BUF_LEFT;
+                    break;
+                }
+        
+                src += srcBreakSize;
+                srcOffset += srcBreakSize;
+                destOffset += destBreakSize;
+        
+                if (destParamsValid) {
+                    dest += destBreakSize;
+                }
+
+                //Go to the next character
+                continue;
+            }
+        }
+        
+        //Try converting the current character to Shift-JIS
+        ENCiConvertUnicodeToSjis(sjisCharBytes, curChar);
+
+        hi = sjisCharBytes[0];
+        lo = sjisCharBytes[1];
+        
+        //Check for any errors
+
+        //If the high byte is zero, an error occured somewhere
+        if(hi == 0x00){
+            result = ENC_ERR_NO_MAP_RULE;
+            break;
+        }
+
+        if(lo == 0x00){
+            //Only write the high byte if the low byte is 0
+            if(destParamsValid){
+                dest[0] = hi;
+                dest++;
+            }
+        }else if(destParamsValid){
+            //If both are non-zero, write both bytes
+
+            //If there isn't enough room in the destination left, return an error
+            if(destLength - destOffset < 2){
+                result = ENC_ERR_NO_BUF_LEFT;
+                break;
+            }
+
+            dest[0] = hi;
+            destOffset++;
+            dest[1] = lo;
+            dest += 2;
+        }else{
+            //Otherwise, just increase the destination offset an extra time
+            destOffset++;
+        }
+
+        destOffset++;
+        src++;
+        srcOffset++;
+    }
+   
+   if(srcLengthPtr != NULL){
+    *srcLengthPtr = srcOffset;
+   }
+
+   if(destLengthPtr != NULL){
+    *destLengthPtr = destOffset;
+   }
+
+   return result;
 }
 
 //unused
@@ -1502,7 +1644,9 @@ void ENCiConvertStringJisToUnicode(){
 void ENCiConvertStringUnicodeToJis(){
 }
 
-static void ENCiConvertUnicodeToSjis(){
+//Converts the given UTF-16 value to Shift-JIS, and writes the two
+//result bytes to the destination.
+static void ENCiConvertUnicodeToSjis(u8* dest, const u16 val){
 }
 
 static void ENCiFindSjisFromUnicode(){

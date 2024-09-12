@@ -57,7 +57,7 @@ BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
 }
 
 //Returns size of break character
-u32 ENCiCheckBreakType(u8 char1, u8 char2){
+u32 ENCiCheckBreakType(u32 char1, u32 char2){
     if(char1 == '\n'){ //LF
         return 1;
     }else if(char1 == '\r'){
