@@ -1,13 +1,13 @@
 #ifndef _TYPES_H
 #define _TYPES_H
 
-#ifdef __cplusplus
+#ifndef __cplusplus
+#include <stdarg.h>
+#include <stddef.h>
+#else
 #include <cstdarg>
 #include <cstddef>
 #include <new>
-#else
-#include <stdarg.h>
-#include <stddef.h>
 #endif
 
 #include "decomp.h"

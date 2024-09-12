@@ -47,6 +47,7 @@ BOOL srcNotNull, u32* srcLength, s32* newSrcLength, BOOL* srcParamsValid){
         *srcParamsValid = FALSE;
     }
 
+    //Zero out the original destination/source pointer values if an error occurred
     if(result != ENC_OK){
         *destLength = 0;
         *srcLength = 0;
@@ -67,10 +68,10 @@ u32 ENCiCheckBreakType(u8 char1, u8 char2){
 }
 
 //Returns size of break character
-u32 ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL r6){
+u32 ENCiWriteBreakType(u8* dest, u32 size, ENCBreakType breakType, BOOL write){
     u8* ptr;
 
-    if(r6 != 0){
+    if(write){
         memset(dest, 0, size - 1);
 
         switch(breakType){

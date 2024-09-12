@@ -124,7 +124,9 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* 
     }
     
     while(*src != 0x00 && (srcOffset < srcLength || !srcParamsValid)) {
-        u8 curChar = *src;
+        u8 curByte = *src;
+        u8 byte2;
+        u16 charVal = curByte;
 
         //If the current destination offset is past the length, return an error
         if (destOffset >= destLength && destParamsValid) {
@@ -134,14 +136,17 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* 
 
         //If the break type isn't ENC_BR_KEEP, change the break characters
         if (brType > ENC_BR_KEEP){
+            s32 srcBreakSize;
+            s32 destBreakSize;
+
             //Determine the size of the break character sequence. If there is more than
             //a single character left, read the next character as well.
-            u8 char2 = (srcLength - srcOffset) > 1 || !srcParamsValid ? src[1] : 0;
-            s32 srcBreakSize = ENCiCheckBreakType(curChar, char2);
+            byte2 = (srcLength - srcOffset) > 1 || !srcParamsValid ? src[1] : 0;
+            srcBreakSize = ENCiCheckBreakType(curByte, byte2);
 
             //If the there is a break at the current offset, try writing it to the destination.
             if (srcBreakSize > 0){
-                s32 destBreakSize = ENCiWriteBreakType((u8*)dest, 2, brType, destParamsValid);
+                destBreakSize = ENCiWriteBreakType((u8*)dest, 2, brType, destParamsValid);
 
                 //If there isn't enough space for the current break character, return an error
                 if (destLength - destOffset < destBreakSize && destParamsValid) {
@@ -162,13 +167,13 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* 
             }
         }
 
-        //Check if the character is a regular ASCII character (less than 0x80)
-        if (curChar < 0x80) {
+        //Check if the byte is a regular ASCII character (less than 0x80)
+        if (curByte < 0x80) {
             //ASCII character
             
-            //If the destination is not null, write the current character.
+            //If the destination is not null, write the current byte.
             if (destParamsValid) {
-                *dest = curChar;
+                *dest = curByte;
                 dest++;
             }
         
@@ -182,13 +187,13 @@ ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* 
             u32 utf32Char;
 
             //Find out the UTF-8 character size and the corresponding UTF-16 character size
-            if ((u8)(curChar & 0xE0) == 0xC0) {
+            if ((u8)(curByte & 0xE0) == 0xC0) {
                 srcCharSize = 2;
                 destCharSize = 1;
-            } else if ((u8)(curChar & 0xF0) == 0xE0) {
+            } else if ((u8)(curByte & 0xF0) == 0xE0) {
                 srcCharSize = 3;
                 destCharSize = 1;
-            } else  if ((u8)(curChar & 0xF8) == 0xF0) {
+            } else  if ((u8)(curByte & 0xF8) == 0xF0) {
                 srcCharSize = 4;
                 destCharSize = 2;
             }else{
