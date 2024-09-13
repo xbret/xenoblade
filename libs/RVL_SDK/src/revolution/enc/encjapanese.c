@@ -2160,6 +2160,7 @@ ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8
             }else if(curByte == 0xA0){
                 charVal = 0xF8F0;
             }else if(curByte < 0xE0){
+                // @bug This doesn't exclude values in from 0x81 to 0xA0...
                 charVal = curByte + (0xFF61 - 0xA1);
             }else if(curByte >= 0xFD){
                 charVal = curByte + (0xF8F1 - 0xFD);
@@ -2197,12 +2198,12 @@ ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8
 }
 
 ENCResult ENCiConvertStringUnicodeToSjis(u8* dest, u32* destLengthPtr, const u16* src, u32* srcLengthPtr, ENCBreakType brType){
-    s32 srcOffset = 0; //r31
-    s32 destOffset = 0; //r30
-    s32 srcLength = -1; //r1_18
-    s32 destLength = -1; //r1_14
-    BOOL destParamsValid = TRUE; //r1_10
-    BOOL srcParamsValid = TRUE; //r1_c
+    s32 srcOffset = 0;
+    s32 destOffset = 0;
+    s32 srcLength = -1;
+    s32 destLength = -1;
+    BOOL destParamsValid = TRUE;
+    BOOL srcParamsValid = TRUE;
 
     //Check the parameters for possible errors. This also handles copying the length from the parameters
     //to our temporary variables rather than directly using those. It seems a bit overkill but if it works
