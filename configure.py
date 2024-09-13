@@ -255,10 +255,11 @@ cflags_hbm = [
     "-lang=c99",
     "-inline auto",
     "-ipa file",
-    "-fpa_contract off",
+    "-fp_contract off",
     "-func_align 16",
     "-sdata 0",
     "-sdata2 0",
+    "-RTTI on",
     "-i libs/RVL_SDK/src/revolution/hbm/include/",
 ]
 
@@ -972,7 +973,7 @@ config.libs = [
         [
             Object(Matching, "revolution/enc/encutility.c"),
             Object(Matching, "revolution/enc/encunicode.c"), #EU/US only
-            Object(NonMatching, "revolution/enc/encjapanese.c"), #JP only
+            Object(Matching, "revolution/enc/encjapanese.c"), #JP only
         ],
     ),
     DolphinLib(
@@ -1023,7 +1024,7 @@ config.libs = [
     {
         "lib": "homebuttonLib",
         "mw_version": "Wii/1.0a",
-        "root_dir": "libs/RVL_SDK/",
+        "root_dir": "libs/RVL_SDK",
         "cflags": cflags_hbm,
         "progress_category": "sdk",
         "objects": [
