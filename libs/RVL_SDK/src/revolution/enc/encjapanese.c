@@ -1695,8 +1695,8 @@ ENCResult ENCiConvertStringSjisToUnicode(u16* dest, u32* destLengthPtr, const u8
                 charVal = curByte;
             }else if(curByte == 0xA0){
                 charVal = 0xF8F0;
-            }else if(curByte < 0xE0){
-                // @bug This doesn't exclude values in from 0x81 to 0xA0...
+            }else if(curByte < 0xE0){ // @bug This doesn't exclude values from 0x81 to 0xA0...
+                //Japanese half-width characters (0xA1-E0)
                 charVal = curByte + (0xFF61 - 0xA1);
             }else if(curByte >= 0xFD){
                 charVal = curByte + (0xF8F1 - 0xFD);
