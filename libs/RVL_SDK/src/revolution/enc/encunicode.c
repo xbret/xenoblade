@@ -297,11 +297,13 @@ static void ENCiConvertUtf16To32(){
 //Converts a UTF-32 value to the equivalent UTF-16 bytes, and writes it to the destination.
 static void ENCiConvertUtf32To16(u16* dest, s32 size, u32 val){
     if(size == 1){
+        //Standard character
         dest[0] = val;
     }
     if(size == 2){
-        dest[0] = (val >> 10) + 0xD7C0;
-        dest[1] = (val & 0x3FF) + 0xDC00;
+        //Surrogate pair character
+        dest[0] = (val >> 10) + 0xD7C0; //High surrogate = ((val - 0x10000) >> 10) + 0xD800
+        dest[1] = (val & 0x3FF) + 0xDC00; //Low surrogate = (val & 0x3FF) + 0xDC00
     }
 }
 
