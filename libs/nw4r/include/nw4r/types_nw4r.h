@@ -42,6 +42,12 @@ template <typename T> struct TextWriterBase;
 
 } // namespace ut
 
+namespace db {
+namespace detail {
+struct ConsoleHead;
+}
+} // namespace db
+
 namespace ef {
 struct DrawOrder;
 struct DrawInfo;

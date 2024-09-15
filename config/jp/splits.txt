@@ -5104,7 +5104,10 @@ libs/CriWare/sofdec/sud/sud_lib.c:
 	.bss        start:0x8061D708 end:0x8061D710
 
 libs/nw4r/db/db_console.cpp:
-	.text       start:0x803D7244 end:0x803D733C
+	.text       start:0x803D7244 end:0x803D7318
+
+libs/nw4r/db/db_DbgPrintBase.cpp:
+	.text       start:0x803D7318 end:0x803D733C
 
 libs/nw4r/db/db_assert.cpp:
 	.text       start:0x803D733C end:0x803D7810
