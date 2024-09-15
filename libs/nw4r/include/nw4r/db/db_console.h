@@ -26,51 +26,21 @@ namespace nw4r
                 s16 viewPosX;                     // at 0x1C
                 s16 viewPosY;                     // at 0x1E
                 u16 viewLines;                    // at 0x20
-                u8 isVisible;                     // at 0x22
+                bool isVisible;                   // at 0x22
                 u8 padding_[1];                   // at 0x23
                 ut::TextWriterBase<char>* writer; // at 0x24
                 ConsoleHead* next;                // at 0x28
             };
         }
 
-        typedef enum ConsoleOutputType {
+        enum ConsoleOutputType {
             CONSOLE_OUTPUT_NONE,
             CONSOLE_OUTPUT_DISPLAY,
             CONSOLE_OUTPUT_TERMINAL,
             CONSOLE_OUTPUT_ALL,
-        } ConsoleOutputType;
+        };
 
         typedef void (*VisitStringCallback)(detail::ConsoleHead* console, u8* r4, long r5, u32 r6);
-
-        //unused
-        void Console_VPrintf(detail::ConsoleHead* console, const char* format, va_list* vlist)
-        {
-        }
-
-        //unused
-        u8 Console_SetVisible(detail::ConsoleHead* console, bool isVisible)
-        {
-            u8 before;
-            return 0;
-        }
-
-        long Console_ShowLatestLine(detail::ConsoleHead* console)
-        {
-            long baseLine;
-            return 0;
-        }
-
-        //unused
-        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line)
-        {
-            long before;
-            return 0;
-        }
-
-        //unused
-        u16 Console_GetViewHeight(detail::ConsoleHead* console)
-        {
-        }
 
         detail::ConsoleHead* Console_Create(void* buffer, u16 width, u16 height, u16 viewHeight, u16 priority, u16 attr);
         void Console_Destroy(detail::ConsoleHead* console);
@@ -87,6 +57,46 @@ namespace nw4r
         u16 Console_ChangePriority(detail::ConsoleHead* console, u16 r4);
         void Console_VisitString(detail::ConsoleHead* console, VisitStringCallback visitor);
         long Console_GetTotalLines(detail::ConsoleHead* console);
+
+        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line);
+        u16 Console_GetViewHeight(detail::ConsoleHead* console);
+
+        //Stubbed in final
+        void Console_VPrintf(detail::ConsoleHead* console, const char* format, __va_list_struct* vlist)
+        {
+        }
+
+        u8 Console_SetVisible(detail::ConsoleHead* console, bool isVisible)
+        {
+            u8 before = console->isVisible;
+            console->isVisible = isVisible;
+            return before;
+        }
+
+        long Console_ShowLatestLine(detail::ConsoleHead* console)
+        {
+            long baseLine =  Console_GetTotalLines(console) - Console_GetViewHeight(console);
+            
+            if(baseLine < 0){
+                baseLine = 0;
+            }
+
+            Console_SetViewBaseLine(console, baseLine);
+
+            return baseLine;
+        }
+
+        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line)
+        {
+            long before = console->viewTopLine;
+            console->viewTopLine = line;
+            return before;
+        }
+
+        u16 Console_GetViewHeight(detail::ConsoleHead* console)
+        {
+            return console->viewLines;
+        }
     }
 }
 

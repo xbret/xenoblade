@@ -161,13 +161,13 @@ namespace nw4r
         }
 
         //unused
-        void Console_VFPrintf(ConsoleOutputType type, ConsoleHead* console, const char* format, va_list* vlist)
+        void Console_VFPrintf(ConsoleOutputType type, ConsoleHead* console, const char* format, __va_list_struct* vlist)
         {
             static u8 sStrBuf[1024];
         }
 
         //unused
-        void Console_FPrintf(ConsoleOutputType type, ConsoleHead* console, const char * format)
+        void Console_FPrintf(ConsoleOutputType type, ConsoleHead* console, const char* format)
         {
         }
 
