@@ -1748,6 +1748,7 @@ config.progress_categories = [
     ProgressCategory("sdk", "SDK Code"),
     ProgressCategory("criware", "Criware Code"),
     ProgressCategory("monolib", "Monolithlib Code"),
+    ProgressCategory("nw4r", "NW4R Code"),
 ]
 config.progress_each_module = args.verbose
 
