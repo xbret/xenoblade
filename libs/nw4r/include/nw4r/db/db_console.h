@@ -43,15 +43,33 @@ namespace nw4r
         typedef void (*VisitStringCallback)(detail::ConsoleHead* console, u8* r4, long r5, u32 r6);
 
         //unused
-        u8 Console_SetVisible(detail::ConsoleHead* console, bool isVisible) {
+        void Console_VPrintf(detail::ConsoleHead* console, const char* format, va_list* vlist)
+        {
+        }
+
+        //unused
+        u8 Console_SetVisible(detail::ConsoleHead* console, bool isVisible)
+        {
             u8 before;
             return 0;
         }
 
+        long Console_ShowLatestLine(detail::ConsoleHead* console)
+        {
+            long baseLine;
+            return 0;
+        }
+
         //unused
-        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line) {
+        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line)
+        {
             long before;
             return 0;
+        }
+
+        //unused
+        u16 Console_GetViewHeight(detail::ConsoleHead* console)
+        {
         }
 
         detail::ConsoleHead* Console_Create(void* buffer, u16 width, u16 height, u16 viewHeight, u16 priority, u16 attr);
