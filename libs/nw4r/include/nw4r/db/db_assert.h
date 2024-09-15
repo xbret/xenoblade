@@ -1,5 +1,5 @@
-#ifndef _NW4R_DB_ASSERT_H
-#define _NW4R_DB_ASSERT_H
+#ifndef NW4R_DB_ASSERT_H
+#define NW4R_DB_ASSERT_H
 
 #include "types.h"
 

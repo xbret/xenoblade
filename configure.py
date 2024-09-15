@@ -1390,7 +1390,8 @@ config.libs = [
     nw4rLib(
         "libnw4r_db",
         [
-            Object(NonMatching, "db/db_console.cpp"),
+            Object(Matching, "db/db_console.cpp"),
+            Object(Matching, "db/db_DbgPrintBase.cpp"),
             Object(NonMatching, "db/db_assert.cpp"),
         ],
     ),
