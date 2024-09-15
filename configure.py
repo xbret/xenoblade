@@ -973,7 +973,7 @@ config.libs = [
         [
             Object(Matching, "revolution/enc/encutility.c"),
             Object(Matching, "revolution/enc/encunicode.c"), #EU/US only
-            Object(Matching, "revolution/enc/encjapanese.c"), #JP only
+            Object(Matching, "revolution/enc/encjapanese.c", shift_jis = False, extra_cflags=["-enc UTF8"]), #JP only
         ],
     ),
     DolphinLib(
