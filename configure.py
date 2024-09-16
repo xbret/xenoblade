@@ -1571,7 +1571,7 @@ config.libs = [
             Object(Matching, "ut/ut_ResFont.cpp"),
             Object(NonMatching, "ut/ut_ArchiveFontBase.cpp"),
             Object(NonMatching, "ut/ut_PackedFont.cpp"),
-            Object(NonMatching, "ut/ut_CharWriter.cpp"),
+            Object(Matching, "ut/ut_CharWriter.cpp"),
             Object(NonMatching, "ut/ut_TextWriterBase.cpp"),
         ],
     ),
