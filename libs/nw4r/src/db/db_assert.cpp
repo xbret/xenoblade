@@ -1,3 +1,5 @@
+#pragma ipa file // TODO: REMOVE AFTER REFACTOR
+
 #include "db_assert.h"
 #include "db_console.h"
 #include <revolution/OS.h>

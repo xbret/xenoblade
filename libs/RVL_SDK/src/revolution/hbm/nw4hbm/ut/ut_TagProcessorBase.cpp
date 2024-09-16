@@ -1,186 +1,90 @@
-#include "nw4hbm/ut/ut_TagProcessorBase.h"
-#include "nw4hbm/ut/ut_TextWriterBase.h"
-#include "nw4hbm/ut/ut_CharWriter.h"
+#pragma ipa file // TODO: REMOVE AFTER REFACTOR
 
-namespace nw4hbm
-{
-    namespace ut
-    {
-        template <typename T>
-        void TagProcessorBase<T>::ProcessLinefeed(PrintContext<T> * pContext)
-        {
-            TextWriterBase<T> * r31;
-            
-            f32 f0;
-            f32 f31;
-            f32 f30;
-            
-            r31 = pContext->mTextWriter;
-            f31 = pContext->FLOAT_0x8;
-            f30 = r31->GetCursorY();
-            
-            f0 = f30 + r31->GetLineHeight();
-            
-            r31->SetCursorX(f31);
-            r31->SetCursorY(f0);
-        }
-        
-        template <typename T>
-        void TagProcessorBase<T>::ProcessTab(PrintContext<T> * pContext)
-        {
-            s32 r30;
-            TextWriterBase<T> * r31;
-            
-            f32 f0;
-            f32 f1;
-            f32 f4;
-            f32 f3;
-            
-            r31 = pContext->mTextWriter;
-            r30 = r31->GetTabWidth();
-            
-            if (r30 <= 0) return;
-            
-            f1 = r31->IsWidthFixed() ? r31->GetFixedWidth() : r31->GetFontWidth();
-            f4 = r31->GetCursorX();
-            f3 = pContext->FLOAT_0x8;
-            f1 = r30 * f1;
-            f4 -= f3;
-            f0 = (s32)(f4 / f1) + 1;
-            r31->SetCursorX(f3 + (f1 * f0));
-        }
-        
-        template <typename T> TagProcessorBase<T>::TagProcessorBase() {}
-        template <typename T> TagProcessorBase<T>::~TagProcessorBase() {}
-        
-        template <typename T>
-        int TagProcessorBase<T>::Process(u16 procCh, PrintContext<T> * pContext)
-        {
-            switch(procCh)
-            {
-                case '\n':
-                    ProcessLinefeed(pContext);
-                    return 3;
-                case '\t':
-                    ProcessTab(pContext);
-                    return 1;
-            }
-            return 0;
-        }
-        
-        template <typename T>
-        int TagProcessorBase<T>::CalcRect(register Rect * pRect, u16 procCh, PrintContext<T> * pContext)
-        {
-            switch(procCh)
-            {
-                case '\n':
-                {
-                    TextWriterBase<T> * r30_newline;
-                    
-                    r30_newline = pContext->mTextWriter;
-                    
-                    pRect->FLOAT_0x8 = r30_newline->GetCursorX();
-                    pRect->FLOAT_0x4 = r30_newline->GetCursorY();
-                    
-                    ProcessLinefeed(pContext);
-                    
-                    pRect->FLOAT_0x0 = r30_newline->GetCursorX();
-                    
-                    pRect->FLOAT_0xC = r30_newline->GetCursorY() + pContext->mTextWriter->GetFontHeight();
-                    
-                    register f32 out_0x4;
-                    
-                    register f32 dif1;
-                    register f32 dif2;
-                    
-                    register f32 out_0x0;
-                    register f32 out_0x8;
-                    register f32 out_0xc;
-                    
-                    register f32 in_0xc;
-                    register f32 in_0x8;
-                    register f32 in_0x4;
-                    register f32 in_0x0;
-                    
-                    in_0x0 = pRect->FLOAT_0x0;
-                    in_0x4 = pRect->FLOAT_0x4;
-                    in_0x8 = pRect->FLOAT_0x8;
-                    in_0xc = pRect->FLOAT_0xC;
-                    
-                    dif1 = in_0xc - in_0x4;
-                    dif2 = in_0x8 - in_0x0;
-                    
-                    asm
-                    {
-                        fsel out_0x4, dif1, in_0x4, in_0xc
-                        fsel out_0x0, dif2, in_0x0, in_0x8
-                        fsel out_0x8, dif2, in_0x8, in_0x0
-                        fsel out_0xc, dif1, in_0xc, in_0x4
-                        stfs out_0x4, 0x4(pRect)
-                        stfs out_0x0, 0x0(pRect)
-                        stfs out_0x8, 0x8(pRect)
-                        stfs out_0xc, 0xc(pRect)
-                    }
-                    
-                    return 3;
-                }
-                case '\t':
-                {
-                    TextWriterBase<T> * r29_tab;
-                    
-                    r29_tab = pContext->mTextWriter;
-                    
-                    pRect->FLOAT_0x0 = r29_tab->GetCursorX();
-                    
-                    ProcessTab(pContext);
-                    
-                    pRect->FLOAT_0x8 = r29_tab->GetCursorX();
-                    pRect->FLOAT_0x4 = r29_tab->GetCursorY();
-                    
-                    pRect->FLOAT_0xC = pRect->FLOAT_0x4 + r29_tab->GetFontHeight();
-                    
-                    register f32 out_0x4;
-                    
-                    register f32 dif1;
-                    register f32 dif2;
-                    
-                    register f32 in_0x8;
-                    
-                    register f32 out_0x0;
-                    register f32 out_0x8;
-                    register f32 out_0xc;
-                    
-                    register f32 in_0xc;
-                    register f32 in_0x4;
-                    register f32 in_0x0;
-                    
-                    in_0x0 = pRect->FLOAT_0x0;
-                    in_0x4 = pRect->FLOAT_0x4;
-                    in_0x8 = pRect->FLOAT_0x8;
-                    in_0xc = pRect->FLOAT_0xC;
-                    
-                    dif2 = in_0x8 - in_0x0;
-                    dif1 = in_0xc - in_0x4;
-                    
-                    asm
-                    {
-                        fsel out_0x0, dif2, in_0x0, in_0x8
-                        fsel out_0x8, dif2, in_0x8, in_0x0
-                        fsel out_0x4, dif1, in_0x4, in_0xc
-                        fsel out_0xc, dif1, in_0xc, in_0x4
-                        stfs out_0x0, 0x0(pRect)
-                        stfs out_0x8, 0x8(pRect)
-                        stfs out_0x4, 0x4(pRect)
-                        stfs out_0xc, 0xc(pRect)
-                    }
-                    return 1;
-                }
-            }
-            
-            return 0;
-        }
-        
-        template struct TagProcessorBase<char>;
-        template struct TagProcessorBase<wchar_t>;
+#include <nw4hbm/ut.h>
+
+namespace nw4hbm {
+namespace ut {
+
+template <typename T> TagProcessorBase<T>::TagProcessorBase() {}
+
+template <typename T> TagProcessorBase<T>::~TagProcessorBase() {}
+
+template <typename T>
+Operation TagProcessorBase<T>::Process(u16 ch, PrintContext<T>* ctx) {
+    switch (ch) {
+    case '\n':
+        ProcessLinefeed(ctx);
+        return OPERATION_NEXT_LINE;
+    case '\t':
+        ProcessTab(ctx);
+        return OPERATION_NO_CHAR_SPACE;
     }
+
+    return OPERATION_DEFAULT;
 }
+
+template <typename T>
+Operation TagProcessorBase<T>::CalcRect(Rect* rect, u16 ch,
+                                        PrintContext<T>* ctx) {
+
+    switch (ch) {
+    case '\n': {
+        const TextWriterBase<T>& writer = *ctx->writer;
+        rect->right = writer.GetCursorX();
+        rect->top = writer.GetCursorY();
+        ProcessLinefeed(ctx);
+        rect->left = writer.GetCursorX();
+        rect->bottom = writer.GetCursorY() + ctx->writer->GetFontHeight();
+        rect->Normalize();
+        return OPERATION_NEXT_LINE;
+    }
+    case '\t': {
+        const TextWriterBase<T>& writer = *ctx->writer;
+        rect->left = writer.GetCursorX();
+        ProcessTab(ctx);
+        rect->right = writer.GetCursorX();
+        rect->top = writer.GetCursorY();
+        rect->bottom = rect->top + writer.GetFontHeight();
+        rect->Normalize();
+        return OPERATION_NO_CHAR_SPACE;
+    }
+    }
+
+    return OPERATION_DEFAULT;
+}
+
+template <typename T>
+void TagProcessorBase<T>::ProcessLinefeed(PrintContext<T>* ctx) {
+    TextWriterBase<T>& writer = *ctx->writer;
+
+    f32 x = ctx->x;
+    f32 y = writer.GetCursorY() + writer.GetLineHeight();
+
+    writer.SetCursor(x, y);
+}
+
+template <typename T>
+void TagProcessorBase<T>::ProcessTab(PrintContext<T>* ctx) {
+    TextWriterBase<T>& writer = *ctx->writer;
+
+    int tabWidth = writer.GetTabWidth();
+    if (tabWidth <= 0) {
+        return;
+    }
+
+    f32 charWidth =
+        writer.IsWidthFixed() ? writer.GetFixedWidth() : writer.GetFontWidth();
+
+    f32 dx = writer.GetCursorX() - ctx->x;
+    f32 tabPixel = tabWidth * charWidth;
+    int numTab = static_cast<int>(dx / tabPixel) + 1;
+    f32 x = ctx->x + (tabPixel * numTab);
+
+    writer.SetCursorX(x);
+}
+
+template class TagProcessorBase<char>;
+template class TagProcessorBase<wchar_t>;
+
+} // namespace ut
+} // namespace nw4hbm
