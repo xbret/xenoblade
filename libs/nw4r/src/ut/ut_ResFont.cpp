@@ -77,6 +77,9 @@ FontInformation* ResFont::Rebuild(BinaryFileHeader* header) {
     FontInformation* info = NULL;
 
     for (int i = 0; i < header->numBlocks; i++) {
+        FontWidth* width;
+        FontCodeMap* map;
+
         switch (block->magic) {
         case MAGIC_FONTINFO:
             info = reinterpret_cast<FontInformation*>(block + 1);
@@ -96,13 +99,13 @@ FontInformation* ResFont::Rebuild(BinaryFileHeader* header) {
                 header);
             break;
         case MAGIC_CHARWIDTH:
-            FontWidth* width = reinterpret_cast<FontWidth*>(block + 1);
+            width = reinterpret_cast<FontWidth*>(block + 1);
             if (width->next != 0) {
                 ResolveOffset<FontWidth>(width->next, header);
             }
             break;
         case MAGIC_CHARMAP:
-            FontCodeMap* map = reinterpret_cast<FontCodeMap*>(block + 1);
+            map = reinterpret_cast<FontCodeMap*>(block + 1);
             if (map->next != 0) {
                 ResolveOffset<FontCodeMap>(map->next, header);
             }
