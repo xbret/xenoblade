@@ -47,6 +47,7 @@ namespace mtl{
 	}
 
 	MemBlock* Region::func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4){
+		return nullptr;
 	}
 
 	MemBlock* Region::func_804339B8(MemBlock* arg1) {
@@ -344,10 +345,12 @@ namespace mtl{
 	}
 
 	void* MemManager::allocateArray(u32 r3, int index, u32 r5){
-
+		return nullptr;
 	}
 
 }
+
+#pragma ecplusplus on
 
 //dummy operator new
 void* operator new(size_t size){
@@ -358,8 +361,8 @@ void operator delete(void* p){
 	mtl::MemManager::deallocate(p);
 }
 
-
-
 void operator delete[](void* p){
 	mtl::MemManager::deallocate(p);
 }
+
+#pragma ecplusplus off

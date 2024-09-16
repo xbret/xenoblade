@@ -113,10 +113,11 @@ bool CGame::wkStartup(){
 	if(result == 0) return false;
 	UNKTYPE* temp_r3_1 = func_80455AA0();
 	CProc::wkStartup();
+	return false;
 }
 
 bool CGame::wkShutdown(){
-
+	return false;
 }
 
 //dummy function to force the ArcResourceAccessor dtor to generate here
@@ -156,7 +157,7 @@ void CGame::func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5){
 }
 
 bool CGame::WorkThreadEvent6(){
-
+	return false;
 }
 
 void CGame::WorkEvent5(UNKTYPE* r4){
