@@ -21,6 +21,8 @@ struct BinaryFileHeader {
 
 bool IsValidBinaryFile(const BinaryFileHeader* header, u32 magic, u16 version,
                        u16 numBlocks);
+bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader);
+BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader);
 
 } // namespace ut
 } // namespace nw4r

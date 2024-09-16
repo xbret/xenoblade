@@ -88,6 +88,7 @@ public:
     bool IsManaging(const void* buffer) const { return mResource == buffer; }
 
     void SetResourceBuffer(void* buffer, FontInformation* info);
+    void RemoveResourceBuffer();
 
     u16 GetGlyphIndex(u16 c) const;
 

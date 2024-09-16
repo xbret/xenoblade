@@ -16,19 +16,22 @@ namespace nw4r
         static ConsoleHead* sAssertionConsole;
         static bool sDispWarningAuto = true;
 
-        static void Assertion_Printf_(const char* fmt, ...){
+        static void Assertion_Printf_(const char* fmt, ...)
+        {
             va_list vlist;
             va_start(vlist, fmt);
 
-            if(sAssertionConsole == nullptr){
+            if (sAssertionConsole == nullptr)
+            {
                 OSVReport(fmt, vlist);
-            }else{
-                //Does nothing in final version
+            }
+            else
+            {
                 Console_VPrintf(sAssertionConsole, fmt, vlist);
             }
         }
 
-        //Stubbed in final
+        // Stubbed in final
         static bool ShowMapInfoSubroutine_(u32 address, u8 preCRFlag)
         {
             u8 strBuf[260];
@@ -44,26 +47,28 @@ namespace nw4r
 
             u32* p = (u32*)sp;
 
-            for(u32 i = 0; i < 16; i++, p = (u32*)*p){
-                if(p == nullptr || p == (u32*)0xFFFFFFFF || !((u32)p & 0x80000000)) break;
+            for (u32 i = 0; i < 16; i++, p = (u32*)*p)
+            {
+                if (p == nullptr || p == (u32*)0xFFFFFFFF || !((u32)p & 0x80000000)) break;
 
                 Assertion_Printf_("%08X:  %08X    %08X ", p, p[0], p[1]);
 
-                //Try printing map information for the current address if the map file exists
-                //The above function does nothing in final, so this will always be true
-                if(!ShowMapInfoSubroutine_(p[1], false)){
+                // Try printing map information for the current address if the map file exists
+                // The above function does nothing in final, so this will always be true
+                if (!ShowMapInfoSubroutine_(p[1], false))
+                {
                     Assertion_Printf_("\n");
                 }
             }
         }
 
-        void VPanic(const char* file, int line, const char* fmt, __va_list_struct* vlist, bool halt)
-        {
+        void VPanic(const char* file, int line, const char* fmt, __va_list_struct* vlist, bool halt) {
             register u32 stackPointer;
 
-            //Get the stack pointer
-            //This feels fake but I can't think of how else it would've been done
-            asm{
+            // Get the stack pointer
+            // This feels fake but I can't think of how else it would've been done
+            asm
+            {
                 lwz stackPointer, 0(r1)
             }
 
@@ -74,19 +79,22 @@ namespace nw4r
 
             ShowStack_(stackPointer);
 
-            if(sAssertionConsole != nullptr){
+            if (sAssertionConsole != nullptr)
+            {
                 Console_Printf(sAssertionConsole, "%s:%d Panic:", file, line);
                 Console_VPrintf(sAssertionConsole, fmt, vlist);
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
                 Console_SetVisible(sAssertionConsole, true);
-            }else{
+            }
+            else
+            {
                 OSReport("%s:%d Panic:", file, line);
                 OSVReport(fmt, vlist);
                 OSReport("\n");
             }
 
-            if(halt) PPCHalt();
+            if (halt) PPCHalt();
 
         }
 
@@ -95,20 +103,24 @@ namespace nw4r
             va_list vlist;
             va_start(vlist, fmt);
             VPanic(file, line, fmt, vlist, true);
-            PPCHalt(); //PPCHalt is called in VPanic, so this never gets called.
+            PPCHalt(); // PPCHalt is called in VPanic, so this never gets called.
         }
         
         void VWarning(const char* file, int line, const char* fmt, __va_list_struct* vlist)
         {
-            if(sAssertionConsole != nullptr){
+            if (sAssertionConsole != nullptr)
+            {
                 Console_Printf(sAssertionConsole, "%s:%d Warning:", file, line);
                 Console_VPrintf(sAssertionConsole, fmt, vlist);
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
-                if(sDispWarningAuto){
+                if (sDispWarningAuto)
+                {
                     Assertion_ShowConsole(sWarningTime);
                 }
-            }else{
+            }
+            else
+            {
                 OSReport("%s:%d Warning:", file, line);
                 OSVReport(fmt, vlist);
                 OSReport("\n");
@@ -123,10 +135,13 @@ namespace nw4r
             VWarning(file, line, fmt, vlist);
         }
 
-        //unused
-        void Log(const char* fmt)
+        namespace detail
         {
-            va_list vlist;
+            //unused
+            void Log(const char* fmt, ...)
+            {
+                va_list vlist;
+            }
         }
 
         //unused
@@ -148,11 +163,13 @@ namespace nw4r
 
         void Assertion_ShowConsole(u32 time)
         {
-            if(sAssertionConsole != nullptr){
+            if (sAssertionConsole != nullptr)
+            {
                 OSAlarm& alarm = GetWarningAlarm_();
                 OSCancelAlarm(&alarm);
                 Console_SetVisible(sAssertionConsole, true);
-                if(time != 0){
+                if (time != 0)
+                {
                     OSSetAlarm(&alarm, time, WarningAlarmFunc_);
                 }
             }
@@ -161,7 +178,7 @@ namespace nw4r
         //unused
         void Assertion_HideConsole()
         {
-            //OSAlarm& alarm;
+            // OSAlarm& alarm;
         }
 
         //unused
@@ -185,7 +202,8 @@ namespace nw4r
             static OSAlarm sWarningAlarm;
             static bool sInitializedAlarm;
 
-            if(!sInitializedAlarm){
+            if (!sInitializedAlarm)
+            {
                 OSCreateAlarm(&sWarningAlarm);
                 sInitializedAlarm = true;
             }
@@ -195,8 +213,7 @@ namespace nw4r
 
         static void WarningAlarmFunc_(OSAlarm* alarm, OSContext* context)
         {
-            if(sAssertionConsole != nullptr)
-            {
+            if (sAssertionConsole != nullptr) {
                 Console_SetVisible(sAssertionConsole, false);
             }
         }
