@@ -5,6 +5,5 @@
 #include <nw4r/math/math_geometry.h>
 #include <nw4r/math/math_triangular.h>
 #include <nw4r/math/math_types.h>
-#include <nw4r/math/triangular.h>
 
 #endif

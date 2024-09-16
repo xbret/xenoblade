@@ -1,8 +1,7 @@
-#ifndef NW4R_MATH_TRIANGULAR_H
-#define NW4R_MATH_TRIANGULAR_H
+#ifndef NW4HBM_MATH_TRIANGULAR_H
+#define NW4HBM_MATH_TRIANGULAR_H
 #include <cmath>
-#include <nw4r/types_nw4r.h>
-#include <nw4r/db/db_assert.h>
+#include <nw4hbm/types_nw4hbm.h>
 
 #define NW4R_MATH_PI 3.141592653589793f
 #define NW4R_MATH_LN_2 0.69314718056f
@@ -18,7 +17,7 @@
 #define NW4R_MATH_RAD_TO_FIDX(x) ((x) * (128.0f / NW4R_MATH_PI))
 #define NW4R_MATH_FIDX_TO_RAD(x) ((x) * (NW4R_MATH_PI / 128.0f))
 
-namespace nw4r {
+namespace nw4hbm {
 namespace math {
 
 /**
@@ -82,33 +81,7 @@ inline f32 Atan2Rad(f32 y, f32 x) {
     return NW4R_MATH_FIDX_TO_RAD(Atan2FIdx(y, x));
 }
 
-/**
- * asin
- */
-inline f32 AsinRad(f32 x){
-    bool inRange = x <= 1.0f && x >= -1.0f;
-
-    if(!inRange){
-        db::Warning("triangular.h",0xe4,"AsinRad: Input is out of the domain.");
-    }
-
-    return asin(x);
-}
-
-/**
- * acos
- */
-inline f32 AcosRad(f32 x){
-    bool inRange = x <= 1.0f && x >= -1.0f;
-
-    if(!inRange){
-        db::Warning("triangular.h",0xef,"AcosRad: Input is out of the domain.");
-    }
-
-    return acos(x);
-}
-
 } // namespace math
-} // namespace nw4r
+} // namespace nw4hbm
 
 #endif

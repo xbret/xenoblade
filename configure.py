@@ -260,7 +260,7 @@ cflags_hbm = [
     "-sdata 0",
     "-sdata2 0",
     "-RTTI on",
-    "-i libs/RVL_SDK/src/revolution/hbm/include/",
+    "-ir libs/RVL_SDK/src/revolution/hbm/include/",
 ]
 
 # Ndev flags
@@ -1392,7 +1392,7 @@ config.libs = [
         [
             Object(Matching, "db/db_console.cpp"),
             Object(Matching, "db/db_DbgPrintBase.cpp"),
-            Object(Matching, "db/db_assert.cpp", extra_cflags=["-ipa file"]),
+            Object(Matching, "db/db_assert.cpp"),
         ],
     ),
     nw4rLib(

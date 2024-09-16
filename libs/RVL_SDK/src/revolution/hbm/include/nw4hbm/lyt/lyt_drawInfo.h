@@ -1,8 +1,8 @@
-#pragma once
-
-#include "nw4hbm/types_nw4hbm.h"
-#include "nw4hbm/math/math_types.h"
-#include "nw4hbm/ut/ut_Rect.h"
+#ifndef NW4HBM_LYT_DRAWINFO_H
+#define NW4HBM_LYT_DRAWINFO_H
+#include "types_nw4hbm.h"
+#include "math_types.h"
+#include "ut_Rect.h"
 
 namespace nw4hbm
 {
@@ -21,3 +21,5 @@ namespace nw4hbm
         };
     }
 }
+
+#endif
