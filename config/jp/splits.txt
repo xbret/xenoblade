@@ -5110,11 +5110,14 @@ libs/nw4r/db/db_DbgPrintBase.cpp:
 	.text       start:0x803D7318 end:0x803D733C
 
 libs/nw4r/db/db_assert.cpp:
-	.text       start:0x803D733C end:0x803D7810
+	.text       start:0x803D733C end:0x803D77CC
 	.data       start:0x8056C7B0 end:0x8056C840
 	.bss        start:0x8061D710 end:0x8061D740
 	.sdata      start:0x80665D80 end:0x80665D88
 	.sbss       start:0x80667D18 end:0x80667D28
+
+libs/nw4r/dw/dw_Window.cpp:
+	.text       start:0x803D77CC end:0x803D7810
 
 libs/nw4r/g3d/res/g3d_rescommon.cpp:
 	.text       start:0x803D7810 end:0x803D7960

@@ -1392,8 +1392,14 @@ config.libs = [
         [
             Object(Matching, "db/db_console.cpp"),
             Object(Matching, "db/db_DbgPrintBase.cpp"),
-            Object(NonMatching, "db/db_assert.cpp"),
+            Object(Matching, "db/db_assert.cpp", extra_cflags=["-ipa file"]),
         ],
+    ),
+    nw4rLib(
+        "libnw4r_dw",
+        [
+            Object(Matching, "dw/dw_Window.cpp"), #Stupid
+        ]
     ),
     nw4rLib(
         "libnw4r_g3d",

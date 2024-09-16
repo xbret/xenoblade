@@ -58,24 +58,24 @@ namespace nw4r
         void Console_VisitString(detail::ConsoleHead* console, VisitStringCallback visitor);
         long Console_GetTotalLines(detail::ConsoleHead* console);
 
-        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line);
-        u16 Console_GetViewHeight(detail::ConsoleHead* console);
+        static long Console_SetViewBaseLine(detail::ConsoleHead* console, long line);
+        static u16 Console_GetViewHeight(detail::ConsoleHead* console);
 
         //Stubbed in final
-        void Console_VPrintf(detail::ConsoleHead* console, const char* format, __va_list_struct* vlist)
+        static void Console_VPrintf(detail::ConsoleHead* console, const char* format, __va_list_struct* vlist)
         {
         }
 
-        u8 Console_SetVisible(detail::ConsoleHead* console, bool isVisible)
+        static bool Console_SetVisible(detail::ConsoleHead* console, bool isVisible)
         {
-            u8 before = console->isVisible;
+            bool before = console->isVisible;
             console->isVisible = isVisible;
             return before;
         }
 
-        long Console_ShowLatestLine(detail::ConsoleHead* console)
+        static long Console_ShowLatestLine(detail::ConsoleHead* console)
         {
-            long baseLine =  Console_GetTotalLines(console) - Console_GetViewHeight(console);
+            long baseLine = Console_GetTotalLines(console) - Console_GetViewHeight(console);
             
             if(baseLine < 0){
                 baseLine = 0;
@@ -86,14 +86,14 @@ namespace nw4r
             return baseLine;
         }
 
-        long Console_SetViewBaseLine(detail::ConsoleHead* console, long line)
+        static long Console_SetViewBaseLine(detail::ConsoleHead* console, long line)
         {
             long before = console->viewTopLine;
             console->viewTopLine = line;
             return before;
         }
 
-        u16 Console_GetViewHeight(detail::ConsoleHead* console)
+        static u16 Console_GetViewHeight(detail::ConsoleHead* console)
         {
             return console->viewLines;
         }

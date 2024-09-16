@@ -2093,10 +2093,16 @@ libs/CriWare/sofdec/sud/sud_lib.temp.c:
 	.text       start:0x803D96F0 end:0x803D9884
 
 libs/nw4r/db/db_console.temp.cpp:
-	.text       start:0x803D9884 end:0x803D997C
+	.text       start:0x803D9884 end:0x803D9958
+
+libs/nw4r/db/db_DbgPrintBase.temp.cpp:
+	.text       start:0x803D9958 end:0x803D997C
 
 libs/nw4r/db/db_assert.temp.cpp:
-	.text       start:0x803D997C end:0x803D9B74
+	.text       start:0x803D997C end:0x803D9B30
+
+libs/nw4r/dw/dw_Window.temp.cpp:
+	.text       start:0x803D9B30 end:0x803D9B74
 
 libs/nw4r/g3d/res/g3d_rescommon.temp.cpp:
 	.text       start:0x803D9B74 end:0x803D9CC4
