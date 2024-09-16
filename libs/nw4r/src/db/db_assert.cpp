@@ -74,7 +74,7 @@ namespace nw4r
 
             if(sAssertionConsole != nullptr){
                 Console_Printf(sAssertionConsole, "%s:%d Panic:", file, line);
-                Console_VPrintf(sAssertionConsole, fmt, vlist); //Does nothing in final
+                Console_VPrintf(sAssertionConsole, fmt, vlist);
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
                 Console_SetVisible(sAssertionConsole, true);
@@ -100,7 +100,7 @@ namespace nw4r
         {
             if(sAssertionConsole != nullptr){
                 Console_Printf(sAssertionConsole, "%s:%d Warning:", file, line);
-                Console_VPrintf(sAssertionConsole, fmt, vlist); //Does nothing in final
+                Console_VPrintf(sAssertionConsole, fmt, vlist);
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
                 if(sDispWarningAuto){
@@ -168,7 +168,8 @@ namespace nw4r
         }
 
         //unused
-        bool Assertion_SetAutoWarning(bool enable) {
+        bool Assertion_SetAutoWarning(bool enable)
+        {
            // OSAlarm& alarm;
             BOOL enabledIntr;
             bool before = sDispWarningAuto;

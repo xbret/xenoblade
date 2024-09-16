@@ -70,6 +70,7 @@ namespace nw4r
         //unused
         ConsoleHead* Console_Create(void* buffer, u16 width, u16 height, u16 viewHeight, u16 priority, u16 attr)
         {
+            return nullptr;
         }
 
         //unused
