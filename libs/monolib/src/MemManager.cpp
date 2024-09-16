@@ -350,6 +350,7 @@ namespace mtl{
 
 }
 
+//No way they did this shit
 #pragma ecplusplus on
 
 //dummy operator new
