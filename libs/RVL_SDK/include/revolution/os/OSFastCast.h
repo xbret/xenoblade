@@ -25,7 +25,7 @@ static inline void OSInitFastCast(){
     }
 }
 
-static void OSSetGQR6(register u32 type, register u32 scale) {
+static inline void OSSetGQR6(register u32 type, register u32 scale) {
     register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
 
     asm {
@@ -33,7 +33,7 @@ static void OSSetGQR6(register u32 type, register u32 scale) {
     }
 }
 
-static void OSSetGQR7(register u32 type, register u32 scale) {
+static inline void OSSetGQR7(register u32 type, register u32 scale) {
     register u32 val = ((scale << 8 | type) << 16) | ((scale << 8) | type);
 
     asm {
