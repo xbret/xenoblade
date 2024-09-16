@@ -57,28 +57,27 @@ namespace nw4r
 
         void VPanic(const char* file, int line, const char* fmt, __va_list_struct* vlist, bool halt)
         {
-            u32 stackPointer;
+            register u32 stackPointer;
+
+            //Get the stack pointer
+            //This feels fake but I can't think of how else it would've been done
+            asm{
+                lwz stackPointer, 0(r1)
+            }
 
             OSDisableInterrupts();
             OSDisableScheduler();
             VISetPreRetraceCallback(nullptr);
             VISetPostRetraceCallback(nullptr);
 
-            /*
-            if(sAssertionConsole != nullptr){
-                DirectPrint_SetupFB(0);
-            }
-            */
-
             ShowStack_(stackPointer);
 
-            if(sAssertionConsole == nullptr){
+            if(sAssertionConsole != nullptr){
                 Console_Printf(sAssertionConsole, "%s:%d Panic:", file, line);
-                Console_VPrintf(sAssertionConsole, fmt, vlist);
+                Console_VPrintf(sAssertionConsole, fmt, vlist); //Does nothing in final
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
                 Console_SetVisible(sAssertionConsole, true);
-                //Console_DrawDirect(sAssertionConsole);
             }else{
                 OSReport("%s:%d Panic:", file, line);
                 OSVReport(fmt, vlist);
@@ -94,17 +93,17 @@ namespace nw4r
             va_list vlist;
             va_start(vlist, fmt);
             VPanic(file, line, fmt, vlist, true);
-            PPCHalt();
+            PPCHalt(); //PPCHalt is called in VPanic, so this never gets called.
         }
         
         void VWarning(const char* file, int line, const char* fmt, __va_list_struct* vlist)
         {
             if(sAssertionConsole != nullptr){
                 Console_Printf(sAssertionConsole, "%s:%d Warning:", file, line);
-                Console_VPrintf(sAssertionConsole, fmt, vlist); //does nothing in final
+                Console_VPrintf(sAssertionConsole, fmt, vlist); //Does nothing in final
                 Console_Printf(sAssertionConsole, "\n");
                 Console_ShowLatestLine(sAssertionConsole);
-                if(!sDispWarningAuto){
+                if(sDispWarningAuto){
                     Assertion_ShowConsole(sWarningTime);
                 }
             }else{
@@ -122,11 +121,13 @@ namespace nw4r
             VWarning(file, line, fmt, vlist);
         }
 
+        //unused
         void Log(const char* fmt)
         {
             va_list vlist;
         }
 
+        //unused
         ConsoleHead* Assertion_SetConsole(ConsoleHead* console)
         {
             ConsoleHead* before = sAssertionConsole;
@@ -134,6 +135,7 @@ namespace nw4r
             return before;
         }
 
+        //unused
         ConsoleHead* Assertion_GetConsole()
         {
             return sAssertionConsole;
