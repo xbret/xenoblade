@@ -109,19 +109,14 @@ namespace nw4r
         static u16 GetActiveLines_(ConsoleHead* console)
         {
             u16 lines = GetRingUsedLines_(console);
-            if(console->printXPos != 0){
-                lines++;
-            }
-
+            if (console->printXPos != 0) lines++;
             return lines;
         }
 
         static u16 GetRingUsedLines_(ConsoleHead* console)
         {
             long lines = console->printTop - console->ringTop;
-            if(lines < 0){
-                lines += console->height;
-            }
+            if (lines < 0) lines += console->height;
             return (u16)lines;
         }
 
@@ -189,7 +184,7 @@ namespace nw4r
         }
 
         //unused
-        u16 Console_ChangePriority(ConsoleHead* console, u16 r4)
+        u16 Console_ChangePriority(ConsoleHead* console, u16 priority)
         {
             return 0;
         }

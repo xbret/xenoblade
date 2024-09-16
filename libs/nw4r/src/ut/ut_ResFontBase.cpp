@@ -15,6 +15,9 @@ void ResFontBase::SetResourceBuffer(void* buffer, FontInformation* info) {
     mFontInfo = info;
 }
 
+void ResFontBase::RemoveResourceBuffer() {
+}
+
 int ResFontBase::GetWidth() const { return mFontInfo->width; }
 
 int ResFontBase::GetHeight() const { return mFontInfo->height; }

@@ -33,7 +33,8 @@ namespace nw4r
             };
         }
 
-        enum ConsoleOutputType {
+        enum ConsoleOutputType
+        {
             CONSOLE_OUTPUT_NONE,
             CONSOLE_OUTPUT_DISPLAY,
             CONSOLE_OUTPUT_TERMINAL,
@@ -77,9 +78,7 @@ namespace nw4r
         {
             long baseLine = Console_GetTotalLines(console) - Console_GetViewHeight(console);
             
-            if(baseLine < 0){
-                baseLine = 0;
-            }
+            if (baseLine < 0) baseLine = 0;
 
             Console_SetViewBaseLine(console, baseLine);
 
@@ -93,8 +92,7 @@ namespace nw4r
             return before;
         }
 
-        static u16 Console_GetViewHeight(detail::ConsoleHead* console)
-        {
+        static u16 Console_GetViewHeight(detail::ConsoleHead* console) {
             return console->viewLines;
         }
     }

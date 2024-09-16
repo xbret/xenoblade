@@ -31,5 +31,15 @@ bool IsValidBinaryFile(const BinaryFileHeader* header, u32 magic, u16 version,
     return true;
 }
 
+//unused
+bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader) {
+    return false;
+}
+
+//unused
+BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader) {
+    return nullptr;
+}
+
 } // namespace ut
 } // namespace nw4r
