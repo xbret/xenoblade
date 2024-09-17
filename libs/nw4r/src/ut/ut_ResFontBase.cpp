@@ -91,6 +91,10 @@ void ResFontBase::GetGlyph(Glyph* glyph, u16 c) const {
     GetGlyphFromIndex(glyph, GetGlyphIndex(c));
 }
 
+bool ResFontBase::HasGlyph(u16 c) const {
+    return FindGlyphIndex(c) != 0xFFFF;
+}
+
 FontEncoding ResFontBase::GetEncoding() const {
     return static_cast<FontEncoding>(mFontInfo->encoding);
 }
