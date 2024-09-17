@@ -26,10 +26,10 @@ public:
     virtual CharWidths GetDefaultCharWidths() const;             // at 0x38
     virtual void SetDefaultCharWidths(const CharWidths& widths); // at 0x3C
     virtual bool SetAlternateChar(u16 c);                        // at 0x40
-    virtual void SetLineFeed(int lf);                            // at 0x44
+    virtual void SetLineFeed(int linefeed);                      // at 0x44
     virtual int GetCharWidth(u16 c) const;                       // at 0x48
     virtual CharWidths GetCharWidths(u16 c) const;               // at 0x4C
-    virtual void GetGlyph(Glyph* out, u16 c) const;              // at 0x50
+    virtual void GetGlyph(Glyph* glyph, u16 c) const;            // at 0x50
     virtual FontEncoding GetEncoding() const;                    // at 0x54
 
     bool Load(void* buffer);

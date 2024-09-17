@@ -110,7 +110,9 @@ bool RomFont::SetAlternateChar(u16 c) {
     }
 }
 
-void RomFont::SetLineFeed(int lf) { mFontHeader->leading = lf; }
+void RomFont::SetLineFeed(int linefeed) {
+    mFontHeader->leading = linefeed;
+}
 
 int RomFont::GetCharWidth(u16 c) const {
     u32 width;
@@ -133,7 +135,7 @@ CharWidths RomFont::GetCharWidths(u16 c) const {
     return widths;
 }
 
-void RomFont::GetGlyph(Glyph* out, u16 c) const {
+void RomFont::GetGlyph(Glyph* glyph, u16 c) const {
     void* texture;
     u32 x, y, width;
     char buffer[4];
@@ -141,20 +143,20 @@ void RomFont::GetGlyph(Glyph* out, u16 c) const {
     MakeCharPtr(buffer, c);
     OSGetFontTexture(buffer, &texture, &x, &y, &width);
 
-    out->texture = texture;
+    glyph->texture = texture;
 
-    out->widths.leftSpacing = 0;
-    out->widths.glyphWidth = width;
-    out->widths.charWidth = width;
+    glyph->widths.leftSpacing = 0;
+    glyph->widths.glyphWidth = width;
+    glyph->widths.charWidth = width;
 
-    out->height = mFontHeader->cellHeight;
-    out->format = GX_TF_I4;
+    glyph->height = mFontHeader->cellHeight;
+    glyph->format = GX_TF_I4;
 
-    out->texWidth = mFontHeader->sheetWidth;
-    out->texHeight = mFontHeader->sheetHeight;
+    glyph->texWidth = mFontHeader->sheetWidth;
+    glyph->texHeight = mFontHeader->sheetHeight;
 
-    out->cellX = x;
-    out->cellY = y;
+    glyph->cellX = x;
+    glyph->cellY = y;
 }
 
 FontEncoding RomFont::GetEncoding() const {
