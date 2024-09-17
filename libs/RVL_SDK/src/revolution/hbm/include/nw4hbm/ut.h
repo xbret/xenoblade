@@ -12,6 +12,7 @@
 #include <nw4hbm/ut/ut_ResFontBase.h>
 #include <nw4hbm/ut/ut_TagProcessorBase.h>
 #include <nw4hbm/ut/ut_TextWriterBase.h>
+#include <nw4hbm/ut/ut_algorithm.h>
 #include <nw4hbm/ut/ut_binaryFileFormat.h>
 
 #endif

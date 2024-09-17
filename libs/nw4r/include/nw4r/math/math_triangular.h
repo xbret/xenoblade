@@ -18,6 +18,10 @@
 #define NW4R_MATH_RAD_TO_FIDX(x) ((x) * (128.0f / NW4R_MATH_PI))
 #define NW4R_MATH_FIDX_TO_RAD(x) ((x) * (NW4R_MATH_PI / 128.0f))
 
+//For warnings
+#undef __FILE__
+#define __FILE__ "triangular.h"
+
 namespace nw4r {
 namespace math {
 
@@ -89,10 +93,11 @@ inline f32 AsinRad(f32 x){
     bool inRange = x <= 1.0f && x >= -1.0f;
 
     if(!inRange){
-        db::Warning("triangular.h",0xe4,"AsinRad: Input is out of the domain.");
+    #line 228
+        NW4R_WARNING("AsinRad: Input is out of the domain.");
     }
 
-    return asin(x);
+    return std::asin(x);
 }
 
 /**
@@ -102,10 +107,11 @@ inline f32 AcosRad(f32 x){
     bool inRange = x <= 1.0f && x >= -1.0f;
 
     if(!inRange){
-        db::Warning("triangular.h",0xef,"AcosRad: Input is out of the domain.");
+    #line 239
+        NW4R_WARNING("AcosRad: Input is out of the domain.");
     }
 
-    return acos(x);
+    return std::acos(x);
 }
 
 } // namespace math
