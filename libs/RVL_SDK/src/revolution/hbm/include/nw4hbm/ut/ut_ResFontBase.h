@@ -78,16 +78,16 @@ public:
     virtual CharWidths GetDefaultCharWidths() const;             // at 0x38
     virtual void SetDefaultCharWidths(const CharWidths& widths); // at 0x3C
     virtual bool SetAlternateChar(u16 c);                        // at 0x40
-    virtual void SetLineFeed(int lf);                            // at 0x44
+    virtual void SetLineFeed(int linefeed);                      // at 0x44
     virtual int GetCharWidth(u16 c) const;                       // at 0x48
     virtual CharWidths GetCharWidths(u16 c) const;               // at 0x4C
-    virtual void GetGlyph(Glyph* out, u16 c) const;              // at 0x50
+    virtual void GetGlyph(Glyph* glyph, u16 c) const;            // at 0x50
     virtual FontEncoding GetEncoding() const;                    // at 0x54
 
     bool IsManaging(const void* buffer) const { return mResource == buffer; }
 
-    void SetResourceBuffer(void* buffer, FontInformation* info);
-    void RemoveResourceBuffer();
+    void SetResourceBuffer(void* pUserBuffer, FontInformation* pFontInfo);
+    void* RemoveResourceBuffer();
 
     u16 GetGlyphIndex(u16 c) const;
 
@@ -98,13 +98,13 @@ public:
     const CharWidths& GetCharWidthsFromIndex(const FontWidth* width,
                                              u16 index) const;
 
-    void GetGlyphFromIndex(Glyph* out, u16 index) const;
+    void GetGlyphFromIndex(Glyph* glyph, u16 index) const;
 
 private:
     void* mResource;            // at 0x10
     FontInformation* mFontInfo; // at 0x14
     u16 mLastCharCode;          // at 0x18
-    u16 mLastGlyphIndex;        // at 0x18
+    u16 mLastGlyphIndex;        // at 0x1A
 };
 
 } // namespace detail
