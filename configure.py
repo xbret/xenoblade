@@ -159,6 +159,14 @@ if args.map:
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
 
+# Progress configuration
+config.progress_all = False
+config.progress_use_fancy = True
+config.progress_code_fancy_frac = 200
+config.progress_code_fancy_item = "achievements"
+config.progress_data_fancy_frac = 21
+config.progress_data_fancy_item = "collectopaedias"
+
 # Base flags, common to most GC/Wii games.
 # Generally leave untouched, with overrides added below.
 cflags_base = [
