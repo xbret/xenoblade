@@ -1572,7 +1572,7 @@ config.libs = [
             Object(NonMatching, "ut/ut_ArchiveFontBase.cpp"),
             Object(NonMatching, "ut/ut_PackedFont.cpp"),
             Object(Matching, "ut/ut_CharWriter.cpp"),
-            Object(NonMatching, "ut/ut_TextWriterBase.cpp"),
+            Object(Matching, "ut/ut_TextWriterBase.cpp"),
         ],
     ),
     {

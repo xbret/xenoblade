@@ -51,19 +51,20 @@ public:
 
     f32 GetLineHeight() const;
 
-    f32 CalcLineWidth(const T* str, int len);
-    f32 CalcStringWidth(const T* str, int len) const;
-    void CalcStringRect(Rect* rect, const T* str, int len) const;
+    f32 CalcLineWidth(const T* str, int length);
+    f32 CalcStringWidth(const T* str, int length) const;
+    void CalcStringRect(Rect* pRect, const T* str, int length) const;
 
-    int VSNPrintf(T* buffer, u32 count, const T* fmt, std::va_list args);
-    f32 VPrintf(const T* str, std::va_list args);
-    f32 Print(const T* str, int len);
+    int VSNPrintf(T* buffer, u32 count, const T* format, std::va_list args);
+    f32 VPrintf(const T* format, std::va_list args);
+    f32 Print(const T* str, int length);
+    f32 PrintMutable(const T* str, int length);
 
-    bool CalcLineRectImpl(Rect* rect, const T** str, int len);
-    void CalcStringRectImpl(Rect* rect, const T* str, int len);
+    bool CalcLineRectImpl(Rect* pRect, const T** pStr, int length);
+    void CalcStringRectImpl(Rect* pRect, const T* str, int length);
 
-    f32 PrintImpl(const T* str, int len);
-    f32 AdjustCursor(f32* x1, f32* y1, const T* str, int len);
+    f32 PrintImpl(const T* str, int length, bool bMutable);
+    f32 AdjustCursor(f32* xOrigin, f32* yOrigin, const T* str, int length);
 
 private:
     f32 mWidthLimit;                    // at 0x4C
@@ -80,15 +81,15 @@ private:
 
 template <>
 inline int TextWriterBase<char>::VSNPrintf(char* buffer, u32 count,
-                                           const char* fmt, std::va_list args) {
-    return std::vsnprintf(buffer, count, fmt, args);
+                                           const char* format, std::va_list args) {
+    return std::vsnprintf(buffer, count, format, args);
 }
 
 template <>
 inline int TextWriterBase<wchar_t>::VSNPrintf(wchar_t* buffer, u32 count,
-                                              const wchar_t* fmt,
+                                              const wchar_t* format,
                                               std::va_list args) {
-    return std::vswprintf(buffer, count, fmt, args);
+    return std::vswprintf(buffer, count, format, args);
 }
 
 } // namespace ut
