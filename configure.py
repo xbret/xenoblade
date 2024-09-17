@@ -1566,7 +1566,7 @@ config.libs = [
             Object(Matching, "ut/ut_DvdFileStream.cpp"),
             Object(Matching, "ut/ut_LockedCache.cpp"),
             Object(Matching, "ut/ut_Font.cpp"),
-            Object(NonMatching, "ut/ut_RomFont.cpp"), #EU/US only
+            Object(Matching, "ut/ut_RomFont.cpp"),
             Object(NonMatching, "ut/ut_ResFontBase.cpp"),
             Object(Matching, "ut/ut_ResFont.cpp"),
             Object(NonMatching, "ut/ut_ArchiveFontBase.cpp"),
