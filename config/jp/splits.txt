@@ -5784,9 +5784,12 @@ libs/nw4r/ut/ut_Font.cpp:
 	.text       start:0x8042BFCC end:0x8042C074
 	.data       start:0x8056E710 end:0x8056E740
 
+libs/nw4r/ut/ut_RomFont.cpp:
+	.data       start:0x8056E740 end:0x8056E7A0
+
 libs/nw4r/ut/ut_ResFontBase.cpp:
 	.text       start:0x8042C074 end:0x8042C928
-	.data       start:0x8056E740 end:0x8056E808
+	.data       start:0x8056E7A0 end:0x8056E808
 
 libs/nw4r/ut/ut_ResFont.cpp:
 	.text       start:0x8042C928 end:0x8042CC2C
