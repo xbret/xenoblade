@@ -12,7 +12,18 @@
 	},
     "files.insertFinalNewline": true,
     "files.associations": {
-        "*.cp": "cpp"
+        "*.cp": "cpp",
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "iterator": "cpp",
+        "new": "cpp",
+        "typeinfo": "cpp"
     },
     "search.useIgnoreFiles": false,
     "search.exclude": {

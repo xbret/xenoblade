@@ -50,7 +50,7 @@ namespace nw4r
         void Console_DrawDirect(detail::ConsoleHead* console);
         void Console_DrawAll();
         void Console_DrawDirectAll();
-        void Console_VFPrintf(ConsoleOutputType type, detail::ConsoleHead* console, const char* format, va_list* vlist);
+        void Console_VFPrintf(ConsoleOutputType type, detail::ConsoleHead* console, const char* format, std::va_list vlist);
         void Console_FPrintf(ConsoleOutputType type, detail::ConsoleHead* console, const char * format);
         void Console_Printf(detail::ConsoleHead* console, const char* format, ...);
         void Console_PrintfD(detail::ConsoleHead* console, const char* format, ...);
@@ -63,7 +63,7 @@ namespace nw4r
         static u16 Console_GetViewHeight(detail::ConsoleHead* console);
 
         //Stubbed in final
-        static void Console_VPrintf(detail::ConsoleHead* console, const char* format, __va_list_struct* vlist)
+        static void Console_VPrintf(detail::ConsoleHead* console, const char* format, std::va_list vlist)
         {
         }
 

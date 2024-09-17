@@ -7,9 +7,9 @@ namespace nw4r
 {
     namespace db
     {
-        DECL_WEAK void VPanic(const char* file, int line, const char* fmt, __va_list_struct* vlist, bool halt);
+        DECL_WEAK void VPanic(const char* file, int line, const char* fmt, std::va_list vlist, bool halt);
         DECL_WEAK void Panic(const char* file, int line, const char* fmt, ...);
-        DECL_WEAK void VWarning(const char* file, int line, const char* fmt, __va_list_struct* vlist);
+        DECL_WEAK void VWarning(const char* file, int line, const char* fmt, std::va_list vlist);
         DECL_WEAK void Warning(const char* file, int line, const char* msg, ...);
         
         namespace detail
