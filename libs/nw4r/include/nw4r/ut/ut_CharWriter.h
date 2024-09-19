@@ -65,13 +65,33 @@ public:
     CharWriter();
     ~CharWriter();
 
+    void SetFont(const Font& font) { mFont = &font; }
+    const Font* GetFont() const { return mFont; }
+
     void SetColorMapping(Color min, Color max) {
         mColorMapping.min = min;
         mColorMapping.max = max;
     }
 
+    Color GetColorMappingMin() const { return mColorMapping.min; }
+    Color GetColorMappingMax() const { return mColorMapping.max; }
+
     void ResetColorMapping() {
         SetColorMapping(Color(0x00000000), Color(0xFFFFFFFF));
+    }
+
+    void ResetTextureCache() { mLoadingTexture.Reset(); }
+
+    void SetAlpha(u8 alpha) { mAlpha = alpha; }
+    u8 GetAlpha() const { return mAlpha; }
+
+    void SetGradationMode(GradationMode mode) {
+        mTextColor.gradMode = mode;
+        UpdateVertexColor();
+    }
+
+    GradationMode GetGradationMode() const {
+        return mTextColor.gradMode;
     }
 
     void SetTextColor(Color start) {
@@ -85,24 +105,24 @@ public:
         UpdateVertexColor();
     }
 
-    void SetGradationMode(GradationMode mode) {
-        mTextColor.gradMode = mode;
-        UpdateVertexColor();
-    }
-
     f32 GetScaleH() const { return mScale.x; }
     f32 GetScaleV() const { return mScale.y; }
 
-    void SetScale(f32 x, f32 y) {
-        mScale.x = x;
-        mScale.y = y;
+    void SetScale(f32 hScale, f32 vScale) {
+        mScale.x = hScale;
+        mScale.y = vScale;
     }
 
-    f32 GetCursorX() const { return mCursorPos.x; }
-    void SetCursorX(f32 x) { mCursorPos.x = x; }
+    void SetScale(f32 hvScale) {
+        mScale.x = hvScale;
+        mScale.y = hvScale;
+    }
 
-    f32 GetCursorY() const { return mCursorPos.y; }
-    void SetCursorY(f32 y) { mCursorPos.y = y; }
+    void EnableFixedWidth(bool enable) { mIsWidthFixed = enable; }
+    bool IsWidthFixed() const { return mIsWidthFixed; }
+
+    void SetFixedWidth(f32 width) { mFixedWidth = width; }
+    f32 GetFixedWidth() const { return mFixedWidth; }
 
     void SetCursor(f32 x, f32 y) {
         mCursorPos.x = x;
@@ -114,29 +134,44 @@ public:
         mCursorPos.z = z;
     }
 
+    void MoveCursor(f32 dx, f32 dy) {
+        mCursorPos.x += dx;
+        mCursorPos.y += dy;
+    }
+    void MoveCursor(f32 dx, f32 dy, f32 dz) {
+        mCursorPos.x += dx;
+        mCursorPos.y += dy;
+        mCursorPos.z += dz;
+    }
+
+    f32 GetCursorX() const { return mCursorPos.x; }
+    void SetCursorX(f32 x) { mCursorPos.x = x; }
+
+    f32 GetCursorY() const { return mCursorPos.y; }
+    void SetCursorY(f32 y) { mCursorPos.y = y; }
+
+    f32 GetCursorZ() const { return mCursorPos.z; }
+    void SetCursorZ(f32 z) { mCursorPos.y = z; }
+
     void MoveCursorX(f32 dx) { mCursorPos.x += dx; }
     void MoveCursorY(f32 dy) { mCursorPos.y += dy; }
-
-    void EnableFixedWidth(bool enable) { mIsWidthFixed = enable; }
-    bool IsWidthFixed() const { return mIsWidthFixed; }
-
-    void SetFixedWidth(f32 width) { mFixedWidth = width; }
-    f32 GetFixedWidth() const { return mFixedWidth; }
-
-    void SetFont(const Font& font) { mFont = &font; }
-    const Font* GetFont() const { return mFont; }
-
-    void ResetTextureCache() { mLoadingTexture.Reset(); }
+    void MoveCursorZ(f32 dz) { mCursorPos.y += dz; }
 
     void SetupGX();
     void SetFontSize(f32 width, f32 height);
+    void SetFontSize(f32 height);
     f32 GetFontWidth() const;
     f32 GetFontHeight() const;
     f32 GetFontAscent() const;
     f32 GetFontDescent() const;
+
     void EnableLinearFilter(bool atSmall, bool atLarge);
-    f32 Print(u16 ch);
+    bool IsLinearFilterEnableAtSmall() const { return false; }
+    bool IsLinearFilterEnableAtLarge() const { return false; }
+
+    f32 Print(u16 code);
     void PrintGlyph(f32 x, f32 y, f32 z, const Glyph& glyph);
+    void DrawGlyph(const Glyph& glyph);
     void LoadTexture(const Glyph& glyph, GXTexMapID slot);
     void UpdateVertexColor();
 

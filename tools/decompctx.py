@@ -20,11 +20,12 @@ root_dir = os.path.abspath(os.path.join(script_dir, ".."))
 src_dir = os.path.join(root_dir, "src")
 include_dirs = [
     os.path.join(root_dir, "include"),
+    os.path.join(root_dir, "libs/PowerPC_EABI_Support/include/stl"),
     os.path.join(root_dir, "libs/PowerPC_EABI_Support/include"),
     os.path.join(root_dir, "libs/monolib/include"),
     os.path.join(root_dir, "libs/nw4r/include"),
     os.path.join(root_dir, "libs/RVL_SDK/include"),
-    os.path.join(root_dir, "libs/PowerPC_EABI_Support/include/stl"),
+    os.path.join(root_dir, "libs/RVL_SDK/src/revolution/hbm/include"),
 ]
 
 include_pattern = re.compile(r'^#\s*include\s*[<"](.+?)[>"]$')
