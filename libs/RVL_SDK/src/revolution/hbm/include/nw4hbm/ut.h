@@ -10,6 +10,7 @@
 #include <nw4hbm/ut/ut_Rect.h>
 #include <nw4hbm/ut/ut_ResFont.h>
 #include <nw4hbm/ut/ut_ResFontBase.h>
+#include <nw4hbm/ut/ut_RuntimeTypeInfo.h>
 #include <nw4hbm/ut/ut_TagProcessorBase.h>
 #include <nw4hbm/ut/ut_TextWriterBase.h>
 #include <nw4hbm/ut/ut_algorithm.h>

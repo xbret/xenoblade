@@ -1062,7 +1062,10 @@ config.libs = [
             Object(NonMatching, "revolution/hbm/HBMCommon.cpp"),
             Object(NonMatching, "revolution/hbm/HBMBase.cpp"),
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_animation.cpp"),
-            Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp"),
+            Object(
+                Matching,
+                "revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp",
+                mw_version = "Wii/1.0a" if sdk_hbm_version > 20090303 else sdk_hbm_compiler), # Only matches on 1.0a in EU/US
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp"),
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_common.cpp"),
             Object(Matching, "revolution/hbm/nw4hbm/lyt/lyt_drawInfo.cpp"),
