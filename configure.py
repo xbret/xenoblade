@@ -167,6 +167,22 @@ config.progress_code_fancy_item = "achievements"
 config.progress_data_fancy_frac = 21
 config.progress_data_fancy_item = "collectopaedias"
 
+# Library version flags
+
+# SDK
+# TODO: Ideally, only the SDK patch should need to be specified here.
+# Adjusting headers to keep the SDK version define flags private from
+# other libraries will likely be necessary to allow each library to have
+# its own separate version define. In addition, making it so the version define
+# can have the same basic name for any library without conflicts would be nice.
+
+# HBM
+sdk_hbm_version = 20090303 # JP
+sdk_hbm_compiler = "Wii/1.0a"
+if config.version != "jp":
+    sdk_hbm_version = 20100224 # EU/US
+    sdk_hbm_compiler = "Wii/1.1"
+
 # Base flags, common to most GC/Wii games.
 # Generally leave untouched, with overrides added below.
 cflags_base = [
@@ -269,6 +285,7 @@ cflags_hbm = [
     "-sdata2 0",
     "-RTTI on",
     "-ir libs/RVL_SDK/src/revolution/hbm/include/",
+    f"-DHBM_VERSION={sdk_hbm_version}",
 ]
 
 # Ndev flags
@@ -1031,7 +1048,7 @@ config.libs = [
     ),
     {
         "lib": "homebuttonLib",
-        "mw_version": "Wii/1.0a",
+        "mw_version": sdk_hbm_compiler,
         "root_dir": "libs/RVL_SDK",
         "cflags": cflags_hbm,
         "progress_category": "sdk",
