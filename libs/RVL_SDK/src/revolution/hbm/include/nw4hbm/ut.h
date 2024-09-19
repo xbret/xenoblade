@@ -14,5 +14,6 @@
 #include <nw4hbm/ut/ut_TextWriterBase.h>
 #include <nw4hbm/ut/ut_algorithm.h>
 #include <nw4hbm/ut/ut_binaryFileFormat.h>
+#include <nw4hbm/ut/ut_list.h>
 
 #endif

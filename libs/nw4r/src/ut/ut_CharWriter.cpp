@@ -28,6 +28,8 @@ static void SetupGXCommon() {
 namespace nw4r {
 namespace ut {
 
+CharWriter::LoadingTexture CharWriter::mLoadingTexture;
+
 CharWriter::CharWriter()
     : mAlpha(255), mIsWidthFixed(false), mFixedWidth(0.0f), mFont(NULL) {
     mLoadingTexture.Reset();
@@ -74,6 +76,10 @@ void CharWriter::SetFontSize(f32 width, f32 height) {
     SetScale(width / mFont->GetWidth(), height / mFont->GetHeight());
 }
 
+//unused
+void CharWriter::SetFontSize(f32 height) {
+}
+
 f32 CharWriter::GetFontWidth() const { return mScale.x * mFont->GetWidth(); }
 
 f32 CharWriter::GetFontHeight() const { return mScale.y * mFont->GetHeight(); }
@@ -89,26 +95,31 @@ void CharWriter::EnableLinearFilter(bool atSmall, bool atLarge) {
     mFilter.atLarge = atLarge ? GX_LINEAR : GX_NEAR;
 }
 
-f32 CharWriter::Print(u16 ch) {
+f32 CharWriter::Print(u16 code) {
+    Glyph glyph;
+    mFont->GetGlyph(&glyph, code);
+
+    CharWidths& widths = glyph.widths;
     f32 width;
     f32 left;
 
-    Glyph glyph;
-    mFont->GetGlyph(&glyph, ch);
-
     if (mIsWidthFixed) {
+        f32 margin = (mFixedWidth - widths.charWidth * mScale.x) / 2;
         width = mFixedWidth;
-        left = (width - glyph.widths.charWidth * mScale.x) / 2 +
-               (glyph.widths.leftSpacing * mScale.x);
+        left = margin + (widths.leftSpacing * mScale.x);
     } else {
-        width = glyph.widths.charWidth * mScale.x;
-        left = glyph.widths.leftSpacing * mScale.x;
+        width = widths.charWidth * mScale.x;
+        left = widths.leftSpacing * mScale.x;
     }
 
     PrintGlyph(mCursorPos.x + left, mCursorPos.y, mCursorPos.z, glyph);
     mCursorPos.x += width;
 
     return width;
+}
+
+//unused
+void CharWriter::DrawGlyph(const Glyph& glyph) {
 }
 
 void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& glyph) {
@@ -151,21 +162,21 @@ void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& glyph) {
 }
 
 void CharWriter::LoadTexture(const Glyph& glyph, GXTexMapID slot) {
-    LoadingTexture loadingTexture;
+    LoadingTexture loadInfo;
 
-    loadingTexture.slot = slot;
-    loadingTexture.texture = glyph.texture;
-    loadingTexture.filter = mFilter;
+    loadInfo.slot = slot;
+    loadInfo.texture = glyph.texture;
+    loadInfo.filter = mFilter;
 
-    if (loadingTexture != mLoadingTexture) {
-        GXTexObj texObj;
-        GXInitTexObj(&texObj, glyph.texture, glyph.texWidth, glyph.texHeight,
+    if (loadInfo != mLoadingTexture) {
+        GXTexObj tobj;
+        GXInitTexObj(&tobj, glyph.texture, glyph.texWidth, glyph.texHeight,
                      glyph.format, GX_CLAMP, GX_CLAMP, FALSE);
-        GXInitTexObjLOD(&texObj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
+        GXInitTexObjLOD(&tobj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
                         0.0f, FALSE, FALSE, GX_ANISO_1);
-        GXLoadTexObj(&texObj, slot);
+        GXLoadTexObj(&tobj, slot);
 
-        mLoadingTexture = loadingTexture;
+        mLoadingTexture = loadInfo;
     }
 }
 
@@ -260,8 +271,6 @@ void CharWriter::SetupGXForI() {
 }
 
 void CharWriter::SetupGXForRGBA() { SetupGXDefault(); }
-
-CharWriter::LoadingTexture CharWriter::mLoadingTexture;
 
 } // namespace ut
 } // namespace nw4r
