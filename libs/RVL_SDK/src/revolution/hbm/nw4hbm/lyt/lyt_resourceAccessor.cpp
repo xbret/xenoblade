@@ -1,4 +1,4 @@
-#include "nw4hbm/lyt/lyt_resourceAccessor.h"
+#include "lyt_resourceAccessor.h"
 
 namespace nw4hbm
 {
@@ -14,7 +14,7 @@ namespace nw4hbm
 
         }
 
-        ut::Font * ResourceAccessor::GetFont(const char *pName)
+        ut::Font * ResourceAccessor::GetFont(const char *name)
         {
             return NULL;
         }
