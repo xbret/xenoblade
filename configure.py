@@ -1074,7 +1074,7 @@ config.libs = [
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp"),
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp"),
             Object(NonMatching, "revolution/hbm/nw4hbm/lyt/lyt_window.cpp"),
-            Object(NonMatching, "revolution/hbm/nw4hbm/math/math_triangular.cpp"),
+            Object(Matching, "revolution/hbm/nw4hbm/math/math_triangular.cpp"),
             Object(Matching, "revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp"),
             Object(Matching, "revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp"),
             Object(Matching, "revolution/hbm/nw4hbm/ut/ut_CharWriter.cpp"),
