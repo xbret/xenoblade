@@ -1515,7 +1515,7 @@ config.libs = [
         "libnw4r_math",
         [
             Object(Matching, "math/math_arithmetic.cpp"),
-            Object(NonMatching, "math/math_triangular.cpp"),
+            Object(Matching, "math/math_triangular.cpp"),
             Object(NonMatching, "math/math_types.cpp"),
             Object(NonMatching, "math/math_geometry.cpp"),
         ],

@@ -7,6 +7,10 @@ namespace nw4r
 {
     namespace g3d
     {
+        // Initialized GQRs 2-7, using the SDK provided function for 2-5, and the following
+        // values for 6-7:
+        // GQR6: signed 16 bit values, 32x scaling
+        // GQR7: signed 16 bit values, 256x scaling
         inline void InitFastCast()
         {
             OSInitFastCast();

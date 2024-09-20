@@ -5,6 +5,11 @@
 extern "C" {
 #endif
 
+// Initializes GQRs 2-5 with the following configuration:
+// GQR2: unsigned 8 bit
+// GQR3: unsigned 16 bit
+// GQR4: signed 8 bit
+// GQR5: signed 16 bit
 static inline void OSInitFastCast(){
     asm{
         li r3, 4
