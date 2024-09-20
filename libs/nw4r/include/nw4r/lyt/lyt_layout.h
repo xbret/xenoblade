@@ -58,10 +58,15 @@ namespace nw4r
             {
                 T *array = (T *)AllocMemory(n * sizeof(T));
 
-                for (size_t i = 0; i < n; i++)
-                    new (&array[i]) T();
+                if(array != nullptr)
+                {
+                    for (size_t i = 0; i < n; i++)
+                        new (&array[i]) T();
 
-                return array;
+                    return array;
+                } else {
+                    return nullptr;
+                }
             }
 
             template <typename T>

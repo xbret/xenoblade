@@ -1507,7 +1507,7 @@ config.libs = [
             Object(NonMatching, "lyt/lyt_animation.cpp"),
             Object(Matching, "lyt/lyt_resourceAccessor.cpp"),
             Object(Matching, "lyt/lyt_arcResourceAccessor.cpp"),
-            Object(NonMatching, "lyt/lyt_common.cpp"),
+            Object(Matching, "lyt/lyt_common.cpp"),
             Object(NonMatching, "lyt/lyt_util.cpp"),
         ],
     ),

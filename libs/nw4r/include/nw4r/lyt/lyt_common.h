@@ -36,6 +36,8 @@ namespace nw4r
                 void Free();
                 void Reserve(u8);
                 void SetSize(u8);
+                void GetCoord(u32 idx, math::VEC2 *coord) const;
+                void SetCoord(u32 idx, const math::VEC2 *coord);
                 void Copy(const void *, u8);
 
                 u8 mCap; // at 0x0
@@ -53,6 +55,7 @@ namespace nw4r
             void SetVertexFormat(bool, u8);
             void DrawQuad(const math::VEC2&, const Size&, u8, const TexCoordData *, const ut::Color *);
             void DrawQuad(const math::VEC2&, const Size&, u8, const TexCoordData *, const ut::Color *, u8);
+            void DrawLine(const math::VEC2& pos, const Size& size, ut::Color &color);
         }
     }
 }
