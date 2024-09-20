@@ -52,12 +52,12 @@ ArcTanSample sArcTanTbl[] = {
 f32 AtanFIdx_(f32 x) {
     x *= 32.0f;
 
-    u16 whole = F32ToU16(x);
-    f32 frac = x - U16ToF32(whole);
+    u16 idx = F32ToU16(x);
+    f32 r = x - U16ToF32(idx);
 
-    f32 atan = sArcTanTbl[whole].atan_val + frac * sArcTanTbl[whole].atan_delta;
+    f32 val = sArcTanTbl[idx].atan_val + r * sArcTanTbl[idx].atan_delta;
 
-    return atan;
+    return val;
 }
 
 } // namespace
@@ -331,13 +331,13 @@ f32 SinFIdx(f32 fidx) {
         abs_fidx -= 65536.0f;
     }
 
-    u16 whole = F32ToU16(abs_fidx);
-    f32 frac = abs_fidx - U16ToF32(whole);
+    u16 idx = F32ToU16(abs_fidx);
+    f32 r = abs_fidx - U16ToF32(idx);
 
-    f32 sin = detail::gSinCosTbl[whole & 255].sin_val +
-              frac * detail::gSinCosTbl[whole & 255].sin_delta;
+    f32 val = detail::gSinCosTbl[idx & 255].sin_val +
+              r * detail::gSinCosTbl[idx & 255].sin_delta;
 
-    return (fidx < 0.0f) ? -sin : sin;
+    return (fidx < 0.0f) ? -val : val;
 }
 
 f32 CosFIdx(f32 fidx) {
@@ -347,13 +347,11 @@ f32 CosFIdx(f32 fidx) {
         abs_fidx -= 65536.0f;
     }
 
-    u16 whole = F32ToU16(abs_fidx);
-    f32 frac = abs_fidx - U16ToF32(whole);
+    u16 idx = F32ToU16(abs_fidx);
+    f32 r = abs_fidx - U16ToF32(idx);
 
-    f32 cos = detail::gSinCosTbl[whole & 255].cos_val +
-              frac * detail::gSinCosTbl[whole & 255].cos_delta;
-
-    return cos;
+    return detail::gSinCosTbl[idx & 255].cos_val +
+              r * detail::gSinCosTbl[idx & 255].cos_delta;
 }
 
 void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
@@ -376,9 +374,9 @@ void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
         abs_fidx -= idxmax;
     }
 
-    ((u16*)pSin)[0] = F32ToU16(abs_fidx);
+    *((u16*)pSin) = F32ToU16(abs_fidx);
 
-    idx = ((u16*)pSin)[0];
+    idx = *((u16*)pSin);
     c_zero = 0; (or idxmax - idxmax bc hudsonsoft silly)
     idx = (idx & 0xFF) << 4;
     pTbl += idx;
@@ -410,9 +408,9 @@ void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
 
     result[0] = scdel[0] * r + scval[0];
     result[1] = scdel[1] * r + scval[1];
-    
-    pCos[0] = result[1];
-    pSin[1] = fidx < 0 ? -result[0] : result[0];
+
+    *pCos = result[1];
+    *pSin = fidx < 0 ? -result[0] : result[0];
     */
     asm {
         psq_l r, 0(pSin), 1, 3

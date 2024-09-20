@@ -37,4 +37,9 @@ typedef void UNKTYPE;
 #define TRUE 1
 typedef int BOOL;
 
+//Make VSCode shut up
+#ifndef __MWERKS__
+typedef int __vec2x32float__;
+#endif
+
 #endif
