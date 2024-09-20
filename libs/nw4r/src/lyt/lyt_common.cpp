@@ -42,7 +42,12 @@ namespace nw4r
             {
                 if (mTexCoords != NULL)
                 {
-                    Layout::DeleteArray<VEC2>(*mTexCoords, mCap * TEXCOORD_VTX_COUNT);
+                    // likely fake but can't figure out the double beq
+                    if (mTexCoords != NULL)
+                    {
+                        u32 coordNum = mCap * TEXCOORD_VTX_COUNT;
+                        Layout::DeleteArray<VEC2>(*mTexCoords, coordNum);
+                    }
 
                     mTexCoords = NULL;
                     mCap = 0;
@@ -56,8 +61,14 @@ namespace nw4r
                 {
                     Free();
 
-                    mTexCoords = (TexCoordData *)Layout::NewArray<VEC2>(num * TEXCOORD_VTX_COUNT);
-                    if (mTexCoords != NULL) mCap = num;
+                    u32 coordNum = num * TEXCOORD_VTX_COUNT;
+                    VEC2* const pVecAry = Layout::NewArray<VEC2>(coordNum);
+
+                    mTexCoords = (TexCoordData *)pVecAry;
+
+                    if (pVecAry != NULL) {
+                        mCap = num;
+                    }
                 }
             }
 
@@ -82,6 +93,20 @@ namespace nw4r
                     }
 
                     mSize = size;
+                }
+            }
+
+            //unused
+            void TexCoordAry::GetCoord(u32 idx, VEC2 *coord) const
+            {
+
+            }
+
+            void TexCoordAry::SetCoord(u32 idx, const VEC2 *coord)
+            {
+                for(int i = 0; i < TEXCOORD_VTX_COUNT; i++)
+                {
+                    mTexCoords[idx][i] = coord[i];
                 }
             }
 
@@ -179,7 +204,7 @@ namespace nw4r
                     GXTexCoord2f32(tc[i][1].x, tc[i][1].y);
                 }
 
-                GXPosition2f32(pos.x + size.x, pos.y + size.y);
+                GXPosition2f32(pos.x + size.x, pos.y - size.y);
                 if (vertexClrs != NULL) 
                 {
                     GXColor1u32(vertexClrs[3]);
@@ -189,7 +214,7 @@ namespace nw4r
                     GXTexCoord2f32(tc[i][3].x, tc[i][3].y);
                 }
 
-                GXPosition2f32(pos.x, pos.y + size.y);
+                GXPosition2f32(pos.x, pos.y - size.y);
                 if (vertexClrs != NULL) 
                 {
                     GXColor1u32(vertexClrs[2]);
@@ -212,6 +237,11 @@ namespace nw4r
 
                 const Color *forUse = vertexClrs ? tempClrs : NULL;
                 DrawQuad(pos, size, c, tc, forUse);
+            }
+
+            //unused
+            void DrawLine(const VEC2 &pos, const Size &size, Color &color)
+            {
             }
         }
     }
