@@ -25,9 +25,9 @@ void DisposeCallbackManager::UnregisterDisposeCallback(
 }
 
 void DisposeCallbackManager::Dispose(void* pData, u32 size, void* pArg) {
-    const void* start = pData;
-    const void* end = static_cast<u8*>(pData) + size;
-
+#pragma unused(pArg)
+    const void* pStart = pData;
+    const void* pEnd = static_cast<u8*>(pData) + size;
     SoundThread::AutoLock lock;
 
     DisposeCallbackList::Iterator it =
@@ -35,14 +35,16 @@ void DisposeCallbackManager::Dispose(void* pData, u32 size, void* pArg) {
 
     while (it != GetInstance().mCallbackList.GetEndIter()) {
         DisposeCallbackList::Iterator curr = it++;
-        curr++->InvalidateData(start, end);
+        // @bug Unnecessary iteration
+        curr++->InvalidateData(pStart, pEnd);
     }
 }
 
 void DisposeCallbackManager::DisposeWave(void* pData, u32 size, void* pArg) {
-    const void* start = pData;
-    const void* end = static_cast<u8*>(pData) + size;
+#pragma unused(pArg)
 
+    const void* pStart = pData;
+    const void* pEnd = static_cast<u8*>(pData) + size;
     SoundThread::AutoLock lock;
 
     DisposeCallbackList::Iterator it =
@@ -50,7 +52,8 @@ void DisposeCallbackManager::DisposeWave(void* pData, u32 size, void* pArg) {
 
     while (it != GetInstance().mCallbackList.GetEndIter()) {
         DisposeCallbackList::Iterator curr = it++;
-        curr++->InvalidateWaveData(start, end);
+        // @bug Unnecessary iteration
+        curr++->InvalidateWaveData(pStart, pEnd);
     }
 }
 

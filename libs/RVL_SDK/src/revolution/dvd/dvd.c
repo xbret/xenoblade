@@ -906,8 +906,7 @@ static void stateOpenPartition(DVDCommandBlock* block) {
     if (OS_LOCKED_FLAG == 0x80) {
         DVDLowOpenPartitionWithTmdAndTicketView(BootGameInfo->offset, (ESTicketView*)__DVDTicketViewBuffer,
         __DVDNumTmdBytes, (ESTitleMeta*)__DVDTmdBuffer, 0, NULL, cbForStateOpenPartition);
-    }
-    else {
+    } else {
         DVDLowOpenPartition(BootGameInfo->offset, NULL, 0, 0, (ESTitleMeta*)__DVDTmdBuffer, cbForStateOpenPartition);
     }
 }
@@ -939,8 +938,7 @@ static void stateOpenPartition2(DVDCommandBlock* block) {
     if (OS_LOCKED_FLAG == 0x80) {
         DVDLowOpenPartitionWithTmdAndTicketView(BootGameInfo->offset, (ESTicketView*)__DVDTicketViewBuffer,
         __DVDNumTmdBytes, (ESTitleMeta*)__DVDTmdBuffer, 0, NULL, cbForStateOpenPartition2);
-    }
-    else {
+    } else {
         DVDLowOpenPartition(BootGameInfo->offset, NULL, 0, 0, (ESTitleMeta*)__DVDTmdBuffer,
                             cbForStateOpenPartition2);
     }
@@ -1128,8 +1126,7 @@ static void stateCoverClosed_CMD(DVDCommandBlock* block) {
             executing->state = DVD_STATE_BUSY;
             stateBusy(executing);
         }
-    }
-    else {
+    } else {
         DVDLowClearCoverInterrupt(NULL);
 
         StampCommand(COMMAND_READID,
@@ -1467,8 +1464,7 @@ static void stateBusy(DVDCommandBlock* block) {
         if (!params->numTmdBytes && !params->numCertBytes) {
             DVDLowGetNoDiscBufferSizes(block->offset, &params->numTmdBytes,
             &params->numCertBytes, cbForStateBusy);
-        }
-        else {
+        } else {
             DVDLowGetNoDiscOpenPartitionParams(block->offset, &params->ticket,
             &params->numTmdBytes, &params->tmd, &params->numCertBytes,
             params->certificates, &params->dataWordOffset,
@@ -2315,8 +2311,7 @@ void __DVDPrepareResetAsync(DVDCommandCallback callback) {
 
     if (Canceling) {
         CancelCallback = callback;
-    }
-    else {
+    } else {
         if (executing != NULL) {
             executing->callback = NULL;
         }

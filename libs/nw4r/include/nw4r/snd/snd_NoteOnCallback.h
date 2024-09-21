@@ -1,12 +1,14 @@
-#ifndef NW4R_SND_NOTE_ON_H
-#define NW4R_SND_NOTE_ON_H
-#include "snd_Channel.h"
-#include "types_nw4r.h"
+#ifndef NW4R_SND_NOTE_ON_CALLBACK_H
+#define NW4R_SND_NOTE_ON_CALLBACK_H
+#include <nw4r/types_nw4r.h>
+
+#include <nw4r/snd/snd_Channel.h>
 
 namespace nw4r {
 namespace snd {
 namespace detail {
 
+// Forward declarations
 class SeqPlayer;
 
 struct NoteOnInfo {
@@ -24,8 +26,9 @@ struct NoteOnInfo {
 class NoteOnCallback {
 public:
     virtual ~NoteOnCallback() {} // at 0x8
+
     virtual Channel* NoteOn(SeqPlayer* pPlayer, int bankNo,
-                            const NoteOnInfo& rInfo) = 0; // at 0xc
+                            const NoteOnInfo& rInfo) = 0; // at 0xC
 };
 
 } // namespace detail

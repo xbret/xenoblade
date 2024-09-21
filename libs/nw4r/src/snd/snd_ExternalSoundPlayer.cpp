@@ -1,54 +1,54 @@
 #pragma ipa file // TODO: REMOVE AFTER REFACTOR
 
 #include <nw4r/snd.h>
+#include <nw4r/ut.h>
 
 namespace nw4r {
 namespace snd {
 namespace detail {
 
-ExternalSoundPlayer::ExternalSoundPlayer()
-    : mPlayableSoundCount(1), mVolume(1.0f) {}
+ExternalSoundPlayer::ExternalSoundPlayer() : mPlayableCount(1), mVolume(1.0f) {}
 
 ExternalSoundPlayer::~ExternalSoundPlayer() {
-    BasicSoundExtPlayList::Iterator iter = mSoundList.GetBeginIter();
-    while (iter != mSoundList.GetEndIter()) {
-        iter++->SetExternalSoundPlayer(NULL);
-    }
+    NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
+        it->SetExternalSoundPlayer(NULL);
+    );
 }
 
 void ExternalSoundPlayer::SetPlayableSoundCount(int count) {
-    mPlayableSoundCount = count;
+    mPlayableCount = count;
 
     while (GetPlayingSoundCount() > GetPlayableSoundCount()) {
         GetLowestPrioritySound()->Shutdown();
     }
 }
 
-void ExternalSoundPlayer::InsertSoundList(BasicSound* sound) {
-    mSoundList.PushBack(sound);
-    sound->SetExternalSoundPlayer(this);
+void ExternalSoundPlayer::InsertSoundList(BasicSound* pSound) {
+    mSoundList.PushBack(pSound);
+    pSound->SetExternalSoundPlayer(this);
 }
 
-void ExternalSoundPlayer::RemoveSoundList(BasicSound* sound) {
-    mSoundList.Erase(sound);
-    sound->SetExternalSoundPlayer(NULL);
+void ExternalSoundPlayer::RemoveSoundList(BasicSound* pSound) {
+    mSoundList.Erase(pSound);
+    pSound->SetExternalSoundPlayer(NULL);
 }
 
 BasicSound* ExternalSoundPlayer::GetLowestPrioritySound() {
     int lowestPrio = BasicSound::PRIORITY_MAX + 1;
-    BasicSound* lowestPrioSound = NULL;
+    BasicSound* pLowest = NULL;
 
-    for (BasicSoundExtPlayList::Iterator iter = mSoundList.GetBeginIter();
-         iter != mSoundList.GetEndIter(); ++iter) {
-        int prio = iter->CalcCurrentPlayerPriority();
+    for (BasicSoundExtPlayList::Iterator it = mSoundList.GetBeginIter();
+         it != mSoundList.GetEndIter(); ++it) {
 
-        if (lowestPrio > prio) {
-            lowestPrioSound = &*iter;
-            lowestPrio = prio;
+        int priority = it->CalcCurrentPlayerPriority();
+
+        if (lowestPrio > priority) {
+            pLowest = &*it;
+            lowestPrio = priority;
         }
     }
 
-    return lowestPrioSound;
+    return pLowest;
 }
 
 } // namespace detail

@@ -1,16 +1,21 @@
-#include "snd_StrmSoundHandle.h"
-#include "snd_StrmSound.h"
+#pragma ipa file // TODO: REMOVE AFTER REFACTOR
 
-namespace nw4r
-{
-    namespace snd
-    {
-        void StrmSoundHandle::DetachSound()
-        {
-            if (IsAttachedSound() && mStrmSound->mTempSpecialHandle == this)
-                mStrmSound->mTempSpecialHandle = NULL;
+#include <nw4r/snd.h>
 
-            if (mStrmSound) mStrmSound = NULL;
+namespace nw4r {
+namespace snd {
+
+void StrmSoundHandle::DetachSound() {
+    if (IsAttachedSound()) {
+        if (mSound->mTempSpecialHandle == this) {
+            mSound->mTempSpecialHandle = NULL;
         }
     }
+
+    if (mSound != NULL) {
+        mSound = NULL;
+    }
 }
+
+} // namespace snd
+} // namespace nw4r

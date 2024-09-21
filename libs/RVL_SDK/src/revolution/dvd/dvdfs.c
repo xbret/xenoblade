@@ -66,23 +66,19 @@ s32 DVDConvertPathToEntrynum(const char* pathPtr) {
             dirLookAt = 0;
             pathPtr++;
             continue;
-        }
-        else if (*pathPtr == '.') {
+        } else if (*pathPtr == '.') {
             if (*(pathPtr + 1) == '.') {
                 if (*(pathPtr + 2) == '/') {
                     dirLookAt = parentDir(dirLookAt);
                     pathPtr += 3;
                     continue;
-                }
-                else if (*(pathPtr + 2) == '\0') {
+                } else if (*(pathPtr + 2) == '\0') {
                     return (s32)parentDir(dirLookAt);
                 }
-            }
-            else if (*(pathPtr + 1) == '/') {
+            } else if (*(pathPtr + 1) == '/') {
                 pathPtr += 2;
                 continue;
-            }
-            else if (*(pathPtr + 1) == '\0') {
+            } else if (*(pathPtr + 1) == '\0') {
                 return (s32)dirLookAt;
             }
         }
@@ -115,8 +111,7 @@ s32 DVDConvertPathToEntrynum(const char* pathPtr) {
             #line 443
                 OSError("DVDConvertEntrynumToPath(possibly DVDOpen or DVDChangeDir or DVDOpenDir): specified directory or file (%s) doesn't match standard 8.3 format. This is a temporary restriction and will be removed soon\n", origPathPtr);
             }
-        }
-        else {
+        } else {
             for (ptr = pathPtr; (*ptr != '\0') && (*ptr != '/'); ptr++);
         }
 

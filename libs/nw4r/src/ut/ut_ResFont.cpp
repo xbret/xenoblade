@@ -2,15 +2,6 @@
 
 #include <nw4r/ut.h>
 
-const u32 MAGIC_RESFONT = 'RFNT';
-const u32 MAGIC_UNPACKED = 'RFNU';
-
-const u32 MAGIC_FONTINFO = 'FINF';
-const u32 MAGIC_TEXGLYPH = 'TGLP';
-const u32 MAGIC_CHARWIDTH = 'CWDH';
-const u32 MAGIC_CHARMAP = 'CMAP';
-const u32 MAGIC_GLGR = 'GLGR';
-
 namespace nw4r {
 namespace ut {
 namespace {
@@ -34,27 +25,26 @@ bool ResFont::SetResource(void* buffer) {
         return false;
     }
 
-    if (header->magic == MAGIC_UNPACKED) {
+    if (header->signature == SIGNATURE_UNPACKED) {
         BinaryBlockHeader* block = reinterpret_cast<BinaryBlockHeader*>(
             reinterpret_cast<char*>(header) + header->headerSize);
 
-        for (int i = 0; i < header->numBlocks; i++) {
-            if (block->magic == MAGIC_FONTINFO) {
+        for (int i = 0; i < header->dataBlocks; i++) {
+            if (block->kind == SIGNATURE_FONTINFO) {
                 info = reinterpret_cast<FontInformation*>(block + 1);
                 break;
             }
 
             block = reinterpret_cast<BinaryBlockHeader*>(
-                reinterpret_cast<char*>(block) + block->length);
+                reinterpret_cast<char*>(block) + block->size);
         }
     } else {
-        if (header->version == NW4R_VERSION(1, 04)) {
-            if (!IsValidBinaryFile(header, MAGIC_RESFONT, NW4R_VERSION(1, 04),
-                                   2)) {
+        if (header->version == NW4R_VERSION(1, 4)) {
+            if (!IsValidBinaryFile(header, SIGNATURE, NW4R_VERSION(1, 4), 2)) {
                 return false;
             }
-        } else if (!IsValidBinaryFile(header, MAGIC_RESFONT,
-                                      NW4R_VERSION(1, 02), 2)) {
+        } else if (!IsValidBinaryFile(header, SIGNATURE, NW4R_VERSION(1, 2),
+                                      2)) {
             return false;
         }
 
@@ -74,53 +64,63 @@ bool ResFont::SetResource(void* buffer) {
 FontInformation* ResFont::Rebuild(BinaryFileHeader* header) {
     BinaryBlockHeader* block = reinterpret_cast<BinaryBlockHeader*>(
         reinterpret_cast<char*>(header) + header->headerSize);
+
     FontInformation* info = NULL;
 
-    for (int i = 0; i < header->numBlocks; i++) {
-        FontWidth* width;
-        FontCodeMap* map;
+    for (int i = 0; i < header->dataBlocks; i++) {
 
-        switch (block->magic) {
-        case MAGIC_FONTINFO:
+        switch (block->kind) {
+        case SIGNATURE_FONTINFO: {
             info = reinterpret_cast<FontInformation*>(block + 1);
-            ResolveOffset<FontTextureGlyph>(info->fontGlyph, header);
+            ResolveOffset<FontTextureGlyph>(info->pGlyph, header);
 
-            if (info->fontWidth != 0) {
-                ResolveOffset<FontWidth>(info->fontWidth, header);
+            if (info->pWidth != 0) {
+                ResolveOffset<FontWidth>(info->pWidth, header);
             }
 
-            if (info->fontMap != 0) {
-                ResolveOffset<FontCodeMap>(info->fontMap, header);
+            if (info->pMap != 0) {
+                ResolveOffset<FontCodeMap>(info->pMap, header);
             }
             break;
-        case MAGIC_TEXGLYPH:
+        }
+
+        case SIGNATURE_TEXGLYPH: {
             ResolveOffset<u8>(
                 reinterpret_cast<FontTextureGlyph*>(block + 1)->sheetImage,
                 header);
             break;
-        case MAGIC_CHARWIDTH:
-            width = reinterpret_cast<FontWidth*>(block + 1);
-            if (width->next != 0) {
-                ResolveOffset<FontWidth>(width->next, header);
+        }
+
+        case SIGNATURE_CHARWIDTH: {
+            FontWidth* width = reinterpret_cast<FontWidth*>(block + 1);
+            if (width->pNext != 0) {
+                ResolveOffset<FontWidth>(width->pNext, header);
             }
             break;
-        case MAGIC_CHARMAP:
-            map = reinterpret_cast<FontCodeMap*>(block + 1);
-            if (map->next != 0) {
-                ResolveOffset<FontCodeMap>(map->next, header);
+        }
+
+        case SIGNATURE_CHARMAP: {
+            FontCodeMap* map = reinterpret_cast<FontCodeMap*>(block + 1);
+            if (map->pNext != 0) {
+                ResolveOffset<FontCodeMap>(map->pNext, header);
             }
             break;
-        case MAGIC_GLGR:
+        }
+
+        case SIGNATURE_GLGR: {
             break;
-        default:
+        }
+
+        default: {
             return NULL;
+        }
         }
 
         block = reinterpret_cast<BinaryBlockHeader*>(
-            reinterpret_cast<char*>(block) + block->length);
+            reinterpret_cast<char*>(block) + block->size);
     }
 
-    header->magic = MAGIC_UNPACKED;
+    header->signature = SIGNATURE_UNPACKED;
     return info;
 }
 

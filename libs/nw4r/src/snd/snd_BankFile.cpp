@@ -15,15 +15,15 @@ enum {
     DATATYPE_INDEXTABLE = Util::DATATYPE_T3,
 };
 
-bool BankFileReader::IsValidFileHeader(const void* pBankData) {
+bool BankFileReader::IsValidFileHeader(const void* pBankBin) {
     const ut::BinaryFileHeader* pFileHeader =
-        static_cast<const ut::BinaryFileHeader*>(pBankData);
+        static_cast<const ut::BinaryFileHeader*>(pBankBin);
 
-    if (pFileHeader->magic != SIGNATURE) {
+    if (pFileHeader->signature != SIGNATURE) {
         return false;
     }
 
-    if (pFileHeader->version < NW4R_VERSION(1, 00)) {
+    if (pFileHeader->version < NW4R_VERSION(1, 0)) {
         return false;
     }
 
@@ -34,19 +34,19 @@ bool BankFileReader::IsValidFileHeader(const void* pBankData) {
     return true;
 }
 
-BankFileReader::BankFileReader(const void* pBankData)
+BankFileReader::BankFileReader(const void* pBankBin)
     : mHeader(NULL), mDataBlock(NULL), mWaveBlock(NULL) {
-    if (!IsValidFileHeader(pBankData)) {
+    if (!IsValidFileHeader(pBankBin)) {
         return;
     }
 
-    mHeader = static_cast<const BankFile::Header*>(pBankData);
+    mHeader = static_cast<const BankFile::Header*>(pBankBin);
 
     mDataBlock = static_cast<const BankFile::DataBlock*>(
-        ut::AddOffsetToPtr<u32>(mHeader, mHeader->dataBlockOffset));
+        ut::AddOffsetToPtr(mHeader, mHeader->dataBlockOffset));
 
     mWaveBlock = static_cast<const BankFile::WaveBlock*>(
-        ut::AddOffsetToPtr<u32>(mHeader, mHeader->waveBlockOffset));
+        ut::AddOffsetToPtr(mHeader, mHeader->waveBlockOffset));
 }
 
 bool BankFileReader::ReadInstInfo(InstInfo* pInfo, int prgNo, int key,
@@ -88,6 +88,7 @@ bool BankFileReader::ReadInstInfo(InstInfo* pInfo, int prgNo, int key,
 
     const BankFile::InstParam* pParam =
         Util::GetDataRefAddress1(*pRef, &mDataBlock->instTable);
+
     if (pParam == NULL) {
         return false;
     }
@@ -121,14 +122,16 @@ BankFileReader::GetReferenceToSubRegion(const BankFile::DataRegion* pRef,
     const BankFile::DataRegion* pSub = NULL;
 
     switch (pRef->dataType) {
-    case DATATYPE_NONE:
+    case DATATYPE_NONE: {
         break;
+    }
 
-    case DATATYPE_INSTPARAM:
+    case DATATYPE_INSTPARAM: {
         pSub = pRef;
         break;
+    }
 
-    case DATATYPE_RANGETABLE:
+    case DATATYPE_RANGETABLE: {
         const BankFile::RangeTable* pRangeTable =
             GetDataRefAddress2(*pRef, &mDataBlock->instTable);
 
@@ -150,8 +153,9 @@ BankFileReader::GetReferenceToSubRegion(const BankFile::DataRegion* pRef,
         pSub = reinterpret_cast<const BankFile::DataRegion*>(pBase + refOffset +
                                                              refStart);
         break;
+    }
 
-    case DATATYPE_INDEXTABLE:
+    case DATATYPE_INDEXTABLE: {
         const BankFile::IndexTable* pIndexTable =
             GetDataRefAddress3(*pRef, &mDataBlock->instTable);
 
@@ -167,6 +171,7 @@ BankFileReader::GetReferenceToSubRegion(const BankFile::DataRegion* pRef,
             pIndexTable->ref +
             (splitKey - pIndexTable->min) * sizeof(BankFile::DataRegion));
         break;
+    }
     }
 
     return pSub;

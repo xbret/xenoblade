@@ -30,19 +30,28 @@ public:
     void SetSustain(int sustain);
     void SetRelease(int release);
 
+private:
+    static const int DECIBEL_SQUARE_TABLE_SIZE = 128;
+
+    static const volatile f32 VOLUME_INIT;
+    static const int ATTACK_INIT = 127;
+    static const int DECAY_INIT = 127;
+    static const int SUSTAIN_INIT = 127;
+    static const int RELEASE_INIT = 127;
+
+private:
     f32 CalcRelease(int release);
     int CalcDecibelSquare(int scale);
 
 private:
-    static const volatile f32 VOLUME_INIT;
-    static const s16 DecibelSquareTable[128];
-
     Status mStatus; // at 0x0
     f32 mValue;     // at 0x4
     f32 mDecay;     // at 0x8
     f32 mRelease;   // at 0xC
     f32 mAttack;    // at 0x10
     u8 mSustain;    // at 0x14
+
+    static const s16 DecibelSquareTable[DECIBEL_SQUARE_TABLE_SIZE];
 };
 
 } // namespace detail

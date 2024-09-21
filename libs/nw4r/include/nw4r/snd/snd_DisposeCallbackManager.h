@@ -1,7 +1,8 @@
 #ifndef NW4R_SND_DISPOSE_CALLBACK_MANAGER_H
 #define NW4R_SND_DISPOSE_CALLBACK_MANAGER_H
-#include <nw4r/snd/snd_DisposeCallback.h>
 #include <nw4r/types_nw4r.h>
+
+#include <nw4r/snd/snd_DisposeCallback.h>
 
 namespace nw4r {
 namespace snd {
@@ -19,7 +20,6 @@ public:
 
 private:
     DisposeCallbackManager();
-    ~DisposeCallbackManager() {}
 
 private:
     DisposeCallbackList mCallbackList; // at 0x0

@@ -580,8 +580,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 offset, const ESTicketVie
     if (tmd == 0) {
         OSReport("(%s) tmd parameter cannot be NULL\n", __FUNCTION__);
         return FALSE;
-    }
-    else if (!is_aligned(tmd)) {
+    } else if (!is_aligned(tmd)) {
         OSReport("(%s) tmd memory is unaligned\n", __FUNCTION__);
         return FALSE;
     }
@@ -589,8 +588,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 offset, const ESTicketVie
     if (eTicketView == 0) {
         OSReport("(%s) eTicketView parameter cannot be NULL\n", __FUNCTION__);
         return FALSE;
-    }
-    else if (!is_aligned(eTicketView)) {
+    } else if (!is_aligned(eTicketView)) {
         OSReport("(%s) eTicketView memory is unaligned\n", __FUNCTION__);
         return FALSE;
     }

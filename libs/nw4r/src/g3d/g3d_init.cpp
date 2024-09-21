@@ -1,7 +1,6 @@
 #include "g3d_init.h"
 #include "g3d_state.h"
 #include "ut_LockedCache.h"
-#include "build_version.h"
 #include <revolution/os/OS.h>
 #include <revolution/VI/vi.h>
 #include <revolution/GX.h>

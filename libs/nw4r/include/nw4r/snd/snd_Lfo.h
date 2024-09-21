@@ -10,6 +10,7 @@ struct LfoParam {
     LfoParam() {
         Init();
     }
+
     void Init();
 
     f32 depth;     // at 0x0
@@ -21,21 +22,25 @@ struct LfoParam {
 
 class Lfo {
 public:
-    static s8 GetSinIdx(int i);
-
     Lfo() : mDelayCounter(0), mCounter(0.0f) {}
 
     LfoParam& GetParam() {
         return mParam;
     }
-    void SetParam(const LfoParam& param) {
-        mParam = param;
+    void SetParam(const LfoParam& rParam) {
+        mParam = rParam;
     }
 
     void Reset();
     void Update(int msec);
 
     f32 GetValue() const;
+
+private:
+    static const int TABLE_SIZE = 32;
+
+private:
+    static s8 GetSinIdx(int i);
 
 private:
     LfoParam mParam;   // at 0x0

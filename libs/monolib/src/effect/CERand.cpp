@@ -11,8 +11,7 @@ void CERandomizerSimple::create(int seed) {
     // Invalid seed = take from the global randomizer
     if (seed < 0) {
         seed1 = ceRandomizerSimple.seed1;
-    }
-    else {
+    } else {
         seed1 = seed;
     }
 

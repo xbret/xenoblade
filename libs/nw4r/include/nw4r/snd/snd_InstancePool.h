@@ -10,6 +10,7 @@ class PoolImpl {
 public:
     PoolImpl() : mNext(NULL) {}
 
+protected:
     u32 CreateImpl(void* pBuffer, u32 size, u32 stride);
     void DestroyImpl(void* pBuffer, u32 size);
     int CountImpl() const;
@@ -62,8 +63,12 @@ public:
         DestroyImpl(pPtr, size);
     }
 
+    int Count() const {
+        return CountImpl();
+    }
+
     T* Alloc() {
-        return AllocImpl();
+        return static_cast<T*>(AllocImpl());
     }
 
     void Free(T* pElem) {

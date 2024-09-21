@@ -286,6 +286,8 @@ namespace nw4r
 
         ScnObj::ForEachResult ScnLeaf::ForEach(ForEachAction action, void *r5, bool b)
         {
+        #pragma unused(b)
+        
             ForEachResult result = (*action)(this, r5);
             return (result != FOREACH_RESULT_1) ? FOREACH_RESULT_0 : FOREACH_RESULT_1;
         }
@@ -541,16 +543,19 @@ namespace nw4r
             if (idx <= mSize && mSize < mCapacity
                 && obj != NULL && obj->GetParent() == NULL)
             {
-                for (u32 i = mSize; i > idx; i--)
-                {
-                    mObjects[i] = mObjects[i - 1];
-                }
+                ScnObj **pObj = std::find(&mObjects[0], &mObjects[mSize], obj);
+                if (pObj == &mObjects[mSize]) {
+                    for (u32 i = mSize; i > idx; i--)
+                    {
+                        mObjects[i] = mObjects[i - 1];
+                    }
 
-                mObjects[idx] = obj;
-                obj->G3dProc(G3DPROC_ATTACH_PARENT, 0, this);
-                
-                mSize++;
-                return true;
+                    mObjects[idx] = obj;
+                    obj->G3dProc(G3DPROC_ATTACH_PARENT, 0, this);
+                    
+                    mSize++;
+                    return true;
+                }
             }
 
             return false;

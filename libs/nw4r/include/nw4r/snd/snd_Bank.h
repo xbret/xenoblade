@@ -1,24 +1,27 @@
 #ifndef NW4R_SND_BANK_H
 #define NW4R_SND_BANK_H
-#include <nw4r/snd/snd_BankFile.h>
-#include <nw4r/snd/snd_Channel.h>
-#include <nw4r/snd/snd_NoteOn.h>
 #include <nw4r/types_nw4r.h>
+
+#include <nw4r/snd/snd_BankFile.h>
+#include <nw4r/snd/snd_NoteOnCallback.h>
 
 namespace nw4r {
 namespace snd {
 namespace detail {
 
+// Forward declarations
+class Channel;
+
 class Bank {
 public:
-    Bank(const void* pData);
+    explicit Bank(const void* pBankBin);
     ~Bank();
+
+    Channel* NoteOn(const NoteOnInfo& rInfo) const;
 
     void SetWaveDataAddress(const void* pData) {
         mWaveDataAddress = pData;
     }
-
-    Channel* NoteOn(const NoteOnInfo& rInfo) const;
 
 private:
     BankFileReader mBankReader;   // at 0x0
