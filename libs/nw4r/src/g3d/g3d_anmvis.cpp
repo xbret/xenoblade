@@ -326,8 +326,8 @@ namespace nw4r
             bool success = false;
             for (u16 i = 0; i < numNode; i++)
             {
-                const ResAnmVisNodeData *nodeAnm = mResAnmVis.GetNodeAnm(i);
-                ResName name((char *)ut::AddOffsetToPtr(nodeAnm, nodeAnm->WORD_0x0) - 4);
+                const ResAnmVisAnmData *nodeAnm = mResAnmVis.GetNodeAnm(i);
+                ResName name((char *)ut::AddOffsetToPtr(nodeAnm, nodeAnm->name) - 4);
                 ResNode node(mdl.GetResNode(name));
                 if (node.IsValid())
                 {

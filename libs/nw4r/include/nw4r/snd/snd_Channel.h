@@ -1,11 +1,13 @@
 #ifndef NW4R_SND_CHANNEL_H
 #define NW4R_SND_CHANNEL_H
+#include <nw4r/types_nw4r.h>
+
 #include <nw4r/snd/snd_Common.h>
 #include <nw4r/snd/snd_EnvGenerator.h>
 #include <nw4r/snd/snd_Lfo.h>
 #include <nw4r/snd/snd_MoveValue.h>
 #include <nw4r/snd/snd_Voice.h>
-#include <nw4r/types_nw4r.h>
+
 #include <nw4r/ut.h>
 
 namespace nw4r {
@@ -69,7 +71,7 @@ public:
     }
 
     bool IsPause() const {
-        return mPauseFlag;
+        return mPauseFlag != false;
     }
     bool IsActive() const {
         return mActiveFlag;
@@ -141,7 +143,7 @@ public:
         mTune = tune;
     }
     void SetSilence(bool silence, int fadeTime) {
-        mSilenceVolume.SetTarget(silence ? 0 : 255, fadeTime);
+        mSilenceVolume.SetTarget(silence ? 0 : SILENCE_VOLUME_MAX, fadeTime);
     }
 
     void SetKey(int key) {
@@ -172,19 +174,28 @@ public:
         mNextLink = pChannel;
     }
 
-    static void VoiceCallbackFunc(Voice* pDropVoice,
-                                  Voice::VoiceCallbackStatus status,
-                                  void* pCallbackArg);
-
-    static Channel* AllocChannel(int channels, int voices, int prio,
+    static Channel* AllocChannel(int channels, int voices, int priority,
                                  ChannelCallback pCallback, u32 callbackArg);
     static void FreeChannel(Channel* pChannel);
 
 private:
+    static const u8 SILENCE_VOLUME_MAX = 255;
+
+    static const int KEY_INIT = 60;
+    static const int ORIGINAL_KEY_INIT = 60;
+
+    static const int PRIORITY_RELEASE = 1;
+
+private:
+    static void VoiceCallbackFunc(Voice* pDropVoice,
+                                  Voice::VoiceCallbackStatus status,
+                                  void* pCallbackArg);
+
+private:
     EnvGenerator mEnvelope; // at 0x0
     Lfo mLfo;               // at 0x18
+    u8 mLfoTarget;          // at 0x30
 
-    u8 mLfoTarget;                // at 0x30
     bool mPauseFlag;              // at 0x31
     bool mActiveFlag;             // at 0x32
     bool mAllocFlag;              // at 0x33
@@ -227,7 +238,7 @@ private:
     PanCurve mPanCurve; // at 0xD0
 
     ChannelCallback mCallback; // at 0xD4
-    u32 mCallbackArg;          // at 0xD8
+    u32 mCallbackData;         // at 0xD8
 
     Voice* mVoice;      // at 0xDC
     Channel* mNextLink; // at 0xE0

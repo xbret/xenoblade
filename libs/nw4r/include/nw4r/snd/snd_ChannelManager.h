@@ -1,14 +1,22 @@
 #ifndef NW4R_SND_CHANNEL_MANAGER_H
 #define NW4R_SND_CHANNEL_MANAGER_H
+#include <nw4r/types_nw4r.h>
+
 #include <nw4r/snd/snd_Channel.h>
 #include <nw4r/snd/snd_InstancePool.h>
-#include <nw4r/types_nw4r.h>
 
 namespace nw4r {
 namespace snd {
 namespace detail {
 
 class ChannelManager {
+    friend class Channel; // Alloc/Free intended through Channel only
+
+public:
+    static const int VOICE_MARGIN = 1;
+    static const int VOICE_MAX = AX_VOICE_MAX + VOICE_MARGIN;
+    static const int WORK_SIZE_MAX = VOICE_MAX * sizeof(Channel);
+
 public:
     static ChannelManager& GetInstance();
 
@@ -16,15 +24,13 @@ public:
 
     void Setup(void* pWork, u32 workSize);
     void Shutdown();
-
-    Channel* Alloc();
-    void Free(Channel* pChannel);
-
     void UpdateAllChannel();
 
 private:
     ChannelManager();
-    ~ChannelManager() {}
+
+    Channel* Alloc();
+    void Free(Channel* pChannel);
 
 private:
     InstancePool<Channel> mPool; // at 0x0

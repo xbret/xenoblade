@@ -1,9 +1,12 @@
 #ifndef NW4R_SND_NAND_SOUND_ARCHIVE_H
 #define NW4R_SND_NAND_SOUND_ARCHIVE_H
+#include <nw4r/types_nw4r.h>
+
 #include <nw4r/snd/snd_SoundArchive.h>
 #include <nw4r/snd/snd_SoundArchiveFile.h>
-#include <nw4r/types_nw4r.h>
+
 #include <nw4r/ut.h>
+
 #include <revolution/NAND.h>
 
 namespace nw4r {
@@ -17,13 +20,11 @@ public:
     NandSoundArchive();
     virtual ~NandSoundArchive(); // at 0x8
 
-    virtual const void* detail_GetFileAddress(u32 id) const {
-#pragma unused(id)
+    virtual const void* detail_GetFileAddress(u32 /* id */) const {
         return NULL;
     } // at 0xC
 
-    virtual const void* detail_GetWaveDataFileAddress(u32 id) const {
-#pragma unused(id)
+    virtual const void* detail_GetWaveDataFileAddress(u32 /* id */) const {
         return NULL;
     } // at 0x10
 
@@ -39,7 +40,6 @@ public:
     bool Open(const char* pPath);
     void Close();
 
-    bool LoadFileHeader() DECOMP_DONT_INLINE;
     bool LoadHeader(void* pBuffer, u32 size);
     bool LoadLabelStringData(void* pBuffer, u32 size);
 
@@ -49,6 +49,9 @@ public:
     u32 GetLabelStringDataSize() const {
         return mFileReader.GetLabelStringChunkSize();
     }
+
+private:
+    bool LoadFileHeader() DECOMP_DONT_INLINE;
 
 private:
     detail::SoundArchiveFileReader mFileReader; // at 0x108

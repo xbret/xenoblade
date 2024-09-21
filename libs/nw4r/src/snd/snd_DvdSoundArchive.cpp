@@ -2,6 +2,7 @@
 
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
+
 #include <revolution/DVD.h>
 
 namespace nw4r {
@@ -11,18 +12,17 @@ class DvdSoundArchive::DvdFileStream : public ut::DvdLockedFileStream {
 public:
     DvdFileStream(const DVDFileInfo* pFileInfo, u32 offset, u32 size);
     DvdFileStream(s32 entrynum, u32 offset, u32 size);
-    virtual ~DvdFileStream() {} // at 0xC
 
     virtual s32 Read(void* pDst, u32 size);    // at 0x14
     virtual void Seek(s32 offset, u32 origin); // at 0x44
 
-    virtual u32 GetSize() const {
-        return mSize;
-    } // at 0x40
-
     virtual u32 Tell() const {
         return ut::DvdFileStream::Tell() - mOffset;
     } // at 0x58
+
+    virtual u32 GetSize() const {
+        return mSize;
+    } // at 0x40
 
 private:
     s32 mOffset; // at 0x70
@@ -54,7 +54,7 @@ bool DvdSoundArchive::Open(const char* pPath) {
         return false;
     }
 
-    char extRoot[256];
+    char extRoot[FILE_PATH_MAX];
     for (int i = strlen(pPath) - 1; i >= 0; i--) {
         if (pPath[i] == '/' || pPath[i] == '\\') {
             // @bug Long path can overflow extRoot buffer
@@ -112,16 +112,16 @@ int DvdSoundArchive::detail_GetRequiredStreamBufferSize() const {
 }
 
 bool DvdSoundArchive::LoadFileHeader() {
-    // TODO: How is this calculated?
-    u8 headerArea[ROUND_UP(sizeof(detail::SoundArchiveFile::Header), 32) + 40];
+    u8 headerArea[detail::SoundArchiveFile::HEADER_AREA_SIZE];
 
     static const u32 headerAlignSize =
         ut::RoundUp(sizeof(detail::SoundArchiveFile::Header), 32);
 
     void* pFile = ut::RoundUp<u8>(headerArea, 32);
 
-    u32 bytesRead =
+    s32 bytesRead =
         DVDReadPrio(&mFileInfo, pFile, headerAlignSize, 0, DVD_PRIO_MEDIUM);
+
     if (bytesRead != headerAlignSize) {
         return false;
     }
@@ -140,8 +140,9 @@ bool DvdSoundArchive::LoadHeader(void* pBuffer, u32 size) {
         return false;
     }
 
-    u32 bytesRead =
+    s32 bytesRead =
         DVDReadPrio(&mFileInfo, pBuffer, infoSize, infoOffset, DVD_PRIO_MEDIUM);
+
     if (bytesRead != infoSize) {
         return false;
     }
@@ -158,8 +159,9 @@ bool DvdSoundArchive::LoadLabelStringData(void* pBuffer, u32 size) {
         return false;
     }
 
-    u32 bytesRead = DVDReadPrio(&mFileInfo, pBuffer, labelSize, labelOffset,
+    s32 bytesRead = DVDReadPrio(&mFileInfo, pBuffer, labelSize, labelOffset,
                                 DVD_PRIO_MEDIUM);
+
     if (bytesRead != labelSize) {
         return false;
     }
@@ -175,7 +177,7 @@ DvdSoundArchive::DvdFileStream::DvdFileStream(const DVDFileInfo* pFileInfo,
         mSize = ut::DvdFileStream::GetSize();
     }
 
-    ut::DvdFileStream::Seek(mOffset, SEEK_ORIGIN_BEG);
+    ut::DvdFileStream::Seek(mOffset, SEEK_BEG);
 }
 
 DvdSoundArchive::DvdFileStream::DvdFileStream(s32 entrynum, u32 offset,
@@ -185,7 +187,7 @@ DvdSoundArchive::DvdFileStream::DvdFileStream(s32 entrynum, u32 offset,
         mSize = ut::DvdFileStream::GetSize();
     }
 
-    ut::DvdFileStream::Seek(mOffset, SEEK_ORIGIN_BEG);
+    ut::DvdFileStream::Seek(mOffset, SEEK_BEG);
 }
 
 s32 DvdSoundArchive::DvdFileStream::Read(void* pDst, u32 size) {
@@ -201,20 +203,24 @@ s32 DvdSoundArchive::DvdFileStream::Read(void* pDst, u32 size) {
 
 void DvdSoundArchive::DvdFileStream::Seek(s32 offset, u32 origin) {
     switch (origin) {
-    case SEEK_ORIGIN_BEG:
+    case SEEK_BEG: {
         offset += mOffset;
         break;
+    }
 
-    case SEEK_ORIGIN_CUR:
+    case SEEK_CUR: {
         offset += ut::DvdFileStream::Tell();
         break;
+    }
 
-    case SEEK_ORIGIN_END:
+    case SEEK_END: {
         offset = mOffset + mSize - offset;
         break;
+    }
 
-    default:
+    default: {
         return;
+    }
     }
 
     if (offset < mOffset) {
@@ -223,16 +229,8 @@ void DvdSoundArchive::DvdFileStream::Seek(s32 offset, u32 origin) {
         offset = mOffset + mSize;
     }
 
-    ut::DvdFileStream::Seek(offset, SEEK_ORIGIN_BEG);
+    ut::DvdFileStream::Seek(offset, SEEK_BEG);
 }
-
-// clang-format off
-DECOMP_FORCEACTIVE(snd_DvdSoundArchive_cpp,
-                   DvdSoundArchive::DvdFileStream::GetSize,
-                   DvdSoundArchive::DvdFileStream::Tell,
-                   DvdSoundArchive::detail_GetWaveDataFileAddress,
-                   DvdSoundArchive::detail_GetFileAddress);
-// clang-format on
 
 } // namespace snd
 } // namespace nw4r

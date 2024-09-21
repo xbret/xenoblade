@@ -16,7 +16,7 @@ Voice::Voice()
       mSyncFlag(0) {
 
     for (int i = 0; i < CHANNEL_MAX; i++) {
-        for (int j = 0; j < scVoicesOutMax; j++) {
+        for (int j = 0; j < VOICES_MAX; j++) {
             mAxVoice[i][j] = NULL;
         }
     }
@@ -24,7 +24,7 @@ Voice::Voice()
 
 Voice::~Voice() {
     for (int i = 0; i < CHANNEL_MAX; i++) {
-        for (int j = 0; j < scVoicesOutMax; j++) {
+        for (int j = 0; j < VOICES_MAX; j++) {
             AxVoice* pVoice = mAxVoice[i][j];
 
             if (pVoice != NULL) {
@@ -148,22 +148,22 @@ void Voice::Update() {
     }
 }
 
-bool Voice::Acquire(int channels, int voices, int prio, VoiceCallback pCallback,
-                    void* pCallbackArg) {
+bool Voice::Acquire(int channels, int voices, int priority,
+                    VoiceCallback pCallback, void* pCallbackArg) {
     channels = ut::Clamp(channels, CHANNEL_MIN, CHANNEL_MAX);
-    voices = ut::Clamp(voices, scVoicesOutMin, scVoicesOutMax);
+    voices = ut::Clamp(voices, VOICES_MIN, VOICES_MAX);
 
     ut::AutoInterruptLock lock;
 
     u32 axPrio;
-    if (prio == PRIORITY_MAX) {
+    if (priority == PRIORITY_MAX) {
         axPrio = AX_PRIORITY_MAX;
     } else {
         axPrio = (AX_PRIORITY_MAX / 2) + 1;
     }
 
     int required = channels * voices;
-    AxVoice* voiceTable[CHANNEL_MAX * scVoicesOutMax];
+    AxVoice* voiceTable[CHANNEL_MAX * VOICES_MAX];
 
     for (int i = 0; required > i; i++) {
         AxVoice* pAxVoice = AxVoiceManager::GetInstance().AcquireAxVoice(
@@ -178,7 +178,7 @@ bool Voice::Acquire(int channels, int voices, int prio, VoiceCallback pCallback,
             for (VoiceList::ConstIterator it = rVoiceList.GetBeginIter();
                  it != rVoiceList.GetEndIter(); ++it) {
 
-                if (prio < it->GetPriority()) {
+                if (priority < it->GetPriority()) {
                     break;
                 }
 
@@ -525,8 +525,8 @@ void Voice::SetRemoteFxSend(int remote, f32 send) {
     mSyncFlag |= SYNC_AX_MIX;
 }
 
-void Voice::SetPriority(int prio) {
-    mPriority = prio;
+void Voice::SetPriority(int priority) {
+    mPriority = priority;
     VoiceManager::GetInstance().ChangeVoicePriority(this);
 
     if (mPriority != 1) {
@@ -749,24 +749,27 @@ void Voice::ResetDelta() {
 void Voice::AxVoiceCallbackFunc(AxVoice* pDropVoice,
                                 AxVoice::AxVoiceCallbackStatus status,
                                 void* pCallbackArg) {
-    Voice* pSelf = static_cast<Voice*>(pCallbackArg);
+    Voice* p = static_cast<Voice*>(pCallbackArg);
 
     VoiceCallbackStatus voiceStatus;
     bool freeDropVoice = false;
 
     switch (status) {
-    case AxVoice::CALLBACK_STATUS_CANCEL:
+    case AxVoice::CALLBACK_STATUS_CANCEL: {
         voiceStatus = CALLBACK_STATUS_CANCEL;
         break;
-    case AxVoice::CALLBACK_STATUS_DROP_DSP:
+    }
+
+    case AxVoice::CALLBACK_STATUS_DROP_DSP: {
         voiceStatus = CALLBACK_STATUS_DROP_DSP;
         freeDropVoice = true;
         break;
     }
+    }
 
-    for (int i = 0; i < pSelf->mChannelCount; i++) {
-        for (int j = 0; j < pSelf->mVoiceOutCount; j++) {
-            AxVoice* pAxVoice = pSelf->mAxVoice[i][j];
+    for (int i = 0; i < p->mChannelCount; i++) {
+        for (int j = 0; j < p->mVoiceOutCount; j++) {
+            AxVoice* pAxVoice = p->mAxVoice[i][j];
 
             if (pAxVoice != NULL) {
                 if (pAxVoice == pDropVoice) {
@@ -778,21 +781,21 @@ void Voice::AxVoiceCallbackFunc(AxVoice* pDropVoice,
                     AxVoiceManager::GetInstance().FreeAxVoice(pAxVoice);
                 }
 
-                pSelf->mAxVoice[i][j] = NULL;
+                p->mAxVoice[i][j] = NULL;
             }
         }
     }
 
-    pSelf->mIsPause = false;
-    pSelf->mIsStarting = false;
-    pSelf->mChannelCount = 0;
+    p->mIsPause = false;
+    p->mIsStarting = false;
+    p->mChannelCount = 0;
 
     if (freeDropVoice) {
-        pSelf->Free();
+        p->Free();
     }
 
-    if (pSelf->mCallback != NULL) {
-        pSelf->mCallback(pSelf, voiceStatus, pSelf->mCallbackArg);
+    if (p->mCallback != NULL) {
+        p->mCallback(p, voiceStatus, p->mCallbackArg);
     }
 }
 
@@ -876,47 +879,57 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
     Util::PanInfo panInfo;
 
     switch (mPanCurve) {
-    case PAN_CURVE_SQRT:
+    case PAN_CURVE_SQRT: {
         panInfo.curve = Util::PAN_CURVE_SQRT;
         break;
-    case PAN_CURVE_SQRT_0DB:
+    }
+    case PAN_CURVE_SQRT_0DB: {
         panInfo.curve = Util::PAN_CURVE_SQRT;
         panInfo.centerZero = true;
         break;
-    case PAN_CURVE_SQRT_0DB_CLAMP:
+    }
+    case PAN_CURVE_SQRT_0DB_CLAMP: {
         panInfo.curve = Util::PAN_CURVE_SQRT;
         panInfo.centerZero = true;
         panInfo.zeroClamp = true;
         break;
+    }
 
-    case PAN_CURVE_SINCOS:
+    case PAN_CURVE_SINCOS: {
         panInfo.curve = Util::PAN_CURVE_SINCOS;
         break;
-    case PAN_CURVE_SINCOS_0DB:
+    }
+    case PAN_CURVE_SINCOS_0DB: {
         panInfo.curve = Util::PAN_CURVE_SINCOS;
         panInfo.centerZero = true;
         break;
-    case PAN_CURVE_SINCOS_0DB_CLAMP:
+    }
+    case PAN_CURVE_SINCOS_0DB_CLAMP: {
         panInfo.curve = Util::PAN_CURVE_SINCOS;
         panInfo.centerZero = true;
         panInfo.zeroClamp = true;
         break;
+    }
 
-    case PAN_CURVE_LINEAR:
+    case PAN_CURVE_LINEAR: {
         panInfo.curve = Util::PAN_CURVE_LINEAR;
         break;
-    case PAN_CURVE_LINEAR_0DB:
+    }
+    case PAN_CURVE_LINEAR_0DB: {
         panInfo.curve = Util::PAN_CURVE_LINEAR;
         panInfo.centerZero = true;
         break;
-    case PAN_CURVE_LINEAR_0DB_CLAMP:
+    }
+    case PAN_CURVE_LINEAR_0DB_CLAMP: {
         panInfo.curve = Util::PAN_CURVE_LINEAR;
         panInfo.centerZero = true;
         panInfo.zeroClamp = true;
         break;
+    }
 
-    default:
+    default: {
         panInfo.curve = Util::PAN_CURVE_SQRT;
+    }
     }
 
     if (mChannelCount > 1 && mPanMode == PAN_MODE_BALANCE) {
@@ -947,19 +960,21 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
         }
 
         switch (AxManager::GetInstance().GetOutputMode()) {
-        case OUTPUT_MODE_DPL2:
+        case OUTPUT_MODE_DPL2: {
             TransformDpl2Pan(&pan, &surroundPan,
                              mPan + voicePan + mVoiceOutParam[voice].pan,
                              mSurroundPan + mVoiceOutParam[voice].surroundPan);
             break;
+        }
 
         case OUTPUT_MODE_STEREO:
         case OUTPUT_MODE_SURROUND:
         case OUTPUT_MODE_MONO:
-        default:
+        default: {
             pan = mPan + voicePan + mVoiceOutParam[voice].pan;
             surroundPan = mSurroundPan + mVoiceOutParam[voice].surroundPan;
             break;
+        }
         }
 
         left = Util::CalcPanRatio(pan, panInfo);
@@ -986,7 +1001,7 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
     f32& b_sr = c_s;
 
     switch (AxManager::GetInstance().GetOutputMode()) {
-    case OUTPUT_MODE_STEREO:
+    case OUTPUT_MODE_STEREO: {
         m_l = main * left;
         m_r = main * right;
         m_s = 0.0f;
@@ -1003,8 +1018,9 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
         c_r = fx_c * right;
         c_s = 0.0f;
         break;
+    }
 
-    case OUTPUT_MODE_MONO:
+    case OUTPUT_MODE_MONO: {
         m_l = main * lrMixed;
         m_r = main * lrMixed;
         m_s = 0.0f;
@@ -1021,6 +1037,7 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
         c_r = fx_c * lrMixed;
         c_s = 0.0f;
         break;
+    }
 
     case OUTPUT_MODE_SURROUND: {
         f32 fl = left * front;
@@ -1068,8 +1085,9 @@ void Voice::CalcMixParam(int channel, int voice, AxVoice::MixParam* pMix,
         break;
     }
 
-    default:
+    default: {
         break;
+    }
     }
 
     f32 rmt[WPAD_MAX_CONTROLLERS];

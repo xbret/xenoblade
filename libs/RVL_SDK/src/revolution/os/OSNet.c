@@ -172,8 +172,7 @@ static BOOL NWC24Shutdown_(BOOL final, u32 event){
         if (-1 < iVar1) {
             shuttingdown = TRUE;
         }
-    }
-    else {
+    } else {
         iVar1 = NWC24iIsAsyncRequestPending_();
 
         if (iVar1 != 0) {

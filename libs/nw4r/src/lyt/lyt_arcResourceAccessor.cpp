@@ -113,7 +113,7 @@ namespace nw4r
             return true;
         }
 
-       void* ArcResourceAccessor::Detach()
+        void * ArcResourceAccessor::Detach()
         {
             void *old = mArchive;
             mArchive = NULL;

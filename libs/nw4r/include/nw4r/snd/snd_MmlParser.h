@@ -1,7 +1,8 @@
 #ifndef NW4R_SND_MML_PARSER_H
 #define NW4R_SND_MML_PARSER_H
-#include <nw4r/snd/snd_SeqTrack.h>
 #include <nw4r/types_nw4r.h>
+
+#include <nw4r/snd/snd_SeqTrack.h>
 
 namespace nw4r {
 namespace snd {
@@ -21,9 +22,9 @@ public:
         SEQ_ARG_VARIABLE
     };
 
-public:
-    MmlParser() {}
+    static const int CALL_STACK_MAX_DEPTH = 3;
 
+public:
     virtual void CommandProc(MmlSeqTrack* pTrack, u32 command, s32 arg1,
                              s32 arg2) const; // at 0x8
 
@@ -32,17 +33,9 @@ public:
                                        bool tie) const; // at 0xC
 
     ParseResult Parse(MmlSeqTrack* pTrack, bool doNoteOn) const;
-    volatile s16* GetVariablePtr(SeqPlayer* pPlayer, SeqTrack* pTrack, int i) const;
 
-    u8 ReadByte(const u8** ppData) const {
-        return *(*ppData)++;
-    }
-
-    u16 Read16(const u8** ppData) const;
-    u32 Read24(const u8** ppData) const;
-    s32 ReadVar(const u8** ppData) const;
-    s32 ReadArg(const u8** ppData, SeqPlayer* pPlayer, SeqTrack* pTrack,
-                SeqArgType type) const;
+    volatile s16* GetVariablePtr(SeqPlayer* pPlayer, SeqTrack* pTrack,
+                                 int i) const;
 
     static void EnablePrintVar(bool enable) {
         mPrintVarEnabledFlag = enable;
@@ -145,6 +138,17 @@ private:
 
         MML_EX_CMD_MAX = 0xFFFF, // >FFFF -> Invalid command
     };
+
+private:
+    u8 ReadByte(const u8** ppData) const {
+        return *(*ppData)++;
+    }
+
+    u16 Read16(const u8** ppData) const;
+    u32 Read24(const u8** ppData) const;
+    s32 ReadVar(const u8** ppData) const;
+    s32 ReadArg(const u8** ppData, SeqPlayer* pPlayer, SeqTrack* pTrack,
+                SeqArgType type) const;
 
 private:
     static bool mPrintVarEnabledFlag;

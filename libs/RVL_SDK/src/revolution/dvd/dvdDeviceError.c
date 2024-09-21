@@ -187,8 +187,7 @@ void __DVDShowDeviceErrorMessage(void) {
 
     if (SCGetLanguage() == 0) {
         OSSetFontEncode(1);
-    }
-    else {
+    } else {
         OSSetFontEncode(0);
     }
 
@@ -196,8 +195,7 @@ void __DVDShowDeviceErrorMessage(void) {
 
     if (SCGetLanguage() > 6) {
         message = messageList[1];
-    }
-    else {
+    } else {
         message = messageList[SCGetLanguage()];
     }
 

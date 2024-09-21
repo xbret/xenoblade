@@ -149,8 +149,7 @@ s32 ESP_GetTicketViews(ESTitleId titleId, ESTicketView* ticketViewList, u32* tic
         if (rv == 0) {
             *ticketViewCnt = *p2;
         }
-    }
-    else {
+    } else {
         if (*ticketViewCnt == 0) {
             rv = -1017;
             goto out;
@@ -189,8 +188,7 @@ s32 ESP_DiGetTicketView(const void* ticket, ESTicketView* ticketView) {
 
     if (ticket == (ESTicketView*)NULL) {
         v[0].length = 0;
-    }
-    else {
+    } else {
         v[0].length = sizeof(ESTicket);
     }
 
@@ -226,8 +224,7 @@ s32 ESP_DiGetTmd(ESTitleMeta* tmd, u32* tmdSize) {
         if (rv == 0) {
             *tmdSize = *p1;
         }
-    }
-    else {
+    } else {
         if (*tmdSize == 0) {
             rv = -1017;
             goto out;
@@ -335,8 +332,7 @@ s32 ESP_GetConsumption(ESTicketId ticketId, ESLpEntry* entries, u32* nEntries) {
     if (entries == (ESLpEntry*)NULL) {
         v[1].base = NULL;
         v[1].length = 0;
-    }
-    else {
+    } else {
         v[1].base = (u8*)entries;
         v[1].length = sizeof(ESLpEntry) * (*nEntries);
         *p2 = *nEntries;

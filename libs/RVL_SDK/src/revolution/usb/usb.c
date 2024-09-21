@@ -173,8 +173,7 @@ static s32 _intrBlkCtrlIsoCb(s32 result, void* arg) {
 
     if (block->callback != NULL) {
         block->callback(result, block->callbackArg);
-    }
-    else if(block->isoCallback != NULL) {
+    } else if(block->isoCallback != NULL) {
         USB_LOG("calling iso callback\n");
         block->isoCallback(result, block->isoCallbackArg, block->callbackArg);
     }

@@ -1,16 +1,21 @@
-#include "snd_WaveSoundHandle.h"
-#include "snd_WaveSound.h"
+#pragma ipa file // TODO: REMOVE AFTER REFACTOR
 
-namespace nw4r
-{
-    namespace snd
-    {
-        void WaveSoundHandle::DetachSound()
-        {
-            if (IsAttachedSound() && mWaveSound->mTempSpecialHandle == this)
-                mWaveSound->mTempSpecialHandle = NULL;
+#include <nw4r/snd.h>
 
-            if (mWaveSound) mWaveSound = NULL;
+namespace nw4r {
+namespace snd {
+
+void WaveSoundHandle::DetachSound() {
+    if (IsAttachedSound()) {
+        if (mSound->mTempSpecialHandle == this) {
+            mSound->mTempSpecialHandle = NULL;
         }
     }
+
+    if (mSound != NULL) {
+        mSound = NULL;
+    }
 }
+
+} // namespace snd
+} // namespace nw4r

@@ -63,8 +63,7 @@ namespace ml{
 				sVar2 = strlen(temp.string);
 				param_1->length = sVar2;
 				strcpy(param_1->string,temp.string);
-			}
-			else {
+			} else {
 				param_1->string[0] = 0;
 				param_1->length = 0;
 

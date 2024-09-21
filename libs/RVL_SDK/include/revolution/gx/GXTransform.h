@@ -7,6 +7,11 @@
 extern "C" {
 #endif
 
+typedef enum {
+    GX_FIELD_EVEN,
+    GX_FIELD_ODD,
+} GXInterlaceField;
+
 void GXSetProjection(const Mtx44 proj, GXProjectionType type);
 void GXSetProjectionv(const f32 proj[7]);
 void GXGetProjectionv(f32 proj[7]);

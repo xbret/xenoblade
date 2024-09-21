@@ -1,8 +1,10 @@
 #ifndef NW4R_SND_BANK_FILE_H
 #define NW4R_SND_BANK_FILE_H
+#include <nw4r/types_nw4r.h>
+
 #include <nw4r/snd/snd_Util.h>
 #include <nw4r/snd/snd_WaveFile.h>
-#include <nw4r/types_nw4r.h>
+
 #include <nw4r/ut.h>
 
 namespace nw4r {
@@ -76,18 +78,19 @@ inline u8 ReadByte(const void* pAddr) {
 
 class BankFileReader {
 public:
-    static const int SIGNATURE = 'RBNK';
-    static const int VERSION = NW4R_VERSION(1, 01);
+    static const u32 SIGNATURE = 'RBNK';
+    static const int VERSION = NW4R_VERSION(1, 1);
 
 public:
-    BankFileReader(const void* pBankData);
+    explicit BankFileReader(const void* pBankBin);
+
+    bool IsValidFileHeader(const void* pBankBin);
 
     bool ReadInstInfo(InstInfo* pInfo, int prgNo, int key, int velocity) const;
     bool ReadWaveParam(WaveData* pData, int waveIndex,
                        const void* pWaveAddr) const;
 
 private:
-    bool IsValidFileHeader(const void* pBankData);
     const BankFile::DataRegion*
     GetReferenceToSubRegion(const BankFile::DataRegion* pRef,
                             int splitKey) const;

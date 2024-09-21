@@ -1,44 +1,8 @@
 #ifndef NW4R_UT_LINK_LIST_H
 #define NW4R_UT_LINK_LIST_H
 #include <nw4r/types_nw4r.h>
+
 #include <nw4r/ut/ut_NonCopyable.h>
-
-/**
- * Declare typedef for linked-list specialization.
- */
-#define NW4R_UT_LIST_TYPEDEF_DECL(T)                                           \
-    typedef nw4r::ut::LinkList<T, offsetof(T, node)> T##List;
-
-/**
- * Declare typedef for linked-list specialization.
- *
- * Use the specified link node (name suffix) for classes with multiple nodes.
- */
-#define NW4R_UT_LIST_TYPEDEF_DECL_EX(T, SUFFIX)                                \
-    typedef nw4r::ut::LinkList<T, offsetof(T, node##SUFFIX)> T##SUFFIX##List;
-
-/**
- * Declare a member LinkListNode for use with the typedef.
- */
-#define NW4R_UT_LIST_NODE_DECL() nw4r::ut::LinkListNode node
-
-/**
- * Declare a member LinkListNode for use with the typedef.
- *
- * Use the specified link node (name suffix) for classes with multiple nodes.
- */
-#define NW4R_UT_LIST_NODE_DECL_EX(SUFFIX) nw4r::ut::LinkListNode node##SUFFIX
-
-/**
- * Explicitly instantiate a linked list specialization.
- * (RESERVED FOR MATCHING DECOMP HACKS)
- */
-#ifndef __DECOMP_NON_MATCHING
-#define NW4R_UT_LIST_TYPEDEF_FORCE(T)                                          \
-    template struct nw4r::ut::LinkList<T, offsetof(T, node)>
-#else
-#define NW4R_UT_LIST_TYPEDEF_FORCE(T)
-#endif
 
 namespace nw4r {
 namespace ut {
@@ -79,7 +43,7 @@ public:
 
     public:
         Iterator() : mNode(NULL) {}
-        Iterator(LinkListNode* node) : mNode(node) {}
+        explicit Iterator(LinkListNode* pNode) : mNode(pNode) {}
 
         Iterator& operator++() {
             mNode = mNode->GetNext();
@@ -108,7 +72,7 @@ public:
         friend class LinkListImpl;
 
     public:
-        ConstIterator(Iterator it) : mNode(it.mNode) {}
+        explicit ConstIterator(Iterator it) : mNode(it.mNode) {}
 
         ConstIterator& operator++() {
             mNode = mNode->GetNext();
@@ -134,8 +98,8 @@ public:
     };
 
 protected:
-    static Iterator GetIteratorFromPointer(LinkListNode* node) {
-        return Iterator(node);
+    static Iterator GetIteratorFromPointer(LinkListNode* pNode) {
+        return Iterator(pNode);
     }
 
     LinkListImpl() {
@@ -150,10 +114,10 @@ protected:
         return Iterator(&mNode);
     }
 
-    Iterator Insert(Iterator it, LinkListNode* node);
+    Iterator Insert(Iterator it, LinkListNode* pNode);
 
     Iterator Erase(Iterator it);
-    Iterator Erase(LinkListNode* node);
+    Iterator Erase(LinkListNode* pNode);
     Iterator Erase(Iterator begin, Iterator end);
 
 public:
@@ -168,7 +132,7 @@ public:
         Erase(GetBeginIter());
     }
     void PopBack() {
-        Erase(GetEndIter());
+        Erase(--GetEndIter());
     }
 
     void Clear();
@@ -187,7 +151,7 @@ private:
 
 template <typename TIter> class ReverseIterator {
 public:
-    ReverseIterator(TIter it) : mCurrent(it) {}
+    explicit ReverseIterator(TIter it) : mCurrent(it) {}
 
     TIter GetBase() const {
         return mCurrent;
@@ -208,14 +172,14 @@ public:
         return *it;
     }
 
-    friend bool operator==(const ReverseIterator& lhs,
-                           const ReverseIterator& rhs) {
-        return lhs.mCurrent == rhs.mCurrent;
+    friend bool operator==(const ReverseIterator& rLhs,
+                           const ReverseIterator& rRhs) {
+        return rLhs.mCurrent == rRhs.mCurrent;
     }
 
-    friend bool operator!=(const ReverseIterator& lhs,
-                           const ReverseIterator& rhs) {
-        return !(lhs.mCurrent == rhs.mCurrent);
+    friend bool operator!=(const ReverseIterator& rLhs,
+                           const ReverseIterator& rRhs) {
+        return !(rLhs.mCurrent == rRhs.mCurrent);
     }
 
 private:
@@ -239,7 +203,7 @@ public:
 
     public:
         Iterator() : mIterator(NULL) {}
-        Iterator(LinkListImpl::Iterator it) : mIterator(it) {}
+        explicit Iterator(LinkListImpl::Iterator it) : mIterator(it) {}
 
         Iterator& operator++() {
             ++mIterator;
@@ -285,8 +249,8 @@ public:
         typedef T TElem;
 
     public:
-        ConstIterator(LinkListImpl::Iterator it) : mIterator(it) {}
-        ConstIterator(Iterator it) : mIterator(it.mIterator) {}
+        explicit ConstIterator(LinkListImpl::Iterator it) : mIterator(it) {}
+        explicit ConstIterator(Iterator it) : mIterator(it.mIterator) {}
 
         ConstIterator& operator++() {
             ++mIterator;
@@ -331,7 +295,6 @@ public:
 
 public:
     LinkList() {}
-    ~LinkList() {}
 
     Iterator GetBeginIter() {
         return Iterator(LinkListImpl::GetBeginIter());
@@ -353,20 +316,20 @@ public:
         return detail::ReverseIterator<Iterator>(GetEndIter());
     }
 
-    Iterator Insert(Iterator it, T* p) {
+    Iterator Insert(Iterator it, T* pElem) {
         return Iterator(
-            LinkListImpl::Insert(it.mIterator, GetNodeFromPointer(p)));
+            LinkListImpl::Insert(it.mIterator, GetNodeFromPointer(pElem)));
     }
 
-    Iterator Erase(T* p) {
-        return Iterator(LinkListImpl::Erase(GetNodeFromPointer(p)));
+    Iterator Erase(T* pElem) {
+        return Iterator(LinkListImpl::Erase(GetNodeFromPointer(pElem)));
     }
     Iterator Erase(Iterator it) {
         return Iterator(LinkListImpl::Erase(it.mIterator));
     }
 
-    void PushBack(T* p) {
-        Insert(GetEndIter(), p);
+    void PushBack(T* pElem) {
+        Insert(GetEndIter(), pElem);
     }
 
     T& GetFront() {
@@ -383,30 +346,84 @@ public:
         return *--GetEndIter();
     }
 
-    static Iterator GetIteratorFromPointer(T* p) {
-        return GetIteratorFromPointer(GetNodeFromPointer(p));
+    static Iterator GetIteratorFromPointer(T* pElem) {
+        return GetIteratorFromPointer(GetNodeFromPointer(pElem));
     }
 
-    static Iterator GetIteratorFromPointer(LinkListNode* node) {
-        return Iterator(LinkListImpl::GetIteratorFromPointer(node));
+    static Iterator GetIteratorFromPointer(LinkListNode* pNode) {
+        return Iterator(LinkListImpl::GetIteratorFromPointer(pNode));
     }
 
-    static LinkListNode* GetNodeFromPointer(T* p) {
-        return reinterpret_cast<LinkListNode*>(reinterpret_cast<char*>(p) +
+    static LinkListNode* GetNodeFromPointer(T* pElem) {
+        return reinterpret_cast<LinkListNode*>(reinterpret_cast<char*>(pElem) +
                                                Ofs);
     }
 
-    static T* GetPointerFromNode(LinkListNode* node) {
-        return reinterpret_cast<T*>(reinterpret_cast<char*>(node) - Ofs);
+    static T* GetPointerFromNode(LinkListNode* pNode) {
+        return reinterpret_cast<T*>(reinterpret_cast<char*>(pNode) - Ofs);
     }
 
-    static const T* GetPointerFromNode(const LinkListNode* node) {
-        return reinterpret_cast<const T*>(reinterpret_cast<const char*>(node) -
+    static const T* GetPointerFromNode(const LinkListNode* pNode) {
+        return reinterpret_cast<const T*>(reinterpret_cast<const char*>(pNode) -
                                           Ofs);
     }
 };
 
 } // namespace ut
 } // namespace nw4r
+
+/**
+ * Declare typedef for linked-list specialization.
+ */
+#define NW4R_UT_LIST_TYPEDEF_DECL(T)                                           \
+    typedef nw4r::ut::LinkList<T, offsetof(T, node)> T##List;
+
+/**
+ * Declare typedef for linked-list specialization.
+ *
+ * Use the specified link node (name suffix) for classes with multiple nodes.
+ */
+#define NW4R_UT_LIST_TYPEDEF_DECL_EX(T, SUFFIX)                                \
+    typedef nw4r::ut::LinkList<T, offsetof(T, node##SUFFIX)> T##SUFFIX##List;
+
+/**
+ * Declare a member LinkListNode for use with the typedef.
+ */
+#define NW4R_UT_LIST_NODE_DECL() nw4r::ut::LinkListNode node
+
+/**
+ * Declare a member LinkListNode for use with the typedef.
+ *
+ * Use the specified link node (name suffix) for classes with multiple nodes.
+ */
+#define NW4R_UT_LIST_NODE_DECL_EX(SUFFIX) nw4r::ut::LinkListNode node##SUFFIX
+
+/**
+ * Explicitly instantiate a linked list specialization.
+ * (RESERVED FOR MATCHING DECOMP HACKS)
+ */
+#ifndef __DECOMP_NON_MATCHING
+#define NW4R_UT_LIST_TYPEDEF_FORCE(T)                                          \
+    template struct nw4r::ut::LinkList<T, offsetof(T, node)>
+#else
+#define NW4R_UT_LIST_TYPEDEF_FORCE(T)
+#endif
+
+/**
+ * Linked-list for-each iteration macro, with robust iteration.
+ *
+ * Access the current element with "it"
+ */
+#define NW4R_UT_LIST_SAFE_FOREACH(LIST, ...)                                   \
+    {                                                                          \
+        typedef DECLTYPE(LIST.GetBeginIter()) IterType;                        \
+                                                                               \
+        for (IterType impl = LIST.GetBeginIter();                              \
+             impl != LIST.GetEndIter();) {                                     \
+                                                                               \
+            IterType it = impl++;                                              \
+            __VA_ARGS__                                                        \
+        }                                                                      \
+    }
 
 #endif
