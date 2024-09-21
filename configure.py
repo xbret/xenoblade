@@ -1199,10 +1199,11 @@ config.libs = [
     DolphinLib(
         "sc",
         [
-            Object(NonMatching, "revolution/sc/scsystem.c"),
+            Object(Matching, "revolution/sc/scsystem.c"),
             Object(Matching, "revolution/sc/scapi.c"),
-            Object(Matching, "revolution/sc/scapi_prdinfo.c", mw_version = "GC/3.0a5.2"),
+            Object(Matching, "revolution/sc/scapi_prdinfo.c"),
         ],
+        "Wii/1.0a",
     ),
     DolphinLib(
         "si",
