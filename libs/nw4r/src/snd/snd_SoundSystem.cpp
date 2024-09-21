@@ -8,7 +8,7 @@
 
 namespace {
 
-NW4R_LIB_VERSION(SND, "Jun  8 2007", "11:17:15", "0x4199_60831");
+NW4R_LIB_VERSION(SND, Jun  8 2007, 11:17:15);
 
 static bool sInitialized = false;
 
@@ -146,7 +146,7 @@ void SoundSystem::WaitForResetReady() {
     u32 start = OSGetTick();
 
     while (!detail::AxManager::GetInstance().IsResetReady()) {
-        if (OS_TICKS_TO_SEC(OSGetTick() - start) > 0) {
+        if (OSTicksToSeconds(OSGetTick() - start) > 0) {
             break;
         }
     }
