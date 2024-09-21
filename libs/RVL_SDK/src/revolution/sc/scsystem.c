@@ -650,9 +650,9 @@ static void DeleteItemByID(SCItemID id) {
     u32 itemSize;
     u32 i;
     u16* confItemsBegin;
-    u16* itemOfs;
     u16* confItemsEnd;
     u16* confLut;
+    u16* itemOfs;
     u16* it;
 
     if (id < ItemIDMaxPlus1 && ItemIDOffsetTblOffset != 0) {
