@@ -643,90 +643,76 @@ static BOOL FindItemByID(SCItemID id, SCItem* item) {
 }
 
 static void DeleteItemByID(SCItemID id) {
-    u8* conf;
-    u16* itemOfs;
+    u8* conf = __SCGetConfBuf();
     u32 itemOfsOfs;
     u32 itemsEndOfs;
+    u32 moveSize;
     u32 itemSize;
-    u16* confLut;
+    u32 i;
     u16* confItemsBegin;
+    u16* itemOfs;
     u16* confItemsEnd;
-    u32 sp14;
+    u16* confLut;
     u16* it;
-    int i;
 
-    conf = __SCGetConfBuf();
+    if (id < ItemIDMaxPlus1 && ItemIDOffsetTblOffset != 0) {
+        confLut = (u16*)(conf + ItemIDOffsetTblOffset);
+        // LUT items are in reverse order
+        itemOfsOfs = confLut[-id];
 
-    if (id >= ItemIDMaxPlus1) {
-        return;
-    }
+        if (itemOfsOfs != 0 && ItemNumTotal != 0) {
+            confItemsBegin = ((SCConfHeader*)conf)->itemOffsets;
 
-    if (ItemIDOffsetTblOffset == 0) {
-        return;
-    }
+            // LUT -> Item offset -> Item data
+            itemOfs = (u16*)(conf + itemOfsOfs);
 
-    confLut = (u16*)(conf + ItemIDOffsetTblOffset);
-    // LUT items are in reverse order
-    itemOfsOfs = confLut[-id];
+            // Last offset -> past end of items
+            confItemsEnd = &confItemsBegin[ItemNumTotal];
+            itemsEndOfs = *confItemsEnd;
 
-    if (itemOfsOfs == 0) {
-        return;
-    }
+            // Offset from next item
+            itemSize = itemOfs[1] - itemOfs[0] + sizeof(u16);
 
-    if (ItemNumTotal == 0) {
-        return;
-    }
+            moveSize = itemOfs[0] - (itemOfsOfs + sizeof(u16));
+            memmove(conf + itemOfsOfs, conf + itemOfsOfs + sizeof(u16), moveSize);
 
-    confItemsBegin = ((SCConfHeader*)conf)->itemOffsets;
+            // Adjust item offsets
+            for (it = confItemsEnd - 1; it >= confItemsBegin; it--) {
+                if (it < itemOfs) {
+                    // After deleted item
+                    *it -= sizeof(u16);
+                } else {
+                    // Before deleted item
+                    *it -= itemSize;
+                }
+            }
 
-    // LUT -> Item offset -> Item data
-    itemOfs = (u16*)(conf + itemOfsOfs);
+            memmove(conf + *itemOfs, conf + itemSize + *itemOfs,
+                    itemsEndOfs - (*itemOfs + itemSize));
 
-    // Last offset -> past end of items
-    confItemsEnd = &confItemsBegin[ItemNumTotal];
-    itemsEndOfs = *confItemsEnd;
+            memset(conf + (itemsEndOfs - itemSize), 0, itemSize);
 
-    // Offset from next item
-    itemSize = itemOfs[1] - itemOfs[0] + sizeof(u16);
+            // Adjust item lookup table
+            for (i = 0; i < ItemIDMaxPlus1; i++) {
+                // Before deleted slot
+                if (confLut[-i] < itemOfsOfs) {
+                    continue;
+                }
 
-    sp14 = *itemOfs - (itemOfsOfs + sizeof(u16));
-    memmove(conf + itemOfsOfs, conf + itemOfsOfs + sizeof(u16), sp14);
+                // After deleted slot
+                if (confLut[-i] > itemOfsOfs) {
+                    confLut[-i] -= sizeof(u16);
+                } else {
+                    confLut[-i] = 0;
+                }
+            }
 
-    // Adjust item offsets
-    for (it = confItemsEnd - 1; it >= confItemsBegin; it--) {
-        if (it < itemOfs) {
-            // After deleted item
-            *it -= sizeof(u16);
-        } else {
-            // Before deleted item
-            *it -= itemSize;
+            ItemRestSize += itemSize;
+            ItemNumTotal--;
+            ((SCConfHeader*)conf)->numItems = ItemNumTotal;
+            __SCSetDirtyFlag();
         }
     }
-
-    memmove(conf + *itemOfs, conf + itemSize + *itemOfs,
-            itemsEndOfs - (*itemOfs + itemSize));
-
-    memset(conf + (itemsEndOfs - itemSize), 0, itemSize);
-
-    // Adjust item lookup table
-    for (i = 0; i < ItemIDMaxPlus1; i++) {
-        // Before deleted slot
-        if (confLut[-i] < itemOfsOfs) {
-            continue;
-        }
-
-        // After deleted slot
-        if (confLut[-i] > itemOfsOfs) {
-            confLut[-i] -= sizeof(u16);
-        } else {
-            confLut[-i] = 0;
-        }
-    }
-
-    ItemRestSize += itemSize;
-    ItemNumTotal--;
-    ((SCConfHeader*)conf)->numItems = ItemNumTotal;
-    __SCSetDirtyFlag();
 }
 
 static BOOL CreateItemByID(SCItemID id, u8 primType, const void* src, u32 len) {
@@ -933,8 +919,7 @@ static BOOL SCFindIntegerItem(void* dst, SCItemID id, u8 primType) {
     return success;
 }
 
-static BOOL SCReplaceIntegerItem(const void* src, SCItemID id, u8 primType)
-    DECOMP_DONT_INLINE {
+static BOOL SCReplaceIntegerItem(const void* src, SCItemID id, u8 primType) {
     BOOL success;
     BOOL enabled;
     SCItem item;
@@ -972,18 +957,100 @@ BOOL SCFindS8Item(s8* dst, SCItemID id) {
     return SCFindIntegerItem(dst, id, SC_ITEM_BYTE);
 }
 
+//unused
+BOOL SCFindU16Item(u16* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_SHORT);
+}
+
+//unused
+BOOL SCFindS16Item(s16* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_SHORT);
+}
+
 BOOL SCFindU32Item(u32* dst, SCItemID id) {
     return SCFindIntegerItem(dst, id, SC_ITEM_LONG);
+}
+
+//unused
+BOOL SCFindS32Item(s32* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_LONG);
+}
+
+//unused
+BOOL SCFindU64Item(u64* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_LONGLONG);
+}
+
+//unused
+BOOL SCFindS64Item(s64* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_LONGLONG);
+}
+
+//unused
+BOOL SCFindBoolItem(BOOL* dst, SCItemID id) {
+    return SCFindIntegerItem(dst, id, SC_ITEM_BOOL);
 }
 
 BOOL SCReplaceU8Item(u8 data, SCItemID id) {
     return SCReplaceIntegerItem(&data, id, SC_ITEM_BYTE);
 }
 
+//unused
+BOOL SCReplaceS8Item(s8 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_BYTE);
+}
+
+//unused
+BOOL SCReplaceU16Item(u16 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_SHORT);
+}
+
+//unused
+BOOL SCReplaceS16Item(s16 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_SHORT);
+}
+
+//unused
+BOOL SCReplaceU32Item(u32 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_LONG);
+}
+
+//unused
+BOOL SCReplaceS32Item(s32 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_LONG);
+}
+
+//unused
+BOOL SCReplaceU64Item(u64 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_LONGLONG);
+}
+
+//unused
+BOOL SCReplaceS64Item(s64 data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_LONGLONG);
+}
+
+//unused
+BOOL SCReplaceBoolItem(BOOL data, SCItemID id) {
+    return SCReplaceIntegerItem(&data, id, SC_ITEM_BOOL);
+}
+
+//unused
+void __SCDumpConfBuf(void) {
+}
+
 static void __SCFlushSyncCallback(SCStatus status) {
 #pragma unused(status)
 
     OSWakeupThread(&Control.threadQueue);
+}
+
+//unused
+static void __SCFlushSync(void) {
+}
+
+//unused
+void SCFlush(void) {
 }
 
 void SCFlushAsync(SCFlushCallback callback) {
@@ -1215,4 +1282,13 @@ u8* __SCGetConfBuf(void) {
 
 u32 __SCGetConfBufSize(void) {
     return SC_CONF_MAX_SIZE;
+}
+
+//unused
+BOOL __SCIsDevKit(void) {
+    return IsDevKit ? TRUE : FALSE;
+}
+
+//unused
+void __SCClearConfBuf(void) {
 }

@@ -76,10 +76,25 @@ BOOL SCReplaceByteArrayItem(const void* src, u32 len, SCItemID id);
 
 BOOL SCFindU8Item(u8* dst, SCItemID id);
 BOOL SCFindS8Item(s8* dst, SCItemID id);
+BOOL SCFindU16Item(u16* dst, SCItemID id);
+BOOL SCFindS16Item(s16* dst, SCItemID id);
 BOOL SCFindU32Item(u32* dst, SCItemID id);
+BOOL SCFindS32Item(s32* dst, SCItemID id);
+BOOL SCFindU64Item(u64* dst, SCItemID id);
+BOOL SCFindS64Item(s64* dst, SCItemID id);
+BOOL SCFindBoolItem(BOOL* dst, SCItemID id);
 
 BOOL SCReplaceU8Item(u8 data, SCItemID id);
+BOOL SCReplaceS8Item(s8 data, SCItemID id);
+BOOL SCReplaceU16Item(u16 data, SCItemID id);
+BOOL SCReplaceS16Item(s16 data, SCItemID id);
+BOOL SCReplaceU32Item(u32 data, SCItemID id);
+BOOL SCReplaceS32Item(s32 data, SCItemID id);
+BOOL SCReplaceU64Item(u64 data, SCItemID id);
+BOOL SCReplaceS64Item(s64 data, SCItemID id);
+BOOL SCReplaceBoolItem(BOOL data, SCItemID id);
 
+void SCFlush(void);
 void SCFlushAsync(SCFlushCallback callback);
 
 #ifdef __cplusplus
