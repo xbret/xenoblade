@@ -16,7 +16,8 @@ asm void DCEnable(void) {
     mthid0 r3
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void DCDisable(){
@@ -181,7 +182,8 @@ do_zero:
     bdnz do_zero
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void DCTouchRange(){
@@ -234,7 +236,8 @@ asm void ICEnable(void) {
     mthid0 r3
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void ICDisable(){
@@ -346,7 +349,8 @@ do_invalidate:
     mtspr 0x398, r4
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void LCIsEnable(){
@@ -361,15 +365,15 @@ asm void LCAllocTags(){
 }
 
 asm void LCLoadBlocks(register void* dst, register const void* src,
-                      register u32 len) {
+                      register u32 blocks) {
     // clang-format off
     nofralloc
 
-    rlwinm r6, len, 30, 27, 31
+    rlwinm r6, blocks, 30, 27, 31
     clrlwi src, src, 3
     or r6, r6, src
     mtspr DMA_U, r6
-    rlwinm r6, len, 2, 28, 29
+    rlwinm r6, blocks, 2, 28, 29
     or r6, r6, dst
     ori r6, r6, 0x12
     mtspr DMA_L, r6
@@ -379,21 +383,22 @@ asm void LCLoadBlocks(register void* dst, register const void* src,
 }
 
 asm void LCStoreBlocks(register void* dst, register const void* src,
-                       register u32 len){
+                       register u32 blocks){
     // clang-format off
     nofralloc
 
-    rlwinm r6, len, 30, 27, 31
+    rlwinm r6, blocks, 30, 27, 31
     clrlwi dst, dst, 3
     or r6, r6, dst
     mtspr DMA_U, r6
-    rlwinm r6, len, 2, 28, 29
+    rlwinm r6, blocks, 2, 28, 29
     or r6, r6, src
     ori r6, r6, 0x2
     mtspr DMA_L, r6
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void LCAlloc(){
@@ -448,7 +453,8 @@ asm void LCQueueWait(register u32 n) {
     bgt LCQueueWait
 
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void LCFlushQueue(){

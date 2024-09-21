@@ -25,7 +25,8 @@ void __DBExceptionDestinationAux(void) {
 }
 
 asm void __DBExceptionDestination(void){
-        nofralloc
+    // clang-format off
+    nofralloc
     
     // Set up MMU
     mfmsr r3
@@ -33,6 +34,7 @@ asm void __DBExceptionDestination(void){
     mtmsr r3
 
     b __DBExceptionDestinationAux
+    // clang-format on
 }
 
 BOOL __DBIsExceptionMarked(u8 exc) {
@@ -47,4 +49,6 @@ void __DBMarkException(){
 void __DBSetPresent(){
 }
 
-void DBPrintf(const char* msg, ...) {}
+void DBPrintf(const char* msg, ...) {
+#pragma unused(msg)
+}

@@ -297,7 +297,9 @@ u8 SCGetWpadSpeakerVolume(void) {
     return item;
 }
 
-void SCSetWpadSpeakerVolume(u8 vol) { SCReplaceU8Item(vol, SC_ITEM_BT_SPKV); }
+void SCSetWpadSpeakerVolume(u8 vol) {
+    SCReplaceU8Item(vol, SC_ITEM_BT_SPKV);
+}
 
 //unused
 void SCGetOwnerNickName(){

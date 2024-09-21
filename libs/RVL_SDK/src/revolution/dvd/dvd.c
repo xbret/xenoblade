@@ -367,7 +367,7 @@ static void stateReadingFST(void) {
 
     // clang-format off
 #line 1090
-    OSAssert(bootInfo->fstSize >= BB2.fstSize, "DVDChangeDisk(): FST in the new disc is too big.   ");
+    OS_ASSERT(bootInfo->fstSize >= BB2.fstSize, "DVDChangeDisk(): FST in the new disc is too big.   ");
     // clang-format on
 
     DVDLowClearCoverInterrupt(NULL);

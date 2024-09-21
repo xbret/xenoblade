@@ -7,8 +7,6 @@ extern "C" {
 
 typedef BOOL (*OSShutdownFunction)(BOOL final, u32 event);
 
-typedef enum { OS_SD_PASS_FIRST, OS_SD_PASS_SECOND } OSShutdownPass;
-
 typedef enum {
     OS_SD_EVENT_SHUTDOWN = 2,
     OS_SD_EVENT_RESTART = 4,

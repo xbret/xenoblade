@@ -8,7 +8,7 @@ extern "C" {
 
 #define FS_MAX_PATH 64
 
-typedef void (*FSAsyncCallback)(s32, void*);
+typedef void (*FSAsyncCallback)(s32 result, void* arg);
 
 typedef struct FSStats {
     char UNK_0x0[0x1C];
@@ -19,13 +19,6 @@ typedef struct FSFileStats {
     u32 length;   // at 0x0
     u32 position; // at 0x4
 } FSFileStats ALIGN(32);
-
-typedef struct FSFileAttr {
-    u32 ownerId; // at 0x0
-    u16 groupId; // at 0x4
-    u8 attr;     // at 0x6
-    u8 perm;     // at 0x7
-} FSFileAttr;
 
 s32 ISFS_OpenLib(void);
 s32 ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm, u32 groupPerm,
@@ -73,8 +66,6 @@ s32 ISFS_WriteAsync(s32 fd, const void* src, s32 len, FSAsyncCallback callback,
 s32 ISFS_Close(s32 fd);
 s32 ISFS_CloseAsync(s32 fd, FSAsyncCallback callback, void* callbackArg);
 s32 ISFS_ShutdownAsync(FSAsyncCallback callback, void* callbackArg);
-
-
 
 #ifdef __cplusplus
 }

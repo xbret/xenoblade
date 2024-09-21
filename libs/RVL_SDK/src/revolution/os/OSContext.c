@@ -172,6 +172,7 @@ static asm void __OSSaveFPUContext(UNKWORD unused, UNKWORD unused1,
 
 _exit:
     blr
+    // clang-format on
 }
 
 //unused
@@ -357,7 +358,8 @@ asm void* OSGetStackPointer(void) {
 
     mr r3, r1
     blr
-    }
+    // clang-format on
+}
 
 //unused
 asm void OSSwitchStack(){

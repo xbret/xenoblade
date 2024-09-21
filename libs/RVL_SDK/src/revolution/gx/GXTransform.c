@@ -5,6 +5,7 @@ inline void LoadProjPS(register f32* dst) {
     register f32 ps_0, ps_1, ps_2;
     register GXData* src;
 
+    // clang-format off
     asm volatile {
         lwz src, __GXData
         psq_l  ps_0,  0  + GXData.proj(src), 0, 0
@@ -14,11 +15,13 @@ inline void LoadProjPS(register f32* dst) {
         psq_st ps_1,  8(dst),                0, 0
         psq_st ps_2, 16(dst),                0, 0
     }
+    // clang-format on
 }
 
 inline void WriteProjPS(register volatile void* dst, register const f32* src) {
     register f32 ps_0, ps_1, ps_2;
 
+    // clang-format off
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -27,11 +30,13 @@ inline void WriteProjPS(register volatile void* dst, register const f32* src) {
         psq_st ps_1,  0(dst), 0, 0
         psq_st ps_2,  0(dst), 0, 0
     }
+    // clang-format on
 }
 
 inline void Copy6Floats(register f32* dst, register const f32* src) {
     register f32 ps_0, ps_1, ps_2;
 
+    // clang-format off
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -40,6 +45,7 @@ inline void Copy6Floats(register f32* dst, register const f32* src) {
         psq_st ps_1,  8(dst), 0, 0
         psq_st ps_2, 16(dst), 0, 0
     }
+    // clang-format on
 }
 
 //unused
@@ -89,6 +95,7 @@ void GXGetProjectionv(f32 proj[7]) {
 inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
+    // clang-format off
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -104,11 +111,13 @@ inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
         psq_st ps_4, 0(dst),  0, 0
         psq_st ps_5, 0(dst),  0, 0
     }
+    // clang-format on
 }
 
 inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
+    // clang-format off
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         lfs    ps_1,  8(src)
@@ -124,11 +133,13 @@ inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
         psq_st ps_4, 0(dst),  0, 0
         stfs   ps_5, 0(dst)
     }
+    // clang-format on
 }
 
 inline void WriteMTXPS4x2(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3;
 
+    // clang-format off
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -140,6 +151,7 @@ inline void WriteMTXPS4x2(register volatile void* dst, register const Mtx src) {
         psq_st ps_2, 0(dst),  0, 0
         psq_st ps_3, 0(dst),  0, 0
     }
+    // clang-format on
 }
 
 void GXLoadPosMtxImm(const Mtx mtx, u32 id) {
@@ -224,10 +236,7 @@ void __GXSetViewport(void) {
 
 void GXSetViewportJitter(f32 ox, f32 oy, f32 sx, f32 sy, f32 near, f32 far,
                          u32 nextField) {
-    // "Field" as in VI field
-    // TODO: Is this an enum? I don't know anything about the return value other
-    // than that it is a u32 (NW4R signature)
-    if (nextField == 0) {
+    if (nextField == GX_FIELD_EVEN) {
         oy -= 0.5f;
     }
 

@@ -226,9 +226,12 @@ static asm void DecrementerExceptionHandler(register u8 type,
 
     stwu r1, -8(r1)
     b DecrementerExceptionCallback
-    }
+    // clang-format on
+}
 
-void OSSetAlarmTag(OSAlarm* alarm, u32 tag) { alarm->tag = tag; }
+void OSSetAlarmTag(OSAlarm* alarm, u32 tag) {
+    alarm->tag = tag;
+}
 
 //unused
 void OSCancelAlarms(){
@@ -238,7 +241,7 @@ static BOOL OnReset(BOOL final, u32 event) {
     OSAlarm* iter;
     OSAlarm* next;
 
-    if (final != OS_SD_PASS_FIRST) {
+    if (final) {
         iter = AlarmQueue.head;
         next = (iter != NULL) ? iter->next : NULL;
 
@@ -259,7 +262,9 @@ void OSSetAlarmUserData(OSAlarm* alarm, void* userData) {
     alarm->userData = userData;
 }
 
-void* OSGetAlarmUserData(const OSAlarm* alarm) { return alarm->userData; }
+void* OSGetAlarmUserData(const OSAlarm* alarm) {
+    return alarm->userData;
+}
 
 //unused
 void __OSSetInternalAlarmUserData(OSAlarm* alarm, void* userData){

@@ -5,7 +5,9 @@ static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127, NULL,
                                                       NULL};
 
 //unused
-u32 OSGetPhysicalMem1Size(void) { return OS_PHYSICAL_MEM1_SIZE; }
+u32 OSGetPhysicalMem1Size(void) {
+    return OS_PHYSICAL_MEM1_SIZE;
+}
 
 u32 OSGetPhysicalMem2Size(void) {
     return OS_PHYSICAL_MEM2_SIZE;
@@ -22,7 +24,7 @@ u32 OSGetConsoleSimulatedMem2Size(void) {
 static BOOL OnShutdown(BOOL final, u32 event) {
 #pragma unused(event)
 
-    if (final != OS_SD_PASS_FIRST) {
+    if (final) {
         MI_HW_REGS[MI_PROT_MEM0] = 0xFF;
         __OSMaskInterrupts(
             OS_INTR_MASK(OS_INTR_MEM_0) | OS_INTR_MASK(OS_INTR_MEM_1) |
@@ -32,7 +34,7 @@ static BOOL OnShutdown(BOOL final, u32 event) {
     return TRUE;
 }
 
-// Typo
+// TYPO
 static void MEMIntrruptHandler(s32 intr, OSContext* ctx) {
 #pragma unused(intr)
 
@@ -87,7 +89,8 @@ static asm void ConfigMEM1_24MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 static asm void ConfigMEM2_52MB(void) {
     // clang-format off

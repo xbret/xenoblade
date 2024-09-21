@@ -3,11 +3,6 @@
 #include <revolution/USB.h>
 #include <stdio.h>
 
-/**
- * Documentation from WiiBrew:
- * https://wiibrew.org/wiki//dev/usb/oh0
- */
-
 #define USB_HEAP_SIZE 0x4000
 
 typedef enum {
@@ -146,7 +141,9 @@ end:
     return result;
 }
 
-IPCResult IUSB_CloseLib(void) { return IPC_RESULT_OK; }
+IPCResult IUSB_CloseLib(void) {
+    return IPC_RESULT_OK;
+}
 
 static s32 _intrBlkCtrlIsoCb(s32 result, void* arg) {
     int i;

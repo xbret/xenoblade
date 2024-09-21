@@ -4,7 +4,6 @@
 extern "C" {
 #endif
 
-#include <revolution/wud/debug_msg.h>
 
 #ifdef __cplusplus
 }
