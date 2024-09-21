@@ -142,7 +142,7 @@ void __OSShutdownToSBY(void) {
     VI_HW_REGS[VI_DCR] = 0;
 
     // clang-format off
-#line 347
+#line 348
     OS_ASSERT(StmReady, "Error: The firmware doesn't support shutdown feature.\n");
     // clang-format on
 

@@ -207,11 +207,11 @@ void SCSetBtDeviceInfoArray(const SCBtDeviceInfoArray* info) {
 }
 
 void SCGetBtCmpDevInfoArray(SCBtCmpDevInfoArray* info) {
-    SCFindByteArrayItem(info, sizeof(SCBtCmpDevInfoArray), SC_ITEM_BT_CINF);
+    SCFindByteArrayItem(info, sizeof(SCBtCmpDevInfoArray), SC_ITEM_BT_CDIF);
 }
 
 void SCSetBtCmpDevInfoArray(const SCBtCmpDevInfoArray* info) {
-    SCReplaceByteArrayItem(info, sizeof(SCBtCmpDevInfoArray), SC_ITEM_BT_CINF);
+    SCReplaceByteArrayItem(info, sizeof(SCBtCmpDevInfoArray), SC_ITEM_BT_CDIF);
 }
 
 

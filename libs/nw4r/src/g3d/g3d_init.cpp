@@ -5,9 +5,10 @@
 #include <revolution/VI/vi.h>
 #include <revolution/GX.h>
 
-namespace
-{
-    const char * NW4R_G3D_Version_ = NW4R_LIB_VERSION(G3D, Nov 20 2008, 03:23:14);
+namespace {
+
+NW4R_LIB_VERSION(G3D, Nov 20 2008, 03:23:14);
+
 }
 
 namespace nw4r

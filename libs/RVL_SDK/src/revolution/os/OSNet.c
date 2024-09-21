@@ -64,7 +64,7 @@ static s32 NWC24iCloseResourceManager_(const char* funcName, s32 fd);
 static s32 NWC24iCloseResourceManagerAsync_(const char* funcName, s32 fd, void* callbackArg);
 static s32 CheckCallingStatus(const char* funcName);
 
-DECL_WEAK s32 NWC24iPrepareShutdown(){
+DECL_WEAK NWC24Err NWC24iPrepareShutdown(){
     s32 result;
     
     result = 0;
@@ -86,7 +86,7 @@ DECL_WEAK s32 NWC24iPrepareShutdown(){
 static s32 GetRTC(s32* destPtr);
 static s32 NWC24iSetRtcCounter_(u32 rtc, u32 param_2);
 
-DECL_WEAK s32 NWC24iSynchronizeRtcCounter(BOOL val){
+DECL_WEAK NWC24Err NWC24iSynchronizeRtcCounter(BOOL val){
     s32 result;
     s32 rtc;
     
@@ -146,13 +146,13 @@ DECL_WEAK s32 NWC24ResumeScheduler(){
     return iVar1;
 }
 
-static s32 NWC24iRequestShutdown(u32 param_1, s32* callbackArg){
+static NWC24Err NWC24iRequestShutdown(u32 param_1, NWC24Err* resultOut){
     s32 uVar1;
     static s32 shtBuffer[8] ALIGN(32);
     static s32 shtResult[8] ALIGN(32);
     
     shtBuffer[0] = param_1;
-    uVar1 = NWC24iIoctlResourceManagerAsync_(__FUNCTION__, nwc24ShtFd, 0x28, shtBuffer, 0x20, shtResult, 0x20, callbackArg);
+    uVar1 = NWC24iIoctlResourceManagerAsync_(__FUNCTION__, nwc24ShtFd, 0x28, shtBuffer, 0x20, shtResult, 0x20, resultOut);
     return uVar1;
 }
 
@@ -160,7 +160,7 @@ static BOOL NWC24iIsAsyncRequestPending_();
 
 static BOOL NWC24Shutdown_(BOOL final, u32 event){
     static BOOL shuttingdown = FALSE;
-    static s32 result = 0;
+    static NWC24Err result = NWC24_OK;
 
     int iVar1;
     

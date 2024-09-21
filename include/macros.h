@@ -18,11 +18,12 @@
 
 #define MEMCLR(x) __memclr((x), sizeof(*(x)))
 
-#define ARRAY_LENGTH(x) (sizeof((x)) / sizeof((x)[0]))
-
 #define ALIGN(x) __attribute__((aligned(x)))
+
 #define DECL_SECTION(x) __declspec(section x)
 #define DECL_WEAK __declspec(weak)
+
+#define DECLTYPE(x) __decltype__(x)
 
 // For VSCode
 #ifdef __INTELLISENSE__
