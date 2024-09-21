@@ -19,8 +19,8 @@ struct BinaryFileHeader {
     u16 dataBlocks; // at 0xE
 };
 
-bool IsValidBinaryFile(const BinaryFileHeader* header, u32 magic, u16 version,
-                       u16 numBlocks);
+bool IsValidBinaryFile(const BinaryFileHeader* header, u32 signature,
+                       u16 version, u16 minBlocks);
 bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader);
 BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader);
 

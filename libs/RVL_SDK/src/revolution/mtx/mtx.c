@@ -310,19 +310,19 @@ loc0:
 void C_MTXRotRad(){
 }
 
-void PSMTXRotRad(Mtx m, char axis, f32 rad) {
+void PSMTXRotRad(Mtx m, f32 rad, char axis) {
     f32 sinA, cosA;
     sinA = sinf(rad);
     cosA = cosf(rad);
-    PSMTXRotTrig(m, axis, sinA, cosA);
+    PSMTXRotTrig(m, sinA, cosA, axis);
 }
 
 //unused
 void C_MTXRotTrig(){
 }
 
-void PSMTXRotTrig(register Mtx m, register char arg2, register f32 arg3,
-                  register f32 arg4) {
+void PSMTXRotTrig(register Mtx m, register f32 arg3,
+                  register f32 arg4, register char arg2) {
     register f32 vv1, vv2, vv3;
     register f32 vv4, vv5, vv6, vv7;
 

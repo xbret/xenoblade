@@ -152,9 +152,8 @@ u16 OSGetFontEncode(void) {
 
     switch (*(u32*)OSPhysicalToCached(OS_PHYS_TV_FORMAT)) {
     case VI_NTSC:
-        FontEncode = ((VI_HW_REGS[VI_VISEL] & 2) != 0)
-                         ? OS_FONT_ENCODE_SJIS
-                         : OS_FONT_ENCODE_ANSI;
+        FontEncode = ((VI_HW_REGS[VI_VISEL] & 2) != 0) ? OS_FONT_ENCODE_SJIS
+                                                       : OS_FONT_ENCODE_ANSI;
         break;
     case VI_PAL:
     case VI_MPAL:
@@ -169,7 +168,6 @@ u16 OSGetFontEncode(void) {
 
     return FontEncode;
 }
-
 
 u16 OSSetFontEncode(u16 encode) {
     u16 old = OSGetFontEncode();

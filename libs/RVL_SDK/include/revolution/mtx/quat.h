@@ -21,5 +21,4 @@ void C_QUATSlerp(const Quaternion*, const Quaternion*, Quaternion*, f32);
 #ifdef __cplusplus
 }
 #endif
-
 #endif

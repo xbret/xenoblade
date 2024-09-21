@@ -4,7 +4,7 @@
 #include <types.h>
 #ifdef __cplusplus
 extern "C" {
-#endif // ifdef __cplusplus
+#endif
 
 void PSVECAdd(const Vec* a, const Vec* b, Vec* sum);
 void PSVECScale(const Vec* in, Vec* out, f32 scale);

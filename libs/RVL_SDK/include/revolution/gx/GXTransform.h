@@ -1,8 +1,10 @@
 #ifndef RVL_SDK_GX_TRANSFORM_H
 #define RVL_SDK_GX_TRANSFORM_H
-#include <revolution/gx/GXTypes.h>
-#include <revolution/MTX.h>
 #include <types.h>
+
+#include <revolution/gx/GXTypes.h>
+
+#include <revolution/MTX.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

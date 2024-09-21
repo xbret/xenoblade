@@ -5,7 +5,6 @@
 extern "C" {
 #endif
 
-
 /**
  * VI hardware registers
  */

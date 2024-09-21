@@ -28,14 +28,13 @@ void C_MTXFrustum(Mtx44 mtx, f32 t, f32 b, f32 l, f32 r, f32 n, f32 f) {
     mtx[3][3] = 0.0f;
 }
 
+DECOMP_FORCELITERAL(mtx44_c, 0.5f);
+
 void C_MTXPerspective(Mtx44 mtx, f32 fovy, f32 aspect, f32 n, f32 f) {
     f32 rad, cot;
     f32 invrange;
-    f32 fov;
 
-    fov = 0.5f * fovy;
-
-    rad = M_PI / 180.0f * fov;
+    rad = M_PI / 180.0f * (0.5f * fovy);
     cot = 1.0f / tanf(rad);
 
     mtx[0][0] = cot / aspect;

@@ -59,19 +59,19 @@ void SISetSamplingRate(u32 msec) {
     SamplingRate = msec;
 
     switch ((u32)VIGetTvFormat()) {
-        case VI_NTSC:
-        case VI_MPAL:
-        case VI_EURGB60:
-            xy = &XYNTSC;
-            break;
-        case VI_PAL:
-            xy = &XYPAL;
-            break;
-        default:
-            OSReport("SISetSamplingRate: unknown TV format. Use default.");
-            msec = 0;
-            xy = &XYNTSC;
-            break;
+    case VI_NTSC:
+    case VI_MPAL:
+    case VI_EURGB60:
+        xy = &XYNTSC;
+        break;
+    case VI_PAL:
+        xy = &XYPAL;
+        break;
+    default:
+        OSReport("SISetSamplingRate: unknown TV format. Use default.");
+        msec = 0;
+        xy = &XYNTSC;
+        break;
     }
 
     m = (VI_HW_REGS[VI_VICLK] & VI_VICLK_SPEED) != VI_VICLK_27MHZ ? 2 : 1;

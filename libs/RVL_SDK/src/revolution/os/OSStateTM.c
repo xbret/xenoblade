@@ -141,9 +141,10 @@ void __OSShutdownToSBY(void) {
 
     VI_HW_REGS[VI_DCR] = 0;
 
+    // clang-format off
 #line 347
-    OSAssert(StmReady,
-             "Error: The firmware doesn't support shutdown feature.\n");
+    OS_ASSERT(StmReady, "Error: The firmware doesn't support shutdown feature.\n");
+    // clang-format on
 
     in_args[0] = 0;
     IOS_Ioctl(StmImDesc, STM_IOCTL_SHUTDOWN_TO_SBY, StmImInBuf,
@@ -160,8 +161,10 @@ void __OSShutdownToIDL(){
 void __OSHotReset(void) {
     VI_HW_REGS[VI_DCR] = 0;
 
+    // clang-format off
 #line 412
-    OSAssert(StmReady, "Error: The firmware doesn't support reboot feature.\n");
+    OS_ASSERT(StmReady, "Error: The firmware doesn't support reboot feature.\n");
+    // clang-format on
 
     IOS_Ioctl(StmImDesc, STM_IOCTL_HOT_RESET, StmImInBuf, sizeof(StmImInBuf),
               StmImOutBuf, sizeof(StmImOutBuf));
@@ -307,8 +310,10 @@ static s32 __OSStateEventHandler(s32 result, void* arg) {
     BOOL enabled;
     OSStateCallback callback;
 
+    // clang-format off
 #line 820
-    OSAssert(result == IPC_RESULT_OK, "Error on STM state event handler\n");
+    OS_ASSERT(result == IPC_RESULT_OK, "Error on STM state event handler\n");
+    // clang-format on
 
     StmEhRegistered = FALSE;
 

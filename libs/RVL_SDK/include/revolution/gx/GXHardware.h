@@ -15,7 +15,7 @@
 #define RVL_SDK_GX_HARDWARE_H
 #include <types.h>
 
-#include <revolution/GX/GXTypes.h>
+#include <revolution/gx/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

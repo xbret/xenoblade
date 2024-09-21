@@ -5,7 +5,6 @@
 extern "C" {
 #endif
 
-
 // Forward declarations
 typedef struct OSContext;
 
@@ -57,7 +56,7 @@ static u32 __EXISwap32(u32 val) {
            val << 8 & 0x00FF0000 | val << 24 & 0xFF000000;
 }
 
-BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 r5, const void* buf, s32 len);
+BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 cmd, const void* buf, s32 len);
 
 #ifdef __cplusplus
 }
