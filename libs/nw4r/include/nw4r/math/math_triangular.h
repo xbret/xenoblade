@@ -85,8 +85,8 @@ inline f32 TanRad(f32 rad) {
  */
 void SinCosFIdx(f32* pSin, f32* pCos, f32 fidx);
 
-inline void SinCosDeg(f32* pSin, f32* pCos, f32 deg) {
-    return SinCosFIdx(pSin, pCos, NW4R_MATH_DEG_TO_FIDX(deg));
+inline void SinCosDeg(f32* s, f32* c, f32 deg) {
+    return SinCosFIdx(s, c, NW4R_MATH_DEG_TO_FIDX(deg));
 }
 inline void SinCosRad(f32* pSin, f32* pCos, f32 rad) {
     return SinCosFIdx(pSin, pCos, NW4R_MATH_RAD_TO_FIDX(rad));

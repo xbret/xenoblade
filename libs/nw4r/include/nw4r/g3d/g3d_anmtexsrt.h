@@ -27,7 +27,15 @@ struct TexSrt : TexSrtTypedef {
     f32 Tu; // at 0xc
     f32 Tv; // at 0x10
 
-    enum Flag {};
+    enum Flag {
+        FLAG_ANM_EXISTS  = (1 << 0),
+        FLAG_SCALE_ONE   = (1 << 1),
+        FLAG_ROT_ZERO    = (1 << 2),
+        FLAG_TRANS_ZERO  = (1 << 3),
+        FLAGSET_IDENTITY = FLAG_ANM_EXISTS | FLAG_SCALE_ONE | FLAG_ROT_ZERO | FLAG_TRANS_ZERO,
+        
+        NUM_OF_FLAG = 4,
+    };
 };
 
 struct TexSrtAnmResult : ResAnmTexSrtDataTypedef, TexSrtTypedef {

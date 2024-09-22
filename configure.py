@@ -1474,7 +1474,7 @@ config.libs = [
             Object(NonMatching, "g3d/g3d_calcworld.cpp"),
             Object(NonMatching, "g3d/g3d_draw.cpp"),
             Object(Matching, "g3d/g3d_camera.cpp"),
-            Object(NonMatching, "g3d/dcc/g3d_basic.cpp"),
+            Object(Matching, "g3d/dcc/g3d_basic.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_maya.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_xsi.cpp"),
             Object(NonMatching, "g3d/dcc/g3d_3dsmax.cpp"),
