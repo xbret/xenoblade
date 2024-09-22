@@ -32,6 +32,9 @@ public:
     void Init();
     Fog CopyTo(void* pDst) const;
 
+    void GetFog(GXFogType* type, f32* startz, f32* endz,
+                    f32* nearz, f32* farz, GXColor* color);
+
     void SetFogRangeAdjParam(u16 width, u16 center,
                              const math::MTX44& rProjMtx);
     void SetGP() const;

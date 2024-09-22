@@ -67,6 +67,37 @@ Fog Fog::CopyTo(register void* pDst) const {
     return Fog(NULL);
 }
 
+void Fog::GetFog(GXFogType* type, f32* startz, f32* endz,
+                f32* nearz, f32* farz, GXColor* color) {
+    if (IsValid()) {
+        FogData& r = ref();
+
+        if (type != NULL) {
+            *type = r.type;
+        }
+
+        if (startz != NULL) {
+            *startz = r.startz;
+        }
+
+        if (endz != NULL) {
+            *endz = r.endz;
+        }
+
+        if (nearz != NULL) {
+            *nearz = r.nearz;
+        }
+
+        if (farz != NULL) {
+            *farz = r.farz;
+        }
+
+        if (color != NULL) {
+            *color = r.color;
+        }
+    }
+}
+
 void Fog::SetFogRangeAdjParam(u16 width, u16 center,
                               const math::MTX44& rProjMtx) {
     if (!IsValid()) {

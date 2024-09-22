@@ -90,7 +90,7 @@ struct ResMdlData {
 class ResMdl : public ResCommon<ResMdlData> {
 public:
     static const u32 SIGNATURE = 'MDL0';
-    static const int REVISION = 9;
+    static const int REVISION = 11;
 
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResMdl);
@@ -134,6 +134,8 @@ public:
 
     ResVtxTexCoord GetResVtxTexCoord(int i) const;
     u32 GetResVtxTexCoordNumEntries() const;
+
+    ResVtxFurPos GetResVtxFurPos(int i) const;
 
     ResMat GetResMat(const char* pName) const;
     ResMat GetResMat(ResName name) const;

@@ -41,7 +41,7 @@ struct ResAnmShpData {
 class ResAnmShp : public ResCommon<ResAnmShpData> {
 public:
     static const u32 SIGNATURE = 'SHP0';
-    static const int REVISION = 3;
+    static const int REVISION = 4;
 
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResAnmShp);

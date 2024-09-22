@@ -7,8 +7,9 @@ namespace nw4r
 {
     namespace g3d
     {
-        void CalcTexMtx(math::MTX34 *, bool, const TexSrt &, TexSrt::Flag,
-            TexSrtTypedef::TexMatrixMode);
+        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag,
+            TexSrtTypedef::TexMatrixMode mode);
+        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag);
     }
 }
 

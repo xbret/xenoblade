@@ -39,7 +39,7 @@ struct ResAnmVisData {
 class ResAnmVis : public ResCommon<ResAnmVisData> {
 public:
     static const u32 SIGNATURE = 'VIS0';
-    static const int REVISION = 3;
+    static const int REVISION = 4;
 
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResAnmVis);
