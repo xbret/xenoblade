@@ -70,15 +70,16 @@ struct ResAnmTexPatData {
     s32 toPlttNameArray;       // at 0x18
     s32 toResTexArray;         // at 0x1C
     s32 toResPlttArray;        // at 0x20
-    s32 name;                  // at 0x24
-    s32 original_path;         // at 0x28
-    ResAnmTexPatInfoData info; // at 0x2C
+    s32 toResUserData;         // at 0x24
+    s32 name;                  // at 0x28
+    s32 original_path;         // at 0x2C
+    ResAnmTexPatInfoData info; // at 0x30
 };
 
 class ResAnmTexPat : public ResCommon<ResAnmTexPatData> {
 public:
     static const u32 SIGNATURE = 'PAT0';
-    static const int REVISION = 3;
+    static const int REVISION = 4;
 
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResAnmTexPat);

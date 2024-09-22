@@ -195,6 +195,16 @@ ResVtxTexCoord ResShp::GetResVtxTexCoord(u32 i) const {
     return ResVtxTexCoord(NULL);
 }
 
+ResVtxFurPos ResShp::GetResVtxFurPos() const {
+    const ResShpData& r = ref();
+
+    if (r.idVtxFurPos != -1) {
+        return GetParent().GetResVtxFurPos(r.idVtxFurPos);
+    }
+
+    return ResVtxFurPos(NULL);
+}
+
 void ResShp::Init() {
     const void* pBase;
     u8 stride;

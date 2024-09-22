@@ -43,7 +43,7 @@ public:
         return ref().revision;
     }
 
-    bool CheckRevision() const {
+    bool CheckRevision() const DECOMP_DONT_INLINE {
         return GetRevision() == REVISION;
     }
 

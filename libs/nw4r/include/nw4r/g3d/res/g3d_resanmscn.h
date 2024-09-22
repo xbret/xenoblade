@@ -35,15 +35,16 @@ struct ResAnmScnData {
     s32 toResAnmLightDataArray;    // at 0x1C
     s32 toResAnmFogDataArray;      // at 0x20
     s32 toResAnmCameraDataArray;   // at 0x24
-    s32 name;                      // at 0x28
-    s32 original_path;             // at 0x2C
-    ResAnmScnInfoData info;        // at 0x30
+    s32 toResUserData;             // at 0x28
+    s32 name;                      // at 0x2C
+    s32 original_path;             // at 0x30
+    ResAnmScnInfoData info;        // at 0x34
 };
 
 class ResAnmScn : public ResCommon<ResAnmScnData> {
 public:
     static const u32 SIGNATURE = 'SCN0';
-    static const int REVISION = 4;
+    static const int REVISION = 5;
 
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResAnmScn);

@@ -17,9 +17,9 @@ struct ResDicNodeData {
 };
 
 struct ResDicData {
-    u32 size;              // at 0x0
-    u32 numData;           // at 0x4
-    ResDicNodeData data[]; // at 0x8
+    u32 size;               // at 0x0
+    u32 numData;            // at 0x4
+    ResDicNodeData data[1]; // at 0x8
 };
 
 class ResDic : public ResCommon<ResDicData> {
@@ -30,6 +30,7 @@ public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResDic);
 
     void* operator[](const char* pName) const;
+    void* operator()(const char* s, u32 len) const;
     void* operator[](const ResName name) const;
     void* operator[](int i) const {
         if (IsValid()) {
@@ -40,6 +41,7 @@ public:
         return NULL;
     }
 
+    s32 GetIndex(const char* s) const;
     s32 GetIndex(const ResName name) const;
 
     u32 GetNumData() const {

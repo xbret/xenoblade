@@ -3,32 +3,43 @@
 #include "g3d_maya.h"
 #include "g3d_xsi.h"
 #include "g3d_3dsmax.h"
+#include "g3d_basic.h"
 
 namespace nw4r
 {
     namespace g3d
     {
-        void CalcTexMtx(math::MTX34 *pMtx, bool set, const TexSrt &srt, TexSrt::Flag flag,
+        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag,
             TexSrtTypedef::TexMatrixMode mode)
         {
-            bool identity;
+            bool bIdentity;
 
             if (mode == TexSrtTypedef::TEXMATRIXMODE_MAYA)
             {
-                identity = !detail::dcc::CalcTexMtx_Maya(pMtx, set, srt, flag);
+                bIdentity = !detail::dcc::CalcTexMtx_Maya(pM, bSet, srt, flag);
             }
             else if (mode == TexSrtTypedef::TEXMATRIXMODE_XSI)
             {
-                identity = !detail::dcc::CalcTexMtx_Xsi(pMtx, set, srt, flag);
+                bIdentity = !detail::dcc::CalcTexMtx_Xsi(pM, bSet, srt, flag);
             }
             else
             {
-                identity = !detail::dcc::CalcTexMtx_3dsmax(pMtx, set, srt, flag);
+                bIdentity = !detail::dcc::CalcTexMtx_3dsmax(pM, bSet, srt, flag);
             }
 
-            if (identity && set)
+            if (bIdentity && bSet)
             {
-                math::MTX34Identity(pMtx);
+                math::MTX34Identity(pM);
+            }
+        }
+
+        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag)
+        {
+            bool bIdentity = !detail::dcc::CalcTexMtx_Basic(pM, bSet, srt, flag);
+
+            if (bIdentity && bSet)
+            {
+                math::MTX34Identity(pM);
             }
         }
     }
