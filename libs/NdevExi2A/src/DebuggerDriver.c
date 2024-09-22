@@ -22,7 +22,7 @@ void __DBMtrHandler(u32 type, OSContext* ctx) {
         __DBMtrCallback(0, ctx);
 }
 
-void __DBIntrHandler(u32 type, OSContext* ctx) {
+void __DBIntrHandler(s32 type, OSContext* ctx) {
     PI_HW_REGS[PI_INTSR] = PI_INTSR_DEBUG;
     if (__DBDbgCallback != NULL)
         __DBDbgCallback(type, ctx);
