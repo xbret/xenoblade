@@ -15,7 +15,7 @@ static OSInterruptHandler __DBMtrCallback;
 static u8 __DBReadUSB_CSR(void);
 static void __DBWaitForSendMail(void);
 
-void __DBMtrHandler(u32 type, OSContext* ctx) {
+void __DBMtrHandler(s32 type, OSContext* ctx) {
     __DBEXIInputFlag = TRUE;
 
     if (__DBMtrCallback != NULL)
