@@ -232,6 +232,7 @@ cflags_game = [
     "-func_align 4",
     "-ir libs/nw4r/include/",
     "-i libs/monolib/include/",
+    "-i libs/CriWare/include/",
     f"-DVERSION={version_num}",
 ]
 
@@ -1755,7 +1756,7 @@ config.libs = [
             Object(Matching, "effect/CERand.cpp"),
             Object(NonMatching, "code_804DB938.cpp"),
             Object(NonMatching, "work/CWorkSystemPack.cpp"),
-            Object(NonMatching, "CPackItem.cpp"),
+            Object(NonMatching, "CPackItem.cpp", extra_cflags=["-O4,s"]),
             Object(NonMatching, "CArcItem.cpp"),
             Object(NonMatching, "code_804DEDA8.cpp"),
             Object(NonMatching, "CSchedule.cpp"),

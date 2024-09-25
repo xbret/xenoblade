@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+#include "monolib/CFileHandle.hpp"
 
 struct WorkThreadSystem {
 	static int getHeapIndex();
@@ -8,8 +9,8 @@ struct WorkThreadSystem {
 
 class CEventFile {
 public:
-	int unk0;
-	u32 unk4;
+	BOOL unk0;
+	CFileHandle* mFileHandle;
 };
 
 //Interface for work events, which most classes that do any types of tasks seem to inherit.

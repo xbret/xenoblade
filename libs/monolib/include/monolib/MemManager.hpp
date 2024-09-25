@@ -115,7 +115,7 @@ namespace mtl{
 		static int getRegionIndex2();
 		static int getRegionIndex2_2();
 		static bool deleteRegion(int regionIndex);
-		static void func_8043442C(int regionIndex, u32 r4, u32 r5);
+		static void* func_8043442C(int regionIndex, u32 r4, u32 r5);
 		static void func_80434450(int regionIndex, u32 r4, u32 r5);
 		static void func_804344D8(void* r3);
 		static u32 func_804346A0(int regionIndex);
