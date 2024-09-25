@@ -2,9 +2,10 @@
 
 #include "types.h"
 #include "monolib/IWorkEvent.hpp"
-#include <cstring>
+#include "monolib/FixStr.hpp"
+#include "monolib/device/CDeviceFile.hpp"
 
-struct PackHeader{
+struct PackHeader {
         u32 unk0;
         u32 unk4;
         u32 mFileHashTableOffset; //0x8
@@ -17,62 +18,49 @@ struct PackHeader{
         u64 mFileHashTable[]; //0x78
 };
 
-struct UnkStruct{
-    int unk0;
-    void* unk4; //maybe PackHeader*?
-};
-
-class CPackItem : IWorkEvent{
+//size: 0x88
+class CPackItem : IWorkEvent {
 public:
+    CPackItem(const char* name, UNKWORD r5);
     virtual ~CPackItem();
-    virtual BOOL IWorkEvent_WorkEvent1();
-    virtual BOOL OnFileEvent(UnkStruct*);//IWorkEvent::OnFileEvent
-    virtual BOOL IWorkEvent_WorkEvent3();
-    virtual BOOL IWorkEvent_WorkEvent4();
-    virtual void IWorkEvent_WorkEvent5();
-    virtual BOOL IWorkEvent_WorkEvent6();
-    virtual BOOL IWorkEvent_WorkEvent7();
-    virtual BOOL IWorkEvent_WorkEvent8();
-    virtual BOOL IWorkEvent_WorkEvent9();
-    virtual BOOL IWorkEvent_WorkEvent10();
-    virtual BOOL IWorkEvent_WorkEvent11();
-    virtual BOOL IWorkEvent_WorkEvent12();
-    virtual BOOL IWorkEvent_WorkEvent13();
-    virtual BOOL IWorkEvent_WorkEvent14();
-    virtual BOOL IWorkEvent_WorkEvent15();
-    virtual BOOL IWorkEvent_WorkEvent16();
-    virtual BOOL IWorkEvent_WorkEvent17();
-    virtual BOOL IWorkEvent_WorkEvent18();
-    virtual BOOL IWorkEvent_WorkEvent19();
-    virtual BOOL IWorkEvent_WorkEvent20();
-    virtual BOOL IWorkEvent_WorkEvent21();
-    virtual BOOL IWorkEvent_WorkEvent22();
-    virtual BOOL IWorkEvent_WorkEvent23();
-    virtual BOOL IWorkEvent_WorkEvent24();
-    virtual BOOL IWorkEvent_WorkEvent25();
-    virtual BOOL IWorkEvent_WorkEvent26();
-    virtual BOOL IWorkEvent_WorkEvent27();
-    virtual BOOL IWorkEvent_WorkEvent28();
-    virtual BOOL IWorkEvent_WorkEvent29();
-    virtual BOOL IWorkEvent_WorkEvent30();
-    virtual void IWorkEvent_WorkEvent31();
+    virtual bool OnFileEvent(CEventFile* eventFile);
 
-    u8 unk4[0x4C-0x4];
-    void* unk4C;
+    void update();
+    bool func_804DE78C(const char* filename, char** r5, u32* r6, u32* r7, u32* r8);
+    int findHashIndex(int startIndex, int endIndex);
+    bool isNotLoaded();
+    bool calculatePackFileHash(const char* filename);
+    void func_804DE948();
+
+    enum LoadState {
+        LOAD_STATE_NOT_LOADED,
+        LOAD_STATE_OPENED_PKH_FILE,
+        LOAD_STATE_LOADING_AHX_ADX_FILE,
+        LOAD_STATE_LOADED
+    };
+
+public:
+    //0x0: vtable
+    //0x0-4: IWorkEvent
+
+    ml::FixStr<32> unk4;
+    ml::FixStr<32> pkbFilename; //0x28
+    CFileHandle* mFileHandle; //0x4C
     PackHeader* mPackHeader; //0x50
-    u32 unk54;
+    const char* unk54;
     u64* mFileHashTable; //0x58
     u16* unk5C; //0x5C
-    u16* unk60; //0x60
-    u8 unk64[8];
-    u32 mHashLowerHalf; //0x6c
+    u32* unk60; //0x60
+    u32 unk64;
+    void* mAhxAdxDataPtr;
+    u32 mHashLowerHalf; //0x6C
     u32 mHashUpperHalf; //0x70
-    int unk74;
+    LoadState mLoadState; //0x74
     u8 unk78;
     u8 unk79;
-    u8 unk7A;
-
-    bool func_804DE920();
-    bool CalculatePackFileHash(const char*);
-    void func_804DE948();
+    bool mIsAhxAdxFile; //0x7A
+    u8 unk7B; //filler?
+    u32 unk7C;
+    u32 unk80;
+    const char* unk84;
 };

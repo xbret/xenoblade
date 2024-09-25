@@ -7052,7 +7052,7 @@ libs/monolib/work/CWorkSystemPack.cpp:
 	extab       start:0x80020830 end:0x800208F4
 	extabindex  start:0x80038894 end:0x80038948
 	.text       start:0x804DD8F4 end:0x804DE38C
-	.rodata     start:0x80527F88 end:0x80528008
+	.rodata     start:0x80527F88 end:0x80528014
 	.data       start:0x805736A0 end:0x805737A0
 	.sdata      start:0x806664E8 end:0x80666510
 	.sbss       start:0x806682E8 end:0x806682F8
@@ -7061,6 +7061,7 @@ libs/monolib/CPackItem.cpp:
 	extab       start:0x800208F4 end:0x80020938
 	extabindex  start:0x80038948 end:0x80038990
 	.text       start:0x804DE38C end:0x804DEB14
+	.rodata     start:0x80528014 end:0x80528028
 	.data       start:0x805737A0 end:0x80573828
 	.sdata      start:0x80666510 end:0x80666518
 
@@ -7068,7 +7069,6 @@ libs/monolib/CArcItem.cpp:
 	extab       start:0x80020938 end:0x80020980
 	extabindex  start:0x80038990 end:0x800389C0
 	.text       start:0x804DEB14 end:0x804DEDA8
-	.rodata     start:0x80528008 end:0x80528028
 	.data       start:0x80573828 end:0x805738B0
 	.sdata      start:0x80666518 end:0x80666520
 

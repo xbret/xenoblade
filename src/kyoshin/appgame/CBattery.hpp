@@ -2,19 +2,12 @@
 
 #include "types.h"
 #include "monolib/IWorkEvent.hpp"
+#include "monolib/CFileHandle.hpp"
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/UnkClass_8045F564.hpp"
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
 #include <nw4r/lyt/lyt_layout.h>
 #include <nw4r/lyt/lyt_pane.h>
-
-class UnkClass_80451720 {
-public:
-	UnkClass_80451720(const char*, void*, int);
-
-	u32 unk0;
-	void* unk4;
-};
 
 class CBattery : public IWorkEvent {
 public:
@@ -30,7 +23,7 @@ public:
     virtual bool OnFileEvent(CEventFile* eventFile);
     
     UnkClass_8045F564 unk4;
-    UnkClass_80451720* unk14;
+    CFileHandle* mFileHandle;
     nw4r::lyt::ArcResourceAccessor* mAccessor; //0x18
     nw4r::lyt::Layout* mLayout; //0x1C
     bool unk20;
