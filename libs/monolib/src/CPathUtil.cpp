@@ -22,7 +22,7 @@ namespace ml{
 	}
 
 	const char* CPathUtil::getFileExtensionFromPath(const char* str){
-		int endIndex = strlen(str) - 1;
+		int endIndex = std::strlen(str) - 1;
 
 		for(int i = endIndex; i >= 0; i--) {
 			char c = str[i];
@@ -49,32 +49,30 @@ namespace ml{
 		param_2 = getFilenameFromPath(param_2);
 
 		if (param_2 == nullptr) {
-			sVar2 = strlen(temp.string);
-			param_1->size = sVar2;
-			strcpy(param_1->string, temp.string);
+			param_1->length = std::strlen(temp.string);
+			std::strcpy(param_1->string, temp.string);
 		}else {
-			local_28 = strlen(param_2);
-			strcpy(temp.string, param_2);
+			local_28 = std::strlen(param_2);
+			std::strcpy(temp.string, param_2);
 
 			sVar2 = getFilenameLengthWithoutExtension(temp.string, local_28);
 
 			if (sVar2 + 1 < 2) {
-				sVar2 = strlen(temp.string);
-				param_1->size = sVar2;
-				strcpy(param_1->string,temp.string);
+				param_1->length = std::strlen(temp.string);
+				std::strcpy(param_1->string,temp.string);
 			} else {
 				param_1->string[0] = 0;
-				param_1->size = 0;
+				param_1->length = 0;
 
 				if (local_28 != 0) {
 					if (sVar2 == -1) {
 						sVar2 = local_28;
 					}
 
-					strncpy(param_1->string,temp.string,sVar2);
+					std::strncpy(param_1->string,temp.string,sVar2);
 					param_1->string[sVar2] = 0;
-					sVar2 = strlen(param_1->string);
-					param_1->size = sVar2;
+					sVar2 = std::strlen(param_1->string);
+					param_1->length = sVar2;
 				}
 			}
 		}
@@ -94,9 +92,9 @@ namespace ml{
 		char acStack_40 [16];
 		size_t local_30;
 
-		sVar3 = strlen("");
-		param_1->size = sVar3;
-		strcpy(param_1->string, "");
+		sVar3 = std::strlen("");
+		param_1->length = sVar3;
+		std::strcpy(param_1->string, "");
 
 		for (iVar6 = 0; iVar6 < param_3; iVar6++) {
 			iVar4 = 1;
@@ -130,16 +128,16 @@ namespace ml{
 			}
 
 			local_58[0] = (u16)(u8)((char)((param_2 % (iVar4 * 10))) + 0x30) << 8;
-			local_30 = strlen((char *)local_58);
-			strcpy(acStack_40,(char *)local_58);
-			local_44 = strlen(acStack_40);
-			strcpy(acStack_54,acStack_40);
-			sVar3 = strlen(param_1->string);
-			strcat(acStack_54,param_1->string);
+			local_30 = std::strlen((char *)local_58);
+			std::strcpy(acStack_40,(char *)local_58);
+			local_44 = std::strlen(acStack_40);
+			std::strcpy(acStack_54,acStack_40);
+			sVar3 = std::strlen(param_1->string);
+			std::strcat(acStack_54,param_1->string);
 			local_44 = local_44 + sVar3;
-			sVar3 = strlen(acStack_54);
-			param_1->size = sVar3;
-			strcpy(param_1->string,acStack_54);
+			sVar3 = std::strlen(acStack_54);
+			param_1->length = sVar3;
+			std::strcpy(param_1->string,acStack_54);
 		}
 		return;
 	}

@@ -30,7 +30,7 @@ CPackItem::CPackItem(const char* name, UNKWORD r5) : unk4(), pkbFilename() {
 
 CPackItem::~CPackItem(){
     if(mFileHandle != nullptr){
-        CDeviceFile::func_8044F118((CFileHandle*)mFileHandle);
+        CDeviceFile::func_8044F118(mFileHandle);
     }
 
     if(unk79 != 0){
@@ -38,12 +38,12 @@ CPackItem::~CPackItem(){
     }
 
     if(mPackHeader != nullptr){
-        mtl::MemManager::func_804344D8((void*)mPackHeader);
+        mtl::MemManager::deallocate((void*)mPackHeader);
         mPackHeader = nullptr;
     }
 
     if(mAhxAdxDataPtr != nullptr){
-        mtl::MemManager::func_804344D8((void*)mAhxAdxDataPtr);
+        mtl::MemManager::deallocate((void*)mAhxAdxDataPtr);
         mAhxAdxDataPtr = nullptr;
     }
 }

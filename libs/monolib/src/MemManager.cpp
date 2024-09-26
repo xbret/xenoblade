@@ -260,13 +260,56 @@ namespace mtl{
 		return true;
 	}
 
-	void MemManager::func_8043442C(int regionIndex, u32 r4, u32 r5){
+	void* MemManager::func_8043442C(int regionIndex, u32 r4, u32 r5){
 	}
 
 	void MemManager::func_80434450(int regionIndex, u32 r4, u32 r5){
 	}
 
-	void MemManager::func_804344D8(void* r3){
+	void MemManager::deallocate(void* p){
+		if(p != nullptr){
+			if(regionIndex1 != -1){
+				MemBlock* entryToDelete = MemBlock::fromVoidPointer(p);
+				Region* region = MemManager::getRegion(entryToDelete->regionIndex);
+
+				//this doesn't seem right
+				if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
+					log(true); //Since monolithsoft removed their log function, this calls the math log lol
+					return;
+				}
+
+				region->mFreeBytes += entryToDelete->size;
+
+				//Remove the entry from the linked list
+				if(entryToDelete->prev != nullptr){
+					entryToDelete->prev->next = entryToDelete->next;
+				}
+				if(entryToDelete->next != nullptr) {
+					entryToDelete->next->prev = entryToDelete->prev;
+				}
+
+				if (region->unk8 == entryToDelete) {
+					region->unk8 = entryToDelete->next;
+				}
+
+				if (region->unkC == entryToDelete) {
+					region->unkC = entryToDelete->prev;
+				}
+
+				MemBlock* entry = region->func_804339B8(entryToDelete);
+				entry = region->unkInline1(entry);
+
+				if (entry != nullptr) {
+					entry = region->unkInline1(entry);
+
+					if (entry != NULL) {
+						region->func_80433AA8(entry);
+					}
+				}
+
+				region->unk18--;
+			}
+		}
 	}
 
 	u32 MemManager::func_804346A0(int regionIndex){
