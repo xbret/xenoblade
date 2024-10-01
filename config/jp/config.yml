@@ -6,3 +6,9 @@ splits: config/jp/splits.txt
 mw_comment_version: 15 # Wii Linker 1.1
 symbols_known: true # Very fast analysis
 fill_gaps: false # Alignments known
+
+block_relocations:
+# extab contains these values, but they're not dtors
+- target: 0x80080000
+- target: 0x800A0000
+- target: 0x804A0000
