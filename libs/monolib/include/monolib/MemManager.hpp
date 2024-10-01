@@ -39,98 +39,99 @@ namespace mtl{
 		}
 	};
 
-	struct Region{
-		~Region();
-		MemBlock* func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4);
-		MemBlock* func_804339B8(MemBlock* arg1);
-		MemBlock* func_80433AA8(MemBlock* entry);
-		int func_80434704(u32 r4, u32 r5, u32* r6);
-		void* allocate(u32 param2, u32 size, u32 param4);
+	class MemManager {
+	public:
+		struct Region{
+			~Region();
+			MemBlock* func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4);
+			MemBlock* func_804339B8(MemBlock* arg1);
+			MemBlock* func_80433AA8(MemBlock* entry);
+			MemBlock* func_80434704(u32 r4, u32 r5, u32* r6);
+			void* allocate(u32 param2, u32 size, u32 param4);
 
-		//Region();
+			//Region();
 
-		void init(){
-			mHead = nullptr;
-			mTail = nullptr;
-			unk8 = nullptr;
-			unkC = nullptr;
-			mStartAddress = 0;
-			mEndAddress = 0;
-			unk18 = 0;
-			mSize = 0;
-			mFreeBytes = 0;
-			mName.string[0] = '\0'; //Set the first character to 0 to mark it as empty
-			mName.length = 0;
-			mRegionIndex = -1;
-			//temp_r1->unk1C = temp_r1;
-			unk6C = 0;
-		}
-
-		inline MemBlock* unkInline1(MemBlock* entry){
-			 MemBlock* prevEntry = entry->prev;
-
-			if (entry->prev != nullptr) {
-				if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
-					prevEntry->size += entry->size;
-
-					if (entry == mTail) {
-						mTail = prevEntry;
-					}
-
-					prevEntry->next = entry->next;
-
-					if (entry->next != nullptr) {
-						entry->next->prev = prevEntry;
-						entry = prevEntry;
-					}
-				}
+			void init(){
+				mHead = nullptr;
+				mTail = nullptr;
+				unk8 = nullptr;
+				unkC = nullptr;
+				mStartAddress = 0;
+				mEndAddress = 0;
+				unk18 = 0;
+				mSize = 0;
+				mFreeBytes = 0;
+				mName.string[0] = '\0'; //Set the first character to 0 to mark it as empty
+				mName.length = 0;
+				mRegionIndex = -1;
+				//temp_r1->unk1C = temp_r1;
+				unk6C = 0;
 			}
 
-			return entry->next;
-		}
+			inline MemBlock* unkInline1(MemBlock* entry){
+				 MemBlock* prevEntry = entry->prev;
 
-		MemBlock* mHead; //0x0
-		MemBlock* mTail; //0x4
-		MemBlock* unk8;
-		MemBlock* unkC;
-		u32 mStartAddress; //0x10
-		u32 mEndAddress; //0x14
-		u32 unk18;
-		u32 mSize; //0x1C
-		u32 mFreeBytes; //0x20
-		ml::FixStr<64> mName; //0x24
-		u32 mRegionIndex; //0x68
-		u8 unk6C;
-	};
+				if (entry->prev != nullptr) {
+					if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
+						prevEntry->size += entry->size;
 
-	class MemManager {
+						if (entry == mTail) {
+							mTail = prevEntry;
+						}
+
+						prevEntry->next = entry->next;
+
+						if (entry->next != nullptr) {
+							entry->next->prev = prevEntry;
+							entry = prevEntry;
+						}
+					}
+				}
+
+				return entry->next;
+			}
+
+			MemBlock* mHead; //0x0
+			MemBlock* mTail; //0x4
+			MemBlock* unk8;
+			MemBlock* unkC;
+			u32 mStartAddress; //0x10
+			u32 mEndAddress; //0x14
+			u32 unk18;
+			u32 mSize; //0x1C
+			u32 mFreeBytes; //0x20
+			ml::FixStr<64> mName; //0x24
+			u32 mRegionIndex; //0x68
+			u8 unk6C;
+		};
+
 	public:
 		static void setArenaMemorySize(u32 val, bool b);
 		static void initialize();
 		static void terminate();
-		static int createRegion(int regionIndex, int offset, const char* name);
+		static int createRegion(u32 regionIndex, int offset, const char* name);
 		static int func_804341D0(int r3, int r4, const char* r5);
 		static int getHeapIndex();
-		static int getRegionIndex1();
-		static int getRegionIndex2();
-		static int getRegionIndex2_2();
-		static bool deleteRegion(int regionIndex);
-		static void* func_8043442C(int regionIndex, u32 r4, u32 r5);
-		static void func_80434450(int regionIndex, u32 r4, u32 r5);
-		static void deallocate(void* r3);
-		static u32 func_804346A0(int regionIndex);
-		static void func_804346BC(int regionIndex);
-		static void func_80434770(int regionIndex);
-		static void func_804347D8(int regionIndex);
-		static void func_80434830(int regionIndex);
-		static void func_804348A4(int regionIndex, u8 val);
+		static int getMem1RegionIndex();
+		static int getMem2RegionIndex();
+		static int getMem2RegionIndex_2();
+		static bool deleteRegion(u32 regionIndex);
+		static void* func_8043442C(u32 regionIndex, u32 r4, int r5);
+		static void func_80434450(u32 regionIndex, u32 r4, int r5);
+		static bool deallocate(void* p);
+		static u32 func_804346A0(u32 regionIndex);
+		static u32 func_804346BC(u32 regionIndex);
+		static u32 func_80434770(u32 regionIndex);
+		static void func_804347D8(u32 regionIndex);
+		static void func_80434830(u32 regionIndex);
+		static void func_804348A4(u32 regionIndex, u8 val);
 		static u32 func_804348C0(u8* arg0, u32 arg1);
 		static void func_80434A4C(u8 r3);
 		static void func_80434A54(u8 r3);
-		static void* malloc(size_t size, int regionIndex);
-		static void* malloc_array(size_t size, int regionIndex);
-		static void func_80434AA4(u32 r3, int regionIndex, u32 r5);
-		static void* allocateArray(u32 r3, int index, u32 r5);
+		static void* malloc(size_t size, u32 regionIndex);
+		static void* malloc_array(size_t size, u32 regionIndex);
+		static void func_80434AA4(u32 r3, u32 regionIndex, int r5);
+		static void* allocateArray(u32 r3, u32 regionIndex, int r5);
 		//static void log(bool status);
 
 		static inline Region* getRegion(u32 index){
@@ -228,8 +229,8 @@ namespace mtl{
 
 		static int lbl_80665E28;
 		static int lbl_80665E2C;
-		static u32 regionIndex1;
-		static u32 regionIndex2;
+		static u32 mem1RegionIndex;
+		static u32 mem2RegionIndex;
 		static bool lbl_80665E38;
 		static bool lbl_80665E39;
 		static int arenaMemorySize;

@@ -11,23 +11,23 @@ namespace mtl{
 
 	int MemManager::lbl_80665E28 = 1;
 	int MemManager::lbl_80665E2C = 1;
-	u32 MemManager::regionIndex1 = -1;
-	u32 MemManager::regionIndex2 = -1;
+	u32 MemManager::mem1RegionIndex = -1;
+	u32 MemManager::mem2RegionIndex = -1;
 	bool MemManager::lbl_80665E38 = true;
 	bool MemManager::lbl_80665E39 = true;
 	int MemManager::arenaMemorySize = 0x600000;
 
-	Region::~Region(){
+	MemManager::Region::~Region(){
 		u32 regionIndex = mRegionIndex;
-		if(regionIndex != MemManager::regionIndex1 && regionIndex != MemManager::regionIndex2 && mStartAddress != 0){
+		if(regionIndex != MemManager::mem1RegionIndex && regionIndex != MemManager::mem2RegionIndex && mStartAddress != 0){
 			MemManager::deallocate((void*)mStartAddress);
 		}
 
 		regionIndex = mRegionIndex;
-		if(regionIndex == MemManager::regionIndex1){
-			MemManager::regionIndex1 = -1;
-		}else if(regionIndex == MemManager::regionIndex2){
-			MemManager::regionIndex2 = -1;
+		if(regionIndex == MemManager::mem1RegionIndex){
+			MemManager::mem1RegionIndex = -1;
+		}else if(regionIndex == MemManager::mem2RegionIndex){
+			MemManager::mem2RegionIndex = -1;
 		}
 
 		unk8 = nullptr;
@@ -46,11 +46,11 @@ namespace mtl{
 		lbl_80667E58 = b;
 	}
 
-	MemBlock* Region::func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4){
+	MemBlock* MemManager::Region::func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4){
 		return nullptr;
 	}
 
-	MemBlock* Region::func_804339B8(MemBlock* arg1) {
+	MemBlock* MemManager::Region::func_804339B8(MemBlock* arg1) {
 		MemBlock* entryTemp = arg1;
 		MemBlock* tempEntry1 = (MemBlock*)entryTemp->data;
 
@@ -101,7 +101,7 @@ namespace mtl{
 	}
 
 
-	MemBlock* Region::func_80433AA8(MemBlock* entry) {
+	MemBlock* MemManager::Region::func_80433AA8(MemBlock* entry) {
 
 		MemBlock* temp_r6 = entry->prev;
 
@@ -156,34 +156,34 @@ namespace mtl{
 
 	void MemManager::initialize(){
 		lbl_80667E50 = 0;
-	    lbl_80665E39 = true;
+		lbl_80665E39 = true;
 
-	    //Initialize the mem region array
-	    for(u8 i = 0; i < MAX_REGIONS; i++){
-	        Region* entry = getRegion(i);
-	        if (entry != nullptr) {
-	            entry->init();
-	        }
-	    }
+		//Initialize the mem region array
+		for(u8 i = 0; i < MAX_REGIONS; i++){
+			Region* entry = getRegion(i);
+			if (entry != nullptr) {
+				entry->init();
+			}
+		}
 	
-	    u32 arenaLo = (u32)OSGetMEM1ArenaLo();
-	    u32 maxMemoryAddress = arenaMemorySize + 0x80000000;
-	    u32 arenaHi = (u32)OSGetMEM1ArenaHi(); //unused
+		u32 arenaLo = (u32)OSGetMEM1ArenaLo();
+		u32 maxMemoryAddress = arenaMemorySize + 0x80000000;
+		u32 arenaHi = (u32)OSGetMEM1ArenaHi(); //unused
 	
-	    int memory = maxMemoryAddress - arenaLo;
-	    if (maxMemoryAddress < arenaLo) {
-	        memory = arenaLo - maxMemoryAddress;
-	    }
-	    //Remaining program region %x / maximum %x
-	    OSReport("プログラム領域残り %x / 最大 %x\n", memory, arenaMemorySize);
-	    if (arenaLo >= maxMemoryAddress) {
-	        //Program region exceeded the limit
-	        OSReport("プログラム領域が限界を超えました");
-	    }
-	    lbl_80665E38 = true;
-	    u32 mem2ArenaHi = (u32)OSGetMEM2ArenaHi(); //unused
-	    regionIndex1 = addRegion((MemBlock*)maxMemoryAddress, (u32)OSGetMEM1ArenaHi() - maxMemoryAddress, "Mem1");
-	    regionIndex2 = addRegion((MemBlock*)OSGetMEM2ArenaLo(),MEM2_END_ADDR - (u32)OSGetMEM2ArenaLo(), "Mem2");
+		int memory = maxMemoryAddress - arenaLo;
+		if (maxMemoryAddress < arenaLo) {
+			memory = arenaLo - maxMemoryAddress;
+		}
+		//Remaining program region %x / maximum %x
+		OSReport("プログラム領域残り %x / 最大 %x\n", memory, arenaMemorySize);
+		if (arenaLo >= maxMemoryAddress) {
+			//Program region exceeded the limit
+			OSReport("プログラム領域が限界を超えました");
+		}
+		lbl_80665E38 = true;
+		u32 mem2ArenaHi = (u32)OSGetMEM2ArenaHi(); //unused
+		mem1RegionIndex = addRegion((MemBlock*)maxMemoryAddress, (u32)OSGetMEM1ArenaHi() - maxMemoryAddress, "Mem1");
+		mem2RegionIndex = addRegion((MemBlock*)OSGetMEM2ArenaLo(), MEM2_END_ADDR - (u32)OSGetMEM2ArenaLo(), "Mem2");
 	}
 
 	void MemManager::terminate(){
@@ -196,7 +196,7 @@ namespace mtl{
 		}
 	}
 
-	int MemManager::createRegion(int regionIndex, int offset, const char* name) {
+	int MemManager::createRegion(u32 regionIndex, int offset, const char* name) {
 		u32 newSize = offset + sizeof(MemBlock);
 
 
@@ -229,19 +229,19 @@ namespace mtl{
 		return index;
 	}
 
-	int MemManager::getRegionIndex1(){
-		return regionIndex1;
+	int MemManager::getMem1RegionIndex(){
+		return mem1RegionIndex;
 	}
 
-	int MemManager::getRegionIndex2(){
-		return regionIndex2;
+	int MemManager::getMem2RegionIndex(){
+		return mem2RegionIndex;
 	}
 
-	int MemManager::getRegionIndex2_2(){
-		return regionIndex2;
+	int MemManager::getMem2RegionIndex_2(){
+		return mem2RegionIndex;
 	}
 
-	bool MemManager::deleteRegion(int regionIndex){
+	bool MemManager::deleteRegion(u32 regionIndex){
 		bool r0;
 		u8 tempIndex = regionIndex & 0xFF;
 		if(tempIndex >= MAX_REGIONS){
@@ -260,79 +260,148 @@ namespace mtl{
 		return true;
 	}
 
-	void* MemManager::func_8043442C(int regionIndex, u32 r4, u32 r5){
+	void* MemManager::func_8043442C(u32 regionIndex, u32 r4, int r5){
+		Region* region = getRegion(regionIndex);
+		return region->allocate(0, r4, r5);
 	}
 
-	void MemManager::func_80434450(int regionIndex, u32 r4, u32 r5){
+	void MemManager::func_80434450(u32 regionIndex, u32 r4, int r5){
 	}
 
-	void MemManager::deallocate(void* p){
-		if(p != nullptr){
-			if(regionIndex1 != -1){
-				MemBlock* entryToDelete = MemBlock::fromVoidPointer(p);
-				Region* region = MemManager::getRegion(entryToDelete->regionIndex);
+	bool MemManager::deallocate(void* p) {
+		if(p == nullptr){
+			return true;
+		}
 
-				//this doesn't seem right
-				if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
-					log(true); //Since monolithsoft removed their log function, this calls the math log lol
-					return;
-				}
+		if(mem1RegionIndex == -1){
+			return true;
+		}
 
-				region->mFreeBytes += entryToDelete->size;
+		MemBlock* entryToDelete = MemBlock::fromVoidPointer(p);
+		Region* region = MemManager::getRegion(entryToDelete->regionIndex);
 
-				//Remove the entry from the linked list
-				if(entryToDelete->prev != nullptr){
-					entryToDelete->prev->next = entryToDelete->next;
-				}
-				if(entryToDelete->next != nullptr) {
-					entryToDelete->next->prev = entryToDelete->prev;
-				}
+		//this doesn't seem right
+		if(entryToDelete->size - sizeof(MemBlock) - 1 > 0x7FFFFFF - sizeof(MemBlock) - 1){
+			log(true); //Since monolithsoft removed their log function, this calls the math log lol
+		}else{
+			region->mFreeBytes += entryToDelete->size;
 
-				if (region->unk8 == entryToDelete) {
-					region->unk8 = entryToDelete->next;
-				}
+			//Remove the entry from the linked list
+			if(entryToDelete->prev != nullptr){
+				entryToDelete->prev->next = entryToDelete->next;
+			}
+			if(entryToDelete->next != nullptr) {
+				entryToDelete->next->prev = entryToDelete->prev;
+			}
 
-				if (region->unkC == entryToDelete) {
-					region->unkC = entryToDelete->prev;
-				}
+			if (region->unk8 == entryToDelete) {
+				region->unk8 = entryToDelete->next;
+			}
 
-				MemBlock* entry = region->func_804339B8(entryToDelete);
+			if (region->unkC == entryToDelete) {
+				region->unkC = entryToDelete->prev;
+			}
+
+			MemBlock* entry = region->func_804339B8(entryToDelete);
+			entry = region->unkInline1(entry);
+
+			if (entry != nullptr) {
 				entry = region->unkInline1(entry);
 
-				if (entry != nullptr) {
-					entry = region->unkInline1(entry);
-
-					if (entry != NULL) {
-						region->func_80433AA8(entry);
-					}
+				if (entry != NULL) {
+					region->func_80433AA8(entry);
 				}
-
-				region->unk18--;
 			}
+
+			region->unk18--;
 		}
+
+		return true;
 	}
 
-	u32 MemManager::func_804346A0(int regionIndex){
+	u32 MemManager::func_804346A0(u32 regionIndex){
 		Region* region = getRegion(regionIndex);
 		return region->mSize;
 	}
 
-	void MemManager::func_804346BC(int regionIndex){
+	u32 MemManager::func_804346BC(u32 regionIndex){
+		Region* region = getRegion(regionIndex);
+		MemBlock* block = region->unk8;
+
+		if(block == nullptr){
+			return 0;
+		}
+
+		u32 result = 0;
+
+		while(block != nullptr){
+			u32 r0 = block->size;
+			block = block->next;
+			result += r0;
+		}
+
+		return result;
 	}
 
-	//int Region::func_80434704(u32 r4, u32 r5, u32* r6){
-	//}
+	MemBlock* MemManager::Region::func_80434704(u32 r4, u32 r5, u32* r6){
+		if(mHead == nullptr){
+			return nullptr;
+		}
 
-	void MemManager::func_80434770(int regionIndex){
+		MemBlock* r3 = mTail;
+		u32 r7 = r4 + 0x100;
+		while(r3 != 0){
+			u32 r0 = r3->size;
+			if(r0 >= r7){
+				u32 r8 = ((u32)r3 + r0) - r4;
+				u32 r0_3 = r8 % r5;
+
+				if(r0_3 != 0){
+					r8 -= r0_3;
+				}
+
+				r6[0] = r8;
+				if(r3 <= MemBlock::fromVoidPointer((void*)r8)) return r3;
+			}
+			r3 = r3->prev;
+		}
+
+		return nullptr;
 	}
 
-	void MemManager::func_804347D8(int regionIndex){
+	u32 MemManager::func_80434770(u32 regionIndex){
+		Region* region = getRegion(regionIndex);
+		MemBlock* r4;
+		MemBlock* r5 = region->mHead;
+
+		if(r5 == nullptr){
+			r5 = nullptr; //Why set it to zero again? lol
+		}else{
+			r4 = r5;
+
+			while(r4 != nullptr){
+				if(r5->size < r4->size){
+					r5 = r4;
+				}
+
+				r4 = r4->next;
+			}
+		}
+
+		if(r5 == nullptr){
+			return 0;
+		}
+
+		return r5->size - sizeof(MemBlock);
 	}
 
-	void MemManager::func_80434830(int regionIndex){
+	void MemManager::func_804347D8(u32 regionIndex){
 	}
 
-	void MemManager::func_804348A4(int regionIndex, u8 val){
+	void MemManager::func_80434830(u32 regionIndex){
+	}
+
+	void MemManager::func_804348A4(u32 regionIndex, u8 val){
 		Region* region = getRegion(regionIndex);
 		region->unk6C = val;
 	}
@@ -374,21 +443,32 @@ namespace mtl{
 		lbl_80667E5C = r3;
 	}
 
-	void* MemManager::malloc(size_t size, int regionIndex){
+	void* MemManager::malloc(size_t size, u32 regionIndex){
 		Region* region = MemManager::getRegion(regionIndex);
 		return region->allocate(0, size, 4);
 	}
 
-	void* MemManager::malloc_array(size_t size, int regionIndex){
+	void* MemManager::malloc_array(size_t size, u32 regionIndex){
 		Region* region = MemManager::getRegion(regionIndex);
 		return region->allocate(0, size, 4);
 	}
 
-	void MemManager::func_80434AA4(u32 r3, int regionIndex, u32 r5){
+	void MemManager::func_80434AA4(u32 r3, u32 regionIndex, int r5){
 	}
 
-	void* MemManager::allocateArray(u32 r3, int index, u32 r5){
-		return nullptr;
+	void* MemManager::allocateArray(u32 r3, u32 regionIndex, int r5){
+		if(r5 < 0){
+			Region* region = getRegion(regionIndex);
+			u32 r1_8 = 0;
+			int r31 = -r5;
+			if(region->func_80434704(r3, r31, &r1_8) == nullptr){
+				return nullptr;
+			}
+			return region->allocate(r1_8, r3, r31);
+		}
+
+		Region* region = getRegion(regionIndex);
+		return region->allocate(0, r3, r5);
 	}
 
 }
