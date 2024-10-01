@@ -79,15 +79,15 @@ float sqrtf(float);
 
 The extra directives are to ensure the file isn't included multiple times (header guard, or the ifndef and define), and to have the function declarations still work when the file is included in a C++ file (#ifdef __cplusplus).
 
-The final step is to change the path of the file in the corresponding library's Makefile, in this case PowerPC_EABI_Support. The Makefiles are located in each library/module's src folder. (for example, the one we need to modify is at src/PowerPC_EABI_Support/MSL_C/Makefile):
+The final step is to change the matching status value of the file in the "configure.py" file. The entries for each file are located in the large table at the bottom. For example, for this file you can find the entry by just searching for `ansi_files`:
 
 Before:
 
-``$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o\``
+``Object(NonMatching, "MSL_C/MSL_Common/ansi_files.c")``
 
 After:
 
-``$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o\``
+``Object(Matching, "MSL_C/MSL_Common/ansi_files.c"),``
 
 Now, you can try building the repository to make sure your new file matches. For a file this simple, as long as you formatted everything correctly, it should easily work. If not, find out what was wrong and keep trying to fix it.
 
