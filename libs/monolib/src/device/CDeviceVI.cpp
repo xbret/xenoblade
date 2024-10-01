@@ -107,7 +107,7 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
 	instance = this;
 	unk2A0 = 0;
 	unk2A2 = 0;
-	mXfbBuffersPtr = (u8*)mtl::MemManager::allocateArray(getXfbBuffersSize(), lbl_80667F2C ? mtl::MemManager::getRegionIndex2_2() : CDevice::func_8044D058(), 0x20);
+	mXfbBuffersPtr = (u8*)mtl::MemManager::allocateArray(getXfbBuffersSize(), lbl_80667F2C ? mtl::MemManager::getMem2RegionIndex_2() : CDevice::func_8044D058(), 0x20);
 
 	memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
 	instance->unk4 |= 0x1;

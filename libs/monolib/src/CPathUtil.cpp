@@ -2,7 +2,7 @@
 
 namespace ml{
 
-	const char* CPathUtil::getFilenameFromPath(const char* str){
+	const char* CPathUtil::getFilePtrFromPath(const char* str){
 		int endIndex = std::strlen(str) - 1;
 
 		for(int i = endIndex; i >= 0; i--) {
@@ -10,7 +10,7 @@ namespace ml{
 
 			/* If the current character is a path separator character, return the rest
 			of the string */
-			if (c == '/' || c == '\\' || c == ':') {
+			if(c == '/' || c == '\\' || c == ':'){
 				return str + (endIndex + 1);
 			}
 
@@ -21,16 +21,12 @@ namespace ml{
 		return str;
 	}
 
-	const char* CPathUtil::getFileExtensionFromPath(const char* str){
+	const char* CPathUtil::getFileExtPtr(const char* str){
 		int endIndex = std::strlen(str) - 1;
 
 		for(int i = endIndex; i >= 0; i--) {
 			char c = str[i];
-
-			if (c == '.') {
-				return str + (endIndex + 1);
-			}
-
+			if(c == '.') return str + (endIndex + 1);
 			endIndex--;
 		}
 
@@ -38,108 +34,86 @@ namespace ml{
 		return nullptr;
 	}
 
-	void CPathUtil::func_80435078(FixStr<64>* param_1, const char* param_2){
-		char cVar1;
-		int sVar2;
+	void CPathUtil::func_80435078(FixStr<64>& param_1, const char* param_2){
 		FixStr<64> temp;
 
-		temp.string[0] = 0;
-		int local_28 = 0;
-
-		param_2 = getFilenameFromPath(param_2);
+		param_2 = getFilePtrFromPath(param_2);
 
 		if (param_2 == nullptr) {
-			param_1->length = std::strlen(temp.string);
-			std::strcpy(param_1->string, temp.string);
-		}else {
-			local_28 = std::strlen(param_2);
-			std::strcpy(temp.string, param_2);
+			param_1 = temp;
+			return;
+		}
 
-			sVar2 = getFilenameLengthWithoutExtension(temp.string, local_28);
+		temp = param_2;
 
-			if (sVar2 + 1 < 2) {
-				param_1->length = std::strlen(temp.string);
-				std::strcpy(param_1->string,temp.string);
-			} else {
-				param_1->string[0] = 0;
-				param_1->length = 0;
+		int length = temp.find(".", -1);
 
-				if (local_28 != 0) {
-					if (sVar2 == -1) {
-						sVar2 = local_28;
-					}
+		if ((u32)length + 1 <= 1) {
+			param_1 = temp;
+		} else {
+			param_1.clear();
 
-					std::strncpy(param_1->string,temp.string,sVar2);
-					param_1->string[sVar2] = 0;
-					sVar2 = std::strlen(param_1->string);
-					param_1->length = sVar2;
-				}
+			if (temp.length == 0) {
+				if (length == -1) length = temp.size();
+				std::strncpy(param_1.string, temp.string, length);
+				param_1.string[length] = 0;
+				param_1.length = std::strlen(param_1.string);
 			}
 		}
 	}
 
-	void CPathUtil::func_80435220(FixStr<16>* param_1, int param_2, int param_3){
-		bool bVar1;
-		int iVar2;
-		size_t sVar3;
-		int iVar4;
-		int iVar5;
-		int iVar6;
-		u32 uVar7;
-		short local_58 [2];
-		char acStack_54 [16];
-		size_t local_44;
-		char acStack_40 [16];
-		size_t local_30;
+	void CPathUtil::htoa(FixStr<16>& arg0, u32 arg1, int arg2) {
+		FixStr<16> sp20 = FixStr<16>(false);
+		FixStr<16> spC = FixStr<16>(false);
+		s16 sp8;
+		s32 temp_r24_2;
+		s32 temp_r4;
+		s32 var_ctr_2;
+		s32 i;
+		s32 var_r3;
+		s32 var_r5;
+		s32 var_r6;
+		s8 *temp_r24;
+		u32 var_ctr;
 
-		sVar3 = std::strlen("");
-		param_1->length = sVar3;
-		std::strcpy(param_1->string, "");
+		arg0 = "";
 
-		for (iVar6 = 0; iVar6 < param_3; iVar6++) {
-			iVar4 = 1;
-			iVar5 = 0;
-
-			if (0 < iVar6) {
-				if (8 < iVar6) {
-					bVar1 = false;
-
-					if ((-1 < iVar6) && (iVar6 < 0x7fffffff)) {
-						bVar1 = true;
+		for(i = 0; i < arg2; i++) {
+			sp8 = 0;
+			var_r5 = 1;
+			var_r6 = 0;
+			if (i > arg2) {
+				temp_r4 = i - 8;
+				if (i > 8) {
+					var_r3 = 0;
+					if ((i >= 8) && (i <= 0x7FFFFFFE)) {
+						var_r3 = 1;
 					}
-
-					if ((bVar1) && (uVar7 = iVar6 - 1U >> 3, 0 < iVar6 + -8)) {
-						do {
-							iVar4 = iVar4 * 100000000;
-							iVar5 = iVar5 + 8;
-							uVar7 = uVar7 - 1;
-						} while (uVar7 != 0);
+					if (var_r3 != 0) {
+						var_ctr = (u32) (temp_r4 + 7) >> 3U;
+						if (temp_r4 > 0) {
+							do {
+								var_r5 *= 100000000;
+								var_r6 += 8;
+								var_ctr -= 1;
+							} while (var_ctr != 0);
+						}
 					}
 				}
-
-				iVar2 = iVar6 - iVar5;
-
-				if (iVar5 < iVar6) {
+				var_ctr_2 = i - var_r6;
+				if (var_r6 < i) {
 					do {
-						iVar4 = iVar4 * 10;
-						iVar2 = iVar2 + -1;
-					} while (iVar2 != 0);
+						var_r5 *= 10;
+						var_ctr_2--;
+					} while (var_ctr_2 != 0);
 				}
 			}
-
-			local_58[0] = (u16)(u8)((char)((param_2 % (iVar4 * 10))) + 0x30) << 8;
-			local_30 = std::strlen((char *)local_58);
-			std::strcpy(acStack_40,(char *)local_58);
-			local_44 = std::strlen(acStack_40);
-			std::strcpy(acStack_54,acStack_40);
-			sVar3 = std::strlen(param_1->string);
-			std::strcat(acStack_54,param_1->string);
-			local_44 = local_44 + sVar3;
-			sVar3 = std::strlen(acStack_54);
-			param_1->length = sVar3;
-			std::strcpy(param_1->string,acStack_54);
+			sp8 = ((s32) (arg1 % (var_r5 * 0xA)) / var_r5) + 0x30;
+			sp20 = (const char*)&sp8;
+			spC = sp20;
+			spC += arg0;
+			arg0 = spC;
 		}
-		return;
 	}
 
 }

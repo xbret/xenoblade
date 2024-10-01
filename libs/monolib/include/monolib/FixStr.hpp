@@ -23,10 +23,9 @@ namespace ml{
 			length = 0;
 		}
 
-		void strncpy(const char* src, int length){
-            std::strncpy(string, src, length);
-            string[length] = 0;
-            length = std::strlen(string);
+		void operator=(const FixStr<N>& str){
+			length = std::strlen(str.string);
+			std::strcpy(string, str.string);
 		}
 
 		void operator=(const char* str){
@@ -34,9 +33,15 @@ namespace ml{
 			std::strcpy(string, str);
 		}
 
+		void operator+=(const FixStr<N>& str){
+			int strLength = std::strlen(str.string);
+			std::strcat(string, str.string);
+			length += strLength;
+		}
+
 		void operator+=(const char* str){
 			int strLength = std::strlen(str);
-        	std::strcat(string, str);
+			std::strcat(string, str);
 			length += strLength;
 		}
 
@@ -46,6 +51,24 @@ namespace ml{
 
 		int size() const {
 			return length;
+		}
+
+		int find(const char* str, int pos) const {
+			if (length == 0) {
+				//Return -1 if the string is empty
+				return -1;
+			}
+			
+			int strLength = std::strlen(str);
+
+			for (char* p = (char*)string + pos + strLength; p != string + pos; p--) {
+				if (!std::strncmp(p, str, strLength)) {
+					return (int)(p - string);
+				}
+			}
+
+			//Reached start of string without finding the string, return -1
+			return -1;
 		}
 
 	public:
