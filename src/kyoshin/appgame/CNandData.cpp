@@ -27,5 +27,3 @@ int CNandData::nandIconTextureSomething[] = {
 };
 
 CNandData CNandData::instance = CNandData();
-
-
