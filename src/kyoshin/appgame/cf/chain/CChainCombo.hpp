@@ -12,12 +12,15 @@ namespace cf {
         1800, 1200, 600
     };
 
-    struct CChainCombo{
-        int w;
-        int a;
-        bool b;
-        void* c;
-        int d;
+    //size: 0x18
+    class CChainCombo {
+    public:
+        int w; //0x0
+        int a; //0x4
+        bool b; //0x8
+        void* c; //0xC
+        int d; //0x10
+        //0x14: vtable
         
         virtual ~CChainCombo(){};
 

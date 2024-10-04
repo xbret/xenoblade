@@ -201,9 +201,9 @@ void CPackItem::func_804DE948() {
 	}
 }
 
-bool CPackItem::OnFileEvent(CEventFile* eventFile){
-	if(eventFile->mFileHandle == mFileHandle){
-		if(eventFile->unk0 == 1){
+bool CPackItem::OnFileEvent(CEventFile* pEventFile){
+	if(pEventFile->mFileHandle == mFileHandle){
+		if(pEventFile->unk0 == 1){
 			void* data = mFileHandle->data;
 			mFileHandle->data = nullptr;
 			mPackHeader = static_cast<PackHeader*>(data);

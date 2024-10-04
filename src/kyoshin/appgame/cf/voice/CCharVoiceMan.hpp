@@ -36,7 +36,3 @@ namespace cf{
 	};
 
 }
-
-extern void* func_800B07E8();
-extern void func_800B8804(void*, cf::IFactoryEvent*);
-extern void func_800B88E0(void*, cf::IFactoryEvent*);

@@ -8,7 +8,7 @@ public:
 	CNBanner();
 	virtual ~CNBanner();
 	void init();
-	virtual bool OnFileEvent(CEventFile* eventFile);
+	virtual bool OnFileEvent(CEventFile* pEventFile);
 	void func_804F52F8(const char* str);
 	void func_804F5304(const char* str);
 	void func_804F5310(const char* str);

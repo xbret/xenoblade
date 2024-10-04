@@ -170,7 +170,7 @@ void CGame::WorkEvent5(UNKTYPE* r4){
 				func_801644BC(1);
 				if(cf::CBattleManager::getInstance() != nullptr){
 					cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
-					battleManager->vision.func_801A929C(1);
+					battleManager->mVision.func_801A929C(1);
 				}
 				func_80044FBC(1);
 				unk228++;
@@ -180,7 +180,7 @@ void CGame::WorkEvent5(UNKTYPE* r4){
 					func_801644BC(0);
 					if(cf::CBattleManager::getInstance() != nullptr){
 						cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
-						battleManager->vision.func_801A929C(0);
+						battleManager->mVision.func_801A929C(0);
 					}
 				}
 				func_80044FBC(0);

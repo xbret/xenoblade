@@ -90,10 +90,10 @@ void CBattery::func_802B94B0(){
 	}
 }
 
-bool CBattery::OnFileEvent(CEventFile* eventFile){
+bool CBattery::OnFileEvent(CEventFile* pEventFile){
 	//Only run the event of the file handle in the event struct matches the one in this class
-	if(mFileHandle == eventFile->mFileHandle){
-		if(eventFile->unk0 != 1){
+	if(mFileHandle == pEventFile->mFileHandle){
+		if(pEventFile->unk0 != 1){
 			func_802B9364();
 			return true;
 		}

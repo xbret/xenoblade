@@ -18,7 +18,7 @@ class IWorkEvent {
 public:
     virtual ~IWorkEvent(){}
     virtual bool WorkEvent1(){ return false; }
-    virtual bool OnFileEvent(CEventFile* eventFile){ return false; }
+    virtual bool OnFileEvent(CEventFile* pEventFile){ return false; }
     virtual bool WorkEvent3(){ return false; }
     virtual bool WorkEvent4(){ return false; }
     virtual void WorkEvent5(UNKTYPE* r4){}

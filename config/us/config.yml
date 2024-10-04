@@ -6,9 +6,3 @@ splits: config/us/splits.txt
 mw_comment_version: 15
 symbols_known: true
 fill_gaps: true
-
-block_relocations:
-# extab contains these values, but they're not dtors
-- target: 0x80080000
-- target: 0x800A0000
-- target: 0x804A0000

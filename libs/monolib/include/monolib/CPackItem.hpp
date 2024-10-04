@@ -23,7 +23,7 @@ class CPackItem : IWorkEvent {
 public:
 	CPackItem(const char* name, UNKWORD r5);
 	virtual ~CPackItem();
-	virtual bool OnFileEvent(CEventFile* eventFile);
+	virtual bool OnFileEvent(CEventFile* pEventFile);
 
 	void update();
 	bool func_804DE78C(const char* filename, char** r5, u32* r6, u32* r7, u32* r8);

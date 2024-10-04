@@ -474,7 +474,7 @@ kyoshin/appgame/cf/CfCollCapsuleImpl.cpp:
 	extabindex  start:0x80024C08 end:0x80024C14
 	.text       start:0x800AB2E4 end:0x800AB3D0
 
-kyoshin/appgame/cf/CfObjectColl.cpp:
+kyoshin/appgame/cf/object/CfObjectColl.cpp:
 	extab       start:0x800093C4 end:0x80009480
 	extabindex  start:0x80024C14 end:0x80024D10
 	.text       start:0x800AB3D0 end:0x800AC62C
@@ -484,14 +484,14 @@ kyoshin/appgame/cf/CfObjectColl.cpp:
 	.sbss       start:0x806667A0 end:0x806667C8
 	.sdata2     start:0x806691D8 end:0x80669220
 
-kyoshin/appgame/cf/CfObjectEff.cpp:
+kyoshin/appgame/cf/object/CfObjectEff.cpp:
 	extab       start:0x80009480 end:0x80009584
 	extabindex  start:0x80024D10 end:0x80024E18
 	.text       start:0x800AC62C end:0x800AD888
 	.data       start:0x8052C028 end:0x8052C1E8
 	.sdata2     start:0x80669220 end:0x80669230
 
-kyoshin/appgame/cf/CfObjectEne.cpp:
+kyoshin/appgame/cf/object/CfObjectEne.cpp:
 	extab       start:0x80009584 end:0x8000964C
 	extabindex  start:0x80024E18 end:0x80024F08
 	.text       start:0x800AD888 end:0x800B06A4
@@ -512,7 +512,7 @@ kyoshin/appgame/code_800B06A4.cpp:
 	.sbss       start:0x806667C8 end:0x806667F0
 	.sdata2     start:0x80669298 end:0x80669300
 
-kyoshin/appgame/cf/CfObjectMap.cpp:
+kyoshin/appgame/cf/object/CfObjectMap.cpp:
 	extab       start:0x80009AE4 end:0x80009B68
 	extabindex  start:0x80025574 end:0x800255EC
 	.text       start:0x800B9A70 end:0x800BA7E8
@@ -521,7 +521,7 @@ kyoshin/appgame/cf/CfObjectMap.cpp:
 	.sdata      start:0x80664600 end:0x80664608
 	.sdata2     start:0x80669300 end:0x80669330
 
-kyoshin/appgame/cf/CfObjectModel.cpp:
+kyoshin/appgame/cf/object/CfObjectModel.cpp:
 	extab       start:0x80009B68 end:0x80009C8C
 	extabindex  start:0x800255EC end:0x80025784
 	.text       start:0x800BA7E8 end:0x800BBC4C
@@ -529,7 +529,7 @@ kyoshin/appgame/cf/CfObjectModel.cpp:
 	.data       start:0x8052CAE8 end:0x8052CE60
 	.sdata2     start:0x80669330 end:0x80669350
 
-kyoshin/appgame/cf/CfObjectMove.cpp:
+kyoshin/appgame/cf/object/CfObjectMove.cpp:
 	extab       start:0x80009C8C end:0x80009EB8
 	extabindex  start:0x80025784 end:0x800259DC
 	.text       start:0x800BBC4C end:0x800BF340
@@ -537,7 +537,7 @@ kyoshin/appgame/cf/CfObjectMove.cpp:
 	.data       start:0x8052CE60 end:0x8052D088
 	.sdata2     start:0x80669350 end:0x806693A8
 
-kyoshin/appgame/cf/CfObjectNpc.cpp:
+kyoshin/appgame/cf/object/CfObjectNpc.cpp:
 	extab       start:0x80009EB8 end:0x80009F18
 	extabindex  start:0x800259DC end:0x80025A30
 	.text       start:0x800BF340 end:0x800BF98C
@@ -546,7 +546,7 @@ kyoshin/appgame/cf/CfObjectNpc.cpp:
 	.sdata      start:0x80664608 end:0x80664610
 	.sdata2     start:0x806693A8 end:0x806693D0
 
-kyoshin/appgame/cf/CfObjectObj.cpp:
+kyoshin/appgame/cf/object/CfObjectObj.cpp:
 	extab       start:0x80009F18 end:0x80009F70
 	extabindex  start:0x80025A30 end:0x80025A78
 	.text       start:0x800BF98C end:0x800BFC90
@@ -554,7 +554,7 @@ kyoshin/appgame/cf/CfObjectObj.cpp:
 	.data       start:0x8052D2E8 end:0x8052D570
 	.sdata      start:0x80664610 end:0x80664620
 
-kyoshin/appgame/cf/CfObjectPc.cpp:
+kyoshin/appgame/cf/object/CfObjectPc.cpp:
 	extab       start:0x80009F70 end:0x8000A058
 	extabindex  start:0x80025A78 end:0x80025B98
 	.text       start:0x800BFC90 end:0x800C1274
@@ -562,7 +562,7 @@ kyoshin/appgame/cf/CfObjectPc.cpp:
 	.data       start:0x8052D570 end:0x8052DB80
 	.sdata2     start:0x806693D0 end:0x80669410
 
-kyoshin/appgame/cf/CfObjectPoint.cpp:
+kyoshin/appgame/cf/object/CfObjectPoint.cpp:
 	extab       start:0x8000A058 end:0x8000A0AC
 	extabindex  start:0x80025B98 end:0x80025BF8
 	.text       start:0x800C1274 end:0x800C17DC
@@ -900,7 +900,7 @@ kyoshin/appgame/menu/CMenuLandTelop.cpp:
 	.sbss       start:0x80666A90 end:0x80666A98
 	.sdata2     start:0x80669C88 end:0x80669CC0
 
-kyoshin/appgame/cf/CBattleState.cpp:
+kyoshin/appgame/cf/object/CBattleState.cpp:
 	extab       start:0x8000CFE4 end:0x8000D04C
 	extabindex  start:0x800282BC end:0x80028358
 	.text       start:0x80145B1C end:0x80149780
@@ -919,7 +919,7 @@ kyoshin/appgame/menu/CMenuGetItem.cpp:
 	.sbss       start:0x80666A98 end:0x80666AA0
 	.sdata2     start:0x80669CD8 end:0x80669CE8
 
-kyoshin/appgame/cf/CAIAction.cpp:
+kyoshin/appgame/cf/object/CAIAction.cpp:
 	extab       start:0x8000D194 end:0x8000D32C
 	extabindex  start:0x8002840C end:0x800284C0
 	.text       start:0x8014A86C end:0x80153BEC
@@ -1070,7 +1070,7 @@ kyoshin/appgame/cf/CfMapEffectManager.cpp:
 	.sbss       start:0x80666B80 end:0x80666B88
 	.sdata2     start:0x80669FC0 end:0x80669FF8
 
-kyoshin/appgame/cf/CfObjectActor.cpp:
+kyoshin/appgame/cf/object/CfObjectActor.cpp:
 	extab       start:0x8000E1BC end:0x8000E254
 	extabindex  start:0x80029204 end:0x800292AC
 	.text       start:0x8016FE68 end:0x801725E4
@@ -1096,7 +1096,7 @@ kyoshin/appgame/cf/CfMapItemManager.cpp:
 	.sbss       start:0x80666B88 end:0x80666B90
 	.sdata2     start:0x8066A040 end:0x8066A0A0
 
-kyoshin/appgame/cf/CActorParam.cpp:
+kyoshin/appgame/cf/object/CActorParam.cpp:
 	extab       start:0x8000E380 end:0x8000E540
 	extabindex  start:0x80029408 end:0x800295C4
 	.text       start:0x80175264 end:0x8017ED94
@@ -1596,7 +1596,7 @@ kyoshin/appgame/cf/CfGimmickObject.cpp:
 	.sdata      start:0x80664FF8 end:0x80665008
 	.sdata2     start:0x8066AA28 end:0x8066AA90
 
-kyoshin/appgame/cf/CfObjectTbox.cpp:
+kyoshin/appgame/cf/object/CfObjectTbox.cpp:
 	extab       start:0x800123F8 end:0x80012438
 	extabindex  start:0x8002C570 end:0x8002C594
 	.text       start:0x801F8CB4 end:0x801F8E34
