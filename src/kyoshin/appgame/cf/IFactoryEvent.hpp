@@ -6,6 +6,7 @@ namespace cf{
 
 	class IFactoryEvent{
 	public:
+		virtual ~IFactoryEvent(){}
 		virtual void FactoryEvent1(){}
 		virtual void FactoryEvent2() = 0;
 		virtual void FactoryEvent3(){}

@@ -1,4 +1,5 @@
 #include "kyoshin/appgame/cf/voice/CCharVoiceMan.hpp"
+#include "kyoshin/appgame/code_800B06A4.hpp"
 
 namespace cf{
 	CCharVoiceMan::CCharVoiceMan(){

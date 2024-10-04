@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/help/CHelp_Target.hpp"
 #include "kyoshin/appgame/UnkClass_80574F50.hpp"
-#include "kyoshin/appgame/cf/CfObjectPc.hpp"
+#include "kyoshin/appgame/cf/object/CfObjectPc.hpp"
 
 extern cf::CfObjectMove* func_80082D54(int playerIndex);
 extern cf::CfObjectPc* func_800BFC68(cf::CfObjectMove* objMove);

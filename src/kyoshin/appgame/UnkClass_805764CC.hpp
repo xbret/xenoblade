@@ -3,8 +3,8 @@
 #include "types.h"
 #include "monolib/reslist.hpp"
 #include "monolib/FixStr.hpp"
-#include "kyoshin/appgame/cf/CfObject.hpp"
-#include "kyoshin/appgame/cf/TBoxInfo.hpp"
+#include "kyoshin/appgame/cf/object/CfObject.hpp"
+#include "kyoshin/appgame/cf/object/TBoxInfo.hpp"
 #include "kyoshin/appgame/cf/IFactoryEvent.hpp"
 
 using namespace cf;

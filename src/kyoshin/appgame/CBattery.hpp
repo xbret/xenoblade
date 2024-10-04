@@ -20,7 +20,7 @@ public:
 	void setBatteryLevel(u8 level);
 	void updateBatteryImage();
 	void func_802B94B0();
-    virtual bool OnFileEvent(CEventFile* eventFile);
+    virtual bool OnFileEvent(CEventFile* pEventFile);
     
     UnkClass_8045F564 unk4;
     CFileHandle* mFileHandle;
