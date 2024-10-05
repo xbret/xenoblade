@@ -15,7 +15,8 @@ namespace cf{
 	public:
 		~UnkClass_801A3728(){}
 
-		u8 unk0[0x78];
+		u8 unk0[0x74];
+		float unk74;
 	};
 
 	//size: 0x2623C

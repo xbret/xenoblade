@@ -31,10 +31,11 @@ namespace cf{
 
 		CBattleManager_Struct1(){
 			u8* r30 = unk0;
+			u8* r31 = unk0 + 0x100;
 			do{
 				std::memset(r30, 0, 8);
 				r30 += 8;
-			} while(r30 < unk0 + 0x100);
+			} while(r30 < r31);
         	std::memset(unk0, 0, sizeof(unk0));
 		}
 	};
@@ -43,9 +44,21 @@ namespace cf{
 	class CBattleManager : public IFactoryEvent {
 	public:
 		CBattleManager();
-		virtual ~CBattleManager();
+		virtual ~CBattleManager(); //0x8
+		virtual void FactoryEvent2(); //0x10
+		virtual void func_80085220(); //0x1C
+		virtual void func_800E2584(); //0x20
+		virtual void func_800F42A0(); //0x24
+		virtual void func_800885F0(); //0x28
+		virtual void func_800EA410(); //0x2C
+		virtual void func_800EA420(); //0x30
+		virtual void func_800EA460(); //0x34
+		virtual void func_800EA470(); //0x38
+		virtual void func_800EA998(); //0x3C
 
 		static CBattleManager* getInstance();
+		static void func_800D9190();
+		static void func_800D91D0();
 
 		//0x0: vtable
 		//0x0-4: IFactoryEvent
