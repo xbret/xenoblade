@@ -2,7 +2,7 @@
 #include "kyoshin/appgame/code_800B06A4.hpp"
 
 namespace cf{
-    CBattleManager::CBattleManager(){ 
+    CBattleManager::CBattleManager() : unk84(0) {
     }
 
     CBattleManager::~CBattleManager(){

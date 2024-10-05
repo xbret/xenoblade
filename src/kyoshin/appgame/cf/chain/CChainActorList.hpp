@@ -9,9 +9,12 @@ namespace cf {
     class CChainActorList {
     public:
         UnkClass_8027AD70 unk0; //0x0
-        reslist<CChainActor> mChainActorList; //0x1D88
+        u8 unk1D80[8];
+        reslist<CChainActor*> mChainActorList; //0x1D88
+        u8 unk1DA8[4];
         //0x1DAC: vtable
 
+        CChainActorList();
         virtual ~CChainActorList();
     };
 }
