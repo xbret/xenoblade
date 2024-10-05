@@ -11,18 +11,18 @@
 #include "monolib/vm/yvm.h"
 
 struct FunctionStruct{
-    const char* name;
-    void* function;
-    u32 unk8;
-    u32 uckC;
+	const char* name;
+	void* function;
+	u32 unk8;
+	u32 uckC;
 };
 
 struct StaticArcFile{
-    const char* unk0;
-    const char* filename;
-    u32 unk8;
-    void (*function1)(int);
-    void* function2;
+	const char* unk0;
+	const char* filename;
+	u32 unk8;
+	void (*function1)(int);
+	void* function2;
 };
 
 extern "C"{

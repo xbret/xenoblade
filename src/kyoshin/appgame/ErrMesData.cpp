@@ -56,41 +56,41 @@ static const wchar_t* errorDuringMemoryReadWriteErrorMessage =
 	L"くわしくはWii本体の取扱説明書をお読みください。";
 
 const wchar_t* getNoDiscErrorMessage(){
-    return noDiscErrorMessage;
+	return noDiscErrorMessage;
 }
 
 const wchar_t* getDiscUnreadableErrorMessage(){
-    return discUnreadableErrorMessage;
+	return discUnreadableErrorMessage;
 }
 
 const wchar_t* getReadingDiscErrorMessage(){
-    return readingDiscErrorMessage;
+	return readingDiscErrorMessage;
 }
 
 const wchar_t* getWiiRemoteDisconnectedErrorMessage(){
-    return wiiRemoteDisconnectedErrorMessage;
+	return wiiRemoteDisconnectedErrorMessage;
 }
 
 const wchar_t* getNunchuckDisconnectedErrorMessage(){
-    return nunchuckDisconnectedErrorMessage;
+	return nunchuckDisconnectedErrorMessage;
 }
 
 const wchar_t* getClassicControllerDisconnectedErrorMessage(){
-    return classicControllerDisconnectedErrorMessage;
+	return classicControllerDisconnectedErrorMessage;
 }
 
 const wchar_t* getNoExtensionErrorMessage(){
-    return noExtensionErrorMessage;
+	return noExtensionErrorMessage;
 }
 
 const wchar_t* getMemoryDamagedErrorMessage(){
-    return memoryDamagedErrorMessage;
+	return memoryDamagedErrorMessage;
 }
 
 const wchar_t* getMemoryReadWriteFailErrorMessage(){
-    return memoryReadWriteFailErrorMessage;
+	return memoryReadWriteFailErrorMessage;
 }
 
 const wchar_t* getErrorDuringMemoryReadWriteErrorMessage(){
-    return errorDuringMemoryReadWriteErrorMessage;
+	return errorDuringMemoryReadWriteErrorMessage;
 }

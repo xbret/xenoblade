@@ -5,6 +5,7 @@
     "[cpp]": {
         "files.encoding": "utf8"
     },
+    "editor.insertSpaces": false,
     "editor.tabSize": 4,
 	"files.exclude": {
         "**/CVS": false,

@@ -3,7 +3,7 @@
 #include "types.h"
 
 namespace cf {
-    class IBattleEvent {   
+	class IBattleEvent {   
 
-    };
+	};
 }

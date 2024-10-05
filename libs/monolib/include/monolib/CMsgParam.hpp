@@ -26,7 +26,7 @@ public:
 		for(int i = 0; i < field4; i++){
 			if(mArrayPtr[(field3 + i) % mSize].unk0 == 2){
 				return i;
-            }
+			}
 		}
 
 		return -1;

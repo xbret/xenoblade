@@ -28,6 +28,10 @@ public:
 
 class UnkClass_805764CC{
 public:
+	static UnkClass_805764CC* func_800B07E8();
+	void func_800B8804(IFactoryEvent*);
+	void func_800B88E0(IFactoryEvent*);
+
 	reslist<CfObject*> objList1; //0x00
 	UnkClass_800B0AD8 unk20; //0x20
 	//might be an array?

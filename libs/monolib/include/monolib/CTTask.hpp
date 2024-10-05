@@ -6,5 +6,5 @@
 template <typename T>
 class CTTask : CProcess {
 public:
-    CTTask(){}
+	CTTask(){}
 };
