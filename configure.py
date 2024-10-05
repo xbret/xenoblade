@@ -616,7 +616,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/cf/ICamControlClassic.cpp"),
             Object(NonMatching, "kyoshin/appgame/code_8027513C.cpp"),
             Object(NonMatching, "kyoshin/appgame/menu/CMenuLvUp.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActor.cpp"),
+            Object(NonMatching, "kyoshin/appgame/cf/chain/CChain.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/chain/CChainActorList.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/chain/CChainTime.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/chain/CChainTimer.cpp"),
