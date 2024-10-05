@@ -14,13 +14,13 @@ int deb_put(_sVMThread* pThread){
 
 //These two functions would've printed out performance info?
 int deb_performanceStart(_sVMThread* pThread) {
-    vmArgStringGet(2, vmArgPtrGet(pThread, 1));
-    return 0;
+	vmArgStringGet(2, vmArgPtrGet(pThread, 1));
+	return 0;
 }
 
 int deb_performanceEnd(_sVMThread* pThread) {
-    vmArgStringGet(2, vmArgPtrGet(pThread, 1));
-    return 0;
+	vmArgStringGet(2, vmArgPtrGet(pThread, 1));
+	return 0;
 }
 
 void pluginDebRegist(){

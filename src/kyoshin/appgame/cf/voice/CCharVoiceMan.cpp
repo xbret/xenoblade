@@ -1,5 +1,5 @@
 #include "kyoshin/appgame/cf/voice/CCharVoiceMan.hpp"
-#include "kyoshin/appgame/code_800B06A4.hpp"
+#include "kyoshin/appgame/UnkClass_805764CC.hpp"
 
 namespace cf{
 	CCharVoiceMan::CCharVoiceMan(){
@@ -19,12 +19,12 @@ namespace cf{
 		unk22A = 0;
 		unk22C = 0;
 		unk230 = 0;
-		void* classPtr = func_800B07E8();
-		func_800B8804(classPtr, this);
+		UnkClass_805764CC* classPtr = UnkClass_805764CC::func_800B07E8();
+		classPtr->func_800B8804(this);
 	}
 
 	CCharVoiceMan::~CCharVoiceMan(){
-		void* classPtr = func_800B07E8();
-		func_800B88E0(classPtr, this);
+		UnkClass_805764CC* classPtr = UnkClass_805764CC::func_800B07E8();
+		classPtr->func_800B88E0(this);
 	}
 }

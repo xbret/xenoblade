@@ -7,8 +7,8 @@ extern reslist<cf::CfObject*>* func_800B6BA4();
 
 
 int voice_play(_sVMThread* pThread) {
-    _reslist_node<cf::CfObject*>* node;
-    int r30 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
+	_reslist_node<cf::CfObject*>* node;
+	int r30 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
 	int r27 = vmArgIntGet(3, vmArgPtrGet(pThread, 2));
 	//TODO: make this an inline
 	reslist<cf::CfObject*>* list = func_800B6BA4();

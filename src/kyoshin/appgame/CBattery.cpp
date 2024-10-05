@@ -13,13 +13,13 @@ extern void func_8045F778(UnkClass_8045F564*);
 extern void func_8045F810(UnkClass_8045F564*);
 
 CBattery::CBattery(u8 batteryLevel) : unk4(){
-    mFileHandle = nullptr;
-    mAccessor = nullptr;
-    mLayout = nullptr;
-    unk20 = false;
-    unk21 = 1;
-    unk22 = false;
-    mBatteryLevel = batteryLevel;
+	mFileHandle = nullptr;
+	mAccessor = nullptr;
+	mLayout = nullptr;
+	unk20 = false;
+	unk21 = 1;
+	unk22 = false;
+	mBatteryLevel = batteryLevel;
 }
 
 CBattery::~CBattery(){

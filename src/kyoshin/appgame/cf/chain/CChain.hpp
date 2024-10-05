@@ -10,13 +10,13 @@
 
 namespace cf {
 	//size: 0x1F0C?
-    class CChain {
+	class CChain {
 	public:
 		CChain();
 		~CChain(){}
 
 		u8 unk0[0x18];
-        CChainActorList mChainActorList; //0x18
+		CChainActorList mChainActorList; //0x18
 		CChainMember mChainMember; //0x1DC8
 		CChainTimer mChainTimer1; //0x1EB4
 		CChainTimer mChainTimer2; //0x1EBC

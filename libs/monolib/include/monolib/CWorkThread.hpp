@@ -24,10 +24,10 @@ public:
 	void func_80438BD8(CWorkThread* r4, u32 r5);
 	u32 func_80457CA4(UNKTYPE* r4, u32 r5);
 
-    inline bool CWorkThread_inline1() const {
-        bool r0_1 = (unk7C & 0x10) ? true : (unk80.someInline() >= 0);
-	    return (!r0_1 && (unk48 == 2 || unk48 == 3));
-    }
+	inline bool CWorkThread_inline1() const {
+		bool r0_1 = (unk7C & 0x10) ? true : (unk80.someInline() >= 0);
+		return (!r0_1 && (unk48 == 2 || unk48 == 3));
+	}
 
 	//0x0: vtable
 	FixStr<64> mName; //0x4

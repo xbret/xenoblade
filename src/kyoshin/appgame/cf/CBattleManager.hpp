@@ -36,7 +36,7 @@ namespace cf{
 				std::memset(r30, 0, 8);
 				r30 += 8;
 			} while(r30 < r31);
-        	std::memset(unk0, 0, sizeof(unk0));
+			std::memset(unk0, 0, sizeof(unk0));
 		}
 	};
 
