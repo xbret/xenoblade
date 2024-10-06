@@ -341,7 +341,7 @@ def DolphinLib(lib_name: str, objects: List[Object], version="Wii/1.1", extra_cf
     return {
         "lib": lib_name,
         "mw_version": version,
-        "root_dir": "libs/RVL_SDK",
+        "src_dir": "libs/RVL_SDK/src",
         "cflags": cflags_sdk + extra_cflags,
         "progress_category": "sdk",
         "objects": objects,
@@ -351,7 +351,7 @@ def criwareLib(lib_name, objects, extra_cflags=[]):
     return {
         "lib": lib_name,
         "mw_version": "GC/3.0a5.2",
-        "root_dir": "libs/CriWare",
+        "src_dir": "libs/CriWare/src",
         "cflags": cflags_criware + extra_cflags,
         "progress_category": "criware",
         "objects": objects,
@@ -361,7 +361,7 @@ def nw4rLib(lib_name, objects, extra_cflags=[]):
     return {
         "lib": lib_name,
         "mw_version": "GC/3.0a5.2",
-        "root_dir": "libs/nw4r",
+        "src_dir": "libs/nw4r/src",
         "cflags": cflags_nw4r + extra_cflags,
         "progress_category": "nw4r",
         "objects": objects,
@@ -378,7 +378,6 @@ config.libs = [
     {
         "lib": "kyoshin",
         "mw_version": "Wii/1.1",
-        "root_dir": "",
         "cflags": cflags_game,
         "progress_category": "game",
         "objects": [
@@ -710,7 +709,7 @@ config.libs = [
     {
         "lib": "Runtime.PPCEABI.H.a",
         "mw_version": "Wii/1.1",
-        "root_dir": "libs/PowerPC_EABI_Support",
+        "src_dir": "libs/PowerPC_EABI_Support/src",
         "cflags": cflags_runtime,
         "progress_category": "mw",
         "objects": [
@@ -730,7 +729,7 @@ config.libs = [
     {
         "lib": "MSL_C.PPCEABI.bare.H",
         "mw_version": "Wii/1.1",
-        "root_dir": "libs/PowerPC_EABI_Support",
+        "src_dir": "libs/PowerPC_EABI_Support/src",
         "cflags": cflags_mslc,
         "progress_category": "mw",
         "objects": [
@@ -809,7 +808,7 @@ config.libs = [
     {
         "lib": "TRK_Hollywood_Revolution",
         "mw_version": "Wii/1.0a",
-        "root_dir": "libs/PowerPC_EABI_Support",
+        "src_dir": "libs/PowerPC_EABI_Support/src",
         "cflags": cflags_trk,
         "progress_category": "mw",
         "objects": [
@@ -844,7 +843,7 @@ config.libs = [
     {
         "lib": "NdevExi2A",
         "mw_version": "GC/3.0a5.2",
-        "root_dir": "libs/NdevExi2A",
+        "src_dir": "libs/NdevExi2A/src",
         "cflags": cflags_ndev,
         "progress_category": "sdk",
         "objects": [
@@ -1065,7 +1064,7 @@ config.libs = [
     {
         "lib": "homebuttonLib",
         "mw_version": sdk_hbm_compiler,
-        "root_dir": "libs/RVL_SDK",
+        "src_dir": "libs/RVL_SDK/src",
         "cflags": cflags_hbm,
         "progress_category": "sdk",
         "objects": [
@@ -1623,7 +1622,7 @@ config.libs = [
     {
         "lib": "monolib",
         "mw_version": "Wii/1.1",
-        "root_dir": "libs/monolib",
+        "src_dir": "libs/monolib/src",
         "cflags": cflags_game,
         "progress_category": "monolib",
         "objects": [
