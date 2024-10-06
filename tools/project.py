@@ -81,18 +81,15 @@ class Object:
         set_default("shift_jis", config.shift_jis)
         set_default("src_dir", config.src_dir)
 
-        root_dir = lib["root_dir"]
-
         # Resolve paths
         build_dir = config.out_path()
-        obj.src_path = root_dir / Path(obj.options["src_dir"]) / obj.options["source"]
+        obj.src_path = Path(obj.options["src_dir"]) / obj.options["source"]
         if obj.options["asm_dir"] is not None:
             obj.asm_path = (
-                root_dir / Path(obj.options["asm_dir"]) / obj.options["source"]
+                Path(obj.options["asm_dir"]) / obj.options["source"]
             ).with_suffix(".s")
-        
-        if root_dir != "":
-            self.name = root_dir + "/" + self.name
+
+        self.name = str(obj.options["src_dir"]) + "/" + self.name
         base_name = Path(self.name).with_suffix("")
         obj.src_obj_path = build_dir / "src" / f"{base_name}.o"
         obj.asm_obj_path = build_dir / "mod" / f"{base_name}.o"
