@@ -57,7 +57,7 @@ DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
      *
      * This can be done by either checking the value from the DVD
      * (OSBI2.debugFlag), or by checking the global OS_BI2_DEBUG_FLAG.
-     * 
+     *
      * If the DVD BI2 is available, it is prioritized over the global value.
      */
     lis r6, OS_DVD_BI2@ha
@@ -107,7 +107,7 @@ _no_dvd_bi2:
      * - BI2 Level 4 -> ID 2 (BBA)
      */
 _handle_bi2_debug_flag:
-    // BI2 Debug Level 3: Init TRK as GDEV hardware 
+    // BI2 Debug Level 3: Init TRK as GDEV hardware
     li r5, 0
     cmplwi r7, 2
     beq _call_init_metro_trk

@@ -29,7 +29,7 @@ size_t __fwrite(const void* pPtr, size_t memb_size, size_t num_memb, FILE* file)
     int res, buff;
 
     if (fwide(file, 0) == 0) {
-        fwide(file, -1);   
+        fwide(file, -1);
     }
 
     rem_bytes = memb_size * num_memb;

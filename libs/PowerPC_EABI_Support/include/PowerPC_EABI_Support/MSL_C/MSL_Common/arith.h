@@ -4,8 +4,8 @@
 #include "types.h"
 
 typedef struct {
-	int quot; /* quotient */
-	int rem;  /* remainder */
+    int quot; /* quotient */
+    int rem;  /* remainder */
 } div_t;
 
 

@@ -27,7 +27,7 @@ s32 ESP_CloseLib(void) {
     }
 
     return ret;
-} 
+}
 
 //unused
 void ESP_ImportTicket(){
@@ -184,7 +184,7 @@ s32 ESP_DiGetTicketView(const void* ticket, ESTicketView* ticketView) {
         goto out;
     }
 
-    v[0].base = (u8*)ticket; 
+    v[0].base = (u8*)ticket;
 
     if (ticket == (ESTicketView*)NULL) {
         v[0].length = 0;

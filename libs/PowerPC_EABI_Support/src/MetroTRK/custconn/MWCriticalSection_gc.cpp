@@ -6,11 +6,11 @@ void MWInitializeCriticalSection(unsigned int* section){
 }
 
 void MWEnterCriticalSection(unsigned int* section){
-	*section = OSDisableInterrupts();
+    *section = OSDisableInterrupts();
 }
 
 void MWExitCriticalSection(unsigned int* section){
-	OSRestoreInterrupts(*section);
+    OSRestoreInterrupts(*section);
 }
 
 //unused

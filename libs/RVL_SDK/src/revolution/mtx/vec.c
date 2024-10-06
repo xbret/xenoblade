@@ -280,7 +280,7 @@ f32 PSVECSquareDistance(register const Vec* a, register const Vec* b) {
     asm {
         // Load vector components
         psq_l axy, Vec.x(a), 0, 0
-        psq_l ayz, Vec.y(a), 0, 0 
+        psq_l ayz, Vec.y(a), 0, 0
         psq_l bxy, Vec.x(b), 0, 0
         psq_l byz, Vec.y(b), 0, 0
 

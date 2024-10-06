@@ -1,7 +1,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 
 asm void TRKSaveExtended1Block(){
-	nofralloc
+    nofralloc
     lis r2, gTRKCPUState@h
     ori r2, r2, gTRKCPUState@l
 
@@ -127,11 +127,11 @@ asm void TRKSaveExtended1Block(){
     mfspr r30, SPR_DMAU
     mfspr r31, SPR_DMAL
     stmw r20, ProcessorState_PPC.Extended1.GQR(r2)
-    blr 
+    blr
 }
 
 asm void TRKRestoreExtended1Block(){
-	nofralloc
+    nofralloc
     lis r2, gTRKCPUState@h
     ori r2, r2, gTRKCPUState@l
 
@@ -165,7 +165,7 @@ no_tbr_restore:
     mtspr SPR_DMAU, r30
     mtspr SPR_DMAL, r31
     b __603e_specific_restore
-	//Stubbed code only present in Wii MetroTRK v0.1
+    //Stubbed code only present in Wii MetroTRK v0.1
 __603e_specific_restore:
     lmw r19, ProcessorState_PPC.Extended1.DABR(r2)
     mtspr SPR_DABR, r19
@@ -179,7 +179,7 @@ __603e_specific_restore:
     mtspr SPR_ICTC, r30
     mtspr SPR_L2CR, r31
     b __end_specific_restore
-	//Stubbed code only present in Wii MetroTRK v0.1
+    //Stubbed code only present in Wii MetroTRK v0.1
 __end_specific_restore:
     lmw r16, ProcessorState_PPC.Extended1.SR[0](r2)
     mtsr 0, r16
@@ -229,7 +229,7 @@ __end_specific_restore:
     mtspr SPR_SPRG1, r26
     mtspr SPR_SPRG2, r27
     mtspr SPR_SPRG3, r28
-	
+    
     mtspr SPR_IABR, r30
     mtspr SPR_EAR, r31
     blr

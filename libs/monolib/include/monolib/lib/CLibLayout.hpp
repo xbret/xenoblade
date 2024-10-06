@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 
 #include "types.h"
 #include "monolib/UnkClass_8045F564.hpp"

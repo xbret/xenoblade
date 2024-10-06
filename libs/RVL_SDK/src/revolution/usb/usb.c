@@ -155,7 +155,7 @@ static s32 _intrBlkCtrlIsoCb(s32 result, void* arg) {
     if (block->nclean != USB_NCLEAN_CTRLMSG &&
         block->nclean != USB_NCLEAN_BULKMSG &&
         block->nclean != USB_NCLEAN_CLOSEDEVICE &&
-        block->nclean != USB_NCLEAN_MSG4 && 
+        block->nclean != USB_NCLEAN_MSG4 &&
         block->nclean != USB_NCLEAN_MSG2) {
         USB_ERR("__intrBlkCtrlIsoCb: got invalid nclean\n");
     } else {

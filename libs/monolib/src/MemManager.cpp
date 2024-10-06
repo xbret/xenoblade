@@ -3,7 +3,7 @@
 
 namespace mtl{
 
-    u8 MemManager::regionArray[MAX_REGIONS * sizeof(Region)]; 
+    u8 MemManager::regionArray[MAX_REGIONS * sizeof(Region)];
     s32 MemManager::lbl_80667E50;
     bool lbl_80667E54;
     BOOL lbl_80667E58;

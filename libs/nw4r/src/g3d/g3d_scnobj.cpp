@@ -301,7 +301,7 @@ namespace nw4r
                     break;
                 default:
                     return ScnObj::SetScnObjOption(option, set);
-            }            
+            }
 
             return true;
         }

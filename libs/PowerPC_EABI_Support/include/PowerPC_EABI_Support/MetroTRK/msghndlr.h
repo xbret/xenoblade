@@ -10,18 +10,18 @@ extern "C"{
 #endif
 
 typedef struct msgbuf_t {
-	ui32 msgLength;
-	//TODO: fix enum size shenanigans
-	union{
-		ui8 commandId;
-		MessageCommandID commandIdInt;
-	};
-	union{
-	    ui8 replyError;
+    ui32 msgLength;
+    //TODO: fix enum size shenanigans
+    union{
+        ui8 commandId;
+        MessageCommandID commandIdInt;
+    };
+    union{
+        ui8 replyError;
         DSReplyError replyErrorInt;
     };
-	ui32 unkC;
-	ui8 unk10[0x30];
+    ui32 unkC;
+    ui8 unk10[0x30];
 } msgbuf_t;
 
 bool GetTRKConnected();

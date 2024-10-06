@@ -51,7 +51,7 @@ namespace nw4r
 
             void SetPolicy(PlayPolicyFunc func)
             {
-                mPolicy = func;    
+                mPolicy = func;
             }
 
             void UpdateFrm()

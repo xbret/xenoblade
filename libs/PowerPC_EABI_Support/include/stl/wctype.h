@@ -46,16 +46,16 @@ static inline int iswpunct(wint_t c) {
     return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_punct);
 }
 
-static inline int iswspace(wint_t c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_space); 
+static inline int iswspace(wint_t c) {
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_space);
 }
 
-static inline int iswupper(wint_t c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_upper); 
+static inline int iswupper(wint_t c) {
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_upper);
 }
 
-static inline int iswxdigit(wint_t c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_xdigit); 
+static inline int iswxdigit(wint_t c) {
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->wctype_map_ptr[c] & wctype_xdigit);
 }
 
 static inline wint_t towlower(wint_t c) {

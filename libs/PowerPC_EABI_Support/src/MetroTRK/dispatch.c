@@ -12,40 +12,40 @@ DSError TRK_DispatchMessage(MessageBuffer* buffer) {
     switch(command){
         case kDSConnect:
             result = TRK_DoConnect(temp);
-        	break;
+            break;
         case kDSDisconnect:
             result = TRKDoDisconnect(temp);
-        	break;
+            break;
         case kDSReset:
             result = TRKDoReset(temp);
-        	break;
+            break;
         case kDSOverride:
             result = TRKDoOverride(temp);
-        	break;
+            break;
         case kDSReadMemory:
             result = TRKDoReadMemory(temp);
-        	break;
+            break;
         case kDSWriteMemory:
             result = TRKDoWriteMemory(temp);
-        	break;
+            break;
         case kDSReadRegisters:
             result = TRKDoReadRegisters(temp);
-        	break;
+            break;
         case kDSWriteRegisters:
             result = TRKDoWriteRegisters(temp);
-        	break;
+            break;
         case kDSContinue:
             result = TRKDoContinue(temp);
-        	break;
+            break;
         case kDSStep:
             result = TRKDoStep(temp);
-        	break;
+            break;
         case kDSStop:
             result = TRKDoStop(temp);
-        	break;
+            break;
         case kDSSetOption:
             result = TRKDoSetOption(temp);
-        	break;
+            break;
     }
     return result;
 }

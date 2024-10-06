@@ -10,8 +10,8 @@ extern "C"{
 #endif
 
 typedef struct TRKPacketSeq {
-	ui16 unk0;
-	ui8 unk2[6];
+    ui16 unk0;
+    ui8 unk2[6];
 } TRKPacketSeq;
 
 DSError TRK_MessageSend(MessageBuffer*);

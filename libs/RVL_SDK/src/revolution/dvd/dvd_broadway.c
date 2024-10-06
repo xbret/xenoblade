@@ -469,7 +469,7 @@ BOOL DVDLowOpenPartition(const u32 offset, const ESTicket* const eTicket, const 
     if (certificates == NULL) {
         ioVec[2].length = 0;
     } else {
-        ioVec[2].length = numCertBytes; 
+        ioVec[2].length = numCertBytes;
     }
 
     // Output vector 1: TMD
@@ -617,7 +617,7 @@ BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32 offset, const ESTicketVie
     if (certificates == 0) {
         ioVec[3].length = 0;
     } else {
-        ioVec[3].length = numCertBytes; 
+        ioVec[3].length = numCertBytes;
     }
 
     // Output vector 1: Last ticket error

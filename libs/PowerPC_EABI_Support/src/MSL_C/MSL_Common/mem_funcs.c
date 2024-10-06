@@ -1,9 +1,9 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.h"
 
-#define srcCharPtr	((unsigned char*)pSrc)
-#define destCharPtr	((unsigned char*)pDest)
-#define srcLongPtr	((unsigned long*)pSrc)
-#define destLongPtr	((unsigned long*)pDest)
+#define srcCharPtr  ((unsigned char*)pSrc)
+#define destCharPtr ((unsigned char*)pDest)
+#define srcLongPtr  ((unsigned long*)pSrc)
+#define destLongPtr ((unsigned long*)pDest)
 
 //unused
 void __copy_mem(){
@@ -53,14 +53,14 @@ void __copy_longs_aligned(void *pDest, const void *pSrc, unsigned long len) {
     }
 
     srcCharPtr = ((unsigned char *) (srcLongPtr + 1)) - 1;
-	destCharPtr = ((unsigned char *) (destLongPtr + 1)) - 1;
+    destCharPtr = ((unsigned char *) (destLongPtr + 1)) - 1;
 
     len &= 3;
-	
-	if (len != 0) {
-		do
-			*++(destCharPtr) = *++(srcCharPtr);
-		while (--len);
+    
+    if (len != 0) {
+        do
+            *++(destCharPtr) = *++(srcCharPtr);
+        while (--len);
     }
 }
 

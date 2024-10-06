@@ -14,12 +14,12 @@ typedef ui64 FloatType;
 typedef FloatType FPType;    /* TRK core calls it FPType */
 
 typedef struct Default_PPC{
-	DefaultType GPR[32];
-	DefaultType PC;
-	DefaultType LR;
-	DefaultType CR;
-	DefaultType CTR;
-	DefaultType XER;
+    DefaultType GPR[32];
+    DefaultType PC;
+    DefaultType LR;
+    DefaultType CR;
+    DefaultType CTR;
+    DefaultType XER;
 } Default_PPC;
 
 /*
@@ -38,9 +38,9 @@ typedef struct Default_PPC{
 #define TRK_DEFAULT_SIZE              (sizeof(DefaultType))
 
 typedef struct Float_PPC{
-	FloatType FPR[32];
-	FloatType FPSCR;
-	FloatType FPECR;
+    FloatType FPR[32];
+    FloatType FPSCR;
+    FloatType FPECR;
 } Float_PPC;
 
 /*
@@ -65,9 +65,9 @@ typedef ui32            InstructionType;
 typedef ui16            ExceptionCauseType;
 
 typedef struct StopInfo_PPC{
-	PCType PC;
-	InstructionType PCInstruction;
-	ExceptionCauseType exceptionID;
+    PCType PC;
+    InstructionType PCInstruction;
+    ExceptionCauseType exceptionID;
 } StopInfo_PPC;
 
 //
@@ -203,7 +203,7 @@ typedef InstructionType BreakpointRestore;
 #define SPR_FPECR         1022
 
 //MSR Register bits
-#define COND_EQ		2
+#define COND_EQ 2
 #define MSR_SE            0x0400      /* SE bit of MSR (bit 21) */
 #define MSR_EE            0x8000      /* EE bit of MSR (bit 16) */
 #define MSR_RI            0x0002      /* RI bit of MSR (bit 30) */

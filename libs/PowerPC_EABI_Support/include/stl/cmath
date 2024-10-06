@@ -34,5 +34,5 @@ using ::tan;
 using ::tanf;
 } // namespace std
 
-#endif 
+#endif
 #endif

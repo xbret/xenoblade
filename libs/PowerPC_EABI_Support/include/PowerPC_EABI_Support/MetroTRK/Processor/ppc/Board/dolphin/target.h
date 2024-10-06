@@ -18,7 +18,7 @@
 
 #define TRK_TRANSPORT_INT_DRIVEN 1
 
-#define TRK_TRANSPORT_INT_KEY		0x00000500
+#define TRK_TRANSPORT_INT_KEY 0x00000500
 
 //Target specific includes
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Board/dolphin/target_asm.h"
