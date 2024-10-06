@@ -11,29 +11,29 @@
 
 typedef enum {
     kDSPing = 0x00,
-	kDSConnect = 0x01,
-	kDSDisconnect = 0x02,
-	kDSReset = 0x03,
-	kDSVersions = 0x04,
-	kDSSupportMask = 0x05,
-	kDSOverride = 0x07,
-	kDSReadMemory = 0x10,
-	kDSWriteMemory = 0x11,
-	kDSReadRegisters = 0x12,
-	kDSWriteRegisters = 0x13,
-	kDSSetOption = 0x17,
-	kDSContinue = 0x18,
-	kDSStep = 0x19,
-	kDSStop = 0x1a,
-	kDSReplyACK = 0x80,
-	kDSReplyNAK = 0xFF,
-	kDSNotifyStopped = 0x90,
-	kDSNotifyException = 0x91,
-	kDSWriteFile = 0xD0,
-	kDSReadFile = 0xD1,
-	kDSOpenFile = 0xD2,
-	kDSCloseFile = 0xD3,
-	kDSPositionFile = 0xD4
+    kDSConnect = 0x01,
+    kDSDisconnect = 0x02,
+    kDSReset = 0x03,
+    kDSVersions = 0x04,
+    kDSSupportMask = 0x05,
+    kDSOverride = 0x07,
+    kDSReadMemory = 0x10,
+    kDSWriteMemory = 0x11,
+    kDSReadRegisters = 0x12,
+    kDSWriteRegisters = 0x13,
+    kDSSetOption = 0x17,
+    kDSContinue = 0x18,
+    kDSStep = 0x19,
+    kDSStop = 0x1a,
+    kDSReplyACK = 0x80,
+    kDSReplyNAK = 0xFF,
+    kDSNotifyStopped = 0x90,
+    kDSNotifyException = 0x91,
+    kDSWriteFile = 0xD0,
+    kDSReadFile = 0xD1,
+    kDSOpenFile = 0xD2,
+    kDSCloseFile = 0xD3,
+    kDSPositionFile = 0xD4
 } MessageCommandID;
 
 
@@ -172,27 +172,27 @@ typedef ui8 DSSupportMask[32];             /* 256 bits total */
 #define DS_MIN_REPLY_WRITEMEMORY_LENGTH      (DS_MIN_REPLY_LENGTH + 2)
 
 //Memory commands options
-#define DS_MSG_MEMORY_SEGMENTED	0x01		/* non-flat addr space */
-#define DS_MSG_MEMORY_EXTENDED	0x02		/* > 32-bit data addr */
-#define DS_MSG_MEMORY_PROTECTED	0x04		/* non-user memory */
-#define DS_MSG_MEMORY_USERVIEW	0x08		/* breakpoints are invisible */
+#define DS_MSG_MEMORY_SEGMENTED 0x01 /* non-flat addr space */
+#define DS_MSG_MEMORY_EXTENDED  0x02 /* > 32-bit data addr */
+#define DS_MSG_MEMORY_PROTECTED 0x04 /* non-user memory */
+#define DS_MSG_MEMORY_USERVIEW  0x08 /* breakpoints are invisible */
 
 
-#define DS_MSG_MEMORY_SPACE_PROGRAM	0x00
-#define DS_MSG_MEMORY_SPACE_DATA	0x40
-#define DS_MSG_MEMORY_SPACE_IO		0x80
+#define DS_MSG_MEMORY_SPACE_PROGRAM 0x00
+#define DS_MSG_MEMORY_SPACE_DATA    0x40
+#define DS_MSG_MEMORY_SPACE_IO      0x80
 
 #define TRK_MSG_HEADER_LENGTH                DS_MSG_MEMORY_SPACE_DATA
 #define TRK_MSG_REPLY_HEADER_LENGTH          (TRK_MSG_HEADER_LENGTH + DS_MIN_MSG_LENGTH)
 
 //Others
 
-#define DS_MSG_MEMORY_SPACE_MASK	0xC0
+#define DS_MSG_MEMORY_SPACE_MASK    0xC0
 
-#define DS_MAXREADWRITELENGTH	0x0800	/* 2K data portion */
+#define DS_MAXREADWRITELENGTH   0x0800  /* 2K data portion */
 #define DS_MAXMESSAGESIZE (DS_MAXREADWRITELENGTH + 0x80)
-											/* max size of all message including cmd hdr */
-#define MAXMESSAGESIZE	DS_MAXMESSAGESIZE
+                                            /* max size of all message including cmd hdr */
+#define MAXMESSAGESIZE DS_MAXMESSAGESIZE
 
 #define DS_MIN_MSG_FLUSHCACHE_LENGTH         (DS_MIN_MSG_LENGTH + 9)
 #define DS_MIN_REPLY_FLUSHCACHE_LENGTH       (DS_MIN_REPLY_LENGTH)
@@ -213,10 +213,10 @@ typedef ui8 DSSupportMask[32];             /* 256 bits total */
 
 //Register commands options
 typedef enum {
-	kDSRegistersDefault   = 0x0,        /* Default register block */
-	kDSRegistersFP        = 0x1,        /* floating point registers */
-	kDSRegistersExtended1 = 0x2,        /* Extended register set 1 */
-	kDSRegistersExtended2 = 0x3         /* Extended register set 2 */
+    kDSRegistersDefault   = 0x0,        /* Default register block */
+    kDSRegistersFP        = 0x1,        /* floating point registers */
+    kDSRegistersExtended1 = 0x2,        /* Extended register set 1 */
+    kDSRegistersExtended2 = 0x3         /* Extended register set 2 */
 } DSMessageRegisterOptions;
 
 
@@ -232,10 +232,10 @@ typedef enum {
 
 //Step command options
 typedef enum {
-	kDSStepIntoCount = 0x00,			/* Exec count instructions & stop */
-	kDSStepIntoRange = 0x01,			/* Exec until PC is out of specified range */
-	kDSStepOverCount = 0x10,			/* Step over 1*count instructions & stop */
-	kDSStepOverRange = 0x11				/* Step over until PC is out of specified range */
+    kDSStepIntoCount = 0x00,         /* Exec count instructions & stop */
+    kDSStepIntoRange = 0x01,         /* Exec until PC is out of specified range */
+    kDSStepOverCount = 0x10,         /* Step over 1*count instructions & stop */
+    kDSStepOverRange = 0x11          /* Step over until PC is out of specified range */
 } DSMessageStepOptions;
 
 
@@ -267,27 +267,27 @@ typedef enum DSIOResult
 
 //Reply errors
 typedef enum {
-	kDSReplyNoError = 0x00,
-	kDSReplyError = 0x01,
-	kDSReplyPacketSizeError = 0x02,
-	kDSReplyCWDSError = 0x03,
-	kDSReplyEscapeError = 0x04,
-	kDSReplyBadFCS = 0x05,
-	kDSReplyOverflow = 0x06,
-	kDSReplySequenceMissing = 0x07,
-	kDSReplyUnsupportedCommandError = 0x10,
-	kDSReplyParameterError = 0x11,
-	kDSReplyUnsupportedOptionError = 0x12,
-	kDSReplyInvalidMemoryRange = 0x13,
-	kDSReplyInvalidRegisterRange = 0x14,
-	kDSReplyCWDSException = 0x15,
-	kDSReplyNotStopped = 0x16,
-	kDSReplyBreakpointsFull = 0x17,
-	kDSReplyBreakpointConflict = 0x18,
-	kDSReplyOsError = 0x20,
-	kDSReplyInvalidProcessId = 0x21,
-	kDSReplyInvalidThreadId = 0x22,
-	kDSDebugSecurityError = 0x23
+    kDSReplyNoError = 0x00,
+    kDSReplyError = 0x01,
+    kDSReplyPacketSizeError = 0x02,
+    kDSReplyCWDSError = 0x03,
+    kDSReplyEscapeError = 0x04,
+    kDSReplyBadFCS = 0x05,
+    kDSReplyOverflow = 0x06,
+    kDSReplySequenceMissing = 0x07,
+    kDSReplyUnsupportedCommandError = 0x10,
+    kDSReplyParameterError = 0x11,
+    kDSReplyUnsupportedOptionError = 0x12,
+    kDSReplyInvalidMemoryRange = 0x13,
+    kDSReplyInvalidRegisterRange = 0x14,
+    kDSReplyCWDSException = 0x15,
+    kDSReplyNotStopped = 0x16,
+    kDSReplyBreakpointsFull = 0x17,
+    kDSReplyBreakpointConflict = 0x18,
+    kDSReplyOsError = 0x20,
+    kDSReplyInvalidProcessId = 0x21,
+    kDSReplyInvalidThreadId = 0x22,
+    kDSDebugSecurityError = 0x23
 } DSReplyError;
 
 #endif

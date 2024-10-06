@@ -19,7 +19,7 @@ typedef enum _va_arg_type {
 typedef struct __va_list_struct {
     char gpr;
     char fpr;
-	char reserved[2];
+    char reserved[2];
     char* input_arg_area;
     char* reg_save_area;
 } __va_list_struct;

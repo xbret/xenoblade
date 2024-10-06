@@ -5,25 +5,25 @@
 typedef struct type_info_struct type_info_struct;
 
 typedef struct type_info_base_list {
-	type_info_struct *baseTypeInfo;
-	long offset;
-}	type_info_base_list;
+    type_info_struct *baseTypeInfo;
+    long offset;
+} type_info_base_list;
 
 typedef struct type_info_ambighead {
-	void* baseTypeInfo;
-	long offset;
-	long bases;
-}	type_info_ambighead;
+    void* baseTypeInfo;
+    long offset;
+    long bases;
+} type_info_ambighead;
 
 struct type_info_struct {
-	char* typeName;
-	type_info_base_list* baseList;
+    char* typeName;
+    type_info_base_list* baseList;
 };
 
 typedef struct RTTIVTableHeader {
-	type_info_struct* typeInfo;
-	long offset;
-}	RTTIVTableHeader;
+    type_info_struct* typeInfo;
+    long offset;
+} RTTIVTableHeader;
 
 extern "C"{
     void* __get_typeid(void*, long);
@@ -44,10 +44,10 @@ void* __get_typeid(void* obj, long offset){
     if(obj == NULL) throw std::bad_typeid();
 
     if((obj = **(void***)((char*)obj + offset)) == 0){
-		return &unknown_type;
-	}
-	
-	return obj;
+        return &unknown_type;
+    }
+    
+    return obj;
 }
 
 void* __dynamic_cast(void* obj, int offset, type_info_struct* typeInfo, type_info_struct* subtypeInfo, short isReference) {
@@ -70,7 +70,7 @@ void* __dynamic_cast(void* obj, int offset, type_info_struct* typeInfo, type_inf
 
         list = vtable_header->typeInfo->baseList;
     
-       	if(list != NULL){
+           if(list != NULL){
             for(; list->baseTypeInfo; list++){
                 if (list->offset & 0x80000000) {
                     temp = (list->offset & 0x7FFFFFFF);
@@ -81,7 +81,7 @@ void* __dynamic_cast(void* obj, int offset, type_info_struct* typeInfo, type_inf
                         
                         for(i = 0; i < bases; i++){
                             if (vtable_header->offset + list->offset == 0 && strequal(list->baseTypeInfo->typeName, subtypeInfo->typeName) == 0) {
-                                return (char*)result + list->offset;    
+                                return (char*)result + list->offset;
                             }
                             list++;
                         }
@@ -89,7 +89,7 @@ void* __dynamic_cast(void* obj, int offset, type_info_struct* typeInfo, type_inf
                         break;
                     }else{
                         list = (type_info_base_list*)((type_info_ambighead*)list + 1);
-					    list += bases - 1;
+                        list += bases - 1;
                     }
                 }else{
                     if (strequal(list->baseTypeInfo->typeName, typeInfo->typeName) == 0) {

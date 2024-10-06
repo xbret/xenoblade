@@ -40,43 +40,43 @@ typedef struct __mem_pool_obj {
 } __mem_pool_obj;
 
 typedef struct __mem_pool {
-	void* reserved[14];
+    void* reserved[14];
 } __mem_pool;
 
 typedef signed long tag_word;
 
 typedef struct block_header {
-    tag_word				tag;
-    struct block_header *	prev;
-    struct block_header *	next;
+    tag_word                tag;
+    struct block_header *   prev;
+    struct block_header *   next;
 } block_header;
 
 typedef struct list_header {
-    block_header *		rover;
-    block_header		header;
+    block_header *      rover;
+    block_header        header;
 } list_header;
 
 typedef struct heap_header {
-    struct heap_header* 	prev;
-    struct heap_header*		next;
+    struct heap_header*     prev;
+    struct heap_header*     next;
 } heap_header;
 
 struct mem_pool_obj;
-typedef void *	(*sys_alloc_ptr)(unsigned long, struct mem_pool_obj*);
-typedef void	(*sys_free_ptr)(void *, struct mem_pool_obj*);
+typedef void *  (*sys_alloc_ptr)(unsigned long, struct mem_pool_obj*);
+typedef void    (*sys_free_ptr)(void *, struct mem_pool_obj*);
 
 typedef struct pool_options{
-    sys_alloc_ptr	sys_alloc_func;
-    sys_free_ptr	sys_free_func;
-    unsigned long		min_heap_size;
-    int				always_search_first;
+    sys_alloc_ptr   sys_alloc_func;
+    sys_free_ptr    sys_free_func;
+    unsigned long   min_heap_size;
+    int             always_search_first;
 } pool_options;
 
 typedef struct mem_pool_obj {
-    list_header		free_list;
-    pool_options	options;
-    heap_header*	heap_list;
-    void*			userData;
+    list_header     free_list;
+    pool_options    options;
+    heap_header*    heap_list;
+    void*           userData;
 
 } mem_pool_obj;
 
@@ -93,19 +93,19 @@ static const unsigned long fix_pool_sizes[] = {4, 12, 20, 36, 52, 68};
 #define Block_size(ths) ((ths)->size & 0xFFFFFFF8)
 #define Block_start(ths) (*(SubBlock**)((char*)(ths) + Block_size((ths)) - sizeof(unsigned long)))
 
-#define SubBlock_set_free(ths)                                               \
-	unsigned long this_size = SubBlock_size((ths));                               \
-	(ths)->size &= ~0x2;                                        \
-	*(unsigned long*)((char*)(ths) + this_size) &= ~0x4;              \
-	*(unsigned long*)((char*)(ths) + this_size - sizeof(unsigned long)) = this_size
+#define SubBlock_set_free(ths)                                     \
+    unsigned long this_size = SubBlock_size((ths));                \
+    (ths)->size &= ~0x2;                                           \
+    *(unsigned long*)((char*)(ths) + this_size) &= ~0x4;           \
+    *(unsigned long*)((char*)(ths) + this_size - sizeof(unsigned long)) = this_size
 
 
 #define SubBlock_is_free(ths) !((ths)->size & 2)
 #define SubBlock_set_size(ths, sz)                                 \
-	(ths)->size &= ~0xFFFFFFF8;                                    \
-	(ths)->size |= (sz) & 0xFFFFFFF8;                              \
-	if (SubBlock_is_free((ths)))                                   \
-		*(unsigned long*)((char*)(ths) + (sz) - sizeof(unsigned long)) = (sz)
+    (ths)->size &= ~0xFFFFFFF8;                                    \
+    (ths)->size |= (sz) & 0xFFFFFFF8;                              \
+    if (SubBlock_is_free((ths)))                                   \
+        *(unsigned long*)((char*)(ths) + (sz) - sizeof(unsigned long)) = (sz)
 
 #define SubBlock_from_pointer(ptr) ((SubBlock*)((char*)(ptr) - 8))
 #define FixSubBlock_from_pointer(ptr) ((FixSubBlock*)((char*)(ptr) - 4))
@@ -117,8 +117,8 @@ static const unsigned long fix_pool_sizes[] = {4, 12, 20, 36, 52, 68};
 #define __msize_inline(ptr) (!classify(ptr) ? FixSubBlock_size(FixSubBlock_from_pointer(ptr)) : SubBlock_size(SubBlock_from_pointer(ptr)) - 8)
 
 #define Block_empty(ths)                                                      \
-	(_sb = (SubBlock*)((char*)(ths) + 16)),                    \
-	SubBlock_is_free(_sb) && SubBlock_size(_sb) == Block_size((ths)) - 24
+    (_sb = (SubBlock*)((char*)(ths) + 16)),                    \
+    SubBlock_is_free(_sb) && SubBlock_size(_sb) == Block_size((ths)) - 24
 
 //unused
 void Block_subBlock(){
@@ -130,23 +130,23 @@ void Block_link(Block* ths, SubBlock* sb) {
     st = &Block_start(ths);
 
     if (*st != 0)
-	{
-		sb->prev = (*st)->prev;
-		sb->prev->next = sb;
-		sb->next = *st;
-		(*st)->prev = sb;
-		*st = sb;
-		*st = SubBlock_merge_prev(*st, st);
-		SubBlock_merge_next(*st, st);
-	}
-	else
-	{
-		*st = sb;
-		sb->prev = sb;
-		sb->next = sb;
-	}
-	if (ths->max_size < SubBlock_size(*st))
-		ths->max_size = SubBlock_size(*st);
+    {
+        sb->prev = (*st)->prev;
+        sb->prev->next = sb;
+        sb->next = *st;
+        (*st)->prev = sb;
+        *st = sb;
+        *st = SubBlock_merge_prev(*st, st);
+        SubBlock_merge_next(*st, st);
+    }
+    else
+    {
+        *st = sb;
+        sb->prev = sb;
+        sb->next = sb;
+    }
+    if (ths->max_size < SubBlock_size(*st))
+        ths->max_size = SubBlock_size(*st);
 }
 
 static SubBlock* SubBlock_merge_prev(SubBlock *ths, SubBlock **start) {
@@ -154,20 +154,20 @@ static SubBlock* SubBlock_merge_prev(SubBlock *ths, SubBlock **start) {
     SubBlock* p;
 
     if (!(ths->size & 0x04))
-	{
-		prevsz = *(unsigned long*)((char*)ths - sizeof(unsigned long));
-		if (prevsz & 0x2)
-			return ths;
-		p = (SubBlock*)((char*)ths - prevsz);
-		SubBlock_set_size(p, prevsz + SubBlock_size(ths));
+    {
+        prevsz = *(unsigned long*)((char*)ths - sizeof(unsigned long));
+        if (prevsz & 0x2)
+            return ths;
+        p = (SubBlock*)((char*)ths - prevsz);
+        SubBlock_set_size(p, prevsz + SubBlock_size(ths));
 
-		if (*start == ths)
-			*start = (*start)->next;
-		ths->next->prev = ths->prev;
-		ths->next->prev->next = ths->next;
-		return p;
-	}
-	return ths;
+        if (*start == ths)
+            *start = (*start)->next;
+        ths->next->prev = ths->prev;
+        ths->next->prev->next = ths->next;
+        return p;
+    }
+    return ths;
 }
 
 
@@ -208,23 +208,23 @@ static void SubBlock_merge_next(SubBlock *pBlock, SubBlock **pStart) {
 }
 
 static Block* __unlink(__mem_pool_obj* pool_obj, Block* bp) {
-	Block* result = bp->next;
-	if (result == bp) {
-		result = 0;
+    Block* result = bp->next;
+    if (result == bp) {
+        result = 0;
     }
 
-	if (pool_obj->start_ == bp) {
-		pool_obj->start_ = result;
+    if (pool_obj->start_ == bp) {
+        pool_obj->start_ = result;
     }
 
-	if (result != 0) {
-		result->prev = bp->prev;
-		result->prev->next = result;
-	}
+    if (result != 0) {
+        result->prev = bp->prev;
+        result->prev->next = result;
+    }
 
-	bp->next = 0;
-	bp->prev = 0;
-	return result;
+    bp->next = 0;
+    bp->prev = 0;
+    return result;
 }
 
 //unused
@@ -240,12 +240,12 @@ static void deallocate_from_var_pools(__mem_pool_obj* pool_obj, void *ptr) {
     SubBlock* _sb;
 
     Block* bp = SubBlock_block(sb);
-	Block_link(bp, sb);
+    Block_link(bp, sb);
 
     if (Block_empty(bp)) {
-		__unlink(pool_obj, bp);
-		__sys_free(bp);
-	}
+        __unlink(pool_obj, bp);
+        __sys_free(bp);
+    }
 }
 
 //unused
@@ -253,19 +253,19 @@ void FixBlock_construct(){
 }
 
 void __init_pool_obj(__mem_pool* pool_obj) {
-	memset(pool_obj, 0, sizeof(__mem_pool_obj));
+    memset(pool_obj, 0, sizeof(__mem_pool_obj));
 }
 
 
 static __mem_pool* get_malloc_pool(void) {
-	static __mem_pool protopool;
-	static unsigned char init = 0;
-	if (!init) {
-		__init_pool_obj(&protopool);
-		init = 1;
-	}
+    static __mem_pool protopool;
+    static unsigned char init = 0;
+    if (!init) {
+        __init_pool_obj(&protopool);
+        init = 1;
+    }
 
-	return &protopool;
+    return &protopool;
 }
 
 //unused
@@ -279,7 +279,7 @@ void deallocate_from_fixed_pools(__mem_pool_obj* pool_obj, void* ptr, unsigned l
     FixStart* fs;
 
     while (size > fix_pool_sizes[i]) {
-		++i;
+        ++i;
     }
 
     fs = &pool_obj->fix_start[i];
@@ -369,7 +369,7 @@ void __pool_free(__mem_pool *pool, void *ptr) {
     size = __msize_inline(ptr);
 
     if (size <= 68) {
-		deallocate_from_fixed_pools(pool_obj, ptr, size);
+        deallocate_from_fixed_pools(pool_obj, ptr, size);
     }
     else {
         deallocate_from_var_pools(pool_obj, ptr);

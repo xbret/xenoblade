@@ -2,9 +2,9 @@
 
 DSError TRKTargetContinue(void)
 {
-	TRKTargetSetStopped(false);
-	UnreserveEXI2Port();
-	TRKSwapAndGo();
-	ReserveEXI2Port();
-	return kNoError;
+    TRKTargetSetStopped(false);
+    UnreserveEXI2Port();
+    TRKSwapAndGo();
+    ReserveEXI2Port();
+    return kNoError;
 }

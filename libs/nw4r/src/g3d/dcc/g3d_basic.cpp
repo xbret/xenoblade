@@ -90,7 +90,7 @@ namespace nw4r
                     else if (WorldMtxAttr::IsScaleOne(attr_1))
                     {
                         math::MTX34Mult(pW, pW_1, &pResult->rt);
-                    }                        
+                    }
                     else
                     {
                         math::MTX34Scale(pW, pW_1, pS_1);

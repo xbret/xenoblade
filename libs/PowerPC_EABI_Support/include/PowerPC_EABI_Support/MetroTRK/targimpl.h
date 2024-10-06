@@ -8,13 +8,13 @@
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Board/dolphin/target.h"
 
 typedef enum ValidMemoryOptions {
-	kValidMemoryReadable,
-	kValidMemoryWriteable
+    kValidMemoryReadable,
+    kValidMemoryWriteable
 } ValidMemoryOptions;
 
 typedef enum MemoryAccessOptions {
-	kUserMemory,
-	kDebuggerMemory
+    kUserMemory,
+    kDebuggerMemory
 } MemoryAccessOptions;
 
 /*

@@ -3,13 +3,13 @@
 
 int abs(int x)
 {
-	return x > 0 ? x : -x;
+    return x > 0 ? x : -x;
 }
 
 //might be llabs
 long labs(long x)
 {
-	return x > 0 ? x : -x;
+    return x > 0 ? x : -x;
 }
 
 //unused

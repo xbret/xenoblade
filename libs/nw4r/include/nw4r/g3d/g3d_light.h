@@ -99,7 +99,7 @@ namespace nw4r
         public:
             LightSetting(LightObj *, AmbLightObj *, u32, LightSetData *, u32);
             bool Import(const LightSetting&);
-            void ApplyViewMtx(const math::MTX34&, u32);  
+            void ApplyViewMtx(const math::MTX34&, u32);
 
             u16 GetNumLightObj() const { return mNumLightObj; }
             u16 GetNumLightSet() const { return mNumLightSet; }

@@ -82,7 +82,7 @@ namespace nw4r
             };
 
         public:
-            virtual bool IsDerivedFrom(TypeObj other) const // at 0x8 
+            virtual bool IsDerivedFrom(TypeObj other) const // at 0x8
             {
                 return other == GetTypeObjStatic();
             }

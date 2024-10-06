@@ -108,7 +108,7 @@ typedef struct ESTitleMeta {
 } ESTitleMeta;
 
 typedef struct ESTicket {
-    IOSCSigRsa2048 sig; 
+    IOSCSigRsa2048 sig;
     IOSCEccPublicKey serverPubKey;
     ESVersion version;
     ESVersion caCrlVersion;

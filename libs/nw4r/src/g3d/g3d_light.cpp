@@ -192,7 +192,7 @@ namespace nw4r
             if (GetNumLightObj() > 2)
             {
                 GetLightObjArray()[2] = lobjC;
-                GetAmbLightObjArray()[2] = ambWhite;  
+                GetAmbLightObjArray()[2] = ambWhite;
             }
 
             for (u32 i = 3; i < GetNumLightObj(); i++)

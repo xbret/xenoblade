@@ -359,94 +359,94 @@ BOOL __less_dec(const decimal* x, const decimal* y) {
 
 void __minus_dec(decimal *z, const decimal *x, const decimal *y)
 {
-	int zlen, dexp;
-	u8 *ib, *i, *ie;
-	u8 const *jb, *j, *jn;
+    int zlen, dexp;
+    u8 *ib, *i, *ie;
+    u8 const *jb, *j, *jn;
     
-	*z = *x;
+    *z = *x;
 
-	if (y->sig.text[0] == 0) return;
+    if (y->sig.text[0] == 0) return;
     
-	zlen = z->sig.length;
-	if (zlen < y->sig.length) zlen = y->sig.length;
+    zlen = z->sig.length;
+    if (zlen < y->sig.length) zlen = y->sig.length;
     
-	dexp = z->exp - y->exp;
-	zlen += dexp;
+    dexp = z->exp - y->exp;
+    zlen += dexp;
     
-	if (zlen > SIGDIGLEN) zlen = SIGDIGLEN;
+    if (zlen > SIGDIGLEN) zlen = SIGDIGLEN;
     
-	while (z->sig.length < zlen){
-		z->sig.text[z->sig.length++] = 0;
+    while (z->sig.length < zlen){
+        z->sig.text[z->sig.length++] = 0;
     }
     
-	ib = z->sig.text;
-	i = ib + zlen;
+    ib = z->sig.text;
+    i = ib + zlen;
     
-	if (y->sig.length + dexp < zlen){
-		i = ib + (y->sig.length + dexp);
+    if (y->sig.length + dexp < zlen){
+        i = ib + (y->sig.length + dexp);
     }
     
-	jb = y->sig.text;
-	j = jb + (i - ib - dexp);
-	jn = j;
+    jb = y->sig.text;
+    j = jb + (i - ib - dexp);
+    jn = j;
     
-	while (i > ib && j > jb){
-		i--;
-		j--;
-		if (*i < *j){
-			u8 *k = i - 1;
-			while (*k == 0) k--;
-			while (k != i){
-				--*k;
-				*++k += 10;
-			}
-		}
-		*i -= *j;
-	}
-
-	if (jn - jb < y->sig.length){
-		BOOL round_down = FALSE;
-		if (*jn < 5) round_down = TRUE;
-		else if (*jn == 5) {
-			u8 const *ibPtr = y->sig.text + y->sig.length;
-            
-			for (j = jn + 1; j < ibPtr; j++){
-				if (*j != 0) goto done;
+    while (i > ib && j > jb){
+        i--;
+        j--;
+        if (*i < *j){
+            u8 *k = i - 1;
+            while (*k == 0) k--;
+            while (k != i){
+                --*k;
+                *++k += 10;
             }
-			i = ib + (jn - jb) + dexp - 1;
-			if (*i & 1) round_down = 1;
-		}
-		if (round_down){
-			if (*i < 1){
-				u8 *k = i - 1;
-				while (*k == 0) k--;
-				while (k != i)
-				{
-					--*k;
-					*++k += 10;
-				}
-			}
-			*i -= 1;
-		}
-	}
-done:
-	for (i = ib; *i == 0; ++i){}
-    
-	if (i > ib){
-		u8 dl = (u8)(i - ib);
-		z->exp -= dl;
-		ie = ib + z->sig.length;
-		for (; i < ie; ++i, ++ib)
-			*ib = *i;
-		z->sig.length -= dl;
-	}
+        }
+        *i -= *j;
+    }
 
-	ib = z->sig.text;
-	for (i = ib + z->sig.length; i > ib;){
-		i--;
-		if (*i != 0) break;
-	}
-	z->sig.length = (u8)(i - ib + 1);
+    if (jn - jb < y->sig.length){
+        BOOL round_down = FALSE;
+        if (*jn < 5) round_down = TRUE;
+        else if (*jn == 5) {
+            u8 const *ibPtr = y->sig.text + y->sig.length;
+            
+            for (j = jn + 1; j < ibPtr; j++){
+                if (*j != 0) goto done;
+            }
+            i = ib + (jn - jb) + dexp - 1;
+            if (*i & 1) round_down = 1;
+        }
+        if (round_down){
+            if (*i < 1){
+                u8 *k = i - 1;
+                while (*k == 0) k--;
+                while (k != i)
+                {
+                    --*k;
+                    *++k += 10;
+                }
+            }
+            *i -= 1;
+        }
+    }
+done:
+    for (i = ib; *i == 0; ++i){}
+    
+    if (i > ib){
+        u8 dl = (u8)(i - ib);
+        z->exp -= dl;
+        ie = ib + z->sig.length;
+        for (; i < ie; ++i, ++ib)
+            *ib = *i;
+        z->sig.length -= dl;
+    }
+
+    ib = z->sig.text;
+    for (i = ib + z->sig.length; i > ib;){
+        i--;
+        if (*i != 0) break;
+    }
+    z->sig.length = (u8)(i - ib + 1);
 }
 
 void __num2dec_internal(decimal* d, double x) {
@@ -514,149 +514,149 @@ void __num2dec(const decform* form, double x, decimal* d) {
 
 double __dec2num(const decimal *d)
 {
-	if (d->sig.length <= 0){
+    if (d->sig.length <= 0){
         return copysign(0.0, d->sign == 0 ? 1.0 : -1.0);
     }
 
-	switch (d->sig.text[0]){
-	case '0':
-		return copysign(0.0, d->sign == 0 ? 1.0 : -1.0);
-	case 'I':
-		return copysign((double)INFINITY, d->sign == 0 ? 1.0 : -1.0);
-	case 'N':
+    switch (d->sig.text[0]){
+    case '0':
+        return copysign(0.0, d->sign == 0 ? 1.0 : -1.0);
+    case 'I':
+        return copysign((double)INFINITY, d->sign == 0 ? 1.0 : -1.0);
+    case 'N':
         {
-		    double result;
-		    d_int* ll = (d_int*)&result;
+            double result;
+            d_int* ll = (d_int*)&result;
 
-		    *ll = 0x7FF0000000000000;
-		    if (d->sign)
-		    	*ll |= 0x8000000000000000;
-		    *ll |= 0x8000000000000;
+            *ll = 0x7FF0000000000000;
+            if (d->sign)
+                *ll |= 0x8000000000000000;
+            *ll |= 0x8000000000000;
 
-		    return result;
+            return result;
         }
-	}
-	
+    }
+    
     {
-    	static double pow_10[8] = {1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8};
+        static double pow_10[8] = {1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8};
 
-    	decimal dec = *d;
-    	u8 *i = dec.sig.text;
-    	u8 *e = i + dec.sig.length;
-    	double first_guess;
-    	int exponent;
+        decimal dec = *d;
+        u8 *i = dec.sig.text;
+        u8 *e = i + dec.sig.length;
+        double first_guess;
+        int exponent;
 
-    	for (; i < e; ++i)
-    		*i -= '0';
-    	dec.exp += dec.sig.length - 1;
-    	exponent = dec.exp;
+        for (; i < e; ++i)
+            *i -= '0';
+        dec.exp += dec.sig.length - 1;
+        exponent = dec.exp;
 
         {
-    	    decimal max;
+            decimal max;
 
-    	    __str2dec(&max, "179769313486231580793728714053034151", 308); 
-    	    if (__less_dec(&max, &dec)){
+            __str2dec(&max, "179769313486231580793728714053034151", 308);
+            if (__less_dec(&max, &dec)){
                 return copysign((double)INFINITY, d->sign == 0 ? 1.0 : -1.0);
             }
         }
 
-    	i = dec.sig.text;
-    	first_guess = *i++;
+        i = dec.sig.text;
+        first_guess = *i++;
 
-    	while (i < e){
-    		u32 ival = 0;
-    		int j;
-    		double temp1, temp2;
-    		int ndig = (int)(e - i) % 8;
+        while (i < e){
+            u32 ival = 0;
+            int j;
+            double temp1, temp2;
+            int ndig = (int)(e - i) % 8;
 
-    		if (ndig == 0) ndig = 8;
+            if (ndig == 0) ndig = 8;
 
-    		for (j = 0; j < ndig; ++j, ++i){
-    			ival = ival * 10 + *i;
+            for (j = 0; j < ndig; ++j, ++i){
+                ival = ival * 10 + *i;
             }
 
-    		temp1 = first_guess * pow_10[ndig - 1];
-    		temp2 = temp1 + ival;
+            temp1 = first_guess * pow_10[ndig - 1];
+            temp2 = temp1 + ival;
 
-    		if (ival != 0 && temp1 == temp2) break;
+            if (ival != 0 && temp1 == temp2) break;
 
-    		first_guess = temp2;
-    		exponent -= ndig;
-    	}
+            first_guess = temp2;
+            exponent -= ndig;
+        }
 
-    	if(exponent < 0){
+        if(exponent < 0){
             first_guess /= pow(5.0, -exponent);
         }else{
             first_guess *= pow(5.0, exponent);
         }
 
-    	first_guess = ldexp(first_guess, exponent);
+        first_guess = ldexp(first_guess, exponent);
 
-    	if (fpclassify(first_guess) == 2){
+        if (fpclassify(first_guess) == 2){
             first_guess = DBL_MAX;
         }
     
         {
-    	    decimal feedback1, feedback2, difflow, diffhigh;
-    	    double next_guess;
-    	    d_int* ull = (d_int*)&next_guess;
-    	    int guessed_low = 0;
+            decimal feedback1, feedback2, difflow, diffhigh;
+            double next_guess;
+            d_int* ull = (d_int*)&next_guess;
+            int guessed_low = 0;
 
-    	    __num2dec_internal(&feedback1, first_guess);
+            __num2dec_internal(&feedback1, first_guess);
 
-    	    if (__equals_dec(&feedback1, &dec)){
+            if (__equals_dec(&feedback1, &dec)){
                 goto done;
             }
-    	    if (__less_dec(&feedback1, &dec)){
+            if (__less_dec(&feedback1, &dec)){
                 guessed_low = 1;
             }
 
-    	    next_guess = first_guess; 
+            next_guess = first_guess;
 
-    	    while (1){
-    	    	if (guessed_low){
-    	    		++*ull;
-    	    		if (fpclassify(next_guess) == 2){
+            while (1){
+                if (guessed_low){
+                    ++*ull;
+                    if (fpclassify(next_guess) == 2){
                         goto done;
                     }
-    	    	} else {
+                } else {
                     --*ull;
                 }
 
-    	    	__num2dec_internal(&feedback2, next_guess);
-    	    	if (guessed_low && !__less_dec(&feedback2, &dec)){
+                __num2dec_internal(&feedback2, next_guess);
+                if (guessed_low && !__less_dec(&feedback2, &dec)){
                     break;
                 }
-    	    	else if (!guessed_low && !__less_dec(&dec, &feedback2)){
-    	    		difflow = feedback1;
-    	    		feedback1 = feedback2;
-    	    		feedback2 = difflow;
+                else if (!guessed_low && !__less_dec(&dec, &feedback2)){
+                    difflow = feedback1;
+                    feedback1 = feedback2;
+                    feedback2 = difflow;
                     {
-    	    		    double temp = first_guess;
-    	    		    first_guess = next_guess;
-    	    		    next_guess = temp;
+                        double temp = first_guess;
+                        first_guess = next_guess;
+                        next_guess = temp;
                     }
-    	    		break;
-    	    	}
-    	    	feedback1 = feedback2;
-    	    	first_guess = next_guess;
-    	    }
+                    break;
+                }
+                feedback1 = feedback2;
+                first_guess = next_guess;
+            }
 
-    	    __minus_dec(&difflow, &dec, &feedback1);
-    	    __minus_dec(&diffhigh, &feedback2, &dec);
+            __minus_dec(&difflow, &dec, &feedback1);
+            __minus_dec(&diffhigh, &feedback2, &dec);
 
-    	    if (__equals_dec(&difflow, &diffhigh)){
-    	    	if (*(u64*)&first_guess & 1){
+            if (__equals_dec(&difflow, &diffhigh)){
+                if (*(u64*)&first_guess & 1){
                     first_guess = next_guess;
                 }
-    	    } else if (!__less_dec(&difflow, &diffhigh)){
+            } else if (!__less_dec(&difflow, &diffhigh)){
                 first_guess = next_guess;
             }
         }
     done:
-    	if (dec.sign){
+        if (dec.sign){
             first_guess = -first_guess;
         }
-    	return first_guess;
+        return first_guess;
     }
 }

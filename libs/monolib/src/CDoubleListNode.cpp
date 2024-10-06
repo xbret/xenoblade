@@ -43,7 +43,7 @@ CDoubleListNode* CDoubleListHeader::InsertEnd(CDoubleListNode* node) {
     if (node != NULL) {
         //List is circular
         InsertTop(node);
-        mHead = node;   
+        mHead = node;
     }
 
     return node;

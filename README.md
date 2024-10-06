@@ -1,4 +1,4 @@
-Xenoblade  
+Xenoblade
 [![Build Status]][actions] [![Discord Badge]][discord]
 =============
 
@@ -50,7 +50,7 @@ Dependencies
 Windows
 --------
 
-On Windows, it's **highly recommended** to use native tooling. WSL or msys2 are **not** required.  
+On Windows, it's **highly recommended** to use native tooling. WSL or msys2 are **not** required.
 When running under WSL, [objdiff](#diffing) is unable to get filesystem notifications for automatic rebuilds.
 
 - Install [Python](https://www.python.org/downloads/) and add it to `%PATH%`.

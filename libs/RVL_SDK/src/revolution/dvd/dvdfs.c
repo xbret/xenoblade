@@ -52,7 +52,7 @@ s32 DVDConvertPathToEntrynum(const char* pathPtr) {
     const char* ptr;
     char* stringPtr;
     BOOL isDir;
-    u32 length, dirLookAt, i; 
+    u32 length, dirLookAt, i;
     const char* origPathPtr = pathPtr, *extentionStart;
     BOOL illegal, extention;
 
@@ -61,7 +61,7 @@ s32 DVDConvertPathToEntrynum(const char* pathPtr) {
     while (1) {
         if (*pathPtr == '\0') {
             return (s32)dirLookAt;
-        } 
+        }
         else if (*pathPtr == '/') {
             dirLookAt = 0;
             pathPtr++;
@@ -97,7 +97,7 @@ s32 DVDConvertPathToEntrynum(const char* pathPtr) {
                     extention = TRUE;
                     extentionStart = ptr + 1;
 
-                } 
+                }
                 else if (*ptr == ' ') {
                     illegal = TRUE;
                 }

@@ -70,7 +70,7 @@ void wcsncat_s(){
 int wcscmp(const wchar_t *str1, const wchar_t *str2) {
     const wchar_t* p1 = (wchar_t *)str1 - 1;
     const wchar_t* p2 = (wchar_t *)str2 - 1;
-    wchar_t	c1, c2;
+    wchar_t c1, c2;
 
     while ((c1 = *++p1) == (c2 = *++p2)) {
         if (!c1) {

@@ -188,7 +188,7 @@ namespace nw4r
                 {
                     mCallback->ExecCallback_CALC_VIEW(timing, this, r5, r6);
                 }
-            }  
+            }
         }
 
         void ScnObj::CheckCallback_CALC_MAT(Timing timing, u32 r5, void *r6)
@@ -211,7 +211,7 @@ namespace nw4r
                     mCallback->ExecCallback_CALC_WORLD(timing, this, r5, r6);
                 }
             }
-        }    
+        }
 
         class ScnLeaf : public ScnObj
         {

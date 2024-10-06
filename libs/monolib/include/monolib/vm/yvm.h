@@ -54,7 +54,7 @@ void vmLink();
 BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs);
 void* vmArgPtrGet(_sVMThread* pThread, int);
 BOOL vmArgBoolGet(int, void*);
-int vmArgIntGet(int, void*); 
+int vmArgIntGet(int, void*);
 void vmArgFixedGet(int, void*);
 char* vmArgStringGet(int, void*);
 void* vmArgFunctionGet(_sVMThread* pthread, int);
@@ -65,7 +65,7 @@ void vmWaitModeSet(_sVMThread* pThread);
 int vmWkIdxGet(_sVMThread* pThread);
 void vmWkIdxSet(_sVMThread* pThread, int);
 int* vmWkGet(_sVMThread* pThread, int);
-int vmArgOmitChk(_sVMThread* pThread, int); 
+int vmArgOmitChk(_sVMThread* pThread, int);
 void func_804A1004(_sVMThread* pThread);
 
 #ifdef __cplusplus

@@ -6,38 +6,38 @@
 #include <wchar.h>
 
 enum __ReadProcActions {
-	__GetAChar,
-	__UngetAChar,
-	__TestForError
+    __GetAChar,
+    __UngetAChar,
+    __TestForError
 };
 
 enum __WReadProcActions
 {
-	__GetAwChar,
-	__UngetAwChar,
-	__TestForwcsError
+    __GetAwChar,
+    __UngetAwChar,
+    __TestForwcsError
 };
 
 typedef struct {
-	char* CharStr;
-	size_t MaxCharCount;
-	size_t CharsWritten;
+    char* CharStr;
+    size_t MaxCharCount;
+    size_t CharsWritten;
 } __OutStrCtrl;
 
 typedef struct{
-	char* NextChar;
-	int NullCharDetected;
+    char* NextChar;
+    int NullCharDetected;
 } __InStrCtrl;
 
 typedef struct {
-	wchar_t * wCharStr;
-	size_t MaxCharCount;
-	size_t CharsWritten;
+    wchar_t * wCharStr;
+    size_t MaxCharCount;
+    size_t CharsWritten;
 } __wOutStrCtrl;
 
 typedef struct {
-	wchar_t * wNextChar;
-	int    wNullCharDetected;
+    wchar_t * wNextChar;
+    int    wNullCharDetected;
 } __wInStrCtrl;
 
 //__fread

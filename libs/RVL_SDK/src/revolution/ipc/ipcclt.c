@@ -699,7 +699,7 @@ s32 IOS_IoctlvReboot(s32 fd, s32 type, s32 inCount, s32 outCount,
                     OSSleepThread(&__relnchRpc->queue);
                     OSRestoreInterrupts(enabled);
                     ret = __relnchRpc->base.ret;
-                }   
+                }
             }
         }
 

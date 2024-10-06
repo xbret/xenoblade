@@ -401,7 +401,7 @@ void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
     /*
     r = abs_fidx - U16ToF32(((u16*)pSin)[0]);
 
-    scval[0] = pTbl[0]; 
+    scval[0] = pTbl[0];
     scval[1] = pTbl[1];
     scdel[0] = pTbl[2];
     scdel[1] = pTbl[3];

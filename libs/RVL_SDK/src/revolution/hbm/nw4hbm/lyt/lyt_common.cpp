@@ -160,7 +160,7 @@ namespace nw4hbm
                 GXBegin(GX_QUADS, GX_VTXFMT0, 4);
 
                 GXPosition2f32(pos.x, pos.y);
-                if (vertexClrs != NULL) 
+                if (vertexClrs != NULL)
                 {
                     GXColor1u32(vertexClrs[0]);
                 }
@@ -170,7 +170,7 @@ namespace nw4hbm
                 }
 
                 GXPosition2f32(pos.x + size.x, pos.y);
-                if (vertexClrs != NULL) 
+                if (vertexClrs != NULL)
                 {
                     GXColor1u32(vertexClrs[1]);
                 }
@@ -180,7 +180,7 @@ namespace nw4hbm
                 }
 
                 GXPosition2f32(pos.x + size.x, pos.y + size.y);
-                if (vertexClrs != NULL) 
+                if (vertexClrs != NULL)
                 {
                     GXColor1u32(vertexClrs[3]);
                 }
@@ -190,7 +190,7 @@ namespace nw4hbm
                 }
 
                 GXPosition2f32(pos.x, pos.y + size.y);
-                if (vertexClrs != NULL) 
+                if (vertexClrs != NULL)
                 {
                     GXColor1u32(vertexClrs[2]);
                 }

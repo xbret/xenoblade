@@ -12,18 +12,18 @@ extern "C"{
 typedef unsigned long NubEventID;
 
 typedef enum NubEventType {
-	kNullEvent,
-	kShutdownEvent,
-	kRequestEvent,
-	kBreakpointEvent,
-	kExceptionEvent,
-	kSupportEvent
+    kNullEvent,
+    kShutdownEvent,
+    kRequestEvent,
+    kBreakpointEvent,
+    kExceptionEvent,
+    kSupportEvent
 } NubEventType;
 
 typedef struct NubEvent {
-	NubEventType fType;
-	NubEventID fID;
-	MessageBufferID fMessageBufferID;
+    NubEventType fType;
+    NubEventID fID;
+    MessageBufferID fMessageBufferID;
 } NubEvent;
 
 DSError TRKInitializeEventQueue();

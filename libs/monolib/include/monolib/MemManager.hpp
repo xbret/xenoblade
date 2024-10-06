@@ -178,7 +178,7 @@ namespace mtl{
         }
 
         static inline MemBlock* findLargestEntry(u32 regionIndex){
-            MemBlock* regionHead = getRegion(regionIndex)->mHead;      
+            MemBlock* regionHead = getRegion(regionIndex)->mHead;
 
                 if (regionHead == nullptr) {
                     return nullptr;

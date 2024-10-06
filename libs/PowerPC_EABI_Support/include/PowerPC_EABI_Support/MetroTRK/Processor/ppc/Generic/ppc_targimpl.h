@@ -10,24 +10,24 @@ extern "C"{
 #endif
 
 typedef struct TRKState_PPC {
-	DefaultType GPR[32]; //0x0
-	DefaultType LR; //0x80
-	DefaultType CTR; //0x84
-	DefaultType XER; //0x88
-	Extended1Type MSR; //0x8c
-	Extended1Type DAR; //0x90
-	Extended1Type DSISR; //0x94
-	bool stopped; //0x98
-	bool inputActivated; //0x9c
-	ui8* inputPendingPtr; //0xA0
+    DefaultType GPR[32]; //0x0
+    DefaultType LR; //0x80
+    DefaultType CTR; //0x84
+    DefaultType XER; //0x88
+    Extended1Type MSR; //0x8c
+    Extended1Type DAR; //0x90
+    Extended1Type DSISR; //0x94
+    bool stopped; //0x98
+    bool inputActivated; //0x9c
+    ui8* inputPendingPtr; //0xA0
 } TRKState_PPC;
 
 extern TRKState_PPC gTRKState;
 
 typedef struct ProcessorRestoreFlags_PPC {
-	ui8 TBR;
-	ui8 DEC;
-	ui8 linker_padding[0x9 - 0x2];
+    ui8 TBR;
+    ui8 DEC;
+    ui8 linker_padding[0x9 - 0x2];
 } ProcessorRestoreFlags_PPC;
 
 extern ProcessorRestoreFlags_PPC gTRKRestoreFlags;

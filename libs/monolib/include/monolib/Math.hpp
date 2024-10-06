@@ -95,11 +95,11 @@ namespace ml{
             this->z = z;
         }
 
-        bool operator==(CVec3& vec){ 
+        bool operator==(CVec3& vec){
             return (x == vec.x && y == vec.y && z == vec.z);
         }
 
-        bool operator!=(CVec3& vec){ 
+        bool operator!=(CVec3& vec){
             return (x != vec.x || y != vec.y || z != vec.z);
         }
 

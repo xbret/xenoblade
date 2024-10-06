@@ -6,9 +6,9 @@ void* gTRKInputPendingPtr;
 
 MessageBufferID TRKTestForPacket(){
     ui8 payloadBuf[0x880];
-	ui8 packetBuf[0x40];
-	int bufID;
-	MessageBuffer* msg;
+    ui8 packetBuf[0x40];
+    int bufID;
+    MessageBuffer* msg;
     MessageBufferID result;
 
     if(TRKPollUART() <= 0) return -1;

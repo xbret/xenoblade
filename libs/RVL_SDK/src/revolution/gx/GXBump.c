@@ -173,7 +173,7 @@ void GXSetTevIndBumpST(){
 }
 
 //unused
-void GXSetTevIndBumpXYZ(){    
+void GXSetTevIndBumpXYZ(){
 }
 
 //unused

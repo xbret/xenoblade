@@ -56,7 +56,7 @@ asm void DCInvalidateRange(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -78,7 +78,7 @@ asm void DCFlushRange(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -101,7 +101,7 @@ asm void DCStoreRange(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -124,7 +124,7 @@ asm void DCFlushRangeNoSync(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -146,7 +146,7 @@ asm void DCStoreRangeNoSync(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -168,7 +168,7 @@ asm void DCZeroRange(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5
@@ -194,7 +194,7 @@ asm void ICInvalidateRange(register const void* buf, register u32 len) {
     nofralloc
     
     cmplwi len, 0
-    blelr 
+    blelr
 
     clrlwi r5, buf, 27
     add len, len, r5

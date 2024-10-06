@@ -9,10 +9,10 @@ extern "C" {
 
 
 typedef u8 VIBool;
-#define VI_FALSE ((VIBool)0) 
-#define VI_TRUE ((VIBool)1) 
-#define VI_DISABLE ((VIBool)0) 
-#define VI_ENABLE ((VIBool)1) 
+#define VI_FALSE ((VIBool)0)
+#define VI_TRUE ((VIBool)1)
+#define VI_DISABLE ((VIBool)0)
+#define VI_ENABLE ((VIBool)1)
 
 #define VI_TVMODE(FMT, INT) ( ((FMT) << 2) + (INT) )
 // Get TV format from TV info
@@ -61,7 +61,7 @@ typedef enum _VIVideo {
 
 
 typedef struct VIGammaObj {
-    u16 a[6];     
+    u16 a[6];
     u8 yin[7];
     u16 yout[7];
 } VIGammaObj;

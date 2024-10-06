@@ -18,7 +18,7 @@ void __destroy_global_chain(void) {
   while ((iter = __global_destructor_chain) != 0) {
     __global_destructor_chain = iter->next;
     DTORCALL_COMPLETE(iter->destructor, iter->object);
-  } 
+  }
 }
 
 //unused
@@ -26,5 +26,5 @@ int __register_atexit(void (*func)(void)){
 }
 
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") __declspec(weak) 
-	extern void * const __destroy_global_chain_reference = __destroy_global_chain;
+__declspec(section ".dtors$10") __declspec(weak)
+    extern void * const __destroy_global_chain_reference = __destroy_global_chain;
