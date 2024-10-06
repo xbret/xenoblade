@@ -1,9 +1,9 @@
 #include "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.hpp"
 
 CVS_THREAD::CVS_THREAD(){
-	unkC = 0;
-	unk10 = 0;
-	func_802A35A0(unk0); //Sets unk0 to something
+    unkC = 0;
+    unk10 = 0;
+    func_802A35A0(unk0); //Sets unk0 to something
 }
 
 void func_802A3ACC(){

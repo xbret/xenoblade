@@ -6,5 +6,5 @@
 
 class CView : public CWorkThread {
 public:
-	void func_8043CB7C(const CRect16& rect16);
+    void func_8043CB7C(const CRect16& rect16);
 };

@@ -71,68 +71,68 @@ namespace ml{
 
 class MTRand{
 protected:
-	static const int N = 624; //length
-	static const int M = 397; //period
-	u32 state[N]; //twister
-	int left; //0x9C0
-	BOOL initialized; //0x9C4
-	u32* pNext; //0x9C8
-	u32 unk9D0;
+    static const int N = 624; //length
+    static const int M = 397; //period
+    u32 state[N]; //twister
+    int left; //0x9C0
+    BOOL initialized; //0x9C4
+    u32* pNext; //0x9C8
+    u32 unk9D0;
 
 public:
-	MTRand() {
-		srand(0x012BD6AA);
-		pNext = state;
-	}
+    MTRand() {
+        srand(0x012BD6AA);
+        pNext = state;
+    }
 
-	static MTRand* getInstance();
-	void srand(u32);
-	void nextMt();
-	u32 rand32();
-	u32 rand31();
-	float randFloat();
-	float randFloat1();
+    static MTRand* getInstance();
+    void srand(u32);
+    void nextMt();
+    u32 rand32();
+    u32 rand31();
+    float randFloat();
+    float randFloat1();
 
-	inline u32 rand(){
-		return rand31();
-	}
+    inline u32 rand(){
+        return rand31();
+    }
 
-	inline u32 rand(int max){
-		if(max != 0){
-			int randVal = rand();
-			return randVal % max;
-		}else{
-			return 0;
-		}
-	}
+    inline u32 rand(int max){
+        if(max != 0){
+            int randVal = rand();
+            return randVal % max;
+        }else{
+            return 0;
+        }
+    }
 
-	inline u32 rand(int min, int max){
-		int range = max - min;
-		int result = 0;
+    inline u32 rand(int min, int max){
+        int range = max - min;
+        int result = 0;
 
-		if(range != 0){
-			int randVal = rand();
-			result = (randVal % range);
-		}else{
-			result = 0;
-		}
+        if(range != 0){
+            int randVal = rand();
+            result = (randVal % range);
+        }else{
+            result = 0;
+        }
 
-		return min + result; //wtf? why not just add it before?
-	}
+        return min + result; //wtf? why not just add it before?
+    }
 
 protected:
-	inline u32 hiBit(u32 u) { return u & 0x80000000; }
-	inline u32 loBit(u32 u) { return u & 0x00000001; }
-	inline u32 loBits(u32 u) { return u & 0x7fffffff; }
-	inline u32 mixBits(u32 u, u32 v) { return hiBit(u) | loBits(v); }
-	inline u32 magic(u32 u) { return loBit(u) ? 0x9908b0dfUL : 0x0UL; }
-	inline u32 twist(u32 m, u32 s0, u32 s1) {
-		const u32 y = mixBits(s0, s1);
-		/* BUG?: Based on the standard implementation this should be magic(y),
-		but this might've been an intentional change */
-		const u32 mask = magic(s1);
-		return m ^ (mask ^ (y >> 1));
-	}
+    inline u32 hiBit(u32 u) { return u & 0x80000000; }
+    inline u32 loBit(u32 u) { return u & 0x00000001; }
+    inline u32 loBits(u32 u) { return u & 0x7fffffff; }
+    inline u32 mixBits(u32 u, u32 v) { return hiBit(u) | loBits(v); }
+    inline u32 magic(u32 u) { return loBit(u) ? 0x9908b0dfUL : 0x0UL; }
+    inline u32 twist(u32 m, u32 s0, u32 s1) {
+        const u32 y = mixBits(s0, s1);
+        /* BUG?: Based on the standard implementation this should be magic(y),
+        but this might've been an intentional change */
+        const u32 mask = magic(s1);
+        return m ^ (mask ^ (y >> 1));
+    }
 };
 
 }

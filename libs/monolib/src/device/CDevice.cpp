@@ -25,97 +25,97 @@ static int lbl_80665FA0 = -1;
 static int lbl_80665FA4 = -1;
 
 CDevice::~CDevice(){
-	instance = nullptr;
+    instance = nullptr;
 }
 
 CDevice* CDevice::getInstance(){
-	return instance;
+    return instance;
 }
 
 int CDevice::func_8044D058(){
-	return lbl_80665FA0;
+    return lbl_80665FA0;
 }
 
 int CDevice::func_8044D060(){
-	return lbl_80665FA4;
+    return lbl_80665FA4;
 }
 
 bool CDevice::func_8044D438(){
-	return instance->inline1();
+    return instance->inline1();
 }
 
 void CDevice::initDevices(){
-	if(CDeviceVI::getInstance() == nullptr){
-		CDeviceVI::init("CDeviceVI", instance);
-	}
-	if(CDeviceGX::getInstance() == nullptr){
-		CDeviceGX::init("CDeviceGX", instance);
-	}
-	if(CDeviceRemotePad::getInstance() == nullptr){
-		CDeviceRemotePad::init("CDeviceRemotePAD", instance);
-	}
-	if(CDeviceClock::getInstance() == nullptr){
-		CDeviceClock::init("CDeviceClock", instance);
-	}
-	if(CDeviceSC::getInstance() == nullptr){
-		CDeviceSC::init("CDeviceSC", instance);
-	}
-	if(CDeviceFont::getInstance() == nullptr){
-		CDeviceFont::init("CDeviceFont", instance);
-	}
-	if(CDeviceFile::getInstance() == nullptr){
-		CDeviceFile::init("CDeviceFile", instance);
-	}
-	if(CLibCri::getInstance() == nullptr){
-		CLibCri::init("CLibCri", instance);
-	}
+    if(CDeviceVI::getInstance() == nullptr){
+        CDeviceVI::init("CDeviceVI", instance);
+    }
+    if(CDeviceGX::getInstance() == nullptr){
+        CDeviceGX::init("CDeviceGX", instance);
+    }
+    if(CDeviceRemotePad::getInstance() == nullptr){
+        CDeviceRemotePad::init("CDeviceRemotePAD", instance);
+    }
+    if(CDeviceClock::getInstance() == nullptr){
+        CDeviceClock::init("CDeviceClock", instance);
+    }
+    if(CDeviceSC::getInstance() == nullptr){
+        CDeviceSC::init("CDeviceSC", instance);
+    }
+    if(CDeviceFont::getInstance() == nullptr){
+        CDeviceFont::init("CDeviceFont", instance);
+    }
+    if(CDeviceFile::getInstance() == nullptr){
+        CDeviceFile::init("CDeviceFile", instance);
+    }
+    if(CLibCri::getInstance() == nullptr){
+        CLibCri::init("CLibCri", instance);
+    }
 
-	CDeviceGX::func_8045535C(1);
+    CDeviceGX::func_8045535C(1);
 }
 
 CDeviceException* CDeviceException::getInstance(){
-	return instance;
+    return instance;
 }
 
 bool CDevice::wkStartup(){
-	CDeviceException::init("CDeviceException", this);
-	CDevice::initDevices();
-	this->func_80437EF0(9);
-	return CWorkThread::wkStartup();
+    CDeviceException::init("CDeviceException", this);
+    CDevice::initDevices();
+    this->func_80437EF0(9);
+    return CWorkThread::wkStartup();
 }
 
 bool CDevice::wkShutdown(){
-	if(mWorkThreadList.empty() && CWorkSystem::getInstance() == nullptr
-	&& CLib::getInstance() == nullptr){
-		return CWorkThread::wkShutdown();
-	}
+    if(mWorkThreadList.empty() && CWorkSystem::getInstance() == nullptr
+    && CLib::getInstance() == nullptr){
+        return CWorkThread::wkShutdown();
+    }
 
-	return false;
+    return false;
 }
 
 CDevice* CDevice::create(){
-	return init("CDevice", func_804437BC());
+    return init("CDevice", func_804437BC());
 }
 
 void CDevice::createRegions(){
-	int deviceRegion1Offset = CDeviceGX::func_804557A0() + func_80454E78() + 0x80;
-	deviceRegion1Offset += CDeviceVI::func_80448E80() ? 0 : CDeviceVI::getXfbBuffersSize();
-	lbl_80665FA0 = mtl::MemManager::createRegion(mtl::MemManager::getMem1RegionIndex(), deviceRegion1Offset, devSys1String);
-	lbl_80665FA4 = mtl::MemManager::createRegion(mtl::MemManager::getMem2RegionIndex(), 0x1A0000, devSys2String);
+    int deviceRegion1Offset = CDeviceGX::func_804557A0() + func_80454E78() + 0x80;
+    deviceRegion1Offset += CDeviceVI::func_80448E80() ? 0 : CDeviceVI::getXfbBuffersSize();
+    lbl_80665FA0 = mtl::MemManager::createRegion(mtl::MemManager::getMem1RegionIndex(), deviceRegion1Offset, devSys1String);
+    lbl_80665FA4 = mtl::MemManager::createRegion(mtl::MemManager::getMem2RegionIndex(), 0x1A0000, devSys2String);
 }
 
 void CDevice::deleteRegions(){
-	mtl::MemManager::deleteRegion(lbl_80665FA0);
-	mtl::MemManager::deleteRegion(lbl_80665FA4);
-	lbl_80665FA0 = -1;
-	lbl_80665FA4 = -1;
+    mtl::MemManager::deleteRegion(lbl_80665FA0);
+    mtl::MemManager::deleteRegion(lbl_80665FA4);
+    lbl_80665FA0 = -1;
+    lbl_80665FA4 = -1;
 }
 
 CDeviceException::~CDeviceException(){
-	instance = nullptr;
+    instance = nullptr;
 }
 
 bool CDeviceException::wkShutdown(){
-	if(mWorkThreadList.empty() == false) return false;
-	return CWorkThread::wkShutdown();
+    if(mWorkThreadList.empty() == false) return false;
+    return CWorkThread::wkShutdown();
 }

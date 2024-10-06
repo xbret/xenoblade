@@ -1,5 +1,5 @@
 #pragma once
 
 namespace ml{
-	void initFastCast();
+    void initFastCast();
 }

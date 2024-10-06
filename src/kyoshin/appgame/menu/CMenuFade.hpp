@@ -7,6 +7,6 @@
 
 class CMenuFade : IUICf, IWorkEvent, IScnRender {
 public:
-	CMenuFade();
+    CMenuFade();
 
 };
