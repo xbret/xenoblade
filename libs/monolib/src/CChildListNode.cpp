@@ -1,10 +1,10 @@
 #include "monolib/CChildListNode.hpp"
 
 CChildListNode::CChildListNode()
-	: parent(NULL) {}
+    : parent(NULL) {}
 
 void CChildListNode::Reset() {
-	CDoubleListNode::Reset();
-	parent = NULL;
-	children.Reset();
+    CDoubleListNode::Reset();
+    parent = NULL;
+    children.Reset();
 }

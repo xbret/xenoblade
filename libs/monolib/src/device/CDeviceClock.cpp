@@ -11,68 +11,68 @@ CDeviceClock* CDeviceClock::instance;
 is 0xA0 instead of 0xA4) */
 CDeviceClock::CDeviceClock(const char* name, CWorkThread* workThread) : CDeviceBase(name,workThread,0), unk1C8(0),
 unk1F0(0), unk1F8(0), unk200(0), unk208(0) {
-	instance = this;
-	memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
-	s64 time = getTimeNow();
-	unk1F0 = time;
-	unk1C8 |= 1;
-	unk1CC.initList(16, unk54);
+    instance = this;
+    memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
+    s64 time = getTimeNow();
+    unk1F0 = time;
+    unk1C8 |= 1;
+    unk1CC.initList(16, unk54);
 }
 
 CDeviceClock::~CDeviceClock(){
-	instance = nullptr;
+    instance = nullptr;
 }
 
 CDeviceClock* CDeviceClock::getInstance(){
-	return instance;
+    return instance;
 }
 
 bool CDeviceClock::func_8044DEE0(){
-	return instance->CWorkThread_inline1();
+    return instance->CWorkThread_inline1();
 }
 
 s64 CDeviceClock::getTimeNow(){
-	return OSGetTime();
+    return OSGetTime();
 }
 
 void CDeviceClock::func_8044DF8C(){
-	s64 time = getTimeNow();
-	instance->unk200 = time;
-	_reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
-	while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-		curNode->mItem->virtualFunc2();
-		curNode = curNode->mNext;
-	}
+    s64 time = getTimeNow();
+    instance->unk200 = time;
+    _reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
+    while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
+        curNode->mItem->virtualFunc2();
+        curNode = curNode->mNext;
+    }
 }
 
 void CDeviceClock::func_8044DFF4(){
-	s64 time = getTimeNow();
-	instance->unk208 = time - instance->unk200;
-	_reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
-	while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-		curNode->mItem->virtualFunc3();
-		curNode = curNode->mNext;
-	}
+    s64 time = getTimeNow();
+    instance->unk208 = time - instance->unk200;
+    _reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
+    while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
+        curNode->mItem->virtualFunc3();
+        curNode = curNode->mNext;
+    }
 }
 
 void CDeviceClock::wkUpdate(){
-	unk1F8 = getTimeNow();
-	OSTicksToCalendarTime(unk1F8, &mCalendar);
+    unk1F8 = getTimeNow();
+    OSTicksToCalendarTime(unk1F8, &mCalendar);
 }
 
 bool CDeviceClock::wkStartup(){
-	func_80447598();
-	return CWorkThread::wkStartup(); //Call base
+    func_80447598();
+    return CWorkThread::wkStartup(); //Call base
 }
 
 bool CDeviceClock::wkShutdown(){
-	if(mWorkThreadList.empty()){
-		if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
-		&& CLib::getInstance() == nullptr){
-			return CWorkThread::wkShutdown(); //Call base
-		}
-	}
+    if(mWorkThreadList.empty()){
+        if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
+        && CLib::getInstance() == nullptr){
+            return CWorkThread::wkShutdown(); //Call base
+        }
+    }
 
-	return false;
+    return false;
 }
 

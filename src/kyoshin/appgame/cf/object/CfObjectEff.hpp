@@ -4,11 +4,11 @@
 #include "kyoshin/appgame/cf/object/CfObject.hpp"
 
 namespace cf{
-	//size: 0xC0
-	class CfObjectEff : public CfObject{
-	public:
-		//0x0: vtable
-		//0x0-70: CfObject
-		u8 unk70[0x50];
-	};
+    //size: 0xC0
+    class CfObjectEff : public CfObject{
+    public:
+        //0x0: vtable
+        //0x0-70: CfObject
+        u8 unk70[0x50];
+    };
 }

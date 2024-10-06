@@ -4,6 +4,6 @@
 
 class CLib {
 public:
-	static CLib* getInstance();
+    static CLib* getInstance();
 };
 

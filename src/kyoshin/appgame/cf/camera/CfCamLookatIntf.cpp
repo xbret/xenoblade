@@ -7,16 +7,16 @@ void CfCamLookatIntf::update(CfCamEvent* camEvent){
 }
 
 void CfCamLookatIntf::setPos(CfCamEvent* camEvent, CVec3 const& v) {
-	camEvent->unk28 = v;
-	camEvent->unk274 = v;
-	camEvent->unk264 = 0;
+    camEvent->unk28 = v;
+    camEvent->unk274 = v;
+    camEvent->unk264 = 0;
 }
 
 void CfCamLookatIntf::setDir(CfCamEvent* camEvent, CVec3 const& v) {
 }
 
 void CfCamLookatIntf::setLookat(CfCamEvent* camEvent, CVec3 const& v) {
-	camEvent->lookat = v;
-	camEvent->unk264 = 0;
+    camEvent->lookat = v;
+    camEvent->unk264 = 0;
 }
 }

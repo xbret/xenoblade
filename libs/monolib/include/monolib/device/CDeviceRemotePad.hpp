@@ -7,18 +7,18 @@
 //size: 0x1f0
 class CDeviceRemotePad : public CDeviceBase {
 public:
-	CDeviceRemotePad(const char* name, CWorkThread* workThread);
-	static CDeviceRemotePad* getInstance();
+    CDeviceRemotePad(const char* name, CWorkThread* workThread);
+    static CDeviceRemotePad* getInstance();
 
-	static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
-		CDeviceRemotePad* device = new (WorkThreadSystem::getHeapIndex()) CDeviceRemotePad(name, workThread);
-		device->func_80438BD8(workThread, 0);
-		return device;
-	}
+    static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
+        CDeviceRemotePad* device = new (WorkThreadSystem::getHeapIndex()) CDeviceRemotePad(name, workThread);
+        device->func_80438BD8(workThread, 0);
+        return device;
+    }
 
-	//0x0: vtable
-	//0x0-1c8: CDeviceBase
-	u8 unk1C8[0x1F0 - 0x1C8];
+    //0x0: vtable
+    //0x0-1c8: CDeviceBase
+    u8 unk1C8[0x1F0 - 0x1C8];
 };
 
 int* CDeviceRemotePad_80447580();

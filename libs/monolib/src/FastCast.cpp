@@ -2,8 +2,8 @@
 
 namespace ml{
 
-	void initFastCast(){
-		OSInitFastCast();
-	}
+    void initFastCast(){
+        OSInitFastCast();
+    }
 
 }

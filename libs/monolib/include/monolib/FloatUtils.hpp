@@ -10,7 +10,7 @@
 #define FLOAT_TO_HEX(f) (*(u32*)&f)
 
 namespace ml{
-	namespace math{
-		bool isErrFloat(float f);
-	}
+    namespace math{
+        bool isErrFloat(float f);
+    }
 }
