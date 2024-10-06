@@ -12,20 +12,20 @@ namespace cf{
     class CfObjectPc : public CfObjectActor{
     public:
         virtual ~CfObjectPc();
-        virtual void func_800BFF20();
-        virtual void func_800C0080();
-        virtual void func_800C0524();
-        virtual void func_800BFFEC();
-        virtual void func_800C00C0();
-        virtual void func_800C0174();
-        virtual void func_800C02C4();
-        virtual void func_800C02EC();
-        virtual void func_800C032C();
-        virtual void func_800C03A8();
-        virtual void func_800C0474();
-        virtual void func_800C0504();
-        virtual void func_800C0514();
-        virtual void func_800C11CC();
+        virtual void func_800BFF20(); //0x5D4
+        virtual void func_800C0080(); //0x5D8
+        virtual void func_800C0524(); //0x5DC
+        virtual void func_800BFFEC(); //0x5E0
+        virtual void func_800C00C0(); //0x5E4
+        virtual void func_800C0174(); //0x5E8
+        virtual void func_800C02C4(); //0x5EC
+        virtual void func_800C02EC(); //0x5F0
+        virtual void func_800C032C(); //0x5F4
+        virtual void func_800C03A8(); //0x5F8
+        virtual void func_800C0474(); //0x5FC
+        virtual void func_800C0504(); //0x600
+        virtual void func_800C0514(); //0x604
+        virtual void func_800C11CC(); //0x608
 
         inline UNKTYPE* unkInline1(){
             BOOL thing = CObjectParam_vtableFunc5();

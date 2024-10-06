@@ -28,14 +28,14 @@ namespace cf{
     };
 
     struct CBattleManager_Struct1 {
-        u8 unk0[0x100];
+        u32 unk0[64];
 
         CBattleManager_Struct1(){
-            u8* r30 = unk0;
-            u8* r31 = unk0 + 0x100;
+            u32* r31 = (u32*)((u32)unk0 + sizeof(unk0));
+            u32* r30 = unk0;
             do{
-                std::memset(r30, 0, 8);
-                r30 += 8;
+                std::memset(r30, 0, sizeof(u32) * 2);
+                r30 += 2;
             } while(r30 < r31);
             std::memset(unk0, 0, sizeof(unk0));
         }
@@ -79,6 +79,8 @@ namespace cf{
         UnkClass_800D8DBC unk20C8; //0x20C8
         CSuddenCommu mSuddenCommu; //0x216C
         CVision mVision; //0x219C
+
+        static u32 lbl_804F8228[];
 
     protected:
         static CBattleManager* instance;
