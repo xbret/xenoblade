@@ -3,9 +3,9 @@
 #include "types.h"
 #include "kyoshin/appgame/cf/object/CfObjectMove.hpp"
 
-namespace cf{
+namespace cf {
     //size 0x718
-    class CfObjectObj : public CfObjectMove{
+    class CfObjectObj : public CfObjectMove {
     public:
         //0x0: vtable 1
         //0x0-718: CfObjectMove

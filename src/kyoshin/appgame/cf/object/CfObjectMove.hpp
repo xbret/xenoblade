@@ -7,6 +7,7 @@ namespace cf {
     //min size: 0x715
     class CfObjectMove : public CfObjectModel {
     public:
+        CfObjectMove();
         //vtable 1 (CfObject)
         virtual ~CfObjectMove();
         //vtable 1 (CfObjectMove)

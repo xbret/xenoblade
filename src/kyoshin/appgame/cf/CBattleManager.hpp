@@ -28,17 +28,23 @@ namespace cf{
     };
 
     struct CBattleManager_Struct1 {
-        u32 unk0[64];
-
         CBattleManager_Struct1(){
-            u32* r31 = (u32*)((u32)unk0 + sizeof(unk0));
-            u32* r30 = unk0;
-            do{
-                std::memset(r30, 0, sizeof(u32) * 2);
-                r30 += 2;
-            } while(r30 < r31);
             std::memset(unk0, 0, sizeof(unk0));
         }
+
+        u8 unk0[8];
+    };
+
+    struct CBattleManager_Struct2 {
+        CBattleManager_Struct2(){
+            clear();
+        }
+
+        void clear(){
+            std::memset(unk0, 0, sizeof(unk0));
+        }
+
+        CBattleManager_Struct1 unk0[32];
     };
 
     //size: 0x283D8
@@ -72,7 +78,7 @@ namespace cf{
         float unk88;
         u32 unk8C;
         float unk90;
-        CBattleManager_Struct1 unk94;
+        CBattleManager_Struct2 unk94;
         UnkClass_8018C5FC unk194; //0x194
         UnkClass_80192BF4 unk19C; //0x19C
         CChain mChain; //0x1A8

@@ -39,6 +39,8 @@ namespace cf {
         virtual void CBattleState_vtableFunc32(); //0x84
         virtual void CBattleState_vtableFunc33(); //0x88
 
+        CBattleState();
+
         u8 unkC[0x15DC - 0xC];
     };
 }
