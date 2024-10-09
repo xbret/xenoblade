@@ -26,14 +26,6 @@ namespace cf {
         u8 unk0;
     };
 
-    struct CActorParam_UnkStruct7 {
-        CActorParam_UnkStruct7(){
-            unk0 = 0;
-        }
-
-        u32 unk0;
-    };
-
     struct CActorParam_Bitflags {
         CActorParam_Bitflags(){
             flags = 0;
@@ -45,6 +37,10 @@ namespace cf {
     //size: 0xBC
     struct CActorParam_UnkStruct1 {
         CActorParam_UnkStruct1() {
+            init();
+        }
+
+        void init(){
             unk0 = 0;
             unk4 = 0;
             unk48 = 0;
@@ -54,7 +50,6 @@ namespace cf {
             unk58 = 0;
             unk5C = 0;
             unk60 = 0;
-            unk64 = 0;
             unk64 = 0;
             unk7C = 0;
             unk80 = 0;
@@ -71,7 +66,7 @@ namespace cf {
 
         u32 unk0;
         u32 unk4;
-        u8 unk8[0x48 - 0x8];
+        u8 unk8[0x40];
         u32 unk48;
         int unk4C;
         CActorParam_UnkStruct2* unk50;
@@ -88,7 +83,7 @@ namespace cf {
         u32 unk7C;
         u16 unk80;
         u8 unk82[2];
-        u8 unk84[0xB8 - 0x84];
+        u8 unk84[0x34];
         u32 unkB8;
 
         enum Flags_74 {
@@ -137,7 +132,7 @@ namespace cf {
         CActorParam_UnkStruct6 unk4E[4];
     };
 
-    //inherits CActorParam_UnkStruct4?
+    //TODO: related to above struct?
     //size: 0x78
     struct CActorParam_UnkStruct3 {
         CActorParam_UnkStruct3() {
@@ -185,60 +180,6 @@ namespace cf {
         float unkC;
         float unk10;
         u32 unk14;
-    };
-
-    //size: 0xB8
-    struct CActorParam_UnkStruct10 {
-        CActorParam_UnkStruct10(){
-            init();
-        }
-
-        void init(){
-            unk0 = 0;
-            unk4 = 0;
-            unk48 = 0;
-            unk4C = -1;
-            unk50 = 0;
-            unk54 = 0;
-            unk58 = 0;
-            unk5C = 0;
-            unk60 = 0;
-            unk64 = 0;
-            unk78 = 0;
-            unk7C = 0;
-            unkB4 = 0;
-            unk68 = 0;
-            unk6C = 0;
-            unk70 = 0;
-            unk72 = 0;
-            std::memset(unk8, 0, 0x40);
-            std::memset(unk80, 0, 0x34);
-
-            unk74[0].unk0 = 0;
-            unk74[1].unk0 = 0;
-        }
-
-        u32 unk0;
-        u32 unk4;
-        u8 unk8[0x40];
-        u32 unk48;
-        int unk4C;
-        u32 unk50;
-        float unk54;
-        float unk58;
-        float unk5C;
-        float unk60;
-        float unk64;
-        float unk68;
-        float unk6C;
-        u16 unk70;
-        u16 unk72;
-        CActorParam_UnkStruct7 unk74[2];
-        u32 unk78;
-        u16 unk7C;
-        u8 unk7E[2];
-        u8 unk80[0x34];
-        u32 unkB4;
     };
 
     //size: 0x3384
@@ -479,8 +420,8 @@ namespace cf {
         CAttackSet mAttackSet; //0x274C
         u32 unk2A80; //probably not here
         CActorParam_UnkStruct1 unk2A84[10];
-        CActorParam_UnkStruct10 unk31DC;
-        CActorParam_UnkStruct10 unk3298;
+        CActorParam_UnkStruct1 unk31DC;
+        CActorParam_UnkStruct1 unk3298;
         u8 unk3354;
         u8 unk3355[3]; //padding?
         u16 unk3358;
