@@ -4,8 +4,12 @@
 #include "kyoshin/appgame/cf/object/CDebugState.hpp"
 #include "kyoshin/appgame/cf/object/CBattleState.hpp"
 #include "kyoshin/appgame/cf/object/CActorState.hpp"
+#include "kyoshin/appgame/cf/CArtsSet.hpp"
+#include <cstring>
 
-namespace cf{
+namespace cf {
+
+    //size: 0x7C
     struct CActorParam_UnkStruct2 {
         u8 unk0[0x40];
         u16 unk40;
@@ -13,15 +17,234 @@ namespace cf{
         u32 unk78;
     };
 
+    //might be fake?
+    struct CActorParam_UnkStruct6 {
+        CActorParam_UnkStruct6(){
+            unk0 = 0;
+        }
+    
+        u8 unk0;
+    };
+
+    struct CActorParam_UnkStruct7 {
+        CActorParam_UnkStruct7(){
+            unk0 = 0;
+        }
+
+        u32 unk0;
+    };
+
+    struct CActorParam_Bitflags {
+        CActorParam_Bitflags(){
+            flags = 0;
+        }
+
+        u32 flags;
+    };
+
+    //size: 0xBC
     struct CActorParam_UnkStruct1 {
-        u8 unk0[0x50];
+        CActorParam_UnkStruct1() {
+            unk0 = 0;
+            unk4 = 0;
+            unk48 = 0;
+            unk4C = -1;
+            unk50 = 0;
+            unk54 = 0;
+            unk58 = 0;
+            unk5C = 0;
+            unk60 = 0;
+            unk64 = 0;
+            unk64 = 0;
+            unk7C = 0;
+            unk80 = 0;
+            unkB8 = 0;
+            unk68 = 0;
+            unk6C = 0;
+            unk70 = 0;
+            unk72 = 0;
+            std::memset(unk8, 0, sizeof(unk8));
+            std::memset(unk84, 0, sizeof(unk84));
+            mFlagsArray[0].flags = 0;
+            mFlagsArray[1].flags = 0;
+        }
+
+        u32 unk0;
+        u32 unk4;
+        u8 unk8[0x48 - 0x8];
+        u32 unk48;
+        int unk4C;
         CActorParam_UnkStruct2* unk50;
-        u8 unk54[0x74 - 0x54];
+        float unk54;
+        float unk58;
+        float unk5C;
+        float unk60;
+        float unk64;
+        float unk68;
+        float unk6C;
+        u16 unk70;
+        u16 unk72;
+        CActorParam_Bitflags mFlagsArray[2]; //0x74
+        u32 unk7C;
+        u16 unk80;
+        u8 unk82[2];
+        u8 unk84[0xB8 - 0x84];
+        u32 unkB8;
+
+        enum Flags_74 {
+            FLAG_BIT_0 = (1 << 0),
+            FLAG_BIT_1 = (1 << 1),
+            FLAG_BIT_2 = (1 << 2),
+            FLAG_BIT_3 = (1 << 3),
+            FLAG_BIT_4 = (1 << 4),
+            FLAG_BIT_5 = (1 << 5),
+            FLAG_BIT_6 = (1 << 6),
+            FLAG_BIT_7 = (1 << 7),
+            FLAG_BIT_8 = (1 << 8),
+            FLAG_BIT_9 = (1 << 9),
+            FLAG_BIT_10 = (1 << 10),
+            FLAG_BIT_11 = (1 << 11),
+            FLAG_BIT_12 = (1 << 12),
+            FLAG_BIT_13 = (1 << 13),
+            FLAG_BIT_14 = (1 << 14),
+            FLAG_BIT_15 = (1 << 15),
+            FLAG_BIT_16 = (1 << 16),
+            FLAG_BIT_17 = (1 << 17),
+            FLAG_BIT_18 = (1 << 18),
+            FLAG_BIT_19 = (1 << 19),
+            FLAG_BIT_20 = (1 << 20),
+            FLAG_BIT_21 = (1 << 21),
+            FLAG_BIT_22 = (1 << 22),
+            FLAG_BIT_23 = (1 << 23),
+            FLAG_BIT_24 = (1 << 24),
+            FLAG_BIT_25 = (1 << 25),
+            FLAG_BIT_26 = (1 << 26),
+            FLAG_BIT_27 = (1 << 27),
+            FLAG_BIT_28 = (1 << 28),
+            FLAG_BIT_29 = (1 << 29),
+            FLAG_BIT_30 = (1 << 30),
+            FLAG_BIT_31 = (1 << 31),
+        };
+    };
+
+    //size: 0x52
+    struct CActorParam_UnkStruct4 {
+        CActorParam_UnkStruct4() {
+            std::memset(this, 0, sizeof(*this)); //wtf??
+        }
+
+        u8 unk0[0x4E];
+        CActorParam_UnkStruct6 unk4E[4];
+    };
+
+    //inherits CActorParam_UnkStruct4?
+    //size: 0x78
+    struct CActorParam_UnkStruct3 {
+        CActorParam_UnkStruct3() {
+            unk74 = 0;
+
+            std::memset(this, 0, sizeof(*this)); //wtf??
+
+            unk5C = 1.0f;
+            unk38 = 5;
+            unk3A = 5;
+        }
+
+        u8 unk0[0x38];
+        u16 unk38;
+        u16 unk3A;
+        u8 unk3C[0x44 - 0x3C];
+        float unk44;
+        u8 unk48[4];
+        float unk4C;
+        u8 unk50[0x5C - 0x50];
+        float unk5C;
+        u8 unk60[0x70 - 0x60];
+        CActorParam_UnkStruct6 unk70[4];
         u32 unk74;
     };
 
-    class CActorParam : public CActorState, public CBattleState, public CDebugState{
+    //size: 0x18
+    struct CActorParam_UnkStruct5 {
+        CActorParam_UnkStruct5(){
+            std::memset(this, 0, sizeof(*this)); //wtf??
+        }
+
+        void init(){
+            unk14 = 0;
+            unk4 = 0;
+            unk0 = 0;
+            unkC = 0;
+            unk8 = 0;
+            unk10 = 0;
+        }
+
+        float unk0;
+        float unk4;
+        float unk8;
+        float unkC;
+        float unk10;
+        u32 unk14;
+    };
+
+    //size: 0xB8
+    struct CActorParam_UnkStruct10 {
+        CActorParam_UnkStruct10(){
+            init();
+        }
+
+        void init(){
+            unk0 = 0;
+            unk4 = 0;
+            unk48 = 0;
+            unk4C = -1;
+            unk50 = 0;
+            unk54 = 0;
+            unk58 = 0;
+            unk5C = 0;
+            unk60 = 0;
+            unk64 = 0;
+            unk78 = 0;
+            unk7C = 0;
+            unkB4 = 0;
+            unk68 = 0;
+            unk6C = 0;
+            unk70 = 0;
+            unk72 = 0;
+            std::memset(unk8, 0, 0x40);
+            std::memset(unk80, 0, 0x34);
+
+            unk74[0].unk0 = 0;
+            unk74[1].unk0 = 0;
+        }
+
+        u32 unk0;
+        u32 unk4;
+        u8 unk8[0x40];
+        u32 unk48;
+        int unk4C;
+        u32 unk50;
+        float unk54;
+        float unk58;
+        float unk5C;
+        float unk60;
+        float unk64;
+        float unk68;
+        float unk6C;
+        u16 unk70;
+        u16 unk72;
+        CActorParam_UnkStruct7 unk74[2];
+        u32 unk78;
+        u16 unk7C;
+        u8 unk7E[2];
+        u8 unk80[0x34];
+        u32 unkB4;
+    };
+
+    //size: 0x3384
+    class CActorParam : public CActorState, public CBattleState, public CDebugState {
     public:
+    #pragma region vtable
         virtual void CActorParam_vtableFunc1();   //0x98
         virtual void CActorParam_vtableFunc2();   //0x9C
         virtual void CActorParam_vtableFunc3();   //0xA0
@@ -203,7 +426,73 @@ namespace cf{
         virtual void CActorParam_vtableFunc179(); //0x360
         virtual void CActorParam_vtableFunc180(); //0x364
         virtual void CActorParam_vtableFunc181(); //0x368
+    #pragma endregion
 
-        u8 unk15E0[0x3384 - 0x15E0]; //temporary
+        CActorParam(UNKTYPE* r4, UNKTYPE* r5);
+
+        UNKTYPE* unk15DC;
+        UNKTYPE* unk15E0;
+        u32 unk15E4;
+        float unk15E8;
+        u32 unk15EC;
+        u32 unk15F0;
+        u8 unk15F4[8];
+        float unk15FC;
+        u32 unk1600;
+        u32 unk1604;
+        u32 unk1608;
+        u16 unk160C;
+        u16 unk160E;
+        float unk1610;
+        u16 unk1614;
+        u16 unk1616;
+        float unk1618;
+        u32 unk161C;
+        float unk1620;
+        float unk1624;
+        u8 unk1628;
+        u8 unk1629;
+        u8 unk162A;
+        u8 unk162B;
+        u8 unk162C;
+        float unk1630;
+        u32 unk1634;
+        u32 unk1638;
+        u32 unk163C;
+        u32 unk1640;
+        u32 unk1644;
+        u16 unk1648;
+        u16 unk164A;
+        u16 unk164C;
+        u8 unk164E[2];
+        CActorParam_UnkStruct3 unk1650;
+        CActorParam_UnkStruct3 unk16C8;
+        CActorParam_UnkStruct4 unk1740;
+        CActorParam_UnkStruct4 unk1792;
+        CActorParam_UnkStruct3 unk17E4;
+        CActorParam_UnkStruct3 unk185C;
+        CActorParam_UnkStruct4 unk18D4;
+        u8 unk1926[2]; //filler?
+        CActorParam_UnkStruct5 unk1928[8];
+        CArtsSet mArtsSet; //0x19E8
+        u8 unk2740[0xC];
+        CAttackSet mAttackSet; //0x274C
+        u32 unk2A80; //probably not here
+        CActorParam_UnkStruct1 unk2A84[10];
+        CActorParam_UnkStruct10 unk31DC;
+        CActorParam_UnkStruct10 unk3298;
+        u8 unk3354;
+        u8 unk3355[3]; //padding?
+        u16 unk3358;
+        u16 unk335A;
+        u8 unk335C[5];
+        u8 unk3361[3]; //padding?
+        float unk3364;
+        float unk3368;
+        u32 unk336C;
+        u32 unk3370;
+        u32 unk3374;
+        u8 unk3378[4];
+        float unk337C;
     };
 }

@@ -3,9 +3,9 @@
 #include "types.h"
 #include "kyoshin/appgame/cf/object/CObjectState.hpp"
 
-namespace cf{
+namespace cf {
     //min size: 0x38
-    class CObjectParam : public CObjectState{
+    class CObjectParam : public CObjectState {
     public:
         virtual void CObjectParam_vtableFunc1(); //0x3C
         virtual void CObjectParam_vtableFunc2(); //0x40

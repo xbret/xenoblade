@@ -2,9 +2,9 @@
 
 #include "types.h"
 
-namespace cf{
+namespace cf {
     //min size: 0x10
-    class CObjectState{
+    class CObjectState {
     public:
         virtual void CObjectState_vtableFunc1();  //0x8
         virtual void CObjectState_vtableFunc2();  //0xC

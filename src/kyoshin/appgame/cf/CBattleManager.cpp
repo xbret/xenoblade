@@ -23,11 +23,12 @@ namespace cf{
         0x1B9
     };
 
+    //Plays attack sound effects when a player character hits an enemy?
     void func_800D7A04(CfObjectPc* pObjectPc, CfObjectEne* pObjectEne){
         CActorParam_UnkStruct1* r3 = pObjectPc->CActorParam_vtableFunc129();
-        u32 flags = r3->unk74;
+        u32 flags = r3->mFlagsArray[0].flags;
 
-        if(flags & 0x2){
+        if(flags & CActorParam_UnkStruct1::FLAG_BIT_1){
             CfSoundMan::func_801BFC38(0, 0x192, 0, 0, 0.6f);
             CfSoundMan::func_801BFC38(0, 0x191, 0, 0, 0.6f);
         }else if(flags & 0x2000){
@@ -36,24 +37,25 @@ namespace cf{
             CActorParam_UnkStruct2* r30 = r3->unk50;
 
             if(r30 != nullptr){
-                if(r30->unk78 & 0x1000000){
+                if(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_24){
                     if(pObjectEne->CActorParam_vtableFunc19() == 1 ||
                     pObjectEne->CActorParam_vtableFunc19() == 2){
-                        if(!(r30->unk78 & 0x200)){
+                        if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                             CfSoundMan::func_801BFC38(0, 0x1B4, 0, 0, 0.6f);
                             return;
                         }
-                    }else if(!(r30->unk78 & 0x200)){
+                    }else if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                         CfSoundMan::func_801BFC38(0, 0x1B5, 0, 0, 0.6f);
                         return;
                     }
-                }else if((r30->unk78 & 0x2000000) && !(r30->unk78 & 0x200)){
+                }else if((r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_25)
+                && !(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                     CfSoundMan::func_801BFC38(0, 0x1B5, 0, 0, 0.6f);
                     return;
                 }
                 
                 if((s32)r30->unk40 == 1){
-                    if(flags & 0x100){
+                    if(flags & CActorParam_UnkStruct1::FLAG_BIT_8){
                         CfSoundMan::func_801BFC38(0, 0x1AF, 0, 0, 0.6f);
                     }else{
                         //likely an inline
@@ -70,7 +72,7 @@ namespace cf{
                         }
                     }
                 }else if((s32)r30->unk40 == 2){
-                    if(flags & 0x100){
+                    if(flags & CActorParam_UnkStruct1::FLAG_BIT_8){
                         CfSoundMan::func_801BFC38(0, 0x1AC, 0, 0, 0.6f);
                     }else{
                         //likely an inline
@@ -140,7 +142,7 @@ namespace cf{
         unk8C = 0;
         unk90 = 0;
         mVision.unk261C4.unk70 = 0;
-        std::memset(unk94.unk0, 0, sizeof(unk94.unk0));
+        unk94.clear();
         func_80085220(2, 0);
     }
 

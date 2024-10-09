@@ -3,9 +3,9 @@
 #include "types.h"
 #include "kyoshin/appgame/cf/object/CfObjectObj.hpp"
 
-namespace cf{
+namespace cf {
     //size: 0x738
-    class CfObjectTbox : public CfObjectObj{
+    class CfObjectTbox : public CfObjectObj {
     public:
         //0x0: vtable
         //0x0-718: CfObjectObj
