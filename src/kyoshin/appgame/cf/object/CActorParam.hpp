@@ -185,6 +185,7 @@ namespace cf {
     //size: 0x3384
     class CActorParam : public CActorState, public CBattleState, public CDebugState {
     public:
+        CActorParam(UNKTYPE* r4, UNKTYPE* r5);
     #pragma region vtable
         virtual void CActorParam_vtableFunc1();   //0x98
         virtual void CActorParam_vtableFunc2();   //0x9C
@@ -368,8 +369,6 @@ namespace cf {
         virtual void CActorParam_vtableFunc180(); //0x364
         virtual void CActorParam_vtableFunc181(); //0x368
     #pragma endregion
-
-        CActorParam(UNKTYPE* r4, UNKTYPE* r5);
 
         UNKTYPE* unk15DC;
         UNKTYPE* unk15E0;
