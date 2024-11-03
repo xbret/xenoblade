@@ -28,7 +28,7 @@ include_dirs = [
     os.path.join(root_dir, "libs/RVL_SDK/src/revolution/hbm/include"),
 ]
 
-include_pattern = re.compile(r'^#\s*include\s*[<"](.+?)[>"]$')
+include_pattern = re.compile(r'^#\s*include\s*[<"](.+?)[>"]')
 guard_pattern = re.compile(r"^#\s*ifndef\s+(.*)$")
 pragmaonce_pattern = re.compile(r'^#pragma once.*$')
 

@@ -1,36 +1,23 @@
 {
-    "[c]": {
-        "files.encoding": "utf8"
-    },
-    "[cpp]": {
-        "files.encoding": "utf8"
-    },
-    "editor.tabSize": 4,
-	"files.exclude": {
-        "**/CVS": false,
-		"**/*.ctx": true
-	},
-    "files.insertFinalNewline": true,
-    "files.associations": {
-        "*.cp": "cpp",
-        "algorithm": "cpp",
-        "cmath": "cpp",
-        "cstdarg": "cpp",
-        "cstddef": "cpp",
-        "cstdio": "cpp",
-        "cstring": "cpp",
-        "cwchar": "cpp",
-        "exception": "cpp",
-        "iterator": "cpp",
-        "new": "cpp",
-        "typeinfo": "cpp"
-    },
-    "search.useIgnoreFiles": false,
-    "search.exclude": {
-        "build/*/config.json": true,
-        "build/**/*.MAP": true,
-        "build.ninja": true,
-        ".ninja_*": true,
-        "objdiff.json": true
-    }
+  "[c]": {
+    "files.encoding": "utf8",
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[cpp]": {
+    "files.encoding": "utf8",
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  // "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.associations": {
+    "*.inc": "c",
+    ".clangd": "yaml"
+  },
+  // Disable C/C++ IntelliSense, use clangd instead
+  "C_Cpp.intelliSenseEngine": "disabled",
 }
