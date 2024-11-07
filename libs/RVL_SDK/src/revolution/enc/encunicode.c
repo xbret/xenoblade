@@ -6,8 +6,8 @@ static char base64_array[] = {
 };
 
 ENCResult ENCiConvertStringUtf8ToUtf16(u16* dest, u32* destLengthPtr, const u8* src, u32* srcLengthPtr, ENCBreakType brType);
-u32 ENCiConvertUtf8To32(const u8* src, s32 size);
-void ENCiConvertUtf32To16(u16* dest, s32 size, u32 val);
+static u32 ENCiConvertUtf8To32(const u8* src, s32 size);
+static void ENCiConvertUtf32To16(u16* dest, s32 size, u32 val);
 
 //unused
 void ENCConvertStringUnicodeToAscii(){
@@ -310,4 +310,3 @@ static void ENCiConvertUtf32To16(u16* dest, s32 size, u32 val){
 //unused
 static void ENCiGetBase64Value(){
 }
-

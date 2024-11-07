@@ -1,5 +1,6 @@
 #ifndef RVL_SDK_AX_SPB_H
 #define RVL_SDK_AX_SPB_H
+#include <revolution/ax/AXPB.h>
 #include <types.h>
 #ifdef __cplusplus
 extern "C" {
@@ -74,6 +75,7 @@ void __AXDepopFadeMain(s32* all, s32* value, s16* depop) DECOMP_DONT_INLINE;
 void __AXDepopFadeRmt(s32* all, s32* value, s16* depop) DECOMP_DONT_INLINE;
 void __AXPrintStudio(void);
 void __AXSPBInit(void);
+void __AXSPBQuit(void);
 void __AXDepopVoice(AXPB* pb);
 
 #ifdef __cplusplus

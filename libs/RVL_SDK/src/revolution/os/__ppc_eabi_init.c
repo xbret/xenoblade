@@ -8,6 +8,7 @@ DECL_SECTION(".dtors$00") extern funcptr_t _dtors[];
 
 asm void __init_hardware(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     // Enable floating-point
@@ -25,11 +26,13 @@ asm void __init_hardware(void) {
     // Restore LR
     mtlr r31
     blr
+    #endif
     // clang-format on
 }
 
 asm void __flush_cache(register void* dst, register size_t n) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     lis r5, 0xFFFFFFF1@h
@@ -49,17 +52,20 @@ _loop:
 
     isync
     blr
+    #endif
     // clang-format on
 }
 
 asm void __init_user(void) {
     // clang-format off
+    #ifdef __MWERKS__
     fralloc
 
     bl __init_cpp
 
     frfree
     blr
+    #endif
     // clang-format on
 }
 

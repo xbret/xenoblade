@@ -4,6 +4,7 @@
 void C_MTXMultVec(){
 }
 
+#ifdef __MWERKS__
 asm void PSMTXMultVec(register const Mtx m, register const Vec* src,
                       register Vec* dst) {
     // clang-format off
@@ -48,6 +49,7 @@ asm void PSMTXMultVec(register const Mtx m, register const Vec* src,
     blr
     // clang-format on
 }
+#endif
 
 //unused
 void C_MTXMultVecArray(){
@@ -72,4 +74,3 @@ void C_MTXMultVecArraySR(){
 //unused
 asm void PSMTXMultVecArraySR(){
 }
-

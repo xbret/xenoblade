@@ -54,6 +54,7 @@ typedef enum {
 extern u32 __PADSpec;
 
 void PADControlMotor(s32 chan, u32 cmd);
+BOOL __PADDisableRecalibration(BOOL disable);
 
 #ifdef __cplusplus
 }

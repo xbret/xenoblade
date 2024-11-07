@@ -166,7 +166,7 @@ void __AIDHandler(s32 intr, OSContext* ctx) {
 
 static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
     // clang-format off
-
+    #ifdef __MWERKS__
     mr r31, callback
 
     lis r5, __OldStack@ha
@@ -187,7 +187,7 @@ static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
 
     frfree
     blr
-
+    #endif
     // clang-format on
 }
 

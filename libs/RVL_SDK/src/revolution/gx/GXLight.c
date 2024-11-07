@@ -215,6 +215,7 @@ inline void WriteLightObj(register volatile void* dst,
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         lwz color, src->color
         xor r6, r6, r6 // make zero
@@ -237,6 +238,7 @@ inline void WriteLightObj(register volatile void* dst,
         psq_st ps_4, 0(dst), 0, 0
         psq_st ps_5, 0(dst), 0, 0
     }
+    #endif
     // clang-format on
 }
 

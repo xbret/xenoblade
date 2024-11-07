@@ -1,6 +1,8 @@
 #include <revolution/BASE.h>
 #include <revolution/OS.h>
 
+#ifdef __MWERKS__
+
 asm u32 PPCMfmsr(void) {
     // clang-format off
     nofralloc
@@ -304,3 +306,5 @@ void PPCMthid4(register u32 val) {
         // clang-format on
     }
 }
+
+#endif

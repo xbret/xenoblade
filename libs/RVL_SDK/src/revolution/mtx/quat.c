@@ -3,6 +3,7 @@
 
 DECOMP_FORCELITERAL(quat_c, 0.00001f, 1.0f, 0.0f);
 
+#ifdef __MWERKS__
 //TODO: get it to match with a register var instead of f3
 void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2,
                register Quaternion* out) {
@@ -141,8 +142,8 @@ void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
 }
 
 //unused
-/*
 void PSQUATInverse(const register Quaternion* src, register Quaternion* inv) {
+    /*
     register f32 vv1, vv2, vv3, vv4;
     register f32 vv5, vv6, vv7, vv8, vv9, vvA, vvB;
     register f32 vvC = 1.0F;
@@ -172,8 +173,9 @@ loc1:
         psq_st      vv1, 0(inv), 0, 0;
         psq_st      vv3, 8(inv), 1, 0;
     }
+    */
 }
-*/
+#endif
 
 inline f32 mySqrtf(f32 x){
     return sqrt(x);
@@ -228,14 +230,15 @@ void C_QUATMtx(Quaternion* quat, const Mtx mtx) {
 }
 
 //unused
-/*
 void C_QUATLerp(const Quaternion* quat1, const Quaternion* quat2,
                 Quaternion* out, f32 f) {
+    /*
     out->x = f * (quat2->x - quat1->x) + quat1->x;
     out->y = f * (quat2->y - quat1->y) + quat1->y;
     out->z = f * (quat2->z - quat1->z) + quat1->z;
     out->w = f * (quat2->w - quat1->w) + quat1->w;
-}*/
+    */
+}
 
 void C_QUATSlerp(const Quaternion* a, const Quaternion* b, Quaternion* out,
                  f32 t) {

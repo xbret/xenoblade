@@ -57,6 +57,7 @@ void __OSIsDebuggerPresent(){
 
 asm void __OSFPRInit(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     // Set FP available bit
@@ -140,6 +141,7 @@ paired_singles_disabled:
     mtfsf 0xff, f0
 
     blr
+    #endif
     // clang-format on
 }
 
@@ -760,6 +762,7 @@ static void OSExceptionInit(void) {
 
 static asm void __OSDBIntegrator(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     entry __OSDBINTSTART
@@ -785,11 +788,13 @@ static asm void __OSDBIntegrator(void) {
     blr
 
     entry __OSDBINTEND
+    #endif
     // clang-format on
 }
 
 static asm void __OSDBJump(void){
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     entry __OSDBJUMPSTART
@@ -797,6 +802,7 @@ static asm void __OSDBJump(void){
     bla 0x60
 
     entry __OSDBJUMPEND
+    #endif
     // clang-format on
 }
 
@@ -813,6 +819,7 @@ OSExceptionHandler __OSGetExceptionHandler(u8 type) {
 
 static asm void OSExceptionVector(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     entry __OSEVStart
@@ -873,11 +880,13 @@ lbl_800ECF70:
     entry __OSEVEnd
 
     nop
+    #endif
     // clang-format on
 }
 
 asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     stw r0, ctx->gprs[0]
@@ -905,6 +914,7 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
 
     stwu r1, -8(r1)
     b __OSUnhandledException
+    #endif
     // clang-format on
 }
 
@@ -913,6 +923,7 @@ void __OSPSInit(void) {
     ICFlashInvalidate();
 
     // clang-format off
+    #ifdef __MWERKS__
     asm {
         sync
         li r3, 0
@@ -925,6 +936,7 @@ void __OSPSInit(void) {
         mtgqr6 r3
         mtgqr7 r3
     }
+    #endif
     // clang-format on
 }
 

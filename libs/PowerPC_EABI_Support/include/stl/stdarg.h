@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#if defined(__INTELLISENSE__) && defined(__cplusplus)
+#if !defined(__MWERKS__)
 #define __builtin_va_info(v) 0 /* definition for IDEs */
 #endif
 

@@ -237,7 +237,6 @@ else:
 # Game/Monolithlib Flags
 cflags_game = [
     *cflags_base,
-    "-lang=c99",
     "-ipa file",
     "-inline auto",
     "-use_lmw_stmw on",

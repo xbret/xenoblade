@@ -8,7 +8,11 @@ extern "C" {
 /**
  * AI hardware registers
  */
+#ifdef __MWERKS__
 volatile u32 AI_HW_REGS[] : 0xCD006C00;
+#else
+volatile u32 AI_HW_REGS[];
+#endif
 
 /**
  * Hardware register indexes

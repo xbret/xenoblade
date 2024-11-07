@@ -202,6 +202,7 @@ static void DecrementerExceptionCallback(u8 type, OSContext* ctx) {
 static asm void DecrementerExceptionHandler(register u8 type,
                                             register OSContext* ctx) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     stw r0, ctx->gprs[0]
@@ -226,6 +227,7 @@ static asm void DecrementerExceptionHandler(register u8 type,
 
     stwu r1, -8(r1)
     b DecrementerExceptionCallback
+    #endif
     // clang-format on
 }
 

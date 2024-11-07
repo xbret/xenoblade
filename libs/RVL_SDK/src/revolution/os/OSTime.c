@@ -22,6 +22,7 @@ static s32 LeapYearDays[MONTH_MAX] = {0,   31,  60,  91,  121, 152,
 
 asm s64 OSGetTime(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     mftbu r3
@@ -33,15 +34,19 @@ asm s64 OSGetTime(void) {
     bne OSGetTime
 
     blr
+    #endif
     // clang-format on
 }
 
 asm u32 OSGetTick(void){
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     mftb r3
     blr
+    #endif
+    // clang-format on
 }
 
 //unused

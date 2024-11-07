@@ -8,7 +8,11 @@ extern "C" {
 /**
  * VI hardware registers
  */
+#ifdef __MWERKS__
 volatile u16 VI_HW_REGS[] : 0xCC002000;
+#else
+volatile u16 VI_HW_REGS[];
+#endif
 
 /**
  * Hardware register indexes

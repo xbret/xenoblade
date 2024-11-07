@@ -26,10 +26,14 @@
 #define DECLTYPE(x) __decltype__(x)
 
 // For VSCode
-#ifdef __INTELLISENSE__
+#ifndef __MWERKS__
 #define asm
 #define __attribute__(x)
 #define __declspec(x)
+#define __rlwimi(ra, rs, sh, mb, me) 0
+#define __cntlzw(x) 0
+#define __abs(x) 0
+#define __sync()
 #endif
 
 #define VERSION_JP 0

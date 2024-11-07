@@ -12,9 +12,9 @@
 
 struct FunctionStruct{
     const char* name;
-    void* function;
+    void (*function)();
     u32 unk8;
-    u32 uckC;
+    u32 unkC;
 };
 
 struct StaticArcFile{
@@ -22,7 +22,7 @@ struct StaticArcFile{
     const char* filename;
     u32 unk8;
     void (*function1)(int);
-    void* function2;
+    void (*function2)();
 };
 
 extern "C"{
@@ -53,4 +53,3 @@ void func_80039F64(int);
 void func_80039F68();
 void vmInitPluginRegistCallback();
 void vmInitCallback();
-void main(int argc, char* argv[]);

@@ -4,6 +4,7 @@
 void C_VECAdd(){
 }
 
+#ifdef __MWERKS__
 asm void PSVECAdd(register const Vec* vec1, register const Vec* vec2,
                   register Vec* dst) {
     // clang-format off
@@ -28,6 +29,7 @@ asm void PSVECAdd(register const Vec* vec1, register const Vec* vec2,
     blr
     // clang-format on
 }
+#endif
 
 //unused
 void C_VECSubtract(){
@@ -41,6 +43,7 @@ asm void PSVECSubtract(){
 void C_VECScale(){
 }
 
+#ifdef __MWERKS__
 //unused
 void PSVECScale(register const Vec* in, register Vec* out, register f32 scale) {
     register f32 xy, z;
@@ -62,11 +65,13 @@ void PSVECScale(register const Vec* in, register Vec* out, register f32 scale) {
     }
     // clang-format on
 }
+#endif
 
 //unused
 void C_VECNormalize(){
 }
 
+#ifdef __MWERKS__
 void PSVECNormalize(register const Vec* vec1, register Vec* dst) {
     register f32 c_half, c_three;
     register f32 v1_xy, v1_z;
@@ -109,6 +114,7 @@ void PSVECNormalize(register const Vec* vec1, register Vec* dst) {
     }
     // clang-format on
 }
+#endif
 
 //unused
 void C_VECSquareMag(){
@@ -122,6 +128,7 @@ asm void PSVECSquareMag(){
 void C_VECMag(){
 }
 
+#ifdef __MWERKS__
 f32 PSVECMag(register const Vec* v) {
     register f32 vxy, vzz, mag;
     register f64 rmag;
@@ -171,11 +178,13 @@ f32 PSVECMag(register const Vec* v) {
 
     return mag;
 }
+#endif
 
 //unused
 void C_VECDotProduct(){
 }
 
+#ifdef __MWERKS__
 asm f32 PSVECDotProduct(register const Vec* vec1, register const Vec* vec2) {
     // clang-format off
     nofralloc
@@ -196,11 +205,13 @@ asm f32 PSVECDotProduct(register const Vec* vec1, register const Vec* vec2) {
     blr
     // clang-format on
 }
+#endif
 
 //unused
 void C_VECCrossProduct(){
 }
 
+#ifdef __MWERKS__
 asm void PSVECCrossProduct(register const Vec* vec1, register const Vec* vec2,
                            register Vec* dst) {
     // clang-format off
@@ -237,6 +248,7 @@ asm void PSVECCrossProduct(register const Vec* vec1, register const Vec* vec2,
     blr
     // clang-format on
 }
+#endif
 
 void C_VECHalfAngle(register const Vec* a, register const Vec* b,
                     register Vec* half) {
@@ -269,6 +281,7 @@ void C_VECReflect(){
 void C_VECSquareDistance(){
 }
 
+#ifdef __MWERKS__
 //unused
 f32 PSVECSquareDistance(register const Vec* a, register const Vec* b) {
     register f32 ayz, byz;
@@ -297,6 +310,7 @@ f32 PSVECSquareDistance(register const Vec* a, register const Vec* b) {
 
     return dist;
 }
+#endif
 
 //unused
 void C_VECDistance(){
@@ -305,4 +319,3 @@ void C_VECDistance(){
 //unused
 void PSVECDistance(){
 }
-

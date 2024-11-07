@@ -1,4 +1,5 @@
 #include <revolution/AX.h>
+#include <revolution/OS.h>
 
 static BOOL __init = FALSE;
 const char* __AXVersion = "<< RVL_SDK - AX \trelease build: Feb 27 2009 10:01:36 (0x4302_145) >>";

@@ -26,6 +26,7 @@ void __DBExceptionDestinationAux(void) {
 
 asm void __DBExceptionDestination(void){
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
     
     // Set up MMU
@@ -34,6 +35,7 @@ asm void __DBExceptionDestination(void){
     mtmsr r3
 
     b __DBExceptionDestinationAux
+    #endif
     // clang-format on
 }
 

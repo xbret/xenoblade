@@ -6,6 +6,7 @@ inline void LoadProjPS(register f32* dst) {
     register GXData* src;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         lwz src, __GXData
         psq_l  ps_0,  0  + GXData.proj(src), 0, 0
@@ -15,6 +16,7 @@ inline void LoadProjPS(register f32* dst) {
         psq_st ps_1,  8(dst),                0, 0
         psq_st ps_2, 16(dst),                0, 0
     }
+    #endif
     // clang-format on
 }
 
@@ -22,6 +24,7 @@ inline void WriteProjPS(register volatile void* dst, register const f32* src) {
     register f32 ps_0, ps_1, ps_2;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -30,6 +33,7 @@ inline void WriteProjPS(register volatile void* dst, register const f32* src) {
         psq_st ps_1,  0(dst), 0, 0
         psq_st ps_2,  0(dst), 0, 0
     }
+    #endif
     // clang-format on
 }
 
@@ -37,6 +41,7 @@ inline void Copy6Floats(register f32* dst, register const f32* src) {
     register f32 ps_0, ps_1, ps_2;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -45,6 +50,7 @@ inline void Copy6Floats(register f32* dst, register const f32* src) {
         psq_st ps_1,  8(dst), 0, 0
         psq_st ps_2, 16(dst), 0, 0
     }
+    #endif
     // clang-format on
 }
 
@@ -96,6 +102,7 @@ inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -111,6 +118,7 @@ inline void WriteMTXPS4x3(register volatile void* dst, register const Mtx src) {
         psq_st ps_4, 0(dst),  0, 0
         psq_st ps_5, 0(dst),  0, 0
     }
+    #endif
     // clang-format on
 }
 
@@ -118,6 +126,7 @@ inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         lfs    ps_1,  8(src)
@@ -133,6 +142,7 @@ inline void WriteMTXPS3x3(register volatile void* dst, register const Mtx src) {
         psq_st ps_4, 0(dst),  0, 0
         stfs   ps_5, 0(dst)
     }
+    #endif
     // clang-format on
 }
 
@@ -140,6 +150,7 @@ inline void WriteMTXPS4x2(register volatile void* dst, register const Mtx src) {
     register f32 ps_0, ps_1, ps_2, ps_3;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm volatile {
         psq_l  ps_0,  0(src), 0, 0
         psq_l  ps_1,  8(src), 0, 0
@@ -151,6 +162,7 @@ inline void WriteMTXPS4x2(register volatile void* dst, register const Mtx src) {
         psq_st ps_2, 0(dst),  0, 0
         psq_st ps_3, 0(dst),  0, 0
     }
+    #endif
     // clang-format on
 }
 

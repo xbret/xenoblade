@@ -67,6 +67,7 @@ void __AXSyncPBs(u32 baseCycles);
 AXPB* __AXGetPBs(void);
 void __AXSetPBDefault(AXVPB* vpb);
 void __AXVPBInit(void);
+void __AXVPBQuit(void);
 void AXSetVoiceState(AXVPB* vpb, u16 state);
 void AXSetVoiceAddr(AXVPB* vpb, AXPBADDR* addr);
 void AXGetLpfCoefs(u16 freq, u16* a, u16* b);

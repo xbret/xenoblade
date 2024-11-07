@@ -15,6 +15,7 @@ u32 __AXOutNewFrame(void);
 void __AXOutAiCallback(void);
 void __AXOutInitDSP(void);
 void __AXOutInit(u32 mode);
+void __AXOutQuit(void);
 AXOutCallback AXRegisterCallback(AXOutCallback callback);
 s32 AXRmtGetSamplesLeft(void);
 s32 AXRmtGetSamples(s32 chan, s16* out, s32 num);

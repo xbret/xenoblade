@@ -1,3 +1,4 @@
+#include "revolution/os/OSTime.h"
 #include <revolution/DVD.h>
 #include <revolution/EXI.h>
 #include <revolution/OS.h>
@@ -247,7 +248,7 @@ static BOOL __EXIProbe(EXIChannel chan) {
         }
 
         if (cpr & EXI_CPR_EXT) {
-            s32 time = (s32)(OS_TICKS_TO_MSEC(OSGetTime()) / 100) + 1;
+            s32 time = (s32)(OSTicksToMilliseconds(OSGetTime()) / 100) + 1;
             if (OS_EXI_LAST_INSERT[chan] == 0) {
                 OS_EXI_LAST_INSERT[chan] = time;
             }

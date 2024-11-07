@@ -5,7 +5,11 @@
 extern "C" {
 #endif
 
+#ifdef __MWERKS__
 u32 IPC_HW_REGS[] : 0xCD000000;
+#else
+u32 IPC_HW_REGS[];
+#endif
 
 inline u32 ACRReadReg(u32 reg) {
     return IPC_HW_REGS[reg / 4];

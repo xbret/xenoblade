@@ -171,6 +171,7 @@ s32 NANDGetLengthAsync(NANDFileInfo* info, u32* lengthOut,
                        NANDAsyncCallback callback, NANDCommandBlock* block);
 
 s32 NANDGetStatus(const char* path, NANDStatus* status);
+s32 NANDPrivateGetStatus(const char* path, NANDStatus* status);
 s32 NANDPrivateGetStatusAsync(const char* path, NANDStatus* status,
                               NANDAsyncCallback callback,
                               NANDCommandBlock* block);

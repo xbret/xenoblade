@@ -2,6 +2,7 @@
 #include <revolution/OS.h>
 #include <revolution/USB.h>
 #include <stdio.h>
+#include <string.h>
 
 #define USB_HEAP_SIZE 0x4000
 
@@ -761,4 +762,3 @@ CW_FORCE_STRINGS(usb_c_4, "GetStrCb returned: %d\n",
                  "Invalid path or devClass in insertion notification call\n",
                  "IUSB_RegisterInsertionNotifyWithIdAsync",
                  "%s: Not enough memory\n", "Failed to open %s: %d\n");
-

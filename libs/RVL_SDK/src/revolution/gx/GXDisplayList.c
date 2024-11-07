@@ -1,6 +1,5 @@
 #include <revolution/GX.h>
 #include <revolution/OS.h>
-#include <string.h>
 
 static GXFifoObj DisplayListFifo;
 static GXData __savedGXdata;

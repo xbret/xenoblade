@@ -1,5 +1,6 @@
 #include <revolution/IPC.h>
 #include <revolution/OS.h>
+#include <string.h>
 
 #define IPC_QUEUE_CAPACITY 16
 #define IPC_HEAP_SIZE_OLD 0x800

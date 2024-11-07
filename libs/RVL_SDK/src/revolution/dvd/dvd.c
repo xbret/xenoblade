@@ -1,6 +1,7 @@
 #include <revolution/DVD.h>
 #include <revolution/ESP.h>
 #include <revolution/OS.h>
+#include <string.h>
 
 #define DISK_TOC_OFFSET 0x40000
 #define DISK_TOC_SIZE ROUND_UP(sizeof(DVDGameToc), 32)
@@ -2384,4 +2385,3 @@ void DVDGetPartitionParamsAsync(){
 //unused
 void DVDOpenPartitionWithParamsAsync(){
 }
-

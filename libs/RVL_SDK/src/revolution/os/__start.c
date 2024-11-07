@@ -28,6 +28,7 @@ DECL_SECTION(".init") static BOOL __get_debug_bba(void) {
 
 DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     // Setup hardware
@@ -281,6 +282,7 @@ _after_init_metro_trk_bba:
     mr r4, r15
     bl main
     b exit // <- Will halt CPU
+    #endif
     // clang-format on
 }
 
@@ -305,6 +307,7 @@ static void __init_bss_section(void* dst, size_t size) {
 
 DECL_SECTION(".init") static asm void __init_registers(void) {
     // clang-format off
+    #ifdef __MWERKS__
     nofralloc
 
     li r0, 0
@@ -345,6 +348,7 @@ DECL_SECTION(".init") static asm void __init_registers(void) {
     ori r13, r13, _SDA_BASE_@l
 
     blr
+    #endif
     // clang-format on
 }
 

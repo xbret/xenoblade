@@ -25,6 +25,7 @@ typedef struct OSExecParams;
     static const u32 OS_CACHED_##name = (addr);                                \
     static const u32 OS_UNCACHED_##name = (addr) + (0xC0000000 - 0x80000000);
 
+#ifdef __MWERKS__
 // Define a global variable in *CACHED* MEM1.
 // Can be accessed directly or with OSAddress functions.
 #define OS_DEF_GLOBAL_VAR(type, name, addr)                                    \
@@ -43,6 +44,18 @@ typedef struct OSExecParams;
 #define OS_DEF_HW_REG(type, name, addr)                                        \
     /* Memory-mapped value for direct access */                                \
     type OS_##name : (addr);
+#else
+#define OS_DEF_GLOBAL_VAR(type, name, addr)                                    \
+    type OS_##name;                                                   \
+    __DEF_ADDR_OFFSETS(name, addr)
+
+#define OS_DEF_GLOBAL_ARR(type, name, arr, addr)                               \
+    type OS_##name arr;                                               \
+    __DEF_ADDR_OFFSETS(name, addr)
+
+#define OS_DEF_HW_REG(type, name, addr)                                        \
+    type OS_##name;
+#endif
 
 typedef enum {
     OS_BOOT_MAGIC_BOOTROM = 0xD15EA5E,
@@ -162,7 +175,12 @@ OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
 /**
  * PI hardware globals
  */
+#ifdef __MWERKS__
 volatile u32 PI_HW_REGS[] : 0xCC003000;
+#else
+volatile u32 PI_HW_REGS[];
+#endif
+
 typedef enum {
     PI_INTSR,    //!< 0xCC003000
     PI_INTMR,    //!< 0xCC003004
@@ -215,7 +233,12 @@ typedef enum {
 /**
  * MI hardware registers
  */
+#ifdef __MWERKS__
 volatile u16 MI_HW_REGS[] : 0xCC004000;
+#else
+volatile u16 MI_HW_REGS[];
+#endif
+
 typedef enum {
     MI_PAGE_MEM0_H, //!< 0xCC004000
     MI_PAGE_MEM0_L, //!< 0xCC004002
