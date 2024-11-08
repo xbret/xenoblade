@@ -1,4 +1,4 @@
-#include "lyt_resourceAccessor.h"
+#include <nw4r/lyt/lyt_resourceAccessor.h>
 
 namespace nw4r
 {

@@ -5,11 +5,7 @@
 extern "C" {
 #endif
 
-#ifdef __MWERKS__
-u32 IPC_HW_REGS[] : 0xCD000000;
-#else
-u32 IPC_HW_REGS[];
-#endif
+extern u32 IPC_HW_REGS[] AT_ADDRESS(0xCD000000);
 
 inline u32 ACRReadReg(u32 reg) {
     return IPC_HW_REGS[reg / 4];

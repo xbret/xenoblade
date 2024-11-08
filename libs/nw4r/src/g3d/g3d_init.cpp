@@ -1,6 +1,6 @@
-#include "g3d_init.h"
-#include "g3d_state.h"
-#include "ut_LockedCache.h"
+#include <nw4r/g3d/g3d_init.h>
+#include <nw4r/g3d/g3d_state.h>
+#include <nw4r/ut/ut_LockedCache.h>
 #include <revolution/os/OS.h>
 #include <revolution/VI/vi.h>
 #include <revolution/GX.h>

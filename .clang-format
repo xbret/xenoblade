@@ -1,30 +1,40 @@
+---
+BasedOnStyle: LLVM
 Language: Cpp
-
-BasedOnStyle: WebKit
-ColumnLimit: 140
-SortIncludes: false
-
+Standard: Cpp03
+SortIncludes: "true"
+SortUsingDeclarations: "true"
+UseTab: Never
 IndentWidth: 4
-TabWidth: 4
-
-UseTab: ForIndentation
-
-NamespaceIndentation: None
+IncludeBlocks: Regroup
+PointerAlignment: Left
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
 FixNamespaceComments: true
-CompactNamespaces: false
+AccessModifierOffset: -4
+AllowShortFunctionsOnASingleLine: Empty
+WhitespaceSensitiveMacros: [NW4R_UT_LIST_SAFE_FOREACH]
+AttributeMacros: [DECOMP_INLINE, DECOMP_DONT_INLINE]
 
-AlignTrailingComments: true
-AlignAfterOpenBracket: true
-AlignConsecutiveAssignments: true
-AlignConsecutiveMacros: true
-AlignEscapedNewlines: Left
-AlignOperands: AlignAfterOperator
+IncludeCategories:
+  - Regex:           '^<(nw4r|egg|Pack)?(\/)?types'     # "Types" headers
+    Priority:        0
+    CaseSensitive:   true
 
-AllowShortFunctionsOnASingleLine: true
-AllowShortIfStatementsOnASingleLine: Never
+  - Regex:           '<egg\/[[:lower:].]+h>' # EGG public headers
+    Priority:        2
+    CaseSensitive:   true
 
-Cpp11BracedListStyle: false
+  - Regex:           '<nw4r\/[[:lower:].]+h>' # NW4R public headers
+    Priority:        3
+    CaseSensitive:   true
 
-AlwaysBreakTemplateDeclarations: true
-BreakStringLiterals: true
-ReflowComments: true
+  - Regex:           '^<revolution\/[[:upper:].]+h>' # RVL SDK public headers
+    Priority:        4
+    CaseSensitive:   true
+
+  - Regex:           '<[[:alnum:].]+>' # STL headers
+    Priority:        5                 # Priority 0 is header mapped to src file
+    CaseSensitive:   true
+
+  - Regex:           '.*' # All other headers
+    Priority:        1

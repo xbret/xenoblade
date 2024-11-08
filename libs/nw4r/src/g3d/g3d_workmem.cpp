@@ -1,4 +1,4 @@
-#include "g3d_workmem.h"
+#include <nw4r/g3d/g3d_workmem.h>
 
 #include <nw4r/g3d.h>
 

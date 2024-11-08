@@ -1,4 +1,4 @@
-#include "db_DbgPrintBase.h"
+#include <nw4r/db/db_DbgPrintBase.h>
 
 // Unused file. Only here to force the function CharWriter::SetTextColor(ut::Color&)
 // into the right place.

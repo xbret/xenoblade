@@ -1,13 +1,13 @@
 #ifndef NW4R_LYT_PANE_H
 #define NW4R_LYT_PANE_H
-#include "types_nw4r.h"
-#include "math_types.h"
-#include "ut_LinkList.h"
-#include "ut_RuntimeTypeInfo.h"
-#include "ut_Color.h"
-#include "ut_algorithm.h"
-#include "lyt_animation.h"
-#include "lyt_types.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/math/math_types.h>
+#include <nw4r/ut/ut_LinkList.h>
+#include <nw4r/ut/ut_RuntimeTypeInfo.h>
+#include <nw4r/ut/ut_Color.h>
+#include <nw4r/ut/ut_algorithm.h>
+#include <nw4r/lyt/lyt_animation.h>
+#include <nw4r/lyt/lyt_types.h>
 #include <string.h>
 
 #define PANE_NAME_SIZE 17

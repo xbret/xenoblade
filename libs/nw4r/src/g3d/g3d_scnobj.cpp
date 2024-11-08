@@ -1,6 +1,6 @@
-#include "g3d_scnobj.h"
-#include "math_types.h"
-#include "math_geometry.h"
+#include <nw4r/g3d/g3d_scnobj.h>
+#include <nw4r/math/math_types.h>
+#include <nw4r/math/math_geometry.h>
 #include <algorithm>
 
 namespace nw4r

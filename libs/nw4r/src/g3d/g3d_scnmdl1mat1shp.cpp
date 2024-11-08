@@ -1,4 +1,4 @@
-#include "g3d_scnmdl1mat1shp.h"
+#include <nw4r/g3d/g3d_scnmdl1mat1shp.h>
 
 namespace nw4r
 {

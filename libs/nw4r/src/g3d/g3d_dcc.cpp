@@ -1,9 +1,9 @@
-#include "g3d_dcc.h"
-#include "math_types.h"
-#include "g3d_maya.h"
-#include "g3d_xsi.h"
-#include "g3d_3dsmax.h"
-#include "g3d_basic.h"
+#include <nw4r/g3d/g3d_dcc.h>
+#include <nw4r/math/math_types.h>
+#include <nw4r/g3d/dcc/g3d_maya.h>
+#include <nw4r/g3d/dcc/g3d_xsi.h>
+#include <nw4r/g3d/dcc/g3d_3dsmax.h>
+#include <nw4r/g3d/dcc/g3d_basic.h>
 
 namespace nw4r
 {

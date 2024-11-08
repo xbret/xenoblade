@@ -1,7 +1,7 @@
 #ifndef NW4R_LYT_RESOURCE_ACCESSOR_H
 #define NW4R_LYT_RESOURCE_ACCESSOR_H
-#include "types_nw4r.h"
-#include "ut_Font.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/ut/ut_Font.h>
 
 namespace nw4r
 {

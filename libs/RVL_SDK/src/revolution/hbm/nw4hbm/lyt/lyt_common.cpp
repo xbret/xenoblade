@@ -1,9 +1,9 @@
-#include "lyt_common.h"
-#include "lyt_layout.h"
-#include "lyt_pane.h"
-#include "ut_algorithm.h"
-#include "ut_color.h"
-#include "math_types.h"
+#include <nw4hbm/lyt/lyt_common.h>
+#include <nw4hbm/lyt/lyt_layout.h>
+#include <nw4hbm/lyt/lyt_pane.h>
+#include <nw4hbm/ut/ut_algorithm.h>
+#include <nw4hbm/ut/ut_color.h>
+#include <nw4hbm/math/math_types.h>
 #include <string.h>
 #include <revolution/GX.h>
 

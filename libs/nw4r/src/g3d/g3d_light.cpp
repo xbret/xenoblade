@@ -1,7 +1,7 @@
 #pragma ipa file
-#include "g3d_light.h"
-#include "g3d_cpu.h"
-#include "math_types.h"
+#include <nw4r/g3d/g3d_light.h>
+#include <nw4r/g3d/platform/g3d_cpu.h>
+#include <nw4r/math/math_types.h>
 #include <algorithm>
 
 namespace nw4r

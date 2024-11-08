@@ -1,9 +1,9 @@
 #ifndef NW4R_G3D_SCNOBJ_H
 #define NW4R_G3D_SCNOBJ_H
-#include "types_nw4r.h"
-#include "math_types.h"
-#include "math_geometry.h"
-#include "g3d_obj.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/math/math_types.h>
+#include <nw4r/math/math_geometry.h>
+#include <nw4r/g3d/g3d_obj.h>
 
 namespace nw4r
 {

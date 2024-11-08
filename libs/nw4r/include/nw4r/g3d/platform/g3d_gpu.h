@@ -1,8 +1,8 @@
 #ifndef NW4R_G3D_GPU_H
 #define NW4R_G3D_GPU_H
-#include "types_nw4r.h"
-#include "g3d_rescommon.h"
-#include "math_types.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/g3d/res/g3d_rescommon.h>
+#include <nw4r/math/math_types.h>
 #include <revolution/GX.h>
 
 namespace nw4r

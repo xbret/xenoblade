@@ -14,11 +14,7 @@ typedef struct EXIChannelParam {
     u32 data;   // at 0x10
 } EXIChannelParam;
 
-#ifdef __MWERKS__
-volatile EXIChannelParam EXI_CHAN_PARAMS[EXI_MAX_CHAN] : 0xCD006800;
-#else
-volatile EXIChannelParam EXI_CHAN_PARAMS[EXI_MAX_CHAN];
-#endif
+extern volatile EXIChannelParam EXI_CHAN_PARAMS[EXI_MAX_CHAN] AT_ADDRESS(0xCD006800);
 
 // CPR - Channel Parameter Register
 #define EXI_CPR_EXIINTMASK (1 << 0)

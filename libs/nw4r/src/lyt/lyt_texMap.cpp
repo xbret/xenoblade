@@ -1,6 +1,6 @@
 #pragma ipa file
 
-#include "lyt_texMap.h"
+#include <nw4r/lyt/lyt_texMap.h>
 
 namespace nw4r
 {

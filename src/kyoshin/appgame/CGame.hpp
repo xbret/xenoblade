@@ -3,7 +3,6 @@
 #include "types.h"
 #include "monolib/CProc.hpp"
 #include "monolib/CView.hpp"
-#include "monolib/MemManager.hpp"
 
 
 class CGame : public CProc {

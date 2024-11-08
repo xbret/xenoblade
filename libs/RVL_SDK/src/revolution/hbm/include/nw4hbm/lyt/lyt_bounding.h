@@ -1,8 +1,8 @@
 #ifndef NW4HBM_LYT_BOUNDING_H
 #define NW4HBM_LYT_BOUNDING_H
-#include "types_nw4hbm.h"
-#include "lyt_pane.h"
-#include "lyt_drawInfo.h"
+#include <nw4hbm/types_nw4hbm.h>
+#include <nw4hbm/lyt/lyt_pane.h>
+#include <nw4hbm/lyt/lyt_drawInfo.h>
 
 namespace nw4hbm
 {

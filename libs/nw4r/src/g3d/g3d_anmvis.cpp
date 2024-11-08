@@ -1,6 +1,6 @@
 #pragma ipa file
-#include "g3d_anmvis.h"
-#include "ut_algorithm.h"
+#include <nw4r/g3d/g3d_anmvis.h>
+#include <nw4r/ut/ut_algorithm.h>
 
 namespace nw4r
 {

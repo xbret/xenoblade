@@ -1,9 +1,9 @@
 #ifndef NW4HBM_LYT_GROUP_H
 #define NW4HBM_LYT_GROUP_H
-#include "types_nw4hbm.h"
-#include "lyt_pane.h"
-#include "lyt_common.h"
-#include "ut_LinkList.h"
+#include <nw4hbm/types_nw4hbm.h>
+#include <nw4hbm/lyt/lyt_pane.h>
+#include <nw4hbm/lyt/lyt_common.h>
+#include <nw4hbm/ut/ut_LinkList.h>
 
 namespace nw4hbm
 {

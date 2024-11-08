@@ -1,9 +1,9 @@
 #pragma ipa file
 
-#include "lyt_group.h"
-#include "lyt_layout.h"
-#include "ut_algorithm.h"
-#include "ut_LinkList.h"
+#include <nw4hbm/lyt/lyt_group.h>
+#include <nw4hbm/lyt/lyt_layout.h>
+#include <nw4hbm/ut/ut_algorithm.h>
+#include <nw4hbm/ut/ut_LinkList.h>
 #include <string.h>
 
 namespace nw4hbm

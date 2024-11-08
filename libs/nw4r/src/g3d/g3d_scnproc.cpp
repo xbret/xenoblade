@@ -1,5 +1,5 @@
-#include "g3d_scnproc.h"
-#include "g3d_state.h"
+#include <nw4r/g3d/g3d_scnproc.h>
+#include <nw4r/g3d/g3d_state.h>
 
 namespace nw4r
 {

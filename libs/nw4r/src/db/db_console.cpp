@@ -1,4 +1,4 @@
-#include "db_console.h"
+#include <nw4r/db/db_console.h>
 #include <revolution/OS.h>
 
 namespace nw4r

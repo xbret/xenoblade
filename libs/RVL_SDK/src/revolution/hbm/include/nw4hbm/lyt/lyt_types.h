@@ -1,6 +1,6 @@
 #ifndef NW4HBM_LYT_TYPES_H
 #define NW4HBM_LYT_TYPES_H
-#include "types_nw4hbm.h"
+#include <nw4hbm/types_nw4hbm.h>
 
 namespace nw4hbm
 {

@@ -1,8 +1,8 @@
 #ifndef NW4HBM_LYT_COMMON_H
 #define NW4HBM_LYT_COMMON_H
-#include "types_nw4hbm.h"
-#include "math_types.h"
-#include "ut_binaryFileFormat.h"
+#include <nw4hbm/types_nw4hbm.h>
+#include <nw4hbm/math/math_types.h>
+#include <nw4hbm/ut/ut_binaryFileFormat.h>
 
 #define NW4R_RES_NAME_SIZE 16
 #define NW4R_MAT_NAME_SIZE 20

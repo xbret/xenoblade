@@ -1,9 +1,9 @@
 #ifndef NW4R_LYT_GROUP_H
 #define NW4R_LYT_GROUP_H
-#include "types_nw4r.h"
-#include "lyt_pane.h"
-#include "lyt_common.h"
-#include "ut_LinkList.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/lyt/lyt_pane.h>
+#include <nw4r/lyt/lyt_common.h>
+#include <nw4r/ut/ut_LinkList.h>
 
 namespace nw4r
 {

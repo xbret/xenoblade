@@ -1,7 +1,7 @@
 #ifndef NW4R_TYPES_H
 #define NW4R_TYPES_H
 #include <types.h>
-#include "build_version.h"
+#include <nw4r/build_version.h>
 
 #define NW4R_BYTEORDER_BIG 0xFEFF
 #define NW4R_BYTEORDER_LITTLE 0xFFFE

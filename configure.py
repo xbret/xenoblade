@@ -219,10 +219,7 @@ cflags_base = [
     #"-str reuse",
     "-enc SJIS",
     "-i include",
-    "-i libs/RVL_SDK/include/",
     "-i libs/PowerPC_EABI_Support/include/stl",
-    "-i src/",
-    "-i libs/NdevExi2A/include/",
     "-i libs/PowerPC_EABI_Support/include/",
     f"-i build/{config.version}/include",
 ]
@@ -244,8 +241,10 @@ cflags_game = [
     "-RTTI on",
     "-Cpp_exceptions on",
     "-func_align 4",
-    "-ir libs/nw4r/include/",
+    "-i src/",
     "-i libs/monolib/include/",
+    "-i libs/nw4r/include/",
+    "-i libs/RVL_SDK/include/",
     "-i libs/CriWare/include/",
     f"-DVERSION={version_num}",
 ]
@@ -259,6 +258,7 @@ cflags_runtime = [
     "-common off",
     "-inline on",
     "-func_align 4",
+    "-i libs/RVL_SDK/include/",
 ]
 
 cflags_mslc = [
@@ -269,6 +269,7 @@ cflags_mslc = [
     "-inline on",
     "-ipa file",
     "-func_align 4",
+    "-i libs/RVL_SDK/include/",
 ]
 
 cflags_trk = [
@@ -276,6 +277,8 @@ cflags_trk = [
     "-use_lmw_stmw on",
     "-inline on",
     "-func_align 4",
+    "-i libs/NdevExi2A/include/",
+    "-i libs/RVL_SDK/include/",
 ]
 
 # Dolphin library flags
@@ -286,6 +289,7 @@ cflags_sdk = [
     "-ipa file",
     "-fp_contract off",
     "-func_align 16",
+    "-i libs/RVL_SDK/include/",
 ]
 
 # Home Button library flags
@@ -299,7 +303,8 @@ cflags_hbm = [
     "-sdata 0",
     "-sdata2 0",
     "-RTTI on",
-    "-ir libs/RVL_SDK/src/revolution/hbm/include/",
+    "-i libs/RVL_SDK/include/",
+    "-i libs/RVL_SDK/src/revolution/hbm/include/",
     f"-DHBM_VERSION={sdk_hbm_version}",
 ]
 
@@ -310,6 +315,8 @@ cflags_ndev = [
     "-inline auto",
     "-ipa file",
     "-func_align 4",
+    "-i libs/NdevExi2A/include/",
+    "-i libs/RVL_SDK/include/",
 ]
 
 
@@ -319,7 +326,8 @@ cflags_nw4r = [
     "-inline auto",
     "-fp_contract off",
     "-func_align 4",
-    "-ir libs/nw4r/include/",
+    "-i libs/nw4r/include/",
+    "-i libs/RVL_SDK/include/",
 ]
 
 # Criware flags
@@ -330,6 +338,7 @@ cflags_criware = [
     "-sdata2 0",
     "-use_lmw_stmw on",
     "-i libs/CriWare/src/",
+    "-i libs/RVL_SDK/include/",
     "-func_align 4",
 ]
 

@@ -1,4 +1,4 @@
-#include "lyt_init.h"
+#include <nw4r/lyt/lyt_init.h>
 #include <revolution/OS.h>
 
 namespace {

@@ -7,7 +7,6 @@
 #include "monolib/reslist.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
-#include "monolib/MemManager.hpp"
 
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {

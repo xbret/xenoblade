@@ -1,14 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "kyoshin/appgame/plugin/pluginMain.hpp"
-#include "monolib/lib/CLibHbm.hpp"
-#include "monolib/device/CDeviceVI.hpp"
-#include "monolib/device/CDeviceGX.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/code_80450B14.hpp"
-#include "monolib/Unknown1.hpp"
-#include "monolib/vm/yvm.h"
 
 struct FunctionStruct{
     const char* name;
@@ -30,7 +23,7 @@ extern void func_80057CDC();
 extern void CWorkRoot_Run();
 extern void CDesktop_SaveStartFunctionCallback(FunctionStruct*, u32);
 extern void CLibStaticData_saveStaticFileArray(StaticArcFile*);
-extern void CLibVM_SetCallbacks(void*, void*);
+extern void CLibVM_SetCallbacks(void (*callback1)(), void (*callback2)());
 extern void func_804DAA90(const wchar_t*);
 extern void func_804DAA98(const wchar_t*);
 extern void func_804DAAA0(const wchar_t*);

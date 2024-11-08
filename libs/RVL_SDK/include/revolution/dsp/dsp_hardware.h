@@ -8,11 +8,7 @@ extern "C" {
 /**
  * DSP hardware registers
  */
-#ifdef __MWERKS__
-volatile u16 DSP_HW_REGS[] : 0xCC005000;
-#else
-volatile u16 DSP_HW_REGS[];
-#endif
+extern volatile u16 DSP_HW_REGS[] AT_ADDRESS(0xCC005000);
 
 /**
  * Hardware register indexes

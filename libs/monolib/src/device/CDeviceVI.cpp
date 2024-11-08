@@ -4,6 +4,7 @@
 #include "monolib/device/CDevice.hpp"
 #include "monolib/lib/CLib.hpp"
 #include "monolib/work/CWorkSystem.hpp"
+#include "monolib/MemManager.hpp"
 #include "monolib/Math.hpp"
 #include <string.h>
 
@@ -324,4 +325,3 @@ bool CDeviceVI::func_80448E80(){
 void CDeviceVI::UnkVirtualFunc2(){
     unk4 |= 0x80000000;
 }
-

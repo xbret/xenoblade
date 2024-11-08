@@ -1,13 +1,13 @@
 #ifndef NW4HBM_LYT_PANE_H
 #define NW4HBM_LYT_PANE_H
-#include "types_nw4hbm.h"
-#include "math_types.h"
-#include "ut_LinkList.h"
-#include "ut_RuntimeTypeInfo.h"
-#include "ut_Color.h"
-#include "ut_algorithm.h"
-#include "lyt_animation.h"
-#include "lyt_types.h"
+#include <nw4hbm/types_nw4hbm.h>
+#include <nw4hbm/math/math_types.h>
+#include <nw4hbm/ut/ut_LinkList.h>
+#include <nw4hbm/ut/ut_RuntimeTypeInfo.h>
+#include <nw4hbm/ut/ut_Color.h>
+#include <nw4hbm/ut/ut_algorithm.h>
+#include <nw4hbm/lyt/lyt_animation.h>
+#include <nw4hbm/lyt/lyt_types.h>
 #include <string.h>
 
 #define PANE_NAME_SIZE 17

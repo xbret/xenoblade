@@ -25,6 +25,12 @@
 
 #define DECLTYPE(x) __decltype__(x)
 
+#ifdef __MWERKS__
+#define AT_ADDRESS(xyz) : (xyz)
+#else
+#define AT_ADDRESS(xyz)
+#endif
+
 // For VSCode
 #ifndef __MWERKS__
 #define asm

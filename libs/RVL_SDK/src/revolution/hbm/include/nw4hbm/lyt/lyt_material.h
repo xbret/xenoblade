@@ -1,8 +1,8 @@
 #ifndef NW4HBM_LYT_MATERIAL_H
 #define NW4HBM_LYT_MATERIAL_H
 #include <revolution/GX.h>
-#include "lyt_animation.h"
-#include "ut_LinkList.h"
+#include <nw4hbm/lyt/lyt_animation.h>
+#include <nw4hbm/ut/ut_LinkList.h>
 
 namespace nw4hbm
 {

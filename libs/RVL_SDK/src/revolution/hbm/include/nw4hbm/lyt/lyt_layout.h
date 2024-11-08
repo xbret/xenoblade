@@ -1,6 +1,6 @@
 #ifndef NW4HBM_LYT_LAYOUT_H
 #define NW4HBM_LYT_LAYOUT_H
-#include "types_nw4hbm.h"
+#include <nw4hbm/types_nw4hbm.h>
 #include <revolution/MEM/mem_allocator.h>
 
 namespace nw4hbm

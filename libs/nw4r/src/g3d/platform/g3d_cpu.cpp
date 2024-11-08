@@ -1,4 +1,4 @@
-#include "g3d_cpu.h"
+#include <nw4r/g3d/platform/g3d_cpu.h>
 
 namespace nw4r
 {

@@ -1,5 +1,5 @@
 #pragma ipa file
-#include "lyt_arcResourceAccessor.h"
+#include <nw4hbm/lyt/lyt_arcResourceAccessor.h>
 #include <string.h>
 #include <revolution/ARC/arc.h>
 

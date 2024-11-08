@@ -1,4 +1,4 @@
-#include "g3d_basic.h"
+#include <nw4r/g3d/dcc/g3d_basic.h>
 #include <nw4r/math.h>
 
 namespace nw4r

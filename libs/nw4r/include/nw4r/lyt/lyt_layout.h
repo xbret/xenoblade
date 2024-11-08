@@ -1,6 +1,6 @@
 #ifndef NW4R_LYT_LAYOUT_H
 #define NW4R_LYT_LAYOUT_H
-#include "types_nw4r.h"
+#include <nw4r/types_nw4r.h>
 #include <new>
 #include <revolution/MEM/mem_allocator.h>
 

@@ -1,9 +1,9 @@
 #ifndef NW4R_DB_CONSOLE_H
 #define NW4R_DB_CONSOLE_H
 
-#include "types_nw4r.h"
-#include "ut_TextWriterBase.h"
-#include "ut_CharWriter.h"
+#include <nw4r/types_nw4r.h>
+#include <nw4r/ut/ut_TextWriterBase.h>
+#include <nw4r/ut/ut_CharWriter.h>
 
 namespace nw4r
 {

@@ -22,9 +22,11 @@ f32 FrSqrt(f32 x);
 
 inline f32 FAbs(register f32 x) {
     // clang-format off
+    #ifdef __MWERKS__
     asm {
         fabs x, x
     }
+    #endif
     // clang-format on
 
     return x;
@@ -46,6 +48,7 @@ inline f32 FInv(register f32 x) {
     register f32 work0, work1, work2, work3;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm {
         fmr  work1, x     // x
         fres work0, work1 // 1/x
@@ -55,6 +58,7 @@ inline f32 FInv(register f32 x) {
         ps_mul   work3, work0, work0        // 1/x^2
         ps_nmsub work0, work1, work3, work2 // -(x * 1/x^2 - 2/x)
     }
+    #endif
     // clang-format on
 
     return work0;
@@ -89,9 +93,11 @@ inline f32 FSelect(register f32 value, register f32 ge_zero,
     register f32 ret;
 
     // clang-format off
+    #ifdef __MWERKS__
     asm {
         fsel ret, value, ge_zero, lt_zero
     }
+    #endif
     // clang-format on
 
     return ret;

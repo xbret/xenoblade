@@ -1,7 +1,7 @@
 #ifndef NW4HBM_LYT_RESOURCE_ACCESSOR_H
 #define NW4HBM_LYT_RESOURCE_ACCESSOR_H
-#include "types_nw4hbm.h"
-#include "ut_Font.h"
+#include <nw4hbm/types_nw4hbm.h>
+#include <nw4hbm/ut/ut_Font.h>
 
 namespace nw4hbm
 {

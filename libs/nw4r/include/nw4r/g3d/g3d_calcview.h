@@ -1,6 +1,6 @@
 #ifndef NW4R_G3D_CALC_VIEW_H
 #define NW4R_G3D_CALC_VIEW_H
-#include "types_nw4r.h"
+#include <nw4r/types_nw4r.h>
 
 namespace nw4r
 {

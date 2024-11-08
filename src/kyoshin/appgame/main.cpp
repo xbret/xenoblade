@@ -1,6 +1,14 @@
 #include "kyoshin/appgame/main.hpp"
+#include "monolib/lib/CLibHbm.hpp"
+#include "monolib/device/CDeviceVI.hpp"
+#include "monolib/device/CDeviceGX.hpp"
+#include "monolib/MemManager.hpp"
+#include "monolib/Unknown1.hpp"
+#include "monolib/vm/yvm.h"
+#include "kyoshin/appgame/plugin/pluginMain.hpp"
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
+#include <revolution/GX.h>
 
 FunctionStruct lbl_80528380 = {
 #if VERSION == VERSION_JP
@@ -126,7 +134,11 @@ void vmInitCallback(){
     vmInit();
 }
 
-void main(int argc, char* argv[]) {
+#ifdef __MWERKS__
+void main(){
+#else
+int main(){
+#endif
     //Copy the error message string pointers
     func_80450B14(getNoDiscErrorMessage());
     func_80450B1C(getDiscUnreadableErrorMessage());
