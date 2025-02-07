@@ -3,9 +3,13 @@
 #include "types.h"
 #include "monolib/CDoubleListNode.hpp"
 
+class CChildListNode;
+
 template <typename T>
-class TChildListHeader : public CDoubleListHeader {
+class TChildListHeader {
 private:
+    CChildListNode* mHead; //0x0
+    CChildListNode* mTail; //0x4
     char unk8[0x10 - 0x8];
 
 public:
@@ -13,6 +17,9 @@ public:
     virtual ~TChildListHeader() {}
     
     void Reset() { mHead = NULL; }
+
+    CChildListNode* Head() const { return mHead; }
+    CChildListNode* Tail() const { return mTail; }
 
     T* Front() const { return static_cast<T*>(Head()); }
     T* Back() const {
