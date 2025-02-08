@@ -14,7 +14,7 @@ for its initialization/termination,
 and for the update ("Move") and render ("Draw") game events.
 */
 class CProcess : public CChildListNode {
-    friend class CProcessMgr;
+    friend class CProcessMan;
 
 public:
     CProcess();
@@ -43,7 +43,7 @@ Process manager.
 Responsible for dispatching all process events every tick,
 and for maintaining the lists of both root-level processes and released processes.
 */
-class CProcessMgr {
+class CProcessMan {
 public:
     static void Reset();
 

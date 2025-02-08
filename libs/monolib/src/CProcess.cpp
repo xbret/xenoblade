@@ -1,9 +1,9 @@
 #include "monolib/CProcess.hpp"
 
-bool CProcessMgr::sIsInitialized = false;
+bool CProcessMan::sIsInitialized = false;
 
-TChildListHeader<CProcess> CProcessMgr::sFreeProcessList;
-TChildListHeader<CProcess> CProcessMgr::sRootProcessList;
+TChildListHeader<CProcess> CProcessMan::sFreeProcessList;
+TChildListHeader<CProcess> CProcessMan::sRootProcessList;
 
 CProcess::CProcess() :
     mIsRegist(false),
@@ -11,7 +11,7 @@ CProcess::CProcess() :
     mIsDisableMove(false),
     mIsDisableDraw(false) {
 
-    CProcessMgr::GetFreeProcessList().InsertEnd(this);
+    CProcessMan::GetFreeProcessList().InsertEnd(this);
 }
 
 CProcess::~CProcess() {
@@ -28,8 +28,8 @@ CProcess::~CProcess() {
     //Remove from process lists
     if (mParent == NULL) {
         TChildListHeader<CProcess>& list = !mIsRegist
-            ? CProcessMgr::GetFreeProcessList()
-            : CProcessMgr::GetRootProcessList();
+            ? CProcessMan::GetFreeProcessList()
+            : CProcessMan::GetRootProcessList();
 
         list.Remove(this);
     }
@@ -43,15 +43,15 @@ void CProcess::Regist(CProcess* parent, bool insertTop) {
         return;
     }
 
-    CProcessMgr::GetFreeProcessList().Remove(this);
+    CProcessMan::GetFreeProcessList().Remove(this);
 
     //NULL parent registers to a root list
     if (parent == NULL) {
         if (insertTop) {
-            CProcessMgr::GetRootProcessList().InsertTop(this);
+            CProcessMan::GetRootProcessList().InsertTop(this);
         }
         else {
-            CProcessMgr::GetRootProcessList().InsertEnd(this);
+            CProcessMan::GetRootProcessList().InsertEnd(this);
         }
     }
     else {
@@ -84,31 +84,31 @@ void CProcess::Remove() {
 
     //Remove parent
     if (mParent == NULL) {
-        CProcessMgr::GetRootProcessList().Remove(this);
+        CProcessMan::GetRootProcessList().Remove(this);
     }
     else {
         mParent->GetChildren().Remove(this);
     }
 
-    CProcessMgr::GetFreeProcessList().InsertEnd(this);
+    CProcessMan::GetFreeProcessList().InsertEnd(this);
     SetParent(NULL);
     mIsRegist = false;
 }
 
-void CProcessMgr::Init() {
+void CProcessMan::Init() {
     if (!sIsInitialized) {
         sIsInitialized = true;
     }
 }
 
-void CProcessMgr::Term() {
+void CProcessMan::Term() {
     if (sIsInitialized == true) {
         Reset();
         sIsInitialized = false;
     }
 }
 
-void CProcessMgr::Reset() {
+void CProcessMan::Reset() {
     CProcess* proc;
 
     //Terminate all processes
@@ -122,7 +122,7 @@ void CProcessMgr::Reset() {
     }
 }
 
-void CProcessMgr::Move() {
+void CProcessMan::Move() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
@@ -135,7 +135,7 @@ void CProcessMgr::Move() {
     }
 }
 
-void CProcessMgr::MoveImpl(CProcess* proc) {
+void CProcessMan::MoveImpl(CProcess* proc) {
     if (!proc->mIsDisableMove && !proc->mIsRemove) {
         proc->Move();
 
@@ -151,7 +151,7 @@ void CProcessMgr::MoveImpl(CProcess* proc) {
     }
 }
 
-bool CProcessMgr::Remove(CProcess* proc) {
+bool CProcessMan::Remove(CProcess* proc) {
     if (proc->mIsRegist == true && proc->mIsRemove == true) {
         proc->Remove();
         return true;
@@ -180,7 +180,7 @@ bool CProcessMgr::Remove(CProcess* proc) {
     return false;
 }
 
-void CProcessMgr::Draw() {
+void CProcessMan::Draw() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
@@ -193,7 +193,7 @@ void CProcessMgr::Draw() {
     }
 }
 
-void CProcessMgr::DrawImpl(CProcess* proc) {
+void CProcessMan::DrawImpl(CProcess* proc) {
     if (!proc->mIsDisableDraw && !proc->mIsRemove) {
         proc->Draw();
 
@@ -209,7 +209,7 @@ void CProcessMgr::DrawImpl(CProcess* proc) {
     }
 }
 
-void CProcessMgr::Tail() {
+void CProcessMan::Tail() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
 
     for (CProcess* proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
@@ -217,7 +217,7 @@ void CProcessMgr::Tail() {
     }
 }
 
-void CProcessMgr::TailImpl(CProcess* proc) {
+void CProcessMan::TailImpl(CProcess* proc) {
     if (!proc->mIsDisableDraw && !proc->mIsRemove) {
         proc->Tail();
 
@@ -233,12 +233,12 @@ void CProcessMgr::TailImpl(CProcess* proc) {
     }
 }
 
-void CProcessMgr::Delete() {
+void CProcessMan::Delete() {
     DeleteList(sFreeProcessList);
     DeleteList(sRootProcessList);
 }
 
-void CProcessMgr::DeleteList(TChildListHeader<CProcess>& list) {
+void CProcessMan::DeleteList(TChildListHeader<CProcess>& list) {
     CProcess* proc;
     CProcess* next;
     for (proc = list.Begin(); proc != NULL; proc = next) {
@@ -252,7 +252,7 @@ void CProcessMgr::DeleteList(TChildListHeader<CProcess>& list) {
     }
 }
 
-void CProcessMgr::DeleteImpl(CProcess* proc) {   
+void CProcessMan::DeleteImpl(CProcess* proc) {   
     //Recurse through child processes
     TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
