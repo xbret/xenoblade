@@ -9,7 +9,7 @@ template <typename T>
 class TChildListHeader {
 private:
     CDoubleListHeader mImpl; //0x00
-    char unk8[0x10 - 0x8];
+    char unk4[0x10 - 0x4];
 
 public:
     TChildListHeader() { Reset(); }
@@ -17,21 +17,12 @@ public:
     
     void Reset() { mImpl.Reset(); }
 
-    //List nodes
-    CChildListNode* Head() const {
-        return static_cast<CChildListNode*>(mImpl.mHead);
-    }
-    CChildListNode* Tail() const {
-        return static_cast<CChildListNode*>(mImpl.mTail);
-    }
-
     //List iterators/elements
     T* Begin() const {
-        return static_cast<T*>(mImpl.mHead);
+        return static_cast<T*>(mImpl.Begin());
     }
     T* End() const {
-        return mImpl.mHead != NULL
-            ? static_cast<T*>(mImpl.mHead->GetPrev()) : NULL;
+        return static_cast<T*>(mImpl.End());
     }
 
     //Add/remove nodes
@@ -46,20 +37,18 @@ public:
     }
 
     //Advance iterators
-    template <typename TIter>
-    TIter* IterNext(const TIter* iter) const {
+    T* IterNext(const T* iter) const {
         if (iter != NULL) {
-            return iter != End()
-                ? static_cast<TIter*>(iter->GetNext()) : NULL;
+            return iter != static_cast<T*>(End())
+                ? static_cast<T*>(iter->GetNext()) : NULL;
         }
 
         return NULL;
     }
-    template <typename TIter>
-    TIter* IterPrev(const TIter* iter) const {
+    T* IterPrev(const T* iter) const {
         if (iter != NULL) {
-            return iter != Begin()
-                ? static_cast<TIter*>(iter->GetPrev()) : NULL;
+            return iter != static_cast<T*>(Begin())
+                ? static_cast<T*>(iter->GetPrev()) : NULL;
         }
 
         return NULL;

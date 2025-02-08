@@ -5,34 +5,36 @@ CDoubleListNode::CDoubleListNode() {
 }
 
 void CDoubleListNode::Reset() {
-    mNext = NULL;
     mPrev = NULL;
+    mNext = NULL;
     unk8 = 0;
     unkC = -1;
 }
 
 CDoubleListNode* CDoubleListHeader::InsertTop(CDoubleListNode* node) {
-    CDoubleListNode* oldHead;
-    CDoubleListNode* headPrev;
+    CDoubleListNode* end;
+    CDoubleListNode* first;
 
     if (node != NULL) {
-        oldHead = Head();
+        end = End();
         
         //No list, create a new one
-        if (oldHead == NULL) {
-            mHead = node;
-            node->SetNext(node);
+        if (end == NULL) {
+            mEnd = node;
+
+            //List is circular
             node->SetPrev(node);
+            node->SetNext(node);
         }
         //Insert node at top of existing list
         else {
-            //Needed because list is circular
-            headPrev = mHead->GetPrev();
+            first = mEnd->GetNext();
+
             //Fix link
-            node->SetPrev(headPrev);
-            node->SetNext(oldHead);
-            headPrev->SetNext(node);
-            mHead->SetPrev(node);
+            node->SetNext(first);
+            node->SetPrev(end);
+            first->SetPrev(node);
+            mEnd->SetNext(node);
         }
     }
 
@@ -41,57 +43,57 @@ CDoubleListNode* CDoubleListHeader::InsertTop(CDoubleListNode* node) {
 
 CDoubleListNode* CDoubleListHeader::InsertEnd(CDoubleListNode* node) {
     if (node != NULL) {
-        //List is circular
         InsertTop(node);
-        mHead = node;
+        //List is circular
+        mEnd = node;
     }
 
     return node;
 }
 
 CDoubleListNode* CDoubleListHeader::Remove(CDoubleListNode* child) {
-    CDoubleListNode* myHead;
+    CDoubleListNode* end;
 
     //Nothing to remove
     if (child == NULL) {
         return NULL;
     }
 
-    myHead = Head();
+    end = End();
 
     //List is not empty
-    if (myHead != NULL) {
+    if (end != NULL) {
         //Only one element
-        if (myHead == myHead->GetPrev()) {
+        if (end == end->GetNext()) {
             //Child is not that one element
-            if (myHead != child) {
+            if (end != child) {
                 //Therefore it is not in this list
                 return NULL;
             }
 
             //The child was the only element
-            mHead = NULL;
+            mEnd = NULL;
         }
         //More than one element
         else {
             //Remove link from prev child
-            if (child->GetNext() != NULL) {
-                child->GetNext()->SetPrev(child->GetPrev());
-            }
-            //Remove link from next child
             if (child->GetPrev() != NULL) {
                 child->GetPrev()->SetNext(child->GetNext());
             }
+            //Remove link from next child
+            if (child->GetNext() != NULL) {
+                child->GetNext()->SetPrev(child->GetPrev());
+            }
 
-            //Fix head if child was the head
-            if (child == mHead) {
-                mHead = child->GetNext();
+            //Fix end if child was the end
+            if (child == mEnd) {
+                mEnd = child->GetPrev();
             }
         }
     
         //Isolate child
-        child->SetNext(NULL);
         child->SetPrev(NULL);
+        child->SetNext(NULL);
     }
 
     return child;
