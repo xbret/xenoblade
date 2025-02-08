@@ -15,10 +15,10 @@ CProcess::CProcess() :
 }
 
 CProcess::~CProcess() {
-    CProcess* next;
-
     //Delete child processes
-    for (CProcess* iter = static_cast<CProcess*>(mChildren.Begin());
+    CProcess* iter;
+    CProcess* next;
+    for (iter = static_cast<CProcess*>(mChildren.Begin());
         iter != NULL; iter = next) {
 
         next = static_cast<CProcess*>(mChildren.IterNext(iter));
@@ -123,7 +123,7 @@ void CProcessMgr::Reset() {
 }
 
 void CProcessMgr::Move() {
-    const TChildListHeader<CProcess>& list = GetRootProcessList();
+    TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
     for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
@@ -140,9 +140,11 @@ void CProcessMgr::MoveImpl(CProcess* proc) {
         proc->Move();
 
         //Recurse through child processes
-        for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.Begin());
+        TChildListHeader<CChildListNode>& children = proc->GetChildren();
+
+        for (CProcess* iter = static_cast<CProcess*>(children.Begin());
             iter != NULL;
-            iter = static_cast<CProcess*>(proc->mChildren.IterNext(iter))) {
+            iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             MoveImpl(iter);
         }
@@ -158,10 +160,11 @@ bool CProcessMgr::Remove(CProcess* proc) {
     //Recurse through child processes
     while (true) {
         bool removedOne = false;
+        TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
-        for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.Begin());
+        for (CProcess* iter = static_cast<CProcess*>(children.Begin());
             iter != NULL;
-            iter = static_cast<CProcess*>(proc->mChildren.IterNext(iter))) {
+            iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             if (Remove(iter)) {
                 removedOne = true;
@@ -178,7 +181,7 @@ bool CProcessMgr::Remove(CProcess* proc) {
 }
 
 void CProcessMgr::Draw() {
-    const TChildListHeader<CProcess>& list = GetRootProcessList();
+    TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
     for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
@@ -195,9 +198,11 @@ void CProcessMgr::DrawImpl(CProcess* proc) {
         proc->Draw();
 
         //Recurse through child processes
-        for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.Begin());
+        TChildListHeader<CChildListNode>& children = proc->GetChildren();
+
+        for (CProcess* iter = static_cast<CProcess*>(children.Begin());
             iter != NULL;
-            iter = static_cast<CProcess*>(proc->mChildren.IterNext(iter))) {
+            iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             DrawImpl(iter);
         }
@@ -205,7 +210,7 @@ void CProcessMgr::DrawImpl(CProcess* proc) {
 }
 
 void CProcessMgr::Tail() {
-    const TChildListHeader<CProcess>& list = GetRootProcessList();
+    TChildListHeader<CProcess>& list = GetRootProcessList();
 
     for (CProcess* proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
         TailImpl(proc);
@@ -217,9 +222,11 @@ void CProcessMgr::TailImpl(CProcess* proc) {
         proc->Tail();
 
         //Recurse through child processes
-        for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.Begin());
+        TChildListHeader<CChildListNode>& children = proc->GetChildren();
+
+        for (CProcess* iter = static_cast<CProcess*>(children.Begin());
             iter != NULL;
-            iter = static_cast<CProcess*>(proc->mChildren.IterNext(iter))) {
+            iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             TailImpl(iter);
         }
@@ -227,21 +234,15 @@ void CProcessMgr::TailImpl(CProcess* proc) {
 }
 
 void CProcessMgr::Delete() {
+    DeleteList(sFreeProcessList);
+    DeleteList(sRootProcessList);
+}
+
+void CProcessMgr::DeleteList(TChildListHeader<CProcess>& list) {
     CProcess* proc;
     CProcess* next;
-
-    for (proc = sFreeProcessList.Begin(); proc != NULL; proc = next) {
-        next = sFreeProcessList.IterNext(proc);
-        
-        if (proc->mIsRemove == true) {
-            delete proc;
-        } else {
-            DeleteImpl(proc);
-        }
-    }
-
-    for (proc = sRootProcessList.Begin(); proc != NULL; proc = next) {
-        next = sRootProcessList.IterNext(proc);
+    for (proc = list.Begin(); proc != NULL; proc = next) {
+        next = list.IterNext(proc);
 
         if (proc->mIsRemove == true) {
             delete proc;
@@ -251,14 +252,16 @@ void CProcessMgr::Delete() {
     }
 }
 
-void CProcessMgr::DeleteImpl(CProcess* proc) {
-    CProcess* next;
-    
+void CProcessMgr::DeleteImpl(CProcess* proc) {   
     //Recurse through child processes
-    for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.Begin());
+    TChildListHeader<CChildListNode>& children = proc->GetChildren();
+
+    CProcess* iter;
+    CProcess* next;
+    for (iter = static_cast<CProcess*>(children.Begin());
         iter != NULL; iter = next) {
 
-        next = static_cast<CProcess*>(proc->mChildren.IterNext(iter));
+        next = static_cast<CProcess*>(children.IterNext(iter));
 
         if (iter->mIsRemove == true) {
             delete iter;
