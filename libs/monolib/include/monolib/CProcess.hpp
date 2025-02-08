@@ -28,8 +28,6 @@ private:
 };
 
 class CProcessMgr {
-    friend class CProcess;
-
 public:
     static void Init();
     static void Term();
@@ -38,6 +36,13 @@ public:
     static void Move();
     static void Draw();
     static void Tail();
+
+    static TChildListHeader<CProcess>& GetTermProcessList() {
+        return sTermProcessList;
+    }
+    static TChildListHeader<CProcess>& GetRootProcessList() {
+        return sRootProcessList;
+    }
 
 private:
     static void MoveImpl(CProcess* proc);
@@ -48,13 +53,6 @@ private:
 
     static void Delete();
     static void DeleteImpl(CProcess* proc);
-
-    static TChildListHeader<CProcess>& GetTermProcessList() {
-        return sTermProcessList;
-    }
-    static TChildListHeader<CProcess>& GetRootProcessList() {
-        return sRootProcessList;
-    }
 
     static bool sIsInitialized;
     static TChildListHeader<CProcess> sTermProcessList;

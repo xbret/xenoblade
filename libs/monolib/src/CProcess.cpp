@@ -11,7 +11,7 @@ CProcess::CProcess() :
     mIsDisableMove(false),
     mIsDisableDraw(false) {
 
-    CProcessMgr::sTermProcessList.InsertEnd(this);
+    CProcessMgr::GetTermProcessList().InsertEnd(this);
 }
 
 CProcess::~CProcess() {
@@ -28,8 +28,8 @@ CProcess::~CProcess() {
     //Remove from process lists
     if (GetParent() == NULL) {
         TChildListHeader<CProcess>& list = !mIsRegist
-            ? CProcessMgr::sTermProcessList
-            : CProcessMgr::sRootProcessList;
+            ? CProcessMgr::GetTermProcessList()
+            : CProcessMgr::GetRootProcessList();
 
         list.Remove(this);
     }
@@ -43,15 +43,15 @@ void CProcess::Regist(CProcess* parent, bool insertTop) {
         return;
     }
 
-    CProcessMgr::sTermProcessList.Remove(this);
+    CProcessMgr::GetTermProcessList().Remove(this);
 
     //NULL parent registers to a default list
     if (parent == NULL) {
         if (insertTop) {
-            CProcessMgr::sRootProcessList.InsertTop(this);
+            CProcessMgr::GetRootProcessList().InsertTop(this);
         }
         else {
-            CProcessMgr::sRootProcessList.InsertEnd(this);
+            CProcessMgr::GetRootProcessList().InsertEnd(this);
         }
     }
     else {
@@ -84,13 +84,13 @@ void CProcess::Remove() {
 
     //Remove parent
     if (GetParent() == NULL) {
-        CProcessMgr::sRootProcessList.Remove(this);
+        CProcessMgr::GetRootProcessList().Remove(this);
     }
     else {
         GetParent()->GetChildren().Remove(this);
     }
 
-    CProcessMgr::sTermProcessList.InsertEnd(this);
+    CProcessMgr::GetTermProcessList().InsertEnd(this);
     SetParent(NULL);
     mIsRegist = false;
 }
@@ -124,12 +124,13 @@ void CProcessMgr::Reset() {
 
 void CProcessMgr::Move() {
     const TChildListHeader<CProcess>& list = GetRootProcessList();
+    CProcess* proc;
 
-    for (CProcess* proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
+    for (proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
         MoveImpl(proc);
     }
 
-    for (CProcess* proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
+    for (proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
         Remove(proc);
     }
 }
@@ -175,12 +176,13 @@ bool CProcessMgr::Remove(CProcess* proc) {
 
 void CProcessMgr::Draw() {
     const TChildListHeader<CProcess>& list = GetRootProcessList();
+    CProcess* proc;
 
-    for (CProcess* proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
+    for (proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
         DrawImpl(proc);
     }
 
-    for (CProcess* proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
+    for (proc = list.Back(); proc != NULL; proc = list.IterPrev(proc)) {
         TailImpl(proc);
     }
 }
@@ -220,10 +222,11 @@ void CProcessMgr::TailImpl(CProcess* proc) {
 }
 
 void CProcessMgr::Delete() {
+    CProcess* proc;
     CProcess* prev;
 
-    for (CProcess* proc = GetTermProcessList().Back(); proc != NULL; proc = prev) {
-        prev = GetTermProcessList().IterPrev(proc);
+    for (proc = sTermProcessList.Back(); proc != NULL; proc = prev) {
+        prev = sTermProcessList.IterPrev(proc);
         
         if (proc->mIsRemove == true) {
             delete proc;
@@ -232,8 +235,8 @@ void CProcessMgr::Delete() {
         }
     }
 
-    for (CProcess* proc = GetRootProcessList().Back(); proc != NULL; proc = prev) {
-        prev = GetRootProcessList().IterPrev(proc);
+    for (proc = sRootProcessList.Back(); proc != NULL; proc = prev) {
+        prev = sRootProcessList.IterPrev(proc);
 
         if (proc->mIsRemove == true) {
             delete proc;
