@@ -25,12 +25,13 @@ public:
         return static_cast<CChildListNode*>(mImpl.mTail);
     }
 
-    //List elements
-    T* Front() const {
+    //List iterators/elements
+    T* Begin() const {
         return static_cast<T*>(mImpl.mHead);
     }
-    T* Back() const {
-        return mImpl.mHead != NULL ? static_cast<T*>(mImpl.mHead->GetPrev()) : NULL;
+    T* End() const {
+        return mImpl.mHead != NULL
+            ? static_cast<T*>(mImpl.mHead->GetPrev()) : NULL;
     }
 
     //Add/remove nodes
@@ -48,7 +49,7 @@ public:
     template <typename TIter>
     TIter* IterNext(const TIter* iter) const {
         if (iter != NULL) {
-            return iter != Back()
+            return iter != End()
                 ? static_cast<TIter*>(iter->GetNext()) : NULL;
         }
 
@@ -57,7 +58,7 @@ public:
     template <typename TIter>
     TIter* IterPrev(const TIter* iter) const {
         if (iter != NULL) {
-            return iter != Front()
+            return iter != Begin()
                 ? static_cast<TIter*>(iter->GetPrev()) : NULL;
         }
 
