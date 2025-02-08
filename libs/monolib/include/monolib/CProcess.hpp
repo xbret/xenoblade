@@ -37,8 +37,8 @@ public:
     static void Draw();
     static void Tail();
 
-    static TChildListHeader<CProcess>& GetTermProcessList() {
-        return sTermProcessList;
+    static TChildListHeader<CProcess>& GetFreeProcessList() {
+        return sFreeProcessList;
     }
     static TChildListHeader<CProcess>& GetRootProcessList() {
         return sRootProcessList;
@@ -55,6 +55,6 @@ private:
     static void DeleteImpl(CProcess* proc);
 
     static bool sIsInitialized;
-    static TChildListHeader<CProcess> sTermProcessList;
+    static TChildListHeader<CProcess> sFreeProcessList;
     static TChildListHeader<CProcess> sRootProcessList;
 };

@@ -2,7 +2,7 @@
 
 bool CProcessMgr::sIsInitialized = false;
 
-TChildListHeader<CProcess> CProcessMgr::sTermProcessList;
+TChildListHeader<CProcess> CProcessMgr::sFreeProcessList;
 TChildListHeader<CProcess> CProcessMgr::sRootProcessList;
 
 CProcess::CProcess() :
@@ -11,7 +11,7 @@ CProcess::CProcess() :
     mIsDisableMove(false),
     mIsDisableDraw(false) {
 
-    CProcessMgr::GetTermProcessList().InsertEnd(this);
+    CProcessMgr::GetFreeProcessList().InsertEnd(this);
 }
 
 CProcess::~CProcess() {
@@ -26,15 +26,15 @@ CProcess::~CProcess() {
     }
 
     //Remove from process lists
-    if (GetParent() == NULL) {
+    if (mParent == NULL) {
         TChildListHeader<CProcess>& list = !mIsRegist
-            ? CProcessMgr::GetTermProcessList()
+            ? CProcessMgr::GetFreeProcessList()
             : CProcessMgr::GetRootProcessList();
 
         list.Remove(this);
     }
     else {
-        GetParent()->GetChildren().Remove(this);
+        mParent->GetChildren().Remove(this);
     }
 }
 
@@ -43,9 +43,9 @@ void CProcess::Regist(CProcess* parent, bool insertTop) {
         return;
     }
 
-    CProcessMgr::GetTermProcessList().Remove(this);
+    CProcessMgr::GetFreeProcessList().Remove(this);
 
-    //NULL parent registers to a default list
+    //NULL parent registers to a root list
     if (parent == NULL) {
         if (insertTop) {
             CProcessMgr::GetRootProcessList().InsertTop(this);
@@ -83,14 +83,14 @@ void CProcess::Remove() {
     Term();
 
     //Remove parent
-    if (GetParent() == NULL) {
+    if (mParent == NULL) {
         CProcessMgr::GetRootProcessList().Remove(this);
     }
     else {
-        GetParent()->GetChildren().Remove(this);
+        mParent->GetChildren().Remove(this);
     }
 
-    CProcessMgr::GetTermProcessList().InsertEnd(this);
+    CProcessMgr::GetFreeProcessList().InsertEnd(this);
     SetParent(NULL);
     mIsRegist = false;
 }
@@ -117,7 +117,7 @@ void CProcessMgr::Reset() {
     }
 
     //Then delete all processes 
-    while (proc = sTermProcessList.End()) {
+    while (proc = sFreeProcessList.End()) {
         delete proc;
     }
 }
@@ -154,19 +154,20 @@ bool CProcessMgr::Remove(CProcess* proc) {
         return true;
     }
 
+    //Recurse through child processes
     while (true) {
-        bool removedParent = false;
+        bool removedOne = false;
 
         for (CProcess* iter = static_cast<CProcess*>(proc->mChildren.End());
             iter != NULL; iter = proc->mChildren.IterPrev(iter)) {
 
             if (Remove(iter)) {
-                removedParent = true;
+                removedOne = true;
                 break;
             }
         }
 
-        if (!removedParent) {
+        if (!removedOne) {
             break;
         }
     };
@@ -225,8 +226,8 @@ void CProcessMgr::Delete() {
     CProcess* proc;
     CProcess* prev;
 
-    for (proc = sTermProcessList.End(); proc != NULL; proc = prev) {
-        prev = sTermProcessList.IterPrev(proc);
+    for (proc = sFreeProcessList.End(); proc != NULL; proc = prev) {
+        prev = sFreeProcessList.IterPrev(proc);
         
         if (proc->mIsRemove == true) {
             delete proc;
