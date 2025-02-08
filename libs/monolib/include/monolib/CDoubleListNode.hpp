@@ -21,11 +21,13 @@ public:
 };
 
 class CDoubleListHeader {
-protected:
+public:
     CDoubleListNode* mHead; //0x0
     CDoubleListNode* mTail; //0x4
 
 public:
+    void Reset() { mHead = NULL; }
+
     CDoubleListNode* Head() const { return mHead; }
     CDoubleListNode* Tail() const { return mTail; }
 
