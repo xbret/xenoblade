@@ -19,14 +19,14 @@ CProcess::~CProcess() {
     CProcess* iter;
     CProcess* next;
     for (iter = static_cast<CProcess*>(mChildren.Begin());
-        iter != NULL; iter = next) {
+        iter != nullptr; iter = next) {
 
         next = static_cast<CProcess*>(mChildren.IterNext(iter));
         delete iter;
     }
 
     //Remove from process lists
-    if (mParent == NULL) {
+    if (mParent == nullptr) {
         TChildListHeader<CProcess>& list = !mIsRegist
             ? CProcessMan::GetFreeProcessList()
             : CProcessMan::GetRootProcessList();
@@ -46,7 +46,7 @@ void CProcess::Regist(CProcess* parent, bool insertTop) {
     CProcessMan::GetFreeProcessList().Remove(this);
 
     //NULL parent registers to a root list
-    if (parent == NULL) {
+    if (parent == nullptr) {
         if (insertTop) {
             CProcessMan::GetRootProcessList().InsertTop(this);
         }
@@ -75,7 +75,7 @@ void CProcess::Remove() {
 
     //Unregister children
     for (CProcess* proc = static_cast<CProcess*>(mChildren.End());
-        proc != NULL; proc = static_cast<CProcess*>(mChildren.End())) {
+        proc != nullptr; proc = static_cast<CProcess*>(mChildren.End())) {
 
         proc->Remove();
     }
@@ -83,7 +83,7 @@ void CProcess::Remove() {
     Term();
 
     //Remove parent
-    if (mParent == NULL) {
+    if (mParent == nullptr) {
         CProcessMan::GetRootProcessList().Remove(this);
     }
     else {
@@ -91,7 +91,7 @@ void CProcess::Remove() {
     }
 
     CProcessMan::GetFreeProcessList().InsertEnd(this);
-    SetParent(NULL);
+    SetParent(nullptr);
     mIsRegist = false;
 }
 
@@ -112,12 +112,12 @@ void CProcessMan::Reset() {
     CProcess* proc;
 
     //Terminate all processes
-    while (proc = sRootProcessList.Begin()) {
+    while ((proc = sRootProcessList.Begin())) {
         proc->Remove();
     }
 
     //Then delete all processes 
-    while (proc = sFreeProcessList.Begin()) {
+    while ((proc = sFreeProcessList.Begin())) {
         delete proc;
     }
 }
@@ -126,11 +126,11 @@ void CProcessMan::Move() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
-    for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
+    for (proc = list.Begin(); proc != nullptr; proc = list.IterNext(proc)) {
         MoveImpl(proc);
     }
 
-    for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
+    for (proc = list.Begin(); proc != nullptr; proc = list.IterNext(proc)) {
         Remove(proc);
     }
 }
@@ -143,7 +143,7 @@ void CProcessMan::MoveImpl(CProcess* proc) {
         TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
         for (CProcess* iter = static_cast<CProcess*>(children.Begin());
-            iter != NULL;
+            iter != nullptr;
             iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             MoveImpl(iter);
@@ -163,7 +163,7 @@ bool CProcessMan::Remove(CProcess* proc) {
         TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
         for (CProcess* iter = static_cast<CProcess*>(children.Begin());
-            iter != NULL;
+            iter != nullptr;
             iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             if (Remove(iter)) {
@@ -184,11 +184,11 @@ void CProcessMan::Draw() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
     CProcess* proc;
 
-    for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
+    for (proc = list.Begin(); proc != nullptr; proc = list.IterNext(proc)) {
         DrawImpl(proc);
     }
 
-    for (proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
+    for (proc = list.Begin(); proc != nullptr; proc = list.IterNext(proc)) {
         TailImpl(proc);
     }
 }
@@ -201,7 +201,7 @@ void CProcessMan::DrawImpl(CProcess* proc) {
         TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
         for (CProcess* iter = static_cast<CProcess*>(children.Begin());
-            iter != NULL;
+            iter != nullptr;
             iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             DrawImpl(iter);
@@ -212,7 +212,7 @@ void CProcessMan::DrawImpl(CProcess* proc) {
 void CProcessMan::Tail() {
     TChildListHeader<CProcess>& list = GetRootProcessList();
 
-    for (CProcess* proc = list.Begin(); proc != NULL; proc = list.IterNext(proc)) {
+    for (CProcess* proc = list.Begin(); proc != nullptr; proc = list.IterNext(proc)) {
         TailImpl(proc);
     }
 }
@@ -225,7 +225,7 @@ void CProcessMan::TailImpl(CProcess* proc) {
         TChildListHeader<CChildListNode>& children = proc->GetChildren();
 
         for (CProcess* iter = static_cast<CProcess*>(children.Begin());
-            iter != NULL;
+            iter != nullptr;
             iter = static_cast<CProcess*>(children.IterNext(iter))) {
 
             TailImpl(iter);
@@ -241,7 +241,7 @@ void CProcessMan::Delete() {
 void CProcessMan::DeleteList(TChildListHeader<CProcess>& list) {
     CProcess* proc;
     CProcess* next;
-    for (proc = list.Begin(); proc != NULL; proc = next) {
+    for (proc = list.Begin(); proc != nullptr; proc = next) {
         next = list.IterNext(proc);
 
         if (proc->mIsRemove == true) {
@@ -259,7 +259,7 @@ void CProcessMan::DeleteImpl(CProcess* proc) {
     CProcess* iter;
     CProcess* next;
     for (iter = static_cast<CProcess*>(children.Begin());
-        iter != NULL; iter = next) {
+        iter != nullptr; iter = next) {
 
         next = static_cast<CProcess*>(children.IterNext(iter));
 

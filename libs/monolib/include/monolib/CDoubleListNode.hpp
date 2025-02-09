@@ -36,10 +36,12 @@ private:
 public:
     CDoubleListHeader() { Reset(); }
     
-    void Reset() { mEnd = NULL; }
+    void Reset() { mEnd = nullptr; }
 
     //List iterators
-    CDoubleListNode* Begin() const { return mEnd != NULL ? mEnd->GetNext() : NULL; }
+    CDoubleListNode* Begin() const {
+        return mEnd != nullptr ? mEnd->GetNext() : nullptr;
+    }
     CDoubleListNode* End() const { return mEnd; }
 
     //Add/remove nodes

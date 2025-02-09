@@ -46,25 +46,25 @@ public:
     //Advance iterators
     T* IterNext(const T* iter) const {
         //Need specific inline depth
-        (void*)0;
+        (void)0;
         
-        if (iter != NULL) {
+        if (iter != nullptr) {
             return iter != static_cast<T*>(End())
-                ? static_cast<T*>(iter->GetNext()) : NULL;
+                ? static_cast<T*>(iter->GetNext()) : nullptr;
         }
 
-        return NULL;
+        return nullptr;
     }
     T* IterPrev(const T* iter) const {
         //Need specific inline depth
-        (void*)0;
+        (void)0;
         
-        if (iter != NULL) {
+        if (iter != nullptr) {
             return iter != static_cast<T*>(Begin())
-                ? static_cast<T*>(iter->GetPrev()) : NULL;
+                ? static_cast<T*>(iter->GetPrev()) : nullptr;
         }
 
-        return NULL;
+        return nullptr;
     }
 };
 
