@@ -57,7 +57,7 @@ void CPackItem::update(){
             mPackHeader = (PackHeader*)unk7C;
             func_804DE948();
         }else{
-            mFileHandle = CDeviceFile::openFile1(mtl::MemManager::getMem2RegionIndex(), unk84, (UNKTYPE*)this, 0, 0);
+            mFileHandle = CDeviceFile::openFile1(mtl::MemManager::getHandleMEM2(), unk84, (UNKTYPE*)this, 0, 0);
         }
 
         //TODO: What did they do here? They likely didnt have a constructor like this to skip
@@ -97,7 +97,7 @@ void CPackItem::update(){
         if(mIsAhxAdxFile){
             if(CWorkSystemPack::func_804DDFBC((u32)this) == false) return;
             u32 r4 = ((mPackHeader->mFiles + 1)*2 + 0x11a) & ~3; //TODO: figure out the corresponding Criware struct here.
-            mAhxAdxDataPtr = mtl::MemManager::func_8043442C(mtl::MemManager::getMem2RegionIndex(), r4, 4);
+            mAhxAdxDataPtr = mtl::MemManager::allocate_head(mtl::MemManager::getHandleMEM2(), r4, 4);
             ADXF_LoadPartitionNw(mAdxPartitionId, pkbFilename.c_str(), nullptr, mAhxAdxDataPtr);
             mLoadState = LOAD_STATE_LOADING_AHX_ADX_FILE;
         }else{

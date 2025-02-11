@@ -8,5 +8,5 @@ CArcItem::CArcItem(int param){
     unk30 = 0;
     //unk34 = param;
     //unk38 = 0;
-    //CDeviceFile_openFile1(Heap_getMem2RegionIndex(), param, this);
+    //CDeviceFile_openFile1(Heap_getHandleMEM2(), param, this);
 }

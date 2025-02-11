@@ -1,247 +1,193 @@
 #pragma once
 
+#include "decomp.h"
 #include "types.h"
-#include <string.h>
-#include <stddef.h>
-#include <math.h> //Only included to make mwcc use log from math.h lol
+#include <cstring>
+#include <cstddef>
 #include "monolib/FixStr.hpp"
 
-#define MEM2_END_ADDR 0x935E0000
-#define MAX_REGIONS 80
+namespace mtl {
+    
+    /*
+    Handle to an allocation region (MemRegion).
+    Bits 16-23: Region UID
+    Bits 24-31: Region index
+    */
+    typedef u32 ALLOC_HANDLE;
+    static const ALLOC_HANDLE INVALID_HANDLE = 0xFFFFFFFF;
 
-namespace mtl{
+    #define ALLOC_HANDLE_UID(handle) ((handle) >> 8 & 0xFF)
+    #define ALLOC_HANDLE_REGION(handle) ((handle) & 0xFF)
 
+    static const int MAX_ALLOC_REGION = 80;
+
+    /*
+    Allocatable block inside of a memory region.
+    */
     struct MemBlock {
+        //Minimum size of allocated data
+        static const int MIN_SIZE = 64;
+        //Maximum size of allocated data
+        static const int MAX_SIZE = 0x7FFFFFF;
+
         MemBlock* prev; //0x0
         MemBlock* next; //0x4
-        void* data; //0x8
+        MemBlock* aligned; //0x8
         u32 size; //0xC
-        u16 regionIndex; //0x10
-        u8 filler[14]; //0x12
+        u16 region; //0x10
+        u8 padding[32 - 0x12]; //0x12
 
-        //MemBlock(){}
-
-        static void* dummyDataPtr(){
-        return (void*)0xA7FB94C7;
+        u8* getStartAddr() {
+            return reinterpret_cast<u8*>(this) + sizeof(MemBlock);
+        }
+        u8* getEndAddr() {
+            return reinterpret_cast<u8*>(this) + size;
         }
 
-        void init(u32 size, int regionIndex){
-            memset(this, 0, sizeof(MemBlock)); //Wipe all values in the struct
-            prev = nullptr;
-            next = 0;
-            this->size = size;
-            data = dummyDataPtr();
-            this->regionIndex = regionIndex & 0xFF;
+        u32 getDataSize() const {
+            return size - sizeof(MemBlock);            
         }
 
-        static MemBlock* fromVoidPointer(void* ptr){
-            return (MemBlock*)((u32)ptr - 0x20);
+        static MemBlock* getBlockAddr(void* p) {
+            return reinterpret_cast<MemBlock*>(
+                static_cast<u8*>(p) - sizeof(MemBlock));
         }
+    };
+
+    /*
+    Region or section of the memory heap.
+    */
+    class MemRegion {
+        friend class MemManager;
+
+    public:
+        MemRegion();
+        ~MemRegion();
+
+        static void setRegionMaxSize(u32 maxMEM1, u32 maxMEM2);
+        static u32 getMEM1MaxSize();
+        static u32 getMEM2MaxSize();
+
+        void* allocate(void* buffer, u32 size, int align);
+        void finalize();
+
+        MemBlock* reallocate(MemBlock* block);
+        MemBlock* coalesce(MemBlock* block);
+        MemBlock* coalesceRecursive(MemBlock* block);
+
+        MemBlock* getTailBuffer(u32 size, int align, void** buffer);
+
+    private:
+        void* allocateImpl(MemBlock* block, void* buffer, u32 size, int align);
+
+        MemBlock* mHead; //0x0
+        MemBlock* mTail; //0x4
+        MemBlock* mOldest; //0x8
+        MemBlock* mYoungest; //0xC
+        void* mStartAddress; //0x10
+        void* mEndAddress; //0x14
+        u32 mNumAlloc; //0x18
+        u32 mSize; //0x1C
+        u32 mFreeBytes; //0x20
+        ml::FixStr<64> mName; //0x24
+        ALLOC_HANDLE mHandle; //0x68
+        u8 unk6C;
+
+        static u32 sMaxSizeMEM1;
+        static u32 sMaxSizeMEM2;
     };
 
     class MemManager {
     public:
-        struct Region{
-            ~Region();
-            MemBlock* func_804336F0(MemBlock* memBlock, u32 param2, u32 size, u32 param4);
-            MemBlock* func_804339B8(MemBlock* arg1);
-            MemBlock* func_80433AA8(MemBlock* entry);
-            MemBlock* func_80434704(u32 r4, u32 r5, u32* r6);
-            void* allocate(u32 param2, u32 size, u32 param4);
-
-            //Region();
-
-            void init(){
-                mHead = nullptr;
-                mTail = nullptr;
-                unk8 = nullptr;
-                unkC = nullptr;
-                mStartAddress = 0;
-                mEndAddress = 0;
-                unk18 = 0;
-                mSize = 0;
-                mFreeBytes = 0;
-                mName.string[0] = '\0'; //Set the first character to 0 to mark it as empty
-                mName.length = 0;
-                mRegionIndex = -1;
-                //temp_r1->unk1C = temp_r1;
-                unk6C = 0;
-            }
-
-            inline MemBlock* unkInline1(MemBlock* entry){
-                 MemBlock* prevEntry = entry->prev;
-
-                if (entry->prev != nullptr) {
-                    if((u32)entry == ((u32)prevEntry + prevEntry->size)) {
-                        prevEntry->size += entry->size;
-
-                        if (entry == mTail) {
-                            mTail = prevEntry;
-                        }
-
-                        prevEntry->next = entry->next;
-
-                        if (entry->next != nullptr) {
-                            entry->next->prev = prevEntry;
-                            entry = prevEntry;
-                        }
-                    }
-                }
-
-                return entry->next;
-            }
-
-            MemBlock* mHead; //0x0
-            MemBlock* mTail; //0x4
-            MemBlock* unk8;
-            MemBlock* unkC;
-            u32 mStartAddress; //0x10
-            u32 mEndAddress; //0x14
-            u32 unk18;
-            u32 mSize; //0x1C
-            u32 mFreeBytes; //0x20
-            ml::FixStr<64> mName; //0x24
-            u32 mRegionIndex; //0x68
-            u8 unk6C;
-        };
-
-    public:
-        static void setArenaMemorySize(u32 val, bool b);
         static void initialize();
-        static void terminate();
-        static int createRegion(u32 regionIndex, int offset, const char* name);
-        static int func_804341D0(int r3, int r4, const char* r5);
-        static int getHeapIndex();
-        static int getMem1RegionIndex();
-        static int getMem2RegionIndex();
-        static int getMem2RegionIndex_2();
-        static bool deleteRegion(u32 regionIndex);
-        static void* func_8043442C(u32 regionIndex, u32 r4, int r5);
-        static void func_80434450(u32 regionIndex, u32 r4, int r5);
-        static bool deallocate(void* p);
-        static u32 func_804346A0(u32 regionIndex);
-        static u32 func_804346BC(u32 regionIndex);
-        static u32 func_80434770(u32 regionIndex);
-        static void func_804347D8(u32 regionIndex);
-        static void func_80434830(u32 regionIndex);
-        static void func_804348A4(u32 regionIndex, u8 val);
-        static u32 func_804348C0(u8* arg0, u32 arg1);
-        static void func_80434A4C(u8 r3);
-        static void func_80434A54(u8 r3);
-        static void* malloc(size_t size, u32 regionIndex);
-        static void* malloc_array(size_t size, u32 regionIndex);
-        static void func_80434AA4(u32 r3, u32 regionIndex, int r5);
-        static void* allocateArray(u32 r3, u32 regionIndex, int r5);
-        //static void log(bool status);
+        static void finalize();
 
-        static inline Region* getRegion(u32 index){
-            return (Region*)((u32)regionArray + (u8)index * sizeof(Region));
-        }
+        static DECOMP_INLINE ALLOC_HANDLE create(void* head, u32 size, const char* name);
+        static ALLOC_HANDLE create(ALLOC_HANDLE handle, u32 size, const char* name);
+        static ALLOC_HANDLE create_tail(ALLOC_HANDLE handle, u32 size, const char* name);
 
-        static inline Region* getRegionU32(u32 index){
-            return (Region*)((u32)regionArray + (index * sizeof(Region)));
-        }
+        static ALLOC_HANDLE getHandleMEM1();
+        static void setHandleMEM1(ALLOC_HANDLE handle);
 
-        /*
-        Attempts to add a new memory region entry into the array, looking for the first unused slot.
-        If successful, it returns the corresponding index.
-        */
-        static inline int addRegion(MemBlock* head, u32 size, const char* name){
-            //Find the first unused entry to use for the new region
-            for(u32 i = 0; i < MAX_REGIONS; i++){
-                Region* entry = getRegion(i);
-                //Check if this slot is empty
-                if (entry->mStartAddress == 0) {
-                    i = (lbl_80667E50++ << 8) | i;
-                    entry->mRegionIndex = i;
-                    entry->mStartAddress = (u32)head;
-                    entry->mEndAddress = (u32)head + size;
-                    entry->unk8 = nullptr;
-                    entry->unkC = nullptr;
+        static ALLOC_HANDLE getHandleMEM2();
+        static void setHandleMEM2(ALLOC_HANDLE handle);
+        
+        static ALLOC_HANDLE getHandleStatic();
+        static void setHandleStatic(ALLOC_HANDLE handle);
 
-                    //Initialize the head entry of the heap
-                    head->init(size,i);
+        static bool erase(ALLOC_HANDLE handle);
+        static bool empty(ALLOC_HANDLE handle);
 
-                    entry->mHead = head;
-                    entry->mTail = head;
-                    entry->unk18 = 0;
-                    entry->mSize = size;
-                    entry->mFreeBytes = size;
-                    entry->unk6C = 0;
-                    entry->mName.length = strlen(name);
-                    strcpy(entry->mName.string, name); //Copy the name to the struct variable
-                    return i;
-                }
-            }
+        static void* allocate_head(ALLOC_HANDLE handle, u32 size, int align);
+        static void* allocate_tail(ALLOC_HANDLE handle, u32 size, int align);
+        static  bool deallocate(void* p);
 
-            return -1; //No available slot was found, return -1
-        }
+        static MemRegion* getRegion(ALLOC_HANDLE handle);
+        static u32 getRegionSize(ALLOC_HANDLE handle);
+        static u32 getBlockSize(ALLOC_HANDLE handle);
+        static MemBlock* getTailBuffer(MemRegion* region, u32 size, int align, void** buffer);
+        static MemBlock* getMaxBlock(ALLOC_HANDLE handle);
+        static u32 getMaxAllocSize(ALLOC_HANDLE handle);
+        static void* getMaxAllocData(ALLOC_HANDLE handle);
+        static f32 getPercentAlloc(ALLOC_HANDLE handle);
+        static void func_804348A4(ALLOC_HANDLE handle, u8 val);
 
-        static inline MemBlock* findLargestEntry(u32 regionIndex){
-            MemBlock* regionHead = getRegion(regionIndex)->mHead;
+        static u16 calculateCrc(const void* data, u32 len);
+        static void func_80434A4C(bool value);
 
-                if (regionHead == nullptr) {
-                    return nullptr;
-                } else {
-                    MemBlock* temp = regionHead;
+        static bool isOptimalAlloc();
+        static void setOptimalAlloc(bool enable);
 
-                    while(temp != nullptr) {
-                        if (regionHead->size < temp->size) {
-                            regionHead = temp;
-                        }
-                        temp = temp->next;
-                    }
-                }
-            return regionHead;
-        }
+        static void* allocate(u32 size, ALLOC_HANDLE handle);
+        static void* allocate_array(u32 size, ALLOC_HANDLE handle);
 
-        static inline MemBlock* createRegionHeadMemBlock(u32 regionIndex, u32 size){
-            Region* region = getRegion(regionIndex);
-            return (MemBlock *)region->allocate(0,size,0x10);
-        }
+        static void* allocate_ex(u32 size, ALLOC_HANDLE handle, int align);
+        static void* allocate_array_ex(u32 size, ALLOC_HANDLE handle, int align);
 
-        static inline MemBlock* createRegionHeadMemBlock1(u32 regionIndex, u32 size){
-            Region* region = getRegion(regionIndex);
-            u32 temp = 0;
-            if(region->func_80434704(size, 0x10, &temp) == 0){
-                return nullptr;
-            }else{
-                return (MemBlock*)region->allocate(temp, size, 0x10);
-            }
-        }
+    private:
+        static const char* scRegionNameMEM1;
+        static const char* scRegionNameMEM2;
 
-        static inline u32 unkInline(u32 param){
-            u32 result = param;
+        static ALLOC_HANDLE sHandleMEM1;
+        static ALLOC_HANDLE sHandleMEM2;
 
-            for(int j = 0; j < 8; j++){
-                result <<= 1;
-                if (result & 0x01000000) {
-                    result ^= 0x01100000 ^ 0x2100;
-                }
-            }
-            
-            return result;
-        }
+        static u8 sRegionBuffer[MAX_ALLOC_REGION * sizeof(MemRegion)];
+        static u32 sRegionUniqueId;
 
-        //TODO: is there a way to have this be a normal array without generating sinit stuff?
-        static u8 regionArray[MAX_REGIONS * sizeof(Region)];
-        static s32 lbl_80667E50;
-
-        static int lbl_80665E28;
-        static int lbl_80665E2C;
-        static u32 mem1RegionIndex;
-        static u32 mem2RegionIndex;
+        static bool lbl_80667E54;
         static bool lbl_80665E38;
-        static bool lbl_80665E39;
-        static int arenaMemorySize;
+        static bool lbl_80665E39;        
+        static bool sIsOptimalAlloc;
     };
 
 }
 
-inline void* operator new(size_t size, int index) {
-    return mtl::MemManager::malloc(size, index);
+/*
+Allocates object memory from the specified region.
+*/
+inline void* operator new(size_t size, mtl::ALLOC_HANDLE handle) {
+    return mtl::MemManager::allocate(size, handle);
 }
 
-inline void* operator new[](size_t size, int index){
-    return mtl::MemManager::malloc_array(size, index);
+/*
+Allocates aligned object memory from the specified region.
+Specify negative alignment to perform a tail allocation.
+*/
+inline void* operator new(size_t size, int align, mtl::ALLOC_HANDLE handle) {
+    return mtl::MemManager::allocate_ex(size, handle, align);
+}
+
+/*
+Allocates array memory from the specified region.
+*/
+inline void* operator new[](size_t size, mtl::ALLOC_HANDLE handle) {
+    return mtl::MemManager::allocate_array(size, handle);
+}
+
+/*
+Allocates aligned array memory from the specified region.
+Specify negative alignment to perform a tail allocation.
+*/
+inline void* operator new[](size_t size, int align, mtl::ALLOC_HANDLE handle) {
+    return mtl::MemManager::allocate_array_ex(size, handle, align);
 }
