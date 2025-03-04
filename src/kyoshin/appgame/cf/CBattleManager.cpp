@@ -117,7 +117,7 @@ namespace cf{
     }
 
     void CBattleManager::func_800D9190(){
-        instance = new (mtl::MemManager::getMem2RegionIndex()) CBattleManager();
+        instance = new (mtl::MemManager::getHandleMEM2()) CBattleManager();
     }
 
     void CBattleManager::func_800D91D0(){

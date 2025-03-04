@@ -20,7 +20,7 @@ CDeviceVICb(), unk1CC(false), mGxHeap(nullptr), mGxHeapEndAddr(nullptr), unk264(
 unk270(0), unk274(1), mFilter(VFILTER_NONE){
     instance = this;
     cacheInstance = &unk27C;
-    mGxHeap = (u8*)mtl::MemManager::allocateArray(gxHeapSize, CDevice::func_8044D058(), 0x20);
+    mGxHeap = (u8*)mtl::MemManager::allocate_array_ex(gxHeapSize, CDevice::func_8044D058(), 32);
     mGxHeapEndAddr = (void*)((u32)mGxHeap + gxHeapSize);
     cacheInstance->unk50C = 0;
     updateVerticalFilter(VFILTER_NONE);
@@ -226,4 +226,3 @@ void CDeviceGX::setValues(GXPixelFmt format, u32 heapSize){
     pixelFormat = format;
     gxHeapSize = heapSize;
 }
-

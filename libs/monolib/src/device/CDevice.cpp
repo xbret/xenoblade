@@ -100,13 +100,13 @@ CDevice* CDevice::create(){
 void CDevice::createRegions(){
     int deviceRegion1Offset = CDeviceGX::func_804557A0() + func_80454E78() + 0x80;
     deviceRegion1Offset += CDeviceVI::func_80448E80() ? 0 : CDeviceVI::getXfbBuffersSize();
-    lbl_80665FA0 = mtl::MemManager::createRegion(mtl::MemManager::getMem1RegionIndex(), deviceRegion1Offset, devSys1String);
-    lbl_80665FA4 = mtl::MemManager::createRegion(mtl::MemManager::getMem2RegionIndex(), 0x1A0000, devSys2String);
+    lbl_80665FA0 = mtl::MemManager::create(mtl::MemManager::getHandleMEM1(), deviceRegion1Offset, devSys1String);
+    lbl_80665FA4 = mtl::MemManager::create(mtl::MemManager::getHandleMEM2(), 0x1A0000, devSys2String);
 }
 
 void CDevice::deleteRegions(){
-    mtl::MemManager::deleteRegion(lbl_80665FA0);
-    mtl::MemManager::deleteRegion(lbl_80665FA4);
+    mtl::MemManager::erase(lbl_80665FA0);
+    mtl::MemManager::erase(lbl_80665FA4);
     lbl_80665FA0 = -1;
     lbl_80665FA4 = -1;
 }
