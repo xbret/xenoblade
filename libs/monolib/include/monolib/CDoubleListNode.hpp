@@ -2,10 +2,13 @@
 
 #include "types.h"
 
+/*
+Doubly-linked list node
+*/
 class CDoubleListNode {
 public:
-    CDoubleListNode* mNext; //0x0
     CDoubleListNode* mPrev; //0x4
+    CDoubleListNode* mNext; //0x0
     u8 unk8;
     int unkC;
 
@@ -14,21 +17,34 @@ public:
     virtual ~CDoubleListNode() {}
     virtual void Reset();
 
-    CDoubleListNode* GetNext() const { return mNext; }
+    //Node links
     CDoubleListNode* GetPrev() const { return mPrev; }
-    void SetNext(CDoubleListNode* newNext) { mNext = newNext; }
-    void SetPrev(CDoubleListNode* newPrev) { mPrev = newPrev; }
+    CDoubleListNode* GetNext() const { return mNext; }
+    void SetPrev(CDoubleListNode* prev) { mPrev = prev; }
+    void SetNext(CDoubleListNode* next) { mNext = next; }
 };
 
+/*
+Doubly-linked, circular list
+*/
 class CDoubleListHeader {
-protected:
-    CDoubleListNode* mHead; //0x0
-    CDoubleListNode* mTail; //0x4
+private:
+    /* Circular list which begins *AFTER* mEnd:
+    mEnd ("End") -> X ("Top") -> Y -> Z -> mEnd */
+    CDoubleListNode* mEnd; //0x0
 
 public:
-    CDoubleListNode* Head() const { return mHead; }
-    CDoubleListNode* Tail() const { return mTail; }
+    CDoubleListHeader() { Reset(); }
+    
+    void Reset() { mEnd = nullptr; }
 
+    //List iterators
+    CDoubleListNode* Begin() const {
+        return mEnd != nullptr ? mEnd->GetNext() : nullptr;
+    }
+    CDoubleListNode* End() const { return mEnd; }
+
+    //Add/remove nodes
     CDoubleListNode* InsertTop(CDoubleListNode* node);
     CDoubleListNode* InsertEnd(CDoubleListNode* node);
     CDoubleListNode* Remove(CDoubleListNode* node);
