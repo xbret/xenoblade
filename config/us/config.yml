@@ -1,4 +1,5 @@
-object: orig/us/sys/main.dol
+object_base: orig/us
+object: sys/main.dol
 hash: 214b15173fa3bad23a067476d58d3933ad7037b7
 symbols: config/us/symbols.txt
 splits: config/us/splits.txt

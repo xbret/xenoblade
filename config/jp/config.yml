@@ -1,4 +1,5 @@
-object: orig/jp/sys/main.dol
+object_base: orig/jp
+object: sys/main.dol
 hash: a564033aee46988743d8f5e6fdc50a8c65791160
 symbols: config/jp/symbols.txt
 splits: config/jp/splits.txt

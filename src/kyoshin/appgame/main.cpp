@@ -11,7 +11,7 @@
 #include <revolution/GX.h>
 
 FunctionStruct lbl_80528380 = {
-#if VERSION == VERSION_JP
+#if defined(VERSION_JP)
     "ゲームメイン",
 #else //EU/US
     "GAME_MAIN",
@@ -20,14 +20,14 @@ FunctionStruct lbl_80528380 = {
 };
 
 const char* const staticArcStr =
-#if VERSION == VERSION_JP
+#if defined(VERSION_JP)
 "static.arc";
 #else //EU/US
 "lang/jp/static.arc";
 #endif
 
 const char* const pkhFilenames[13] = {
-#if VERSION == VERSION_JP
+#if defined(VERSION_JP)
     "ahx.pkh",
     "adx.pkh",
     "chr.pkh",
@@ -56,7 +56,7 @@ const char* const pkhFilenames[13] = {
 #endif
 };
 
-#if VERSION != VERSION_JP
+#if !defined(VERSION_JP)
 const char* const languageFolderPaths1[8] = {
     "/jp/",
     "/en/",
@@ -83,7 +83,7 @@ StaticArcFile staticArcFiles[10] = {
     {"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
     {"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
     {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
-#if VERSION == VERSION_JP
+#if defined(VERSION_JP)
     {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
     {"BDAT","dvddata/common/jp/bdat.bin",1,&func_80039EFC,&func_80039F34},
 #else //EU/US

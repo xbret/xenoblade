@@ -105,6 +105,12 @@ parser.add_argument(
     help="path to sjiswrap.exe (optional)",
 )
 parser.add_argument(
+    "--ninja",
+    metavar="BINARY",
+    type=Path,
+    help="path to ninja binary (optional)"
+)
+parser.add_argument(
     "--verbose",
     action="store_true",
     help="print verbose output",
@@ -114,6 +120,13 @@ parser.add_argument(
     dest="non_matching",
     action="store_true",
     help="builds equivalent (but non-matching) or modded objects",
+)
+parser.add_argument(
+    "--warn",
+    dest="warn",
+    type=str,
+    choices=["all", "off", "error"],
+    help="how to handle warnings",
 )
 parser.add_argument(
     "--no-progress",
@@ -136,6 +149,7 @@ config.compilers_path = args.compilers
 config.generate_map = args.map
 config.non_matching = args.non_matching
 config.sjiswrap_path = args.sjiswrap
+config.ninja_path = args.ninja
 config.progress = args.progress
 if not is_windows():
     config.wrapper = args.wrapper
@@ -145,11 +159,11 @@ if not config.non_matching:
 
 # Tool versions
 config.binutils_tag = "2.42-1"
-config.compilers_tag = "20240706"
-config.dtk_tag = "v1.1.4"
-config.objdiff_tag = "v2.3.3"
-config.sjiswrap_tag = "v1.2.0"
-config.wibo_tag = "0.6.11"
+config.compilers_tag = "20250812"
+config.dtk_tag = "v1.6.2"
+config.objdiff_tag = "v3.0.0-beta.14"
+config.sjiswrap_tag = "v1.2.1"
+config.wibo_tag = "0.7.0"
 
 # Project
 config.config_path = Path("config") / config.version / "config.yml"
@@ -159,7 +173,7 @@ config.asflags = [
     "--strip-local-absolute",
     "-I include",
     f"-I build/{config.version}/include",
-    f"--defsym version={version_num}",
+    f"--defsym BUILD_VERSION={version_num}",
 ]
 config.ldflags = [
     "-fp hardware",
@@ -173,6 +187,10 @@ if args.map:
 
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
+
+# Optional numeric ID for decomp.me preset
+# Can be overridden in libraries or objects
+config.scratch_preset_id = None
 
 # Progress configuration
 config.progress_all = False
@@ -222,6 +240,8 @@ cflags_base = [
     "-i libs/PowerPC_EABI_Support/include/stl",
     "-i libs/PowerPC_EABI_Support/include/",
     f"-i build/{config.version}/include",
+    f"-DBUILD_VERSION={version_num}",
+    f"-DVERSION_{config.version.upper()}",
 ]
 
 # Debug flags
@@ -230,6 +250,14 @@ if args.debug:
     cflags_base.extend(["-sym on", "-DDEBUG=1"])
 else:
     cflags_base.append("-DNDEBUG=1")
+
+# Warning flags
+if args.warn == "all":
+    cflags_base.append("-W all")
+elif args.warn == "off":
+    cflags_base.append("-W off")
+elif args.warn == "error":
+    cflags_base.append("-W error")
 
 # Game/Monolithlib Flags
 cflags_game = [
@@ -246,7 +274,6 @@ cflags_game = [
     "-i libs/nw4r/include/",
     "-i libs/RVL_SDK/include/",
     "-i libs/CriWare/include/",
-    f"-DVERSION={version_num}",
 ]
 
 # Metrowerks library flags
@@ -345,7 +372,7 @@ cflags_criware = [
 config.linker_version = "Wii/1.1"
 
 # Helper function for Dolphin libraries
-def DolphinLib(lib_name: str, objects: List[Object], version="Wii/1.1", extra_cflags=[]) -> Dict[str, Any]:
+def DolphinLib(lib_name: str, objects: List[Object], version=config.linker_version, extra_cflags=[]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
         "mw_version": version,
@@ -380,12 +407,18 @@ Matching = True                   # Object matches and should be linked
 NonMatching = False               # Object does not match and should not be linked
 Equivalent = config.non_matching  # Object should be linked when configured with --non-matching
 
+
+# Object is only matching for specific versions
+def MatchingFor(*versions):
+    return config.version in versions
+
+
 config.warn_missing_config = True
 config.warn_missing_source = False
 config.libs = [
     {
         "lib": "kyoshin",
-        "mw_version": "Wii/1.1",
+        "mw_version": config.linker_version,
         "cflags": cflags_game,
         "progress_category": "game",
         "objects": [
@@ -716,7 +749,7 @@ config.libs = [
     },
     {
         "lib": "Runtime.PPCEABI.H.a",
-        "mw_version": "Wii/1.1",
+        "mw_version": config.linker_version,
         "src_dir": "libs/PowerPC_EABI_Support/src",
         "cflags": cflags_runtime,
         "progress_category": "mw",
@@ -736,7 +769,7 @@ config.libs = [
     },
     {
         "lib": "MSL_C.PPCEABI.bare.H",
-        "mw_version": "Wii/1.1",
+        "mw_version": config.linker_version,
         "src_dir": "libs/PowerPC_EABI_Support/src",
         "cflags": cflags_mslc,
         "progress_category": "mw",
@@ -1798,6 +1831,24 @@ config.libs = [
     }
 ]
 
+
+# Optional callback to adjust link order. This can be used to add, remove, or reorder objects.
+# This is called once per module, with the module ID and the current link order.
+#
+# For example, this adds "dummy.c" to the end of the DOL link order if configured with --non-matching.
+# "dummy.c" *must* be configured as a Matching (or Equivalent) object in order to be linked.
+def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
+    # Don't modify the link order for matching builds
+    if not config.non_matching:
+        return objects
+    if module_id == 0:  # DOL
+        return objects + ["dummy.c"]
+    return objects
+
+# Uncomment to enable the link order callback.
+# config.link_order_callback = link_order_callback
+
+
 # Optional extra categories for progress tracking
 # Adjust as desired for your project
 config.progress_categories = [
@@ -1809,6 +1860,12 @@ config.progress_categories = [
     ProgressCategory("nw4r", "NW4R Code"),
 ]
 config.progress_each_module = args.verbose
+# Optional extra arguments to `objdiff-cli report generate`
+config.progress_report_args = [
+    # Marks relocations as mismatching if the target value is different
+    # Default is "functionRelocDiffs=none", which is most lenient
+    # "--config functionRelocDiffs=data_value",
+]
 
 if args.mode == "configure":
     # Write build.ninja and objdiff.json

@@ -2863,6 +2863,10 @@ src/kyoshin/appgame/CBattery.cpp:
 	.data       start:0x8053EFA8 end:0x8053F040
 	.sdata      start:0x80665850 end:0x80665858
 
+libs/PowerPC_EABI_Support/src/Runtime/New.cp:
+	.rodata     start:0x8050CE00 end:0x8050CE10
+	.sdata      start:0x80665858 end:0x80665860
+
 libs/PowerPC_EABI_Support/src/Runtime/__mem.c:
 	.init       start:0x80004000 end:0x80004380
 	.text       start:0x802B95B8 end:0x802B95D4
@@ -2873,10 +2877,6 @@ libs/PowerPC_EABI_Support/src/Runtime/__va_arg.c:
 libs/PowerPC_EABI_Support/src/Runtime/global_destructor_chain.c:
 	.text       start:0x802B969C end:0x802B96FC
 	.sbss       start:0x80667520 end:0x80667528
-
-libs/PowerPC_EABI_Support/src/Runtime/New.cp:
-	.rodata     start:0x8050CE00 end:0x8050CE10
-	.sdata      start:0x80665858 end:0x80665860
 
 libs/PowerPC_EABI_Support/src/Runtime/NMWException.cp:
 	extab       start:0x8001BEE8 end:0x8001BF30
@@ -2917,9 +2917,6 @@ libs/PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.cp:
 libs/PowerPC_EABI_Support/src/Runtime/GCN_mem_alloc.c:
 	.text       start:0x802BBD00 end:0x802BBDB8
 	.rodata     start:0x8050CE90 end:0x8050CF00
-
-libs/PowerPC_EABI_Support/src/MetroTRK/__exception.s:
-	.init       start:0x80004380 end:0x800062C0
 
 libs/PowerPC_EABI_Support/src/MSL_C/MSL_Common/alloc.c:
 	.text       start:0x802BBDB8 end:0x802BC2CC
@@ -4311,6 +4308,9 @@ libs/RVL_SDK/src/revolution/os/OSStateTM.c:
 	.data       start:0x8055EBF8 end:0x8055ECC0
 	.bss        start:0x805D5160 end:0x805D5220
 	.sbss       start:0x80667AE0 end:0x80667B00
+
+libs/PowerPC_EABI_Support/src/MetroTRK/__exception.s:
+	.init       start:0x80004380 end:0x800062C0
 
 libs/RVL_SDK/src/revolution/os/__start.c:
 	.init       start:0x800062C0 end:0x800065C0

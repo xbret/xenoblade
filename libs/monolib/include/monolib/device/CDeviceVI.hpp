@@ -116,11 +116,11 @@ protected:
 //XFB dimensions
 //JP: 640x480, US: 640x456, PAL: 640x542
 #define XFB_WIDTH 640
-#if VERSION == VERSION_JP
+#if defined(VERSION_JP)
 #define XFB_HEIGHT 480
-#elif VERSION == VERSION_EU
+#elif defined(VERSION_EU)
 #define XFB_HEIGHT 542
-#elif VERSION == VERSION_US
+#elif defined(VERSION_US)
 #define XFB_HEIGHT 456
 #endif
 #define NUM_XFB_BUFFERS 2 //double buffered

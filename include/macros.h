@@ -42,8 +42,4 @@
 #define __sync()
 #endif
 
-#define VERSION_JP 0
-#define VERSION_EU 1
-#define VERSION_US 2
-
 #endif
