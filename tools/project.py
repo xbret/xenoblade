@@ -121,7 +121,6 @@ class Object:
                 Path(obj.options["asm_dir"]) / obj.options["source"]
             ).with_suffix(".s")
 
-        self.name = str(obj.options["src_dir"]) + "/" + self.name
         base_name = Path(self.name).with_suffix("")
         obj.src_obj_path = build_dir / "src" / f"{base_name}.o"
         obj.asm_obj_path = build_dir / "mod" / f"{base_name}.o"
