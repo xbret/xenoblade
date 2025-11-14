@@ -234,7 +234,7 @@ cflags_base = [
     "-nosyspath",
     "-RTTI off",
     "-fp_contract on",
-    #"-str reuse",
+    "-str reuse",
     "-enc SJIS",
     "-i include",
     "-i libs/PowerPC_EABI_Support/include/stl",
