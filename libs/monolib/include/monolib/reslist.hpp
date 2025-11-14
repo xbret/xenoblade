@@ -63,6 +63,45 @@ public:
     u8 unk1D[3];
 };
 
+template <typename T>
+class _reslist_iterator {
+public:
+    _reslist_iterator() : mNode(NULL){}
+    explicit _reslist_iterator(_reslist_node<T>* node) : mNode(node){}
+
+    _reslist_iterator& operator++(){
+        mNode = mNode->mNext;
+        return *this;
+    }
+
+    _reslist_iterator& operator++(int){
+
+        _reslist_iterator<T>& temp = *this;
+        mNode = mNode->mNext;
+        return temp;
+    }
+
+    _reslist_iterator& operator--(){
+        mNode = mNode->mPrev;
+        return *this;
+    }
+
+    _reslist_node<T>* operator->() const {
+        return mNode;
+    }
+
+    bool operator==(_reslist_iterator<T> const& rhs) const {
+        return mNode == rhs.mNode;
+    }
+
+    bool operator!=(_reslist_iterator<T> const& rhs) const {
+        return mNode != rhs.mNode;
+    }
+
+private:
+    _reslist_node<T>* mNode; //0x0
+};
+
 //size: 0x20
 template <typename T>
 class reslist : public _reslist_base<T> {
@@ -113,8 +152,12 @@ public:
     }
 
 
-    void begin();
-    void end();
+    _reslist_iterator<T> begin(){
+        return _reslist_iterator<T>(mStartNodePtr->mNext);
+    }
+    _reslist_iterator<T> end(){
+        return _reslist_iterator<T>(mStartNodePtr);
+    }
 
     inline void initList(int capacity, int heapIndex) {
         mList = new (heapIndex) _reslist_node<T>[capacity];

@@ -38,20 +38,18 @@ s64 CDeviceClock::getTimeNow(){
 void CDeviceClock::func_8044DF8C(){
     s64 time = getTimeNow();
     instance->unk200 = time;
-    _reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
-    while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-        curNode->mItem->virtualFunc2();
-        curNode = curNode->mNext;
+
+    for(_reslist_iterator<IDeviceClockFrame*> it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+        it->mItem->virtualFunc2();
     }
 }
 
 void CDeviceClock::func_8044DFF4(){
     s64 time = getTimeNow();
     instance->unk208 = time - instance->unk200;
-    _reslist_node<IDeviceClockFrame*>* curNode = instance->unk1CC.mStartNodePtr->mNext;
-    while((u32)curNode != (u32)instance->unk1CC.mStartNodePtr){
-        curNode->mItem->virtualFunc3();
-        curNode = curNode->mNext;
+    
+    for(_reslist_iterator<IDeviceClockFrame*> it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+        it->mItem->virtualFunc3();
     }
 }
 
@@ -75,4 +73,3 @@ bool CDeviceClock::wkShutdown(){
 
     return false;
 }
-
