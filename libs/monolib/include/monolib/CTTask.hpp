@@ -31,7 +31,7 @@ public:
         }
     }
 
-private:
+protected:
     MoveFunc mMoveFunc;
     DrawFunc mDrawFunc;
 };

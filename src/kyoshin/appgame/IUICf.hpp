@@ -2,8 +2,7 @@
 
 #include "monolib/CTTask.hpp"
 
-class IUICf : CTTask<IUICf>  {
+class IUICf : public CTTask<IUICf>  {
 public:
 
 };
-

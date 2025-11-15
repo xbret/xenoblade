@@ -43,11 +43,11 @@ void CTaskManager::Create() {
 
 void CTaskManager::Start() {
     //All register with NULL parent because they are root-level processes
-    spRootProcGame = new (WorkThreadSystem::getHeapHandle()) CRootProc();
-    spRootProcGame->Regist(nullptr, false);
-
     spRootProcRealTime = new (WorkThreadSystem::getHeapHandle()) CRootProc();
     spRootProcRealTime->Regist(nullptr, false);
+
+    spRootProcGame = new (WorkThreadSystem::getHeapHandle()) CRootProc();
+    spRootProcGame->Regist(nullptr, false);
 
     spRootProcScn = new (WorkThreadSystem::getHeapHandle()) CRootProc();
     spRootProcScn->Regist(nullptr, false);
