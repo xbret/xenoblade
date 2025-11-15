@@ -105,10 +105,7 @@ parser.add_argument(
     help="path to sjiswrap.exe (optional)",
 )
 parser.add_argument(
-    "--ninja",
-    metavar="BINARY",
-    type=Path,
-    help="path to ninja binary (optional)"
+    "--ninja", metavar="BINARY", type=Path, help="path to ninja binary (optional)"
 )
 parser.add_argument(
     "--verbose",
@@ -210,10 +207,10 @@ config.progress_data_fancy_item = "collectopaedias"
 # can have the same basic name for any library without conflicts would be nice.
 
 # HBM
-sdk_hbm_version = 20090303 # JP
+sdk_hbm_version = 20090303  # JP
 sdk_hbm_compiler = "Wii/1.0a"
 if config.version != "jp":
-    sdk_hbm_version = 20100224 # EU/US
+    sdk_hbm_version = 20100224  # EU/US
     sdk_hbm_compiler = "Wii/1.1"
 
 # Base flags, common to most GC/Wii games.
@@ -371,8 +368,11 @@ cflags_criware = [
 
 config.linker_version = "Wii/1.1"
 
+
 # Helper function for Dolphin libraries
-def DolphinLib(lib_name: str, objects: List[Object], version=config.linker_version, extra_cflags=[]) -> Dict[str, Any]:
+def DolphinLib(
+    lib_name: str, objects: List[Object], version=config.linker_version, extra_cflags=[]
+) -> Dict[str, Any]:
     return {
         "lib": lib_name,
         "mw_version": version,
@@ -381,6 +381,7 @@ def DolphinLib(lib_name: str, objects: List[Object], version=config.linker_versi
         "progress_category": "sdk",
         "objects": objects,
     }
+
 
 def criwareLib(lib_name, objects, extra_cflags=[]):
     return {
@@ -391,6 +392,7 @@ def criwareLib(lib_name, objects, extra_cflags=[]):
         "progress_category": "criware",
         "objects": objects,
     }
+
 
 def nw4rLib(lib_name, objects, extra_cflags=[]):
     return {
@@ -403,9 +405,11 @@ def nw4rLib(lib_name, objects, extra_cflags=[]):
     }
 
 
-Matching = True                   # Object matches and should be linked
-NonMatching = False               # Object does not match and should not be linked
-Equivalent = config.non_matching  # Object should be linked when configured with --non-matching
+Matching = True  # Object matches and should be linked
+NonMatching = False  # Object does not match and should not be linked
+Equivalent = (
+    config.non_matching
+)  # Object should be linked when configured with --non-matching
 
 
 # Object is only matching for specific versions
@@ -422,7 +426,11 @@ config.libs = [
         "cflags": cflags_game,
         "progress_category": "game",
         "objects": [
-            Object(NonMatching, "kyoshin/appgame/CGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+            Object(
+                NonMatching,
+                "kyoshin/appgame/CGame.cpp",
+                extra_cflags=["-O4,s", "-func_align 4"],
+            ),
             Object(Matching, "kyoshin/appgame/main.cpp"),
             Object(Matching, "kyoshin/appgame/plugin/pluginDeb.cpp"),
             Object(Matching, "kyoshin/appgame/plugin/pluginWait.cpp"),
@@ -615,7 +623,9 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/makecrystal/code_80213488.cpp"),
             Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalBox.cpp"),
             Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalInfo.cpp"),
-            Object(NonMatching, "kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp"),
+            Object(
+                NonMatching, "kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp"
+            ),
             Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCylinderGauge.cpp"),
             Object(NonMatching, "kyoshin/appgame/makecrystal/CMCCrystalList.cpp"),
             Object(NonMatching, "kyoshin/appgame/makecrystal/CMCEffStart.cpp"),
@@ -685,7 +695,9 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/cf/voice/CCharVoice.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/CCharVoiceMan.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp"),
+            Object(
+                NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp"
+            ),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.cpp"),
@@ -693,23 +705,45 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp"),
+            Object(
+                NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp"
+            ),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp"),
+            Object(
+                NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp"
+            ),
+            Object(
+                NonMatching,
+                "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp",
+            ),
+            Object(
+                NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp"
+            ),
             Object(NonMatching, "kyoshin/appgame/menu/CMenuBattleChain.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp"),
+            Object(
+                NonMatching,
+                "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp",
+            ),
             Object(NonMatching, "kyoshin/appgame/cf/CfGimmickSaveOff.cpp"),
             Object(NonMatching, "kyoshin/appgame/menu/CMenuTutorialList.cpp"),
             Object(NonMatching, "kyoshin/appgame/CTutorialList.cpp"),
             Object(NonMatching, "kyoshin/appgame/CLoad.cpp"),
             Object(Matching, "kyoshin/appgame/CNandData.cpp"),
-            Object(Matching, "kyoshin/appgame/ErrMesData.cpp", shift_jis = False, extra_cflags=["-enc UTF8"]),
+            Object(
+                Matching,
+                "kyoshin/appgame/ErrMesData.cpp",
+                shift_jis=False,
+                extra_cflags=["-enc UTF8"],
+            ),
             Object(NonMatching, "kyoshin/appgame/plugin/pluginHelp.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp"),
-            Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp"),
+            Object(
+                NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp"
+            ),
+            Object(
+                NonMatching,
+                "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp",
+            ),
             Object(NonMatching, "kyoshin/appgame/menu/CMenuGCItem.cpp"),
             Object(NonMatching, "kyoshin/appgame/menu/CMenuGameClear.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/CfHikariItemManager.cpp"),
@@ -744,7 +778,11 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/code_802B8A3C.cpp"),
             Object(Matching, "kyoshin/appgame/plugin/pluginVoice.cpp"),
             Object(NonMatching, "kyoshin/appgame/code_802B9064.cpp"),
-            Object(Matching, "kyoshin/appgame/CBattery.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+            Object(
+                Matching,
+                "kyoshin/appgame/CBattery.cpp",
+                extra_cflags=["-O4,s", "-func_align 4"],
+            ),
         ],
     },
     {
@@ -756,14 +794,34 @@ config.libs = [
         "objects": [
             Object(Matching, "PowerPC_EABI_Support/src/Runtime/__mem.c"),
             Object(Matching, "PowerPC_EABI_Support/src/Runtime/__va_arg.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/global_destructor_chain.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/New.cp", extra_cflags = ["-Cpp_exceptions on", "-RTTI on"]),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/NMWException.cp", extra_cflags = ["-Cpp_exceptions on"]),
+            Object(
+                Matching, "PowerPC_EABI_Support/src/Runtime/global_destructor_chain.c"
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/Runtime/New.cp",
+                extra_cflags=["-Cpp_exceptions on", "-RTTI on"],
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/Runtime/NMWException.cp",
+                extra_cflags=["-Cpp_exceptions on"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/Runtime/ptmf.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/MWRTTI.cp", extra_cflags = ["-Cpp_exceptions on", "-RTTI on"]),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/Runtime/MWRTTI.cp",
+                extra_cflags=["-Cpp_exceptions on", "-RTTI on"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/Runtime/runtime.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/__init_cpp_exceptions.cpp"),
-            Object(Matching, "PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.cp", extra_cflags = ["-Cpp_exceptions on"]),
+            Object(
+                Matching, "PowerPC_EABI_Support/src/Runtime/__init_cpp_exceptions.cpp"
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.cp",
+                extra_cflags=["-Cpp_exceptions on"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/Runtime/GCN_mem_alloc.c"),
         ],
     },
@@ -776,9 +834,13 @@ config.libs = [
         "objects": [
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/alloc.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/ansi_files.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/ansi_fp.c"),
+            Object(
+                Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/ansi_fp.c"
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/arith.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/assert.c"), #JP only
+            Object(
+                Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/assert.c"
+            ),  # JP only
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/buffer_io.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/ctype.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/direct_io.c"),
@@ -806,43 +868,147 @@ config.libs = [
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/wscanf.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/wstring.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/wchar_io.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/PPC_EABI/uart_console_io_gcn.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/PPC_EABI/abort_exit_ppc_eabi.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/secure_error.c"),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/PPC_EABI/uart_console_io_gcn.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/PPC_EABI/abort_exit_ppc_eabi.c",
+            ),
+            Object(
+                Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/secure_error.c"
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/math_double.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/math_sun.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c"),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/math_sun.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_acos.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_asin.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_atan2.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_fmod.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_log10.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_pow.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_cos.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_sin.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/k_tan.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_atan.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ceil.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_copysign.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_cos.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_floor.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_frexp.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_ldexp.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_modf.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_sin.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/s_tan.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_acos.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_asin.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_atan2.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_fmod.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_log10.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_pow.c",
+            ),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/e_sqrt.c",
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/PPC_EABI/math_ppc.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c"),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MSL_C/MSL_Common_Embedded/Math/Double_precision/w_sqrt.c",
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/extras.c"),
         ],
     },
@@ -856,28 +1022,49 @@ config.libs = [
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/__exception.s"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/targsupp.s"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/custconn/cc_gdev.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/custconn/MWCriticalSection_gc.cpp"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/custconn/CircleBuffer.c"),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MetroTRK/custconn/MWCriticalSection_gc.cpp",
+            ),
+            Object(
+                Matching, "PowerPC_EABI_Support/src/MetroTRK/custconn/CircleBuffer.c"
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/flush_cache.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/main_TRK.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/mainloop.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/mem_TRK.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/dispatch.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/dolphin_trk.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.c", extra_cflags = ["-str pool"]),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.c",
+                extra_cflags=["-str pool"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/notify.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/nubevent.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/nubinit.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/serpoll.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/string_TRK.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/support.c", extra_cflags = ["-str pool"]),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MetroTRK/support.c",
+                extra_cflags=["-str pool"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/targcont.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/mpc_7xx_603e.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/msg.c"),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/msgbuf.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/msghndlr.c", extra_cflags = ["-str pool"]),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MetroTRK/msghndlr.c",
+                extra_cflags=["-str pool"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/mslsupp.c"),
-            Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/targimpl.c", extra_cflags = ["-inline auto", "-pool off"]),
+            Object(
+                Matching,
+                "PowerPC_EABI_Support/src/MetroTRK/targimpl.c",
+                extra_cflags=["-inline auto", "-pool off"],
+            ),
             Object(Matching, "PowerPC_EABI_Support/src/MetroTRK/target_options.c"),
         ],
     },
@@ -1000,11 +1187,19 @@ config.libs = [
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/port_api.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/port_rfc.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/port_utils.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_l2cap_if.c"),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_l2cap_if.c"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_mx_fsm.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_port_fsm.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_port_if.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_ts_frames.c"),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_port_fsm.c"
+            ),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_port_if.c"
+            ),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_ts_frames.c"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/rfcomm/rfc_utils.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/sdp/sdp_api.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/stack/sdp/sdp_db.c"),
@@ -1053,8 +1248,13 @@ config.libs = [
         "enc",
         [
             Object(Matching, "RVL_SDK/src/revolution/enc/encutility.c"),
-            Object(Matching, "RVL_SDK/src/revolution/enc/encunicode.c"), #EU/US only
-            Object(Matching, "RVL_SDK/src/revolution/enc/encjapanese.c", shift_jis = False, extra_cflags=["-enc UTF8"]), #JP only
+            Object(Matching, "RVL_SDK/src/revolution/enc/encunicode.c"),  # EU/US only
+            Object(
+                Matching,
+                "RVL_SDK/src/revolution/enc/encjapanese.c",
+                shift_jis=False,
+                extra_cflags=["-enc UTF8"],
+            ),  # JP only
         ],
     ),
     DolphinLib(
@@ -1094,7 +1294,9 @@ config.libs = [
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXFrameBuf.c"),
             Object(Matching, "RVL_SDK/src/revolution/gx/GXLight.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXTexture.c"),
-            Object(Matching, "RVL_SDK/src/revolution/gx/GXBump.c", mw_version = "Wii/1.0"),
+            Object(
+                Matching, "RVL_SDK/src/revolution/gx/GXBump.c", mw_version="Wii/1.0"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXTev.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXPixel.c"),
             Object(Matching, "RVL_SDK/src/revolution/gx/GXDisplayList.c"),
@@ -1117,33 +1319,60 @@ config.libs = [
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMAxSound.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMCommon.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMBase.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_animation.cpp"),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_animation.cpp"
+            ),
             Object(
                 Matching,
                 "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.cpp",
-                mw_version = "Wii/1.0a" if sdk_hbm_version > 20090303 else sdk_hbm_compiler), # Only matches on 1.0a in EU/US
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp"),
+                mw_version=(
+                    "Wii/1.0a" if sdk_hbm_version > 20090303 else sdk_hbm_compiler
+                ),
+            ),  # Only matches on 1.0a in EU/US
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_bounding.cpp"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_common.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_drawInfo.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_group.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_layout.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_material.cpp"),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_material.cpp"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_pane.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_picture.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp"),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_picture.cpp"
+            ),
+            Object(
+                NonMatching,
+                "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_resourceAccessor.cpp",
+            ),
+            Object(
+                NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_textBox.cpp"
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/lyt/lyt_window.cpp"),
-            Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/math/math_triangular.cpp"),
-            Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp"),
-            Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp"),
+            Object(
+                Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/math/math_triangular.cpp"
+            ),
+            Object(
+                Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_binaryFileFormat.cpp"
+            ),
+            Object(
+                Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_CharStrmReader.cpp"
+            ),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_CharWriter.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_Font.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_LinkList.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_list.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_ResFont.cpp"),
             Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_ResFontBase.cpp"),
-            Object(Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_TextWriterBase.cpp"),
+            Object(
+                Matching, "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.cpp"
+            ),
+            Object(
+                NonMatching,
+                "RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_TextWriterBase.cpp",
+            ),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/mix.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/syn.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/synctrl.c"),
@@ -1232,7 +1461,9 @@ config.libs = [
             Object(Matching, "RVL_SDK/src/revolution/os/OSSync.c"),
             Object(Matching, "RVL_SDK/src/revolution/os/OSThread.c"),
             Object(Matching, "RVL_SDK/src/revolution/os/OSTime.c"),
-            Object(Matching, "RVL_SDK/src/revolution/os/OSUtf.c", mw_version = "GC/3.0a5.2"),
+            Object(
+                Matching, "RVL_SDK/src/revolution/os/OSUtf.c", mw_version="GC/3.0a5.2"
+            ),
             Object(Matching, "RVL_SDK/src/revolution/os/OSIpc.c"),
             Object(Matching, "RVL_SDK/src/revolution/os/OSStateTM.c"),
             Object(Matching, "RVL_SDK/src/revolution/os/__start.c"),
@@ -1483,8 +1714,8 @@ config.libs = [
     nw4rLib(
         "libnw4r_dw",
         [
-            Object(Matching, "nw4r/src/dw/dw_Window.cpp"), #Stupid
-        ]
+            Object(Matching, "nw4r/src/dw/dw_Window.cpp"),  # Stupid
+        ],
     ),
     nw4rLib(
         "libnw4r_g3d",
@@ -1689,7 +1920,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/CRsrcData.cpp"),
             Object(NonMatching, "monolib/src/CScriptCode.cpp"),
             Object(NonMatching, "monolib/src/CToken.cpp"),
-            Object(NonMatching, "monolib/src/CRootProc.cpp"),
+            Object(NonMatching, "monolib/src/CTaskManager.cpp"),
             Object(NonMatching, "monolib/src/CView.cpp"),
             Object(NonMatching, "monolib/src/CViewFrame.cpp"),
             Object(NonMatching, "monolib/src/CViewRoot.cpp"),
@@ -1705,7 +1936,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/device/CDeviceBase.cpp"),
             Object(Matching, "monolib/src/device/CDeviceSC.cpp"),
             Object(NonMatching, "monolib/src/device/CDeviceVI.cpp"),
-			Object(Matching, "monolib/src/device/CDeviceVICb.cpp"),
+            Object(Matching, "monolib/src/device/CDeviceVICb.cpp"),
             Object(NonMatching, "monolib/src/CFontLayer.cpp"),
             Object(NonMatching, "monolib/src/CGXCache.cpp"),
             Object(NonMatching, "monolib/src/device/CDevice.cpp"),
@@ -1828,7 +2059,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/nand/CNReqtaskSaveBanner.cpp"),
             Object(NonMatching, "monolib/src/nand/CNBanner.cpp"),
         ],
-    }
+    },
 ]
 
 
@@ -1844,6 +2075,7 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
     if module_id == 0:  # DOL
         return objects + ["dummy.c"]
     return objects
+
 
 # Uncomment to enable the link order callback.
 # config.link_order_callback = link_order_callback

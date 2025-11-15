@@ -27,7 +27,7 @@ public:
     static void deleteRegions();
 
     static CDevice* init(const char* name, CWorkThread* workThread){
-        CDevice* cDevice = new (WorkThreadSystem::getHeapIndex()) CDevice(name, workThread);
+        CDevice* cDevice = new (WorkThreadSystem::getHeapHandle()) CDevice(name, workThread);
         cDevice->func_80438BD8(workThread, 0);
         return cDevice;
     }
@@ -65,7 +65,7 @@ namespace{
         static CDeviceException* getInstance();
 
         static CDeviceException* init(const char* name, CWorkThread* workThread){
-            CDeviceException* deviceException = new (WorkThreadSystem::getHeapIndex()) CDeviceException(name, workThread);
+            CDeviceException* deviceException = new (WorkThreadSystem::getHeapHandle()) CDeviceException(name, workThread);
             deviceException->func_80438BD8(workThread, 0);
             return deviceException;
         }

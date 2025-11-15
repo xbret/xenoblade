@@ -12,7 +12,7 @@ public:
     static CDeviceFile* getInstance();
 
     static inline CDeviceFile* init(const char* name, CWorkThread* workThread){
-        CDeviceFile* device = new (WorkThreadSystem::getHeapIndex()) CDeviceFile(name, workThread);
+        CDeviceFile* device = new (WorkThreadSystem::getHeapHandle()) CDeviceFile(name, workThread);
         device->func_80438BD8(workThread, 0);
         return device;
     }

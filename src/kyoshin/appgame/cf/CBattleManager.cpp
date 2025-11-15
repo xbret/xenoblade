@@ -97,7 +97,7 @@ namespace cf{
     }
 
     CBattleManager::CBattleManager() : unk84(0) {
-        int heapIndex = WorkThreadSystem::getHeapIndex();
+        int heapIndex = WorkThreadSystem::getHeapHandle();
         mActorList1.initList(64, heapIndex);
         mActorList2.initList(8, heapIndex);
         mActorList3.initList(56, heapIndex);

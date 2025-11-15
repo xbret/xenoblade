@@ -66,7 +66,7 @@ public:
     }
 
     static inline CDeviceGX* init(const char* name, CWorkThread* workThread){
-        CDeviceGX* device = new (WorkThreadSystem::getHeapIndex()) CDeviceGX(name, workThread);
+        CDeviceGX* device = new (WorkThreadSystem::getHeapHandle()) CDeviceGX(name, workThread);
         device->func_80438BD8(workThread, 0);
         device->unk1C4 |= 1;
         return device;
@@ -98,4 +98,3 @@ protected:
     static float lbl_80667F70;
     static const char* someString;
 };
-

@@ -60,7 +60,7 @@ void CGame::func_80039364(){
         if(CGameRestart::instance == nullptr){
             CDesktop* desktop = CDesktop::getInstance();
             const char* name = "CGameRestart";
-            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapIndex()) CGameRestart(name, desktop, 8);
+            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
             gameRestart->func_80438BD8(desktop, 0);
             UNKTYPE* temp_r3 = func_80455AA0();
             u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
@@ -135,7 +135,7 @@ void CGame::GameMain(){
         u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
         CDesktop* desktop = CDesktop::getInstance();
         const char* name = "巨神"; //"Bionis"
-        CGame* cGame = new (WorkThreadSystem::getHeapIndex()) CGame(name, desktop);
+        CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
         cGame->func_80438BD8(desktop, 0);
         cGame->unk1E4 = r29;
     }
