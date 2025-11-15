@@ -63,7 +63,7 @@ public:
     u8 unk1D[3];
 };
 
-template <typename T>
+template <typename T, typename Ref, typename Ptr>
 class _reslist_iterator {
 public:
     _reslist_iterator() : mNode(NULL){}
@@ -74,9 +74,9 @@ public:
         return *this;
     }
 
-    _reslist_iterator& operator++(int){
+    _reslist_iterator operator++(int){
 
-        _reslist_iterator<T>& temp = *this;
+        _reslist_iterator temp = *this;
         mNode = mNode->mNext;
         return temp;
     }
@@ -86,15 +86,26 @@ public:
         return *this;
     }
 
-    _reslist_node<T>* operator->() const {
-        return mNode;
+    _reslist_iterator operator--(int){
+
+        _reslist_iterator temp = *this;
+        mNode = mNode->mPrev;
+        return temp;
     }
 
-    bool operator==(_reslist_iterator<T> const& rhs) const {
+    Ref operator*() const {
+        return mNode->mItem;
+    }
+
+    Ptr operator->() const {
+        return &operator*();
+    }
+
+    bool operator==(_reslist_iterator const& rhs) const {
         return mNode == rhs.mNode;
     }
 
-    bool operator!=(_reslist_iterator<T> const& rhs) const {
+    bool operator!=(_reslist_iterator const& rhs) const {
         return mNode != rhs.mNode;
     }
 
@@ -106,6 +117,8 @@ private:
 template <typename T>
 class reslist : public _reslist_base<T> {
 public:
+    typedef _reslist_iterator<T, T&, T*> iterator;
+
     reslist() : _reslist_base<T>() {
     }
     virtual ~reslist(){
@@ -152,11 +165,11 @@ public:
     }
 
 
-    _reslist_iterator<T> begin(){
-        return _reslist_iterator<T>(mStartNodePtr->mNext);
+    iterator begin(){
+        return iterator(mStartNodePtr->mNext);
     }
-    _reslist_iterator<T> end(){
-        return _reslist_iterator<T>(mStartNodePtr);
+    iterator end(){
+        return iterator(mStartNodePtr);
     }
 
     inline void initList(int capacity, int heapIndex) {

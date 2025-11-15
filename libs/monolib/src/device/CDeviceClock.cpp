@@ -1,6 +1,7 @@
 #include "monolib/device/CDeviceClock.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/device/CDeviceSC.hpp"
+#include "monolib/reslist.hpp"
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/lib/CLib.hpp"
 #include <string.h>
@@ -39,8 +40,8 @@ void CDeviceClock::func_8044DF8C(){
     s64 time = getTimeNow();
     instance->unk200 = time;
 
-    for(_reslist_iterator<IDeviceClockFrame*> it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
-        it->mItem->virtualFunc2();
+    for(reslist<IDeviceClockFrame*>::iterator it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+        (*it)->virtualFunc2();
     }
 }
 
@@ -48,8 +49,8 @@ void CDeviceClock::func_8044DFF4(){
     s64 time = getTimeNow();
     instance->unk208 = time - instance->unk200;
     
-    for(_reslist_iterator<IDeviceClockFrame*> it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
-        it->mItem->virtualFunc3();
+    for(reslist<IDeviceClockFrame*>::iterator it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+        (*it)->virtualFunc3();
     }
 }
 
