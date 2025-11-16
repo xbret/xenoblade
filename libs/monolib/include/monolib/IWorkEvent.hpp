@@ -2,9 +2,10 @@
 
 #include "types.h"
 #include "monolib/CFileHandle.hpp"
+#include "monolib/MemManager.hpp"
 
 struct WorkThreadSystem {
-    static int getHeapIndex();
+    static mtl::ALLOC_HANDLE getHeapHandle();
 };
 
 class CEventFile {

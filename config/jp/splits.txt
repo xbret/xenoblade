@@ -5974,7 +5974,7 @@ monolib/src/CToken.cpp:
 	.sdata      start:0x80665E88 end:0x80665E90
 	.sdata2     start:0x8066CA88 end:0x8066CAD0
 
-monolib/src/CRootProc.cpp:
+monolib/src/CTaskManager.cpp:
 	extab       start:0x8001C380 end:0x8001C3C0
 	extabindex  start:0x80034004 end:0x80034064
 	.text       start:0x8043BC84 end:0x8043C2C4

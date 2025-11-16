@@ -1689,7 +1689,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/CRsrcData.cpp"),
             Object(NonMatching, "monolib/src/CScriptCode.cpp"),
             Object(NonMatching, "monolib/src/CToken.cpp"),
-            Object(NonMatching, "monolib/src/CRootProc.cpp"),
+            Object(Matching, "monolib/src/CTaskManager.cpp"),
             Object(NonMatching, "monolib/src/CView.cpp"),
             Object(NonMatching, "monolib/src/CViewFrame.cpp"),
             Object(NonMatching, "monolib/src/CViewRoot.cpp"),

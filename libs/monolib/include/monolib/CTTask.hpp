@@ -3,8 +3,35 @@
 #include "types.h"
 #include "monolib/CProcess.hpp"
 
-template <typename T>
-class CTTask : CProcess {
+/*
+Generic task object.
+
+Provides a way to implement Move/Draw behavior without needing to work with the
+CProcess api.
+
+Derived classes must inherit using CRTP to allow binding the move/draw functions.
+*/
+template <typename TDerived>
+class CTTask : public CProcess {
 public:
-    CTTask(){}
+    typedef void (TDerived::*MoveFunc)();
+    typedef void (TDerived::*DrawFunc)();
+
+public:
+    CTTask() : mMoveFunc(nullptr), mDrawFunc(nullptr) {}
+
+    virtual void Move() {
+        if (mMoveFunc) {
+            (static_cast<TDerived*>(this)->*mMoveFunc)();
+        }
+    }
+    virtual void Draw() {
+        if (mDrawFunc) {
+            (static_cast<TDerived*>(this)->*mDrawFunc)();
+        }
+    }
+
+protected:
+    MoveFunc mMoveFunc;
+    DrawFunc mDrawFunc;
 };

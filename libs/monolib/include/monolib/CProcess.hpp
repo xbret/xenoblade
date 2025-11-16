@@ -46,6 +46,7 @@ and for maintaining the lists of both root-level processes and released processe
 class CProcessMan {
 public:
     static void Reset();
+    static void Delete();
 
     static void Init();
     static void Term();
@@ -68,7 +69,6 @@ private:
 
     static bool Remove(CProcess* proc);
 
-    static void Delete();
     static void DeleteList(TChildListHeader<CProcess>& list);
     static void DeleteImpl(CProcess* proc);
 
