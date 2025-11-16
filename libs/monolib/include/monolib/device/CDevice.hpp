@@ -35,13 +35,14 @@ public:
     inline bool inline1(){
         bool r0 = CWorkThread_inline1();
         if(r0 == false) return false;
+        
         bool result = true;
-        _reslist_node<CWorkThread*>* curNode = mWorkThreadList.mStartNodePtr->mNext;
-        while(curNode != mWorkThreadList.mStartNodePtr){
-            CDeviceBase* deviceBase = static_cast<CDeviceBase*>(curNode->mItem);
+
+        for(reslist<CWorkThread*>::iterator it = mWorkThreadList.begin(); it != mWorkThreadList.end(); it++){
+            CDeviceBase* deviceBase = static_cast<CDeviceBase*>(*it);
             if((deviceBase->unk1C4 & 1) == 0) result = false;
-            curNode = curNode->mNext;
         }
+
         return result;
     }
     

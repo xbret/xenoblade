@@ -337,13 +337,12 @@ MemBlock* MemRegion::reallocate(MemBlock* block) {
 }
 
 /*
-Merges (or coalesces) a memory block with its previous block,
-under the condition that they are contiguous in memory.
+Recursively coalesces a memory block, until it cannot be merged further.
 */
-MemBlock* MemRegion::coalesce(MemBlock* block) {
+MemBlock* MemRegion::coalesceRecursive(MemBlock* block) {
     MemBlock* prev = block->prev;
 
-    if (prev != nullptr) {
+    if (block->prev != nullptr) {
         //Blocks must be contiguous in memory
         if (reinterpret_cast<u8*>(block) ==
             reinterpret_cast<u8*>(prev) + prev->size) {
@@ -364,66 +363,8 @@ MemBlock* MemRegion::coalesce(MemBlock* block) {
         }
     }
 
-    //Next block in sequence (allows for recursive calls)
-    return block->next;
-}
-
-/*
-Recursively coalesces a memory block, until it cannot be merged further.
-*/
-MemBlock* MemRegion::coalesceRecursive(MemBlock* block) {
-    //TODO: Seems like coalesce inlined, but it modifies block!
-    MemBlock* prev = block->prev;
-
-    if (prev != nullptr) {
-        //Only merge contiguous blocks
-        if (reinterpret_cast<u8*>(block) ==
-            reinterpret_cast<u8*>(prev) + prev->size) {
-
-            prev->size += block->size;
-
-            if (block == mTail) {
-                mTail = prev;
-            }
-
-            prev->next = block->next;
-
-            if (block->next != nullptr) {
-                block->next->prev = prev;
-                block = prev;
-            }
-        }
-    }
-    
-    MemBlock* block2 = block->next;
-
-    if (block2 != nullptr) {
-        MemBlock* prev = block2->prev;
-
-        if (prev != nullptr) {
-            if (reinterpret_cast<u8*>(block2) ==
-                reinterpret_cast<u8*>(prev) + prev->size) {
-    
-                prev->size += block2->size;
-    
-                if (block2 == mTail) {
-                    mTail = prev;
-                }
-    
-                prev->next = block2->next;
-    
-                if (block2->next != nullptr) {
-                    block2->next->prev = prev;
-                    block2 = prev;
-                }
-            }
-        }
-
-        MemBlock* block3 = block2->next;
-
-        if (block3 != nullptr) {
-            block3 = coalesceRecursive(block3);
-        }
+    if (block->next != nullptr) {
+        coalesceRecursive(block->next);
     }
 
     return block;
@@ -843,17 +784,7 @@ bool MemManager::deallocate(void* p) {
         //Re-position and collapse any aligned blocks
         MemBlock* entry = region->reallocate(block);
 
-        /* Coalesce to defragment memory and allow larger allocations.
-        TODO: This whole thing should be coalesceRecursive inlined. */
-        entry = region->coalesce(entry);
-
-        if (entry != nullptr) {
-            entry = region->coalesce(entry);
-
-            if (entry != NULL) {
-                region->coalesceRecursive(entry);
-            }
-        }
+        region->coalesceRecursive(entry);
 
         region->mNumAlloc--;
     }

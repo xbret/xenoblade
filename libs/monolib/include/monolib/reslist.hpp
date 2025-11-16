@@ -182,7 +182,7 @@ public:
         mCapacity = capacity;
     }
 
-    inline bool empty(){
+    inline bool empty() const {
         return mStartNodePtr->mNext == mStartNodePtr;
     }
 
