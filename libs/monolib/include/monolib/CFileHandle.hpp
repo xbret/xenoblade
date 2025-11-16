@@ -4,5 +4,5 @@
 
 struct CFileHandle {
     int unk0;
-    void* data;
+    void* mData;
 };

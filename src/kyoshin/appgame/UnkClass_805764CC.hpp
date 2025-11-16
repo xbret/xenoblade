@@ -32,21 +32,21 @@ public:
     void func_800B8804(IFactoryEvent*);
     void func_800B88E0(IFactoryEvent*);
 
-    reslist<CfObject*> objList1; //0x00
+    reslist<CfObject*> mObjList1; //0x00
     UnkClass_800B0AD8 unk20; //0x20
     //might be an array?
-    reslist<CfObject*> objList2; //0xB28
-    reslist<CfObject*> objList3; //0xB48
-    reslist<CfObject*> objList4; //0xB68
-    reslist<CfObject*> objList5; //0xB88
-    reslist<CfObject*> objList6; //0xBA8
-    reslist<CfObject*> objList7; //0xBC8
-    reslist<CfObject*> objList8; //0xBE8
-    reslist<CfObject*> objList9; //0xC08
-    reslist<CfObject*> objList10; //0xC28
-    reslist<TBoxInfo*> tboxInfoList; //0xC48
+    reslist<CfObject*> mObjList2; //0xB28
+    reslist<CfObject*> mObjList3; //0xB48
+    reslist<CfObject*> mObjList4; //0xB68
+    reslist<CfObject*> mObjList5; //0xB88
+    reslist<CfObject*> mObjList6; //0xBA8
+    reslist<CfObject*> mObjList7; //0xBC8
+    reslist<CfObject*> mObjList8; //0xBE8
+    reslist<CfObject*> mObjList9; //0xC08
+    reslist<CfObject*> mObjList10; //0xC28
+    reslist<TBoxInfo*> mTboxInfoList; //0xC48
     u8 unkC68[0x18];
-    reslist<IFactoryEvent*> factoryEventList; //0xC80
+    reslist<IFactoryEvent*> mFactoryEventList; //0xC80
     u32 unkCA0;
     u32 unkCA4;
     u32 unkCA8;

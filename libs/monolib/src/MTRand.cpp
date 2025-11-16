@@ -3,8 +3,8 @@
 namespace ml{
 
     MTRand* MTRand::getInstance(){
-        static MTRand instance;
-        return &instance;
+        static MTRand sInstance;
+        return &sInstance;
     }
 
     void MTRand::srand(u32 seed) {

@@ -44,19 +44,21 @@ public:
     void func_80448E88();
     virtual void UnkVirtualFunc2();
 
+    //TODO: these should use enums
+
     inline u32 convertTvFormat() {
-        u32 r4 = 0;
-        if(tvFormat == VI_PAL) r4 = 1;
-        else if(tvFormat == VI_MPAL) r4 = 3;
-        else if(tvFormat == VI_EURGB60) r4 = 2;
-        return r4;
+        u32 result = 0;
+        if(mTvFormat == VI_PAL) result = 1;
+        else if(mTvFormat == VI_MPAL) result = 3;
+        else if(mTvFormat == VI_EURGB60) result = 2;
+        return result;
     }
 
     inline u32 convertScanMode() {
-        u32 r3 = 16;
-        if(scanMode == VI_NON_INTERLACE) r3 = 0;
-        else if(scanMode == VI_PROGRESSIVE) r3 = 32;
-        return r3;
+        u32 result = 16;
+        if(mScanMode == VI_NON_INTERLACE) result = 0;
+        else if(mScanMode == VI_PROGRESSIVE) result = 32;
+        return result;
     }
 
     static inline u16 getEfbHeight(){
@@ -77,11 +79,11 @@ public:
     //0x0: vtable
     //0x0-1c8: CDeviceBase
     //0x1c8-1d0: UnkClass_80447FDC
-    reslist<CDeviceVICb*> callbackList;
-    u32 tvFormat; //0x1F0
+    reslist<CDeviceVICb*> mCallbackList;
+    u32 mTvFormat; //0x1F0
     u32 unk1F4;
-    u32 scanMode; //0x1F8
-    u32 dimmingCount; //0x1FC
+    u32 mScanMode; //0x1F8
+    u32 mDimmingCount; //0x1FC
     GXRenderModeObj unk200;
     GXRenderModeObj unk23C;
     u16 unk278;
@@ -108,7 +110,7 @@ public:
     float unk2BC;
 
 protected:
-    static CDeviceVI* instance;
+    static CDeviceVI* sInstance;
 };
 
 //XFB defines

@@ -3,7 +3,7 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include <revolution/SC.h>
 
-CDeviceSC* CDeviceSC::instance;
+CDeviceSC* CDeviceSC::sInstance;
 
 CDeviceSC::CDeviceSC(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8) {
     mAspectRatio = 0;
@@ -12,32 +12,32 @@ CDeviceSC::CDeviceSC(const char* name, CWorkThread* workThread) : CDeviceBase(na
     mProgMode = 0;
     mSoundMode = 1;
     unk1CD = 0;
-    instance = this;
+    sInstance = this;
     SCInit();
 }
 
 CDeviceSC::~CDeviceSC(){
-    instance = nullptr;
+    sInstance = nullptr;
 }
 
 CDeviceSC* CDeviceSC::getInstance(){
-    return instance;
+    return sInstance;
 }
 
 bool CDeviceSC::isWideAspectRatio(){
-    return instance->mAspectRatio == SC_ASPECT_WIDE;
+    return sInstance->mAspectRatio == SC_ASPECT_WIDE;
 }
 
 bool CDeviceSC::isSoundModeMono(){
-    return instance->mSoundMode == SC_SND_MONO;
+    return sInstance->mSoundMode == SC_SND_MONO;
 }
 
 u8 CDeviceSC::getLanguage(){
-    return instance->mLanguage;
+    return sInstance->mLanguage;
 }
 
 bool CDeviceSC::func_80447C60(){
-    return instance->CWorkThread_inline1();
+    return sInstance->CWorkThread_inline1();
 }
 
 bool CDeviceSC::wkStartup(){

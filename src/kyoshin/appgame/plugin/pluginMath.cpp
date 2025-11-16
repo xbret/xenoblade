@@ -1,7 +1,7 @@
 #include "kyoshin/appgame/plugin/pluginMath.hpp"
 #include "monolib/Random.hpp"
 
-PluginFuncData pluginMathFuncs[] = {
+static PluginFuncData sPluginMathFuncs[] = {
     {"random", math_random},
     {NULL,NULL}
 };
@@ -18,5 +18,5 @@ int math_random(_sVMThread* pThread) {
 }
 
 void pluginMathRegist(){
-    vmPluginRegist("math", pluginMathFuncs);
+    vmPluginRegist("math", sPluginMathFuncs);
 }

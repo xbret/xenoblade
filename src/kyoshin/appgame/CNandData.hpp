@@ -8,10 +8,10 @@ public:
     CNBanner mNandBanner;
 
     CNandData() : mNandBanner() {
-        mNandBanner.func_804F52F8(nandTitleText);
-        mNandBanner.func_804F5304(nandDescriptionText);
-        mNandBanner.func_804F5310(nandBannerFilename);
-        mNandBanner.func_804F531C(nandIconTextureFilenames, nandIconTextureSomething);
+        mNandBanner.func_804F52F8(scNandTitleText);
+        mNandBanner.func_804F5304(scNandDescriptionText);
+        mNandBanner.func_804F5310(scNandBannerFilename);
+        mNandBanner.func_804F531C(sNandIconTextureFilenames, sNandIconTextureSomething);
         mNandBanner.unkC &= ~0x10;
     }
 
@@ -19,10 +19,10 @@ public:
     }
 
 private:
-    static const char* nandTitleText;
-    static const char* nandDescriptionText;
-    static const char* nandBannerFilename;
-    static const char* nandIconTextureFilenames[];
-    static int nandIconTextureSomething[];
-    static CNandData instance;
+    static const char* scNandTitleText;
+    static const char* scNandDescriptionText;
+    static const char* scNandBannerFilename;
+    static const char* sNandIconTextureFilenames[];
+    static int sNandIconTextureSomething[];
+    static CNandData sInstance;
 };

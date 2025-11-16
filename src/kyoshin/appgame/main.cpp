@@ -10,7 +10,7 @@
 #include "kyoshin/appgame/ErrMesData.hpp"
 #include <revolution/GX.h>
 
-FunctionStruct lbl_80528380 = {
+static FunctionStruct sGameMainFunction = {
 #if defined(VERSION_JP)
     "ゲームメイン",
 #else //EU/US
@@ -19,14 +19,14 @@ FunctionStruct lbl_80528380 = {
     &CGame::GameMain
 };
 
-const char* const staticArcStr =
+static const char* const scStaticArcStr =
 #if defined(VERSION_JP)
 "static.arc";
 #else //EU/US
 "lang/jp/static.arc";
 #endif
 
-const char* const pkhFilenames[13] = {
+static const char* const sPkhFilenames[13] = {
 #if defined(VERSION_JP)
     "ahx.pkh",
     "adx.pkh",
@@ -57,7 +57,7 @@ const char* const pkhFilenames[13] = {
 };
 
 #if !defined(VERSION_JP)
-const char* const languageFolderPaths1[8] = {
+static const char* const sLanguageFolderPaths[8] = {
     "/jp/",
     "/en/",
     "/en/",
@@ -67,7 +67,7 @@ const char* const languageFolderPaths1[8] = {
     "/it/",
 };
 
-const char* const languageFolderPaths2[8] = {
+const char* const sLanguageFolderPaths2[8] = {
     "\\jp\\",
     "\\en\\",
     "\\en\\",
@@ -78,52 +78,56 @@ const char* const languageFolderPaths2[8] = {
 };
 #endif
 
-StaticArcFile staticArcFiles[10] = {
+//List of files contained in the static.arc archive
+static StaticArcFile sStaticArcFiles[10] = {
     {"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
     {"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
     {"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
     {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
 #if defined(VERSION_JP)
     {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","dvddata/common/jp/bdat.bin",1,&func_80039EFC,&func_80039F34},
+    {"BDAT","dvddata/common/jp/bdat.bin",1,&bdatFileCallback1,&bdatFileCallback2},
 #else //EU/US
     {"43","dvddata/menu/jp/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","common/jp/bdat_common.bin",1,&func_80039EFC,&func_80039F34},
+    {"BDAT","common/jp/bdat_common.bin",1,&bdatFileCallback1,&bdatFileCallback2},
 #endif
-    {"AIDAT","dvddata/etc/ai.bin",1,&func_80039F5C,&func_80039F60},
+    {"AIDAT","dvddata/etc/ai.bin",1,&aidatCallback1,&aidatCallback2},
     {"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
-    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&func_80039F64,&func_80039F68}
+    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&hbmstopCallback1,&hbmstopCallback2}
 };
 
 
+//Static file callback functions.
+//TODO: what do these do?
 
-
-void func_80039EFC(int arg0) {
+void bdatFileCallback1(int arg0) {
     func_8003AA50();
     func_8003AA78(0, arg0);
 }
 
-void func_80039F34(void) {
+void bdatFileCallback2(void) {
     func_8003AA8C(0);
     func_8003AA50();
 }
 
 
-void func_80039F5C(int arg0){
+void aidatCallback1(int arg0){
     func_8014A86C(arg0);
 }
 
-void func_80039F60(){
+void aidatCallback2(){
     func_8014A8F8();
 }
 
-void func_80039F64(int arg0){
+void hbmstopCallback1(int arg0){
     func_8045D480(arg0);
 }
 
-void func_80039F68(){
+void hbmstopCallback2(){
     func_8045D4FC();
 }
+
+//VM initialization callback functions.
 
 void vmInitPluginRegistCallback(){
     vmInit();
@@ -151,11 +155,11 @@ int main(){
     mtl::MemRegion::setRegionMaxSize(0x680000, 0); //Set arena size to 6.5 mb
     CDeviceVI::func_80448E78(false);
     CDeviceGX::setValues(GX_PF_RGB8_Z24, 0x180000); //Set GX heap size to 1.5 mb
-    CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
-    CLibStaticData_saveStaticFileArray(staticArcFiles);
+    CDesktop_SaveStartFunctionCallback(&sGameMainFunction, 1); //Pass the start function struct to CDesktop to have it be run later
+    CLibStaticData_saveStaticFileArray(sStaticArcFiles);
     CLibVM_SetCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
-    SaveStaticArcFilenameStringPtr(&staticArcStr);
-    SavePkhFilenamesArrayPtr(pkhFilenames);
+    SaveStaticArcFilenameStringPtr(&scStaticArcStr);
+    SavePkhFilenamesArrayPtr(sPkhFilenames);
     func_80057CDC();
     CLibHbm_8045D5C8(1);
     CWorkRoot_Run(); //Start up CWorkRoot, which later starts CGame

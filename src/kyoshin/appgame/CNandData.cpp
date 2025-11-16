@@ -1,9 +1,9 @@
 #include "kyoshin/appgame/CNandData.hpp"
 
-const char* CNandData::nandTitleText = "ゼノブレイド";
-const char* CNandData::nandDescriptionText = "巨神と機神　モナドが未来を斬り開く";
-const char* CNandData::nandBannerFilename = "bannerTexture.tpl";
-const char* CNandData::nandIconTextureFilenames[] = {
+const char* CNandData::scNandTitleText = "ゼノブレイド";
+const char* CNandData::scNandDescriptionText = "巨神と機神　モナドが未来を斬り開く";
+const char* CNandData::scNandBannerFilename = "bannerTexture.tpl";
+const char* CNandData::sNandIconTextureFilenames[] = {
     "iconTexture[0].tpl",
     "iconTexture[1].tpl",
     "iconTexture[2].tpl",
@@ -14,7 +14,7 @@ const char* CNandData::nandIconTextureFilenames[] = {
     "iconTexture[7].tpl",
     nullptr
 };
-int CNandData::nandIconTextureSomething[] = {
+int CNandData::sNandIconTextureSomething[] = {
     2,
     2,
     2,
@@ -26,4 +26,4 @@ int CNandData::nandIconTextureSomething[] = {
     0
 };
 
-CNandData CNandData::instance = CNandData();
+CNandData CNandData::sInstance = CNandData();

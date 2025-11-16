@@ -26,11 +26,11 @@ int voice_play(_sVMThread* pThread) {
     return 0;
 }
 
-PluginFuncData pluginVoiceFuncs[] = {
+static PluginFuncData sPluginVoiceFuncs[] = {
     {"play", voice_play},
     {NULL,NULL}
 };
 
 void pluginVoiceRegist(){
-    vmPluginRegist("voice", pluginVoiceFuncs);
+    vmPluginRegist("voice", sPluginVoiceFuncs);
 }

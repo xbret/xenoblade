@@ -49,13 +49,13 @@ public:
     }
 
     static inline void someInline(void* r3){
-        CDeviceGX* gx = instance;
+        CDeviceGX* gx = sInstance;
         GXBool vf = gx->mFilter != VFILTER_NONE;
         GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
         GXBool aa = CDeviceVI::getRenderModeObj()->aa;
         u8* vfilter = gx->mVFilter;
         GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
-        GXCopyDisp(r3, instance->unk274);
+        GXCopyDisp(r3, sInstance->unk274);
     }
 
     static inline void anotherInline(){
@@ -91,7 +91,7 @@ public:
     CGXCache unk27C;
 
 protected:
-    static CDeviceGX* instance;
+    static CDeviceGX* sInstance;
     static CGXCache* cacheInstance;
     static GXPixelFmt pixelFormat;
     static int gxHeapSize;

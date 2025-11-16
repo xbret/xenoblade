@@ -17,14 +17,14 @@ extern void func_801644BC(u32 r3);
 extern void func_80044FBC(u32 r3);
 extern UNKTYPE* func_800426F0();
 
-CGame* CGame::instance;
-CGameRestart* CGameRestart::instance;
-FixStr<64> lbl_80573C80;
+CGame* CGame::sInstance;
+CGameRestart* CGameRestart::sInstance;
+static FixStr<64> lbl_80573C80;
 
 void func_80039D08();
 
 CGame::CGame(const char* name, CWorkThread* workThread) : CProc(name, workThread, 8) {
-    view = nullptr;
+    mView = nullptr;
     unk1F0 = 0;
     unk1F4 = -1;
     unk1F6 = -1;
@@ -34,20 +34,20 @@ CGame::CGame(const char* name, CWorkThread* workThread) : CProc(name, workThread
     unk220 = 1;
     unk224 = 1.0f;
     unk228 = 0;
-    instance = this;
+    sInstance = this;
     CLibHbm_8045D5C8(1);
-    func_80444874(func_80039D08);
+    func_80444874(&func_80039D08);
     this->func_80437EF0(4);
 }
 
 CGame::~CGame(){
     func_80444874(nullptr);
     CLibHbm_8045D5C8(0);
-    instance = nullptr;
+    sInstance = nullptr;
 }
 
 CGame* CGame::getInstance(){
-    return CGame::instance;
+    return CGame::sInstance;
 }
 
 bool CGame::func_8003933C(){
@@ -55,9 +55,9 @@ bool CGame::func_8003933C(){
 }
 
 void CGame::func_80039364(){
-    if(instance == nullptr) GameMain();
+    if(sInstance == nullptr) GameMain();
     else{
-        if(CGameRestart::instance == nullptr){
+        if(CGameRestart::sInstance == nullptr){
             CDesktop* desktop = CDesktop::getInstance();
             const char* name = "CGameRestart";
             CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
@@ -65,18 +65,18 @@ void CGame::func_80039364(){
             UNKTYPE* temp_r3 = func_80455AA0();
             u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
             gameRestart->unk1E4 = r0;
-            CGameRestart::instance = gameRestart;
+            CGameRestart::sInstance = gameRestart;
             if(r0 != 0){
-                gameRestart->unk1EC = instance->unk4C;
-                instance->func_80437EF0(0);
+                gameRestart->unk1EC = sInstance->unk4C;
+                sInstance->func_80437EF0(0);
             }
         }
     }
 }
 
 void CGame::func_80039438(bool r3){
-    if(instance != nullptr){
-        instance->unk220 = r3;
+    if(sInstance != nullptr){
+        sInstance->unk220 = r3;
     }
 }
 
@@ -89,16 +89,16 @@ void CGame::WorkThreadEvent2(){
 }
 
 void CGame::func_800395F4(bool r3){
-    if(instance != nullptr){
-        if(instance->view != nullptr){
+    if(sInstance != nullptr){
+        if(sInstance->mView != nullptr){
             if(r3 == false){
                 s16 height = CDeviceVI::getRenderModeObj()->efbHeight - 114;
                 s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-                func_80039694(instance->view, 0, 56, width, height);
+                func_80039694(sInstance->mView, 0, 56, width, height);
             }else{
                 s16 height = CDeviceVI::getRenderModeObj()->efbHeight;
                 s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-                func_80039694(instance->view, 0, 0, width, height);
+                func_80039694(sInstance->mView, 0, 0, width, height);
             }
         }
     }
@@ -128,8 +128,8 @@ void dummy(){
 }
 
 void CGame::GameMain(){
-    if(instance != nullptr){
-        instance->func_804391A8();
+    if(sInstance != nullptr){
+        sInstance->func_804391A8();
     }else{
         UNKTYPE* temp_r3 = func_80455AA0();
         u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
@@ -142,9 +142,9 @@ void CGame::GameMain(){
 }
 
 void CGame::func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5){
-    if(instance != nullptr){
+    if(sInstance != nullptr){
         if(func_800426F0() == nullptr){
-            CGame* game = instance;
+            CGame* game = sInstance;
             u32 r0 = game->unk7C;
             if(!(r0 & 1)){
                 if(game->func_80457CA4(r3, 5) != 0){
@@ -192,7 +192,7 @@ void CGame::WorkEvent5(UNKTYPE* r4){
 }
 
 void CGame::func_80039D08(){
-    if(instance != nullptr){
+    if(sInstance != nullptr){
         if(func_8007E1B4() != 0){
             func_801BF93C();
         }

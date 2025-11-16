@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/plugin/pluginWait.hpp"
 
-PluginFuncData pluginWaitFuncs[] = {
+static PluginFuncData sPluginWaitFuncs[] = {
     {"frame", wait_frame},
     {NULL,NULL}
 };
@@ -26,5 +26,5 @@ int wait_frame(_sVMThread* pThread) {
 }
 
 void pluginWaitRegist(){
-    vmPluginRegist("wait", pluginWaitFuncs);
+    vmPluginRegist("wait", sPluginWaitFuncs);
 }

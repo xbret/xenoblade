@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/plugin/pluginGame.hpp"
 
-PluginFuncData pluginGameFuncs[] = {
+static PluginFuncData sPluginGameFuncs[] = {
     {"cmd", game_cmd},
     {NULL,NULL}
 };
@@ -11,5 +11,5 @@ int game_cmd(_sVMThread* pThread) {
 }
 
 void pluginGameRegist(){
-    vmPluginRegist("game", pluginGameFuncs);
+    vmPluginRegist("game", sPluginGameFuncs);
 }

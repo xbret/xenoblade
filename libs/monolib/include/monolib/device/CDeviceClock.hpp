@@ -45,7 +45,7 @@ public:
     s64 unk208;
     OSCalendarTime mCalendar; //0x210
 
-    static CDeviceClock* instance;
+    static CDeviceClock* sInstance;
 };
 
 extern u32 func_8044DEE0();

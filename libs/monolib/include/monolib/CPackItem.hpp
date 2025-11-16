@@ -44,7 +44,7 @@ public:
     //0x0-4: IWorkEvent
 
     ml::FixStr<32> unk4;
-    ml::FixStr<32> pkbFilename; //0x28
+    ml::FixStr<32> mPkbFilename; //0x28
     CFileHandle* mFileHandle; //0x4C
     PackHeader* mPackHeader; //0x50
     const char* unk54;

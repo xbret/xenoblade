@@ -8,7 +8,7 @@
 class CDevice : public CWorkThread {
 public:
     CDevice(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x20) {
-        instance = this;
+        sInstance = this;
         unk50 = 10;
     }
 
@@ -50,7 +50,7 @@ public:
     u32 unk1C4;
 
 protected:
-    static CDevice* instance;
+    static CDevice* sInstance;
 };
 
 namespace{
@@ -58,7 +58,7 @@ namespace{
     class CDeviceException : public CWorkThread {
     public:
         CDeviceException(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x40) {
-            instance = this;
+            sInstance = this;
         }
         virtual ~CDeviceException();
         virtual bool wkShutdown();
@@ -75,6 +75,6 @@ namespace{
         u32 unk1C4;
 
     protected:
-        static CDeviceException* instance;
+        static CDeviceException* sInstance;
     };
 }

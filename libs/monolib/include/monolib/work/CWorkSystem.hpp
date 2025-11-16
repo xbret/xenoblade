@@ -8,5 +8,4 @@ public:
     static CWorkSystem* getInstance();
 };
 
-void func_80444874(void* func);
-
+void func_80444874(void(*func)());

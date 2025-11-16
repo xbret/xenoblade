@@ -8,7 +8,7 @@
 #include "monolib/Math.hpp"
 #include <string.h>
 
-CDeviceVI* CDeviceVI::instance;
+CDeviceVI* CDeviceVI::sInstance;
 
 static const VIGamma gammaLevels[] = {
     VI_GM_0_1,
@@ -85,10 +85,10 @@ static bool lbl_80667F2C;
 
 CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8)
 , UnkClass_80447FDC() {
-    tvFormat = 0;
+    mTvFormat = 0;
     unk1F4 = 9;
-    scanMode = 0;
-    dimmingCount = 0;
+    mScanMode = 0;
+    mDimmingCount = 0;
     unk278 = 0;
     unk27A = 0;
     unk27C = 0;
@@ -105,15 +105,15 @@ CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(na
     unk2B5 = 1;
     unk2B8 = 0x1E;
     unk2BC = 0.033333335;
-    instance = this;
+    sInstance = this;
     unk2A0 = 0;
     unk2A2 = 0;
     mXfbBuffersPtr = (u8*)mtl::MemManager::allocate_array_ex(getXfbBuffersSize(), lbl_80667F2C ? mtl::MemManager::getHandleStatic() : CDevice::func_8044D058(), 32);
 
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
-    instance->unk4 |= 0x1;
-    instance->unk4 |= 0x10;
-    callbackList.initList(16, unk54);
+    sInstance->unk4 |= 0x1;
+    sInstance->unk4 |= 0x10;
+    mCallbackList.initList(16, unk54);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
     func_804EE194(ptr);
@@ -128,69 +128,69 @@ CDeviceVI::~CDeviceVI(){
         mXfbBuffersPtr = nullptr;
     }
 
-    instance = nullptr;
+    sInstance = nullptr;
 }
 
 CDeviceVI* CDeviceVI::getInstance(){
-    return instance;
+    return sInstance;
 }
 
 void CDeviceVI::func_804482B0(u32 r3){
-    CDeviceVI* vi = instance;
+    CDeviceVI* vi = sInstance;
     if(r3 != 0) vi->unk4 |= 0x10;
     else vi->unk4 &= ~0x10;
 }
 
 bool CDeviceVI::func_804482DC(){
-    bool result = instance->CWorkThread_inline1();
-    return result == false || (instance->unk4 & 0x4) != 0 ? false : true;
+    bool result = sInstance->CWorkThread_inline1();
+    return result == false || (sInstance->unk4 & 0x4) != 0 ? false : true;
 }
 
 void CDeviceVI::func_804483A0(u32 r3){
-    CDeviceVI* vi = instance;
+    CDeviceVI* vi = sInstance;
     if(r3 != 0) vi->unk4 |= 0x1;
     else vi->unk4 &= ~0x1;
 }
 
 u32 CDeviceVI::func_804483CC(){
-    return instance->unk4 & 0x1;
+    return sInstance->unk4 & 0x1;
 }
 
 void CDeviceVI::func_804483DC(u32 r3){
-    if(instance != nullptr){
+    if(sInstance != nullptr){
         u32 val = r3;
         if(val >= 0x1E) val = 0x1D;
-        instance->unk1F4 = val;
+        sInstance->unk1F4 = val;
     }
 }
 
 GXRenderModeObj* CDeviceVI::getRenderModeObj(){
-    return &instance->unk200;
+    return &sInstance->unk200;
 }
 
 u32 CDeviceVI::func_80448408(){
-    return instance->unk2B8;
+    return sInstance->unk2B8;
 }
 
 float CDeviceVI::func_80448414(){
-    return instance->unk2BC;
+    return sInstance->unk2BC;
 }
 
 u32 CDeviceVI::func_80448420(){
-    return instance->unk2AC;
+    return sInstance->unk2AC;
 }
 
 u32 CDeviceVI::func_8044842C(){
-    return instance->unk2A8;
+    return sInstance->unk2A8;
 }
 
 bool CDeviceVI::addCallback(CDeviceVICb* entry){
-    instance->callbackList.push_back(entry);
+    sInstance->mCallbackList.push_back(entry);
     return true;
 }
 
 bool CDeviceVI::removeCallback(CDeviceVICb* entry){
-    instance->callbackList.remove(entry);
+    sInstance->mCallbackList.remove(entry);
     return true;
 }
 
@@ -242,7 +242,7 @@ void CDeviceVI::func_80448A44(){
 }
 
 void CDeviceVI::func_80448A84(){
-    CDeviceVI* vi = instance;
+    CDeviceVI* vi = sInstance;
 
     u32 r0 = vi->unk7C & 0x10;
     if(r0 != 0){
@@ -287,9 +287,9 @@ bool CDeviceVI::wkStartup(){
         //Initialize VI
         VIInit();
         u32 dtvStatus = VIGetDTVStatus(); //unused
-        dimmingCount = VIGetDimmingCount();
-        scanMode = VIGetScanMode();
-        tvFormat = VIGetTvFormat();
+        mDimmingCount = VIGetDimmingCount();
+        mScanMode = VIGetScanMode();
+        mTvFormat = VIGetTvFormat();
         u32 val = convertTvFormat() | convertScanMode();
         func_8044857C(val, 0);
         func_804486E4();

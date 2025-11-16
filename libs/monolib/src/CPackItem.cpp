@@ -5,7 +5,7 @@
 #include <criware/cri_adxf.h>
 #include <cstring>
 
-CPackItem::CPackItem(const char* name, int r5) : unk4(), pkbFilename() {
+CPackItem::CPackItem(const char* name, int r5) : unk4(), mPkbFilename() {
     mFileHandle = nullptr;
     mPackHeader = nullptr;
     unk54 = name;
@@ -67,24 +67,24 @@ void CPackItem::update(){
         ml::CPathUtil::func_80435078(tempString, unk84);
 
         unk4 = tempString.string;
-        pkbFilename = unk84;
+        mPkbFilename = unk84;
 
-        int length = pkbFilename.find(".", -1);
+        int length = mPkbFilename.find(".", -1);
 
         if((u32)length + 1 > 1){
             ml::FixStr<32> tempString1; //0x8
 
-            if(pkbFilename.size() != 0){
-                if(length == -1) length = pkbFilename.size();
-                std::strncpy(tempString1.string, pkbFilename.string, length);
+            if(mPkbFilename.size() != 0){
+                if(length == -1) length = mPkbFilename.size();
+                std::strncpy(tempString1.string, mPkbFilename.string, length);
                 tempString1.string[length] = 0; //Stop the string at the extension
                 tempString1.length = std::strlen(tempString1.string);
             }
 
-            pkbFilename = tempString1.string;
+            mPkbFilename = tempString1.string;
         }
 
-        pkbFilename += ".pkb";
+        mPkbFilename += ".pkb";
         mLoadState = LOAD_STATE_OPENED_PKH_FILE;
     }else if(mLoadState == LOAD_STATE_OPENED_PKH_FILE){
         if(unk78 != 0){
@@ -98,7 +98,7 @@ void CPackItem::update(){
             if(CWorkSystemPack::func_804DDFBC((u32)this) == false) return;
             u32 r4 = ((mPackHeader->mFiles + 1)*2 + 0x11a) & ~3; //TODO: figure out the corresponding Criware struct here.
             mAhxAdxDataPtr = mtl::MemManager::allocate_head(mtl::MemManager::getHandleMEM2(), r4, 4);
-            ADXF_LoadPartitionNw(mAdxPartitionId, pkbFilename.c_str(), nullptr, mAhxAdxDataPtr);
+            ADXF_LoadPartitionNw(mAdxPartitionId, mPkbFilename.c_str(), nullptr, mAhxAdxDataPtr);
             mLoadState = LOAD_STATE_LOADING_AHX_ADX_FILE;
         }else{
             mLoadState = LOAD_STATE_LOADED;
@@ -125,7 +125,7 @@ bool CPackItem::func_804DE78C(const char* filename, char** r5, u32* r6, u32* r7,
         return false;
     }
 
-    *r5 = pkbFilename.string;
+    *r5 = mPkbFilename.string;
 
     if(unk60 != nullptr){
         *r6 = unk60[hashIndex];
@@ -204,8 +204,8 @@ void CPackItem::func_804DE948() {
 bool CPackItem::OnFileEvent(CEventFile* pEventFile){
     if(pEventFile->mFileHandle == mFileHandle){
         if(pEventFile->unk0 == 1){
-            void* data = mFileHandle->data;
-            mFileHandle->data = nullptr;
+            void* data = mFileHandle->mData;
+            mFileHandle->mData = nullptr;
             mPackHeader = static_cast<PackHeader*>(data);
             func_804DE948();
         }else{

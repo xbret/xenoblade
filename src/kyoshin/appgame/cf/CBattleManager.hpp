@@ -89,6 +89,6 @@ namespace cf{
         static u32 lbl_804F8228[];
 
     protected:
-        static CBattleManager* instance;
+        static CBattleManager* sInstance;
     };
 }

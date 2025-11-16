@@ -9,7 +9,7 @@ namespace cf {
         _sArtsSet::vtableFunc1();
 
         for(int i = 0; i < 24; i++){
-            artsParams[i].vtableFunc1();
+            mArtsParams[i].vtableFunc1();
         }
     }
 }

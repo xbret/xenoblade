@@ -2,7 +2,7 @@
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "kyoshin/appgame/code_8007C0F8.hpp"
 
-PluginFuncData pluginPadFuncs[] = {
+static PluginFuncData sPluginPadFuncs[] = {
     {"get", pad_get},
     {"enable", pad_enable},
     {NULL,NULL}
@@ -57,5 +57,5 @@ int pad_enable(_sVMThread* pThread) {
 }
 
 void pluginPadRegist(){
-    vmPluginRegist("pad", pluginPadFuncs);
+    vmPluginRegist("pad", sPluginPadFuncs);
 }

@@ -34,5 +34,5 @@ public:
     u8 unk1CD;
     u8 unk1CE[2];
 
-    static CDeviceSC* instance;
+    static CDeviceSC* sInstance;
 };

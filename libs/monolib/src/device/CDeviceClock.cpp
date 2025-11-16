@@ -6,13 +6,13 @@
 #include "monolib/lib/CLib.hpp"
 #include <string.h>
 
-CDeviceClock* CDeviceClock::instance;
+CDeviceClock* CDeviceClock::sInstance;
 
 /* Won't match because of stupid extab issue (the start pc for the first pc action
 is 0xA0 instead of 0xA4) */
 CDeviceClock::CDeviceClock(const char* name, CWorkThread* workThread) : CDeviceBase(name,workThread,0), unk1C8(0),
 unk1F0(0), unk1F8(0), unk200(0), unk208(0) {
-    instance = this;
+    sInstance = this;
     memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
     s64 time = getTimeNow();
     unk1F0 = time;
@@ -21,15 +21,15 @@ unk1F0(0), unk1F8(0), unk200(0), unk208(0) {
 }
 
 CDeviceClock::~CDeviceClock(){
-    instance = nullptr;
+    sInstance = nullptr;
 }
 
 CDeviceClock* CDeviceClock::getInstance(){
-    return instance;
+    return sInstance;
 }
 
 bool CDeviceClock::func_8044DEE0(){
-    return instance->CWorkThread_inline1();
+    return sInstance->CWorkThread_inline1();
 }
 
 s64 CDeviceClock::getTimeNow(){
@@ -38,18 +38,18 @@ s64 CDeviceClock::getTimeNow(){
 
 void CDeviceClock::func_8044DF8C(){
     s64 time = getTimeNow();
-    instance->unk200 = time;
+    sInstance->unk200 = time;
 
-    for(reslist<IDeviceClockFrame*>::iterator it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+    for(reslist<IDeviceClockFrame*>::iterator it = sInstance->unk1CC.begin(); it != sInstance->unk1CC.end(); it++){
         (*it)->virtualFunc2();
     }
 }
 
 void CDeviceClock::func_8044DFF4(){
     s64 time = getTimeNow();
-    instance->unk208 = time - instance->unk200;
+    sInstance->unk208 = time - sInstance->unk200;
     
-    for(reslist<IDeviceClockFrame*>::iterator it = instance->unk1CC.begin(); it != instance->unk1CC.end(); it++){
+    for(reslist<IDeviceClockFrame*>::iterator it = sInstance->unk1CC.begin(); it != sInstance->unk1CC.end(); it++){
         (*it)->virtualFunc3();
     }
 }

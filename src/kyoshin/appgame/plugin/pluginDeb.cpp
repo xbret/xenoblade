@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/plugin/pluginDeb.hpp"
 
-PluginFuncData pluginDebFuncs[] = {
+static PluginFuncData sPluginDebFuncs[] = {
     {"put", deb_put},
     {"performanceStart", deb_performanceStart},
     {"performanceEnd", deb_performanceEnd},
@@ -24,6 +24,5 @@ int deb_performanceEnd(_sVMThread* pThread) {
 }
 
 void pluginDebRegist(){
-    vmPluginRegist("deb", pluginDebFuncs);
+    vmPluginRegist("deb", sPluginDebFuncs);
 }
-

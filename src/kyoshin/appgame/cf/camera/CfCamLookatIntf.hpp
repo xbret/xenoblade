@@ -20,7 +20,7 @@ public:
     CVec3 unk28;
     u8 unk34[0x264-0x34];
     float unk264;
-    CVec3 lookat;
+    CVec3 mLookat;
     CVec3 unk274;
 };
 

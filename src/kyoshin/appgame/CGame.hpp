@@ -27,7 +27,7 @@ public:
 
     //0x0: vtable
     //0x0-1ec: CProc
-    CView* view; //0x1EC
+    CView* mView; //0x1EC
     u32 unk1F0;
     s16 unk1F4;
     s16 unk1F6;
@@ -45,7 +45,7 @@ public:
     u32 unk22C;
 
 protected:
-    static CGame* instance;
+    static CGame* sInstance;
 };
 
 namespace {
@@ -60,12 +60,12 @@ namespace {
             if(r3 == 0){
                 CGame::GameMain();
                 func_80437EF0(0);
-                instance = nullptr;
+                sInstance = nullptr;
             }
         }
 
         int unk1EC;
 
-        static CGameRestart* instance;
+        static CGameRestart* sInstance;
     };
 }

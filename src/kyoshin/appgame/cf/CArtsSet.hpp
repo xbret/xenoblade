@@ -152,6 +152,6 @@ namespace cf {
 
         //0x0: vtable
         //0x0-38: _sArtsSet
-        CArtsParam artsParams[24]; //0x38
+        CArtsParam mArtsParams[24]; //0x38
     };
 };
