@@ -1,6 +1,87 @@
 
 # Contribution Guide
 
+This is guide to help you get started with how to contribute on this project and other similar projects to this one.
+
+## Style
+
+These guidelines mainly apply to the code for the game itself and Criware. For the SDK and NW4R, I would recommend following along with the style used for each one.
+
+Note that the project has a clang format file which can format the code properly, so for a more concrete list of some of the guidelines, you can check the file.
+
+### Comments
+ - Single line: ``//mogu mogu``
+ - Multiline:
+	 ```
+	 /* Butterflies shining
+	in the moonlight, shimmering
+	 Then disappearing */
+	 ```
+
+### Brackets
+Generally, brackets should be like this:
+```
+if(something){
+	//something
+}else{
+	//something else
+}
+```
+
+For one line statements, this is acceptable:
+```
+if(isTrue) print("True");
+else print("False");
+```
+
+### Variable names
+Variable names should be written with camel case. In certain cases, some Hungarian notation type prefixes are used:
+
+Member functions should be prefixed with m:
+```
+class Banana {
+    bool mIsRipe;
+}
+```
+
+Static variables/members should be prefixed with s:
+```
+static int sCount;
+
+class Banana {
+    static Banana* sInstance;
+}
+```
+
+Using the p prefix for pointers isn't necessary, but if you really want, you can:
+```
+void something(void* pBleh){
+    void* pAnother = pBleh;
+}
+```
+
+In most cases, the type shouldn't be included as in Hungarian notation, but it's fine for static strings:
+```
+static const char* scString = ":3";
+```
+
+### Struct/Class Members
+If adding offsets for members, it should look like this:
+```
+struct Struct {
+    u8 thing1; //0x0
+    u32 thing2; //0x4
+    u16 thing3; //0x8
+}
+```
+
+### Other
+Header guards/#pragma once: header guards for Metrowerks and Wii SDK code, ``#pragma once`` otherwise
+
+### Formatting
+
+- 4 spaces for tabs
+- 140 characters maximum per line
 
 ## Decompilation process
 Here are the general steps you must go through to decompile a single file:
@@ -83,41 +164,10 @@ The final step is to change the matching status value of the file in the "config
 
 Before:
 
-``Object(NonMatching, "MSL_C/MSL_Common/ansi_files.c")``
+``Object(NonMatching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/ansi_files.c")``
 
 After:
 
-``Object(Matching, "MSL_C/MSL_Common/ansi_files.c"),``
+``Object(Matching, "PowerPC_EABI_Support/src/MSL_C/MSL_Common/ansi_files.c"),``
 
 Now, you can try building the repository to make sure your new file matches. For a file this simple, as long as you formatted everything correctly, it should easily work. If not, find out what was wrong and keep trying to fix it.
-
-## Style
-There isn't a specific set of guidelines for the code style for this project, but there are a few general style preferences.
-
-### Comments
- - Single line: ``//mogu mogu``
- - Multiline:
-	 ```
-	 /* Butterflies shining
-	in the moonlight, shimmering
-	 Then disappearing */
-	 ```
-
-### Brackets
-Generally, brackets should be like this:
-```
-if(something){
-	//something
-}else{
-	//something else
-}
-```
-
-For one line statements, this is acceptable:
-```
-if(isTrue) print("True");
-else print("False");
-```
-
-### Misc things
-- Header guards/#pragma once: header guards for Metrowerks and Wii SDK code, ``#pragma once`` otherwise
