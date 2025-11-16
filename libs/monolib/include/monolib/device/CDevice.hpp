@@ -3,6 +3,7 @@
 #include "types.h"
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/device/CDeviceBase.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1c8
 class CDevice : public CWorkThread {
@@ -27,7 +28,7 @@ public:
     static void deleteRegions();
 
     static CDevice* init(const char* name, CWorkThread* workThread){
-        CDevice* cDevice = new (WorkThreadSystem::getHeapHandle()) CDevice(name, workThread);
+        CDevice* cDevice = new (CWorkUtil::getWorkMem()) CDevice(name, workThread);
         cDevice->func_80438BD8(workThread, 0);
         return cDevice;
     }
@@ -66,7 +67,7 @@ namespace{
         static CDeviceException* getInstance();
 
         static CDeviceException* init(const char* name, CWorkThread* workThread){
-            CDeviceException* deviceException = new (WorkThreadSystem::getHeapHandle()) CDeviceException(name, workThread);
+            CDeviceException* deviceException = new (CWorkUtil::getWorkMem()) CDeviceException(name, workThread);
             deviceException->func_80438BD8(workThread, 0);
             return deviceException;
         }

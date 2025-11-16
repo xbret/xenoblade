@@ -17,8 +17,7 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "kyoshin/appgame/cf/CTaskREvent.hpp"
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
-#include "kyoshin/appgame/CTaskGame.hpp"
-#include "kyoshin/appgame/code_80135FDC.hpp"
+#include <nw4r/lyt/lyt_arcResourceAccessor.h>
 
 extern u32 func_8007E1B4();
 extern void func_801BF93C();
@@ -73,12 +72,20 @@ bool CGame::func_8003933C(){
 
 void CGame::func_80039364(){
     if(sInstance == nullptr) GameMain();
-    else if(CGameRestart::sInstance == nullptr){
-        CGameRestart* gameRestart = CGameRestart::init("CGameRestart", CDesktop::getInstance());
-
-        if(gameRestart != nullptr){
-            gameRestart->unk1EC = sInstance->unk4C;
-            sInstance->func_80437EF0(0);
+    else{
+        if(CGameRestart::sInstance == nullptr){
+            CDesktop* desktop = CDesktop::getInstance();
+            const char* name = "CGameRestart";
+            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
+            gameRestart->func_80438BD8(desktop, 0);
+            UNKTYPE* temp_r3 = func_80455AA0();
+            u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
+            gameRestart->unk1E4 = r0;
+            CGameRestart::sInstance = gameRestart;
+            if(r0 != 0){
+                gameRestart->unk1EC = sInstance->unk4C;
+                sInstance->func_80437EF0(0);
+            }
         }
     }
 }
@@ -253,59 +260,33 @@ void CGame::GameMain(){
     if(sInstance != nullptr){
         sInstance->func_804391A8();
     }else{
-        //TODO: can this inline be rewritten to only take the first two arguments?
-        init("CGame", CDesktop::getInstance(), func_80455AA0()->unk4C);
+        UNKTYPE* temp_r3 = func_80455AA0();
+        u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
+        CDesktop* desktop = CDesktop::getInstance();
+        const char* name = "巨神"; //"Bionis"
+        CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
+        cGame->func_80438BD8(desktop, 0);
+        cGame->unk1E4 = r29;
     }
 }
 
-/* Creates a new error entry using the given error message and callback class. This is used specifically
-for the error messages related to controller related issues (e.g. controller disconnect). */
-void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
-    if(sInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !(sInstance->mFlags & THREAD_FLAG_0)){
-        CException* exception = static_cast<CException*>(func_80457CA4(sInstance, message, 5));
-        if(exception != nullptr){
-            exception->mException = (IGameException*)r4;
-            exception->unk204 = param;
+void CGame::func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5){
+    if(sInstance != nullptr){
+        if(func_800426F0() == nullptr){
+            CGame* game = sInstance;
+            u32 r0 = game->unk7C;
+            if(!(r0 & 1)){
+                if(game->func_80457CA4(r3, 5) != 0){
+                    game->unk200 = r4;
+                    game->unk204 = r5;
+                }
+            }
         }
     }
 }
 
-/* This function gets triggered when a certain exception occurs (seems to specifically be controller related
-errors like a controller disconnect). If the given work id corresponds to the right instance of CException,
-the given controller error message gets displayed.
-
-In this case, the class containing the error handler function is CfPadTask, which inherits from the type used
-for the error handler classes (seems to be IGameException, but unfortunately the RTTI doesn't specify the name.) */
-bool CGame::wkException(u32 wid){
-    if(mFlags & THREAD_FLAG_0) return true;
-    if(func_8045DE00()) return false;
-
-    //Get the work thread for the given id
-    CWorkThread* workThread = CWorkThreadSystem_getWorkThread(wid);
-    CWorkThread* exceptionWorkThread;
-    
-    /* Check that the thread is valid, and has the right unk50 value (maybe enum w/ value for each
-    class?). If it's the right value, the type should be CException. */
-    //How does the UNK50_25 value relate to CException/this specific error?
-    if(workThread == nullptr){
-        exceptionWorkThread = nullptr;
-    }else if(workThread->unk50 != UNK50_25){
-        exceptionWorkThread = nullptr;
-    }else exceptionWorkThread = workThread;
-
-    //Invalid work thread, return
-    if(exceptionWorkThread == nullptr) return true;
-
-    CException* exception = static_cast<CException*>(exceptionWorkThread);
-
-    if(exception->func_80457C8C() == false) return false;
-
-    //Call the error handler function
-    if(exception->mException == nullptr) return true;
-    else{
-        IGameException* gameException = exception->mException;
-        return gameException->func0C(exception->unk204);
-    }
+bool CGame::WorkThreadEvent6(){
+    return false;
 }
 
 void CGame::WorkEvent5(UNKTYPE* r4){

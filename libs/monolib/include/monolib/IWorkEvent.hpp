@@ -4,10 +4,6 @@
 #include "monolib/CFileHandle.hpp"
 #include "monolib/MemManager.hpp"
 
-struct WorkThreadSystem {
-    static mtl::ALLOC_HANDLE getHeapHandle();
-};
-
 class CEventFile {
 public:
     BOOL unk0;

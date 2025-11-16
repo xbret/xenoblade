@@ -5,6 +5,7 @@
 #include "kyoshin/appgame/cf/CfSoundMan.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 extern UNKTYPE* func_8009EC9C(u16 r3);
 extern void func_8009D7E4(UNKTYPE* r3, u32 r4);
@@ -97,7 +98,7 @@ namespace cf{
     }
 
     CBattleManager::CBattleManager() : unk84(0) {
-        int heapIndex = WorkThreadSystem::getHeapHandle();
+        int heapIndex = CWorkUtil::getWorkMem();
         mActorList1.initList(64, heapIndex);
         mActorList2.initList(8, heapIndex);
         mActorList3.initList(56, heapIndex);

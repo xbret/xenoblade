@@ -4,6 +4,7 @@
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/MemManager.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include <revolution/OS.h>
 
 class IDeviceClockFrame {
@@ -28,7 +29,7 @@ public:
     static void func_8044DFF4();
 
     static inline CDeviceClock* init(const char* name, CWorkThread* workThread){
-        CDeviceClock* device = new (WorkThreadSystem::getHeapHandle()) CDeviceClock(name, workThread);
+        CDeviceClock* device = new (CWorkUtil::getWorkMem()) CDeviceClock(name, workThread);
         device->func_80438BD8(workThread, 0);
         device->unk1C4 |= 1;
         return device;

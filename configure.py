@@ -1683,6 +1683,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/CMat34.cpp"),
             Object(Matching, "monolib/src/CMat44.cpp"),
             Object(NonMatching, "monolib/src/CQuat.cpp"),
+            Object(Matching, "monolib/src/work/CWorkUtil.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkThread.cpp"),
             Object(NonMatching, "monolib/src/CProc.cpp"),
             Object(NonMatching, "monolib/src/CProcRoot.cpp"),

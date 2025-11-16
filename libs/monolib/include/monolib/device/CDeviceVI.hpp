@@ -5,6 +5,7 @@
 #include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/reslist.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 
@@ -70,7 +71,7 @@ public:
     }
 
     static inline CDeviceVI* init(const char* name, CWorkThread* workThread){
-        CDeviceVI* device = new (WorkThreadSystem::getHeapHandle()) CDeviceVI(name, workThread);
+        CDeviceVI* device = new (CWorkUtil::getWorkMem()) CDeviceVI(name, workThread);
         device->func_80438BD8(workThread, 0);
         device->unk1C4 |= 1;
         return device;
