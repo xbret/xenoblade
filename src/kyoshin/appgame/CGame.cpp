@@ -18,6 +18,7 @@
 #include "kyoshin/appgame/cf/CTaskREvent.hpp"
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
+#include "monolib/work/CWorkThreadSystem.hpp"
 
 extern u32 func_8007E1B4();
 extern void func_801BF93C();
@@ -76,7 +77,7 @@ void CGame::func_80039364(){
         if(CGameRestart::sInstance == nullptr){
             CDesktop* desktop = CDesktop::getInstance();
             const char* name = "CGameRestart";
-            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
+            CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(name, desktop, 8);
             gameRestart->func_80438BD8(desktop, 0);
             UNKTYPE* temp_r3 = func_80455AA0();
             u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
@@ -264,7 +265,7 @@ void CGame::GameMain(){
         u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
         CDesktop* desktop = CDesktop::getInstance();
         const char* name = "巨神"; //"Bionis"
-        CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
+        CGame* cGame = new (CWorkThreadSystem::getWorkMem()) CGame(name, desktop);
         cGame->func_80438BD8(desktop, 0);
         cGame->unk1E4 = r29;
     }

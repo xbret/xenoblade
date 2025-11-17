@@ -3,7 +3,7 @@
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/MemManager.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
 
 //size: 0x1f0
 class CDeviceRemotePad : public CDeviceBase {
@@ -12,7 +12,7 @@ public:
     static CDeviceRemotePad* getInstance();
 
     static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
-        CDeviceRemotePad* device = new (CWorkUtil::getWorkMem()) CDeviceRemotePad(name, workThread);
+        CDeviceRemotePad* device = new (CWorkThreadSystem::getWorkMem()) CDeviceRemotePad(name, workThread);
         device->func_80438BD8(workThread, 0);
         return device;
     }

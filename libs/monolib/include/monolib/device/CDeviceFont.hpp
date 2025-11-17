@@ -3,7 +3,7 @@
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/MemManager.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
 
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {
@@ -12,7 +12,7 @@ public:
     static CDeviceFont* getInstance();
 
     static inline CDeviceFont* init(const char* name, CWorkThread* workThread){
-        CDeviceFont* device = new (CWorkUtil::getWorkMem()) CDeviceFont(name, workThread);
+        CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(name, workThread);
         device->func_80438BD8(workThread, 0);
         return device;
     }

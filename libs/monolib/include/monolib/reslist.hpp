@@ -165,11 +165,25 @@ public:
     }
 
 
-    iterator begin(){
+    iterator begin() const {
         return iterator(mStartNodePtr->mNext);
     }
-    iterator end(){
+    iterator end() const {
         return iterator(mStartNodePtr);
+    }
+
+    T& front() {
+        return *begin();
+    }
+    T& back() {
+        return *begin();
+    }
+
+    const T& front() const {
+        return *begin();
+    }
+    const T& back() const {
+        return *begin();
     }
 
     inline void initList(int capacity, int heapIndex) {
@@ -181,6 +195,16 @@ public:
 
         mCapacity = capacity;
     }
+
+    inline void destroyList(){
+        clear();
+        if (unk1C == 0 && mList != nullptr) {
+            delete[](this->mList);
+            mList = nullptr;
+        }
+        mCapacity = 0;
+    }
+
 
     inline bool empty() const {
         return mStartNodePtr->mNext == mStartNodePtr;

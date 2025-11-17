@@ -5920,13 +5920,17 @@ monolib/src/CQuat.cpp:
 	.bss        start:0x8065A068 end:0x8065A088
 	.sdata2     start:0x8066CA60 end:0x8066CA78
 
-monolib/src/work/CWorkUtil.cpp:
+monolib/src/work/CWorkThreadSystem.cpp:
 	extab       start:0x8001C0F0 end:0x8001C100
 	extabindex  start:0x80033D34 end:0x80033D4C
 	.text       start:0x8043738C end:0x804375BC
 	.rodata     start:0x80525D78 end:0x80525D8C
-	.sdata      start:0x80665E40 end:0x80665E48
-	.sbss       start:0x80667E70 end:0x80667E80
+	.sdata      start:0x80665E40 end:0x80665E44
+	.sbss       start:0x80667E70 end:0x80667E74
+
+monolib/src/work/wroot.cpp:
+	.sdata      start:0x80665E44 end:0x80665E48
+	.sbss       start:0x80667E74 end:0x80667E80
 
 monolib/src/work/CWorkThread.cpp:
 	extab       start:0x8001C100 end:0x8001C1B4

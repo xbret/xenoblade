@@ -2,23 +2,16 @@
 
 #include "types.h"
 
-//size: 0x24
-struct CMsgParamEntry{
-    u32 unk0;
-    u32 unk4;
-    u32 unk8;
-    u32 unkC;
-    u32 unk10;
-    u32 unk14;
-    u32 unk18;
-    u32 unk1C;
-    u32 unk20;
-};
-
 template <int N>
 class CMsgParam{
 public:
-    CMsgParam(u32 r4){
+    struct REQCOM{
+        u32 unk0;
+        u8 unk4[0x20];
+    };
+
+public:
+    CMsgParam(u32 r4) {
         mSize = N;
         mArrayPtr = mEntries;
         field4 = 0;
@@ -26,10 +19,12 @@ public:
         field6 = 0;
         field7 = r4;
     }
-    virtual ~CMsgParam(){
+
+    virtual ~CMsgParam() {
+        clear();
     }
 
-    inline int someInline() const {
+    int someInline() const {
         for(int i = 0; i < field4; i++){
             if(mArrayPtr[(mCount + i) % mSize].unk0 == 2){
                 return i;
@@ -39,9 +34,14 @@ public:
         return -1;
     }
 
+    void clear() {
+        field4 = 0;
+        field3 = 0;
+    }
+
     //0x0: vtable
-    CMsgParamEntry mEntries[N]; //0x4
-    CMsgParamEntry* mArrayPtr;
+    REQCOM mEntries[N]; //0x4
+    REQCOM* mArrayPtr;
     u32 mCount;
     u32 field4;
     u32 mSize;
