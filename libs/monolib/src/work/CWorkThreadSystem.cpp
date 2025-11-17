@@ -31,12 +31,12 @@ WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread) {
         if (sAllocFlags[flag] != 0xFFFFFFFF) {
 
             //Find the free bit in the flagset
-            u32 bit = 1 << 0;
+            u32 mask = 1 << 0;
             u32 flags = sAllocFlags[flag];
 
-            for (u32 i = 0; i < 32; i++, bit <<= 1) {
+            for (u32 i = 0; i < 32; i++, mask <<= 1) {
                 //ID is already allocated
-                if (flags & bit) {
+                if (flags & mask) {
                     continue;
                 }
 
@@ -44,7 +44,7 @@ WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread) {
                 WORK_ID wid = flag * 32 + i;
 
                 //Save thread information
-                sAllocFlags[flag] |= bit;
+                sAllocFlags[flag] |= mask;
                 sWorkThreads[wid] = thread;
 
                 return wid;
