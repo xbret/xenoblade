@@ -1,5 +1,6 @@
 #pragma once
 
+#include "monolib/FixStr.hpp"
 #include "types.h"
 #include "monolib/CProc.hpp"
 #include "monolib/CView.hpp"
@@ -12,9 +13,9 @@ public:
     static CGame* getInstance();
     static bool func_8003933C();
     static void func_80039364();
-    static void func_80039438(bool r3);
+    static void setTaskManagerUpdateCount(u32 count);
     virtual void wkUpdate();
-    virtual void WorkThreadEvent2();
+    virtual void wkRender();
     static void func_800395F4(bool r3);
     static void func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height);
     virtual bool wkStartup();
@@ -33,13 +34,8 @@ public:
     s16 unk1F6;
     s16 unk1F8;
     u8 unk1FA[2];
-    u8 unk1FC;
-    u8 unk1FD[3];
-    u32 unk200;
-    u32 unk204;
-    u8 unk208[0x14];
-    u32 unk21C;
-    u32 unk220;
+    FixStr<32> unk1FC;
+    u32 mTaskManUpdateCount; //0x220
     float unk224;
     int unk228;
     u32 unk22C;

@@ -11,10 +11,15 @@ using namespace ml;
 //size: 0x1C4
 class CWorkThread : public IWorkEvent {
 public:
+    enum Unk7CFlags {
+        UNK7C_FLAG_0 = 1 << 0,
+        UNK7C_FLAG_4 = 1 << 4
+    };
+
     CWorkThread(const char* name, CWorkThread* workThread, int r6);
     virtual ~CWorkThread();
     virtual void wkUpdate();
-    virtual void WorkThreadEvent2(){}
+    virtual void wkRender(){}
     virtual void WorkThreadEvent3(){}
     virtual bool wkStartup();
     virtual bool wkShutdown();
@@ -25,7 +30,7 @@ public:
     u32 func_80457CA4(UNKTYPE* r4, u32 r5);
 
     inline bool CWorkThread_inline1() const {
-        bool r0_1 = (unk7C & 0x10) ? true : (unk80.someInline() >= 0);
+        bool r0_1 = (unk7C & UNK7C_FLAG_4) ? true : (unk80.someInline() >= 0);
         return (!r0_1 && (unk48 == 2 || unk48 == 3));
     }
 

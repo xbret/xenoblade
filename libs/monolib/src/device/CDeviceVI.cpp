@@ -83,8 +83,9 @@ static CPnt16 lbl_8065A6B8[] = {
 
 static bool lbl_80667F2C;
 
-CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8)
-, UnkClass_80447FDC() {
+CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) :
+CDeviceBase(name, workThread, 8),
+UnkClass_80447FDC() {
     mTvFormat = 0;
     unk1F4 = 9;
     mScanMode = 0;
@@ -207,16 +208,19 @@ u32 CDeviceVI::getXfbBuffersSize(){
     return XFB_WIDTH * XFB_HEIGHT * NUM_XFB_BUFFERS * 2;
 }
 
-float CDeviceVI::getSomeRatio(){
-    float ratio;
+/* Returns the scale factor for the screen width based on the current aspect ratio mode.
+This is used to handle squishing everything horizontally to fit into 4:3 so that it looks
+correct when stretched back to anamorphic 16:9. */
+float CDeviceVI::getWidthScale(){
+    float scale;
 
     if(isWideAspectRatio()){
-        ratio = 1.33333333;
+        scale = 4.0f/3.0f; //If in 16:9 mode, width gets scaled by 4/3 ((4/3)^2 * height = 16/9 * height)
     }else{
-        ratio = 1.0;
+        scale = 1.0f; //Otherwise, no scaling
     }
 
-    return ratio;
+    return scale;
 }
 
 void CDeviceVI::wkUpdate(){
@@ -244,7 +248,7 @@ void CDeviceVI::func_80448A44(){
 void CDeviceVI::func_80448A84(){
     CDeviceVI* vi = sInstance;
 
-    u32 r0 = vi->unk7C & 0x10;
+    u32 r0 = vi->unk7C & UNK7C_FLAG_4;
     if(r0 != 0){
         r0 = 1;
     }else{

@@ -29,7 +29,7 @@ public:
     static bool isWideAspectRatio();
     static bool isTvFormatPal();
     static u32 getXfbBuffersSize();
-    static float getSomeRatio();
+    static float getWidthScale();
     static void func_8044857C(u32 r3, u32 r4);
     void func_804486E4();
     virtual void wkUpdate();
