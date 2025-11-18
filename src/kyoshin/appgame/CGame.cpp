@@ -6,6 +6,7 @@
 #include "monolib/FixStr.hpp"
 #include "monolib/CView.hpp"
 #include "monolib/CDesktop.hpp"
+#include "monolib/CException.hpp"
 #include "monolib/CTaskManager.hpp"
 #include "monolib/lib/CLibHbm.hpp"
 #include "monolib/lib/CLibLayout.hpp"
@@ -29,7 +30,6 @@ extern void func_80442DA8();
 extern CView* createWorkThreadView(CWorkThread* thread1, const char* const string, CWorkThread* thread2,
 int r6);
 extern bool func_8045DE00();
-extern bool func_80457C8C(CWorkThread* workThread);
 extern void func_80043298(CView* view, CWorkThread* thread, int r5);
 extern CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);
 
@@ -37,6 +37,7 @@ CGame* CGame::sInstance;
 static FixStr<64> lbl_80573C80;
 nw4r::lyt::Layout* CGame::lbl_80666604;
 nw4r::lyt::ArcResourceAccessor* CGame::sArcResourceAccessor;
+const char* CGame::scViewName = "巨神"; //"Bionis"
 CGameRestart* CGameRestart::sInstance;
 
 CGame::CGame(const char* name, CWorkThread* workThread) :
@@ -75,8 +76,7 @@ void CGame::func_80039364(){
     else if(CGameRestart::sInstance == nullptr){
         CDesktop* desktop = CDesktop::getInstance();
         const char* name = "CGameRestart";
-        CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle())
-            CGameRestart(name, desktop, 8);
+        CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
         gameRestart->func_80438BD8(desktop, 0);
         
         CWorkThread* temp_r3 = func_80455AA0();
@@ -112,7 +112,7 @@ void CGame::wkUpdate(){
     }
 
     if((mFlags & THREAD_FLAG_0) && CTaskGame::getInstance() != nullptr){
-        (void)CTaskGame::getInstance();
+        (void)CTaskGame::getInstance(); //What are we doing
         if(CTaskGame::func_800426F0() == false){
             CTaskGame::getInstance()->func_80042720();
         }
@@ -149,13 +149,11 @@ void CGame::wkRender(){
 void CGame::func_800395F4(bool wide){
     if(sInstance != nullptr && sInstance->mView != nullptr){
         if(!wide){
-            s16 height = CDeviceVI::getRenderModeObj()->efbHeight - 114;
-            s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-            func_80039694(sInstance->mView, 0, 56, width, height);
+            func_80039694(sInstance->mView, 0, 56,
+            CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
         }else{
-            s16 height = CDeviceVI::getRenderModeObj()->efbHeight;
-            s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-            func_80039694(sInstance->mView, 0, 0, width, height);
+            func_80039694(sInstance->mView, 0, 0,
+            CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
         }
     }
 }
@@ -170,25 +168,23 @@ bool CGame::wkStartup(){
     CWorkThread* thread1 = func_80455AA0();
 
     //Create the CView instance for CGame
-    static const char* name = "巨神"; //"Bionis"
 
-    mView = createWorkThreadView(this, name, thread1, 0);
+    mView = createWorkThreadView(this, scViewName, thread1, 0);
+    CView* view = mView;
+    const char* nameTemp = scViewName;
 
-    const char* nameTemp = name;
-    mView->unk400 = nameTemp;
-    if(mView->mName.size() == 0){
-        mView->mName = nameTemp;
+    view->unk400 = nameTemp;
+    if(view->mName.size() == 0){
+        view->mName = nameTemp;
     }
 
     //Almost equivalent to func_800395F4
     if(CDeviceSC::isWideAspectRatio()){
-        s16 height = CDeviceVI::getRenderModeObj()->efbHeight;
-        s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-        func_80039694(mView, 0, 0, width, height);
+        func_80039694(mView, 0, 0,
+        CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
     }else{
-        s16 height = CDeviceVI::getRenderModeObj()->efbHeight - 114;
-        s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
-        func_80039694(mView, 0, 56, width, height);
+        func_80039694(mView, 0, 56,
+        CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
     }
 
     StaticDataHandle handle;
@@ -265,8 +261,7 @@ void CGame::GameMain(){
     if(sInstance != nullptr){
         sInstance->func_804391A8();
     }else{
-        CWorkThread* temp_r3 = func_80455AA0();
-        u32 r29 = temp_r3->unk4C;
+        u32 r29 = func_80455AA0()->unk4C;
         CDesktop* desktop = CDesktop::getInstance();
         const char* name = "巨神"; //"Bionis"
         CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
@@ -279,57 +274,68 @@ void CGame::GameMain(){
 for the error messages related to controller related issues (e.g. controller disconnect). */
 void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
     if(sInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !(sInstance->mFlags & THREAD_FLAG_0)){
-        PadErrorHandler* someClass = static_cast<PadErrorHandler*>(func_80457CA4(sInstance, message, 5));
-        if(someClass != nullptr){
-            someClass->unk200 = (PadErrorCallbackClass*)r4;
-            someClass->unk204 = param;
+        CException* exception = static_cast<CException*>(func_80457CA4(sInstance, message, 5));
+        if(exception != nullptr){
+            exception->mException = (IGameException*)r4;
+            exception->unk204 = param;
         }
     }
 }
 
-bool CGame::wkStandbyExceptionRetry(u32 wid){
-    CWorkThread* r31;
+/* This function gets triggered when a certain exception occurs (seems to specifically be controller related
+errors like a controller disconnect). If the given work id corresponds to the right instance of CException,
+the given controller error message gets displayed.
 
+In this case, the class containing the error handler function is CfPadTask, which inherits from the type used
+for the error handler classes (seems to be IGameException, but unfortunately the RTTI doesn't specify the name.) */
+bool CGame::wkException(u32 wid){
     if(mFlags & THREAD_FLAG_0) return true;
     if(func_8045DE00()) return false;
 
+    //Get the work thread for the given id
     CWorkThread* workThread = CWorkThreadSystem_getWorkThread(wid);
+    CWorkThread* exceptionWorkThread;
     
+    /* Check that the thread is valid, and has the right unk50 value (maybe enum w/ value for each
+    class?). If it's the right value, the type should be CException. */
+    //How does the UNK50_25 value relate to CException/this specific error?
     if(workThread == nullptr){
-        r31 = nullptr;
+        exceptionWorkThread = nullptr;
     }else if(workThread->unk50 != UNK50_25){
-        r31 = nullptr;
-    }else r31 = workThread;
+        exceptionWorkThread = nullptr;
+    }else exceptionWorkThread = workThread;
 
-    if(r31 == nullptr) return true;
-    if(func_80457C8C(r31) == false) return false;
-    
-    /* The thread gets cast to some unknown derived class of CWorkThread.
-    Possibly related to the UNK50_25 value? */
-    PadErrorHandler* class1 = static_cast<PadErrorHandler*>(workThread);
+    //Invalid work thread, return
+    if(exceptionWorkThread == nullptr) return true;
 
-    //Print error message?
-    if(class1->unk200 == nullptr) return true;
+    CException* exception = static_cast<CException*>(exceptionWorkThread);
+
+    if(exception->func_80457C8C() == false) return false;
+
+    //Call the error handler function
+    if(exception->mException == nullptr) return true;
     else{
-        PadErrorCallbackClass* class2 = class1->unk200;
-        class2->func0C(class1->unk204);
+        IGameException* gameException = exception->mException;
+        gameException->func0C(exception->unk204);
     }
 }
 
 void CGame::WorkEvent5(UNKTYPE* r4){
-    if(func_8007E1B4() != 0 && r4 != nullptr){
-        int r0 = unk228;
-        if(r0 == 0){
-            unk224 = func_801C0014();
-            func_801BFFAC(0,0);
-            func_801644BC(1);
+    if(func_8007E1B4() != 0){
+        if(r4 != nullptr){
+            if(unk228 == 0){
+                unk224 = func_801C0014();
+                func_801BFFAC(0,0);
+                func_801644BC(1);
 
-            if(cf::CBattleManager::getInstance() != nullptr){
-                cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
-                battleManager->mVision.func_801A929C(1);
+                if(cf::CBattleManager::getInstance() != nullptr){
+                    cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
+                    battleManager->mVision.func_801A929C(1);
+                }
+
+                func_80044FBC(1);
             }
 
-            func_80044FBC(1);
             unk228++;
         }else{
             if(unk228 <= 1){
@@ -340,9 +346,10 @@ void CGame::WorkEvent5(UNKTYPE* r4){
                     cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
                     battleManager->mVision.func_801A929C(0);
                 }
+
+                func_80044FBC(0);
             }
 
-            func_80044FBC(0);
             unk228--;
             if(unk228 < 0) unk228 = 0;
         }

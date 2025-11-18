@@ -27,7 +27,7 @@ public:
     virtual void wkRenderAfter(){} //0x90
     virtual bool wkStartup(); //0x94
     virtual bool wkShutdown(); //0x98
-    virtual bool wkStandbyExceptionRetry(u32 wid){ return true; } //0x9C
+    virtual bool wkException(u32 wid){ return true; } //0x9C
 
     void func_80437EF0(u32);
     void func_80438BD8(CWorkThread* r4, u32 r5);
@@ -43,7 +43,7 @@ public:
     u32 unk4C;
     int unk50;
     u32 unk54;
-    u32 unk58;
+    UNKTYPE* unk58;
     reslist<CWorkThread*> mChildThreads; //0x5C
     u32 mFlags; //0x7C
     //Message param entry format:
@@ -58,7 +58,7 @@ public:
     //0x20: address (pointer to string?)
     CMsgParam<8> mThreadMsgParam; //0x80
     u32 unk1BC;
-    u32 unk1C0; //This value gets used in calls of the wkStandbyExceptionRetry callback
+    u32 unk1C0; //Work id value that gets used in calls of the wkException callback
 };
 
 CWorkThread* CWorkThreadSystem_getWorkThread(u32 wid);

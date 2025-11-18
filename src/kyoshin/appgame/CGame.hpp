@@ -30,7 +30,7 @@ public:
     virtual bool wkShutdown();
     static void GameMain();
     static void registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param);
-    virtual bool wkStandbyExceptionRetry(u32 r4);
+    virtual bool wkException(u32 r4);
     virtual void WorkEvent5(UNKTYPE* r4);
     static void func_80039D08();
 
@@ -52,6 +52,7 @@ protected:
     static CGame* sInstance;
     static nw4r::lyt::Layout* lbl_80666604;
     static nw4r::lyt::ArcResourceAccessor* sArcResourceAccessor;
+    static const char* scViewName;
 };
 
 namespace {
@@ -78,17 +79,3 @@ namespace {
         static CGameRestart* sInstance;
     };
 }
-
-//Temporary classes for unknown types used below
-struct PadErrorCallbackClass {
-    virtual void func08();
-    virtual bool func0C(u32 r4);
-};
-
-//Possibly CException?
-class PadErrorHandler : public CWorkThread {
-public:
-    u8 unk1C4[0x200 - 0x1C4];
-    PadErrorCallbackClass* unk200;
-    u32 unk204;
-};
