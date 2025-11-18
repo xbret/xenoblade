@@ -31,6 +31,9 @@ public:
     void Remove();
 
 private:
+    //0x0-10: CDoubleListNode
+    //0x10: vtable
+    //0x14-38: CChildListNode
     bool mIsRegist; //0x38
     bool mIsRemove; //0x39
     bool mIsDisableMove; //0x3A

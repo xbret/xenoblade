@@ -11,6 +11,7 @@ public:
 
     //0x0: vtable 1
     //0x4-1C4: CWorkThread
-    u8 unk1C4[0x440 - 0x1C4];
-    ml::FixStr<64> unk440;
+    u8 unk1C4[0x400 - 0x1C4];
+    ml::FixStr<64> unk400;
+    ml::CVec4 unk444;
 };

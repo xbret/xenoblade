@@ -206,7 +206,7 @@ bool CDeviceGX::wkShutdown(){
         GXSetDrawSyncCallback(nullptr);
     }
 
-    if(mWorkThreadList.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
+    if(mChildThreads.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
         return CWorkThread::wkShutdown();
     }

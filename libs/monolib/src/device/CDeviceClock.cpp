@@ -65,7 +65,7 @@ bool CDeviceClock::wkStartup(){
 }
 
 bool CDeviceClock::wkShutdown(){
-    if(mWorkThreadList.empty()){
+    if(mChildThreads.empty()){
         if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
         && CLib::getInstance() == nullptr){
             return CWorkThread::wkShutdown(); //Call base

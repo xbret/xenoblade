@@ -16,6 +16,7 @@ private:
     typedef CDoubleListHeader Base;
 
 private:
+    //0x0-4: CDoubleListHeader
     char unk4[0x10 - 0x4];
 
 public:
@@ -89,6 +90,8 @@ public:
     const ChildrenType& GetChildren() const { return mChildren; }
 
 protected:
+    //0x0-10: CDoubleListNode
+    //0x10: vtable
     CChildListNode* mParent; //0x14
     char unk18[0x24 - 0x18];
     ChildrenType mChildren; //0x24

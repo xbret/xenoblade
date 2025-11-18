@@ -58,7 +58,7 @@ bool CDeviceSC::wkStartup(){
 }
 
 bool CDeviceSC::wkShutdown(){
-    if(mWorkThreadList.empty()){
+    if(mChildThreads.empty()){
         if(CDeviceVI::getInstance() == nullptr){
             return CWorkThread::wkShutdown();
         }

@@ -250,11 +250,11 @@ void CDeviceVI::func_80448A44(){
 void CDeviceVI::func_80448A84(){
     CDeviceVI* vi = sInstance;
 
-    u32 r0 = vi->unk7C & UNK7C_FLAG_4;
+    u32 r0 = vi->mFlags & THREAD_FLAG_4;
     if(r0 != 0){
         r0 = 1;
     }else{
-        int r0_1 = vi->unk80.field4;
+        int r0_1 = vi->mThreadMsgParam.field4;
         int r6 = 0;
         if(r0_1 > 0){
 
@@ -310,7 +310,7 @@ bool CDeviceVI::wkStartup(){
 bool CDeviceVI::wkShutdown(){
     VISetBlack(VI_TRUE);
     VIFlush();
-    if(mWorkThreadList.empty()){
+    if(mChildThreads.empty()){
         if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
             return CWorkThread::wkShutdown();

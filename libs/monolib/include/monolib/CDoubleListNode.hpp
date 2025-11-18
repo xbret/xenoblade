@@ -7,8 +7,8 @@ Doubly-linked list node
 */
 class CDoubleListNode {
 public:
-    CDoubleListNode* mPrev; //0x4
-    CDoubleListNode* mNext; //0x0
+    CDoubleListNode* mPrev; //0x0
+    CDoubleListNode* mNext; //0x4
     u8 unk8;
     int unkC;
 

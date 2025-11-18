@@ -3,12 +3,19 @@
 #include "types.h"
 #include "monolib/FixStr.hpp"
 #include "monolib/CProc.hpp"
+#include "nw4r/types_nw4r.h"
 
 //Forward declarations
 class CView;
 
 class CGame : public CProc {
 public:
+    enum ShutdownState {
+        SHUTDOWN_STATE_0,
+        SHUTDOWN_STATE_1,
+        SHUTDOWN_STATE_2
+    };
+
     CGame(const char* name, CWorkThread* workThread);
     virtual ~CGame();
     static CGame* getInstance();
@@ -22,15 +29,15 @@ public:
     virtual bool wkStartup();
     virtual bool wkShutdown();
     static void GameMain();
-    static void func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5);
-    virtual bool WorkThreadEvent6(u32 r4);
+    static void registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param);
+    virtual bool wkStandbyExceptionRetry(u32 r4);
     virtual void WorkEvent5(UNKTYPE* r4);
     static void func_80039D08();
 
     //0x0: vtable
     //0x0-1ec: CProc
     CView* mView; //0x1EC
-    u32 unk1F0;
+    ShutdownState mShutdownState; //0x1F0
     s16 unk1F4;
     s16 unk1F6;
     s16 unk1F8;
@@ -43,6 +50,8 @@ public:
 
 protected:
     static CGame* sInstance;
+    static nw4r::lyt::Layout* lbl_80666604;
+    static nw4r::lyt::ArcResourceAccessor* sArcResourceAccessor;
 };
 
 namespace {
@@ -69,3 +78,17 @@ namespace {
         static CGameRestart* sInstance;
     };
 }
+
+//Temporary classes for unknown types used below
+struct PadErrorCallbackClass {
+    virtual void func08();
+    virtual bool func0C(u32 r4);
+};
+
+//Possibly CException?
+class PadErrorHandler : public CWorkThread {
+public:
+    u8 unk1C4[0x200 - 0x1C4];
+    PadErrorCallbackClass* unk200;
+    u32 unk204;
+};

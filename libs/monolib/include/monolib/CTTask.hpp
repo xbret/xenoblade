@@ -32,6 +32,9 @@ public:
     }
 
 protected:
-    MoveFunc mMoveFunc;
-    DrawFunc mDrawFunc;
+    //0x0-10: CDoubleListNode
+    //0x10: vtable
+    //0x14-3C: CProcess
+    MoveFunc mMoveFunc; //0x3C
+    DrawFunc mDrawFunc; //0x48
 };

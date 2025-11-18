@@ -107,10 +107,12 @@ namespace ml{
     };
 
     struct CVec4{
+        struct{
         float x;
         float y;
         float z;
         float w;
+        };
 
         static CVec4 zero;
         static CVec4 unitX;
