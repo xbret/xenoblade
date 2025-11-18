@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/CWorkThread.hpp"
+#include "monolib/work/CWorkThread.hpp"
 
 //size: 0x1C8
 class CDeviceBase : public CWorkThread {
@@ -20,4 +20,3 @@ public:
     //0x0-1c4: CWorkThread
     u32 unk1C4;
 };
-

@@ -41,6 +41,8 @@ s32 WPADSendStreamData(s32, UNKTYPE*, UNKWORD);
 s32 WPADProbe(s32 chan, u32* type);
 s32 WPADReadFaceData(s32 chan, void* dst, u32 size, u32 src, WPADCallback cb);
 
+void WPADSetAutoSleepTime(int min);
+
 #ifdef __cplusplus
 }
 #endif

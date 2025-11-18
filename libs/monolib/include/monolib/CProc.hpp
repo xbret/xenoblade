@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/CWorkThread.hpp"
+#include "monolib/work/CWorkThread.hpp"
 #include "monolib/reslist.hpp"
 
 //size: 0x1ec

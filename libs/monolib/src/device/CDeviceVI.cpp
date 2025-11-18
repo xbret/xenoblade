@@ -8,6 +8,8 @@
 #include "monolib/Math.hpp"
 #include <string.h>
 
+using namespace ml;
+
 CDeviceVI* CDeviceVI::sInstance;
 
 static const VIGamma gammaLevels[] = {

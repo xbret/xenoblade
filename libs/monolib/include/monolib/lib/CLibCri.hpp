@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/CWorkThread.hpp"
+#include "monolib/work/CWorkThread.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
 

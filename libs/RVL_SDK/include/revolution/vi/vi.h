@@ -30,6 +30,7 @@ u32 VIGetScanMode(void);
 u32 VIGetDTVStatus();
 u32 VIGetDimmingCount();
 BOOL VIEnableDimming(BOOL enable);
+s32 VISetTimeToDimming(s32 time);
 BOOL VIResetDimmingCount();
 
 #ifdef __cplusplus

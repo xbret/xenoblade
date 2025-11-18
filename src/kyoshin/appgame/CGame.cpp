@@ -1,21 +1,22 @@
 #include "kyoshin/appgame/CGame.hpp"
 #include "revolution/GX.h"
-#include "nw4r/lyt/lyt_drawInfo.h"
-#include "nw4r/lyt/lyt_layout.h"
-#include "revolution/gx/GXPixel.h"
-#include "revolution/gx/GXTypes.h"
-#include <nw4r/lyt/lyt_arcResourceAccessor.h>
+#include "revolution/VI.h"
+#include "revolution/WPAD.h"
+#include "monolib/work/CWorkThread.hpp"
 #include "monolib/FixStr.hpp"
-#include "monolib/lib/CLibHbm.hpp"
-#include "monolib/work/CWorkSystem.hpp"
+#include "monolib/CView.hpp"
 #include "monolib/CDesktop.hpp"
 #include "monolib/CTaskManager.hpp"
+#include "monolib/lib/CLibHbm.hpp"
+#include "monolib/lib/CLibLayout.hpp"
+#include "monolib/work/CWorkSystem.hpp"
 #include "monolib/device/CDeviceGX.hpp"
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "kyoshin/appgame/cf/CTaskREvent.hpp"
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
 #include "kyoshin/appgame/CTaskGame.hpp"
+#include "kyoshin/appgame/code_80135FDC.hpp"
 
 extern u32 func_8045FB08();
 extern u32 func_8007E1B4();
@@ -24,16 +25,18 @@ extern float func_801C0014();
 extern void func_801BFFAC(float f1, float f2);
 extern void func_801644BC(u32 r3);
 extern void func_80044FBC(u32 r3);
-extern void func_80137250(nw4r::lyt::DrawInfo* pDrawInfo);
-extern void func_80137038(nw4r::lyt::Layout* pLayout, nw4r::lyt::DrawInfo* pDrawInfo, int r5, int r6);
 extern void func_80442DA8();
-extern CView* func_804392F4();
+extern CView* createWorkThreadView(CWorkThread* thread1, const char* string, CWorkThread* thread2,
+int r6);
+extern bool func_8045DE00();
+extern bool func_80457C8C(CWorkThread* workThread);
+extern void func_80043298(CView* view, CWorkThread* thread, int r5);
 
 CGame* CGame::sInstance;
-CGameRestart* CGameRestart::sInstance;
 static FixStr<64> lbl_80573C80;
 static nw4r::lyt::Layout* lbl_80666604;
 static nw4r::lyt::ArcResourceAccessor* lbl_80666608;
+CGameRestart* CGameRestart::sInstance;
 
 CGame::CGame(const char* name, CWorkThread* workThread) :
 CProc(name, workThread, 8),
@@ -68,22 +71,21 @@ bool CGame::func_8003933C(){
 
 void CGame::func_80039364(){
     if(sInstance == nullptr) GameMain();
-    else{
-        if(CGameRestart::sInstance == nullptr){
-            CDesktop* desktop = CDesktop::getInstance();
-            const char* name = "CGameRestart";
-            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
-            gameRestart->func_80438BD8(desktop, 0);
-            
-            UNKTYPE* temp_r3 = func_80455AA0();
-            u32 r0 = *(u32*)((u32)temp_r3 + 0x4C);
-            gameRestart->unk1E4 = r0;
-            CGameRestart::sInstance = gameRestart;
+    else if(CGameRestart::sInstance == nullptr){
+        CDesktop* desktop = CDesktop::getInstance();
+        const char* name = "CGameRestart";
+        CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle())
+            CGameRestart(name, desktop, 8);
+        gameRestart->func_80438BD8(desktop, 0);
+        
+        CWorkThread* temp_r3 = func_80455AA0();
+        u32 r0 = temp_r3->unk4C;
+        gameRestart->unk1E4 = r0;
+        CGameRestart::sInstance = gameRestart;
 
-            if(r0 != 0){
-                gameRestart->unk1EC = sInstance->unk4C;
-                sInstance->func_80437EF0(0);
-            }
+        if(gameRestart != nullptr){
+            gameRestart->unk1EC = sInstance->unk4C;
+            sInstance->func_80437EF0(0);
         }
     }
 }
@@ -146,12 +148,12 @@ void CGame::func_800395F4(bool r3){
     if(sInstance != nullptr){
         if(sInstance->mView != nullptr){
             if(r3 == false){
-                s16 height = CDeviceVI::getRenderModeObj()->efbHeight - 114;
-                s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
+                s16 height = CDeviceVI::getEfbHeight() - 114;
+                s16 width = CDeviceVI::getFbWidth();
                 func_80039694(sInstance->mView, 0, 56, width, height);
             }else{
-                s16 height = CDeviceVI::getRenderModeObj()->efbHeight;
-                s16 width = CDeviceVI::getRenderModeObj()->fbWidth;
+                s16 height = CDeviceVI::getEfbHeight();
+                s16 width = CDeviceVI::getFbWidth();
                 func_80039694(sInstance->mView, 0, 0, width, height);
             }
         }
@@ -165,12 +167,42 @@ void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
 bool CGame::wkStartup(){
     u32 result = func_8045FB08();
     if(result == 0) return false;
-    UNKTYPE* temp_r3_1 = func_80455AA0();
 
+    CWorkThread* thread1 = func_80455AA0();
     const char* name = "巨神"; //"Bionis"
 
-    //func_804392F4()
+    mView = createWorkThreadView(this, name, thread1, 0);
 
+    mView->unk440 = name;
+
+    if(mView->mName.size() == 0){
+        mView->mName = name;
+    }
+
+    if(CDeviceSC::isWideAspectRatio()){
+        s16 height = CDeviceVI::getEfbHeight() - 114;
+        s16 width = CDeviceVI::getFbWidth();
+        func_80039694(mView, 0, 56, width, height);
+    }else{
+        s16 height = CDeviceVI::getEfbHeight();
+        s16 width = CDeviceVI::getFbWidth();
+        func_80039694(mView, 0, 0, width, height);
+    }
+
+    func_800395F4(CDeviceSC::isWideAspectRatio());
+    CDeviceGX::updateVerticalFilter(VFILTER_NONE);
+    CTaskManager::Reset();
+
+    func_80043298(mView, this, 1);
+    WPADSetAutoSleepTime(5);
+    VIEnableDimming(VI_ENABLE);
+    VISetTimeToDimming(1);
+
+    void* data;
+
+    lbl_80666608 = CLibLayout_getArcResourceAccessorInstance();
+    lbl_80666608->Attach(data, "arc");
+    func_80136E84(&lbl_80666604, lbl_80666608, "4_3mode.brlyt");
 
     //Call base
     CProc::wkStartup();
@@ -192,8 +224,8 @@ void CGame::GameMain(){
     if(sInstance != nullptr){
         sInstance->func_804391A8();
     }else{
-        UNKTYPE* temp_r3 = func_80455AA0();
-        u32 r29 = *(u32*)((u32)temp_r3 + 0x4C);
+        CWorkThread* temp_r3 = func_80455AA0();
+        u32 r29 = temp_r3->unk4C;
         CDesktop* desktop = CDesktop::getInstance();
         const char* name = "巨神"; //"Bionis"
         CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
@@ -203,23 +235,38 @@ void CGame::GameMain(){
 }
 
 void CGame::func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5){
-    if(sInstance != nullptr){
-        if(CTaskGame::func_800426F0() == nullptr){
-            CGame* game = sInstance;
-
-            if(!(game->unk7C & UNK7C_FLAG_0)){
-                if(game->func_80457CA4(r3, 5) != 0){
-                    u32* stringIntPtr = (u32*)game->unk1FC.c_str();
-                    stringIntPtr[1] = r4;
-                    stringIntPtr[2] = r5;
-                }
-            }
-        }
+    if(sInstance != nullptr && CTaskGame::func_800426F0() == nullptr
+    && !(sInstance->unk7C & UNK7C_FLAG_0) && sInstance->func_80457CA4(r3, 5) != 0){
+        //This has to be fake
+        u32* stringIntPtr = (u32*)sInstance->unk1FC.c_str();
+        stringIntPtr[1] = r4;
+        stringIntPtr[2] = r5;
     }
 }
 
-bool CGame::WorkThreadEvent6(){
-    return false;
+bool CGame::WorkThreadEvent6(u32 r4){
+    CWorkThread* r31 = (CWorkThread*)r4;
+
+    if(unk7C & UNK7C_FLAG_0) return true;
+    if(func_8045DE00() == true) return false;
+
+    CWorkThread* workThread = CWorkThreadSystem_getWorkThread(r4);
+    
+    if(workThread == nullptr){
+        r31 = nullptr;
+    }else if(unk50 != UNK50_25){
+        r31 = nullptr;
+    }else r31 = workThread;
+
+    if(r31 == nullptr) return true;
+    if(func_80457C8C(r31) == false) return false;
+    
+    u32* stringIntPtr = (u32*)unk1FC.c_str();
+
+    if(stringIntPtr[1] == 0) return true;
+    else{
+        return r31->WorkEvent1();
+    }
 }
 
 void CGame::WorkEvent5(UNKTYPE* r4){

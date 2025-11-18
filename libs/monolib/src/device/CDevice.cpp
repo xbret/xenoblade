@@ -12,6 +12,8 @@
 #include "monolib/lib/CLib.hpp"
 #include "monolib/lib/CLibCri.hpp"
 
+using namespace ml;
+
 extern CWorkThread* func_804437BC();
 extern int func_80454E78();
 

@@ -5,7 +5,14 @@
 //size: 0x24
 struct CMsgParamEntry{
     u32 unk0;
-    u8 unk4[0x20];
+    u32 unk4;
+    u32 unk8;
+    u32 unkC;
+    u32 unk10;
+    u32 unk14;
+    u32 unk18;
+    u32 unk1C;
+    u32 unk20;
 };
 
 template <int N>
@@ -15,7 +22,7 @@ public:
         mSize = N;
         mArrayPtr = mEntries;
         field4 = 0;
-        field3 = 0;
+        mCount = 0;
         field6 = 0;
         field7 = r4;
     }
@@ -24,7 +31,7 @@ public:
 
     inline int someInline() const {
         for(int i = 0; i < field4; i++){
-            if(mArrayPtr[(field3 + i) % mSize].unk0 == 2){
+            if(mArrayPtr[(mCount + i) % mSize].unk0 == 2){
                 return i;
             }
         }
@@ -35,7 +42,7 @@ public:
     //0x0: vtable
     CMsgParamEntry mEntries[N]; //0x4
     CMsgParamEntry* mArrayPtr;
-    u32 field3;
+    u32 mCount;
     u32 field4;
     u32 mSize;
     u32 field6;

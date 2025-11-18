@@ -1,10 +1,11 @@
 #pragma once
 
-#include "monolib/FixStr.hpp"
 #include "types.h"
+#include "monolib/FixStr.hpp"
 #include "monolib/CProc.hpp"
-#include "monolib/CView.hpp"
 
+//Forward declarations
+class CView;
 
 class CGame : public CProc {
 public:
@@ -22,7 +23,7 @@ public:
     virtual bool wkShutdown();
     static void GameMain();
     static void func_80039AC4(UNKTYPE* r3, u32 r4, u32 r5);
-    virtual bool WorkThreadEvent6();
+    virtual bool WorkThreadEvent6(u32 r4);
     virtual void WorkEvent5(UNKTYPE* r4);
     static void func_80039D08();
 
@@ -34,7 +35,7 @@ public:
     s16 unk1F6;
     s16 unk1F8;
     u8 unk1FA[2];
-    FixStr<32> unk1FC;
+    ml::FixStr<32> unk1FC;
     u32 mTaskManUpdateCount; //0x220
     float unk224;
     int unk228;
@@ -47,13 +48,15 @@ protected:
 namespace {
     class CGameRestart : public CProc {
     public:
+        friend class CGame;
+
         CGameRestart(const char* name, CWorkThread* workThread, int r6) : CProc(name, workThread, r6){
             unk1EC = -1;
         }
         virtual ~CGameRestart(){}
         virtual void wkUpdate(){
-            u32 r3 = func_804385A8(unk1EC);
-            if(r3 == 0){
+            CWorkThread* r3 = CWorkThreadSystem_getWorkThread(unk1EC);
+            if(r3 == nullptr){
                 CGame::GameMain();
                 func_80437EF0(0);
                 sInstance = nullptr;
@@ -61,7 +64,8 @@ namespace {
         }
 
         int unk1EC;
-
+    
+    protected:
         static CGameRestart* sInstance;
     };
 }

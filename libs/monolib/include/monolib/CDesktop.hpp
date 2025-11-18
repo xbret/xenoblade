@@ -3,6 +3,9 @@
 #include "types.h"
 #include "monolib/CProc.hpp"
 
+//Forward declarations
+class CView;
+
 class CDesktop : public CProc {
 public:
     CDesktop(const char* name, CWorkThread* workThread);
@@ -10,4 +13,5 @@ public:
     static CDesktop* getInstance();
 };
 
-extern UNKTYPE* func_80455AA0();
+//Not sure if this is CView. It at least inherits from CWorkThread
+extern CWorkThread* func_80455AA0();

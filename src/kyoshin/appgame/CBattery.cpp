@@ -1,14 +1,12 @@
 #include "kyoshin/appgame/CBattery.hpp"
+#include <stdio.h>
 #include "monolib/MemManager.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceFile.hpp"
-#include <stdio.h>
+#include "kyoshin/appgame/code_80135FDC.hpp"
 
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
-extern void func_80136E84(nw4r::lyt::Layout**, nw4r::lyt::ArcResourceAccessor*, const char*);
-extern void func_80137038(nw4r::lyt::Layout*, void*, int, int);
 extern void func_801390E0(CFileHandle**);
-extern void func_80139124(nw4r::lyt::ArcResourceAccessor*);
 extern void func_8045F778(UnkClass_8045F564*);
 extern void func_8045F810(UnkClass_8045F564*);
 
@@ -41,7 +39,7 @@ void CBattery::func_802B92FC(){
 //r4 inherits from DrawInfo
 void CBattery::func_802B9334(void* r4){
     if(unk22 == false || unk20 == false) return;
-    func_80137038(mLayout, r4, 0, 1);
+    func_80137038(mLayout, static_cast<nw4r::lyt::DrawInfo*>(r4), 0, 1);
 }
 
 void CBattery::func_802B9364(){
