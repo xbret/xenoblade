@@ -6,6 +6,7 @@
 #include "monolib/reslist.hpp"
 #include "monolib/CMsgParam.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/wroot.hpp"
 
 class CWorkThread : public IWorkEvent {
 public:
@@ -20,11 +21,12 @@ public:
     CWorkThread(const char* name, CWorkThread* parent, int capacity);
     virtual ~CWorkThread();
     virtual void wkUpdate();
-    virtual void WorkThreadEvent2(){}
-    virtual void WorkThreadEvent3(){}
+    virtual void wkRender() {}
+    virtual void wkRenderAfter() {}
+    // TODO(kiwi) are these wkStandbyLogin/wkStandbyLogout?
     virtual bool wkStartup();
     virtual bool wkShutdown();
-    virtual bool WorkThreadEvent6(){ return true; }
+    virtual bool wkException(WORK_ID wid) { return true; }
 
     CWorkThread* wkGetChild() {
         return mChildren.front();
