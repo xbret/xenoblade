@@ -3,6 +3,7 @@
 #include "types.h"
 #include "monolib/FixStr.hpp"
 #include "monolib/CProc.hpp"
+#include "monolib/CDesktop.hpp"
 #include "nw4r/types_nw4r.h"
 
 //Forward declarations
@@ -34,6 +35,13 @@ public:
     virtual void WorkEvent5(UNKTYPE* r4);
     static void func_80039D08();
 
+    static inline CGame* init(const char* name, CWorkThread* workThread, u32 r5){
+        CGame* game = new (WorkThreadSystem::getHeapHandle()) CGame(name, workThread);
+        game->func_80438BD8(workThread, 0);
+        game->unk1E4 = r5;
+        return game;
+    }
+
     //0x0: vtable
     //0x0-1ec: CProc
     CView* mView; //0x1EC
@@ -60,9 +68,9 @@ namespace {
     public:
         friend class CGame;
 
-        CGameRestart(const char* name, CWorkThread* workThread, int r6) : CProc(name, workThread, r6){
-            unk1EC = -1;
-        }
+        CGameRestart(const char* name, CWorkThread* workThread, int r6) :
+        CProc(name, workThread, r6),
+        unk1EC(-1) {}
         virtual ~CGameRestart(){}
         virtual void wkUpdate(){
             CWorkThread* r3 = CWorkThreadSystem_getWorkThread(unk1EC);
@@ -71,6 +79,15 @@ namespace {
                 func_80437EF0(0);
                 sInstance = nullptr;
             }
+        }
+
+        static inline CGameRestart* init(const char* name, CWorkThread* workThread){
+            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, workThread, 8);
+            
+            gameRestart->func_80438BD8(workThread, 0);
+            gameRestart->unk1E4 = func_80455AA0()->unk4C;
+            sInstance = gameRestart;
+            return gameRestart;
         }
 
         int unk1EC;

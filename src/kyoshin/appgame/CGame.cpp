@@ -74,15 +74,7 @@ bool CGame::func_8003933C(){
 void CGame::func_80039364(){
     if(sInstance == nullptr) GameMain();
     else if(CGameRestart::sInstance == nullptr){
-        CDesktop* desktop = CDesktop::getInstance();
-        const char* name = "CGameRestart";
-        CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, desktop, 8);
-        gameRestart->func_80438BD8(desktop, 0);
-        
-        CWorkThread* temp_r3 = func_80455AA0();
-        u32 r0 = temp_r3->unk4C;
-        gameRestart->unk1E4 = r0;
-        CGameRestart::sInstance = gameRestart;
+        CGameRestart* gameRestart = CGameRestart::init("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
             gameRestart->unk1EC = sInstance->unk4C;
@@ -251,22 +243,21 @@ bool CGame::wkShutdown(){
 }
 
 //Dummy function to force the ArcResourceAccessor dtor to generate here
-void dummy(){
+static void dummy(){
     nw4r::lyt::ArcResourceAccessor* accessor = new nw4r::lyt::ArcResourceAccessor();
     accessor->Attach(0,0);
     delete accessor;
 }
 
 void CGame::GameMain(){
+    CGame* game;
+    u32 val;
+
     if(sInstance != nullptr){
         sInstance->func_804391A8();
     }else{
-        u32 r29 = func_80455AA0()->unk4C;
-        CDesktop* desktop = CDesktop::getInstance();
-        const char* name = "巨神"; //"Bionis"
-        CGame* cGame = new (WorkThreadSystem::getHeapHandle()) CGame(name, desktop);
-        cGame->func_80438BD8(desktop, 0);
-        cGame->unk1E4 = r29;
+        //TODO: can this inline be rewritten to only take the first two arguments?
+        init("CGame", CDesktop::getInstance(), func_80455AA0()->unk4C);
     }
 }
 

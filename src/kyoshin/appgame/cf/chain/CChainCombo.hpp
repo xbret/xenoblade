@@ -8,9 +8,11 @@ void func_802AA338();
 
 namespace cf {
     
+    /*
     int lbl_8053C140[3] = {
         1800, 1200, 600
     };
+    */
 
     //size: 0x18
     class CChainCombo {

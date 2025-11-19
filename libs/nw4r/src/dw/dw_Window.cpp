@@ -9,7 +9,7 @@ namespace nw4r
     namespace dw
     {
         // Dummy function
-        void dummy(ut::CharWriter* charWriter)
+        static void dummy(ut::CharWriter* charWriter)
         {
             ut::Color color;
             charWriter->SetTextColor(color, color);

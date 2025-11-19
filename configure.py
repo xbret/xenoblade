@@ -160,8 +160,8 @@ if not config.non_matching:
 # Tool versions
 config.binutils_tag = "2.42-1"
 config.compilers_tag = "20250812"
-config.dtk_tag = "v1.7.0"
-config.objdiff_tag = "v3.4.0"
+config.dtk_tag = "v1.7.1"
+config.objdiff_tag = "v3.4.1"
 config.sjiswrap_tag = "v1.2.2"
 config.wibo_tag = "1.0.0-beta.4"
 
@@ -422,7 +422,7 @@ config.libs = [
         "cflags": cflags_game,
         "progress_category": "game",
         "objects": [
-            Object(NonMatching, "kyoshin/appgame/CGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+            Object(Matching, "kyoshin/appgame/CGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(Matching, "kyoshin/appgame/main.cpp"),
             Object(Matching, "kyoshin/appgame/plugin/pluginDeb.cpp"),
             Object(Matching, "kyoshin/appgame/plugin/pluginWait.cpp"),

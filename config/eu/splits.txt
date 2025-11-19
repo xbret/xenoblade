@@ -21,7 +21,7 @@ kyoshin/appgame/CGame.cpp:
 	.rodata     start:0x804FA1E0 end:0x804FA258
 	.data       start:0x805248E0 end:0x80524A80
 	.bss        start:0x80570480 end:0x805704C8
-	.sdata      start:0x80661880 end:0x806618B8
+	.sdata      start:0x80661880 end:0x806618B0
 	.sbss       start:0x80663D00 end:0x80663D10
 	.sdata2     start:0x80665AA0 end:0x80665AB8
 
@@ -41,7 +41,7 @@ split1.s:
 	.rodata     start:0x804FA410 end:0x805139D8
 	.data       start:0x80524B98 end:0x8053B928
 	.bss        start:0x805704C8 end:0x80577790
-	.sdata      start:0x806618B8 end:0x80662F30
+	.sdata      start:0x806618B0 end:0x80662F30
 	.sbss       start:0x80663D10 end:0x80664C40
 	.sdata2     start:0x80665B80 end:0x80669020
 
@@ -59,9 +59,6 @@ PowerPC_EABI_Support/src/Runtime/__va_arg.c:
 PowerPC_EABI_Support/src/Runtime/global_destructor_chain.c:
 	.text       start:0x802BC10C end:0x802BC16C
 	.sbss       start:0x80664C40 end:0x80664C48
-
-PowerPC_EABI_Support/src/MetroTRK/__exception.s:
-	.init       start:0x80004380 end:0x800062C0
 
 PowerPC_EABI_Support/src/Runtime/NMWException.cp:
 	extab       start:0x8001BF94 end:0x8001BFDC
@@ -1488,6 +1485,9 @@ RVL_SDK/src/revolution/os/OSStateTM.c:
 	.bss        start:0x805D1AE0 end:0x805D1BA0
 	.sbss       start:0x80665200 end:0x80665220
 
+PowerPC_EABI_Support/src/MetroTRK/__exception.s:
+	.init       start:0x80004380 end:0x800062C0
+
 RVL_SDK/src/revolution/os/__start.c:
 	.init       start:0x800062C0 end:0x800065C0
 	.sbss       start:0x80665220 end:0x80665228
@@ -1641,6 +1641,20 @@ RVL_SDK/src/revolution/wud/WUD.c:
 RVL_SDK/src/revolution/wud/WUDHidHost.c:
 	.text       start:0x8037ED60 end:0x8037F350 align:16
 	.data       start:0x8055FD90 end:0x80560028
+
+criware_data.s:
+	.rodata     start:0x80515788 end:0x8051D4A0
+	.data       start:0x80560028 end:0x80568F38
+	.bss        start:0x805DFDA8 end:0x8061A4D8
+
+nw4r_data.s:
+	.rodata     start:0x8051D4A0 end:0x80522410
+	.data       start:0x80568F38 end:0x8056B0E0
+	.bss        start:0x8061A4D8 end:0x80653EE0
+	.sdata      start:0x80663450 end:0x80663500
+	.sbss       start:0x80665438 end:0x80665570
+	.sdata2     start:0x80669A68 end:0x8066A178
+	.sbss2      start:0x8066B550 end:0x8066B558
 
 RVL_SDK/src/revolution/wud/debug_msg.c:
 	.text       start:0x8037F350 end:0x8037F3A0 align:16
@@ -2567,20 +2581,6 @@ nw4r/src/ut/ut_CharWriter.temp.cpp:
 nw4r/src/ut/ut_TextWriterBase.temp.cpp:
 	.text       start:0x80432FBC end:0x80435010
 	.ctors      start:0x804FA100 end:0x804FA104
-
-criware_data.s:
-	.rodata     start:0x80515788 end:0x8051D4A0
-	.data       start:0x80560028 end:0x80568F38
-	.bss        start:0x805DFDA8 end:0x8061A4D8
-
-nw4r_data.s:
-	.rodata     start:0x8051D4A0 end:0x80522410
-	.data       start:0x80568F38 end:0x8056B0E0
-	.bss        start:0x8061A4D8 end:0x80653EE0
-	.sdata      start:0x80663450 end:0x80663500
-	.sbss       start:0x80665438 end:0x80665570
-	.sdata2     start:0x80669A68 end:0x8066A178
-	.sbss2      start:0x8066B550 end:0x8066B558
 
 monolib1.s:
 	extab       start:0x8001C02C end:0x8001CB24

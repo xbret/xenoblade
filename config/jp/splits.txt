@@ -21,7 +21,7 @@ kyoshin/appgame/CGame.cpp:
 	.rodata     start:0x804F5B20 end:0x804F5B88
 	.data       start:0x805281E0 end:0x80528380
 	.bss        start:0x80573C80 end:0x80573CC8
-	.sdata      start:0x80664180 end:0x806641B8
+	.sdata      start:0x80664180 end:0x806641B0
 	.sbss       start:0x80666600 end:0x80666610
 	.sdata2     start:0x80668380 end:0x806683A0
 
@@ -89,7 +89,7 @@ kyoshin/appgame/plugin/ocUnit.cpp:
 	.text       start:0x8003BC10 end:0x80040144
 	.rodata     start:0x804F5D88 end:0x804F60D0
 	.data       start:0x805286A8 end:0x80529310
-	.sdata      start:0x806641B8 end:0x80664208
+	.sdata      start:0x806641B0 end:0x80664208
 	.sdata2     start:0x806684C8 end:0x80668600
 
 kyoshin/appgame/CTaskGame.cpp:

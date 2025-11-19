@@ -4,7 +4,7 @@
 //Unused file. Needed to generate rtti info for std::exception in the right place.
 
 //Dummy function to force the rtti info to generate
-void dummy(){
+static void dummy(){
     throw std::bad_alloc();
 }
 
