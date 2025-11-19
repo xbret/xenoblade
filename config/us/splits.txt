@@ -13,7 +13,7 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
-kyoshin/appgame/CGame.cpp:
+kyoshin/appgame/CGame.cpp.temp:
 	extab       start:0x800066E0 end:0x800067C4
 	extabindex  start:0x800211C0 end:0x800212A4
 	.text       start:0x800395A0 end:0x8003A2A8

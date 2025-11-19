@@ -250,9 +250,6 @@ static void dummy(){
 }
 
 void CGame::GameMain(){
-    CGame* game;
-    u32 val;
-
     if(sInstance != nullptr){
         sInstance->func_804391A8();
     }else{
@@ -307,7 +304,7 @@ bool CGame::wkException(u32 wid){
     if(exception->mException == nullptr) return true;
     else{
         IGameException* gameException = exception->mException;
-        gameException->func0C(exception->unk204);
+        return gameException->func0C(exception->unk204);
     }
 }
 
