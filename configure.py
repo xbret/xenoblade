@@ -108,7 +108,7 @@ parser.add_argument(
     "--ninja",
     metavar="BINARY",
     type=Path,
-    help="path to ninja binary (optional)"
+    help="path to ninja binary (optional)",
 )
 parser.add_argument(
     "--verbose",
@@ -163,7 +163,7 @@ config.compilers_tag = "20250812"
 config.dtk_tag = "v1.7.1"
 config.objdiff_tag = "v3.4.1"
 config.sjiswrap_tag = "v1.2.2"
-config.wibo_tag = "1.0.0-beta.4"
+config.wibo_tag = "1.0.0-beta.5"
 
 # Project
 config.config_path = Path("config") / config.version / "config.yml"
@@ -1844,6 +1844,7 @@ def link_order_callback(module_id: int, objects: List[str]) -> List[str]:
     if module_id == 0:  # DOL
         return objects + ["dummy.c"]
     return objects
+
 
 # Uncomment to enable the link order callback.
 # config.link_order_callback = link_order_callback
