@@ -11,7 +11,7 @@ Note that the project has a [format file](../.clang-format), so for a more concr
 3. [Indentation](#indentation)
 4. [Naming](#naming)
 5. [Struct/Class Members](#structclass-members)
-6. [Includes](#includes)
+6. [Includes/Headers](#includes-headers)
 7. [Formatting](#formatting)
 
 ## Data Types
@@ -83,13 +83,13 @@ mSecond(2),
 mThird(3) {}
 ```
 
-Namespaces should have indentation per level (without ending comments):
+Namespaces should have indentation per level + ending comment:
 ```cpp
 namespace One {
 	namespace Two {
 		//:>
-	}
-}
+	} // namespace Two
+} // namespace One
 ```
 
 ## Naming
@@ -103,8 +103,8 @@ void findThing(int whatToFind, Finder* finder){
 }
 ```
 
-Function names should generally also should use camel case, but in some cases Monolithsoft devs used uppercase ones, in which case that style should be used. The main example is for
-callback functions (like in IWorkEvent, CWorkThread, and CProcess):
+Function names should generally also should use camel case, but in some cases Monolithsoft devs used uppercase ones, in which case that style should be used. 
+The main example is for callback functions (like in IWorkEvent, CWorkThread, and CProcess):
 ```cpp
 class Banana : IWorkEvent {
 	virtual void OnEvent(){
@@ -135,13 +135,18 @@ void something(void* pBleh){
 }
 ```
 
-In most cases, the type shouldn't be included as in Hungarian notation, but it's fine for static strings, and if you want, pointers:
+In most cases, the type shouldn't be included as in Hungarian notation, but it's fine for static constant variables
+(such as strings), and if you want, pointers:
 ```cpp
 static const char* scString = ":3";
 
 class Fruit {
 	int* mpFruit;
 	static int* spValue;
+
+	static void SetValue(int* pValue){
+		spValue = pValue;
+	}
 };
 ```
 
@@ -166,11 +171,44 @@ struct UnkStruct {
 }
 ```
 
-## Includes
+## Includes/Headers
+
+### Header Guards
 
 All include files should have ``#pragma once`` at the start to prevent multiple inclusions.
 
 Include paths need to be the entire path, not just the filename.
+
+**Note**: for the RVL SDK/NW4R/Criware, header guards should be used.
+
+### Forward Declarations
+
+In header files with classes/struct declarations, there often are several other structs/classes that get referenced through the type of
+variables and return types of functions, usually either in the form of pointers of that type, or just the type itself. If a class has
+a non pointer variable of that class (meaning it includes a full copy of it within itself), it needs to have an include to the respective
+header to let the compiler know what variables the member contains. **However**, pointers don't need this, and instead can work by creating
+a "forward declaration", which is a simple declaration of that type. For example, instead of this:
+
+```cpp
+#include "Fruit.h" //Contains the Fruit class
+
+class Shop {
+	Fruit* fruit;
+};
+```
+
+This can be done instead:
+
+```cpp
+class Fruit; //Forward declaration for Fruit
+
+class Shop {
+	Fruit* fruit;
+};
+```
+
+This works since the compiler doesn't need to know the details of the class, just the type that the variable points to. This is useful as it limits
+the amount of headers that not just headers, but regular code files need to include.
 
 
 ## Formatting
