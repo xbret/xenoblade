@@ -87,7 +87,7 @@ bool CDevice::wkStartup(){
 }
 
 bool CDevice::wkShutdown(){
-    if(mChildThreads.empty() && CWorkSystem::getInstance() == nullptr
+    if(mChildren.empty() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
         return CWorkThread::wkShutdown();
     }
@@ -118,6 +118,6 @@ CDeviceException::~CDeviceException(){
 }
 
 bool CDeviceException::wkShutdown(){
-    if(mChildThreads.empty() == false) return false;
+    if(mChildren.empty() == false) return false;
     return CWorkThread::wkShutdown();
 }

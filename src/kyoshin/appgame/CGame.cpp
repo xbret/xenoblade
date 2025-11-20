@@ -77,7 +77,7 @@ void CGame::func_80039364(){
         CGameRestart* gameRestart = CGameRestart::init("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
-            gameRestart->unk1EC = sInstance->unk4C;
+            gameRestart->unk1EC = sInstance->mWorkID;
             sInstance->func_80437EF0(0);
         }
     }
@@ -218,7 +218,7 @@ bool CGame::wkShutdown(){
     }
 
     //Only continue with shutdown if all child threads are stopped
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         //Reset the task manager
         CTaskManager::Reset();
         
@@ -254,7 +254,7 @@ void CGame::GameMain(){
         sInstance->func_804391A8();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
-        init("CGame", CDesktop::getInstance(), func_80455AA0()->unk4C);
+        init("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
     }
 }
 
@@ -270,33 +270,33 @@ void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u3
     }
 }
 
-/* This function gets triggered when a certain exception occurs (seems to specifically be controller related
-errors like a controller disconnect). If the given work id corresponds to the right instance of CException,
-the given controller error message gets displayed.
+/* This function gets triggered when a certain exception occurs (including controller related
+errors like a controller disconnect). If the work thread's type matches the one for CException,
+the corresponding function in the error handler class instance is called to handle the exception.
 
-In this case, the class containing the error handler function is CfPadTask, which inherits from the type used
-for the error handler classes (seems to be IGameException, but unfortunately the RTTI doesn't specify the name.) */
+In the case of controller errors, the class containing the error handler function is CfPadTask,
+which inherits from the type used for the error handler classes (seems to be IGameException,
+but unfortunately the RTTI doesn't specify the name.) */
 bool CGame::wkException(u32 wid){
     if(mFlags & THREAD_FLAG_0) return true;
     if(func_8045DE00()) return false;
 
     //Get the work thread for the given id
     CWorkThread* workThread = CWorkThreadSystem_getWorkThread(wid);
-    CWorkThread* exceptionWorkThread;
+    CException* exception;
     
-    /* Check that the thread is valid, and has the right unk50 value (maybe enum w/ value for each
-    class?). If it's the right value, the type should be CException. */
-    //How does the UNK50_25 value relate to CException/this specific error?
+    //Check that the thread is valid, and has the right type id. If not, set the pointer to null.
     if(workThread == nullptr){
-        exceptionWorkThread = nullptr;
-    }else if(workThread->unk50 != UNK50_25){
-        exceptionWorkThread = nullptr;
-    }else exceptionWorkThread = workThread;
+        exception = nullptr;
+    }else if(workThread->mType != WORKTHREAD_CEXCEPTION){
+        exception = nullptr;
+    }else{
+        //The type matches, so casting should be safe
+        exception = static_cast<CException*>(workThread);
+    }
 
     //Invalid work thread, return
-    if(exceptionWorkThread == nullptr) return true;
-
-    CException* exception = static_cast<CException*>(exceptionWorkThread);
+    if(exception == nullptr) return true;
 
     if(exception->func_80457C8C() == false) return false;
 

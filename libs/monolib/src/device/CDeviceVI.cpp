@@ -116,7 +116,7 @@ UnkClass_80447FDC() {
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
     sInstance->unk4 |= 0x1;
     sInstance->unk4 |= 0x10;
-    mCallbackList.initList(16, unk54);
+    mCallbackList.initList(16, mAllocHandle);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
     func_804EE194(ptr);
@@ -310,7 +310,7 @@ bool CDeviceVI::wkStartup(){
 bool CDeviceVI::wkShutdown(){
     VISetBlack(VI_TRUE);
     VIFlush();
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
             return CWorkThread::wkShutdown();
