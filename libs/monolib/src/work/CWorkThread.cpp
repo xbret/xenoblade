@@ -286,8 +286,7 @@ void CWorkThread::wkStandby(){
                 break;
             }
         }
-    } else{
-        if(wkException(mExceptionWorkID)){
+    } else if(wkException(mExceptionWorkID)){
             CWorkThread* pExceptionThread = getWorkThread(mExceptionWorkID);
 
             if(pExceptionThread != nullptr){
@@ -296,7 +295,6 @@ void CWorkThread::wkStandby(){
 
             mExceptionWorkID = INVALID_WORK_ID;
             mFlags &= ~THREAD_FLAG_EXCEPTION;
-        }
     }
 }
 
@@ -324,7 +322,6 @@ CWorkThread* CWorkThread::getWorkThread(const char* name){
     }
 
     for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
-
         CWorkThread* result = (*it)->getWorkThread(name);
 
         if(result != nullptr && result->mState != THREAD_STATE_SHUTDOWN){
