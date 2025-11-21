@@ -79,7 +79,7 @@ public:
     //0x0: vtable
     //0x0-1c8: CDeviceBase
     //0x1c8-1d0: UnkClass_80447FDC
-    reslist<CDeviceVICb*> mCallbackList;
+    reslist<CDeviceVICb*> mCallbackList; //0x1D0
     u32 mTvFormat; //0x1F0
     u32 unk1F4;
     u32 mScanMode; //0x1F8

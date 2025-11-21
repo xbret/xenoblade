@@ -85,7 +85,7 @@ namespace {
             CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, workThread, 8);
             
             gameRestart->func_80438BD8(workThread, 0);
-            gameRestart->unk1E4 = func_80455AA0()->unk4C;
+            gameRestart->unk1E4 = func_80455AA0()->mWorkID;
             sInstance = gameRestart;
             return gameRestart;
         }

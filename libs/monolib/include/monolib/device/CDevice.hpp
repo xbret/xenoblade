@@ -9,7 +9,7 @@ class CDevice : public CWorkThread {
 public:
     CDevice(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x20) {
         sInstance = this;
-        unk50 = UNK50_10;
+        mType = WORKTHREAD_CDEVICE;
     }
 
     virtual ~CDevice();
@@ -38,7 +38,7 @@ public:
         
         bool result = true;
 
-        for(reslist<CWorkThread*>::iterator it = mChildThreads.begin(); it != mChildThreads.end(); it++){
+        for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
             CDeviceBase* deviceBase = static_cast<CDeviceBase*>(*it);
             if((deviceBase->unk1C4 & 1) == 0) result = false;
         }
