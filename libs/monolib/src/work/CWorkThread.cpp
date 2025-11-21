@@ -13,48 +13,48 @@ CWorkThread::CWorkThread(const char* pName, CWorkThread* pParent, int capacity)
       mFlags(0),
       mMsgQueue(0),
       unk1BC(0),
-      mExceptionWorkID(INVALID_WORK_ID) {
+      mExceptionWorkID(INVALID_WORK_ID){
 
     mAllocHandle = CWorkThreadSystem::sAllocHandle;
     mName = pName;
     mWorkID = CWorkThreadSystem::allocWID(this);
 
-    if(capacity > 0) {
+    if(capacity > 0){
         mChildren.initList(mAllocHandle, capacity);
     }
 
-    if(pParent != nullptr && pParent->CWorkThread_inline2()) {
+    if(pParent != nullptr && pParent->CWorkThread_inline2()){
         mFlags |= THREAD_FLAG_5;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_6)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_6)){
         mFlags |= THREAD_FLAG_6;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_7)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_7)){
         mFlags |= THREAD_FLAG_7;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_9)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_9)){
         mFlags |= THREAD_FLAG_9;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_8)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_8)){
         mFlags |= THREAD_FLAG_8;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_10)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_10)){
         mFlags |= THREAD_FLAG_10;
     }
 
-    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_0)) {
+    if(pParent != nullptr && (pParent->mFlags & THREAD_FLAG_0)){
         mFlags |= THREAD_FLAG_0;
     }
 }
 
-CWorkThread::~CWorkThread() {
-    if(!mChildren.empty()) {
-        for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++) {
+CWorkThread::~CWorkThread(){
+    if(!mChildren.empty()){
+        for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
             //Do nothing???
             ;
         }
@@ -63,57 +63,57 @@ CWorkThread::~CWorkThread() {
     CWorkThreadSystem::freeWID(mWorkID);
 }
 
-void CWorkThread::wkReplaceHasChild(int capacity) {
-    if(capacity > 0) {
+void CWorkThread::wkReplaceHasChild(int capacity){
+    if(capacity > 0){
         mChildren.destroyList();
         mChildren.initList(mAllocHandle, capacity);
     }
 }
 
-void CWorkThread::wkEntryChild(CWorkThread* pChild, bool dontNotify) {
-    if(dontNotify) {
+void CWorkThread::wkEntryChild(CWorkThread* pChild, bool dontNotify){
+    if(dontNotify){
         mChildren.push_back(pChild);
-    } else {
+    } else{
         mChildren.push_back(pChild);
         pChild->mParent = this;
     }
 }
 
-void CWorkThread::wkRemoveChild(CWorkThread* pChild) {
+void CWorkThread::wkRemoveChild(CWorkThread* pChild){
     mChildren.remove(pChild);
 }
 
-void CWorkThread::wkSetEvent(EVT evt) {
-    if(evt == EVT_NONE) {
+void CWorkThread::wkSetEvent(EVT evt){
+    if(evt == EVT_NONE){
         mFlags |= THREAD_FLAG_0;
-    } else {
+    } else{
         mMsgQueue.enqueue(evt);
     }
 
     wkSetEventChild(evt);
 }
 
-void CWorkThread::wkSetEventChild(EVT evt) {
-    for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++) {
+void CWorkThread::wkSetEventChild(EVT evt){
+    for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
         (*it)->wkSetEvent(evt);
     }
 }
 
-bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pName) {
+bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pName){
     CDeviceClock* pDevClock = CDeviceClock::getInstance();
-    if(pDevClock == nullptr || (!pDevClock->func_8044DEE0() && !arg1)) {
+    if(pDevClock == nullptr || (!pDevClock->func_8044DEE0() && !arg1)){
         return false;
     }
 
-    if(mFlags & THREAD_FLAG_1) {
+    if(mFlags & THREAD_FLAG_1){
         return true;
     }
 
-    if(mState != THREAD_STATE_INIT && mState != THREAD_STATE_LOGIN && mState != THREAD_STATE_RUN) {
+    if(mState != THREAD_STATE_INIT && mState != THREAD_STATE_LOGIN && mState != THREAD_STATE_RUN){
         return true;
     }
 
-    if(arg0 == 0) {
+    if(arg0 == 0){
         wkSetEvent(EVT_1);
         CWorkUtil::dispTree(CWorkControl::getInstance());
         return true;
@@ -122,36 +122,36 @@ bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pName) {
     return arg1;
 }
 
-bool CWorkThread::wkIsCurrent() const {
-    if(mParent != nullptr) {
+bool CWorkThread::wkIsCurrent() const{
+    if(mParent != nullptr){
         return this == mParent->wkGetChild();
     }
 
     return true;
 }
 
-CWorkThread* CWorkThread::getWorkThread(WORK_ID wid) {
-    if(wid == INVALID_WORK_ID) {
+CWorkThread* CWorkThread::getWorkThread(WORK_ID wid){
+    if(wid == INVALID_WORK_ID){
         return nullptr;
     }
 
     return CWorkThreadSystem::sWorkThreads[wid];
 }
 
-void CWorkThread::func_804385CC(u32) {}
+void CWorkThread::func_804385CC(u32){}
 
-void CWorkThread::wkTimeoutInit() {
+void CWorkThread::wkTimeoutInit(){
     (void)CDeviceClock::getInstance();
 }
 
-bool CWorkThread::wkStandbyInit() {
+bool CWorkThread::wkStandbyInit(){
     mState = THREAD_STATE_INIT;
     wkTimeoutInit();
     return true;
 }
 
-bool CWorkThread::wkStandbyRun() {
-    if(mFlags & THREAD_FLAG_0) {
+bool CWorkThread::wkStandbyRun(){
+    if(mFlags & THREAD_FLAG_0){
         mState = THREAD_STATE_RUN;
         wkTimeoutInit();
     }
@@ -159,77 +159,77 @@ bool CWorkThread::wkStandbyRun() {
     return mState == THREAD_STATE_RUN;
 }
 
-bool CWorkThread::wkStandbyShutdown() {
+bool CWorkThread::wkStandbyShutdown(){
     mState = THREAD_STATE_SHUTDOWN;
     wkTimeoutInit();
     return true;
 }
 
-void CWorkThread::wkStandby() {
+void CWorkThread::wkStandby(){
     mFlags &= 0xFFFF;
 
-    while(!mMsgQueue.empty()) {
-        switch(mMsgQueue.front().command) {
-            case EVT_1: {
+    while(!mMsgQueue.empty()){
+        switch(mMsgQueue.front().command){
+            case EVT_1:{
                 mFlags |= THREAD_FLAG_1;
                 break;
             }
 
-            case EVT_EXCEPTION: {
+            case EVT_EXCEPTION:{
                 mFlags |= THREAD_FLAG_EXCEPTION;
                 mExceptionWorkID = mMsgQueue.front().wid;
                 break;
             }
 
-            case EVT_3: {
+            case EVT_3:{
                 mFlags |= THREAD_FLAG_5;
                 break;
             }
 
-            case EVT_4: {
+            case EVT_4:{
                 mFlags |= THREAD_FLAG_6;
                 break;
             }
 
-            case EVT_PAUSE: {
+            case EVT_PAUSE:{
                 mFlags |= THREAD_FLAG_7;
                 OnPauseTrigger(true);
                 break;
             }
 
-            case EVT_UNPAUSE: {
+            case EVT_UNPAUSE:{
                 mFlags &= ~THREAD_FLAG_7;
                 OnPauseTrigger(false);
                 break;
             }
 
-            case EVT_7: {
-                if(!(mFlags & THREAD_FLAG_8)) {
+            case EVT_7:{
+                if(!(mFlags & THREAD_FLAG_8)){
                     mFlags |= THREAD_FLAG_9;
                 }
                 break;
             }
 
-            case EVT_8: {
-                if(!(mFlags & THREAD_FLAG_8)) {
+            case EVT_8:{
+                if(!(mFlags & THREAD_FLAG_8)){
                     mFlags &= ~THREAD_FLAG_9;
                 }
                 break;
             }
 
-            case EVT_10: {
+            case EVT_10:{
                 mFlags |= THREAD_FLAG_10;
                 OnPauseTrigger(true);
                 break;
             }
 
-            case EVT_11: {
+            case EVT_11:{
                 mFlags &= ~THREAD_FLAG_10;
                 OnPauseTrigger(false);
                 break;
             }
 
-            case EVT_9: {
+            case EVT_9:{
                 mFlags |= THREAD_FLAG_8;
                 break;
             }
@@ -238,59 +238,59 @@ void CWorkThread::wkStandby() {
         mMsgQueue.pop();
     }
 
-    if(!(mFlags & THREAD_FLAG_EXCEPTION)) {
-        switch(mState) {
-            case THREAD_STATE_NONE: {
-                if(!wkStandbyInit()) {
+    if(!(mFlags & THREAD_FLAG_EXCEPTION)){
+        switch(mState){
+            case THREAD_STATE_NONE:{
+                if(!wkStandbyInit()){
                     break;
                 }
 
                 //FALLTHROUGH
             }
 
-            case THREAD_STATE_INIT: {
-                if(mFlags & THREAD_FLAG_0) {
+            case THREAD_STATE_INIT:{
+                if(mFlags & THREAD_FLAG_0){
                     mState = THREAD_STATE_LOGIN;
                     wkTimeoutInit();
-                } else if(!wkStartup()) {
+                } else if(!wkStartup()){
                     break;
                 }
 
                 //FALLTHROUGH
             }
 
-            case THREAD_STATE_LOGIN: {
-                if(!wkStandbyRun()) {
+            case THREAD_STATE_LOGIN:{
+                if(!wkStandbyRun()){
                     break;
                 }
 
                 //FALLTHROUGH
             }
 
-            case THREAD_STATE_RUN: {
-                if(!wkShutdown()) {
+            case THREAD_STATE_RUN:{
+                if(!wkShutdown()){
                     break;
                 }
 
                 //FALLTHROUGH
             }
 
-            case THREAD_STATE_LOGOUT: {
+            case THREAD_STATE_LOGOUT:{
                 wkStandbyShutdown();
 
                 //FALLTHROUGH
             }
 
             case THREAD_STATE_SHUTDOWN:
-            default: {
+            default:{
                 break;
             }
         }
-    } else {
-        if(wkException(mExceptionWorkID)) {
+    } else{
+        if(wkException(mExceptionWorkID)){
             CWorkThread* pExceptionThread = getWorkThread(mExceptionWorkID);
 
-            if(pExceptionThread != nullptr) {
+            if(pExceptionThread != nullptr){
                 pExceptionThread->wkSetEvent(EVT_NONE);
             }
 
@@ -300,34 +300,34 @@ void CWorkThread::wkStandby() {
     }
 }
 
-bool CWorkThread::wkStartup() {
+bool CWorkThread::wkStartup(){
     mState = THREAD_STATE_LOGIN;
     wkTimeoutInit();
     return true;
 }
 
-bool CWorkThread::wkShutdown() {
+bool CWorkThread::wkShutdown(){
     mState = THREAD_STATE_LOGOUT;
     wkTimeoutInit();
     return true;
 }
 
-void CWorkThread::wkUpdate() {}
+void CWorkThread::wkUpdate(){}
 
-CWorkThread* CWorkThread::getWorkThread(const char* name) {
-    if(name == nullptr) {
+CWorkThread* CWorkThread::getWorkThread(const char* name){
+    if(name == nullptr){
         return nullptr;
     }
 
-    if(mName == name) {
+    if(mName == name){
         return this;
     }
 
-    for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++) {
+    for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
 
         CWorkThread* result = (*it)->getWorkThread(name);
 
-        if(result != nullptr && result->mState != THREAD_STATE_SHUTDOWN) {
+        if(result != nullptr && result->mState != THREAD_STATE_SHUTDOWN){
             return result;
         }
     }

@@ -4,7 +4,7 @@
 
 #include "monolib/work/CWorkThread.hpp"
 
-class CWorkFlowWiiReset : public CWorkThread {
+class CWorkFlowWiiReset : public CWorkThread{
 public:
     static CWorkFlowWiiReset* getInstance();
 

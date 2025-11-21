@@ -2,6 +2,6 @@
 
 CWorkFlowWiiReset* CWorkFlowWiiReset::spInstance = nullptr;
 
-CWorkFlowWiiReset* CWorkFlowWiiReset::getInstance() {
+CWorkFlowWiiReset* CWorkFlowWiiReset::getInstance(){
     return spInstance;
 }

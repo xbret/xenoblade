@@ -5,7 +5,7 @@
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/work/CWorkUtil.hpp"
 
-class CWorkControl : public CWorkThread {
+class CWorkControl : public CWorkThread{
 public:
     static CWorkControl* getInstance();
     static CWorkControl* create(CWorkThread* pParent);

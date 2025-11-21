@@ -5,7 +5,7 @@
 //Forward declarations
 class CWorkThread;
 
-class CWorkRoot {
+class CWorkRoot{
 public:
     static void initialize();
     static void destroy();
@@ -17,15 +17,4 @@ public:
 
     static void run();
     static void exit();
-
-private:
-    enum ExitType {
-        EXIT_TYPE_PROGRAM_END,
-        EXIT_TYPE_WII_MENU,
-        EXIT_TYPE_WII_RESTART,
-        EXIT_TYPE_WII_POWEROFF,
-    };
-
-private:
-    static ExitType sExitType;
 };

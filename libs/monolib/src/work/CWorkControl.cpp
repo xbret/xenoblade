@@ -21,22 +21,22 @@ CW_FORCE_STRINGS(CWorkControl_cpp,
 
 CWorkControl* CWorkControl::spInstance = nullptr;
 
-CWorkControl::CWorkControl(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD) {
+CWorkControl::CWorkControl(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD){
     spInstance = this;
     mType = WORKTHREAD_CWORKCONTROL;
 }
 
-CWorkControl::~CWorkControl() {
+CWorkControl::~CWorkControl(){
     spInstance = nullptr;
 }
 
-CWorkControl* CWorkControl::getInstance() {
+CWorkControl* CWorkControl::getInstance(){
     return spInstance;
 }
 
-bool CWorkControl::setFlowSetup() {
+bool CWorkControl::setFlowSetup(){
     CWorkFlowSetup* pFlowSetup = CWorkFlowSetup::getInstance();
-    if(pFlowSetup != nullptr) {
+    if(pFlowSetup != nullptr){
         return true;
     }
 
@@ -44,52 +44,52 @@ bool CWorkControl::setFlowSetup() {
     return true;
 }
 
-void CWorkControl::pause(bool paused) {
+void CWorkControl::pause(bool paused){
     getInstance()->wkSetEventChild(paused ? EVT_PAUSE : EVT_UNPAUSE);
 }
 
-bool CWorkControl::hasFlow() {
-    if(CWorkFlowWiiMenu::getInstance() != nullptr) {
+bool CWorkControl::hasFlow(){
+    if(CWorkFlowWiiMenu::getInstance() != nullptr){
         return true;
     }
 
-    if(CWorkFlowShutdownAll::getInstance() != nullptr) {
+    if(CWorkFlowShutdownAll::getInstance() != nullptr){
         return true;
     }
 
-    if(CWorkFlowWiiReset::getInstance() != nullptr) {
+    if(CWorkFlowWiiReset::getInstance() != nullptr){
         return true;
     }
 
-    if(CWorkFlowWiiPowerOff::getInstance() != nullptr) {
+    if(CWorkFlowWiiPowerOff::getInstance() != nullptr){
         return true;
     }
 
-    if(CWorkFlowSetup::getInstance() != nullptr) {
+    if(CWorkFlowSetup::getInstance() != nullptr){
         return true;
     }
 
     return false;
 }
 
-bool CWorkControl::wkStartup() {
+bool CWorkControl::wkStartup(){
     setFlowSetup();
     return CWorkThread::wkStartup();
 }
 
-bool CWorkControl::wkShutdown() {
-    if(mChildren.empty() && CDevice::getInstance() == nullptr) {
+bool CWorkControl::wkShutdown(){
+    if(mChildren.empty() && CDevice::getInstance() == nullptr){
         return CWorkThread::wkShutdown();
     }
 
     return false;
 }
 
-CWorkControl* CWorkControl::create(CWorkThread* pParent) {
+CWorkControl* CWorkControl::create(CWorkThread* pParent){
     return create("CWorkControl", pParent);
 }
 
-DECOMP_INLINE CWorkControl* CWorkControl::create(const char* pName, CWorkThread* pParent) {
+DECOMP_INLINE CWorkControl* CWorkControl::create(const char* pName, CWorkThread* pParent){
     CWorkControl* pWorkControl = new (CWorkThreadSystem::getWorkMem()) CWorkControl(pName, pParent);
 
     CWorkUtil::entryWork(pWorkControl, pParent, false);

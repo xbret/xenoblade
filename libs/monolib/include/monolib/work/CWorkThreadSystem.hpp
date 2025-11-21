@@ -13,7 +13,7 @@ Handle to a work memory region
 typedef u32 WORK_ID;
 static const WORK_ID INVALID_WORK_ID = 0xFFFFFFFF;
 
-class CWorkThreadSystem {
+class CWorkThreadSystem{
     friend class CWorkThread;
 
 public:
@@ -21,7 +21,7 @@ public:
     static void destroy();
 
     static WORK_ID allocWID(CWorkThread* thread);
-    static void freeWID(WORK_ID wid) {
+    static void freeWID(WORK_ID wid){
         sAllocFlags[wid / 32] &= ~(1 << wid % 32);
         sWorkThreads[wid] = nullptr;
     }

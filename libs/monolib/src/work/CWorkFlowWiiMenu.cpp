@@ -2,6 +2,6 @@
 
 CWorkFlowWiiMenu* CWorkFlowWiiMenu::spInstance = nullptr;
 
-CWorkFlowWiiMenu* CWorkFlowWiiMenu::getInstance() {
+CWorkFlowWiiMenu* CWorkFlowWiiMenu::getInstance(){
     return spInstance;
 }

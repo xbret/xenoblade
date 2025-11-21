@@ -4,7 +4,7 @@
 
 #include "monolib/work/CWorkThread.hpp"
 
-class CWorkFlowWiiPowerOff : public CWorkThread {
+class CWorkFlowWiiPowerOff : public CWorkThread{
 public:
     static CWorkFlowWiiPowerOff* getInstance();
 

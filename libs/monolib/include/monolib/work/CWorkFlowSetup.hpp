@@ -6,11 +6,11 @@
 #include "monolib/work/CWorkThreadSystem.hpp"
 #include "monolib/work/CWorkUtil.hpp"
 
-class CWorkFlowSetup : public CWorkThread {
+class CWorkFlowSetup : public CWorkThread{
 public:
     static CWorkFlowSetup* getInstance();
 
-    static CWorkFlowSetup* create(const char* pName, CWorkThread* pParent) {
+    static CWorkFlowSetup* create(const char* pName, CWorkThread* pParent){
         CWorkFlowSetup* pFlow = new (CWorkThreadSystem::getWorkMem()) CWorkFlowSetup(pName, pParent);
         CWorkUtil::entryWork(pFlow, pParent, 0);
         return pFlow;

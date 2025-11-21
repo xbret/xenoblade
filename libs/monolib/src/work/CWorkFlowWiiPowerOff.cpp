@@ -2,6 +2,6 @@
 
 CWorkFlowWiiPowerOff* CWorkFlowWiiPowerOff::spInstance = nullptr;
 
-CWorkFlowWiiPowerOff* CWorkFlowWiiPowerOff::getInstance() {
+CWorkFlowWiiPowerOff* CWorkFlowWiiPowerOff::getInstance(){
     return spInstance;
 }

@@ -2,6 +2,6 @@
 
 CWorkFlowShutdownAll* CWorkFlowShutdownAll::spInstance = nullptr;
 
-CWorkFlowShutdownAll* CWorkFlowShutdownAll::getInstance() {
+CWorkFlowShutdownAll* CWorkFlowShutdownAll::getInstance(){
     return spInstance;
 }

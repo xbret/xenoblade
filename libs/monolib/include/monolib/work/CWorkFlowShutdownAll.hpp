@@ -4,7 +4,7 @@
 
 #include "monolib/work/CWorkThread.hpp"
 
-class CWorkFlowShutdownAll : public CWorkThread {
+class CWorkFlowShutdownAll : public CWorkThread{
 public:
     static CWorkFlowShutdownAll* getInstance();
 

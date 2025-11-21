@@ -5,20 +5,20 @@
 
 CWorkFlowSetup* CWorkFlowSetup::spInstance = nullptr;
 
-CWorkFlowSetup::CWorkFlowSetup(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, 0), unk1C4(0) {
+CWorkFlowSetup::CWorkFlowSetup(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, 0), unk1C4(0){
     spInstance = this;
 }
 
-CWorkFlowSetup::~CWorkFlowSetup() {
+CWorkFlowSetup::~CWorkFlowSetup(){
     spInstance = nullptr;
 }
 
-CWorkFlowSetup* CWorkFlowSetup::getInstance() {
+CWorkFlowSetup* CWorkFlowSetup::getInstance(){
     return spInstance;
 }
 
-bool CWorkFlowSetup::wkStartup() {
-    if(CLib::isInitialized()) {
+bool CWorkFlowSetup::wkStartup(){
+    if(CLib::isInitialized()){
         wkSetEvent(EVT_NONE);
         return CWorkThread::wkStartup();
     }
@@ -26,6 +26,6 @@ bool CWorkFlowSetup::wkStartup() {
     return false;
 }
 
-bool CWorkFlowSetup::wkShutdown() {
+bool CWorkFlowSetup::wkShutdown(){
     return !mChildren.empty() ? false : CWorkThread::wkShutdown();
 }

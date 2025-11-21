@@ -14,7 +14,7 @@ u32* CWorkThreadSystem::sAllocFlags = nullptr;
 //Registered work threads, by ID
 CWorkThread** CWorkThreadSystem::sWorkThreads = nullptr;
 
-void CWorkThreadSystem::initialize() {
+void CWorkThreadSystem::initialize(){
     sAllocHandle = mtl::MemManager::create(mtl::MemManager::getHandleMEM1(), REGION_SIZE, scRegionName);
     sMemAvailable = true;
 
@@ -22,25 +22,25 @@ void CWorkThreadSystem::initialize() {
     sWorkThreads =
         static_cast<CWorkThread**>(mtl::MemManager::allocate_head(sAllocHandle, sizeof(CWorkThread*) * MAX_WORK_ID, 4));
 
-    for(WORK_ID i = 0; i < ALLOC_FLAGS_COUNT; i++) {
+    for(WORK_ID i = 0; i < ALLOC_FLAGS_COUNT; i++){
         sAllocFlags[i] = 0;
     }
 }
 
-WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread) {
+WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread){
     //Find the first set of alloc flags with a free bit
-    for(u32 flag = 0; flag < ALLOC_FLAGS_COUNT; flag++) {
+    for(u32 flag = 0; flag < ALLOC_FLAGS_COUNT; flag++){
 
         //All bits set means all IDs allocated
-        if(sAllocFlags[flag] != 0xFFFFFFFF) {
+        if(sAllocFlags[flag] != 0xFFFFFFFF){
 
             //Find the free bit in the flagset
             u32 mask = 1 << 0;
             u32 flags = sAllocFlags[flag];
 
-            for(u32 i = 0; i < 32; i++, mask <<= 1) {
+            for(u32 i = 0; i < 32; i++, mask <<= 1){
                 //ID is already allocated
-                if(flags & mask) {
+                if(flags & mask){
                     continue;
                 }
 
@@ -61,13 +61,13 @@ WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread) {
     return INVALID_WORK_ID;
 }
 
-void CWorkThreadSystem::destroy() {
-    if(sAllocFlags != nullptr) {
+void CWorkThreadSystem::destroy(){
+    if(sAllocFlags != nullptr){
         delete[] sAllocFlags;
         sAllocFlags = nullptr;
     }
 
-    if(sWorkThreads != nullptr) {
+    if(sWorkThreads != nullptr){
         mtl::MemManager::deallocate(sWorkThreads);
         sWorkThreads = nullptr;
     }
@@ -78,6 +78,6 @@ void CWorkThreadSystem::destroy() {
     sMemAvailable = false;
 }
 
-mtl::ALLOC_HANDLE CWorkThreadSystem::getWorkMem() {
+mtl::ALLOC_HANDLE CWorkThreadSystem::getWorkMem(){
     return sAllocHandle;
 }

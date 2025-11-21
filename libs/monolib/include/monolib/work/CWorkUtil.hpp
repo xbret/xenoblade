@@ -8,7 +8,7 @@
 //Forward declarations
 class CWorkThread;
 
-class CWorkUtil {
+class CWorkUtil{
 public:
     static UnkStruct_80438AF0_3* func_80438AF0(UnkStruct_80438AF0* arg0);
     static CWorkThread* getWorkThread(WORK_ID wid);

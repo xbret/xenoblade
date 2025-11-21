@@ -14,7 +14,7 @@
  casting from a generic instance of CWorkThread. Most classes inheriting from
  CWorkThread have a unique value reserved, but not all do. If a custom value
  isn't set, derived classes will default to the value for CWorkThread. */
-enum WorkThreadType {
+enum WorkThreadType{
     WORKTHREAD_CWORKTHREAD = 0,
     WORKTHREAD_CWORKCONTROL = 1,
     WORKTHREAD_CWORKSYSTEM = 2,
@@ -52,9 +52,9 @@ enum WorkThreadType {
 };
 
 //size: 0x1C4
-class CWorkThread : public IWorkEvent {
+class CWorkThread : public IWorkEvent{
 public:
-    enum EVT {
+    enum EVT{
         EVT_NONE,
         EVT_1,
         EVT_EXCEPTION,
@@ -69,7 +69,7 @@ public:
         EVT_11,
     };
 
-    enum ThreadFlags {
+    enum ThreadFlags{
         THREAD_FLAG_0 = 1 << 0,
         THREAD_FLAG_1 = 1 << 1,
         THREAD_FLAG_2 = 1 << 2,
@@ -83,7 +83,7 @@ public:
         THREAD_FLAG_10 = 1 << 10,
     };
 
-    enum ThreadState {
+    enum ThreadState{
         THREAD_STATE_NONE,
         THREAD_STATE_INIT,
         THREAD_STATE_LOGIN,
@@ -96,11 +96,11 @@ public:
     CWorkThread(const char* pName, CWorkThread* pParent, int capacity);
     virtual ~CWorkThread();
     virtual void wkUpdate();                //0x88
-    virtual void wkRender() {}              //0x8C
-    virtual void wkRenderAfter() {}         //0x90
+    virtual void wkRender(){}              //0x8C
+    virtual void wkRenderAfter(){}         //0x90
     virtual bool wkStartup();               //0x94
     virtual bool wkShutdown();              //0x98
-    virtual bool wkException(WORK_ID wid) { //0x9C
+    virtual bool wkException(WORK_ID wid){ //0x9C
         return true;
     }
 
@@ -121,22 +121,22 @@ public:
     static CWorkThread* getWorkThread(WORK_ID wid);
     CWorkThread* getWorkThread(const char* name);
 
-    CWorkThread* wkGetChild() {
+    CWorkThread* wkGetChild(){
         return mChildren.front();
     }
-    CWorkThread* wkGetChild() const {
+    CWorkThread* wkGetChild() const{
         return mChildren.front();
     }
 
-    bool IsRunning() const {
+    bool IsRunning() const{
         return (!IsException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
     }
 
-    bool IsException() const {
+    bool IsException() const{
         return (mFlags & THREAD_FLAG_EXCEPTION) ? true : mMsgQueue.find(EVT_EXCEPTION) >= 0;
     }
 
-    bool CWorkThread_inline2() const {
+    bool CWorkThread_inline2() const{
         return (mFlags & THREAD_FLAG_5) ? true : mMsgQueue.find(EVT_3) >= 0;
     }
 
@@ -158,5 +158,3 @@ private:
     bool wkStandbyRun();
     bool wkStandbyShutdown();
 };
-
-u32 func_804385A8(u32 r3);
