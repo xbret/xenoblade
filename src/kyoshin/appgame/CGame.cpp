@@ -54,7 +54,7 @@ unk228(0) {
     sInstance = this;
     CLibHbm_8045D5C8(1);
     func_80444874(&func_80039D08);
-    this->func_80437EF0(4);
+    this->wkSetEvent(EVT_4);
 }
 
 CGame::~CGame(){
@@ -77,8 +77,8 @@ void CGame::func_80039364(){
         CGameRestart* gameRestart = CGameRestart::init("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
-            gameRestart->unk1EC = sInstance->unk4C;
-            sInstance->func_80437EF0(0);
+            gameRestart->unk1EC = sInstance->mWorkID;
+            sInstance->wkSetEvent(EVT_NONE);
         }
     }
 }
@@ -218,7 +218,7 @@ bool CGame::wkShutdown(){
     }
 
     //Only continue with shutdown if all child threads are stopped
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         //Reset the task manager
         CTaskManager::Reset();
         
@@ -254,7 +254,7 @@ void CGame::GameMain(){
         sInstance->func_804391A8();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
-        init("CGame", CDesktop::getInstance(), func_80455AA0()->unk4C);
+        init("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
     }
 }
 
@@ -281,7 +281,7 @@ bool CGame::wkException(u32 wid){
     if(func_8045DE00()) return false;
 
     //Get the work thread for the given id
-    CWorkThread* workThread = CWorkThreadSystem_getWorkThread(wid);
+    CWorkThread* workThread = CWorkThread::getWorkThread(wid);
     CWorkThread* exceptionWorkThread;
     
     /* Check that the thread is valid, and has the right unk50 value (maybe enum w/ value for each
@@ -308,9 +308,9 @@ bool CGame::wkException(u32 wid){
     }
 }
 
-void CGame::WorkEvent5(UNKTYPE* r4){
+void CGame::OnPauseTrigger(bool paused){
     if(func_8007E1B4() != 0){
-        if(r4 != nullptr){
+        if(paused){
             if(unk228 == 0){
                 unk224 = func_801C0014();
                 func_801BFFAC(0,0);

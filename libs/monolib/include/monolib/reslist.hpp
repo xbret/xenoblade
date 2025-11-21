@@ -124,44 +124,47 @@ public:
     virtual ~reslist(){
     }
 
-    void remove(const T& item) {
-        _reslist_node<T>* startNode = mStartNodePtr;
-        _reslist_node<T>* curNode = startNode->mNext;
+    void remove(const T& item){
+        _reslist_node<T>* curr;
+        _reslist_node<T>* next;
+        _reslist_node<T>* head;
+
+        head = mStartNodePtr;
+        curr = head->mNext;
         
         //Walk through the list
-        while(curNode != startNode){
-            _reslist_node<T>* next = curNode->mNext;
+        while(curr != head){
+            //Save next node in case we invalidate the curr iterator
+            next = curr->mNext;
+
             //If we find an entry containing the item, remove the entry
-            if(curNode->mItem == item){
-                _reslist_node<T>* prev = curNode->mPrev;
+            if(curr->mItem == item){
+                _reslist_node<T>* prev = curr->mPrev;
                 prev->mNext = next;
                 next->mPrev = prev;
-                curNode->mNext = nullptr;
+                curr->mNext = nullptr;
             }
-            curNode = next;
+
+            curr = next;
         }
     }
 
     void push_back(const T& item){
-        _reslist_node<T>* r9 = mStartNodePtr;
-        u32 r8 = mCapacity;
-        int i = 0;
+        _reslist_node<T>* head = mStartNodePtr;
 
         //Go through the list until we find an empty slot
-        while(i < mCapacity){
-            if(mList[i].mNext == 0) break;
-            i++;
+        u32 i = 0;
+        for(; i < mCapacity; i++){
+            if(mList[i].mNext == nullptr) break;
         }
+    
+        _reslist_node<T>* pSlot = &mList[i];
+        new (&pSlot->mItem) T(item);
 
-
-        if(&mList[i].mItem != nullptr){
-            mList[i].mItem = item;
-        }
-
-        mList[i].mNext = r9;
-        mList[i].mPrev = r9->mPrev;
-        r9->mPrev->mNext = mList[i].mNext;
-        r9->mPrev = mList[i].mNext;
+        pSlot->mNext = head;
+        pSlot->mPrev = head->mPrev;
+        head->mPrev->mNext = pSlot;
+        head->mPrev = pSlot;
     }
 
 
@@ -205,9 +208,7 @@ public:
         mCapacity = 0;
     }
 
-
     inline bool empty() const {
         return mStartNodePtr->mNext == mStartNodePtr;
     }
-
 };

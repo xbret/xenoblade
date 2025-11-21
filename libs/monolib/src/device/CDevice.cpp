@@ -11,6 +11,7 @@
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/lib/CLib.hpp"
 #include "monolib/lib/CLibCri.hpp"
+#include "monolib/work/CWorkThread.hpp"
 
 using namespace ml;
 
@@ -82,12 +83,12 @@ CDeviceException* CDeviceException::getInstance(){
 bool CDevice::wkStartup(){
     CDeviceException::init("CDeviceException", this);
     CDevice::initDevices();
-    this->func_80437EF0(9);
+    this->wkSetEvent(EVT_9);
     return CWorkThread::wkStartup();
 }
 
 bool CDevice::wkShutdown(){
-    if(mChildThreads.empty() && CWorkSystem::getInstance() == nullptr
+    if(mChildren.empty() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
         return CWorkThread::wkShutdown();
     }
@@ -118,6 +119,6 @@ CDeviceException::~CDeviceException(){
 }
 
 bool CDeviceException::wkShutdown(){
-    if(mChildThreads.empty() == false) return false;
+    if(mChildren.empty() == false) return false;
     return CWorkThread::wkShutdown();
 }

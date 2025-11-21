@@ -34,12 +34,12 @@ public:
     }
 
     inline bool inline1(){
-        bool r0 = CWorkThread_inline1();
+        bool r0 = IsRunning();
         if(r0 == false) return false;
         
         bool result = true;
 
-        for(reslist<CWorkThread*>::iterator it = mChildThreads.begin(); it != mChildThreads.end(); it++){
+        for(reslist<CWorkThread*>::iterator it = mChildren.begin(); it != mChildren.end(); it++){
             CDeviceBase* deviceBase = static_cast<CDeviceBase*>(*it);
             if((deviceBase->unk1C4 & 1) == 0) result = false;
         }

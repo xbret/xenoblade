@@ -1,3 +1,4 @@
+#include <cmath>
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceGX.hpp"
@@ -116,7 +117,7 @@ UnkClass_80447FDC() {
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
     sInstance->unk4 |= 0x1;
     sInstance->unk4 |= 0x10;
-    mCallbackList.initList(16, unk54);
+    mCallbackList.initList(16, mAllocHandle);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
     func_804EE194(ptr);
@@ -145,7 +146,7 @@ void CDeviceVI::func_804482B0(u32 r3){
 }
 
 bool CDeviceVI::func_804482DC(){
-    bool result = sInstance->CWorkThread_inline1();
+    bool result = sInstance->IsRunning();
     return result == false || (sInstance->unk4 & 0x4) != 0 ? false : true;
 }
 
@@ -250,11 +251,11 @@ void CDeviceVI::func_80448A44(){
 void CDeviceVI::func_80448A84(){
     CDeviceVI* vi = sInstance;
 
-    u32 r0 = vi->mFlags & THREAD_FLAG_4;
+    u32 r0 = vi->mFlags & THREAD_FLAG_EXCEPTION;
     if(r0 != 0){
         r0 = 1;
     }else{
-        int r0_1 = vi->mThreadMsgParam.field4;
+        int r0_1 = vi->mMsgQueue.size();
         int r6 = 0;
         if(r0_1 > 0){
 
@@ -268,7 +269,7 @@ void CDeviceVI::func_80448A84(){
 
     u32 r0_2 = 0;
     if(r0 == 0){
-        int r4 = vi->unk48;
+        int r4 = vi->mState;
         u32 r3 = 1;
         if(r4 != 2 && r4 != 3){
             r3 = 0;
@@ -310,7 +311,7 @@ bool CDeviceVI::wkStartup(){
 bool CDeviceVI::wkShutdown(){
     VISetBlack(VI_TRUE);
     VIFlush();
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
             return CWorkThread::wkShutdown();

@@ -42,7 +42,7 @@ CDeviceGX* CDeviceGX::getInstance(){
 }
 
 bool CDeviceGX::func_804552B4(){
-    return sInstance->CWorkThread_inline1();
+    return sInstance->IsRunning();
 }
 
 void CDeviceGX::func_8045535C(u32 r3){
@@ -206,7 +206,7 @@ bool CDeviceGX::wkShutdown(){
         GXSetDrawSyncCallback(nullptr);
     }
 
-    if(mChildThreads.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
+    if(mChildren.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
         return CWorkThread::wkShutdown();
     }

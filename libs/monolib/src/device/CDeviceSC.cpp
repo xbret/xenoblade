@@ -37,7 +37,7 @@ u8 CDeviceSC::getLanguage(){
 }
 
 bool CDeviceSC::func_80447C60(){
-    return sInstance->CWorkThread_inline1();
+    return sInstance->IsRunning();
 }
 
 bool CDeviceSC::wkStartup(){
@@ -58,7 +58,7 @@ bool CDeviceSC::wkStartup(){
 }
 
 bool CDeviceSC::wkShutdown(){
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         if(CDeviceVI::getInstance() == nullptr){
             return CWorkThread::wkShutdown();
         }

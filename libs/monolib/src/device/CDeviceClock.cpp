@@ -17,7 +17,7 @@ unk1F0(0), unk1F8(0), unk200(0), unk208(0) {
     s64 time = getTimeNow();
     unk1F0 = time;
     unk1C8 |= 1;
-    unk1CC.initList(16, unk54);
+    unk1CC.initList(16, mAllocHandle);
 }
 
 CDeviceClock::~CDeviceClock(){
@@ -29,7 +29,7 @@ CDeviceClock* CDeviceClock::getInstance(){
 }
 
 bool CDeviceClock::func_8044DEE0(){
-    return sInstance->CWorkThread_inline1();
+    return sInstance->IsRunning();
 }
 
 s64 CDeviceClock::getTimeNow(){
@@ -65,7 +65,7 @@ bool CDeviceClock::wkStartup(){
 }
 
 bool CDeviceClock::wkShutdown(){
-    if(mChildThreads.empty()){
+    if(mChildren.empty()){
         if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
         && CLib::getInstance() == nullptr){
             return CWorkThread::wkShutdown(); //Call base
