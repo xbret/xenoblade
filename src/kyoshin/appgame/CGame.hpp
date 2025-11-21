@@ -6,6 +6,7 @@
 #include "monolib/CDesktop.hpp"
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include "nw4r/types_nw4r.h"
 
 //Forward declarations
@@ -39,7 +40,7 @@ public:
 
     static inline CGame* init(const char* name, CWorkThread* workThread, u32 r5){
         CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(name, workThread);
-        game->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(game, workThread, 0);
         game->unk1E4 = r5;
         return game;
     }
@@ -86,7 +87,7 @@ namespace {
         static inline CGameRestart* init(const char* name, CWorkThread* workThread){
             CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(name, workThread, 8);
             
-            gameRestart->func_80438BD8(workThread, 0);
+            CWorkUtil::entryWork(gameRestart, workThread, 0);
             gameRestart->unk1E4 = func_80455AA0()->mWorkID;
             sInstance = gameRestart;
             return gameRestart;

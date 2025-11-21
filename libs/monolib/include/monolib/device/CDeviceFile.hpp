@@ -5,6 +5,7 @@
 #include "monolib/MemManager.hpp"
 #include "monolib/CFileHandle.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
@@ -14,7 +15,7 @@ public:
 
     static inline CDeviceFile* init(const char* name, CWorkThread* workThread){
         CDeviceFile* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFile(name, workThread);
-        device->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(device, workThread, 0);
         return device;
     }
 

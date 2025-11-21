@@ -8,6 +8,7 @@
 #include "monolib/CGXCache.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include <revolution/GX.h>
 
 enum EVerticalFilter {
@@ -68,7 +69,7 @@ public:
 
     static inline CDeviceGX* init(const char* name, CWorkThread* workThread){
         CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(name, workThread);
-        device->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;
         return device;
     }

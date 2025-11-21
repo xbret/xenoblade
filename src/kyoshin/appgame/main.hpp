@@ -20,7 +20,6 @@ struct StaticArcFile{
 
 extern "C"{
     extern void func_80057CDC();
-    extern void CWorkRoot_Run();
     extern void CDesktop_SaveStartFunctionCallback(FunctionStruct*, u32);
     extern void CLibStaticData_saveStaticFileArray(StaticArcFile*);
     extern void CLibVM_SetCallbacks(void (*callback1)(), void (*callback2)());

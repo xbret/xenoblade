@@ -2,6 +2,7 @@
 
 #include "types.h"
 #include "monolib/work/CWorkThread.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1C8
 class CDeviceBase : public CWorkThread {
@@ -12,7 +13,7 @@ public:
     virtual ~CDeviceBase(){}
 
     inline void CDeviceBase_inline1(CWorkThread* workThread){
-        func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(this, workThread, 0);
         unk1C4 |= 1;
     }
 

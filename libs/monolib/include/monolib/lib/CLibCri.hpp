@@ -5,6 +5,7 @@
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1d0
 class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC {
@@ -15,7 +16,7 @@ public:
 
     static inline CLibCri* init(const char* name, CWorkThread* workThread){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(name, workThread);
-        lib->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(lib, workThread, 0);
         return lib;
     }
 

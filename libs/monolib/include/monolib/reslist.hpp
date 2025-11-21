@@ -189,7 +189,7 @@ public:
         return *begin();
     }
 
-    inline void initList(int capacity, int heapIndex) {
+    inline void initList(int heapIndex, int capacity) {
         mList = new (heapIndex) _reslist_node<T>[capacity];
 
         for(int i = 0; i < capacity; i++){

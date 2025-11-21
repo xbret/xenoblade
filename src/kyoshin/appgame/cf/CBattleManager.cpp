@@ -98,11 +98,11 @@ namespace cf{
     }
 
     CBattleManager::CBattleManager() : unk84(0) {
-        int heapIndex = CWorkThreadSystem::getWorkMem();
-        mActorList1.initList(64, heapIndex);
-        mActorList2.initList(8, heapIndex);
-        mActorList3.initList(56, heapIndex);
-        mBattleEventList.initList(4, heapIndex);
+        mtl::ALLOC_HANDLE heapIndex = CWorkThreadSystem::getWorkMem();
+        mActorList1.initList(heapIndex, 64);
+        mActorList2.initList(heapIndex, 8);
+        mActorList3.initList(heapIndex, 56);
+        mBattleEventList.initList(heapIndex, 4);
         UnkClass_805764CC* classPtr = UnkClass_805764CC::func_800B07E8();
         classPtr->func_800B8804(this);
         mVision.unk261C4.unk74 = 0;

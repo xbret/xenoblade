@@ -1,5 +1,6 @@
 #pragma once
 
+#include "monolib/work/CWorkUtil.hpp"
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/MemManager.hpp"
@@ -13,7 +14,7 @@ public:
 
     static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
         CDeviceRemotePad* device = new (CWorkThreadSystem::getWorkMem()) CDeviceRemotePad(name, workThread);
-        device->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(device, workThread, 0);
         return device;
     }
 

@@ -4,6 +4,7 @@
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {
@@ -13,7 +14,7 @@ public:
 
     static inline CDeviceFont* init(const char* name, CWorkThread* workThread){
         CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(name, workThread);
-        device->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(device, workThread, 0);
         return device;
     }
 

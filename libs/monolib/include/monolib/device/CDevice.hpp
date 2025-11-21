@@ -4,6 +4,7 @@
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1c8
 class CDevice : public CWorkThread {
@@ -29,7 +30,7 @@ public:
 
     static CDevice* init(const char* name, CWorkThread* workThread){
         CDevice* cDevice = new (CWorkThreadSystem::getWorkMem()) CDevice(name, workThread);
-        cDevice->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(cDevice, workThread, 0);
         return cDevice;
     }
 
@@ -68,7 +69,7 @@ namespace{
 
         static CDeviceException* init(const char* name, CWorkThread* workThread){
             CDeviceException* deviceException = new (CWorkThreadSystem::getWorkMem()) CDeviceException(name, workThread);
-            deviceException->func_80438BD8(workThread, 0);
+            CWorkUtil::entryWork(deviceException, workThread, 0);
             return deviceException;
         }
 

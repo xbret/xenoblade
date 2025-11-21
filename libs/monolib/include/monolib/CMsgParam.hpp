@@ -1,8 +1,19 @@
 #pragma once
 
-#include "monolib/work/CWorkThreadSystem.hpp"
 #include "types.h"
 
+#include "monolib/work/CWorkThreadSystem.hpp"
+
+// Message param entry format:
+// 0x0: message id
+// 0x4: work ID
+// 0x8: address
+// 0xC: code address
+// 0x10: value
+// 0x14: address
+// 0x18: address
+// 0x1C: address
+// 0x20: address (pointer to string?)
 struct CMsgParamEntry {
     u32 command; // 0x0
     WORK_ID wid; // 0x4
@@ -41,6 +52,7 @@ public:
         return mArrayPtr[mFront % mCapacity];
     }
 
+    // TODO(kiwi) Emitted at 804380b4
     void enqueue(u32 msg) {}
 
     void pop() {

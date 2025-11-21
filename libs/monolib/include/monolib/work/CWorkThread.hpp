@@ -1,12 +1,14 @@
 #pragma once
 
+#include "types.h"
+
 #include "monolib/CMsgParam.hpp"
 #include "monolib/FixStr.hpp"
 #include "monolib/IWorkEvent.hpp"
+#include "monolib/Math.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
-#include "types.h"
 
 /* Enum used to keep track of the type of this work thread, which is useful when
  casting from a generic instance of CWorkThread. Most classes inheriting from
@@ -18,7 +20,7 @@ enum WorkThreadType {
     WORKTHREAD_CWORKSYSTEM = 2,
     WORKTHREAD_03 = 3,
     WORKTHREAD_04 = 4,
-    WORKTHREAD_05,
+    WORKTHREAD_05 = 5,
     WORKTHREAD_CWORKSYSTEMCACHE = 6,
     WORKTHREAD_CWORKSYSTEMPACK = 7,
     WORKTHREAD_08 = 8,
@@ -49,7 +51,7 @@ enum WorkThreadType {
     WORKTHREAD_CDEVICEFILEJOBREADDVD = 68
 };
 
-// size: 0x1C4
+//size: 0x1C4
 class CWorkThread : public IWorkEvent {
 public:
     enum EVT {
@@ -58,8 +60,8 @@ public:
         EVT_EXCEPTION,
         EVT_3,
         EVT_4,
-        EVT_5,
-        EVT_6,
+        EVT_PAUSE,
+        EVT_UNPAUSE,
         EVT_7,
         EVT_8,
         EVT_9,
@@ -91,38 +93,33 @@ public:
     };
 
 public:
-    CWorkThread(const char* name, CWorkThread* parent, int capacity);
+    CWorkThread(const char* pName, CWorkThread* pParent, int capacity);
     virtual ~CWorkThread();
-    virtual void wkUpdate();                // 0x88
-    virtual void wkRender() {}              // 0x8C
-    virtual void wkRenderAfter() {}         // 0x90
-    virtual bool wkStartup();               // 0x94
-    virtual bool wkShutdown();              // 0x98
-    virtual bool wkException(WORK_ID wid) { // 0x9C
+    virtual void wkUpdate();                //0x88
+    virtual void wkRender() {}              //0x8C
+    virtual void wkRenderAfter() {}         //0x90
+    virtual bool wkStartup();               //0x94
+    virtual bool wkShutdown();              //0x98
+    virtual bool wkException(WORK_ID wid) { //0x9C
         return true;
     }
 
     void wkReplaceHasChild(int capacity);
-    void wkEntryChild(CWorkThread* parent, bool dontNotify);
-    void wkRemoveChild(CWorkThread* child);
+    void wkEntryChild(CWorkThread* pChild, bool dontNotify);
+    void wkRemoveChild(CWorkThread* pChild);
 
     void wkSetEvent(EVT evt);
     void wkSetEventChild(EVT evt);
 
-    bool wkCheckTimeout(u32 timeOut, bool arg1, const char* pName);
+    bool wkCheckTimeout(u32 arg0, bool arg1, const char* pName);
     bool wkIsCurrent() const;
-    static CWorkThread* getWorkThread(WORK_ID wid);
     void func_804385CC(u32);
 
     void wkTimeoutInit();
-    bool wkStandbyInit();
-    bool wkStandbyRun();
-    bool wkStandbyShutdown();
     void wkStandby();
 
+    static CWorkThread* getWorkThread(WORK_ID wid);
     CWorkThread* getWorkThread(const char* name);
-
-    void func_80438BD8(CWorkThread* r4, u32 r5);
 
     CWorkThread* wkGetChild() {
         return mChildren.front();
@@ -132,42 +129,34 @@ public:
     }
 
     bool IsRunning() const {
-        return (!IsException() &&
-                (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
+        return (!IsException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
     }
 
     bool IsException() const {
-        return (mFlags & THREAD_FLAG_EXCEPTION)
-                   ? true
-                   : mMsgQueue.find(EVT_EXCEPTION) >= 0;
+        return (mFlags & THREAD_FLAG_EXCEPTION) ? true : mMsgQueue.find(EVT_EXCEPTION) >= 0;
     }
 
     bool CWorkThread_inline2() const {
-        return (mFlags & THREAD_FLAG_5) ? true : (mMsgQueue.find(EVT_3) >= 0);
+        return (mFlags & THREAD_FLAG_5) ? true : mMsgQueue.find(EVT_3) >= 0;
     }
 
-    // 0x0: vtable
-    ml::FixStr<64> mName;            // 0x4
-    ThreadState mState;              // 0x48
-    WORK_ID mWorkID;                 // 0x4C
-    WorkThreadType mType;            // 0x50
-    mtl::ALLOC_HANDLE mAllocHandle;  // 0x54
-    CWorkThread* mParent;            // 0x58
-    reslist<CWorkThread*> mChildren; // 0x5C
-    u32 mFlags;                      // 0x7C
-    // Message param entry format:
-    // 0x0: id
-    // 0x4: address
-    // 0x8: address
-    // 0xC: code address
-    // 0x10: value
-    // 0x14: address
-    // 0x18: address
-    // 0x1C: address
-    // 0x20: address (pointer to string?)
-    CMsgParam<8> mMsgQueue; // 0x80
+    //0x0: vtable
+    ml::FixStr<64> mName;            //0x4
+    ThreadState mState;              //0x48
+    WORK_ID mWorkID;                 //0x4C
+    WorkThreadType mType;            //0x50
+    mtl::ALLOC_HANDLE mAllocHandle;  //0x54
+    CWorkThread* mParent;            //0x58
+    reslist<CWorkThread*> mChildren; //0x5C
+    u32 mFlags;                      //0x7C
+    CMsgParam<8> mMsgQueue;          //0x80
     u32 unk1BC;
-    WORK_ID mExceptionWorkID; // 0x1C0
+    WORK_ID mExceptionWorkID; //0x1C0
+
+private:
+    bool wkStandbyInit();
+    bool wkStandbyRun();
+    bool wkStandbyShutdown();
 };
 
 u32 func_804385A8(u32 r3);

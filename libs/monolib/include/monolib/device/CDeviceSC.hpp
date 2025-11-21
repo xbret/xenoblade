@@ -4,6 +4,7 @@
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1D0
 class CDeviceSC : public CDeviceBase {
@@ -20,7 +21,7 @@ public:
 
     static inline CDeviceSC* init(const char* name, CWorkThread* workThread){
         CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(name, workThread);
-        device->func_80438BD8(workThread, 0);
+        CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;
         return device;
     }
