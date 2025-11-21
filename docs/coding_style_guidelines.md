@@ -11,7 +11,7 @@ Note that the project has a [format file](../.clang-format), so for a more concr
 3. [Indentation](#indentation)
 4. [Naming](#naming)
 5. [Struct/Class Members](#structclass-members)
-6. [Includes/Headers](#includes-headers)
+6. [Includes/Headers](#includesheaders)
 7. [Formatting](#formatting)
 
 ## Data Types
