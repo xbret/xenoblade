@@ -54,7 +54,16 @@ public:
 
     enum ThreadFlags {
         THREAD_FLAG_0 = 1 << 0,
-        THREAD_FLAG_4 = 1 << 4
+        THREAD_FLAG_1 = 1 << 1,
+        THREAD_FLAG_2 = 1 << 2,
+        THREAD_FLAG_3 = 1 << 3,
+        THREAD_FLAG_4 = 1 << 4,
+        THREAD_FLAG_5 = 1 << 5,
+        THREAD_FLAG_6 = 1 << 6,
+        THREAD_FLAG_7 = 1 << 7,
+        THREAD_FLAG_8 = 1 << 8,
+        THREAD_FLAG_9 = 1 << 9,
+        THREAD_FLAG_10 = 1 << 10,
     };
 
     CWorkThread(const char* name, CWorkThread* workThread, int r6);
