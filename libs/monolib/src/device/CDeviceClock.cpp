@@ -34,7 +34,7 @@ CDeviceClock* CDeviceClock::getInstance(){
 }
 
 bool CDeviceClock::func_8044DEE0(){
-    return sInstance->IsRunning();
+    return sInstance->isRunning();
 }
 
 s64 CDeviceClock::getTimeNow(){

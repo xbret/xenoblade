@@ -146,7 +146,7 @@ void CDeviceVI::func_804482B0(u32 r3){
 }
 
 bool CDeviceVI::func_804482DC(){
-    bool result = sInstance->IsRunning();
+    bool result = sInstance->isRunning();
     return result == false || (sInstance->unk4 & 0x4) != 0 ? false : true;
 }
 

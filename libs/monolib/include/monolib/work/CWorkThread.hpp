@@ -128,11 +128,11 @@ public:
         return mChildren.front();
     }
 
-    bool IsRunning() const{
-        return (!IsException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
+    bool isRunning() const{
+        return (!isException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
     }
 
-    bool IsException() const{
+    bool isException() const{
         return (mFlags & THREAD_FLAG_EXCEPTION) ? true : mMsgQueue.find(EVT_EXCEPTION) >= 0;
     }
 

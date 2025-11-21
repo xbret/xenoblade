@@ -37,7 +37,7 @@ u8 CDeviceSC::getLanguage(){
 }
 
 bool CDeviceSC::func_80447C60(){
-    return sInstance->IsRunning();
+    return sInstance->isRunning();
 }
 
 bool CDeviceSC::wkStartup(){

@@ -35,7 +35,7 @@ public:
     }
 
     inline bool inline1(){
-        bool r0 = IsRunning();
+        bool r0 = isRunning();
         if(r0 == false) return false;
         
         bool result = true;
