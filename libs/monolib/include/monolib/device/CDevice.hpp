@@ -10,7 +10,7 @@ class CDevice : public CWorkThread {
 public:
     CDevice(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x20) {
         sInstance = this;
-        unk50 = UNK50_10;
+        mType = WORKTHREAD_CDEVICE;
     }
 
     virtual ~CDevice();

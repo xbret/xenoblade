@@ -3,15 +3,55 @@
 #include "monolib/CMsgParam.hpp"
 #include "monolib/FixStr.hpp"
 #include "monolib/IWorkEvent.hpp"
+#include "monolib/MemManager.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 #include "types.h"
 
+/* Enum used to keep track of the type of this work thread, which is useful when
+ casting from a generic instance of CWorkThread. Most classes inheriting from
+ CWorkThread have a unique value reserved, but not all do. If a custom value
+ isn't set, derived classes will default to the value for CWorkThread. */
+enum WorkThreadType {
+    WORKTHREAD_CWORKTHREAD = 0,
+    WORKTHREAD_CWORKCONTROL = 1,
+    WORKTHREAD_CWORKSYSTEM = 2,
+    WORKTHREAD_03 = 3,
+    WORKTHREAD_04 = 4,
+    WORKTHREAD_05,
+    WORKTHREAD_CWORKSYSTEMCACHE = 6,
+    WORKTHREAD_CWORKSYSTEMPACK = 7,
+    WORKTHREAD_08 = 8,
+    WORKTHREAD_09 = 9,
+    WORKTHREAD_CDEVICE = 10,
+    WORKTHREAD_CLIB = 11,
+    WORKTHREAD_CLIBG3D = 12,
+    WORKTHREAD_CLIBHBM = 13,
+    WORKTHREAD_CLIBLAYOUT = 14,
+    WORKTHREAD_CLIBCRI = 15,
+    WORKTHREAD_CLIBCRIMOVIEPLAY = 16,
+    WORKTHREAD_CLIBCRISTREAMINGPLAY = 17,
+    WORKTHREAD_CLIBVM = 18,
+    WORKTHREAD_CLIBSTATICDATA = 19,
+    WORKTHREAD_20 = 20,
+    WORKTHREAD_CPROCROOT = 21,
+    WORKTHREAD_CVIEWROOT = 22,
+    WORKTHREAD_CPROC = 23,
+    WORKTHREAD_CDESKTOP = 24,
+    WORKTHREAD_CEXCEPTION = 25,
+    WORKTHREAD_CLIBHBMCONTROL = 45,
+    WORKTHREAD_CVIEW = 48,
+    WORKTHREAD_CRSRCDATA = 56,
+    WORKTHREAD_CSCRIPTCODE = 59,
+    WORKTHREAD_CDEVICEFONTLAYER = 63,
+    WORKTHREAD_CDEVICEFONTLOADER = 64,
+    WORKTHREAD_CDEVICEFILEJOB = 65,
+    WORKTHREAD_CDEVICEFILEJOBREADDVD = 68
+};
+
+// size: 0x1C4
 class CWorkThread : public IWorkEvent {
 public:
-    /*
-    Work thread event
-    */
     enum EVT {
         EVT_NONE,
         EVT_1,
@@ -26,8 +66,6 @@ public:
         EVT_10,
         EVT_11,
     };
-
-    enum Unk50_Values { UNK50_10 = 10, UNK50_25 = 25 };
 
     enum ThreadFlags {
         THREAD_FLAG_0 = 1 << 0,
@@ -55,12 +93,12 @@ public:
 public:
     CWorkThread(const char* name, CWorkThread* parent, int capacity);
     virtual ~CWorkThread();
-    virtual void wkUpdate();
-    virtual void wkRender() {}
-    virtual void wkRenderAfter() {}
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
-    virtual bool wkException(WORK_ID wid) {
+    virtual void wkUpdate();                // 0x88
+    virtual void wkRender() {}              // 0x8C
+    virtual void wkRenderAfter() {}         // 0x90
+    virtual bool wkStartup();               // 0x94
+    virtual bool wkShutdown();              // 0x98
+    virtual bool wkException(WORK_ID wid) { // 0x9C
         return true;
     }
 
@@ -108,15 +146,26 @@ public:
         return (mFlags & THREAD_FLAG_5) ? true : (mMsgQueue.find(EVT_3) >= 0);
     }
 
-    ml::FixStr<64> mName; // 0x4
-    ThreadState mState;   // 0x48
-    WORK_ID mWorkID;      // 0x4C
-    int unk50;
+    // 0x0: vtable
+    ml::FixStr<64> mName;            // 0x4
+    ThreadState mState;              // 0x48
+    WORK_ID mWorkID;                 // 0x4C
+    WorkThreadType mType;            // 0x50
     mtl::ALLOC_HANDLE mAllocHandle;  // 0x54
     CWorkThread* mParent;            // 0x58
     reslist<CWorkThread*> mChildren; // 0x5C
     u32 mFlags;                      // 0x7C
-    CMsgParam<8> mMsgQueue;          // 0x80
+    // Message param entry format:
+    // 0x0: id
+    // 0x4: address
+    // 0x8: address
+    // 0xC: code address
+    // 0x10: value
+    // 0x14: address
+    // 0x18: address
+    // 0x1C: address
+    // 0x20: address (pointer to string?)
+    CMsgParam<8> mMsgQueue; // 0x80
     u32 unk1BC;
     WORK_ID mExceptionWorkID; // 0x1C0
 };

@@ -15,9 +15,17 @@ const char* CDeviceGX::someString = "GPCost";
 const u16 token1 = 0xB00B;
 const u16 token2 = 0xBEEF;
 
-CDeviceGX::CDeviceGX(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 0),
-CDeviceVICb(), unk1CC(false), mGxHeap(nullptr), mGxHeapEndAddr(nullptr), unk264(0), unk26C(0),
-unk270(0), unk274(1), mFilter(VFILTER_NONE){
+CDeviceGX::CDeviceGX(const char* name, CWorkThread* workThread) :
+CDeviceBase(name, workThread, 0),
+CDeviceVICb(),
+unk1CC(false),
+mGxHeap(nullptr),
+mGxHeapEndAddr(nullptr),
+unk264(0),
+unk26C(0),
+unk270(0),
+unk274(1),
+mFilter(VFILTER_NONE){
     sInstance = this;
     cacheInstance = &unk27C;
     mGxHeap = (u8*)mtl::MemManager::allocate_array_ex(gxHeapSize, CDevice::func_8044D058(), 32);

@@ -10,8 +10,13 @@ CDeviceClock* CDeviceClock::sInstance;
 
 /* Won't match because of stupid extab issue (the start pc for the first pc action
 is 0xA0 instead of 0xA4) */
-CDeviceClock::CDeviceClock(const char* name, CWorkThread* workThread) : CDeviceBase(name,workThread,0), unk1C8(0),
-unk1F0(0), unk1F8(0), unk200(0), unk208(0) {
+CDeviceClock::CDeviceClock(const char* name, CWorkThread* workThread) :
+CDeviceBase(name,workThread,0),
+unk1C8(0),
+unk1F0(0),
+unk1F8(0),
+unk200(0),
+unk208(0) {
     sInstance = this;
     memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
     s64 time = getTimeNow();
