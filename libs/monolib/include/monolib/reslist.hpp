@@ -124,55 +124,72 @@ public:
     virtual ~reslist(){
     }
 
-    void remove(const T& item) {
-        _reslist_node<T>* startNode = mStartNodePtr;
-        _reslist_node<T>* curNode = startNode->mNext;
+    void remove(const T& item){
+        _reslist_node<T>* curr;
+        _reslist_node<T>* next;
+        _reslist_node<T>* head;
+
+        head = mStartNodePtr;
+        curr = head->mNext;
         
         //Walk through the list
-        while(curNode != startNode){
-            _reslist_node<T>* next = curNode->mNext;
+        while(curr != head){
+            //Save next node in case we invalidate the curr iterator
+            next = curr->mNext;
+
             //If we find an entry containing the item, remove the entry
-            if(curNode->mItem == item){
-                _reslist_node<T>* prev = curNode->mPrev;
+            if(curr->mItem == item){
+                _reslist_node<T>* prev = curr->mPrev;
                 prev->mNext = next;
                 next->mPrev = prev;
-                curNode->mNext = nullptr;
+                curr->mNext = nullptr;
             }
-            curNode = next;
+
+            curr = next;
         }
     }
 
     void push_back(const T& item){
-        _reslist_node<T>* r9 = mStartNodePtr;
-        u32 r8 = mCapacity;
-        int i = 0;
+        _reslist_node<T>* head = mStartNodePtr;
 
         //Go through the list until we find an empty slot
-        while(i < mCapacity){
-            if(mList[i].mNext == 0) break;
-            i++;
+        u32 i = 0;
+        for(; i < mCapacity; i++){
+            if(mList[i].mNext == nullptr) break;
         }
+    
+        _reslist_node<T>* pSlot = &mList[i];
+        new (&pSlot->mItem) T(item);
 
-
-        if(&mList[i].mItem != nullptr){
-            mList[i].mItem = item;
-        }
-
-        mList[i].mNext = r9;
-        mList[i].mPrev = r9->mPrev;
-        r9->mPrev->mNext = mList[i].mNext;
-        r9->mPrev = mList[i].mNext;
+        pSlot->mNext = head;
+        pSlot->mPrev = head->mPrev;
+        head->mPrev->mNext = pSlot;
+        head->mPrev = pSlot;
     }
 
 
-    iterator begin(){
+    iterator begin() const {
         return iterator(mStartNodePtr->mNext);
     }
-    iterator end(){
+    iterator end() const {
         return iterator(mStartNodePtr);
     }
 
-    inline void initList(int capacity, int heapIndex) {
+    T& front() {
+        return *begin();
+    }
+    T& back() {
+        return *begin();
+    }
+
+    const T& front() const {
+        return *begin();
+    }
+    const T& back() const {
+        return *begin();
+    }
+
+    inline void initList(int heapIndex, int capacity) {
         mList = new (heapIndex) _reslist_node<T>[capacity];
 
         for(int i = 0; i < capacity; i++){
@@ -182,8 +199,16 @@ public:
         mCapacity = capacity;
     }
 
+    inline void destroyList(){
+        clear();
+        if (unk1C == 0 && mList != nullptr) {
+            delete[](this->mList);
+            mList = nullptr;
+        }
+        mCapacity = 0;
+    }
+
     inline bool empty() const {
         return mStartNodePtr->mNext == mStartNodePtr;
     }
-
 };

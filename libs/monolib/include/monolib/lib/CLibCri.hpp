@@ -4,6 +4,8 @@
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 
 //size: 0x1d0
 class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC {
@@ -13,8 +15,8 @@ public:
     virtual void UnkVirtualFunc2();
 
     static inline CLibCri* init(const char* name, CWorkThread* workThread){
-        CLibCri* lib = new (WorkThreadSystem::getHeapHandle()) CLibCri(name, workThread);
-        lib->func_80438BD8(workThread, 0);
+        CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(name, workThread);
+        CWorkUtil::entryWork(lib, workThread, 0);
         return lib;
     }
 

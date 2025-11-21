@@ -4,10 +4,6 @@
 #include "monolib/CFileHandle.hpp"
 #include "monolib/MemManager.hpp"
 
-struct WorkThreadSystem {
-    static mtl::ALLOC_HANDLE getHeapHandle();
-};
-
 class CEventFile {
 public:
     BOOL unk0;
@@ -22,7 +18,7 @@ public:
     virtual bool OnFileEvent(CEventFile* pEventFile){ return false; }
     virtual bool WorkEvent3(){ return false; }
     virtual bool WorkEvent4(){ return false; }
-    virtual void WorkEvent5(UNKTYPE* r4){}
+    virtual void OnPauseTrigger(bool paused){}
     virtual bool WorkEvent6(){ return false; }
     virtual bool WorkEvent7(){ return false; }
     virtual bool WorkEvent8(){ return false; }

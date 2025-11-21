@@ -50,7 +50,7 @@ CDeviceGX* CDeviceGX::getInstance(){
 }
 
 bool CDeviceGX::func_804552B4(){
-    return sInstance->CWorkThread_inline1();
+    return sInstance->isRunning();
 }
 
 void CDeviceGX::func_8045535C(u32 r3){

@@ -54,7 +54,7 @@ unk228(0) {
     sInstance = this;
     CLibHbm_8045D5C8(1);
     func_80444874(&func_80039D08);
-    this->func_80437EF0(4);
+    this->wkSetEvent(EVT_4);
 }
 
 CGame::~CGame(){
@@ -78,7 +78,7 @@ void CGame::func_80039364(){
 
         if(gameRestart != nullptr){
             gameRestart->unk1EC = sInstance->mWorkID;
-            sInstance->func_80437EF0(0);
+            sInstance->wkSetEvent(EVT_NONE);
         }
     }
 }
@@ -282,7 +282,7 @@ bool CGame::wkException(u32 wid){
     if(func_8045DE00()) return false;
 
     //Get the work thread for the given id
-    CWorkThread* workThread = CWorkThreadSystem_getWorkThread(wid);
+    CWorkThread* workThread = CWorkThread::getWorkThread(wid);
     CException* exception;
     
     //Check that the thread is valid, and has the right type id. If not, set the pointer to null.
@@ -308,9 +308,9 @@ bool CGame::wkException(u32 wid){
     }
 }
 
-void CGame::WorkEvent5(UNKTYPE* r4){
+void CGame::OnPauseTrigger(bool paused){
     if(func_8007E1B4() != 0){
-        if(r4 != nullptr){
+        if(paused){
             if(unk228 == 0){
                 unk224 = func_801C0014();
                 func_801BFFAC(0,0);

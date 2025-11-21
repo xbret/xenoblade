@@ -8,6 +8,7 @@
 #include "kyoshin/appgame/plugin/pluginMain.hpp"
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
+#include "monolib/work/CWorkRoot.hpp"
 #include <revolution/GX.h>
 
 static FunctionStruct sGameMainFunction = {
@@ -162,5 +163,5 @@ int main(){
     SavePkhFilenamesArrayPtr(sPkhFilenames);
     func_80057CDC();
     CLibHbm_8045D5C8(1);
-    CWorkRoot_Run(); //Start up CWorkRoot, which later starts CGame
+    CWorkRoot::run(); //Start up CWorkRoot, which later starts CGame
 }

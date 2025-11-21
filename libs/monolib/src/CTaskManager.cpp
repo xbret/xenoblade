@@ -1,7 +1,7 @@
 #include "monolib/CTaskManager.hpp"
 #include "monolib/CTTask.hpp"
 #include "monolib/CProcess.hpp"
-#include "monolib/IWorkEvent.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 
 namespace {
@@ -43,16 +43,16 @@ void CTaskManager::Create() {
 
 void CTaskManager::Start() {
     //All register with NULL parent because they are root-level processes
-    spRootProcRealTime = new (WorkThreadSystem::getHeapHandle()) CRootProc();
+    spRootProcRealTime = new (CWorkThreadSystem::getWorkMem()) CRootProc();
     spRootProcRealTime->Regist(nullptr, false);
 
-    spRootProcGame = new (WorkThreadSystem::getHeapHandle()) CRootProc();
+    spRootProcGame = new (CWorkThreadSystem::getWorkMem()) CRootProc();
     spRootProcGame->Regist(nullptr, false);
 
-    spRootProcScn = new (WorkThreadSystem::getHeapHandle()) CRootProc();
+    spRootProcScn = new (CWorkThreadSystem::getWorkMem()) CRootProc();
     spRootProcScn->Regist(nullptr, false);
 
-    spRootProcUnknown = new (WorkThreadSystem::getHeapHandle()) CRootProc();
+    spRootProcUnknown = new (CWorkThreadSystem::getWorkMem()) CRootProc();
     spRootProcUnknown->Regist(nullptr, false);
 }
 

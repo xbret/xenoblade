@@ -3,7 +3,7 @@
 #include "types.h"
 #include "monolib/work/CWorkThread.hpp"
 
-class CWorkSystem : public CWorkThread {
+class CWorkSystem : public CWorkThread{
 public:
     static CWorkSystem* getInstance();
 };

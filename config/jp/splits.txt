@@ -5920,14 +5920,27 @@ monolib/src/CQuat.cpp:
 	.bss        start:0x8065A068 end:0x8065A088
 	.sdata2     start:0x8066CA60 end:0x8066CA78
 
-monolib/src/work/CWorkThread.cpp:
-	extab       start:0x8001C0F0 end:0x8001C1B4
-	extabindex  start:0x80033D34 end:0x80033E18
-	.text       start:0x8043738C end:0x80438C30
-	.rodata     start:0x80525D78 end:0x80525DE0
-	.data       start:0x8056E958 end:0x8056EA58
-	.sdata      start:0x80665E40 end:0x80665E60
+monolib/src/work/CWorkThreadSystem.cpp:
+	extab       start:0x8001C0F0 end:0x8001C100
+	extabindex  start:0x80033D34 end:0x80033D4C
+	.text       start:0x8043738C end:0x804375BC
+	.rodata     start:0x80525D78 end:0x80525D8C
+	.sdata      start:0x80665E40 end:0x80665E48
 	.sbss       start:0x80667E70 end:0x80667E80
+
+monolib/src/work/CWorkThread.cpp:
+	extab       start:0x8001C100 end:0x8001C1A4
+	extabindex  start:0x80033D4C end:0x80033E00
+	.text       start:0x804375BC end:0x80438AF0
+	.rodata     start:0x80525D8C end:0x80525DD8
+	.data       start:0x8056E958 end:0x8056EA58
+	.sdata      start:0x80665E48 end:0x80665E60
+
+monolib/src/work/CWorkUtil.cpp:
+	extab       start:0x8001C1A4 end:0x8001C1B4
+	extabindex  start:0x80033E00 end:0x80033E18
+	.text       start:0x80438AF0 end:0x80438C30
+	.rodata     start:0x80525DD8 end:0x80525DE0
 
 monolib/src/CProc.cpp:
 	extab       start:0x8001C1B4 end:0x8001C230
@@ -6025,11 +6038,27 @@ monolib/src/work/CWorkControl.cpp:
 monolib/src/work/CWorkFlowSetup.cpp:
 	extab       start:0x8001C75C end:0x8001C774
 	extabindex  start:0x80034358 end:0x8003437C
-	.text       start:0x804439CC end:0x80443B08
+	.text       start:0x804439CC end:0x80443AE8
 	.rodata     start:0x80526020 end:0x80526030
 	.data       start:0x8056F0F8 end:0x8056F1B0
 	.sdata      start:0x80665EE0 end:0x80665EE8
-	.sbss       start:0x80667EC0 end:0x80667EE8
+	.sbss       start:0x80667EC0 end:0x80667EC8
+
+monolib/src/work/CWorkFlowShutdownAll.cpp:
+	.text       start:0x80443AE8 end:0x80443AF0
+	.sbss       start:0x80667EC8 end:0x80667ED0
+
+monolib/src/work/CWorkFlowWiiMenu.cpp:
+	.text       start:0x80443AF0 end:0x80443AF8
+	.sbss       start:0x80667ED0 end:0x80667ED8
+
+monolib/src/work/CWorkFlowWiiReset.cpp:
+	.text       start:0x80443AF8 end:0x80443B00
+	.sbss       start:0x80667ED8 end:0x80667EE0
+
+monolib/src/work/CWorkFlowWiiPowerOff.cpp:
+	.text       start:0x80443B00 end:0x80443B08
+	.sbss       start:0x80667EE0 end:0x80667EE8
 
 monolib/src/work/CWorkRoot.cpp:
 	extab       start:0x8001C774 end:0x8001C838

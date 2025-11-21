@@ -4,6 +4,9 @@
 #include "monolib/FixStr.hpp"
 #include "monolib/CProc.hpp"
 #include "monolib/CDesktop.hpp"
+#include "monolib/work/CWorkThread.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include "nw4r/types_nw4r.h"
 
 //Forward declarations
@@ -32,12 +35,12 @@ public:
     static void GameMain();
     static void registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param);
     virtual bool wkException(u32 r4);
-    virtual void WorkEvent5(UNKTYPE* r4);
+    virtual void OnPauseTrigger(bool paused);
     static void func_80039D08();
 
     static inline CGame* init(const char* name, CWorkThread* workThread, u32 r5){
-        CGame* game = new (WorkThreadSystem::getHeapHandle()) CGame(name, workThread);
-        game->func_80438BD8(workThread, 0);
+        CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(name, workThread);
+        CWorkUtil::entryWork(game, workThread, 0);
         game->unk1E4 = r5;
         return game;
     }
@@ -73,18 +76,18 @@ namespace {
         unk1EC(-1) {}
         virtual ~CGameRestart(){}
         virtual void wkUpdate(){
-            CWorkThread* r3 = CWorkThreadSystem_getWorkThread(unk1EC);
+            CWorkThread* r3 = CWorkThread::getWorkThread(unk1EC);
             if(r3 == nullptr){
                 CGame::GameMain();
-                func_80437EF0(0);
+                wkSetEvent(EVT_NONE);
                 sInstance = nullptr;
             }
         }
 
         static inline CGameRestart* init(const char* name, CWorkThread* workThread){
-            CGameRestart* gameRestart = new (WorkThreadSystem::getHeapHandle()) CGameRestart(name, workThread, 8);
+            CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(name, workThread, 8);
             
-            gameRestart->func_80438BD8(workThread, 0);
+            CWorkUtil::entryWork(gameRestart, workThread, 0);
             gameRestart->unk1E4 = func_80455AA0()->mWorkID;
             sInstance = gameRestart;
             return gameRestart;

@@ -5,5 +5,6 @@
 class CLib {
 public:
     static CLib* getInstance();
-};
 
+    static bool isInitialized();
+};

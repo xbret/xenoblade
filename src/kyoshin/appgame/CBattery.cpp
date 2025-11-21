@@ -3,7 +3,9 @@
 #include "monolib/MemManager.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceFile.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
+#include <stdio.h>
 
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
 extern void func_801390E0(CFileHandle**);
@@ -24,7 +26,7 @@ CBattery::~CBattery(){
 }
 
 void CBattery::func_802B92A4(){
-    int heapIndex = WorkThreadSystem::getHeapHandle();
+    int heapIndex = CWorkThreadSystem::getWorkMem();
     mFileHandle = CDeviceFile::openFile1(heapIndex, "/menu/Battery.arc", (void*)this, 0, 0);
     //likely member functions of the class
     CDeviceFile::func_8044F154(mFileHandle, 3);
@@ -95,7 +97,7 @@ bool CBattery::OnFileEvent(CEventFile* pEventFile){
             func_802B9364();
             return true;
         }
-        int heapIndex = WorkThreadSystem::getHeapHandle();
+        int heapIndex = CWorkThreadSystem::getWorkMem();
         CLibLayout_addLayoutHeapEntry(&unk4, heapIndex, 0xC00, "CBattery", 0); //Add the class to the layout heap
         Class_8045F858 sp8 = Class_8045F858(&unk4);
         void* data = mFileHandle->mData;
