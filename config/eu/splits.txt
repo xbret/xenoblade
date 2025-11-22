@@ -13,7 +13,7 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
-kyoshin/appgame/CGame.cpp.temp:
+kyoshin/appgame/CGame.cpp:
 	extab       start:0x800066E0 end:0x800067C4
 	extabindex  start:0x800211C0 end:0x800212A4
 	.text       start:0x800395A0 end:0x8003A2A8
@@ -25,7 +25,7 @@ kyoshin/appgame/CGame.cpp.temp:
 	.sbss       start:0x80663D00 end:0x80663D10
 	.sdata2     start:0x80665AA0 end:0x80665AB8
 
-kyoshin/appgame/main.cpp.temp:
+kyoshin/appgame/main.cpp:
 	extab       start:0x800067C4 end:0x800067D4
 	extabindex  start:0x800212A4 end:0x800212BC
 	.text       start:0x8003A2A8 end:0x8003A414
@@ -1659,926 +1659,926 @@ nw4r_data.s:
 RVL_SDK/src/revolution/wud/debug_msg.c:
 	.text       start:0x8037F350 end:0x8037F3A0 align:16
 
-CriWare/src/adx/adxf/adx_fini.temp.c:
+CriWare/src/adx/adxf/adx_fini.c:
 	.text       start:0x8037F3A0 end:0x8037F4F8
 
-CriWare/src/adx/adxf/adx_fs.temp.c:
+CriWare/src/adx/adxf/adx_fs.c:
 	.text       start:0x8037F4F8 end:0x803822E8
 
-CriWare/src/adx/adxf/adx_fcch.temp.c:
+CriWare/src/adx/adxf/adx_fcch.c:
 	.text       start:0x803822E8 end:0x803822EC
 
-CriWare/src/adx/adxt/adx_fsvr.temp.c:
+CriWare/src/adx/adxt/adx_fsvr.c:
 	.text       start:0x803822EC end:0x803823E4
 
-CriWare/src/adx/adxt/adx_inis.temp.c:
+CriWare/src/adx/adxt/adx_inis.c:
 	.text       start:0x803823E4 end:0x80382690
 
-CriWare/src/adx/adxt/adx_lsc.temp.c:
+CriWare/src/adx/adxt/adx_lsc.c:
 	.text       start:0x80382690 end:0x803826F8
 
-CriWare/src/adx/adxt/adx_mng.temp.c:
+CriWare/src/adx/adxt/adx_mng.c:
 	.text       start:0x803826F8 end:0x80382798
 
-CriWare/src/adx/adxt/adx_sfa.temp.c:
+CriWare/src/adx/adxt/adx_sfa.c:
 	.text       start:0x80382798 end:0x803827C0
 
-CriWare/src/adx/adxt/adx_sjd.temp.c:
+CriWare/src/adx/adxt/adx_sjd.c:
 	.text       start:0x803827C0 end:0x80383CC8
 
-CriWare/src/adx/adxt/adx_stmc.temp.c:
+CriWare/src/adx/adxt/adx_stmc.c:
 	.text       start:0x80383CC8 end:0x80385390
 
-CriWare/src/adx/adxt/adx_tlk2.temp.c:
+CriWare/src/adx/adxt/adx_tlk2.c:
 	.text       start:0x80385390 end:0x803855A0
 
-CriWare/src/adx/adxt/adx_tlk.temp.c:
+CriWare/src/adx/adxt/adx_tlk.c:
 	.text       start:0x803855A0 end:0x803878BC
 
-CriWare/src/adx/adxt/adx_tsvr.temp.c:
+CriWare/src/adx/adxt/adx_tsvr.c:
 	.text       start:0x803878BC end:0x803888A8
 
-CriWare/src/adx/adxt/adx_xpnd.temp.c:
+CriWare/src/adx/adxt/adx_xpnd.c:
 	.text       start:0x803888A8 end:0x80388C90
 
-CriWare/src/adx/adxt/adx_amp.temp.c:
+CriWare/src/adx/adxt/adx_amp.c:
 	.text       start:0x80388C90 end:0x80388EA8
 
-CriWare/src/adx/adxt/adx_bahx.temp.c:
+CriWare/src/adx/adxt/adx_bahx.c:
 	.text       start:0x80388EA8 end:0x80388F78
 
-CriWare/src/adx/adxt/adx_baif.temp.c:
+CriWare/src/adx/adxt/adx_baif.c:
 	.text       start:0x80388F78 end:0x80389B08
 
-CriWare/src/adx/adxt/adx_bsc.temp.c:
+CriWare/src/adx/adxt/adx_bsc.c:
 	.text       start:0x80389B08 end:0x8038B640
 
-CriWare/src/adx/adxt/adx_bwav.temp.c:
+CriWare/src/adx/adxt/adx_bwav.c:
 	.text       start:0x8038B640 end:0x8038C584
 
-CriWare/src/adx/adxt/code_80389300.temp.c:
+CriWare/src/adx/adxt/code_80389300.c:
 	.text       start:0x8038C584 end:0x8038C628
 
-CriWare/src/adx/adxt/adx_crs.temp.c:
+CriWare/src/adx/adxt/adx_crs.c:
 	.text       start:0x8038C628 end:0x8038C690
 
-CriWare/src/adx/adxt/adx_dcd5.temp.c:
+CriWare/src/adx/adxt/adx_dcd5.c:
 	.text       start:0x8038C690 end:0x8038CD48
 
-CriWare/src/adx/adxt/adx_dcd.temp.c:
+CriWare/src/adx/adxt/adx_dcd.c:
 	.text       start:0x8038CD48 end:0x8038D40C
 
-CriWare/src/adx/adxt/adx_errs.temp.c:
+CriWare/src/adx/adxt/adx_errs.c:
 	.text       start:0x8038D40C end:0x8038D8EC
 
-CriWare/src/adx/ahx/ahx_ftbl.temp.c:
+CriWare/src/adx/ahx/ahx_ftbl.c:
 	.text       start:0x8038D8EC end:0x8038D918
 
-CriWare/src/adx/ahx/ahx_link.temp.c:
+CriWare/src/adx/ahx/ahx_link.c:
 	.text       start:0x8038D918 end:0x8038DC50
 
-CriWare/src/adx/ahx/ahx_mflt_c.temp.c:
+CriWare/src/adx/ahx/ahx_mflt_c.c:
 	.text       start:0x8038DC50 end:0x8038E148
 
-CriWare/src/adx/ahx/ahx_mwin2_c.temp.c:
+CriWare/src/adx/ahx/ahx_mwin2_c.c:
 	.text       start:0x8038E148 end:0x8038F608
 
-CriWare/src/adx/ahx/ahx_sbf2.temp.c:
+CriWare/src/adx/ahx/ahx_sbf2.c:
 	.text       start:0x8038F608 end:0x8038F6CC
 
-CriWare/src/adx/ahx/ahx_sbf.temp.c:
+CriWare/src/adx/ahx/ahx_sbf.c:
 	.text       start:0x8038F6CC end:0x8038FA00
 
-CriWare/src/adx/ahx/ahx_sjd.temp.c:
+CriWare/src/adx/ahx/ahx_sjd.c:
 	.text       start:0x8038FA00 end:0x803901C4
 
-CriWare/src/adx/ahx/ahx_wtbl.temp.c:
+CriWare/src/adx/ahx/ahx_wtbl.c:
 	.text       start:0x803901C4 end:0x803901F0
 
-CriWare/src/adx/ahx/adx_hdr.temp.c:
+CriWare/src/adx/ahx/adx_hdr.c:
 	.text       start:0x803901F0 end:0x80390548
 
-CriWare/src/adx/ahx/ahx_atbl.temp.c:
+CriWare/src/adx/ahx/ahx_atbl.c:
 	.text       start:0x80390548 end:0x803905A0
 
-CriWare/src/adx/ahx/ahx_bsr.temp.c:
+CriWare/src/adx/ahx/ahx_bsr.c:
 	.text       start:0x803905A0 end:0x80390C64
 
-CriWare/src/adx/ahx/ahx_cmn.temp.c:
+CriWare/src/adx/ahx/ahx_cmn.c:
 	.text       start:0x80390C64 end:0x80390C84
 
-CriWare/src/adx/ahx/ahx_dcd.temp.c:
+CriWare/src/adx/ahx/ahx_dcd.c:
 	.text       start:0x80390C84 end:0x80392748
 
-CriWare/src/adx/cricfg/cfg_lib.temp.c:
+CriWare/src/adx/cricfg/cfg_lib.c:
 	.text       start:0x80392748 end:0x803927FC
 
-CriWare/src/adx/cvfs/cri_cvfs.temp.c:
+CriWare/src/adx/cvfs/cri_cvfs.c:
 	.text       start:0x803927FC end:0x80393B8C
 
-CriWare/src/adx/gcci/gcci.temp.c:
+CriWare/src/adx/gcci/gcci.c:
 	.text       start:0x80393B8C end:0x803949AC
 
-CriWare/src/adx/gcci/gcci_sub.temp.c:
+CriWare/src/adx/gcci/gcci_sub.c:
 	.text       start:0x803949AC end:0x803949B8
 
-CriWare/src/adx/lsc/lsc_err.temp.c:
+CriWare/src/adx/lsc/lsc_err.c:
 	.text       start:0x803949B8 end:0x80394AB0
 
-CriWare/src/adx/lsc/lsc_ini.temp.c:
+CriWare/src/adx/lsc/lsc_ini.c:
 	.text       start:0x80394AB0 end:0x80394BC4
 
-CriWare/src/adx/lsc/lsc_svr.temp.c:
+CriWare/src/adx/lsc/lsc_svr.c:
 	.text       start:0x80394BC4 end:0x80394F58
 
-CriWare/src/adx/lsc/lsc.temp.c:
+CriWare/src/adx/lsc/lsc.c:
 	.text       start:0x80394F58 end:0x80395A0C
 
-CriWare/src/adx/lsc/lsc_crs.temp.c:
+CriWare/src/adx/lsc/lsc_crs.c:
 	.text       start:0x80395A0C end:0x80395A1C
 
-CriWare/src/adx/mfci/mfci.temp.c:
+CriWare/src/adx/mfci/mfci.c:
 	.text       start:0x80395A1C end:0x8039669C
 
-CriWare/src/adx/sj/sj_mem.temp.c:
+CriWare/src/adx/sj/sj_mem.c:
 	.text       start:0x8039669C end:0x803974BC
 
-CriWare/src/adx/sj/sj_rbf.temp.c:
+CriWare/src/adx/sj/sj_rbf.c:
 	.text       start:0x803974BC end:0x80398810
 
-CriWare/src/adx/sj/sj_uni.temp.c:
+CriWare/src/adx/sj/sj_uni.c:
 	.text       start:0x80398810 end:0x803997D4
 
-CriWare/src/adx/sj/sj_utl.temp.c:
+CriWare/src/adx/sj/sj_utl.c:
 	.text       start:0x803997D4 end:0x80399A3C
 
-CriWare/src/adx/sj/sj_crs.temp.c:
+CriWare/src/adx/sj/sj_crs.c:
 	.text       start:0x80399A3C end:0x80399B08
 
-CriWare/src/adx/sj/sj_err.temp.c:
+CriWare/src/adx/sj/sj_err.c:
 	.text       start:0x80399B08 end:0x80399B0C
 
-CriWare/src/adx/svm/svm.temp.c:
+CriWare/src/adx/svm/svm.c:
 	.text       start:0x80399B0C end:0x8039AD88
 
-CriWare/src/adx/adxt/adx_bsps.temp.c:
+CriWare/src/adx/adxt/adx_bsps.c:
 	.text       start:0x8039AD88 end:0x8039B2E8
 
-CriWare/src/adx/adxt/adx_bau.temp.c:
+CriWare/src/adx/adxt/adx_bau.c:
 	.text       start:0x8039B2E8 end:0x8039C310
 
-CriWare/src/adx/wiirna/rna_crs.temp.c:
+CriWare/src/adx/wiirna/rna_crs.c:
 	.text       start:0x8039C310 end:0x8039C318
 
-CriWare/src/adx/wiirna/rna_err.temp.c:
+CriWare/src/adx/wiirna/rna_err.c:
 	.text       start:0x8039C318 end:0x8039C384
 
-CriWare/src/adx/wiirna/ax_rna.temp.c:
+CriWare/src/adx/wiirna/ax_rna.c:
 	.text       start:0x8039C384 end:0x8039DD7C
 
-CriWare/src/adx/adxt/srcwii/adx_mwii.temp.c:
+CriWare/src/adx/adxt/srcwii/adx_mwii.c:
 	.text       start:0x8039DD7C end:0x8039E5F4
 
-CriWare/src/adx/adxt/srcwii/adx_suwii.temp.c:
+CriWare/src/adx/adxt/srcwii/adx_suwii.c:
 	.text       start:0x8039E5F4 end:0x8039E6C4
 
-CriWare/src/adx/adxt/srcwii/adx_rnawii.temp.c:
+CriWare/src/adx/adxt/srcwii/adx_rnawii.c:
 	.text       start:0x8039E6C4 end:0x8039E76C
 
-CriWare/src/adx/std/cri_crw_std.temp.c:
+CriWare/src/adx/std/cri_crw_std.c:
 	.text       start:0x8039E76C end:0x8039EB5C
 
-CriWare/src/sofdec/cft/srcgc/cftyp422_ppc.temp.c:
+CriWare/src/sofdec/cft/srcgc/cftyp422_ppc.c:
 	.text       start:0x8039EB5C end:0x8039EF4C
 
-CriWare/src/sofdec/cft/cft_common.temp.c:
+CriWare/src/sofdec/cft/cft_common.c:
 	.text       start:0x8039EF4C end:0x8039EF60
 
-CriWare/src/sofdec/mwply/mwsfdfrm.temp.c:
+CriWare/src/sofdec/mwply/mwsfdfrm.c:
 	.text       start:0x8039EF60 end:0x803A02BC
 
-CriWare/src/sofdec/mwply/mwsfdrna.temp.c:
+CriWare/src/sofdec/mwply/mwsfdrna.c:
 	.text       start:0x803A02BC end:0x803A02CC
 
-CriWare/src/sofdec/mwply/mwsfdrsc.temp.c:
+CriWare/src/sofdec/mwply/mwsfdrsc.c:
 	.text       start:0x803A02CC end:0x803A02D4
 
-CriWare/src/sofdec/mwply/mwsfdsl.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsl.c:
 	.text       start:0x803A02D4 end:0x803A0F7C
 
-CriWare/src/sofdec/mwply/mwsfdsvm.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsvm.c:
 	.text       start:0x803A0F7C end:0x803A122C
 
-CriWare/src/sofdec/mwply/mwstm.temp.c:
+CriWare/src/sofdec/mwply/mwstm.c:
 	.text       start:0x803A122C end:0x803A1328
 
-CriWare/src/sofdec/mwply/mwsfdsee.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsee.c:
 	.text       start:0x803A1328 end:0x803A1330
 
-CriWare/src/sofdec/mwply/mwsfdsfx.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsfx.c:
 	.text       start:0x803A1330 end:0x803A20C0
 
-CriWare/src/sofdec/mwply/mwsfdcre.temp.c:
+CriWare/src/sofdec/mwply/mwsfdcre.c:
 	.text       start:0x803A20C0 end:0x803A41C0
 
-CriWare/src/sofdec/mwply/mwsfdlib.temp.c:
+CriWare/src/sofdec/mwply/mwsfdlib.c:
 	.text       start:0x803A41C0 end:0x803A48DC
 
-CriWare/src/sofdec/mwply/mwsfdply.temp.c:
+CriWare/src/sofdec/mwply/mwsfdply.c:
 	.text       start:0x803A48DC end:0x803A54AC
 
-CriWare/src/sofdec/mwply/mwsfdset.temp.c:
+CriWare/src/sofdec/mwply/mwsfdset.c:
 	.text       start:0x803A54AC end:0x803A5A18
 
-CriWare/src/sofdec/mwply/mwsfdsvr.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsvr.c:
 	.text       start:0x803A5A18 end:0x803A693C
 
-CriWare/src/sofdec/mwply/mwsfdsst.temp.c:
+CriWare/src/sofdec/mwply/mwsfdsst.c:
 	.text       start:0x803A693C end:0x803A7128
 
-CriWare/src/sofdec/mwply/mwsfx_Y84C44.temp.c:
+CriWare/src/sofdec/mwply/mwsfx_Y84C44.c:
 	.text       start:0x803A7128 end:0x803A71C4
 
-CriWare/src/sofdec/mwply/code_803A3AE4.temp.c:
+CriWare/src/sofdec/mwply/code_803A3AE4.c:
 	.text       start:0x803A71C4 end:0x803A7330
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_bdec.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_bdec.c:
 	.text       start:0x803A7330 end:0x803A7710
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_cdec.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_cdec.c:
 	.text       start:0x803A7710 end:0x803A7DA8
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_cmc.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_cmc.c:
 	.text       start:0x803A7DA8 end:0x803A7EA0
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_dec.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_dec.c:
 	.text       start:0x803A7EA0 end:0x803A90A4
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_deli.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_deli.c:
 	.text       start:0x803A90A4 end:0x803A9288
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_emp.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_emp.c:
 	.text       start:0x803A9288 end:0x803A98E0
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_err.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_err.c:
 	.text       start:0x803A98E0 end:0x803A9A30
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_frm.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_frm.c:
 	.text       start:0x803A9A30 end:0x803A9C70
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_get.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_get.c:
 	.text       start:0x803A9C70 end:0x803A9E88
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_hdec.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_hdec.c:
 	.text       start:0x803A9E88 end:0x803AB68C
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_lib.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_lib.c:
 	.text       start:0x803AB68C end:0x803AC184
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_mc.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_mc.c:
 	.text       start:0x803AC184 end:0x803ACE78
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_vlc.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_vlc.c:
 	.text       start:0x803ACE78 end:0x803AFBC8
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_umc.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_umc.c:
 	.text       start:0x803AFBC8 end:0x803B15B0
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_mcy.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_mcy.c:
 	.text       start:0x803B15B0 end:0x803B273C
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_m2v.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_m2v.c:
 	.text       start:0x803B273C end:0x803B276C
 
-CriWare/src/sofdec/sfdcore/mpv/mpvabdec.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpvabdec.c:
 	.text       start:0x803B276C end:0x803BCE64
 
-CriWare/src/sofdec/sfdcore/mpv/mpv_slice.temp.c:
+CriWare/src/sofdec/sfdcore/mpv/mpv_slice.c:
 	.text       start:0x803BCE64 end:0x803BD250
 
-CriWare/src/sofdec/sfdcore/dct/dct_ac.temp.c:
+CriWare/src/sofdec/sfdcore/dct/dct_ac.c:
 	.text       start:0x803BD250 end:0x803BD574
 
-CriWare/src/sofdec/sfdcore/dct/dct_isr.temp.c:
+CriWare/src/sofdec/sfdcore/dct/dct_isr.c:
 	.text       start:0x803BD574 end:0x803BDF28
 
-CriWare/src/sofdec/sfdcore/dct/dct_ver.temp.c:
+CriWare/src/sofdec/sfdcore/dct/dct_ver.c:
 	.text       start:0x803BDF28 end:0x803BDF50
 
-CriWare/src/sofdec/sfdcore/memcpy/mcp_not.temp.c:
+CriWare/src/sofdec/sfdcore/memcpy/mcp_not.c:
 	.text       start:0x803BDF50 end:0x803BDF54
 
-CriWare/src/sofdec/sfdcore/mps/mps_dec.temp.c:
+CriWare/src/sofdec/sfdcore/mps/mps_dec.c:
 	.text       start:0x803BDF54 end:0x803BF200
 
-CriWare/src/sofdec/sfdcore/mps/mps_del.temp.c:
+CriWare/src/sofdec/sfdcore/mps/mps_del.c:
 	.text       start:0x803BF200 end:0x803BF274
 
-CriWare/src/sofdec/sfdcore/mps/mps_get.temp.c:
+CriWare/src/sofdec/sfdcore/mps/mps_get.c:
 	.text       start:0x803BF274 end:0x803BF4E0
 
-CriWare/src/sofdec/sfdcore/mps/mps_lib.temp.c:
+CriWare/src/sofdec/sfdcore/mps/mps_lib.c:
 	.text       start:0x803BF4E0 end:0x803BFAB0
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_adxt.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_adxt.c:
 	.text       start:0x803BFAB0 end:0x803C10C8
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_aoap.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_aoap.c:
 	.text       start:0x803C10C8 end:0x803C1500
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_buf.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_buf.c:
 	.text       start:0x803C1500 end:0x803C25C0
 
-CriWare/src/sofdec/sfdcore/sfd/code_803BFD20.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/code_803BFD20.c:
 	.text       start:0x803C25C0 end:0x803C25D8
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_con.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_con.c:
 	.text       start:0x803C25D8 end:0x803C28FC
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_hds.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_hds.c:
 	.text       start:0x803C28FC end:0x803C3310
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_lib.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_lib.c:
 	.text       start:0x803C3310 end:0x803C36E8
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_mem.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_mem.c:
 	.text       start:0x803C36E8 end:0x803C3798
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_mps.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_mps.c:
 	.text       start:0x803C3798 end:0x803C570C
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_mpv.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_mpv.c:
 	.text       start:0x803C570C end:0x803CA4A0
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_mpvf.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_mpvf.c:
 	.text       start:0x803CA4A0 end:0x803CB49C
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_pl2.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_pl2.c:
 	.text       start:0x803CB49C end:0x803CB938
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_ply.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_ply.c:
 	.text       start:0x803CB938 end:0x803CE16C
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_pts.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_pts.c:
 	.text       start:0x803CE16C end:0x803CE5A0
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_see.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_see.c:
 	.text       start:0x803CE5A0 end:0x803CEC14
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_set.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_set.c:
 	.text       start:0x803CEC14 end:0x803CF034
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_tim.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_tim.c:
 	.text       start:0x803CF034 end:0x803D0D9C
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_trn.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_trn.c:
 	.text       start:0x803D0D9C end:0x803D1400
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_uo.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_uo.c:
 	.text       start:0x803D1400 end:0x803D1648
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_vom.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_vom.c:
 	.text       start:0x803D1648 end:0x803D180C
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_tmr.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_tmr.c:
 	.text       start:0x803D180C end:0x803D1A94
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_tst.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_tst.c:
 	.text       start:0x803D1A94 end:0x803D29E0
 
-CriWare/src/sofdec/sfdcore/sfd/sfd_seeki.temp.c:
+CriWare/src/sofdec/sfdcore/sfd/sfd_seeki.c:
 	.text       start:0x803D29E0 end:0x803D2AF4
 
-CriWare/src/sofdec/sfdcore/sfh/sfh_local.temp.c:
+CriWare/src/sofdec/sfdcore/sfh/sfh_local.c:
 	.text       start:0x803D2AF4 end:0x803D2E40
 
-CriWare/src/sofdec/sfdcore/sfh/sfh_main.temp.c:
+CriWare/src/sofdec/sfdcore/sfh/sfh_main.c:
 	.text       start:0x803D2E40 end:0x803D35A8
 
-CriWare/src/sofdec/sfdcore/sfh/sfh_ver1.temp.c:
+CriWare/src/sofdec/sfdcore/sfh/sfh_ver1.c:
 	.text       start:0x803D35A8 end:0x803D53CC
 
-CriWare/src/sofdec/sfdcore/sfh/sfh_ver2.temp.c:
+CriWare/src/sofdec/sfdcore/sfh/sfh_ver2.c:
 	.text       start:0x803D53CC end:0x803D6AA4
 
-CriWare/src/sofdec/sfdcore/uty/cmptime.temp.c:
+CriWare/src/sofdec/sfdcore/uty/cmptime.c:
 	.text       start:0x803D6AA4 end:0x803D6AD4
 
-CriWare/src/sofdec/sfdcore/uty/memcpyd.temp.c:
+CriWare/src/sofdec/sfdcore/uty/memcpyd.c:
 	.text       start:0x803D6AD4 end:0x803D6B98
 
-CriWare/src/sofdec/sfdcore/uty/memsetd.temp.c:
+CriWare/src/sofdec/sfdcore/uty/memsetd.c:
 	.text       start:0x803D6B98 end:0x803D6C10
 
-CriWare/src/sofdec/sfdcore/uty/muldiv.temp.c:
+CriWare/src/sofdec/sfdcore/uty/muldiv.c:
 	.text       start:0x803D6C10 end:0x803D6C68
 
-CriWare/src/sofdec/sfdcore/uty/muldivr.temp.c:
+CriWare/src/sofdec/sfdcore/uty/muldivr.c:
 	.text       start:0x803D6C68 end:0x803D6DC0
 
-CriWare/src/sofdec/sfdcore/uty/uty_tmr.temp.c:
+CriWare/src/sofdec/sfdcore/uty/uty_tmr.c:
 	.text       start:0x803D6DC0 end:0x803D6F2C
 
-CriWare/src/sofdec/sfx/sfx_set.temp.c:
+CriWare/src/sofdec/sfx/sfx_set.c:
 	.text       start:0x803D6F2C end:0x803D70DC
 
-CriWare/src/sofdec/sfx/sfx_cnv.temp.c:
+CriWare/src/sofdec/sfx/sfx_cnv.c:
 	.text       start:0x803D70DC end:0x803D7E64
 
-CriWare/src/sofdec/sfx/sfx_inf.temp.c:
+CriWare/src/sofdec/sfx/sfx_inf.c:
 	.text       start:0x803D7E64 end:0x803D7E6C
 
-CriWare/src/sofdec/sfx/sfx_lib.temp.c:
+CriWare/src/sofdec/sfx/sfx_lib.c:
 	.text       start:0x803D7E6C end:0x803D825C
 
-CriWare/src/sofdec/sfx/sfx_alp.temp.c:
+CriWare/src/sofdec/sfx/sfx_alp.c:
 	.text       start:0x803D825C end:0x803D8408
 
-CriWare/src/sofdec/sfx/sfx_zmv.temp.c:
+CriWare/src/sofdec/sfx/sfx_zmv.c:
 	.text       start:0x803D8408 end:0x803D964C
 
-CriWare/src/sofdec/sfx/sfx_sud.temp.c:
+CriWare/src/sofdec/sfx/sfx_sud.c:
 	.text       start:0x803D964C end:0x803D9650
 
-CriWare/src/sofdec/sfx/sfx_cnv_to_Y84C44.temp.c:
+CriWare/src/sofdec/sfx/sfx_cnv_to_Y84C44.c:
 	.text       start:0x803D9650 end:0x803D96F0
 
-CriWare/src/sofdec/sud/sud_lib.temp.c:
+CriWare/src/sofdec/sud/sud_lib.c:
 	.text       start:0x803D96F0 end:0x803D9884
 
-nw4r/src/db/db_console.temp.cpp:
+nw4r/src/db/db_console.cpp:
 	.text       start:0x803D9884 end:0x803D9958
 
-nw4r/src/db/db_DbgPrintBase.temp.cpp:
+nw4r/src/db/db_DbgPrintBase.cpp:
 	.text       start:0x803D9958 end:0x803D997C
 
-nw4r/src/db/db_assert.temp.cpp:
+nw4r/src/db/db_assert.cpp:
 	.text       start:0x803D997C end:0x803D9B30
 
-nw4r/src/dw/dw_Window.temp.cpp:
+nw4r/src/dw/dw_Window.cpp:
 	.text       start:0x803D9B30 end:0x803D9B74
 
-nw4r/src/g3d/res/g3d_rescommon.temp.cpp:
+nw4r/src/g3d/res/g3d_rescommon.cpp:
 	.text       start:0x803D9B74 end:0x803D9CC4
 
-nw4r/src/g3d/res/g3d_resdict.temp.cpp:
+nw4r/src/g3d/res/g3d_resdict.cpp:
 	.text       start:0x803D9CC4 end:0x803DA048
 
-nw4r/src/g3d/res/g3d_resfile.temp.cpp:
+nw4r/src/g3d/res/g3d_resfile.cpp:
 	.text       start:0x803DA048 end:0x803DB918
 
-nw4r/src/g3d/res/g3d_resmdl.temp.cpp:
+nw4r/src/g3d/res/g3d_resmdl.cpp:
 	.text       start:0x803DB918 end:0x803DC9C4
 
-nw4r/src/g3d/res/g3d_resshp.temp.cpp:
+nw4r/src/g3d/res/g3d_resshp.cpp:
 	.text       start:0x803DC9C4 end:0x803DD258
 
-nw4r/src/g3d/res/g3d_restev.temp.cpp:
+nw4r/src/g3d/res/g3d_restev.cpp:
 	.text       start:0x803DD258 end:0x803DDAE4
 
-nw4r/src/g3d/res/g3d_resmat.temp.cpp:
+nw4r/src/g3d/res/g3d_resmat.cpp:
 	.text       start:0x803DDAE4 end:0x803DF524
 
-nw4r/src/g3d/res/g3d_resvtx.temp.cpp:
+nw4r/src/g3d/res/g3d_resvtx.cpp:
 	.text       start:0x803DF524 end:0x803DF8E4
 
-nw4r/src/g3d/res/g3d_restex.temp.cpp:
+nw4r/src/g3d/res/g3d_restex.cpp:
 	.text       start:0x803DF8E4 end:0x803DFAE8
 
-nw4r/src/g3d/res/g3d_resnode.temp.cpp:
+nw4r/src/g3d/res/g3d_resnode.cpp:
 	.text       start:0x803DFAE8 end:0x803DFE0C
 
-nw4r/src/g3d/res/g3d_resanm.temp.cpp:
+nw4r/src/g3d/res/g3d_resanm.cpp:
 	.text       start:0x803DFE0C end:0x803E0038
 
-nw4r/src/g3d/res/g3d_resanmclr.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmclr.cpp:
 	.text       start:0x803E0038 end:0x803E01A4
 
-nw4r/src/g3d/res/g3d_resanmtexpat.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmtexpat.cpp:
 	.text       start:0x803E01A4 end:0x803E0540
 
-nw4r/src/g3d/res/g3d_resanmtexsrt.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmtexsrt.cpp:
 	.text       start:0x803E0540 end:0x803E0954
 
-nw4r/src/g3d/res/g3d_resanmchr.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmchr.cpp:
 	.text       start:0x803E0954 end:0x803E2680
 
-nw4r/src/g3d/res/g3d_reslightset.temp.cpp:
+nw4r/src/g3d/res/g3d_reslightset.cpp:
 	.text       start:0x803E2680 end:0x803E27EC
 
-nw4r/src/g3d/res/g3d_resanmamblight.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmamblight.cpp:
 	.text       start:0x803E27EC end:0x803E28BC
 
-nw4r/src/g3d/res/g3d_resanmlight.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmlight.cpp:
 	.text       start:0x803E28BC end:0x803E2CB4
 
-nw4r/src/g3d/res/g3d_resanmfog.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmfog.cpp:
 	.text       start:0x803E2CB4 end:0x803E2E14
 
-nw4r/src/g3d/res/g3d_resanmcamera.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmcamera.cpp:
 	.text       start:0x803E2E14 end:0x803E312C
 
-nw4r/src/g3d/res/g3d_resanmscn.temp.cpp:
+nw4r/src/g3d/res/g3d_resanmscn.cpp:
 	.text       start:0x803E312C end:0x803E3B14
 
-nw4r/src/g3d/g3d_transform.temp.cpp:
+nw4r/src/g3d/g3d_transform.cpp:
 	.text       start:0x803E3B14 end:0x803E3E04
 
-nw4r/src/g3d/g3d_anmvis.temp.cpp:
+nw4r/src/g3d/g3d_anmvis.cpp:
 	.text       start:0x803E3E04 end:0x803E3F4C
 
-nw4r/src/g3d/g3d_anmclr.temp.cpp:
+nw4r/src/g3d/g3d_anmclr.cpp:
 	.text       start:0x803E3F4C end:0x803E4CD0
 
-nw4r/src/g3d/g3d_anmtexpat.temp.cpp:
+nw4r/src/g3d/g3d_anmtexpat.cpp:
 	.text       start:0x803E4CD0 end:0x803E56FC
 
-nw4r/src/g3d/g3d_anmtexsrt.temp.cpp:
+nw4r/src/g3d/g3d_anmtexsrt.cpp:
 	.text       start:0x803E56FC end:0x803E6178
 
-nw4r/src/g3d/g3d_anmchr.temp.cpp:
+nw4r/src/g3d/g3d_anmchr.cpp:
 	.text       start:0x803E6178 end:0x803E8070
 
-nw4r/src/g3d/g3d_anmshp.temp.cpp:
+nw4r/src/g3d/g3d_anmshp.cpp:
 	.text       start:0x803E8070 end:0x803E808C
 
-nw4r/src/g3d/g3d_anmscn.temp.cpp:
+nw4r/src/g3d/g3d_anmscn.cpp:
 	.text       start:0x803E808C end:0x803E95F8
 
-nw4r/src/g3d/g3d_obj.temp.cpp:
+nw4r/src/g3d/g3d_obj.cpp:
 	.text       start:0x803E95F8 end:0x803E9714
 
-nw4r/src/g3d/g3d_anmobj.temp.cpp:
+nw4r/src/g3d/g3d_anmobj.cpp:
 	.text       start:0x803E9714 end:0x803E97CC
 
-nw4r/src/g3d/platform/g3d_gpu.temp.cpp:
+nw4r/src/g3d/platform/g3d_gpu.cpp:
 	.text       start:0x803E97CC end:0x803E9CDC
 
-nw4r/src/g3d/platform/g3d_cpu.temp.cpp:
+nw4r/src/g3d/platform/g3d_cpu.cpp:
 	.text       start:0x803E9CDC end:0x803E9F00
 
-nw4r/src/g3d/g3d_state.temp.cpp:
+nw4r/src/g3d/g3d_state.cpp:
 	.text       start:0x803E9F00 end:0x803EDA14
 	.ctors      start:0x804FA0C0 end:0x804FA0C4
 
-nw4r/src/g3d/g3d_draw1mat1shp.temp.cpp:
+nw4r/src/g3d/g3d_draw1mat1shp.cpp:
 	.text       start:0x803EDA14 end:0x803EE748
 
-nw4r/src/g3d/g3d_calcview.temp.cpp:
+nw4r/src/g3d/g3d_calcview.cpp:
 	.text       start:0x803EE748 end:0x803F0924
 
-nw4r/src/g3d/g3d_dcc.temp.cpp:
+nw4r/src/g3d/g3d_dcc.cpp:
 	.text       start:0x803F0924 end:0x803F0A00
 
-nw4r/src/g3d/g3d_workmem.temp.cpp:
+nw4r/src/g3d/g3d_workmem.cpp:
 	.text       start:0x803F0A00 end:0x803F0A40
 
-nw4r/src/g3d/g3d_calcworld.temp.cpp:
+nw4r/src/g3d/g3d_calcworld.cpp:
 	.text       start:0x803F0A40 end:0x803F1504
 
-nw4r/src/g3d/g3d_draw.temp.cpp:
+nw4r/src/g3d/g3d_draw.cpp:
 	.text       start:0x803F1504 end:0x803F3360
 
-nw4r/src/g3d/g3d_camera.temp.cpp:
+nw4r/src/g3d/g3d_camera.cpp:
 	.text       start:0x803F3360 end:0x803F417C
 
-nw4r/src/g3d/dcc/g3d_basic.temp.cpp:
+nw4r/src/g3d/dcc/g3d_basic.cpp:
 	.text       start:0x803F417C end:0x803F4440
 
-nw4r/src/g3d/dcc/g3d_maya.temp.cpp:
+nw4r/src/g3d/dcc/g3d_maya.cpp:
 	.text       start:0x803F4440 end:0x803F5100
 
-nw4r/src/g3d/dcc/g3d_xsi.temp.cpp:
+nw4r/src/g3d/dcc/g3d_xsi.cpp:
 	.text       start:0x803F5100 end:0x803F5CC0
 
-nw4r/src/g3d/dcc/g3d_3dsmax.temp.cpp:
+nw4r/src/g3d/dcc/g3d_3dsmax.cpp:
 	.text       start:0x803F5CC0 end:0x803F6770
 
-nw4r/src/g3d/g3d_scnobj.temp.cpp:
+nw4r/src/g3d/g3d_scnobj.cpp:
 	.text       start:0x803F6770 end:0x803F7FA4
 
-nw4r/src/g3d/g3d_scnroot.temp.cpp:
+nw4r/src/g3d/g3d_scnroot.cpp:
 	.text       start:0x803F7FA4 end:0x803F99B8
 
-nw4r/src/g3d/g3d_scnmdlsmpl.temp.cpp:
+nw4r/src/g3d/g3d_scnmdlsmpl.cpp:
 	.text       start:0x803F99B8 end:0x803FB86C
 
-nw4r/src/g3d/g3d_scnmdl.temp.cpp:
+nw4r/src/g3d/g3d_scnmdl.cpp:
 	.text       start:0x803FB86C end:0x803FE2E0
 
-nw4r/src/g3d/g3d_scnmdlexpand.temp.cpp:
+nw4r/src/g3d/g3d_scnmdlexpand.cpp:
 	.text       start:0x803FE2E0 end:0x803FEC90
 
-nw4r/src/g3d/g3d_calcmaterial.temp.cpp:
+nw4r/src/g3d/g3d_calcmaterial.cpp:
 	.text       start:0x803FEC90 end:0x803FF0A0
 
-nw4r/src/g3d/g3d_init.temp.cpp:
+nw4r/src/g3d/g3d_init.cpp:
 	.text       start:0x803FF0A0 end:0x803FF19C
 
-nw4r/src/g3d/g3d_scnproc.temp.cpp:
+nw4r/src/g3d/g3d_scnproc.cpp:
 	.text       start:0x803FF19C end:0x803FF48C
 
-nw4r/src/g3d/g3d_fog.temp.cpp:
+nw4r/src/g3d/g3d_fog.cpp:
 	.text       start:0x803FF48C end:0x803FF688
 
-nw4r/src/g3d/g3d_light.temp.cpp:
+nw4r/src/g3d/g3d_light.cpp:
 	.text       start:0x803FF688 end:0x8040041C
 
-nw4r/src/g3d/g3d_calcvtx.temp.cpp:
+nw4r/src/g3d/g3d_calcvtx.cpp:
 	.text       start:0x8040041C end:0x80400C14
 
-nw4r/src/lyt/lyt_init.temp.cpp:
+nw4r/src/lyt/lyt_init.cpp:
 	.text       start:0x80400C14 end:0x80400C68
 
-nw4r/src/lyt/lyt_pane.temp.cpp:
+nw4r/src/lyt/lyt_pane.cpp:
 	.text       start:0x80400C68 end:0x80401C98
 	.ctors      start:0x804FA0C4 end:0x804FA0C8
 
-nw4r/src/lyt/lyt_group.temp.cpp:
+nw4r/src/lyt/lyt_group.cpp:
 	.text       start:0x80401C98 end:0x80401FD8
 
-nw4r/src/lyt/lyt_layout.temp.cpp:
+nw4r/src/lyt/lyt_layout.cpp:
 	.text       start:0x80401FD8 end:0x80402FC4
 
-nw4r/src/lyt/lyt_picture.temp.cpp:
+nw4r/src/lyt/lyt_picture.cpp:
 	.text       start:0x80402FC4 end:0x80403620
 	.ctors      start:0x804FA0C8 end:0x804FA0CC
 
-nw4r/src/lyt/lyt_textBox.temp.cpp:
+nw4r/src/lyt/lyt_textBox.cpp:
 	.text       start:0x80403620 end:0x8040518C
 	.ctors      start:0x804FA0CC end:0x804FA0D0
 
-nw4r/src/lyt/lyt_window.temp.cpp:
+nw4r/src/lyt/lyt_window.cpp:
 	.text       start:0x8040518C end:0x80407740
 	.ctors      start:0x804FA0D0 end:0x804FA0D4
 
-nw4r/src/lyt/lyt_bounding.temp.cpp:
+nw4r/src/lyt/lyt_bounding.cpp:
 	.text       start:0x80407740 end:0x804077EC
 	.ctors      start:0x804FA0D4 end:0x804FA0D8
 
-nw4r/src/lyt/lyt_material.temp.cpp:
+nw4r/src/lyt/lyt_material.cpp:
 	.text       start:0x804077EC end:0x8040A660
 
-nw4r/src/lyt/lyt_texMap.temp.cpp:
+nw4r/src/lyt/lyt_texMap.cpp:
 	.text       start:0x8040A660 end:0x8040A9CC
 
-nw4r/src/lyt/lyt_drawInfo.temp.cpp:
+nw4r/src/lyt/lyt_drawInfo.cpp:
 	.text       start:0x8040A9CC end:0x8040AA80
 
-nw4r/src/lyt/lyt_animation.temp.cpp:
+nw4r/src/lyt/lyt_animation.cpp:
 	.text       start:0x8040AA80 end:0x8040BFAC
 
-nw4r/src/lyt/lyt_resourceAccessor.temp.cpp:
+nw4r/src/lyt/lyt_resourceAccessor.cpp:
 	.text       start:0x8040BFAC end:0x8040C004
 
-nw4r/src/lyt/lyt_arcResourceAccessor.temp.cpp:
+nw4r/src/lyt/lyt_arcResourceAccessor.cpp:
 	.text       start:0x8040C004 end:0x8040C38C
 
-nw4r/src/lyt/lyt_common.temp.cpp:
+nw4r/src/lyt/lyt_common.cpp:
 	.text       start:0x8040C38C end:0x8040CEE4
 
-nw4r/src/lyt/lyt_util.temp.cpp:
+nw4r/src/lyt/lyt_util.cpp:
 	.text       start:0x8040CEE4 end:0x8040CF54
 
-nw4r/src/math/math_arithmetic.temp.cpp:
+nw4r/src/math/math_arithmetic.cpp:
 	.text       start:0x8040CF54 end:0x8040D090
 
-nw4r/src/math/math_triangular.temp.cpp:
+nw4r/src/math/math_triangular.cpp:
 	.text       start:0x8040D090 end:0x8040D364
 
-nw4r/src/math/math_types.temp.cpp:
+nw4r/src/math/math_types.cpp:
 	.text       start:0x8040D364 end:0x8040D7EC
 
-nw4r/src/math/math_geometry.temp.cpp:
+nw4r/src/math/math_geometry.cpp:
 	.text       start:0x8040D7EC end:0x8040E7C8
 
-nw4r/src/snd/snd_AxManager.temp.cpp:
+nw4r/src/snd/snd_AxManager.cpp:
 	.text       start:0x8040E7C8 end:0x80410224
 	.ctors      start:0x804FA0D8 end:0x804FA0DC
 
-nw4r/src/snd/snd_AxVoice.temp.cpp:
+nw4r/src/snd/snd_AxVoice.cpp:
 	.text       start:0x80410224 end:0x80412EE4
 
-nw4r/src/snd/snd_AxVoiceManager.temp.cpp:
+nw4r/src/snd/snd_AxVoiceManager.cpp:
 	.text       start:0x80412EE4 end:0x80413918
 
-nw4r/src/snd/snd_AxfxImpl.temp.cpp:
+nw4r/src/snd/snd_AxfxImpl.cpp:
 	.text       start:0x80413918 end:0x80413AE4
 
-nw4r/src/snd/snd_Bank.temp.cpp:
+nw4r/src/snd/snd_Bank.cpp:
 	.text       start:0x80413AE4 end:0x80413D54
 
-nw4r/src/snd/snd_BankFile.temp.cpp:
+nw4r/src/snd/snd_BankFile.cpp:
 	.text       start:0x80413D54 end:0x80414410
 
-nw4r/src/snd/snd_BasicPlayer.temp.cpp:
+nw4r/src/snd/snd_BasicPlayer.cpp:
 	.text       start:0x80414410 end:0x80414804
 
-nw4r/src/snd/snd_BasicSound.temp.cpp:
+nw4r/src/snd/snd_BasicSound.cpp:
 	.text       start:0x80414804 end:0x80415E78
 	.ctors      start:0x804FA0DC end:0x804FA0E0
 
-nw4r/src/snd/snd_BiquadFilterPreset.temp.cpp:
+nw4r/src/snd/snd_BiquadFilterPreset.cpp:
 	.text       start:0x80415E78 end:0x80416144
 
-nw4r/src/snd/snd_Channel.temp.cpp:
+nw4r/src/snd/snd_Channel.cpp:
 	.text       start:0x80416144 end:0x80417398
 
-nw4r/src/snd/snd_DisposeCallbackManager.temp.cpp:
+nw4r/src/snd/snd_DisposeCallbackManager.cpp:
 	.text       start:0x80417398 end:0x80417728
 
-nw4r/src/snd/snd_EnvGenerator.temp.cpp:
+nw4r/src/snd/snd_EnvGenerator.cpp:
 	.text       start:0x80417728 end:0x80417AC4
 
-nw4r/src/snd/snd_ExternalSoundPlayer.temp.cpp:
+nw4r/src/snd/snd_ExternalSoundPlayer.cpp:
 	.text       start:0x80417AC4 end:0x80417D70
 
-nw4r/src/snd/snd_FxChorusDpl2.temp.cpp:
+nw4r/src/snd/snd_FxChorusDpl2.cpp:
 	.text       start:0x80417D70 end:0x80418314
 
-nw4r/src/snd/snd_FxDelayDpl2.temp.cpp:
+nw4r/src/snd/snd_FxDelayDpl2.cpp:
 	.text       start:0x80418314 end:0x80418914
 
-nw4r/src/snd/snd_FxReverbStdDpl2.temp.cpp:
+nw4r/src/snd/snd_FxReverbStdDpl2.cpp:
 	.text       start:0x80418914 end:0x8041900C
 
-nw4r/src/snd/snd_InstancePool.temp.cpp:
+nw4r/src/snd/snd_InstancePool.cpp:
 	.text       start:0x8041900C end:0x804192C4
 
-nw4r/src/snd/snd_Lfo.temp.cpp:
+nw4r/src/snd/snd_Lfo.cpp:
 	.text       start:0x804192C4 end:0x804194B4
 
-nw4r/src/snd/snd_McsSoundArchive.temp.cpp:
+nw4r/src/snd/snd_McsSoundArchive.cpp:
 	.text       start:0x804194B4 end:0x804194CC
 
-nw4r/src/snd/snd_MemorySoundArchive.temp.cpp:
+nw4r/src/snd/snd_MemorySoundArchive.cpp:
 	.text       start:0x804194CC end:0x80419900
 
-nw4r/src/snd/snd_MidiSeqPlayer.temp.cpp:
+nw4r/src/snd/snd_MidiSeqPlayer.cpp:
 	.text       start:0x80419900 end:0x80419954
 
-nw4r/src/snd/snd_MmlParser.temp.cpp:
+nw4r/src/snd/snd_MmlParser.cpp:
 	.text       start:0x80419954 end:0x8041AAF8
 
-nw4r/src/snd/snd_MmlSeqTrack.temp.cpp:
+nw4r/src/snd/snd_MmlSeqTrack.cpp:
 	.text       start:0x8041AAF8 end:0x8041ABA0
 
-nw4r/src/snd/snd_MmlSeqTrackAllocator.temp.cpp:
+nw4r/src/snd/snd_MmlSeqTrackAllocator.cpp:
 	.text       start:0x8041ABA0 end:0x8041ACCC
 
-nw4r/src/snd/snd_PlayerHeap.temp.cpp:
+nw4r/src/snd/snd_PlayerHeap.cpp:
 	.text       start:0x8041ACCC end:0x8041AECC
 
-nw4r/src/snd/snd_RemoteSpeaker.temp.cpp:
+nw4r/src/snd/snd_RemoteSpeaker.cpp:
 	.text       start:0x8041AECC end:0x8041B6B8
 
-nw4r/src/snd/snd_RemoteSpeakerManager.temp.cpp:
+nw4r/src/snd/snd_RemoteSpeakerManager.cpp:
 	.text       start:0x8041B6B8 end:0x8041B938
 
-nw4r/src/snd/snd_SeqFile.temp.cpp:
+nw4r/src/snd/snd_SeqFile.cpp:
 	.text       start:0x8041B938 end:0x8041BA6C
 
-nw4r/src/snd/snd_SeqPlayer.temp.cpp:
+nw4r/src/snd/snd_SeqPlayer.cpp:
 	.text       start:0x8041BA6C end:0x8041CF20
 
-nw4r/src/snd/snd_SeqSound.temp.cpp:
+nw4r/src/snd/snd_SeqSound.cpp:
 	.text       start:0x8041CF20 end:0x8041D668
 	.ctors      start:0x804FA0E0 end:0x804FA0E4
 
-nw4r/src/snd/snd_SeqSoundHandle.temp.cpp:
+nw4r/src/snd/snd_SeqSoundHandle.cpp:
 	.text       start:0x8041D668 end:0x8041D6A0
 
-nw4r/src/snd/snd_SeqTrack.temp.cpp:
+nw4r/src/snd/snd_SeqTrack.cpp:
 	.text       start:0x8041D6A0 end:0x8041EAE0
 
-nw4r/src/snd/snd_SoundArchive.temp.cpp:
+nw4r/src/snd/snd_SoundArchive.cpp:
 	.text       start:0x8041EAE0 end:0x8041EE38
 
-nw4r/src/snd/snd_SoundArchiveFile.temp.cpp:
+nw4r/src/snd/snd_SoundArchiveFile.cpp:
 	.text       start:0x8041EE38 end:0x8041FEE8
 
-nw4r/src/snd/snd_SoundArchivePlayer.temp.cpp:
+nw4r/src/snd/snd_SoundArchivePlayer.cpp:
 	.text       start:0x8041FEE8 end:0x80422694
 
-nw4r/src/snd/snd_SoundHandle.temp.cpp:
+nw4r/src/snd/snd_SoundHandle.cpp:
 	.text       start:0x80422694 end:0x8042277C
 
-nw4r/src/snd/snd_SoundPlayer.temp.cpp:
+nw4r/src/snd/snd_SoundPlayer.cpp:
 	.text       start:0x8042277C end:0x80423324
 
-nw4r/src/snd/snd_SoundStartable.temp.cpp:
+nw4r/src/snd/snd_SoundStartable.cpp:
 	.text       start:0x80423324 end:0x80423384
 
-nw4r/src/snd/snd_SoundSystem.temp.cpp:
+nw4r/src/snd/snd_SoundSystem.cpp:
 	.text       start:0x80423384 end:0x80423648
 	.ctors      start:0x804FA0E4 end:0x804FA0E8
 
-nw4r/src/snd/snd_SoundThread.temp.cpp:
+nw4r/src/snd/snd_SoundThread.cpp:
 	.text       start:0x80423648 end:0x80423D2C
 
-nw4r/src/snd/snd_StrmChannel.temp.cpp:
+nw4r/src/snd/snd_StrmChannel.cpp:
 	.text       start:0x80423D2C end:0x80423F4C
 
-nw4r/src/snd/snd_StrmFile.temp.cpp:
+nw4r/src/snd/snd_StrmFile.cpp:
 	.text       start:0x80423F4C end:0x804248FC
 
-nw4r/src/snd/snd_StrmPlayer.temp.cpp:
+nw4r/src/snd/snd_StrmPlayer.cpp:
 	.text       start:0x804248FC end:0x80427320
 
-nw4r/src/snd/snd_StrmSound.temp.cpp:
+nw4r/src/snd/snd_StrmSound.cpp:
 	.text       start:0x80427320 end:0x80427AB0
 	.ctors      start:0x804FA0E8 end:0x804FA0EC
 
-nw4r/src/snd/snd_StrmSoundHandle.temp.cpp:
+nw4r/src/snd/snd_StrmSoundHandle.cpp:
 	.text       start:0x80427AB0 end:0x80427AE8
 
-nw4r/src/snd/snd_Task.temp.cpp:
+nw4r/src/snd/snd_Task.cpp:
 	.text       start:0x80427AE8 end:0x80427B28
 
-nw4r/src/snd/snd_TaskManager.temp.cpp:
+nw4r/src/snd/snd_TaskManager.cpp:
 	.text       start:0x80427B28 end:0x80428294
 
-nw4r/src/snd/snd_TaskThread.temp.cpp:
+nw4r/src/snd/snd_TaskThread.cpp:
 	.text       start:0x80428294 end:0x804284B0
 
-nw4r/src/snd/snd_Voice.temp.cpp:
+nw4r/src/snd/snd_Voice.cpp:
 	.text       start:0x804284B0 end:0x8042AFBC
 
-nw4r/src/snd/snd_VoiceManager.temp.cpp:
+nw4r/src/snd/snd_VoiceManager.cpp:
 	.text       start:0x8042AFBC end:0x8042B734
 
-nw4r/src/snd/snd_Util.temp.cpp:
+nw4r/src/snd/snd_Util.cpp:
 	.text       start:0x8042B734 end:0x8042BBB0
 
-nw4r/src/snd/snd_WaveFile.temp.cpp:
+nw4r/src/snd/snd_WaveFile.cpp:
 	.text       start:0x8042BBB0 end:0x8042BF3C
 
-nw4r/src/snd/snd_WaveSound.temp.cpp:
+nw4r/src/snd/snd_WaveSound.cpp:
 	.text       start:0x8042BF3C end:0x8042C29C
 	.ctors      start:0x804FA0EC end:0x804FA0F0
 
-nw4r/src/snd/snd_WaveSoundHandle.temp.cpp:
+nw4r/src/snd/snd_WaveSoundHandle.cpp:
 	.text       start:0x8042C29C end:0x8042C2D4
 
-nw4r/src/snd/snd_WsdFile.temp.cpp:
+nw4r/src/snd/snd_WsdFile.cpp:
 	.text       start:0x8042C2D4 end:0x8042C690
 
-nw4r/src/snd/snd_WsdPlayer.temp.cpp:
+nw4r/src/snd/snd_WsdPlayer.cpp:
 	.text       start:0x8042C690 end:0x8042D6E8
 
-nw4r/src/snd/snd_adpcm.temp.cpp:
+nw4r/src/snd/snd_adpcm.cpp:
 	.text       start:0x8042D6E8 end:0x8042D774
 
-nw4r/src/ut/ut_LinkList.temp.cpp:
+nw4r/src/ut/ut_LinkList.cpp:
 	.text       start:0x8042D774 end:0x8042D8E0
 
-nw4r/src/ut/ut_binaryFileFormat.temp.cpp:
+nw4r/src/ut/ut_binaryFileFormat.cpp:
 	.text       start:0x8042D8E0 end:0x8042D954
 
-nw4r/src/ut/ut_CharStrmReader.temp.cpp:
+nw4r/src/ut/ut_CharStrmReader.cpp:
 	.text       start:0x8042D954 end:0x8042DA64
 
-nw4r/src/ut/ut_TagProcessorBase.temp.cpp:
+nw4r/src/ut/ut_TagProcessorBase.cpp:
 	.text       start:0x8042DA64 end:0x8042E134
 
-nw4r/src/ut/ut_IOStream.temp.cpp:
+nw4r/src/ut/ut_IOStream.cpp:
 	.text       start:0x8042E134 end:0x8042E160
 	.ctors      start:0x804FA0F0 end:0x804FA0F4
 
-nw4r/src/ut/ut_FileStream.temp.cpp:
+nw4r/src/ut/ut_FileStream.cpp:
 	.text       start:0x8042E160 end:0x8042E178
 	.ctors      start:0x804FA0F4 end:0x804FA0F8
 
-nw4r/src/ut/ut_DvdFileStream.temp.cpp:
+nw4r/src/ut/ut_DvdFileStream.cpp:
 	.text       start:0x8042E178 end:0x8042E184
 	.ctors      start:0x804FA0F8 end:0x804FA0FC
 
-nw4r/src/ut/ut_LockedCache.temp.cpp:
+nw4r/src/ut/ut_LockedCache.cpp:
 	.text       start:0x8042E184 end:0x8042E330
 	.ctors      start:0x804FA0FC end:0x804FA100
 
-nw4r/src/ut/ut_Font.temp.cpp:
+nw4r/src/ut/ut_Font.cpp:
 	.text       start:0x8042E330 end:0x8042E3D8
 
-nw4r/src/ut/ut_RomFont.temp.cpp:
+nw4r/src/ut/ut_RomFont.cpp:
 	.text       start:0x8042E3D8 end:0x8042EA0C
 
-nw4r/src/ut/ut_ResFontBase.temp.cpp:
+nw4r/src/ut/ut_ResFontBase.cpp:
 	.text       start:0x8042EA0C end:0x8042F2C0
 
-nw4r/src/ut/ut_ResFont.temp.cpp:
+nw4r/src/ut/ut_ResFont.cpp:
 	.text       start:0x8042F2C0 end:0x8042F5C4
 
-nw4r/src/ut/ut_ArchiveFontBase.temp.cpp:
+nw4r/src/ut/ut_ArchiveFontBase.cpp:
 	.text       start:0x8042F5C4 end:0x80430478
 
-nw4r/src/ut/ut_PackedFont.temp.cpp:
+nw4r/src/ut/ut_PackedFont.cpp:
 	.text       start:0x80430478 end:0x80431878
 
-nw4r/src/ut/ut_CharWriter.temp.cpp:
+nw4r/src/ut/ut_CharWriter.cpp:
 	.text       start:0x80431878 end:0x80432FBC
 
-nw4r/src/ut/ut_TextWriterBase.temp.cpp:
+nw4r/src/ut/ut_TextWriterBase.cpp:
 	.text       start:0x80432FBC end:0x80435010
 	.ctors      start:0x804FA100 end:0x804FA104
 
@@ -2595,7 +2595,7 @@ monolib1.s:
 	.sdata2     start:0x8066A178 end:0x8066A360
 	.sbss2      start:0x8066B558 end:0x8066B55C
 
-NdevExi2A/src/device/CDeviceVI.cpp:
+monolib/src/device/CDeviceVI.cpp:
 	extab       start:0x8001CB24 end:0x8001CC1C
 	extabindex  start:0x8003496C end:0x80034A2C
 	.text       start:0x8044A7B8 end:0x8044B9B0
