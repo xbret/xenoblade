@@ -1334,7 +1334,6 @@ config.libs = [
             Object(NonMatching, "CriWare/src/adx/adxt/adx_baif.c"),
             Object(NonMatching, "CriWare/src/adx/adxt/adx_bsc.c"),
             Object(NonMatching, "CriWare/src/adx/adxt/adx_bwav.c"),
-            Object(NonMatching, "CriWare/src/adx/adxt/code_80389300.c"),
             Object(NonMatching, "CriWare/src/adx/adxt/adx_crs.c"),
             Object(NonMatching, "CriWare/src/adx/adxt/adx_dcd5.c"),
             Object(NonMatching, "CriWare/src/adx/adxt/adx_dcd.c"),

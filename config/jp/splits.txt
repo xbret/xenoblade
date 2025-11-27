@@ -4550,12 +4550,9 @@ CriWare/src/adx/adxt/adx_bsc.c:
 	.bss        start:0x805E89D8 end:0x805E99B8
 
 CriWare/src/adx/adxt/adx_bwav.c:
-	.text       start:0x803883BC end:0x80389300
+	.text       start:0x803883BC end:0x803893A4
 	.rodata     start:0x8051AA78 end:0x8051AA98
 	.data       start:0x80563728 end:0x80563730
-
-CriWare/src/adx/adxt/code_80389300.c:
-	.text       start:0x80389300 end:0x803893A4
 
 CriWare/src/adx/adxt/adx_crs.c:
 	.text       start:0x803893A4 end:0x8038940C
