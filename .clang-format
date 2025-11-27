@@ -44,6 +44,10 @@ IncludeCategories:
     Priority: 3
     CaseSensitive: true
 
+  - Regex: '(<|")criware\/[[:lower:].]' # Criware public headers
+    Priority: 3
+    CaseSensitive: true
+
   - Regex: '^(<|")revolution\/[[:upper:].]' # RVL SDK public headers
     Priority: 4
     CaseSensitive: true

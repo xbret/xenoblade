@@ -5,7 +5,6 @@
 #include "monolib/CMsgParam.hpp"
 #include "monolib/FixStr.hpp"
 #include "monolib/IWorkEvent.hpp"
-#include "monolib/Math.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
