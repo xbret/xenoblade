@@ -21,8 +21,8 @@ public:
     CDeviceClock(const char* name, CWorkThread* workThread);
     virtual ~CDeviceClock();
     virtual void wkUpdate();
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static CDeviceClock* getInstance();
     static bool func_8044DEE0();
     static s64 getTimeNow();

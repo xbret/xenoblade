@@ -11,8 +11,8 @@ class CDeviceSC : public CDeviceBase {
 public:
     CDeviceSC(const char* name, CWorkThread* workThread);
     virtual ~CDeviceSC();
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static CDeviceSC* getInstance();
     static bool isWideAspectRatio();
     static bool isSoundModeMono();

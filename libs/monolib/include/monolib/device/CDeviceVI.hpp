@@ -39,8 +39,8 @@ public:
     static void func_80448A44();
     static void func_80448A84();
     static u32 func_80448D10();
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static void func_80448E78(bool state);
     static bool func_80448E80();
     void func_80448E88();

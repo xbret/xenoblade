@@ -99,7 +99,7 @@ void CWorkThread::wkSetEventChild(EVT evt){
     }
 }
 
-bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pName){
+bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pMessage){
     CDeviceClock* pDevClock = CDeviceClock::getInstance();
     if(pDevClock == nullptr || (!pDevClock->func_8044DEE0() && !arg1)){
         return false;
@@ -252,7 +252,7 @@ void CWorkThread::wkStandby(){
                 if(mFlags & THREAD_FLAG_0){
                     mState = THREAD_STATE_LOGIN;
                     wkTimeoutInit();
-                } else if(!wkStartup()){
+                } else if(!wkStandbyLogin()){
                     break;
                 }
 
@@ -268,7 +268,7 @@ void CWorkThread::wkStandby(){
             }
 
             case THREAD_STATE_RUN:{
-                if(!wkShutdown()){
+                if(!wkStandbyLogout()){
                     break;
                 }
 
@@ -286,7 +286,7 @@ void CWorkThread::wkStandby(){
                 break;
             }
         }
-    } else if(wkException(mExceptionWorkID)){
+    } else if(wkStandbyExceptionRetry(mExceptionWorkID)){
             CWorkThread* pExceptionThread = getWorkThread(mExceptionWorkID);
 
             if(pExceptionThread != nullptr){
@@ -298,13 +298,13 @@ void CWorkThread::wkStandby(){
     }
 }
 
-bool CWorkThread::wkStartup(){
+bool CWorkThread::wkStandbyLogin(){
     mState = THREAD_STATE_LOGIN;
     wkTimeoutInit();
     return true;
 }
 
-bool CWorkThread::wkShutdown(){
+bool CWorkThread::wkStandbyLogout(){
     mState = THREAD_STATE_LOGOUT;
     wkTimeoutInit();
     return true;

@@ -34,8 +34,8 @@ public:
     static void func_8045565C(void* r3);
     static void func_8045579C();
     static int func_804557A0();
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static void drawSyncCallback(u16 token);
     static void setValues(GXPixelFmt format, u32 heapSize);
 

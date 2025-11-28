@@ -16,8 +16,8 @@ public:
         return pFlow;
     }
 
-    virtual bool wkStartup();  //0x94
-    virtual bool wkShutdown(); //0x98
+    virtual bool wkStandbyLogin();  //0x94
+    virtual bool wkStandbyLogout(); //0x98
 
 private:
     CWorkFlowSetup(const char* pName, CWorkThread* pParent);

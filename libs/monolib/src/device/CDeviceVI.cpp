@@ -289,7 +289,7 @@ u32 CDeviceVI::func_80448D10(){
     return 1;
 }
 
-bool CDeviceVI::wkStartup(){
+bool CDeviceVI::wkStandbyLogin(){
     if(CDeviceSC::func_80447C60() != false){
         //Initialize VI
         VIInit();
@@ -302,19 +302,19 @@ bool CDeviceVI::wkStartup(){
         func_804486E4();
         VIEnableDimming(VI_ENABLE);
         VISetTrapFilter(VI_FALSE);
-        return CWorkThread::wkStartup();
+        return CWorkThread::wkStandbyLogin();
     }
 
     return false;
 }
 
-bool CDeviceVI::wkShutdown(){
+bool CDeviceVI::wkStandbyLogout(){
     VISetBlack(VI_TRUE);
     VIFlush();
     if(mChildren.empty()){
         if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
-            return CWorkThread::wkShutdown();
+            return CWorkThread::wkStandbyLogout();
         }
     }
 

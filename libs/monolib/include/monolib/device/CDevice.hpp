@@ -22,8 +22,8 @@ public:
     static u32 func_8044D248();
     static bool func_8044D438();
     static void initDevices();
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static CDevice* create();
     static void createRegions();
     static void deleteRegions();
@@ -64,7 +64,7 @@ namespace{
             sInstance = this;
         }
         virtual ~CDeviceException();
-        virtual bool wkShutdown();
+        virtual bool wkStandbyLogout();
         static CDeviceException* getInstance();
 
         static CDeviceException* init(const char* name, CWorkThread* workThread){

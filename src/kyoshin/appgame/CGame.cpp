@@ -154,7 +154,7 @@ void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
     view->func_8043CB7C(CRect16(x, y, width, height));
 }
 
-bool CGame::wkStartup(){
+bool CGame::wkStandbyLogin(){
     if(!CLibStaticData::func_8045FB08()) return false;
 
     CWorkThread* thread1 = func_80455AA0();
@@ -203,10 +203,10 @@ bool CGame::wkStartup(){
     }
 
     //Call base
-    return CProc::wkStartup();
+    return CProc::wkStandbyLogin();
 }
 
-bool CGame::wkShutdown(){
+bool CGame::wkStandbyLogout(){
     if(mShutdownState == SHUTDOWN_STATE_0){
         CTaskGame::getInstance()->func_80042710();
         mShutdownState = SHUTDOWN_STATE_1;
@@ -236,7 +236,7 @@ bool CGame::wkShutdown(){
         }
 
         //Call base
-        return CProc::wkShutdown();
+        return CProc::wkStandbyLogout();
     }
 
     return false;
@@ -277,7 +277,7 @@ the corresponding function in the error handler class instance is called to hand
 In the case of controller errors, the class containing the error handler function is CfPadTask,
 which inherits from the type used for the error handler classes (seems to be IGameException,
 but unfortunately the RTTI doesn't specify the name.) */
-bool CGame::wkException(u32 wid){
+bool CGame::wkStandbyExceptionRetry(u32 wid){
     if(mFlags & THREAD_FLAG_0) return true;
     if(func_8045DE00()) return false;
 

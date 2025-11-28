@@ -72,14 +72,14 @@ bool CWorkControl::hasFlow(){
     return false;
 }
 
-bool CWorkControl::wkStartup(){
+bool CWorkControl::wkStandbyLogin(){
     setFlowSetup();
-    return CWorkThread::wkStartup();
+    return CWorkThread::wkStandbyLogin();
 }
 
-bool CWorkControl::wkShutdown(){
+bool CWorkControl::wkStandbyLogout(){
     if(mChildren.empty() && CDevice::getInstance() == nullptr){
-        return CWorkThread::wkShutdown();
+        return CWorkThread::wkStandbyLogout();
     }
 
     return false;

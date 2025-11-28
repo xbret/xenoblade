@@ -94,12 +94,12 @@ public:
 public:
     CWorkThread(const char* pName, CWorkThread* pParent, int capacity);
     virtual ~CWorkThread();
-    virtual void wkUpdate();                //0x88
-    virtual void wkRender(){}              //0x8C
-    virtual void wkRenderAfter(){}         //0x90
-    virtual bool wkStartup();               //0x94
-    virtual bool wkShutdown();              //0x98
-    virtual bool wkException(WORK_ID wid){ //0x9C
+    virtual void wkUpdate();                           //0x88
+    virtual void wkRender(){}                          //0x8C
+    virtual void wkRenderAfter(){}                     //0x90
+    virtual bool wkStandbyLogin();                     //0x94
+    virtual bool wkStandbyLogout();                    //0x98
+    virtual bool wkStandbyExceptionRetry(WORK_ID wid){ //0x9C
         return true;
     }
 
@@ -110,7 +110,7 @@ public:
     void wkSetEvent(EVT evt);
     void wkSetEventChild(EVT evt);
 
-    bool wkCheckTimeout(u32 arg0, bool arg1, const char* pName);
+    bool wkCheckTimeout(u32 arg0, bool arg1, const char* pMessage);
     bool wkIsCurrent() const;
     void func_804385CC(u32);
 

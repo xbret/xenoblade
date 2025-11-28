@@ -40,7 +40,7 @@ bool CDeviceSC::func_80447C60(){
     return sInstance->isRunning();
 }
 
-bool CDeviceSC::wkStartup(){
+bool CDeviceSC::wkStandbyLogin(){
     if(SCCheckStatus() == SC_STATUS_OK){
         u32 r3 = CDeviceClock::func_8044DEE0();
         if(r3 != 0){
@@ -50,17 +50,17 @@ bool CDeviceSC::wkStartup(){
             mLanguage = SCGetLanguage();
             mProgMode = SCGetProgressiveMode();
             mSoundMode = SCGetSoundMode();
-            return CWorkThread::wkStartup(); //Call the base method
+            return CWorkThread::wkStandbyLogin(); //Call the base method
         }
     }
 
     return false;
 }
 
-bool CDeviceSC::wkShutdown(){
+bool CDeviceSC::wkStandbyLogout(){
     if(mChildren.empty()){
         if(CDeviceVI::getInstance() == nullptr){
-            return CWorkThread::wkShutdown();
+            return CWorkThread::wkStandbyLogout();
         }
     }
 

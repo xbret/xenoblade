@@ -80,17 +80,17 @@ CDeviceException* CDeviceException::getInstance(){
     return sInstance;
 }
 
-bool CDevice::wkStartup(){
+bool CDevice::wkStandbyLogin(){
     CDeviceException::init("CDeviceException", this);
     CDevice::initDevices();
     this->wkSetEvent(EVT_9);
-    return CWorkThread::wkStartup();
+    return CWorkThread::wkStandbyLogin();
 }
 
-bool CDevice::wkShutdown(){
+bool CDevice::wkStandbyLogout(){
     if(mChildren.empty() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
-        return CWorkThread::wkShutdown();
+        return CWorkThread::wkStandbyLogout();
     }
 
     return false;
@@ -118,7 +118,7 @@ CDeviceException::~CDeviceException(){
     sInstance = nullptr;
 }
 
-bool CDeviceException::wkShutdown(){
+bool CDeviceException::wkStandbyLogout(){
     if(mChildren.empty() == false) return false;
-    return CWorkThread::wkShutdown();
+    return CWorkThread::wkStandbyLogout();
 }

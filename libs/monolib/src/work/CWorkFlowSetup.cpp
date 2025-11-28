@@ -17,15 +17,15 @@ CWorkFlowSetup* CWorkFlowSetup::getInstance(){
     return spInstance;
 }
 
-bool CWorkFlowSetup::wkStartup(){
+bool CWorkFlowSetup::wkStandbyLogin(){
     if(CLib::isInitialized()){
         wkSetEvent(EVT_NONE);
-        return CWorkThread::wkStartup();
+        return CWorkThread::wkStandbyLogin();
     }
 
     return false;
 }
 
-bool CWorkFlowSetup::wkShutdown(){
-    return !mChildren.empty() ? false : CWorkThread::wkShutdown();
+bool CWorkFlowSetup::wkStandbyLogout(){
+    return !mChildren.empty() ? false : CWorkThread::wkStandbyLogout();
 }

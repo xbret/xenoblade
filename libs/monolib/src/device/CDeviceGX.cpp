@@ -173,7 +173,7 @@ int CDeviceGX::func_804557A0(){
     return sInstance->gxHeapSize;
 }
 
-bool CDeviceGX::wkStartup(){
+bool CDeviceGX::wkStandbyLogin(){
     if(CDeviceVI::func_804482DC()){
         GXInit(mGxHeap, gxHeapSize);
 
@@ -203,20 +203,20 @@ bool CDeviceGX::wkStartup(){
             GXSetDrawSyncCallback(drawSyncCallback);
         }
 
-        return CWorkThread::wkStartup();
+        return CWorkThread::wkStandbyLogin();
     }
 
     return false;
 }
 
-bool CDeviceGX::wkShutdown(){
+bool CDeviceGX::wkStandbyLogout(){
     if(sInstance->unk1CC == true){
         GXSetDrawSyncCallback(nullptr);
     }
 
     if(mChildren.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
-        return CWorkThread::wkShutdown();
+        return CWorkThread::wkStandbyLogout();
     }
 
     return false;

@@ -64,16 +64,16 @@ void CDeviceClock::wkUpdate(){
     OSTicksToCalendarTime(unk1F8, &mCalendar);
 }
 
-bool CDeviceClock::wkStartup(){
+bool CDeviceClock::wkStandbyLogin(){
     func_80447598();
-    return CWorkThread::wkStartup(); //Call base
+    return CWorkThread::wkStandbyLogin(); //Call base
 }
 
-bool CDeviceClock::wkShutdown(){
+bool CDeviceClock::wkStandbyLogout(){
     if(mChildren.empty()){
         if(CDeviceSC::getInstance() == nullptr && CWorkSystem::getInstance() == nullptr
         && CLib::getInstance() == nullptr){
-            return CWorkThread::wkShutdown(); //Call base
+            return CWorkThread::wkStandbyLogout(); //Call base
         }
     }
 

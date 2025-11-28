@@ -30,11 +30,11 @@ public:
     virtual void wkRender();
     static void func_800395F4(bool r3);
     static void func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height);
-    virtual bool wkStartup();
-    virtual bool wkShutdown();
+    virtual bool wkStandbyLogin();
+    virtual bool wkStandbyLogout();
     static void GameMain();
     static void registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param);
-    virtual bool wkException(u32 r4);
+    virtual bool wkStandbyExceptionRetry(u32 r4);
     virtual void OnPauseTrigger(bool paused);
     static void func_80039D08();
 

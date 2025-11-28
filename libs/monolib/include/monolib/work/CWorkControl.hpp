@@ -15,8 +15,8 @@ public:
     static void pause(bool paused);
     static bool hasFlow();
 
-    virtual bool wkStartup();  //0x94
-    virtual bool wkShutdown(); //0x98
+    virtual bool wkStandbyLogin();  //0x94
+    virtual bool wkStandbyLogout(); //0x98
 
 private:
     static const int MAX_CHILD = 32;
