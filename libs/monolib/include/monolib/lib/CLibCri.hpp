@@ -14,7 +14,7 @@ public:
     static CLibCri* getInstance();
     virtual void UnkVirtualFunc2();
 
-    static inline CLibCri* init(const char* name, CWorkThread* workThread){
+    static inline CLibCri* create(const char* name, CWorkThread* workThread){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(name, workThread);
         CWorkUtil::entryWork(lib, workThread, 0);
         return lib;

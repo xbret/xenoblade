@@ -23,9 +23,9 @@ class CDeviceGX : public CDeviceBase, public CDeviceVICb {
 public:
     CDeviceGX(const char* name, CWorkThread* workThread);
     virtual ~CDeviceGX();
-    static bool func_804552B4();
-    static void func_8045535C(u32 r3);
-    static bool func_80455368();
+    static bool checkIfRunning();
+    static void setDevicesInitializedFlag(bool state);
+    static bool devicesInitialized();
     static CDeviceGX* getInstance();
     static void updateVerticalFilter(EVerticalFilter filter);
     virtual void CDeviceVICb_vtableFunc3();
@@ -67,7 +67,7 @@ public:
         lbl_80667F70 = temp2/temp;
     }
 
-    static inline CDeviceGX* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceGX* create(const char* name, CWorkThread* workThread){
         CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;
@@ -77,7 +77,7 @@ public:
     //0x0: vtable
     //0x0-1c8: CDeviceBase
     //0x1c8-1cc: CDeviceVICb
-    BOOL unk1CC;
+    BOOL mDevicesInitialized; //0x1CC
     GXFifoObj mFifo; //0x1D0
     u8* mGxHeap; //0x250
     void* mGxHeapEndAddr; //0x254
@@ -92,7 +92,11 @@ public:
     EVerticalFilter mFilter; //0x278
     CGXCache unk27C;
 
-protected:
+private:
+    //Graphics callback tokens
+    static const u16 token1 = 0xB00B;
+    static const u16 token2 = 0xBEEF;
+
     static CDeviceGX* sInstance;
     static CGXCache* cacheInstance;
     static GXPixelFmt pixelFormat;

@@ -71,7 +71,7 @@ public:
         return getRenderModeObj()->fbWidth;
     }
 
-    static inline CDeviceVI* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceVI* create(const char* name, CWorkThread* workThread){
         CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;
@@ -111,8 +111,11 @@ public:
     u32 unk2B8;
     float unk2BC;
 
-protected:
+private:
+    static const u16 drawSyncToken = 0xBEEF;
+
     static CDeviceVI* sInstance;
+    static bool lbl_80667F2C;
 };
 
 //XFB defines

@@ -12,7 +12,7 @@ public:
     CDeviceRemotePad(const char* name, CWorkThread* workThread);
     static CDeviceRemotePad* getInstance();
 
-    static inline CDeviceRemotePad* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceRemotePad* create(const char* name, CWorkThread* workThread){
         CDeviceRemotePad* device = new (CWorkThreadSystem::getWorkMem()) CDeviceRemotePad(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         return device;

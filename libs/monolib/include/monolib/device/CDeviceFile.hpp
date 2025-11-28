@@ -13,7 +13,7 @@ public:
     CDeviceFile(const char* name, CWorkThread* workThread);
     static CDeviceFile* getInstance();
 
-    static inline CDeviceFile* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceFile* create(const char* name, CWorkThread* workThread){
         CDeviceFile* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFile(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         return device;

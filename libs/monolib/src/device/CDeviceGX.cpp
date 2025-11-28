@@ -11,14 +11,10 @@ CGXCache* CDeviceGX::cacheInstance;
 int CDeviceGX::gxHeapSize = 0x200000; //2 MB
 const char* CDeviceGX::someString = "GPCost";
 
-//Graphics callback tokens
-const u16 token1 = 0xB00B;
-const u16 token2 = 0xBEEF;
-
 CDeviceGX::CDeviceGX(const char* name, CWorkThread* workThread) :
 CDeviceBase(name, workThread, 0),
 CDeviceVICb(),
-unk1CC(false),
+mDevicesInitialized(false),
 mGxHeap(nullptr),
 mGxHeapEndAddr(nullptr),
 unk264(0),
@@ -49,16 +45,16 @@ CDeviceGX* CDeviceGX::getInstance(){
     return sInstance;
 }
 
-bool CDeviceGX::func_804552B4(){
+bool CDeviceGX::checkIfRunning(){
     return sInstance->isRunning();
 }
 
-void CDeviceGX::func_8045535C(u32 r3){
-    sInstance->unk1CC = r3;
+void CDeviceGX::setDevicesInitializedFlag(bool state){
+    sInstance->mDevicesInitialized = state;
 }
 
-bool CDeviceGX::func_80455368(){
-    return sInstance->unk1CC == 1;
+bool CDeviceGX::devicesInitialized(){
+    return sInstance->mDevicesInitialized == true;
 }
 
 void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
@@ -119,13 +115,13 @@ void CDeviceGX::CDeviceVICb_vtableFunc3(){
 }
 
 void CDeviceGX::CDeviceVICb_vtableFunc4(){
-    if(sInstance->unk1CC != true){
+    if(sInstance->mDevicesInitialized != true){
         cacheInstance->func_8044BE38();
     }
 }
 
 void CDeviceGX::func_80455560(){
-    if(sInstance->unk1CC == true){
+    if(sInstance->mDevicesInitialized == true){
         GXFlush();
 
         GXFifoObj fifoTemp;
@@ -155,7 +151,7 @@ void CDeviceGX::func_80455560(){
 }
 
 void CDeviceGX::func_8045565C(void* r3){
-    if(sInstance->unk1CC == true){
+    if(sInstance->mDevicesInitialized == true){
         GXSetDrawSync(token2);
         someInline(r3);
         while(GXReadDrawSync() != token2){}
@@ -177,7 +173,7 @@ bool CDeviceGX::wkStandbyLogin(){
     if(CDeviceVI::func_804482DC()){
         GXInit(mGxHeap, gxHeapSize);
 
-        if(sInstance->unk1CC == true){
+        if(sInstance->mDevicesInitialized == true){
             GXSetDrawDone();
             GXInitFifoBase(&mFifo, mGxHeap, gxHeapSize);
             GXSetCPUFifo(&mFifo);
@@ -199,7 +195,7 @@ bool CDeviceGX::wkStandbyLogin(){
         cacheInstance->func_8044BE38();
         GXSetDither(GX_DISABLE);
 
-        if(sInstance->unk1CC == true){
+        if(sInstance->mDevicesInitialized == true){
             GXSetDrawSyncCallback(drawSyncCallback);
         }
 
@@ -210,7 +206,7 @@ bool CDeviceGX::wkStandbyLogin(){
 }
 
 bool CDeviceGX::wkStandbyLogout(){
-    if(sInstance->unk1CC == true){
+    if(sInstance->mDevicesInitialized == true){
         GXSetDrawSyncCallback(nullptr);
     }
 

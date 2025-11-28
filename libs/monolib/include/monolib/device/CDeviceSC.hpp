@@ -19,7 +19,7 @@ public:
     static u8 getLanguage();
     static bool func_80447C60();
 
-    static inline CDeviceSC* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceSC* create(const char* name, CWorkThread* workThread){
         CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;

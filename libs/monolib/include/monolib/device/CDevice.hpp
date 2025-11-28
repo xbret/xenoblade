@@ -28,7 +28,7 @@ public:
     static void createRegions();
     static void deleteRegions();
 
-    static CDevice* init(const char* name, CWorkThread* workThread){
+    static CDevice* create(const char* name, CWorkThread* workThread){
         CDevice* cDevice = new (CWorkThreadSystem::getWorkMem()) CDevice(name, workThread);
         CWorkUtil::entryWork(cDevice, workThread, 0);
         return cDevice;
@@ -67,7 +67,7 @@ namespace{
         virtual bool wkStandbyLogout();
         static CDeviceException* getInstance();
 
-        static CDeviceException* init(const char* name, CWorkThread* workThread){
+        static CDeviceException* create(const char* name, CWorkThread* workThread){
             CDeviceException* deviceException = new (CWorkThreadSystem::getWorkMem()) CDeviceException(name, workThread);
             CWorkUtil::entryWork(deviceException, workThread, 0);
             return deviceException;

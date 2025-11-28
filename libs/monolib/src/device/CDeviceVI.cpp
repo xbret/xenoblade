@@ -84,35 +84,36 @@ static CPnt16 lbl_8065A6B8[] = {
     CPnt16(0,16)
 };
 
-static bool lbl_80667F2C;
+bool CDeviceVI::lbl_80667F2C;
 
 CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) :
 CDeviceBase(name, workThread, 8),
-UnkClass_80447FDC() {
-    mTvFormat = 0;
-    unk1F4 = 9;
-    mScanMode = 0;
-    mDimmingCount = 0;
-    unk278 = 0;
-    unk27A = 0;
-    unk27C = 0;
-    unk27E = 0;
-    mXfbBuffersPtr = nullptr;
-    unk284 = 2;
-    unk294 = 0;
-    unk298 = 0;
-    unk29C = 0;
-    unk2A4 = 0;
-    unk2A8 = 2;
-    unk2AC = 0;
-    unk2B0 = 0;
-    unk2B5 = 1;
-    unk2B8 = 0x1E;
-    unk2BC = 0.033333335;
+UnkClass_80447FDC(),
+mTvFormat(0),
+unk1F4(9),
+mScanMode(0),
+mDimmingCount(0),
+unk278(0),
+unk27A(0),
+unk27C(0),
+unk27E(0),
+mXfbBuffersPtr(nullptr),
+unk284(2),
+unk294(0),
+unk298(0),
+unk29C(0),
+unk2A4(0),
+unk2A8(2),
+unk2AC(0),
+unk2B0(0),
+unk2B5(1),
+unk2B8(30),
+unk2BC(1.0f/30.0f) {
     sInstance = this;
     unk2A0 = 0;
     unk2A2 = 0;
-    mXfbBuffersPtr = (u8*)mtl::MemManager::allocate_array_ex(getXfbBuffersSize(), lbl_80667F2C ? mtl::MemManager::getHandleStatic() : CDevice::func_8044D058(), 32);
+    mXfbBuffersPtr = (u8*)mtl::MemManager::allocate_array_ex(getXfbBuffersSize(),
+     lbl_80667F2C ? mtl::MemManager::getHandleStatic() : CDevice::func_8044D058(), 32);
 
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
     sInstance->unk4 |= 0x1;
@@ -240,8 +241,8 @@ void CDeviceVI::wkUpdate(){
 }
 
 void CDeviceVI::func_80448A44(){
-    if(CDeviceGX::func_80455368() != false){
-        while(GXReadDrawSync() != 0xBEEF){
+    if(CDeviceGX::devicesInitialized() != false){
+        while(GXReadDrawSync() != drawSyncToken){
         }
     }else{
         GXDrawDone();

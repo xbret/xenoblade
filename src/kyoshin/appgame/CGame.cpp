@@ -74,7 +74,7 @@ bool CGame::func_8003933C(){
 void CGame::func_80039364(){
     if(sInstance == nullptr) GameMain();
     else if(CGameRestart::sInstance == nullptr){
-        CGameRestart* gameRestart = CGameRestart::init("CGameRestart", CDesktop::getInstance());
+        CGameRestart* gameRestart = CGameRestart::create("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
             gameRestart->unk1EC = sInstance->mWorkID;
@@ -254,7 +254,7 @@ void CGame::GameMain(){
         sInstance->func_804391A8();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
-        init("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
+        create("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
     }
 }
 

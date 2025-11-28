@@ -38,7 +38,7 @@ public:
     virtual void OnPauseTrigger(bool paused);
     static void func_80039D08();
 
-    static inline CGame* init(const char* name, CWorkThread* workThread, u32 r5){
+    static inline CGame* create(const char* name, CWorkThread* workThread, u32 r5){
         CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(name, workThread);
         CWorkUtil::entryWork(game, workThread, 0);
         game->unk1E4 = r5;
@@ -84,7 +84,7 @@ namespace {
             }
         }
 
-        static inline CGameRestart* init(const char* name, CWorkThread* workThread){
+        static inline CGameRestart* create(const char* name, CWorkThread* workThread){
             CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(name, workThread, 8);
             
             CWorkUtil::entryWork(gameRestart, workThread, 0);

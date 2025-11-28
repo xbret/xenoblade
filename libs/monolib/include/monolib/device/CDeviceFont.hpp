@@ -12,7 +12,7 @@ public:
     CDeviceFont(const char* name, CWorkThread* workThread);
     static CDeviceFont* getInstance();
 
-    static inline CDeviceFont* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceFont* create(const char* name, CWorkThread* workThread){
         CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         return device;

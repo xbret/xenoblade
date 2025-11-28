@@ -29,7 +29,7 @@ public:
     static void func_8044DF8C();
     static void func_8044DFF4();
 
-    static inline CDeviceClock* init(const char* name, CWorkThread* workThread){
+    static inline CDeviceClock* create(const char* name, CWorkThread* workThread){
         CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(name, workThread);
         CWorkUtil::entryWork(device, workThread, 0);
         device->unk1C4 |= 1;

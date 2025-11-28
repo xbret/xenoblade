@@ -49,31 +49,31 @@ bool CDevice::func_8044D438(){
 
 void CDevice::initDevices(){
     if(CDeviceVI::getInstance() == nullptr){
-        CDeviceVI::init("CDeviceVI", sInstance);
+        CDeviceVI::create("CDeviceVI", sInstance);
     }
     if(CDeviceGX::getInstance() == nullptr){
-        CDeviceGX::init("CDeviceGX", sInstance);
+        CDeviceGX::create("CDeviceGX", sInstance);
     }
     if(CDeviceRemotePad::getInstance() == nullptr){
-        CDeviceRemotePad::init("CDeviceRemotePAD", sInstance);
+        CDeviceRemotePad::create("CDeviceRemotePAD", sInstance);
     }
     if(CDeviceClock::getInstance() == nullptr){
-        CDeviceClock::init("CDeviceClock", sInstance);
+        CDeviceClock::create("CDeviceClock", sInstance);
     }
     if(CDeviceSC::getInstance() == nullptr){
-        CDeviceSC::init("CDeviceSC", sInstance);
+        CDeviceSC::create("CDeviceSC", sInstance);
     }
     if(CDeviceFont::getInstance() == nullptr){
-        CDeviceFont::init("CDeviceFont", sInstance);
+        CDeviceFont::create("CDeviceFont", sInstance);
     }
     if(CDeviceFile::getInstance() == nullptr){
-        CDeviceFile::init("CDeviceFile", sInstance);
+        CDeviceFile::create("CDeviceFile", sInstance);
     }
     if(CLibCri::getInstance() == nullptr){
-        CLibCri::init("CLibCri", sInstance);
+        CLibCri::create("CLibCri", sInstance);
     }
 
-    CDeviceGX::func_8045535C(1);
+    CDeviceGX::setDevicesInitializedFlag(1);
 }
 
 CDeviceException* CDeviceException::getInstance(){
@@ -81,7 +81,7 @@ CDeviceException* CDeviceException::getInstance(){
 }
 
 bool CDevice::wkStandbyLogin(){
-    CDeviceException::init("CDeviceException", this);
+    CDeviceException::create("CDeviceException", this);
     CDevice::initDevices();
     this->wkSetEvent(EVT_9);
     return CWorkThread::wkStandbyLogin();
@@ -97,7 +97,7 @@ bool CDevice::wkStandbyLogout(){
 }
 
 CDevice* CDevice::create(){
-    return init("CDevice", func_804437BC());
+    return create("CDevice", func_804437BC());
 }
 
 void CDevice::createRegions(){
