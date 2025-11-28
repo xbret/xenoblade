@@ -706,7 +706,8 @@ config.libs = [
             Object(NonMatching, "kyoshin/appgame/CTutorialList.cpp"),
             Object(NonMatching, "kyoshin/appgame/CLoad.cpp"),
             Object(MatchingFor("jp"), "kyoshin/appgame/CNandData.cpp"),
-            Object(MatchingFor("jp"), "kyoshin/appgame/ErrMesData.cpp", shift_jis = False, extra_cflags=["-enc UTF8"]),
+            Object(MatchingFor("jp"), "kyoshin/appgame/ErrMesData.cpp", shift_jis = False, extra_cflags=["-enc UTF8"]), #JP only
+            Object(NonMatching, "kyoshin/appgame/CErrMes.cpp"), #EU/US only
             Object(NonMatching, "kyoshin/appgame/plugin/pluginHelp.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp"),
             Object(NonMatching, "kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp"),
@@ -1832,6 +1833,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/code_804F0258.cpp"),
             Object(NonMatching, "monolib/src/nand/CNReqtaskSaveBanner.cpp"),
             Object(NonMatching, "monolib/src/nand/CNBanner.cpp"),
+            Object(NonMatching, "monolib/src/monolib_eu_804F9E98.cpp"), #EU/US only
         ],
     }
 ]
