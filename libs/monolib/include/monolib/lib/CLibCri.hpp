@@ -11,7 +11,7 @@ class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC
 public:
     CLibCri(const char* pName, CWorkThread* pWorkThread);
     static CLibCri* getInstance();
-    virtual void UnkVirtualFunc2();
+    virtual void UnkClass_80447FDC_UnkVirtualFunc1();
 
     static inline CLibCri* create(const char* pName, CWorkThread* pWorkThread){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pWorkThread);

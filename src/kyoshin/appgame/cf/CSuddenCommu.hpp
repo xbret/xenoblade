@@ -9,7 +9,7 @@ namespace cf{
     public:
         CSuddenCommu();
         virtual ~CSuddenCommu(){}
-        virtual void IObjectInfo_vtableFunc1();
+        virtual void IObjectInfo_UnkVirtualFunc1();
         void func_801BA1DC();
 
         //0x0: vtable

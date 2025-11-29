@@ -92,7 +92,7 @@ void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
     }
 }
 
-void CDeviceGX::CDeviceVICb_vtableFunc3(){
+void CDeviceGX::CDeviceVICb_UnkVirtualFunc3(){
     GXFifoObj fifoTemp;
     void* readPtr;
     void* writePtr;
@@ -114,7 +114,7 @@ void CDeviceGX::CDeviceVICb_vtableFunc3(){
     unk264 = ((float)temp2/(float)gxHeapSize) * 2.0f;
 }
 
-void CDeviceGX::CDeviceVICb_vtableFunc4(){
+void CDeviceGX::CDeviceVICb_UnkVirtualFunc4(){
     if(spInstance->mDevicesInitialized != true){
         cacheInstance->func_8044BE38();
     }

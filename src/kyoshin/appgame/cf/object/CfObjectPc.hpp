@@ -28,13 +28,13 @@ namespace cf {
         virtual void func_800C11CC(); //0x608
 
         inline UNKTYPE* unkInline1(){
-            BOOL thing = CObjectParam_vtableFunc5();
+            BOOL thing = CObjectParam_UnkVirtualFunc5();
             UNKTYPE* idk = func_800B708C(thing);
             return func_800AD860(idk);
         }
 
         inline UNKTYPE* unkInline2(){
-            BOOL thing2 = CObjectParam_vtableFunc5();
+            BOOL thing2 = CObjectParam_UnkVirtualFunc5();
             UNKTYPE* idk2 = func_800B708C(thing2);
             return func_800C1228(idk2);
         }

@@ -9,8 +9,8 @@ public:
     CFileHandle* mFileHandle;
 };
 
-/* Interface for work events, which provides a set of 32 callback functions that get
-triggered when a certain event happens (such as when loading a file for OnFileEvent).
+/* Interface for work events, which provides a set of 32 event handler functions that
+get triggered when a certain event happens (such as when loading a file for OnFileEvent).
 Deriving classes can override any of these functions to run their own code when the
 corresponding event happens. Only events 2-5 are actually used though, with the rest
 being empty slots that were left in for some dumb reason (tysm monolithsoft <3). It is

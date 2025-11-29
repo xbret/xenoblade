@@ -3,16 +3,15 @@
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/reslist.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 #include "monolib/work/CWorkUtil.hpp"
 #include <revolution/OS.h>
 
 class IDeviceClockFrame {
 public:
-    virtual void virtualFunc1() = 0;
-    virtual void virtualFunc2() = 0;
-    virtual void virtualFunc3() = 0;
+    virtual void IDeviceClockFrame_UnkVirtualFunc1() = 0;
+    virtual void IDeviceClockFrame_UnkVirtualFunc2() = 0;
+    virtual void IDeviceClockFrame_UnkVirtualFunc3() = 0;
 };
 
 //size: 0x238

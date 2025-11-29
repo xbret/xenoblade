@@ -9,7 +9,7 @@ namespace cf {
     public:
         CChainEffect();
         virtual ~CChainEffect(){}
-        virtual void IObjectInfo_vtableFunc1();
+        virtual void IObjectInfo_UnkVirtualFunc1();
 
         //0x0: vtable
         //0x0-4: IObjectInfo

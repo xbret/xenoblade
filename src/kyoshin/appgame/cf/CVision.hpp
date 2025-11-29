@@ -26,7 +26,7 @@ namespace cf{
     public:
         CVision();
         virtual ~CVision();
-        virtual void IObjectInfo_vtableFunc1();
+        virtual void IObjectInfo_UnkVirtualFunc1();
         void func_801A380C();
         void func_801A929C(u32 r4);
 

@@ -1,5 +1,4 @@
 #include "kyoshin/appgame/CBattery.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceFile.hpp"

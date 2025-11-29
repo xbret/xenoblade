@@ -7,25 +7,25 @@ namespace cf {
         unk0 = 0;
         unk20 = 0;
         unk78 = 0;
-        vtableFunc1();
+        CAttackParam_UnkVirtualFunc1();
     }
 
     CArtsParam::CArtsParam(){
-        vtableFunc1();
+        CArtsParam_UnkVirtualFunc1();
     }
 
-    void CArtsParam::vtableFunc1(){
-        CAttackParam::vtableFunc1();
+    void CArtsParam::CArtsParam_UnkVirtualFunc1(){
+        CAttackParam::CAttackParam_UnkVirtualFunc1();
         unk88 = 0;
     }
 
-    void CArtsParam::vtableFunc3(u8 r4){
+    void CArtsParam::CArtsParam_UnkVirtualFunc3(u8 r4){
         if(unk88 != nullptr){
             unk0 = r4;
         }
     }
 
-    u8 CArtsParam::vtableFunc2(){
+    u8 CArtsParam::CArtsParam_UnkVirtualFunc2(){
         if(unk88 != nullptr){
             return *(u8*)unk88;
         }

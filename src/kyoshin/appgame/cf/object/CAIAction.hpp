@@ -8,8 +8,8 @@ namespace cf {
     class CAIAction {
     public:
         CAIAction();
-        virtual void CAIAction_vtableFunc1(); //0x8
-        virtual void CAIAction_vtableFunc2(); //0xC
+        virtual void CAIAction_UnkVirtualFunc1(); //0x8
+        virtual void CAIAction_UnkVirtualFunc2(); //0xC
 
         //0x0: vtable
         u8 unk4[0xB18]; //temporary

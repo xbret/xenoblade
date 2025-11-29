@@ -3,8 +3,6 @@
 #include "kyoshin/appgame/cf/object/CfObjectPc.hpp"
 #include "kyoshin/appgame/cf/object/CfObjectEne.hpp"
 #include "kyoshin/appgame/cf/CfSoundMan.hpp"
-#include "monolib/MemManager.hpp"
-#include "monolib/work/CWorkSystem.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 
 extern UNKTYPE* func_8009EC9C(u16 r3);
@@ -26,7 +24,7 @@ namespace cf{
 
     //Plays attack sound effects when a player character hits an enemy?
     void func_800D7A04(CfObjectPc* pObjectPc, CfObjectEne* pObjectEne){
-        CActorParam_UnkStruct1* r3 = pObjectPc->CActorParam_vtableFunc129();
+        CActorParam_UnkStruct1* r3 = pObjectPc->CActorParam_UnkVirtualFunc129();
         u32 flags = r3->mFlagsArray[0].flags;
 
         if(flags & CActorParam_UnkStruct1::FLAG_BIT_1){
@@ -39,8 +37,8 @@ namespace cf{
 
             if(r30 != nullptr){
                 if(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_24){
-                    if(pObjectEne->CActorParam_vtableFunc19() == 1 ||
-                    pObjectEne->CActorParam_vtableFunc19() == 2){
+                    if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                    pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                         if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                             CfSoundMan::func_801BFC38(0, 0x1B4, 0, 0, 0.6f);
                             return;
@@ -65,8 +63,8 @@ namespace cf{
                             func_8009D7E4((UNKTYPE*)((u32)r3_1 + 0x1C), 1);
                         }
 
-                        if(pObjectEne->CActorParam_vtableFunc19() == 1 ||
-                        pObjectEne->CActorParam_vtableFunc19() == 2){
+                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                        pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                             CfSoundMan::func_801BFC38(0, 0x1AE, 0, 0, 0.6f);
                         }else{
                             CfSoundMan::func_801BFC38(0, 0x1AD, 0, 0, 0.6f);
@@ -82,8 +80,8 @@ namespace cf{
                             func_8009D7E4((UNKTYPE*)((u32)r3_1 + 0x1C), 1);
                         }
 
-                        if(pObjectEne->CActorParam_vtableFunc19() == 1 ||
-                        pObjectEne->CActorParam_vtableFunc19() == 2){
+                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                        pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                             CfSoundMan::func_801BFC38(0, 0x1AB, 0, 0, 0.6f);
                         }else{
                             CfSoundMan::func_801BFC38(0, 0x1AA, 0, 0, 0.6f);

@@ -11,7 +11,7 @@ public:
     virtual ~UnkClass_80447FDC(){
     }
 
-    virtual void UnkVirtualFunc2() = 0;
+    virtual void UnkClass_80447FDC_UnkVirtualFunc1() = 0;
 
     //0x0: vtable
     u32 unk4; //may not belong here

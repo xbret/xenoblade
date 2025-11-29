@@ -7,6 +7,6 @@ namespace cf{
     //size: 0x10
     class CHelp_Target : public CHelp {
     public:
-        virtual bool CHelp_vtableFunc3();
+        virtual bool CHelp_UnkVirtualFunc3();
     };
 }

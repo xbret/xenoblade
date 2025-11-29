@@ -1,11 +1,9 @@
-#include <cmath>
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceGX.hpp"
 #include "monolib/device/CDevice.hpp"
 #include "monolib/lib/CLib.hpp"
 #include "monolib/work/CWorkSystem.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/Math.hpp"
 #include <string.h>
 
@@ -330,6 +328,6 @@ bool CDeviceVI::func_80448E80(){
     return lbl_80667F2C;
 }
 
-void CDeviceVI::UnkVirtualFunc2(){
+void CDeviceVI::UnkClass_80447FDC_UnkVirtualFunc1(){
     unk4 |= 0x80000000;
 }

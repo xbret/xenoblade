@@ -15,7 +15,7 @@ int voice_play(_sVMThread* pThread) {
     
     for(reslist<cf::CfObject*>::iterator it = list->begin(); it != list->end(); it++){
         cf::CfObjectPc* object = static_cast<cf::CfObjectPc*>(*it);
-        if(object->CActorParam_vtableFunc138() == 0){
+        if(object->CActorParam_UnkVirtualFunc138() == 0){
             if(r30 == object->unk8C_3){
                 object->func_800BE898(r27, 0x14, 1.0f, 30.0f);
                 break;

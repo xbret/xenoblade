@@ -52,7 +52,14 @@ public:
     //0x0-1c4: CWorkThread
     u32 unk1C4;
 
-protected:
+private:
+    static const char* devSys1String;
+    static const char* devSys2String;
+    static ml::FixStr<64> lbl_8065A6F8;
+    static ml::FixStr<64> lbl_8065A73C;
+    static mtl::ALLOC_HANDLE lbl_80665FA0;
+    static mtl::ALLOC_HANDLE lbl_80665FA4;
+
     static CDevice* spInstance;
 };
 

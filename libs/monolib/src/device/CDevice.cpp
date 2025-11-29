@@ -20,12 +20,12 @@ extern int func_80454E78();
 
 CDevice* CDevice::spInstance;
 CDeviceException* CDeviceException::spInstance;
-static const char* devSys1String = "DeviceSystem1";
-static const char* devSys2String = "DeviceSystem2";
-static FixStr<64> lbl_8065A6F8;
-static FixStr<64> lbl_8065A73C;
-static int lbl_80665FA0 = -1;
-static int lbl_80665FA4 = -1;
+const char* CDevice::devSys1String = "DeviceSystem1";
+const char* CDevice::devSys2String = "DeviceSystem2";
+FixStr<64> CDevice::lbl_8065A6F8;
+FixStr<64> CDevice::lbl_8065A73C;
+mtl::ALLOC_HANDLE CDevice::lbl_80665FA0 = mtl::INVALID_HANDLE;
+mtl::ALLOC_HANDLE CDevice::lbl_80665FA4 = mtl::INVALID_HANDLE;
 
 CDevice::~CDevice(){
     spInstance = nullptr;

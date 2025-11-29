@@ -8,7 +8,7 @@ extern UNKWORD func_800829B8();
 extern UNKWORD func_8006EF04(UNKWORD r3);
 
 namespace cf{
-    bool CHelp_Target::CHelp_vtableFunc3(){
+    bool CHelp_Target::CHelp_UnkVirtualFunc3(){
         CfObjectMove* objMove = func_80082D54(0);
         CfObjectPc* objPc = func_800BFC68(objMove);
         if(func_800829B8() != 0) return false;
@@ -17,7 +17,7 @@ namespace cf{
         
         if(func_8006EF04(0x4000000) != 0) return false;
         if(objPc == nullptr) return false;
-        if(objPc->CObjectParam_vtableFunc5() == false) return false;
+        if(objPc->CObjectParam_UnkVirtualFunc5() == false) return false;
 
         UNKTYPE* smthElse;
         UNKTYPE* smthElse1;

@@ -3,7 +3,6 @@
 #include "monolib/work/CWorkUtil.hpp"
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 
 //size: 0x1f0

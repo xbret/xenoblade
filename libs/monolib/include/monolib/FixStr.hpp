@@ -49,6 +49,10 @@ namespace ml{
             return std::strcmp(c_str(), str) == 0;
         }
 
+        bool operator!=(const char* str) const {
+            return std::strcmp(c_str(), str) != 0;
+        }
+
         const char* c_str() const {
             return string;
         }

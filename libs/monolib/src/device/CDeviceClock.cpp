@@ -46,7 +46,7 @@ void CDeviceClock::func_8044DF8C(){
     spInstance->unk200 = time;
 
     for(reslist<IDeviceClockFrame*>::iterator it = spInstance->unk1CC.begin(); it != spInstance->unk1CC.end(); it++){
-        (*it)->virtualFunc2();
+        (*it)->IDeviceClockFrame_UnkVirtualFunc2();
     }
 }
 
@@ -55,7 +55,7 @@ void CDeviceClock::func_8044DFF4(){
     spInstance->unk208 = time - spInstance->unk200;
     
     for(reslist<IDeviceClockFrame*>::iterator it = spInstance->unk1CC.begin(); it != spInstance->unk1CC.end(); it++){
-        (*it)->virtualFunc3();
+        (*it)->IDeviceClockFrame_UnkVirtualFunc3();
     }
 }
 

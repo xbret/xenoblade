@@ -2,10 +2,12 @@
 
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
-#include "monolib/MemManager.hpp"
-#include "monolib/CFileHandle.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 #include "monolib/work/CWorkUtil.hpp"
+
+//Forward declarations
+class CFileHandle;
+class CDeviceFileJob;
 
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
@@ -19,6 +21,7 @@ public:
         return device;
     }
 
+    static void removeFileJob(CDeviceFileJob* pJob);
     static void func_8044F118(CFileHandle* r3);
     static void func_8044F154(CFileHandle*, int);
     static void func_8044F414(CFileHandle*);

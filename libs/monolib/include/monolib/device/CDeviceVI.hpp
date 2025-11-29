@@ -44,7 +44,7 @@ public:
     static void func_80448E78(bool state);
     static bool func_80448E80();
     void func_80448E88();
-    virtual void UnkVirtualFunc2();
+    virtual void UnkClass_80447FDC_UnkVirtualFunc1();
 
     //TODO: these should use enums
 

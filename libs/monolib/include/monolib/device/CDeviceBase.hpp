@@ -7,7 +7,7 @@
 //size: 0x1C8
 class CDeviceBase : public CWorkThread {
 public:
-    CDeviceBase(const char* pName, CWorkThread* pWorkThread, int r6) : CWorkThread(pName, pWorkThread, r6) {
+    CDeviceBase(const char* pName, CWorkThread* pWorkThread, int capacity) : CWorkThread(pName, pWorkThread, capacity) {
         unk1C4 = 0;
     }
     virtual ~CDeviceBase(){}

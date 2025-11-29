@@ -16,6 +16,6 @@ namespace cf {
             unk60 = false;
         }
         virtual ~CChainTemp(){}
-        virtual void vtableFunc2(); //0
+        virtual void CChainTemp_UnkVirtualFunc1(); //0
     };
 }

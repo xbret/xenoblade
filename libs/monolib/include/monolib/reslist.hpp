@@ -1,12 +1,11 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/MemManager.hpp"
 
 template <typename T>
 struct _reslist_node{
-    _reslist_node<T>* mNext; //0x00
-    _reslist_node<T>* mPrev; //0x04
+    _reslist_node<T>* mNext; //0x0
+    _reslist_node<T>* mPrev; //0x4
     T mItem; //0x8
 };
 

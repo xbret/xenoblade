@@ -6,7 +6,6 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/CGXCache.hpp"
-#include "monolib/MemManager.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 #include "monolib/work/CWorkUtil.hpp"
 #include <revolution/GX.h>
@@ -28,8 +27,8 @@ public:
     static bool devicesInitialized();
     static CDeviceGX* getInstance();
     static void updateVerticalFilter(EVerticalFilter filter);
-    virtual void CDeviceVICb_vtableFunc3();
-    virtual void CDeviceVICb_vtableFunc4();
+    virtual void CDeviceVICb_UnkVirtualFunc3();
+    virtual void CDeviceVICb_UnkVirtualFunc4();
     static void func_80455560();
     static void func_8045565C(void* r3);
     static void func_8045579C();
