@@ -2,11 +2,10 @@
 
 #include "types.h"
 
-#include "monolib/CMsgParam.hpp"
-#include "monolib/FixStr.hpp"
+#include "monolib/work/CMsgParam.hpp"
 #include "monolib/work/IWorkEvent.hpp"
-#include "monolib/reslist.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/util.hpp"
 
 //size: 0x1C4
 class CWorkThread : public IWorkEvent{

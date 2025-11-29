@@ -2,7 +2,7 @@
 
 #include "types.h"
 #include "monolib/work/CWorkThread.hpp"
-#include "monolib/reslist.hpp"
+#include "monolib/util.hpp"
 
 //size: 0x1ec
 class CProc : public CWorkThread {

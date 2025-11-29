@@ -1,6 +1,6 @@
 #include "monolib/work/CWorkThreadSystem.hpp"
 
-#include "monolib/MemManager.hpp"
+#include "monolib/util.hpp"
 
 const char* CWorkThreadSystem::scRegionName = "WorkThreadSystem";
 BOOL CWorkThreadSystem::sMemAvailable = false;

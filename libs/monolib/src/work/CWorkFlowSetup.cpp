@@ -1,7 +1,7 @@
 #include "monolib/work/CWorkFlowSetup.hpp"
 
-#include "monolib/lib/CLib.hpp"
-#include "monolib/work/CWorkThread.hpp"
+#include "monolib/lib.hpp"
+#include "monolib/work.hpp"
 
 CWorkFlowSetup* CWorkFlowSetup::spInstance = nullptr;
 

@@ -2,7 +2,7 @@
 
 #include "types.h"
 
-#include "monolib/MemManager.hpp"
+#include "monolib/util.hpp"
 
 //Forward declarations
 class CWorkThread;

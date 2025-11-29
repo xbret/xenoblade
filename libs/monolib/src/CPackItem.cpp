@@ -1,7 +1,6 @@
 #include "monolib/CPackItem.hpp"
-#include "monolib/MemManager.hpp"
-#include "monolib/work/CWorkSystemPack.hpp"
-#include "monolib/CPathUtil.hpp"
+#include "monolib/work.hpp"
+#include "monolib/util.hpp"
 #include <criware/cri_adxf.h>
 #include <cstring>
 

@@ -1,7 +1,7 @@
 #include "monolib/device/CDeviceClock.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/device/CDeviceSC.hpp"
-#include "monolib/reslist.hpp"
+#include "monolib/util.hpp"
 #include "monolib/work/CWorkSystem.hpp"
 #include "monolib/lib/CLib.hpp"
 #include <string.h>

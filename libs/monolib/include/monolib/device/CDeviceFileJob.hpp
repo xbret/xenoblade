@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work/CWorkThread.hpp"
+#include "monolib/work.hpp"
 #include "monolib/CFileHandle.hpp"
 
 //Base class for jobs carried out by CDeviceFile.

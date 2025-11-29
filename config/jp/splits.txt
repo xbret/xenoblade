@@ -5814,13 +5814,13 @@ nw4r/src/ut/ut_TextWriterBase.cpp:
 	.sbss       start:0x80667E40 end:0x80667E50
 	.sdata2     start:0x8066C960 end:0x8066C978
 
-monolib/src/CAttrTransform.cpp:
+monolib/src/math/CAttrTransform.cpp:
 	extab       start:0x8001BF80 end:0x8001BF98
 	extabindex  start:0x80033B0C end:0x80033B30
 	.text       start:0x80432678 end:0x80433300
 	.sdata2     start:0x8066C978 end:0x8066C9A8
 
-monolib/src/MemManager.cpp:
+monolib/src/util/MemManager.cpp:
 	extab       start:0x8001BF98 end:0x8001C020
 	extabindex  start:0x80033B30 end:0x80033BFC
 	.text       start:0x80433300 end:0x80434F94
@@ -5830,13 +5830,13 @@ monolib/src/MemManager.cpp:
 	.sbss       start:0x80667E50 end:0x80667E60
 	.sdata2     start:0x8066C9A8 end:0x8066C9D0
 
-monolib/src/CPathUtil.cpp:
+monolib/src/util/CPathUtil.cpp:
 	extab       start:0x8001C020 end:0x8001C040
 	extabindex  start:0x80033BFC end:0x80033C2C
 	.text       start:0x80434F94 end:0x8043539C
 	.rodata     start:0x80525D70 end:0x80525D78
 
-monolib/src/MTRand.cpp:
+monolib/src/math/MTRand.cpp:
 	extab       start:0x8001C040 end:0x8001C070
 	extabindex  start:0x80033C2C end:0x80033C74
 	.text       start:0x8043539C end:0x80435C9C
@@ -5844,12 +5844,12 @@ monolib/src/MTRand.cpp:
 	.sbss       start:0x80667E60 end:0x80667E68
 	.sdata2     start:0x8066C9D0 end:0x8066C9E8
 
-monolib/src/CRect16.cpp:
+monolib/src/math/CRect16.cpp:
 	.text       start:0x80435C9C end:0x80435D28
 	.ctors      start:0x804F5A44 end:0x804F5A48
 	.sbss       start:0x80667E68 end:0x80667E70
 
-monolib/src/CVec3.cpp:
+monolib/src/math/CVec3.cpp:
 	extab       start:0x8001C070 end:0x8001C078
 	extabindex  start:0x80033C74 end:0x80033C80
 	.text       start:0x80435D28 end:0x80435DF8
@@ -5857,29 +5857,29 @@ monolib/src/CVec3.cpp:
 	.bss        start:0x80659DB0 end:0x80659DF0
 	.sdata2     start:0x8066C9E8 end:0x8066C9F0
 
-monolib/src/CVec4.cpp:
+monolib/src/math/CVec4.cpp:
 	.text       start:0x80435DF8 end:0x80435E70
 	.ctors      start:0x804F5A4C end:0x804F5A50
 	.bss        start:0x80659DF0 end:0x80659E40
 	.sdata2     start:0x8066C9F0 end:0x8066C9F8
 
-monolib/src/MathConstants.cpp:
+monolib/src/math/MathConstants.cpp:
 	.sdata2     start:0x8066C9F8 end:0x8066CA20
 
-monolib/src/FastCast.cpp:
+monolib/src/math/FastCast.cpp:
 	.text       start:0x80435E70 end:0x80435EA4
 
-monolib/src/Random.cpp:
+monolib/src/math/Random.cpp:
 	extab       start:0x8001C078 end:0x8001C098
 	extabindex  start:0x80033C80 end:0x80033CB0
 	.text       start:0x80435EA4 end:0x80435FA4
 
-monolib/src/FloatUtils.cpp:
+monolib/src/math/FloatUtils.cpp:
 	extab       start:0x8001C098 end:0x8001C0A0
 	extabindex  start:0x80033CB0 end:0x80033CBC
 	.text       start:0x80435FA4 end:0x80436058
 
-monolib/src/CCol3.cpp:
+monolib/src/math/CCol3.cpp:
 	extab       start:0x8001C0A0 end:0x8001C0A8
 	extabindex  start:0x80033CBC end:0x80033CC8
 	.text       start:0x80436058 end:0x80436138
@@ -5887,7 +5887,7 @@ monolib/src/CCol3.cpp:
 	.bss        start:0x80659E40 end:0x80659EC8
 	.sdata2     start:0x8066CA20 end:0x8066CA30
 
-monolib/src/CCol4.cpp:
+monolib/src/math/CCol4.cpp:
 	extab       start:0x8001C0A8 end:0x8001C0B0
 	extabindex  start:0x80033CC8 end:0x80033CD4
 	.text       start:0x80436138 end:0x80436260
@@ -5895,7 +5895,7 @@ monolib/src/CCol4.cpp:
 	.bss        start:0x80659EC8 end:0x80659F88
 	.sdata2     start:0x8066CA30 end:0x8066CA40
 
-monolib/src/CMat34.cpp:
+monolib/src/math/CMat34.cpp:
 	extab       start:0x8001C0B0 end:0x8001C0D0
 	extabindex  start:0x80033CD4 end:0x80033D04
 	.text       start:0x80436260 end:0x80436E84
@@ -5903,13 +5903,13 @@ monolib/src/CMat34.cpp:
 	.bss        start:0x80659F88 end:0x80659FE8
 	.sdata2     start:0x8066CA40 end:0x8066CA58
 
-monolib/src/CMat44.cpp:
+monolib/src/math/CMat44.cpp:
 	.text       start:0x80436E84 end:0x80436F20
 	.ctors      start:0x804F5A5C end:0x804F5A60
 	.bss        start:0x80659FE8 end:0x8065A068
 	.sdata2     start:0x8066CA58 end:0x8066CA60
 
-monolib/src/CQuat.cpp:
+monolib/src/math/CQuat.cpp:
 	extab       start:0x8001C0D0 end:0x8001C0F0
 	extabindex  start:0x80033D04 end:0x80033D34
 	.text       start:0x80436F20 end:0x8043738C
@@ -6097,11 +6097,11 @@ monolib/src/CProcess.cpp:
 	.sdata      start:0x80665F00 end:0x80665F08
 	.sbss       start:0x80667F08 end:0x80667F10
 
-monolib/src/CDoubleListNode.cpp:
+monolib/src/util/CDoubleListNode.cpp:
 	.text       start:0x80446578 end:0x804466E0
 	.data       start:0x8056F408 end:0x8056F418
 
-monolib/src/CChildListNode.cpp:
+monolib/src/util/CChildListNode.cpp:
 	extab       start:0x8001C9A4 end:0x8001C9B4
 	extabindex  start:0x8003458C end:0x800345A4
 	.text       start:0x804466E0 end:0x8044676C

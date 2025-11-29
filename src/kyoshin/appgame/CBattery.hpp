@@ -1,9 +1,9 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work/IWorkEvent.hpp"
 #include "monolib/CFileHandle.hpp"
-#include "monolib/lib/CLibLayout.hpp"
+#include "monolib/work.hpp"
+#include "monolib/lib.hpp"
 #include "monolib/UnkClass_8045F564.hpp"
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
 #include <nw4r/lyt/lyt_layout.h>

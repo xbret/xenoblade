@@ -4,9 +4,8 @@
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
-#include "monolib/reslist.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/util.hpp"
+#include "monolib/work.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 

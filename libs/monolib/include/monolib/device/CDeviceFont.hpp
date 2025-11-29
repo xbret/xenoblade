@@ -2,8 +2,7 @@
 
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/work.hpp"
 
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {

@@ -6,12 +6,9 @@
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceFile.hpp"
 #include "monolib/device/CDeviceFont.hpp"
-#include "monolib/MemManager.hpp"
-#include "monolib/FixStr.hpp"
-#include "monolib/work/CWorkSystem.hpp"
-#include "monolib/lib/CLib.hpp"
-#include "monolib/lib/CLibCri.hpp"
-#include "monolib/work/CWorkThread.hpp"
+#include "monolib/util.hpp"
+#include "monolib/work.hpp"
+#include "monolib/lib.hpp"
 
 using namespace ml;
 

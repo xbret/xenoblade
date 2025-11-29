@@ -2,8 +2,8 @@
 
 #include "types.h"
 #include "monolib/work/IWorkEvent.hpp"
-#include "monolib/FixStr.hpp"
 #include "monolib/device/CDeviceFile.hpp"
+#include "monolib/util.hpp"
 
 struct PackHeader {
     u32 unk0;

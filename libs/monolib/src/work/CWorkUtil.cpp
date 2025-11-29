@@ -1,6 +1,6 @@
 #include "monolib/work/CWorkUtil.hpp"
 
-#include "monolib/FixStr.hpp"
+#include "monolib/util.hpp"
 #include "monolib/work/CWorkRoot.hpp"
 #include "monolib/work/CWorkThread.hpp"
 

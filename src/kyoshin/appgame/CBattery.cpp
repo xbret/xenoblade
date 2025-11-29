@@ -1,8 +1,7 @@
 #include "kyoshin/appgame/CBattery.hpp"
-#include "monolib/lib/CLibLayout.hpp"
-#include "monolib/device/CDeviceVI.hpp"
-#include "monolib/device/CDeviceFile.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/lib.hpp"
+#include "monolib/device.hpp"
+#include "monolib/work.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
 #include <stdio.h>
 

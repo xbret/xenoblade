@@ -2,9 +2,8 @@
 
 #include "types.h"
 #include "monolib/device/CDeviceBase.hpp"
-#include "monolib/reslist.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/util.hpp"
+#include "monolib/work.hpp"
 #include <revolution/OS.h>
 
 class IDeviceClockFrame {

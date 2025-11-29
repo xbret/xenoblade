@@ -6,8 +6,7 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/CGXCache.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include "monolib/work.hpp"
 #include <revolution/GX.h>
 
 enum EVerticalFilter {

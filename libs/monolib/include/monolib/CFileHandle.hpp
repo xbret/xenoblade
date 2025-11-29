@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include <monolib/FixStr.hpp>
+#include "monolib/util.hpp"
 
 enum CBM {
     CBM_0,

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work/IWorkEvent.hpp"
+#include "monolib/work.hpp"
 
 class CArcItem : IWorkEvent {
 public:

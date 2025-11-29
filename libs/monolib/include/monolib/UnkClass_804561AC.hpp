@@ -1,8 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/device/CDeviceGX.hpp"
-#include "monolib/Math.hpp"
+#include "monolib/math.hpp"
 
 using namespace ml;
 
@@ -18,4 +17,3 @@ public:
 
     u8 unk0[0xD0];
 };
-

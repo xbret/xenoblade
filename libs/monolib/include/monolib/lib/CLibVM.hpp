@@ -1,6 +1,6 @@
 #pragma once
 
-#include "monolib/work/CWorkThread.hpp"
+#include "monolib/work.hpp"
 
 class CLibVM : public CWorkThread {
 public:

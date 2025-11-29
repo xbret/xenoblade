@@ -1,5 +1,5 @@
 #include "kyoshin/appgame/plugin/pluginPad.hpp"
-#include "monolib/device/CDeviceRemotePad.hpp"
+#include "monolib/device.hpp"
 #include "kyoshin/appgame/code_8007C0F8.hpp"
 
 static PluginFuncData sPluginPadFuncs[] = {
