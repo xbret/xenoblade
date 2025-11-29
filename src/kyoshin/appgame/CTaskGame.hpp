@@ -21,5 +21,5 @@ public:
     u32 unk68;
 
 protected:
-    static CTaskGame* sInstance;
+    static CTaskGame* spInstance;
 };

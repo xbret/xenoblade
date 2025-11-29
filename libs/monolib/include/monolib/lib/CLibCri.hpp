@@ -1,6 +1,5 @@
 #pragma once
 
-#include "types.h"
 #include "monolib/work/CWorkThread.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
@@ -10,13 +9,13 @@
 //size: 0x1d0
 class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC {
 public:
-    CLibCri(const char* name, CWorkThread* workThread);
+    CLibCri(const char* pName, CWorkThread* pWorkThread);
     static CLibCri* getInstance();
     virtual void UnkVirtualFunc2();
 
-    static inline CLibCri* create(const char* name, CWorkThread* workThread){
-        CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(name, workThread);
-        CWorkUtil::entryWork(lib, workThread, 0);
+    static inline CLibCri* create(const char* pName, CWorkThread* pWorkThread){
+        CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pWorkThread);
+        CWorkUtil::entryWork(lib, pWorkThread, 0);
         return lib;
     }
 

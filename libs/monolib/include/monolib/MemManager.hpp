@@ -2,9 +2,9 @@
 
 #include "decomp.h"
 #include "types.h"
+#include "monolib/FixStr.hpp"
 #include <cstring>
 #include <cstddef>
-#include "monolib/FixStr.hpp"
 
 namespace mtl {
     
@@ -69,13 +69,16 @@ namespace mtl {
         static u32 getMEM2MaxSize();
 
         void* allocate(void* buffer, u32 size, int align);
-        void finalize();
 
         MemBlock* reallocate(MemBlock* block);
         MemBlock* coalesce(MemBlock* block);
         MemBlock* coalesceRecursive(MemBlock* block);
 
         MemBlock* getTailBuffer(u32 size, int align, void** buffer);
+
+        static inline void initialize(){
+            setRegionMaxSize(MEM1_MAX_SIZE, MEM2_MAX_SIZE);
+        }
 
     private:
         void* allocateImpl(MemBlock* block, void* buffer, u32 size, int align);
@@ -95,6 +98,9 @@ namespace mtl {
 
         static u32 sMaxSizeMEM1;
         static u32 sMaxSizeMEM2;
+
+        static const int MEM1_MAX_SIZE = 0x680000;
+        static const int MEM2_MAX_SIZE = 0;
     };
 
     class MemManager {

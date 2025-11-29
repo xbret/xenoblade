@@ -11,7 +11,7 @@
 
 using namespace ml;
 
-CDeviceVI* CDeviceVI::sInstance;
+CDeviceVI* CDeviceVI::spInstance;
 
 static const VIGamma gammaLevels[] = {
     VI_GM_0_1,
@@ -86,8 +86,8 @@ static CPnt16 lbl_8065A6B8[] = {
 
 bool CDeviceVI::lbl_80667F2C;
 
-CDeviceVI::CDeviceVI(const char* name, CWorkThread* workThread) :
-CDeviceBase(name, workThread, 8),
+CDeviceVI::CDeviceVI(const char* pName, CWorkThread* pWorkThread) :
+CDeviceBase(pName, pWorkThread, 8),
 UnkClass_80447FDC(),
 mTvFormat(0),
 unk1F4(9),
@@ -109,15 +109,15 @@ unk2B0(0),
 unk2B5(1),
 unk2B8(30),
 unk2BC(1.0f/30.0f) {
-    sInstance = this;
+    spInstance = this;
     unk2A0 = 0;
     unk2A2 = 0;
     mXfbBuffersPtr = (u8*)mtl::MemManager::allocate_array_ex(getXfbBuffersSize(),
      lbl_80667F2C ? mtl::MemManager::getHandleStatic() : CDevice::func_8044D058(), 32);
 
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
-    sInstance->unk4 |= 0x1;
-    sInstance->unk4 |= 0x10;
+    spInstance->unk4 |= 0x1;
+    spInstance->unk4 |= 0x10;
     mCallbackList.initList(mAllocHandle, 16);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
@@ -133,69 +133,69 @@ CDeviceVI::~CDeviceVI(){
         mXfbBuffersPtr = nullptr;
     }
 
-    sInstance = nullptr;
+    spInstance = nullptr;
 }
 
 CDeviceVI* CDeviceVI::getInstance(){
-    return sInstance;
+    return spInstance;
 }
 
 void CDeviceVI::func_804482B0(u32 r3){
-    CDeviceVI* vi = sInstance;
+    CDeviceVI* vi = spInstance;
     if(r3 != 0) vi->unk4 |= 0x10;
     else vi->unk4 &= ~0x10;
 }
 
 bool CDeviceVI::func_804482DC(){
-    bool result = sInstance->isRunning();
-    return result == false || (sInstance->unk4 & 0x4) != 0 ? false : true;
+    bool result = spInstance->isRunning();
+    return result == false || (spInstance->unk4 & 0x4) != 0 ? false : true;
 }
 
 void CDeviceVI::func_804483A0(u32 r3){
-    CDeviceVI* vi = sInstance;
+    CDeviceVI* vi = spInstance;
     if(r3 != 0) vi->unk4 |= 0x1;
     else vi->unk4 &= ~0x1;
 }
 
 u32 CDeviceVI::func_804483CC(){
-    return sInstance->unk4 & 0x1;
+    return spInstance->unk4 & 0x1;
 }
 
 void CDeviceVI::func_804483DC(u32 r3){
-    if(sInstance != nullptr){
+    if(spInstance != nullptr){
         u32 val = r3;
         if(val >= 0x1E) val = 0x1D;
-        sInstance->unk1F4 = val;
+        spInstance->unk1F4 = val;
     }
 }
 
 GXRenderModeObj* CDeviceVI::getRenderModeObj(){
-    return &sInstance->unk200;
+    return &spInstance->unk200;
 }
 
 u32 CDeviceVI::func_80448408(){
-    return sInstance->unk2B8;
+    return spInstance->unk2B8;
 }
 
 float CDeviceVI::func_80448414(){
-    return sInstance->unk2BC;
+    return spInstance->unk2BC;
 }
 
 u32 CDeviceVI::func_80448420(){
-    return sInstance->unk2AC;
+    return spInstance->unk2AC;
 }
 
 u32 CDeviceVI::func_8044842C(){
-    return sInstance->unk2A8;
+    return spInstance->unk2A8;
 }
 
 bool CDeviceVI::addCallback(CDeviceVICb* entry){
-    sInstance->mCallbackList.push_back(entry);
+    spInstance->mCallbackList.push_back(entry);
     return true;
 }
 
 bool CDeviceVI::removeCallback(CDeviceVICb* entry){
-    sInstance->mCallbackList.remove(entry);
+    spInstance->mCallbackList.remove(entry);
     return true;
 }
 
@@ -250,7 +250,7 @@ void CDeviceVI::func_80448A44(){
 }
 
 void CDeviceVI::func_80448A84(){
-    CDeviceVI* vi = sInstance;
+    CDeviceVI* vi = spInstance;
 
     u32 r0 = vi->mFlags & THREAD_FLAG_EXCEPTION;
     if(r0 != 0){

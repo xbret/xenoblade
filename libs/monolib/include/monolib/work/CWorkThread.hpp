@@ -4,55 +4,55 @@
 
 #include "monolib/CMsgParam.hpp"
 #include "monolib/FixStr.hpp"
-#include "monolib/IWorkEvent.hpp"
+#include "monolib/work/IWorkEvent.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/reslist.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
 
-/* Enum used to keep track of the type of this work thread, which is useful when
- casting from a generic instance of CWorkThread. Most classes inheriting from
- CWorkThread have a unique value reserved, but not all do. If a custom value
- isn't set, derived classes will default to the value for CWorkThread. */
-enum WorkThreadType{
-    WORKTHREAD_CWORKTHREAD = 0,
-    WORKTHREAD_CWORKCONTROL = 1,
-    WORKTHREAD_CWORKSYSTEM = 2,
-    WORKTHREAD_03 = 3,
-    WORKTHREAD_04 = 4,
-    WORKTHREAD_05 = 5,
-    WORKTHREAD_CWORKSYSTEMCACHE = 6,
-    WORKTHREAD_CWORKSYSTEMPACK = 7,
-    WORKTHREAD_08 = 8,
-    WORKTHREAD_09 = 9,
-    WORKTHREAD_CDEVICE = 10,
-    WORKTHREAD_CLIB = 11,
-    WORKTHREAD_CLIBG3D = 12,
-    WORKTHREAD_CLIBHBM = 13,
-    WORKTHREAD_CLIBLAYOUT = 14,
-    WORKTHREAD_CLIBCRI = 15,
-    WORKTHREAD_CLIBCRIMOVIEPLAY = 16,
-    WORKTHREAD_CLIBCRISTREAMINGPLAY = 17,
-    WORKTHREAD_CLIBVM = 18,
-    WORKTHREAD_CLIBSTATICDATA = 19,
-    WORKTHREAD_20 = 20,
-    WORKTHREAD_CPROCROOT = 21,
-    WORKTHREAD_CVIEWROOT = 22,
-    WORKTHREAD_CPROC = 23,
-    WORKTHREAD_CDESKTOP = 24,
-    WORKTHREAD_CEXCEPTION = 25,
-    WORKTHREAD_CLIBHBMCONTROL = 45,
-    WORKTHREAD_CVIEW = 48,
-    WORKTHREAD_CRSRCDATA = 56,
-    WORKTHREAD_CSCRIPTCODE = 59,
-    WORKTHREAD_CDEVICEFONTLAYER = 63,
-    WORKTHREAD_CDEVICEFONTLOADER = 64,
-    WORKTHREAD_CDEVICEFILEJOB = 65,
-    WORKTHREAD_CDEVICEFILEJOBREADDVD = 68
-};
-
 //size: 0x1C4
 class CWorkThread : public IWorkEvent{
 public:
+    /* Enum used to keep track of the type of this work thread, which is useful when
+     casting from a generic instance of CWorkThread. Most classes inheriting from
+     CWorkThread have a unique value reserved, but not all do. If a custom value
+     isn't set, derived classes will default to the value for CWorkThread. */
+    enum ThreadType{
+        THREAD_CWORKTHREAD = 0,
+        THREAD_CWORKCONTROL = 1,
+        THREAD_CWORKSYSTEM = 2,
+        THREAD_03 = 3,
+        THREAD_04 = 4,
+        THREAD_05 = 5,
+        THREAD_CWORKSYSTEMCACHE = 6,
+        THREAD_CWORKSYSTEMPACK = 7,
+        THREAD_08 = 8,
+        THREAD_09 = 9,
+        THREAD_CDEVICE = 10,
+        THREAD_CLIB = 11,
+        THREAD_CLIBG3D = 12,
+        THREAD_CLIBHBM = 13,
+        THREAD_CLIBLAYOUT = 14,
+        THREAD_CLIBCRI = 15,
+        THREAD_CLIBCRIMOVIEPLAY = 16,
+        THREAD_CLIBCRISTREAMINGPLAY = 17,
+        THREAD_CLIBVM = 18,
+        THREAD_CLIBSTATICDATA = 19,
+        THREAD_20 = 20,
+        THREAD_CPROCROOT = 21,
+        THREAD_CVIEWROOT = 22,
+        THREAD_CPROC = 23,
+        THREAD_CDESKTOP = 24,
+        THREAD_CEXCEPTION = 25,
+        THREAD_CLIBHBMCONTROL = 45,
+        THREAD_CVIEW = 48,
+        THREAD_CRSRCDATA = 56,
+        THREAD_CSCRIPTCODE = 59,
+        THREAD_CDEVICEFONTLAYER = 63,
+        THREAD_CDEVICEFONTLOADER = 64,
+        THREAD_CDEVICEFILEJOB = 65,
+        THREAD_CDEVICEFILEJOBREADDVD = 68
+    };
+
     enum EVT{
         EVT_NONE,
         EVT_1,
@@ -143,7 +143,7 @@ public:
     ml::FixStr<64> mName;            //0x4
     ThreadState mState;              //0x48
     WORK_ID mWorkID;                 //0x4C
-    WorkThreadType mType;            //0x50
+    ThreadType mType;                //0x50
     mtl::ALLOC_HANDLE mAllocHandle;  //0x54
     CWorkThread* mParent;            //0x58
     reslist<CWorkThread*> mChildren; //0x5C

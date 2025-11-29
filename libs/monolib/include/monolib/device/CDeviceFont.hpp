@@ -9,12 +9,12 @@
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {
 public:
-    CDeviceFont(const char* name, CWorkThread* workThread);
+    CDeviceFont(const char* pName, CWorkThread* pWorkThread);
     static CDeviceFont* getInstance();
 
-    static inline CDeviceFont* create(const char* name, CWorkThread* workThread){
-        CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceFont* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         return device;
     }
 

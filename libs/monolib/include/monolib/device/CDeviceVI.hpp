@@ -13,7 +13,7 @@
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {
 public:
-    CDeviceVI(const char* name, CWorkThread* workThread);
+    CDeviceVI(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceVI();
     static CDeviceVI* getInstance();
     static void func_804482B0(u32 r3);
@@ -71,9 +71,9 @@ public:
         return getRenderModeObj()->fbWidth;
     }
 
-    static inline CDeviceVI* create(const char* name, CWorkThread* workThread){
-        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceVI* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         device->unk1C4 |= 1;
         return device;
     }
@@ -114,7 +114,7 @@ public:
 private:
     static const u16 drawSyncToken = 0xBEEF;
 
-    static CDeviceVI* sInstance;
+    static CDeviceVI* spInstance;
     static bool lbl_80667F2C;
 };
 

@@ -7,7 +7,7 @@
 //size: 0x1ec
 class CProc : public CWorkThread {
 public:
-    CProc(const char* name, CWorkThread* workThread, int r6);
+    CProc(const char* pName, CWorkThread* pWorkThread, int r6);
     virtual ~CProc();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();

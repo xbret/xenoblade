@@ -8,7 +8,7 @@
 CWorkThread::CWorkThread(const char* pName, CWorkThread* pParent, int capacity)
     : mState(THREAD_STATE_NONE),
       mWorkID(INVALID_WORK_ID),
-      mType(WORKTHREAD_CWORKTHREAD),
+      mType(THREAD_CWORKTHREAD),
       mParent(pParent),
       mFlags(0),
       mMsgQueue(0),

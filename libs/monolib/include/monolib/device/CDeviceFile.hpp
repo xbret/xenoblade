@@ -10,12 +10,12 @@
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
 public:
-    CDeviceFile(const char* name, CWorkThread* workThread);
+    CDeviceFile(const char* pName, CWorkThread* pWorkThread);
     static CDeviceFile* getInstance();
 
-    static inline CDeviceFile* create(const char* name, CWorkThread* workThread){
-        CDeviceFile* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFile(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceFile* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceFile* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFile(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         return device;
     }
 

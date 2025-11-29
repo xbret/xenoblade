@@ -18,7 +18,7 @@ public:
 //size: 0x238
 class CDeviceClock : public CDeviceBase {
 public:
-    CDeviceClock(const char* name, CWorkThread* workThread);
+    CDeviceClock(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceClock();
     virtual void wkUpdate();
     virtual bool wkStandbyLogin();
@@ -29,9 +29,9 @@ public:
     static void func_8044DF8C();
     static void func_8044DFF4();
 
-    static inline CDeviceClock* create(const char* name, CWorkThread* workThread){
-        CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceClock* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         device->unk1C4 |= 1;
         return device;
     }
@@ -47,7 +47,7 @@ public:
     s64 unk208;
     OSCalendarTime mCalendar; //0x210
 
-    static CDeviceClock* sInstance;
+    static CDeviceClock* spInstance;
 };
 
 extern u32 func_8044DEE0();

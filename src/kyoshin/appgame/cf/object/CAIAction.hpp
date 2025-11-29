@@ -15,3 +15,6 @@ namespace cf {
         u8 unk4[0xB18]; //temporary
     };
 }
+
+extern void func_8014A86C(int);
+extern void func_8014A8F8();

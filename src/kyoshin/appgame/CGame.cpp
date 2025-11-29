@@ -33,15 +33,15 @@ extern bool func_8045DE00();
 extern void func_80043298(CView* view, CWorkThread* thread, int r5);
 extern CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);
 
-CGame* CGame::sInstance;
+CGame* CGame::spInstance;
 static FixStr<64> lbl_80573C80;
 nw4r::lyt::Layout* CGame::lbl_80666604;
 nw4r::lyt::ArcResourceAccessor* CGame::sArcResourceAccessor;
 const char* CGame::scViewName = "巨神"; //"Bionis"
-CGameRestart* CGameRestart::sInstance;
+CGameRestart* CGameRestart::spInstance;
 
-CGame::CGame(const char* name, CWorkThread* workThread) :
-CProc(name, workThread, 8),
+CGame::CGame(const char* pName, CWorkThread* pWorkThread) :
+CProc(pName, pWorkThread, 8),
 mView(nullptr),
 mShutdownState(SHUTDOWN_STATE_0),
 unk1F4(-1),
@@ -51,7 +51,7 @@ unk1FC(),
 mTaskManUpdateCount(1),
 unk224(1.0f),
 unk228(0) {
-    sInstance = this;
+    spInstance = this;
     CLibHbm_8045D5C8(1);
     func_80444874(&func_80039D08);
     this->wkSetEvent(EVT_4);
@@ -60,11 +60,11 @@ unk228(0) {
 CGame::~CGame(){
     func_80444874(nullptr);
     CLibHbm_8045D5C8(0);
-    sInstance = nullptr;
+    spInstance = nullptr;
 }
 
 CGame* CGame::getInstance(){
-    return CGame::sInstance;
+    return CGame::spInstance;
 }
 
 bool CGame::func_8003933C(){
@@ -72,20 +72,20 @@ bool CGame::func_8003933C(){
 }
 
 void CGame::func_80039364(){
-    if(sInstance == nullptr) GameMain();
-    else if(CGameRestart::sInstance == nullptr){
+    if(spInstance == nullptr) GameMain();
+    else if(CGameRestart::spInstance == nullptr){
         CGameRestart* gameRestart = CGameRestart::create("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
-            gameRestart->unk1EC = sInstance->mWorkID;
-            sInstance->wkSetEvent(EVT_NONE);
+            gameRestart->unk1EC = spInstance->mWorkID;
+            spInstance->wkSetEvent(EVT_NONE);
         }
     }
 }
 
 void CGame::setTaskManagerUpdateCount(u32 count){
-    if(sInstance != nullptr){
-        sInstance->mTaskManUpdateCount = count;
+    if(spInstance != nullptr){
+        spInstance->mTaskManUpdateCount = count;
     }
 }
 
@@ -139,12 +139,12 @@ void CGame::wkRender(){
 
 //TODO: the inner statements should maybe be inlines?
 void CGame::func_800395F4(bool wide){
-    if(sInstance != nullptr && sInstance->mView != nullptr){
+    if(spInstance != nullptr && spInstance->mView != nullptr){
         if(!wide){
-            func_80039694(sInstance->mView, 0, 56,
+            func_80039694(spInstance->mView, 0, 56,
             CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
         }else{
-            func_80039694(sInstance->mView, 0, 0,
+            func_80039694(spInstance->mView, 0, 0,
             CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
         }
     }
@@ -250,8 +250,8 @@ static void dummy(){
 }
 
 void CGame::GameMain(){
-    if(sInstance != nullptr){
-        sInstance->func_804391A8();
+    if(spInstance != nullptr){
+        spInstance->func_804391A8();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
         create("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
@@ -261,8 +261,8 @@ void CGame::GameMain(){
 /* Creates a new error entry using the given error message and callback class. This is used specifically
 for the error messages related to controller related issues (e.g. controller disconnect). */
 void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
-    if(sInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !(sInstance->mFlags & THREAD_FLAG_0)){
-        CException* exception = static_cast<CException*>(func_80457CA4(sInstance, message, 5));
+    if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !(spInstance->mFlags & THREAD_FLAG_0)){
+        CException* exception = static_cast<CException*>(func_80457CA4(spInstance, message, 5));
         if(exception != nullptr){
             exception->mException = (IGameException*)r4;
             exception->unk204 = param;
@@ -288,7 +288,7 @@ bool CGame::wkStandbyExceptionRetry(u32 wid){
     //Check that the thread is valid, and has the right type id. If not, set the pointer to null.
     if(workThread == nullptr){
         exception = nullptr;
-    }else if(workThread->mType != WORKTHREAD_CEXCEPTION){
+    }else if(workThread->mType != THREAD_CEXCEPTION){
         exception = nullptr;
     }else{
         //The type matches, so casting should be safe
@@ -345,7 +345,7 @@ void CGame::OnPauseTrigger(bool paused){
 }
 
 void CGame::func_80039D08(){
-    if(sInstance != nullptr){
+    if(spInstance != nullptr){
         if(func_8007E1B4() != 0){
             func_801BF93C();
         }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/IWorkEvent.hpp"
+#include "monolib/work/IWorkEvent.hpp"
 #include "monolib/CFileHandle.hpp"
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/UnkClass_8045F564.hpp"

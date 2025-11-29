@@ -21,7 +21,7 @@ enum EVerticalFilter {
 //size: 0x798
 class CDeviceGX : public CDeviceBase, public CDeviceVICb {
 public:
-    CDeviceGX(const char* name, CWorkThread* workThread);
+    CDeviceGX(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceGX();
     static bool checkIfRunning();
     static void setDevicesInitializedFlag(bool state);
@@ -51,13 +51,13 @@ public:
     }
 
     static inline void someInline(void* r3){
-        CDeviceGX* gx = sInstance;
+        CDeviceGX* gx = spInstance;
         GXBool vf = gx->mFilter != VFILTER_NONE;
         GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
         GXBool aa = CDeviceVI::getRenderModeObj()->aa;
         u8* vfilter = gx->mVFilter;
         GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
-        GXCopyDisp(r3, sInstance->unk274);
+        GXCopyDisp(r3, spInstance->unk274);
     }
 
     static inline void anotherInline(){
@@ -67,11 +67,15 @@ public:
         lbl_80667F70 = temp2/temp;
     }
 
-    static inline CDeviceGX* create(const char* name, CWorkThread* workThread){
-        CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceGX* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         device->unk1C4 |= 1;
         return device;
+    }
+
+    static inline void initialize(){
+        setValues(GX_PF_RGB8_Z24, REGION_SIZE);
     }
 
     //0x0: vtable
@@ -97,7 +101,9 @@ private:
     static const u16 token1 = 0xB00B;
     static const u16 token2 = 0xBEEF;
 
-    static CDeviceGX* sInstance;
+    static const u32 REGION_SIZE = 0x180000;
+
+    static CDeviceGX* spInstance;
     static CGXCache* cacheInstance;
     static GXPixelFmt pixelFormat;
     static int gxHeapSize;

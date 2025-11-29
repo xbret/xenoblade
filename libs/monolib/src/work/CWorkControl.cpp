@@ -23,7 +23,7 @@ CWorkControl* CWorkControl::spInstance = nullptr;
 
 CWorkControl::CWorkControl(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD){
     spInstance = this;
-    mType = WORKTHREAD_CWORKCONTROL;
+    mType = THREAD_CWORKCONTROL;
 }
 
 CWorkControl::~CWorkControl(){

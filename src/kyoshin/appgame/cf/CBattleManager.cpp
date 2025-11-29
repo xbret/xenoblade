@@ -114,17 +114,17 @@ namespace cf{
     }
 
     CBattleManager* CBattleManager::getInstance(){
-        return sInstance;
+        return spInstance;
     }
 
     void CBattleManager::func_800D9190(){
-        sInstance = new (mtl::MemManager::getHandleMEM2()) CBattleManager();
+        spInstance = new (mtl::MemManager::getHandleMEM2()) CBattleManager();
     }
 
     void CBattleManager::func_800D91D0(){
-        if(sInstance != nullptr){
-            delete sInstance;
-            sInstance = nullptr;
+        if(spInstance != nullptr){
+            delete spInstance;
+            spInstance = nullptr;
         }
     }
 

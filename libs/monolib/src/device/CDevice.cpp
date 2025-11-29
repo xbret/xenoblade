@@ -18,8 +18,8 @@ using namespace ml;
 extern CWorkThread* func_804437BC();
 extern int func_80454E78();
 
-CDevice* CDevice::sInstance;
-CDeviceException* CDeviceException::sInstance;
+CDevice* CDevice::spInstance;
+CDeviceException* CDeviceException::spInstance;
 static const char* devSys1String = "DeviceSystem1";
 static const char* devSys2String = "DeviceSystem2";
 static FixStr<64> lbl_8065A6F8;
@@ -28,11 +28,11 @@ static int lbl_80665FA0 = -1;
 static int lbl_80665FA4 = -1;
 
 CDevice::~CDevice(){
-    sInstance = nullptr;
+    spInstance = nullptr;
 }
 
 CDevice* CDevice::getInstance(){
-    return sInstance;
+    return spInstance;
 }
 
 int CDevice::func_8044D058(){
@@ -44,40 +44,40 @@ int CDevice::func_8044D060(){
 }
 
 bool CDevice::func_8044D438(){
-    return sInstance->inline1();
+    return spInstance->inline1();
 }
 
 void CDevice::initDevices(){
     if(CDeviceVI::getInstance() == nullptr){
-        CDeviceVI::create("CDeviceVI", sInstance);
+        CDeviceVI::create("CDeviceVI", spInstance);
     }
     if(CDeviceGX::getInstance() == nullptr){
-        CDeviceGX::create("CDeviceGX", sInstance);
+        CDeviceGX::create("CDeviceGX", spInstance);
     }
     if(CDeviceRemotePad::getInstance() == nullptr){
-        CDeviceRemotePad::create("CDeviceRemotePAD", sInstance);
+        CDeviceRemotePad::create("CDeviceRemotePAD", spInstance);
     }
     if(CDeviceClock::getInstance() == nullptr){
-        CDeviceClock::create("CDeviceClock", sInstance);
+        CDeviceClock::create("CDeviceClock", spInstance);
     }
     if(CDeviceSC::getInstance() == nullptr){
-        CDeviceSC::create("CDeviceSC", sInstance);
+        CDeviceSC::create("CDeviceSC", spInstance);
     }
     if(CDeviceFont::getInstance() == nullptr){
-        CDeviceFont::create("CDeviceFont", sInstance);
+        CDeviceFont::create("CDeviceFont", spInstance);
     }
     if(CDeviceFile::getInstance() == nullptr){
-        CDeviceFile::create("CDeviceFile", sInstance);
+        CDeviceFile::create("CDeviceFile", spInstance);
     }
     if(CLibCri::getInstance() == nullptr){
-        CLibCri::create("CLibCri", sInstance);
+        CLibCri::create("CLibCri", spInstance);
     }
 
     CDeviceGX::setDevicesInitializedFlag(1);
 }
 
 CDeviceException* CDeviceException::getInstance(){
-    return sInstance;
+    return spInstance;
 }
 
 bool CDevice::wkStandbyLogin(){
@@ -115,7 +115,7 @@ void CDevice::deleteRegions(){
 }
 
 CDeviceException::~CDeviceException(){
-    sInstance = nullptr;
+    spInstance = nullptr;
 }
 
 bool CDeviceException::wkStandbyLogout(){

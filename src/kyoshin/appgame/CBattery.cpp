@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/CBattery.hpp"
-#include <stdio.h>
 #include "monolib/MemManager.hpp"
+#include "monolib/lib/CLibLayout.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceFile.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
@@ -9,8 +9,6 @@
 
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
 extern void func_801390E0(CFileHandle**);
-extern void func_8045F778(UnkClass_8045F564*);
-extern void func_8045F810(UnkClass_8045F564*);
 
 CBattery::CBattery(u8 batteryLevel) : unk4(){
     mFileHandle = nullptr;

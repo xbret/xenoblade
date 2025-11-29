@@ -9,9 +9,9 @@
 //size: 0x1c8
 class CDevice : public CWorkThread {
 public:
-    CDevice(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x20) {
-        sInstance = this;
-        mType = WORKTHREAD_CDEVICE;
+    CDevice(const char* pName, CWorkThread* pWorkThread) : CWorkThread(pName, pWorkThread, 0x20) {
+        spInstance = this;
+        mType = THREAD_CDEVICE;
     }
 
     virtual ~CDevice();
@@ -28,10 +28,10 @@ public:
     static void createRegions();
     static void deleteRegions();
 
-    static CDevice* create(const char* name, CWorkThread* workThread){
-        CDevice* cDevice = new (CWorkThreadSystem::getWorkMem()) CDevice(name, workThread);
-        CWorkUtil::entryWork(cDevice, workThread, 0);
-        return cDevice;
+    static CDevice* create(const char* pName, CWorkThread* pWorkThread){
+        CDevice* device = new (CWorkThreadSystem::getWorkMem()) CDevice(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
+        return device;
     }
 
     inline bool inline1(){
@@ -53,23 +53,23 @@ public:
     u32 unk1C4;
 
 protected:
-    static CDevice* sInstance;
+    static CDevice* spInstance;
 };
 
 namespace{
     //size: 0x1c8
     class CDeviceException : public CWorkThread {
     public:
-        CDeviceException(const char* name, CWorkThread* workThread) : CWorkThread(name, workThread, 0x40) {
-            sInstance = this;
+        CDeviceException(const char* pName, CWorkThread* pWorkThread) : CWorkThread(pName, pWorkThread, 0x40) {
+            spInstance = this;
         }
         virtual ~CDeviceException();
         virtual bool wkStandbyLogout();
         static CDeviceException* getInstance();
 
-        static CDeviceException* create(const char* name, CWorkThread* workThread){
-            CDeviceException* deviceException = new (CWorkThreadSystem::getWorkMem()) CDeviceException(name, workThread);
-            CWorkUtil::entryWork(deviceException, workThread, 0);
+        static CDeviceException* create(const char* pName, CWorkThread* pWorkThread){
+            CDeviceException* deviceException = new (CWorkThreadSystem::getWorkMem()) CDeviceException(pName, pWorkThread);
+            CWorkUtil::entryWork(deviceException, pWorkThread, 0);
             return deviceException;
         }
 
@@ -78,6 +78,6 @@ namespace{
         u32 unk1C4;
 
     protected:
-        static CDeviceException* sInstance;
+        static CDeviceException* spInstance;
     };
 }

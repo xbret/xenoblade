@@ -7,13 +7,13 @@
 //size: 0x1C8
 class CDeviceBase : public CWorkThread {
 public:
-    CDeviceBase(const char* name, CWorkThread* workThread, int r6) : CWorkThread(name, workThread, r6) {
+    CDeviceBase(const char* pName, CWorkThread* pWorkThread, int r6) : CWorkThread(pName, pWorkThread, r6) {
         unk1C4 = 0;
     }
     virtual ~CDeviceBase(){}
 
-    inline void CDeviceBase_inline1(CWorkThread* workThread){
-        CWorkUtil::entryWork(this, workThread, 0);
+    inline void CDeviceBase_inline1(CWorkThread* pWorkThread){
+        CWorkUtil::entryWork(this, pWorkThread, 0);
         unk1C4 |= 1;
     }
 

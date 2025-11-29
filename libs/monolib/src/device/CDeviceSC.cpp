@@ -3,41 +3,41 @@
 #include "monolib/device/CDeviceVI.hpp"
 #include <revolution/SC.h>
 
-CDeviceSC* CDeviceSC::sInstance;
+CDeviceSC* CDeviceSC::spInstance;
 
-CDeviceSC::CDeviceSC(const char* name, CWorkThread* workThread) : CDeviceBase(name, workThread, 8) {
+CDeviceSC::CDeviceSC(const char* pName, CWorkThread* pWorkThread) : CDeviceBase(pName, pWorkThread, 8) {
     mAspectRatio = 0;
     mEuRgb60Mode = 0;
     mLanguage = 0;
     mProgMode = 0;
     mSoundMode = 1;
     unk1CD = 0;
-    sInstance = this;
+    spInstance = this;
     SCInit();
 }
 
 CDeviceSC::~CDeviceSC(){
-    sInstance = nullptr;
+    spInstance = nullptr;
 }
 
 CDeviceSC* CDeviceSC::getInstance(){
-    return sInstance;
+    return spInstance;
 }
 
 bool CDeviceSC::isWideAspectRatio(){
-    return sInstance->mAspectRatio == SC_ASPECT_WIDE;
+    return spInstance->mAspectRatio == SC_ASPECT_WIDE;
 }
 
 bool CDeviceSC::isSoundModeMono(){
-    return sInstance->mSoundMode == SC_SND_MONO;
+    return spInstance->mSoundMode == SC_SND_MONO;
 }
 
 u8 CDeviceSC::getLanguage(){
-    return sInstance->mLanguage;
+    return spInstance->mLanguage;
 }
 
 bool CDeviceSC::func_80447C60(){
-    return sInstance->isRunning();
+    return spInstance->isRunning();
 }
 
 bool CDeviceSC::wkStandbyLogin(){

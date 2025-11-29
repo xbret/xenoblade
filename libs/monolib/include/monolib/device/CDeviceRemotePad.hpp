@@ -9,12 +9,12 @@
 //size: 0x1f0
 class CDeviceRemotePad : public CDeviceBase {
 public:
-    CDeviceRemotePad(const char* name, CWorkThread* workThread);
+    CDeviceRemotePad(const char* pName, CWorkThread* pWorkThread);
     static CDeviceRemotePad* getInstance();
 
-    static inline CDeviceRemotePad* create(const char* name, CWorkThread* workThread){
-        CDeviceRemotePad* device = new (CWorkThreadSystem::getWorkMem()) CDeviceRemotePad(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceRemotePad* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceRemotePad* device = new (CWorkThreadSystem::getWorkMem()) CDeviceRemotePad(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         return device;
     }
 

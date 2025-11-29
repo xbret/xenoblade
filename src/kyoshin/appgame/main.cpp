@@ -1,17 +1,23 @@
-#include "kyoshin/appgame/main.hpp"
+#include "monolib/nand/CNand.hpp"
 #include "monolib/lib/CLibHbm.hpp"
+#include "monolib/lib/CLibVM.hpp"
+#include "monolib/lib/CLibStaticData.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/CDeviceGX.hpp"
+#include "monolib/work/CWorkSystemPack.hpp"
+#include "monolib/work/CWorkRoot.hpp"
 #include "monolib/MemManager.hpp"
 #include "monolib/Unknown1.hpp"
+#include "monolib/code_80450B14.hpp"
 #include "monolib/vm/yvm.h"
+#include "kyoshin/appgame/cf/object/CAIAction.hpp"
 #include "kyoshin/appgame/plugin/pluginMain.hpp"
+#include "kyoshin/appgame/plugin/ocBdat.hpp"
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
-#include "monolib/work/CWorkRoot.hpp"
-#include <revolution/GX.h>
+#include "kyoshin/action/CActParamData.hpp"
 
-static FunctionStruct sGameMainFunction = {
+static DesktopIcon sGameMainIcon = {
 #if defined(VERSION_JP)
     "ゲームメイン",
 #else //EU/US
@@ -79,25 +85,6 @@ const char* const sLanguageFolderPaths2[8] = {
 };
 #endif
 
-//List of files contained in the static.arc archive
-static StaticArcFile sStaticArcFiles[10] = {
-    {"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
-    {"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
-    {"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
-    {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
-#if defined(VERSION_JP)
-    {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","dvddata/common/jp/bdat.bin",1,&bdatFileCallback1,&bdatFileCallback2},
-#else //EU/US
-    {"43","dvddata/menu/jp/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","common/jp/bdat_common.bin",1,&bdatFileCallback1,&bdatFileCallback2},
-#endif
-    {"AIDAT","dvddata/etc/ai.bin",1,&aidatCallback1,&aidatCallback2},
-    {"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
-    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&hbmstopCallback1,&hbmstopCallback2}
-};
-
-
 //Static file callback functions.
 //TODO: what do these do?
 
@@ -128,6 +115,24 @@ void hbmstopCallback2(){
     func_8045D4FC();
 }
 
+//List of files contained in the static.arc archive
+static StaticArcFileData sStaticArcFiles[10] = {
+    {"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
+    {"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
+    {"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
+    {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
+#if defined(VERSION_JP)
+    {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
+    {"BDAT","dvddata/common/jp/bdat.bin",1,&bdatFileCallback1,&bdatFileCallback2},
+#else //EU/US
+    {"43","dvddata/menu/jp/Mode43.arc",1,nullptr,nullptr},
+    {"BDAT","common/jp/bdat_common.bin",1,&bdatFileCallback1,&bdatFileCallback2},
+#endif
+    {"AIDAT","dvddata/etc/ai.bin",1,&aidatCallback1,&aidatCallback2},
+    {"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
+    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&hbmstopCallback1,&hbmstopCallback2}
+};
+
 //VM initialization callback functions.
 
 void vmInitPluginRegistCallback(){
@@ -153,14 +158,14 @@ int main(){
     func_804DAAA0(getErrorDuringMemoryReadWriteErrorMessage());
     
     lbl_80666438 = 0;
-    mtl::MemRegion::setRegionMaxSize(0x680000, 0); //Set arena size to 6.5 mb
+    mtl::MemRegion::initialize();
     CDeviceVI::func_80448E78(false);
-    CDeviceGX::setValues(GX_PF_RGB8_Z24, 0x180000); //Set GX heap size to 1.5 mb
-    CDesktop_SaveStartFunctionCallback(&sGameMainFunction, 1); //Pass the start function struct to CDesktop to have it be run later
-    CLibStaticData_saveStaticFileArray(sStaticArcFiles);
-    CLibVM_SetCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
-    SaveStaticArcFilenameStringPtr(&scStaticArcStr);
-    SavePkhFilenamesArrayPtr(sPkhFilenames);
+    CDeviceGX::initialize();
+    CDesktop::entryTable(&sGameMainIcon, 1); //Pass the start function struct to CDesktop to have it be run later
+    CLibStaticData::saveStaticFileArray(sStaticArcFiles);
+    CLibVM::setCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
+    CWorkSystemPack::SaveStaticArcFilenameStringPtr(&scStaticArcStr);
+    CWorkSystemPack::SavePkhFilenamesArrayPtr(sPkhFilenames);
     func_80057CDC();
     CLibHbm_8045D5C8(1);
     CWorkRoot::run(); //Start up CWorkRoot, which later starts CGame

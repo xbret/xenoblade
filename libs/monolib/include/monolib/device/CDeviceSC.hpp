@@ -9,7 +9,7 @@
 //size: 0x1D0
 class CDeviceSC : public CDeviceBase {
 public:
-    CDeviceSC(const char* name, CWorkThread* workThread);
+    CDeviceSC(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceSC();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
@@ -19,9 +19,9 @@ public:
     static u8 getLanguage();
     static bool func_80447C60();
 
-    static inline CDeviceSC* create(const char* name, CWorkThread* workThread){
-        CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(name, workThread);
-        CWorkUtil::entryWork(device, workThread, 0);
+    static inline CDeviceSC* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
         device->unk1C4 |= 1;
         return device;
     }
@@ -36,5 +36,5 @@ public:
     u8 unk1CD;
     u8 unk1CE[2];
 
-    static CDeviceSC* sInstance;
+    static CDeviceSC* spInstance;
 };

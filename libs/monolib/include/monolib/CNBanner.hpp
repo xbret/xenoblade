@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/IWorkEvent.hpp"
+#include "monolib/work/IWorkEvent.hpp"
 
 class CNBanner : IWorkEvent {
 public:
