@@ -1,5 +1,6 @@
 #include "kyoshin/appgame/CBattery.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
+#include <monolib/device.hpp>
 #include <stdio.h>
 
 extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);

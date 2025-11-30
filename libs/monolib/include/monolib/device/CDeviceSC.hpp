@@ -2,7 +2,6 @@
 
 #include <types.h>
 #include <monolib/device/CDeviceBase.hpp>
-#include <monolib/work.hpp>
 
 //size: 0x1D0
 class CDeviceSC : public CDeviceBase {

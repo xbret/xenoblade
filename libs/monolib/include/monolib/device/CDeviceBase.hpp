@@ -1,7 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work.hpp>
+#include <monolib/work/CWorkThread.hpp>
+#include <monolib/work/CWorkUtil.hpp>
 
 //size: 0x1C8
 class CDeviceBase : public CWorkThread {
