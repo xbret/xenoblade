@@ -1,8 +1,10 @@
-#include "monolib/device/CDeviceGX.hpp"
-#include "monolib/device/CDevice.hpp"
-#include "monolib/UnkClass_804561AC.hpp"
-#include "monolib/work.hpp"
-#include "monolib/lib.hpp"
+#include <monolib/device.hpp>
+#include <monolib/core.hpp>
+#include <monolib/work.hpp>
+#include <monolib/lib.hpp>
+#include <monolib/math.hpp>
+
+using namespace ml;
 
 float CDeviceGX::lbl_80667F70;
 GXPixelFmt CDeviceGX::pixelFormat;

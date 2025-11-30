@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work/CWorkThread.hpp"
+#include <monolib/work/CWorkThread.hpp>
 
 class CWorkSystemPack : public CWorkThread{
 public:

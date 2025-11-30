@@ -1,9 +1,6 @@
 #pragma once
 
-#include "types.h"
-
-//Forward declarations
-class CWorkThread;
+#include <monolib/monolib_types.hpp>
 
 class CWorkRoot{
 public:

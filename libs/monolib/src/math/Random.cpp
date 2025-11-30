@@ -1,5 +1,4 @@
-#include "monolib/math/Random.hpp"
-#include "monolib/math/MTRand.hpp"
+#include <monolib/math.hpp>
 
 namespace ml{
 

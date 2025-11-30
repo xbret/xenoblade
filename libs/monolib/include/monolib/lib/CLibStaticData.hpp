@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work.hpp"
+#include <monolib/work.hpp>
 
 struct StaticDataHandle {
     void* data; //0x0

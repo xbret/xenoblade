@@ -1,11 +1,11 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/device/CDeviceBase.hpp"
-#include "monolib/device/UnkClass_80447FDC.hpp"
-#include "monolib/device/CDeviceVICb.hpp"
-#include "monolib/util.hpp"
-#include "monolib/work.hpp"
+#include <monolib/device/CDeviceBase.hpp>
+#include <monolib/device/UnkClass_80447FDC.hpp>
+#include <monolib/device/CDeviceVICb.hpp>
+#include <monolib/util.hpp>
+#include <monolib/work.hpp>
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 

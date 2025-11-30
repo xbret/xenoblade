@@ -1,4 +1,4 @@
-#include "monolib/code_80450B14.hpp"
+#include <monolib/core.hpp>
 
 extern const wchar_t* lbl_80665FF0;
 extern const wchar_t* lbl_80665FF4;

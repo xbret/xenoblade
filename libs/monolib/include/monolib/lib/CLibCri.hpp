@@ -1,7 +1,7 @@
 #pragma once
 
-#include "monolib/device.hpp"
-#include "monolib/work.hpp"
+#include <monolib/device.hpp>
+#include <monolib/work.hpp>
 
 //size: 0x1d0
 class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC {

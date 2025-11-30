@@ -5958,7 +5958,7 @@ monolib/src/CProcRoot.cpp:
 	.sdata      start:0x80665E70 end:0x80665E78
 	.sbss       start:0x80667E80 end:0x80667E90
 
-monolib/src/CRsrcData.cpp:
+monolib/src/core/CRsrcData.cpp:
 	extab       start:0x8001C278 end:0x8001C2CC
 	extabindex  start:0x80033EF0 end:0x80033F50
 	.text       start:0x80439CB4 end:0x8043A0E0
@@ -5966,7 +5966,7 @@ monolib/src/CRsrcData.cpp:
 	.data       start:0x8056EBD8 end:0x8056EC90
 	.sdata      start:0x80665E78 end:0x80665E80
 
-monolib/src/CScriptCode.cpp:
+monolib/src/core/CScriptCode.cpp:
 	extab       start:0x8001C2CC end:0x8001C340
 	extabindex  start:0x80033F50 end:0x80033FA4
 	.text       start:0x8043A0E0 end:0x8043A984
@@ -5975,7 +5975,7 @@ monolib/src/CScriptCode.cpp:
 	.sdata      start:0x80665E80 end:0x80665E88
 	.sbss       start:0x80667E90 end:0x80667E98
 
-monolib/src/CToken.cpp:
+monolib/src/core/CToken.cpp:
 	extab       start:0x8001C340 end:0x8001C380
 	extabindex  start:0x80033FA4 end:0x80034004
 	.text       start:0x8043A984 end:0x8043BC84
@@ -5993,7 +5993,7 @@ monolib/src/CTaskManager.cpp:
 	.sdata      start:0x80665E90 end:0x80665EA0
 	.sbss       start:0x80667E98 end:0x80667EA8
 
-monolib/src/CView.cpp:
+monolib/src/core/CView.cpp:
 	extab       start:0x8001C3C0 end:0x8001C5E0
 	extabindex  start:0x80034064 end:0x800341F0
 	.text       start:0x8043C2C4 end:0x8043FBC4
@@ -6005,7 +6005,7 @@ monolib/src/CView.cpp:
 	.sbss       start:0x80667EA8 end:0x80667EB0
 	.sdata2     start:0x8066CAD0 end:0x8066CAE8
 
-monolib/src/CViewFrame.cpp:
+monolib/src/core/CViewFrame.cpp:
 	extab       start:0x8001C5E0 end:0x8001C6C0
 	extabindex  start:0x800341F0 end:0x800342D4
 	.text       start:0x8043FBC4 end:0x804430C4
@@ -6015,7 +6015,7 @@ monolib/src/CViewFrame.cpp:
 	.sbss       start:0x80667EB0 end:0x80667EB8
 	.sdata2     start:0x8066CAE8 end:0x8066CB20
 
-monolib/src/CViewRoot.cpp:
+monolib/src/core/CViewRoot.cpp:
 	extab       start:0x8001C6C0 end:0x8001C724
 	extabindex  start:0x800342D4 end:0x80034304
 	.text       start:0x804430C4 end:0x80443718
@@ -6086,7 +6086,7 @@ monolib/src/work/CWorkSystemMem.cpp:
 	.sdata      start:0x80665EF8 end:0x80665F00
 	.sbss       start:0x80667F00 end:0x80667F08
 
-monolib/src/CProcess.cpp:
+monolib/src/work/CDesktop.cpp:
 	extab       start:0x8001C89C end:0x8001C9A4
 	extabindex  start:0x800344A8 end:0x8003458C
 	.text       start:0x80444A18 end:0x80446578
@@ -6157,7 +6157,7 @@ monolib/src/device/CDeviceVICb.cpp:
 	.data       start:0x8056F7A8 end:0x8056F7C0
 	.sdata      start:0x80665F40 end:0x80665F48
 
-monolib/src/CFontLayer.cpp:
+monolib/src/core/CFontLayer.cpp:
 	extab       start:0x8001CB78 end:0x8001CB90
 	extabindex  start:0x80034778 end:0x8003479C
 	.text       start:0x80448FDC end:0x80449164
@@ -6211,7 +6211,7 @@ monolib/src/device/CDeviceFileCri.cpp:
 	.sbss       start:0x80667F48 end:0x80667F50
 	.sdata2     start:0x8066CBB0 end:0x8066CBB8
 
-monolib/src/code_80450B14.cpp:
+monolib/src/device/code_80450B14.cpp:
 	.text       start:0x80450B14 end:0x80450B2C
 
 monolib/src/device/code_80450B2C.cpp:
@@ -6301,7 +6301,7 @@ monolib/src/device/CDeviceGX.cpp:
 	.sbss       start:0x80667F70 end:0x80667F80
 	.sdata2     start:0x8066CBE8 end:0x8066CC10
 
-monolib/src/CDesktop.cpp:
+monolib/src/core/CDesktop.cpp:
 	extab       start:0x8001D2E4 end:0x8001D360
 	extabindex  start:0x80034F1C end:0x80034FB8
 	.text       start:0x804559CC end:0x80456134
@@ -6318,7 +6318,7 @@ monolib/src/code_80456134.cpp:
 	.data       start:0x805704D0 end:0x80570528
 	.sdata2     start:0x8066CC28 end:0x8066CC40
 
-monolib/src/CException.cpp:
+monolib/src/core/CException.cpp:
 	extab       start:0x8001D3C0 end:0x8001D478
 	extabindex  start:0x80035048 end:0x800350CC
 	.text       start:0x80457B9C end:0x80459390
@@ -6912,7 +6912,7 @@ monolib/src/code_804BF59C.cpp:
 	.sbss       start:0x80668270 end:0x80668278
 	.sdata2     start:0x8066D730 end:0x8066D758
 
-monolib/src/CLight.cpp:
+monolib/src/scn/CLight.cpp:
 	extab       start:0x80020020 end:0x80020058
 	extabindex  start:0x80037D60 end:0x80037DB4
 	.text       start:0x804C0280 end:0x804C0BE4
@@ -6931,7 +6931,7 @@ monolib/src/scn/CScnEnvLgtCtrl.cpp:
 	.sdata      start:0x80666408 end:0x80666438
 	.sdata2     start:0x8066D780 end:0x8066D838
 
-monolib/src/Unknown1.cpp:
+monolib/src/core/Unknown1.cpp:
 	.sdata      start:0x80666438 end:0x80666440
 
 monolib/src/code_804C8684.cpp:
@@ -7083,7 +7083,7 @@ monolib/src/work/CWorkSystemPack.cpp:
 	.sdata      start:0x806664E8 end:0x80666510
 	.sbss       start:0x806682E8 end:0x806682F8
 
-monolib/src/CPackItem.cpp:
+monolib/src/core/CPackItem.cpp:
 	extab       start:0x800208F4 end:0x80020938
 	extabindex  start:0x80038948 end:0x80038990
 	.text       start:0x804DE38C end:0x804DEB14
@@ -7091,7 +7091,7 @@ monolib/src/CPackItem.cpp:
 	.data       start:0x805737A0 end:0x80573828
 	.sdata      start:0x80666510 end:0x80666518
 
-monolib/src/CArcItem.cpp:
+monolib/src/core/CArcItem.cpp:
 	extab       start:0x80020938 end:0x80020980
 	extabindex  start:0x80038990 end:0x800389C0
 	.text       start:0x804DEB14 end:0x804DEDA8
@@ -7106,7 +7106,7 @@ monolib/src/code_804DEDA8.cpp:
 	.sbss       start:0x806682F8 end:0x80668328
 	.sdata2     start:0x8066DA30 end:0x8066DA88
 
-monolib/src/CSchedule.cpp:
+monolib/src/core/CSchedule.cpp:
 	extab       start:0x80020B08 end:0x80020B20
 	extabindex  start:0x80038C0C end:0x80038C30
 	.text       start:0x804E3294 end:0x804E36DC
@@ -7120,7 +7120,7 @@ monolib/src/code_804E36DC.cpp:
 	.text       start:0x804E36DC end:0x804E4334
 	.sdata2     start:0x8066DA88 end:0x8066DAA0
 
-monolib/src/ScheduleList.cpp:
+monolib/src/core/ScheduleList.cpp:
 	extab       start:0x80020B78 end:0x80020C88
 	extabindex  start:0x80038CB4 end:0x80038D8C
 	.text       start:0x804E4334 end:0x804E5444

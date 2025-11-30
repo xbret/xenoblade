@@ -1,10 +1,8 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/CTTask.hpp"
-#include "monolib/util.hpp"
-
-using namespace ml;
+#include <monolib/work.hpp>
+#include <monolib/util.hpp>
 
 class CTaskGame : public CTTask<CTaskGame> {
 public:

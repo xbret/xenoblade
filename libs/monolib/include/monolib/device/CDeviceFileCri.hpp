@@ -1,7 +1,6 @@
 #pragma once
 
-#include "monolib/work.hpp"
-#include "monolib/CException.hpp"
+#include <monolib/work.hpp>
 
 struct UnkStruct_8044F65C {
     ~UnkStruct_8044F65C(){}

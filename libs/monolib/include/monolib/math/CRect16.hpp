@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/math/CPnt16.hpp"
+#include <monolib/math/CPnt16.hpp>
 
 namespace ml {
     struct CRect16 {

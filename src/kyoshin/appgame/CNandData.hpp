@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/nand/CNBanner.hpp"
+#include <monolib/nand/CNBanner.hpp>
 
 class CNandData {
 public:

@@ -1,8 +1,5 @@
-#include "monolib/work/CWorkUtil.hpp"
-
-#include "monolib/util.hpp"
-#include "monolib/work/CWorkRoot.hpp"
-#include "monolib/work/CWorkThread.hpp"
+#include <monolib/work.hpp>
+#include <monolib/util.hpp>
 
 UnkStruct_80438AF0_3* CWorkUtil::func_80438AF0(UnkStruct_80438AF0* arg0){
     return arg0->unk4->unk0;

@@ -1,4 +1,4 @@
-#include "monolib/util/CDoubleListNode.hpp"
+#include <monolib/util.hpp>
 
 CDoubleListNode::CDoubleListNode() {
     CDoubleListNode::Reset();

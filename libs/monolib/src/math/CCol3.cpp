@@ -1,4 +1,4 @@
-#include "monolib/math/CCol3.hpp"
+#include <monolib/math.hpp>
 
 namespace ml{
     CCol3 CCol3::white = CCol3(1,1,1);

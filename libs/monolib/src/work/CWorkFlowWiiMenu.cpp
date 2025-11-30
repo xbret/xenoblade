@@ -1,4 +1,4 @@
-#include "monolib/work/CWorkFlowWiiMenu.hpp"
+#include <monolib/work.hpp>
 
 CWorkFlowWiiMenu* CWorkFlowWiiMenu::spInstance = nullptr;
 

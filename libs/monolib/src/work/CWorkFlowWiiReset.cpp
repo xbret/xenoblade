@@ -1,4 +1,4 @@
-#include "monolib/work/CWorkFlowWiiReset.hpp"
+#include <monolib/work.hpp>
 
 CWorkFlowWiiReset* CWorkFlowWiiReset::spInstance = nullptr;
 

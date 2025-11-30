@@ -1,4 +1,4 @@
-#include "monolib/device/CDeviceFileJob.hpp"
+#include <monolib/device.hpp>
 
 CDeviceFileJob::CDeviceFileJob(const char* pName, CWorkThread* pParent):
 CWorkThread(pName, pParent, 0),

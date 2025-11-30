@@ -1,4 +1,4 @@
-#include "monolib/util/CChildListNode.hpp"
+#include <monolib/util.hpp>
 
 CChildListNode::CChildListNode()
     : mParent(NULL) {}

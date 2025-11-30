@@ -1,11 +1,8 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/math.hpp"
+#include <monolib/math.hpp>
 #include <climits>
-
-using namespace ml;
-
 
 class IRandomizer {
 public:
@@ -73,8 +70,8 @@ class CERand {
 public:
     static void init();
     static void execute(float);
-    static void randVec(CVec3*);
-    static void randSignVec(CVec3*);
+    static void randVec(ml::CVec3*);
+    static void randSignVec(ml::CVec3*);
 
     static const int defaultSeed = 14992;
 };

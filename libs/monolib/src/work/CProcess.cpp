@@ -1,4 +1,4 @@
-#include "monolib/CProcess.hpp"
+#include <monolib/work.hpp>
 
 bool CProcessMan::sIsInitialized = false;
 

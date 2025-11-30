@@ -1,9 +1,5 @@
-#include "monolib/work/CWorkThread.hpp"
-
-#include "monolib/device/CDeviceClock.hpp"
-#include "monolib/work/CWorkControl.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include <monolib/device.hpp>
+#include <monolib/work.hpp>
 
 CWorkThread::CWorkThread(const char* pName, CWorkThread* pParent, int capacity)
     : mState(THREAD_STATE_NONE),

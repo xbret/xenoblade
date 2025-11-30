@@ -1,16 +1,10 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/util.hpp"
-#include "monolib/CProc.hpp"
-#include "monolib/CDesktop.hpp"
-#include "monolib/work/CWorkThread.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
-#include "nw4r/types_nw4r.h"
-
-//Forward declarations
-class CView;
+#include <monolib/util.hpp>
+#include <monolib/core.hpp>
+#include <monolib/work.hpp>
+#include <nw4r/types_nw4r.h>
 
 class CGame : public CProc {
 public:

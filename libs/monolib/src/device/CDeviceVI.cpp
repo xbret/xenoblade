@@ -1,10 +1,7 @@
-#include "monolib/device/CDeviceVI.hpp"
-#include "monolib/device/CDeviceSC.hpp"
-#include "monolib/device/CDeviceGX.hpp"
-#include "monolib/device/CDevice.hpp"
-#include "monolib/lib.hpp"
-#include "monolib/work.hpp"
-#include "monolib/math.hpp"
+#include <monolib/device.hpp>
+#include <monolib/lib.hpp>
+#include <monolib/work.hpp>
+#include <monolib/math.hpp>
 #include <string.h>
 
 using namespace ml;

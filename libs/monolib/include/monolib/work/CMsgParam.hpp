@@ -2,7 +2,7 @@
 
 #include "types.h"
 
-#include "monolib/work/CWorkThreadSystem.hpp"
+#include <monolib/work/CWorkThreadSystem.hpp>
 
 //Message param entry format:
 //0x0: message id

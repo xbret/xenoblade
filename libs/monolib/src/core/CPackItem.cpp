@@ -1,6 +1,7 @@
-#include "monolib/CPackItem.hpp"
-#include "monolib/work.hpp"
-#include "monolib/util.hpp"
+#include <monolib/core.hpp>
+#include <monolib/work.hpp>
+#include <monolib/util.hpp>
+#include <monolib/device.hpp>
 #include <criware/cri_adxf.h>
 #include <cstring>
 

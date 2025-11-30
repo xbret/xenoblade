@@ -1,4 +1,4 @@
-#include "monolib/math/MathConstants.hpp"
+#include <monolib/math.hpp>
 
 //General math constants
 

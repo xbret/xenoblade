@@ -1,4 +1,4 @@
-#include "monolib/math/CRect16.hpp"
+#include <monolib/math.hpp>
 
 namespace ml{
 

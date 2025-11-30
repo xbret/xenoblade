@@ -1,4 +1,4 @@
-#include "monolib/math/FastCast.hpp"
+#include <monolib/math.hpp>
 #include <revolution/OS.h>
 
 namespace ml{

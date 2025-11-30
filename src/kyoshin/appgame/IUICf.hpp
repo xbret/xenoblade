@@ -1,6 +1,6 @@
 #pragma once
 
-#include "monolib/CTTask.hpp"
+#include <monolib/work.hpp>
 
 class IUICf : public CTTask<IUICf>  {
 public:

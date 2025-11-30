@@ -1,5 +1,4 @@
-#include "monolib/device/CDeviceVICb.hpp"
-#include "monolib/device/CDeviceVI.hpp"
+#include <monolib/device.hpp>
 
 CDeviceVICb::CDeviceVICb(){
     CDeviceVI::addCallback(this);

@@ -1,4 +1,6 @@
-#include "monolib/effect/CERand.hpp"
+#include <monolib/effect/CERand.hpp>
+
+using namespace ml;
 
 CERandomizer ceRandomizer;
 CERandomizerSimple ceRandomizerSimple;

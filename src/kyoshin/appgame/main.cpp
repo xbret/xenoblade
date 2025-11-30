@@ -1,17 +1,16 @@
-#include "monolib/nand/CNand.hpp"
-#include "monolib/Unknown1.hpp"
-#include "monolib/code_80450B14.hpp"
-#include "monolib/vm/yvm.h"
-#include "monolib/lib.hpp"
-#include "monolib/device.hpp"
-#include "monolib/work.hpp"
-#include "monolib/util.hpp"
 #include "kyoshin/appgame/cf/object/CAIAction.hpp"
 #include "kyoshin/appgame/plugin/pluginMain.hpp"
 #include "kyoshin/appgame/plugin/ocBdat.hpp"
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
 #include "kyoshin/action/CActParamData.hpp"
+#include <monolib/nand/CNand.hpp>
+#include <monolib/vm/yvm.h>
+#include <monolib/core.hpp>
+#include <monolib/lib.hpp>
+#include <monolib/device.hpp>
+#include <monolib/work.hpp>
+#include <monolib/util.hpp>
 
 static DesktopIcon sGameMainIcon = {
 #if defined(VERSION_JP)

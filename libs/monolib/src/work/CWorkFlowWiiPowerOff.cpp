@@ -1,4 +1,4 @@
-#include "monolib/work/CWorkFlowWiiPowerOff.hpp"
+#include <monolib/work.hpp>
 
 CWorkFlowWiiPowerOff* CWorkFlowWiiPowerOff::spInstance = nullptr;
 

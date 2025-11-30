@@ -1,9 +1,7 @@
-#include "monolib/device/CDeviceClock.hpp"
-#include "monolib/device/CDeviceRemotePad.hpp"
-#include "monolib/device/CDeviceSC.hpp"
-#include "monolib/util.hpp"
-#include "monolib/work/CWorkSystem.hpp"
-#include "monolib/lib/CLib.hpp"
+#include <monolib/device.hpp>
+#include <monolib/util.hpp>
+#include <monolib/work.hpp>
+#include <monolib/lib.hpp>
 #include <string.h>
 
 CDeviceClock* CDeviceClock::spInstance;

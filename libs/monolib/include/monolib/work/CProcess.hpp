@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/util.hpp"
+#include <monolib/util.hpp>
 
 /*
 Instance of a game task.

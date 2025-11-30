@@ -1,9 +1,9 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/work/IWorkEvent.hpp"
-#include "monolib/device/CDeviceFile.hpp"
-#include "monolib/util.hpp"
+#include <monolib/work.hpp>
+#include <monolib/device.hpp>
+#include <monolib/util.hpp>
 
 struct PackHeader {
     u32 unk0;

@@ -1,8 +1,8 @@
 #pragma once
 
-#include "monolib/util/CDoubleListNode.hpp"
+#include <monolib/util/CDoubleListNode.hpp>
 
-//Forward declaration
+//Forward declarations
 class CChildListNode;
 
 /*

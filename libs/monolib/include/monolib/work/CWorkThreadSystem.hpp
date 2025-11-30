@@ -1,11 +1,8 @@
 #pragma once
 
 #include "types.h"
-
-#include "monolib/util.hpp"
-
-//Forward declarations
-class CWorkThread;
+#include <monolib/monolib_types.hpp>
+#include <monolib/util.hpp>
 
 /*
 Handle to a work memory region

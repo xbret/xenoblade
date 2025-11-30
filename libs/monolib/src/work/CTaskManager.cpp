@@ -1,8 +1,5 @@
-#include "monolib/CTaskManager.hpp"
-#include "monolib/CTTask.hpp"
-#include "monolib/CProcess.hpp"
-#include "monolib/work.hpp"
-#include "monolib/device.hpp"
+#include <monolib/work.hpp>
+#include <monolib/device.hpp>
 
 namespace {
 

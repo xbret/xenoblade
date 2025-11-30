@@ -1,10 +1,8 @@
 #pragma once
 
-#include "monolib/device/CDeviceFileJob.hpp"
+#include <monolib/monolib_types.hpp>
+#include <monolib/device/CDeviceFileJob.hpp>
 #include <revolution/DVD.h>
-
-//Forward declarations
-struct CFileHandle;
 
 class CDeviceFileJobReadDvd : public CDeviceFileJob {
 public:

@@ -3,17 +3,16 @@
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
 #include "kyoshin/appgame/CTaskGame.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
-#include "monolib/CView.hpp"
-#include "monolib/CDesktop.hpp"
-#include "monolib/CException.hpp"
-#include "monolib/CTaskManager.hpp"
-#include "monolib/util.hpp"
-#include "monolib/lib.hpp"
-#include "monolib/work.hpp"
-#include "monolib/device.hpp"
-#include "revolution/GX.h"
-#include "revolution/VI.h"
-#include "revolution/WPAD.h"
+#include <monolib/core.hpp>
+#include <monolib/util.hpp>
+#include <monolib/lib.hpp>
+#include <monolib/work.hpp>
+#include <monolib/device.hpp>
+#include <revolution/GX.h>
+#include <revolution/VI.h>
+#include <revolution/WPAD.h>
+
+using namespace ml;
 
 extern u32 func_8007E1B4();
 extern void func_801BF93C();
@@ -146,7 +145,7 @@ void CGame::func_800395F4(bool wide){
 }
 
 void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
-    view->func_8043CB7C(CRect16(x, y, width, height));
+    view->func_8043CB7C(ml::CRect16(x, y, width, height));
 }
 
 bool CGame::wkStandbyLogin(){

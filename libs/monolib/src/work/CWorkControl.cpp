@@ -1,15 +1,6 @@
-#include "monolib/work/CWorkControl.hpp"
-
+#include <monolib/device.hpp>
+#include <monolib/work.hpp>
 #include "decomp.h"
-#include "monolib/device/CDevice.hpp"
-#include "monolib/work/CWorkFlowSetup.hpp"
-#include "monolib/work/CWorkFlowShutdownAll.hpp"
-#include "monolib/work/CWorkFlowWiiMenu.hpp"
-#include "monolib/work/CWorkFlowWiiPowerOff.hpp"
-#include "monolib/work/CWorkFlowWiiReset.hpp"
-#include "monolib/work/CWorkThread.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
 
 CW_FORCE_STRINGS(CWorkControl_cpp,
                  "CWorkFlowTvMode",

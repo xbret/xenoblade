@@ -1,5 +1,4 @@
-#include "monolib/math/CVec3.hpp"
-#include "monolib/math/FloatUtils.hpp"
+#include <monolib/math.hpp>
 
 namespace ml{
     CVec3 CVec3::zero = CVec3(0,0,0);

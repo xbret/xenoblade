@@ -2,9 +2,9 @@
 
 #include "types.h"
 
-#include "monolib/work/CWorkThread.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include <monolib/work/CWorkThread.hpp>
+#include <monolib/work/CWorkThreadSystem.hpp>
+#include <monolib/work/CWorkUtil.hpp>
 
 class CWorkFlowSetup : public CWorkThread{
 public:

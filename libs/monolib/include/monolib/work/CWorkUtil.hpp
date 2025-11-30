@@ -1,12 +1,8 @@
 #pragma once
 
-#include "types.h"
-
-#include "monolib/UnkStruct_80438AF0.hpp"
-#include "monolib/work/CWorkThreadSystem.hpp"
-
-//Forward declarations
-class CWorkThread;
+#include <monolib/monolib_types.hpp>
+#include <monolib/work/UnkStruct_80438AF0.hpp>
+#include <monolib/work/CWorkThreadSystem.hpp>
 
 class CWorkUtil{
 public:

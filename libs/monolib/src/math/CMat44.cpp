@@ -1,4 +1,4 @@
-#include "monolib/math/CMat44.hpp"
+#include <monolib/math.hpp>
 
 namespace ml{
     //TODO: see if it's possible to have these use arrays instead

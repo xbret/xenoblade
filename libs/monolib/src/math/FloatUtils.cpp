@@ -1,5 +1,4 @@
-#include "monolib/math/MathConstants.hpp"
-#include "monolib/math/FloatUtils.hpp"
+#include <monolib/math.hpp>
 #include <cmath>
 
 namespace ml{

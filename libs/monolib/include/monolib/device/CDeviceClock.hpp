@@ -1,9 +1,9 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/device/CDeviceBase.hpp"
-#include "monolib/util.hpp"
-#include "monolib/work.hpp"
+#include <monolib/device/CDeviceBase.hpp>
+#include <monolib/util.hpp>
+#include <monolib/work.hpp>
 #include <revolution/OS.h>
 
 class IDeviceClockFrame {

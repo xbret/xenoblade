@@ -2,8 +2,8 @@
 
 #include "types.h"
 
-#include "monolib/work/CWorkThread.hpp"
-#include "monolib/work/CWorkUtil.hpp"
+#include <monolib/work/CWorkThread.hpp>
+#include <monolib/work/CWorkUtil.hpp>
 
 class CWorkControl : public CWorkThread{
 public:

@@ -1,4 +1,4 @@
-#include "monolib/work/CWorkFlowShutdownAll.hpp"
+#include <monolib/work.hpp>
 
 CWorkFlowShutdownAll* CWorkFlowShutdownAll::spInstance = nullptr;
 

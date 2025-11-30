@@ -1,6 +1,6 @@
 #pragma once
 
-#include "monolib/CProcess.hpp"
+#include <monolib/work/CProcess.hpp>
 
 /*
 Manages the lifetime of the root tasks.

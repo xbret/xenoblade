@@ -1,14 +1,7 @@
-#include "monolib/device/CDevice.hpp"
-#include "monolib/device/CDeviceGX.hpp"
-#include "monolib/device/CDeviceVI.hpp"
-#include "monolib/device/CDeviceRemotePad.hpp"
-#include "monolib/device/CDeviceClock.hpp"
-#include "monolib/device/CDeviceSC.hpp"
-#include "monolib/device/CDeviceFile.hpp"
-#include "monolib/device/CDeviceFont.hpp"
-#include "monolib/util.hpp"
-#include "monolib/work.hpp"
-#include "monolib/lib.hpp"
+#include <monolib/device.hpp>
+#include <monolib/util.hpp>
+#include <monolib/work.hpp>
+#include <monolib/lib.hpp>
 
 using namespace ml;
 

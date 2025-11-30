@@ -1,4 +1,6 @@
-#include "monolib/CLight.hpp"
+#include <monolib/scn/CLight.hpp>
+
+using namespace ml;
 
 CLight::CLight(){
     u32 r4 = 0;

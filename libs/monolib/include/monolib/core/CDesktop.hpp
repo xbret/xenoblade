@@ -1,10 +1,8 @@
 #pragma once
 
 #include "types.h"
-#include "monolib/CProc.hpp"
-
-//Forward declarations
-class CView;
+#include <monolib/monolib_types.hpp>
+#include <monolib/work.hpp>
 
 class CDesktop : public CProc {
 public:

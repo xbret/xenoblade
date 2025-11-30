@@ -1,5 +1,5 @@
 #include "kyoshin/appgame/cf/object/CActorParam.hpp"
-#include "monolib/Math.hpp"
+#include <monolib/math.hpp>
 
 namespace cf {
     CActorParam::CActorParam(UNKTYPE* r4, UNKTYPE* r5) : CActorState(r4),
