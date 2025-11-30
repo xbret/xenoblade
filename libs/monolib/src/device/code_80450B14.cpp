@@ -1,4 +1,4 @@
-#include <monolib/core.hpp>
+#include <monolib/device.hpp>
 
 extern const wchar_t* lbl_80665FF0;
 extern const wchar_t* lbl_80665FF4;

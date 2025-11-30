@@ -1,6 +1,5 @@
 #pragma once
 
-#include "types.h"
 #include <monolib/vm/yvm.h>
 
 int pad_get(_sVMThread* pThread);

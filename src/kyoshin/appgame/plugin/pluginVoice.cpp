@@ -1,4 +1,3 @@
-#include "types.h"
 #include "kyoshin/appgame/cf/object/CfObject.hpp"
 #include "kyoshin/appgame/plugin/pluginVoice.hpp"
 #include "kyoshin/appgame/cf/object/CfObjectPc.hpp"

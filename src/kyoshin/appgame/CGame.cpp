@@ -3,11 +3,7 @@
 #include "kyoshin/appgame/cf/CBattleManager.hpp"
 #include "kyoshin/appgame/CTaskGame.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
-#include <monolib/core.hpp>
-#include <monolib/util.hpp>
 #include <monolib/lib.hpp>
-#include <monolib/work.hpp>
-#include <monolib/device.hpp>
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 #include <revolution/WPAD.h>

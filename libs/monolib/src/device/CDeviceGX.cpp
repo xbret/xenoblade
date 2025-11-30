@@ -1,6 +1,4 @@
 #include <monolib/device.hpp>
-#include <monolib/core.hpp>
-#include <monolib/work.hpp>
 #include <monolib/lib.hpp>
 #include <monolib/math.hpp>
 
