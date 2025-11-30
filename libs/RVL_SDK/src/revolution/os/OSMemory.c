@@ -1,8 +1,7 @@
 #include <revolution/OS.h>
 
 static BOOL OnShutdown(BOOL final, u32 event);
-static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127, NULL,
-                                                      NULL};
+static OSShutdownFunctionInfo ShutdownFunctionInfo = {OnShutdown, 127};
 
 //unused
 u32 OSGetPhysicalMem1Size(void) {
@@ -34,7 +33,7 @@ static BOOL OnShutdown(BOOL final, u32 event) {
     return TRUE;
 }
 
-// TYPO
+// @typo
 static void MEMIntrruptHandler(s32 intr, OSContext* ctx) {
 #pragma unused(intr)
 
@@ -258,7 +257,8 @@ static asm void ConfigMEM2_64MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 static asm void ConfigMEM2_112MB(void) {
     // clang-format off
@@ -366,7 +366,8 @@ static asm void ConfigMEM2_128MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    }
+    // clang-format on
+}
 
 //unused
 void DisableInstsOnMEM1Hi8MB(){
@@ -394,7 +395,8 @@ static asm void RealMode(register void* config) {
     rlwinm config, config, 0, 0x1c, 0x19
     mtsrr1 config
     rfi
-    }
+    // clang-format on
+}
 
 //Does nothing. There might've been extra code while was commented out/removed.
 static void WeirdAssInline(u32 size){
@@ -424,7 +426,7 @@ static void BATConfig(u32 size) {
     if (OSGetConsoleSimulatedMem2Size() <= OS_MEM_MB_TO_B(64)) {
         if (mem2end <= (void*)0x93400000) {
             RealMode(ConfigMEM2_52MB);
-        } else if (mem2end <= (char*)0x93400000 + OS_MEM_MB_TO_B(4)) {
+        } else if ((char*)mem2end <= (char*)0x93400000 + OS_MEM_MB_TO_B(4)) {
             RealMode(ConfigMEM2_56MB);
         } else {
             RealMode(ConfigMEM2_64MB);

@@ -1,8 +1,8 @@
 #include <revolution/MEM.h>
 
-#define MEM_EXP_HEAP_MAGIC 'EXPH'
-#define MEM_EXP_HEAP_MBLOCK_FREE 'FR'
-#define MEM_EXP_HEAP_MBLOCK_USED 'UD'
+#define MEM_EXP_HEAP_MAGIC FOURCC('E', 'X', 'P', 'H')
+#define MEM_EXP_HEAP_MBLOCK_FREE TWOCC('F', 'R')
+#define MEM_EXP_HEAP_MBLOCK_USED TWOCC('U', 'D')
 
 // Size of base and expandable heap head
 #define MEM_EXP_HEAP_HEAD_SIZE (sizeof(MEMiHeapHead) + sizeof(MEMiExpHeapHead))
@@ -117,19 +117,12 @@ static MEMiHeapHead* InitExpHeap_(MEMiHeapHead* heap, void* end, u16 opt) {
     return heap;
 }
 
-#ifdef __DECOMP_NON_MATCHING
+// Non-matching
 static void* AllocUsedBlockFromFreeBlock_(MEMiExpHeapHead* exp,
                                           MEMiExpHeapMBlock* mblock,
                                           void* memPtr, u32 size,
-                                          u16 allocDir) {
-    ;
-    ;
-}
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
+                                          u16 allocDir) {}
 
-#ifdef __DECOMP_NON_MATCHING
 static void* AllocFromHead_(MEMiHeapHead* heap, u32 size, s32 align) {
     MEMiExpHeapMBlock* it;
     MEMiExpHeapHead* exp;
@@ -164,11 +157,8 @@ static void* AllocFromHead_(MEMiHeapHead* heap, u32 size, s32 align) {
                                  exp, bestBlk, bestBlkMemPtr, size, 0)
                            : NULL;
 }
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
 
-#ifdef __DECOMP_NON_MATCHING
+// Non-matching
 static void* AllocFromTail_(MEMiHeapHead* heap, u32 size, s32 align) {
     MEMiExpHeapMBlock* it;
     MEMiExpHeapHead* exp;
@@ -203,20 +193,10 @@ static void* AllocFromTail_(MEMiHeapHead* heap, u32 size, s32 align) {
                                  exp, bestBlk, bestBlkMemPtr, size, 1)
                            : NULL;
 }
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
 
-#ifdef __DECOMP_NON_MATCHING
-static void RecycleRegion_(MEMiExpHeapHead* exp, void** region) {
-    ;
-    ;
-}
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
+// Non-matching
+static void RecycleRegion_(MEMiExpHeapHead* exp, void** region) {}
 
-#ifdef __DECOMP_NON_MATCHING
 MEMiHeapHead* MEMCreateExpHeapEx(void* start, u32 size, u16 opt) {
     void* end = AddU32ToPtr(start, size);
 
@@ -232,20 +212,12 @@ MEMiHeapHead* MEMCreateExpHeapEx(void* start, u32 size, u16 opt) {
 
     return InitExpHeap_(start, end, opt);
 }
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
 
-#ifdef __DECOMP_NON_MATCHING
 MEMiHeapHead* MEMDestroyExpHeap(MEMiHeapHead* heap) {
     MEMiFinalizeHeap(heap);
     return heap;
 }
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
 
-#ifdef __DECOMP_NON_MATCHING
 void* MEMAllocFromExpHeapEx(MEMiHeapHead* heap, u32 size, s32 align) {
     void* memBlock;
 
@@ -267,18 +239,9 @@ void* MEMAllocFromExpHeapEx(MEMiHeapHead* heap, u32 size, s32 align) {
 
     return memBlock;
 }
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
 
-#ifdef __DECOMP_NON_MATCHING
-u32 MEMResizeForMBlockExpHeap(MEMiHeapHead* heap, void* memBlock, u32 size) {
-    ;
-    ;
-}
-#else
-//#error This file has not yet been decompiled accurately. Use "mem_expHeap.s" instead.
-#endif
+// Non-matching
+u32 MEMResizeForMBlockExpHeap(MEMiHeapHead* heap, void* memBlock, u32 size) {}
 
 void MEMFreeToExpHeap(MEMiHeapHead* heap, void* memBlock) {
     MEMiExpHeapMBlock* mblock;

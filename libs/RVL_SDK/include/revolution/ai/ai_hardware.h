@@ -8,7 +8,7 @@ extern "C" {
 /**
  * AI hardware registers
  */
-extern volatile u32 AI_HW_REGS[] AT_ADDRESS(0xCD006C00);
+volatile u32 DECL_HW_REGS(AI) DECL_ADDRESS(0xCD006C00);
 
 /**
  * Hardware register indexes
@@ -18,7 +18,7 @@ typedef enum {
     AI_AIVR,   //!< 0xCD006C04
     AI_AISCNT, //!< 0xCD006C08
     AI_AIIT,   //!< 0xCD006C0C
-};
+} AiHwReg;
 
 // AICR - AI Control Register
 #define AI_AICR_SAMPLERATE (1 << 6)

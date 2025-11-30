@@ -1,38 +1,39 @@
-#pragma ipa file
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
-#include <string.h>
+
 #include <revolution/ARC/arc.h>
+
+#include <cstring>
 
 namespace
 {
-    UNKWORD FindNameResource(ARCHandle *pHandle, const char *name)
+    s32 FindNameResource(ARCHandle *pHandle, const char *name)
     {
-        UNKWORD resource = -1;
+        s32 entrynum = -1;
         ARCDir dir;
-        ARCEntry entry;
+        ARCDirEntry entry;
         
         ARCOpenDir(pHandle, ".", &dir);
         while (ARCReadDir(&dir, &entry))
         {
-            if (entry.type != ARC_ENTRY_FILE)
+            if (entry.isDir)
             {
                 ARCChangeDir(pHandle, entry.name);
-                resource = FindNameResource(pHandle, name);
+                entrynum = FindNameResource(pHandle, name);
                 ARCChangeDir(pHandle, "..");
-                if (resource != -1) break;
+                if (entrynum != -1) break;
             }
             else
             {
-                if (stricmp(name, entry.name) == 0)
+                if (std::stricmp(name, entry.name) == 0)
                 {
-                    resource = entry.path;
+                    entrynum = entry.entryNum;
                     break;
                 }
             }
         }
 
         ARCCloseDir(&dir);
-        return resource;
+        return entrynum;
     }
 
     UNKTYPE * GetResourceSub(ARCHandle *pHandle, const char *rootDir, u32 filetype, const char *filename, u32 *pSize)

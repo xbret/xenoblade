@@ -8,27 +8,27 @@
 extern "C" {
 #endif
 
-#include <revolution/gx/GXAttr.h>
-#include <revolution/gx/GXBump.h>
-#include <revolution/gx/GXDisplayList.h>
-#include <revolution/gx/GXDraw.h>
-#include <revolution/gx/GXFifo.h>
-#include <revolution/gx/GXFrameBuf.h>
-#include <revolution/gx/GXGeometry.h>
-#include <revolution/gx/GXHardware.h>
-#include <revolution/gx/GXHardwareBP.h>
-#include <revolution/gx/GXHardwareCP.h>
-#include <revolution/gx/GXHardwareXF.h>
-#include <revolution/gx/GXInit.h>
-#include <revolution/gx/GXInternal.h>
-#include <revolution/gx/GXLight.h>
-#include <revolution/gx/GXMisc.h>
-#include <revolution/gx/GXPixel.h>
-#include <revolution/gx/GXTev.h>
-#include <revolution/gx/GXTexture.h>
-#include <revolution/gx/GXTransform.h>
-#include <revolution/gx/GXTypes.h>
-#include <revolution/gx/GXVert.h>
+#include <revolution/GX/GXAttr.h>
+#include <revolution/GX/GXBump.h>
+#include <revolution/GX/GXDisplayList.h>
+#include <revolution/GX/GXDraw.h>
+#include <revolution/GX/GXFifo.h>
+#include <revolution/GX/GXFrameBuf.h>
+#include <revolution/GX/GXGeometry.h>
+#include <revolution/GX/GXHardware.h>
+#include <revolution/GX/GXHardwareBP.h>
+#include <revolution/GX/GXHardwareCP.h>
+#include <revolution/GX/GXHardwareXF.h>
+#include <revolution/GX/GXInit.h>
+#include <revolution/GX/GXInternal.h>
+#include <revolution/GX/GXLight.h>
+#include <revolution/GX/GXMisc.h>
+#include <revolution/GX/GXPixel.h>
+#include <revolution/GX/GXTev.h>
+#include <revolution/GX/GXTexture.h>
+#include <revolution/GX/GXTransform.h>
+#include <revolution/GX/GXTypes.h>
+#include <revolution/GX/GXVert.h>
 
 #ifdef __cplusplus
 }

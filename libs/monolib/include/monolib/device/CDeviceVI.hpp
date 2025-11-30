@@ -1,6 +1,7 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
+#include "revolution/vi/vitypes.h"
 #include <monolib/device/CDeviceBase.hpp>
 #include <monolib/device/UnkClass_80447FDC.hpp>
 #include <monolib/device/CDeviceVICb.hpp>
@@ -49,16 +50,16 @@ public:
 
     inline u32 convertTvFormat() {
         u32 result = 0;
-        if(mTvFormat == VI_PAL) result = 1;
-        else if(mTvFormat == VI_MPAL) result = 3;
-        else if(mTvFormat == VI_EURGB60) result = 2;
+        if(mTvFormat == VI_TVFORMAT_PAL) result = 1;
+        else if(mTvFormat == VI_TVFORMAT_MPAL) result = 3;
+        else if(mTvFormat == VI_TVFORMAT_EURGB60) result = 2;
         return result;
     }
 
     inline u32 convertScanMode() {
         u32 result = 16;
-        if(mScanMode == VI_NON_INTERLACE) result = 0;
-        else if(mScanMode == VI_PROGRESSIVE) result = 32;
+        if(mScanMode == VI_SCANMODE_DS) result = 0;
+        else if(mScanMode == VI_SCANMODE_PROG) result = 32;
         return result;
     }
 
@@ -112,21 +113,21 @@ public:
 
 private:
     static const u16 drawSyncToken = 0xBEEF;
+    
+    //XFB defines
+
+    //XFB dimensions
+    //JP: 640x480, US: 640x456, PAL: 640x542
+    static const int XFB_WIDTH = 640;
+    #if defined(VERSION_JP)
+    static const int XFB_HEIGHT = 480;
+    #elif defined(VERSION_EU)
+    static const int XFB_HEIGHT = 542;
+    #elif defined(VERSION_US)
+    static const int XFB_HEIGHT = 456;
+    #endif
+    static const int NUM_XFB_BUFFERS = 2; //double buffered
 
     static CDeviceVI* spInstance;
     static bool lbl_80667F2C;
 };
-
-//XFB defines
-
-//XFB dimensions
-//JP: 640x480, US: 640x456, PAL: 640x542
-#define XFB_WIDTH 640
-#if defined(VERSION_JP)
-#define XFB_HEIGHT 480
-#elif defined(VERSION_EU)
-#define XFB_HEIGHT 542
-#elif defined(VERSION_US)
-#define XFB_HEIGHT 456
-#endif
-#define NUM_XFB_BUFFERS 2 //double buffered

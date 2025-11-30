@@ -1,5 +1,5 @@
-#ifndef REVOSDK_OSSERIAL
-#define REVOSDK_OSSERIAL
+#ifndef RVL_SDK_OS_SERIAL
+#define RVK_SDK_OS_SERIAL
 
 #include <types.h>
 
@@ -65,4 +65,4 @@ void SISetSamplingRate(u32 msec);
 #ifdef __cplusplus
 }
 #endif
-#endif // _DOLPHIN_OSSERIAL
+#endif

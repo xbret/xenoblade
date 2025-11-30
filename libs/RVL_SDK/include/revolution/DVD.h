@@ -8,14 +8,14 @@
 extern "C" {
 #endif
 
-#include <revolution/dvd/dvd.h>
-#include <revolution/dvd/dvdFatal.h>
-#include <revolution/dvd/dvd_broadway.h>
-#include <revolution/dvd/dvdDeviceError.h>
-#include <revolution/dvd/dvderror.h>
-#include <revolution/dvd/dvdfs.h>
-#include <revolution/dvd/dvdidutils.h>
-#include <revolution/dvd/dvdqueue.h>
+#include <revolution/DVD/dvd.h>
+#include <revolution/DVD/dvd_broadway.h>
+#include <revolution/DVD/dvdDeviceError.h>
+#include <revolution/DVD/dvderror.h>
+#include <revolution/DVD/dvdfatal.h>
+#include <revolution/DVD/dvdfs.h>
+#include <revolution/DVD/dvdidutils.h>
+#include <revolution/DVD/dvdqueue.h>
 
 #ifdef __cplusplus
 }

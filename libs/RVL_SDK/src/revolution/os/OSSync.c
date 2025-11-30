@@ -10,7 +10,6 @@ void __OSSystemCallVectorEnd(void);
 
 static asm void SystemCallVector(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     entry __OSSystemCallVectorStart
@@ -25,7 +24,6 @@ static asm void SystemCallVector(void) {
 
     entry __OSSystemCallVectorEnd
     nop
-    #endif
     // clang-format on
 }
 

@@ -6,7 +6,7 @@ static ui8 gRecvBuf[0x500];
 static CircleBuffer gRecvCB;
 static bool gIsInitialized;
 
-CW_FORCE_BSS(CC_GDEV_c, gRecvBuf);
+DECOMP_FORCEACTIVE(CC_GDEV_c, gRecvBuf);
 
 //unused
 void OutputData(){

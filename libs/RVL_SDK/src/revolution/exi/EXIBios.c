@@ -1,7 +1,7 @@
-#include "revolution/os/OSTime.h"
 #include <revolution/DVD.h>
 #include <revolution/EXI.h>
 #include <revolution/OS.h>
+
 #include <string.h>
 
 const char* __EXIVersion =
@@ -16,7 +16,7 @@ static void SetExiInterruptMask(EXIChannel chan, EXIData* exi) {
     EXIData* exi2 = &Ecb[EXI_CHAN_2];
 
     switch (chan) {
-    case EXI_CHAN_0:
+    case EXI_CHAN_0: {
         if (exi->exiCallback == NULL && exi2->exiCallback == NULL ||
             exi->state & EXI_STATE_LOCKED) {
             __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_0_EXI) |
@@ -26,20 +26,30 @@ static void SetExiInterruptMask(EXIChannel chan, EXIData* exi) {
                                  OS_INTR_MASK(OS_INTR_EXI_2_EXI));
         }
         break;
-    case EXI_CHAN_1:
+    }
+    
+    case EXI_CHAN_1: {
         if (exi->exiCallback == NULL || exi->state & EXI_STATE_LOCKED) {
             __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_1_EXI));
         } else {
             __OSUnmaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_1_EXI));
         }
         break;
-    case EXI_CHAN_2:
+    }
+
+    case EXI_CHAN_2: {
         if (__OSGetInterruptHandler(OS_INTR_PI_DEBUG) == NULL ||
             exi->state & EXI_STATE_LOCKED) {
             __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_PI_DEBUG));
         } else {
             __OSUnmaskInterrupts(OS_INTR_MASK(OS_INTR_PI_DEBUG));
         }
+        break;
+    }
+
+    default: {
+        break;
+    }
     }
 }
 
@@ -105,7 +115,7 @@ BOOL EXIImmEx(EXIChannel chan, void* buf, s32 len, u32 type) {
     while (len != 0) {
         s32 immLen = (len < 4) ? len : 4;
 
-        if (!EXIImm(chan, buf, immLen, type, FALSE)) {
+        if (!EXIImm(chan, buf, immLen, type, NULL)) {
             return FALSE;
         }
 
@@ -248,7 +258,7 @@ static BOOL __EXIProbe(EXIChannel chan) {
         }
 
         if (cpr & EXI_CPR_EXT) {
-            s32 time = (s32)(OSTicksToMilliseconds(OSGetTime()) / 100) + 1;
+            s32 time = (s32)(OS_TICKS_TO_MSEC(OSGetTime()) / 100) + 1;
             if (OS_EXI_LAST_INSERT[chan] == 0) {
                 OS_EXI_LAST_INSERT[chan] = time;
             }
@@ -377,12 +387,19 @@ BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq) {
 
     if (exi->state & EXI_STATE_ATTACHED) {
         switch (chan) {
-        case EXI_CHAN_0:
+        case EXI_CHAN_0: {
             __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_0_EXT));
             break;
-        case EXI_CHAN_1:
+        }
+
+        case EXI_CHAN_1: {
             __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_1_EXT));
             break;
+        }
+
+        default: {
+            break;
+        }
         }
     }
 
@@ -413,12 +430,18 @@ BOOL EXIDeselect(EXIChannel chan) {
 
     if (exi->state & EXI_STATE_ATTACHED) {
         switch (chan) {
-        case EXI_CHAN_0:
+        case EXI_CHAN_0: {
             __OSUnmaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_0_EXT));
             break;
-        case EXI_CHAN_1:
+        }
+        case EXI_CHAN_1: {
             __OSUnmaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_1_EXT));
             break;
+        }
+
+        default: {
+            break;
+        }
         }
     }
 
@@ -446,7 +469,7 @@ static void EXIIntrruptHandler(s32 intr, OSContext* ctx) {
     EXIClearInterrupts(chan, TRUE, FALSE, FALSE);
 
     exi = &Ecb[chan];
-
+    
     callback = exi->exiCallback;
     if (callback != NULL) {
         OSClearContext(&temp);

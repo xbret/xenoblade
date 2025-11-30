@@ -1,7 +1,7 @@
 #ifndef MSL_MBSTRING_H
 #define MSL_MBSTRING_H
 
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

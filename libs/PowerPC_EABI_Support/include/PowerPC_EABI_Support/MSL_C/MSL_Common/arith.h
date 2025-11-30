@@ -1,7 +1,7 @@
 #ifndef _MSL_COMMON_ARITH_H
 #define _MSL_COMMON_ARITH_H
 
-#include "types.h"
+#include <types.h>
 
 typedef struct {
     int quot; /* quotient */

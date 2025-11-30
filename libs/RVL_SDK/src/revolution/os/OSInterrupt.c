@@ -2,7 +2,9 @@
 #include <revolution/BASE.h>
 #include <revolution/DSP.h>
 #include <revolution/EXI.h>
+#include <revolution/IPC.h>
 #include <revolution/OS.h>
+
 #include <string.h>
 
 static OSInterruptHandler* InterruptHandlerTable;
@@ -18,7 +20,6 @@ static void ExternalInterruptHandler(u8 type, OSContext* ctx);
 
 asm BOOL OSDisableInterrupts(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     entry __RAS_OSDisableInterrupts_begin
@@ -33,13 +34,11 @@ asm BOOL OSDisableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    #endif
     // clang-format on
 }
 
 asm BOOL OSEnableInterrupts(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     mfmsr r3
@@ -50,13 +49,11 @@ asm BOOL OSEnableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    #endif
     // clang-format on
 }
 
 asm BOOL OSRestoreInterrupts(register BOOL status){
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     cmpwi status, 0
@@ -76,11 +73,11 @@ set_msr:
     // Return old interrupt status
     rlwinm r3, r4, 17, 31, 31
     blr
-    #endif
     // clang-format on
 }
 
-OSInterruptHandler __OSSetInterruptHandler(OSInterruptType type, OSInterruptHandler handler) {
+OSInterruptHandler
+    __OSSetInterruptHandler(OSInterruptType type, OSInterruptHandler handler) {
     OSInterruptHandler old = InterruptHandlerTable[type];
     InterruptHandlerTable[type] = handler;
     return old;
@@ -91,14 +88,17 @@ OSInterruptHandler __OSGetInterruptHandler(OSInterruptType type) {
 }
 
 void __OSInterruptInit(void) {
-    InterruptHandlerTable = (OSInterruptHandler*)OSPhysicalToCached(OS_PHYS_INTR_HANDLER_TABLE);
+    InterruptHandlerTable =
+        (OSInterruptHandler*)OSPhysicalToCached(OS_PHYS_INTR_HANDLER_TABLE);
     memset(InterruptHandlerTable, 0, sizeof(OSInterruptHandler) * OS_INTR_MAX);
 
     *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK) = 0;
     *(u32*)OSPhysicalToCached(OS_PHYS_CURRENT_INTR_MASK) = 0;
 
-    PI_HW_REGS[PI_INTMR] = PI_INTMR_EXI | PI_INTMR_AI | PI_INTMR_DSP | PI_INTMR_MEM;
-    OS_UNK_CD000034 = 0x40000000;
+    PI_HW_REGS[PI_INTMR] =
+        PI_INTMR_EXI | PI_INTMR_AI | PI_INTMR_DSP | PI_INTMR_MEM;
+
+    IPC_PPC_HW_REGS[IPC_PPCIRQMASK] = 0x40000000;
 
     __OSMaskInterrupts(
         OS_INTR_MASK(OS_INTR_MEM_0) | OS_INTR_MASK(OS_INTR_MEM_1) |
@@ -542,7 +542,6 @@ void __OSDispatchInterrupt(u8 intr, OSContext* ctx) {
 static asm void ExternalInterruptHandler(register u8 type,
                                          register OSContext* ctx) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     stw r0, ctx->gprs[0]
@@ -567,6 +566,5 @@ static asm void ExternalInterruptHandler(register u8 type,
 
     stwu r1, -8(r1)
     b __OSDispatchInterrupt
-    #endif
     // clang-format on
 }

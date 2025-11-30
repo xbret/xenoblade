@@ -146,7 +146,7 @@ void SoundSystem::WaitForResetReady() {
     u32 start = OSGetTick();
 
     while (!detail::AxManager::GetInstance().IsResetReady()) {
-        if (OSTicksToSeconds(OSGetTick() - start) > 0) {
+        if (OS_TICKS_TO_SEC(OSGetTick() - start) > 0) {
             break;
         }
     }

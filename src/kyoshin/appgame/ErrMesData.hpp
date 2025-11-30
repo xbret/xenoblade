@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 
 const wchar_t* getNoDiscErrorMessage();
 const wchar_t* getDiscUnreadableErrorMessage();

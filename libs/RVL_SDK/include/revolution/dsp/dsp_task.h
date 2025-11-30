@@ -7,15 +7,15 @@ extern "C" {
 
 #define DSP_SEND_MAIL_SYNC(x)                                                  \
     do {                                                                       \
-        DSPSendMailToDSP((DSPMail)(x));                                        \
+        DSPSendMailToDSP((DSPMail)(u32)(x));                                   \
         while (DSPCheckMailToDSP()) {                                          \
             ;                                                                  \
         }                                                                      \
     } while (0)
 
 // Forward declarations
-typedef struct DSPTask;
-typedef struct OSContext;
+struct DSPTask;
+struct OSContext;
 
 typedef enum {
     DSP_TASK_ACTIVE = (1 << 0),
@@ -33,7 +33,7 @@ typedef void (*DSPTaskCallback)(struct DSPTask* task);
 
 typedef struct DSPTask {
     volatile u32 state;              // at 0x0
-    u32 prio;                        // at 0x4
+    volatile u32 prio;               // at 0x4
     volatile u32 flags;              // at 0x8
     void* iramMmemAddr;              // at 0xC
     u32 iramMmemLen;                 // at 0x10

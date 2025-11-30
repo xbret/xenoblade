@@ -1,5 +1,5 @@
 /**
- * References: WiiBrew, Dolphin Emulator
+ * References: WiiBrew, Dolphin Emulator, fail0verflow
  */
 
 #ifndef RVL_SDK_PUBLIC_IPC_H
@@ -8,10 +8,10 @@
 extern "C" {
 #endif
 
-#include <revolution/ipc/ipcMain.h>
-#include <revolution/ipc/ipcProfile.h>
-#include <revolution/ipc/ipcclt.h>
-#include <revolution/ipc/memory.h>
+#include <revolution/IPC/ipcMain.h>
+#include <revolution/IPC/ipcProfile.h>
+#include <revolution/IPC/ipcclt.h>
+#include <revolution/IPC/memory.h>
 
 #ifdef __cplusplus
 }

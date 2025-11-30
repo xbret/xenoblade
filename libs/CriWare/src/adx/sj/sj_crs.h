@@ -1,7 +1,7 @@
 #ifndef SJ_CRS_H
 #define SJ_CRS_H
 
-#include "types.h"
+#include <types.h>
 
 void SJCRS_Init(void);
 void SJCRS_Finish(void);

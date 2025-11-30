@@ -5,7 +5,7 @@
 static u32 AnalogMode = 0x00000300u;
 static u32 Spec = 5;
 static u32 EnabledBits;
-u32 __PADSpec;
+u32 __PADSpec = 0;
 
 
 //unused

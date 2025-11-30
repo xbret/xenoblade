@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include "kyoshin/appgame/cf/chain/UnkClass_8027AD70.hpp"
 #include <monolib/util.hpp>
 

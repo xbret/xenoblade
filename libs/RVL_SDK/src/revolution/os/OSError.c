@@ -1,24 +1,24 @@
 #include <revolution/BASE.h>
 #include <revolution/DSP.h>
 #include <revolution/OS.h>
+
 #include <stdio.h>
 
 OSErrorHandler __OSErrorTable[OS_ERR_MAX];
-u32 __OSFpscrEnableBits =
-    (FPSCR_VE | FPSCR_OE | FPSCR_UE | FPSCR_ZE | FPSCR_XE);
+u32 __OSFpscrEnableBits = FPSCR_VE | FPSCR_OE | FPSCR_UE | FPSCR_ZE | FPSCR_XE;
 
-void OSReport(const char* msg, ...) {
+DECL_WEAK void OSReport(const char* msg, ...) {
     va_list list;
     va_start(list, msg);
     vprintf(msg, list);
     va_end(list);
 }
 
-void OSVReport(const char* msg, va_list arg){
+DECL_WEAK void OSVReport(const char* msg, va_list arg){
     vprintf(msg,arg);
 }
 
-void OSPanic(const char* file, int line, const char* msg, ...) {
+DECL_WEAK void OSPanic(const char* file, int line, const char* msg, ...) {
     u32 depth;
     u32* sp;
     va_list list;
@@ -201,7 +201,7 @@ void __OSUnhandledException(u8 error, OSContext* ctx, u32 dsisr, u32 dar) {
         OSReport("ARAM DMA Address = 0x%04x%04x\n",
                  DSP_HW_REGS[DSP_AR_DMA_MMADDR_H],
                  DSP_HW_REGS[DSP_AR_DMA_MMADDR_L]);
-        OSReport("DI DMA Address =   0x%08x\n", OS_DI_DMA_ADDR);
+        OSReport("DI DMA Address =   0x%08x\n", DI_HW_REGS[DI_DMA_ADDR]);
         break;
     }
 

@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#include <revolution/esp/esp.h>
+#include <revolution/ESP/esp.h>
 
 #ifdef __cplusplus
 }

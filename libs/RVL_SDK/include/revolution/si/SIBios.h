@@ -27,10 +27,10 @@ typedef enum {
 typedef void (*SICallback)(s32 chan, u32 status);
 
 void SIInit(void);
+u32 SISetXY(u32 lines, u32 times);
+BOOL SITransfer(s32 chan, void* outAddr, u32 outSize, void* inAddr, u32 inSize,
+                SICallback callback, s64 wait);
 u32 SIGetType(s32 chan);
-void SISetCommand(s32 chan, u32 command);
-void SITransferCommands(void);
-void SISetXY(u32 line, u8 count);
 
 #ifdef __cplusplus
 }

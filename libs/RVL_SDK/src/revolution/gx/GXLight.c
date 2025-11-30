@@ -1,5 +1,6 @@
-#include <math.h>
 #include <revolution/GX.h>
+
+#include <math.h>
 
 #define XF_MEM_LOBJ_SIZE 16
 
@@ -208,15 +209,13 @@ void GXInitLightColor(GXLightObj* light, GXColor color) {
 void GXGetLightColor(){
 }
 
-// TODO: This inline is fake, and also is a fake match (r6 hardcoded)
+// TODO(kiwi) This inline is fake, and also is a fake match (r6 hardcoded)
 inline void WriteLightObj(register volatile void* dst,
                           register const GXLightObjImpl* src) {
     register u32 color;
     register f32 ps_0, ps_1, ps_2, ps_3, ps_4, ps_5;
 
-    // clang-format off
-    #ifdef __MWERKS__
-    asm volatile {
+    ASM_VOLATILE(
         lwz color, src->color
         xor r6, r6, r6 // make zero
         psq_l ps_0, GXLightObjImpl.aa(src),   0, 0
@@ -237,9 +236,7 @@ inline void WriteLightObj(register volatile void* dst,
         psq_st ps_3, 0(dst), 0, 0
         psq_st ps_4, 0(dst), 0, 0
         psq_st ps_5, 0(dst), 0, 0
-    }
-    #endif
-    // clang-format on
+    )
 }
 
 void GXLoadLightObjImm(const GXLightObj* light, GXLightID id) {
@@ -363,8 +360,8 @@ void GXSetChanCtrl(GXChannelID chan, GXBool enable, GXColorSrc ambSrc,
                                                                 : diffFn);
     GX_XF_SET_COLOR0CNTRL_ATTNENABLE(reg, attnFn != GX_AF_NONE);
     GX_XF_SET_COLOR0CNTRL_ATTNSELECT(reg, attnFn != GX_AF_SPEC);
-    GX_XF_SET_COLOR0CNTRL_LMASKHI(reg, (u32)lightMask);
-    GX_XF_SET_COLOR0CNTRL_LMASKLO(reg, (u32)lightMask >> 4);
+    GX_XF_SET_COLOR0CNTRL_LMASKLO(reg, (u32)lightMask);
+    GX_XF_SET_COLOR0CNTRL_LMASKHI(reg, (u32)lightMask >> 4);
 
     gxdt->colorControl[regIdx] = reg;
     gxdt->gxDirtyFlags |= GX_DIRTY_CHAN_COLOR0 << (regIdx);

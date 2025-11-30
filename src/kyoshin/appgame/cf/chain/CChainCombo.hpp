@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 
 void func_80294824(void*);
 void func_80294834(void*);

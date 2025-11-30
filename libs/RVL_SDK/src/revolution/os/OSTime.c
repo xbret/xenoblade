@@ -22,7 +22,6 @@ static s32 LeapYearDays[MONTH_MAX] = {0,   31,  60,  91,  121, 152,
 
 asm s64 OSGetTime(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     mftbu r3
@@ -34,18 +33,15 @@ asm s64 OSGetTime(void) {
     bne OSGetTime
 
     blr
-    #endif
     // clang-format on
 }
 
 asm u32 OSGetTick(void){
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     mftb r3
     blr
-    #endif
     // clang-format on
 }
 
@@ -119,17 +115,17 @@ void OSTicksToCalendarTime(s64 ticks, OSCalendarTime* cal) {
     s32 days, secs;
     s64 d;
 
-    d = ticks % OSSecondsToTicks(1);
+    d = ticks % OS_SEC_TO_TICKS(1);
     if (d < 0) {
-        d += OSSecondsToTicks(1);
+        d += OS_SEC_TO_TICKS(1);
     }
 
-    cal->usec = OSTicksToMicroseconds(d) % USEC_MAX;
-    cal->msec = OSTicksToMilliseconds(d) % MSEC_MAX;
+    cal->usec = OS_TICKS_TO_USEC(d) % USEC_MAX;
+    cal->msec = OS_TICKS_TO_MSEC(d) % MSEC_MAX;
     ticks -= d;
 
-    days = (OSTicksToSeconds(ticks) / SECS_IN_DAY) + BIAS;
-    secs = OSTicksToSeconds(ticks) % SECS_IN_DAY;
+    days = (OS_TICKS_TO_SEC(ticks) / SECS_IN_DAY) + BIAS;
+    secs = OS_TICKS_TO_SEC(ticks) % SECS_IN_DAY;
     if (secs < 0) {
         days -= 1;
         secs += SECS_IN_DAY;
@@ -166,6 +162,7 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
               cal->sec -
               (s64)0xEB1E1BF80ULL;
     // clang-format on
-    return OSSecondsToTicks(seconds) + OSMillisecondsToTicks((s64)cal->msec) +
-           OSMicrosecondsToTicks((s64)cal->usec);
+
+    return OS_SEC_TO_TICKS(seconds) + OS_MSEC_TO_TICKS((s64)cal->msec) +
+           OS_USEC_TO_TICKS((s64)cal->usec);
 }

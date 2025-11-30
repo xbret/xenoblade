@@ -8,8 +8,8 @@
 extern "C" {
 #endif
 
-#include <revolution/ai/ai.h>
-#include <revolution/ai/ai_hardware.h>
+#include <revolution/AI/ai.h>
+#include <revolution/AI/ai_hardware.h>
 
 #ifdef __cplusplus
 }

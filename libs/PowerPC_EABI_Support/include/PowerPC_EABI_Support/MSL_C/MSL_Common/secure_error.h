@@ -1,7 +1,7 @@
 #ifndef MSLC_SECURE_ERROR_H
 #define MSLC_SECURE_ERROR_H
 
-#include "types.h"
+#include <types.h>
 
 typedef void (*msl_constraint_handler)(int,int,int);
 

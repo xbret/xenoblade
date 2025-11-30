@@ -7,6 +7,7 @@ extern "C" {
 #endif
 
 void __VISetRGBModeImm(void);
+
 void __VISetRevolutionModeSimple(void);
 
 void VISetGamma(VIGamma gamma);

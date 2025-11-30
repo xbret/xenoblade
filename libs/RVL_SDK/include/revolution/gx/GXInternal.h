@@ -1,7 +1,8 @@
 #ifndef RVL_SDK_GX_INTERNAL_H
 #define RVL_SDK_GX_INTERNAL_H
-#include <revolution/gx/GXTypes.h>
 #include <types.h>
+
+#include <revolution/GX/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -21,9 +22,10 @@ extern "C" {
  * (Implementation size is included to require that such a structure already
  * exists.)
  */
-#define GX_DECL_PUBLIC_STRUCT(name, size)                                      \
+#define GX_PUBLIC_STRUCT_DECL(name, size)                                      \
     typedef struct _##name {                                                   \
-        u8 dummy[(size) - sizeof(name##Impl) + sizeof(name##Impl)];            \
+        u32 dummy[((size) - sizeof(name##Impl) + sizeof(name##Impl)) /         \
+                  sizeof(u32)];                                                \
     } name;
 
 typedef struct _GXFifoObjImpl {
@@ -62,6 +64,14 @@ typedef struct _GXTexObjImpl {
 typedef struct _GXTlutObjImpl {
     u8 todo;
 } GXTlutObjImpl;
+
+typedef struct _GXTexRegionImpl {
+    u8 todo;
+} GXTexRegionImpl;
+
+typedef struct _GXTlutRegionImpl {
+    u8 todo;
+} GXTlutRegionImpl;
 
 #ifdef __cplusplus
 }

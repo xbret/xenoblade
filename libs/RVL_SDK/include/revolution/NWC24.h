@@ -8,10 +8,10 @@
 extern "C" {
 #endif
 
-#include <revolution/nwc24/NWC24Schedule.h>
-#include <revolution/nwc24/NWC24System.h>
-#include <revolution/nwc24/NWC24Time.h>
-#include <revolution/nwc24/NWC24Types.h>
+#include <revolution/NWC24/NWC24Schedule.h>
+#include <revolution/NWC24/NWC24System.h>
+#include <revolution/NWC24/NWC24Time.h>
+#include <revolution/NWC24/NWC24Types.h>
 
 #ifdef __cplusplus
 }

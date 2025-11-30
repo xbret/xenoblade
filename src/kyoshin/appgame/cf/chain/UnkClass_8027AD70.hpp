@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include "kyoshin/appgame/cf/chain/CChainActorPc.hpp"
 #include "kyoshin/appgame/cf/chain/CChainActorEne.hpp"
 

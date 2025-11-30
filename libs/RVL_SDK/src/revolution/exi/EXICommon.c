@@ -1,5 +1,5 @@
-#include <revolution/exi/EXIBios.h>
-#include <revolution/exi/EXICommon.h>
+#include <revolution/EXI/EXIBios.h>
+#include <revolution/EXI/EXICommon.h>
 
 const u32 __EXIFreq = EXI_FREQ_16MHZ;
 
@@ -15,8 +15,7 @@ void EXIWait(){
 void EXIReadReg(){
 }
 
-BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 cmd, const void* buf,
-                 s32 len) {
+BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 cmd, const void* buf, s32 len) {
     BOOL error = FALSE;
     u32 write_val;
 

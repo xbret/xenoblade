@@ -48,6 +48,7 @@ typedef enum {
     OS_INTR_MAX
 } OSInterruptType;
 
+//TODO: is this s16 or s32???
 typedef void (*OSInterruptHandler)(s32 intr, struct OSContext* ctx);
 
 extern u32 __OSLastInterruptSrr0;

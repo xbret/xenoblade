@@ -1,7 +1,7 @@
 #ifndef MSL_WSTRING_H
 #define MSL_WSTRING_H
 
-#include "types.h"
+#include <types.h>
 
 size_t wcslen(const wchar_t*);
 wchar_t* wcscpy(wchar_t*, const wchar_t*);

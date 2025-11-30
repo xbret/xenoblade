@@ -1,7 +1,7 @@
 #ifndef _MSL_LOCALE_API_H
 #define _MSL_LOCALE_API_H
 
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -8,10 +8,10 @@
 extern "C" {
 #endif
 
-#include <revolution/dsp/dsp.h>
-#include <revolution/dsp/dsp_debug.h>
-#include <revolution/dsp/dsp_hardware.h>
-#include <revolution/dsp/dsp_task.h>
+#include <revolution/DSP/dsp.h>
+#include <revolution/DSP/dsp_debug.h>
+#include <revolution/DSP/dsp_hardware.h>
+#include <revolution/DSP/dsp_task.h>
 
 #ifdef __cplusplus
 }

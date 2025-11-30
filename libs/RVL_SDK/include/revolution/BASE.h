@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include <revolution/base/PPCArch.h>
+#include <revolution/BASE/PPCArch.h>
 
 #ifdef __cplusplus
 }

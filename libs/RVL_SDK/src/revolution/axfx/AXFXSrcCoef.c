@@ -1,11 +1,5 @@
 #include <revolution/AXFX.h>
 
-extern SrcCoef __SrcTab12khz[128];
-
-SrcCoef* __AXFXGetSrcCoef(u32 i) {
-    return &__SrcTab12khz[i];
-}
-
 static SrcCoef __SrcTab12khz[128] = {
     {0.09750366211f, 0.80221557617f, 0.10159301758f, -0.00097656250f},
     {0.09350585938f, 0.80203247070f, 0.10580444336f, -0.00103759766f},
@@ -135,3 +129,7 @@ static SrcCoef __SrcTab12khz[128] = {
     {-0.00115966797f, 0.11010742188f, 0.80169677734f, 0.08959960938f},
     {-0.00103759766f, 0.10580444336f, 0.80203247070f, 0.09350585938f},
     {-0.00097656250f, 0.10159301758f, 0.80221557617f, 0.09750366211f}};
+
+SrcCoef* __AXFXGetSrcCoef(u32 i) {
+    return &__SrcTab12khz[i];
+}

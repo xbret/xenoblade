@@ -26,15 +26,27 @@ void IPCReInit(void) {
     Initialized = TRUE;
 }
 
-u32 IPCReadReg(s32 index) { return IPC_HW_REGS[index]; }
+u32 IPCReadReg(s32 index) {
+    return IPC_PPC_HW_REGS[index];
+}
 
-void IPCWriteReg(s32 index, u32 value) { IPC_HW_REGS[index] = value; }
+void IPCWriteReg(s32 index, u32 value) {
+    IPC_PPC_HW_REGS[index] = value;
+}
 
-void* IPCGetBufferHi(void) { return IPCCurrentBufferHi; }
+void* IPCGetBufferHi(void) {
+    return IPCCurrentBufferHi;
+}
 
-void* IPCGetBufferLo(void) { return IPCCurrentBufferLo; }
+void* IPCGetBufferLo(void) {
+    return IPCCurrentBufferLo;
+}
 
 //unused
-void IPCSetBufferHi(void* hi) {IPCCurrentBufferHi = hi; }
+void IPCSetBufferHi(void* hi) {
+    IPCCurrentBufferHi = hi;
+}
 
-void IPCSetBufferLo(void* lo) { IPCCurrentBufferLo = lo; }
+void IPCSetBufferLo(void* lo) {
+    IPCCurrentBufferLo = lo;
+}

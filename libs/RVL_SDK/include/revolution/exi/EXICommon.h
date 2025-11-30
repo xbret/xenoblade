@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 // Forward declarations
-typedef struct OSContext;
+struct OSContext;
 
 typedef enum {
     EXI_STATE_DMA_ACCESS = (1 << 0),

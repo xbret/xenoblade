@@ -1,7 +1,8 @@
 #ifndef RVL_SDK_GX_ATTR_H
 #define RVL_SDK_GX_ATTR_H
-#include <revolution/gx/GXTypes.h>
 #include <types.h>
+
+#include <revolution/GX/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -26,8 +27,8 @@ void GXClearVtxDesc(void);
 void GXSetVtxAttrFmt(GXVtxFmt fmt, GXAttr attr, GXCompCnt compCnt,
                      GXCompType compType, u8 shift);
 
-// TODO: Please find a way to get rid of this
-#ifdef GXATTR_MATCH_HACK
+// TODO(kiwi) Please find a way to get rid of this
+#if defined(GXATTR_MATCH_HACK)
 void GXSetVtxAttrFmtv(s16 fmt, const GXVtxAttrFmtList* list);
 #else
 void GXSetVtxAttrFmtv(GXVtxFmt fmt, const GXVtxAttrFmtList* list);
@@ -46,10 +47,9 @@ void __GXSetVCD(void);
 void __GXCalculateVLim(void);
 void __GXSetVAT(void);
 
-//Actually in GXGeometry.h
-static inline void GXSetTexCoordGen(GXTexCoordID id, GXTexGenType type,
+static void GXSetTexCoordGen(GXTexCoordID id, GXTexGenType type,
                              GXTexGenSrc src, u32 texMtxIdx) {
-    GXSetTexCoordGen2(id, type, src, texMtxIdx, FALSE, GX_DUALMTX_IDENT);
+    GXSetTexCoordGen2(id, type, src, texMtxIdx, FALSE, GX_PTIDENTITY);
 }
 
 #ifdef __cplusplus

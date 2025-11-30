@@ -7,10 +7,11 @@
 
 #ifndef RVL_SDK_OS_HARDWARE_H
 #define RVL_SDK_OS_HARDWARE_H
-#include <revolution/dvd/dvd.h>
-#include <revolution/os/OSAddress.h>
-#include <revolution/os/OSThread.h>
 #include <types.h>
+
+#include <revolution/DVD/dvd.h>
+#include <revolution/OS/OSAddress.h>
+#include <revolution/OS/OSThread.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -21,7 +22,7 @@ typedef struct OSExecParams;
 
 // Derive offsets for use with OSAddress functions
 #define __DEF_ADDR_OFFSETS(name, addr)                                         \
-    static const u32 OS_PHYS_##name = (addr)-0x80000000;                       \
+    static const u32 OS_PHYS_##name = (addr) - 0x80000000;                     \
     static const u32 OS_CACHED_##name = (addr);                                \
     static const u32 OS_UNCACHED_##name = (addr) + (0xC0000000 - 0x80000000);
 
@@ -29,20 +30,20 @@ typedef struct OSExecParams;
 // Can be accessed directly or with OSAddress functions.
 #define OS_DEF_GLOBAL_VAR(type, name, addr)                                    \
     /* Memory-mapped value for direct access */                                \
-    extern type OS_##name AT_ADDRESS(addr);                                    \
+    type OS_##name DECL_ADDRESS(addr);                                         \
     __DEF_ADDR_OFFSETS(name, addr)
 
 // Define a global array in *CACHED* MEM1.
 // Can be accessed directly or with OSAddress functions.
 #define OS_DEF_GLOBAL_ARR(type, name, arr, addr)                               \
     /* Memory-mapped value for direct access */                                \
-    extern type OS_##name arr AT_ADDRESS(addr);                                \
+    type OS_##name arr DECL_ADDRESS(addr);                                     \
     __DEF_ADDR_OFFSETS(name, addr)
 
 // Define an global variable in the hardware-register range.
 #define OS_DEF_HW_REG(type, name, addr)                                        \
     /* Memory-mapped value for direct access */                                \
-    extern type OS_##name AT_ADDRESS(addr);
+    type OS_##name : (addr);
 
 typedef enum {
     OS_BOOT_MAGIC_BOOTROM = 0xD15EA5E,
@@ -90,13 +91,13 @@ typedef struct OSBI2 {
 OS_DEF_GLOBAL_VAR(OSBootInfo, BOOT_INFO,                   0x80000000);
 OS_DEF_GLOBAL_VAR(OSDebugInterface, DEBUG_INTERFACE,       0x80000040);
 OS_DEF_GLOBAL_ARR(u8, DB_INTEGRATOR_HOOK, [0x24],          0x80000060);
-OS_DEF_GLOBAL_VAR(struct OSContext*, CURRENT_CONTEXT_PHYS, 0x800000C0);
+OS_DEF_GLOBAL_VAR(OSContext*, CURRENT_CONTEXT_PHYS,        0x800000C0);
 OS_DEF_GLOBAL_VAR(u32, PREV_INTR_MASK,                     0x800000C4);
 OS_DEF_GLOBAL_VAR(u32, CURRENT_INTR_MASK,                  0x800000C8);
 OS_DEF_GLOBAL_VAR(u32, TV_FORMAT,                          0x800000CC);
 OS_DEF_GLOBAL_VAR(u32, ARAM_SIZE,                          0x800000D0);
-OS_DEF_GLOBAL_VAR(struct OSContext*, CURRENT_CONTEXT,      0x800000D4);
-OS_DEF_GLOBAL_VAR(struct OSContext*, CURRENT_FPU_CONTEXT,  0x800000D8);
+OS_DEF_GLOBAL_VAR(OSContext*, CURRENT_CONTEXT,             0x800000D4);
+OS_DEF_GLOBAL_VAR(OSContext*, CURRENT_FPU_CONTEXT,         0x800000D8);
 OS_DEF_GLOBAL_VAR(OSThreadQueue, THREAD_QUEUE,             0x800000DC);
 OS_DEF_GLOBAL_VAR(OSThread*, CURRENT_THREAD,               0x800000E4);
 OS_DEF_GLOBAL_VAR(u32, DEBUG_MONITOR_SIZE,                 0x800000E8);
@@ -113,7 +114,7 @@ OS_DEF_GLOBAL_VAR(u32, CPU_CLOCK_SPEED,                    0x800000FC);
 // clang-format off
 OS_DEF_GLOBAL_ARR(void*, EXCEPTION_TABLE, [15],          0x80003000);
 OS_DEF_GLOBAL_VAR(void*, INTR_HANDLER_TABLE,             0x80003040);
-OS_DEF_GLOBAL_ARR(volatile s32, EXI_LAST_INSERT, [],     0x800030C0);
+OS_DEF_GLOBAL_ARR(volatile s32, EXI_LAST_INSERT, [2],    0x800030C0);
 OS_DEF_GLOBAL_VAR(void*, FIRST_REL,                      0x800030C8);
 OS_DEF_GLOBAL_VAR(void*, LAST_REL,                       0x800030CC);
 OS_DEF_GLOBAL_VAR(void*, REL_NAME_TABLE,                 0x800030D0);
@@ -154,6 +155,7 @@ OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_RETURN_CODE,           0x80003190);
 OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_TYPE,              0x80003194);
 OS_DEF_GLOBAL_VAR(u32, BOOT_PARTITION_OFFSET,            0x80003198);
 OS_DEF_GLOBAL_VAR(u8, BOOT_PARTITION_319C,               0x8000319C);
+OS_DEF_GLOBAL_VAR(s8, WIFI_AFH_CHANNEL,                  0x800031A2);
 OS_DEF_GLOBAL_ARR(u8, NWC24_USER_ID_BUFFER, [32],        0x800031C0);
 OS_DEF_GLOBAL_VAR(u64, NWC24_USER_ID,                    0x800031C0);
 OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
@@ -162,8 +164,7 @@ OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
 /**
  * PI hardware globals
  */
-extern volatile u32 PI_HW_REGS[] AT_ADDRESS(0xCC003000);
-
+volatile u32 DECL_HW_REGS(PI) DECL_ADDRESS(0xCC003000);
 typedef enum {
     PI_INTSR,    //!< 0xCC003000
     PI_INTMR,    //!< 0xCC003004
@@ -216,8 +217,7 @@ typedef enum {
 /**
  * MI hardware registers
  */
-extern volatile u16 MI_HW_REGS[] AT_ADDRESS(0xCC004000);
-
+volatile u16 DECL_HW_REGS(MI) DECL_ADDRESS(0xCC004000);
 typedef enum {
     MI_PAGE_MEM0_H, //!< 0xCC004000
     MI_PAGE_MEM0_L, //!< 0xCC004002
@@ -258,22 +258,13 @@ typedef enum {
 #define MI_INTSR_ADDR (1 << 4)
 
 /**
- * DI hardware globals
+ * DI hardware registers
  */
-// clang-format off
-OS_DEF_HW_REG(volatile u32, DI_DMA_ADDR, 0xCD006014);
-OS_DEF_HW_REG(volatile u32, DI_CONFIG,   0xCD006024);
-// clang-format on
-
-/**
- * Misc/unknown globals
- */
-// clang-format off
-OS_DEF_HW_REG(volatile u32, UNK_CD000034, 0xCD000034);
-OS_DEF_HW_REG(volatile u32, UNK_CD800180, 0xCD800180);
-OS_DEF_HW_REG(volatile u32, UNK_CD8001CC, 0xCD8001CC);
-OS_DEF_HW_REG(volatile u32, UNK_CD8001D0, 0xCD8001D0);
-// clang-format on
+volatile u32 DECL_HW_REGS(DI) DECL_ADDRESS(0xCD006000);
+typedef enum {
+    DI_DMA_ADDR = 5, // !< 0xCD006014
+    DI_CONFIG = 9,   // !< 0xCD006024
+} DIHwReg;
 
 #ifdef __cplusplus
 }

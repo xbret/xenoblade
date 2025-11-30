@@ -3,6 +3,7 @@
 #include <revolution/GX.h>
 #include <revolution/OS.h>
 #include <revolution/VI.h>
+
 #include <string.h>
 
 /**
@@ -122,38 +123,47 @@ static void ConfigureVideo(u16 width, u16 height) {
     rmode.viHeight = height;
 
     switch ((u32)VIGetTvFormat()) {
-    case VI_NTSC:
-    case VI_MPAL:
-        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_54MHZ) {
+    case VI_TVFORMAT_NTSC:
+    case VI_TVFORMAT_MPAL: {
+        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_SPEED /* == VI_VICLK_54MHZ */) {
             // Progressive mode
-            rmode.viTVmode = VI_TVMODE(VI_NTSC, VI_PROGRESSIVE);
+            rmode.viTVmode = VI_TVMODE(VI_TVFORMAT_NTSC, VI_SCANMODE_PROG);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFBMODE_SF;
+            rmode.xFBmode = VI_XFBMODE_SF;
         } else {
             // Non-progressive mode
-            rmode.viTVmode = VI_TVMODE(VI_NTSC, VI_INTERLACE);
+            rmode.viTVmode = VI_TVMODE(VI_TVFORMAT_NTSC, VI_SCANMODE_INT);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFBMODE_DF;
+            rmode.xFBmode = VI_XFBMODE_DF;
         }
         break;
-    case VI_EURGB60:
-        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_54MHZ) {
+    }
+
+    case VI_TVFORMAT_EURGB60: {
+        if (VI_HW_REGS[VI_VICLK] & VI_VICLK_SPEED /* == VI_VICLK_54MHZ */) {
             // Progressive mode
-            rmode.viTVmode = VI_TVMODE(VI_EURGB60, VI_PROGRESSIVE);
+            rmode.viTVmode = VI_TVMODE(VI_TVFORMAT_EURGB60, VI_SCANMODE_PROG);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFBMODE_SF;
+            rmode.xFBmode = VI_XFBMODE_SF;
         }else{
             // Non-progressive mode
-            rmode.viTVmode = VI_TVMODE(VI_EURGB60, VI_INTERLACE);
+            rmode.viTVmode = VI_TVMODE(VI_TVFORMAT_EURGB60, VI_SCANMODE_INT);
             rmode.viYOrigin = 0;
-            rmode.xfbMode = VI_XFBMODE_DF;
+            rmode.xFBmode = VI_XFBMODE_DF;
         }
         break;
-    case VI_PAL:
-        rmode.viTVmode = VI_TVMODE(VI_PAL, VI_INTERLACE);
+    }
+
+    case VI_TVFORMAT_PAL: {
+        rmode.viTVmode = VI_TVMODE(VI_TVFORMAT_PAL, VI_SCANMODE_INT);
         rmode.viYOrigin = 47;
-        rmode.xfbMode = VI_XFBMODE_DF;
+        rmode.xFBmode = VI_XFBMODE_DF;
         break;
+    }
+
+    default: {
+        break;
+    }
     }
 
     VIConfigure(&rmode);
@@ -208,13 +218,13 @@ void OSFatal(GXColor textColor, GXColor bgColor, const char* msg) {
 
     start = OSGetTime();
     do {
-        if (__OSCallShutdownFunctions(0, 0)) {
+        if (__OSCallShutdownFunctions(FALSE, OS_SD_EVENT_FATAL)) {
             break;
         }
-    } while (OSGetTime() - start < OSMillisecondsToTicks(1000));
+    } while (OSGetTime() - start < OS_MSEC_TO_TICKS(1000));
 
     OSDisableInterrupts();
-    __OSCallShutdownFunctions(1, 0);
+    __OSCallShutdownFunctions(TRUE, OS_SD_EVENT_FATAL);
 
     EXISetExiCallback(EXI_CHAN_0, NULL);
     EXISetExiCallback(EXI_CHAN_2, NULL);

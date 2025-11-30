@@ -4,8 +4,8 @@
 extern "C" {
 #endif
 
-#include <revolution/enc/encjapanese.h>
-#include <revolution/enc/encunicode.h>
+#include <revolution/ENC/encjapanese.h>
+#include <revolution/ENC/encunicode.h>
 
 #ifdef __cplusplus
 }

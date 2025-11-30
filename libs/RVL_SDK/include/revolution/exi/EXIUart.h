@@ -1,7 +1,8 @@
 #ifndef RVL_SDK_EXI_UART_H
 #define RVL_SDK_EXI_UART_H
-#include <revolution/exi/EXICommon.h>
 #include <types.h>
+
+#include <revolution/EXI/EXICommon.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

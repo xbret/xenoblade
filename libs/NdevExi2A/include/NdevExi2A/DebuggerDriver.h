@@ -1,12 +1,13 @@
-#ifndef NDEV_EXI2AD_DEBUGGER_DRIVER_H
-#define NDEV_EXI2AD_DEBUGGER_DRIVER_H
-#include "NdevExi2A/exi2.h"
+#ifndef RVL_SDK_NDEV_EXI2_AD_DEBUGGER_DRIVER_H
+#define RVL_SDK_NDEV_EXI2_AD_DEBUGGER_DRIVER_H
+#include <types.h>
+
+#include <NdevExi2A/exi2.h>
+
 #include <revolution/OS.h>
-#include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 void DBInitComm(u8** flagOut, OSInterruptHandler handler);
 void DBInitInterrupts(void);
@@ -16,19 +17,19 @@ BOOL DBWrite(const void* src, u32 size);
 void DBOpen(void);
 void DBClose(void);
 
-static inline BOOL __DBReadMailbox(u32* mailOut) {
+static BOOL __DBReadMailbox(u32* mailOut) {
     return __DBEXIReadReg(0x34000200, mailOut, sizeof(*mailOut));
 }
 
-static inline BOOL __DBRead(u32 ofs, void* dest, u32 size) {
+static BOOL __DBRead(u32 ofs, void* dest, u32 size) {
     return __DBEXIReadRam(((ofs + 0xD10000) * 0x40) & 0x3FFFFF00, dest, size);
 }
 
-static inline BOOL __DBWriteMailbox(u32 mail) {
+static BOOL __DBWriteMailbox(u32 mail) {
     return __DBEXIWriteReg(0xB4000100, &mail, sizeof(mail));
 }
 
-static inline BOOL __DBWrite(u32 ofs, const void* src, u32 size) {
+static BOOL __DBWrite(u32 ofs, const void* src, u32 size) {
     return __DBEXIWriteRam(
         (((ofs + 0xD10000) * 0x40) & 0x3FFFFF00) | 0x80000000, src, size);
 }

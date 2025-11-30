@@ -4321,12 +4321,12 @@ monolib/src/work/CWorkUtil.cpp:
 	extabindex  start:0x800340C0 end:0x800340D8
 	.text       start:0x8043B488 end:0x8043B5C8
 
-monolib/src/CProc.cpp:
+monolib/src/work/CProc.cpp:
 	extab       start:0x8001C260 end:0x8001C2DC
 	extabindex  start:0x800340D8 end:0x80034144
 	.text       start:0x8043B5C8 end:0x8043C0E4
 
-monolib/src/CProcRoot.cpp:
+monolib/src/work/CProcRoot.cpp:
 	extab       start:0x8001C2DC end:0x8001C324
 	extabindex  start:0x80034144 end:0x800341B0
 	.text       start:0x8043C0E4 end:0x8043C64C
@@ -4346,7 +4346,7 @@ monolib/src/core/CToken.cpp:
 	extabindex  start:0x80034264 end:0x800342C4
 	.text       start:0x8043D31C end:0x8043E61C
 
-monolib/src/CTaskManager.cpp:
+monolib/src/core/CTaskManager.cpp:
 	extab       start:0x8001C42C end:0x8001C46C
 	extabindex  start:0x800342C4 end:0x80034324
 	.text       start:0x8043E61C end:0x8043EC5C

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include "kyoshin/appgame/cf/object/CfObjectMove.hpp"
 
 //min size: 0xb8

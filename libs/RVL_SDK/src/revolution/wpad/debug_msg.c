@@ -1,7 +1,9 @@
 #include <revolution/WPAD.h>
 
-//Stubbed for release
-void DEBUGPrint(const char* fmt, ...){
+void DEBUGPrint(const char* pFmt, ...) {
+#pragma unused(pFmt)
+
+    // Stubbed for release
 }
 
 //unused

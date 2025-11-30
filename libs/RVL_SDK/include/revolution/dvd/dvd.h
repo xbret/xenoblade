@@ -19,9 +19,9 @@ typedef struct OSAlarm;
 typedef enum {
     DVD_RESULT_COVER_CLOSED = -4,
     DVD_RESULT_CANCELED,
-    DVD_RESULT_M2,
-    DVD_RESULT_FATAL,
-    DVD_RESULT_OK,
+    DVD_RESULT_IGNORED,
+    DVD_RESULT_FATAL_ERROR,
+    DVD_RESULT_GOOD,
 } DVDResult;
 
 typedef enum {
@@ -63,18 +63,18 @@ typedef struct DVDDiskID {
 } DVDDiskID;
 
 typedef struct DVDCommandBlock {
-    struct DVDCommandBlock* next; // at 0x0
-    struct DVDCommandBlock* prev; // at 0x4
-    u32 command;                  // at 0x8
-    volatile s32 state;           // at 0xC
-    u32 offset;                   // at 0x10
-    u32 length;                   // at 0x14
-    void* addr;                   // at 0x18
-    u32 transferSize;             // at 0x1C
-    u32 transferTotal;            // at 0x20
-    DVDDiskID* id;                // at 0x24
-    DVDCommandCallback callback;  // at 0x28
-    void* userData;               // at 0x2C
+    struct DVDCommandBlock* next;       // at 0x0
+    struct DVDCommandBlock* prev;       // at 0x4
+    u32 command;                 // at 0x8
+    volatile s32 state;          // at 0xC
+    u32 offset;                  // at 0x10
+    u32 length;                  // at 0x14
+    void* addr;                  // at 0x18
+    u32 transferSize;            // at 0x1C
+    u32 transferTotal;           // at 0x20
+    DVDDiskID* id;               // at 0x24
+    DVDCommandCallback callback; // at 0x28
+    void* userData;              // at 0x2C
 } DVDCommandBlock;
 
 typedef struct DVDDriveInfo {

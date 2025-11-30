@@ -6,58 +6,62 @@
 void TPLBind(TPLPalette* pal) {
     u16 i;
 
-#line 24
-    OS_ASSERT(pal->version == TPL_VERSION,
-             "invalid version number for texture palette");
+    // clang-format off
+#line 25
+    OS_ASSERT(pal->versionNumber == TPL_VERSION, "invalid version number for texture palette");
+    // clang-format on
 
-    pal->descriptors = (TPLDescriptor*)((char*)pal->descriptors + (u32)pal);
+    pal->descriptorArray =
+        (TPLDescriptor*)((char*)pal->descriptorArray + (u32)pal);
 
-    for (i = 0; i < pal->numImages; i++) {
-        if (pal->descriptors[i].texHeader != NULL) {
+    for (i = 0; i < pal->numDescriptors; i++) {
+        if (pal->descriptorArray[i].textureHeader != NULL) {
             // Convert header offset into pointer
-            pal->descriptors[i].texHeader =
-                (TPLHeader*)((char*)pal + (u32)pal->descriptors[i].texHeader);
+            pal->descriptorArray[i].textureHeader =
+                (TPLHeader*)((char*)pal +
+                             (u32)pal->descriptorArray[i].textureHeader);
 
-            if (!pal->descriptors[i].texHeader->unpacked) {
+            if (!pal->descriptorArray[i].textureHeader->unpacked) {
                 // Convert data offset into pointer
-                pal->descriptors[i].texHeader->data =
-                    (char*)pal + (u32)pal->descriptors[i].texHeader->data;
+                pal->descriptorArray[i].textureHeader->data =
+                    (char*)pal +
+                    (u32)pal->descriptorArray[i].textureHeader->data;
 
-                pal->descriptors[i].texHeader->unpacked = TRUE;
+                pal->descriptorArray[i].textureHeader->unpacked = TRUE;
             }
         }
 
-        if (pal->descriptors[i].clutHeader != NULL) {
+        if (pal->descriptorArray[i].CLUTHeader != NULL) {
             // Convert header offset into pointer
-            pal->descriptors[i].clutHeader =
+            pal->descriptorArray[i].CLUTHeader =
                 (TPLClutHeader*)((char*)pal +
-                                 (u32)pal->descriptors[i].clutHeader);
+                                 (u32)pal->descriptorArray[i].CLUTHeader);
 
-            if (!pal->descriptors[i].clutHeader->unpacked) {
+            if (!pal->descriptorArray[i].CLUTHeader->unpacked) {
                 // Convert data offset into pointer
-                pal->descriptors[i].clutHeader->data =
-                    (char*)pal + (u32)pal->descriptors[i].clutHeader->data;
+                pal->descriptorArray[i].CLUTHeader->data =
+                    (char*)pal + (u32)pal->descriptorArray[i].CLUTHeader->data;
 
-                pal->descriptors[i].clutHeader->unpacked = TRUE;
+                pal->descriptorArray[i].CLUTHeader->unpacked = TRUE;
             }
         }
     }
 }
 
 TPLDescriptor* TPLGet(TPLPalette* pal, u32 id) {
-    return &pal->descriptors[id % pal->numImages];
+    return &pal->descriptorArray[id % pal->numDescriptors];
 }
 
 void TPLGetGXTexObjFromPalette(TPLPalette* pal, GXTexObj* to, u32 id) {
   TPLDescriptor* desc = TPLGet(pal, id);
-  int mipMap = desc->texHeader->minLod == desc->texHeader->maxLod ? 0 : 1;
-  GXInitTexObj(to, desc->texHeader->data, desc->texHeader->width,
-               desc->texHeader->height, desc->texHeader->format,
-               desc->texHeader->wrapS, desc->texHeader->wrapT, mipMap);
-  GXInitTexObjLOD(to, desc->texHeader->minFilt,
-                  desc->texHeader->magFilt, desc->texHeader->minLod,
-                  desc->texHeader->maxLod, desc->texHeader->lodBias, 0,
-                  desc->texHeader->edgeLodEnable, 0);
+  int mipMap = desc->textureHeader->minLOD == desc->textureHeader->maxLOD ? 0 : 1;
+  GXInitTexObj(to, desc->textureHeader->data, desc->textureHeader->width,
+               desc->textureHeader->height, desc->textureHeader->format,
+               desc->textureHeader->wrapS, desc->textureHeader->wrapT, mipMap);
+  GXInitTexObjLOD(to, desc->textureHeader->minFilter,
+                  desc->textureHeader->magFilter, desc->textureHeader->minLOD,
+                  desc->textureHeader->maxLOD, desc->textureHeader->LODBias, 0,
+                  desc->textureHeader->edgeLODEnable, 0);
 }
 
 //unused

@@ -1,5 +1,4 @@
-
-#include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
+#include <PowerPC_EABI_Support/MetroTRK/dolphin_trk.h>
 #include <revolution/DB.h>
 #include <revolution/DVD.h>
 #include <revolution/OS.h>
@@ -28,7 +27,6 @@ DECL_SECTION(".init") static BOOL __get_debug_bba(void) {
 
 DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     // Setup hardware
@@ -58,7 +56,7 @@ DECL_SECTION(".init") DECL_WEAK asm void __start(void) {
      *
      * This can be done by either checking the value from the DVD
      * (OSBI2.debugFlag), or by checking the global OS_BI2_DEBUG_FLAG.
-     *
+     * 
      * If the DVD BI2 is available, it is prioritized over the global value.
      */
     lis r6, OS_DVD_BI2@ha
@@ -108,7 +106,7 @@ _no_dvd_bi2:
      * - BI2 Level 4 -> ID 2 (BBA)
      */
 _handle_bi2_debug_flag:
-    // BI2 Debug Level 3: Init TRK as GDEV hardware
+    // BI2 Debug Level 3: Init TRK as GDEV hardware 
     li r5, 0
     cmplwi r7, 2
     beq _call_init_metro_trk
@@ -282,7 +280,6 @@ _after_init_metro_trk_bba:
     mr r4, r15
     bl main
     b exit // <- Will halt CPU
-    #endif
     // clang-format on
 }
 
@@ -307,7 +304,6 @@ static void __init_bss_section(void* dst, size_t size) {
 
 DECL_SECTION(".init") static asm void __init_registers(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     li r0, 0
@@ -348,7 +344,6 @@ DECL_SECTION(".init") static asm void __init_registers(void) {
     ori r13, r13, _SDA_BASE_@l
 
     blr
-    #endif
     // clang-format on
 }
 

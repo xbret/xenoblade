@@ -4,11 +4,11 @@
 extern "C" {
 #endif
 
-#include <revolution/mem/mem_allocator.h>
-#include <revolution/mem/mem_expHeap.h>
-#include <revolution/mem/mem_frameHeap.h>
-#include <revolution/mem/mem_heapCommon.h>
-#include <revolution/mem/mem_list.h>
+#include <revolution/MEM/mem_allocator.h>
+#include <revolution/MEM/mem_expHeap.h>
+#include <revolution/MEM/mem_frameHeap.h>
+#include <revolution/MEM/mem_heapCommon.h>
+#include <revolution/MEM/mem_list.h>
 
 #ifdef __cplusplus
 }

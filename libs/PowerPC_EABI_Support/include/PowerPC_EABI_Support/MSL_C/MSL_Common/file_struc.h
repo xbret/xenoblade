@@ -1,6 +1,6 @@
 #ifndef _MSL_COMMON_FILE_STRUC_H
 #define _MSL_COMMON_FILE_STRUC_H
-#include "types.h"
+#include <types.h>
 
 typedef unsigned long __file_handle;
 typedef unsigned long fpos_t;

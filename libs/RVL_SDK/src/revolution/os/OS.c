@@ -1,4 +1,3 @@
-#include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
 #include <revolution/BASE.h>
 #include <revolution/DB.h>
 #include <revolution/DVD.h>
@@ -8,6 +7,8 @@
 #include <revolution/PAD.h>
 #include <revolution/SC.h>
 #include <revolution/SI.h>
+
+#include <PowerPC_EABI_Support/MetroTRK/dolphin_trk.h>
 #include <string.h>
 
 #define INVALID_NAME_CHAR(c) ('0' > c || ('9' < c && c < 'A') || c > 'Z')
@@ -48,7 +49,7 @@ void __DBVECTOR(void);
 void __OSEVSetNumber(void);
 void __OSEVEnd(void);
 
-CW_FORCE_BSS(OS_c, __OSRebootParams);
+DECOMP_FORCEACTIVE(OS_c, __OSRebootParams);
 
 
 //unused
@@ -57,7 +58,6 @@ void __OSIsDebuggerPresent(){
 
 asm void __OSFPRInit(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     // Set FP available bit
@@ -141,7 +141,6 @@ paired_singles_disabled:
     mtfsf 0xff, f0
 
     blr
-    #endif
     // clang-format on
 }
 
@@ -272,7 +271,7 @@ u32 OSGetConsoleType(void) {
 }
 
 static void MemClear(void* mem, u32 size) {
-    void* flush = (0x40000 < size) ? (u32)mem + (size - 0x40000) : mem;
+    void* flush = (0x40000 < size) ? (u8*)((u32)mem + (size - 0x40000)) : mem;
     DCZeroRange(mem, size);
     DCFlushRange(flush, 0x40000);
 }
@@ -364,7 +363,7 @@ static void CheckTargets(void) {
                  "correct boot program.\n");
         // clang-format off
 #line 1153
-        OSError("Failed to run app");
+        OS_ERROR("Failed to run app");
         // clang-format on
         break;
     case 0x80:
@@ -376,8 +375,9 @@ static void CheckTargets(void) {
     case 0x81:
         OSReport("OS ERROR: apploader[D].img is not for RVL target. Please use "
                  "correct apploader[D].img.\n");
+        // clang-format off
 #line 1171
-        OSError("Failed to run app");
+        OS_ERROR("Failed to run app");
         // clang-format on
         break;
     case 0x80:
@@ -464,6 +464,7 @@ static void ReportOSInfo(void) {
              OSGetMEM2ArenaHi());
 }
 
+// @typo
 static void CheckFirmare(void){
     OSIOSRev rev;
     u32 myVersion;
@@ -479,7 +480,7 @@ static void CheckFirmare(void){
         OSReport("OS ERROR: This firmware is an improper version for this SDK. Please use a correct Firmware.\n");
         OSFatal(textColor, bgColor, "\n\nERROR #002\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to \nthe console. \nPlease read the Wii Operations Manual \nfor further instructions.\n");
 #line 1236
-        OSError("Failed to run app");
+        OS_ERROR("Failed to run app");
       }
 }
 
@@ -762,7 +763,6 @@ static void OSExceptionInit(void) {
 
 static asm void __OSDBIntegrator(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     entry __OSDBINTSTART
@@ -788,21 +788,19 @@ static asm void __OSDBIntegrator(void) {
     blr
 
     entry __OSDBINTEND
-    #endif
     // clang-format on
 }
 
+//TODO: this should use the label
 static asm void __OSDBJump(void){
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     entry __OSDBJUMPSTART
 
-    bla 0x60
+    bla 0x60 //__OSDBJUMPDEST
 
     entry __OSDBJUMPEND
-    #endif
     // clang-format on
 }
 
@@ -819,7 +817,6 @@ OSExceptionHandler __OSGetExceptionHandler(u8 type) {
 
 static asm void OSExceptionVector(void) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     entry __OSEVStart
@@ -880,13 +877,11 @@ lbl_800ECF70:
     entry __OSEVEnd
 
     nop
-    #endif
     // clang-format on
 }
 
 asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
     // clang-format off
-    #ifdef __MWERKS__
     nofralloc
 
     stw r0, ctx->gprs[0]
@@ -914,7 +909,6 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
 
     stwu r1, -8(r1)
     b __OSUnhandledException
-    #endif
     // clang-format on
 }
 
@@ -922,9 +916,7 @@ void __OSPSInit(void) {
     PPCMthid2(PPCMfhid2() | (1 << 31) | HID2_PSE);
     ICFlashInvalidate();
 
-    // clang-format off
-    #ifdef __MWERKS__
-    asm {
+    ASM (
         sync
         li r3, 0
         mtgqr0 r3
@@ -935,28 +927,29 @@ void __OSPSInit(void) {
         mtgqr5 r3
         mtgqr6 r3
         mtgqr7 r3
-    }
-    #endif
-    // clang-format on
+    )
 }
 
 u32 __OSGetDIConfig(void) {
-    return OS_DI_CONFIG & 0xFF;
+    return DI_HW_REGS[DI_CONFIG] & 0xFF;
 }
 
-void OSRegisterVersion(const char* ver) { __OSRegisterVersion(ver); }
+void OSRegisterVersion(const char* ver) {
+    __OSRegisterVersion(ver);
+}
 
 // Must be defined down here because of data pooling
 static const char* AppGameNameForSysMenu = "HAEA";
 
 const char* OSGetAppGamename(void) {
     int i;
-    const char* temp = (const char*)OSPhysicalToCached(OS_PHYS_BOOT_PARTITION_TYPE);
+    const char* temp =
+        (const char*)OSPhysicalToCached(OS_PHYS_BOOT_PARTITION_TYPE);
     const char* name = temp;
 
-    if (__OSInIPL){
+    if (__OSInIPL) {
         name = AppGameNameForSysMenu;
-    }else if(INVALID_NAME_CHAR(*temp)){
+    } else if(INVALID_NAME_CHAR(*temp)) {
         name = (const char*)OSPhysicalToCached(OS_PHYS_CURRENT_APP_NAME);
     }
 

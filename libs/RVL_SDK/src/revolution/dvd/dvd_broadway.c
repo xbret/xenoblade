@@ -2,8 +2,8 @@
 #include <revolution/ESP.h>
 #include <revolution/IPC.h>
 #include <revolution/OS.h>
-#include <string.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define DVD_LOW_CTX_MAX 4
 #define DVD_LOW_CMD_MAX 4
@@ -311,8 +311,8 @@ BOOL DVDLowInit(void) {
 
     if (!DVDLowInitCalled) {
         DVDLowInitCalled = TRUE;
-        result = IPCCltInit();
 
+        result = IPCCltInit();
         if (result != IPC_RESULT_OK) {
             OSReport("IPCCltInit returned error: %d\n", result);
             return FALSE;
@@ -389,12 +389,13 @@ static void nextCommandBuf(void) {
     }
 }
 
-static DECOMP_INLINE DVDLowContext* newContext(const DVDLowCallback callback, const callbackType_t type) {
+static DECOMP_INLINE DVDLowContext* newContext(const DVDLowCallback callback,
+                                               const callbackType_t type) {
     s32 id;
     bool use = dvdContexts[freeDvdContext].inUse != 0;
 
     // The last operation somehow did not complete
-    if (use == true)  {
+    if (use == true) {
         OSReport("(newContext) ERROR: freeDvdContext.inUse (#%d) is true\n", freeDvdContext);
         OSReport("(newContext) Now spinning in infinite loop\n");
 
@@ -765,7 +766,7 @@ BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 offset, ESTicket* eTicket, u32
     return TRUE;
 }
 
-CW_FORCE_STRINGS(DVD_BROADWAY_C_1, "DVDLowNoDiscOpenPartition");
+DECOMP_FORCEACTIVE(DVD_BROADWAY_C_1, "DVDLowNoDiscOpenPartition");
 
 //unused
 void DVDLowNoDiscOpenPartition(){
@@ -1033,7 +1034,7 @@ u32 DVDLowGetCoverStatus(){
     return status;
 }
 
-CW_FORCE_STRINGS(DVD_BROADWAY_C_3,
+DECOMP_FORCEACTIVE(DVD_BROADWAY_C_3,
 "@@@ (DVDLowReadDVD) IOS_IoctlAsync returned error: %d\n",
 "@@@ (DVDLowReadDVDConfig) IOS_IoctlAsync returned error: %d\n",
 "@@@ (DVDLowReadDvdCopyright) IOS_IoctlAsync returned error: %d\n",
@@ -1087,7 +1088,7 @@ BOOL DVDLowReportKey(DVDVideoReportKey* reportKey, u32 format, u32 lsn, DVDLowCa
     return TRUE;
 }
 
-CW_FORCE_STRINGS(DVD_BROADWAY_C_4,
+DECOMP_FORCEACTIVE(DVD_BROADWAY_C_4,
 "@@@ (DVDLowOffset) IOS_IoctlAsync returned error: %d\n",
 "@@@ (DVDLowStopLaser) IOS_IoctlAsync returned error: %d\n",
 "@@@ (DVDLowReadDiskBca) IOS_IoctlAsync returned error: %d\n",
@@ -1367,9 +1368,9 @@ BOOL __DVDLowTestAlarm(const OSAlarm* alarm) {
     return FALSE;
 }
 
-// clang-format off
-DECOMP_FORCEACTIVE(dvd_broadway_c, "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n");
-// clang-format on
+DECOMP_FORCEACTIVE(dvd_broadway_c,
+                   "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n");
+
 
 //unused
 void DVDLowEnableDvdVideo(){
