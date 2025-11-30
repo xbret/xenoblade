@@ -3,7 +3,6 @@
 #include <types.h>
 #include <monolib/monolib_types.hpp>
 #include <monolib/device/CDeviceBase.hpp>
-#include <monolib/work.hpp>
 
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {

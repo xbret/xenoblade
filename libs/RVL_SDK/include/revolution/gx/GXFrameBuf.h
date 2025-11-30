@@ -10,7 +10,7 @@ extern "C" {
 #define GX_VFILTER_SZ 7
 
 typedef struct _GXRenderModeObj {
-    u32 viTVmode;              // at 0x0
+    VITVMode viTVmode;         // at 0x0
     u16 fbWidth;               // at 0x4
     u16 efbHeight;             // at 0x6
     u16 xfbHeight;             // at 0x8

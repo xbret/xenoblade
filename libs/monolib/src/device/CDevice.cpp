@@ -1,6 +1,7 @@
 #include <monolib/device.hpp>
 #include <monolib/util.hpp>
 #include <monolib/lib.hpp>
+#include <monolib/work.hpp>
 
 using namespace ml;
 

@@ -2,7 +2,6 @@
 
 #include <types.h>
 #include <monolib/work.hpp>
-#include <monolib/device.hpp>
 #include <monolib/util.hpp>
 
 struct PackHeader {

@@ -1,5 +1,6 @@
 #include <monolib/device.hpp>
 #include <monolib/lib.hpp>
+#include <monolib/work.hpp>
 #include <string.h>
 
 CDeviceClock* CDeviceClock::spInstance;

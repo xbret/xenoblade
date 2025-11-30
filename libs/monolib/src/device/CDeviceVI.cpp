@@ -1,7 +1,8 @@
-#include "revolution/vi/vitypes.h"
 #include <monolib/device.hpp>
 #include <monolib/lib.hpp>
+#include <monolib/work.hpp>
 #include <monolib/math.hpp>
+#include <revolution/VI.h>
 #include <string.h>
 
 using namespace ml;

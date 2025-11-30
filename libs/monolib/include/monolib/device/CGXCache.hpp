@@ -1,7 +1,7 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work.hpp>
+#include <monolib/work/CMsgParam.hpp>
 
 //size: 0x4
 class IStateCache {
