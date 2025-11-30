@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#include <revolution/tpl/TPL.h>
+#include <revolution/TPL/TPL.h>
 
 #ifdef __cplusplus
 }

@@ -8,17 +8,17 @@
 extern "C" {
 #endif
 
-#include <revolution/ax/AX.h>
-#include <revolution/ax/AXAlloc.h>
-#include <revolution/ax/AXAux.h>
-#include <revolution/ax/AXCL.h>
-#include <revolution/ax/AXComp.h>
-#include <revolution/ax/AXOut.h>
-#include <revolution/ax/AXPB.h>
-#include <revolution/ax/AXProf.h>
-#include <revolution/ax/AXSPB.h>
-#include <revolution/ax/AXVPB.h>
-#include <revolution/ax/DSPCode.h>
+#include <revolution/AX/AX.h>
+#include <revolution/AX/AXAlloc.h>
+#include <revolution/AX/AXAux.h>
+#include <revolution/AX/AXCL.h>
+#include <revolution/AX/AXComp.h>
+#include <revolution/AX/AXOut.h>
+#include <revolution/AX/AXPB.h>
+#include <revolution/AX/AXProf.h>
+#include <revolution/AX/AXSPB.h>
+#include <revolution/AX/AXVPB.h>
+#include <revolution/AX/DSPCode.h>
 
 #ifdef __cplusplus
 }

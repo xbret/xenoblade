@@ -2,7 +2,7 @@
 #include <monolib/work.hpp>
 #include "decomp.h"
 
-CW_FORCE_STRINGS(CWorkControl_cpp,
+DECOMP_FORCEACTIVE(CWorkControl_cpp,
                  "CWorkFlowTvMode",
                  "CWorkFlowSetup",
                  "CWorkFlowShutdownAll",

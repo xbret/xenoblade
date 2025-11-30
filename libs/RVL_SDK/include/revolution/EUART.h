@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include <revolution/euart/euart.h>
+#include <revolution/EUART/euart.h>
 
 #ifdef __cplusplus
 }

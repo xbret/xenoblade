@@ -1,6 +1,7 @@
 #include <revolution/FS.h>
 #include <revolution/OS.h>
 #include <revolution/USB.h>
+
 #include <stdio.h>
 #include <string.h>
 
@@ -222,7 +223,7 @@ void IUSB_OpenDeviceIdsAsync(){
 void IUSB_CloseDevice(){
 }
 
-CW_FORCE_STRINGS(usb_c, "OpenDevice\n",
+DECOMP_FORCEACTIVE(usb_c, "OpenDevice\n",
                  "OpenDeviceIdsAsync: Not enough memory\n", "CloseDevice\n",
                  "CloseDevice returned: %d\n");
 
@@ -263,7 +264,7 @@ static inline void __openDevice(){
 void IUSB_GetDeviceList(){
 }
 
-CW_FORCE_STRINGS(usb_c_2, "openDevice: Not enough memory\n",
+DECOMP_FORCEACTIVE(usb_c_2, "openDevice: Not enough memory\n",
                  "getDeviceList: Not enough memory\n");
 
 static IPCResult __LongBlkMsgInt(s32 fd, u32 endpoint, u32 length, void* buffer,
@@ -421,8 +422,7 @@ static IPCResult __IntrBlkMsgInt(s32 fd, u32 endpoint, u32 length, void* buffer,
     block->msg.buffer = buffer;
     block->msg.length = length;
 
-    result =
-        IOS_IoctlvAsync(fd, ioctl, 2, 1, vectors, _intrBlkCtrlIsoCb, block);
+    result = IOS_IoctlvAsync(fd, ioctl, 2, 1, vectors, _intrBlkCtrlIsoCb, block);
     if (result >= IPC_RESULT_OK) {
         goto end_async;
     }
@@ -448,7 +448,7 @@ end_async:
 void IUSB_ReadIntrMsg(){
 }
 
-CW_FORCE_STRINGS(usb_c_3,
+DECOMP_FORCEACTIVE(usb_c_3,
                  "calling short blk transfer fn: buflen = %u limit = %u\n",
                  "calling long blk transfer fn: buflen = %u limit = %u\n");
 
@@ -744,7 +744,7 @@ void IUSB_CancelInsertionNotify(){
 }
 
 /* Added Some other strings to this, might belong in a file that got deadstripped */
-CW_FORCE_STRINGS(usb_c_4, "GetStrCb returned: %d\n",
+DECOMP_FORCEACTIVE(usb_c_4, "GetStrCb returned: %d\n",
                  "GetStrCb: buf = 0x%x buflen = %u\n",
                  "Failed to convert buffer from unicode 2 ascii\n",
                  "calling cb 0x%x with arg 0x%x\n",

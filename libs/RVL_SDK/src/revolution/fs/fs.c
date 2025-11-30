@@ -1,6 +1,8 @@
+#include "revolution/ipc/ipcclt.h"
 #include <revolution/FS.h>
 #include <revolution/IPC.h>
 #include <revolution/OS.h>
+
 #include <string.h>
 
 #define FS_HEAP_SIZE 0x1500
@@ -161,7 +163,7 @@ s32 ISFS_OpenLib(void) {
 
     __devfs = (char*)ROUND_UP_PTR(lo, 32);
 
-    if (!__fsInitialized && __devfs + FS_MAX_PATH > hi) {
+    if (!__fsInitialized && __devfs + FS_MAX_PATH > (char*)hi) {
         OSReport("APP ERROR: Not enough IPC arena\n");
         ret = IPC_RESULT_ALLOC_FAILED;
         goto end;
@@ -177,7 +179,7 @@ s32 ISFS_OpenLib(void) {
 
     base = (u8*)__devfs;
 
-    if (!__fsInitialized && base + FS_MAX_PATH + FS_HEAP_SIZE > hi) {
+    if (!__fsInitialized && base + FS_MAX_PATH + FS_HEAP_SIZE > (u8*)hi) {
         OSReport("APP ERROR: Not enough IPC arena\n");
         ret = IPC_RESULT_ALLOC_FAILED;
         goto end;
@@ -209,22 +211,35 @@ s32 _isfsFuncCb(s32 result, void* arg) {
     FSCommandBlock* block = (FSCommandBlock*)arg;
 
     if (result >= IPC_RESULT_OK) {
-        switch ((u32)(block->callbackState)) {
-        case CB_STATE_GET_STATS:
+        switch ((u32)block->callbackState) {
+        case CB_STATE_GET_STATS: {
             _FSGetStatsCb(result, block);
             break;
-        case CB_STATE_READ_DIR:
+        }
+
+        case CB_STATE_READ_DIR: {
             _FSReadDirCb(result, block);
             break;
-        case CB_STATE_GET_ATTR:
+        }
+
+        case CB_STATE_GET_ATTR: {
             _FSGetAttrCb(result, block);
             break;
-        case CB_STATE_GET_USAGE:
+        }
+
+        case CB_STATE_GET_USAGE: {
             _FSGetUsageCb(result, block);
             break;
-        case CB_STATE_GET_FILE_STATS:
+        }
+
+        case CB_STATE_GET_FILE_STATS: {
             _FSGetFileStatsCb(result, block);
             break;
+        }
+        
+        default: {
+            break;
+        }
         }
     }
 
@@ -262,8 +277,8 @@ void ISFS_GetStatsAsync(){
 }
 
 //unused
-s32 ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm,
-                         u32 groupPerm, u32 otherPerm) {
+s32 ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm, u32 groupPerm,
+                   u32 otherPerm) {
     FSCommandBlock* block;
     s32 ret;
     size_t len;

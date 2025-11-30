@@ -15,7 +15,7 @@
 #define RVL_SDK_GX_HARDWARE_H
 #include <types.h>
 
-#include <revolution/gx/GXTypes.h>
+#include <revolution/GX/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -43,7 +43,7 @@ extern volatile union {
     unsigned int ui;
     void* p;
     float f;
-} WGPIPE AT_ADDRESS(0xCC008000);
+} WGPIPE DECL_ADDRESS(0xCC008000);
 
 /**
  * FIFO commands
@@ -61,8 +61,22 @@ typedef enum {
     GX_FIFO_CMD_LOAD_INDX_D = 0x38,
 
     GX_FIFO_CMD_CALL_DL = 0x40,
-    GX_FIFO_CMD_INVAL_VTX = 0x48
+    GX_FIFO_CMD_INVAL_VTX = 0x48,
+
+    GX_FIFO_CMD_DRAW_POINTS = GX_POINTS,
+    GX_FIFO_CMD_DRAW_LINES = GX_LINES,
+    GX_FIFO_CMD_DRAW_LINESTRIP = GX_LINESTRIP,
+    GX_FIFO_CMD_DRAW_TRIANGLES = GX_TRIANGLES,
+    GX_FIFO_CMD_DRAW_TRIANGLESTRIP = GX_TRIANGLESTRIP,
+    GX_FIFO_CMD_DRAW_TRIANGLEFAN = GX_TRIANGLEFAN,
+    GX_FIFO_CMD_DRAW_QUADS = GX_QUADS,
 } GXFifoCmd;
+
+/**
+ * FIFO command sizes
+ */
+#define GX_FIFO_CMD_LOAD_INDX_SIZE 5
+#define GX_FIFO_CMD_DRAW_SIZE 3
 
 #define __GX_FIFO_SET_LOAD_INDX_DST(reg, x) ((reg) = GX_BITSET(reg, 20, 12, x))
 #define __GX_FIFO_SET_LOAD_INDX_NELEM(reg, x) ((reg) = GX_BITSET(reg, 16, 4, x))
@@ -156,14 +170,14 @@ typedef enum {
     WGPIPE.c = GX_FIFO_CMD_LOAD_XF_REG;                                        \
     WGPIPE.i = (addr);
 
-#define GX_XF_CMD_SZ (sizeof(u8) + sizeof(u32))
-
 /**
  * Load immediate value into XF register
  */
 #define GX_XF_LOAD_REG(addr, data)                                             \
     GX_XF_LOAD_REG_HDR(addr);                                                  \
     WGPIPE.i = (data);
+
+#define GX_XF_CMD_SZ (sizeof(u8) + sizeof(u32) + sizeof(u32))
 
 /**
  * Load immediate values into multiple XF registers
@@ -212,6 +226,11 @@ typedef enum {
 
     GX_RAS_MAX_CHANNEL
 } GXRasChannelID;
+
+typedef enum {
+    GX_TEVREG_COLOR,
+    GX_TEVREG_KONST,
+} GXTevRegType;
 
 #ifdef __cplusplus
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include "kyoshin/appgame/help/CHelp.hpp"
 
 namespace cf{

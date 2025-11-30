@@ -1,6 +1,6 @@
-#ifndef NDEV_EXI2_AD_EXI2_H
-#define NDEV_EXI2_AD_EXI2_H
-#include "types.h"
+#ifndef RVL_SDK_NDEV_EXI2_AD_EXI2_H
+#define RVL_SDK_NDEV_EXI2_AD_EXI2_H
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

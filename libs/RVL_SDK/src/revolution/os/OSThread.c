@@ -16,7 +16,7 @@ volatile static BOOL RunQueueHint = FALSE;
 volatile static u32 RunQueueBits = 0;
 
 static void DefaultSwitchThreadCallback(OSThread* currThread,
-                                        OSThread* newThread){
+                                        OSThread* newThread) {
 #pragma unused(currThread)
 #pragma unused(newThread)
 }
@@ -175,7 +175,7 @@ static void SetRun(OSThread* thread) {
     thread->next = NULL;
     thread->queue->tail = thread;
 
-    RunQueueBits |= (1 << OS_PRIORITY_MAX - thread->priority);
+    RunQueueBits |= (1 << (OS_PRIORITY_MAX - thread->priority));
     RunQueueHint = TRUE;
 }
 
@@ -201,7 +201,7 @@ static void UnsetRun(OSThread* thread) DECOMP_DONT_INLINE {
     }
 
     if (queue->head == NULL) {
-        RunQueueBits &= ~(1 << OS_PRIORITY_MAX - thread->priority);
+        RunQueueBits &= ~(1 << (OS_PRIORITY_MAX - thread->priority));
     }
 
     thread->queue = NULL;
@@ -401,7 +401,7 @@ static OSThread* SelectThread(BOOL b) {
 
     queue->head = next;
     if (next == NULL) {
-        RunQueueBits &= ~(1 << OS_PRIORITY_MAX - prio);
+        RunQueueBits &= ~(1 << (OS_PRIORITY_MAX - prio));
     }
 
     head->queue = NULL;

@@ -1,6 +1,6 @@
 #ifndef _RUNTIME_PPC_EABI_INIT_H
 #define _RUNTIME_PPC_EABI_INIT_H
-#include "types.h"
+#include <types.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

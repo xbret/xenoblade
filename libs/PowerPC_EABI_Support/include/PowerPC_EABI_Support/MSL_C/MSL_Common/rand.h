@@ -1,7 +1,7 @@
 #ifndef _MSL_RAND_H
 #define _MSL_RAND_H
 
-#include "types.h"
+#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {

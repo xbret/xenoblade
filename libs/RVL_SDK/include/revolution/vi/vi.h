@@ -1,8 +1,9 @@
 #ifndef RVL_SDK_VI_H
 #define RVL_SDK_VI_H
 #include <types.h>
+
 #include <revolution/GX.h>
-#include <revolution/vi/vitypes.h>
+#include <revolution/VI/vitypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -19,19 +20,20 @@ void VIWaitForRetrace(void);
 void VIConfigure(const GXRenderModeObj* rmo);
 void VIConfigurePan(u16 x, u16 y, u16 w, u16 h);
 void VIFlush(void);
+
 void VISetNextFrameBuffer(void* fb);
+void* VIGetCurrentFrameBuffer(void);
 
 void VISetBlack(BOOL black);
 s32 VIGetRetraceCount(void);
 
-u32 VIGetTvFormat(void);
-u32 VIGetScanMode(void);
-
-u32 VIGetDTVStatus();
-u32 VIGetDimmingCount();
+VITVFormat VIGetTvFormat(void);
+VIScanMode VIGetScanMode(void);
+u32 VIGetDTVStatus(void);
+u32 VIGetDimmingCount(void);
 BOOL VIEnableDimming(BOOL enable);
 s32 VISetTimeToDimming(s32 time);
-BOOL VIResetDimmingCount();
+BOOL VIResetDimmingCount(void);
 
 #ifdef __cplusplus
 }

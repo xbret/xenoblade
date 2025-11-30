@@ -1,6 +1,7 @@
 #ifndef RVL_SDK_ESP_H
 #define RVL_SDK_ESP_H
 #include <types.h>
+
 #include <revolution/ARC.h>
 #include <revolution/IPC.h>
 #include <private/iostypes.h>

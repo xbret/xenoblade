@@ -2,6 +2,7 @@
 #include <revolution/NAND.h>
 #include <revolution/OS.h>
 #include <revolution/SC.h>
+
 #include <string.h>
 
 #define SC_CONF_MIN_SIZE (sizeof(SCConfHeader) + sizeof(u32))
@@ -257,7 +258,7 @@ static s32 SCReloadConfFileAsync(u8* buf, u32 size, SCAsyncCallback callback) {
     Control.fileBuffers[SC_CONF_FILE_PRODUCT] = OS_SC_PRDINFO;
 
     Control.bufferSizes[SC_CONF_FILE_SYSTEM] = __SCGetConfBufSize();
-    Control.bufferSizes[SC_CONF_FILE_PRODUCT] = LENGTHOF(OS_SC_PRDINFO);
+    Control.bufferSizes[SC_CONF_FILE_PRODUCT] = ARRAY_SIZE(OS_SC_PRDINFO);
 
     ClearConfBuf(buf);
 
@@ -350,7 +351,7 @@ _openFile:
         break;
     }
 
-    OS_SC_PRDINFO[LENGTHOF(OS_SC_PRDINFO) - 1] = '\0';
+    OS_SC_PRDINFO[ARRAY_SIZE(OS_SC_PRDINFO) - 1] = '\0';
 
     if (Control.asyncCallback != NULL) {
         Control.asyncCallback(Control.asyncResult);
@@ -643,76 +644,90 @@ static BOOL FindItemByID(SCItemID id, SCItem* item) {
 }
 
 static void DeleteItemByID(SCItemID id) {
-    u8* conf = __SCGetConfBuf();
+    u8* conf;
+    u16* itemOfs;
     u32 itemOfsOfs;
     u32 itemsEndOfs;
-    u32 moveSize;
     u32 itemSize;
-    u32 i;
+    u16* confLut;
     u16* confItemsBegin;
     u16* confItemsEnd;
-    u16* confLut;
-    u16* itemOfs;
+    u32 sp14;
     u16* it;
+    int i;
 
-    if (id < ItemIDMaxPlus1 && ItemIDOffsetTblOffset != 0) {
-        confLut = (u16*)(conf + ItemIDOffsetTblOffset);
-        // LUT items are in reverse order
-        itemOfsOfs = confLut[-id];
+    conf = __SCGetConfBuf();
 
-        if (itemOfsOfs != 0 && ItemNumTotal != 0) {
-            confItemsBegin = ((SCConfHeader*)conf)->itemOffsets;
+    if (id >= ItemIDMaxPlus1) {
+        return;
+    }
 
-            // LUT -> Item offset -> Item data
-            itemOfs = (u16*)(conf + itemOfsOfs);
+    if (ItemIDOffsetTblOffset == 0) {
+        return;
+    }
 
-            // Last offset -> past end of items
-            confItemsEnd = &confItemsBegin[ItemNumTotal];
-            itemsEndOfs = *confItemsEnd;
+    confLut = (u16*)(conf + ItemIDOffsetTblOffset);
+    // LUT items are in reverse order
+    itemOfsOfs = confLut[-id];
 
-            // Offset from next item
-            itemSize = itemOfs[1] - itemOfs[0] + sizeof(u16);
+    if (itemOfsOfs == 0) {
+        return;
+    }
 
-            moveSize = itemOfs[0] - (itemOfsOfs + sizeof(u16));
-            memmove(conf + itemOfsOfs, conf + itemOfsOfs + sizeof(u16), moveSize);
+    if (ItemNumTotal == 0) {
+        return;
+    }
 
-            // Adjust item offsets
-            for (it = confItemsEnd - 1; it >= confItemsBegin; it--) {
-                if (it < itemOfs) {
-                    // After deleted item
-                    *it -= sizeof(u16);
-                } else {
-                    // Before deleted item
-                    *it -= itemSize;
-                }
-            }
+    confItemsBegin = ((SCConfHeader*)conf)->itemOffsets;
 
-            memmove(conf + *itemOfs, conf + itemSize + *itemOfs,
-                    itemsEndOfs - (*itemOfs + itemSize));
+    // LUT -> Item offset -> Item data
+    itemOfs = (u16*)(conf + itemOfsOfs);
 
-            memset(conf + (itemsEndOfs - itemSize), 0, itemSize);
+    // Last offset -> past end of items
+    confItemsEnd = &confItemsBegin[ItemNumTotal];
+    itemsEndOfs = *confItemsEnd;
 
-            // Adjust item lookup table
-            for (i = 0; i < ItemIDMaxPlus1; i++) {
-                // Before deleted slot
-                if (confLut[-i] < itemOfsOfs) {
-                    continue;
-                }
+    // Offset from next item
+    itemSize = itemOfs[1] - itemOfs[0] + sizeof(u16);
 
-                // After deleted slot
-                if (confLut[-i] > itemOfsOfs) {
-                    confLut[-i] -= sizeof(u16);
-                } else {
-                    confLut[-i] = 0;
-                }
-            }
+    sp14 = *itemOfs - (itemOfsOfs + sizeof(u16));
+    memmove(conf + itemOfsOfs, conf + itemOfsOfs + sizeof(u16), sp14);
 
-            ItemRestSize += itemSize;
-            ItemNumTotal--;
-            ((SCConfHeader*)conf)->numItems = ItemNumTotal;
-            __SCSetDirtyFlag();
+    // Adjust item offsets
+    for (it = confItemsEnd - 1; it >= confItemsBegin; it--) {
+        if (it < itemOfs) {
+            // After deleted item
+            *it -= sizeof(u16);
+        } else {
+            // Before deleted item
+            *it -= itemSize;
         }
     }
+
+    memmove(conf + *itemOfs, conf + itemSize + *itemOfs,
+            itemsEndOfs - (*itemOfs + itemSize));
+
+    memset(conf + (itemsEndOfs - itemSize), 0, itemSize);
+
+    // Adjust item lookup table
+    for (i = 0; i < ItemIDMaxPlus1; i++) {
+        // Before deleted slot
+        if (confLut[-i] < itemOfsOfs) {
+            continue;
+        }
+
+        // After deleted slot
+        if (confLut[-i] > itemOfsOfs) {
+            confLut[-i] -= sizeof(u16);
+        } else {
+            confLut[-i] = 0;
+        }
+    }
+
+    ItemRestSize += itemSize;
+    ItemNumTotal--;
+    ((SCConfHeader*)conf)->numItems = ItemNumTotal;
+    __SCSetDirtyFlag();
 }
 
 static BOOL CreateItemByID(SCItemID id, u8 primType, const void* src, u32 len) {

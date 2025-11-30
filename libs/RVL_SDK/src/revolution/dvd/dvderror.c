@@ -10,8 +10,8 @@ DVDErrorInfo __ErrorInfo ALIGN(32);
 DVDErrorInfo __FirstErrorInfo ALIGN(32);
 
 static void cbForNandClose(s32 result, NANDCommandBlock* block) {
-    if (Callback) {
-        Callback((result == 0) ? 1 : 2, NULL);
+    if (Callback != NULL) {
+        Callback((result == NAND_RESULT_OK) ? 1 : 2, NULL);
     }
 }
 
@@ -191,7 +191,7 @@ static void cbForPrepareStatusRegister(u32 intType) {
 
 void __DVDStoreErrorCode(u32 error, DVDErrorCallback callback) {
     __ErrorInfo.error = error;
-    __ErrorInfo.sec = (u32)OSTicksToSeconds(OSGetTime());
+    __ErrorInfo.sec = (u32)OS_TICKS_TO_SEC(OSGetTime());
     Callback = callback;
     DVDLowPrepareStatusRegister(cbForPrepareStatusRegister);
 }

@@ -1,17 +1,19 @@
-#ifndef _TYPES_H
-#define _TYPES_H
+#ifndef TYPES_H
+#define TYPES_H
 
-#ifndef __cplusplus
-#include <stdarg.h>
-#include <stddef.h>
-#else
+#ifdef __cplusplus
 #include <cstdarg>
 #include <cstddef>
 #include <new>
+#else
+#include <stdarg.h>
+#include <stddef.h>
 #endif
 
-#include "decomp.h"
-#include "macros.h"
+#include <compat.h>
+#include <decomp.h>
+#include <lang.h>
+#include <macros.h>
 
 typedef unsigned long long u64;
 typedef signed long long s64;
@@ -33,13 +35,7 @@ typedef unsigned int uint;
 typedef int UNKWORD;
 typedef void UNKTYPE;
 
-#define FALSE 0
-#define TRUE 1
+enum { FALSE, TRUE };
 typedef int BOOL;
-
-//Make VSCode shut up
-#ifndef __MWERKS__
-typedef int __vec2x32float__;
-#endif
 
 #endif

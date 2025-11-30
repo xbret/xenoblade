@@ -297,7 +297,7 @@ static s32 GetRTC(s32* destPtr) {
         if (status == 0) {
             bias = SCGetCounterBias();
             time = OSGetTime();
-            *destPtr = OSTicksToSeconds(time) - bias;
+            *destPtr = OS_TICKS_TO_SEC(time) - bias;
             return 0;
         }
     }

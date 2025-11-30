@@ -1,10 +1,8 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4hbm/ut.h>
 
 namespace {
 
-static void SetupGXCommon() {
+void SetupGXCommon() {
     static const nw4hbm::ut::Color fog = 0;
 
     GXSetFog(GX_FOG_NONE, fog, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -17,8 +15,8 @@ static void SetupGXCommon() {
     GXSetChanCtrl(GX_COLOR1A1, FALSE, GX_SRC_REG, GX_SRC_REG, GX_LIGHT_NULL,
                   GX_DF_NONE, GX_AF_NONE);
     GXSetNumTexGens(1);
-    GXSetTexCoordGen2(GX_TEXCOORD0, GX_TG_MTX2x4, GX_TG_TEX0, GX_TEXMTX_IDENT,
-                      FALSE, GX_DUALMTX_IDENT);
+    GXSetTexCoordGen2(GX_TEXCOORD0, GX_TG_MTX2x4, GX_TG_TEX0, GX_IDENTITY,
+                      FALSE, GX_PTIDENTITY);
     GXSetNumIndStages(0);
     GXSetBlendMode(GX_BM_BLEND, GX_BL_SRCALPHA, GX_BL_INVSRCALPHA, GX_LO_SET);
 }
@@ -32,6 +30,7 @@ CharWriter::LoadingTexture CharWriter::mLoadingTexture;
 
 CharWriter::CharWriter()
     : mAlpha(255), mIsWidthFixed(false), mFixedWidth(0.0f), mFont(NULL) {
+
     mLoadingTexture.Reset();
     ResetColorMapping();
     SetGradationMode(GRADMODE_NONE);

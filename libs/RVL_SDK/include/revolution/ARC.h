@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include <revolution/arc/arc.h>
+#include <revolution/ARC/arc.h>
 
 #ifdef __cplusplus
 }

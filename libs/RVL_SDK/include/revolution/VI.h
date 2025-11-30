@@ -4,10 +4,10 @@
 extern "C" {
 #endif
 
-#include <revolution/vi/vitypes.h>
-#include <revolution/vi/vi.h>
-#include <revolution/vi/vi3in1.h>
-#include <revolution/vi/vihardware.h>
+#include <revolution/VI/vi.h>
+#include <revolution/VI/vi3in1.h>
+#include <revolution/VI/vihardware.h>
+#include <revolution/VI/vitypes.h>
 
 #ifdef __cplusplus
 }

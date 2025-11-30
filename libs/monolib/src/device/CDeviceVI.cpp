@@ -1,3 +1,4 @@
+#include "revolution/vi/vitypes.h"
 #include <monolib/device.hpp>
 #include <monolib/lib.hpp>
 #include <monolib/math.hpp>
@@ -198,7 +199,7 @@ bool CDeviceVI::isWideAspectRatio(){
 }
 
 bool CDeviceVI::isTvFormatPal(){
-    return VIGetTvFormat() == VI_PAL;
+    return VIGetTvFormat() == VI_TVFORMAT_PAL;
 }
 
 u32 CDeviceVI::getXfbBuffersSize(){

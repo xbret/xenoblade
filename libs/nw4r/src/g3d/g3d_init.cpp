@@ -29,16 +29,16 @@ namespace nw4r
             GXRenderModeObj* rmo;
             switch(VIGetTvFormat())
             {
-                case VI_NTSC:
+                case VI_TVFORMAT_NTSC:
                     rmo = &GXNtsc480IntDf;
                     break;
-                case VI_PAL:
+                case VI_TVFORMAT_PAL:
                     rmo = &GXPal528IntDf;
                     break;
-                case VI_EURGB60:
+                case VI_TVFORMAT_EURGB60:
                     rmo = &GXEurgb60Hz480IntDf;
                     break;
-                case VI_MPAL:
+                case VI_TVFORMAT_MPAL:
                     rmo = &GXMpal480IntDf;
                     break;
                 default:

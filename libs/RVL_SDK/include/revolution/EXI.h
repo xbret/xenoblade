@@ -8,10 +8,10 @@
 extern "C" {
 #endif
 
-#include <revolution/exi/EXIBios.h>
-#include <revolution/exi/EXICommon.h>
-#include <revolution/exi/EXIHardware.h>
-#include <revolution/exi/EXIUart.h>
+#include <revolution/EXI/EXIBios.h>
+#include <revolution/EXI/EXICommon.h>
+#include <revolution/EXI/EXIHardware.h>
+#include <revolution/EXI/EXIUart.h>
 
 #ifdef __cplusplus
 }

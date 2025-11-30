@@ -4,7 +4,7 @@
 extern "C" {
 #endif
 
-#include <revolution/wenc/wenc.h>
+#include <revolution/WENC/wenc.h>
 
 #ifdef __cplusplus
 }

@@ -1,8 +1,9 @@
 #include <revolution/MEM.h>
 #include <revolution/OS.h>
 
-#define MEM_FRM_HEAP_MAGIC 'FRMH'
+#define MEM_FRM_HEAP_MAGIC FOURCC('F', 'R', 'M', 'H')
 
+// Size of base and frame heap head
 #define MEM_FRM_HEAP_HEAD_SIZE (sizeof(MEMiHeapHead) + sizeof(MEMiFrmHeapHead))
 
 static MEMiFrmHeapHead*
@@ -34,7 +35,7 @@ static void* AllocFromHead_(MEMiFrmHeapHead* frm, u32 size, s32 align) {
     end = AddU32ToPtr(start, size);
 
     // Not enough memory
-    if (end > frm->tail) {
+    if ((u8*)end > frm->tail) {
         return NULL;
     }
 
@@ -56,7 +57,7 @@ static void* AllocFromTail_(MEMiFrmHeapHead* frm, u32 size, s32 align) {
     start = ROUND_DOWN_PTR(GetUIntPtr(start), align);
 
     // Not enough memory
-    if (start < frm->head) {
+    if ((u8*)start < frm->head) {
         return NULL;
     }
 
@@ -99,7 +100,7 @@ MEMiHeapHead* MEMCreateFrmHeapEx(void* start, u32 size, u16 opt) {
 
     // Ensure valid heap
     if (GetUIntPtr(start) > GetUIntPtr(end) ||
-        GetOffsetFromPtr(start, end) < MEM_FRM_HEAP_HEAD_SIZE) {
+        GetOffsetFromPtr(start, end) < MEM_FRM_HEAP_MIN_SIZE) {
         return NULL;
     }
 
@@ -158,7 +159,7 @@ u32 MEMGetAllocatableSizeForFrmHeapEx(MEMiHeapHead* heap, s32 align) {
 
     start = ROUND_UP_PTR(frm->head, align);
 
-    if (start > frm->tail) {
+    if ((u8*)start > frm->tail) {
         size = 0;
     } else {
         size = GetOffsetFromPtr(start, frm->tail);

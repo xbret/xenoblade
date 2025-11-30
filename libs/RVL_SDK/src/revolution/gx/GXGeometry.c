@@ -108,8 +108,8 @@ void __GXSetDirtyState(void) {
 
         tempFlags = dirtyFlags & GX_DIRTY_MTX_IDX;
         if (tempFlags != 0) {
-            __GXSetMatrixIndex(0);
-            __GXSetMatrixIndex(5);
+            __GXSetMatrixIndex(GX_VA_PNMTXIDX);
+            __GXSetMatrixIndex(GX_VA_TEX4MTXIDX);
         }
 
         tempFlags = dirtyFlags & GX_DIRTY_VIEWPORT;
@@ -178,14 +178,14 @@ void GXGetPointSize(){
 }
 
 void GXEnableTexOffsets(GXTexCoordID id, GXBool lineOfs, GXBool pointOfs) {
-    GX_BP_SET_SU_SSIZE_USELINEOFS(gxdt->txcRegs[id], lineOfs);
-    GX_BP_SET_SU_SSIZE_USEPOINTOFS(gxdt->txcRegs[id], pointOfs);
+    GX_BP_SET_SU_SIZE_USELINEOFS(gxdt->txcRegs[id], lineOfs);
+    GX_BP_SET_SU_SIZE_USEPOINTOFS(gxdt->txcRegs[id], pointOfs);
     GX_BP_LOAD_REG(gxdt->txcRegs[id]);
     gxdt->lastWriteWasXF = FALSE;
 }
 
 void GXSetCullMode(GXCullMode mode) {
-    // Swap bits to get hardware representation (see nw4r::g3d::fifo::cm2hw)
+    // Swap bits to get hardware representation
     GXCullMode bits = (GXCullMode)(mode << 1 & 2 | mode >> 1 & 1);
     GX_BP_SET_GENMODE_CULLMODE(gxdt->genMode, bits);
     gxdt->gxDirtyFlags |= GX_DIRTY_GEN_MODE;
@@ -193,7 +193,7 @@ void GXSetCullMode(GXCullMode mode) {
 
 //unused
 void GXGetCullMode(GXCullMode* out) {
-    // TODO: Fakematch? Should use GX_BP_GET_GENMODE_CULLMODE if possible
+    // TODO(kiwi) Fakematch? Should use GX_BP_GET_GENMODE_CULLMODE if possible
     s32 bits = 0;
     bits |= (s32)(gxdt->genMode >> (13 + 1) & 2) >> 1;
     bits |= (s32)(gxdt->genMode >> 13 & 2);
@@ -205,7 +205,7 @@ void GXSetCoPlanar(GXBool coplanar) {
 
     GX_BP_SET_GENMODE_COPLANAR(gxdt->genMode, coplanar);
 
-    // TODO: GX_BP_SET_OPCODE doesn't work.
+    // TODO(kiwi) GX_BP_SET_OPCODE doesn't work.
     // Did they really write this out?
     reg = 0;
     reg |= GX_BP_REG_SSMASK << 24;

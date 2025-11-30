@@ -1,7 +1,7 @@
 #include <revolution/AI.h>
 #include <revolution/DSP.h>
 #include <revolution/OS.h>
-//#include <revolution/build_version.h>
+//#include <revolution/version.h>
 
 //#define BUILD_DATE "Feb 27 2009"
 //#define BUILD_TIME "10:01:30"
@@ -62,9 +62,13 @@ void AIInitDMA(void* buffer, u32 length) {
 void AIGetDMAEnableFlag(){
 }
 
-void AIStartDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] |= DSP_AI_DMA_CSR_PLAY; }
+void AIStartDMA(void) {
+    DSP_HW_REGS[DSP_AI_DMA_CSR] |= DSP_AI_DMA_CSR_PLAY;
+}
 
-void AIStopDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] &= ~DSP_AI_DMA_CSR_PLAY; }
+void AIStopDMA(void) {
+    DSP_HW_REGS[DSP_AI_DMA_CSR] &= ~DSP_AI_DMA_CSR_PLAY;
+}
 
 u32 AIGetDMABytesLeft(void) {
     return (DSP_HW_REGS[DSP_AI_DMA_BYTES_LEFT] & 0x7FFF) * 32;
@@ -78,7 +82,9 @@ u32 AIGetDMALength(void) {
     return (DSP_HW_REGS[DSP_AI_DMA_CSR] & 0x7FFF) << 5;
 }
 
-BOOL AICheckInit(void) { return __AI_init_flag; }
+BOOL AICheckInit(void) {
+    return __AI_init_flag;
+}
 
 
 void AISetDSPSampleRate(u32 rate) {
@@ -106,11 +112,11 @@ void AIInit(void* stack) {
     if (__AI_init_flag != TRUE) {
         OSRegisterVersion(__AIVersion);
 
-        bound_32KHz = OSNanosecondsToTicks(31524);
-        bound_48KHz = OSNanosecondsToTicks(42024);
-        min_wait = OSNanosecondsToTicks(42000);
-        max_wait = OSNanosecondsToTicks(63000);
-        buffer = OSNanosecondsToTicks(3000);
+        bound_32KHz = OS_NSEC_TO_TICKS(31524);
+        bound_48KHz = OS_NSEC_TO_TICKS(42024);
+        min_wait = OS_NSEC_TO_TICKS(42000);
+        max_wait = OS_NSEC_TO_TICKS(63000);
+        buffer = OS_NSEC_TO_TICKS(3000);
 
         AI_HW_REGS[AI_AICR] &=
             ~(AI_AICR_PSTAT | AI_AICR_AIINTMSK | AI_AICR_AIINTVLD);
@@ -138,6 +144,7 @@ void AIReset(){
 }
 
 void __AIDHandler(s32 intr, OSContext* ctx) {
+#pragma unused(intr)
 
     OSContext tempCtx;
 
@@ -166,7 +173,7 @@ void __AIDHandler(s32 intr, OSContext* ctx) {
 
 static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
     // clang-format off
-    #ifdef __MWERKS__
+
     mr r31, callback
 
     lis r5, __OldStack@ha
@@ -187,7 +194,7 @@ static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
 
     frfree
     blr
-    #endif
+
     // clang-format on
 }
 

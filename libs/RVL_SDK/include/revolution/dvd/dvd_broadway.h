@@ -6,10 +6,9 @@ extern "C" {
 #endif
 
 #define DVD_LOW_OFFSET(x) ((x) >> 2)
-#define DVD_LOW_SPEED(x) (((x)&3) << 16)
+#define DVD_LOW_SPEED(x) (((x) & 3) << 16)
 
 // Forward declarations
-#ifdef __MWERKS__
 typedef struct DVDDiskID;
 typedef struct DVDDriveInfo;
 typedef struct ESTicket;
@@ -17,15 +16,6 @@ typedef struct ESTicketView;
 typedef struct ESTitleMeta;
 typedef struct OSAlarm;
 typedef struct DVDVideoReportKey;
-#else
-typedef struct DVDDiskID DVDDiskID;
-typedef struct DVDDriveInfo DVDDriveInfo;
-typedef struct ESTicket ESTicket;
-typedef struct ESTicketView ESTicketView;
-typedef struct ESTitleMeta ESTitleMeta;
-typedef struct OSAlarm OSAlarm;
-typedef struct DVDVideoReportKey DVDVideoReportKey;
-#endif
 
 typedef enum {
     DVD_INTTYPE_TC = (1 << 0),   // Transaction callback?
@@ -47,13 +37,18 @@ typedef void (*DVDLowCallback)(u32 intType);
 
 BOOL DVDLowInit(void);
 BOOL DVDLowReadDiskID(struct DVDDiskID* out, DVDLowCallback callback);
-//BOOL DVDLowOpenPartition(const u32 offset, const struct ESTicket* const ticket,
-//                         u32 certsSize, const void* const certs, struct ESTitleMeta* tmd,
+//BOOL DVDLowOpenPartition(u32 offset, const ESTicket* ticket, u32 certsSize,
+//                         const void* certs, ESTitleMeta* tmd,
 //                         DVDLowCallback callback);
-BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32, const struct ESTicketView* const, const u32, const struct ESTitleMeta* const, const u32, const u8* const, DVDLowCallback);
+BOOL DVDLowOpenPartitionWithTmdAndTicketView(const u32, const struct ESTicketView* const, const u32,
+                                             const struct ESTitleMeta* const, const u32, const u8* const,
+                                             DVDLowCallback);
 BOOL DVDLowGetNoDiscBufferSizes(const u32 offset, u32* numTmdBytes, u32* numCertBytes, DVDLowCallback callback);
-BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 offset, struct ESTicket* eTicket, u32* numTmdBytes, struct ESTitleMeta* tmd, u32* numCertBytes, u8* certificates, u32* dataWordOffset, u8* h3HashPtr, DVDLowCallback callback);
-BOOL DVDLowOpenPartition(const u32, const struct ESTicket* const, const u32, const u8* const, struct ESTitleMeta *, DVDLowCallback);
+BOOL DVDLowGetNoDiscOpenPartitionParams(const u32 offset, struct ESTicket* eTicket, u32* numTmdBytes,
+                                        struct ESTitleMeta* tmd, u32* numCertBytes, u8* certificates, u32* dataWordOffset,
+                                        u8* h3HashPtr, DVDLowCallback callback);
+BOOL DVDLowOpenPartition(const u32, const struct ESTicket* const, const u32,
+                         const u8* const, struct ESTitleMeta *, DVDLowCallback);
 BOOL DVDLowClosePartition(DVDLowCallback callback);
 BOOL DVDLowUnencryptedRead(void* dst, u32 size, u32 offset,
                            DVDLowCallback callback);

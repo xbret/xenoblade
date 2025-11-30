@@ -1,7 +1,7 @@
 #ifndef AHX_ATBL_H
 #define AHX_ATBL_H
 
-#include "types.h"
+#include <types.h>
 
 typedef struct ATblSubEntry{
     u32 unk0;

@@ -4,16 +4,9 @@
 
 static funcptr_t FatalFunc = NULL;
 
-/* Unsupported characters to fix:
-? (E9)
-? (FC)
-? (F3)
-? (E1)
-? (E8)
-*/
-
-// TODO: Fix text formatting (SJIS)
 const char* const __DVDErrorMessageDefault[] = {
+    // clang-format off
+
     // SC_LANG_JP
     "\n\n\nエラーが発生しました。\n\n"
     "イジェクトボタンを押してディスクを取り出してか\n"
@@ -110,11 +103,15 @@ const char* const __DVDErrorMessageEurope[] = {
     "Druk op de EJECT-knop, verwijder de\n"
     "disk en zet het Wii-systeem uit. Lees\n"
     "de Wii-handleiding voor meer informatie."
+
+    // clang-format on
 };
 
 
 // TODO: Fix text formatting (SJIS)
 char* __DVDErrorMessageChinaKorea[] = {
+    // clang-format off
+    
     // SC_LANG_CN
     "\n\nエラーコード１０４。\n"
     "エラーが発生しました。\n\n"
@@ -129,8 +126,9 @@ char* __DVDErrorMessageChinaKorea[] = {
     "Game Disc, and turn the power off.\n"
     "Please read the Wii Operations Manual\n"
     "for more information."
+    
+    // clang-format on
 };
-
 
 void __DVDShowFatalMessage(void) {
     const char* msg;

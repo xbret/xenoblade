@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#include <revolution/db/db.h>
+#include <revolution/DB/db.h>
 
 #ifdef __cplusplus
 }

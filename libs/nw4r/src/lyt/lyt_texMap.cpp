@@ -34,7 +34,7 @@ namespace nw4r
         void TexMap::Set(TPLPalette *pPalette, u32 tplID)
         {
             // Not yet converted from offset to pointer (unbound)
-            if ((uintptr_t)pPalette->descriptors < 0x80000000)
+            if ((uintptr_t)pPalette->descriptorArray < 0x80000000)
             {
                 TPLBind(pPalette);
             }
@@ -45,7 +45,7 @@ namespace nw4r
         void TexMap::Set(const TPLDescriptor *pDescriptor)
         {
             SetNoWrap(pDescriptor);
-            SetWrapMode(pDescriptor->texHeader->wrapS, pDescriptor->texHeader->wrapT);
+            SetWrapMode(pDescriptor->textureHeader->wrapS, pDescriptor->textureHeader->wrapT);
         }
 
         void TexMap::SetNoWrap(const TexMap& map)
@@ -59,20 +59,20 @@ namespace nw4r
 
         void TexMap::SetNoWrap(const TPLDescriptor *pDescriptor)
         {
-            TPLHeader *tex = pDescriptor->texHeader;
+            TPLHeader *tex = pDescriptor->textureHeader;
             SetImage(tex->data);
             SetSize(tex->width, tex->height);
             SetTexelFormat(static_cast<GXTexFmt>(tex->format));
 
-            bool bMipMap = (tex->minLod != tex->maxLod);
+            bool bMipMap = (tex->minLOD != tex->maxLOD);
             SetMipMap(bMipMap);
 
-            SetFilter(tex->minFilt, tex->magFilt);
-            SetLOD(tex->minLod, tex->maxLod);
-            SetLODBias(tex->lodBias);
-            SetEdgeLODEnable(tex->edgeLodEnable);
+            SetFilter(tex->minFilter, tex->magFilter);
+            SetLOD(tex->minLOD, tex->maxLOD);
+            SetLODBias(tex->LODBias);
+            SetEdgeLODEnable(tex->edgeLODEnable);
 
-            TPLClutHeader *clut = pDescriptor->clutHeader;
+            TPLClutHeader *clut = pDescriptor->CLUTHeader;
             if (clut != NULL)
             {
                 SetPalette(clut->data);

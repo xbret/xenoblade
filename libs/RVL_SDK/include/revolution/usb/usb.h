@@ -1,14 +1,14 @@
 #ifndef RVL_SDK_USB_H
 #define RVL_SDK_USB_H
-#include <revolution/IPC.h>
 #include <types.h>
+
+#include <revolution/IPC.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 typedef void (*USBCallback)(IPCResult result, void* arg);
 typedef void (*USBISOCallback)(IPCResult result, void* arg1, void* arg2);
-
 
 IPCResult IUSB_OpenLib(void);
 IPCResult IUSB_CloseLib(void);

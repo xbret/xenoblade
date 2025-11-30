@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include <monolib/math/CVec3.hpp>
 #include <monolib/math/CMat34.hpp>
 #include <monolib/math/CQuat.hpp>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "decomp.h"
-#include "types.h"
+#include <types.h>
 #include <monolib/util/FixStr.hpp>
 #include <cstring>
 #include <cstddef>

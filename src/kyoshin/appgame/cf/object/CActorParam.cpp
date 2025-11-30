@@ -60,7 +60,7 @@ namespace cf {
         unk3354 = 0;
         unk337C = 0;
 
-        for(int i = 0; i < LENGTHOF(unk1928); i++){
+        for(int i = 0; i < ARRAY_SIZE(unk1928); i++){
             unk1928[i].init();
         }
     }

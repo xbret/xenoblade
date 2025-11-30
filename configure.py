@@ -242,6 +242,8 @@ cflags_base = [
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version.upper()}",
+    "-ir libs/RVL_SDK/include/revolution/BTE",  # thanks broadcom...
+    "-DREVOLUTION"
 ]
 
 # Debug flags
@@ -1563,7 +1565,7 @@ config.libs = [
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_drawInfo.cpp"),
             Object(NonMatching, "nw4r/src/lyt/lyt_animation.cpp"),
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_resourceAccessor.cpp"),
-            Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_arcResourceAccessor.cpp"),
+            Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_arcResourceAccessor.cpp", extra_cflags = ["-ipa file"]),
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_common.cpp"),
             Object(NonMatching, "nw4r/src/lyt/lyt_util.cpp"),
         ],
@@ -1686,12 +1688,12 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/work/CWorkThreadSystem.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkThread.cpp"),
             Object(MatchingFor("jp"), "monolib/src/work/CWorkUtil.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
-            Object(NonMatching, "monolib/src/CProc.cpp"),
-            Object(NonMatching, "monolib/src/CProcRoot.cpp"),
+            Object(NonMatching, "monolib/src/work/CProc.cpp"),
+            Object(NonMatching, "monolib/src/work/CProcRoot.cpp"),
             Object(NonMatching, "monolib/src/core/CRsrcData.cpp"),
             Object(NonMatching, "monolib/src/core/CScriptCode.cpp"),
             Object(NonMatching, "monolib/src/core/CToken.cpp"),
-            Object(MatchingFor("jp"), "monolib/src/CTaskManager.cpp"),
+            Object(MatchingFor("jp"), "monolib/src/core/CTaskManager.cpp"),
             Object(NonMatching, "monolib/src/core/CView.cpp"),
             Object(NonMatching, "monolib/src/core/CViewFrame.cpp"),
             Object(NonMatching, "monolib/src/core/CViewRoot.cpp"),

@@ -24,7 +24,7 @@ BOOL DVDCompareDiskID(const DVDDiskID* id1, const DVDDiskID* id2) {
         id1->version != id2->version) {
         return FALSE;
     }
-    
+
     return TRUE;
 }
 

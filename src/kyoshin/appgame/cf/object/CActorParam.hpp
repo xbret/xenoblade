@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 #include "kyoshin/appgame/cf/object/CDebugState.hpp"
 #include "kyoshin/appgame/cf/object/CBattleState.hpp"
 #include "kyoshin/appgame/cf/object/CActorState.hpp"

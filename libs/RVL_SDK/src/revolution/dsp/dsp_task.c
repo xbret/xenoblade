@@ -307,8 +307,6 @@ void __DSP_insert_task(DSPTask* task) {
 void __DSP_add_task(DSPTask* task){
 }
 
-CW_FORCE_STRINGS(DSPTASK_cpp, "__DSP_add_task() : Added task    : 0x%08X\n");
-
 void __DSP_remove_task(DSPTask* task) {
     task->flags = 0;
     task->state = DSP_TASK_STATE_3;
@@ -332,3 +330,6 @@ void __DSP_remove_task(DSPTask* task) {
         task->next->prev = task->prev;
     }
 }
+
+DECOMP_FORCEACTIVE(dsp_task_c,
+                   "__DSP_add_task() : Added task    : 0x%08X\n");

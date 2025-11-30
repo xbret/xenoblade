@@ -1,13 +1,14 @@
 #ifndef RVL_SDK_GX_GEOMETRY_H
 #define RVL_SDK_GX_GEOMETRY_H
-#include <revolution/gx/GXTypes.h>
 #include <types.h>
+
+#include <revolution/GX/GXTypes.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void GXBegin(GXPrimitive prim, GXVtxFmt fmt, u16 verts);
-static inline void GXEnd(void) {}
+static void GXEnd(void) {}
 
 void GXSetLineWidth(u8 width, u32 offset);
 void GXSetPointSize(u8 size, u32 offset);

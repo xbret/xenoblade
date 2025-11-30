@@ -1,5 +1,6 @@
-#include <monolib/work.hpp>
+#include <monolib/core.hpp>
 #include <monolib/device.hpp>
+#include <monolib/work.hpp>
 
 namespace {
 

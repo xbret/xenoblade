@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 
 //min size: 0x4
 class UnkClass_80447FDC {

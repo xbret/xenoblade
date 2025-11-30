@@ -194,7 +194,7 @@ void RemoteSpeaker::UpdateStreamData(const s16* pRmtSamples) {
 
         if (!mContinueFlag) {
             OSSetAlarm(&mContinueAlarm,
-                       OSSecondsToTicks(CONTINUOUS_PLAY_INTERVAL_MINUTES * 60LL),
+                       OS_SEC_TO_TICKS(CONTINUOUS_PLAY_INTERVAL_MINUTES * 60LL),
                        ContinueAlarmHandler);
 
             mContinueBeginTime = OSGetTime();
@@ -210,7 +210,7 @@ void RemoteSpeaker::UpdateStreamData(const s16* pRmtSamples) {
 
         mIntervalFlag = true;
         OSCancelAlarm(&mIntervalAlarm);
-        OSSetAlarm(&mIntervalAlarm, OSSecondsToTicks(1LL), IntervalAlarmHandler);
+        OSSetAlarm(&mIntervalAlarm, OS_SEC_TO_TICKS(1LL), IntervalAlarmHandler);
     }
 
     mPlayFlag = playFlag;

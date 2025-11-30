@@ -1,7 +1,7 @@
 #ifndef _WCTYPE_H
 #define _WCTYPE_H
 
-#include "types.h"
+#include <types.h>
 #include <locale.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/wctype_api.h"
 

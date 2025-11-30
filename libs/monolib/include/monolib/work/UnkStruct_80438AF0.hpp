@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.h"
+#include <types.h>
 
 struct UnkStruct_80438AF0_3 {};
 

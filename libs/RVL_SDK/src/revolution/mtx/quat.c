@@ -1,14 +1,17 @@
-#include <math.h>
 #include <revolution/MTX.h>
 
-DECOMP_FORCELITERAL(quat_c, 0.00001f, 1.0f, 0.0f);
+#include <math.h>
 
-#ifdef __MWERKS__
+#define MY_EPSILON 1e-5f
+
+DECOMP_FORCELITERAL(quat_c, MY_EPSILON, 1.0f, 0.0f);
+
 //TODO: get it to match with a register var instead of f3
 void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat2,
                register Quaternion* out) {
     register f32 vv1, vv2, vv3, vv4;
-    asm {
+    
+    ASM (
         psq_l vv1, 0(quat1), 0, 0;
         psq_l vv2, 0(quat2), 0, 0;
         psq_l vv3, 8(quat1), 0, 0;
@@ -17,7 +20,7 @@ void PSQUATAdd(const register Quaternion* quat1, const register Quaternion* quat
         ps_add vv2, vv3, fp3;
         psq_st vv1, 0(out), 0, 0;
         psq_st vv2, 8(out), 0, 0;
-    }
+    )
 }
 
 void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
@@ -27,8 +30,7 @@ void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
     register f32 naxay, naxy, nazw;
     register f32 work1, work2, work3, work4, work5;
 
-    // clang-format off
-    asm {
+    ASM (
         // Load qA components
         psq_l axy, Quaternion.x(a), 0, 0 // AX, AY
         psq_l azw, Quaternion.z(a), 0, 0 // AZ, AW
@@ -61,27 +63,28 @@ void PSQUATMultiply(register const Quaternion* a, register const Quaternion* b,
         // Store result
         psq_st work1, Quaternion.x(prod), 0, 0
         psq_st work3, Quaternion.z(prod), 0, 0
-    }
-    // clang-format on
+    )
 }
 
 void PSQUATScale(const register Quaternion* quat1, register Quaternion* quat2,
                  register f32 ff1) {
     register f32 vv1, vv2;
-    asm {
+    
+    ASM (
         psq_l    vv1, 0(quat1), 0, 0;
         psq_l    vv2, 8(quat1), 0, 0;
         ps_muls0 vv1, vv1, ff1;
         psq_st   vv1, 0(quat2), 0, 0;
         ps_muls0 vv2, vv2, ff1;
         psq_st   vv2, 8(quat2), 0, 0;
-    }
+    )
 }
 
 f32 PSQUATDotProduct(const register Quaternion* quat1,
                      const register Quaternion* quat2) {
     register f32 vv1, vv2, vv3, vv4, out;
-    asm {
+    
+    ASM (
         psq_l vv1, 0(quat1), 0, 0;
         psq_l vv3, 0(quat2), 0, 0;
         ps_mul out, vv1, vv3;
@@ -89,7 +92,7 @@ f32 PSQUATDotProduct(const register Quaternion* quat1,
         psq_l vv4, 8(quat2), 0, 0;
         ps_madd out, vv2, vv4, out;
         ps_sum0 out, out, out, out;
-    }
+    )
     return out;
 }
 
@@ -99,12 +102,11 @@ void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
     register f32 work0, work1, work2, work3;
     register f32 c_epsilon, c_half, c_three;
 
-    c_epsilon = 0.00001f;
+    c_epsilon = MY_EPSILON;
     c_half = 0.5f;
     c_three = 3.0f;
 
-    // clang-format off
-    asm {
+    ASM (
         // Load quaternion components
         psq_l xy, Quaternion.x(in), 0, 0
         psq_l zw, Quaternion.z(in), 0, 0
@@ -137,17 +139,16 @@ void PSQUATNormalize(register const Quaternion* in, register Quaternion* out) {
         // Store result
         psq_st xy, Quaternion.x(out), 0, 0
         psq_st zw, Quaternion.z(out), 0, 0
-    }
-    // clang-format on
+    )
 }
 
 //unused
 void PSQUATInverse(const register Quaternion* src, register Quaternion* inv) {
-    /*
     register f32 vv1, vv2, vv3, vv4;
     register f32 vv5, vv6, vv7, vv8, vv9, vvA, vvB;
     register f32 vvC = 1.0F;
-    asm {
+    
+    ASM (
         psq_l       vv1, 0(src), 0, 0;
         ps_mul      vv5, vv1, vv1;
         ps_sub      vvB, vvC, vvC;
@@ -172,10 +173,8 @@ loc1:
         ps_muls0    vv3, vv2, vv8;
         psq_st      vv1, 0(inv), 0, 0;
         psq_st      vv3, 8(inv), 1, 0;
-    }
-    */
+    )
 }
-#endif
 
 inline f32 mySqrtf(f32 x){
     return sqrt(x);
@@ -201,11 +200,11 @@ void C_QUATMtx(Quaternion* quat, const Mtx mtx) {
         dmax = 0;
 
         if (mtx[1][1] > mtx[dmax][dmax]) {
-                dmax = 1;
+            dmax = 1;
         }
 
         if (mtx[2][2] > mtx[dmax][dmax]) {
-                dmax = 2;
+            dmax = 2;
         }
 
         dnext = next[dmax];
@@ -254,7 +253,7 @@ void C_QUATSlerp(const Quaternion* a, const Quaternion* b, Quaternion* out,
         coeffb = -coeffb;
     }
 
-    if (dot <= 1.0f - 0.00001f) {
+    if (dot <= 1.0f - MY_EPSILON) {
         theta = acosf(dot);
         sintheta = sinf(theta);
 

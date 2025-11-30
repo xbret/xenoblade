@@ -4,6 +4,7 @@
 #include "kyoshin/appgame/CTaskGame.hpp"
 #include "kyoshin/appgame/code_80135FDC.hpp"
 #include <monolib/lib.hpp>
+#include <monolib/core.hpp>
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 #include <revolution/WPAD.h>

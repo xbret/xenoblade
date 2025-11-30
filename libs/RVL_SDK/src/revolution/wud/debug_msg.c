@@ -1,8 +1,11 @@
 #include <revolution/WUD.h>
 
-//Stubbed for release
-void WUD_DEBUGPrint(const char* fmt, ...){
+void WUD_DEBUGPrint(const char* pFmt, ...) {
+#pragma unused(pFmt)
+
+    // Stubbed for release
 }
+
 
 //unused
 void _WUDEnableDebugMsgs(){

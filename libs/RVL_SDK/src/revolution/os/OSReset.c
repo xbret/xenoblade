@@ -3,6 +3,7 @@
 #include <revolution/PAD.h>
 #include <revolution/SC.h>
 #include <revolution/VI.h>
+
 #include <string.h>
 
 static OSShutdownFunctionQueue ShutdownFunctionQueue;
@@ -48,7 +49,7 @@ void OSRegisterShutdownFunction(OSShutdownFunctionInfo* info) {
     }
 }
 
-BOOL __OSCallShutdownFunctions(BOOL final, u32 event) {
+BOOL __OSCallShutdownFunctions(u32 pass, u32 event) {
     OSShutdownFunctionInfo* iter;
     BOOL failure;
     u32 prio;
@@ -61,7 +62,7 @@ BOOL __OSCallShutdownFunctions(BOOL final, u32 event) {
             break;
         }
 
-        failure |= !iter->func(final, event);
+        failure |= !iter->func(pass, event);
         prio = iter->prio;
     }
 
@@ -76,7 +77,7 @@ void __OSShutdownDevices(u32 event) {
     BOOL keepEnable;
 
     switch (event) {
-    case 0:
+    case OS_SD_EVENT_FATAL:
     case OS_SD_EVENT_RESTART:
     case OS_SD_EVENT_RETURN_TO_MENU:
     case OS_SD_EVENT_LAUNCH_APP:
@@ -115,7 +116,7 @@ void __OSShutdownDevices(u32 event) {
     KillThreads();
 }
 
-// TODO: There must be a better way....
+// TODO(kiwi) There must be a better way....
 void __OSGetDiscState(u8* out) {
     u32 flags;
 
@@ -216,7 +217,7 @@ void OSReturnToMenu(void) {
 
     // clang-format off
 #line 843
-    OSError("OSReturnToMenu(): Falied to boot system menu.\n");
+    OS_ERROR("OSReturnToMenu(): Falied to boot system menu.\n");
     // clang-format on
 }
 
@@ -235,6 +236,6 @@ void OSResetSystem(BOOL reset, u32 resetCode, BOOL forceMenu) {
 
     // clang-format off
 #line 1020
-    OSError("OSResetSystem() is obsoleted. It doesn't work any longer.\n");
+    OS_ERROR("OSResetSystem() is obsoleted. It doesn't work any longer.\n");
     // clang-format on
 }

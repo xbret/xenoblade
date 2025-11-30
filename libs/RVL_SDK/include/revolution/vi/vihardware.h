@@ -8,7 +8,7 @@ extern "C" {
 /**
  * VI hardware registers
  */
-extern volatile u16 VI_HW_REGS[] AT_ADDRESS(0xCC002000);
+volatile u16 DECL_HW_REGS(VI) DECL_ADDRESS(0xCC002000);
 
 /**
  * Hardware register indexes
@@ -92,6 +92,9 @@ typedef enum {
 // VICLK - VI Clock Select Register
 #define VI_VICLK_SPEED (1 << 0)
 typedef enum { VI_VICLK_27MHZ, VI_VICLK_54MHZ } VIClkSpeed;
+
+// VISEL - VI DTV Status Register
+#define VI_VISEL_COMPONENT (1 << 0)
 
 // HBE - Border HBE
 #define VI_HBE_BRDR_EN (1 << 15)

@@ -14,31 +14,27 @@ typedef struct SCRegion {
     char name[3]; // at 0x1
 } SCRegion;
 
-static SCArea ProductAreaAndStringTbl[] = {
-    {SC_AREA_JPN, "JPN"},
-    {SC_AREA_USA, "USA"},
-    {SC_AREA_EUR, "EUR"},
-    {SC_AREA_AUS, "AUS"},
-    {SC_AREA_BRA, "BRA"},
-    {SC_AREA_TWN, "TWN"},
-    {SC_AREA_TWN, "ROC"},
-    {SC_AREA_KOR, "KOR"},
-    {SC_AREA_HKG, "HKG"},
-    {SC_AREA_ASI, "ASI"},
-    {SC_AREA_LTN, "LTN"},
-    {SC_AREA_SAF, "SAF"},
-    {SC_AREA_CHN, "CHN"},
-    {-1, ""}
-};
+static SCArea ProductAreaAndStringTbl[] = {{SC_AREA_JPN, "JPN"},
+                                           {SC_AREA_USA, "USA"},
+                                           {SC_AREA_EUR, "EUR"},
+                                           {SC_AREA_AUS, "AUS"},
+                                           {SC_AREA_BRA, "BRA"},
+                                           {SC_AREA_TWN, "TWN"},
+                                           {SC_AREA_TWN, "ROC"},
+                                           {SC_AREA_KOR, "KOR"},
+                                           {SC_AREA_HKG, "HKG"},
+                                           {SC_AREA_ASI, "ASI"},
+                                           {SC_AREA_LTN, "LTN"},
+                                           {SC_AREA_SAF, "SAF"},
+                                           {SC_AREA_CHN, "CHN"},
+                                           {-1, ""}};
 
-static SCRegion ProductGameRegionAndStringTbl[] = {
-    {SC_REGION_JP, "JP"},
-    {SC_REGION_US, "US"},
-    {SC_REGION_EU, "EU"},
-    {SC_REGION_KR, "KR"},
-    {SC_REGION_CN, "CN"},
-    {-1, ""}
-};
+static SCRegion ProductGameRegionAndStringTbl[] = {{SC_REGION_JP, "JP"},
+                                                   {SC_REGION_US, "US"},
+                                                   {SC_REGION_EU, "EU"},
+                                                   {SC_REGION_KR, "KR"},
+                                                   {SC_REGION_CN, "CN"},
+                                                   {-1, ""}};
 
 BOOL __SCF1(const char* type, char* buf, u32 sz) {
     u8 ptext;

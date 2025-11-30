@@ -32,7 +32,7 @@ void RemoteSpeakerManager::Setup() {
     OSCreateAlarm(&mRemoteSpeakerAlarm);
 
     OSSetPeriodicAlarm(&mRemoteSpeakerAlarm, OSGetTime(),
-                       OSNanosecondsToTicks(SPEAKER_ALARM_PERIOD_NSEC),
+                       OS_NSEC_TO_TICKS(SPEAKER_ALARM_PERIOD_NSEC),
                        RemoteSpeakerAlarmProc);
 
     mInitialized = true;

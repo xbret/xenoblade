@@ -1,7 +1,8 @@
 #ifndef RVL_SDK_OS_TIME_H
 #define RVL_SDK_OS_TIME_H
-#include <revolution/os/OSHardware.h>
 #include <types.h>
+
+#include <revolution/OS/OSHardware.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -10,16 +11,16 @@ extern "C" {
 #define OS_TIME_SPEED (OS_BUS_CLOCK_SPEED / 4)
 
 // OS time -> Real time
-#define OSTicksToSeconds(x) ((x) / (OS_TIME_SPEED))
-#define OSTicksToMilliseconds(x) ((x) / (OS_TIME_SPEED / 1000))
-#define OSTicksToMicroseconds(x) (((x)*8) / (OS_TIME_SPEED / 125000))
-#define OSTicksToNanoseconds(x) (((x)*8000) / (OS_TIME_SPEED / 125000))
+#define OS_TICKS_TO_SEC(x) ((x) / (OS_TIME_SPEED))
+#define OS_TICKS_TO_MSEC(x) ((x) / (OS_TIME_SPEED / 1000))
+#define OS_TICKS_TO_USEC(x) (((x) * 8) / (OS_TIME_SPEED / 125000))
+#define OS_TICKS_TO_NSEC(x) (((x) * 8000) / (OS_TIME_SPEED / 125000))
 
 // Real time -> OS time
-#define OSSecondsToTicks(x) ((x) * (OS_TIME_SPEED))
-#define OSMillisecondsToTicks(x) ((x) * (OS_TIME_SPEED / 1000))
-#define OSMicrosecondsToTicks(x) ((x) * (OS_TIME_SPEED / 125000) / 8)
-#define OSNanosecondsToTicks(x) ((x) * (OS_TIME_SPEED / 125000) / 8000)
+#define OS_SEC_TO_TICKS(x) ((x) * (OS_TIME_SPEED))
+#define OS_MSEC_TO_TICKS(x) ((x) * (OS_TIME_SPEED / 1000))
+#define OS_USEC_TO_TICKS(x) ((x) * (OS_TIME_SPEED / 125000) / 8)
+#define OS_NSEC_TO_TICKS(x) ((x) * (OS_TIME_SPEED / 125000) / 8000)
 
 // Interpret as signed to find tick delta
 #define OS_TICKS_DELTA(x, y) ((s32)x - (s32)y)

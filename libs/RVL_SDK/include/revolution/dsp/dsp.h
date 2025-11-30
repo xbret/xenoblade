@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 // Forward declarations
-typedef struct DSPTask;
+struct DSPTask;
 
 // General-purpose typedef
 typedef void* DSPMail;
