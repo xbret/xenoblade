@@ -17,10 +17,12 @@ namespace g3d {
  ******************************************************************************/
 class LightObj {
 public:
+    LightObj(const LightObj& rLightObj);
     LightObj() : mFlag(0) {}
     ~LightObj() {}
 
     LightObj& operator=(const LightObj& rOther);
+    bool operator!=(const LightObj& rOther) const;
 
     operator GXLightObj*() {
         return &mObj;
@@ -34,12 +36,12 @@ public:
     void InitLightColor(GXColor color);
     void InitLightPos(f32 x, f32 y, f32 z);
     void InitLightDir(f32 nx, f32 ny, f32 nz);
-    void InitSpecularDir(f32 nx, f32 ny, f32 nz);
     void InitLightSpot(f32 cutoff, GXSpotFn spotFn);
     void InitLightAttnA(f32 aa, f32 ab, f32 ac);
     void InitLightDistAttn(f32 distance, f32 brightness,
                            GXDistAttnFn distAttnFn);
     void InitLightAttnK(f32 ka, f32 kb, f32 kc);
+    void InitSpecularDir(f32 nx, f32 ny, f32 nz);
     void InitLightShininess(f32 shininess);
 
     void GetLightPos(math::VEC3* pPos) const;
@@ -123,6 +125,9 @@ public:
     bool IsValid() const {
         return mpSetting != NULL && mpLightSetData != NULL;
     }
+
+    LightObj* GetLightObj(u32 lightIdx);
+    AmbLightObj* GetAmbLightObj();
 
     bool SelectLightObj(u32 lightIdx, int lightObjIdx);
     bool SelectAmbLightObj(int lightObjIdx);

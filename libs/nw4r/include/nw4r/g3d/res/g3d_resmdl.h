@@ -110,13 +110,16 @@ struct ResMdlData {
     s32 toResVtxNrmDic;                // at 0x1C
     s32 toResVtxClrDic;                // at 0x20
     s32 toResVtxTexCoordDic;           // at 0x24
-    s32 toResMatDic;                   // at 0x28
-    s32 toResTevDic;                   // at 0x2C
-    s32 toResShpDic;                   // at 0x30
-    s32 toResTexNameToTexPlttInfoDic;  // at 0x34
-    s32 toResPlttNameToTexPlttInfoDic; // at 0x38
-    s32 name;                          // at 0x3C
-    ResMdlInfoData info;               // at 0x40
+    s32 toResVtxFurVecDic;             // at 0x28
+    s32 toResVtxFurPosDic;             // at 0x2C
+    s32 toResMatDic;                   // at 0x30 
+    s32 toResTevDic;                   // at 0x34 
+    s32 toResShpDic;                   // at 0x38 
+    s32 toResTexNameToTexPlttInfoDic;  // at 0x3C 
+    s32 toResPlttNameToTexPlttInfoDic; // at 0x40
+    s32 toResUserData;                 // at 0x44 
+    s32 name;                          // at 0x48
+    ResMdlInfoData info;               // at 0x4C
 };
 
 class ResMdl : public ResCommon<ResMdlData> {
