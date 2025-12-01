@@ -1,7 +1,11 @@
+#include "nw4r/g3d/g3d_light.h"
+#include "macros.h"
+#include "nw4r/g3d/platform/g3d_cpu.h"
 #include <nw4r/g3d.h>
 #include <nw4r/math.h>
 
 #include <algorithm>
+#include <cstddef>
 
 namespace nw4r {
 namespace g3d {
@@ -11,6 +15,11 @@ namespace g3d {
  * LightObj
  *
  ******************************************************************************/
+LightObj::LightObj(const LightObj& rLightObj){
+    mFlag = rLightObj.mFlag;
+    detail::Copy32ByteBlocks(&mObj, &rLightObj.mObj, sizeof(GXLightObj));
+}
+
 LightObj& LightObj::operator=(const LightObj& rOther) {
     if (this != &rOther) {
         mFlag = rOther.mFlag;
@@ -18,6 +27,31 @@ LightObj& LightObj::operator=(const LightObj& rOther) {
     }
 
     return *this;
+}
+
+//TODO(amber) this can't be it
+bool LightObj::operator!=(const LightObj& rOther) const {
+    bool result = false;
+    
+    if(mFlag != rOther.mFlag
+        ||mObj.dummy[0] != rOther.mObj.dummy[0]
+        ||mObj.dummy[1] != rOther.mObj.dummy[1]
+        ||mObj.dummy[2] != rOther.mObj.dummy[2]
+        ||mObj.dummy[3] != rOther.mObj.dummy[3]
+        ||mObj.dummy[4] != rOther.mObj.dummy[4]
+        ||mObj.dummy[5] != rOther.mObj.dummy[5]
+        ||mObj.dummy[6] != rOther.mObj.dummy[6]
+        ||mObj.dummy[7] != rOther.mObj.dummy[7]
+        ||mObj.dummy[8] != rOther.mObj.dummy[8]
+        ||mObj.dummy[9] != rOther.mObj.dummy[9]
+        ||mObj.dummy[10] != rOther.mObj.dummy[10]
+        ||mObj.dummy[11] != rOther.mObj.dummy[11]
+        ||mObj.dummy[12] != rOther.mObj.dummy[12]
+        ||mObj.dummy[13] != rOther.mObj.dummy[13]
+        ||mObj.dummy[14] != rOther.mObj.dummy[14]
+        ||mObj.dummy[15] != rOther.mObj.dummy[15]) result = true;
+ 
+    return result;
 }
 
 void LightObj::Clear() {
@@ -38,13 +72,6 @@ void LightObj::InitLightDir(f32 nx, f32 ny, f32 nz) {
     GXInitLightDir(&mObj, nx, ny, nz);
     mFlag &= ~FLAG_SPECULAR;
     mFlag |= FLAG_SPOT;
-}
-
-void LightObj::InitSpecularDir(f32 nx, f32 ny, f32 nz) {
-    GXInitLightDir(&mObj, nx, ny, nz);
-    mFlag &= ~FLAG_SPOT;
-    mFlag |= FLAG_SPECULAR;
-    mFlag |= FLAG_SPECULAR_DIR;
 }
 
 void LightObj::InitLightSpot(f32 cutoff, GXSpotFn spotFn) {
@@ -70,6 +97,13 @@ void LightObj::InitLightAttnK(f32 ka, f32 kb, f32 kc) {
     GXInitLightAttnK(&mObj, ka, kb, kc);
     mFlag &= ~FLAG_SPECULAR;
     mFlag |= FLAG_SPOT;
+}
+
+void LightObj::InitSpecularDir(f32 nx, f32 ny, f32 nz) {
+    GXInitLightDir(&mObj, nx, ny, nz);
+    mFlag &= ~FLAG_SPOT;
+    mFlag |= FLAG_SPECULAR;
+    mFlag |= FLAG_SPECULAR_DIR;
 }
 
 void LightObj::InitLightShininess(f32 shininess) {
@@ -225,6 +259,25 @@ void LightSetting::ApplyViewMtx(const math::MTX34& rCamera, u32 numLight) {
  * LightSet
  *
  ******************************************************************************/
+LightObj* LightSet::GetLightObj(u32 lightIdx){
+    if (IsValid() && lightIdx < G3DState::NUM_LIGHT_IN_LIGHT_SET) {
+        s8 lightObjIdx = mpLightSetData->idxLight[lightIdx];
+        if(lightObjIdx >= 0){
+            return &mpSetting->GetLightObjArray()[lightObjIdx];
+        }
+    }
+
+    return NULL;
+}
+
+AmbLightObj* LightSet::GetAmbLightObj(){
+    if (IsValid() &&  mpLightSetData->idxAmbLight >= 0) {
+        return &mpSetting->GetAmbLightObjArray()[mpLightSetData->idxAmbLight];
+    }
+
+    return NULL;
+}
+
 bool LightSet::SelectLightObj(u32 lightIdx, int lightObjIdx) {
     if (IsValid() && lightIdx < G3DState::NUM_LIGHT_IN_LIGHT_SET) {
         if (lightObjIdx < 0) {

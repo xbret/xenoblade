@@ -529,12 +529,13 @@ struct ResMatData {
     s32 toResTevData;           // at 0x28
     u32 numResTexPlttInfo;      // at 0x2C
     s32 toResTexPlttInfo;       // at 0x30
-    s32 toResUserData;          // at 0x34
-    s32 toResMatDLData;         // at 0x38
-    ResTexObjData texObjData;   // at 0x3C
-    ResTlutObjData tlutObjData; // at 0x140
-    ResTexSrtData texSrtData;   // at 0x1A4
-    ResChanData chan;           // at 0x3EC
+    s32 toResMatFurData;        // at 0x34
+    s32 toResUserData;          // at 0x38
+    s32 toResMatDLData;         // at 0x3C
+    ResTexObjData texObjData;   // at 0x140
+    ResTlutObjData tlutObjData; // at 0x1A4
+    ResTexSrtData texSrtData;   // at 0x3EC
+    ResChanData chan;           // at 0x3F0
 };
 
 class ResMat : public ResCommon<ResMatData> {

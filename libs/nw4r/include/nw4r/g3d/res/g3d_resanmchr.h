@@ -232,9 +232,10 @@ struct ResAnmChrData {
     u32 revision;              // at 0x8
     s32 toResFileData;         // at 0xC
     s32 toChrDataDic;          // at 0x10
-    s32 name;                  // at 0x14
-    s32 original_path;         // at 0x18
-    ResAnmChrInfoData info;    // at 0x1C
+    s32 toResUserData;         // at 0x14
+    s32 name;                  // at 0x18
+    s32 original_path;         // at 0x1C
+    ResAnmChrInfoData info;    // at 0x20
 };
 
 class ResAnmChr : public ResCommon<ResAnmChrData> {

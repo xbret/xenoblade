@@ -105,6 +105,7 @@ public:
     void CalcViewMtx(const math::MTX34* pCamera);
 
     bool SetMtx(ScnObjMtxType type, const math::MTX34* pMtx);
+    bool SetMtx(ScnObjMtxType type, const math::MTX34& pMtx);
     bool GetMtx(ScnObjMtxType type, math::MTX34* pMtx) const;
     const math::MTX34* GetMtxPtr(ScnObjMtxType type) const {
         return &mMtxArray[type];
@@ -360,6 +361,8 @@ private:
  ******************************************************************************/
 class ScnGroup : public ScnObj {
 public:
+    static ScnGroup* Construct(MEMAllocator* pHeap, u32* pSize, u32 maxNumChildren);
+
     ScnGroup(MEMAllocator* pAllocator, ScnObj** ppObj, u32 capacity);
 
     virtual void G3dProc(u32 task, u32 param, void* pInfo); // at 0xC

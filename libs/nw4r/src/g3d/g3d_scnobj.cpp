@@ -1,7 +1,11 @@
+#include "nw4r/g3d/g3d_scnobj.h"
+#include "macros.h"
+#include "revolution/mem/mem_allocator.h"
 #include <nw4r/g3d.h>
 #include <nw4r/math.h>
 
 #include <algorithm>
+#include <cstddef>
 
 namespace nw4r {
 namespace g3d {
@@ -195,6 +199,7 @@ bool ScnObj::GetScnObjOption(u32 option, u32* pValue) const {
     return true;
 }
 
+//unused
 bool ScnObj::SetMtx(ScnObjMtxType type, const math::MTX34* pMtx) {
     if (static_cast<u32>(type) < MTX_TYPE_MAX) {
         if (pMtx != NULL) {
@@ -210,6 +215,20 @@ bool ScnObj::SetMtx(ScnObjMtxType type, const math::MTX34* pMtx) {
 
             math::MTX34Identity(&mMtxArray[type]);
         }
+
+        return true;
+    }
+
+    return false;
+}
+
+bool ScnObj::SetMtx(ScnObjMtxType type, const math::MTX34& pMtx) {
+    if (static_cast<u32>(type) < MTX_TYPE_MAX) {
+        if (type == MTX_LOCAL) {
+            SetScnObjFlag(SCNOBJFLAG_MTX_LOCAL_IDENTITY, FALSE);
+        }
+
+        math::MTX34Copy(&mMtxArray[type], &pMtx);
 
         return true;
     }
@@ -427,7 +446,32 @@ void ScnLeaf::DefG3dProcScnLeaf(u32 task, u32 param, void* pInfo) {
  * ScnGroup
  *
  ******************************************************************************/
-ScnObj::ForEachResult ScnGroup::ForEach(ForEachFunc pFunc, void* pInfo,
+
+ScnGroup* ScnGroup::Construct(MEMAllocator* pHeap, u32* pSize, u32 maxNumChildren) {
+    ScnGroup* pObj = NULL;
+    u32 sizeScnGroup = sizeof(ScnGroup);
+    u32 sizeCldArray = maxNumChildren * sizeof(ScnObj*);
+    u32 ofsCldArray = align4(sizeScnGroup + sizeCldArray);
+    u32 size = ROUND_DOWN(ofsCldArray, 4); //TODO(amber) is this really round down?
+
+    if(pSize != NULL){
+        *pSize = size;
+    }
+
+    if(pHeap != NULL){
+        u8* buf = reinterpret_cast<u8*>(Alloc(pHeap, size));
+        
+        if(buf == NULL){
+            return NULL;
+        }
+        
+        pObj = new (buf) ScnGroup(pHeap, (ScnObj**)(buf + sizeScnGroup), maxNumChildren);
+    }
+
+    return pObj;
+}
+
+ ScnObj::ForEachResult ScnGroup::ForEach(ForEachFunc pFunc, void* pInfo,
                                         bool postOrder) {
     ForEachResult result;
 
@@ -601,11 +645,6 @@ void ScnGroup::DefG3dProcScnGroup(u32 task, u32 param, void* pInfo) {
 bool ScnGroup::Insert(u32 idx, ScnObj* pObj) {
     if (idx <= mNumScnObj && mNumScnObj < mSizeScnObj && pObj != NULL &&
         pObj->GetParent() == NULL) {
-
-        ScnObj** ppObj =
-            std::find(mpScnObjArray, mpScnObjArray + mNumScnObj, pObj);
-
-        if (ppObj == mpScnObjArray + mNumScnObj) {
             for (u32 i = mNumScnObj; i > idx; i--) {
                 mpScnObjArray[i] = mpScnObjArray[i - 1];
             }
@@ -615,7 +654,6 @@ bool ScnGroup::Insert(u32 idx, ScnObj* pObj) {
 
             mNumScnObj++;
             return true;
-        }
     }
 
     return false;
