@@ -1,5 +1,5 @@
-#ifndef NW4R_G3D_RESSHP_H
-#define NW4R_G3D_RESSHP_H
+#ifndef NW4R_G3D_RES_RES_SHP_H
+#define NW4R_G3D_RES_RES_SHP_H
 
 #include <nw4r/types_nw4r.h>
 
@@ -18,14 +18,17 @@ namespace g3d {
  *
  ******************************************************************************/
 struct ResPrePrimDL {
+    static const int SIZE_GXVTXDESCLIST = (GX_VA_TEX7 + 1) + 1;
+    static const int SIZE_GXVTXATTRFMTLIST = (GX_VA_TEX7 - GX_VA_POS + 1) + 1;
+
     union {
         struct {
             u8 cullMode[10];                                          // at 0x0
             u8 vtxDescv[21];                                          // at 0xA
-            u8 _1;                                                    // at 0x1F
+            u8 PADDING_0x1F;                                          // at 0x1F
             u8 vtxFmtv[GX_CP_CMD_SZ * 3];                             // at 0x20
             u8 array[GX_POS_MTX_ARRAY - GX_VA_POS][GX_CP_CMD_SZ * 2]; // at 0x32
-            u8 _[0xE0 - 0xC2];                                        // at 0xC2
+            u8 PADDING_0xC2[0xE0 - 0xC2];                             // at 0xC2
         } dl;
 
         u8 data[0xE0]; // at 0x0
@@ -49,6 +52,16 @@ struct ResCacheVtxDescv {
         u32 data_u32[0xC / sizeof(u32)];
         u8 data[0xC / sizeof(u8)];
     }; // at 0x0
+
+    void Clear() {
+        data_u32[0] = data_u32[1] = data_u32[2] = 0;
+    }
+
+    bool operator==(const ResCacheVtxDescv& rRhs) const {
+        return data_u32[0] == rRhs.data_u32[0] &&
+               data_u32[1] == rRhs.data_u32[1] &&
+               data_u32[2] == rRhs.data_u32[2];
+    }
 };
 
 struct ResMtxSetUsed {
@@ -57,6 +70,14 @@ struct ResMtxSetUsed {
 };
 
 struct ResShpData {
+    enum IDFlag {
+        ID_FLAG_ENVELOPE = (1 << 31),
+    };
+
+    enum Flag {
+        FLAG_INVISIBLE = (1 << 1),
+    };
+
     u32 size;                                         // at 0x0
     s32 toResMdlData;                                 // at 0x4
     s32 curMtxIdx;                                    // at 0x8
@@ -95,8 +116,8 @@ public:
 
     ResVtxPos GetResVtxPos() const;
     ResVtxNrm GetResVtxNrm() const;
-    ResVtxClr GetResVtxClr(u32 i) const;
-    ResVtxTexCoord GetResVtxTexCoord(u32 i) const;
+    ResVtxClr GetResVtxClr(u32 idx) const;
+    ResVtxTexCoord GetResVtxTexCoord(u32 idx) const;
     ResVtxFurPos GetResVtxFurPos() const;
 
     void CallPrePrimitiveDisplayList(bool sync, bool cacheIsSame) const;
@@ -128,13 +149,8 @@ public:
     }
 
     bool IsVisible() const {
-        return ref().flag & FLAG_VISIBLE;
+        return !(ref().flag & ResShpData::FLAG_INVISIBLE);
     }
-
-private:
-    enum Flag {
-        FLAG_VISIBLE = (1 << 1),
-    };
 };
 
 } // namespace g3d

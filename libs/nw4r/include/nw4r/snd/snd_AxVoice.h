@@ -2,16 +2,31 @@
 #define NW4R_SND_AX_VOICE_H
 #include <nw4r/types_nw4r.h>
 
-#include <nw4r/snd/snd_Common.h>
+#include <nw4r/snd/snd_Types.h>
 
 #include <nw4r/ut.h>
 
 #include <revolution/AX.h>
 
+#include <climits>
+
 namespace nw4r {
 namespace snd {
 namespace detail {
 
+inline int CalcAxvpbDelta(u16 init, u16 target) {
+    return (target - init) / AX_SAMPLES_PER_FRAME;
+}
+
+inline u16 CalcMixVolume(f32 volume) {
+    return ut::Min<u32>(USHRT_MAX, AX_MAX_VOLUME * volume);
+}
+
+/******************************************************************************
+ *
+ * AxVoiceParamBlock
+ *
+ ******************************************************************************/
 class AxVoiceParamBlock {
 public:
     AxVoiceParamBlock();
@@ -123,6 +138,11 @@ private:
     u16 mVolume;                    // at 0xE
 };
 
+/******************************************************************************
+ *
+ * AxVoice
+ *
+ ******************************************************************************/
 class AxVoice {
     friend class AxVoiceManager;
 
@@ -263,18 +283,10 @@ private:
     void* mCallbackData;       // at 0x3C
 
 public:
-    NW4R_UT_LIST_NODE_DECL(); // at 0x40
+    NW4R_UT_LINKLIST_NODE_DECL(); // at 0x40
 };
 
-NW4R_UT_LIST_TYPEDEF_DECL(AxVoice);
-
-inline int CalcAxvpbDelta(u16 init, u16 target) {
-    return (target - init) / AX_SAMPLES_PER_FRAME;
-}
-
-inline u16 CalcMixVolume(f32 volume) {
-    return ut::Min<u32>(0xFFFF, AX_MAX_VOLUME * volume);
-}
+NW4R_UT_LINKLIST_TYPEDEF_DECL(AxVoice);
 
 } // namespace detail
 } // namespace snd

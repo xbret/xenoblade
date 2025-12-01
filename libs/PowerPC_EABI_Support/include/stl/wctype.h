@@ -1,5 +1,5 @@
-#ifndef _WCTYPE_H
-#define _WCTYPE_H
+#ifndef MSL_WCTYPE_H
+#define MSL_WCTYPE_H
 
 #include <types.h>
 #include <locale.h>

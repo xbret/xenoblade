@@ -6,9 +6,11 @@ namespace nw4r {
 namespace ut {
 namespace {
 
-/**
+/******************************************************************************
+ *
  * Value operations
- */
+ *
+ ******************************************************************************/
 template <typename T> inline T Max(T t1, T t2) {
     return (t1 < t2) ? t2 : t1;
 }
@@ -22,25 +24,25 @@ template <typename T> inline T Clamp(T value, T min, T max) {
 }
 
 template <typename T> inline T Abs(T x) {
-    // Static cast needed to break abs optimization during instruction selection
+    // Static cast needed to break abs optimization
     return x < 0 ? static_cast<T>(-x) : static_cast<T>(x);
 }
 
 template <> f32 inline Abs(register f32 x) {
     register f32 ax;
 
-    // clang-format off
-    asm {
+    ASM (
         fabs ax, x
-    }
-    // clang-format on
+    )
 
     return ax;
 }
 
-/**
+/******************************************************************************
+ *
  * Bit operations
- */
+ *
+ ******************************************************************************/
 template <typename T> inline T BitExtract(T bits, int pos, int len) {
     T mask = (1 << len) - 1;
     return (bits >> pos) & mask;
@@ -50,9 +52,11 @@ template <typename T> inline bool TestBit(T t, int pos) {
     return BitExtract<T>(t, sizeof(T), pos);
 }
 
-/**
- * Pointer operations
- */
+/******************************************************************************
+ *
+ * Pointer arithmetic
+ *
+ ******************************************************************************/
 inline u32 GetIntPtr(const void* pPtr) {
     return reinterpret_cast<u32>(pPtr);
 }
@@ -73,9 +77,11 @@ inline int ComparePtr(const void* pPtr1, const void* pPtr2) {
     return static_cast<int>(GetIntPtr(pPtr1) - GetIntPtr(pPtr2));
 }
 
-/**
+/******************************************************************************
+ *
  * Rounding
- */
+ *
+ ******************************************************************************/
 template <typename T> inline T RoundUp(T t, unsigned int alignment) {
     return (alignment + t - 1) & ~(alignment - 1);
 }

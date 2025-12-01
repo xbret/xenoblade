@@ -20,7 +20,7 @@ struct FogData {
     f32 farz;               // at 0x10
     GXColor color;          // at 0x14
     GXBool adjEnable;       // at 0x18
-    u8 _0;                  // at 0x19
+    u8 PADDING_0x19;        // at 0x19
     u16 adjCenter;          // at 0x1A
     GXFogAdjTable adjTable; // at 0x1C
 };
@@ -31,9 +31,6 @@ public:
 
     void Init();
     Fog CopyTo(void* pDst) const;
-
-    void GetFog(GXFogType* type, f32* startz, f32* endz,
-                    f32* nearz, f32* farz, GXColor* color);
 
     void SetFogRangeAdjParam(u16 width, u16 center,
                              const math::MTX44& rProjMtx);
@@ -76,6 +73,9 @@ public:
 
         ref().color = color;
     }
+
+    void GetFog(GXFogType* type, f32* startz, f32* endz,
+                f32* nearz, f32* farz, GXColor* color);
 
     bool IsFogRangeAdjEnable() const {
         return IsValid() && ref().adjEnable == TRUE;

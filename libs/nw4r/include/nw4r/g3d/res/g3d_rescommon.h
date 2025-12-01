@@ -1,8 +1,14 @@
-#ifndef NW4R_G3D_RES_COMMON_H
-#define NW4R_G3D_RES_COMMON_H
+#ifndef NW4R_G3D_RES_RES_COMMON_H
+#define NW4R_G3D_RES_RES_COMMON_H
 #include <nw4r/types_nw4r.h>
 
 #include <revolution/GX.h>
+
+/******************************************************************************
+ *
+ * Macros
+ *
+ ******************************************************************************/
 
 /**
  * Define ResName pascal string for file resource groups.
@@ -19,8 +25,8 @@
     nw4r::g3d::ResName((char*)(BASE) + (OFS) - sizeof(u32))
 
 /**
- * Define constructor and ref functions for resource classes.
- * NOTE: Hides ResCommon::ref, why did they do this???
+ * Define common functions for resource classes.
+ * @note Hides ResCommon::ref, why did they do this???
  */
 #define NW4R_G3D_RESOURCE_FUNC_DEF(T)                                          \
     NW4R_G3D_RESOURCE_FUNC_DEF_IMPL(T, T##Data)
@@ -28,7 +34,7 @@
     NW4R_G3D_RESOURCE_FUNC_DEF_IMPL(TCLS, TDATA)
 
 #define NW4R_G3D_RESOURCE_FUNC_DEF_IMPL(TCLS, TDATA)                           \
-    explicit TCLS(void* pData) : nw4r::g3d::ResCommon<TDATA>(pData) {}         \
+    explicit TCLS(void* pData = NULL) : nw4r::g3d::ResCommon<TDATA>(pData) {}  \
                                                                                \
     TDATA& ref() {                                                             \
         return *ptr();                                                         \
@@ -36,6 +42,14 @@
                                                                                \
     const TDATA& ref() const {                                                 \
         return *ptr();                                                         \
+    }                                                                          \
+                                                                               \
+    bool operator==(const TCLS& rOther) const {                                \
+        return ptr() == rOther.ptr();                                          \
+    }                                                                          \
+                                                                               \
+    bool operator!=(const TCLS& rOther) const {                                \
+        return ptr() != rOther.ptr();                                          \
     }
 
 namespace nw4r {
@@ -57,13 +71,6 @@ public:
         return mpData != NULL;
     }
 
-    bool operator==(const ResCommon& rOther) const {
-        return ptr() == rOther.ptr();
-    }
-    bool operator!=(const ResCommon& rOther) const {
-        return ptr() != rOther.ptr();
-    }
-
     T* ptr() {
         return mpData;
     }
@@ -78,49 +85,49 @@ public:
         return *mpData;
     }
 
-    template <typename T> T* ofs_to_ptr_raw(s32 ofs) {
-        return reinterpret_cast<T*>((char*)mpData + ofs);
+    template <typename TTo> TTo* ofs_to_ptr_raw(s32 ofs) {
+        return reinterpret_cast<TTo*>((char*)mpData + ofs);
     }
-    template <typename T> const T* ofs_to_ptr_raw(s32 ofs) const {
-        return reinterpret_cast<const T*>((char*)mpData + ofs);
+    template <typename TTo> const TTo* ofs_to_ptr_raw(s32 ofs) const {
+        return reinterpret_cast<const TTo*>((char*)mpData + ofs);
     }
 
-    template <typename T> T* ofs_to_ptr(s32 ofs) {
+    template <typename TTo> TTo* ofs_to_ptr(s32 ofs) {
         u8* pPtr = reinterpret_cast<u8*>(mpData);
 
         if (ofs != 0) {
-            return reinterpret_cast<T*>(pPtr + ofs);
+            return reinterpret_cast<TTo*>(pPtr + ofs);
         }
 
         return NULL;
     }
-    template <typename T> const T* ofs_to_ptr(s32 ofs) const {
+    template <typename TTo> const TTo* ofs_to_ptr(s32 ofs) const {
         const u8* pPtr = reinterpret_cast<const u8*>(mpData);
 
         if (ofs != 0) {
-            return reinterpret_cast<const T*>(pPtr + ofs);
+            return reinterpret_cast<const TTo*>(pPtr + ofs);
         }
 
         return NULL;
     }
 
-    template <typename T> T ofs_to_obj(s32 ofs) {
+    template <typename TTo> TTo ofs_to_obj(s32 ofs) {
         u8* pPtr = reinterpret_cast<u8*>(mpData);
 
         if (ofs != 0) {
-            return T(pPtr + ofs);
+            return TTo(pPtr + ofs);
         }
 
-        return T(NULL);
+        return TTo(NULL);
     }
-    template <typename T> const T ofs_to_obj(s32 ofs) const {
+    template <typename TTo> const TTo ofs_to_obj(s32 ofs) const {
         const u8* pPtr = reinterpret_cast<const u8*>(mpData);
 
         if (ofs != 0) {
-            return T(const_cast<u8*>(pPtr + ofs));
+            return TTo(const_cast<u8*>(pPtr + ofs));
         }
 
-        return T(NULL);
+        return TTo(NULL);
     }
 
 private:
@@ -165,7 +172,7 @@ public:
         return ref().str;
     }
 
-    bool operator==(ResName rhs) const;
+    bool operator==(const ResName rhs) const;
 };
 
 /******************************************************************************
@@ -198,6 +205,81 @@ public:
         return ofs_to_ptr<u8>(ref().toDL);
     }
 };
+
+/******************************************************************************
+ *
+ * Model bytecode
+ *
+ ******************************************************************************/
+namespace ResByteCodeData {
+
+enum OpCode {
+    NOOP,   // No operation
+    END,    // End of bytecode
+    CALC,   // Calculate matrix
+    WEIGHT, // Apply weighting
+    DRAW,   // Draw polygon
+    EVPMTX, // Envelope matrix
+    MTXDUP  // Duplicate matrix
+};
+
+// CALC opcode layout
+struct CalcParams {
+    u8 opcode;        // at 0x0
+    u8 nodeIdHi;      // at 0x1
+    u8 nodeIdLo;      // at 0x2
+    u8 parentMtxIdHi; // at 0x1
+    u8 parentMtxIdLo; // at 0x2
+};
+
+// WEIGHT opcode layout
+struct WeightParams {
+    u8 opcode;      // at 0x0
+    u8 tgtIdHi;     // at 0x1
+    u8 tgtIdLo;     // at 0x2
+    u8 numBlendMtx; // at 0x3
+};
+// WEIGHT opcode layout - weighting entry
+struct WeightEntry {
+    u8 mtxIdHi;  // at 0x0
+    u8 mtxIdLo;  // at 0x1
+    u8 fWeight0; // at 0x2
+    u8 fWeight1; // at 0x3
+    u8 fWeight2; // at 0x4
+    u8 fWeight3; // at 0x5
+};
+
+// DRAW opcode layout
+struct DrawParams {
+    u8 opcode;   // at 0x0
+    u8 matIdHi;  // at 0x3
+    u8 matIdLo;  // at 0x4
+    u8 shpIdHi;  // at 0x1
+    u8 shpIdLo;  // at 0x2
+    u8 nodeIdHi; // at 0x5
+    u8 nodeIdLo; // at 0x6
+    u8 priority; // at 0x7
+};
+
+// EVPMTX opcode layout
+struct EvpMtxParams {
+    u8 opcode;   // at 0x0
+    u8 mtxIdHi;  // at 0x1
+    u8 mtxIdLo;  // at 0x2
+    u8 nodeIdHi; // at 0x1
+    u8 nodeIdLo; // at 0x2
+};
+
+// MTXDUP opcode layout
+struct MtxDupParams {
+    u8 opcode;      // at 0x0
+    u8 toMtxIdHi;   // at 0x1
+    u8 toMtxIdLo;   // at 0x2
+    u8 fromMtxIdHi; // at 0x1
+    u8 fromMtxIdLo; // at 0x2
+};
+
+} // namespace ResByteCodeData
 
 namespace detail {
 
@@ -265,7 +347,24 @@ void ResWriteCPCmd(u8* pPtr, u8 addr, u32 value);
  * GX Transform Unit (XF)
  *
  ******************************************************************************/
+inline void ResReadXFCmd(const u8* pPtr, u32* pOut) {
+    // Skip over FIFO command byte + size short + addr short
+    *pOut = ResRead_u32(pPtr + 5);
+}
+
 void ResWriteXFCmd(u8* pPtr, u16 addr, u32 value);
+
+/******************************************************************************
+ *
+ * Utility functions
+ *
+ ******************************************************************************/
+inline GXColor GetRGBA(u8 r, u8 g, u8 b, u8 a) {
+    return (GXColor){r, g, b, a};
+}
+inline GXColorS10 GetRGBAS10(s16 r, s16 g, s16 b, s16 a) {
+    return (GXColorS10){r, g, b, a};
+}
 
 } // namespace detail
 } // namespace g3d

@@ -1,14 +1,12 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/ut.h>
 
 namespace nw4r {
 namespace ut {
 namespace {
 
-template <typename T> void ResolveOffset(T*& ptr, void* base) {
-    ptr = reinterpret_cast<T*>(static_cast<char*>(base) +
-                               reinterpret_cast<std::ptrdiff_t>(ptr));
+template <typename T> inline void ResolveOffset(T*& rpPtr, void* pBase) {
+    rpPtr = reinterpret_cast<T*>(static_cast<char*>(pBase) +
+                                 reinterpret_cast<s32>(rpPtr));
 }
 
 } // namespace
@@ -17,92 +15,91 @@ ResFont::ResFont() {}
 
 ResFont::~ResFont() {}
 
-bool ResFont::SetResource(void* buffer) {
-    BinaryFileHeader* header = static_cast<BinaryFileHeader*>(buffer);
-    FontInformation* info = NULL;
+bool ResFont::SetResource(void* pBuffer) {
+    BinaryFileHeader* pHeader = static_cast<BinaryFileHeader*>(pBuffer);
+    FontInformation* pInfo = NULL;
 
     if (!IsManaging(NULL)) {
         return false;
     }
 
-    if (header->signature == SIGNATURE_UNPACKED) {
-        BinaryBlockHeader* block = reinterpret_cast<BinaryBlockHeader*>(
-            reinterpret_cast<char*>(header) + header->headerSize);
+    if (pHeader->signature == SIGNATURE_UNPACKED) {
+        BinaryBlockHeader* pBlock = reinterpret_cast<BinaryBlockHeader*>(
+            reinterpret_cast<char*>(pHeader) + pHeader->headerSize);
 
-        for (int i = 0; i < header->dataBlocks; i++) {
-            if (block->kind == SIGNATURE_FONTINFO) {
-                info = reinterpret_cast<FontInformation*>(block + 1);
+        for (int i = 0; i < pHeader->dataBlocks; i++) {
+            if (pBlock->kind == SIGNATURE_FONTINFO) {
+                pInfo = reinterpret_cast<FontInformation*>(pBlock + 1);
                 break;
             }
 
-            block = reinterpret_cast<BinaryBlockHeader*>(
-                reinterpret_cast<char*>(block) + block->size);
+            pBlock = reinterpret_cast<BinaryBlockHeader*>(
+                reinterpret_cast<char*>(pBlock) + pBlock->size);
         }
     } else {
-        if (header->version == NW4R_VERSION(1, 4)) {
-            if (!IsValidBinaryFile(header, SIGNATURE, NW4R_VERSION(1, 4), 2)) {
+        if (pHeader->version == NW4R_VERSION(1, 4)) {
+            if (!IsValidBinaryFile(pHeader, SIGNATURE, NW4R_VERSION(1, 4), 2)) {
                 return false;
             }
-        } else if (!IsValidBinaryFile(header, SIGNATURE, NW4R_VERSION(1, 2),
+        } else if (!IsValidBinaryFile(pHeader, SIGNATURE, NW4R_VERSION(1, 2),
                                       2)) {
             return false;
         }
 
-        info = Rebuild(header);
+        pInfo = Rebuild(pHeader);
     }
 
-    if (info == NULL) {
+    if (pInfo == NULL) {
         return false;
     }
 
-    SetResourceBuffer(header, info);
+    SetResourceBuffer(pHeader, pInfo);
     InitReaderFunc(GetEncoding());
 
     return true;
 }
 
-FontInformation* ResFont::Rebuild(BinaryFileHeader* header) {
-    BinaryBlockHeader* block = reinterpret_cast<BinaryBlockHeader*>(
-        reinterpret_cast<char*>(header) + header->headerSize);
+FontInformation* ResFont::Rebuild(BinaryFileHeader* pHeader) {
+    BinaryBlockHeader* pBlock = reinterpret_cast<BinaryBlockHeader*>(
+        reinterpret_cast<char*>(pHeader) + pHeader->headerSize);
 
-    FontInformation* info = NULL;
+    FontInformation* pInfo = NULL;
 
-    for (int i = 0; i < header->dataBlocks; i++) {
-
-        switch (block->kind) {
+    for (int i = 0; i < pHeader->dataBlocks; i++) {
+        switch (pBlock->kind) {
         case SIGNATURE_FONTINFO: {
-            info = reinterpret_cast<FontInformation*>(block + 1);
-            ResolveOffset<FontTextureGlyph>(info->pGlyph, header);
+            pInfo = reinterpret_cast<FontInformation*>(pBlock + 1);
+            ResolveOffset<FontTextureGlyph>(pInfo->pGlyph, pHeader);
 
-            if (info->pWidth != 0) {
-                ResolveOffset<FontWidth>(info->pWidth, header);
+            if (pInfo->pWidth != 0) {
+                ResolveOffset<FontWidth>(pInfo->pWidth, pHeader);
             }
 
-            if (info->pMap != 0) {
-                ResolveOffset<FontCodeMap>(info->pMap, header);
+            if (pInfo->pMap != 0) {
+                ResolveOffset<FontCodeMap>(pInfo->pMap, pHeader);
             }
             break;
         }
 
         case SIGNATURE_TEXGLYPH: {
             ResolveOffset<u8>(
-                reinterpret_cast<FontTextureGlyph*>(block + 1)->sheetImage,
-                header);
+                reinterpret_cast<FontTextureGlyph*>(pBlock + 1)->sheetImage,
+                pHeader);
             break;
         }
 
         case SIGNATURE_CHARWIDTH: {
-            FontWidth* width = reinterpret_cast<FontWidth*>(block + 1);
-            if (width->pNext != 0) {
-                ResolveOffset<FontWidth>(width->pNext, header);
+            FontWidth* pWidth = reinterpret_cast<FontWidth*>(pBlock + 1);
+            if (pWidth->pNext != 0) {
+                ResolveOffset<FontWidth>(pWidth->pNext, pHeader);
             }
             break;
         }
 
         case SIGNATURE_CHARMAP: {
-            FontCodeMap* map = reinterpret_cast<FontCodeMap*>(block + 1);
-            if (map->pNext != 0) {
-                ResolveOffset<FontCodeMap>(map->pNext, header);
+            FontCodeMap* pMap = reinterpret_cast<FontCodeMap*>(pBlock + 1);
+            if (pMap->pNext != 0) {
+                ResolveOffset<FontCodeMap>(pMap->pNext, pHeader);
             }
             break;
         }
@@ -116,12 +113,12 @@ FontInformation* ResFont::Rebuild(BinaryFileHeader* header) {
         }
         }
 
-        block = reinterpret_cast<BinaryBlockHeader*>(
-            reinterpret_cast<char*>(block) + block->size);
+        pBlock = reinterpret_cast<BinaryBlockHeader*>(
+            reinterpret_cast<char*>(pBlock) + pBlock->size);
     }
 
-    header->signature = SIGNATURE_UNPACKED;
-    return info;
+    pHeader->signature = SIGNATURE_UNPACKED;
+    return pInfo;
 }
 
 } // namespace ut

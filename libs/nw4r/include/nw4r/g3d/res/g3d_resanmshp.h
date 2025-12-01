@@ -1,17 +1,72 @@
-#ifndef NW4R_G3D_RESANMSHP_H
-#define NW4R_G3D_RESANMSHP_H
+#ifndef NW4R_G3D_RES_RES_ANM_SHP_H
+#define NW4R_G3D_RES_RES_ANM_SHP_H
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/g3d/res/g3d_resanm.h>
 #include <nw4r/g3d/res/g3d_rescommon.h>
+#include <nw4r/g3d/res/g3d_resvtx.h>
 
 namespace nw4r {
 namespace g3d {
 
-// Forward declarations
-struct ShpAnmResult;
+/******************************************************************************
+ *
+ * BlendVtx
+ *
+ ******************************************************************************/
+struct ShpAnmVtxSet {
+    ResVtxPos resVtxPos; // at 0x0
+    ResVtxNrm resVtxNrm; // at 0x4
+    ResVtxClr resVtxClr; // at 0x8
 
+    friend bool operator==(const ShpAnmVtxSet& rLhs, const ShpAnmVtxSet& rRhs);
+};
+
+inline bool operator==(const ShpAnmVtxSet& rLhs, const ShpAnmVtxSet& rRhs) {
+    return rLhs.resVtxPos == rRhs.resVtxPos &&
+           rLhs.resVtxNrm == rRhs.resVtxNrm && rLhs.resVtxClr == rRhs.resVtxClr;
+}
+
+struct BlendVtx {
+    ShpAnmVtxSet vtxSet; // at 0x0
+    f32 weight;          // at 0xC
+};
+
+/******************************************************************************
+ *
+ * ShpAnmResult
+ *
+ ******************************************************************************/
+struct ShpAnmResult {
+    enum Flag {
+        FLAG_ANM_EXISTS = (1 << 0),
+        FLAG_ANM_VTXPOS = (1 << 1),
+        FLAG_ANM_VTXNRM = (1 << 2),
+        FLAG_ANM_VTXCLR = (1 << 3),
+    };
+
+    static const int MAX_KEY_SHAPE = 32;
+
+    u32 flags;                        // at 0x0
+    u32 numKeyShape;                  // at 0x4
+    ShpAnmVtxSet baseShapeVtxSet;     // at 0x8
+    f32 baseShapeWeight;              // at 0x14
+    BlendVtx keyShape[MAX_KEY_SHAPE]; // at 0x18
+};
+
+/******************************************************************************
+ *
+ * ResAnmShp
+ *
+ ******************************************************************************/
 struct ResAnmShpAnmData {
+    enum Flag {
+        FLAG_ANM_EXISTS = (1 << 0),
+        FLAG_ANM_VTXPOS = (1 << 1),
+        FLAG_ANM_VTXNRM = (1 << 2),
+        FLAG_ANM_VTXCLR = (1 << 3),
+    };
+
     u32 flags;                 // at 0x0
     s32 name;                  // at 0x4
     u16 baseShapeVtxIdx;       // at 0x8
@@ -40,7 +95,7 @@ struct ResAnmShpData {
 
 class ResAnmShp : public ResCommon<ResAnmShpData> {
 public:
-    static const u32 SIGNATURE = 'SHP0';
+    static const u32 SIGNATURE = FOURCC('S', 'H', 'P', '0');
     static const int REVISION = 4;
 
 public:
@@ -54,16 +109,16 @@ public:
         return GetRevision() == REVISION;
     }
 
-    void GetAnmResult(ShpAnmResult* pResult, u32 id, f32 frame,
+    void GetAnmResult(ShpAnmResult* pResult, u32 idx, f32 frame,
                       const ShpAnmVtxSet* pShapeArray) const;
 
-    const ResAnmShpAnmData* GetShapeAnm(int i) const {
+    const ResAnmShpAnmData* GetShapeAnm(int idx) const {
         return static_cast<ResAnmShpAnmData*>(
-            ofs_to_obj<ResDic>(ref().toShpDataDic)[i]);
+            ofs_to_obj<ResDic>(ref().toShpDataDic)[idx]);
     }
-    const ResAnmShpAnmData* GetShapeAnm(u32 i) const {
+    const ResAnmShpAnmData* GetShapeAnm(u32 idx) const {
         return static_cast<ResAnmShpAnmData*>(
-            ofs_to_obj<ResDic>(ref().toShpDataDic)[i]);
+            ofs_to_obj<ResDic>(ref().toShpDataDic)[idx]);
     }
 
     u32 GetShapeAnmNumEntries() const {

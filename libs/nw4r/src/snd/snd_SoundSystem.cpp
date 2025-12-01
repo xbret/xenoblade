@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 
 #include <revolution/AX.h>
@@ -8,7 +6,7 @@
 
 namespace {
 
-NW4R_LIB_VERSION(SND, Jun  8 2007, 11:17:15);
+NW4R_LIB_VERSION(SND, "Jun  8 2007", "11:17:15", "0x4199_60831");
 
 static bool sInitialized = false;
 
@@ -65,21 +63,25 @@ void SoundSystem::InitSoundSystem(const SoundSystemParam& rParam, void* pWork,
     }
 
     switch (SCGetSoundMode()) {
-    case SC_SND_MONO:
+    case SC_SND_MONO: {
         detail::AxManager::GetInstance().SetOutputMode(OUTPUT_MODE_MONO);
         break;
+    }
 
-    case SC_SND_STEREO:
+    case SC_SND_STEREO: {
         detail::AxManager::GetInstance().SetOutputMode(OUTPUT_MODE_STEREO);
         break;
+    }
 
-    case SC_SND_SURROUND:
+    case SC_SND_SURROUND: {
         detail::AxManager::GetInstance().SetOutputMode(OUTPUT_MODE_DPL2);
         break;
+    }
 
-    default:
+    default: {
         detail::AxManager::GetInstance().SetOutputMode(OUTPUT_MODE_STEREO);
         break;
+    }
     }
 
     detail::RemoteSpeakerManager::GetInstance().Setup();

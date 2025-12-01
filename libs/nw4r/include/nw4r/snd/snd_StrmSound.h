@@ -14,12 +14,14 @@ namespace snd {
 class StrmSoundHandle;
 
 namespace detail {
-
-// Forward declarations
 template <typename T> class SoundInstanceManager;
+class StrmBufferPool;
+} // namespace detail
+
+namespace detail {
 
 class StrmSound : public BasicSound {
-    friend class StrmSoundHandle;
+    friend class nw4r::snd::StrmSoundHandle;
 
 public:
     NW4R_UT_RTTI_DECL(StrmSound);

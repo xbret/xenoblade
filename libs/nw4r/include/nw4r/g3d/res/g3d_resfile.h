@@ -1,5 +1,5 @@
-#ifndef NW4R_G3D_RESFILE_H
-#define NW4R_G3D_RESFILE_H
+#ifndef NW4R_G3D_RES_RES_FILE_H
+#define NW4R_G3D_RES_RES_FILE_H
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/g3d/res/g3d_resanmchr.h>
@@ -18,6 +18,9 @@
 
 namespace nw4r {
 namespace g3d {
+
+// Forward declarations
+class ResAnmTexPat;
 
 struct ResTopLevelDictData {
     ut::BinaryBlockHeader header; // at 0x0
@@ -38,76 +41,76 @@ public:
     bool CheckRevision() const;
     void DCStore(bool sync);
 
-    bool Bind(ResFile file);
+    bool Bind(const ResFile file);
     void Release();
 
     bool Bind() {
         return Bind(*this);
     }
 
-    ResMdl GetResMdl(const char* str) const;
-    ResMdl GetResMdl(const char* str, u32 len) const;
-    ResMdl GetResMdl(ResName n) const;
+    ResMdl GetResMdl(const char* pName) const;
+    ResMdl GetResMdl(const char* pName, u32 len) const;
+    ResMdl GetResMdl(const ResName name) const;
     ResMdl GetResMdl(int idx) const;
     ResMdl GetResMdl(u32 idx) const;
 
-    ResPltt GetResPltt(const char* str) const;
-    ResPltt GetResPltt(const char* str, u32 len) const;
-    ResPltt GetResPltt(ResName n) const;
+    ResPltt GetResPltt(const char* pName) const;
+    ResPltt GetResPltt(const char* pName, u32 len) const;
+    ResPltt GetResPltt(const ResName name) const;
     ResPltt GetResPltt(int idx) const;
     ResPltt GetResPltt(u32 idx) const;
 
-    ResTex GetResTex(const char* str) const;
-    ResTex GetResTex(const char* str, u32 len) const;
-    ResTex GetResTex(ResName n) const;
+    ResTex GetResTex(const char* pName) const;
+    ResTex GetResTex(const char* pName, u32 len) const;
+    ResTex GetResTex(const ResName name) const;
     ResTex GetResTex(int idx) const;
     ResTex GetResTex(u32 idx) const;
 
-    ResAnmChr GetResAnmChr(const char* str) const;
-    ResAnmChr GetResAnmChr(const char* str, u32 len) const;
-    ResAnmChr GetResAnmChr(ResName n) const;
+    ResAnmChr GetResAnmChr(const char* pName) const;
+    ResAnmChr GetResAnmChr(const char* pName, u32 len) const;
+    ResAnmChr GetResAnmChr(const ResName name) const;
     ResAnmChr GetResAnmChr(int idx) const;
     ResAnmChr GetResAnmChr(u32 idx) const;
 
-    ResAnmVis GetResAnmVis(const char* str) const;
-    ResAnmVis GetResAnmVis(const char* str, u32 len) const;
-    ResAnmVis GetResAnmVis(ResName n) const;
+    ResAnmVis GetResAnmVis(const char* pName) const;
+    ResAnmVis GetResAnmVis(const char* pName, u32 len) const;
+    ResAnmVis GetResAnmVis(const ResName name) const;
     ResAnmVis GetResAnmVis(int idx) const;
     ResAnmVis GetResAnmVis(u32 idx) const;
 
-    ResAnmClr GetResAnmClr(const char* str) const;
-    ResAnmClr GetResAnmClr(const char* str, u32 len) const;
-    ResAnmClr GetResAnmClr(ResName n) const;
+    ResAnmClr GetResAnmClr(const char* pName) const;
+    ResAnmClr GetResAnmClr(const char* pName, u32 len) const;
+    ResAnmClr GetResAnmClr(const ResName name) const;
     ResAnmClr GetResAnmClr(int idx) const;
     ResAnmClr GetResAnmClr(u32 idx) const;
 
-    ResAnmTexPat GetResAnmTexPat(const char* str) const;
-    ResAnmTexPat GetResAnmTexPat(const char* str, u32 len) const;
-    ResAnmTexPat GetResAnmTexPat(ResName n) const;
+    ResAnmTexPat GetResAnmTexPat(const char* pName) const;
+    ResAnmTexPat GetResAnmTexPat(const char* pName, u32 len) const;
+    ResAnmTexPat GetResAnmTexPat(const ResName name) const;
     ResAnmTexPat GetResAnmTexPat(int idx) const;
     ResAnmTexPat GetResAnmTexPat(u32 idx) const;
 
-    ResAnmTexSrt GetResAnmTexSrt(const char* str) const;
-    ResAnmTexSrt GetResAnmTexSrt(const char* str, u32 len) const;
-    ResAnmTexSrt GetResAnmTexSrt(ResName n) const;
+    ResAnmTexSrt GetResAnmTexSrt(const char* pName) const;
+    ResAnmTexSrt GetResAnmTexSrt(const char* pName, u32 len) const;
+    ResAnmTexSrt GetResAnmTexSrt(const ResName name) const;
     ResAnmTexSrt GetResAnmTexSrt(int idx) const;
     ResAnmTexSrt GetResAnmTexSrt(u32 idx) const;
 
-    ResAnmShp GetResAnmShp(const char* str) const;
-    ResAnmShp GetResAnmShp(const char* str, u32 len) const;
-    ResAnmShp GetResAnmShp(ResName n) const;
+    ResAnmShp GetResAnmShp(const char* pName) const;
+    ResAnmShp GetResAnmShp(const char* pName, u32 len) const;
+    ResAnmShp GetResAnmShp(const ResName name) const;
     ResAnmShp GetResAnmShp(int idx) const;
     ResAnmShp GetResAnmShp(u32 idx) const;
 
-    ResAnmScn GetResAnmScn(const char* str) const;
-    ResAnmScn GetResAnmScn(const char* str, u32 len) const;
-    ResAnmScn GetResAnmScn(ResName n) const;
+    ResAnmScn GetResAnmScn(const char* pName) const;
+    ResAnmScn GetResAnmScn(const char* pName, u32 len) const;
+    ResAnmScn GetResAnmScn(const ResName name) const;
     ResAnmScn GetResAnmScn(int idx) const;
     ResAnmScn GetResAnmScn(u32 idx) const;
 
-    void* GetExternalData(const char* str) const;
-    void* GetExternalData(const char* str, u32 len) const;
-    void* GetExternalData(ResName n) const;
+    void* GetExternalData(const char* pName) const;
+    void* GetExternalData(const char* pName, u32 len) const;
+    void* GetExternalData(const ResName name) const;
     void* GetExternalData(int idx) const;
     void* GetExternalData(u32 idx) const;
 

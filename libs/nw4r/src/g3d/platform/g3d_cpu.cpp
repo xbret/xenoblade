@@ -1,75 +1,61 @@
-#include <nw4r/g3d/platform/g3d_cpu.h>
+#include <nw4r/g3d.h>
 
-namespace nw4r
-{
-    namespace g3d
-    {
-        namespace detail
-        {
-            void Copy32ByteBlocks(void *dest, const void *src, u32 n)
-            {
-                n /= 32;
-                register const char *csrc = (const char *)src;
-                register char *cdest = (char *)dest;
+namespace nw4r {
+namespace g3d {
+namespace detail {
 
-                while (n-- > 0)
-                {
-                    asm
-                    {
-                        lfd f0, 0(csrc)
-                        stfd f0, 0(cdest)
+void Copy32ByteBlocks(register void* pDst, register const void* pSrc,
+                      register u32 size) {
+    register f32 work0, work1, work2, work3;
 
-                        lfd f1, 8(csrc)
-                        stfd f1, 8(cdest)
+    for (size /= 32; size > 0; size--) {
+        ASM (
+            lfd  work0, 0(pSrc)
+            stfd work0, 0(pDst)
 
-                        lfd f0, 16(csrc)
-                        stfd f0, 16(cdest)
-                        
-                        lfd f1, 24(csrc)
-                        stfd f1, 24(cdest)
-                    }
+            lfd  work1, 8(pSrc)
+            stfd work1, 8(pDst)
 
-                    cdest += 32;
-                    csrc += 32;
-                }
-            }
+            lfd  work2, 16(pSrc)
+            stfd work2, 16(pDst)
+            
+            lfd  work3, 24(pSrc)
+            stfd work3, 24(pDst)
+        )
 
-            void ZeroMemory32ByteBlocks(void *dest, u32 n)
-            {
-                n /= 32;
-                register char *cdest = (char *)dest;
-
-                while (n-- > 0)
-                {
-                    register f32 zero = 0.0f;
-                    asm
-                    {
-                        psq_st zero, 0(cdest), 0, 0
-                        psq_st zero, 8(cdest), 0, 0
-                        psq_st zero, 16(cdest), 0, 0
-                        psq_st zero, 24(cdest), 0, 0
-                    }
-
-                    cdest += 32;
-                }
-            }
-
-            void ZeroMemory16ByteBlocks(void *dest, u32 n){
-                n /= 16;
-                register char *cdest = (char *)dest;
-
-                while (n-- > 0)
-                {
-                    register f32 zero = 0.0f;
-                    asm
-                    {
-                        psq_st zero, 0(cdest), 0, 0
-                        psq_st zero, 8(cdest), 0, 0
-                    }
-
-                    cdest += 16;
-                }
-            }
-        }
+        pDst = static_cast<u8*>(pDst) + 32;
+        pSrc = static_cast<const u8*>(pSrc) + 32;
     }
 }
+
+void ZeroMemory32ByteBlocks(register void* pDst, register u32 size) {
+    register f32 zero = 0.0f;
+
+    for (size /= 32; size > 0; size--) {
+        ASM (
+            psq_st zero,  0(pDst), 0, 0
+            psq_st zero,  8(pDst), 0, 0
+            psq_st zero, 16(pDst), 0, 0
+            psq_st zero, 24(pDst), 0, 0
+        )
+
+        pDst = static_cast<u8*>(pDst) + 32;
+    }
+}
+
+void ZeroMemory16ByteBlocks(register void* pDst, register u32 size) {
+    register f32 zero = 0.0f;
+
+    for (size /= 16; size > 0; size--) {
+        ASM (
+            psq_st zero,  0(pDst), 0, 0
+            psq_st zero,  8(pDst), 0, 0
+        )
+
+        pDst = static_cast<u8*>(pDst) + 16;
+    }
+}
+
+} // namespace detail
+} // namespace g3d
+} // namespace nw4r

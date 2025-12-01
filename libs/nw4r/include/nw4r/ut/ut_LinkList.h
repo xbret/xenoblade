@@ -10,8 +10,13 @@ namespace ut {
 // Forward declarations
 namespace detail {
 class LinkListImpl;
-}
+} // namespace detail
 
+/******************************************************************************
+ *
+ * Linked list node
+ *
+ ******************************************************************************/
 class LinkListNode : private NonCopyable {
     friend class detail::LinkListImpl;
 
@@ -32,11 +37,19 @@ private:
 
 namespace detail {
 
+/******************************************************************************
+ *
+ * Linked list implementation
+ *
+ ******************************************************************************/
 class LinkListImpl : private NonCopyable {
 public:
     // Forward declarations
     class ConstIterator;
 
+    /******************************************************************************
+     * Iterator implementation
+     ******************************************************************************/
     class Iterator {
         friend class LinkListImpl;
         friend class ConstIterator;
@@ -68,6 +81,9 @@ public:
         LinkListNode* mNode; // at 0x0
     };
 
+    /******************************************************************************
+     * Iterator implementation (const-view)
+     ******************************************************************************/
     class ConstIterator {
         friend class LinkListImpl;
 
@@ -149,6 +165,11 @@ private:
     LinkListNode mNode; // at 0x4
 };
 
+/******************************************************************************
+ *
+ * Reverse iterator
+ *
+ ******************************************************************************/
 template <typename TIter> class ReverseIterator {
 public:
     explicit ReverseIterator(TIter it) : mCurrent(it) {}
@@ -162,14 +183,13 @@ public:
         return *this;
     }
 
-    const TIter::TElem* operator->() const {
+    const typename TIter::TElem* operator->() const {
         return &this->operator*();
     }
 
-    TIter::TElem& operator*() const {
+    typename TIter::TElem& operator*() const {
         TIter it = mCurrent;
-        --it;
-        return *it;
+        return *--it;
     }
 
     friend bool operator==(const ReverseIterator& rLhs,
@@ -188,11 +208,19 @@ private:
 
 } // namespace detail
 
+/******************************************************************************
+ *
+ * Templated linked list
+ *
+ ******************************************************************************/
 template <typename T, int Ofs> class LinkList : public detail::LinkListImpl {
 public:
     // Forward declarations
     class ConstIterator;
 
+    /******************************************************************************
+     * Templated iterator
+     ******************************************************************************/
     class Iterator {
         friend class LinkList;
         friend class ConstIterator;
@@ -241,6 +269,9 @@ public:
         LinkListImpl::Iterator mIterator; // at 0x0
     };
 
+    /******************************************************************************
+     * Templated iterator (const-view)
+     ******************************************************************************/
     class ConstIterator {
         friend class LinkList;
 
@@ -291,7 +322,7 @@ public:
 public:
     // Shorthand names for reverse iterator types
     typedef detail::ReverseIterator<Iterator> RevIterator;
-    typedef detail::ReverseIterator<ConstIterator> RevConstIterator;
+    typedef detail::ReverseIterator<ConstIterator> ConstRevIterator;
 
 public:
     LinkList() {}
@@ -302,8 +333,11 @@ public:
     ConstIterator GetBeginIter() const {
         return ConstIterator(const_cast<LinkList*>(this)->GetBeginIter());
     }
-    detail::ReverseIterator<Iterator> GetBeginReverseIter() {
-        return detail::ReverseIterator<Iterator>(GetBeginIter());
+    RevIterator GetBeginReverseIter() {
+        return RevIterator(GetBeginIter());
+    }
+    ConstRevIterator GetBeginReverseIter() const {
+        return ConstRevIterator(GetBeginIter());
     }
 
     Iterator GetEndIter() {
@@ -312,8 +346,11 @@ public:
     ConstIterator GetEndIter() const {
         return ConstIterator(const_cast<LinkList*>(this)->GetEndIter());
     }
-    detail::ReverseIterator<Iterator> GetEndReverseIter() {
-        return detail::ReverseIterator<Iterator>(GetEndIter());
+    RevIterator GetEndReverseIter() {
+        return RevIterator(GetEndIter());
+    }
+    ConstRevIterator GetEndReverseIter() const {
+        return ConstRevIterator(GetEndIter());
     }
 
     Iterator Insert(Iterator it, T* pElem) {
@@ -372,10 +409,15 @@ public:
 } // namespace ut
 } // namespace nw4r
 
+/******************************************************************************
+ *
+ * Macros
+ *
+ ******************************************************************************/
 /**
  * Declare typedef for linked-list specialization.
  */
-#define NW4R_UT_LIST_TYPEDEF_DECL(T)                                           \
+#define NW4R_UT_LINKLIST_TYPEDEF_DECL(T)                                       \
     typedef nw4r::ut::LinkList<T, offsetof(T, node)> T##List;
 
 /**
@@ -383,46 +425,67 @@ public:
  *
  * Use the specified link node (name suffix) for classes with multiple nodes.
  */
-#define NW4R_UT_LIST_TYPEDEF_DECL_EX(T, SUFFIX)                                \
+#define NW4R_UT_LINKLIST_TYPEDEF_DECL_EX(T, SUFFIX)                            \
     typedef nw4r::ut::LinkList<T, offsetof(T, node##SUFFIX)> T##SUFFIX##List;
 
 /**
  * Declare a member LinkListNode for use with the typedef.
  */
-#define NW4R_UT_LIST_NODE_DECL() nw4r::ut::LinkListNode node
+#define NW4R_UT_LINKLIST_NODE_DECL() nw4r::ut::LinkListNode node
 
 /**
  * Declare a member LinkListNode for use with the typedef.
  *
  * Use the specified link node (name suffix) for classes with multiple nodes.
  */
-#define NW4R_UT_LIST_NODE_DECL_EX(SUFFIX) nw4r::ut::LinkListNode node##SUFFIX
+#define NW4R_UT_LINKLIST_NODE_DECL_EX(SUFFIX)                                  \
+    nw4r::ut::LinkListNode node##SUFFIX
 
 /**
  * Explicitly instantiate a linked list specialization.
  * (RESERVED FOR MATCHING DECOMP HACKS)
  */
-#ifndef __DECOMP_NON_MATCHING
-#define NW4R_UT_LIST_TYPEDEF_FORCE(T)                                          \
+#if !defined(NONMATCHING)
+#define NW4R_UT_LINKLIST_TYPEDEF_FORCE(T)                                      \
     template struct nw4r::ut::LinkList<T, offsetof(T, node)>
 #else
-#define NW4R_UT_LIST_TYPEDEF_FORCE(T)
+#define NW4R_UT_LINKLIST_TYPEDEF_FORCE(T)
 #endif
 
 /**
- * Linked-list for-each iteration macro, with robust iteration.
+ * Linked-list for-each macro.
  *
- * Access the current element with "it"
+ * @param NAME Element name
+ * @param LIST Reference to list
+ * @param ... Statement(s) to execute
  */
-#define NW4R_UT_LIST_SAFE_FOREACH(LIST, ...)                                   \
+#define NW4R_UT_LINKLIST_FOREACH(NAME, LIST, ...)                              \
     {                                                                          \
-        typedef DECLTYPE(LIST.GetBeginIter()) IterType;                        \
+        typedef DECLTYPE((LIST).GetBeginIter()) IterType;                      \
                                                                                \
-        for (IterType impl = LIST.GetBeginIter();                              \
-             impl != LIST.GetEndIter();) {                                     \
+        for (IterType NAME = (LIST).GetBeginIter();                            \
+             NAME != (LIST).GetEndIter(); ++NAME) {                            \
                                                                                \
-            IterType it = impl++;                                              \
-            __VA_ARGS__                                                        \
+            __VA_ARGS__;                                                       \
+        }                                                                      \
+    }
+
+/**
+ * List for-each macro, with robust iteration.
+ *
+ * @param NAME Element name
+ * @param LIST Reference to list
+ * @param ... Statement(s) to execute
+ */
+#define NW4R_UT_LINKLIST_FOREACH_SAFE(NAME, LIST, ...)                         \
+    {                                                                          \
+        typedef DECLTYPE((LIST).GetBeginIter()) IterType;                      \
+                                                                               \
+        for (IterType __impl__ = (LIST).GetBeginIter();                        \
+             __impl__ != (LIST).GetEndIter();) {                               \
+                                                                               \
+            IterType NAME = __impl__++;                                        \
+            __VA_ARGS__;                                                       \
         }                                                                      \
     }
 

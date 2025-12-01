@@ -2,7 +2,7 @@
 #define NW4R_SND_STRM_FILE_H
 #include <nw4r/types_nw4r.h>
 
-#include <nw4r/snd/snd_Common.h>
+#include <nw4r/snd/snd_Types.h>
 #include <nw4r/snd/snd_Util.h>
 
 #include <nw4r/ut.h>
@@ -10,6 +10,12 @@
 namespace nw4r {
 namespace snd {
 namespace detail {
+
+/******************************************************************************
+ *
+ * RSTM binary layout
+ *
+ ******************************************************************************/
 namespace StrmFile {
 
 struct StrmDataInfo {
@@ -71,6 +77,11 @@ struct HeadBlock {
 
 } // namespace StrmFile
 
+/******************************************************************************
+ *
+ * StrmFileReader
+ *
+ ******************************************************************************/
 struct StrmInfo {
     u8 format;               // at 0x0
     u8 loopFlag;             // at 0x1
@@ -92,7 +103,7 @@ struct StrmInfo {
 
 class StrmFileReader {
 public:
-    static const u32 SIGNATURE = 'RSTM';
+    static const u32 SIGNATURE = FOURCC('R', 'S', 'T', 'M');
     static const int VERSION = NW4R_VERSION(1, 0);
 
 public:
@@ -121,6 +132,11 @@ private:
     const StrmFile::HeadBlock* mHeadBlock; // at 0x4
 };
 
+/******************************************************************************
+ *
+ * StrmFileLoader
+ *
+ ******************************************************************************/
 class StrmFileLoader {
 public:
     explicit StrmFileLoader(ut::FileStream& rFileStream)

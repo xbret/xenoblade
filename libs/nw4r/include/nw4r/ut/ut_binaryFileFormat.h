@@ -19,10 +19,11 @@ struct BinaryFileHeader {
     u16 dataBlocks; // at 0xE
 };
 
-bool IsValidBinaryFile(const BinaryFileHeader* header, u32 signature,
+bool IsValidBinaryFile(const BinaryFileHeader* pHeader, u32 signature,
                        u16 version, u16 minBlocks);
-bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader);
-BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader);
+bool IsReverseEndianBinaryFile(const BinaryFileHeader* pHeader);
+BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* pHeader,
+                                            BinaryBlockHeader* pBlockHeader);
 
 } // namespace ut
 } // namespace nw4r

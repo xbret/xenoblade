@@ -1,13 +1,11 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/ut.h>
 
 namespace nw4r {
 namespace ut {
 namespace {
 
-bool IsSJISLeadByte(u8 c) {
-    return (c >= 0x81 && c < 0xA0) || c >= 0xE0;
+inline bool IsSJISLeadByte(u8 ch) {
+    return (ch >= 0x81 && ch < 0xA0) || ch >= 0xE0;
 }
 
 } // namespace
@@ -15,7 +13,7 @@ bool IsSJISLeadByte(u8 c) {
 u16 CharStrmReader::ReadNextCharUTF8() {
     u16 ch;
 
-    if ((GetChar<u8>(0) & 0x80) == 0) {
+    if (!(GetChar<u8>(0) & 0x80)) {
         ch = GetChar<u8>(0);
         StepStrm<u8>(1);
     } else if ((GetChar<u8>(0) & 0xE0) == 0xC0) {

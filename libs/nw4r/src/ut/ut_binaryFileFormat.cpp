@@ -1,30 +1,28 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/ut.h>
 
 namespace nw4r {
 namespace ut {
 
-bool IsValidBinaryFile(const BinaryFileHeader* header, u32 signature, u16 version,
-                       u16 minBlocks) {
-    if (header->signature != signature) {
+bool IsValidBinaryFile(const BinaryFileHeader* pHeader, u32 signature,
+                       u16 version, u16 minBlocks) {
+    if (pHeader->signature != signature) {
         return false;
     }
 
-    if (header->byteOrder != NW4R_BYTEORDER_NATIVE) {
+    if (pHeader->byteOrder != NW4R_BYTEORDER_NATIVE) {
         return false;
     }
 
-    if (header->version != version) {
+    if (pHeader->version != version) {
         return false;
     }
 
-    if (header->fileSize <
+    if (pHeader->fileSize <
         sizeof(BinaryFileHeader) + (minBlocks * sizeof(BinaryBlockHeader))) {
         return false;
     }
 
-    if (header->dataBlocks < minBlocks) {
+    if (pHeader->dataBlocks < minBlocks) {
         return false;
     }
 
@@ -32,12 +30,12 @@ bool IsValidBinaryFile(const BinaryFileHeader* header, u32 signature, u16 versio
 }
 
 //unused
-bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader) {
+bool IsReverseEndianBinaryFile(const BinaryFileHeader* pHeader) {
     return false;
 }
 
 //unused
-BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader) {
+BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* pHeader, BinaryBlockHeader* pBlockHeader) {
     return nullptr;
 }
 

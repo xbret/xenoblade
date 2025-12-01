@@ -1,5 +1,5 @@
-#ifndef _WCHAR_H
-#define _WCHAR_H
+#ifndef MSL_WCHAR_H
+#define MSL_WCHAR_H
 
 #include <types.h>
 

@@ -1,6 +1,7 @@
-#ifndef NW4R_G3D_RESPLTT_H
-#define NW4R_G3D_RESPLTT_H
+#ifndef NW4R_G3D_RES_RES_PLTT_H
+#define NW4R_G3D_RES_RES_PLTT_H
 #include <nw4r/types_nw4r.h>
+#include "decomp.h"
 
 #include <nw4r/g3d/res/g3d_rescommon.h>
 
@@ -17,14 +18,14 @@ struct ResPlttData {
     s32 name;                  // at 0x14
     GXTlutFmt fmt;             // at 0x18
     u16 numEntries;            // at 0x1C
-    u16 dummy_;                // at 0x1E
+    u16 PADDING_0x1E;          // at 0x1E
     s32 original_path;         // at 0x20
     s32 toResUserData;         // at 0x24
 };
 
 class ResPltt : public ResCommon<ResPlttData> {
 public:
-    static const u32 SIGNATURE = 'PLT0';
+    static const u32 SIGNATURE = FOURCC('P', 'L', 'T', '0');
     static const int REVISION = 1;
 
 public:
@@ -45,10 +46,23 @@ public:
     void DCStore(bool sync);
 
     u16* GetPlttData() {
-        return ofs_to_ptr<u16>(ref().toPlttData);
+        ResPlttData& r = ref();
+
+        // clang-format off
+        return r.toPlttData != 0
+            ? reinterpret_cast<u16*>(reinterpret_cast<u8*>(&r) + r.toPlttData)
+            : NULL;
+        // clang-format on
     }
+
     const u16* GetPlttData() const {
-        return ofs_to_ptr<u16>(ref().toPlttData);
+        const ResPlttData& r = ref();
+
+        // clang-format off
+        return r.toPlttData != 0
+            ? reinterpret_cast<const u16*>(reinterpret_cast<const u8*>(&r) + r.toPlttData)
+            : NULL;
+        // clang-format on
     }
 
     GXTlutFmt GetFmt() const {

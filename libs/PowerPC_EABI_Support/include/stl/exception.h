@@ -1,5 +1,5 @@
-#ifndef _EXCEPTION_H
-#define _EXCEPTION_H
+#ifndef MSL_EXCEPTION_H
+#define MSL_EXCEPTION_H
 
 #include <exception>
 

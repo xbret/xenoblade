@@ -11,6 +11,11 @@
 namespace nw4r {
 namespace snd {
 
+// Forward declarations
+class Sound3DListener;
+class SoundHandle;
+struct SoundParam;
+
 class Sound3DManager : public detail::BasicSound::AmbientParamUpdateCallback,
                        public detail::BasicSound::AmbientArgAllocaterCallback {
 public:
@@ -44,6 +49,9 @@ public:
 
     Sound3DListener* GetListener() const {
         return mListener;
+    }
+    void AddListener(Sound3DListener* pListener) {
+        mListener = pListener;
     }
 
     int GetMaxPriorityReduction() const {

@@ -1,248 +1,227 @@
-#include <nw4r/lyt/lyt_common.h>
-#include <nw4r/lyt/lyt_layout.h>
-#include <nw4r/lyt/lyt_pane.h>
-#include <nw4r/ut/ut_algorithm.h>
-#include <nw4r/ut/ut_color.h>
-#include <nw4r/math/math_types.h>
-#include <string.h>
+#include "nw4r/lyt/lyt_common.h"
+#include <nw4r/lyt.h>
+#include <nw4r/math.h>
+#include <nw4r/ut.h>
+
 #include <revolution/GX.h>
 
-namespace nw4r
-{
-    using namespace math;
-    using namespace ut;
+#include <cstddef>
+#include <cstring>
 
-    namespace lyt
-    {
-        namespace detail
-        {
-            bool EqualsResName(const char *s1, const char *s2)
-            {
-                return (strncmp(s1, s2, NW4R_RES_NAME_SIZE) == 0);
-            }
-            
-            bool EqualsMaterialName(const char *s1, const char *s2)
-            {
-                return (strncmp(s1, s2, NW4R_MAT_NAME_SIZE) == 0);
-            }
+namespace nw4r {
+namespace lyt {
+namespace detail {
 
-            bool TestFileHeader(const res::BinaryFileHeader& header)
-            {
-                return (header.byteOrder == NW4R_BYTEORDER_BIG);
-            }
+/******************************************************************************
+ *
+ * Utility functions
+ *
+ ******************************************************************************/
+bool EqualsResName(const char* pLhs, const char* pRhs) {
+    return std::strncmp(pLhs, pRhs, NW4R_LYT_RES_NAME_LEN) == 0;
+}
 
-            bool TestFileHeader(const res::BinaryFileHeader& header, u32 magic)
-            {
-                return ((magic == header.signature) && TestFileHeader(header));
-            }
+bool EqualsMaterialName(const char* pLhs, const char* pRhs) {
+    return std::strncmp(pLhs, pRhs, NW4R_LYT_MATERIAL_NAME_LEN) == 0;
+}
 
-            TexCoordAry::TexCoordAry() : mCap(0), mSize(0), mTexCoords(NULL) {}
+bool TestFileHeader(const res::BinaryFileHeader& rHeader) {
+    return rHeader.byteOrder == NW4R_BYTEORDER_BIG;
+}
 
-            void TexCoordAry::Free()
-            {
-                if (mTexCoords != NULL)
-                {
-                    // likely fake but can't figure out the double beq
-                    if (mTexCoords != NULL)
-                    {
-                        u32 coordNum = mCap * TEXCOORD_VTX_COUNT;
-                        Layout::DeleteArray<VEC2>(*mTexCoords, coordNum);
-                    }
+bool TestFileHeader(const res::BinaryFileHeader& rHeader, u32 signature) {
+    return GetSignatureInt(rHeader.signature) == signature &&
+           TestFileHeader(rHeader);
+}
 
-                    mTexCoords = NULL;
-                    mCap = 0;
-                    mSize = 0;
-                }
-            }
+/******************************************************************************
+ *
+ * TexCoordAry
+ *
+ ******************************************************************************/
+TexCoordAry::TexCoordAry() : mCap(0), mNum(0), mpData(NULL) {}
 
-            void TexCoordAry::Reserve(u8 num)
-            {
-                if (mCap < num)
-                {
-                    Free();
+void TexCoordAry::Free() {
+    if (mpData != NULL) {
+        Layout::DeleteObj(mpData);
+        mpData = NULL;
+        mCap = 0;
+        mNum = 0;
+    }
+}
 
-                    u32 coordNum = num * TEXCOORD_VTX_COUNT;
-                    VEC2* const pVecAry = Layout::NewArray<VEC2>(coordNum);
+void TexCoordAry::Reserve(u8 num) {
+    if (mCap < num) {
+        Free();
 
-                    mTexCoords = (TexCoordData *)pVecAry;
+        mpData = Layout::NewArray<TexCoord>(num);
 
-                    if (pVecAry != NULL) {
-                        mCap = num;
-                    }
-                }
-            }
-
-            void TexCoordAry::SetSize(u8 size)
-            {
-                if (mTexCoords != NULL && size <= mCap)
-                {
-                    static TexCoordData texCoords =
-                    {
-                        VEC2(0.0f, 0.0f),
-                        VEC2(1.0f, 0.0f),
-                        VEC2(0.0f, 1.0f),
-                        VEC2(1.0f, 1.0f)
-                    };
-
-                    for (int i = mSize; i < size; i++)
-                    {
-                        for (int j = 0; j < TEXCOORD_VTX_COUNT; j++)
-                        {
-                            mTexCoords[i][j] = texCoords[j];
-                        }
-                    }
-
-                    mSize = size;
-                }
-            }
-
-            //unused
-            void TexCoordAry::GetCoord(u32 idx, VEC2 *coord) const
-            {
-
-            }
-
-            void TexCoordAry::SetCoord(u32 idx, const VEC2 *coord)
-            {
-                for(int i = 0; i < TEXCOORD_VTX_COUNT; i++)
-                {
-                    mTexCoords[idx][i] = coord[i];
-                }
-            }
-
-            void TexCoordAry::Copy(const void *src, u8 n)
-            {
-                mSize = Max<u8>(mSize, n);
-
-                const TexCoordData *tsrc = (const TexCoordData *)src;
-                for (int i = 0; i < n; i++)
-                {
-                    for (int j = 0; j < TEXCOORD_VTX_COUNT; j++)
-                    {
-                        mTexCoords[i][j] = tsrc[i][j];
-                    }
-                }
-            }
-
-            bool IsModulateVertexColor(Color *vertexClrs, u8 c)
-            {
-                if (c != 255) return true;
-
-                if ((vertexClrs != NULL) &&
-                ((vertexClrs[0] != 0xFFFFFFFF) || (vertexClrs[1] != 0xFFFFFFFF) ||
-                (vertexClrs[2] != 0xFFFFFFFF) || (vertexClrs[3] != 0xFFFFFFFF)))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
-            void MultipleAlpha(Color *dest, const Color *src, u8 alpha)
-            {
-                for (int i = 0; i < TEXCOORD_VTX_COUNT; i++)
-                {
-                    dest[i] = MultipleAlpha(src[i], alpha);
-                }
-            }
-
-            Color MultipleAlpha(Color col, u8 alpha)
-            {
-                Color newCol = col;
-                if (alpha != 255)
-                {
-                    newCol.a = (col.a * alpha) / 255;
-                }
-
-                return newCol;
-            }
-
-            void SetVertexFormat(bool bColor, u8 n)
-            {
-                GXClearVtxDesc();
-
-                GXSetVtxDesc(GX_VA_POS, GX_DIRECT);
-                if (bColor) GXSetVtxDesc(GX_VA_CLR0, GX_DIRECT);
-
-                for (int i = 0; i < n; i++)
-                {
-                    GXSetVtxDesc((GXAttr)(GX_VA_TEX0 + i), GX_DIRECT);
-                }
-
-                GXSetVtxAttrFmt(GX_VTXFMT0, GX_VA_POS, GX_POS_XY, GX_F32, 0);
-                if (bColor) GXSetVtxAttrFmt(GX_VTXFMT0, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8, 0);
-
-                for (int i = 0; i < n; i++)
-                {
-                    GXSetVtxAttrFmt(GX_VTXFMT0, (GXAttr)(GX_VA_TEX0 + i), GX_TEX_ST, GX_F32, 0);
-                }
-            }
-
-            void DrawQuad(const VEC2 &pos, const Size &size, u8 c, const TexCoordData *tc, const Color *vertexClrs)
-            {
-                GXBegin(GX_QUADS, GX_VTXFMT0, 4);
-
-                GXPosition2f32(pos.x, pos.y);
-                if (vertexClrs != NULL)
-                {
-                    GXColor1u32(vertexClrs[0]);
-                }
-                for (int i = 0; i < c; i++)
-                {
-                    GXTexCoord2f32(tc[i][0].x, tc[i][0].y);
-                }
-
-                GXPosition2f32(pos.x + size.x, pos.y);
-                if (vertexClrs != NULL)
-                {
-                    GXColor1u32(vertexClrs[1]);
-                }
-                for (int i = 0; i < c; i++)
-                {
-                    GXTexCoord2f32(tc[i][1].x, tc[i][1].y);
-                }
-
-                GXPosition2f32(pos.x + size.x, pos.y - size.y);
-                if (vertexClrs != NULL)
-                {
-                    GXColor1u32(vertexClrs[3]);
-                }
-                for (int i = 0; i < c; i++)
-                {
-                    GXTexCoord2f32(tc[i][3].x, tc[i][3].y);
-                }
-
-                GXPosition2f32(pos.x, pos.y - size.y);
-                if (vertexClrs != NULL)
-                {
-                    GXColor1u32(vertexClrs[2]);
-                }
-                for (int i = 0; i < c; i++)
-                {
-                    GXTexCoord2f32(tc[i][2].x, tc[i][2].y);
-                }
-
-                GXEnd();
-            }
-
-            void DrawQuad(const VEC2 &pos, const Size &size, u8 c, const TexCoordData *tc, const Color *vertexClrs, u8 alpha)
-            {
-                Color tempClrs[TEXCOORD_VTX_COUNT];
-                if (vertexClrs)
-                {
-                    MultipleAlpha(tempClrs, vertexClrs, alpha);
-                }
-
-                const Color *forUse = vertexClrs ? tempClrs : NULL;
-                DrawQuad(pos, size, c, tc, forUse);
-            }
-
-            //unused
-            void DrawLine(const VEC2 &pos, const Size &size, Color &color)
-            {
-            }
+        if (mpData != NULL) {
+            mCap = num;
         }
     }
 }
+
+void TexCoordAry::SetSize(u8 num) {
+    if (mpData != NULL && num <= mCap) {
+        // clang-format off
+        static TexCoord pCoords = {
+            math::VEC2(0.0f, 0.0f),
+            math::VEC2(1.0f, 0.0f),
+            math::VEC2(0.0f, 1.0f),
+            math::VEC2(1.0f, 1.0f)
+        };
+        // clang-format on
+
+        for (int j = mNum; j < num; j++) {
+            for (int i = 0; i < VERTEXCOLOR_MAX; i++) {
+                mpData[j][i] = pCoords[i];
+            }
+        }
+
+        mNum = num;
+    }
+}
+
+void TexCoordAry::SetCoord(u32 idx, const math::VEC2* coord) {
+    for(int i = 0; i < VERTEXCOLOR_MAX; i++)
+    {
+        mpData[idx][i] = coord[i];
+    }
+}
+
+void TexCoordAry::Copy(const void* pSrc, u8 num) {
+    mNum = ut::Max<u8>(mNum, num);
+    const TexCoord* pSrcCoords = static_cast<const TexCoord*>(pSrc);
+
+    for (int j = 0; j < num; j++) {
+        for (int i = 0; i < VERTEXCOLOR_MAX; i++) {
+            mpData[j][i] = pSrcCoords[j][i];
+        }
+    }
+}
+
+//unused
+void DrawLine(const math::VEC2 &pos, const Size &size, ut::Color &color) {
+}
+
+/******************************************************************************
+ *
+ * Utility functions
+ *
+ ******************************************************************************/
+bool IsModulateVertexColor(ut::Color* pColors, u8 glbAlpha) {
+    if (glbAlpha != 255) {
+        return true;
+    }
+
+    if (pColors != NULL && (pColors[VERTEXCOLOR_LT] != ut::Color::WHITE ||
+                            pColors[VERTEXCOLOR_RT] != ut::Color::WHITE ||
+                            pColors[VERTEXCOLOR_LB] != ut::Color::WHITE ||
+                            pColors[VERTEXCOLOR_RB] != ut::Color::WHITE)) {
+        return true;
+    }
+
+    return false;
+}
+
+ut::Color MultipleAlpha(ut::Color color, u8 alpha) {
+    ut::Color result = color;
+
+    if (alpha != 255) {
+        result.a = color.a * alpha / 255;
+    }
+
+    return result;
+}
+
+void MultipleAlpha(ut::Color* pDst, const ut::Color* pSrc, u8 alpha) {
+    for (int i = 0; i < VERTEXCOLOR_MAX; i++) {
+        pDst[i] = MultipleAlpha(pSrc[i], alpha);
+    }
+}
+
+void SetVertexFormat(bool modulate, u8 numCoord) {
+    GXClearVtxDesc();
+
+    GXSetVtxDesc(GX_VA_POS, GX_DIRECT);
+
+    if (modulate) {
+        GXSetVtxDesc(GX_VA_CLR0, GX_DIRECT);
+    }
+
+    for (int i = 0; i < numCoord; i++) {
+        GXSetVtxDesc(static_cast<GXAttr>(GX_VA_TEX0 + i), GX_DIRECT);
+    }
+
+    GXSetVtxAttrFmt(GX_VTXFMT0, GX_VA_POS, GX_POS_XY, GX_F32, 0);
+
+    if (modulate) {
+        GXSetVtxAttrFmt(GX_VTXFMT0, GX_VA_CLR0, GX_CLR_RGBA, GX_RGBA8, 0);
+    }
+
+    for (int i = 0; i < numCoord; i++) {
+        GXSetVtxAttrFmt(GX_VTXFMT0, static_cast<GXAttr>(GX_VA_TEX0 + i),
+                        GX_TEX_ST, GX_F32, 0);
+    }
+}
+
+void DrawQuad(const math::VEC2& rBase, const Size& rSize, u8 num,
+              const TexCoord* pCoords, const ut::Color* pColors) {
+
+    GXBegin(GX_QUADS, GX_VTXFMT0, 4);
+    {
+        GXPosition2f32(rBase.x, rBase.y);
+        if (pColors != NULL) {
+            GXColor1u32(pColors[VERTEXCOLOR_LT]);
+        }
+        for (int i = 0; i < num; i++) {
+            GXTexCoord2f32(pCoords[i][VERTEXCOLOR_LT].x,
+                           pCoords[i][VERTEXCOLOR_LT].y);
+        }
+
+        GXPosition2f32(rBase.x + rSize.width, rBase.y);
+        if (pColors != NULL) {
+            GXColor1u32(pColors[VERTEXCOLOR_RT]);
+        }
+        for (int i = 0; i < num; i++) {
+            GXTexCoord2f32(pCoords[i][VERTEXCOLOR_RT].x,
+                           pCoords[i][VERTEXCOLOR_RT].y);
+        }
+
+        GXPosition2f32(rBase.x + rSize.width, rBase.y - rSize.height);
+        if (pColors != NULL) {
+            GXColor1u32(pColors[VERTEXCOLOR_RB]);
+        }
+        for (int i = 0; i < num; i++) {
+            GXTexCoord2f32(pCoords[i][VERTEXCOLOR_RB].x,
+                           pCoords[i][VERTEXCOLOR_RB].y);
+        }
+
+        GXPosition2f32(rBase.x, rBase.y - rSize.height);
+        if (pColors != NULL) {
+            GXColor1u32(pColors[VERTEXCOLOR_LB]);
+        }
+        for (int i = 0; i < num; i++) {
+            GXTexCoord2f32(pCoords[i][VERTEXCOLOR_LB].x,
+                           pCoords[i][VERTEXCOLOR_LB].y);
+        }
+    }
+    GXEnd();
+}
+
+void DrawQuad(const math::VEC2& rBase, const Size& rSize, u8 num,
+              const TexCoord* pCoords, const ut::Color* pColors, u8 alpha) {
+
+    ut::Color colorWork[VERTEXCOLOR_MAX];
+
+    if (pColors != NULL) {
+        MultipleAlpha(colorWork, pColors, alpha);
+    }
+
+    DrawQuad(rBase, rSize, num, pCoords, pColors ? colorWork : NULL);
+}
+
+} // namespace detail
+} // namespace lyt
+} // namespace nw4r

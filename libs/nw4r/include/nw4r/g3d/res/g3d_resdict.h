@@ -1,5 +1,5 @@
-#ifndef NW4R_G3D_RESDICT_H
-#define NW4R_G3D_RESDICT_H
+#ifndef NW4R_G3D_RES_RES_DICT_H
+#define NW4R_G3D_RES_RES_DICT_H
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/g3d/res/g3d_rescommon.h>
@@ -30,12 +30,11 @@ public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResDic);
 
     void* operator[](const char* pName) const;
-    void* operator()(const char* s, u32 len) const;
     void* operator[](const ResName name) const;
-    void* operator[](int i) const {
+    void* operator[](int idx) const {
         if (IsValid()) {
             return const_cast<void*>(
-                ofs_to_ptr<void>(ref().data[i + 1].ofsData));
+                ofs_to_ptr<void>(ref().data[idx + 1].ofsData));
         }
 
         return NULL;

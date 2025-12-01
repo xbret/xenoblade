@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
 
 #include <revolution/GX.h>
@@ -175,21 +173,21 @@ ResVtxNrm ResShp::GetResVtxNrm() const {
     return ResVtxNrm(NULL);
 }
 
-ResVtxClr ResShp::GetResVtxClr(u32 i) const {
+ResVtxClr ResShp::GetResVtxClr(u32 idx) const {
     const ResShpData& r = ref();
 
-    if (r.idVtxColor[i] != -1) {
-        return GetParent().GetResVtxClr(r.idVtxColor[i]);
+    if (r.idVtxColor[idx] != -1) {
+        return GetParent().GetResVtxClr(r.idVtxColor[idx]);
     }
 
     return ResVtxClr(NULL);
 }
 
-ResVtxTexCoord ResShp::GetResVtxTexCoord(u32 i) const {
+ResVtxTexCoord ResShp::GetResVtxTexCoord(u32 idx) const {
     const ResShpData& r = ref();
 
-    if (r.idVtxTexCoord[i] != -1) {
-        return GetParent().GetResVtxTexCoord(r.idVtxTexCoord[i]);
+    if (r.idVtxTexCoord[idx] != -1) {
+        return GetParent().GetResVtxTexCoord(r.idVtxTexCoord[idx]);
     }
 
     return ResVtxTexCoord(NULL);
@@ -240,7 +238,7 @@ void ResShp::Init() {
 
     GetResShpPrePrim().DCStore(false);
 
-    // TODO: Fakematch
+    // TODO(kiwi) Fakematch
     ResShpData& r = ref();
     DC::StoreRangeNoSync(GetPrimDLTag().GetDL(), r.tagPrimDL.bufSize);
 }
@@ -263,7 +261,7 @@ void ResShp::Terminate() {
 }
 
 void ResShp::CallPrePrimitiveDisplayList(bool sync, bool cacheIsSame) const {
-    // TODO: Should be non-const, and initialized by value
+    // TODO(kiwi) Should be non-const, and initialized by value
     const ResTagDL& rTag = GetPrePrimDLTag();
 
     if (cacheIsSame) {
@@ -286,7 +284,7 @@ void ResShp::CallPrePrimitiveDisplayList(bool sync, bool cacheIsSame) const {
 }
 
 void ResShp::CallPrimitiveDisplayList(bool sync) const {
-    // TODO: Should be non-const, and initialized by value
+    // TODO(kiwi) Should be non-const, and initialized by value
     const ResTagDL& rTag = GetPrimDLTag();
 
     if (sync) {

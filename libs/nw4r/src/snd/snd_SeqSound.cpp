@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
 
@@ -10,7 +8,7 @@ namespace detail {
 NW4R_UT_RTTI_DEF_DERIVED(SeqSound, BasicSound);
 
 SeqSound::SeqSound(SoundInstanceManager<SeqSound>* pManager)
-    // TODO: Fakematch
+    // TODO(kiwi) Fakematch
     : mTempSpecialHandle(reinterpret_cast<SeqSoundHandle*>(
           mPreparedFlag = mLoadingFlag = false)),
       mManager(pManager),
@@ -116,13 +114,13 @@ void SeqSound::SetTrackPitch(u32 trackFlags, f32 pitch) {
     mSeqPlayer.SetTrackPitch(trackFlags, pitch);
 }
 
-bool SeqSound::WriteVariable(int i, s16 value) {
-    mSeqPlayer.SetLocalVariable(i, value);
+bool SeqSound::WriteVariable(int idx, s16 value) {
+    mSeqPlayer.SetLocalVariable(idx, value);
     return true;
 }
 
-bool SeqSound::WriteGlobalVariable(int i, s16 value) {
-    SeqPlayer::SetGlobalVariable(i, value);
+bool SeqSound::WriteGlobalVariable(int idx, s16 value) {
+    SeqPlayer::SetGlobalVariable(idx, value);
     return true;
 }
 

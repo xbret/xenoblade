@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
 
@@ -341,9 +339,14 @@ void SeqTrack::ChannelCallbackFunc(Channel* pDropChannel,
 
     switch (status) {
     case Channel::CALLBACK_STATUS_STOPPED:
-    case Channel::CALLBACK_STATUS_FINISH:
+    case Channel::CALLBACK_STATUS_FINISH: {
         Channel::FreeChannel(pDropChannel);
         break;
+    }
+
+    default: {
+        break;
+    }
     }
 
     if (p->mPlayer != NULL) {
@@ -402,9 +405,9 @@ void SeqTrack::SetPitch(f32 pitch) {
     mExtPitch = pitch;
 }
 
-volatile s16* SeqTrack::GetVariablePtr(int i) {
-    if (i < VARIABLE_NUM) {
-        return &mTrackVariable[i];
+volatile s16* SeqTrack::GetVariablePtr(int idx) {
+    if (idx < VARIABLE_NUM) {
+        return &mTrackVariable[idx];
     }
 
     return NULL;

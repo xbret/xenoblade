@@ -1,5 +1,5 @@
-#ifndef _CTYPE_H
-#define _CTYPE_H
+#ifndef MSL_CTYPE_H
+#define MSL_CTYPE_H
 
 #include <types.h>
 #include <locale.h>

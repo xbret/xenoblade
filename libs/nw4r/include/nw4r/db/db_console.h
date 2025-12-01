@@ -2,6 +2,7 @@
 #define NW4R_DB_CONSOLE_H
 
 #include <nw4r/types_nw4r.h>
+
 #include <nw4r/ut/ut_TextWriterBase.h>
 #include <nw4r/ut/ut_CharWriter.h>
 

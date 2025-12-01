@@ -1,93 +1,87 @@
-#pragma ipa file
+#include <nw4r/lyt.h>
+#include <nw4r/ut.h>
 
-#include <nw4r/lyt/lyt_group.h>
-#include <nw4r/lyt/lyt_layout.h>
-#include <nw4r/ut/ut_algorithm.h>
-#include <nw4r/ut/ut_LinkList.h>
-#include <string.h>
+#include <cstring>
 
-namespace nw4r
-{
-    namespace lyt
-    {
-        using namespace ut;
-        using namespace detail;
+namespace nw4r {
+namespace lyt {
 
-        #ifdef __DECOMP_NON_MATCHING
-        Group::Group(const res::Group *res, Pane *pane) : mNode(), mPaneList()
-        {
-            Init();
-            strncpy(mName, res->mName, NW4R_RES_NAME_SIZE);
-            mName[NW4R_RES_NAME_SIZE - 1] = '\0';
+/******************************************************************************
+ *
+ * Group
+ *
+ ******************************************************************************/
+Group::Group(const res::Group* pRes, Pane* pRootPane) {
+    Init();
 
-            const char *base = (const char *)AddOffsetToPtr<u32>(res, 0x1C);
-            for (int i = 0; i < res->SHORT_0x18; i++)
-            {
-                Pane *p = pane->FindPaneByName(base + i * NW4R_RES_NAME_SIZE, true);
-                if (p) AppendPane(p);
-            }
-        }
-        #else
-        //#error This file has yet to be decompiled accurately. Use "lyt_group.s" instead.
-        #endif
+    std::strncpy(mName, pRes->name, NW4R_LYT_RES_NAME_LEN);
+    mName[NW4R_LYT_RES_NAME_LEN] = '\0';
 
-        // Inlined
-        void Group::Init()
-        {
-            mIsUserAllocated = false;
-        }
+    const char* pNameBase =
+        detail::ConvertOffsToPtr<char>(pRes, sizeof(res::Group));
 
-        Group::~Group()
-        {
-            LinkList<PaneLink, 0>::Iterator it = mPaneList.GetBeginIter();
-            while (it != mPaneList.GetEndIter())
-            {
-                LinkList<PaneLink, 0>::Iterator temp = it++;
-                mPaneList.Erase(temp);
-                Layout::DeleteObj<PaneLink>(&*temp);
-            }
-        }
+    for (int i = 0; i < pRes->paneNum; i++) {
+        Pane* pResult = pRootPane->FindPaneByName(
+            pNameBase + i * NW4R_LYT_RES_NAME_LEN, true);
 
-        // Inlined
-        #ifdef __DECOMP_NON_MATCHING
-        void Group::AppendPane(Pane *pane)
-        {
-            PaneLink *link = Layout::NewObj<PaneLink>();
-            link->PANE_0x8 = pane;
-            mPaneList.PushBack(link);
-        }
-        #else
-        #endif
-
-        #ifdef __DECOMP_NON_MATCHING
-        GroupContainer::~GroupContainer()
-        {
-            LinkList<Group, 4>::Iterator it = mGroups.GetBeginIter();
-            while (it != mGroups.GetEndIter())
-            {
-                LinkList<Group, 4>::Iterator temp = it++;
-                mGroups.Erase(temp);
-                if (!temp->mIsUserAllocated) Layout::DeleteObj<Group>(&*temp);
-            }
-        }
-        #else
-        #endif
-
-        // Inlined
-        void GroupContainer::AppendGroup(Group *g)
-        {
-            mGroups.PushBack(g);
-        }
-
-        Group * GroupContainer::FindGroupByName(const char *name)
-        {
-            LinkList<Group, 4>::Iterator it = mGroups.GetBeginIter();
-            for (; it != mGroups.GetEndIter(); it++)
-            {
-                if (EqualsResName(it->mName, name)) return &*it;
-            }
-
-            return NULL;
+        if (pResult != NULL) {
+            AppendPane(pResult);
         }
     }
 }
+
+void Group::Init() {
+    mbUserAllocated = false;
+}
+
+Group::~Group() {
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mPaneLinkList, {
+        mPaneLinkList.Erase(it);
+        Layout::FreeMemory(&*it);
+    })
+}
+
+void Group::AppendPane(Pane* pPane) {
+    void* pBuffer = Layout::AllocMemory(sizeof(detail::PaneLink));
+    if (pBuffer == NULL) {
+        return;
+    }
+
+    detail::PaneLink* pLink = new (pBuffer) detail::PaneLink();
+    pLink->mTarget = pPane;
+
+    mPaneLinkList.PushBack(pLink);
+}
+
+/******************************************************************************
+ *
+ * GroupContainer
+ *
+ ******************************************************************************/
+GroupContainer::~GroupContainer() {
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mGroupList, {
+        mGroupList.Erase(it);
+        
+        if (!it->IsUserAllocated()) {
+            it->~Group();
+            Layout::FreeMemory(&*it);
+        }
+    })
+}
+
+void GroupContainer::AppendGroup(Group* pGroup) {
+    mGroupList.PushBack(pGroup);
+}
+
+Group* GroupContainer::FindGroupByName(const char* pName) {
+    NW4R_UT_LINKLIST_FOREACH (it, mGroupList, {
+        if (detail::EqualsResName(it->GetName(), pName)) {
+            return &*it;
+        }
+    })
+
+    return NULL;
+}
+
+} // namespace lyt
+} // namespace nw4r

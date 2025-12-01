@@ -18,6 +18,10 @@ public:
     Color(int red, int green, int blue, int alpha) {
         Set(red, green, blue, alpha);
     }
+    Color(const GXColor& rColor) {
+        *this = rColor;
+    }
+
     ~Color() {}
 
     void Set(int red, int green, int blue, int alpha) {
@@ -31,11 +35,15 @@ public:
         ToU32ref() = color;
         return *this;
     }
+    Color& operator=(const GXColor& rColor) {
+        *this = *reinterpret_cast<const u32*>(&rColor);
+        return *this;
+    }
 
-    Color operator|(u32 color) {
+    Color operator|(u32 color) const {
         return Color(ToU32() | color);
     }
-    Color operator&(u32 color) {
+    Color operator&(u32 color) const {
         return Color(ToU32() & color);
     }
 
@@ -66,6 +74,9 @@ public:
     static const u32 BLACK = 0x000000FF;
     static const u32 GRAY  = 0x808080FF;
     static const u32 WHITE = 0xFFFFFFFF;
+
+    static const u32 ELEMENT_MIN = 0x00000000;
+    static const u32 ELEMENT_MAX = 0xFFFFFFFF;
     // clang-format on
 };
 

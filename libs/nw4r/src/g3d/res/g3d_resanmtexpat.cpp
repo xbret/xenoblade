@@ -1,7 +1,4 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
-
 #include <nw4r/math.h>
 #include <nw4r/ut.h>
 
@@ -51,18 +48,18 @@ const ResAnmTexPatFrmData* SearchFrame(const ResAnmTexPatAnmData* pAnmData,
     return pFrmData;
 }
 
-ResName GetResNameFromOffsetArray(s32* pStringArray, int i) {
-    s32 offset = pStringArray[i];
+inline ResName GetResNameFromOffsetArray(s32* pStringArray, int idx) {
+    s32 offset = pStringArray[idx];
     return NW4R_G3D_OFS_TO_RESNAME(pStringArray, offset);
 }
 
 } // namespace
 
-void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
+void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 idx,
                                 f32 frame) const {
-    ResFile file = GetParent(); // unused
+    (void)GetParent(); // unused
 
-    const ResAnmTexPatMatData* pMatData = GetMatAnm(id);
+    const ResAnmTexPatMatData* pMatData = GetMatAnm(idx);
     const ResAnmTexPatMatData::AnmData* pAnmDataImpl = pMatData->anms;
     u32 flags = pMatData->flags;
 
@@ -73,7 +70,7 @@ void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
     pResult->bTexExist = 0;
     pResult->bPlttExist = 0;
 
-    for (int i = 0; i < ResAnmTexPatMatData::NUM_OF_ANMS;
+    for (int i = 0; i < TexPatAnmResult::NUM_OF_ANMS;
          flags >>= ResAnmTexPatMatData::NUM_OF_FLAGS, i++) {
 
         if (!(flags & ResAnmTexPatMatData::FLAG_ANM_EXISTS)) {
@@ -81,7 +78,7 @@ void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
         }
 
         int texIndex, plttIndex;
-        if (flags & ResAnmTexPatMatData::FLAG_ANM_CONSTANT) {
+        if (flags & ResAnmTexPatMatData::FLAG_ANM_CONST) {
             texIndex = pAnmDataImpl->constValue.texIndex;
             plttIndex = pAnmDataImpl->constValue.plttIndex;
         } else {
@@ -96,7 +93,7 @@ void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
 
         u32 targetBit = 1 << i;
 
-        if (flags & ResAnmTexPatMatData::FLAG_ANM_TEXTURE) {
+        if (flags & ResAnmTexPatMatData::FLAG_ANM_TEX) {
             ResTex tex(pResTexArray[texIndex]);
 
             if (tex.IsValid()) {
@@ -105,7 +102,7 @@ void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
             }
         }
 
-        if (flags & ResAnmTexPatMatData::FLAG_ANM_PALETTE) {
+        if (flags & ResAnmTexPatMatData::FLAG_ANM_PLTT) {
             ResPltt pltt(pResPlttArray[plttIndex]);
 
             if (pltt.IsValid()) {
@@ -118,7 +115,7 @@ void ResAnmTexPat::GetAnmResult(TexPatAnmResult* pResult, u32 id,
     }
 }
 
-bool ResAnmTexPat::Bind(ResFile file) {
+bool ResAnmTexPat::Bind(const ResFile file) {
     const ResAnmTexPatInfoData& rInfoData = ref().info;
     int numTexture = rInfoData.numTexture;
     int numPalette = rInfoData.numPalette;

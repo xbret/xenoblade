@@ -41,7 +41,7 @@ struct FontCodeMap {
     u16 mappingMethod;  // at 0x4
     u16 reserved;       // at 0x6
     FontCodeMap* pNext; // at 0x8
-    u16 mapInfo[];      // at 0xc
+    u16 mapInfo[];      // at 0xC
 };
 
 struct FontInformation {
@@ -60,6 +60,11 @@ struct FontInformation {
 
 namespace detail {
 
+/******************************************************************************
+ *
+ * ResFontBase
+ *
+ ******************************************************************************/
 class ResFontBase : public Font {
 public:
     static const u16 GLYPH_INDEX_NOT_FOUND = 0xFFFF;
@@ -83,43 +88,43 @@ public:
     virtual GXTexFmt GetTextureFormat() const; // at 0x30
     virtual int GetLineFeed() const;           // at 0x34
 
-    virtual CharWidths GetDefaultCharWidths() const;             // at 0x38
-    virtual void SetDefaultCharWidths(const CharWidths& widths); // at 0x3C
+    virtual CharWidths GetDefaultCharWidths() const;              // at 0x38
+    virtual void SetDefaultCharWidths(const CharWidths& rWidths); // at 0x3C
 
-    virtual bool SetAlternateChar(u16 c);   // at 0x40
-    virtual void SetLineFeed(int linefeed); // at 0x44
+    virtual bool SetAlternateChar(u16 ch); // at 0x40
+    virtual void SetLineFeed(int lf);      // at 0x44
 
-    virtual int GetCharWidth(u16 c) const;            // at 0x48
-    virtual CharWidths GetCharWidths(u16 c) const;    // at 0x4C
-    virtual void GetGlyph(Glyph* glyph, u16 c) const; // at 0x50
-    virtual bool HasGlyph(u16 c) const;               // at 0x54
-    virtual FontEncoding GetEncoding() const;         // at 0x58
+    virtual int GetCharWidth(u16 ch) const;             // at 0x48
+    virtual CharWidths GetCharWidths(u16 ch) const;     // at 0x4C
+    virtual void GetGlyph(Glyph* pGlyph, u16 ch) const; // at 0x50
+    virtual bool HasGlyph(u16 ch) const;                // at 0x54
+    virtual FontEncoding GetEncoding() const;           // at 0x58
 
 protected:
-    bool IsManaging(const void* buffer) const {
-        return mResource == buffer;
+    bool IsManaging(const void* pBuffer) const {
+        return mResource == pBuffer;
     }
 
-    void SetResourceBuffer(void* pUserBuffer, FontInformation* pFontInfo);
+    void SetResourceBuffer(void* pBuffer, FontInformation* pInfo);
     void* RemoveResourceBuffer();
 
 private:
-    u16 GetGlyphIndex(u16 c) const;
+    u16 GetGlyphIndex(u16 ch) const;
 
-    u16 FindGlyphIndex(u16 c) const;
-    u16 FindGlyphIndex(const FontCodeMap* pMap, u16 c) const;
+    u16 FindGlyphIndex(u16 ch) const;
+    u16 FindGlyphIndex(const FontCodeMap* pMap, u16 ch) const;
 
     const CharWidths& GetCharWidthsFromIndex(u16 index) const;
-    const CharWidths& GetCharWidthsFromIndex(const FontWidth* width,
+    const CharWidths& GetCharWidthsFromIndex(const FontWidth* pWidth,
                                              u16 index) const;
 
-    void GetGlyphFromIndex(Glyph* glyph, u16 index) const;
+    void GetGlyphFromIndex(Glyph* pGlyph, u16 index) const;
 
 private:
-    void* mResource;             // at 0x10
-    FontInformation* mFontInfo;  // at 0x14
-    mutable u16 mLastCharCode;   // at 0x18
-    mutable u16 mLastGlyphIndex; // at 0x1A
+    void* mResource;            // at 0x10
+    FontInformation* mFontInfo; // at 0x14
+    mutable u16 mLastCharCode;  // at 0x18
+    mutable u16 mLastGlyphIndex;// at 0x1A
 };
 
 } // namespace detail

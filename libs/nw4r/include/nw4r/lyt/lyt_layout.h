@@ -1,92 +1,231 @@
 #ifndef NW4R_LYT_LAYOUT_H
 #define NW4R_LYT_LAYOUT_H
 #include <nw4r/types_nw4r.h>
-#include <new>
-#include <revolution/MEM/mem_allocator.h>
 
-namespace nw4r
-{
-    namespace lyt
-    {
-        struct Layout
-        {
-            // TO-DO: Class members
-            Layout();
-            virtual ~Layout();
-            virtual void Build(const void*, ResourceAccessor*);
-            virtual void CreateAnimTransform();
-            virtual void CreateAnimTransform(const void*, ResourceAccessor*);
-            virtual void CreateAnimTransform(const AnimResource&, ResourceAccessor*);
-            virtual void BindAnimation(AnimTransform*);
-            virtual void UnbindAnimation(AnimTransform*);
-            virtual void UnbindAllAnimation();
-            virtual void BindAnimationAuto(const AnimResource&, ResourceAccessor*);
-            virtual void SetAnimationEnable(AnimTransform*, bool);
-            virtual void CalculateMtx(const DrawInfo&);
-            virtual void Draw(const DrawInfo&);
-            virtual void Animate(u32);
-            virtual void SetTagProcessor(ut::TagProcessorBase<wchar_t>*);
+#include <nw4r/lyt/lyt_animation.h>
+#include <nw4r/lyt/lyt_types.h>
 
-            u32 unk4;
-            u32 unk8;
-            u32 unkC;
-            Pane* unk10;
-            u32 unk14;
-            f32 unk18;
-            f32 unk1C;
+#include <nw4r/ut.h>
 
-            static void FreeMemory(void *p)
-            {
-                MEMFreeToAllocator(mspAllocator, p);
-            }
+#include <revolution/MEM.h>
 
-            static void * AllocMemory(size_t n)
-            {
-                return MEMAllocFromAllocator(mspAllocator, n);
-            }
+namespace nw4r {
+namespace lyt {
 
-            template <typename T>
-            static void DeleteArray(T *p, size_t n)
-            {
-                for (size_t i = 0; i < n; i++)
-                    p[i].~T();
+// Forward declarations
+class ArcResourceAccessor;
+class DrawInfo;
+class GroupContainer;
+class Pane;
+class AnimResource;
 
-                FreeMemory(p);
-            }
+/******************************************************************************
+ *
+ * OriginType
+ *
+ ******************************************************************************/
+enum OriginType {
+    ORIGINTYPE_TOPLEFT,
+    ORIGINTYPE_CENTER,
 
-            template <typename T>
-            static T * NewArray(size_t n)
-            {
-                T *array = (T *)AllocMemory(n * sizeof(T));
+    ORIGINTYPE_MAX
+};
 
-                if(array != nullptr)
-                {
-                    for (size_t i = 0; i < n; i++)
-                        new (&array[i]) T();
+namespace res {
 
-                    return array;
-                } else {
-                    return nullptr;
-                }
-            }
+/******************************************************************************
+ *
+ * LYT1 binary layout
+ *
+ ******************************************************************************/
+struct Layout {
+    static const u32 SIGNATURE = FOURCC('l', 'y', 't', '1');
 
-            template <typename T>
-            static void DeleteObj(T *t)
-            {
-                t->~T();
-                FreeMemory(t);
-            }
+    DataBlockHeader blockHeader; // at 0x0
+    u8 originType;               // at 0x8
+    u8 PADDING_0x9[0xC - 0x9];   // at 0x9
+    Size layoutSize;             // at 0xC
+};
 
-            template <typename T>
-            static T * NewObj()
-            {
-                T *obj = (T *)AllocMemory(sizeof(T));
-                return new (obj) T();
-            }
+} // namespace res
 
-            static MEMAllocator *mspAllocator;
-        };
+/******************************************************************************
+ *
+ * Layout
+ *
+ ******************************************************************************/
+class Layout {
+public:
+    static const u32 SIGNATURE = FOURCC('R', 'L', 'Y', 'T');
+    static const u32 SIGNATURE_ANIMATION = FOURCC('R', 'L', 'A', 'N');
+
+public:
+    Layout();
+    virtual ~Layout(); // at 0x8
+
+    virtual bool Build(const void* pLytBinary,
+                       ResourceAccessor* pAccessor); // at 0xC
+    
+    virtual AnimTransform* CreateAnimTransform(); // at 0x10
+    virtual AnimTransform*
+    CreateAnimTransform(const void* pAnmBinary,
+                        ResourceAccessor* pAccessor); // at 0x14
+    virtual void
+    CreateAnimTransform(const AnimResource& rResource,
+                        ResourceAccessor* pAccessor); //at 0x18
+
+    virtual void BindAnimation(AnimTransform* pAnimTrans);   // at 0x1C
+    virtual void UnbindAnimation(AnimTransform* pAnimTrans); // at 0x20
+    virtual void UnbindAllAnimation();                       // at 0x24
+    virtual void
+    BindAnimationAuto(const AnimResource& rResource,
+                     ResourceAccessor* pAccessor); //at 0x28
+    virtual void SetAnimationEnable(AnimTransform* pAnimTrans,
+                                    bool enable); // at 0x2C
+
+    virtual void CalculateMtx(const DrawInfo& rInfo); // at 0x30
+    virtual void Draw(const DrawInfo& rInfo);         // at 0x34
+    virtual void Animate(u32 option = 0);             // at 0x38
+
+    virtual void SetTagProcessor(ut::WideTagProcessor* pProcessor); // at 0x3C
+
+    ut::Rect GetLayoutRect() const;
+
+    Pane* GetRootPane() const {
+        return mpRootPane;
     }
+
+    GroupContainer* GetGroupContainer() const {
+        return mpGroupContainer;
+    }
+
+    static MEMAllocator* GetAllocator() {
+        return mspAllocator;
+    }
+    static void SetAllocator(MEMAllocator* pAllocator) {
+        mspAllocator = pAllocator;
+    }
+
+    static void* AllocMemory(u32 size) {
+        return MEMAllocFromAllocator(mspAllocator, size);
+    }
+    static void FreeMemory(void* pBlock) {
+        MEMFreeToAllocator(mspAllocator, pBlock);
+    }
+
+    //TODO(amber) verify how accurate these are
+    
+    template <typename T>
+    static T* NewObj() {
+        T* obj = (T*)AllocMemory(sizeof(T));
+        return new (obj) T();
+    }
+
+    
+    template <typename T>
+    static T * NewArray(size_t num) {
+        void* pMem = AllocMemory(num * sizeof(T));
+        T* objAry = (T* const)pMem;
+
+        if(objAry != NULL){
+            for (size_t i = 0; i < num; i++) {
+               //new (&objAry[i]) T();
+            }
+
+            return objAry;
+        }
+
+        return NULL;
+    }
+
+    
+    template <typename T>
+    static void DeleteObj(T* pObj) {
+        if(pObj != nullptr){
+            pObj->~T();
+            FreeMemory(pObj);
+        }
+    }
+
+    template <typename T>
+    static void DeleteArray(T* objAry, size_t num) {
+        if(objAry != nullptr){
+            for (size_t i = 0; i < num; i++) {
+                objAry[i].~T();
+            }
+
+            FreeMemory(objAry);
+        }
+    }
+
+protected:
+    static const u32 SIGNATURE_TEXTURELIST = FOURCC('t', 'x', 'l', '1');
+    static const u32 SIGNATURE_FONTLIST = FOURCC('f', 'n', 'l', '1');
+    static const u32 SIGNATURE_MATERIALLIST = FOURCC('m', 'a', 't', '1');
+
+    static const u32 SIGNATURE_ANIMATIONINFO = FOURCC('p', 'a', 'i', '1');
+
+    static const u32 SIGNATURE_PANESTART = FOURCC('p', 'a', 's', '1');
+    static const u32 SIGNATURE_PANEEND = FOURCC('p', 'a', 'e', '1');
+
+    static const u32 SIGNATURE_GROUPSTART = FOURCC('g', 'r', 's', '1');
+    static const u32 SIGNATURE_GROUPEND = FOURCC('g', 'r', 'e', '1');
+
+protected:
+    static Pane* BuildPaneObj(s32 kind, const void* pBinary,
+                              const ResBlockSet& rBlockSet) DECOMP_DONT_INLINE;
+
+protected:
+    AnimTransformList mAnimTransList; // at 0x4
+    Pane* mpRootPane;                 // at 0x10
+    GroupContainer* mpGroupContainer; // at 0x14
+    Size mLayoutSize;                 // at 0x18
+    u8 mOriginType;                   // at 0x20
+
+    static MEMAllocator* mspAllocator;
+};
+
+/******************************************************************************
+ *
+ * Utility functions
+ *
+ ******************************************************************************/
+namespace {
+
+template <typename TObj> TObj* CreateObject() {
+    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
+
+    if (pBuffer != NULL) {
+        return new (pBuffer) TObj();
+    }
+
+    return NULL;
 }
+
+template <typename TObj, typename TParam> TObj* CreateObject(TParam param) {
+    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
+
+    if (pBuffer != NULL) {
+        return new (pBuffer) TObj(param);
+    }
+
+    return NULL;
+}
+
+template <typename TObj, typename TParam1, typename TParam2>
+TObj* CreateObject(TParam1 param1, TParam2 param2) {
+
+    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
+
+    if (pBuffer != NULL) {
+        return new (pBuffer) TObj(param1, param2);
+    }
+
+    return NULL;
+}
+
+} // namespace
+} // namespace lyt
+} // namespace nw4r
 
 #endif

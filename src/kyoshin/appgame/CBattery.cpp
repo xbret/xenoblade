@@ -68,7 +68,7 @@ void CBattery::updateBatteryImage(){
         //Go through each image, and enable it if the index is <= battery level
         for(u8 num = 1; num <= 4; num++){
             sprintf(name, "pic_%02d", num); //Calculate the image name
-            nw4r::lyt::Pane* pane = mLayout->unk10->FindPaneByName(name, true);
+            nw4r::lyt::Pane* pane = mLayout->GetRootPane()->FindPaneByName(name, true);
             if(pane != nullptr){
                 pane->SetVisible(num <= mBatteryLevel);
             }

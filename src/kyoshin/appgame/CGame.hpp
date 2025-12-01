@@ -4,7 +4,7 @@
 #include <monolib/util.hpp>
 #include <monolib/core.hpp>
 #include <monolib/work.hpp>
-#include <nw4r/types_nw4r.h>
+#include <nw4r/lyt.h>
 
 class CGame : public CProc {
 public:

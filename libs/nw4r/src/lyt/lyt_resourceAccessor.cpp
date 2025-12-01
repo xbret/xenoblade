@@ -1,24 +1,17 @@
-#include <nw4r/lyt/lyt_resourceAccessor.h>
+#include <nw4r/lyt.h>
 
-namespace nw4r
-{
-    namespace lyt
-    {
-        ResourceAccessor::~ResourceAccessor()
-        {
+namespace nw4r {
+namespace lyt {
 
-        }
+ResourceAccessor::~ResourceAccessor() {}
 
-        ResourceAccessor::ResourceAccessor()
-        {
+ResourceAccessor::ResourceAccessor() {}
 
-        }
+ut::Font* ResourceAccessor::GetFont(const char* pName) {
+#pragma unused(pName)
 
-        ut::Font * ResourceAccessor::GetFont(const char *name)
-        {
-        #pragma unused(name)
-        
-            return NULL;
-        }
-    }
+    return NULL;
 }
+
+} // namespace lyt
+} // namespace nw4r

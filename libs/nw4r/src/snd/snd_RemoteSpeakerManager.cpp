@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 
 #include <revolution/AX.h>
@@ -20,8 +18,8 @@ RemoteSpeakerManager::RemoteSpeakerManager() : mInitialized(false) {
     }
 }
 
-RemoteSpeaker& RemoteSpeakerManager::GetRemoteSpeaker(int i) {
-    return mSpeaker[i];
+RemoteSpeaker& RemoteSpeakerManager::GetRemoteSpeaker(int idx) {
+    return mSpeaker[idx];
 }
 
 void RemoteSpeakerManager::Setup() {

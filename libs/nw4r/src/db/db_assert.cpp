@@ -62,7 +62,7 @@ namespace nw4r
             }
         }
 
-        void VPanic(const char* file, int line, const char* fmt, std::va_list vlist, bool halt) {
+        DECL_WEAK void VPanic(const char* file, int line, const char* fmt, std::va_list vlist, bool halt) {
             register u32 stackPointer;
 
             // Get the stack pointer
@@ -98,7 +98,7 @@ namespace nw4r
 
         }
 
-        void Panic(const char* file, int line, const char* fmt, ...)
+        DECL_WEAK void Panic(const char* file, int line, const char* fmt, ...)
         {
             va_list vlist;
             va_start(vlist, fmt);
@@ -106,7 +106,7 @@ namespace nw4r
             PPCHalt(); // PPCHalt is called in VPanic, so this never gets called.
         }
         
-        void VWarning(const char* file, int line, const char* fmt, std::va_list vlist)
+        DECL_WEAK void VWarning(const char* file, int line, const char* fmt, std::va_list vlist)
         {
             if (sAssertionConsole != nullptr)
             {
@@ -127,7 +127,7 @@ namespace nw4r
             }
         }
 
-        void Warning(const char* file, int line, const char* fmt, ...)
+        DECL_WEAK void Warning(const char* file, int line, const char* fmt, ...)
         {
             va_list vlist;
             va_start(vlist, fmt);

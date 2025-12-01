@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
 
@@ -93,8 +91,10 @@ u32 SoundArchivePlayer::GetRequiredMemSize(const SoundArchive* pArchive) {
         }
     }
 
+    // clang-format off
     size += ut::RoundUp(
-        pArchive->GetGroupCount() * sizeof(Group) + sizeof(GroupTable), 4);
+        pArchive->GetGroupCount() * sizeof(Group) + (sizeof(GroupTable) - sizeof(Group)), 4);
+    // clang-format on
 
     SoundArchive::SoundArchivePlayerInfo info;
     if (pArchive->ReadSoundArchivePlayerInfo(&info)) {
@@ -118,7 +118,7 @@ u32 SoundArchivePlayer::GetRequiredStrmBufferSize(
         strmChannels = info.strmChannelCount;
     }
 
-    // TODO: How is this calculated?
+    // TODO(kiwi) How is this calculated?
     return strmChannels * 0xA000;
 }
 
@@ -238,8 +238,10 @@ bool SoundArchivePlayer::SetupSoundPlayer(const SoundArchive* pArchive,
 
 bool SoundArchivePlayer::CreateGroupAddressTable(const SoundArchive* pArchive,
                                                  void** ppBuffer, void* pEnd) {
-    u32 requireSize =
-        pArchive->GetGroupCount() * sizeof(Group) + sizeof(GroupTable);
+    // clang-format off
+    u32 requireSize = 
+        pArchive->GetGroupCount() * sizeof(Group) + (sizeof(GroupTable) - sizeof(Group));
+    // clang-format on
 
     void* pTableEnd =
         ut::RoundUp(ut::AddOffsetToPtr(*ppBuffer, requireSize), 4);
@@ -370,8 +372,8 @@ const SoundArchive& SoundArchivePlayer::GetSoundArchive() const {
     return *mSoundArchive;
 }
 
-SoundPlayer& SoundArchivePlayer::GetSoundPlayer(u32 i) {
-    return mSoundPlayers[i];
+SoundPlayer& SoundArchivePlayer::GetSoundPlayer(u32 idx) {
+    return mSoundPlayers[idx];
 }
 
 const void* SoundArchivePlayer::detail_GetFileAddress(u32 id) const {

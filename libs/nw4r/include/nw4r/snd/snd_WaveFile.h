@@ -3,13 +3,19 @@
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/snd/snd_AxVoice.h>
-#include <nw4r/snd/snd_Common.h>
+#include <nw4r/snd/snd_Types.h>
 
 #include <nw4r/ut.h>
 
 namespace nw4r {
 namespace snd {
 namespace detail {
+
+/******************************************************************************
+ *
+ * RWAV binary layout
+ *
+ ******************************************************************************/
 namespace WaveFile {
 
 enum Format { FORMAT_PCM8, FORMAT_PCM16, FORMAT_ADPCM };
@@ -20,7 +26,7 @@ struct WaveInfo {
     u8 numChannels;             // at 0x2
     u8 sampleRate24;            // at 0x3
     u16 sampleRate;             // at 0x4
-    u16 padding2;               // at 0x6
+    u16 PADDING_0x6;            // at 0x6
     u32 loopStart;              // at 0x8
     u32 loopEnd;                // at 0xC
     u32 channelInfoTableOffset; // at 0x10
@@ -40,6 +46,11 @@ struct WaveChannelInfo {
 
 }; // namespace WaveFile
 
+/******************************************************************************
+ *
+ * WaveFileReader
+ *
+ ******************************************************************************/
 struct ChannelParam {
     void* dataAddr;       // at 0x0
     u32 volumeFrontLeft;  // at 0x4

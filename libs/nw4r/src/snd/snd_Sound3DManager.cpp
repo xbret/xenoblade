@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/math.h>
 #include <nw4r/snd.h>
 
@@ -19,8 +17,8 @@ namespace {
  *         c = cAngle * cFactor
  *         d = dAngle * dFactor
  */
-f32 SolveLinerFunction(f32 x, f32 dAngle, f32 cAngle, f32 dFactor, // TYPO
-                       f32 cFactor) {
+inline f32 SolveLinerFunction(f32 x, f32 dAngle, f32 cAngle, f32 dFactor,
+                              f32 cFactor) { // @typo
     if (dAngle == cAngle) {
         return (dFactor + cFactor) / 2;
     }
@@ -106,7 +104,8 @@ void Sound3DManager::Update(SoundParam* pParam, u32 id, SoundHandle* pHandle,
             f32 units = (distance - pListener->GetMaxVolumeDistance()) /
                         pListener->GetUnitDistance();
 
-            volume = pow(pActorParam->soundParam.decayRatio / 256.0f, units);
+            volume =
+                std::pow(pActorParam->soundParam.decayRatio / 256.0f, units);
             break;
         }
 

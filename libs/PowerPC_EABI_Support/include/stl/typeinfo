@@ -1,5 +1,5 @@
-#ifndef _TYPEINFO
-#define _TYPEINFO
+#ifndef MSL_CPP_TYPEINFO_H
+#define MSL_CPP_TYPEINFO_H
 
 #include <exception>
 

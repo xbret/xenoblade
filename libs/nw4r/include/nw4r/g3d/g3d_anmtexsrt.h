@@ -1,58 +1,168 @@
-#ifndef NW4R_G3D_ANMTEXSRT_H
-#define NW4R_G3D_ANMTEXSRT_H
+#ifndef NW4R_G3D_ANM_TEX_SRT_H
+#define NW4R_G3D_ANM_TEX_SRT_H
 #include <nw4r/types_nw4r.h>
+
+#include <nw4r/g3d/g3d_anmobj.h>
+#include <nw4r/g3d/res/g3d_resanmtexsrt.h>
+#include <nw4r/g3d/res/g3d_resmat.h>
 
 namespace nw4r {
 namespace g3d {
 
-// TODO: Moved to this file to resolve circular dependency
-struct ResAnmTexSrtDataTypedef {
-    static const int NUM_OF_MAT_TEX_MTX = 8;
-    static const int NUM_OF_IND_TEX_MTX = 3;
-    static const int NUM_OF_TEX_MTX = NUM_OF_MAT_TEX_MTX + NUM_OF_IND_TEX_MTX;
+void ApplyTexSrtAnmResult(ResTexSrt srt, const TexSrtAnmResult* pResult);
+void ApplyTexSrtAnmResult(ResTexSrt srt, ResMatIndMtxAndScale ind,
+                          const TexSrtAnmResult* pResult);
+
+/******************************************************************************
+ *
+ * AnmObjTexSrt
+ *
+ ******************************************************************************/
+// Forward declarations
+class AnmObjTexSrtRes;
+
+class AnmObjTexSrt : public AnmObj {
+public:
+    AnmObjTexSrt(MEMAllocator* pAllocator, u16* pBindingBuf, int numBinding);
+    virtual void G3dProc(u32 task, u32 param, void* pInfo) = 0; // at 0xC
+    virtual ~AnmObjTexSrt() {}                                  // at 0x10
+
+    virtual void SetFrame(f32 frame) = 0; // at 0x1C
+    virtual f32 GetFrame() const = 0;     // at 0x20
+    virtual void UpdateFrame() = 0;       // at 0x24
+
+    virtual void SetUpdateRate(f32 rate) = 0; // at 0x28
+    virtual f32 GetUpdateRate() const = 0;    // at 0x2C
+
+    virtual bool Bind(const ResMdl mdl) = 0; // at 0x30
+    virtual void Release();                  // at 0x34
+
+    virtual const TexSrtAnmResult* GetResult(TexSrtAnmResult* pResult,
+                                             u32 idx) = 0; // at 0x38
+
+    virtual AnmObjTexSrtRes* Attach(int idx, AnmObjTexSrtRes* pRes); // at 0x3C
+    virtual AnmObjTexSrtRes* Detach(int idx);                        // at 0x40
+    virtual void DetachAll();                                        // at 0x44
+
+    bool TestExistence(u32 idx) const;
+    bool TestDefined(u32 idx) const;
+
+protected:
+    enum BindingFlag {
+        BINDING_ID_MASK = (1 << 14) - 1,
+        BINDING_INVALID = (1 << 14),
+        BINDING_UNDEFINED = (1 << 15),
+    };
+
+protected:
+    static const int MAX_CHILD = 4;
+
+protected:
+    int mNumBinding;      // at 0x10
+    u16* const mpBinding; // at 0x14
+
+    NW4R_G3D_RTTI_DECL_DERIVED(AnmObjTexSrt, AnmObj);
 };
 
-struct TexSrtTypedef {
-    enum TexMatrixMode {
-        TEXMATRIXMODE_MAYA,
-        TEXMATRIXMODE_XSI,
-        TEXMATRIXMODE_3DSMAX
-    };
+/******************************************************************************
+ *
+ * AnmObjTexSrtNode
+ *
+ ******************************************************************************/
+class AnmObjTexSrtNode : public AnmObjTexSrt {
+public:
+    AnmObjTexSrtNode(MEMAllocator* pAllocator, u16* pBindingBuf, int numBinding,
+                     AnmObjTexSrtRes** ppChildrenBuf, int numChildren);
+    virtual void G3dProc(u32 task, u32 param, void* pInfo); // at 0xC
+    virtual ~AnmObjTexSrtNode();                            // at 0x10
+
+    virtual void SetFrame(f32 frame); // at 0x1C
+    virtual f32 GetFrame() const;     // at 0x20
+    virtual void UpdateFrame();       // at 0x24
+
+    virtual void SetUpdateRate(f32 rate); // at 0x28
+    virtual f32 GetUpdateRate() const;    // at 0x2C
+
+    virtual bool Bind(const ResMdl mdl); // at 0x30
+    virtual void Release();              // at 0x34
+
+    virtual AnmObjTexSrtRes* Attach(int idx, AnmObjTexSrtRes* pRes); // at 0x3C
+    virtual AnmObjTexSrtRes* Detach(int idx);                        // at 0x40
+    virtual void DetachAll();                                        // at 0x44
+
+protected:
+    int mChildrenArraySize;            // at 0x18
+    AnmObjTexSrtRes** mpChildrenArray; // at 0x1C
+
+    NW4R_G3D_RTTI_DECL_DERIVED(AnmObjTexSrtNode, AnmObjTexSrt);
 };
 
-struct TexSrt : TexSrtTypedef {
-    f32 Su; // at 0x0
-    f32 Sv; // at 0x4
-    f32 R;  // at 0x8
-    f32 Tu; // at 0xc
-    f32 Tv; // at 0x10
+/******************************************************************************
+ *
+ * AnmObjTexSrtOverride
+ *
+ ******************************************************************************/
+class AnmObjTexSrtOverride : public AnmObjTexSrtNode {
+    static AnmObjTexSrtOverride* Construct(MEMAllocator* pAllocator, u32* pSize,
+                                           ResMdl mdl, int numChildren);
 
-    enum Flag {
-        FLAG_ANM_EXISTS  = (1 << 0),
-        FLAG_SCALE_ONE   = (1 << 1),
-        FLAG_ROT_ZERO    = (1 << 2),
-        FLAG_TRANS_ZERO  = (1 << 3),
-        FLAGSET_IDENTITY = FLAG_ANM_EXISTS | FLAG_SCALE_ONE | FLAG_ROT_ZERO | FLAG_TRANS_ZERO,
-        
-        NUM_OF_FLAG = 4,
-    };
+    AnmObjTexSrtOverride(MEMAllocator* pAllocator, u16* pBindingBuf,
+                         int numBinding, AnmObjTexSrtRes** ppChildrenBuf,
+                         int numChildren)
+        : AnmObjTexSrtNode(pAllocator, pBindingBuf, numBinding, ppChildrenBuf,
+                           numChildren) {}
+
+    virtual ~AnmObjTexSrtOverride() {} // at 0x10
+
+    virtual const TexSrtAnmResult* GetResult(TexSrtAnmResult* pResult,
+                                             u32 idx); // at 0x38
+
+    NW4R_G3D_RTTI_DECL_DERIVED(AnmObjTexSrtOverride, AnmObjTexSrtNode);
 };
 
-struct TexSrtAnmResult : ResAnmTexSrtDataTypedef, TexSrtTypedef {
-    u32 flags;                  // at 0x0
-    u32 indFlags;               // at 0x4
-    TexMatrixMode texMtxMode;   // at 0x8
-    TexSrt srt[NUM_OF_TEX_MTX]; // at 0xC
+/******************************************************************************
+ *
+ * AnmObjTexSrtRes
+ *
+ ******************************************************************************/
+class AnmObjTexSrtRes : public AnmObjTexSrt, protected FrameCtrl {
+public:
+    static AnmObjTexSrtRes* Construct(MEMAllocator* pAllocator, u32* pSize,
+                                      ResAnmTexSrt srt, ResMdl mdl, bool cache);
 
-    enum Flag {
-        // TODO: Naming
-        FLAG_0 = (1 << 0),
-        FLAG_SCALE_ONE = (1 << 1),
-        FLAG_ROT_ZERO = (1 << 2),
-        FLAG_TRANS_ZERO = (1 << 3),
+    AnmObjTexSrtRes(MEMAllocator* pAllocator, ResAnmTexSrt srt,
+                    u16* pBindingBuf, int numBinding,
+                    TexSrtAnmResult* pCacheBuf);
+    virtual void G3dProc(u32 task, u32 param, void* pInfo); // at 0xC
+    virtual ~AnmObjTexSrtRes() {}                           // at 0x10
 
-        NUM_OF_FLAGS = 4
-    };
+    virtual void SetFrame(f32 frame); // at 0x1C
+    virtual f32 GetFrame() const;     // at 0x20
+    virtual void UpdateFrame();       // at 0x24
+
+    virtual void SetUpdateRate(f32 rate); // at 0x28
+    virtual f32 GetUpdateRate() const;    // at 0x2C
+
+    virtual bool Bind(const ResMdl mdl); // at 0x30
+
+    virtual const TexSrtAnmResult* GetResult(TexSrtAnmResult* pResult,
+                                             u32 idx); // at 0x38
+
+    void UpdateCache();
+
+    ResAnmTexSrt GetResAnm() {
+        return mRes;
+    }
+
+    void SetPlayPolicy(PlayPolicyFunc pFunc) {
+        FrameCtrl::SetPlayPolicy(pFunc);
+    }
+
+private:
+    ResAnmTexSrt mRes;                    // at 0x2C
+    TexSrtAnmResult* const mpResultCache; // at 0x30
+
+    NW4R_G3D_RTTI_DECL_DERIVED(AnmObjTexSrtRes, AnmObjTexSrt);
 };
 
 } // namespace g3d

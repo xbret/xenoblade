@@ -31,7 +31,7 @@ public:
     void RemoveSoundList(BasicSound* pSound);
 
     template <typename TForEachFunc>
-    TForEachFunc ForEachSound(TForEachFunc pFunction, bool reverse) {
+    TForEachFunc ForEachSound(TForEachFunc pFunc, bool reverse) {
         if (reverse) {
             BasicSoundExtPlayList::RevIterator it =
                 mSoundList.GetBeginReverseIter();
@@ -41,21 +41,21 @@ public:
 
                 SoundHandle handle;
                 handle.detail_AttachSoundAsTempHandle(&*curr);
-                pFunction(handle);
+                pFunc(handle);
 
                 if (handle.IsAttachedSound()) {
                     ++it;
                 }
             }
         } else {
-            NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
+            NW4R_UT_LINKLIST_FOREACH_SAFE(it, mSoundList, {
                 SoundHandle handle;
                 handle.detail_AttachSoundAsTempHandle(&*it);
-                pFunction(handle);
-            );
+                pFunc(handle);
+            });
         }
 
-        return pFunction;
+        return pFunc;
     }
 
 private:

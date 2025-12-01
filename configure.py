@@ -353,6 +353,7 @@ cflags_ndev = [
 cflags_nw4r = [
     *cflags_base,
     "-inline auto",
+    "-ipa file",
     "-fp_contract off",
     "-func_align 4",
     "-i libs/nw4r/include/",

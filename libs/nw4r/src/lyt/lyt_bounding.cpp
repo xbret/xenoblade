@@ -1,29 +1,22 @@
-#include <nw4r/lyt/lyt_bounding.h>
+#include <nw4r/lyt.h>
 
-namespace nw4r
-{
-    namespace lyt
-    {
-        Bounding::Bounding(const res::Bounding *res, const ResBlockSet&) : Pane(res)
-        {
+namespace nw4r {
+namespace lyt {
 
-        }
+NW4R_UT_RTTI_DEF_DERIVED(Bounding, Pane);
 
-        Bounding::~Bounding()
-        {
+Bounding::Bounding(const res::Bounding* pRes, const ResBlockSet& rBlockSet)
+    : Pane(pRes) {
 
-        }
-
-        void Bounding::DrawSelf(const DrawInfo&)
-        {
-
-        }
-
-        const ut::detail::RuntimeTypeInfo * Bounding::GetRuntimeTypeInfo() const
-        {
-            return &typeInfo;
-        }
-
-        ut::detail::RuntimeTypeInfo Bounding::typeInfo(&Pane::typeInfo);
-    }
+#pragma unused(rBlockSet)
 }
+
+Bounding::~Bounding() {}
+
+void Bounding::DrawSelf(const DrawInfo& rInfo) {
+#pragma unused(rInfo)
+    // Debug draw stripped out
+}
+
+} // namespace lyt
+} // namespace nw4r

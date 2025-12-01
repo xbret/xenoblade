@@ -1,5 +1,5 @@
-#ifndef _LIMITS_H
-#define _LIMITS_H
+#ifndef MSL_LIMITS_H
+#define MSL_LIMITS_H
 #include <types.h>
 #ifdef __cplusplus
 extern "C" {

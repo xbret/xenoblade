@@ -15,7 +15,8 @@ namespace math {
  * VEC2 structure
  *
  ******************************************************************************/
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _VEC2 {
     f32 x, y;
 };
@@ -66,11 +67,13 @@ struct VEC2 : _VEC2 {
  *
  ******************************************************************************/
 // Forward declarations
+struct VEC3;
 VEC3* VEC3Add(VEC3* pOut, const VEC3* pA, const VEC3* pB);
 VEC3* VEC3Sub(VEC3* pOut, const VEC3* pA, const VEC3* pB);
 VEC3* VEC3Scale(VEC3* pOut, const VEC3* pIn, f32 scale);
 
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _VEC3 {
     f32 x, y, z;
 };
@@ -162,7 +165,8 @@ struct VEC3 : _VEC3 {
  * MTX33 structure
  *
  ******************************************************************************/
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _MTX33 {
     union {
         struct {
@@ -185,7 +189,8 @@ struct MTX33 : _MTX33 {
  * MTX34 structure
  *
  ******************************************************************************/
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _MTX34 {
     union {
         struct {
@@ -229,7 +234,8 @@ struct MTX34 : _MTX34 {
  * MTX44 structure
  *
  ******************************************************************************/
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _MTX44 {
     union {
         struct {
@@ -264,7 +270,8 @@ struct MTX44 : _MTX44 {
  * QUAT structure
  *
  ******************************************************************************/
-// Optimization: Forces copy by lwz/stw
+// Provides a POD type that can be upcasted to the real structure.
+// (Has the added benefit of forcing struct copies to use lwz/stw.)
 struct _QUAT {
     f32 x, y, z, w;
 };
@@ -278,7 +285,8 @@ struct QUAT : _QUAT {
         w = fw;
     }
 
-    // TODO: These are not real AFAIK. Do they really manually cast the QUAT?
+    // TODO(kiwi) These are not real AFAIK. Do they really manually cast the
+    // QUAT?
     operator Quaternion*() {
         return reinterpret_cast<Quaternion*>(this);
     }
@@ -309,8 +317,7 @@ inline VEC3* VEC3Add(register VEC3* pOut, register const VEC3* pA,
                      register const VEC3* pB) {
     register f32 work0, work1, work2;
 
-    // clang-format off
-    asm {
+    ASM (
         // Add XY
         psq_l  work0, VEC3.x(pA),   0, 0
         psq_l  work1, VEC3.x(pB),   0, 0
@@ -322,8 +329,7 @@ inline VEC3* VEC3Add(register VEC3* pOut, register const VEC3* pA,
         psq_l  work1, VEC3.z(pB),   1, 0
         ps_add work2, work0, work1
         psq_st work2, VEC3.z(pOut), 1, 0
-    }
-    // clang-format on
+    )
 
     return pOut;
 }
@@ -332,8 +338,7 @@ inline f32 VEC3Dot(register const VEC3* pA, register const VEC3* pB) {
     register f32 dot;
     register f32 work0, work1, work2, work3;
 
-    // clang-format off
-    asm {
+    ASM (
         // YZ product
         psq_l  work0, VEC3.y(pA), 0, 0
         psq_l  work1, VEC3.y(pB), 0, 0
@@ -346,8 +351,7 @@ inline f32 VEC3Dot(register const VEC3* pA, register const VEC3* pB) {
         
         // Dot product
         ps_sum0 dot, work1, work0, work0
-    }
-    // clang-format on
+    )
 
     return dot;
 }
@@ -355,8 +359,7 @@ inline f32 VEC3Dot(register const VEC3* pA, register const VEC3* pB) {
 inline f32 VEC3LenSq(register const VEC3* pVec) {
     register f32 work0, work1, work2;
 
-    // clang-format off
-    asm {
+    ASM (
         // Square XY
         psq_l  work0, VEC3.x(pVec), 0, 0
         ps_mul work0, work0, work0
@@ -367,8 +370,7 @@ inline f32 VEC3LenSq(register const VEC3* pVec) {
 
         // Sum products
         ps_sum0 work2, work2, work0, work0
-    }
-    // clang-format on
+    )
 
     return work2;
 }
@@ -377,8 +379,7 @@ inline VEC3* VEC3Lerp(register VEC3* pOut, register const VEC3* pVec1,
                       register const VEC3* pVec2, register f32 t) {
     register f32 work0, work1, work2;
 
-    // clang-format off
-    asm {
+    ASM (
         // X/Y delta
         psq_l  work0, VEC3.x(pVec1), 0, 0
         psq_l  work1, VEC3.x(pVec2), 0, 0
@@ -394,8 +395,7 @@ inline VEC3* VEC3Lerp(register VEC3* pOut, register const VEC3* pVec1,
         // Scale with time and add to v0
         ps_madds0 work2, work2, t, work0
         psq_st    work2, VEC3.z(pOut), 1, 0
-    }
-    // clang-format on
+    )
 
     return pOut;
 }
@@ -404,8 +404,7 @@ inline VEC3* VEC3Scale(register VEC3* pOut, register const VEC3* pIn,
                        register f32 scale) {
     register f32 work0, work1;
 
-    // clang-format off
-    asm {
+    ASM (
         // Scale XY
         psq_l    work0, VEC3.x(pIn),  0, 0
         ps_muls0 work1, work0, scale
@@ -415,8 +414,7 @@ inline VEC3* VEC3Scale(register VEC3* pOut, register const VEC3* pIn,
         psq_l    work0, VEC3.z(pIn),  1, 0
         ps_muls0 work1, work0, scale
         psq_st   work1, VEC3.z(pOut), 1, 0
-    }
-    // clang-format on
+    )
 
     return pOut;
 }
@@ -425,8 +423,7 @@ inline VEC3* VEC3Sub(register VEC3* pOut, register const VEC3* pA,
                      register const VEC3* pB) {
     register f32 work0, work1, work2;
 
-    // clang-format off
-    asm {
+    ASM (
         // Sub XY
         psq_l  work0, VEC3.x(pA),   0, 0
         psq_l  work1, VEC3.x(pB),   0, 0
@@ -438,8 +435,7 @@ inline VEC3* VEC3Sub(register VEC3* pOut, register const VEC3* pA,
         psq_l  work1, VEC3.z(pB),   1, 0
         ps_sub work2, work0, work1
         psq_st work2, VEC3.z(pOut), 1, 0
-    }
-    // clang-format on
+    )
 
     return pOut;
 }
@@ -486,7 +482,7 @@ MTX33* MTX33Identity(MTX33* pMtx);
  *
  ******************************************************************************/
 MTX33* MTX34ToMTX33(MTX33* pOut, const MTX34* pIn);
-bool MTX34InvTranspose(MTX33* pOut, const MTX34* pIn);
+u32 MTX34InvTranspose(MTX33* pOut, const MTX34* pIn);
 MTX34* MTX34Zero(MTX34* pMtx);
 MTX34* MTX34Scale(MTX34* pOut, const MTX34* pIn, const VEC3* pScale);
 MTX34* MTX34Trans(MTX34* pOut, const MTX34* pIn, const VEC3* pTrans);
@@ -503,9 +499,12 @@ inline MTX34* MTX34Identity(MTX34* pMtx) {
     return pMtx;
 }
 
-inline MTX34* MTX34Inv(MTX34* pOut, const MTX34* pIn) {
-    PSMTXInverse(*pIn, *pOut);
-    return pOut;
+inline u32 MTX34Inv(MTX34* pOut, const MTX34* pIn) {
+    return PSMTXInverse(*pIn, *pOut);
+}
+
+inline u32 MTX34InvTranspose(MTX34* pOut, const MTX34* pIn) {
+    return PSMTXInvXpose(*pIn, *pOut);
 }
 
 inline MTX34* MTX34LookAt(MTX34* pMtx, const VEC3* pPos, const VEC3* pUp,
@@ -574,6 +573,7 @@ inline MTX34* QUATToMTX34(MTX34* pMtx, const QUAT* pQuat) {
     return pMtx;
 }
 
+// @bug QUATSlerp macro changes this function name!
 inline QUAT* C_QUATSlerp(QUAT* pOut, const QUAT* p1, const QUAT* p2, f32 t) {
     ::C_QUATSlerp(*p1, *p2, *pOut, t);
     return pOut;
