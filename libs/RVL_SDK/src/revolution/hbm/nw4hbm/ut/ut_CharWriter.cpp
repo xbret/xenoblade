@@ -2,7 +2,7 @@
 
 namespace {
 
-void SetupGXCommon() {
+static void SetupGXCommon() {
     static const nw4hbm::ut::Color fog = 0;
 
     GXSetFog(GX_FOG_NONE, fog, 0.0f, 0.0f, 0.0f, 0.0f);
