@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
 
 #include <cstring>
@@ -74,18 +72,6 @@ void* ResDic::operator[](const char* pName) const {
     return NULL;
 }
 
-void* ResDic::operator()(const char* s, u32 len) const {
-    if (IsValid()) {
-        ResDicNodeData* x = Get(s, len);
-        
-        if (x != NULL) {
-            return const_cast<void*>(ofs_to_ptr_raw<void>(x->ofsData));
-        }
-    }
-
-    return NULL;
-}
-
 void* ResDic::operator[](const ResName name) const {
     if (IsValid() && name.IsValid()) {
         ResDicNodeData* pNode = Get(name);
@@ -101,10 +87,10 @@ void* ResDic::operator[](const ResName name) const {
 s32 ResDic::GetIndex(const char* s) const {
     if (IsValid() && s != NULL) {
         u32 len = std::strlen(s);
-        ResDicNodeData* x = Get(s, len);
+        ResDicNodeData* pNode = Get(s, len);
 
-        if (x != NULL) {
-            return x - (ref().data + 1);
+        if (pNode != NULL) {
+            return pNode - (ref().data + 1);
         }
     }
 

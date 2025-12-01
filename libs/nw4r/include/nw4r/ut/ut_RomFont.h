@@ -29,26 +29,26 @@ public:
     virtual GXTexFmt GetTextureFormat() const; // at 0x30
     virtual int GetLineFeed() const;           // at 0x34
 
-    virtual CharWidths GetDefaultCharWidths() const;             // at 0x38
-    virtual void SetDefaultCharWidths(const CharWidths& widths); // at 0x3C
+    virtual CharWidths GetDefaultCharWidths() const;              // at 0x38
+    virtual void SetDefaultCharWidths(const CharWidths& rWidths); // at 0x3C
 
-    virtual bool SetAlternateChar(u16 c);   // at 0x40
-    virtual void SetLineFeed(int linefeed); // at 0x44
+    virtual bool SetAlternateChar(u16 ch); // at 0x40
+    virtual void SetLineFeed(int lf);      // at 0x44
 
-    virtual int GetCharWidth(u16 c) const;            // at 0x48
-    virtual CharWidths GetCharWidths(u16 c) const;    // at 0x4C
-    virtual void GetGlyph(Glyph* glyph, u16 c) const; // at 0x50
-    virtual FontEncoding GetEncoding() const;         // at 0x54
+    virtual int GetCharWidth(u16 ch) const;             // at 0x48
+    virtual CharWidths GetCharWidths(u16 ch) const;     // at 0x4C
+    virtual void GetGlyph(Glyph* pGlyph, u16 ch) const; // at 0x50
+    virtual FontEncoding GetEncoding() const;           // at 0x54
 
     u32 GetRequireBufferSize();
-    bool Load(void* buffer);
+    bool Load(void* pBuffer);
 
 private:
     static const int CHAR_PTR_BUFFER_SIZE = 4;
 
 private:
-    void MakeCharPtr(char* buffer, u16 c) const;
-    u16 HandleUndefinedChar(u16 c) const;
+    void MakeCharPtr(char* pBuffer, u16 ch) const;
+    u16 HandleUndefinedChar(u16 ch) const;
 
 private:
     OSFontHeader* mFontHeader; // at 0x10

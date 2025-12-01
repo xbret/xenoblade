@@ -15,7 +15,7 @@ enum FontEncoding {
     FONT_ENCODING_SJIS,
     FONT_ENCODING_CP1252,
 
-    NUM_OF_FONT_ENCODING
+    FONT_ENCODING_MAX
 };
 
 struct CharWidths {
@@ -35,6 +35,11 @@ struct Glyph {
     u16 cellY;          // at 0x12
 };
 
+/******************************************************************************
+ *
+ * Font
+ *
+ ******************************************************************************/
 class Font {
 public:
     enum Type { TYPE_NULL, TYPE_ROM, TYPE_RESOURCE, TYPE_PAIR };
@@ -43,8 +48,8 @@ public:
     Font() : mReadFunc(&CharStrmReader::ReadNextCharCP1252) {}
     virtual ~Font() {} // at 0x8
 
-    virtual int GetWidth() const = 0;   // at 0xC
-    virtual int GetHeight() const = 0;  // at 0x10
+    virtual int GetWidth() const = 0;  // at 0xC
+    virtual int GetHeight() const = 0; // at 0x10
 
     virtual int GetAscent() const = 0;      // at 0x14
     virtual int GetDescent() const = 0;     // at 0x18
@@ -58,17 +63,17 @@ public:
     virtual GXTexFmt GetTextureFormat() const = 0; // at 0x30
     virtual int GetLineFeed() const = 0;           // at 0x34
 
-    virtual CharWidths GetDefaultCharWidths() const = 0;             // at 0x38
-    virtual void SetDefaultCharWidths(const CharWidths& widths) = 0; // at 0x3C
+    virtual CharWidths GetDefaultCharWidths() const = 0;              // at 0x38
+    virtual void SetDefaultCharWidths(const CharWidths& rWidths) = 0; // at 0x3C
 
-    virtual bool SetAlternateChar(u16 c) = 0;   // at 0x40
-    virtual void SetLineFeed(int linefeed) = 0; // at 0x44
+    virtual bool SetAlternateChar(u16 ch) = 0; // at 0x40
+    virtual void SetLineFeed(int lf) = 0;      // at 0x44
 
-    virtual int GetCharWidth(u16 c) const = 0;            // at 0x48
-    virtual CharWidths GetCharWidths(u16 c) const = 0;    // at 0x4C
-    virtual void GetGlyph(Glyph* glyph, u16 c) const = 0; // at 0x50
-    virtual bool HasGlyph(u16 c) const = 0;               // at 0x54
-    virtual FontEncoding GetEncoding() const = 0;         // at 0x58
+    virtual int GetCharWidth(u16 ch) const = 0;             // at 0x48
+    virtual CharWidths GetCharWidths(u16 ch) const = 0;     // at 0x4C
+    virtual void GetGlyph(Glyph* pGlyph, u16 ch) const = 0; // at 0x50
+    virtual bool HasGlyph(u16 ch) const = 0;                // at 0x54
+    virtual FontEncoding GetEncoding() const = 0;           // at 0x58
 
     void InitReaderFunc(FontEncoding encode);
 

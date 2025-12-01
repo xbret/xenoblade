@@ -1,12 +1,7 @@
-#ifndef _STDARG_H_
-#define _STDARG_H_
-
+#ifndef MSL_STDARG_H
+#define MSL_STDARG_H
 #ifdef __cplusplus
 extern "C" {
-#endif
-
-#if !defined(__MWERKS__)
-#define __builtin_va_info(v) 0 /* definition for IDEs */
 #endif
 
 typedef enum _va_arg_type {
@@ -22,16 +17,14 @@ typedef struct __va_list_struct {
     char reserved[2];
     char* input_arg_area;
     char* reg_save_area;
-} __va_list_struct;
+} va_list[1];
 
-typedef __va_list_struct va_list[1];
+void* __va_arg(va_list argp, int type);
 
-void* __va_arg(__va_list_struct* list, int type);
-
-#define va_start(ap, fmt) ((void)fmt, __builtin_va_info(&ap))
-#define va_arg(ap, t)     (*((t*)__va_arg(ap, _var_arg_typeof(t))))
-#define va_end(ap)        (void)0
-
+#define va_start(VA_LIST, ARG) ((void)ARG, __builtin_va_info(&VA_LIST))
+#define va_end(VA_LIST) ((void)VA_LIST)
+#define va_arg(VA_LIST, ARG_TYPE)                                              \
+    (*(ARG_TYPE*)__va_arg(VA_LIST, _var_arg_typeof(ARG_TYPE)))
 
 #ifdef __cplusplus
 }

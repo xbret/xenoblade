@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
 
@@ -10,9 +8,8 @@ namespace detail {
 ExternalSoundPlayer::ExternalSoundPlayer() : mPlayableCount(1), mVolume(1.0f) {}
 
 ExternalSoundPlayer::~ExternalSoundPlayer() {
-    NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
-        it->SetExternalSoundPlayer(NULL);
-    );
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mSoundList,
+                                   { it->SetExternalSoundPlayer(NULL); })
 }
 
 void ExternalSoundPlayer::SetPlayableSoundCount(int count) {

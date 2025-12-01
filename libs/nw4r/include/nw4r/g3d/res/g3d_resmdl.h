@@ -1,5 +1,5 @@
-#ifndef NW4R_G3D_RESMDL_H
-#define NW4R_G3D_RESMDL_H
+#ifndef NW4R_G3D_RES_RES_MDL_H
+#define NW4R_G3D_RES_RES_MDL_H
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/g3d/res/g3d_rescommon.h>
@@ -20,12 +20,6 @@ namespace g3d {
  *
  ******************************************************************************/
 struct ResMdlInfoDataTypedef {
-    enum ScalingRule {
-        SCALINGRULE_STANDARD,
-        SCALINGRULE_SOFTIMAGE,
-        SCALINGRULE_MAYA
-    };
-
     enum TexMatrixMode {
         TEXMATRIXMODE_MAYA,
         TEXMATRIXMODE_XSI,
@@ -37,6 +31,16 @@ struct ResMdlInfoDataTypedef {
         EVPMATRIXMODE_APPROX,
         EVPMATRIXMODE_EXACT
     };
+};
+
+enum ScalingRule {
+    SCALINGRULE_STANDARD,
+    SCALINGRULE_SOFTIMAGE,
+    SCALINGRULE_MAYA
+};
+
+struct ResMtxIDToNodeIDData {
+    u32 numMtxID; // at 0x0
 };
 
 struct ResMdlInfoData : ResMdlInfoDataTypedef {
@@ -61,6 +65,34 @@ class ResMdlInfo : public ResCommon<ResMdlInfoData>,
                    public ResMdlInfoDataTypedef {
 public:
     NW4R_G3D_RESOURCE_FUNC_DEF(ResMdlInfo);
+
+    ScalingRule GetScalingRule() const {
+        return ref().scaling_rule;
+    }
+
+    u32 GetNumViewMtx() const {
+        return ref().numViewMtx;
+    }
+
+    EnvelopeMatrixMode GetEnvelopeMatrixMode() const {
+        return static_cast<EnvelopeMatrixMode>(ref().envelope_mtx_mode);
+    }
+
+    u32 GetNumPosNrmMtx() const {
+        const ResMtxIDToNodeIDData* pData =
+            reinterpret_cast<const ResMtxIDToNodeIDData*>(
+                reinterpret_cast<const u8*>(&ref()) + ref().toMtxIDToNodeID);
+
+        return pData->numMtxID;
+    }
+
+    s32 GetNodeIDFromMtxID(u32 id) const {
+        const s32* pArray = reinterpret_cast<const s32*>(
+            reinterpret_cast<const u8*>(&ref()) + ref().toMtxIDToNodeID +
+            sizeof(ResMtxIDToNodeIDData));
+
+        return pArray[id];
+    }
 };
 
 /******************************************************************************
@@ -89,7 +121,7 @@ struct ResMdlData {
 
 class ResMdl : public ResCommon<ResMdlData> {
 public:
-    static const u32 SIGNATURE = 'MDL0';
+    static const u32 SIGNATURE = FOURCC('M', 'D', 'L', '0');
     static const int REVISION = 11;
 
 public:
@@ -98,7 +130,7 @@ public:
     void Init();
     void Terminate();
 
-    bool Bind(ResFile file);
+    bool Bind(const ResFile file);
     void Release();
 
     u32 GetRevision() const {
@@ -109,46 +141,46 @@ public:
         return GetRevision() == REVISION;
     }
 
-    u8* GetResByteCode(const char* pName) const;
+    const u8* GetResByteCode(const char* pName) const;
 
     ResNode GetResNode(const char* pName) const;
-    ResNode GetResNode(ResName name) const;
-    ResNode GetResNode(int i) const;
-    ResNode GetResNode(u32 i) const;
+    ResNode GetResNode(const ResName name) const;
+    ResNode GetResNode(int idx) const;
+    ResNode GetResNode(u32 idx) const;
     u32 GetResNodeNumEntries() const;
 
-    ResVtxPos GetResVtxPos(ResName name) const;
-    ResVtxPos GetResVtxPos(int i) const;
-    ResVtxPos GetResVtxPos(u32 i) const;
+    ResVtxPos GetResVtxPos(const ResName name) const;
+    ResVtxPos GetResVtxPos(int idx) const;
+    ResVtxPos GetResVtxPos(u32 idx) const;
     u32 GetResVtxPosNumEntries() const;
 
-    ResVtxNrm GetResVtxNrm(ResName name) const;
-    ResVtxNrm GetResVtxNrm(int i) const;
-    ResVtxNrm GetResVtxNrm(u32 i) const;
+    ResVtxNrm GetResVtxNrm(const ResName name) const;
+    ResVtxNrm GetResVtxNrm(int idx) const;
+    ResVtxNrm GetResVtxNrm(u32 idx) const;
     u32 GetResVtxNrmNumEntries() const;
 
-    ResVtxClr GetResVtxClr(ResName name) const;
-    ResVtxClr GetResVtxClr(int i) const;
-    ResVtxClr GetResVtxClr(u32 i) const;
+    ResVtxClr GetResVtxClr(const ResName name) const;
+    ResVtxClr GetResVtxClr(int idx) const;
+    ResVtxClr GetResVtxClr(u32 idx) const;
     u32 GetResVtxClrNumEntries() const;
 
-    ResVtxTexCoord GetResVtxTexCoord(int i) const;
+    ResVtxTexCoord GetResVtxTexCoord(int idx) const;
     u32 GetResVtxTexCoordNumEntries() const;
 
-    ResVtxFurPos GetResVtxFurPos(int i) const;
+    ResVtxFurPos GetResVtxFurPos(int idx) const;
 
     ResMat GetResMat(const char* pName) const;
-    ResMat GetResMat(ResName name) const;
-    ResMat GetResMat(int i) const;
-    ResMat GetResMat(u32 i) const;
+    ResMat GetResMat(const ResName name) const;
+    ResMat GetResMat(int idx) const;
+    ResMat GetResMat(u32 idx) const;
     u32 GetResMatNumEntries() const;
 
     ResShp GetResShp(const char* pName) const;
-    ResShp GetResShp(int i) const;
-    ResShp GetResShp(u32 i) const;
+    ResShp GetResShp(int idx) const;
+    ResShp GetResShp(u32 idx) const;
     u32 GetResShpNumEntries() const;
 
-    ResTexPlttInfo GetResTexPlttInfoOffsetFromTexName(int i) const;
+    ResTexPlttInfo GetResTexPlttInfoOffsetFromTexName(int idx) const;
     u32 GetResTexPlttInfoOffsetFromTexNameNumEntries() const;
 
     ResMdlInfo GetResMdlInfo() {

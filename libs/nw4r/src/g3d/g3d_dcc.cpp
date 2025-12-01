@@ -1,46 +1,34 @@
-#include <nw4r/g3d/g3d_dcc.h>
-#include <nw4r/math/math_types.h>
-#include <nw4r/g3d/dcc/g3d_maya.h>
-#include <nw4r/g3d/dcc/g3d_xsi.h>
-#include <nw4r/g3d/dcc/g3d_3dsmax.h>
-#include <nw4r/g3d/dcc/g3d_basic.h>
+#include <nw4r/g3d.h>
+#include <nw4r/math.h>
 
-namespace nw4r
-{
-    namespace g3d
-    {
-        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag,
-            TexSrtTypedef::TexMatrixMode mode)
-        {
-            bool bIdentity;
+namespace nw4r {
+namespace g3d {
 
-            if (mode == TexSrtTypedef::TEXMATRIXMODE_MAYA)
-            {
-                bIdentity = !detail::dcc::CalcTexMtx_Maya(pM, bSet, srt, flag);
-            }
-            else if (mode == TexSrtTypedef::TEXMATRIXMODE_XSI)
-            {
-                bIdentity = !detail::dcc::CalcTexMtx_Xsi(pM, bSet, srt, flag);
-            }
-            else
-            {
-                bIdentity = !detail::dcc::CalcTexMtx_3dsmax(pM, bSet, srt, flag);
-            }
+void CalcTexMtx(math::MTX34* pMtx, bool set, const TexSrt& rSrt,
+                TexSrt::Flag flag, TexSrtTypedef::TexMatrixMode mode) {
+    bool ident = true;
 
-            if (bIdentity && bSet)
-            {
-                math::MTX34Identity(pM);
-            }
-        }
+    if (mode == TexSrtTypedef::TEXMATRIXMODE_MAYA) {
+        ident = !detail::dcc::CalcTexMtx_Maya(pMtx, set, rSrt, flag);
+    } else if (mode == TexSrtTypedef::TEXMATRIXMODE_XSI) {
+        ident = !detail::dcc::CalcTexMtx_Xsi(pMtx, set, rSrt, flag);
+    } else /* TEXMATRIXMODE_3DSMAX */ {
+        ident = !detail::dcc::CalcTexMtx_3dsmax(pMtx, set, rSrt, flag);
+    }
 
-        void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag)
-        {
-            bool bIdentity = !detail::dcc::CalcTexMtx_Basic(pM, bSet, srt, flag);
-
-            if (bIdentity && bSet)
-            {
-                math::MTX34Identity(pM);
-            }
-        }
+    if (ident && set) {
+        math::MTX34Identity(pMtx);
     }
 }
+
+void CalcTexMtx(math::MTX34 *pM, bool bSet, const TexSrt &srt, TexSrt::Flag flag) {
+    bool bIdentity = !detail::dcc::CalcTexMtx_Basic(pM, bSet, srt, flag);
+
+    if (bIdentity && bSet)
+    {
+        math::MTX34Identity(pM);
+    }
+}
+
+} // namespace g3d
+} // namespace nw4r

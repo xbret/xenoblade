@@ -1,5 +1,5 @@
-#ifndef _STDIO_H
-#define _STDIO_H
+#ifndef MSL_STDIO_H
+#define MSL_STDIO_H
 
 #include <types.h>
 #ifdef __cplusplus

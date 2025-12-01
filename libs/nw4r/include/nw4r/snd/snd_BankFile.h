@@ -10,6 +10,16 @@
 namespace nw4r {
 namespace snd {
 namespace detail {
+
+inline u8 ReadByte(const void* pAddr) {
+    return *static_cast<const u8*>(pAddr);
+}
+
+/******************************************************************************
+ *
+ * RBNK binary format
+ *
+ ******************************************************************************/
 namespace BankFile {
 
 struct InstParam {
@@ -60,6 +70,11 @@ struct WaveBlock {
 
 } // namespace BankFile
 
+/******************************************************************************
+ *
+ * BankFileReader
+ *
+ ******************************************************************************/
 struct InstInfo {
     s32 waveIndex;  // at 0x0
     u8 attack;      // at 0x4
@@ -72,13 +87,9 @@ struct InstInfo {
     f32 tune;       // at 0xC
 };
 
-inline u8 ReadByte(const void* pAddr) {
-    return *static_cast<const u8*>(pAddr);
-}
-
 class BankFileReader {
 public:
-    static const u32 SIGNATURE = 'RBNK';
+    static const u32 SIGNATURE = FOURCC('R', 'B', 'N', 'K');
     static const int VERSION = NW4R_VERSION(1, 1);
 
 public:

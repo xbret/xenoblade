@@ -1,5 +1,5 @@
-#ifndef NW4R_SND_COMMON_H
-#define NW4R_SND_COMMON_H
+#ifndef NW4R_SND_TYPES_H
+#define NW4R_SND_TYPES_H
 #include <nw4r/types_nw4r.h>
 
 namespace nw4r {
@@ -9,10 +9,6 @@ static const int CHANNEL_MIN = 1;
 static const int CHANNEL_MAX = 2;
 
 static const int REMOTE_FILTER_MAX = 127;
-
-// 12 notes each with 256 microtones
-static const int SEMITONE_MAX = 12;
-static const int MICROTONE_MAX = 256;
 
 // Volume in range [-90.4db, 6.0db]
 static const f32 VOLUME_MIN_DB = -90.4f;
@@ -80,7 +76,7 @@ struct AdpcmLoopParam {
 struct AdpcmInfo {
     AdpcmParam param;         // at 0x0
     AdpcmLoopParam loopParam; // at 0x28
-    u16 padding;
+    u16 PADDING_0x2E;         // at 0x2E
 };
 
 } // namespace detail

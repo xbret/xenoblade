@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
 
 #include <revolution/GX.h>
@@ -26,7 +24,7 @@ void Fog::Init() {
     r.color.r = r.color.g = r.color.b = r.color.a = 0;
 
     r.adjEnable = FALSE;
-    r._0 = 0;
+    r.PADDING_0x19 = 0;
 
     r.adjCenter = 0;
     for (int i = 0; i < GX_FOG_ADJ_TABLE_SZ; i++) {
@@ -39,8 +37,7 @@ Fog Fog::CopyTo(register void* pDst) const {
         register const FogData* pSrc = ptr();
         register f64 work0, work1, work2, work3, work4, work5;
 
-        // clang-format off
-        asm {
+        ASM (
             lfd  work0, 0(pSrc)
             stfd work0, 0(pDst)
 
@@ -58,8 +55,7 @@ Fog Fog::CopyTo(register void* pDst) const {
 
             lfd  work5, 40(pSrc)
             stfd work5, 40(pDst)
-        }
-        // clang-format on
+        )
 
         return Fog(static_cast<FogData*>(pDst));
     }

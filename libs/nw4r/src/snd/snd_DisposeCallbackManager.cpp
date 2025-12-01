@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 
 namespace nw4r {
@@ -26,6 +24,7 @@ void DisposeCallbackManager::UnregisterDisposeCallback(
 
 void DisposeCallbackManager::Dispose(void* pData, u32 size, void* pArg) {
 #pragma unused(pArg)
+
     const void* pStart = pData;
     const void* pEnd = static_cast<u8*>(pData) + size;
     SoundThread::AutoLock lock;

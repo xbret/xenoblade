@@ -1,5 +1,5 @@
-#ifndef NW4R_G3D_RESANMVIS_H
-#define NW4R_G3D_RESANMVIS_H
+#ifndef NW4R_G3D_RES_RES_ANM_VIS_H
+#define NW4R_G3D_RES_RES_ANM_VIS_H
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/g3d/res/g3d_resanm.h>
@@ -10,14 +10,11 @@ namespace nw4r {
 namespace g3d {
 
 struct ResAnmVisAnmData {
+    enum Flag { FLAG_ENABLE = (1 << 0), FLAG_CONST = (1 << 1) };
+
     s32 name;                        // at 0x0
     u32 flags;                       // at 0x4
     ResBoolAnmFramesData visibility; // at 0x8
-
-    enum Flag {
-        FLAG_ANM_CONSTANT_VALUE = (1 << 0),
-        FLAG_ANM_IS_CONSTANT = (1 << 1)
-    };
 };
 
 struct ResAnmVisInfoData {
@@ -38,7 +35,7 @@ struct ResAnmVisData {
 
 class ResAnmVis : public ResCommon<ResAnmVisData> {
 public:
-    static const u32 SIGNATURE = 'VIS0';
+    static const u32 SIGNATURE = FOURCC('V', 'I', 'S', '0');
     static const int REVISION = 4;
 
 public:
@@ -52,15 +49,15 @@ public:
         return GetRevision() == REVISION;
     }
 
-    bool GetAnmResult(u32 id, f32 frame) const;
+    bool GetAnmResult(u32 idx, f32 frame) const;
 
-    const ResAnmVisAnmData* GetNodeAnm(int i) const {
+    const ResAnmVisAnmData* GetNodeAnm(int idx) const {
         return static_cast<ResAnmVisAnmData*>(
-            ofs_to_obj<ResDic>(ref().toVisDataDic)[i]);
+            ofs_to_obj<ResDic>(ref().toVisDataDic)[idx]);
     }
-    const ResAnmVisAnmData* GetNodeAnm(u32 i) const {
+    const ResAnmVisAnmData* GetNodeAnm(u32 idx) const {
         return static_cast<ResAnmVisAnmData*>(
-            ofs_to_obj<ResDic>(ref().toVisDataDic)[i]);
+            ofs_to_obj<ResDic>(ref().toVisDataDic)[idx]);
     }
 
     int GetNumFrame() const {

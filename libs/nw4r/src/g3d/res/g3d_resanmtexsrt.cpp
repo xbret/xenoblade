@@ -1,7 +1,4 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
-
 #include <nw4r/math.h>
 #include <nw4r/ut.h>
 
@@ -9,14 +6,14 @@ namespace nw4r {
 namespace g3d {
 namespace {
 
-DECOMP_INLINE u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
-                             f32 frame) {
+inline u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
+                      f32 frame) {
     int anmIdx = 0;
     u32 flags = pTexData->flags;
     TexSrt& rSrt = *pSrt;
 
     if (!(flags & ResAnmTexSrtTexData::FLAG_SCALE_ONE)) {
-        bool suConstant = flags & ResAnmTexSrtTexData::FLAG_SCALE_CONSTANT_U;
+        bool suConstant = flags & ResAnmTexSrtTexData::FLAG_SCALE_U_CONST;
 
         rSrt.Su = detail::GetResAnmResult(&pTexData->anms[anmIdx++], frame,
                                           suConstant);
@@ -24,8 +21,7 @@ DECOMP_INLINE u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
         if (flags & ResAnmTexSrtTexData::FLAG_SCALE_UNIFORM) {
             rSrt.Sv = rSrt.Su;
         } else {
-            bool svConstant =
-                flags & ResAnmTexSrtTexData::FLAG_SCALE_CONSTANT_V;
+            bool svConstant = flags & ResAnmTexSrtTexData::FLAG_SCALE_V_CONST;
 
             rSrt.Sv = detail::GetResAnmResult(&pTexData->anms[anmIdx++], frame,
                                               svConstant);
@@ -36,7 +32,7 @@ DECOMP_INLINE u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
     }
 
     if (!(flags & ResAnmTexSrtTexData::FLAG_ROT_ZERO)) {
-        bool rConstant = flags & ResAnmTexSrtTexData::FLAG_ROT_CONSTANT;
+        bool rConstant = flags & ResAnmTexSrtTexData::FLAG_ROT_CONST;
 
         rSrt.R = detail::GetResAnmResult(&pTexData->anms[anmIdx++], frame,
                                          rConstant);
@@ -45,8 +41,8 @@ DECOMP_INLINE u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
     }
 
     if (!(flags & ResAnmTexSrtTexData::FLAG_TRANS_ZERO)) {
-        bool tuConstant = flags & ResAnmTexSrtTexData::FLAG_TRANS_CONSTANT_U;
-        bool tvConstant = flags & ResAnmTexSrtTexData::FLAG_TRANS_CONSTANT_V;
+        bool tuConstant = flags & ResAnmTexSrtTexData::FLAG_TRANS_U_CONST;
+        bool tvConstant = flags & ResAnmTexSrtTexData::FLAG_TRANS_V_CONST;
 
         rSrt.Tu = detail::GetResAnmResult(&pTexData->anms[anmIdx++], frame,
                                           tuConstant);
@@ -57,17 +53,17 @@ DECOMP_INLINE u32 MakeResult(TexSrt* pSrt, const ResAnmTexSrtTexData* pTexData,
         rSrt.Tv = 0.0f;
     }
 
-    return flags &
-           (ResAnmTexSrtTexData::FLAG_0 | ResAnmTexSrtTexData::FLAG_SCALE_ONE |
-            ResAnmTexSrtTexData::FLAG_ROT_ZERO |
-            ResAnmTexSrtTexData::FLAG_TRANS_ZERO);
+    return flags & (ResAnmTexSrtTexData::FLAG_ANM_EXISTS |
+                    ResAnmTexSrtTexData::FLAG_SCALE_ONE |
+                    ResAnmTexSrtTexData::FLAG_ROT_ZERO |
+                    ResAnmTexSrtTexData::FLAG_TRANS_ZERO);
 }
 
 } // namespace
 
-void ResAnmTexSrt::GetAnmResult(TexSrtAnmResult* pResult, u32 id,
+void ResAnmTexSrt::GetAnmResult(TexSrtAnmResult* pResult, u32 idx,
                                 f32 frame) const {
-    const ResAnmTexSrtMatData* pMatData = GetMatAnm(id);
+    const ResAnmTexSrtMatData* pMatData = GetMatAnm(idx);
     const s32* pToTexData = pMatData->toResAnmTexSrtTexData;
     u32 flags = pMatData->flags;
     u32 indFlags = pMatData->indFlags;

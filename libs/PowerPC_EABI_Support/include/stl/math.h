@@ -1,5 +1,5 @@
-#ifndef _MATH_H
-#define _MATH_H
+#ifndef MSL_MATH_H
+#define MSL_MATH_H
 
 #include <types.h>
 

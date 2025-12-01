@@ -15,9 +15,9 @@ namespace snd {
 namespace detail {
 class ExternalSoundPlayer;
 class SeqSound;
+template <typename T> class SoundInstanceManager;
 class StrmSound;
 class WaveSound;
-template <typename T> class SoundInstanceManager;
 } // namespace detail
 
 class SoundPlayer {
@@ -36,7 +36,7 @@ public:
     int detail_GetOutputLine() const;
     bool detail_IsEnabledOutputLine() const;
 
-    f32 detail_GetRemoteOutVolume(int i) const;
+    f32 detail_GetRemoteOutVolume(int idx) const;
 
     void detail_InsertSoundList(detail::BasicSound* pSound);
     void detail_RemoveSoundList(detail::BasicSound* pSound);

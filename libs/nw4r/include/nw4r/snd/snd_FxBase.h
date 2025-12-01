@@ -2,7 +2,7 @@
 #define NW4R_SND_FX_BASE_H
 #include <nw4r/types_nw4r.h>
 
-#include <nw4r/snd/snd_Common.h>
+#include <nw4r/snd/snd_Types.h>
 
 #include <nw4r/ut.h>
 
@@ -32,10 +32,10 @@ public:
     } // at 0x14
 
 public:
-    NW4R_UT_LIST_NODE_DECL(); // at 0x4
+    NW4R_UT_LINKLIST_NODE_DECL(); // at 0x4
 };
 
-NW4R_UT_LIST_TYPEDEF_DECL(FxBase);
+NW4R_UT_LINKLIST_TYPEDEF_DECL(FxBase);
 
 } // namespace snd
 } // namespace nw4r

@@ -1,5 +1,5 @@
-#ifndef _ASSERT_H
-#define _ASSERT_H
+#ifndef MSL_ASSERT_H
+#define MSL_ASSERT_H
 
 #ifdef __cplusplus
 extern "C" {

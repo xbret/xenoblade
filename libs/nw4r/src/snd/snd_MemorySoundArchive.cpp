@@ -1,7 +1,7 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
+
+#include <cstring>
 
 namespace nw4r {
 namespace snd {
@@ -166,7 +166,7 @@ void MemorySoundArchive::MemoryFileStream::Close() {
 
 s32 MemorySoundArchive::MemoryFileStream::Read(void* pDst, u32 size) {
     u32 bytesRead = ut::Min<u32>(size, mSize - mOffset);
-    memcpy(pDst, ut::AddOffsetToPtr(mData, mOffset), bytesRead);
+    std::memcpy(pDst, ut::AddOffsetToPtr(mData, mOffset), bytesRead);
 
     return bytesRead;
 }

@@ -7,6 +7,15 @@
 namespace nw4r {
 namespace snd {
 namespace detail {
+
+// Forward declarations
+struct WaveData;
+
+/******************************************************************************
+ *
+ * RWSD binary layout
+ *
+ ******************************************************************************/
 namespace WsdFile {
 
 struct WsdInfo {
@@ -31,7 +40,7 @@ struct NoteInfo {
     u8 sustain;                                // at 0x6
     u8 release;                                // at 0x7
     u16 hold;                                  // at 0x8
-    u16 padding;                               // at 0xA
+    u16 PADDING_0xA;                           // at 0xA
     u8 originalKey;                            // at 0xC
     u8 volume;                                 // at 0xD
     u8 pan;                                    // at 0xE
@@ -81,6 +90,11 @@ struct WaveBlockOld {
 
 }; // namespace WsdFile
 
+/******************************************************************************
+ *
+ * WsdFileReader
+ *
+ ******************************************************************************/
 struct WaveSoundInfo {
     f32 pitch;      // at 0x0
     u8 pan;         // at 0x4
@@ -106,7 +120,7 @@ struct WaveSoundNoteInfo {
 
 class WsdFileReader {
 public:
-    static const u32 SIGNATURE = 'RWSD';
+    static const u32 SIGNATURE = FOURCC('R', 'W', 'S', 'D');
     static const int VERSION = NW4R_VERSION(1, 2);
 
 public:

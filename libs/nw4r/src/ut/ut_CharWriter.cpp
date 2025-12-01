@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/ut.h>
 
 namespace {
@@ -95,11 +93,17 @@ void CharWriter::SetFontSize(f32 width, f32 height) {
 void CharWriter::SetFontSize(f32 height) {
 }
 
-f32 CharWriter::GetFontWidth() const { return mScale.x * mFont->GetWidth(); }
+f32 CharWriter::GetFontWidth() const {
+    return mScale.x * mFont->GetWidth();
+}
 
-f32 CharWriter::GetFontHeight() const { return mScale.y * mFont->GetHeight(); }
+f32 CharWriter::GetFontHeight() const {
+    return mScale.y * mFont->GetHeight();
+}
 
-f32 CharWriter::GetFontAscent() const { return mScale.y * mFont->GetAscent(); }
+f32 CharWriter::GetFontAscent() const {
+    return mScale.y * mFont->GetAscent();
+}
 
 f32 CharWriter::GetFontDescent() const {
     return mScale.y * mFont->GetDescent();
@@ -110,21 +114,20 @@ void CharWriter::EnableLinearFilter(bool atSmall, bool atLarge) {
     mFilter.atLarge = atLarge ? GX_LINEAR : GX_NEAR;
 }
 
-f32 CharWriter::Print(u16 code) {
-    Glyph glyph;
-    mFont->GetGlyph(&glyph, code);
-
-    CharWidths& widths = glyph.widths;
+f32 CharWriter::Print(u16 ch) {
     f32 width;
     f32 left;
 
+    Glyph glyph;
+    mFont->GetGlyph(&glyph, ch);
+
     if (mIsWidthFixed) {
-        f32 margin = (mFixedWidth - widths.charWidth * mScale.x) / 2;
+        f32 margin = (mFixedWidth - glyph.widths.charWidth * mScale.x) / 2;
         width = mFixedWidth;
-        left = margin + (widths.left * mScale.x);
+        left = margin + glyph.widths.left * mScale.x;
     } else {
-        width = widths.charWidth * mScale.x;
-        left = widths.left * mScale.x;
+        width = glyph.widths.charWidth * mScale.x;
+        left = glyph.widths.left * mScale.x;
     }
 
     PrintGlyph(mCursorPos.x + left, mCursorPos.y, mCursorPos.z, glyph);
@@ -137,76 +140,75 @@ f32 CharWriter::Print(u16 code) {
 void CharWriter::DrawGlyph(const Glyph& glyph) {
 }
 
-void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& glyph) {
-    f32 x2 = x + (glyph.widths.glyphWidth * mScale.x);
-    f32 y2 = y + (glyph.height * mScale.y);
+void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& rGlyph) {
+    f32 x2 = x + rGlyph.widths.glyphWidth * mScale.x;
+    f32 y2 = y + rGlyph.height * mScale.y;
 
-    u32 posLeft = glyph.cellX;
-    u16 texLeft = 0x8000 * posLeft / glyph.texWidth;
+    u16 texLeft = rGlyph.cellX * 0x8000U / rGlyph.texWidth;
+    u16 texTop = rGlyph.cellY * 0x8000U / rGlyph.texHeight;
 
-    u32 posTop = glyph.cellY;
-    u16 texTop = 0x8000 * posTop / glyph.texHeight;
+    u16 texRight =
+        (rGlyph.cellX + rGlyph.widths.glyphWidth) * 0x8000U / rGlyph.texWidth;
 
-    u32 posRight = posLeft + glyph.widths.glyphWidth;
-    u16 texRight = 0x8000 * posRight / glyph.texWidth;
+    u16 texBottom = (rGlyph.cellY + rGlyph.height) * 0x8000U / rGlyph.texHeight;
 
-    u32 posBottom = posTop + glyph.height;
-    u16 texBottom = 0x8000 * posBottom / glyph.texHeight;
-
-    LoadTexture(glyph, GX_TEXMAP0);
+    LoadTexture(rGlyph, GX_TEXMAP0);
 
     GXBegin(GX_QUADS, GX_VTXFMT0, 4);
     {
         GXPosition3f32(x, y, z);
-        GXColor1u32(mVertexColor.tl);
+        GXColor1u32(mVertexColor.lu);
         GXTexCoord2s16(texLeft, texTop);
 
         GXPosition3f32(x2, y, z);
-        GXColor1u32(mVertexColor.tr);
+        GXColor1u32(mVertexColor.ru);
         GXTexCoord2s16(texRight, texTop);
 
         GXPosition3f32(x2, y2, z);
-        GXColor1u32(mVertexColor.br);
+        GXColor1u32(mVertexColor.rd);
         GXTexCoord2s16(texRight, texBottom);
 
         GXPosition3f32(x, y2, z);
-        GXColor1u32(mVertexColor.bl);
+        GXColor1u32(mVertexColor.ld);
         GXTexCoord2s16(texLeft, texBottom);
     }
     GXEnd();
 }
 
-void CharWriter::LoadTexture(const Glyph& glyph, GXTexMapID slot) {
-    LoadingTexture loadInfo;
+void CharWriter::LoadTexture(const Glyph& rGlyph, GXTexMapID slot) {
+    LoadingTexture loadingTexture;
 
-    loadInfo.slot = slot;
-    loadInfo.texture = glyph.pTexture;
-    loadInfo.filter = mFilter;
+    loadingTexture.slot = slot;
+    loadingTexture.texture = rGlyph.pTexture;
+    loadingTexture.filter = mFilter;
 
-    if (loadInfo != mLoadingTexture) {
-        GXTexObj tobj;
-        GXInitTexObj(&tobj, glyph.pTexture, glyph.texWidth, glyph.texHeight,
-                     glyph.texFormat, GX_CLAMP, GX_CLAMP, FALSE);
-        GXInitTexObjLOD(&tobj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
+    if (loadingTexture != mLoadingTexture) {
+        GXTexObj texObj;
+        GXInitTexObj(&texObj, rGlyph.pTexture, rGlyph.texWidth,
+                     rGlyph.texHeight, rGlyph.texFormat, GX_CLAMP, GX_CLAMP,
+                     FALSE);
+
+        GXInitTexObjLOD(&texObj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
                         0.0f, FALSE, FALSE, GX_ANISO_1);
-        GXLoadTexObj(&tobj, slot);
 
-        mLoadingTexture = loadInfo;
+        GXLoadTexObj(&texObj, slot);
+
+        mLoadingTexture = loadingTexture;
     }
 }
 
 void CharWriter::UpdateVertexColor() {
     // clang-format off
-    mVertexColor.tl = mTextColor.start;
-    mVertexColor.tr = mTextColor.gradMode != GRADMODE_H    ? mTextColor.start : mTextColor.end;
-    mVertexColor.bl = mTextColor.gradMode != GRADMODE_V    ? mTextColor.start : mTextColor.end;
-    mVertexColor.br = mTextColor.gradMode == GRADMODE_NONE ? mTextColor.start : mTextColor.end;
+    mVertexColor.lu = mTextColor.start;
+    mVertexColor.ru = mTextColor.gradationMode != GRADMODE_H    ? mTextColor.start : mTextColor.end;
+    mVertexColor.ld = mTextColor.gradationMode != GRADMODE_V    ? mTextColor.start : mTextColor.end;
+    mVertexColor.rd = mTextColor.gradationMode == GRADMODE_NONE ? mTextColor.start : mTextColor.end;
     // clang-format on
 
-    mVertexColor.tl.a = (mVertexColor.tl.a * mAlpha) / 255,
-    mVertexColor.tr.a = (mVertexColor.tr.a * mAlpha) / 255;
-    mVertexColor.bl.a = (mVertexColor.bl.a * mAlpha) / 255;
-    mVertexColor.br.a = (mVertexColor.br.a * mAlpha) / 255;
+    mVertexColor.lu.a = (mVertexColor.lu.a * mAlpha) / 255,
+    mVertexColor.ru.a = (mVertexColor.ru.a * mAlpha) / 255;
+    mVertexColor.ld.a = (mVertexColor.ld.a * mAlpha) / 255;
+    mVertexColor.rd.a = (mVertexColor.rd.a * mAlpha) / 255;
 }
 
 void CharWriter::SetupVertexFormat() {

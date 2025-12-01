@@ -1,5 +1,5 @@
-#ifndef _SIGNAL_H
-#define _SIGNAL_H
+#ifndef MSL_SIGNAL_H
+#define MSL_SIGNAL_H
 
 #include <types.h>
 

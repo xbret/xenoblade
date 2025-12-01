@@ -14,12 +14,13 @@ namespace snd {
 class WaveSoundHandle;
 
 namespace detail {
-
-// Forward declarations
 template <typename T> class SoundInstanceManager;
+} // namespace detail
+
+namespace detail {
 
 class WaveSound : public BasicSound {
-    friend class WaveSoundHandle;
+    friend class nw4r::snd::WaveSoundHandle;
 
 public:
     NW4R_UT_RTTI_DECL(WaveSound);

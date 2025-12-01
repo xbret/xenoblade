@@ -1,12 +1,10 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
 
 namespace nw4r {
 namespace g3d {
 
-void ResAnmClr::GetAnmResult(ClrAnmResult* pResult, u32 id, f32 frame) const {
-    const ResAnmClrMatData* pMatData = GetMatAnm(id);
+void ResAnmClr::GetAnmResult(ClrAnmResult* pResult, u32 idx, f32 frame) const {
+    const ResAnmClrMatData* pMatData = GetMatAnm(idx);
     const ResAnmClrAnmData* pAnmData = pMatData->anms;
     const ResAnmClrInfoData& rInfoData = ref().info;
 
@@ -19,7 +17,7 @@ void ResAnmClr::GetAnmResult(ClrAnmResult* pResult, u32 id, f32 frame) const {
 
     f32 clippedFrame = detail::ClipFrame(rInfoData, frame);
 
-    for (int i = 0; i < ResAnmClrMatData::NUM_OF_CLA_COLOR;
+    for (int i = 0; i < ClrAnmResult::CLA_MAX;
          flags >>= ResAnmClrMatData::NUM_OF_FLAGS, i++) {
 
         if (!(flags & ResAnmClrMatData::FLAG_ANM_EXISTS)) {

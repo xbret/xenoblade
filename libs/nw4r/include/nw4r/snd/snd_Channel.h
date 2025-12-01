@@ -2,10 +2,10 @@
 #define NW4R_SND_CHANNEL_H
 #include <nw4r/types_nw4r.h>
 
-#include <nw4r/snd/snd_Common.h>
 #include <nw4r/snd/snd_EnvGenerator.h>
 #include <nw4r/snd/snd_Lfo.h>
 #include <nw4r/snd/snd_MoveValue.h>
+#include <nw4r/snd/snd_Types.h>
 #include <nw4r/snd/snd_Voice.h>
 
 #include <nw4r/ut.h>
@@ -13,6 +13,9 @@
 namespace nw4r {
 namespace snd {
 namespace detail {
+
+// Forward declarations
+struct WaveData;
 
 class Channel {
 public:
@@ -244,10 +247,10 @@ private:
     Channel* mNextLink; // at 0xE0
 
 public:
-    NW4R_UT_LIST_NODE_DECL(); // at 0xE4
+    NW4R_UT_LINKLIST_NODE_DECL(); // at 0xE4
 };
 
-NW4R_UT_LIST_TYPEDEF_DECL(Channel);
+NW4R_UT_LINKLIST_TYPEDEF_DECL(Channel);
 
 } // namespace detail
 } // namespace snd

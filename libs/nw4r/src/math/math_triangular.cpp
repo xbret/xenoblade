@@ -1,69 +1,237 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/math.h>
 
 namespace nw4r {
 namespace math {
-namespace {
+
+struct SinCosSample {
+    f32 sin_val;   // at 0x0
+    f32 cos_val;   // at 0x4
+    f32 sin_delta; // at 0x8
+    f32 cos_delta; // at 0xC
+};
 
 struct ArcTanSample {
     f32 atan_val;   // at 0x0
     f32 atan_delta; // at 0x4
 };
 
-ArcTanSample sArcTanTbl[] = {
-    // clang-format off
-    {0.000000000f,  1.272825360f},
-    {1.272825360f,  1.270345807f},
-    {2.543171167f,  1.265415549f},
-    {3.808586597f,  1.258091569f},
-    {5.066678524f,  1.248457074f},
-    {6.315135479f,  1.236619473f},
-    {7.551754951f,  1.222707152f},
-    {8.774461746f,  1.206866622f},
-    {9.981328964f,  1.189258218f},
-    {11.170586586f, 1.170052886f},
-    {12.340640068f, 1.149428010f},
-    {13.490067482f, 1.127564430f},
-    {14.617631912f, 1.104642272f},
-    {15.722274780f, 1.080838680f},
-    {16.803113937f, 1.056325078f},
-    {17.859437943f, 1.031264901f},
-    {18.890703201f, 1.005812049f},
-    {19.896514893f, 0.980109632f},
-    {20.876625061f, 0.954289079f},
-    {21.830913544f, 0.928469777f},
-    {22.759384155f, 0.902758956f},
-    {23.662141800f, 0.877251565f},
-    {24.539394379f, 0.852030873f},
-    {25.391424179f, 0.827168882f},
-    {26.218593597f, 0.802726984f},
-    {27.021320343f, 0.778756559f},
-    {27.800077438f, 0.755300105f},
-    {28.555377960f, 0.732391477f},
-    {29.287769318f, 0.710057378f},
-    {29.997825623f, 0.688317478f},
-    {30.686143875f, 0.667185664f},
-    {31.353328705f, 0.646670520f},
-    {32.000000000f, 0.626776159f}
-    // clang-format on
-};
+namespace detail {
+extern const SinCosSample gSinCosTbl[];
+} // namespace detail
+
+namespace {
+
+extern ArcTanSample sArcTanTbl[];
 
 f32 AtanFIdx_(f32 x) {
     x *= 32.0f;
 
-    u16 idx = F32ToU16(x);
-    f32 r = x - U16ToF32(idx);
+    u16 whole = F32ToU16(x);
+    f32 frac = x - U16ToF32(whole);
 
-    f32 val = sArcTanTbl[idx].atan_val + r * sArcTanTbl[idx].atan_delta;
+    f32 atan = sArcTanTbl[whole].atan_val + frac * sArcTanTbl[whole].atan_delta;
 
-    return val;
+    return atan;
 }
 
 } // namespace
 
+f32 SinFIdx(f32 fidx) {
+    f32 abs_fidx = FAbs(fidx);
+
+    while (abs_fidx > 65536.0f) {
+        abs_fidx -= 65536.0f;
+    }
+
+    u16 whole = F32ToU16(abs_fidx);
+    f32 frac = abs_fidx - U16ToF32(whole);
+
+    f32 sin = detail::gSinCosTbl[whole & 255].sin_val +
+              frac * detail::gSinCosTbl[whole & 255].sin_delta;
+
+    return (fidx < 0.0f) ? -sin : sin;
+}
+
+f32 CosFIdx(f32 fidx) {
+    f32 abs_fidx = FAbs(fidx);
+
+    while (abs_fidx > 65536.0f) {
+        abs_fidx -= 65536.0f;
+    }
+
+    u16 whole = F32ToU16(abs_fidx);
+    f32 frac = abs_fidx - U16ToF32(whole);
+
+    f32 cos = detail::gSinCosTbl[whole & 255].cos_val +
+              frac * detail::gSinCosTbl[whole & 255].cos_delta;
+
+    return cos;
+}
+
+void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
+    register u32 idx; // r31
+    register f32 abs_fidx; // f31
+    register f32 r; // f30
+    register f32 idxmax; // f29
+    register __vec2x32float__ scval, scdel; //f28, f27
+    register __vec2x32float__ result; //f26
+    register f32 c_zero; // f25
+    const register f32* pTbl; // r30
+    
+    idxmax = 65536.0f;
+    pTbl = reinterpret_cast<const f32*>(detail::gSinCosTbl);
+
+    /*
+    abs_fidx = FAbs(fidx);
+
+    while (abs_fidx > idxmax) {
+        abs_fidx -= idxmax;
+    }
+
+    *((u16*)pSin) = F32ToU16(abs_fidx);
+
+    idx = *((u16*)pSin);
+    c_zero = 0; (or idxmax - idxmax bc hudsonsoft silly)
+    idx = (idx & 0xFF) << 4;
+    pTbl += idx;
+    */
+    ASM (
+        fabs abs_fidx, fidx;
+        psq_st abs_fidx, 0(pSin), 1, 3;
+        fcmpu cr0, abs_fidx, idxmax;
+        ble loc2;
+    loc1:
+        fsubs abs_fidx, abs_fidx, idxmax;
+        fcmpu cr0, abs_fidx, idxmax;
+        bgt loc1;
+        psq_st abs_fidx, 0(pSin), 1, 3;
+    loc2:
+        lhz idx, 0(pSin);
+        fsubs c_zero, idxmax, idxmax; // you could just... use 0, but sure
+        rlwinm idx, idx, 4, 20, 27;
+        add pTbl, pTbl, idx;
+    )
+
+    /*
+    r = abs_fidx - U16ToF32(((u16*)pSin)[0]);
+
+    scval[0] = pTbl[0];
+    scval[1] = pTbl[1];
+    scdel[0] = pTbl[2];
+    scdel[1] = pTbl[3];
+
+    result[0] = scdel[0] * r + scval[0];
+    result[1] = scdel[1] * r + scval[1];
+
+    *pCos = result[1];
+    *pSin = fidx < 0 ? -result[0] : result[0];
+    */
+    ASM (
+        psq_l r, 0(pSin), 1, 3
+        fsubs r, abs_fidx, r
+        psq_l scval, 0(pTbl), 0, 0
+        psq_l scdel, 8(pTbl), 0, 0
+        ps_madds0 result, scdel, r, scval
+        ps_merge10 r, result, result
+        psq_st r, 0(pCos), 1, 0
+        fcmpu cr0, fidx, c_zero;
+        bge positive;
+        ps_neg result, result;
+    positive:
+        psq_st result, 0(pSin), 1, 0;
+    )
+
+}
+
+f32 AtanFIdx(f32 x) {
+    if (x >= 0.0f) {
+        if (x > 1.0f) {
+            return 64.0f - AtanFIdx_(1.0f / x);
+        } else {
+            return AtanFIdx_(x);
+        }
+    } else {
+        if (x < -1.0f) {
+            return AtanFIdx_(-1.0f / x) + -64.0f;
+        } else {
+            return -AtanFIdx_(-x);
+        }
+    }
+}
+
+f32 Atan2FIdx(f32 y, f32 x) {
+    f32 a, b, c;
+    bool minus;
+
+    if (x == 0.0f && y == 0.0f) {
+        return 0.0f;
+    }
+
+    if (x >= 0.0f) {
+        if (y >= 0.0f) {
+            if (x >= y) {
+                a = x;
+                b = y;
+                c = 0.0f;
+                minus = false;
+            } else {
+                a = y;
+                b = x;
+                c = 64.0f;
+                minus = true;
+            }
+        } else {
+            if (x >= -y) {
+                a = x;
+                b = -y;
+                c = 0.0f;
+                minus = true;
+            } else {
+                a = -y;
+                b = x;
+                c = -64.0f;
+                minus = false;
+            }
+        }
+    } else {
+        if (y >= 0.0f) {
+            if (-x >= y) {
+                a = -x;
+                b = y;
+                c = 128.0f;
+                minus = true;
+            } else {
+                a = y;
+                b = -x;
+                c = 64.0f;
+                minus = false;
+            }
+        } else {
+            if (-x >= -y) {
+                a = -x;
+                b = -y;
+                c = -128.0f;
+                minus = false;
+            } else {
+                a = -y;
+                b = -x;
+                c = -64.0f;
+                minus = true;
+            }
+        }
+    }
+
+    if (minus) {
+        return c - AtanFIdx_(b / a);
+    } else {
+        return c + AtanFIdx_(b / a);
+    }
+} // namespace
+
 namespace detail {
+
 const SinCosSample gSinCosTbl[] = {
+    // clang-format off
     { 0.000000000f,  1.000000000f,  0.024541000f, -0.000301000f},
     { 0.024541000f,  0.999698997f,  0.024526000f, -0.000903000f},
     { 0.049068000f,  0.998794973f,  0.024497001f, -0.001505000f},
@@ -321,198 +489,51 @@ const SinCosSample gSinCosTbl[] = {
     {-0.049068000f,  0.998794973f,  0.024526000f,  0.000903000f},
     {-0.024541000f,  0.999698997f,  0.024541000f,  0.000301000f},
     {-0.000000000f,  1.000000000f,  0.024541000f, -0.000301000f}
+    // clang-format on
 };
-}
 
-f32 SinFIdx(f32 fidx) {
-    f32 abs_fidx = FAbs(fidx);
+} // namespace detail
 
-    while (abs_fidx > 65536.0f) {
-        abs_fidx -= 65536.0f;
-    }
+namespace {
 
-    u16 idx = F32ToU16(abs_fidx);
-    f32 r = abs_fidx - U16ToF32(idx);
+ArcTanSample sArcTanTbl[] = {
+    // clang-format off
+    {0.000000000f,  1.272825360f},
+    {1.272825360f,  1.270345807f},
+    {2.543171167f,  1.265415549f},
+    {3.808586597f,  1.258091569f},
+    {5.066678524f,  1.248457074f},
+    {6.315135479f,  1.236619473f},
+    {7.551754951f,  1.222707152f},
+    {8.774461746f,  1.206866622f},
+    {9.981328964f,  1.189258218f},
+    {11.170586586f, 1.170052886f},
+    {12.340640068f, 1.149428010f},
+    {13.490067482f, 1.127564430f},
+    {14.617631912f, 1.104642272f},
+    {15.722274780f, 1.080838680f},
+    {16.803113937f, 1.056325078f},
+    {17.859437943f, 1.031264901f},
+    {18.890703201f, 1.005812049f},
+    {19.896514893f, 0.980109632f},
+    {20.876625061f, 0.954289079f},
+    {21.830913544f, 0.928469777f},
+    {22.759384155f, 0.902758956f},
+    {23.662141800f, 0.877251565f},
+    {24.539394379f, 0.852030873f},
+    {25.391424179f, 0.827168882f},
+    {26.218593597f, 0.802726984f},
+    {27.021320343f, 0.778756559f},
+    {27.800077438f, 0.755300105f},
+    {28.555377960f, 0.732391477f},
+    {29.287769318f, 0.710057378f},
+    {29.997825623f, 0.688317478f},
+    {30.686143875f, 0.667185664f},
+    {31.353328705f, 0.646670520f},
+    {32.000000000f, 0.626776159f}
+    // clang-format on
+};
 
-    f32 val = detail::gSinCosTbl[idx & 255].sin_val +
-              r * detail::gSinCosTbl[idx & 255].sin_delta;
-
-    return (fidx < 0.0f) ? -val : val;
-}
-
-f32 CosFIdx(f32 fidx) {
-    f32 abs_fidx = FAbs(fidx);
-
-    while (abs_fidx > 65536.0f) {
-        abs_fidx -= 65536.0f;
-    }
-
-    u16 idx = F32ToU16(abs_fidx);
-    f32 r = abs_fidx - U16ToF32(idx);
-
-    return detail::gSinCosTbl[idx & 255].cos_val +
-              r * detail::gSinCosTbl[idx & 255].cos_delta;
-}
-
-void SinCosFIdx(register f32* pSin, register f32* pCos, register f32 fidx) {
-    register u32 idx; // r31
-    register f32 abs_fidx; // f31
-    register f32 r; // f30
-    register f32 idxmax; // f29
-    register __vec2x32float__ scval, scdel; //f28, f27
-    register __vec2x32float__ result; //f26
-    register f32 c_zero; // f25
-    const register f32* pTbl; // r30
-    
-    idxmax = 65536.0f;
-    pTbl = reinterpret_cast<const f32*>(detail::gSinCosTbl);
-
-    /*
-    abs_fidx = FAbs(fidx);
-
-    while (abs_fidx > idxmax) {
-        abs_fidx -= idxmax;
-    }
-
-    *((u16*)pSin) = F32ToU16(abs_fidx);
-
-    idx = *((u16*)pSin);
-    c_zero = 0; (or idxmax - idxmax bc hudsonsoft silly)
-    idx = (idx & 0xFF) << 4;
-    pTbl += idx;
-    */
-    asm {
-        fabs abs_fidx, fidx;
-        psq_st abs_fidx, 0(pSin), 1, 3;
-        fcmpu cr0, abs_fidx, idxmax;
-        ble loc2;
-    loc1:
-        fsubs abs_fidx, abs_fidx, idxmax;
-        fcmpu cr0, abs_fidx, idxmax;
-        bgt loc1;
-        psq_st abs_fidx, 0(pSin), 1, 3;
-    loc2:
-        lhz idx, 0(pSin);
-        fsubs c_zero, idxmax, idxmax; // you could just... use 0, but sure
-        rlwinm idx, idx, 4, 20, 27;
-        add pTbl, pTbl, idx;
-    }
-
-    /*
-    r = abs_fidx - U16ToF32(((u16*)pSin)[0]);
-
-    scval[0] = pTbl[0];
-    scval[1] = pTbl[1];
-    scdel[0] = pTbl[2];
-    scdel[1] = pTbl[3];
-
-    result[0] = scdel[0] * r + scval[0];
-    result[1] = scdel[1] * r + scval[1];
-
-    *pCos = result[1];
-    *pSin = fidx < 0 ? -result[0] : result[0];
-    */
-    asm {
-        psq_l r, 0(pSin), 1, 3
-        fsubs r, abs_fidx, r
-        psq_l scval, 0(pTbl), 0, 0
-        psq_l scdel, 8(pTbl), 0, 0
-        ps_madds0 result, scdel, r, scval
-        ps_merge10 r, result, result
-        psq_st r, 0(pCos), 1, 0
-        fcmpu cr0, fidx, c_zero;
-        bge positive;
-        ps_neg result, result;
-    positive:
-        psq_st result, 0(pSin), 1, 0;
-    }
-
-}
-
-f32 AtanFIdx(f32 x) {
-    if (x >= 0.0f) {
-        if (x > 1.0f) {
-            return 64.0f - AtanFIdx_(1.0f / x);
-        } else {
-            return AtanFIdx_(x);
-        }
-    } else {
-        if (x < -1.0f) {
-            return AtanFIdx_(-1.0f / x) + -64.0f;
-        } else {
-            return -AtanFIdx_(-x);
-        }
-    }
-}
-
-f32 Atan2FIdx(f32 y, f32 x) {
-    f32 a, b, c;
-    bool minus;
-
-    if (x == 0.0f && y == 0.0f) {
-        return 0.0f;
-    }
-
-    if (x >= 0.0f) {
-        if (y >= 0.0f) {
-            if (x >= y) {
-                a = x;
-                b = y;
-                c = 0.0f;
-                minus = false;
-            } else {
-                a = y;
-                b = x;
-                c = 64.0f;
-                minus = true;
-            }
-        } else {
-            if (x >= -y) {
-                a = x;
-                b = -y;
-                c = 0.0f;
-                minus = true;
-            } else {
-                a = -y;
-                b = x;
-                c = -64.0f;
-                minus = false;
-            }
-        }
-    } else {
-        if (y >= 0.0f) {
-            if (-x >= y) {
-                a = -x;
-                b = y;
-                c = 128.0f;
-                minus = true;
-            } else {
-                a = y;
-                b = -x;
-                c = 64.0f;
-                minus = false;
-            }
-        } else {
-            if (-x >= -y) {
-                a = -x;
-                b = -y;
-                c = -128.0f;
-                minus = false;
-            } else {
-                a = -y;
-                b = -x;
-                c = -64.0f;
-                minus = true;
-            }
-        }
-    }
-
-    if (minus) {
-        return c - AtanFIdx_(b / a);
-    } else {
-        return c + AtanFIdx_(b / a);
-    }
-}
-
+} // namespace
 } // namespace math
 } // namespace nw4r

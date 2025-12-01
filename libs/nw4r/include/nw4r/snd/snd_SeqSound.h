@@ -17,12 +17,15 @@ namespace snd {
 class SeqSoundHandle;
 
 namespace detail {
-
-// Forward declarations
+class NoteOnCallback;
+class SeqTrackAllocator;
 template <typename T> class SoundInstanceManager;
+} // namespace detail
+
+namespace detail {
 
 class SeqSound : public BasicSound {
-    friend class SeqSoundHandle;
+    friend class nw4r::snd::SeqSoundHandle;
 
 public:
     NW4R_UT_RTTI_DECL(SeqSound);
@@ -68,8 +71,8 @@ public:
     void SetTrackVolume(u32 trackFlags, f32 volume);
     void SetTrackPitch(u32 trackFlags, f32 pitch);
 
-    bool WriteVariable(int i, s16 value);
-    static bool WriteGlobalVariable(int i, s16 value);
+    bool WriteVariable(int idx, s16 value);
+    static bool WriteGlobalVariable(int idx, s16 value);
 
     void* GetFileStreamBuffer() {
         return mFileStreamBuffer;
@@ -82,6 +85,9 @@ private:
     typedef void (*SeqLoadCallback)(bool success, const void* pBase,
                                     void* pCallbackArg);
 
+    /******************************************************************************
+     * SeqLoadTask
+     ******************************************************************************/
     struct SeqLoadTask : public Task {
         SeqLoadTask();
 

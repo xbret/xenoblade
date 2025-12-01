@@ -1,5 +1,3 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/snd.h>
 #include <nw4r/ut.h>
 
@@ -33,9 +31,7 @@ void SoundPlayer::InitParam() {
 void SoundPlayer::Update() {
     ut::detail::AutoLock<OSMutex> lock(mMutex);
 
-    NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
-        it->Update();
-    )
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mSoundList, { it->Update(); })
 
     detail_SortPriorityList();
 }
@@ -43,17 +39,14 @@ void SoundPlayer::Update() {
 void SoundPlayer::StopAllSound(int frames) {
     ut::detail::AutoLock<OSMutex> lock(mMutex);
 
-    NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
-        it->Stop(frames);
-    )
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mSoundList, { it->Stop(frames); })
 }
 
 void SoundPlayer::PauseAllSound(bool flag, int frames) {
     ut::detail::AutoLock<OSMutex> lock(mMutex);
 
-    NW4R_UT_LIST_SAFE_FOREACH(mSoundList,
-        it->Pause(flag, frames);
-    )
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mSoundList,
+                                   { it->Pause(flag, frames); })
 }
 
 void SoundPlayer::SetVolume(f32 volume) {
@@ -68,8 +61,8 @@ bool SoundPlayer::detail_IsEnabledOutputLine() const {
     return mOutputLineFlagEnable;
 }
 
-f32 SoundPlayer::detail_GetRemoteOutVolume(int i) const {
-    return mRemoteOutVolume[i];
+f32 SoundPlayer::detail_GetRemoteOutVolume(int idx) const {
+    return mRemoteOutVolume[idx];
 }
 
 void SoundPlayer::detail_InsertSoundList(detail::BasicSound* pSound) {

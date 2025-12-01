@@ -1,8 +1,8 @@
-#ifndef _NEW
-#define _NEW
-
+#ifndef MSL_CPP_NEW_H
+#define MSL_CPP_NEW_H
+#include <stddef.h>
+#ifdef __cplusplus
 #include <exception>
-#include <cstddef>
 
 namespace std{
     class bad_alloc : public exception {
@@ -17,6 +17,15 @@ namespace std{
     extern const nothrow_t nothrow;
 }
 
-inline void* operator new(size_t size, void* ptr) { return ptr; }
+inline void* operator new(size_t size, void* ptr) {
+#pragma unused(size)
+    return ptr;
+}
 
+inline void* operator new[](size_t size, void* ptr) {
+#pragma unused(size)
+    return ptr;
+}
+
+#endif
 #endif

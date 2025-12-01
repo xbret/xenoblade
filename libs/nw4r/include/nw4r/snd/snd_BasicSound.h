@@ -2,8 +2,8 @@
 #define NW4R_SND_BASIC_SOUND_H
 #include <nw4r/types_nw4r.h>
 
-#include <nw4r/snd/snd_Common.h>
 #include <nw4r/snd/snd_MoveValue.h>
+#include <nw4r/snd/snd_Types.h>
 
 #include <nw4r/ut.h>
 
@@ -11,10 +11,21 @@
 
 namespace nw4r {
 namespace snd {
+
+// Forward declarations
+class SoundHandle;
+class SoundPlayer;
+
+namespace detail {
+class BasicPlayer;
+class ExternalSoundPlayer;
+class PlayerHeap;
+} // namespace detail
+
 namespace detail {
 
 class BasicSound {
-    friend class SoundHandle;
+    friend class nw4r::snd::SoundHandle;
 
 public:
     NW4R_UT_RTTI_DECL(BasicSound);
@@ -216,16 +227,16 @@ private:
     f32 mRemoteOutVolume[WPAD_MAX_CONTROLLERS]; // at 0xA8
 
 public:
-    NW4R_UT_LIST_NODE_DECL_EX(Prio);       // at 0xB8
-    NW4R_UT_LIST_NODE_DECL_EX(PlayerPlay); // at 0xC0
-    NW4R_UT_LIST_NODE_DECL_EX(PlayerPrio); // at 0xC8
-    NW4R_UT_LIST_NODE_DECL_EX(ExtPlay);    // at 0xD0
+    NW4R_UT_LINKLIST_NODE_DECL_EX(Prio);       // at 0xB8
+    NW4R_UT_LINKLIST_NODE_DECL_EX(PlayerPlay); // at 0xC0
+    NW4R_UT_LINKLIST_NODE_DECL_EX(PlayerPrio); // at 0xC8
+    NW4R_UT_LINKLIST_NODE_DECL_EX(ExtPlay);    // at 0xD0
 };
 
-NW4R_UT_LIST_TYPEDEF_DECL_EX(BasicSound, Prio);
-NW4R_UT_LIST_TYPEDEF_DECL_EX(BasicSound, PlayerPlay);
-NW4R_UT_LIST_TYPEDEF_DECL_EX(BasicSound, PlayerPrio);
-NW4R_UT_LIST_TYPEDEF_DECL_EX(BasicSound, ExtPlay);
+NW4R_UT_LINKLIST_TYPEDEF_DECL_EX(BasicSound, Prio);
+NW4R_UT_LINKLIST_TYPEDEF_DECL_EX(BasicSound, PlayerPlay);
+NW4R_UT_LINKLIST_TYPEDEF_DECL_EX(BasicSound, PlayerPrio);
+NW4R_UT_LINKLIST_TYPEDEF_DECL_EX(BasicSound, ExtPlay);
 
 } // namespace detail
 } // namespace snd

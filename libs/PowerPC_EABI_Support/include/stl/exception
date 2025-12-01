@@ -1,5 +1,5 @@
-#ifndef _EXCEPTION
-#define _EXCEPTION
+#ifndef MSL_CPP_EXCEPTION_H
+#define MSL_CPP_EXCEPTION_H
 
 namespace std{
     class exception{

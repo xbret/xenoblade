@@ -185,14 +185,19 @@ struct Header {
     u32 fileImageSize;               // at 0x24
 };
 
-// TODO: How is this calculated?
+// TODO(kiwi) How is this calculated?
 static const int HEADER_AREA_SIZE = ROUND_UP(sizeof(Header), 32) + 40;
 
 } // namespace SoundArchiveFile
 
+/******************************************************************************
+ *
+ * SoundArchiveFileReader
+ *
+ ******************************************************************************/
 class SoundArchiveFileReader {
 public:
-    static const u32 SIGNATURE = 'RSAR';
+    static const u32 SIGNATURE = FOURCC('R', 'S', 'A', 'R');
     static const int VERSION = NW4R_VERSION(1, 3);
 
 public:

@@ -1,13 +1,11 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/g3d.h>
 
 namespace nw4r {
 namespace g3d {
 
-void ResAnmShp::GetAnmResult(ShpAnmResult* pResult, u32 id, f32 frame,
+void ResAnmShp::GetAnmResult(ShpAnmResult* pResult, u32 idx, f32 frame,
                              const ShpAnmVtxSet* pShapeArray) const {
-    const ResAnmShpAnmData* pAnmData = GetShapeAnm(id);
+    const ResAnmShpAnmData* pAnmData = GetShapeAnm(idx);
 
     const u16* pAnmIdxToVtxIdxTable = static_cast<const u16*>(
         ut::AddOffsetToPtr(pAnmData, pAnmData->toAnmIdxToVtxIdxTable));

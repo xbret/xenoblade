@@ -1,5 +1,5 @@
-#ifndef _LOCALE_H
-#define _LOCALE_H
+#ifndef MSL_LOCALE_H
+#define MSL_LOCALE_H
 
 #include <types.h>
 #include <stdlib.h>

@@ -10,13 +10,19 @@ namespace nw4r {
 namespace snd {
 
 // Forward declarations
+class SoundArchive;
 class SoundMemoryAllocatable;
 
 namespace detail {
 
+/******************************************************************************
+ *
+ * FileStreamHandle
+ *
+ ******************************************************************************/
 class FileStreamHandle {
 public:
-    FileStreamHandle(ut::FileStream* pFileStream) : mStream(pFileStream) {}
+    FileStreamHandle(ut::FileStream* pStream) : mStream(pStream) {}
 
     ~FileStreamHandle() {
         if (mStream != NULL) {
@@ -40,6 +46,11 @@ private:
     ut::FileStream* mStream; // at 0x0
 };
 
+/******************************************************************************
+ *
+ * SoundArchiveLoader
+ *
+ ******************************************************************************/
 class SoundArchiveLoader {
 public:
     explicit SoundArchiveLoader(const SoundArchive& rArchive);

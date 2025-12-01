@@ -1,12 +1,12 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
 #include <nw4r/ut.h>
 
 namespace nw4r {
 namespace ut {
 
-template <typename T> T* TextWriterBase<T>::mFormatBuffer;
-template <typename T> u32 TextWriterBase<T>::mFormatBufferSize = 0x100;
+template <typename T> T* TextWriterBase<T>::mFormatBuffer = NULL;
+
+template <typename T>
+u32 TextWriterBase<T>::mFormatBufferSize = DEFAULT_FORMAT_BUFFER_SIZE;
 
 template <typename T>
 TagProcessorBase<T> TextWriterBase<T>::mDefaultTagProcessor;
@@ -23,62 +23,66 @@ TextWriterBase<T>::TextWriterBase()
 template <typename T> TextWriterBase<T>::~TextWriterBase() {}
 
 template <typename T> f32 TextWriterBase<T>::GetLineHeight() const {
-    const Font* font = GetFont();
-    int linefeed = font != NULL ? font->GetLineFeed() : 0;
-    return mLineSpace + GetScaleV() * linefeed;
+    const Font* pFont = GetFont();
+    int lf = pFont != NULL ? pFont->GetLineFeed() : 0;
+    return mLineSpace + GetScaleV() * lf;
 }
 
 template <typename T>
-f32 TextWriterBase<T>::VPrintf(const T* format, std::va_list args) {
-    T* buffer;
+f32 TextWriterBase<T>::VPrintf(const T* pStr, std::va_list args) {
+    T* pBuffer;
 
     if (mFormatBuffer != NULL) {
-        buffer = mFormatBuffer;
+        pBuffer = mFormatBuffer;
     } else {
-        buffer = static_cast<T*>(__alloca(mFormatBufferSize));
+        pBuffer = static_cast<T*>(__alloca(mFormatBufferSize));
     }
 
-    int length = VSNPrintf(buffer, mFormatBufferSize, format, args);
-    return Print(buffer, length);
+    int len = VSNPrintf(pBuffer, mFormatBufferSize, pStr, args);
+    return Print(pBuffer, len);
 }
 
-template <typename T> f32 TextWriterBase<T>::Print(const T* str, int length) {
-    TextWriterBase<T> myCopy(*this);
+template <typename T> f32 TextWriterBase<T>::Print(const T* pStr, int len) {
+    TextWriterBase<T> clone(*this);
 
-    f32 width = myCopy.PrintImpl(str, length, false);
-    SetCursor(myCopy.GetCursorX(), myCopy.GetCursorY());
+    f32 width = clone.PrintImpl(pStr, len, false);
+    SetCursor(clone.GetCursorX(), clone.GetCursorY());
 
     return width;
 }
 
-template <typename T> f32 TextWriterBase<T>::PrintMutable(const T* str, int length) {
-    return PrintImpl(str, length, true);
+template <typename T> f32 TextWriterBase<T>::PrintMutable(const T* pStr, int len) {
+    return PrintImpl(pStr, len, true);
 }
 
 template <typename T>
-f32 TextWriterBase<T>::CalcLineWidth(const T* str, int length) {
+f32 TextWriterBase<T>::CalcLineWidth(const T* pStr, int len) {
     Rect rect;
-    TextWriterBase<T> myCopy(*this);
+    TextWriterBase<T> clone(*this);
 
-    myCopy.SetCursor(0.0f, 0.0f);
-    myCopy.CalcLineRectImpl(&rect, &str, length);
+    clone.SetCursor(0.0f, 0.0f);
+    clone.CalcLineRectImpl(&rect, &pStr, len);
 
     return rect.GetWidth();
 }
 
 template <typename T>
-bool TextWriterBase<T>::CalcLineRectImpl(Rect* pRect, const T** pStr, int length) {
-    const T* const str = *pStr;
-    const T* const end = str + length;
-    bool bUseLimit = mWidthLimit < NW4R_MATH_FLT_MAX;
+bool TextWriterBase<T>::CalcLineRectImpl(Rect* pRect, const T** ppStr,
+                                         int len) {
+    const T* pStrBegin = *ppStr;
+    const T* pStrEnd = pStrBegin + len;
+    bool useLimit = mWidthLimit < NW4R_MATH_FLT_MAX;
 
-    PrintContext<T> context = {this, str};
+    PrintContext<T> context = {
+        this,     // writer
+        pStrBegin // str
+    };
 
     f32 x = 0.0f;
-    bool bCharSpace = false;
-    bool bOverLimit = false;
+    bool charSpace = false;
+    bool overLimit = false;
 
-    const T* prevStreamPos = NULL;
+    const T* pPrevStream = NULL;
     Rect prevRect;
 
     CharStrmReader reader = GetFont()->GetCharStrmReader();
@@ -89,74 +93,77 @@ bool TextWriterBase<T>::CalcLineRectImpl(Rect* pRect, const T** pStr, int length
     pRect->bottom = Max(0.0f, GetLineHeight());
     prevRect = *pRect;
 
-    reader.Set(str);
-    prevStreamPos = NULL;
+    reader.Set(pStrBegin);
+    pPrevStream = NULL;
 
-    u16 code = reader.Next();
+    u16 ch = reader.Next();
 
-    while (static_cast<const T*>(reader.GetCurrentPos()) <= end) {
-        if (code < ' ') {
-            Rect rect(x, 0.0f, 0.0f, 0.0f);
+    while (static_cast<const T*>(reader.GetCurrentPos()) <= pStrEnd) {
+        if (ch < ' ') {
+            Rect r(x, 0.0f, 0.0f, 0.0f);
             context.str = static_cast<const T*>(reader.GetCurrentPos());
-            context.flags = bCharSpace ? 0 : PRINTFLAGS_CHARSPACE;
+            context.flags = charSpace ? 0 : PrintContext<T>::FLAGS_CHARSPACE;
+
             SetCursorX(x);
 
-            if (bUseLimit && code != '\n' && prevStreamPos != NULL) {
+            if (useLimit && ch != '\n' && pPrevStream != NULL) {
                 PrintContext<T> context2 = context;
-                TextWriterBase<T> myCopy(*this);
+                TextWriterBase<T> clone(*this);
 
-                Rect rect;
-                context2.writer = &myCopy;
-                mTagProcessor->CalcRect(&rect, code, &context2);
+                Rect r;
+                context2.writer = &clone;
+                mTagProcessor->CalcRect(&r, ch, &context2);
 
-                if (rect.GetWidth() > 0.0f &&
-                    myCopy.GetCursorX() - context.x > mWidthLimit) {
-                    bOverLimit = true;
-                    code = '\n';
-                    reader.Set(prevStreamPos);
+                if (r.GetWidth() > 0.0f &&
+                    clone.GetCursorX() - context.x > mWidthLimit) {
+                    overLimit = true;
+                    ch = '\n';
+                    reader.Set(pPrevStream);
                     continue;
                 }
             }
 
-            Operation oper = mTagProcessor->CalcRect(&rect, code, &context);
+            typename TagProcessorType::Operation oper =
+                mTagProcessor->CalcRect(&r, ch, &context);
+
             reader.Set(context.str);
 
-            pRect->left = Min(pRect->left, rect.left);
-            pRect->top = Min(pRect->top, rect.top);
-            pRect->right = Max(pRect->right, rect.right);
-            pRect->bottom = Max(pRect->bottom, rect.bottom);
+            pRect->left = Min(pRect->left, r.left);
+            pRect->top = Min(pRect->top, r.top);
+            pRect->right = Max(pRect->right, r.right);
+            pRect->bottom = Max(pRect->bottom, r.bottom);
 
             x = GetCursorX();
 
-            if (oper == OPERATION_END_DRAW) {
-                *pStr += length;
+            if (oper == TagProcessorType::OPERATION_END_DRAW) {
+                *ppStr += len;
                 return false;
             }
 
-            if (oper == OPERATION_NO_CHAR_SPACE) {
-                bCharSpace = false;
-            } else if (oper == OPERATION_CHAR_SPACE) {
-                bCharSpace = true;
-            } else if (oper == OPERATION_NEXT_LINE) {
+            if (oper == TagProcessorType::OPERATION_NO_CHAR_SPACE) {
+                charSpace = false;
+            } else if (oper == TagProcessorType::OPERATION_CHAR_SPACE) {
+                charSpace = true;
+            } else if (oper == TagProcessorType::OPERATION_NEXT_LINE) {
                 break;
             }
         } else {
             f32 dx = 0.0f;
 
-            if (bCharSpace) {
+            if (charSpace) {
                 dx += GetCharSpace();
             }
 
             if (IsWidthFixed()) {
                 dx += GetFixedWidth();
             } else {
-                dx += GetFont()->GetCharWidth(code) * GetScaleH();
+                dx += GetFont()->GetCharWidth(ch) * GetScaleH();
             }
 
-            if (bUseLimit && prevStreamPos != NULL && x + dx > mWidthLimit) {
-                bOverLimit = true;
-                code = '\n';
-                reader.Set(prevStreamPos);
+            if (useLimit && pPrevStream != NULL && x + dx > mWidthLimit) {
+                overLimit = true;
+                ch = '\n';
+                reader.Set(pPrevStream);
                 continue;
             }
 
@@ -164,24 +171,25 @@ bool TextWriterBase<T>::CalcLineRectImpl(Rect* pRect, const T** pStr, int length
             pRect->left = Min(pRect->left, x);
             pRect->right = Max(pRect->right, x);
 
-            bCharSpace = true;
+            charSpace = true;
         }
 
-        if (bUseLimit) {
-            prevStreamPos = static_cast<const T*>(reader.GetCurrentPos());
+        if (useLimit) {
+            pPrevStream = static_cast<const T*>(reader.GetCurrentPos());
         }
 
-        code = reader.Next();
+        ch = reader.Next();
     }
 
-    *pStr = static_cast<const T*>(reader.GetCurrentPos());
-    return bOverLimit;
+    *ppStr = static_cast<const T*>(reader.GetCurrentPos());
+    return overLimit;
 }
 
 template <typename T>
-void TextWriterBase<T>::CalcStringRectImpl(Rect* pRect, const T* str, int length) {
-    const T* const end = str + length;
-    int remain = length;
+void TextWriterBase<T>::CalcStringRectImpl(Rect* pRect, const T* pStr,
+                                           int len) {
+    const T* pEnd = pStr + len;
+    int remain = len;
 
     pRect->left = 0.0f;
     pRect->right = 0.0f;
@@ -191,78 +199,89 @@ void TextWriterBase<T>::CalcStringRectImpl(Rect* pRect, const T* str, int length
     SetCursor(0.0f, 0.0f);
 
     do {
-        Rect rect;
-        CalcLineRectImpl(&rect, &str, remain);
-        remain = end - str;
+        Rect r;
+        CalcLineRectImpl(&r, &pStr, remain);
+        remain = pEnd - pStr;
 
-        pRect->left = Min(pRect->left, rect.left);
-        pRect->top = Min(pRect->top, rect.top);
-        pRect->right = Max(pRect->right, rect.right);
-        pRect->bottom = Max(pRect->bottom, rect.bottom);
+        pRect->left = Min(pRect->left, r.left);
+        pRect->top = Min(pRect->top, r.top);
+        pRect->right = Max(pRect->right, r.right);
+        pRect->bottom = Max(pRect->bottom, r.bottom);
     } while (remain > 0);
 }
 
-template <typename T> f32 TextWriterBase<T>::PrintImpl(const T* str, int length, bool bMutable) {
-    f32 xOrigin = GetCursorX();
-    f32 yOrigin = GetCursorY();
+template <typename T> f32 TextWriterBase<T>::PrintImpl(const T* pStr, int len, bool bMutable) {
+    f32 cursorX = GetCursorX();
+    f32 cursorY = GetCursorY();
 
-    bool bUseLimit = mWidthLimit < NW4R_MATH_FLT_MAX;
+    bool useLimit = mWidthLimit < NW4R_MATH_FLT_MAX;
 
-    f32 orgCursorX = xOrigin;
-    f32 orgCursorY = yOrigin;
+    f32 orgCursorX = cursorX;
+    f32 orgCursorY = cursorY;
 
-    f32 xCursorAdj = 0.0f;
-    f32 yCursorAdj = 0.0f;
+    f32 cursorXAdj = 0.0f;
+    f32 cursorYAdj = 0.0f;
 
-    bool bCharSpace = false;
+    bool charSpace = false;
 
-    const T* prevStreamPos = str;
-    const T* prevNewLinePos = str;
+    const T* pPrevStream = pStr;
+    const T* pPrevNewLine = pStr;
 
-    f32 textWidth = AdjustCursor(&xOrigin, &yOrigin, str, length);
+    f32 textWidth = AdjustCursor(&cursorX, &cursorY, pStr, len);
 
-    xCursorAdj = orgCursorX - GetCursorX();
-    yCursorAdj = orgCursorY - GetCursorY();
+    cursorXAdj = orgCursorX - GetCursorX();
+    cursorYAdj = orgCursorY - GetCursorY();
 
-    PrintContext<T> context = {this, str, xOrigin, yOrigin};
+    PrintContext<T> context = {
+        this,    // writer
+        pStr,    // str
+        cursorX, // x
+        cursorY  // y
+    };
 
     CharStrmReader reader = GetFont()->GetCharStrmReader();
-    reader.Set(str);
+    reader.Set(pStr);
 
-    Operation operation;
-    u16 code = reader.Next();
+    typename TagProcessorType::Operation oper;
+    u16 ch = reader.Next();
 
-    while (static_cast<const T*>(reader.GetCurrentPos()) - str <= length) {
-        if (code < ' ') {
+    while (static_cast<const T*>(reader.GetCurrentPos()) - pStr <= len) {
+        if (ch < ' ') {
             context.str = static_cast<const T*>(reader.GetCurrentPos());
-            context.flags = bCharSpace ? 0 : PRINTFLAGS_CHARSPACE;
+            context.flags = charSpace ? 0 : PrintContext<T>::FLAGS_CHARSPACE;
 
-            if (bUseLimit && code != '\n' && prevStreamPos != prevNewLinePos) {
+            if (useLimit && ch != '\n' && pPrevStream != pPrevNewLine) {
                 PrintContext<T> context2 = context;
-                TextWriterBase<T> myCopy(*this);
+                TextWriterBase<T> clone(*this);
                 Rect rect;
 
-                context2.writer = &myCopy;
-                operation = mTagProcessor->CalcRect(&rect, code, &context2);
+                context2.writer = &clone;
+                oper = mTagProcessor->CalcRect(&rect, ch, &context2);
 
                 if (rect.GetWidth() > 0.0f &&
-                    myCopy.GetCursorX() - context.x > mWidthLimit) {
-                    code = '\n';
-                    reader.Set(prevStreamPos);
+                    clone.GetCursorX() - context.x > mWidthLimit) {
+                    ch = '\n';
+                    reader.Set(pPrevStream);
                     continue;
                 }
             }
 
-            operation = mTagProcessor->Process(code, &context);
-            if (operation == OPERATION_NEXT_LINE) {
-                if (IsDrawFlagSet(0x3, 0x1)) {
-                    int remain = length - (context.str - str);
+            oper = mTagProcessor->Process(ch, &context);
+            if (oper == TagProcessorType::OPERATION_NEXT_LINE) {
+                if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_TEXT,
+                                  DRAWFLAG_ALIGN_TEXT_CENTER)) {
+
+                    int remain = len - (context.str - pStr);
                     f32 width = CalcLineWidth(context.str, remain);
+
                     f32 offset = (textWidth - width) / 2.0f;
                     SetCursorX(context.x + offset);
-                } else if (IsDrawFlagSet(0x3, 0x2)) {
-                    int remain = length - (context.str - str);
+                } else if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_TEXT,
+                                         DRAWFLAG_ALIGN_TEXT_RIGHT)) {
+
+                    int remain = len - (context.str - pStr);
                     f32 width = CalcLineWidth(context.str, remain);
+
                     f32 offset = textWidth - width;
                     SetCursorX(context.x + offset);
                 } else {
@@ -271,125 +290,132 @@ template <typename T> f32 TextWriterBase<T>::PrintImpl(const T* str, int length,
                     SetCursorX(context.x);
                 }
 
-                if (bUseLimit) {
-                    prevNewLinePos = static_cast<const T*>(reader.GetCurrentPos());
+                if (useLimit) {
+                    pPrevNewLine =
+                        static_cast<const T*>(reader.GetCurrentPos());
                 }
 
-                bCharSpace = false;
-            } else if (operation == OPERATION_NO_CHAR_SPACE) {
-                bCharSpace = false;
-            } else if (operation == OPERATION_CHAR_SPACE) {
-                bCharSpace = true;
-            } else if (operation == OPERATION_END_DRAW) {
+                charSpace = false;
+            } else if (oper == TagProcessorType::OPERATION_NO_CHAR_SPACE) {
+                charSpace = false;
+            } else if (oper == TagProcessorType::OPERATION_CHAR_SPACE) {
+                charSpace = true;
+            } else if (oper == TagProcessorType::OPERATION_END_DRAW) {
                 break;
             }
 
             reader.Set(context.str);
         } else {
             f32 baseY = GetCursorY();
-            if (bUseLimit && prevStreamPos != prevNewLinePos) {
+            if (useLimit && pPrevStream != pPrevNewLine) {
                 f32 baseX = GetCursorX();
-                f32 charSpace = bCharSpace ? GetCharSpace() : 0.0f;
-                f32 charWidth = IsWidthFixed()
+                f32 space = charSpace ? GetCharSpace() : 0.0f;
+
+                f32 width = IsWidthFixed()
                                 ? GetFixedWidth()
-                                : GetFont()->GetCharWidth(code) * GetScaleH();
-                if (baseX - xOrigin + charSpace + charWidth > mWidthLimit) {
-                    code = '\n';
-                    reader.Set(prevStreamPos);
+                                : GetFont()->GetCharWidth(ch) * GetScaleH();
+
+                if (baseX - cursorX + space + width > mWidthLimit) {
+                    ch = '\n';
+                    reader.Set(pPrevStream);
                     continue;
                 }
             }
 
-            if (bCharSpace) {
+            if (charSpace) {
                 MoveCursorX(GetCharSpace());
             }
 
-            bCharSpace = true;
+            charSpace = true;
 
-            const Font* pFont = GetFont();
-            f32 adj = -pFont->GetBaselinePos() * GetScaleV();
+            f32 adj = -GetFont()->GetBaselinePos() * GetScaleV();
             MoveCursorY(adj);
-            CharWriter::Print(code);
+            CharWriter::Print(ch);
             SetCursorY(baseY);
         }
 
-        if (bUseLimit) {
-            prevStreamPos = static_cast<const T*>(reader.GetCurrentPos());
+        if (useLimit) {
+            pPrevStream = static_cast<const T*>(reader.GetCurrentPos());
         }
 
-        code = reader.Next();
+        ch = reader.Next();
     }
 
     f32 width = GetCursorX() - context.x;
     textWidth = Max(textWidth, width);
 
-    if (IsDrawFlagSet(0x300, 0x100) || IsDrawFlagSet(0x300, 0x200)) {
+    if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V, DRAWFLAG_ALIGN_V_CENTER) ||
+        IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V, DRAWFLAG_ALIGN_V_TOP)) {
         SetCursorY(orgCursorY);
     } else if(bMutable) {
-        if (IsDrawFlagSet(0x300, 0x0)) {
+        if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V, DRAWFLAG_ALIGN_TEXT_BASELINE)) {
             SetCursorY(GetCursorY() - GetFontAscent());
         }
     } else {
-        MoveCursorY(yCursorAdj);
+        MoveCursorY(cursorYAdj);
     }
 
     return textWidth;
 }
 
 template <typename T>
-f32 TextWriterBase<T>::AdjustCursor(f32* xOrigin, f32* yOrigin, const T* str, int length) {
+f32 TextWriterBase<T>::AdjustCursor(f32* pX, f32* pY, const T* pStr, int len) {
     f32 textWidth = 0.0f;
     f32 textHeight = 0.0f;
 
-    if (!IsDrawFlagSet(0x333, 0x300) && !IsDrawFlagSet(0x333, 0)) {
-        Rect textRect;
-        CalcStringRect(&textRect, str, length);
+    if (!IsDrawFlagSet(DRAWFLAG_MASK_ALL, DRAWFLAG_MASK_ALIGN_V) &&
+        !IsDrawFlagSet(DRAWFLAG_MASK_ALL, 0)) {
 
-        textWidth = textRect.left + textRect.right;
-        textHeight = textRect.top + textRect.bottom;
+        Rect rect;
+        CalcStringRect(&rect, pStr, len);
+
+        textWidth = rect.left + rect.right;
+        textHeight = rect.top + rect.bottom;
     }
 
-    if (IsDrawFlagSet(0x30, 0x10)) {
-        *xOrigin -= textWidth / 2;
-    } else if (IsDrawFlagSet(0x30, 0x20)) {
-        *xOrigin -= textWidth;
+    if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_H, DRAWFLAG_ALIGN_H_CENTER)) {
+        *pX -= textWidth / 2;
+    } else if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_H, DRAWFLAG_ALIGN_H_RIGHT)) {
+        *pX -= textWidth;
     }
 
-    if (IsDrawFlagSet(0x300, 0x100)) {
-        *yOrigin -= textHeight / 2;
-    } else if (IsDrawFlagSet(0x300, 0x200)) {
-        *yOrigin -= textHeight;
+    if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V, DRAWFLAG_ALIGN_V_CENTER)) {
+        *pY -= textHeight / 2;
+    } else if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V, DRAWFLAG_ALIGN_V_TOP)) {
+        *pY -= textHeight;
     }
 
-    if (IsDrawFlagSet(0x3, 0x1)) {
-        SetCursorX(*xOrigin + (textWidth - CalcLineWidth(str, length)) / 2);
-    } else if (IsDrawFlagSet(0x3, 0x2)) {
-        SetCursorX(*xOrigin + (textWidth - CalcLineWidth(str, length)));
+    if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_TEXT, DRAWFLAG_ALIGN_TEXT_CENTER)) {
+        SetCursorX(*pX + (textWidth - CalcLineWidth(pStr, len)) / 2);
+    } else if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_TEXT,
+                             DRAWFLAG_ALIGN_TEXT_RIGHT)) {
+        SetCursorX(*pX + (textWidth - CalcLineWidth(pStr, len)));
     } else {
-        SetCursorX(*xOrigin);
+        SetCursorX(*pX);
     }
 
-    if (IsDrawFlagSet(0x300, 0x300)) {
-        SetCursorY(*yOrigin);
+    if (IsDrawFlagSet(DRAWFLAG_MASK_ALIGN_V,
+                      DRAWFLAG_ALIGN_V_CENTER | DRAWFLAG_ALIGN_V_TOP)) {
+        SetCursorY(*pY);
     } else {
-        SetCursorY(*yOrigin + GetFontAscent());
+        SetCursorY(*pY + GetFontAscent());
     }
 
     return textWidth;
 }
 
 template <typename T>
-f32 TextWriterBase<T>::CalcStringWidth(const T* str, int length) const {
+f32 TextWriterBase<T>::CalcStringWidth(const T* pStr, int len) const {
     Rect rect;
-    CalcStringRect(&rect, str, length);
+    CalcStringRect(&rect, pStr, len);
     return rect.GetWidth();
 }
 
 template <typename T>
-void TextWriterBase<T>::CalcStringRect(Rect* pRect, const T* str,
-                                       int length) const {
-    TextWriterBase<T> myCopy(*this);
-    myCopy.CalcStringRectImpl(pRect, str, length);
+void TextWriterBase<T>::CalcStringRect(Rect* pRect, const T* pStr,
+                                       int len) const {
+    TextWriterBase<T> clone(*this);
+    clone.CalcStringRectImpl(pRect, pStr, len);
 }
 
 template struct TextWriterBase<char>;
