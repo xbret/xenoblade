@@ -3,6 +3,7 @@
 #include <nw4r/types_nw4r.h>
 
 #include <nw4r/lyt/lyt_common.h>
+#include <nw4r/lyt/lyt_layout.h>
 #include <nw4r/lyt/lyt_pane.h>
 
 #include <nw4r/ut.h>
@@ -128,13 +129,17 @@ public:
     virtual void UnbindAnimationSelf(AnimTransform* pAnimTrans); // at 0x50
 
     virtual AnimationLink*
-    FindAnimationLink(AnimTransform* pAnimTrans); // at 0x54
+    FindAnimationLinkSelf(AnimTransform* pAnimTrans); // at 0x54
 
     virtual void SetAnimationEnable(AnimTransform* pAnimTrans, bool enable,
-                                    bool recursive); // at 0x58
+                                    bool recursive); // at 0x5C
+    
+    virtual u8 GetMaterialNum() const; // at 0x64
+    virtual Material* GetMaterial() const; // at 0x68
+	virtual Material* GetMaterial(u32 index) const; // at 0x6C
 
-    virtual Material* GetContentMaterial() const;      // at 0x64
-    virtual Material* GetFrameMaterial(u32 idx) const; // at 0x68
+    virtual Material* GetContentMaterial() const;      // at 0x74
+    virtual Material* GetFrameMaterial(u32 idx) const; // at 0x78
 
 protected:
     struct Frame {
@@ -142,6 +147,9 @@ protected:
         Material* pMaterial; // at 0x4
 
         Frame() : textureFlip(0), pMaterial(NULL) {}
+        ~Frame() {
+            Layout::DeleteObj(pMaterial);
+        }
     };
 
     struct Content {
@@ -152,27 +160,32 @@ protected:
 protected:
     virtual void DrawContent(const math::VEC2& rBase,
                              const WindowFrameSize& rFrameSize,
-                             u8 alpha); // at 0x6C
+                             u8 alpha); // at 0x7C
 
     virtual void DrawFrame(const math::VEC2& rBase, const Frame& rFrame,
                            const WindowFrameSize& rFrameSize,
-                           u8 alpha); // at 0x70
+                           u8 alpha); // at 0x80
 
     virtual void DrawFrame4(const math::VEC2& rBase, const Frame* pFrames,
                             const WindowFrameSize& rFrameSize,
-                            u8 alpha); // at 0x74
+                            u8 alpha); // at 0x84
 
     virtual void DrawFrame8(const math::VEC2& rBase, const Frame* pFrames,
                             const WindowFrameSize& rFrameSize,
-                            u8 alpha); // at 0x78
+                            u8 alpha); // at 0x88
+
+    void InitContent(u8 texNum);
+    void InitFrame(u8 frameNum);
+    
+    void ReserveTexCoord(u8 num);
 
     WindowFrameSize GetFrameSize(u8 frameNum, const Frame* pFrames);
 
 protected:
-    InflationLRTB mContentInflation; // at 0xD4
-    Content mContent;                // at 0xE4
-    Frame* mFrames;                  // at 0xFC
-    u8 mFrameNum;                    // at 0x100
+    InflationLRTB mContentInflation; // at 0xD8
+    Content mContent;                // at 0xE8
+    Frame* mFrames;                  // at 0x100
+    u8 mFrameNum;                    // at 0x104
 };
 
 } // namespace lyt

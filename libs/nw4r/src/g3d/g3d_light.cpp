@@ -1,6 +1,3 @@
-#include "nw4r/g3d/g3d_light.h"
-#include "macros.h"
-#include "nw4r/g3d/platform/g3d_cpu.h"
 #include <nw4r/g3d.h>
 #include <nw4r/math.h>
 
@@ -29,7 +26,7 @@ LightObj& LightObj::operator=(const LightObj& rOther) {
     return *this;
 }
 
-//TODO(amber) this can't be it
+//Whoever programmed this should feel bad ngl
 bool LightObj::operator!=(const LightObj& rOther) const {
     bool result = false;
     

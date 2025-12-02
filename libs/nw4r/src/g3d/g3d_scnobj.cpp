@@ -1,6 +1,3 @@
-#include "nw4r/g3d/g3d_scnobj.h"
-#include "macros.h"
-#include "revolution/mem/mem_allocator.h"
 #include <nw4r/g3d.h>
 #include <nw4r/math.h>
 

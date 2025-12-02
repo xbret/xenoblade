@@ -35,6 +35,36 @@ struct AnimationBlock {
 
 /******************************************************************************
  *
+ * AnimationTagBlock
+ *
+ ******************************************************************************/
+struct AnimationTagBlock {
+    DataBlockHeader blockHeader; // at 0x0
+    u16 tagOrder;                // at 0x8
+    u16 groupNum;                // at 0xA
+    u32 nameOffset;              // at 0xC
+    u32 groupsOffset;            // at 0x10
+    s16 startFrame;              // at 0x14
+    s16 endFrame;                // at 0x16
+    u8 flag;                     // at 0x18
+    u8 padding[3];               // at 0x19
+};
+
+/******************************************************************************
+ *
+ * AnimationShareBlock
+ *
+ ******************************************************************************/
+struct AnimationShareBlock {
+    DataBlockHeader blockHeader; // at 0x0
+    u32 animShareInfoOffset;     // at 0x8
+    u16 shareNum;                // at 0xC
+    u8 padding[2];               // at 0xE
+};
+
+
+/******************************************************************************
+ *
  * AnimationInfo
  *
  ******************************************************************************/
@@ -74,6 +104,19 @@ struct AnimationContent {
 
 /******************************************************************************
  *
+ * AnimResource
+ *
+ ******************************************************************************/
+class AnimResource {
+protected:
+    const res::BinaryFileHeader* mpFileHeader;
+    const res::AnimationBlock* mpResBlock;
+    const res::AnimationTagBlock* mpTagBlock;
+    const res::AnimationShareBlock* mpShareBlock;
+};
+
+/******************************************************************************
+ *
  * AnimTransform
  *
  ******************************************************************************/
@@ -84,12 +127,15 @@ public:
 
     virtual void SetResource(const res::AnimationBlock* pBlock,
                              ResourceAccessor* pAccessor) = 0; // at 0xC
+    virtual void SetResource(const res::AnimationBlock* pBlock,
+                             ResourceAccessor* pAccessor,
+                             u16 animNum) = 0; // at 0x10
 
-    virtual void Bind(Pane* pPane, bool recursive) = 0; // at 0x10
-    virtual void Bind(Material* pMaterial) = 0;         // at 0x14
+    virtual void Bind(Pane* pPane, bool recursive) = 0; // at 0x14
+    virtual void Bind(Material* pMaterial) = 0;         // at 0x18
 
-    virtual void Animate(u32 idx, Pane* pPane) = 0;         // at 0x18
-    virtual void Animate(u32 idx, Material* pMaterial) = 0; // at 0x1C
+    virtual void Animate(u32 idx, Pane* pPane) = 0;         // at 0x1C
+    virtual void Animate(u32 idx, Material* pMaterial) = 0; // at 0x20
 
     u16 GetFrameSize() const;
 
@@ -132,12 +178,15 @@ public:
 
     virtual void SetResource(const res::AnimationBlock* pBlock,
                              ResourceAccessor* pAccessor); // at 0xC
+    virtual void SetResource(const res::AnimationBlock* pBlock,
+                             ResourceAccessor* pAccessor,
+                             u16 animNum); // at 0x10
 
-    virtual void Bind(Pane* pPane, bool recursive); // at 0x10
-    virtual void Bind(Material* pMaterial);         // at 0x14
+    virtual void Bind(Pane* pPane, bool recursive); // at 0x14
+    virtual void Bind(Material* pMaterial);         // at 0x18
 
-    virtual void Animate(u32 idx, Pane* pPane);         // at 0x18
-    virtual void Animate(u32 idx, Material* pMaterial); // at 0x1C
+    virtual void Animate(u32 idx, Pane* pPane);         // at 0x1C
+    virtual void Animate(u32 idx, Material* pMaterial); // at 0x20
 
 protected:
     void** mpFileResAry;         // at 0x14
@@ -153,6 +202,10 @@ protected:
 namespace detail {
 
 AnimationLink* FindAnimationLink(AnimationLinkList* pAnimList,
+                                 AnimTransform* pAnimTrans);
+AnimationLink* FindAnimationLink(AnimationLinkList* pAnimList,
+                                 const AnimResource& rResource);
+void UnbindAnimationLink(AnimationLinkList* pAnimList,
                                  AnimTransform* pAnimTrans);
 
 } // namespace detail

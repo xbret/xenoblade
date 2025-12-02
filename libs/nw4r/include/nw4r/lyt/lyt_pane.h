@@ -90,6 +90,7 @@ private:
     typedef ut::LinkList<Pane, offsetof(PaneBase, node)> PaneList;
 
 public:
+    Pane();
     explicit Pane(const res::Pane* pRes);
     virtual ~Pane(); // at 0x8
 
@@ -131,12 +132,13 @@ public:
     virtual void
     SetAnimationEnable(const AnimResource& rResource, bool enable, bool recursive); // at 0x60
     
-    virtual s32 GetMaterialNum() const; // at 0x64
+    virtual u8 GetMaterialNum() const; // at 0x64
     virtual Material* GetMaterial() const;       // at 0x68
     virtual Material* GetMaterial(u32 index) const;  // at 0x6C
     virtual void LoadMtx(const DrawInfo& rInfo); // at 0x70
 
     void AppendChild(Pane* pChild);
+    void PrependChild(Pane* pChild);
     void RemoveChild(Pane* pChild);
 
     ut::Rect GetPaneRect(const DrawInfo& rInfo) const;
@@ -289,8 +291,8 @@ protected:
     char mName[NW4R_LYT_RES_NAME_LEN + 1];          // at 0xBC
     char mUserData[NW4R_LYT_PANE_USERDATA_LEN + 1]; // at 0xCD
 
-    bool mbUserAllocated; // at 0xD2
-    u8 PADDING_0xD3;      // at 0xD3
+    bool mbUserAllocated; // at 0xD6
+    u8 mPadding;          // at 0xD7
 
 protected:
     void InsertChild(PaneList::Iterator next, Pane* pChild);

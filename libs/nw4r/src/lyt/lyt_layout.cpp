@@ -153,12 +153,12 @@ bool Layout::Build(const void* pLytBinary, ResourceAccessor* pAccessor) {
         case res::Group::SIGNATURE: {
             if (!readRootGroup) {
                 readRootGroup = true;
-                mpGroupContainer = CreateObject<GroupContainer>();
+                mpGroupContainer = Layout::NewObj<GroupContainer>();
                 break;
             }
 
             if (mpGroupContainer != NULL && groupDepth == 1) {
-                Group* pGroup = CreateObject<Group>(
+                Group* pGroup = Layout::NewObj<Group>(
                     reinterpret_cast<const res::Group*>(pBlockHeader),
                     mpRootPane);
 
@@ -218,7 +218,7 @@ AnimTransform* Layout::CreateAnimTransform(const void* pAnmBinary,
             case res::AnimationInfo::SIGNATURE_ANMTEXSRT:
             case res::AnimationInfo::SIGNATURE_ANMTEXPAT: {
                 AnimTransformBasic* pAnimTrans =
-                    CreateObject<AnimTransformBasic>();
+                    Layout::NewObj<AnimTransformBasic>();
 
                 if (pAnimTrans != NULL) {
                     pAnimBlock = reinterpret_cast<const res::AnimationBlock*>(
@@ -318,27 +318,27 @@ Pane* Layout::BuildPaneObj(s32 kind, const void* pBinary,
     switch (kind) {
     case res::Pane::SIGNATURE: {
         const res::Pane* pRes = static_cast<const res::Pane*>(pBinary);
-        return CreateObject<Pane>(pRes);
+        return Layout::NewObj<Pane>(pRes);
     }
 
     case res::Picture::SIGNATURE: {
         const res::Picture* pRes = static_cast<const res::Picture*>(pBinary);
-        return CreateObject<Picture>(pRes, rBlockSet);
+        return Layout::NewObj<Picture>(pRes, rBlockSet);
     }
 
     case res::TextBox::SIGNATURE: {
         const res::TextBox* pRes = static_cast<const res::TextBox*>(pBinary);
-        return CreateObject<TextBox>(pRes, rBlockSet);
+        return Layout::NewObj<TextBox>(pRes, rBlockSet);
     }
 
     case res::Window::SIGNATURE: {
         const res::Window* pRes = static_cast<const res::Window*>(pBinary);
-        return CreateObject<Window>(pRes, rBlockSet);
+        return Layout::NewObj<Window>(pRes, rBlockSet);
     }
 
     case res::Bounding::SIGNATURE: {
         const res::Bounding* pRes = static_cast<const res::Bounding*>(pBinary);
-        return CreateObject<Bounding>(pRes, rBlockSet);
+        return Layout::NewObj<Bounding>(pRes, rBlockSet);
     }
 
     default: {

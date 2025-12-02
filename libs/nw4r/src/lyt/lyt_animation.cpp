@@ -389,7 +389,7 @@ void AnimTransformBasic::Bind(Pane* pPane, bool recursive) {
             Pane* pResult = pPane->FindPaneByName(rContent.name, recursive);
 
             if (pResult != NULL) {
-                mAnimLinkAry[i].SetAnimTransform(this, i);
+                mAnimLinkAry[i].Set(this, i, false);
                 pResult->AddAnimationLink(&mAnimLinkAry[i]);
             }
         } else /* res::AnimationContent::ANIMTYPE_MATERIAL */ {
@@ -397,7 +397,7 @@ void AnimTransformBasic::Bind(Pane* pPane, bool recursive) {
                 pPane->FindMaterialByName(rContent.name, recursive);
 
             if (pResult != NULL) {
-                mAnimLinkAry[i].SetAnimTransform(this, i);
+                mAnimLinkAry[i].Set(this, i, false);
                 pResult->AddAnimationLink(&mAnimLinkAry[i]);
             }
         }
@@ -416,7 +416,7 @@ void AnimTransformBasic::Bind(Material* pMaterial) {
         if (rContent.type == res::AnimationContent::ANIMTYPE_MATERIAL &&
             detail::EqualsMaterialName(pMaterial->GetName(), rContent.name)) {
 
-            mAnimLinkAry[i].SetAnimTransform(this, i);
+            mAnimLinkAry[i].Set(this, i, false);
             pMaterial->AddAnimationLink(&mAnimLinkAry[i]);
         }
     }
@@ -524,6 +524,18 @@ AnimationLink* FindAnimationLink(AnimationLinkList* pAnimList,
     })
 
     return NULL;
+}
+
+void UnbindAnimationLink(AnimationLinkList* pAnimList,
+                                 AnimTransform* pAnimTrans) {
+
+    NW4R_UT_LINKLIST_FOREACH (it, *pAnimList, {
+        IterType currIt = it;
+        if (pAnimTrans != NULL && pAnimTrans == it->GetAnimTransform()) {
+            pAnimList->Erase(it);
+            currIt->Reset();
+        }
+    })
 }
 
 } // namespace detail

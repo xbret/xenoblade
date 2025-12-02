@@ -1238,12 +1238,12 @@ void Material::AddAnimationLink(AnimationLink* pAnimLink) {
     mAnimList.PushBack(pAnimLink);
 }
 
-AnimationLink* Material::FindAnimationLink(AnimTransform* pAnimTrans) {
+AnimationLink* Material::FindAnimationLinkSelf(AnimTransform* pAnimTrans) {
     return detail::FindAnimationLink(&mAnimList, pAnimTrans);
 }
 
 void Material::SetAnimationEnable(AnimTransform* pAnimTrans, bool enable) {
-    AnimationLink* pAnimLink = FindAnimationLink(pAnimTrans);
+    AnimationLink* pAnimLink = FindAnimationLinkSelf(pAnimTrans);
 
     if (pAnimLink != NULL) {
         pAnimLink->SetEnable(enable);

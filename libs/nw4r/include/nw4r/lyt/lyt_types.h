@@ -83,15 +83,16 @@ public:
     }
 
     void Reset() {
-        SetAnimTransform(NULL, 0);
+        Set(NULL, 0, false);
     }
 
     AnimTransform* GetAnimTransform() const {
         return mAnimTrans;
     }
-    void SetAnimTransform(AnimTransform* pAnimTrans, u16 idx) {
+    void Set(AnimTransform* pAnimTrans, u16 idx, bool bDisable) {
         mAnimTrans = pAnimTrans;
         mIdx = idx;
+        mbDisable = bDisable;
     }
 
     u16 GetIndex() const {
