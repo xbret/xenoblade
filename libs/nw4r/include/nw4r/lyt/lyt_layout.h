@@ -17,7 +17,6 @@ class ArcResourceAccessor;
 class DrawInfo;
 class GroupContainer;
 class Pane;
-class AnimResource;
 
 /******************************************************************************
  *
@@ -113,48 +112,68 @@ public:
         MEMFreeToAllocator(mspAllocator, pBlock);
     }
 
-    //TODO(amber) verify how accurate these are
-    
-    template <typename T>
-    static T* NewObj() {
-        T* obj = (T*)AllocMemory(sizeof(T));
-        return new (obj) T();
-    }
+    template <typename TObj> static TObj* NewObj() {
+        void* pMem = AllocMemory(sizeof(TObj));
 
-    
-    template <typename T>
-    static T * NewArray(size_t num) {
-        void* pMem = AllocMemory(num * sizeof(T));
-        T* objAry = (T* const)pMem;
-
-        if(objAry != NULL){
-            for (size_t i = 0; i < num; i++) {
-               //new (&objAry[i]) T();
-            }
-
-            return objAry;
+        if (pMem != NULL) {
+            return new (pMem) TObj();
         }
 
         return NULL;
     }
 
+    template <typename TObj, typename TParam> static TObj* NewObj(TParam param1) {
+        void* pMem = AllocMemory(sizeof(TObj));
+
+        if (pMem != NULL) {
+            return new (pMem) TObj(param1);
+        }
+
+        return NULL;
+    }
+
+    template <typename TObj, typename TParam1, typename TParam2>
+    static TObj* NewObj(TParam1 param1, TParam2 param2) {
+        void* pMem = AllocMemory(sizeof(TObj));
+        
+        if (pMem != NULL) {
+            return new (pMem) TObj(param1, param2);
+        }
+
+        return NULL;
+    }
     
-    template <typename T>
-    static void DeleteObj(T* pObj) {
-        if(pObj != nullptr){
-            pObj->~T();
+    template <typename TObj> static TObj* NewArray(size_t num) {
+        void* pMem = AllocMemory(num * sizeof(TObj));
+
+        if(pMem == NULL){
+            return NULL;
+        }else{
+            TObj* const objAry = static_cast<TObj*>(pMem);
+
+            for (size_t i = 0; i < num; i++) {
+               new (&objAry[i]) TObj();
+            }
+
+            return objAry;
+        }
+    }
+
+    template <typename TObj> static void DeleteObj(TObj* pObj) {
+        if(pObj != NULL){
+            pObj->~TObj();
             FreeMemory(pObj);
         }
     }
 
-    template <typename T>
-    static void DeleteArray(T* objAry, size_t num) {
-        if(objAry != nullptr){
+    template <typename TObj> static void DeleteArray(TObj* objAry, size_t num) {
+        if(objAry != NULL){
             for (size_t i = 0; i < num; i++) {
-                objAry[i].~T();
+                objAry[i].~TObj();
             }
 
             FreeMemory(objAry);
+            objAry = NULL;
         }
     }
 
@@ -185,46 +204,6 @@ protected:
     static MEMAllocator* mspAllocator;
 };
 
-/******************************************************************************
- *
- * Utility functions
- *
- ******************************************************************************/
-namespace {
-
-template <typename TObj> TObj* CreateObject() {
-    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
-
-    if (pBuffer != NULL) {
-        return new (pBuffer) TObj();
-    }
-
-    return NULL;
-}
-
-template <typename TObj, typename TParam> TObj* CreateObject(TParam param) {
-    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
-
-    if (pBuffer != NULL) {
-        return new (pBuffer) TObj(param);
-    }
-
-    return NULL;
-}
-
-template <typename TObj, typename TParam1, typename TParam2>
-TObj* CreateObject(TParam1 param1, TParam2 param2) {
-
-    void* pBuffer = Layout::AllocMemory(sizeof(TObj));
-
-    if (pBuffer != NULL) {
-        return new (pBuffer) TObj(param1, param2);
-    }
-
-    return NULL;
-}
-
-} // namespace
 } // namespace lyt
 } // namespace nw4r
 

@@ -12,6 +12,19 @@ Picture::Picture(u8 num) : Pane(NULL) {
     Init(num);
 }
 
+Picture::Picture(const TexMap& rTexMap) : Pane() {
+    Init(1);
+
+    mpMaterial = Layout::NewObj<Material>();
+    
+    if (mpMaterial != NULL) {
+        mpMaterial->ReserveGXMem(1,1,1,0,
+                   false, 0,0,false,
+                    false,false,false);
+        Append(rTexMap);
+    }
+}
+
 Picture::Picture(const res::Picture* pRes, const ResBlockSet& rBlockSet)
     : Pane(pRes) {
 
@@ -27,21 +40,14 @@ Picture::Picture(const res::Picture* pRes, const ResBlockSet& rBlockSet)
             reinterpret_cast<const u8*>(pRes) + sizeof(res::Picture), num);
     }
 
-    void* pMaterialBuf = Layout::AllocMemory(sizeof(Material));
+    const u32* const pMatOffsetTbl = detail::ConvertOffsToPtr<u32>(
+        rBlockSet.pMaterialList, sizeof(res::MaterialList));
 
-    if (pMaterialBuf != NULL) {
-        const u32* const pMatOffsetTbl = detail::ConvertOffsToPtr<u32>(
-            rBlockSet.pMaterialList, sizeof(res::MaterialList));
+    const res::Material* const pResMaterial =
+        detail::ConvertOffsToPtr<res::Material>(
+            rBlockSet.pMaterialList, pMatOffsetTbl[pRes->materialIdx]);
 
-        const res::Material* const pResMaterial =
-            detail::ConvertOffsToPtr<res::Material>(
-                rBlockSet.pMaterialList, pMatOffsetTbl[pRes->materialIdx]);
-
-        Material* pMaterial =
-            new (pMaterialBuf) Material(pResMaterial, rBlockSet);
-
-        mpMaterial = pMaterial;
-    }
+    mpMaterial = Layout::NewObj<Material>(pResMaterial, rBlockSet);
 }
 
 void Picture::Init(u8 num) {
@@ -52,8 +58,7 @@ void Picture::Init(u8 num) {
 
 Picture::~Picture() {
     if (mpMaterial != NULL && !mpMaterial->IsUserAllocated()) {
-        mpMaterial->~Material();
-        Layout::FreeMemory(mpMaterial);
+        Layout::DeleteObj(mpMaterial);
         mpMaterial = NULL;
     }
 
@@ -87,6 +92,10 @@ void Picture::ReserveTexCoord(u8 num) {
 
 void Picture::SetTexCoordNum(u8 num) {
     mTexCoordAry.SetSize(num);
+}
+
+void Picture::SetTexCoord(u32 idx, const detail::TexCoord coord) {
+    mTexCoordAry.SetCoord(idx, coord);
 }
 
 ut::Color Picture::GetVtxColor(u32 idx) const {

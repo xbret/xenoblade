@@ -37,20 +37,17 @@ void Group::Init() {
 Group::~Group() {
     NW4R_UT_LINKLIST_FOREACH_SAFE (it, mPaneLinkList, {
         mPaneLinkList.Erase(it);
-        Layout::FreeMemory(&*it);
+        Layout::DeleteObj(&*it);
     })
 }
 
 void Group::AppendPane(Pane* pPane) {
-    void* pBuffer = Layout::AllocMemory(sizeof(detail::PaneLink));
-    if (pBuffer == NULL) {
-        return;
+    detail::PaneLink* pLink = Layout::NewObj<detail::PaneLink>();
+
+    if (pLink != NULL) {
+        pLink->mTarget = pPane;
+        mPaneLinkList.PushBack(pLink);
     }
-
-    detail::PaneLink* pLink = new (pBuffer) detail::PaneLink();
-    pLink->mTarget = pPane;
-
-    mPaneLinkList.PushBack(pLink);
 }
 
 /******************************************************************************
@@ -63,8 +60,7 @@ GroupContainer::~GroupContainer() {
         mGroupList.Erase(it);
         
         if (!it->IsUserAllocated()) {
-            it->~Group();
-            Layout::FreeMemory(&*it);
+            Layout::DeleteObj(&*it);
         }
     })
 }

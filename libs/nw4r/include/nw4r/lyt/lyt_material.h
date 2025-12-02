@@ -4,6 +4,7 @@
 
 #include <nw4r/lyt/lyt_common.h>
 #include <nw4r/lyt/lyt_texMap.h>
+#include <nw4r/lyt/lyt_resources.h>
 #include <nw4r/lyt/lyt_types.h>
 
 #include <nw4r/ut.h>
@@ -63,6 +64,7 @@ struct Material {
  ******************************************************************************/
 class Material {
 public:
+    Material();
     Material(const res::Material* pRes, const ResBlockSet& rBlockSet);
     virtual ~Material(); // at 0x8
 
@@ -75,7 +77,7 @@ public:
     virtual void Animate(); // at 0x1C
 
     virtual AnimationLink*
-    FindAnimationLink(AnimTransform* pAnimTrans); // at 0x20
+    FindAnimationLinkSelf(AnimTransform* pAnimTrans); // at 0x20
 
     virtual void SetAnimationEnable(AnimTransform* pAnimTrans,
                                     bool enable); // at 0x24
@@ -222,6 +224,11 @@ public:
         return mbUserAllocated;
     }
 
+    void ReserveGXMem(u8 texMapNum, u8 texSrtNum, u8 texCoordGenNum,
+                  u8 tevStageNum, bool allocTevSwap, u8 indStageNum,
+                  u8 indSrtNum, bool allocChanCtrl, bool allocMatCol,
+                  bool allocAlpComp, bool allocBlendMode);
+
 protected:
     static const int MAX_TEX_SRT = (GX_TEXMTX9 - GX_TEXMTX0) / 3 + 1;
     static const int MAX_IND_SRT = (GX_ITM_2 - GX_ITM_0) + 1;
@@ -244,11 +251,6 @@ protected:
 private:
     void Init();
     void InitBitGXNums(detail::BitGXNums* pNums);
-
-    void ReserveGXMem(u8 texMapNum, u8 texSrtNum, u8 texCoordGenNum,
-                      u8 tevStageNum, bool allocTevSwap, u8 indStageNum,
-                      u8 indSrtNum, bool allocChanCtrl, bool allocMatCol,
-                      bool allocAlpComp, bool allocBlendMode);
 };
 
 /******************************************************************************

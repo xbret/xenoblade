@@ -6,6 +6,10 @@
 
 namespace nw4r {
 namespace lyt {
+
+// Forward declarations
+class ResourceAccessor;
+
 namespace res {
 
 /******************************************************************************

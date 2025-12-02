@@ -48,6 +48,25 @@ PaneBase::~PaneBase() {}
  * Pane
  *
  ******************************************************************************/
+Pane::Pane() {
+    Init();
+
+    mBasePosition = HORIZONTALPOSITION_MAX + 1;
+
+    std::memset(mName, 0, sizeof(mName));
+    std::memset(mUserData, 0, sizeof(mUserData));
+
+    mTranslate = math::VEC3(0,0,0);
+    mRotate = math::VEC3(0,0,0);
+    mScale = math::VEC2(1,1);
+    mSize = Size(0,0);
+    
+    mAlpha = -1;
+    mGlbAlpha = -1;
+    mFlag = false;
+    SetVisible(true);
+}
+
 Pane::Pane(const res::Pane* pRes) {
     Init();
 
@@ -70,6 +89,7 @@ void Pane::Init() {
     mpParent = NULL;
     mpMaterial = NULL;
     mbUserAllocated = false;
+    mpExtUserDataList = NULL;
 }
 
 Pane::~Pane() {
@@ -77,16 +97,14 @@ Pane::~Pane() {
         mChildList.Erase(it);
 
         if (!it->IsUserAllocated()) {
-            it->~Pane();
-            Layout::FreeMemory(&*it);
+            Layout::DeleteObj(&*it);
         }
     })
 
     UnbindAnimationSelf(NULL);
 
     if (mpMaterial != NULL && !mpMaterial->IsUserAllocated()) {
-        mpMaterial->~Material();
-        Layout::FreeMemory(mpMaterial);
+        Layout::DeleteObj(mpMaterial);
     }
 }
 
@@ -106,6 +124,11 @@ void Pane::AppendChild(Pane* pChild) {
 
 void Pane::InsertChild(PaneList::Iterator next, Pane* pChild) {
     mChildList.Insert(next, pChild);
+    pChild->mpParent = this;
+}
+
+void Pane::PrependChild(Pane* pChild) {
+    mChildList.Insert( mChildList.GetBeginIter(), pChild);
     pChild->mpParent = this;
 }
 
@@ -186,7 +209,7 @@ Pane* Pane::FindPaneByName(const char* pName, bool recursive) {
 
     if (recursive) {
         NW4R_UT_LINKLIST_FOREACH (it, mChildList, {
-            Pane* pResult = it->FindPaneByName(pName, true);
+            Pane* pResult = it->FindPaneByName(pName, recursive);
 
             if (pResult != NULL) {
                 return pResult;
@@ -206,7 +229,7 @@ Material* Pane::FindMaterialByName(const char* pName, bool recursive) {
 
     if (recursive) {
         NW4R_UT_LINKLIST_FOREACH (it, mChildList, {
-            Material* pResult = it->FindMaterialByName(pName, true);
+            Material* pResult = it->FindMaterialByName(pName, recursive);
 
             if (pResult != NULL) {
                 return pResult;
@@ -342,12 +365,7 @@ void Pane::UnbindAnimationSelf(AnimTransform* pAnimTrans) {
         mpMaterial->UnbindAnimation(pAnimTrans);
     }
 
-    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mAnimList, {
-        if (pAnimTrans == NULL || it->GetAnimTransform() == pAnimTrans) {
-            mAnimList.Erase(it);
-            it->Reset();
-        }
-    })
+    detail::UnbindAnimationLink(&mAnimList, pAnimTrans);
 }
 
 void Pane::AddAnimationLink(AnimationLink* pAnimLink) {
@@ -355,22 +373,11 @@ void Pane::AddAnimationLink(AnimationLink* pAnimLink) {
 }
 
 AnimationLink* Pane::FindAnimationLinkSelf(AnimTransform* pAnimTrans) {
-    AnimationLink* pAnimLink =
-        detail::FindAnimationLink(&mAnimList, pAnimTrans);
+    return detail::FindAnimationLink(&mAnimList, pAnimTrans);
+}
 
-    if (pAnimLink != NULL) {
-        return pAnimLink;
-    }
-
-    if (mpMaterial != NULL) {
-        pAnimLink = mpMaterial->FindAnimationLink(pAnimTrans);
-
-        if (pAnimLink != NULL) {
-            return pAnimLink;
-        }
-    }
-
-    return NULL;
+AnimationLink* Pane::FindAnimationLinkSelf(const AnimResource& rResource) {
+    return detail::FindAnimationLink(&mAnimList, rResource);
 }
 
 void Pane::SetAnimationEnable(AnimTransform* pAnimTrans, bool enable,
