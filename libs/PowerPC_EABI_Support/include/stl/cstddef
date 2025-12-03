@@ -4,10 +4,8 @@
 #ifdef __cplusplus
 
 namespace std {
-using ::intptr_t;
 using ::ptrdiff_t;
 using ::size_t;
-using ::uintptr_t;
 } // namespace std
 
 #endif

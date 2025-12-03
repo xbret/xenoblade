@@ -2225,25 +2225,25 @@ RVL_SDK/src/revolution/base/PPCArch.c:
 	.text       start:0x802DD4A0 end:0x802DD6B0 align:16
 	.data       start:0x805406C0 end:0x805406F8
 
-RVL_SDK/src/revolution/bte/gki/gki_buffer.c:
+RVL_SDK/src/revolution/bte/gki/common/gki_buffer.c:
 	.text       start:0x802DD6B0 end:0x802DEB50 align:16
 	.data       start:0x805406F8 end:0x80540840
 
-RVL_SDK/src/revolution/bte/gki/gki_time.c:
+RVL_SDK/src/revolution/bte/gki/common/gki_time.c:
 	.text       start:0x802DEB50 end:0x802DF0E0 align:16
 
-RVL_SDK/src/revolution/bte/gki/gki_ppc.c:
+RVL_SDK/src/revolution/bte/gki/rvl/gki_ppc.c:
 	.text       start:0x802DF0E0 end:0x802DF3F0 align:16
 	.bss        start:0x8058FA40 end:0x805B8520
 
-RVL_SDK/src/revolution/bte/hci/hcisu_h2.c:
+RVL_SDK/src/revolution/bte/hci/src/hcisu_h2.c:
 	.text       start:0x802DF3F0 end:0x802DFAB0 align:16
 	.rodata     start:0x80514AE0 end:0x80514AF8
 	.data       start:0x80540840 end:0x805408B0
 	.bss        start:0x805B8520 end:0x805B8560
 	.sdata2     start:0x80669730 end:0x80669740
 
-RVL_SDK/src/revolution/bte/hci/uusb_ppc.c:
+RVL_SDK/src/revolution/bte/hci/src/uusb_ppc.c:
 	.text       start:0x802DFAB0 end:0x802E0730 align:16
 	.bss        start:0x805B8560 end:0x805BA5C0
 	.sdata      start:0x80662FA0 end:0x80662FB0

@@ -160,7 +160,7 @@
 #endif
 
 #ifndef BTA_AG_INCLUDED
-#define BTA_AG_INCLUDED  TRUE
+#define BTA_AG_INCLUDED  FALSE
 #endif
 
 #ifndef BTA_CT_INCLUDED
@@ -209,7 +209,7 @@
 #endif
 
 #ifndef BTA_PAN_INCLUDED
-#define BTA_PAN_INCLUDED TRUE
+#define BTA_PAN_INCLUDED FALSE
 #endif
 
 #ifndef BTA_FS_INCLUDED
@@ -233,11 +233,11 @@
 #endif
 
 #ifndef BTA_AR_INCLUDED
-#define BTA_AR_INCLUDED TRUE
+#define BTA_AR_INCLUDED FALSE
 #endif
 
 #ifndef BTA_AV_INCLUDED
-#define BTA_AV_INCLUDED TRUE
+#define BTA_AV_INCLUDED FALSE
 #endif
 
 #ifndef BTA_AV_VDP_INCLUDED
@@ -317,7 +317,7 @@
 #endif
 
 #ifndef ANDROID_APP_INCLUDED
-#define ANDROID_APP_INCLUDED  TRUE
+#define ANDROID_APP_INCLUDED  FALSE
 #endif
 
 #ifndef ANDROID_USE_LOGCAT
@@ -325,7 +325,7 @@
 #endif
 
 #ifndef LINUX_GKI_INCLUDED
-#define LINUX_GKI_INCLUDED  TRUE
+#define LINUX_GKI_INCLUDED  FALSE
 #endif
 
 #ifndef BTA_SYS_TIMER_PERIOD

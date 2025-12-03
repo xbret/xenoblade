@@ -948,11 +948,11 @@ config.libs = [
     DolphinLib(
         "bte",
         [
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/gki_buffer.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/gki_time.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/gki_ppc.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/hci/hcisu_h2.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/bte/hci/uusb_ppc.c"),
+            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/common/gki_buffer.c"),
+            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/common/gki_time.c"),
+            Object(NonMatching, "RVL_SDK/src/revolution/bte/gki/rvl/gki_ppc.c"),
+            Object(NonMatching, "RVL_SDK/src/revolution/bte/hci/src/hcisu_h2.c"),
+            Object(NonMatching, "RVL_SDK/src/revolution/bte/hci/src/uusb_ppc.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/bta/dm/bta_dm_cfg.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/bta/hh/bta_hh_cfg.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/bte/bta/sys/bta_sys_cfg.c"),
