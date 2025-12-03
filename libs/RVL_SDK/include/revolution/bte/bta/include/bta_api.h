@@ -737,6 +737,7 @@ typedef tBTM_VSC_CMPL_CB        tBTA_VENDOR_CMPL_CBACK;
 #define BTA_DM_DISC_RES_EVT             2       /* Discovery result for a peer device. */
 #define BTA_DM_DISC_CMPL_EVT            3       /* Discovery complete. */
 #define BTA_DM_SEARCH_CANCEL_CMPL_EVT   4       /* Search cancelled */
+#define BTA_DM_DI_DISC_CMPL_EVT         5       /* Discovery complete. */
 #else
 #define BTA_DM_INQ_RES_EVT              0       /* Inquiry result for a peer device. */
 #define BTA_DM_INQ_CMPL_EVT             1       /* Inquiry complete. */
@@ -756,11 +757,9 @@ typedef struct
 {
     BD_ADDR         bd_addr;                /* BD address peer device. */
     DEV_CLASS       dev_class;              /* Device class of peer device. */
-#ifndef REVOLUTION
     BOOLEAN         remt_name_not_required; /* Application sets this flag if it already knows the name of the device */
                                             /* If the device name is known to application BTA skips the remote name request */
     BOOLEAN         is_limited;             /* TRUE, if the limited inquiry bit is set in the CoD */
-#endif
     INT8            rssi;                   /* The rssi value */
     UINT8           *p_eir;                 /* received EIR */
 #if (BLE_INCLUDED == TRUE)

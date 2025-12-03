@@ -2818,10 +2818,11 @@ tBTM_STATUS btm_remove_acl (BD_ADDR bd_addr)
 {
     UINT16  hci_handle = BTM_GetHCIConnHandle(bd_addr);
     tBTM_STATUS status = BTM_SUCCESS;
+    tBTM_SEC_DEV_REC  *p_dev_rec;
 
     BTM_TRACE_DEBUG0 ("btm_remove_acl");
 #if BTM_DISC_DURING_RS == TRUE
-    tBTM_SEC_DEV_REC  *p_dev_rec = btm_find_dev (bd_addr);
+    p_dev_rec = btm_find_dev (bd_addr);
 
     /* Role Switch is pending, postpone until completed */
     if (p_dev_rec && (p_dev_rec->rs_disc_pending == BTM_SEC_RS_PENDING))

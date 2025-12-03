@@ -88,7 +88,7 @@ extern void bte_load_conf(const char *p_path);
 
 /* bluetooth protocol stack (BTU) task */
 #ifndef BTE_BTU_STACK_SIZE
-#define BTE_BTU_STACK_SIZE       0//0x2000         /* In bytes */
+#define BTE_BTU_STACK_SIZE       0x2000         /* In bytes */
 #endif
 #define BTE_BTU_TASK_STR        ((INT8 *) "BTU")
 UINT32 bte_btu_stack[(BTE_BTU_STACK_SIZE + 3) / 4];

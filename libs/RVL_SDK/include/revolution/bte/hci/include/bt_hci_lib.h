@@ -20,8 +20,8 @@
 #define BT_HCI_LIB_H
 
 #include <stdint.h>
-#include <sys/cdefs.h>
-#include <sys/types.h>
+//#include <sys/cdefs.h>
+//#include <sys/types.h>
 
 /** Struct types */
 
@@ -199,4 +199,3 @@ typedef struct {
 extern const bt_hc_interface_t* bt_hc_get_interface(void);
 
 #endif /* BT_HCI_LIB_H */
-

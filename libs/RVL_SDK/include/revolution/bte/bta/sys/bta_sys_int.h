@@ -82,8 +82,8 @@ typedef struct
     tBTA_SYS_HW_STATE state;
     tBTA_SYS_HW_CBACK *sys_hw_cback[BTA_SYS_MAX_HW_MODULES];    /* enable callback for each HW modules */
     UINT32                  sys_hw_module_active;   /* bitmask of all active modules */
-    UINT16                  sys_features;           /* Bitmask of sys features */
 #endif
+    UINT16                  sys_features;           /* Bitmask of sys features */
 
 #ifdef REVOLUTION
     BOOLEAN                 events_disabled;

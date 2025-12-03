@@ -464,15 +464,15 @@ BTA_API extern void BTA_HhGetDscpInfo(UINT8 dev_handle);
 ** Returns          void
 **
 *******************************************************************************/
-#ifdef REVOLUTION
-BTA_API extern void BTA_HhAddDev(BD_ADDR bda, tBTA_HH_ATTR_MASK attr_mask,
-                                 UINT8 sub_class, UINT8 app_id,
-                                 tBTA_HH_DEV_DESCR dscp_info);
-#else
+//#ifdef REVOLUTION
+//BTA_API extern void BTA_HhAddDev(BD_ADDR bda, tBTA_HH_ATTR_MASK attr_mask,
+//                                 UINT8 sub_class, UINT8 app_id,
+//                                 tBTA_HH_DEV_DESCR dscp_info);
+//#else
 BTA_API extern void BTA_HhAddDev(BD_ADDR bda, tBTA_HH_ATTR_MASK attr_mask,
                                  UINT8 sub_class, UINT8 app_id,
                                  tBTA_HH_DEV_DSCP_INFO dscp_info);
-#endif
+//#endif
 /*******************************************************************************
 **
 ** Function         BTA_HhRemoveDev

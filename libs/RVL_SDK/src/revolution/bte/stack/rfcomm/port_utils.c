@@ -33,7 +33,9 @@
 #include "btm_int.h"
 #include "btu.h"
 
+#ifndef REVOLUTION
 #include <cutils/log.h>
+#endif
 #define info(fmt, ...)  ALOGI ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define debug(fmt, ...) ALOGD ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define error(fmt, ...) ALOGE ("## ERROR : %s: " fmt "##",__FUNCTION__,  ## __VA_ARGS__)
@@ -579,4 +581,3 @@ void port_flow_control_peer(tPORT *p_port, BOOLEAN enable, UINT16 count)
         }
     }
 }
-

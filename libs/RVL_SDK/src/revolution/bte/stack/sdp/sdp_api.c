@@ -36,7 +36,9 @@
 #include "sdpint.h"
 #include "btu.h"
 
+#ifndef REVOLUTION
 #include <cutils/log.h>
+#endif
 #define info(fmt, ...)  LOGI ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define debug(fmt, ...) LOGD ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define error(fmt, ...) LOGE ("## ERROR : %s: " fmt "##",__FUNCTION__,  ## __VA_ARGS__)

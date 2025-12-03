@@ -37,7 +37,9 @@
 /* duration of break in 200ms units */
 #define PORT_BREAK_DURATION     1
 
+#ifndef REVOLUTION
 #include <cutils/log.h>
+#endif
 #define info(fmt, ...)  ALOGI ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define debug(fmt, ...) ALOGD ("%s: " fmt,__FUNCTION__,  ## __VA_ARGS__)
 #define error(fmt, ...) ALOGE ("## ERROR : %s: " fmt "##",__FUNCTION__,  ## __VA_ARGS__)
@@ -1381,9 +1383,11 @@ int PORT_WriteDataCO (UINT16 handle, int* p_len)
     UINT32     event = 0;
     int        rc = 0;
     UINT16     length;
+    int        written;
+    int        available;
 
     RFCOMM_TRACE_API1 ("PORT_WriteDataCO() handle:%d", handle);
-    int written;
+
     *p_len = 0;
 
     /* Check if handle is valid to avoid crashing */
@@ -1404,7 +1408,7 @@ int PORT_WriteDataCO (UINT16 handle, int* p_len)
         RFCOMM_TRACE_ERROR1 ("PORT_WriteDataByFd() peer_mtu:%d", p_port->peer_mtu);
         return (PORT_UNKNOWN_ERROR);
     }
-    int available = 0;
+    available = 0;
     //if(ioctl(fd, FIONREAD, &available) < 0)
     if(p_port->p_data_co_callback(handle, (UINT8*)&available, sizeof(available),
                                 DATA_CO_CALLBACK_TYPE_OUTGOING_SIZE) == FALSE)
@@ -1727,4 +1731,3 @@ UINT8 PORT_SetTraceLevel (UINT8 new_level)
 
     return (rfc_cb.trace_level);
 }
-

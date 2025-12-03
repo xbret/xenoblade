@@ -716,7 +716,7 @@ void BTA_DmPasskeyCancel(BD_ADDR bd_addr)
 *******************************************************************************/
 #ifdef REVOLUTION
 tBTA_STATUS BTA_DmAddDevice(BD_ADDR bd_addr, LINK_KEY link_key,
-    tBTA_SERVICE_MASK trusted_mask, BOOLEAN is_trusted);
+    tBTA_SERVICE_MASK trusted_mask, BOOLEAN is_trusted)
 #else
 void BTA_DmAddDevice(BD_ADDR bd_addr, DEV_CLASS dev_class, LINK_KEY link_key,
     tBTA_SERVICE_MASK trusted_mask, BOOLEAN is_trusted,
@@ -734,21 +734,23 @@ void BTA_DmAddDevice(BD_ADDR bd_addr, DEV_CLASS dev_class, LINK_KEY link_key,
         bdcpy(p_msg->bd_addr, bd_addr);
         p_msg->tm = trusted_mask;
         p_msg->is_trusted = is_trusted;
-        p_msg->io_cap = io_cap;
+        //p_msg->io_cap = io_cap;
 
         if (link_key)
         {
             p_msg->link_key_known = TRUE;
-            p_msg->key_type = key_type;
+            //p_msg->key_type = key_type;
             memcpy(p_msg->link_key, link_key, LINK_KEY_LEN);
         }
 
         /* Load device class if specified */
+        /*
         if (dev_class)
         {
             p_msg->dc_known = TRUE;
             memcpy (p_msg->dc, dev_class, DEV_CLASS_LEN);
         }
+        */
 
         memset (p_msg->bd_name, 0, BD_NAME_LEN);
         memset (p_msg->features, 0, BD_FEATURES_LEN);

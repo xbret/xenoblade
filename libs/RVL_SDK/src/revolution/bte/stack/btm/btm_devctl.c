@@ -1490,16 +1490,19 @@ tBTM_STATUS BTM_RegisterForVSEvents (tBTM_VS_EVT_CB *p_cb, BOOLEAN is_register)
         else if (btm_cb.devcb.p_vend_spec_cb[i] == p_cb)
         {
             /* Found callback in lookup table. If deregistering, clear the entry. */
+            /*
             if (is_register == FALSE)
             {
                 btm_cb.devcb.p_vend_spec_cb[i] = NULL;
                 BTM_TRACE_EVENT0("BTM Deregister For VSEvents is successfully");
             }
+            */
             return (BTM_SUCCESS);
         }
     }
 
     /* Didn't find callback. Add callback to free slot if registering */
+    #ifndef REVOLUTION
     if (is_register)
     {
         if (free_idx < BTM_MAX_VSE_CALLBACKS)
@@ -1515,6 +1518,7 @@ tBTM_STATUS BTM_RegisterForVSEvents (tBTM_VS_EVT_CB *p_cb, BOOLEAN is_register)
             retval = BTM_NO_RESOURCES;
         }
     }
+    #endif
 
     return (retval);
 }

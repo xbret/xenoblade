@@ -44,12 +44,25 @@
 #define HID_HOST_INCLUDED       TRUE
 #define BNEP_INCLUDED           FALSE
 #define A2D_INCLUDED            FALSE
+#define AVCT_INCLUDED           FALSE
 #define AVRC_INCLUDED           FALSE
+#define AVDT_INCLUDED           FALSE
+#define PAN_INCLUDED            FALSE
+
+#define BTA_AG_INCLUDED         FALSE
+#define BTA_PAN_INCLUDED        FALSE
+#define BTA_FS_INCLUDED         FALSE
+#define BTA_AR_INCLUDED         FALSE
+#define BTA_AV_INCLUDED         FALSE
 
 #define BT_USE_TRACES           TRUE
 
 #define BTM_SSR_INCLUDED        FALSE
 #define BTM_EIR_SERVER_INCLUDED FALSE
+
+#define ANDROID_APP_INCLUDED    FALSE
+#define ANDROID_USE_LOGCAT      FALSE
+#define LINUX_GKI_INCLUDED      FALSE
 
 #define BTA_DM_COD              {0x40, 0x02, 0x04}
 #define BTA_SYS_TIMER_PERIOD    1000
@@ -160,7 +173,7 @@
 #endif
 
 #ifndef BTA_AG_INCLUDED
-#define BTA_AG_INCLUDED  FALSE
+#define BTA_AG_INCLUDED  TRUE
 #endif
 
 #ifndef BTA_CT_INCLUDED
@@ -209,7 +222,7 @@
 #endif
 
 #ifndef BTA_PAN_INCLUDED
-#define BTA_PAN_INCLUDED FALSE
+#define BTA_PAN_INCLUDED TRUE
 #endif
 
 #ifndef BTA_FS_INCLUDED
@@ -233,11 +246,11 @@
 #endif
 
 #ifndef BTA_AR_INCLUDED
-#define BTA_AR_INCLUDED FALSE
+#define BTA_AR_INCLUDED TRUE
 #endif
 
 #ifndef BTA_AV_INCLUDED
-#define BTA_AV_INCLUDED FALSE
+#define BTA_AV_INCLUDED TRUE
 #endif
 
 #ifndef BTA_AV_VDP_INCLUDED
@@ -317,7 +330,7 @@
 #endif
 
 #ifndef ANDROID_APP_INCLUDED
-#define ANDROID_APP_INCLUDED  FALSE
+#define ANDROID_APP_INCLUDED  TRUE
 #endif
 
 #ifndef ANDROID_USE_LOGCAT
@@ -325,7 +338,7 @@
 #endif
 
 #ifndef LINUX_GKI_INCLUDED
-#define LINUX_GKI_INCLUDED  FALSE
+#define LINUX_GKI_INCLUDED  TRUE
 #endif
 
 #ifndef BTA_SYS_TIMER_PERIOD
