@@ -353,7 +353,7 @@ AnimationLink* Window::FindAnimationLinkSelf(AnimTransform* pAnimTrans) {
 
     for (int i = 0; i < mFrameNum; i++) {
         AnimationLink* pAnimLink =
-            mFrames[i].pMaterial->FindAnimationLinkSelf(pAnimTrans);
+            mFrames[i].pMaterial->FindAnimationLink(pAnimTrans);
 
         if (pAnimLink != NULL) {
             return pAnimLink;

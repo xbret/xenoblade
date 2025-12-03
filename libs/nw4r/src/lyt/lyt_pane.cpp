@@ -383,21 +383,44 @@ AnimationLink* Pane::FindAnimationLinkSelf(const AnimResource& rResource) {
 void Pane::SetAnimationEnable(AnimTransform* pAnimTrans, bool enable,
                               bool recursive) {
 
-    AnimationLink* pAnimLink =
-        detail::FindAnimationLink(&mAnimList, pAnimTrans);
+    AnimationLink* pAnimLink = FindAnimationLinkSelf(pAnimTrans);
 
     if (pAnimLink != NULL) {
         pAnimLink->SetEnable(enable);
     }
 
-    if (mpMaterial != NULL) {
-        mpMaterial->SetAnimationEnable(pAnimTrans, enable);
-    }
+    u8 materialNum = GetMaterialNum();
 
+    for (u8 i = 0; i < materialNum; i++) {
+        GetMaterial(i)->SetAnimationEnable(pAnimTrans, enable);
+    }
+    
     if (recursive) {
         NW4R_UT_LINKLIST_FOREACH (it, mChildList, 
             { it->SetAnimationEnable(pAnimTrans, enable, recursive); })
     }
+}
+
+void Pane::SetAnimationEnable(const AnimResource& rResource, bool enable,
+                              bool recursive) {
+    
+    AnimationLink* pAnimLink = FindAnimationLinkSelf(rResource);
+
+    if (pAnimLink != NULL) {
+        pAnimLink->SetEnable(enable);
+    }
+
+    u8 materialNum = GetMaterialNum();
+
+    for (u8 i = 0; i < materialNum; i++) {
+        GetMaterial(i)->SetAnimationEnable(rResource, enable);
+    }
+    
+    if (recursive) {
+        NW4R_UT_LINKLIST_FOREACH (it, mChildList, 
+            { it->SetAnimationEnable(rResource, enable, recursive); })
+    }
+
 }
 
 void Pane::LoadMtx(const DrawInfo& rInfo) {
@@ -406,18 +429,8 @@ void Pane::LoadMtx(const DrawInfo& rInfo) {
 
     if (rInfo.IsMultipleViewMtxOnDraw()) {
         math::MTX34Mult(&mtx, &rInfo.GetViewMtx(), &mGlbMtx);
-
-        if (rInfo.IsYAxisUp()) {
-            ReverseYAxis(&mtx);
-        }
-
         pMtx = &mtx;
-    } else if (rInfo.IsYAxisUp()) {
-        math::MTX34Copy(&mtx, &mGlbMtx);
-        pMtx = &mtx;
-
-        ReverseYAxis(&mtx);
-    } else {
+    }else{
         pMtx = &mGlbMtx;
     }
 
@@ -454,12 +467,12 @@ math::VEC2 Pane::GetVtxPos() const {
     }
 
     case HORIZONTALPOSITION_CENTER: {
-        base.y = -mSize.height / 2;
+        base.y = mSize.height / 2;
         break;
     }
 
     case HORIZONTALPOSITION_RIGHT: {
-        base.y = -mSize.height;
+        base.y = mSize.height;
         break;
     }
     }
@@ -467,8 +480,17 @@ math::VEC2 Pane::GetVtxPos() const {
     return base;
 }
 
+u8 Pane::GetMaterialNum() const {
+    return mpMaterial != NULL ? 1 : 0;
+}
+
 Material* Pane::GetMaterial() const {
     return mpMaterial;
+}
+
+Material* Pane::GetMaterial(u32 index) const {
+    if(index == 0) return GetMaterial();
+    return NULL;
 }
 
 } // namespace lyt

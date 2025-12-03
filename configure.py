@@ -1554,7 +1554,7 @@ config.libs = [
         "libnw4r_lyt",
         [
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_init.cpp"),
-            Object(NonMatching, "nw4r/src/lyt/lyt_pane.cpp"),
+            Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_pane.cpp"),
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_group.cpp"),
             Object(NonMatching, "nw4r/src/lyt/lyt_layout.cpp"),
             Object(MatchingFor("jp"), "nw4r/src/lyt/lyt_picture.cpp"),

@@ -16,6 +16,7 @@ namespace lyt {
 
 // Forward declarations
 class AnimTransform;
+class AnimResource;
 struct ResBlockSet;
 
 namespace detail {
@@ -77,10 +78,14 @@ public:
     virtual void Animate(); // at 0x1C
 
     virtual AnimationLink*
-    FindAnimationLinkSelf(AnimTransform* pAnimTrans); // at 0x20
+    FindAnimationLink(AnimTransform* pAnimTrans); // at 0x20
+    virtual AnimationLink*
+    FindAnimationLink(const AnimResource& rResource); // at 0x24
 
     virtual void SetAnimationEnable(AnimTransform* pAnimTrans,
-                                    bool enable); // at 0x24
+                                    bool enable); // at 0x28
+    virtual void SetAnimationEnable(const AnimResource& rResource,
+                                    bool enable); // at 0x2C
 
     void AddAnimationLink(AnimationLink* pAnimLink);
 
