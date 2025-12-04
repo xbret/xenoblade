@@ -1,29 +1,14 @@
 Xenoblade
-[![Build Status]][actions] [![Discord Badge]][discord]
+[![Build Status]][actions] ![code-progress-jp] ![data-progress-jp] ![code-progress-eu] ![data-progress-eu] [![Discord Badge]][discord]
 =============
 
-<!--
-Replace with your repository's URL.
--->
-[Build Status]: https://github.com/xbret/xenoblade-dtk/actions/workflows/build.yml/badge.svg
-[actions]: https://github.com/xbret/xenoblade-dtk/actions/workflows/build.yml
-<!---
-Code progress URL:
-https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=code
-URL encoded then appended to: https://img.shields.io/endpoint?label=Code&url=
--->
-<!---
-Data progress URL:
-https://progress.decomp.club/data/[project]/[version]/dol/?mode=shield&measure=data
-URL encoded then appended to: https://img.shields.io/endpoint?label=Data&url=
--->
+[Build Status]: https://github.com/xbret/xenoblade/actions/workflows/build.yml/badge.svg
+[actions]: https://github.com/xbret/xenoblade/actions/workflows/build.yml
 
-[code-progress-jp]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
-[data-progress-jp]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
-[code-progress-eu]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Feu%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
-[data-progress-eu]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Feu%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
-[code-progress-us]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fus%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
-[data-progress-us]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.decomp.club%2Fdata%2Fxenoblade%2Fus%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
+[code-progress-jp]: https://decomp.dev/xbret/xenoblade.svg?mode=shield&measure=complete_code&label=Code%20(JP)
+[data-progress-jp]: https://decomp.dev/xbret/xenoblade.svg?mode=shield&measure=complete_data&label=Data%20(JP)
+[code-progress-eu]: https://decomp.dev/xbret/xenoblade/eu.svg?mode=shield&measure=complete_code&label=Code%20(EU/US)
+[data-progress-eu]: https://decomp.dev/xbret/xenoblade/eu.svg?mode=shield&measure=complete_data&label=Data%20(EU/US)
 
 <!--
 Replace with your Discord server's ID and invite URL.
@@ -35,11 +20,11 @@ This is a work-in-progress decompilation of Xenoblade.
 
 It builds the following executables:
 
-| Region | SHA1 hash                                  | Code Progress       | Data Progress       |
-|:------:|--------------------------------------------|:-------------------:|:-------------------:|
-| JP     | `a564033aee46988743d8f5e6fdc50a8c65791160` | ![code-progress-jp] | ![data-progress-jp] |
-| EU     | `10d34dbf901e5d6547718176303a6073ee80dda2` | ![code-progress-eu] | ![data-progress-eu] |
-| US     | `214b15173fa3bad23a067476d58d3933ad7037b7` | ![code-progress-us] | ![data-progress-us] |
+| Region | SHA1 hash                                  |
+|:------:|--------------------------------------------|
+| JP     | `a564033aee46988743d8f5e6fdc50a8c65791160` |
+| EU     | `10d34dbf901e5d6547718176303a6073ee80dda2` |
+| US     | `214b15173fa3bad23a067476d58d3933ad7037b7` |
 
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
