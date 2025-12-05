@@ -24,10 +24,10 @@
 #ifndef L2C_INT_H
 #define L2C_INT_H
 
-#include "l2c_api.h"
-#include "l2cdefs.h"
-#include "gki.h"
-#include "btm_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 #define L2CAP_MIN_MTU   48      /* Minimum acceptable MTU is 48 bytes */
 

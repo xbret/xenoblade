@@ -35,10 +35,10 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "bta_sys.h"
-#include "bta_api.h"
-#include "bta_dm_int.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
 
 #ifdef REVOLUTION
 

@@ -26,14 +26,14 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "gki.h"
-#include "bt_types.h"
-#include "hcidefs.h"
-#include "hcimsgs.h"
-#include "l2cdefs.h"
-#include "l2c_int.h"
-#include "btu.h"
-#include "btm_api.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 /*******************************************************************************
 **
@@ -1809,4 +1809,3 @@ UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush)
 
     return (num_left);
 }
-

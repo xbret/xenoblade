@@ -35,7 +35,7 @@
 #error Please compile the BTE library with REVOLUTION!
 #endif
 
-#include "gki_int.h"
+#include "revolution/BTE/gki/platform/gki_int.h"
 #include <revolution/OS.h>
 #include <revolution/WUD.h>
 

@@ -26,13 +26,13 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "gki.h"
-#include "bt_types.h"
-#include "hiddefs.h"
-#include "hidh_api.h"
-#include "hidh_int.h"
-#include "btm_api.h"
-#include "btu.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hiddefs.h"
+#include "revolution/BTE/stack/include/hidh_api.h"
+#include "revolution/BTE/stack/hid/hidh_int.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/include/btu.h"
 
 #if HID_DYNAMIC_MEMORY == FALSE
 tHID_HOST_CTB   hh_cb;

@@ -36,10 +36,10 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "gki.h"
-#include "ptim.h"
-#include "bta_sys.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/include/ptim.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 
 /*******************************************************************************
 **

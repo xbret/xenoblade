@@ -24,10 +24,10 @@
 #ifndef AVCT_INT_H
 #define AVCT_INT_H
 
-#include "gki.h"
+#include "revolution/BTE/gki/common/gki.h"
 #include "avct_api.h"
 #include "avct_defs.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 
 /*****************************************************************************
 ** constants
@@ -235,5 +235,3 @@ extern const tL2CAP_APPL_INFO avct_l2c_br_appl;
 #endif
 
 #endif /* AVCT_INT_H */
-
-

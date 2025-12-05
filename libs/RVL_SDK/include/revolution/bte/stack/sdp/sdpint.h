@@ -25,9 +25,9 @@
 #ifndef  SDP_INT_H
 #define  SDP_INT_H
 
-#include "bt_target.h"
-#include "sdp_api.h"
-#include "l2c_api.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 
 
 /* Continuation length - we use a 2-byte offset */
@@ -326,4 +326,3 @@ extern void sdp_disc_server_rsp (tCONN_CB *p_ccb, BT_HDR *p_msg);
 
 
 #endif
-

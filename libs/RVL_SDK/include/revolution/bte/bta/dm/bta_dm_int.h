@@ -37,7 +37,7 @@
 #ifndef BTA_DM_INT_H
 #define BTA_DM_INT_H
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 
 #if (BLE_INCLUDED == TRUE && (defined BTA_GATT_INCLUDED) && (BTA_GATT_INCLUDED == TRUE))
     #include "bta_gatt_api.h"
@@ -1011,4 +1011,3 @@ extern void bta_dm_execute_callback(tBTA_DM_MSG *p_data);
 extern void bta_dm_set_afh_channel_assesment(tBTA_DM_MSG *p_data);
 
 #endif /* BTA_DM_INT_H */
-

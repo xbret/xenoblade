@@ -23,14 +23,14 @@
  *
  ******************************************************************************/
 #include <string.h>
-#include "bt_target.h"
-#include "gki.h"
-#include "rfcdefs.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "port_api.h"
-#include "port_int.h"
-#include "rfc_int.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
 
 /********************************************************************************/
 /*              L O C A L    F U N C T I O N     P R O T O T Y P E S            */
@@ -912,4 +912,3 @@ void rfc_set_port_state(tPORT_STATE *port_pars, MX_FRAME *p_frame)
     if (p_frame->u.rpn.param_mask & RFCOMM_RPN_PM_XOFF_CHAR)
         port_pars->xoff_char   = p_frame->u.rpn.xoff_char;
 }
-

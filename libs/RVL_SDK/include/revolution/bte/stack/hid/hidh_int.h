@@ -25,9 +25,9 @@
 #ifndef HIDH_INT_H
 #define HIDH_INT_H
 
-#include "hidh_api.h"
-#include "hid_conn.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/hidh_api.h"
+#include "revolution/BTE/stack/hid/hid_conn.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 
 enum {
     HID_DEV_NO_CONN,
@@ -91,4 +91,3 @@ HID_API extern tHID_HOST_CTB *hidh_cb_ptr;
 #endif
 
 #endif
-

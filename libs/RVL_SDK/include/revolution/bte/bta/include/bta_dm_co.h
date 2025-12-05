@@ -24,7 +24,7 @@
 #ifndef BTA_DM_CO_H
 #define BTA_DM_CO_H
 
-#include "bta_sys.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 
 
 #ifndef BTA_SCO_OUT_PKT_SIZE

@@ -17,11 +17,11 @@
  ******************************************************************************/
 #include <string.h>
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 #if defined(BTA_HH_INCLUDED) && (BTA_HH_INCLUDED == TRUE)
 
 
-#include "bta_hh_int.h"
+#include "revolution/BTE/bta/hh/bta_hh_int.h"
 
 /*****************************************************************************
 **  Constants

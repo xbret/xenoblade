@@ -19,7 +19,7 @@
 #ifndef BT_TYPES_H
 #define BT_TYPES_H
 
-#include "data_types.h"
+#include "revolution/BTE/gki/platform/data_types.h"
 
 #ifdef _WIN32
 #ifdef BLUESTACK_TESTER
@@ -494,6 +494,13 @@ typedef struct
 #define BLE_ADDR_TYPE_MASK      (BLE_ADDR_RANDOM | BLE_ADDR_PUBLIC)
 typedef UINT8 tBLE_ADDR_TYPE;
 
+#ifndef REVOLUTION
+#define BT_TRANSPORT_INVALID   0
+#define BT_TRANSPORT_BR_EDR    1
+#define BT_TRANSPORT_LE        2
+typedef UINT8 tBT_TRANSPORT;
+#endif
+
 #define BLE_ADDR_IS_STATIC(x)   ((x[0] & 0xC0) == 0xC0)
 
 typedef struct
@@ -687,4 +694,3 @@ typedef UINT8 tBT_DEVICE_TYPE;
 typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
 
 #endif
-

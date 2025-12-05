@@ -23,16 +23,18 @@
  *  Description:   Contains BTE core stack initialization and shutdown code
  *
  ******************************************************************************/
-//#include <fcntl.h>
+#ifndef REVOLUTION
+#include <fcntl.h>
+#endif
 #include <stdlib.h>
 #include <assert.h>
 
-#include "gki.h"
-#include "bd.h"
-#include "btu.h"
-#include "bte.h"
-#include "bta_api.h"
-#include "bt_hci_lib.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/include/bd.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/include/bte.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/hci/include/bt_hci_lib.h"
 
 /*******************************************************************************
 **  Constants & Macros

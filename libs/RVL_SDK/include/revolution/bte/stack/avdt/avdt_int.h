@@ -24,12 +24,12 @@
 #ifndef AVDT_INT_H
 #define AVDT_INT_H
 
-#include "gki.h"
+#include "revolution/BTE/gki/common/gki.h"
 #include "avdt_api.h"
 #include "avdtc_api.h"
 #include "avdt_defs.h"
-#include "l2c_api.h"
-#include "btm_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 #ifndef AVDT_DEBUG
 #if (!defined BTTRC_INCLUDED || BTTRC_INCLUDED == FALSE)

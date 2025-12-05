@@ -37,8 +37,8 @@
 #ifndef BTA_SYS_H
 #define BTA_SYS_H
 
-#include "bt_target.h"
-#include "gki.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
 
 /*****************************************************************************
 **  Constants and data types

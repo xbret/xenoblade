@@ -36,7 +36,7 @@
 #ifndef BTA_SYS_INT_H
 #define BTA_SYS_INT_H
 
-#include "ptim.h"
+#include "revolution/BTE/bta/include/ptim.h"
 
 /*****************************************************************************
 **  Constants and data types

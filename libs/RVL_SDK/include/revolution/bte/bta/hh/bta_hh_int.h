@@ -25,10 +25,10 @@
 #ifndef BTA_HH_INT_H
 #define BTA_HH_INT_H
 
-#include "bta_sys.h"
-#include "bd.h"
-#include "utl.h"
-#include "bta_hh_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/include/bd.h"
+#include "revolution/BTE/bta/include/utl.h"
+#include "revolution/BTE/bta/include/bta_hh_api.h"
 
 /* can be moved to bta_api.h */
 #define BTA_HH_MAX_RPT_CHARS    8
@@ -245,4 +245,3 @@ extern void bta_hh_trace_dev_db(void);
 #endif
 
 #endif
-

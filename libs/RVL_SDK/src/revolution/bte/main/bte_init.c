@@ -23,7 +23,7 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 #include <string.h>
 
 #ifndef BTA_INCLUDED
@@ -32,7 +32,7 @@
 
 /* Include initialization functions definitions */
 #if (defined(RFCOMM_INCLUDED) && RFCOMM_INCLUDED == TRUE)
-#include "port_api.h"
+#include "revolution/BTE/stack/include/port_api.h"
 #endif
 
 #if (defined(TCS_INCLUDED) && TCS_INCLUDED == TRUE)
@@ -48,7 +48,7 @@
 #endif
 
 #if (defined(GAP_INCLUDED) && GAP_INCLUDED == TRUE)
-#include "gap_api.h"
+#include "revolution/BTE/stack/include/gap_api.h"
 #endif
 
 #if ((defined(CTP_INCLUDED) && CTP_INCLUDED == TRUE))
@@ -125,11 +125,11 @@
 
 
 #if (defined(HID_DEV_INCLUDED) && HID_DEV_INCLUDED == TRUE)
-#include "hidd_api.h"
+#include "revolution/BTE/stack/include/hidd_api.h"
 #endif
 
 #if (defined(HID_HOST_INCLUDED) && HID_HOST_INCLUDED == TRUE)
-#include "hidh_api.h"
+#include "revolution/BTE/stack/include/hidh_api.h"
 #endif
 
 #if (defined(SAP_SERVER_INCLUDED) && SAP_SERVER_INCLUDED == TRUE)
@@ -141,7 +141,7 @@
 #endif
 
 #if (defined(BLE_INCLUDED) && BLE_INCLUDED == TRUE)
-#include "gatt_api.h"
+#include "revolution/BTE/stack/include/gatt_api.h"
 #if (defined(SMP_INCLUDED) && SMP_INCLUDED == TRUE)
 #include "smp_api.h"
 #endif
@@ -150,8 +150,8 @@
 // btla-specific ++
 /***** BTA Modules ******/
 #if BTA_INCLUDED == TRUE && BTA_DYNAMIC_MEMORY == TRUE
-#include "bta_api.h"
-#include "bta_sys.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 
 #if BTA_AC_INCLUDED == TRUE
 #include "bta_acs_int.h"
@@ -166,7 +166,7 @@
 #include "bta_hs_int.h"
 #endif
 
-#include "bta_dm_int.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
 
 #if BTA_DG_INCLUDED == TRUE
 #include "bta_dg_api.h"
@@ -228,7 +228,7 @@
 #endif
 
 #if BTA_HH_INCLUDED==TRUE
-#include "bta_hh_int.h"
+#include "revolution/BTE/bta/hh/bta_hh_int.h"
 #endif
 
 #if BTA_FM_INCLUDED==TRUE
@@ -265,7 +265,7 @@ tBTA_JV_CB *bta_jv_cb_ptr = NULL;
 #include "bta_pan_int.h"
 #endif
 
-#include "bta_sys_int.h"
+#include "revolution/BTE/bta/sys/bta_sys_int.h"
 
 /* control block for patch ram downloading */
 #include "bta_prm_int.h"

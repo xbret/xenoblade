@@ -19,8 +19,8 @@
 #ifndef PROFILES_API_H
 #define PROFILES_API_H
 
-#include "bt_target.h"
-#include "btm_api.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 /*****************************************************************************
 **  Constants
@@ -68,4 +68,3 @@ typedef struct
 } tBT_SECURITY;
 
 #endif  /* PROFILES_API_H */
-

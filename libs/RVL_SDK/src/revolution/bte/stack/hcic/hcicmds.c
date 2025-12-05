@@ -23,12 +23,12 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "gki.h"
-#include "hcidefs.h"
-#include "hcimsgs.h"
-#include "hcidefs.h"
-#include "btu.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/btu.h"
 
 #include <stddef.h>
 #include <string.h>
@@ -37,7 +37,7 @@
 #include <script.h>
 #define btu_hcif_send_cmd(p1, p2) HCI_CMD_TO_LOWER((p2))
 #else
-#include "btm_int.h"    /* Included for UIPC_* macro definitions */
+#include "revolution/BTE/stack/btm/btm_int.h"    /* Included for UIPC_* macro definitions */
 #endif
 
 BOOLEAN btsnd_hcic_inquiry(const LAP inq_lap, UINT8 duration, UINT8 response_cnt)
@@ -3358,4 +3358,3 @@ BOOLEAN btsnd_hcic_nop (void)
     btu_hcif_send_cmd (LOCAL_BR_EDR_CONTROLLER_ID,  p);
     return (TRUE);
 }
-

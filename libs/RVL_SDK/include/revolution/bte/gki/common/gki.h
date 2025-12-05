@@ -21,15 +21,15 @@
 
 /* Include platform-specific over-rides */
 #if (defined(NFC_STANDALONE) && (NFC_STANDALONE == TRUE))
-    #include "gki_target.h"
+    #include "revolution/BTE/include/gki_target.h"
 #else
     /* For non-nfc_standalone, include Bluetooth definitions */
-    #include "bt_target.h"
+    #include "revolution/BTE/include/bt_target.h"
 #endif
 
 
 
-#include "bt_types.h"
+#include "revolution/BTE/stack/include/bt_types.h"
 
 /* Error codes */
 #define GKI_SUCCESS         0x00
@@ -491,4 +491,3 @@ GKI_API extern void    GKI_print_task(void);
 
 
 #endif
-

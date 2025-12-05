@@ -41,7 +41,7 @@
 #include <signal.h>
 #include <pthread.h>
 #endif
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 
 /* by default on shutdown, baudrate is reset 115kbits. this should NOT be need for platforms
  * that kill BTE driver and remove/reset BT chip
@@ -126,7 +126,7 @@ typedef struct tBAUD_REG_tag {
     UINT8 ExplicitBaudRate3;
 } tBAUD_REG;
 
-#include "gki.h"
+#include "revolution/BTE/gki/common/gki.h"
 
 extern const tBAUD_REG baud_rate_regs[];
 

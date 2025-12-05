@@ -30,13 +30,13 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#include "bt_types.h"
-#include "gki.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "hcidefs.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 #define BTM_INQ_REPLY_TIMEOUT   3       /* 3 second timeout waiting for responses */
 
@@ -3262,4 +3262,3 @@ void btm_set_eir_uuid( UINT8 *p_eir, tBTM_INQ_RESULTS *p_results )
                      p_results->eir_uuid[1], p_results->eir_uuid[0] );
 }
 #endif
-

@@ -22,8 +22,8 @@
  *
  ******************************************************************************/
 
-#include "data_types.h"
-#include "bd.h"
+#include "revolution/BTE/gki/platform/data_types.h"
+#include "revolution/BTE/bta/include/bd.h"
 
 /*****************************************************************************
 **  Constants

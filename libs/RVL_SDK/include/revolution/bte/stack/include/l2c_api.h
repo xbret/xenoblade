@@ -24,9 +24,9 @@
 #ifndef L2C_API_H
 #define L2C_API_H
 
-#include "bt_target.h"
-#include "l2cdefs.h"
-#include "hcidefs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 /*****************************************************************************
 **  Constants

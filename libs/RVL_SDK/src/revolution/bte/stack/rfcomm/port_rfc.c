@@ -24,14 +24,14 @@
  ******************************************************************************/
 #include <string.h>
 
-#include "bt_target.h"
-#include "gki.h"
-#include "rfcdefs.h"
-#include "port_api.h"
-#include "btm_int.h"
-#include "btm_api.h"
-#include "port_int.h"
-#include "rfc_int.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
 
 /*
 ** Local function definitions
@@ -1107,6 +1107,3 @@ void port_get_credits (tPORT *p_port, UINT8 k)
     if (p_port->credit_tx == 0)
         p_port->tx.peer_fc = TRUE;
 }
-
-
-

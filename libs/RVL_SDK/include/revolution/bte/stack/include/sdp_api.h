@@ -18,8 +18,8 @@
 #ifndef SDP_API_H
 #define SDP_API_H
 
-#include "bt_target.h"
-#include "sdpdefs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/sdpdefs.h"
 
 /*****************************************************************************
 **  Constants

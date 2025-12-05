@@ -38,12 +38,12 @@
  *
  ******************************************************************************/
 
-#include "btm_api.h"
-#include "bta_api.h"
-#include "bta_sys.h"
-#include "bta_sys_int.h"
-#include "bta_sys_ci.h"
-#include "bta_sys_co.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/sys/bta_sys_int.h"
+#include "revolution/BTE/bta/include/bta_sys_ci.h"
+#include "revolution/BTE/bta/include/bta_sys_co.h"
 #if BTA_FM_INCLUDED == TRUE
 #include "bta_fm_api.h"
 #endif
@@ -54,15 +54,15 @@
 #include "bta_gps_api.h"
 #endif
 
-#include "gki.h"
-#include "ptim.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/include/ptim.h"
 #include <string.h>
 #if( defined BTA_AR_INCLUDED ) && (BTA_AR_INCLUDED == TRUE)
 #include "bta_ar_api.h"
 #endif
 
 #ifdef REVOLUTION
-#include "bta_dm_int.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
 #endif
 
 /* protocol timer update period, in milliseconds */
@@ -777,5 +777,3 @@ UINT16 bta_sys_get_sys_features (void)
     return bta_sys_cb.sys_features;
 }
 #endif
-
-

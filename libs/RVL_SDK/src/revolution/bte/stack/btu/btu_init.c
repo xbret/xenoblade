@@ -23,17 +23,17 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 #include <string.h>
-#include "dyn_mem.h"
+#include "revolution/BTE/stack/include/dyn_mem.h"
 
-#include "btu.h"
-#include "btm_int.h"
-#include "sdpint.h"
-#include "l2c_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/sdp/sdpint.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
 
 #if (BLE_INCLUDED == TRUE)
-#include "gatt_api.h"
+#include "revolution/BTE/stack/include/gatt_api.h"
 #include "gatt_int.h"
 #if SMP_INCLUDED == TRUE
 #include "smp_int.h"
@@ -154,4 +154,3 @@ void btu_uipc_rx_cback(BT_HDR *p_msg)
     GKI_send_msg(BTU_TASK, BTU_HCI_RCV_MBOX, p_msg);
 
 }
-

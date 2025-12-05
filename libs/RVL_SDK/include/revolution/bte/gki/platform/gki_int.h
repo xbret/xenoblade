@@ -31,7 +31,7 @@
  ******************************************************************************/
 #ifndef GKI_INT_H
 #define GKI_INT_H
-#include "gki_common.h"
+#include "revolution/BTE/gki/common/gki_common.h"
 
 /**********************************************************************
 ** OS specific definitions
@@ -136,4 +136,3 @@ GKI_API extern tGKI_CB *gki_cb_ptr;
 #endif
 
 #endif
-

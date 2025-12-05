@@ -32,14 +32,14 @@
 #include <string.h>
 #include <stdio.h>
 #include <stddef.h>
-#include "bt_types.h"
-#include "gki.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "l2c_int.h"
-#include "hcidefs.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 
 #if BTM_PWR_MGR_INCLUDED == TRUE

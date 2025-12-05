@@ -35,9 +35,9 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "gki.h"
-#include "bta_sys.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 
 /* GKI task mailbox event for BTA. */
 #ifndef BTA_MBOX_EVT
@@ -67,5 +67,3 @@ const tBTA_SYS_CFG bta_sys_cfg =
 };
 
 tBTA_SYS_CFG *p_bta_sys_cfg = (tBTA_SYS_CFG *)&bta_sys_cfg;
-
-

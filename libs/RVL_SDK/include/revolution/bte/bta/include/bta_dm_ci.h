@@ -24,7 +24,7 @@
 #ifndef BTA_DM_CI_H
 #define BTA_DM_CI_H
 
-#include "bta_api.h"
+#include "revolution/BTE/bta/include/bta_api.h"
 
 /*****************************************************************************
 **  Function Declarations
@@ -78,4 +78,3 @@ BTA_API extern void bta_dm_sco_ci_data_ready(UINT16 event, UINT16 sco_handle);
 #endif
 
 #endif
-

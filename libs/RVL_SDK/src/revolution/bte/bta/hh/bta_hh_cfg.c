@@ -35,8 +35,8 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "bta_hh_api.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/bta/include/bta_hh_api.h"
 
 /* max number of device types supported by BTA */
 #ifdef REVOLUTION

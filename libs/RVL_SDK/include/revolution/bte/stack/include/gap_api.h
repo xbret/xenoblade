@@ -19,9 +19,9 @@
 #ifndef GAP_API_H
 #define GAP_API_H
 
-#include "profiles_api.h"
-#include "btm_api.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/profiles_api.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 
 /*****************************************************************************
 **  Constants
@@ -800,4 +800,3 @@ GAP_API extern BOOLEAN GAP_BleUpdateReconnectAddr (BD_ADDR peer_bda,
 #endif
 
 #endif  /* GAP_API_H */
-

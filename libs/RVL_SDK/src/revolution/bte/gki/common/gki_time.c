@@ -33,7 +33,7 @@
  ******************************************************************************/
 
 
-#include "gki_int.h"
+#include "revolution/BTE/gki/platform/gki_int.h"
 
 #ifndef BT_ERROR_TRACE_0
 #define BT_ERROR_TRACE_0(l,m)

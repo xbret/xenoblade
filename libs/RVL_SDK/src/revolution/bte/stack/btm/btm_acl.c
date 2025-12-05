@@ -28,15 +28,15 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#include "bt_types.h"
-#include "bt_target.h"
-#include "gki.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "l2c_int.h"
-#include "hcidefs.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 static void btm_establish_continue (tACL_CONN *p_acl_cb);
 
 #define BTM_DEV_REPLY_TIMEOUT   3       /* 3 second timeout waiting for responses */

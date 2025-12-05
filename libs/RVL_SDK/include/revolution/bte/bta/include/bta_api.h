@@ -45,11 +45,11 @@
 #ifndef BTA_API_H
 #define BTA_API_H
 
-#include "data_types.h"
-#include "bt_target.h"
-#include "bt_types.h"
-#include "btm_api.h"
-#include "uipc_msg.h"
+#include "revolution/BTE/gki/platform/data_types.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/include/uipc_msg.h"
 
 #if BLE_INCLUDED == TRUE
 #include "btm_ble_api.h"

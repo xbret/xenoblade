@@ -24,7 +24,7 @@
 #ifndef BTA_SYS_CO_H
 #define BTA_SYS_CO_H
 
-#include "bta_sys.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 
 
 

@@ -22,17 +22,17 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 
 #if defined(BTA_HH_INCLUDED) && (BTA_HH_INCLUDED == TRUE)
 
 #include <string.h>
 
-#include "bta_sys.h"
-#include "btm_api.h"
-#include "l2c_api.h"
-#include "bta_hh_int.h"
-#include "bta_hh_co.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/bta/hh/bta_hh_int.h"
+#include "revolution/BTE/bta/include/bta_hh_co.h"
 
 /*****************************************************************************
 **  Constants
@@ -1194,4 +1194,3 @@ static char * bta_hh_hid_event_name(UINT16 event)
 }
 #endif
 #endif /* BTA_HH_INCLUDED */
-

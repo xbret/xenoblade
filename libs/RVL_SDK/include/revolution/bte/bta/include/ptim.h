@@ -36,7 +36,7 @@
 #ifndef PTIM_H
 #define PTIM_H
 
-#include "gki.h"
+#include "revolution/BTE/gki/common/gki.h"
 
 /*****************************************************************************
 **  Constants and data types

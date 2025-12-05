@@ -23,20 +23,20 @@
  *
  ******************************************************************************/
 
-#include "bt_types.h"
-#include "gki.h"
-#include "bd.h"
-#include "bta_sys.h"
-#include "bta_api.h"
-#include "bta_dm_int.h"
-#include "bta_dm_co.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "btu.h"
-#include "sdp_api.h"
-#include "l2c_api.h"
-#include "wbt_api.h"
-#include "utl.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/include/bd.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
+#include "revolution/BTE/bta/include/bta_dm_co.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/wbt_api.h"
+#include "revolution/BTE/bta/include/utl.h"
 #include <string.h>
 
 static void bta_dm_inq_results_cb (tBTM_INQ_RESULTS *p_inq, UINT8 *p_eir);

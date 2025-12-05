@@ -24,13 +24,13 @@
  *****************************************************************************/
 
 #include <string.h>
-#include "bt_target.h"
-#include "gki.h"
-#include "rfcdefs.h"
-#include "port_api.h"
-#include "l2c_api.h"
-#include "port_int.h"
-#include "rfc_int.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
 
 
 #if RFC_DYNAMIC_MEMORY == FALSE
@@ -335,5 +335,3 @@ void RFCOMM_DataReq (tRFC_MCB *p_mcb, UINT8 dlci, BT_HDR *p_buf)
 {
     rfc_port_sm_execute(port_find_mcb_dlci_port (p_mcb, dlci), RFC_EVENT_DATA, p_buf);
 }
-
-

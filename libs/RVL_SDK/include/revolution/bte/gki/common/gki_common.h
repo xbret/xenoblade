@@ -31,8 +31,8 @@
 #ifndef GKI_COMMON_H
 #define GKI_COMMON_H
 
-#include "gki.h"
-#include "dyn_mem.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/dyn_mem.h"
 
 /* Task States: (For OSRdyTbl) */
 #define TASK_DEAD       0   /* b0000 */

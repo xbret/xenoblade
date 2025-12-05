@@ -18,8 +18,8 @@
 #ifndef HIDH_API_H
 #define HIDH_API_H
 
-#include "hiddefs.h"
-#include "sdp_api.h"
+#include "revolution/BTE/stack/include/hiddefs.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
 
 /*****************************************************************************
 **  Constants

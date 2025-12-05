@@ -37,9 +37,9 @@
 #ifndef BTM_API_H
 #define BTM_API_H
 
-#include "bt_target.h"
-#include "sdp_api.h"
-#include "hcidefs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 #if BLE_INCLUDED == TRUE && SMP_INCLUDED == TRUE
 #include "smp_api.h"
@@ -1185,12 +1185,16 @@ typedef void (tBTM_ESCO_CBACK) (tBTM_ESCO_EVT event, tBTM_ESCO_EVT_DATA *p_data)
 #define BTM_SEC_SERVICE_HDP_SNK         48
 #define BTM_SEC_SERVICE_HDP_SRC         49
 #define BTM_SEC_SERVICE_ATT             50
+#define BTM_SEC_SERVICE_HIDD_SEC_CTRL   51
+#define BTM_SEC_SERVICE_HIDD_NOSEC_CTRL 52
+#define BTM_SEC_SERVICE_HIDD_INTR       53
 
 /* Update these as services are added */
-#define BTM_SEC_SERVICE_FIRST_EMPTY     51
+#define BTM_SEC_SERVICE_FIRST_EMPTY     54
 
 #ifndef BTM_SEC_MAX_SERVICES
-#define BTM_SEC_MAX_SERVICES            65
+/* accomadate client profiles also */
+#define BTM_SEC_MAX_SERVICES            70
 #endif
 
 /************************************************************************************************

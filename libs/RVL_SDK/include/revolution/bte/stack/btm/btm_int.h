@@ -25,15 +25,15 @@
 #ifndef BTM_INT_H
 #define BTM_INT_H
 
-#include "bt_target.h"
-#include "gki.h"
-#include "hcidefs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 #if RFCOMM_INCLUDED == TRUE
-#include "rfcdefs.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
 #endif
 
-#include "btm_api.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 #if (BLE_INCLUDED == TRUE)
 #include "btm_ble_int.h"
@@ -1111,4 +1111,3 @@ extern void btm_brcm_arc_init (void);
 #endif
 
 #endif
-

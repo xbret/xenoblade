@@ -27,14 +27,14 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#include "bt_types.h"
-#include "gki.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "hcidefs.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 static tBTM_SEC_DEV_REC *btm_find_oldest_dev (void);
 
 /*******************************************************************************
@@ -460,5 +460,3 @@ tBTM_SEC_DEV_REC *btm_find_oldest_dev (void)
     }
     return(p_oldest);
 }
-
-

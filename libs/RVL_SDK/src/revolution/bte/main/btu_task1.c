@@ -32,30 +32,30 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "bt_target.h"
-#include "gki.h"
-#include "bt_types.h"
-#include "hcimsgs.h"
-#include "l2c_int.h"
-#include "btu.h"
-#include "bt_utils.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/utils/include/bt_utils.h"
 
-#include "sdpint.h"
+#include "revolution/BTE/stack/sdp/sdpint.h"
 
 #if ( defined(RFCOMM_INCLUDED) && RFCOMM_INCLUDED == TRUE )
-#include "port_api.h"
-#include "port_ext.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/include/port_ext.h"
 #endif
 
-#include "btm_api.h"
-#include "btm_int.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 
 #if (defined(EVAL) && EVAL == TRUE)
 #include "btu_eval.h"
 #endif
 
 #if GAP_INCLUDED == TRUE
-#include "gap_int.h"
+#include "revolution/BTE/stack/gap/gap_int.h"
 #endif
 
 #if (defined(OBX_INCLUDED) && OBX_INCLUDED == TRUE)
@@ -71,11 +71,11 @@
 
 #endif /* OBX */
 
-#include "bt_trace.h"
+#include "revolution/BTE/include/bt_trace.h"
 
 /* BTE application task */
 #if APPL_INCLUDED == TRUE
-#include "bte_appl.h"
+#include "revolution/BTE/include/bte_appl.h"
 #endif
 
 #if (defined(RPC_INCLUDED) && RPC_INCLUDED == TRUE)
@@ -95,11 +95,11 @@
 #endif
 
 #if (defined(HID_DEV_INCLUDED) && HID_DEV_INCLUDED == TRUE )
-#include "hidd_int.h"
+#include "revolution/BTE/stack/hid/hidd_int.h"
 #endif
 
 #if (defined(HID_HOST_INCLUDED) && HID_HOST_INCLUDED == TRUE )
-#include "hidh_int.h"
+#include "revolution/BTE/stack/hid/hidh_int.h"
 #endif
 
 #if (defined(AVDT_INCLUDED) && AVDT_INCLUDED == TRUE)
@@ -116,7 +116,7 @@ extern void avdt_rcv_sync_info (BT_HDR *p_buf); /* this is for hci_test */
 
 
 #if (defined(BTU_BTA_INCLUDED) && BTU_BTA_INCLUDED == TRUE)
-#include "bta_sys.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
 #endif
 
 #if (BLE_INCLUDED == TRUE)

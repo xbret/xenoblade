@@ -23,14 +23,14 @@
  *
  ******************************************************************************/
 #include <string.h>
-#include "gki.h"
-#include "bt_types.h"
-#include "rfcdefs.h"
-#include "l2cdefs.h"
-#include "port_api.h"
-#include "port_int.h"
-#include "l2c_api.h"
-#include "rfc_int.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
 
 #define L2CAP_SUCCESS   0
 #define L2CAP_ERROR     1

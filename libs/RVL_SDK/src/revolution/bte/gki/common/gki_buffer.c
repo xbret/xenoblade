@@ -27,7 +27,7 @@
  *  limitations under the License.
  *
  ******************************************************************************/
-#include "gki_int.h"
+#include "revolution/BTE/gki/platform/gki_int.h"
 #ifndef REVOLUTION
 #include <cutils/log.h>
 #endif
@@ -1504,4 +1504,3 @@ UINT16 GKI_poolutilization (UINT8 pool_id)
 
     return ((Q->cur_cnt * 100) / Q->total);
 }
-

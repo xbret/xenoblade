@@ -22,15 +22,15 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
-#include "gki.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
 
-#include "rfcdefs.h"
-#include "port_api.h"
-#include "port_int.h"
-#include "l2c_api.h"
-#include "l2cdefs.h"
-#include "rfc_int.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
 
 
 /*

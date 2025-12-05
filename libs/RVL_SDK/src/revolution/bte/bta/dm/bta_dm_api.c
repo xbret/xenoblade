@@ -36,14 +36,14 @@
  *
  ******************************************************************************/
 
-#include "gki.h"
-#include "bd.h"
-#include "bta_sys.h"
-#include "bta_api.h"
-#include "bta_dm_int.h"
-#include "bta_sys_int.h"
-#include "btm_api.h"
-#include "btm_int.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/bta/include/bd.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
+#include "revolution/BTE/bta/sys/bta_sys_int.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 #include <string.h>
 
 /*****************************************************************************

@@ -25,8 +25,8 @@
 #ifndef RFC_INT_H
 #define RFC_INT_H
 
-#include "l2c_api.h"
-#include "port_int.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
 
 /*
 ** Define RFCOMM result codes
@@ -384,4 +384,3 @@ extern void PORT_LineStatusInd (tRFC_MCB *p_mcb, UINT8 dlci, UINT8 line_status);
 #endif
 
 #endif
-

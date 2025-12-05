@@ -22,17 +22,17 @@
  *
  *****************************************************************************/
 
-#include "bt_target.h"
-#include "gki.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
 
-#include "btm_api.h"
-#include "btm_int.h"
-#include "rfcdefs.h"
-#include "port_api.h"
-#include "port_ext.h"
-#include "port_int.h"
-#include "rfc_int.h"
-#include "btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
+#include "revolution/BTE/stack/include/port_ext.h"
+#include "revolution/BTE/stack/rfcomm/port_int.h"
+#include "revolution/BTE/stack/rfcomm/rfc_int.h"
+#include "revolution/BTE/stack/include/btu.h"
 
 #include <string.h>
 
@@ -463,5 +463,3 @@ void rfc_check_send_cmd(tRFC_MCB *p_mcb, BT_HDR *p_buf)
         L2CA_DataWrite (p_mcb->lcid, p);
     }
 }
-
-

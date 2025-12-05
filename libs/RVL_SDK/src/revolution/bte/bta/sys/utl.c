@@ -21,9 +21,9 @@
  *  This file contains utility functions.
  *
  ******************************************************************************/
-#include "utl.h"
-#include "gki.h"
-#include "btm_api.h"
+#include "revolution/BTE/bta/include/utl.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
 /*******************************************************************************
 **
@@ -292,5 +292,3 @@ BOOLEAN utl_isdialstr(const char *p_s)
 
     return TRUE;
 }
-
-

@@ -22,9 +22,9 @@
  *
  ******************************************************************************/
 
-#include "bta_api.h"
-#include "bta_sys.h"
-#include "bta_dm_int.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/dm/bta_dm_int.h"
 
 
 /*****************************************************************************
@@ -342,4 +342,3 @@ BOOLEAN bta_dm_search_sm_execute(BT_HDR *p_msg)
     }
     return TRUE;
 }
-

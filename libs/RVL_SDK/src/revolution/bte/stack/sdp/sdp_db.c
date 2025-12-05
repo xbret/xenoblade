@@ -26,17 +26,17 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 
-#include "gki.h"
+#include "revolution/BTE/gki/common/gki.h"
 
-#include "l2cdefs.h"
-#include "hcidefs.h"
-#include "hcimsgs.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
 
-#include "sdp_api.h"
-#include "sdpint.h"
-#include "wbt_api.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
+#include "revolution/BTE/stack/sdp/sdpint.h"
+#include "revolution/BTE/stack/include/wbt_api.h"
 
 #if SDP_SERVER_ENABLED == TRUE
 /********************************************************************************/
@@ -957,6 +957,3 @@ INT32 SDP_ReadRecord(UINT32 handle, UINT8 *p_data, INT32 *p_data_len)
     return (offset);
 }
 #endif
-
-
-

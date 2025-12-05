@@ -29,13 +29,13 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "gki.h"
-#include "bt_types.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "l2c_int.h"
-#include "btm_api.h"
-#include "btm_int.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 
 // btla-specific ++
 #define LOG_TAG "BTLD"
@@ -50,7 +50,7 @@
 // btla-specific ++
 /* BTE application task */
 #if APPL_INCLUDED == TRUE
-#include "bte_appl.h"
+#include "revolution/BTE/include/bte_appl.h"
 #endif
 // btla-specific --
 
@@ -2254,4 +2254,3 @@ static void btu_ble_proc_ltk_req (UINT8 *p, UINT16 evt_len)
 ** End of BLE Events Handler
 ***********************************************/
 #endif /* BLE_INCLUDED */
-

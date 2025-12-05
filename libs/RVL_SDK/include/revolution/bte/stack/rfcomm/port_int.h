@@ -25,10 +25,10 @@
 #ifndef PORT_INT_H
 #define PORT_INT_H
 
-#include "bt_target.h"
-#include "gki.h"
-#include "rfcdefs.h"
-#include "port_api.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/rfcdefs.h"
+#include "revolution/BTE/stack/include/port_api.h"
 
 /* Local events passed when application event is sent from the api to PORT */
 /* ???*/

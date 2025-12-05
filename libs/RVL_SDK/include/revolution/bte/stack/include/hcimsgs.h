@@ -19,9 +19,9 @@
 #ifndef HCIMSGS_H
 #define HCIMSGS_H
 
-#include "bt_target.h"
-#include "hcidefs.h"
-#include "bt_types.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/bt_types.h"
 
 
 #ifdef __cplusplus
@@ -1328,4 +1328,3 @@ HCI_API extern BOOLEAN btsnd_hcic_ble_read_supported_states (void);
 #endif
 
 #endif
-

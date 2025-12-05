@@ -27,20 +27,20 @@
 #include <stdio.h>
 
 
-#include "gki.h"
-#include "bt_types.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
 
-#include "l2cdefs.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 
-#include "hiddefs.h"
+#include "revolution/BTE/stack/include/hiddefs.h"
 
-#include "hidh_api.h"
-#include "hidh_int.h"
+#include "revolution/BTE/stack/include/hidh_api.h"
+#include "revolution/BTE/stack/hid/hidh_int.h"
 
 static UINT8 find_conn_by_cid (UINT16 cid);
 static void hidh_conn_retry (UINT8 dhandle);

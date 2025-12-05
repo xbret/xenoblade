@@ -24,15 +24,15 @@
  ******************************************************************************/
 
 #include <string.h>
-#include "bt_types.h"
-#include "bt_target.h"
-#include "gki.h"
-#include "bt_types.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_api.h"
-#include "btm_int.h"
-#include "hcidefs.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
 
 #if BTM_SCO_INCLUDED == TRUE
 

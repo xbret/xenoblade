@@ -47,10 +47,10 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include "gki.h"
-#include "bte.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/include/bte.h"
 
-#include "bte_appl.h"
+#include "revolution/BTE/include/bte_appl.h"
 
 #if MMI_INCLUDED == TRUE
 #include "mmi.h"
@@ -58,10 +58,10 @@
 
 /* always enable trace framework */
 
-#include "btu.h"
-#include "l2c_api.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
 #if (RFCOMM_INCLUDED==TRUE)
-#include "port_api.h"
+#include "revolution/BTE/stack/include/port_api.h"
 #endif
 #if (OBX_INCLUDED==TRUE)
 #include "obx_api.h"
@@ -90,12 +90,12 @@
 #if (BPP_INCLUDED==TRUE)
 #include "bpp_api.h"
 #endif
-#include "btm_api.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 #if (DUN_INCLUDED==TRUE)
 #include "dun_api.h"
 #endif
 #if (GAP_INCLUDED==TRUE)
-#include "gap_api.h"
+#include "revolution/BTE/stack/include/gap_api.h"
 #endif
 #if (GOEP_INCLUDED==TRUE)
 #include "goep_util.h"
@@ -106,15 +106,15 @@
 #if (PAN_INCLUDED==TRUE)
 #include "pan_api.h"
 #endif
-#include "sdp_api.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
 
 #if (BLE_INCLUDED==TRUE)
-#include "gatt_api.h"
+#include "revolution/BTE/stack/include/gatt_api.h"
 #endif
 
     /* LayerIDs for BTA, currently everything maps onto appl_trace_level */
 #if (BTA_INCLUDED==TRUE)
-#include "bta_api.h"
+#include "revolution/BTE/bta/include/bta_api.h"
 #endif
 
 

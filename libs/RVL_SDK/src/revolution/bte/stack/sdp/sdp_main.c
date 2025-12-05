@@ -26,20 +26,20 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "bt_target.h"
-#include "gki.h"
-#include "l2cdefs.h"
-#include "hcidefs.h"
-#include "hcimsgs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
 
-#include "l2c_api.h"
-#include "l2cdefs.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
 
-#include "btu.h"
-#include "btm_api.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/btm_api.h"
 
-#include "sdp_api.h"
-#include "sdpint.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
+#include "revolution/BTE/stack/sdp/sdpint.h"
 
 
 /********************************************************************************/
@@ -718,7 +718,3 @@ void sdp_conn_timeout (tCONN_CB*p_ccb)
 #endif
     sdpu_release_ccb (p_ccb);
 }
-
-
-
-

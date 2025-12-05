@@ -72,7 +72,7 @@
 #ifndef BUILDCFG
 #define BUILDCFG
 #endif
-#include "data_types.h"
+#include "revolution/BTE/gki/platform/data_types.h"
 
 
 #ifndef BTIF_HSAG_SERVICE_NAME
@@ -97,10 +97,10 @@
 #endif
 
 /* Include common GKI definitions used by this platform */
-#include "gki_target.h"
+#include "revolution/BTE/include/gki_target.h"
 
-#include "bt_types.h"   /* This must be defined AFTER buildcfg.h */
-#include "dyn_mem.h"    /* defines static and/or dynamic memory for components */
+#include "revolution/BTE/stack/include/bt_types.h"   /* This must be defined AFTER buildcfg.h */
+#include "revolution/BTE/stack/include/dyn_mem.h"    /* defines static and/or dynamic memory for components */
 
 
 //------------------Added from Bluedroid buildcfg.h---------------------
@@ -3872,6 +3872,6 @@ The maximum number of payload octets that the local device can receive in a sing
 **
 ******************************************************************************/
 
-#include "bt_trace.h"
+#include "revolution/BTE/include/bt_trace.h"
 
 #endif /* BT_TARGET_H */

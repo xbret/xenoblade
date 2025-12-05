@@ -38,10 +38,10 @@
  *
  ******************************************************************************/
 
-#include "bta_api.h"
-#include "bta_sys.h"
-#include "bta_sys_int.h"
-#include "gki.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/bta/sys/bta_sys_int.h"
+#include "revolution/BTE/gki/common/gki.h"
 
 
 /*******************************************************************************
@@ -633,4 +633,3 @@ void bta_sys_remove_uuid(UINT16 uuid16)
     }
 }
 #endif
-

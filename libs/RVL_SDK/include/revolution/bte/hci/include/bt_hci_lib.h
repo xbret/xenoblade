@@ -20,8 +20,10 @@
 #define BT_HCI_LIB_H
 
 #include <stdint.h>
-//#include <sys/cdefs.h>
-//#include <sys/types.h>
+#ifndef REVOLUTION
+#include <sys/cdefs.h>
+#include <sys/types.h>
+#endif
 
 /** Struct types */
 

@@ -40,18 +40,18 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#include "bt_types.h"
-#include "hcimsgs.h"
-#include "btu.h"
-#include "btm_int.h"
-#include "l2c_int.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
 
 #if BLE_INCLUDED == TRUE
 #include "gatt_int.h"
 
 #if GAP_INCLUDED == TRUE
-#include "gap_api.h"
-#include "gattdefs.h"
+#include "revolution/BTE/stack/include/gap_api.h"
+#include "revolution/BTE/stack/include/gattdefs.h"
 #endif
 
 #endif /* BLE_INCLUDED */

@@ -37,10 +37,10 @@
 #ifndef BTE_APPL_H
 #define BTE_APPL_H
 
-#include "btm_int.h"
-#include "bta_api.h"
-#include "bta_sys.h"
-#include "bte.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/bta/sys/bta_sys.h"
+#include "revolution/BTE/include/bte.h"
 
 /* Maximum length for serial port device name */
 #ifndef BTE_APPL_MAX_USERIAL_DEV_NAME

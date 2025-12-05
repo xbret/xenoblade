@@ -22,18 +22,18 @@
  *
  ******************************************************************************/
 
-#include "bt_target.h"
+#include "revolution/BTE/include/bt_target.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
-#include "gki.h"
-#include "hcimsgs.h"
-#include "l2cdefs.h"
-#include "l2c_int.h"
-#include "l2c_api.h"
-#include "btu.h"
-#include "btm_int.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/include/l2c_api.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 
 /********************************************************************************/
 /*              L O C A L    F U N C T I O N     P R O T O T Y P E S            */
@@ -988,4 +988,3 @@ UINT8 l2c_data_write (UINT16 cid, BT_HDR *p_data, UINT16 flags)
 
     return (L2CAP_DW_SUCCESS);
 }
-

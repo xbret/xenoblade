@@ -25,7 +25,7 @@
 #ifndef HIDDEFS_H
 #define HIDDEFS_H
 
-#include "sdp_api.h"
+#include "revolution/BTE/stack/include/sdp_api.h"
 /*
 ** tHID_STATUS: HID result codes, returned by HID and device and host functions.
 */
@@ -155,4 +155,3 @@ typedef struct sdp_info
 } tHID_DEV_SDP_INFO;
 
 #endif
-

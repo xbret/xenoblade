@@ -26,15 +26,15 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "bt_target.h"
-#include "gki.h"
-#include "hcidefs.h"
-#include "hcimsgs.h"
-#include "l2cdefs.h"
-#include "l2c_int.h"
-#include "btm_int.h"
-#include "btu.h"
-#include "hcimsgs.h"
+#include "revolution/BTE/include/bt_target.h"
+#include "revolution/BTE/gki/common/gki.h"
+#include "revolution/BTE/stack/include/hcidefs.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
+#include "revolution/BTE/stack/include/l2cdefs.h"
+#include "revolution/BTE/stack/l2cap/l2c_int.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
+#include "revolution/BTE/stack/include/btu.h"
+#include "revolution/BTE/stack/include/hcimsgs.h"
 
 /********************************************************************************/
 /*              L O C A L    F U N C T I O N     P R O T O T Y P E S            */
@@ -1329,5 +1329,3 @@ void l2c_enqueue_peer_data (tL2C_CCB *p_ccb, BT_HDR *p_buf)
     if (p_ccb->p_lcb->link_xmit_quota == 0)
         l2cb.check_round_robin = TRUE;
 }
-
-

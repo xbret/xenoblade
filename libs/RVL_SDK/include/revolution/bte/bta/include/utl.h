@@ -24,7 +24,7 @@
 #ifndef UTL_H
 #define UTL_H
 
-#include "data_types.h"
+#include "revolution/BTE/gki/platform/data_types.h"
 
 /*****************************************************************************
 **  Constants

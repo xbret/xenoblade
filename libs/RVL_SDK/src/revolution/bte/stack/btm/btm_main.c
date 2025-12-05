@@ -23,10 +23,10 @@
  *
  ******************************************************************************/
 
-#include "bt_types.h"
-#include "bt_target.h"
+#include "revolution/BTE/stack/include/bt_types.h"
+#include "revolution/BTE/include/bt_target.h"
 #include <string.h>
-#include "btm_int.h"
+#include "revolution/BTE/stack/btm/btm_int.h"
 
 /* Global BTM control block structure
 */
@@ -66,5 +66,3 @@ void btm_init (void)
 
     btm_dev_init();                     /* Device Manager Structures & HCI_Reset */
 }
-
-

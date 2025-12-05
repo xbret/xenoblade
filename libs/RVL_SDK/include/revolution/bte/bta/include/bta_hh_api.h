@@ -32,8 +32,8 @@
 #ifndef BTA_HH_API_H
 #define BTA_HH_API_H
 
-#include "bta_api.h"
-#include "hidh_api.h"
+#include "revolution/BTE/bta/include/bta_api.h"
+#include "revolution/BTE/stack/include/hidh_api.h"
 
 /*****************************************************************************
 **  Constants and Type Definitions
