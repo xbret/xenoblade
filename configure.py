@@ -242,8 +242,6 @@ cflags_base = [
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version.upper()}",
-    "-ir libs/RVL_SDK/include/revolution/BTE",  # thanks broadcom...
-    "-DREVOLUTION"
 ]
 
 # Debug flags
