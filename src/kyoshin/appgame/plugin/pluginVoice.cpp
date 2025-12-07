@@ -1,7 +1,7 @@
 #include "kyoshin/appgame/cf/object/CfObject.hpp"
 #include "kyoshin/appgame/plugin/pluginVoice.hpp"
 #include "kyoshin/appgame/cf/object/CfObjectPc.hpp"
-#include <monolib/util.hpp>
+#include "monolib/util.hpp"
 
 extern reslist<cf::CfObject*>* func_800B6BA4();
 

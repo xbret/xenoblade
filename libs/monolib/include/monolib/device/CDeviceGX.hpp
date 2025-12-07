@@ -1,11 +1,11 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/device/CDeviceBase.hpp>
-#include <monolib/device/CDeviceVICb.hpp>
-#include <monolib/device/CDeviceVI.hpp>
-#include <monolib/device/CDeviceRemotePad.hpp>
-#include <monolib/device/CGXCache.hpp>
+#include "monolib/device/CDeviceBase.hpp"
+#include "monolib/device/CDeviceVICb.hpp"
+#include "monolib/device/CDeviceVI.hpp"
+#include "monolib/device/CDeviceRemotePad.hpp"
+#include "monolib/device/CGXCache.hpp"
 #include <revolution/GX.h>
 
 enum EVerticalFilter {

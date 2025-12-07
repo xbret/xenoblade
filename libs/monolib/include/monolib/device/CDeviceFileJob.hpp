@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work/CWorkThread.hpp>
-#include <monolib/device/CFileHandle.hpp>
+#include "monolib/work/CWorkThread.hpp"
+#include "monolib/device/CFileHandle.hpp"
 
 //Base class for jobs carried out by CDeviceFile.
 class CDeviceFileJob : public CWorkThread {

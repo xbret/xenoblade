@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work.hpp>
-#include <monolib/core.hpp>
+#include "monolib/work.hpp"
+#include "monolib/core.hpp"
 
 namespace cf {
     /* Not sure, but it seems like this class inherits IGameException

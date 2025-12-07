@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/monolib_types.hpp>
-#include <monolib/util.hpp>
+#include "monolib/monolib_types.hpp"
+#include "monolib/util.hpp"
 
 /*
 Handle to a work memory region

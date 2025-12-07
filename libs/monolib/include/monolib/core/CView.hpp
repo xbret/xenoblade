@@ -1,9 +1,9 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work.hpp>
-#include <monolib/math.hpp>
-#include <monolib/util.hpp>
+#include "monolib/work.hpp"
+#include "monolib/math.hpp"
+#include "monolib/util.hpp"
 
 class CView : public CWorkThread {
 public:

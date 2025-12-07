@@ -4,13 +4,13 @@
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/ErrMesData.hpp"
 #include "kyoshin/action/CActParamData.hpp"
-#include <monolib/nand/CNand.hpp>
-#include <monolib/vm/yvm.h>
-#include <monolib/core.hpp>
-#include <monolib/lib.hpp>
-#include <monolib/device.hpp>
-#include <monolib/work.hpp>
-#include <monolib/util.hpp>
+#include "monolib/nand/CNand.hpp"
+#include "monolib/vm/yvm.h"
+#include "monolib/core.hpp"
+#include "monolib/lib.hpp"
+#include "monolib/device.hpp"
+#include "monolib/work.hpp"
+#include "monolib/util.hpp"
 
 static DesktopIcon sGameMainIcon = {
 #if defined(VERSION_JP)

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work.hpp>
-#include <monolib/util.hpp>
+#include "monolib/work.hpp"
+#include "monolib/util.hpp"
 
 class CTaskGame : public CTTask<CTaskGame> {
 public:

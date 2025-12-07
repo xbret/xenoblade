@@ -2,7 +2,7 @@
 
 #include <types.h>
 #include "kyoshin/appgame/cf/chain/UnkClass_8027AD70.hpp"
-#include <monolib/util.hpp>
+#include "monolib/util.hpp"
 
 namespace cf {
     //size: 0x1DB0

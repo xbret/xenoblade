@@ -1,7 +1,7 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/monolib_types.hpp>
+#include "monolib/monolib_types.hpp"
 
 /* Interface for work events, which provides a set of 32 event handler functions that
 get triggered when a certain event happens (such as when loading a file for OnFileEvent).

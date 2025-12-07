@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/monolib_types.hpp>
-#include <monolib/work.hpp>
+#include "monolib/monolib_types.hpp"
+#include "monolib/work.hpp"
 
 class CDesktop : public CProc {
 public:

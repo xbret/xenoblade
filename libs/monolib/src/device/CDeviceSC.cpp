@@ -1,4 +1,4 @@
-#include <monolib/device.hpp>
+#include "monolib/device.hpp"
 #include <revolution/SC.h>
 
 CDeviceSC* CDeviceSC::spInstance;

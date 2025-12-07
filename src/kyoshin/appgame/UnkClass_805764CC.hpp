@@ -1,7 +1,7 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/util.hpp>
+#include "monolib/util.hpp"
 #include "kyoshin/appgame/cf/object/CfObject.hpp"
 #include "kyoshin/appgame/cf/object/TBoxInfo.hpp"
 #include "kyoshin/appgame/cf/IFactoryEvent.hpp"

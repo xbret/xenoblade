@@ -1,5 +1,5 @@
-#include <monolib/device.hpp>
-#include <monolib/work.hpp>
+#include "monolib/device.hpp"
+#include "monolib/work.hpp"
 #include "decomp.h"
 
 DECOMP_FORCEACTIVE(CWorkControl_cpp,

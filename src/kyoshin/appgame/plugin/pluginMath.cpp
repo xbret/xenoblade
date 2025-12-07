@@ -1,5 +1,5 @@
 #include "kyoshin/appgame/plugin/pluginMath.hpp"
-#include <monolib/math.hpp>
+#include "monolib/math.hpp"
 
 static PluginFuncData sPluginMathFuncs[] = {
     {"random", math_random},

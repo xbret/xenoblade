@@ -2,7 +2,7 @@
 
 #include <types.h>
 
-#include <monolib/work/CWorkThread.hpp>
+#include "monolib/work/CWorkThread.hpp"
 
 class CWorkFlowWiiMenu : public CWorkThread{
 public:

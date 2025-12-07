@@ -1,4 +1,4 @@
-#include <monolib/device.hpp>
+#include "monolib/device.hpp"
 
 extern bool func_804399A4(UNKTYPE* r3, const char* r4, UNKTYPE* r5, void* r6, u32 r7, bool r8);
 extern bool func_8044E768();

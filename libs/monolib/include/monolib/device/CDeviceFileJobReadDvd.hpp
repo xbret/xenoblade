@@ -1,7 +1,7 @@
 #pragma once
 
-#include <monolib/monolib_types.hpp>
-#include <monolib/device/CDeviceFileJob.hpp>
+#include "monolib/monolib_types.hpp"
+#include "monolib/device/CDeviceFileJob.hpp"
 #include <revolution/DVD.h>
 
 class CDeviceFileJobReadDvd : public CDeviceFileJob {

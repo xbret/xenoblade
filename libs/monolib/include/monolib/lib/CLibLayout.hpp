@@ -1,6 +1,6 @@
 #pragma once
 
-#include <monolib/lib/UnkClass_8045F564.hpp>
+#include "monolib/lib/UnkClass_8045F564.hpp"
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
 
 class CLibLayout{

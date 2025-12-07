@@ -1,7 +1,7 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/work/CProcess.hpp>
+#include "monolib/work/CProcess.hpp"
 
 /*
 Generic task object.

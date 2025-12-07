@@ -1,6 +1,6 @@
 #pragma once
 
-#include <monolib/nand/CNBanner.hpp>
+#include "monolib/nand/CNBanner.hpp"
 
 class CNandData {
 public:

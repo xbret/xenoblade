@@ -1,9 +1,9 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/math/CVec3.hpp>
-#include <monolib/math/CMat34.hpp>
-#include <monolib/math/CQuat.hpp>
+#include "monolib/math/CVec3.hpp"
+#include "monolib/math/CMat34.hpp"
+#include "monolib/math/CQuat.hpp"
 
 namespace ml{
     struct CAttrTransform{

@@ -1,9 +1,9 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/core.hpp>
-#include <monolib/work.hpp>
-#include <monolib/lib.hpp>
+#include "monolib/core.hpp"
+#include "monolib/work.hpp"
+#include "monolib/lib.hpp"
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
 #include <nw4r/lyt/lyt_layout.h>
 #include <nw4r/lyt/lyt_pane.h>

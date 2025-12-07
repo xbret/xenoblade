@@ -8,7 +8,7 @@
 #include "kyoshin/appgame/cf/chain/UnkClass_800D8DBC.hpp"
 #include "kyoshin/appgame/cf/CVision.hpp"
 #include "kyoshin/appgame/cf/CSuddenCommu.hpp"
-#include <monolib/util.hpp>
+#include "monolib/util.hpp"
 #include <cstring>
 
 namespace cf{

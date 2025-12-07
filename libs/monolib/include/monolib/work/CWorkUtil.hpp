@@ -1,8 +1,8 @@
 #pragma once
 
-#include <monolib/monolib_types.hpp>
-#include <monolib/work/UnkStruct_80438AF0.hpp>
-#include <monolib/work/CWorkThreadSystem.hpp>
+#include "monolib/monolib_types.hpp"
+#include "monolib/work/UnkStruct_80438AF0.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
 
 class CWorkUtil{
 public:

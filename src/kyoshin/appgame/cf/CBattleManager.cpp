@@ -3,7 +3,7 @@
 #include "kyoshin/appgame/cf/object/CfObjectPc.hpp"
 #include "kyoshin/appgame/cf/object/CfObjectEne.hpp"
 #include "kyoshin/appgame/cf/CfSoundMan.hpp"
-#include <monolib/work.hpp>
+#include "monolib/work.hpp"
 
 extern UNKTYPE* func_8009EC9C(u16 r3);
 extern void func_8009D7E4(UNKTYPE* r3, u32 r4);

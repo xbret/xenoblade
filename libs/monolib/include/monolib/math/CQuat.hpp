@@ -1,8 +1,8 @@
 #pragma once
 
-#include <monolib/math/CVec3.hpp>
-#include <monolib/math/MathConstants.hpp>
-#include <monolib/math/Utility.hpp>
+#include "monolib/math/CVec3.hpp"
+#include "monolib/math/MathConstants.hpp"
+#include "monolib/math/Utility.hpp"
 
 namespace ml {
     struct CQuat{

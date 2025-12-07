@@ -1,7 +1,7 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/math.hpp>
+#include "monolib/math.hpp"
 
 class UnkClass_804561AC {
 public:

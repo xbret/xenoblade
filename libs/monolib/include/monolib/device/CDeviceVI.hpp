@@ -2,10 +2,10 @@
 
 #include <types.h>
 #include "revolution/vi/vitypes.h"
-#include <monolib/device/CDeviceBase.hpp>
-#include <monolib/device/UnkClass_80447FDC.hpp>
-#include <monolib/device/CDeviceVICb.hpp>
-#include <monolib/util.hpp>
+#include "monolib/device/CDeviceBase.hpp"
+#include "monolib/device/UnkClass_80447FDC.hpp"
+#include "monolib/device/CDeviceVICb.hpp"
+#include "monolib/util.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 

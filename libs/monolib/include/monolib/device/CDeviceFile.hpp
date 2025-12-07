@@ -1,8 +1,8 @@
 #pragma once
 
 #include <types.h>
-#include <monolib/monolib_types.hpp>
-#include <monolib/device/CDeviceBase.hpp>
+#include "monolib/monolib_types.hpp"
+#include "monolib/device/CDeviceBase.hpp"
 
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
