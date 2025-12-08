@@ -1,8 +1,13 @@
 #pragma once
 
+#include <revolution/MTX.h>
+
 namespace ml {
     struct CMat34{
-        float m[3][4];
+        union {
+            float m[3][4];
+            Mtx mtx;
+        };
 
         static CMat34 zero;
         static CMat34 identity;
@@ -23,6 +28,10 @@ namespace ml {
             m[2][1] = m21;
             m[2][2] = m22;
             m[2][3] = m23;
+        }
+
+        inline void setIdentity(){
+            PSMTXIdentity(mtx);
         }
     };
 } //namespace ml

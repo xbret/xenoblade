@@ -19,26 +19,34 @@ namespace ml {
         CQuat(){}
 
         CQuat(float x, float y, float z, float w){
+            set(x,y,z,w);
+        }
+
+        void func_8043715C(CVec3& vec);
+        void func_80437310(CVec3& vec);
+
+        inline void set(float x, float y, float z, float w){
             this->x = x;
             this->y = y;
             this->z = z;
             this->w = w;
         }
 
-         void func_8043715C(CVec3& vec);
-        void func_80437310(CVec3& vec);
+        inline void setIdentity(){
+            set(0,0,0,1);
+        }
   
         //Sets the quaternion from the given euler angle, following the 3-2-1 conversion.
-        void setFromAngle(CVec3& angle){
+        inline void setRotXYZ(CVec3& angle){
             float x = angle.x * 0.5f;
             float y = angle.y * 0.5f;
             float z = angle.z * 0.5f;
-            float sinX = nw4r::math::SinFIdx(x * (128.0f/PI));
-            float cosX = nw4r::math::CosFIdx(x * (128.0f/PI));
-            float sinY = nw4r::math::SinFIdx(y * (128.0f/PI));
-            float cosY = nw4r::math::CosFIdx(y * (128.0f/PI));
-            float sinZ = nw4r::math::SinFIdx(z * (128.0f/PI));
-            float cosZ = nw4r::math::CosFIdx(z * (128.0f/PI));
+            float sinX = math::sin(x * (128.0f/PI));
+            float cosX = math::cos(x * (128.0f/PI));
+            float sinY = math::sin(y * (128.0f/PI));
+            float cosY = math::cos(y * (128.0f/PI));
+            float sinZ = math::sin(z * (128.0f/PI));
+            float cosZ = math::cos(z * (128.0f/PI));
 
             this->x = cosZ*(sinX*cosY) - sinZ*(cosX*sinY);
             this->y = cosZ*(cosX*sinY) + sinZ*(sinX*cosY);
@@ -46,35 +54,34 @@ namespace ml {
             this->w = cosZ*(cosX*cosY) + sinZ*(sinX*sinY);
         }
 
-        inline void UnkInline(CVec3& unkC4){
-            float dVar20 = x + x;
-            float dVar17 = y + y;
-            float dVar18 = z + z;
-            float dVar14 = 1.0f;
+        //Converts this quaternion to euler angles, storing the result in the given vector.
+        inline void getRotXYZ(CVec3& result){
+            float twoX = x + x;
+            float twoY = y + y;
+            float twoZ = z + z;
         
-            float dVar19 = -((x * dVar18) - (w * dVar17));
-
-            dVar19 = Clamp(dVar19, -1.0f, 1.0f); //unnecessary, asin function already does clamping
-            float angle = Asin(dVar19);
+            float dVar19 = -((x * twoZ) - (w * twoY));
+            dVar19 = math::clamp(dVar19, -1.0f, 1.0f); //Unnecessary, asin function already does clamping
+            float angle = math::asin(dVar19);
         
-            float dVar16 = x * dVar20;
-            float dVar22 = x * dVar17;
-            dVar19 = z * dVar18;
-            unkC4.y = angle;
-            float dVar21 = (w * dVar18);
+            float dVar16 = x * twoX;
+            float dVar22 = x * twoY;
+            dVar19 = z * twoZ;
+            result.y = angle;
+            float dVar21 = w * twoZ;
                     
             if (angle < halfpi) {
                 if (angle > -halfpi) {
-                    dVar17 *= y;
-                    unkC4.x = DEG2RAD(nw4r::math::Atan2FIdx((y * dVar18) + (w * dVar20), 1.0f - (dVar16 + dVar17)));
-                    unkC4.z = DEG2RAD(nw4r::math::Atan2FIdx((dVar22 + dVar21),1.0f - (dVar17 + dVar19)));
+                    twoY *= y;
+                    result.x = DEG2RAD(math::atan2((y * twoZ) + (w * twoX), 1.0f - (dVar16 + twoY)));
+                    result.z = DEG2RAD(math::atan2((dVar22 + dVar21),1.0f - (twoY + dVar19)));
                 }else{
-                    unkC4.x = -DEG2RAD(nw4r::math::Atan2FIdx((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
-                    unkC4.z = 0.0f;
+                    result.x = -DEG2RAD(math::atan2((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
+                    result.z = 0.0f;
                 }
             }else{
-                unkC4.x = DEG2RAD(nw4r::math::Atan2FIdx((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
-                unkC4.z = 0.0f;
+                result.x = DEG2RAD(math::atan2((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
+                result.z = 0.0f;
             }
         }
     };

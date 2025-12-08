@@ -1705,7 +1705,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/work/CWorkRoot.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "monolib/src/work/CWorkSystem.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkSystemMem.cpp"),
-            Object(NonMatching, "monolib/src/work/CDesktop.cpp"),
+            Object(NonMatching, "monolib/src/work/CProcess.cpp"),
             Object(MatchingFor("jp"), "monolib/src/util/CDoubleListNode.cpp"),
             Object(MatchingFor("jp"), "monolib/src/util/CChildListNode.cpp"),
             Object(NonMatching, "monolib/src/device/CDeviceRemotePad.cpp"),

@@ -6,17 +6,18 @@
 /* Interface for work events, which provides a set of 32 event handler functions that
 get triggered when a certain event happens (such as when loading a file for OnFileEvent).
 Deriving classes can override any of these functions to run their own code when the
-corresponding event happens. Only events 2-5 are actually used though, with the rest
+corresponding event happens. Only events 1-5 are actually used though, with the rest
 being empty slots that were left in for some dumb reason (tysm monolithsoft <3). It is
 possible though that the code tries to trigger the others, though. */
 class IWorkEvent {
 public:
     virtual ~IWorkEvent(){}
-    virtual bool WorkEvent1(){ return false; }
+    virtual bool WorkEvent1(UNKTYPE* r4, const char* r5){ return false; }
     virtual bool OnFileEvent(CEventFile* pEventFile){ return false; }
     virtual bool WorkEvent3(UNKTYPE* r4){ return false; }
     virtual bool WorkEvent4(){ return false; }
     virtual void OnPauseTrigger(bool paused){}
+    //Completely unused, but still left in...
     virtual bool WorkEvent6(){ return false; }
     virtual bool WorkEvent7(){ return false; }
     virtual bool WorkEvent8(){ return false; }

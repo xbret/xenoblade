@@ -4405,7 +4405,7 @@ monolib/src/work/CWorkSystemMem.cpp:
 	extabindex  start:0x80034744 end:0x80034768
 	.text       start:0x80447250 end:0x804473B0
 
-monolib/src/work/CDesktop.cpp:
+monolib/src/work/CProcess.cpp:
 	extab       start:0x8001C948 end:0x8001CA50
 	extabindex  start:0x80034768 end:0x8003484C
 	.text       start:0x804473B0 end:0x80448F10

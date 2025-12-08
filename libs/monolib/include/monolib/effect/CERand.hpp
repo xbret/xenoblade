@@ -18,19 +18,19 @@ public:
     ~CERandomizer(){}
 
     virtual u32 rand(){
-        return ml::mtRand();
+        return ml::math::mtRand();
     }
 
     virtual float randF(){
-        return (float)ml::mtRand()/INT_MAX;
+        return (float)ml::math::mtRand()/INT_MAX;
     }
 
     virtual float randFHalf(){
-        return ((float)ml::mtRand()/INT_MAX) - 0.5f;
+        return ((float)ml::math::mtRand()/INT_MAX) - 0.5f;
     }
 
     virtual float randSign(){
-        return (ml::mtRand() % 2 != 0) ? 1.0f : -1.0f;
+        return (ml::math::mtRand() % 2 != 0) ? 1.0f : -1.0f;
     }
 };
 

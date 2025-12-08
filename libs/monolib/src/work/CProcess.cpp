@@ -14,6 +14,7 @@ CProcess::CProcess() :
     CProcessMan::GetFreeProcessList().InsertEnd(this);
 }
 
+//TODO: find out why mwcc decides to go crazy only for this function's extab :p
 CProcess::~CProcess() {
     //Delete child processes
     CProcess* iter;

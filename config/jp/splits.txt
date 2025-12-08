@@ -6086,7 +6086,7 @@ monolib/src/work/CWorkSystemMem.cpp:
 	.sdata      start:0x80665EF8 end:0x80665F00
 	.sbss       start:0x80667F00 end:0x80667F08
 
-monolib/src/work/CDesktop.cpp:
+monolib/src/work/CProcess.cpp:
 	extab       start:0x8001C89C end:0x8001C9A4
 	extabindex  start:0x800344A8 end:0x8003458C
 	.text       start:0x80444A18 end:0x80446578
