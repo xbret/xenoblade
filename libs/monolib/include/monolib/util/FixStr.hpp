@@ -88,6 +88,7 @@ namespace ml{
         }
 
         //Sets the given string to the first characters of this string, up to the specified length.
+        //TODO: This might just be substr, but when the start index is 0?
         void copy(FixStr<N>& str, int length){
             if (mLength == 0) {
                 //Copy entire string if length is -1
