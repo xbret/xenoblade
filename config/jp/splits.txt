@@ -6163,7 +6163,7 @@ monolib/src/core/CFontLayer.cpp:
 	.text       start:0x80448FDC end:0x80449164
 	.data       start:0x8056F7C0 end:0x8056F7D0
 
-monolib/src/CGXCache.cpp:
+monolib/src/device/CGXCache.cpp:
 	extab       start:0x8001CB90 end:0x8001CCB8
 	extabindex  start:0x8003479C end:0x80034928
 	.text       start:0x80449164 end:0x8044CFF0
@@ -6311,7 +6311,7 @@ monolib/src/core/CDesktop.cpp:
 	.sbss       start:0x80667F80 end:0x80667F98
 	.sdata2     start:0x8066CC10 end:0x8066CC28
 
-monolib/src/code_80456134.cpp:
+monolib/src/core/code_80456134.cpp:
 	extab       start:0x8001D360 end:0x8001D3C0
 	extabindex  start:0x80034FB8 end:0x80035048
 	.text       start:0x80456134 end:0x80457B9C
@@ -6425,7 +6425,7 @@ monolib/src/lib/CLibVM.cpp:
 	.sbss       start:0x80667FF8 end:0x80668008
 	.sdata2     start:0x8066CD70 end:0x8066CD78
 
-monolib/src/CTaskLOD.cpp:
+monolib/src/lod/CTaskLOD.cpp:
 	extab       start:0x8001D9C4 end:0x8001DA6C
 	extabindex  start:0x800355AC end:0x8003566C
 	.text       start:0x80462904 end:0x8046376C
@@ -6435,7 +6435,7 @@ monolib/src/CTaskLOD.cpp:
 	.sbss       start:0x80668008 end:0x80668040
 	.sdata2     start:0x8066CD78 end:0x8066CDA8
 
-monolib/src/code_8046376C.cpp:
+monolib/src/lod/code_8046376C.cpp:
 	extab       start:0x8001DA6C end:0x8001DABC
 	extabindex  start:0x8003566C end:0x800356E4
 	.text       start:0x8046376C end:0x804645CC
@@ -6444,7 +6444,7 @@ monolib/src/code_8046376C.cpp:
 	.sbss       start:0x80668040 end:0x806680A8
 	.sdata2     start:0x8066CDA8 end:0x8066CDC8
 
-monolib/src/code_804645CC.cpp:
+monolib/src/lod/code_804645CC.cpp:
 	extab       start:0x8001DABC end:0x8001DC74
 	extabindex  start:0x800356E4 end:0x80035978
 	.text       start:0x804645CC end:0x80468434
@@ -6455,7 +6455,7 @@ monolib/src/code_804645CC.cpp:
 	.sbss       start:0x806680A8 end:0x80668100
 	.sdata2     start:0x8066CDC8 end:0x8066CE08
 
-monolib/src/code_80468434.cpp:
+monolib/src/lod/code_80468434.cpp:
 	extab       start:0x8001DC74 end:0x8001DCEC
 	extabindex  start:0x80035978 end:0x80035A2C
 	.text       start:0x80468434 end:0x8046A530
@@ -6464,14 +6464,14 @@ monolib/src/code_80468434.cpp:
 	.bss        start:0x8065AC98 end:0x8065ACC8
 	.sdata2     start:0x8066CE08 end:0x8066CE18
 
-monolib/src/code_8046A530.cpp:
+monolib/src/lod/code_8046A530.cpp:
 	extab       start:0x8001DCEC end:0x8001DD2C
 	extabindex  start:0x80035A2C end:0x80035A8C
 	.text       start:0x8046A530 end:0x8046CFE0
 	.sdata      start:0x80666138 end:0x80666148
 	.sdata2     start:0x8066CE18 end:0x8066CE80
 
-monolib/src/LOD/LODMemMan.cpp:
+monolib/src/lod/LODMemMan.cpp:
 	extab       start:0x8001DD2C end:0x8001DFA8
 	extabindex  start:0x80035A8C end:0x80035DF8
 	.text       start:0x8046CFE0 end:0x80474F80
@@ -6530,7 +6530,7 @@ monolib/src/mpfsys/code_8047BB54.cpp:
 	.sbss       start:0x80668190 end:0x80668198
 	.sdata2     start:0x8066D018 end:0x8066D030
 
-monolib/src/code_8047CA88.cpp:
+monolib/src/mpfsys/code_8047CA88.cpp:
 	extab       start:0x8001E0E0 end:0x8001E130
 	extabindex  start:0x80035FCC end:0x80036044
 	.text       start:0x8047CA88 end:0x8047D2AC
@@ -6539,7 +6539,7 @@ monolib/src/code_8047CA88.cpp:
 	.sbss       start:0x80668198 end:0x806681A8
 	.sdata2     start:0x8066D030 end:0x8066D038
 
-monolib/src/code_8047D2AC.cpp:
+monolib/src/mpfsys/code_8047D2AC.cpp:
 	extab       start:0x8001E130 end:0x8001E210
 	extabindex  start:0x80036044 end:0x80036194
 	.text       start:0x8047D2AC end:0x80481E6C
@@ -6673,12 +6673,12 @@ monolib/src/scn/CScnVirtualLight.cpp:
 	.sdata      start:0x806662E0 end:0x806662E8
 	.sdata2     start:0x8066D1D0 end:0x8066D240
 
-monolib/src/code_8049431C.cpp:
+monolib/src/scn/code_8049431C.cpp:
 	extab       start:0x8001EEEC end:0x8001EF14
 	extabindex  start:0x80036A88 end:0x80036AC4
 	.text       start:0x8049431C end:0x80494678
 
-monolib/src/CVirtualLightAmb.cpp:
+monolib/src/scn/CVirtualLightAmb.cpp:
 	extab       start:0x8001EF14 end:0x8001EF24
 	extabindex  start:0x80036AC4 end:0x80036ADC
 	.text       start:0x80494678 end:0x804946FC
@@ -6686,7 +6686,7 @@ monolib/src/CVirtualLightAmb.cpp:
 	.data       start:0x805720C0 end:0x805720E0
 	.sdata      start:0x806662E8 end:0x806662F0
 
-monolib/src/CVirtualLightDir.cpp:
+monolib/src/scn/CVirtualLightDir.cpp:
 	extab       start:0x8001EF24 end:0x8001EF34
 	extabindex  start:0x80036ADC end:0x80036AF4
 	.text       start:0x804946FC end:0x80494798
@@ -6694,7 +6694,7 @@ monolib/src/CVirtualLightDir.cpp:
 	.sdata      start:0x806662F0 end:0x80666300
 	.sdata2     start:0x8066D240 end:0x8066D248
 
-monolib/src/CVirtualLightObj.cpp:
+monolib/src/scn/CVirtualLightObj.cpp:
 	extab       start:0x8001EF34 end:0x8001F168
 	extabindex  start:0x80036AF4 end:0x80036BB4
 	.text       start:0x80494798 end:0x80495C2C
@@ -6831,7 +6831,7 @@ monolib/src/vm/yvm.cpp:
 	.bss        start:0x8065AF38 end:0x8065F860
 	.sdata2     start:0x8066D3F0 end:0x8066D5D0
 
-monolib/src/code_804A6C60.cpp:
+monolib/src/coli/code_804A6C60.cpp:
 	extab       start:0x8001F9D0 end:0x8001FC50
 	extabindex  start:0x800374C0 end:0x80037880
 	.text       start:0x804A6C60 end:0x804B2578
@@ -6843,7 +6843,7 @@ monolib/src/code_804A6C60.cpp:
 	.sbss       start:0x806681E8 end:0x80668218
 	.sdata2     start:0x8066D5D0 end:0x8066D658
 
-monolib/src/CColiProc.cpp:
+monolib/src/coli/CColiProc.cpp:
 	extab       start:0x8001FC50 end:0x8001FC88
 	extabindex  start:0x80037880 end:0x800378D4
 	.text       start:0x804B2578 end:0x804B2FF0
@@ -6855,7 +6855,7 @@ monolib/src/CColiProc.cpp:
 	.sbss       start:0x80668218 end:0x80668238
 	.sdata2     start:0x8066D658 end:0x8066D660
 
-monolib/src/code_804B2FF0.cpp:
+monolib/src/coli/code_804B2FF0.cpp:
 	extab       start:0x8001FC88 end:0x8001FD84
 	extabindex  start:0x800378D4 end:0x80037A30
 	.text       start:0x804B2FF0 end:0x804B59C8
@@ -6866,7 +6866,7 @@ monolib/src/code_804B2FF0.cpp:
 	.sdata      start:0x806663C8 end:0x806663E8
 	.sdata2     start:0x8066D660 end:0x8066D680
 
-monolib/src/code_804B59C8.cpp:
+monolib/src/coli/code_804B59C8.cpp:
 	extab       start:0x8001FD84 end:0x8001FEDC
 	extabindex  start:0x80037A30 end:0x80037BF8
 	.text       start:0x804B59C8 end:0x804BAE10
@@ -6876,7 +6876,7 @@ monolib/src/code_804B59C8.cpp:
 	.sdata      start:0x806663E8 end:0x806663F0
 	.sdata2     start:0x8066D680 end:0x8066D6A0
 
-monolib/src/code_804BAE10.cpp:
+monolib/src/coli/code_804BAE10.cpp:
 	extab       start:0x8001FEDC end:0x8001FF2C
 	extabindex  start:0x80037BF8 end:0x80037C70
 	.text       start:0x804BAE10 end:0x804BC9EC
@@ -6884,7 +6884,7 @@ monolib/src/code_804BAE10.cpp:
 	.sbss       start:0x80668238 end:0x80668240
 	.sdata2     start:0x8066D6A0 end:0x8066D6C0
 
-monolib/src/code_804BC9EC.cpp:
+monolib/src/scn/code_804BC9EC.cpp:
 	extab       start:0x8001FF2C end:0x8001FF44
 	extabindex  start:0x80037C70 end:0x80037C94
 	.text       start:0x804BC9EC end:0x804BD8E8
@@ -6894,7 +6894,7 @@ monolib/src/code_804BC9EC.cpp:
 	.sbss       start:0x80668240 end:0x80668248
 	.sdata2     start:0x8066D6C0 end:0x8066D708
 
-monolib/src/code_804BD8E8.cpp:
+monolib/src/scn/code_804BD8E8.cpp:
 	extab       start:0x8001FF44 end:0x8001FF94
 	extabindex  start:0x80037C94 end:0x80037D0C
 	.text       start:0x804BD8E8 end:0x804BF59C
@@ -6904,7 +6904,7 @@ monolib/src/code_804BD8E8.cpp:
 	.sbss       start:0x80668248 end:0x80668270
 	.sdata2     start:0x8066D708 end:0x8066D730
 
-monolib/src/code_804BF59C.cpp:
+monolib/src/scn/code_804BF59C.cpp:
 	extab       start:0x8001FF94 end:0x80020020
 	extabindex  start:0x80037D0C end:0x80037D60
 	.text       start:0x804BF59C end:0x804C0280
@@ -6931,17 +6931,17 @@ monolib/src/scn/CScnEnvLgtCtrl.cpp:
 	.sdata      start:0x80666408 end:0x80666438
 	.sdata2     start:0x8066D780 end:0x8066D838
 
-monolib/src/core/Unknown1.cpp:
+monolib/src/effect/Unknown1.cpp:
 	.sdata      start:0x80666438 end:0x80666440
 
-monolib/src/code_804C8684.cpp:
+monolib/src/effect/code_804C8684.cpp:
 	.text       start:0x804C8684 end:0x804C8718
 	.ctors      start:0x804F5AC4 end:0x804F5AC8
 	.bss        start:0x806624A8 end:0x806624D8
 	.sbss       start:0x80668278 end:0x80668280
 	.sdata2     start:0x8066D838 end:0x8066D850
 
-monolib/src/code_804C8718.cpp:
+monolib/src/effect/code_804C8718.cpp:
 	extab       start:0x800202E8 end:0x800203B8
 	extabindex  start:0x80038114 end:0x8003824C
 	.text       start:0x804C8718 end:0x804CC2B8
@@ -6949,7 +6949,7 @@ monolib/src/code_804C8718.cpp:
 	.rodata     start:0x80527E08 end:0x80527E20
 	.sdata2     start:0x8066D850 end:0x8066D888
 
-monolib/src/code_804CC2B8.cpp:
+monolib/src/effect/code_804CC2B8.cpp:
 	extab       start:0x800203B8 end:0x80020518
 	extabindex  start:0x8003824C end:0x8003845C
 	.text       start:0x804CC2B8 end:0x804D6C60
@@ -6987,7 +6987,7 @@ monolib/src/work/CWorkSystemCache.cpp:
 	.sdata      start:0x80666460 end:0x80666478
 	.sbss       start:0x806682A0 end:0x806682A8
 
-monolib/src/code_804D9274.cpp:
+monolib/src/effect/code_804D9274.cpp:
 	extab       start:0x80020628 end:0x80020650
 	extabindex  start:0x80038588 end:0x800385C4
 	.text       start:0x804D9274 end:0x804DA0B8
@@ -7068,7 +7068,7 @@ monolib/src/effect/CERand.cpp:
 	.sbss       start:0x806682E0 end:0x806682E8
 	.sdata2     start:0x8066D9D8 end:0x8066DA08
 
-monolib/src/code_804DB938.cpp:
+monolib/src/effect/code_804DB938.cpp:
 	extab       start:0x800207E8 end:0x80020830
 	extabindex  start:0x80038828 end:0x80038894
 	.text       start:0x804DB980 end:0x804DD8F4
@@ -7098,7 +7098,7 @@ monolib/src/core/CArcItem.cpp:
 	.data       start:0x80573828 end:0x805738B0
 	.sdata      start:0x80666518 end:0x80666520
 
-monolib/src/code_804DEDA8.cpp:
+monolib/src/core/code_804DEDA8.cpp:
 	extab       start:0x80020980 end:0x80020B08
 	extabindex  start:0x800389C0 end:0x80038C0C
 	.text       start:0x804DEDA8 end:0x804E3294
@@ -7114,7 +7114,7 @@ monolib/src/core/CSchedule.cpp:
 	.data       start:0x805738B0 end:0x805738C0
 	.sdata      start:0x80666520 end:0x80666528
 
-monolib/src/code_804E36DC.cpp:
+monolib/src/core/code_804E36DC.cpp:
 	extab       start:0x80020B20 end:0x80020B78
 	extabindex  start:0x80038C30 end:0x80038CB4
 	.text       start:0x804E36DC end:0x804E4334
@@ -7184,7 +7184,7 @@ monolib/src/scn/CMdlDynamics.cpp:
 	.sdata      start:0x806665C8 end:0x806665E8
 	.sdata2     start:0x8066DB60 end:0x8066DBA8
 
-monolib/src/code_804EE0F4.cpp:
+monolib/src/core/code_804EE0F4.cpp:
 	extab       start:0x80020EB4 end:0x80020F2C
 	extabindex  start:0x80039008 end:0x800390BC
 	.text       start:0x804EE0F4 end:0x804F0258
@@ -7195,7 +7195,7 @@ monolib/src/code_804EE0F4.cpp:
 	.sbss       start:0x80668338 end:0x80668340
 	.sdata2     start:0x8066DBA8 end:0x8066DBE8
 
-monolib/src/code_804F0258.cpp:
+monolib/src/core/code_804F0258.cpp:
 	extab       start:0x80020F2C end:0x80020FBC
 	extabindex  start:0x800390BC end:0x80039194
 	.text       start:0x804F0258 end:0x804F4D7C

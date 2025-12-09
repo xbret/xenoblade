@@ -6,4 +6,3 @@
 #include "monolib/core/CPackItem.hpp"
 #include "monolib/core/CTaskManager.hpp"
 #include "monolib/core/CView.hpp"
-#include "monolib/core/Unknown1.hpp"

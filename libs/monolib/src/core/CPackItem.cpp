@@ -66,22 +66,15 @@ void CPackItem::update(){
 
         ml::CPathUtil::func_80435078(tempString, unk84);
 
-        unk4 = tempString.string;
+        unk4 = tempString.c_str();
         mPkbFilename = unk84;
 
         int length = mPkbFilename.find(".", -1);
 
         if((u32)length + 1 > 1){
             ml::FixStr<32> tempString1; //0x8
-
-            if(mPkbFilename.size() != 0){
-                if(length == -1) length = mPkbFilename.size();
-                std::strncpy(tempString1.string, mPkbFilename.string, length);
-                tempString1.string[length] = 0; //Stop the string at the extension
-                tempString1.length = std::strlen(tempString1.string);
-            }
-
-            mPkbFilename = tempString1.string;
+            mPkbFilename.copy(tempString1, length);
+            mPkbFilename = tempString1;
         }
 
         mPkbFilename += ".pkb";
@@ -125,7 +118,7 @@ bool CPackItem::func_804DE78C(const char* filename, char** r5, u32* r6, u32* r7,
         return false;
     }
 
-    *r5 = mPkbFilename.string;
+    *r5 = (char*)mPkbFilename.c_str();
 
     if(unk60 != nullptr){
         *r6 = unk60[hashIndex];

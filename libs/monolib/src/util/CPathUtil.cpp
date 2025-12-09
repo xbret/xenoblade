@@ -52,67 +52,28 @@ namespace ml{
             param_1 = temp;
         } else {
             param_1.clear();
-
-            if (temp.length == 0) {
-                if (length == -1) length = temp.size();
-                std::strncpy(param_1.string, temp.string, length);
-                param_1.string[length] = 0;
-                param_1.length = std::strlen(param_1.string);
-            }
+            temp.copy(param_1, length);
         }
     }
 
-    void CPathUtil::htoa(FixStr<16>& arg0, u32 arg1, int arg2) {
-        FixStr<16> sp20 = FixStr<16>(false);
-        FixStr<16> spC = FixStr<16>(false);
-        s16 sp8;
-        s32 temp_r24_2;
-        s32 temp_r4;
-        s32 var_ctr_2;
-        s32 i;
-        s32 var_r3;
-        s32 var_r5;
-        s32 var_r6;
-        s8 *temp_r24;
-        u32 var_ctr;
+    void CPathUtil::itoa(FixStr<16>& outStr, int num, int digits) {
+        outStr = "";
 
-        arg0 = "";
+        for(int i = 0; i < digits; i++) {
+            char buffer[2] = {0,0};
+            int factor = 1;
 
-        for(i = 0; i < arg2; i++) {
-            sp8 = 0;
-            var_r5 = 1;
-            var_r6 = 0;
-            if (i > arg2) {
-                temp_r4 = i - 8;
-                if (i > 8) {
-                    var_r3 = 0;
-                    if ((i >= 8) && (i <= 0x7FFFFFFE)) {
-                        var_r3 = 1;
-                    }
-                    if (var_r3 != 0) {
-                        var_ctr = (u32) (temp_r4 + 7) >> 3U;
-                        if (temp_r4 > 0) {
-                            do {
-                                var_r5 *= 100000000;
-                                var_r6 += 8;
-                                var_ctr -= 1;
-                            } while (var_ctr != 0);
-                        }
-                    }
-                }
-                var_ctr_2 = i - var_r6;
-                if (var_r6 < i) {
-                    do {
-                        var_r5 *= 10;
-                        var_ctr_2--;
-                    } while (var_ctr_2 != 0);
-                }
+            //Calculate the current factor
+            for(int j = 0; j < i; j++){
+                factor *= 10;
             }
-            sp8 = ((s32) (arg1 % (var_r5 * 0xA)) / var_r5) + 0x30;
-            sp20 = (const char*)&sp8;
-            spC = sp20;
-            spC += arg0;
-            arg0 = spC;
+
+            //Extract the current digit, and convert it to a character
+            int digit = (num % (factor * 10)) / factor;
+            buffer[0] = (char)(digit + (int)'0');
+            //Prepend the character to the output string
+            FixStr<16> string1 = buffer;
+            outStr = string1 + outStr;
         }
     }
 
