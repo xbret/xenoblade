@@ -16,5 +16,5 @@ namespace cf {
     };
 }
 
-extern void func_8014A86C(int);
+extern void func_8014A86C(void*);
 extern void func_8014A8F8();

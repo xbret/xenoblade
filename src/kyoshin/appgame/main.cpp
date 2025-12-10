@@ -84,7 +84,7 @@ const char* const sLanguageFolderPaths2[8] = {
 //Static file callback functions.
 //TODO: what do these do?
 
-void bdatFileCallback1(int arg0) {
+void bdatFileCallback1(void* arg0) {
     func_8003AA50();
     func_8003AA78(0, arg0);
 }
@@ -95,7 +95,7 @@ void bdatFileCallback2(void) {
 }
 
 
-void aidatCallback1(int arg0){
+void aidatCallback1(void* arg0){
     func_8014A86C(arg0);
 }
 
@@ -103,7 +103,7 @@ void aidatCallback2(){
     func_8014A8F8();
 }
 
-void hbmstopCallback1(int arg0){
+void hbmstopCallback1(void* arg0){
     func_8045D480(arg0);
 }
 

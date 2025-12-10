@@ -526,15 +526,15 @@ kyoshin/appgame/code_80135FDC.cpp:
 	.text       start:0x80136AB0 end:0x8013CA58
 
 kyoshin/appgame/CUIWindowManager.cpp:
-	extab       start:0x8000CBC0 end:0x8000CDFC
-	extabindex  start:0x80028024 end:0x800282E8
-	.text       start:0x8013CA58 end:0x80141ED0
+	extab       start:0x8000CBC0 end:0x8000CDF4
+	extabindex  start:0x80028024 end:0x800282DC
+	.text       start:0x8013CA58 end:0x80141E90
 	.ctors      start:0x804FA018 end:0x804FA01C
 
 kyoshin/appgame/cf/CfBdat.cpp:
-	extab       start:0x8000CDFC end:0x8000CE84
-	extabindex  start:0x800282E8 end:0x800283B4
-	.text       start:0x80141ED0 end:0x80142F60
+	extab       start:0x8000CDF4 end:0x8000CE84
+	extabindex  start:0x800282DC end:0x800283B4
+	.text       start:0x80141E90 end:0x80142F60
 	.ctors      start:0x804FA01C end:0x804FA020
 
 kyoshin/appgame/menu/CMenuUpdate.cpp:

@@ -6,9 +6,16 @@
 /* Interface for work events, which provides a set of 32 event handler functions that
 get triggered when a certain event happens (such as when loading a file for OnFileEvent).
 Deriving classes can override any of these functions to run their own code when the
-corresponding event happens. Only events 1-5 are actually used though, with the rest
-being empty slots that were left in for some dumb reason (tysm monolithsoft <3). It is
-possible though that the code tries to trigger the others, though. */
+corresponding event happens.
+
+Of the 32 available event slots, however, only events 1-5 are ever overriden, with the rest
+being empty slots that were left in for some dumb reason (tysm monolithsoft <3). Additionally,
+out of the 5 overriden events, only OnFileEvent and OnPauseTrigger seem to be used,
+with no apparent calls to the other 3 (possibly debug only).
+
+In XC3D, all instances of the unused event functions (including events 1, 3, and 4) are absent,
+with the entries for each instead just being 0 in the vtable. This points to the extra 3 overridden
+events being unused as well. */
 class IWorkEvent {
 public:
     virtual ~IWorkEvent(){}

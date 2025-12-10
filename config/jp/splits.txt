@@ -859,23 +859,24 @@ kyoshin/appgame/code_80135FDC.cpp:
 	.sdata2     start:0x80669BA0 end:0x80669C28
 
 kyoshin/appgame/CUIWindowManager.cpp:
-	extab       start:0x8000CB50 end:0x8000CD8C
-	extabindex  start:0x80027DDC end:0x800280A0
-	.text       start:0x8013C068 end:0x801414CC
+	extab       start:0x8000CB50 end:0x8000CD84
+	extabindex  start:0x80027DDC end:0x80028094
+	.text       start:0x8013C068 end:0x8014148C
 	.ctors      start:0x804F5958 end:0x804F595C
 	.rodata     start:0x804FC110 end:0x804FC5A8
 	.data       start:0x80531D70 end:0x80531EC0
-	.bss        start:0x80577448 end:0x80577580
+	.bss        start:0x80577448 end:0x80577510
 	.sdata      start:0x80664AF0 end:0x80664B20
 	.sbss       start:0x80666978 end:0x80666980
 
 kyoshin/appgame/cf/CfBdat.cpp:
-	extab       start:0x8000CD8C end:0x8000CE14
-	extabindex  start:0x800280A0 end:0x8002816C
-	.text       start:0x801414CC end:0x8014255C
+	extab       start:0x8000CD84 end:0x8000CE14
+	extabindex  start:0x80028094 end:0x8002816C
+	.text       start:0x8014148C end:0x8014255C
 	.ctors      start:0x804F595C end:0x804F5960
 	.rodata     start:0x804FC5A8 end:0x804FCBB8
 	.data       start:0x80531EC0 end:0x80531F80
+	.bss        start:0x80577510 end:0x80577580
 	.sdata      start:0x80664B20 end:0x80664B30
 	.sbss       start:0x80666980 end:0x80666A88
 	.sdata2     start:0x80669C28 end:0x80669C60

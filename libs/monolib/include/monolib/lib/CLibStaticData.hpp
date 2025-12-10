@@ -12,7 +12,7 @@ struct StaticArcFileData {
     const char* mName; //0x0
     const char* mPath; //0x4
     u32 unk8;
-    void (*callback1)(int); //0xC
+    void (*callback1)(void*); //0xC
     void (*callback2)(); //0x10
 };
 
