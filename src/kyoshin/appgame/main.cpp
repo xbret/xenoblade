@@ -82,32 +82,30 @@ const char* const sLanguageFolderPaths2[8] = {
 #endif
 
 //Static file callback functions.
-//TODO: what do these do?
 
-void bdatFileCallback1(void* arg0) {
-    func_8003AA50();
-    func_8003AA78(0, arg0);
+void OnBdatFileLoaded(void* pData, u32 length) {
+    CBdat::func_8003AA50();
+    CBdat::func_8003AA78(0, pData);
 }
 
-void bdatFileCallback2(void) {
-    func_8003AA8C(0);
-    func_8003AA50();
+void OnBdatFileUnloaded(void* pData, u32 length) {
+    CBdat::func_8003AA8C(0);
+    CBdat::func_8003AA50();
 }
 
-
-void aidatCallback1(void* arg0){
-    func_8014A86C(arg0);
+void OnAidatFileLoaded(void* pData, u32 length){
+    func_8014A86C(pData);
 }
 
-void aidatCallback2(){
+void OnAidatFileUnloaded(void* pData, u32 length){
     func_8014A8F8();
 }
 
-void hbmstopCallback1(void* arg0){
-    func_8045D480(arg0);
+void OnHbmstopFileLoaded(void* pData, u32 length){
+    func_8045D480(pData);
 }
 
-void hbmstopCallback2(){
+void OnHbmstopFileUnloaded(void* pData, u32 length){
     func_8045D4FC();
 }
 
@@ -119,14 +117,14 @@ static StaticArcFileData sStaticArcFiles[10] = {
     {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
 #if defined(VERSION_JP)
     {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","dvddata/common/jp/bdat.bin",1,&bdatFileCallback1,&bdatFileCallback2},
+    {"BDAT","dvddata/common/jp/bdat.bin",1,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #else //EU/US
     {"43","dvddata/menu/jp/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","common/jp/bdat_common.bin",1,&bdatFileCallback1,&bdatFileCallback2},
+    {"BDAT","common/jp/bdat_common.bin",1,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #endif
-    {"AIDAT","dvddata/etc/ai.bin",1,&aidatCallback1,&aidatCallback2},
+    {"AIDAT","dvddata/etc/ai.bin",1,&OnAidatFileLoaded,&OnAidatFileUnloaded},
     {"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
-    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&hbmstopCallback1,&hbmstopCallback2}
+    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&OnHbmstopFileLoaded,&OnHbmstopFileUnloaded}
 };
 
 //VM initialization callback functions.
@@ -140,11 +138,7 @@ void vmInitCallback(){
     vmInit();
 }
 
-#ifdef __MWERKS__
-void main(){
-#else
-int main(){
-#endif
+static void copyErrorMessages(){
     //Copy the error message string pointers
     func_80450B14(getNoDiscErrorMessage());
     func_80450B1C(getDiscUnreadableErrorMessage());
@@ -152,7 +146,14 @@ int main(){
     func_804DAA90(getMemoryDamagedErrorMessage());
     func_804DAA98(getMemoryReadWriteFailErrorMessage());
     func_804DAAA0(getErrorDuringMemoryReadWriteErrorMessage());
-    
+}
+
+#ifdef __MWERKS__
+void main(){
+#else
+int main(){
+#endif
+    copyErrorMessages();
     lbl_80666438 = 0;
     mtl::MemRegion::initialize();
     CDeviceVI::func_80448E78(false);

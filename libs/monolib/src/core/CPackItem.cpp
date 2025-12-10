@@ -30,7 +30,7 @@ CPackItem::CPackItem(const char* name, int r5) : unk4(), mPkbFilename() {
 
 CPackItem::~CPackItem(){
     if(mFileHandle != nullptr){
-        CDeviceFile::func_8044F118(mFileHandle);
+        CDeviceFile::cancel(mFileHandle);
     }
 
     if(unk79 != 0){
@@ -57,14 +57,14 @@ void CPackItem::update(){
             mPackHeader = (PackHeader*)unk7C;
             func_804DE948();
         }else{
-            mFileHandle = CDeviceFile::openFile1(mtl::MemManager::getHandleMEM2(), unk84, (UNKTYPE*)this, 0, 0);
+            mFileHandle = CDeviceFile::readFile(mtl::MemManager::getHandleMEM2(), unk84, this, 0, 0);
         }
 
         //TODO: What did they do here? They likely didnt have a constructor like this to skip
         //initialization, but using a raw buffer feels wrong
         ml::FixStr<64> tempString = ml::FixStr<64>(false); //0x2C
 
-        ml::CPathUtil::func_80435078(tempString, unk84);
+        ml::CPathUtil::getNoPathExtName(tempString, unk84);
 
         unk4 = tempString.c_str();
         mPkbFilename = unk84;

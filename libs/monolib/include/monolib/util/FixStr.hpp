@@ -80,10 +80,11 @@ namespace ml{
         }
         
         void format(const char* format, ...){
+            //Why hardcode the buffer size to 256??
             char buffer[256];
             va_list args;
             va_start(args, format);
-            std::vsnprintf(buffer, 256, format, args);
+            std::vsnprintf(buffer, sizeof(buffer), format, args);
             *this = buffer;
         }
 

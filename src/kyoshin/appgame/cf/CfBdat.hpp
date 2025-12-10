@@ -15,6 +15,7 @@ namespace cf{
         static void resetMapBdatFileDataPointers();
         static void loadMapBdatFileDataPointers(int mapId, int areaId);
         static void* func_80141B20(const char* pName);
+        static const char* func_801421C4(u16 index);
         static u32 func_801422A8(u32 param1);
         static const char* func_801424A8(u16 index);
 

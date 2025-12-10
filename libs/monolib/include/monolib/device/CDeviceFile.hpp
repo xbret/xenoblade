@@ -3,6 +3,7 @@
 #include <types.h>
 #include "monolib/monolib_types.hpp"
 #include "monolib/device/CDeviceBase.hpp"
+#include "monolib/util.hpp"
 
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
@@ -17,11 +18,14 @@ public:
     }
 
     static void removeFileJob(CDeviceFileJob* pJob);
-    static void func_8044F118(CFileHandle* r3);
-    static void func_8044F154(CFileHandle*, int);
-    static void func_8044F414(CFileHandle*);
+    static void cancel(CFileHandle* pFileHandle);
+    static void func_8044F154(CFileHandle* pFileHandle, int);
+    static void func_8044F414(CFileHandle* pFileHandle);
 
-    static CFileHandle* openFile1(int regionIndex, const char* r4, UNKTYPE* r5, int r6, int r7);
+    static CFileHandle* readFile(mtl::ALLOC_HANDLE allocHandle, const char* pPath, IWorkEvent* pWorkEvent,
+    int r6, int r7);
+    static CFileHandle* readCommonArchiveFile(mtl::ALLOC_HANDLE allocHandle, const char* pPath, IWorkEvent* pWorkEvent,
+    int r6, int r7);
     
     //0x0: vtable
     //0x0-1c8: CDeviceBase

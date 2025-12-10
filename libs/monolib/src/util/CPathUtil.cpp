@@ -2,31 +2,33 @@
 
 namespace ml{
 
-    const char* CPathUtil::getFilePtrFromPath(const char* str){
-        int endIndex = std::strlen(str) - 1;
+    //Returns a pointer to the filename portion of the given path.
+    const char* CPathUtil::getFilePtrFromPath(const char* pPath){
+        int endIndex = std::strlen(pPath) - 1;
 
         for(int i = endIndex; i >= 0; i--) {
-            char c = str[i];
+            char c = pPath[i];
 
             /* If the current character is a path separator character, return the rest
             of the string */
             if(c == '/' || c == '\\' || c == ':'){
-                return str + (endIndex + 1);
+                return pPath + (endIndex + 1);
             }
 
             endIndex--;
         }
 
         //If no path separator characters were found, just return the string
-        return str;
+        return pPath;
     }
 
-    const char* CPathUtil::getFileExtPtr(const char* str){
-        int endIndex = std::strlen(str) - 1;
+    //Returns a pointer to the file extension portion of the given filename.
+    const char* CPathUtil::getFileExtPtr(const char* pFilename){
+        int endIndex = std::strlen(pFilename) - 1;
 
         for(int i = endIndex; i >= 0; i--) {
-            char c = str[i];
-            if(c == '.') return str + (endIndex + 1);
+            char c = pFilename[i];
+            if(c == '.') return pFilename + (endIndex + 1);
             endIndex--;
         }
 
@@ -34,25 +36,26 @@ namespace ml{
         return nullptr;
     }
 
-    void CPathUtil::func_80435078(FixStr<64>& param_1, const char* param_2){
+    //Copies the file name w/o the extension from the given path to the given fixed string.
+    void CPathUtil::getNoPathExtName(FixStr<64>& outStr, const char* pPath){
         FixStr<64> temp;
 
-        param_2 = getFilePtrFromPath(param_2);
+        const char* pFilename = getFilePtrFromPath(pPath);
 
-        if (param_2 == nullptr) {
-            param_1 = temp;
+        if (pFilename == nullptr) {
+            outStr = temp;
             return;
         }
 
-        temp = param_2;
+        temp = pFilename;
 
         int length = temp.find(".", -1);
 
         if ((u32)length + 1 <= 1) {
-            param_1 = temp;
+            outStr = temp;
         } else {
-            param_1.clear();
-            temp.copy(param_1, length);
+            outStr.clear();
+            temp.copy(outStr, length);
         }
     }
 

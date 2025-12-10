@@ -100,46 +100,46 @@ namespace cf{
     }
 
     void CfBdat::func_801414CC(){
-        func_8003AA34();
-        spBtlPcListFileData = getBdatFileDataPtr("BTL_pclist");
-        spBtlEneListFileData = getBdatFileDataPtr("BTL_enelist");
-        spBtlSkillListFileData = getBdatFileDataPtr("BTL_skilllist");
-        spBtlGrowListFileData = getBdatFileDataPtr("BTL_growlist");
-        spBtlBuffListFileData = getBdatFileDataPtr("BTL_bufflist");
-        spFldPointListFileData = getBdatFileDataPtr("FLD_pointlist");
-        spFldTboxListFileData = getBdatFileDataPtr("FLD_tboxlist");
-        spBtlCamListFileData = getBdatFileDataPtr("BTL_camlist");
-        spBtlCamDataListFileData = getBdatFileDataPtr("BTL_camdatalist");
-        spBtlCrystalNameListFileData = getBdatFileDataPtr("BTL_crystalnamelist");
-        spMnuItemFileData = getBdatFileDataPtr("MNU_item");
-        spFldNpcListFileData = getBdatFileDataPtr("FLD_npclist");
-        spFldMapListFileData = getBdatFileDataPtr("FLD_maplist");
-        spLandmarkListFileData = getBdatFileDataPtr("landmarklist");
-        spFldValPopListFileData = getBdatFileDataPtr("FLD_valpoplist");
-        spFldDmObjListFileData = getBdatFileDataPtr("FLD_dmobjlist");
-        spItmItemListFileData = getBdatFileDataPtr("ITM_itemlist");
-        spItmWpnListFileData = getBdatFileDataPtr("ITM_wpnlist");
-        spItmEquipListFileData = getBdatFileDataPtr("ITM_equiplist");
-        spItmCrystalListFileData = getBdatFileDataPtr("ITM_crystallist");
-        spItmDropCrystalListFileData = getBdatFileDataPtr("ITM_dropcrystallist");
-        spItmCollectListFileData = getBdatFileDataPtr("ITM_collectlist");
-        spItmMaterialListFileData = getBdatFileDataPtr("ITM_materiallist");
-        spItmValuableListFileData = getBdatFileDataPtr("ITM_valuablelist");
-        spItmArtsListFileData = getBdatFileDataPtr("ITM_artslist");
-        spItmHeadListFileData = getBdatFileDataPtr("ITM_headlist");
-        spItmBodyListFileData = getBdatFileDataPtr("ITM_bodylist");
-        spItmArmListFileData = getBdatFileDataPtr("ITM_armlist");
-        spItmWaistListFileData = getBdatFileDataPtr("ITM_waistlist");
-        spItmLeggListFileData = getBdatFileDataPtr("ITM_legglist");
+        CBdat::func_8003AA34();
+        spBtlPcListFileData = CBdat::getFP("BTL_pclist");
+        spBtlEneListFileData = CBdat::getFP("BTL_enelist");
+        spBtlSkillListFileData = CBdat::getFP("BTL_skilllist");
+        spBtlGrowListFileData = CBdat::getFP("BTL_growlist");
+        spBtlBuffListFileData = CBdat::getFP("BTL_bufflist");
+        spFldPointListFileData = CBdat::getFP("FLD_pointlist");
+        spFldTboxListFileData = CBdat::getFP("FLD_tboxlist");
+        spBtlCamListFileData = CBdat::getFP("BTL_camlist");
+        spBtlCamDataListFileData = CBdat::getFP("BTL_camdatalist");
+        spBtlCrystalNameListFileData = CBdat::getFP("BTL_crystalnamelist");
+        spMnuItemFileData = CBdat::getFP("MNU_item");
+        spFldNpcListFileData = CBdat::getFP("FLD_npclist");
+        spFldMapListFileData = CBdat::getFP("FLD_maplist");
+        spLandmarkListFileData = CBdat::getFP("landmarklist");
+        spFldValPopListFileData = CBdat::getFP("FLD_valpoplist");
+        spFldDmObjListFileData = CBdat::getFP("FLD_dmobjlist");
+        spItmItemListFileData = CBdat::getFP("ITM_itemlist");
+        spItmWpnListFileData = CBdat::getFP("ITM_wpnlist");
+        spItmEquipListFileData = CBdat::getFP("ITM_equiplist");
+        spItmCrystalListFileData = CBdat::getFP("ITM_crystallist");
+        spItmDropCrystalListFileData = CBdat::getFP("ITM_dropcrystallist");
+        spItmCollectListFileData = CBdat::getFP("ITM_collectlist");
+        spItmMaterialListFileData = CBdat::getFP("ITM_materiallist");
+        spItmValuableListFileData = CBdat::getFP("ITM_valuablelist");
+        spItmArtsListFileData = CBdat::getFP("ITM_artslist");
+        spItmHeadListFileData = CBdat::getFP("ITM_headlist");
+        spItmBodyListFileData = CBdat::getFP("ITM_bodylist");
+        spItmArmListFileData = CBdat::getFP("ITM_armlist");
+        spItmWaistListFileData = CBdat::getFP("ITM_waistlist");
+        spItmLeggListFileData = CBdat::getFP("ITM_legglist");
         
         lbl_80666A74 = nullptr;
         lbl_80666A78 = nullptr;
         lbl_80666A7C = 0;
         lbl_8066698C = nullptr;
         
-        spBtlPsvSkillFileData = getBdatFileDataPtr("BTL_PSVskill");
-        spBtlPsvLinkFileData = getBdatFileDataPtr("BTL_PSVlink");
-        spBtlPssListFileData = getBdatFileDataPtr("BTL_PSSlist");
+        spBtlPsvSkillFileData = CBdat::getFP("BTL_PSVskill");
+        spBtlPsvLinkFileData = CBdat::getFP("BTL_PSVlink");
+        spBtlPssListFileData = CBdat::getFP("BTL_PSSlist");
 
         const char* temp[ARRAY_SIZE(lbl_80577510)] = {
             "JNL_quest0000",
@@ -171,21 +171,21 @@ namespace cf{
             "JNL_quest2401"
         };
 
-        for(int i = 0; i < ARRAY_SIZE(lbl_80577510); i++){
-            lbl_80577510[i] = getBdatFileDataPtr(temp[i]);
+        for(int i = 0; i < (int)ARRAY_SIZE(lbl_80577510); i++){
+            lbl_80577510[i] = CBdat::getFP(temp[i]);
         }
 
         resetMapBdatFileDataPointers();
 
         if(lbl_80666A6C != nullptr){
-            CDeviceFile::func_8044F118(lbl_80666A6C);
+            CDeviceFile::cancel(lbl_80666A6C);
             lbl_80666A6C = nullptr;
         }
 
         if(lbl_80666A70 != nullptr){
-            func_8003AA8C(3);
+            CBdat::func_8003AA8C(3);
             if(lbl_80666A70 != nullptr){
-                delete lbl_80666A70;
+                mtl::MemManager::deallocate(lbl_80666A70);
             }
         }
 
@@ -218,82 +218,43 @@ namespace cf{
         spCurDropSprListFileData = nullptr;
     }
 
-    //TODO: is there a cleaner way to write this? maybe using an inline?
-    void CfBdat::loadMapBdatFileDataPointers(int mapId, int areaId){
-        FixStr<64> bdatNameString;
+    //This feels a bit janky, but if it works it works :p
+    #define GET_MAP_BDAT_PTR(dest, name) \
+    string.format(STR(name)"%02d%02d", mapId, areaId); \
+    dest = CBdat::getFP(string.c_str());
 
-        bdatNameString.format("routelist%02d%02d", mapId, areaId);
-        spCurRouteListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("mapefflist%02d%02d", mapId, areaId);
-        spCurMapEffListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("mapobjlist%02d%02d", mapId, areaId);
-        spCurMapObjListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("maplodlist%02d%02d", mapId, areaId);
-        spCurMapLodListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("mapselist%02d%02d", mapId, areaId);
-        spCurMapSeListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("FLD_GimCamList%02d%02d", mapId, areaId);
-        spCurFldGimCamListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("Litemlist%02d%02d", mapId, areaId);
-        spCurLItemListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("extalklist%02d%02d", mapId, areaId);
-        spCurExTalkListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("minelist%02d%02d", mapId, areaId);
-        spCurMineListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("BTL_enelist%02d%02d", mapId, areaId);
-        spCurBtlEneListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("Gimlist%02d%02d", mapId, areaId);
-        spCurGimListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("FieldLock%02d%02d", mapId, areaId);
-        spCurFieldLockFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("ElvGm%02d%02d", mapId, areaId);
-        spCurElvGmFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("WarpGm%02d%02d", mapId, areaId);
-        spCurWarpGmFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("JumpGm%02d%02d", mapId, areaId);
-        spCurJumpGmFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("ItemGm%02d%02d", mapId, areaId);
-        spCurItemGmFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("GimSVoff%02d%02d", mapId, areaId);
-        spCurGimSvOffFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("GimEne%02d%02d", mapId, areaId);
-        spCurGimEneFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("GimMess%02d%02d", mapId, areaId);
-        spCurGimMessFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("drop_nmllist%02d%02d", mapId, areaId);
-        spCurDropNmlListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("drop_rarlist%02d%02d", mapId, areaId);
-        spCurDropRarListFileData = getBdatFileDataPtr(bdatNameString.c_str());
-        
-        bdatNameString.format("drop_sprlist%02d%02d", mapId, areaId);
-        spCurDropSprListFileData = getBdatFileDataPtr(bdatNameString.c_str());
+    void CfBdat::loadMapBdatFileDataPointers(int mapId, int areaId){
+        FixStr<64> string;
+
+        GET_MAP_BDAT_PTR(spCurRouteListFileData, routelist);
+        GET_MAP_BDAT_PTR(spCurMapEffListFileData, mapefflist);
+        GET_MAP_BDAT_PTR(spCurMapObjListFileData, mapobjlist);
+        GET_MAP_BDAT_PTR(spCurMapLodListFileData, maplodlist);
+        GET_MAP_BDAT_PTR(spCurMapSeListFileData, mapselist);
+        GET_MAP_BDAT_PTR(spCurFldGimCamListFileData, FLD_GimCamList);
+        GET_MAP_BDAT_PTR(spCurLItemListFileData, Litemlist);
+        GET_MAP_BDAT_PTR(spCurExTalkListFileData, extalklist);
+        GET_MAP_BDAT_PTR(spCurMineListFileData, minelist);
+        GET_MAP_BDAT_PTR(spCurBtlEneListFileData, BTL_enelist);
+        GET_MAP_BDAT_PTR(spCurGimListFileData, Gimlist);
+        GET_MAP_BDAT_PTR(spCurFieldLockFileData, FieldLock);
+        GET_MAP_BDAT_PTR(spCurElvGmFileData, ElvGm);
+        GET_MAP_BDAT_PTR(spCurWarpGmFileData, WarpGm);
+        GET_MAP_BDAT_PTR(spCurJumpGmFileData, JumpGm);
+        GET_MAP_BDAT_PTR(spCurItemGmFileData, ItemGm);
+        GET_MAP_BDAT_PTR(spCurGimSvOffFileData, GimSVoff);
+        GET_MAP_BDAT_PTR(spCurGimEneFileData, GimEne);
+        GET_MAP_BDAT_PTR(spCurGimMessFileData, GimMess);
+        GET_MAP_BDAT_PTR(spCurDropNmlListFileData, drop_nmllist);
+        GET_MAP_BDAT_PTR(spCurDropRarListFileData, drop_rarlist);
+        GET_MAP_BDAT_PTR(spCurDropSprListFileData, drop_sprlist);
     }
 
     void* CfBdat::func_80141B20(const char* pName){
         void* fileDataPtr;
 
         if(pName != nullptr){
-            fileDataPtr = getBdatFileDataPtr(pName);
+            fileDataPtr = CBdat::getFP(pName);
         }else{
             fileDataPtr = nullptr;
         }
@@ -302,17 +263,22 @@ namespace cf{
         return fileDataPtr;
     }
 
+    const char* CfBdat::func_801421C4(u16 index){
+
+    }
+
     u32 CfBdat::func_801422A8(u32 param1){
         if(param1 != 0){
             if((param1 >> 27) == 5) return param1;
             u32 r30 = 0;
             if((param1 & 0xFFFF) != 0){
                 void* data = spItmWpnListFileData;
-                u16 unk12 = func_8003B41C(data);
-                u16 unkC = func_8003B1EC(data);
+                u16 unk12 = CBdat::func_8003B41C(data);
+                u16 unkC = CBdat::func_8003B1EC(data);
                 u16 r0 = unk12 + unkC;
-                if((s32)param1 < r0){
-                    r30 = func_800AA714(func_8003AB48(data, "resource"));
+                s32 temp = (param1 & 0xFFFF);
+                if(temp < r0){
+                    r30 = func_800AA714(CBdat::getBdatStringColumnValue(data, "resource", temp));
                 }
             }
             return r30;
@@ -330,9 +296,9 @@ namespace cf{
 
         if(lbl_80666A6C == pEventFile->mFileHandle){
             if(pEventFile->unk0 == 1 && *(u32*)((u32)pEventFile + 0x14) != 0){
-                func_8003AA78(3, lbl_80666A70);
-                spMnuEveStartFileData = getBdatFileDataPtr("MNU_eve_start");
-                spMnuEveTableFileData = getBdatFileDataPtr("MNU_eve_table");
+                CBdat::func_8003AA78(3, lbl_80666A70);
+                spMnuEveStartFileData = CBdat::getFP("MNU_eve_start");
+                spMnuEveTableFileData = CBdat::getFP("MNU_eve_table");
             }
             
             lbl_80666A6C = nullptr;
