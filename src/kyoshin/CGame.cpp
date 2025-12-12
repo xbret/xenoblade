@@ -295,7 +295,7 @@ bool CGame::wkStandbyExceptionRetry(u32 wid){
     if(exception->mException == nullptr) return true;
     else{
         IGameException* gameException = exception->mException;
-        return gameException->func0C(exception->unk204);
+        return gameException->IGameException_UnkVirtualFunc1(exception->unk204);
     }
 }
 
