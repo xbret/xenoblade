@@ -13,7 +13,7 @@ Sections:
 	.sdata2     type:rodata align:32
 	.sbss2      type:bss align:16
 
-kyoshin/appgame/CGame.cpp:
+kyoshin/CGame.cpp:
 	extab       start:0x800066E0 end:0x800067C4
 	extabindex  start:0x80021020 end:0x80021104
 	.text       start:0x80039220 end:0x80039EFC
@@ -25,7 +25,7 @@ kyoshin/appgame/CGame.cpp:
 	.sbss       start:0x80666600 end:0x80666610
 	.sdata2     start:0x80668380 end:0x806683A0
 
-kyoshin/appgame/main.cpp:
+kyoshin/main.cpp:
 	extab       start:0x800067C4 end:0x800067E4
 	extabindex  start:0x80021104 end:0x80021134
 	.text       start:0x80039EFC end:0x8003A05C
@@ -33,7 +33,7 @@ kyoshin/appgame/main.cpp:
 	.data       start:0x80528380 end:0x80528458
 	.sdata2     start:0x806683A0 end:0x80668418
 
-kyoshin/appgame/plugin/pluginDeb.cpp:
+kyoshin/plugin/pluginDeb.cpp:
 	extab       start:0x800067E4 end:0x800067F4
 	extabindex  start:0x80021134 end:0x8002114C
 	.text       start:0x8003A05C end:0x8003A0E0
@@ -41,7 +41,7 @@ kyoshin/appgame/plugin/pluginDeb.cpp:
 	.data       start:0x80528458 end:0x80528478
 	.sdata2     start:0x80668418 end:0x80668420
 
-kyoshin/appgame/plugin/pluginWait.cpp:
+kyoshin/plugin/pluginWait.cpp:
 	extab       start:0x800067F4 end:0x800067FC
 	extabindex  start:0x8002114C end:0x80021158
 	.text       start:0x8003A0E0 end:0x8003A1AC
@@ -49,7 +49,7 @@ kyoshin/appgame/plugin/pluginWait.cpp:
 	.data       start:0x80528478 end:0x80528488
 	.sdata2     start:0x80668420 end:0x80668428
 
-kyoshin/appgame/plugin/ocBuiltin.cpp:
+kyoshin/plugin/ocBuiltin.cpp:
 	extab       start:0x800067FC end:0x80006814
 	extabindex  start:0x80021158 end:0x8002117C
 	.text       start:0x8003A1AC end:0x8003A310
@@ -57,7 +57,7 @@ kyoshin/appgame/plugin/ocBuiltin.cpp:
 	.data       start:0x80528488 end:0x805284C8
 	.sdata2     start:0x80668428 end:0x80668430
 
-kyoshin/appgame/plugin/ocThread.cpp:
+kyoshin/plugin/ocThread.cpp:
 	extab       start:0x80006814 end:0x8000684C
 	extabindex  start:0x8002117C end:0x800211D0
 	.text       start:0x8003A310 end:0x8003A53C
@@ -66,7 +66,7 @@ kyoshin/appgame/plugin/ocThread.cpp:
 	.bss        start:0x80573CC8 end:0x80573DD0
 	.sdata2     start:0x80668430 end:0x80668468
 
-kyoshin/appgame/plugin/ocMsg.cpp:
+kyoshin/plugin/ocMsg.cpp:
 	extab       start:0x8000684C end:0x800068C4
 	extabindex  start:0x800211D0 end:0x80021284
 	.text       start:0x8003A53C end:0x8003AA34
@@ -74,7 +74,7 @@ kyoshin/appgame/plugin/ocMsg.cpp:
 	.sbss       start:0x80666610 end:0x80666618
 	.sdata2     start:0x80668468 end:0x806684B8
 
-kyoshin/appgame/plugin/ocBdat.cpp:
+kyoshin/plugin/ocBdat.cpp:
 	extab       start:0x800068C4 end:0x80006934
 	extabindex  start:0x80021284 end:0x8002132C
 	.text       start:0x8003AA34 end:0x8003BC10
@@ -83,7 +83,7 @@ kyoshin/appgame/plugin/ocBdat.cpp:
 	.bss        start:0x80573DD0 end:0x80573DE8
 	.sdata2     start:0x806684B8 end:0x806684C8
 
-kyoshin/appgame/plugin/ocUnit.cpp:
+kyoshin/plugin/ocUnit.cpp:
 	extab       start:0x80006934 end:0x80006BDC
 	extabindex  start:0x8002132C end:0x80021728
 	.text       start:0x8003BC10 end:0x80040144
@@ -92,7 +92,7 @@ kyoshin/appgame/plugin/ocUnit.cpp:
 	.sdata      start:0x806641B0 end:0x80664208
 	.sdata2     start:0x806684C8 end:0x80668600
 
-kyoshin/appgame/CTaskGame.cpp:
+kyoshin/CTaskGame.cpp:
 	extab       start:0x80006BDC end:0x80006E68
 	extabindex  start:0x80021728 end:0x80021A64
 	.text       start:0x80040144 end:0x80044168
@@ -101,7 +101,7 @@ kyoshin/appgame/CTaskGame.cpp:
 	.sbss       start:0x80666618 end:0x80666638
 	.sdata2     start:0x80668600 end:0x80668620
 
-kyoshin/appgame/cf/CTaskGameCf.cpp:
+kyoshin/cf/CTaskGameCf.cpp:
 	extab       start:0x80006E68 end:0x80006EC8
 	extabindex  start:0x80021A64 end:0x80021AF4
 	.text       start:0x80044168 end:0x80044AB8
@@ -111,7 +111,7 @@ kyoshin/appgame/cf/CTaskGameCf.cpp:
 	.sbss       start:0x80666638 end:0x80666640
 	.sdata2     start:0x80668620 end:0x80668628
 
-kyoshin/appgame/CTaskGameEff.cpp:
+kyoshin/CTaskGameEff.cpp:
 	extab       start:0x80006EC8 end:0x80006F98
 	extabindex  start:0x80021AF4 end:0x80021BD8
 	.text       start:0x80044AB8 end:0x80045560
@@ -121,7 +121,7 @@ kyoshin/appgame/CTaskGameEff.cpp:
 	.sbss       start:0x80666640 end:0x80666648
 	.sdata2     start:0x80668628 end:0x80668630
 
-kyoshin/appgame/plugin/ocCfp.cpp:
+kyoshin/plugin/ocCfp.cpp:
 	extab       start:0x80006F98 end:0x80006FD8
 	extabindex  start:0x80021BD8 end:0x80021C38
 	.text       start:0x80045560 end:0x80045814
@@ -129,12 +129,12 @@ kyoshin/appgame/plugin/ocCfp.cpp:
 	.data       start:0x80529548 end:0x805295C0
 	.sdata2     start:0x80668630 end:0x80668650
 
-kyoshin/appgame/plugin/pluginMain.cpp:
+kyoshin/plugin/pluginMain.cpp:
 	extab       start:0x80006FD8 end:0x80006FE0
 	extabindex  start:0x80021C38 end:0x80021C44
 	.text       start:0x80045814 end:0x80045884
 
-kyoshin/appgame/plugin/pluginUi.cpp:
+kyoshin/plugin/pluginUi.cpp:
 	extab       start:0x80006FE0 end:0x80007110
 	extabindex  start:0x80021C44 end:0x80021DF4
 	.text       start:0x80045884 end:0x800468E0
@@ -143,7 +143,7 @@ kyoshin/appgame/plugin/pluginUi.cpp:
 	.sdata      start:0x806642A0 end:0x806642A8
 	.sdata2     start:0x80668650 end:0x80668690
 
-kyoshin/appgame/plugin/pluginEve.cpp:
+kyoshin/plugin/pluginEve.cpp:
 	extab       start:0x80007110 end:0x800071A0
 	extabindex  start:0x80021DF4 end:0x80021ECC
 	.text       start:0x800468E0 end:0x80047274
@@ -151,7 +151,7 @@ kyoshin/appgame/plugin/pluginEve.cpp:
 	.data       start:0x80529740 end:0x805297E0
 	.sdata2     start:0x80668690 end:0x806686C8
 
-kyoshin/appgame/plugin/pluginCfs.cpp:
+kyoshin/plugin/pluginCfs.cpp:
 	extab       start:0x800071A0 end:0x80007390
 	extabindex  start:0x80021ECC end:0x800221B4
 	.text       start:0x80047274 end:0x8004AF8C
@@ -159,7 +159,7 @@ kyoshin/appgame/plugin/pluginCfs.cpp:
 	.data       start:0x805297E0 end:0x805299E8
 	.sdata2     start:0x806686C8 end:0x80668720
 
-kyoshin/appgame/plugin/pluginMath.cpp:
+kyoshin/plugin/pluginMath.cpp:
 	extab       start:0x80007390 end:0x80007398
 	extabindex  start:0x800221B4 end:0x800221C0
 	.text       start:0x8004AF8C end:0x8004B028
@@ -188,7 +188,7 @@ kyoshin/action/CActParamData.cpp:
 	.sbss       start:0x80666650 end:0x80666658
 	.sdata2     start:0x80668808 end:0x80668830
 
-kyoshin/appgame/cf/CMcaFile.cpp:
+kyoshin/cf/CMcaFile.cpp:
 	extab       start:0x80007704 end:0x80007714
 	extabindex  start:0x800226C4 end:0x800226DC
 	.text       start:0x80058414 end:0x8005857C
@@ -196,7 +196,7 @@ kyoshin/appgame/cf/CMcaFile.cpp:
 	.data       start:0x80529B78 end:0x80529BC0
 	.sdata      start:0x806642C0 end:0x806642C8
 
-kyoshin/appgame/cf/CTaskEnvironment.cpp:
+kyoshin/cf/CTaskEnvironment.cpp:
 	extab       start:0x80007714 end:0x80007794
 	extabindex  start:0x800226DC end:0x8002279C
 	.text       start:0x8005857C end:0x80059EB8
@@ -208,7 +208,7 @@ kyoshin/appgame/cf/CTaskEnvironment.cpp:
 	.sbss       start:0x80666658 end:0x80666660
 	.sdata2     start:0x80668830 end:0x806688C8
 
-kyoshin/appgame/CTimeLightGrp.cpp:
+kyoshin/CTimeLightGrp.cpp:
 	extab       start:0x80007794 end:0x800077EC
 	extabindex  start:0x8002279C end:0x800227F0
 	.text       start:0x80059EB8 end:0x8005A3FC
@@ -217,7 +217,7 @@ kyoshin/appgame/CTimeLightGrp.cpp:
 	.sdata      start:0x806642D8 end:0x806642F8
 	.sdata2     start:0x806688C8 end:0x806688D0
 
-kyoshin/appgame/cf/CActParamAnimGame.cpp:
+kyoshin/cf/CActParamAnimGame.cpp:
 	extab       start:0x800077EC end:0x800078EC
 	extabindex  start:0x800227F0 end:0x80022934
 	.text       start:0x8005A3FC end:0x800602B8
@@ -227,7 +227,7 @@ kyoshin/appgame/cf/CActParamAnimGame.cpp:
 	.sbss       start:0x80666660 end:0x80666678
 	.sdata2     start:0x806688D0 end:0x806689F0
 
-kyoshin/appgame/plugin/pluginCam.cpp:
+kyoshin/plugin/pluginCam.cpp:
 	extab       start:0x800078EC end:0x8000798C
 	extabindex  start:0x80022934 end:0x80022A24
 	.text       start:0x800602B8 end:0x800614F4
@@ -235,7 +235,7 @@ kyoshin/appgame/plugin/pluginCam.cpp:
 	.data       start:0x80529D90 end:0x80529E38
 	.sdata2     start:0x806689F0 end:0x80668A68
 
-kyoshin/appgame/cf/CTaskGameEffAfter.cpp:
+kyoshin/cf/CTaskGameEffAfter.cpp:
 	extab       start:0x8000798C end:0x800079B4
 	extabindex  start:0x80022A24 end:0x80022A60
 	.text       start:0x800614F4 end:0x800616E0
@@ -243,7 +243,7 @@ kyoshin/appgame/cf/CTaskGameEffAfter.cpp:
 	.data       start:0x80529E38 end:0x80529EC0
 	.sdata      start:0x80664310 end:0x80664320
 
-kyoshin/appgame/plugin/pluginPad.cpp:
+kyoshin/plugin/pluginPad.cpp:
 	extab       start:0x800079B4 end:0x800079C4
 	extabindex  start:0x80022A60 end:0x80022A78
 	.text       start:0x800616E0 end:0x80061870
@@ -251,7 +251,7 @@ kyoshin/appgame/plugin/pluginPad.cpp:
 	.data       start:0x80529EC0 end:0x80529ED8
 	.sdata2     start:0x80668A68 end:0x80668A78
 
-kyoshin/appgame/cf/CfRes.cpp:
+kyoshin/cf/CfRes.cpp:
 	extab       start:0x800079C4 end:0x80007CF0
 	extabindex  start:0x80022A78 end:0x80022EBC
 	.text       start:0x80061870 end:0x80065F24
@@ -261,7 +261,7 @@ kyoshin/appgame/cf/CfRes.cpp:
 	.sbss       start:0x80666678 end:0x80666688
 	.sdata2     start:0x80668A78 end:0x80668A88
 
-kyoshin/appgame/cf/IResInfo.cpp:
+kyoshin/cf/IResInfo.cpp:
 	extab       start:0x80007CF0 end:0x80007E2C
 	extabindex  start:0x80022EBC end:0x80023078
 	.text       start:0x80065F24 end:0x80068A20
@@ -271,7 +271,7 @@ kyoshin/appgame/cf/IResInfo.cpp:
 	.sbss       start:0x80666688 end:0x80666690
 	.sdata2     start:0x80668A88 end:0x80668AA8
 
-kyoshin/appgame/cf/CfScript.cpp:
+kyoshin/cf/CfScript.cpp:
 	extab       start:0x80007E2C end:0x80007F28
 	extabindex  start:0x80023078 end:0x800231C8
 	.text       start:0x80068A20 end:0x80069710
@@ -281,7 +281,7 @@ kyoshin/appgame/cf/CfScript.cpp:
 	.bss        start:0x805740C8 end:0x80574218
 	.sdata      start:0x806643B8 end:0x806643D0
 
-kyoshin/appgame/cf/CfTaskMain.cpp:
+kyoshin/cf/CfTaskMain.cpp:
 	extab       start:0x80007F28 end:0x80007F64
 	extabindex  start:0x800231C8 end:0x80023204
 	.text       start:0x80069710 end:0x8006994C
@@ -289,7 +289,7 @@ kyoshin/appgame/cf/CfTaskMain.cpp:
 	.data       start:0x8052A650 end:0x8052A768
 	.sdata      start:0x806643D0 end:0x806643E0
 
-kyoshin/appgame/cf/CfTFile.cpp:
+kyoshin/cf/CfTFile.cpp:
 	extab       start:0x80007F64 end:0x8000800C
 	extabindex  start:0x80023204 end:0x80023300
 	.text       start:0x8006994C end:0x8006A82C
@@ -300,7 +300,7 @@ kyoshin/appgame/cf/CfTFile.cpp:
 	.sbss       start:0x80666690 end:0x806666B0
 	.sdata2     start:0x80668AA8 end:0x80668AF0
 
-kyoshin/appgame/cf/CfCamEvent.cpp:
+kyoshin/cf/CfCamEvent.cpp:
 	extab       start:0x8000800C end:0x80008088
 	extabindex  start:0x80023300 end:0x8002339C
 	.text       start:0x8006A82C end:0x8006B3EC
@@ -310,22 +310,22 @@ kyoshin/appgame/cf/CfCamEvent.cpp:
 	.sbss       start:0x806666B0 end:0x806666C8
 	.sdata2     start:0x80668AF0 end:0x80668B10
 
-kyoshin/appgame/cf/CfCamDirectionIntf.cpp:
+kyoshin/cf/CfCamDirectionIntf.cpp:
 	extab       start:0x80008088 end:0x80008098
 	extabindex  start:0x8002339C end:0x800233B4
 	.text       start:0x8006B3EC end:0x8006B508
 
-kyoshin/appgame/cf/CfCamLookatIntf.cpp:
+kyoshin/cf/CfCamLookatIntf.cpp:
 	extab       start:0x80008098 end:0x800080A0
 	extabindex  start:0x800233B4 end:0x800233C0
 	.text       start:0x8006B508 end:0x8006B5D4
 
-kyoshin/appgame/cf/CfCamTargetIntf.cpp:
+kyoshin/cf/CfCamTargetIntf.cpp:
 	extab       start:0x800080A0 end:0x800080A8
 	extabindex  start:0x800233C0 end:0x800233CC
 	.text       start:0x8006B5D4 end:0x8006B6A0
 
-kyoshin/appgame/cf/CfCam.cpp:
+kyoshin/cf/CfCam.cpp:
 	extab       start:0x800080A8 end:0x8000836C
 	extabindex  start:0x800233CC end:0x800237D4
 	.text       start:0x8006B6A0 end:0x80074F4C
@@ -337,7 +337,7 @@ kyoshin/appgame/cf/CfCam.cpp:
 	.sbss       start:0x806666C8 end:0x806666F0
 	.sdata2     start:0x80668B10 end:0x80668CA0
 
-kyoshin/appgame/cf/CfCamEvent_1.cpp:
+kyoshin/cf/CfCamEvent_1.cpp:
 	extab       start:0x8000836C end:0x8000841C
 	extabindex  start:0x800237D4 end:0x800238DC
 	.text       start:0x80074F4C end:0x8007C0F8
@@ -349,7 +349,7 @@ kyoshin/appgame/cf/CfCamEvent_1.cpp:
 	.sbss       start:0x806666F0 end:0x806666F8
 	.sdata2     start:0x80668CA0 end:0x80668D20
 
-kyoshin/appgame/code_8007C0F8.cpp:
+kyoshin/code_8007C0F8.cpp:
 	extab       start:0x8000841C end:0x80008AAC
 	extabindex  start:0x800238DC end:0x800240A4
 	.text       start:0x8007C0F8 end:0x800875A8
@@ -361,7 +361,7 @@ kyoshin/appgame/code_8007C0F8.cpp:
 	.sbss       start:0x806666F8 end:0x80666780
 	.sdata2     start:0x80668D20 end:0x80668DF8
 
-kyoshin/appgame/cf/CtrlEnemy.cpp:
+kyoshin/cf/CtrlEnemy.cpp:
 	extab       start:0x80008AAC end:0x80008B54
 	extabindex  start:0x800240A4 end:0x8002411C
 	.text       start:0x800875A8 end:0x80088904
@@ -370,7 +370,7 @@ kyoshin/appgame/cf/CtrlEnemy.cpp:
 	.sdata      start:0x806644D8 end:0x80664510
 	.sdata2     start:0x80668DF8 end:0x80668E20
 
-kyoshin/appgame/cf/CtrlMoveBase.cpp:
+kyoshin/cf/CtrlMoveBase.cpp:
 	extab       start:0x80008B54 end:0x80008BBC
 	extabindex  start:0x8002411C end:0x800241B8
 	.text       start:0x80088904 end:0x8008A104
@@ -380,7 +380,7 @@ kyoshin/appgame/cf/CtrlMoveBase.cpp:
 	.sdata      start:0x80664510 end:0x80664528
 	.sdata2     start:0x80668E20 end:0x80668E48
 
-kyoshin/appgame/cf/CtrlMoveEne.cpp:
+kyoshin/cf/CtrlMoveEne.cpp:
 	extab       start:0x80008BBC end:0x80008CC4
 	extabindex  start:0x800241B8 end:0x80024344
 	.text       start:0x8008A104 end:0x80093698
@@ -390,7 +390,7 @@ kyoshin/appgame/cf/CtrlMoveEne.cpp:
 	.sdata      start:0x80664528 end:0x80664538
 	.sdata2     start:0x80668E48 end:0x80668F20
 
-kyoshin/appgame/cf/CtrlNpc.cpp:
+kyoshin/cf/CtrlNpc.cpp:
 	extab       start:0x80008CC4 end:0x80008DA4
 	extabindex  start:0x80024344 end:0x80024458
 	.text       start:0x80093698 end:0x8009689C
@@ -399,7 +399,7 @@ kyoshin/appgame/cf/CtrlNpc.cpp:
 	.sdata      start:0x80664538 end:0x80664540
 	.sdata2     start:0x80668F20 end:0x80668FA0
 
-kyoshin/appgame/cf/CtrlPc.cpp:
+kyoshin/cf/CtrlPc.cpp:
 	extab       start:0x80008DA4 end:0x80008EA0
 	extabindex  start:0x80024458 end:0x8002453C
 	.text       start:0x8009689C end:0x80098BE4
@@ -408,7 +408,7 @@ kyoshin/appgame/cf/CtrlPc.cpp:
 	.sdata      start:0x80664540 end:0x80664568
 	.sdata2     start:0x80668FA0 end:0x80668FB8
 
-kyoshin/appgame/cf/CtrlRemote.cpp:
+kyoshin/cf/CtrlRemote.cpp:
 	extab       start:0x80008EA0 end:0x80008FBC
 	extabindex  start:0x8002453C end:0x80024668
 	.text       start:0x80098BE4 end:0x8009D604
@@ -419,7 +419,7 @@ kyoshin/appgame/cf/CtrlRemote.cpp:
 	.sbss       start:0x80666780 end:0x80666788
 	.sdata2     start:0x80668FB8 end:0x80668FF8
 
-kyoshin/appgame/cf/CtrlObjectParam.cpp:
+kyoshin/cf/CtrlObjectParam.cpp:
 	extab       start:0x80008FBC end:0x80009124
 	extabindex  start:0x80024668 end:0x80024884
 	.text       start:0x8009D604 end:0x800A3B24
@@ -428,7 +428,7 @@ kyoshin/appgame/cf/CtrlObjectParam.cpp:
 	.sbss       start:0x80666788 end:0x80666790
 	.sdata2     start:0x80668FF8 end:0x80669058
 
-kyoshin/appgame/code_800A3B24.cpp:
+kyoshin/code_800A3B24.cpp:
 	extab       start:0x80009124 end:0x80009344
 	extabindex  start:0x80024884 end:0x80024B84
 	.text       start:0x800A3B24 end:0x800AA008
@@ -439,7 +439,7 @@ kyoshin/appgame/code_800A3B24.cpp:
 	.sbss       start:0x80666790 end:0x806667A0
 	.sdata2     start:0x80669058 end:0x806690B0
 
-kyoshin/appgame/code_800AA008.cpp:
+kyoshin/code_800AA008.cpp:
 	extab       start:0x80009344 end:0x80009364
 	extabindex  start:0x80024B84 end:0x80024BB4
 	.text       start:0x800AA008 end:0x800AABD4
@@ -449,32 +449,32 @@ kyoshin/appgame/code_800AA008.cpp:
 	.bss        start:0x80576478 end:0x805764C0
 	.sdata2     start:0x806690B0 end:0x806691D8
 
-kyoshin/appgame/cf/CfCollCircleImpl.cpp:
+kyoshin/cf/CfCollCircleImpl.cpp:
 	extab       start:0x80009364 end:0x80009384
 	extabindex  start:0x80024BB4 end:0x80024BCC
 	.text       start:0x800AABD4 end:0x800AAD28
 
-kyoshin/appgame/cf/CfCollSphereImpl.cpp:
+kyoshin/cf/CfCollSphereImpl.cpp:
 	extab       start:0x80009384 end:0x80009394
 	extabindex  start:0x80024BCC end:0x80024BE4
 	.text       start:0x800AAD28 end:0x800AAE24
 
-kyoshin/appgame/cf/CfCollAABBImpl.cpp:
+kyoshin/cf/CfCollAABBImpl.cpp:
 	extab       start:0x80009394 end:0x800093AC
 	extabindex  start:0x80024BE4 end:0x80024BF0
 	.text       start:0x800AAE24 end:0x800AB010
 
-kyoshin/appgame/cf/CfCollCylinderImpl.cpp:
+kyoshin/cf/CfCollCylinderImpl.cpp:
 	extab       start:0x800093AC end:0x800093BC
 	extabindex  start:0x80024BF0 end:0x80024C08
 	.text       start:0x800AB010 end:0x800AB2E4
 
-kyoshin/appgame/cf/CfCollCapsuleImpl.cpp:
+kyoshin/cf/CfCollCapsuleImpl.cpp:
 	extab       start:0x800093BC end:0x800093C4
 	extabindex  start:0x80024C08 end:0x80024C14
 	.text       start:0x800AB2E4 end:0x800AB3D0
 
-kyoshin/appgame/cf/object/CfObjectColl.cpp:
+kyoshin/cf/object/CfObjectColl.cpp:
 	extab       start:0x800093C4 end:0x80009480
 	extabindex  start:0x80024C14 end:0x80024D10
 	.text       start:0x800AB3D0 end:0x800AC62C
@@ -484,14 +484,14 @@ kyoshin/appgame/cf/object/CfObjectColl.cpp:
 	.sbss       start:0x806667A0 end:0x806667C8
 	.sdata2     start:0x806691D8 end:0x80669220
 
-kyoshin/appgame/cf/object/CfObjectEff.cpp:
+kyoshin/cf/object/CfObjectEff.cpp:
 	extab       start:0x80009480 end:0x80009584
 	extabindex  start:0x80024D10 end:0x80024E18
 	.text       start:0x800AC62C end:0x800AD888
 	.data       start:0x8052C028 end:0x8052C1E8
 	.sdata2     start:0x80669220 end:0x80669230
 
-kyoshin/appgame/cf/object/CfObjectEne.cpp:
+kyoshin/cf/object/CfObjectEne.cpp:
 	extab       start:0x80009584 end:0x8000964C
 	extabindex  start:0x80024E18 end:0x80024F08
 	.text       start:0x800AD888 end:0x800B06A4
@@ -500,7 +500,7 @@ kyoshin/appgame/cf/object/CfObjectEne.cpp:
 	.sdata      start:0x806645B0 end:0x806645C0
 	.sdata2     start:0x80669230 end:0x80669298
 
-kyoshin/appgame/code_800B06A4.cpp:
+kyoshin/code_800B06A4.cpp:
 	extab       start:0x8000964C end:0x80009AE4
 	extabindex  start:0x80024F08 end:0x80025574
 	.text       start:0x800B06A4 end:0x800B9A70
@@ -512,7 +512,7 @@ kyoshin/appgame/code_800B06A4.cpp:
 	.sbss       start:0x806667C8 end:0x806667F0
 	.sdata2     start:0x80669298 end:0x80669300
 
-kyoshin/appgame/cf/object/CfObjectMap.cpp:
+kyoshin/cf/object/CfObjectMap.cpp:
 	extab       start:0x80009AE4 end:0x80009B68
 	extabindex  start:0x80025574 end:0x800255EC
 	.text       start:0x800B9A70 end:0x800BA7E8
@@ -521,7 +521,7 @@ kyoshin/appgame/cf/object/CfObjectMap.cpp:
 	.sdata      start:0x80664600 end:0x80664608
 	.sdata2     start:0x80669300 end:0x80669330
 
-kyoshin/appgame/cf/object/CfObjectModel.cpp:
+kyoshin/cf/object/CfObjectModel.cpp:
 	extab       start:0x80009B68 end:0x80009C8C
 	extabindex  start:0x800255EC end:0x80025784
 	.text       start:0x800BA7E8 end:0x800BBC4C
@@ -529,7 +529,7 @@ kyoshin/appgame/cf/object/CfObjectModel.cpp:
 	.data       start:0x8052CAE8 end:0x8052CE60
 	.sdata2     start:0x80669330 end:0x80669350
 
-kyoshin/appgame/cf/object/CfObjectMove.cpp:
+kyoshin/cf/object/CfObjectMove.cpp:
 	extab       start:0x80009C8C end:0x80009EB8
 	extabindex  start:0x80025784 end:0x800259DC
 	.text       start:0x800BBC4C end:0x800BF340
@@ -537,7 +537,7 @@ kyoshin/appgame/cf/object/CfObjectMove.cpp:
 	.data       start:0x8052CE60 end:0x8052D088
 	.sdata2     start:0x80669350 end:0x806693A8
 
-kyoshin/appgame/cf/object/CfObjectNpc.cpp:
+kyoshin/cf/object/CfObjectNpc.cpp:
 	extab       start:0x80009EB8 end:0x80009F18
 	extabindex  start:0x800259DC end:0x80025A30
 	.text       start:0x800BF340 end:0x800BF98C
@@ -546,7 +546,7 @@ kyoshin/appgame/cf/object/CfObjectNpc.cpp:
 	.sdata      start:0x80664608 end:0x80664610
 	.sdata2     start:0x806693A8 end:0x806693D0
 
-kyoshin/appgame/cf/object/CfObjectObj.cpp:
+kyoshin/cf/object/CfObjectObj.cpp:
 	extab       start:0x80009F18 end:0x80009F70
 	extabindex  start:0x80025A30 end:0x80025A78
 	.text       start:0x800BF98C end:0x800BFC90
@@ -554,7 +554,7 @@ kyoshin/appgame/cf/object/CfObjectObj.cpp:
 	.data       start:0x8052D2E8 end:0x8052D570
 	.sdata      start:0x80664610 end:0x80664620
 
-kyoshin/appgame/cf/object/CfObjectPc.cpp:
+kyoshin/cf/object/CfObjectPc.cpp:
 	extab       start:0x80009F70 end:0x8000A058
 	extabindex  start:0x80025A78 end:0x80025B98
 	.text       start:0x800BFC90 end:0x800C1274
@@ -562,7 +562,7 @@ kyoshin/appgame/cf/object/CfObjectPc.cpp:
 	.data       start:0x8052D570 end:0x8052DB80
 	.sdata2     start:0x806693D0 end:0x80669410
 
-kyoshin/appgame/cf/object/CfObjectPoint.cpp:
+kyoshin/cf/object/CfObjectPoint.cpp:
 	extab       start:0x8000A058 end:0x8000A0AC
 	extabindex  start:0x80025B98 end:0x80025BF8
 	.text       start:0x800C1274 end:0x800C17DC
@@ -570,7 +570,7 @@ kyoshin/appgame/cf/object/CfObjectPoint.cpp:
 	.data       start:0x8052DB80 end:0x8052DCF8
 	.sdata2     start:0x80669410 end:0x80669420
 
-kyoshin/appgame/cf/code_800C17DC.cpp:
+kyoshin/cf/code_800C17DC.cpp:
 	extab       start:0x8000A0AC end:0x8000A0E4
 	extabindex  start:0x80025BF8 end:0x80025C4C
 	.text       start:0x800C17DC end:0x800C1F44
@@ -629,7 +629,7 @@ kyoshin/cfsys/CfObjectImplEne.cpp:
 	.sdata      start:0x80664640 end:0x80664650
 	.sdata2     start:0x806695A0 end:0x806695C0
 
-kyoshin/appgame/cf/CtrlAct.cpp:
+kyoshin/cf/CtrlAct.cpp:
 	extab       start:0x8000A4FC end:0x8000A5FC
 	extabindex  start:0x80026018 end:0x80026144
 	.text       start:0x800D10DC end:0x800D7A04
@@ -640,7 +640,7 @@ kyoshin/appgame/cf/CtrlAct.cpp:
 	.sbss       start:0x806667F0 end:0x806667F8
 	.sdata2     start:0x806695C0 end:0x80669698
 
-kyoshin/appgame/cf/CBattleManager.cpp:
+kyoshin/cf/CBattleManager.cpp:
 	extab       start:0x8000A5FC end:0x8000ABB8
 	extabindex  start:0x80026144 end:0x8002642C
 	.text       start:0x800D7A04 end:0x800F42AC
@@ -650,13 +650,13 @@ kyoshin/appgame/cf/CBattleManager.cpp:
 	.sbss       start:0x806667F8 end:0x80666800
 	.sdata2     start:0x80669698 end:0x80669758
 
-kyoshin/appgame/cf/code_800F42AC.cpp:
+kyoshin/cf/code_800F42AC.cpp:
 	extab       start:0x8000ABB8 end:0x8000ABE0
 	extabindex  start:0x8002642C end:0x80026468
 	.text       start:0x800F42AC end:0x800F47C8
 	.sdata2     start:0x80669758 end:0x80669780
 
-kyoshin/appgame/cf/CfObjectEnumList.cpp:
+kyoshin/cf/CfObjectEnumList.cpp:
 	extab       start:0x8000ABE0 end:0x8000ACEC
 	extabindex  start:0x80026468 end:0x800265DC
 	.text       start:0x800F47C8 end:0x800FD774
@@ -667,7 +667,7 @@ kyoshin/appgame/cf/CfObjectEnumList.cpp:
 	.sbss       start:0x80666800 end:0x80666808
 	.sdata2     start:0x80669780 end:0x806697C0
 
-kyoshin/appgame/cf/CfObjectSelectorObj.cpp:
+kyoshin/cf/CfObjectSelectorObj.cpp:
 	extab       start:0x8000ACEC end:0x8000AD68
 	extabindex  start:0x800265DC end:0x8002663C
 	.text       start:0x800FD774 end:0x800FEA30
@@ -678,7 +678,7 @@ kyoshin/appgame/cf/CfObjectSelectorObj.cpp:
 	.sbss       start:0x80666808 end:0x80666810
 	.sdata2     start:0x806697C0 end:0x806697D8
 
-kyoshin/appgame/CMainMenu.cpp:
+kyoshin/CMainMenu.cpp:
 	extab       start:0x8000AD68 end:0x8000AF14
 	extabindex  start:0x8002663C end:0x8002675C
 	.text       start:0x800FEA30 end:0x80102020
@@ -688,7 +688,7 @@ kyoshin/appgame/CMainMenu.cpp:
 	.sbss       start:0x80666810 end:0x80666818
 	.sdata2     start:0x806697D8 end:0x806697F0
 
-kyoshin/appgame/menu/CMenuArtsSelect.cpp:
+kyoshin/menu/CMenuArtsSelect.cpp:
 	extab       start:0x8000AF14 end:0x8000B0AC
 	extabindex  start:0x8002675C end:0x800268D0
 	.text       start:0x80102020 end:0x80108C58
@@ -698,7 +698,7 @@ kyoshin/appgame/menu/CMenuArtsSelect.cpp:
 	.sbss       start:0x80666818 end:0x80666820
 	.sdata2     start:0x806697F0 end:0x80669830
 
-kyoshin/appgame/menu/CMenuBattleDamage.cpp:
+kyoshin/menu/CMenuBattleDamage.cpp:
 	extab       start:0x8000B0AC end:0x8000B1A4
 	extabindex  start:0x800268D0 end:0x80026990
 	.text       start:0x80108C58 end:0x8010ADA4
@@ -708,7 +708,7 @@ kyoshin/appgame/menu/CMenuBattleDamage.cpp:
 	.sbss       start:0x80666820 end:0x80666828
 	.sdata2     start:0x80669830 end:0x80669858
 
-kyoshin/appgame/menu/CMenuBattlePlayerState.cpp:
+kyoshin/menu/CMenuBattlePlayerState.cpp:
 	extab       start:0x8000B1A4 end:0x8000B330
 	extabindex  start:0x80026990 end:0x80026A38
 	.text       start:0x8010ADA4 end:0x8010EA64
@@ -719,7 +719,7 @@ kyoshin/appgame/menu/CMenuBattlePlayerState.cpp:
 	.sbss       start:0x80666828 end:0x80666848
 	.sdata2     start:0x80669858 end:0x806698B0
 
-kyoshin/appgame/menu/CMenuEnemyState.cpp:
+kyoshin/menu/CMenuEnemyState.cpp:
 	extab       start:0x8000B330 end:0x8000B4C0
 	extabindex  start:0x80026A38 end:0x80026B58
 	.text       start:0x8010EA64 end:0x801135E0
@@ -731,7 +731,7 @@ kyoshin/appgame/menu/CMenuEnemyState.cpp:
 	.sbss       start:0x80666848 end:0x80666898
 	.sdata2     start:0x806698B0 end:0x80669920
 
-kyoshin/appgame/menu/CMenuFade.cpp:
+kyoshin/menu/CMenuFade.cpp:
 	extab       start:0x8000B4C0 end:0x8000B570
 	extabindex  start:0x80026B58 end:0x80026BAC
 	.text       start:0x801135E0 end:0x80113E50
@@ -741,7 +741,7 @@ kyoshin/appgame/menu/CMenuFade.cpp:
 	.sbss       start:0x80666898 end:0x806668A0
 	.sdata2     start:0x80669920 end:0x80669940
 
-kyoshin/appgame/menu/CMenuKeyAssign.cpp:
+kyoshin/menu/CMenuKeyAssign.cpp:
 	extab       start:0x8000B570 end:0x8000B640
 	extabindex  start:0x80026BAC end:0x80026C30
 	.text       start:0x80113E50 end:0x80115FD0
@@ -751,7 +751,7 @@ kyoshin/appgame/menu/CMenuKeyAssign.cpp:
 	.sbss       start:0x806668A0 end:0x806668A8
 	.sdata2     start:0x80669940 end:0x80669950
 
-kyoshin/appgame/CMiniMap.cpp:
+kyoshin/CMiniMap.cpp:
 	extab       start:0x8000B640 end:0x8000B8D0
 	extabindex  start:0x80026C30 end:0x80026D5C
 	.text       start:0x80115FD0 end:0x8011C44C
@@ -762,7 +762,7 @@ kyoshin/appgame/CMiniMap.cpp:
 	.sbss       start:0x806668A8 end:0x806668B8
 	.sdata2     start:0x80669950 end:0x80669998
 
-kyoshin/appgame/menu/CMenuQuestLog.cpp:
+kyoshin/menu/CMenuQuestLog.cpp:
 	extab       start:0x8000B8D0 end:0x8000BA8C
 	extabindex  start:0x80026D5C end:0x80026E40
 	.text       start:0x8011C44C end:0x8011D338
@@ -771,7 +771,7 @@ kyoshin/appgame/menu/CMenuQuestLog.cpp:
 	.sdata      start:0x80664768 end:0x80664770
 	.sbss       start:0x806668B8 end:0x806668C0
 
-kyoshin/appgame/menu/CMenuSymbolMark.cpp:
+kyoshin/menu/CMenuSymbolMark.cpp:
 	extab       start:0x8000BA8C end:0x8000BC10
 	extabindex  start:0x80026E40 end:0x80026F6C
 	.text       start:0x8011D338 end:0x80122164
@@ -781,7 +781,7 @@ kyoshin/appgame/menu/CMenuSymbolMark.cpp:
 	.sbss       start:0x806668C0 end:0x806668C8
 	.sdata2     start:0x80669998 end:0x80669A00
 
-kyoshin/appgame/CQuestWindow.cpp:
+kyoshin/CQuestWindow.cpp:
 	extab       start:0x8000BC10 end:0x8000BDB4
 	extabindex  start:0x80026F6C end:0x8002705C
 	.text       start:0x80122164 end:0x801245EC
@@ -791,7 +791,7 @@ kyoshin/appgame/CQuestWindow.cpp:
 	.sbss       start:0x806668C8 end:0x806668D0
 	.sdata2     start:0x80669A00 end:0x80669A48
 
-kyoshin/appgame/CSystemWindow.cpp:
+kyoshin/CSystemWindow.cpp:
 	extab       start:0x8000BDB4 end:0x8000BE54
 	extabindex  start:0x8002705C end:0x800270B0
 	.text       start:0x801245EC end:0x80124B80
@@ -800,12 +800,12 @@ kyoshin/appgame/CSystemWindow.cpp:
 	.sdata      start:0x806647D0 end:0x806647E0
 	.sbss       start:0x806668D0 end:0x806668D8
 
-kyoshin/appgame/CSysWinSelect.cpp:
+kyoshin/CSysWinSelect.cpp:
 	extab       start:0x8000BE54 end:0x8000BF38
 	extabindex  start:0x800270B0 end:0x8002711C
 	.text       start:0x80124B80 end:0x80125310
 
-kyoshin/appgame/CTagProcessor.cpp:
+kyoshin/CTagProcessor.cpp:
 	extab       start:0x8000BF38 end:0x8000C21C
 	extabindex  start:0x8002711C end:0x800274F4
 	.text       start:0x80125310 end:0x8012BC44
@@ -816,7 +816,7 @@ kyoshin/appgame/CTagProcessor.cpp:
 	.sbss       start:0x806668D8 end:0x80666938
 	.sdata2     start:0x80669A48 end:0x80669B30
 
-kyoshin/appgame/CTalkWindow.cpp:
+kyoshin/CTalkWindow.cpp:
 	extab       start:0x8000C21C end:0x8000C2EC
 	extabindex  start:0x800274F4 end:0x80027578
 	.text       start:0x8012BC44 end:0x8012DF90
@@ -828,7 +828,7 @@ kyoshin/appgame/CTalkWindow.cpp:
 	.sbss       start:0x80666938 end:0x80666940
 	.sdata2     start:0x80669B30 end:0x80669B90
 
-kyoshin/appgame/CUIBattleManager.cpp:
+kyoshin/CUIBattleManager.cpp:
 	extab       start:0x8000C2EC end:0x8000C3F8
 	extabindex  start:0x80027578 end:0x80027698
 	.text       start:0x8012DF90 end:0x8012FF74
@@ -837,7 +837,7 @@ kyoshin/appgame/CUIBattleManager.cpp:
 	.sdata      start:0x80664A70 end:0x80664AA0
 	.sbss       start:0x80666940 end:0x80666948
 
-kyoshin/appgame/CUICfManager.cpp:
+kyoshin/CUICfManager.cpp:
 	extab       start:0x8000C3F8 end:0x8000C778
 	extabindex  start:0x80027698 end:0x80027998
 	.text       start:0x8012FF74 end:0x80135FDC
@@ -847,7 +847,7 @@ kyoshin/appgame/CUICfManager.cpp:
 	.sbss       start:0x80666948 end:0x80666950
 	.sdata2     start:0x80669B90 end:0x80669BA0
 
-kyoshin/appgame/code_80135FDC.cpp:
+kyoshin/code_80135FDC.cpp:
 	extab       start:0x8000C778 end:0x8000CB50
 	extabindex  start:0x80027998 end:0x80027DDC
 	.text       start:0x80135FDC end:0x8013C068
@@ -858,7 +858,7 @@ kyoshin/appgame/code_80135FDC.cpp:
 	.sbss       start:0x80666950 end:0x80666978
 	.sdata2     start:0x80669BA0 end:0x80669C28
 
-kyoshin/appgame/CUIWindowManager.cpp:
+kyoshin/CUIWindowManager.cpp:
 	extab       start:0x8000CB50 end:0x8000CD84
 	extabindex  start:0x80027DDC end:0x80028094
 	.text       start:0x8013C068 end:0x8014148C
@@ -869,7 +869,7 @@ kyoshin/appgame/CUIWindowManager.cpp:
 	.sdata      start:0x80664AF0 end:0x80664B20
 	.sbss       start:0x80666978 end:0x80666980
 
-kyoshin/appgame/cf/CfBdat.cpp:
+kyoshin/cf/CfBdat.cpp:
 	extab       start:0x8000CD84 end:0x8000CE14
 	extabindex  start:0x80028094 end:0x8002816C
 	.text       start:0x8014148C end:0x8014255C
@@ -881,7 +881,7 @@ kyoshin/appgame/cf/CfBdat.cpp:
 	.sbss       start:0x80666980 end:0x80666A88
 	.sdata2     start:0x80669C28 end:0x80669C60
 
-kyoshin/appgame/menu/CMenuUpdate.cpp:
+kyoshin/menu/CMenuUpdate.cpp:
 	extab       start:0x8000CE14 end:0x8000CF14
 	extabindex  start:0x8002816C end:0x80028238
 	.text       start:0x8014255C end:0x801445A8
@@ -891,7 +891,7 @@ kyoshin/appgame/menu/CMenuUpdate.cpp:
 	.sbss       start:0x80666A88 end:0x80666A90
 	.sdata2     start:0x80669C60 end:0x80669C88
 
-kyoshin/appgame/menu/CMenuLandTelop.cpp:
+kyoshin/menu/CMenuLandTelop.cpp:
 	extab       start:0x8000CF14 end:0x8000CFE4
 	extabindex  start:0x80028238 end:0x800282BC
 	.text       start:0x801445A8 end:0x80145B1C
@@ -901,7 +901,7 @@ kyoshin/appgame/menu/CMenuLandTelop.cpp:
 	.sbss       start:0x80666A90 end:0x80666A98
 	.sdata2     start:0x80669C88 end:0x80669CC0
 
-kyoshin/appgame/cf/object/CBattleState.cpp:
+kyoshin/cf/object/CBattleState.cpp:
 	extab       start:0x8000CFE4 end:0x8000D04C
 	extabindex  start:0x800282BC end:0x80028358
 	.text       start:0x80145B1C end:0x80149780
@@ -910,7 +910,7 @@ kyoshin/appgame/cf/object/CBattleState.cpp:
 	.sdata      start:0x80664B40 end:0x80664B48
 	.sdata2     start:0x80669CC0 end:0x80669CD8
 
-kyoshin/appgame/menu/CMenuGetItem.cpp:
+kyoshin/menu/CMenuGetItem.cpp:
 	extab       start:0x8000D04C end:0x8000D194
 	extabindex  start:0x80028358 end:0x8002840C
 	.text       start:0x80149780 end:0x8014A86C
@@ -920,7 +920,7 @@ kyoshin/appgame/menu/CMenuGetItem.cpp:
 	.sbss       start:0x80666A98 end:0x80666AA0
 	.sdata2     start:0x80669CD8 end:0x80669CE8
 
-kyoshin/appgame/cf/object/CAIAction.cpp:
+kyoshin/cf/object/CAIAction.cpp:
 	extab       start:0x8000D194 end:0x8000D32C
 	extabindex  start:0x8002840C end:0x800284C0
 	.text       start:0x8014A86C end:0x80153BEC
@@ -929,7 +929,7 @@ kyoshin/appgame/cf/object/CAIAction.cpp:
 	.sbss       start:0x80666AA0 end:0x80666AA8
 	.sdata2     start:0x80669CE8 end:0x80669D20
 
-kyoshin/appgame/cf/CArtsSet.cpp:
+kyoshin/cf/CArtsSet.cpp:
 	extab       start:0x8000D32C end:0x8000D344
 	extabindex  start:0x800284C0 end:0x800284E4
 	.text       start:0x80153BEC end:0x80153F00
@@ -937,7 +937,7 @@ kyoshin/appgame/cf/CArtsSet.cpp:
 	.data       start:0x80532D78 end:0x80532DB8
 	.sdata      start:0x80664B50 end:0x80664B70
 
-kyoshin/appgame/cf/CArtsParam.cpp:
+kyoshin/cf/CArtsParam.cpp:
 	extab       start:0x8000D344 end:0x8000D3AC
 	extabindex  start:0x800284E4 end:0x80028550
 	.text       start:0x80153F00 end:0x80155660
@@ -947,7 +947,7 @@ kyoshin/appgame/cf/CArtsParam.cpp:
 	.sdata      start:0x80664B70 end:0x80664B80
 	.sdata2     start:0x80669D20 end:0x80669D60
 
-kyoshin/appgame/cf/CItem.cpp:
+kyoshin/cf/CItem.cpp:
 	extab       start:0x8000D3AC end:0x8000D614
 	extabindex  start:0x80028550 end:0x800288EC
 	.text       start:0x80155660 end:0x8015BAA8
@@ -959,7 +959,7 @@ kyoshin/appgame/cf/CItem.cpp:
 	.sbss       start:0x80666AA8 end:0x80666B18
 	.sdata2     start:0x80669D60 end:0x80669DF0
 
-kyoshin/appgame/cf/CCharEffect.cpp:
+kyoshin/cf/CCharEffect.cpp:
 	extab       start:0x8000D614 end:0x8000D67C
 	extabindex  start:0x800288EC end:0x80028988
 	.text       start:0x8015BAA8 end:0x8015CCBC
@@ -969,7 +969,7 @@ kyoshin/appgame/cf/CCharEffect.cpp:
 	.sbss       start:0x80666B18 end:0x80666B20
 	.sdata2     start:0x80669DF0 end:0x80669E00
 
-kyoshin/appgame/cf/CCharEffectEne.cpp:
+kyoshin/cf/CCharEffectEne.cpp:
 	extab       start:0x8000D67C end:0x8000D6AC
 	extabindex  start:0x80028988 end:0x800289D0
 	.text       start:0x8015CCBC end:0x8015D0B8
@@ -977,7 +977,7 @@ kyoshin/appgame/cf/CCharEffectEne.cpp:
 	.data       start:0x805335A8 end:0x80533668
 	.sdata      start:0x80664C30 end:0x80664C50
 
-kyoshin/appgame/CCol6System.cpp:
+kyoshin/CCol6System.cpp:
 	extab       start:0x8000D6AC end:0x8000DA98
 	extabindex  start:0x800289D0 end:0x80028BBC
 	.text       start:0x8015D0B8 end:0x80163FB8
@@ -987,12 +987,12 @@ kyoshin/appgame/CCol6System.cpp:
 	.sbss       start:0x80666B20 end:0x80666B30
 	.sdata2     start:0x80669E00 end:0x80669E48
 
-kyoshin/appgame/CCol6Invite.cpp:
+kyoshin/CCol6Invite.cpp:
 	extab       start:0x8000DA98 end:0x8000DAA0
 	extabindex  start:0x80028BBC end:0x80028BC8
 	.text       start:0x80163FB8 end:0x80164120
 
-kyoshin/appgame/cf/CTaskREvent.cpp:
+kyoshin/cf/CTaskREvent.cpp:
 	extab       start:0x8000DAA0 end:0x8000DD00
 	extabindex  start:0x80028BC8 end:0x80028D24
 	.text       start:0x80164120 end:0x80166704
@@ -1002,7 +1002,7 @@ kyoshin/appgame/cf/CTaskREvent.cpp:
 	.sbss       start:0x80666B30 end:0x80666B40
 	.sdata2     start:0x80669E48 end:0x80669F10
 
-kyoshin/appgame/cf/CInfoCf.cpp:
+kyoshin/cf/CInfoCf.cpp:
 	extab       start:0x8000DD00 end:0x8000DDDC
 	extabindex  start:0x80028D24 end:0x80028DB4
 	.text       start:0x80166704 end:0x801678F0
@@ -1011,7 +1011,7 @@ kyoshin/appgame/cf/CInfoCf.cpp:
 	.sdata      start:0x80664C90 end:0x80664C98
 	.sbss       start:0x80666B40 end:0x80666B48
 
-kyoshin/appgame/menu/CMenuItem.cpp:
+kyoshin/menu/CMenuItem.cpp:
 	extab       start:0x8000DDDC end:0x8000DE34
 	extabindex  start:0x80028DB4 end:0x80028DCC
 	.text       start:0x801678F0 end:0x80167C40
@@ -1020,7 +1020,7 @@ kyoshin/appgame/menu/CMenuItem.cpp:
 	.sdata      start:0x80664C98 end:0x80664CA0
 	.sbss       start:0x80666B48 end:0x80666B50
 
-kyoshin/appgame/realtimeevt/CREvtMem.cpp:
+kyoshin/realtimeevt/CREvtMem.cpp:
 	extab       start:0x8000DE34 end:0x8000DE54
 	extabindex  start:0x80028DCC end:0x80028DFC
 	.text       start:0x80167C40 end:0x8016803C
@@ -1030,7 +1030,7 @@ kyoshin/appgame/realtimeevt/CREvtMem.cpp:
 	.sbss       start:0x80666B50 end:0x80666B58
 	.sdata2     start:0x80669F10 end:0x80669F18
 
-kyoshin/appgame/cf/CTaskREvtSequence.cpp:
+kyoshin/cf/CTaskREvtSequence.cpp:
 	extab       start:0x8000DE54 end:0x8000E048
 	extabindex  start:0x80028DFC end:0x80028FF4
 	.text       start:0x8016803C end:0x8016C7F0
@@ -1040,7 +1040,7 @@ kyoshin/appgame/cf/CTaskREvtSequence.cpp:
 	.sbss       start:0x80666B58 end:0x80666B60
 	.sdata2     start:0x80669F18 end:0x80669F50
 
-kyoshin/appgame/cf/CfResObjImpl.cpp:
+kyoshin/cf/CfResObjImpl.cpp:
 	extab       start:0x8000E048 end:0x8000E078
 	extabindex  start:0x80028FF4 end:0x8002903C
 	.text       start:0x8016C7F0 end:0x8016CDC0
@@ -1050,7 +1050,7 @@ kyoshin/appgame/cf/CfResObjImpl.cpp:
 	.sbss       start:0x80666B60 end:0x80666B68
 	.sdata2     start:0x80669F50 end:0x80669F58
 
-kyoshin/appgame/cf/CfResReloadImpl.cpp:
+kyoshin/cf/CfResReloadImpl.cpp:
 	extab       start:0x8000E078 end:0x8000E150
 	extabindex  start:0x8002903C end:0x80029180
 	.text       start:0x8016CDC0 end:0x8016ED50
@@ -1061,7 +1061,7 @@ kyoshin/appgame/cf/CfResReloadImpl.cpp:
 	.sbss       start:0x80666B68 end:0x80666B80
 	.sdata2     start:0x80669F58 end:0x80669FC0
 
-kyoshin/appgame/cf/CfMapEffectManager.cpp:
+kyoshin/cf/CfMapEffectManager.cpp:
 	extab       start:0x8000E150 end:0x8000E1BC
 	extabindex  start:0x80029180 end:0x80029204
 	.text       start:0x8016ED50 end:0x8016FE68
@@ -1071,14 +1071,14 @@ kyoshin/appgame/cf/CfMapEffectManager.cpp:
 	.sbss       start:0x80666B80 end:0x80666B88
 	.sdata2     start:0x80669FC0 end:0x80669FF8
 
-kyoshin/appgame/cf/object/CfObjectActor.cpp:
+kyoshin/cf/object/CfObjectActor.cpp:
 	extab       start:0x8000E1BC end:0x8000E254
 	extabindex  start:0x80029204 end:0x800292AC
 	.text       start:0x8016FE68 end:0x801725E4
 	.data       start:0x80534860 end:0x80534E40
 	.sdata2     start:0x80669FF8 end:0x8066A030
 
-kyoshin/appgame/realtimeevt/CREvtModel.cpp:
+kyoshin/realtimeevt/CREvtModel.cpp:
 	extab       start:0x8000E254 end:0x8000E2F0
 	extabindex  start:0x800292AC end:0x80029330
 	.text       start:0x801725E4 end:0x801731B4
@@ -1087,7 +1087,7 @@ kyoshin/appgame/realtimeevt/CREvtModel.cpp:
 	.sdata      start:0x80664CF0 end:0x80664D18
 	.sdata2     start:0x8066A030 end:0x8066A040
 
-kyoshin/appgame/cf/CfMapItemManager.cpp:
+kyoshin/cf/CfMapItemManager.cpp:
 	extab       start:0x8000E2F0 end:0x8000E380
 	extabindex  start:0x80029330 end:0x80029408
 	.text       start:0x801731B4 end:0x80175264
@@ -1097,7 +1097,7 @@ kyoshin/appgame/cf/CfMapItemManager.cpp:
 	.sbss       start:0x80666B88 end:0x80666B90
 	.sdata2     start:0x8066A040 end:0x8066A0A0
 
-kyoshin/appgame/cf/object/CActorParam.cpp:
+kyoshin/cf/object/CActorParam.cpp:
 	extab       start:0x8000E380 end:0x8000E540
 	extabindex  start:0x80029408 end:0x800295C4
 	.text       start:0x80175264 end:0x8017ED94
@@ -1105,7 +1105,7 @@ kyoshin/appgame/cf/object/CActorParam.cpp:
 	.data       start:0x80534F00 end:0x805353B8
 	.sdata2     start:0x8066A0A0 end:0x8066A130
 
-kyoshin/appgame/menu/CMenuZeal.cpp:
+kyoshin/menu/CMenuZeal.cpp:
 	extab       start:0x8000E540 end:0x8000E600
 	extabindex  start:0x800295C4 end:0x80029630
 	.text       start:0x8017ED94 end:0x8017FF78
@@ -1115,7 +1115,7 @@ kyoshin/appgame/menu/CMenuZeal.cpp:
 	.sbss       start:0x80666B90 end:0x80666B98
 	.sdata2     start:0x8066A130 end:0x8066A158
 
-kyoshin/appgame/realtimeevt/CREvtCamera.cpp:
+kyoshin/realtimeevt/CREvtCamera.cpp:
 	extab       start:0x8000E600 end:0x8000E668
 	extabindex  start:0x80029630 end:0x80029690
 	.text       start:0x8017FF78 end:0x801809B8
@@ -1125,7 +1125,7 @@ kyoshin/appgame/realtimeevt/CREvtCamera.cpp:
 	.sbss       start:0x80666B98 end:0x80666BA0
 	.sdata2     start:0x8066A158 end:0x8066A180
 
-kyoshin/appgame/realtimeevt/CREvtModelMap.cpp:
+kyoshin/realtimeevt/CREvtModelMap.cpp:
 	extab       start:0x8000E668 end:0x8000E754
 	extabindex  start:0x80029690 end:0x80029714
 	.text       start:0x801809B8 end:0x80181A5C
@@ -1135,7 +1135,7 @@ kyoshin/appgame/realtimeevt/CREvtModelMap.cpp:
 	.sbss       start:0x80666BA0 end:0x80666BA8
 	.sdata2     start:0x8066A180 end:0x8066A190
 
-kyoshin/appgame/realtimeevt/CREvtModelObj.cpp:
+kyoshin/realtimeevt/CREvtModelObj.cpp:
 	extab       start:0x8000E754 end:0x8000E834
 	extabindex  start:0x80029714 end:0x800297B0
 	.text       start:0x80181A5C end:0x80183724
@@ -1145,7 +1145,7 @@ kyoshin/appgame/realtimeevt/CREvtModelObj.cpp:
 	.sbss       start:0x80666BA8 end:0x80666BB8
 	.sdata2     start:0x8066A190 end:0x8066A1D8
 
-kyoshin/appgame/realtimeevt/CREvtModelPc.cpp:
+kyoshin/realtimeevt/CREvtModelPc.cpp:
 	extab       start:0x8000E834 end:0x8000E8E8
 	extabindex  start:0x800297B0 end:0x80029840
 	.text       start:0x80183724 end:0x80184B14
@@ -1154,7 +1154,7 @@ kyoshin/appgame/realtimeevt/CREvtModelPc.cpp:
 	.sdata      start:0x80664D60 end:0x80664D68
 	.sdata2     start:0x8066A1D8 end:0x8066A1E8
 
-kyoshin/appgame/realtimeevt/CREvtEffect.cpp:
+kyoshin/realtimeevt/CREvtEffect.cpp:
 	extab       start:0x8000E8E8 end:0x8000E984
 	extabindex  start:0x80029840 end:0x800298AC
 	.text       start:0x80184B14 end:0x80185690
@@ -1163,13 +1163,13 @@ kyoshin/appgame/realtimeevt/CREvtEffect.cpp:
 	.sdata      start:0x80664D68 end:0x80664D80
 	.sdata2     start:0x8066A1E8 end:0x8066A228
 
-kyoshin/appgame/realtimeevt/CREvtObj.cpp:
+kyoshin/realtimeevt/CREvtObj.cpp:
 	extab       start:0x8000E984 end:0x8000E994
 	extabindex  start:0x800298AC end:0x800298C4
 	.text       start:0x80185690 end:0x80185760
 	.data       start:0x80535AF0 end:0x80535B18
 
-kyoshin/appgame/plugin/pluginTime.cpp:
+kyoshin/plugin/pluginTime.cpp:
 	extab       start:0x8000E994 end:0x8000E9A4
 	extabindex  start:0x800298C4 end:0x800298DC
 	.text       start:0x80185760 end:0x80185808
@@ -1177,7 +1177,7 @@ kyoshin/appgame/plugin/pluginTime.cpp:
 	.data       start:0x80535B18 end:0x80535B30
 	.sdata2     start:0x8066A228 end:0x8066A238
 
-kyoshin/appgame/plugin/pluginBtl.cpp:
+kyoshin/plugin/pluginBtl.cpp:
 	extab       start:0x8000E9A4 end:0x8000EA64
 	extabindex  start:0x800298DC end:0x800299B4
 	.text       start:0x80185808 end:0x801862C0
@@ -1185,7 +1185,7 @@ kyoshin/appgame/plugin/pluginBtl.cpp:
 	.data       start:0x80535B30 end:0x80535BC8
 	.sdata2     start:0x8066A238 end:0x8066A280
 
-kyoshin/appgame/code_801862C0.cpp:
+kyoshin/code_801862C0.cpp:
 	extab       start:0x8000EA64 end:0x8000EAAC
 	extabindex  start:0x800299B4 end:0x80029A20
 	.text       start:0x801862C0 end:0x80186F00
@@ -1194,7 +1194,7 @@ kyoshin/appgame/code_801862C0.cpp:
 	.sbss       start:0x80666BB8 end:0x80666BC8
 	.sdata2     start:0x8066A280 end:0x8066A2A0
 
-kyoshin/appgame/menu/CMenuPTGauge.cpp:
+kyoshin/menu/CMenuPTGauge.cpp:
 	extab       start:0x8000EAAC end:0x8000EB9C
 	extabindex  start:0x80029A20 end:0x80029AD4
 	.text       start:0x80186F00 end:0x80187F14
@@ -1204,7 +1204,7 @@ kyoshin/appgame/menu/CMenuPTGauge.cpp:
 	.sbss       start:0x80666BC8 end:0x80666BD0
 	.sdata2     start:0x8066A2A0 end:0x8066A2C8
 
-kyoshin/appgame/menu/code_80187F14.cpp:
+kyoshin/menu/code_80187F14.cpp:
 	extab       start:0x8000EB9C end:0x8000EC4C
 	extabindex  start:0x80029AD4 end:0x80029BDC
 	.text       start:0x80187F14 end:0x80189DE8
@@ -1215,7 +1215,7 @@ kyoshin/appgame/menu/code_80187F14.cpp:
 	.sbss       start:0x80666BD0 end:0x80666BD8
 	.sdata2     start:0x8066A2C8 end:0x8066A2E0
 
-kyoshin/appgame/menu/CMenuSelectShop.cpp:
+kyoshin/menu/CMenuSelectShop.cpp:
 	extab       start:0x8000EC4C end:0x8000ED90
 	extabindex  start:0x80029BDC end:0x80029C60
 	.text       start:0x80189DE8 end:0x8018A628
@@ -1224,7 +1224,7 @@ kyoshin/appgame/menu/CMenuSelectShop.cpp:
 	.sdata      start:0x80664DA0 end:0x80664DA8
 	.sbss       start:0x80666BD8 end:0x80666BE0
 
-kyoshin/appgame/menu/CMenuShopSell.cpp:
+kyoshin/menu/CMenuShopSell.cpp:
 	extab       start:0x8000ED90 end:0x8000EEAC
 	extabindex  start:0x80029C60 end:0x80029CE4
 	.text       start:0x8018A628 end:0x8018B6B8
@@ -1233,7 +1233,7 @@ kyoshin/appgame/menu/CMenuShopSell.cpp:
 	.sdata      start:0x80664DA8 end:0x80664DB0
 	.sbss       start:0x80666BE0 end:0x80666BE8
 
-kyoshin/appgame/menu/CMenuShopBuy.cpp:
+kyoshin/menu/CMenuShopBuy.cpp:
 	extab       start:0x8000EEAC end:0x8000EFC8
 	extabindex  start:0x80029CE4 end:0x80029D68
 	.text       start:0x8018B6B8 end:0x8018C5FC
@@ -1243,13 +1243,13 @@ kyoshin/appgame/menu/CMenuShopBuy.cpp:
 	.sbss       start:0x80666BE8 end:0x80666BF0
 	.sdata2     start:0x8066A2E0 end:0x8066A2F0
 
-kyoshin/appgame/menu/code_8018C5FC.cpp:
+kyoshin/menu/code_8018C5FC.cpp:
 	extab       start:0x8000EFC8 end:0x8000EFE0
 	extabindex  start:0x80029D68 end:0x80029D8C
 	.text       start:0x8018C5FC end:0x8018C9C4
 	.sdata2     start:0x8066A2F0 end:0x8066A300
 
-kyoshin/appgame/cf/CfResPcImpl.cpp:
+kyoshin/cf/CfResPcImpl.cpp:
 	extab       start:0x8000EFE0 end:0x8000F11C
 	extabindex  start:0x80029D8C end:0x80029F24
 	.text       start:0x8018C9C4 end:0x8018F8D8
@@ -1258,7 +1258,7 @@ kyoshin/appgame/cf/CfResPcImpl.cpp:
 	.sdata      start:0x80664DB8 end:0x80664DD8
 	.sdata2     start:0x8066A300 end:0x8066A330
 
-kyoshin/appgame/cf/code_8018F8D8.cpp:
+kyoshin/cf/code_8018F8D8.cpp:
 	extab       start:0x8000F11C end:0x8000F2A4
 	extabindex  start:0x80029F24 end:0x8002A0A4
 	.text       start:0x8018F8D8 end:0x80192AB8
@@ -1266,7 +1266,7 @@ kyoshin/appgame/cf/code_8018F8D8.cpp:
 	.sbss       start:0x80666BF0 end:0x80666BF8
 	.sdata2     start:0x8066A330 end:0x8066A358
 
-kyoshin/appgame/menu/CMenuPTState.cpp:
+kyoshin/menu/CMenuPTState.cpp:
 	extab       start:0x8000F2A4 end:0x8000F308
 	extabindex  start:0x8002A0A4 end:0x8002A0C8
 	.text       start:0x80192AB8 end:0x80192DE8
@@ -1275,7 +1275,7 @@ kyoshin/appgame/menu/CMenuPTState.cpp:
 	.sdata      start:0x80664DD8 end:0x80664DE0
 	.sdata2     start:0x8066A358 end:0x8066A370
 
-kyoshin/appgame/cf/CPartsChange.cpp:
+kyoshin/cf/CPartsChange.cpp:
 	extab       start:0x8000F308 end:0x8000F4CC
 	extabindex  start:0x8002A0C8 end:0x8002A350
 	.text       start:0x80192DE8 end:0x801993C4
@@ -1285,7 +1285,7 @@ kyoshin/appgame/cf/CPartsChange.cpp:
 	.sbss       start:0x80666BF8 end:0x80666C08
 	.sdata2     start:0x8066A370 end:0x8066A420
 
-kyoshin/appgame/cf/CtrlMovePC.cpp:
+kyoshin/cf/CtrlMovePC.cpp:
 	extab       start:0x8000F4CC end:0x8000F55C
 	extabindex  start:0x8002A350 end:0x8002A428
 	.text       start:0x801993C4 end:0x8019F690
@@ -1294,7 +1294,7 @@ kyoshin/appgame/cf/CtrlMovePC.cpp:
 	.sdata      start:0x80664E38 end:0x80664E40
 	.sdata2     start:0x8066A420 end:0x8066A518
 
-kyoshin/appgame/cf/CtrlMoveNpc.cpp:
+kyoshin/cf/CtrlMoveNpc.cpp:
 	extab       start:0x8000F55C end:0x8000F58C
 	extabindex  start:0x8002A428 end:0x8002A470
 	.text       start:0x8019F690 end:0x8019FE50
@@ -1304,7 +1304,7 @@ kyoshin/appgame/cf/CtrlMoveNpc.cpp:
 	.sdata      start:0x80664E40 end:0x80664E48
 	.sdata2     start:0x8066A518 end:0x8066A540
 
-kyoshin/appgame/menu/CMenuBattleMode.cpp:
+kyoshin/menu/CMenuBattleMode.cpp:
 	extab       start:0x8000F58C end:0x8000F634
 	extabindex  start:0x8002A470 end:0x8002A4B8
 	.text       start:0x8019FE50 end:0x801A04A4
@@ -1314,7 +1314,7 @@ kyoshin/appgame/menu/CMenuBattleMode.cpp:
 	.sbss       start:0x80666C08 end:0x80666C10
 	.sdata2     start:0x8066A540 end:0x8066A548
 
-kyoshin/appgame/COccCulling.cpp:
+kyoshin/COccCulling.cpp:
 	extab       start:0x8000F634 end:0x8000F6B0
 	extabindex  start:0x8002A4B8 end:0x8002A524
 	.text       start:0x801A04A4 end:0x801A1864
@@ -1325,7 +1325,7 @@ kyoshin/appgame/COccCulling.cpp:
 	.sdata      start:0x80664E50 end:0x80664E58
 	.sdata2     start:0x8066A548 end:0x8066A560
 
-kyoshin/appgame/CSimpleEveTalkWin.cpp:
+kyoshin/CSimpleEveTalkWin.cpp:
 	extab       start:0x8000F6B0 end:0x8000F790
 	extabindex  start:0x8002A524 end:0x8002A590
 	.text       start:0x801A1864 end:0x801A29CC
@@ -1335,7 +1335,7 @@ kyoshin/appgame/CSimpleEveTalkWin.cpp:
 	.sbss       start:0x80666C10 end:0x80666C18
 	.sdata2     start:0x8066A560 end:0x8066A578
 
-kyoshin/appgame/cf/CTaskCulling.cpp:
+kyoshin/cf/CTaskCulling.cpp:
 	extab       start:0x8000F790 end:0x8000F864
 	extabindex  start:0x8002A590 end:0x8002A608
 	.text       start:0x801A29CC end:0x801A30D8
@@ -1347,7 +1347,7 @@ kyoshin/appgame/cf/CTaskCulling.cpp:
 	.sbss       start:0x80666C18 end:0x80666C20
 	.sdata2     start:0x8066A578 end:0x8066A590
 
-kyoshin/appgame/cf/CVision.cpp:
+kyoshin/cf/CVision.cpp:
 	extab       start:0x8000F864 end:0x8000FAAC
 	extabindex  start:0x8002A608 end:0x8002A794
 	.text       start:0x801A30D8 end:0x801A9338
@@ -1356,7 +1356,7 @@ kyoshin/appgame/cf/CVision.cpp:
 	.sdata      start:0x80664E70 end:0x80664E78
 	.sdata2     start:0x8066A590 end:0x8066A620
 
-kyoshin/appgame/code_801A929C.cpp:
+kyoshin/code_801A929C.cpp:
 	extab       start:0x8000FAAC end:0x8000FAF4
 	extabindex  start:0x8002A794 end:0x8002A800
 	.text       start:0x801A9338 end:0x801AAD20
@@ -1365,7 +1365,7 @@ kyoshin/appgame/code_801A929C.cpp:
 	.sbss       start:0x80666C20 end:0x80666C28
 	.sdata2     start:0x8066A620 end:0x8066A650
 
-kyoshin/appgame/plugin/pluginSnd.cpp:
+kyoshin/plugin/pluginSnd.cpp:
 	extab       start:0x8000FAF4 end:0x8000FB84
 	extabindex  start:0x8002A800 end:0x8002A8D8
 	.text       start:0x801AAD20 end:0x801ABDE4
@@ -1373,13 +1373,13 @@ kyoshin/appgame/plugin/pluginSnd.cpp:
 	.data       start:0x80536BB0 end:0x80536C48
 	.sdata2     start:0x8066A650 end:0x8066A678
 
-kyoshin/appgame/plugin/pluginGame.cpp:
+kyoshin/plugin/pluginGame.cpp:
 	.text       start:0x801ABDE4 end:0x801ABE00
 	.rodata     start:0x804FF990 end:0x804FF998
 	.data       start:0x80536C48 end:0x80536C58
 	.sdata2     start:0x8066A678 end:0x8066A680
 
-kyoshin/appgame/menu/CMenuVision.cpp:
+kyoshin/menu/CMenuVision.cpp:
 	extab       start:0x8000FB84 end:0x8000FC5C
 	extabindex  start:0x8002A8D8 end:0x8002A968
 	.text       start:0x801ABE00 end:0x801AFE1C
@@ -1391,7 +1391,7 @@ kyoshin/appgame/menu/CMenuVision.cpp:
 	.sbss       start:0x80666C28 end:0x80666C80
 	.sdata2     start:0x8066A680 end:0x8066A6A0
 
-kyoshin/appgame/menu/CMenuBattleCommu.cpp:
+kyoshin/menu/CMenuBattleCommu.cpp:
 	extab       start:0x8000FC5C end:0x8000FD24
 	extabindex  start:0x8002A968 end:0x8002A9E0
 	.text       start:0x801AFE1C end:0x801B18D0
@@ -1401,7 +1401,7 @@ kyoshin/appgame/menu/CMenuBattleCommu.cpp:
 	.sbss       start:0x80666C80 end:0x80666C88
 	.sdata2     start:0x8066A6A0 end:0x8066A6A8
 
-kyoshin/appgame/cf/CPcEffect07.cpp:
+kyoshin/cf/CPcEffect07.cpp:
 	extab       start:0x8000FD24 end:0x8000FD5C
 	extabindex  start:0x8002A9E0 end:0x8002AA34
 	.text       start:0x801B18D0 end:0x801B2564
@@ -1411,7 +1411,7 @@ kyoshin/appgame/cf/CPcEffect07.cpp:
 	.sbss       start:0x80666C88 end:0x80666C90
 	.sdata2     start:0x8066A6A8 end:0x8066A6C0
 
-kyoshin/appgame/menu/CMenuGetItemMulti.cpp:
+kyoshin/menu/CMenuGetItemMulti.cpp:
 	extab       start:0x8000FD5C end:0x8000FFAC
 	extabindex  start:0x8002AA34 end:0x8002AB78
 	.text       start:0x801B2564 end:0x801BA14C
@@ -1422,7 +1422,7 @@ kyoshin/appgame/menu/CMenuGetItemMulti.cpp:
 	.sbss       start:0x80666C90 end:0x80666D10
 	.sdata2     start:0x8066A6C0 end:0x8066A6F0
 
-kyoshin/appgame/cf/CSuddenCommu.cpp:
+kyoshin/cf/CSuddenCommu.cpp:
 	extab       start:0x8000FFAC end:0x800100D8
 	extabindex  start:0x8002AB78 end:0x8002ACBC
 	.text       start:0x801BA14C end:0x801BCA38
@@ -1433,7 +1433,7 @@ kyoshin/appgame/cf/CSuddenCommu.cpp:
 	.sdata      start:0x80664ED8 end:0x80664F10
 	.sdata2     start:0x8066A6F0 end:0x8066A728
 
-kyoshin/appgame/menu/CMenuKizunaTalk.cpp:
+kyoshin/menu/CMenuKizunaTalk.cpp:
 	extab       start:0x800100D8 end:0x80010234
 	extabindex  start:0x8002ACBC end:0x8002AD64
 	.text       start:0x801BCA38 end:0x801BDDA4
@@ -1443,7 +1443,7 @@ kyoshin/appgame/menu/CMenuKizunaTalk.cpp:
 	.sbss       start:0x80666D10 end:0x80666D18
 	.sdata2     start:0x8066A728 end:0x8066A738
 
-kyoshin/appgame/menu/CMenuItemExchange.cpp:
+kyoshin/menu/CMenuItemExchange.cpp:
 	extab       start:0x80010234 end:0x800103E4
 	extabindex  start:0x8002AD64 end:0x8002AE54
 	.text       start:0x801BDDA4 end:0x801BF76C
@@ -1453,7 +1453,7 @@ kyoshin/appgame/menu/CMenuItemExchange.cpp:
 	.sbss       start:0x80666D18 end:0x80666D20
 	.sdata2     start:0x8066A738 end:0x8066A748
 
-kyoshin/appgame/cf/CfSoundMan.cpp:
+kyoshin/cf/CfSoundMan.cpp:
 	extab       start:0x800103E4 end:0x8001061C
 	extabindex  start:0x8002AE54 end:0x8002B034
 	.text       start:0x801BF76C end:0x801C189C
@@ -1464,7 +1464,7 @@ kyoshin/appgame/cf/CfSoundMan.cpp:
 	.sbss       start:0x80666D20 end:0x80666D30
 	.sdata2     start:0x8066A748 end:0x8066A768
 
-kyoshin/appgame/cf/CfPadTask.cpp:
+kyoshin/cf/CfPadTask.cpp:
 	extab       start:0x8001061C end:0x80010718
 	extabindex  start:0x8002B034 end:0x8002B0DC
 	.text       start:0x801C189C end:0x801C2C14
@@ -1475,14 +1475,14 @@ kyoshin/appgame/cf/CfPadTask.cpp:
 	.sbss       start:0x80666D30 end:0x80666D50
 	.sdata2     start:0x8066A768 end:0x8066A780
 
-kyoshin/appgame/cf/code_801C2C14.cpp:
+kyoshin/cf/code_801C2C14.cpp:
 	extab       start:0x80010718 end:0x80010874
 	extabindex  start:0x8002B0DC end:0x8002B154
 	.text       start:0x801C2C14 end:0x801C35A8
 	.data       start:0x80537500 end:0x80537548
 	.sdata2     start:0x8066A780 end:0x8066A7C8
 
-kyoshin/appgame/realtimeevt/CREvtLight.cpp:
+kyoshin/realtimeevt/CREvtLight.cpp:
 	extab       start:0x80010874 end:0x800108B0
 	extabindex  start:0x8002B154 end:0x8002B190
 	.text       start:0x801C35A8 end:0x801C3974
@@ -1491,7 +1491,7 @@ kyoshin/appgame/realtimeevt/CREvtLight.cpp:
 	.sdata      start:0x80664F40 end:0x80664F48
 	.sdata2     start:0x8066A7C8 end:0x8066A7D8
 
-kyoshin/appgame/CBgTex.cpp:
+kyoshin/CBgTex.cpp:
 	extab       start:0x800108B0 end:0x8001090C
 	extabindex  start:0x8002B190 end:0x8002B1D8
 	.text       start:0x801C3974 end:0x801C3ED0
@@ -1501,7 +1501,7 @@ kyoshin/appgame/CBgTex.cpp:
 	.sbss       start:0x80666D50 end:0x80666D58
 	.sdata2     start:0x8066A7D8 end:0x8066A7E0
 
-kyoshin/appgame/CTitleAHelp.cpp:
+kyoshin/CTitleAHelp.cpp:
 	extab       start:0x8001090C end:0x800109A0
 	extabindex  start:0x8002B1D8 end:0x8002B280
 	.text       start:0x801C3ED0 end:0x801C4B74
@@ -1512,7 +1512,7 @@ kyoshin/appgame/CTitleAHelp.cpp:
 	.sbss       start:0x80666D58 end:0x80666D78
 	.sdata2     start:0x8066A7E0 end:0x8066A7F0
 
-kyoshin/appgame/CItemBoxGrid.cpp:
+kyoshin/CItemBoxGrid.cpp:
 	extab       start:0x800109A0 end:0x800114EC
 	extabindex  start:0x8002B280 end:0x8002B814
 	.text       start:0x801C4B74 end:0x801D1FC0
@@ -1523,7 +1523,7 @@ kyoshin/appgame/CItemBoxGrid.cpp:
 	.sbss       start:0x80666D78 end:0x80666E08
 	.sdata2     start:0x8066A7F0 end:0x8066A860
 
-kyoshin/appgame/CCur.cpp:
+kyoshin/CCur.cpp:
 	extab       start:0x800114EC end:0x8001162C
 	extabindex  start:0x8002B814 end:0x8002B9F4
 	.text       start:0x801D1FC0 end:0x801D2F80
@@ -1532,7 +1532,7 @@ kyoshin/appgame/CCur.cpp:
 	.sdata      start:0x80664F78 end:0x80664FC0
 	.sdata2     start:0x8066A860 end:0x8066A8B0
 
-kyoshin/appgame/CSortMenu.cpp:
+kyoshin/CSortMenu.cpp:
 	extab       start:0x8001162C end:0x80011700
 	extabindex  start:0x8002B9F4 end:0x8002BAC0
 	.text       start:0x801D2F80 end:0x801D3C74
@@ -1541,7 +1541,7 @@ kyoshin/appgame/CSortMenu.cpp:
 	.sdata      start:0x80664FC0 end:0x80664FC8
 	.sdata2     start:0x8066A8B0 end:0x8066A8C8
 
-kyoshin/appgame/CItemBoxInfo.cpp:
+kyoshin/CItemBoxInfo.cpp:
 	extab       start:0x80011700 end:0x80011AD8
 	extabindex  start:0x8002BAC0 end:0x8002BF10
 	.text       start:0x801D3C74 end:0x801EADC0
@@ -1552,7 +1552,7 @@ kyoshin/appgame/CItemBoxInfo.cpp:
 	.sbss       start:0x80666E08 end:0x80666EC8
 	.sdata2     start:0x8066A8C8 end:0x8066A948
 
-kyoshin/appgame/CNumSelect.cpp:
+kyoshin/CNumSelect.cpp:
 	extab       start:0x80011AD8 end:0x80011B7C
 	extabindex  start:0x8002BF10 end:0x8002BFD0
 	.text       start:0x801EADC0 end:0x801EBAD4
@@ -1561,7 +1561,7 @@ kyoshin/appgame/CNumSelect.cpp:
 	.sdata      start:0x80664FD8 end:0x80664FE0
 	.sdata2     start:0x8066A948 end:0x8066A958
 
-kyoshin/appgame/CItemBoxLine.cpp:
+kyoshin/CItemBoxLine.cpp:
 	extab       start:0x80011B7C end:0x800121F4
 	extabindex  start:0x8002BFD0 end:0x8002C2DC
 	.text       start:0x801EBAD4 end:0x801F3410
@@ -1572,7 +1572,7 @@ kyoshin/appgame/CItemBoxLine.cpp:
 	.sbss       start:0x80666EC8 end:0x80666F48
 	.sdata2     start:0x8066A958 end:0x8066A9F8
 
-kyoshin/appgame/CScrollBar.cpp:
+kyoshin/CScrollBar.cpp:
 	extab       start:0x800121F4 end:0x80012268
 	extabindex  start:0x8002C2DC end:0x8002C354
 	.text       start:0x801F3410 end:0x801F3BE0
@@ -1581,14 +1581,14 @@ kyoshin/appgame/CScrollBar.cpp:
 	.sdata      start:0x80664FF0 end:0x80664FF8
 	.sdata2     start:0x8066A9F8 end:0x8066AA18
 
-kyoshin/appgame/code_801F3BE0.cpp:
+kyoshin/code_801F3BE0.cpp:
 	extab       start:0x80012268 end:0x80012308
 	extabindex  start:0x8002C354 end:0x8002C444
 	.text       start:0x801F3BE0 end:0x801F4F68
 	.sbss       start:0x80666F48 end:0x80666F50
 	.sdata2     start:0x8066AA18 end:0x8066AA28
 
-kyoshin/appgame/cf/CfGimmickObject.cpp:
+kyoshin/cf/CfGimmickObject.cpp:
 	extab       start:0x80012308 end:0x800123F8
 	extabindex  start:0x8002C444 end:0x8002C570
 	.text       start:0x801F4F68 end:0x801F8CB4
@@ -1597,13 +1597,13 @@ kyoshin/appgame/cf/CfGimmickObject.cpp:
 	.sdata      start:0x80664FF8 end:0x80665008
 	.sdata2     start:0x8066AA28 end:0x8066AA90
 
-kyoshin/appgame/cf/object/CfObjectTbox.cpp:
+kyoshin/cf/object/CfObjectTbox.cpp:
 	extab       start:0x800123F8 end:0x80012438
 	extabindex  start:0x8002C570 end:0x8002C594
 	.text       start:0x801F8CB4 end:0x801F8E34
 	.data       start:0x80538770 end:0x80538998
 
-kyoshin/appgame/cf/CfResTboxImpl.cpp:
+kyoshin/cf/CfResTboxImpl.cpp:
 	extab       start:0x80012438 end:0x80012460
 	extabindex  start:0x8002C594 end:0x8002C5D0
 	.text       start:0x801F8E34 end:0x801F92D8
@@ -1613,7 +1613,7 @@ kyoshin/appgame/cf/CfResTboxImpl.cpp:
 	.sbss       start:0x80666F50 end:0x80666F58
 	.sdata2     start:0x8066AA90 end:0x8066AA98
 
-kyoshin/appgame/CPartyStateWin.cpp:
+kyoshin/CPartyStateWin.cpp:
 	extab       start:0x80012460 end:0x800126F8
 	extabindex  start:0x8002C5D0 end:0x8002C774
 	.text       start:0x801F92D8 end:0x801FBDC8
@@ -1622,7 +1622,7 @@ kyoshin/appgame/CPartyStateWin.cpp:
 	.sdata      start:0x80665010 end:0x80665018
 	.sdata2     start:0x8066AA98 end:0x8066AAA8
 
-kyoshin/appgame/CModelDisp.cpp:
+kyoshin/CModelDisp.cpp:
 	extab       start:0x800126F8 end:0x800127E4
 	extabindex  start:0x8002C774 end:0x8002C828
 	.text       start:0x801FBDC8 end:0x801FCE70
@@ -1631,7 +1631,7 @@ kyoshin/appgame/CModelDisp.cpp:
 	.sdata      start:0x80665018 end:0x80665020
 	.sdata2     start:0x8066AAA8 end:0x8066AAD8
 
-kyoshin/appgame/CPartyState.cpp:
+kyoshin/CPartyState.cpp:
 	extab       start:0x800127E4 end:0x80012900
 	extabindex  start:0x8002C828 end:0x8002C960
 	.text       start:0x801FCE70 end:0x801FE8F4
@@ -1640,7 +1640,7 @@ kyoshin/appgame/CPartyState.cpp:
 	.sdata      start:0x80665020 end:0x80665030
 	.sdata2     start:0x8066AAD8 end:0x8066AB10
 
-kyoshin/appgame/plugin/pluginUnit.cpp:
+kyoshin/plugin/pluginUnit.cpp:
 	extab       start:0x80012900 end:0x80012960
 	extabindex  start:0x8002C960 end:0x8002C9F0
 	.text       start:0x801FE8F4 end:0x801FF564
@@ -1648,7 +1648,7 @@ kyoshin/appgame/plugin/pluginUnit.cpp:
 	.data       start:0x80538C18 end:0x80538C80
 	.sdata2     start:0x8066AB10 end:0x8066AB30
 
-kyoshin/appgame/menu/parts/CModelDispEquip.cpp:
+kyoshin/menu/parts/CModelDispEquip.cpp:
 	extab       start:0x80012960 end:0x80012AD4
 	extabindex  start:0x8002C9F0 end:0x8002CB64
 	.text       start:0x801FF564 end:0x80201A84
@@ -1659,7 +1659,7 @@ kyoshin/appgame/menu/parts/CModelDispEquip.cpp:
 	.sdata      start:0x80665030 end:0x80665040
 	.sdata2     start:0x8066AB30 end:0x8066AB60
 
-kyoshin/appgame/CEquipChange.cpp:
+kyoshin/CEquipChange.cpp:
 	extab       start:0x80012AD4 end:0x80012E10
 	extabindex  start:0x8002CB64 end:0x8002CD44
 	.text       start:0x80201A84 end:0x80205A7C
@@ -1671,7 +1671,7 @@ kyoshin/appgame/CEquipChange.cpp:
 	.sbss       start:0x80666F58 end:0x80666F90
 	.sdata2     start:0x8066AB60 end:0x8066AB70
 
-kyoshin/appgame/cf/CfMapMineManager.cpp:
+kyoshin/cf/CfMapMineManager.cpp:
 	extab       start:0x80012E10 end:0x80012EC0
 	extabindex  start:0x8002CD44 end:0x8002CE1C
 	.text       start:0x80205A7C end:0x80207F40
@@ -1681,7 +1681,7 @@ kyoshin/appgame/cf/CfMapMineManager.cpp:
 	.sbss       start:0x80666F90 end:0x80666FA0
 	.sdata2     start:0x8066AB70 end:0x8066ABB8
 
-kyoshin/appgame/CItemBoxGridSubMenu.cpp:
+kyoshin/CItemBoxGridSubMenu.cpp:
 	extab       start:0x80012EC0 end:0x80012F00
 	extabindex  start:0x8002CE1C end:0x8002CE7C
 	.text       start:0x80207F40 end:0x802088E0
@@ -1690,7 +1690,7 @@ kyoshin/appgame/CItemBoxGridSubMenu.cpp:
 	.sdata      start:0x80665070 end:0x80665078
 	.sdata2     start:0x8066ABB8 end:0x8066ABE0
 
-kyoshin/appgame/cf/CfGimmick.cpp:
+kyoshin/cf/CfGimmick.cpp:
 	extab       start:0x80012F00 end:0x80013028
 	extabindex  start:0x8002CE7C end:0x8002D038
 	.text       start:0x802088E0 end:0x8020AB80
@@ -1702,7 +1702,7 @@ kyoshin/appgame/cf/CfGimmick.cpp:
 	.sbss       start:0x80666FA0 end:0x80666FB8
 	.sdata2     start:0x8066ABE0 end:0x8066AC40
 
-kyoshin/appgame/cf/CfGimmickElv.cpp:
+kyoshin/cf/CfGimmickElv.cpp:
 	extab       start:0x80013028 end:0x800130B0
 	extabindex  start:0x8002D038 end:0x8002D0C8
 	.text       start:0x8020AB80 end:0x8020C334
@@ -1711,7 +1711,7 @@ kyoshin/appgame/cf/CfGimmickElv.cpp:
 	.sdata      start:0x80665088 end:0x80665090
 	.sdata2     start:0x8066AC40 end:0x8066AC68
 
-kyoshin/appgame/cf/CfGimmickLock.cpp:
+kyoshin/cf/CfGimmickLock.cpp:
 	extab       start:0x800130B0 end:0x8001318C
 	extabindex  start:0x8002D0C8 end:0x8002D128
 	.text       start:0x8020C334 end:0x8020D3A0
@@ -1720,7 +1720,7 @@ kyoshin/appgame/cf/CfGimmickLock.cpp:
 	.sdata      start:0x80665090 end:0x806650A0
 	.sdata2     start:0x8066AC68 end:0x8066AC88
 
-kyoshin/appgame/cf/CfGimmickWarp.cpp:
+kyoshin/cf/CfGimmickWarp.cpp:
 	extab       start:0x8001318C end:0x80013224
 	extabindex  start:0x8002D128 end:0x8002D1D0
 	.text       start:0x8020D3A0 end:0x8020EF08
@@ -1729,7 +1729,7 @@ kyoshin/appgame/cf/CfGimmickWarp.cpp:
 	.sdata      start:0x806650A0 end:0x806650A8
 	.sdata2     start:0x8066AC88 end:0x8066ACC0
 
-kyoshin/appgame/cf/CfGimmickJump.cpp:
+kyoshin/cf/CfGimmickJump.cpp:
 	extab       start:0x80013224 end:0x80013294
 	extabindex  start:0x8002D1D0 end:0x8002D23C
 	.text       start:0x8020EF08 end:0x80210264
@@ -1738,7 +1738,7 @@ kyoshin/appgame/cf/CfGimmickJump.cpp:
 	.sdata      start:0x806650A8 end:0x806650B0
 	.sdata2     start:0x8066ACC0 end:0x8066ACF8
 
-kyoshin/appgame/cf/CfGimmickItem.cpp:
+kyoshin/cf/CfGimmickItem.cpp:
 	extab       start:0x80013294 end:0x800132FC
 	extabindex  start:0x8002D23C end:0x8002D29C
 	.text       start:0x80210264 end:0x80210C20
@@ -1747,7 +1747,7 @@ kyoshin/appgame/cf/CfGimmickItem.cpp:
 	.sdata      start:0x806650B0 end:0x806650C0
 	.sdata2     start:0x8066ACF8 end:0x8066AD10
 
-kyoshin/appgame/makecrystal/CMenuMakeCrystal.cpp:
+kyoshin/makecrystal/CMenuMakeCrystal.cpp:
 	extab       start:0x800132FC end:0x800133E8
 	extabindex  start:0x8002D29C end:0x8002D320
 	.text       start:0x80210C20 end:0x80212504
@@ -1756,7 +1756,7 @@ kyoshin/appgame/makecrystal/CMenuMakeCrystal.cpp:
 	.sdata      start:0x806650C0 end:0x806650C8
 	.sbss       start:0x80666FB8 end:0x80666FC0
 
-kyoshin/appgame/makecrystal/CMakeCrystalWin.cpp:
+kyoshin/makecrystal/CMakeCrystalWin.cpp:
 	extab       start:0x800133E8 end:0x8001356C
 	extabindex  start:0x8002D320 end:0x8002D404
 	.text       start:0x80212504 end:0x80213488
@@ -1765,13 +1765,13 @@ kyoshin/appgame/makecrystal/CMakeCrystalWin.cpp:
 	.sdata      start:0x806650C8 end:0x806650D0
 	.sdata2     start:0x8066AD10 end:0x8066AD18
 
-kyoshin/appgame/makecrystal/code_80213488.cpp:
+kyoshin/makecrystal/code_80213488.cpp:
 	extab       start:0x8001356C end:0x80013594
 	extabindex  start:0x8002D404 end:0x8002D440
 	.text       start:0x80213488 end:0x802138B8
 	.sdata2     start:0x8066AD18 end:0x8066AD30
 
-kyoshin/appgame/makecrystal/CMCCrystalBox.cpp:
+kyoshin/makecrystal/CMCCrystalBox.cpp:
 	extab       start:0x80013594 end:0x80013E0C
 	extabindex  start:0x8002D440 end:0x8002D7A0
 	.text       start:0x802138B8 end:0x8021A634
@@ -1781,7 +1781,7 @@ kyoshin/appgame/makecrystal/CMCCrystalBox.cpp:
 	.sbss       start:0x80666FC0 end:0x80666FC8
 	.sdata2     start:0x8066AD30 end:0x8066AD58
 
-kyoshin/appgame/makecrystal/CMCCrystalInfo.cpp:
+kyoshin/makecrystal/CMCCrystalInfo.cpp:
 	extab       start:0x80013E0C end:0x80013F30
 	extabindex  start:0x8002D7A0 end:0x8002D8CC
 	.text       start:0x8021A634 end:0x8021BC70
@@ -1792,7 +1792,7 @@ kyoshin/appgame/makecrystal/CMCCrystalInfo.cpp:
 	.sbss       start:0x80666FC8 end:0x80667008
 	.sdata2     start:0x8066AD58 end:0x8066AD60
 
-kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp:
+kyoshin/makecrystal/CModelDispMakeCrystal.cpp:
 	extab       start:0x80013F30 end:0x80014DE8
 	extabindex  start:0x8002D8CC end:0x8002DC14
 	.text       start:0x8021BC70 end:0x80221E6C
@@ -1804,7 +1804,7 @@ kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp:
 	.sbss       start:0x80667008 end:0x80667010
 	.sdata2     start:0x8066AD60 end:0x8066ADD8
 
-kyoshin/appgame/makecrystal/CMCCylinderGauge.cpp:
+kyoshin/makecrystal/CMCCylinderGauge.cpp:
 	extab       start:0x80014DE8 end:0x80014E60
 	extabindex  start:0x8002DC14 end:0x8002DCC8
 	.text       start:0x80221E6C end:0x80222740
@@ -1813,7 +1813,7 @@ kyoshin/appgame/makecrystal/CMCCylinderGauge.cpp:
 	.sdata      start:0x806650E8 end:0x806650F0
 	.sdata2     start:0x8066ADD8 end:0x8066AE00
 
-kyoshin/appgame/makecrystal/CMCCrystalList.cpp:
+kyoshin/makecrystal/CMCCrystalList.cpp:
 	extab       start:0x80014E60 end:0x80014F8C
 	extabindex  start:0x8002DCC8 end:0x8002DE00
 	.text       start:0x80222740 end:0x80223D40
@@ -1822,7 +1822,7 @@ kyoshin/appgame/makecrystal/CMCCrystalList.cpp:
 	.sdata      start:0x806650F0 end:0x806650F8
 	.sdata2     start:0x8066AE00 end:0x8066AE10
 
-kyoshin/appgame/makecrystal/CMCEffStart.cpp:
+kyoshin/makecrystal/CMCEffStart.cpp:
 	extab       start:0x80014F8C end:0x8001520C
 	extabindex  start:0x8002DE00 end:0x8002E1C0
 	.text       start:0x80223D40 end:0x802262B8
@@ -1831,7 +1831,7 @@ kyoshin/appgame/makecrystal/CMCEffStart.cpp:
 	.sdata      start:0x806650F8 end:0x80665150
 	.sdata2     start:0x8066AE10 end:0x8066AE28
 
-kyoshin/appgame/menu/CMenuQstCnt.cpp:
+kyoshin/menu/CMenuQstCnt.cpp:
 	extab       start:0x8001520C end:0x80015304
 	extabindex  start:0x8002E1C0 end:0x8002E280
 	.text       start:0x802262B8 end:0x8022774C
@@ -1841,7 +1841,7 @@ kyoshin/appgame/menu/CMenuQstCnt.cpp:
 	.sbss       start:0x80667010 end:0x80667018
 	.sdata2     start:0x8066AE28 end:0x8066AE38
 
-kyoshin/appgame/CQstLogList.cpp:
+kyoshin/CQstLogList.cpp:
 	extab       start:0x80015304 end:0x8001550C
 	extabindex  start:0x8002E280 end:0x8002E3DC
 	.text       start:0x8022774C end:0x802293F0
@@ -1853,7 +1853,7 @@ kyoshin/appgame/CQstLogList.cpp:
 	.sbss       start:0x80667018 end:0x80667030
 	.sdata2     start:0x8066AE38 end:0x8066AE50
 
-kyoshin/appgame/CQstLogInfo.cpp:
+kyoshin/CQstLogInfo.cpp:
 	extab       start:0x8001550C end:0x800155E0
 	extabindex  start:0x8002E3DC end:0x8002E4E4
 	.text       start:0x802293F0 end:0x8022B618
@@ -1862,7 +1862,7 @@ kyoshin/appgame/CQstLogInfo.cpp:
 	.sdata      start:0x80665168 end:0x80665170
 	.sdata2     start:0x8066AE50 end:0x8066AE58
 
-kyoshin/appgame/CSysWin.cpp:
+kyoshin/CSysWin.cpp:
 	extab       start:0x800155E0 end:0x8001567C
 	extabindex  start:0x8002E4E4 end:0x8002E598
 	.text       start:0x8022B618 end:0x8022C6B4
@@ -1871,7 +1871,7 @@ kyoshin/appgame/CSysWin.cpp:
 	.sdata      start:0x80665170 end:0x80665178
 	.sdata2     start:0x8066AE58 end:0x8066AEC0
 
-kyoshin/appgame/CSelShopWin.cpp:
+kyoshin/CSelShopWin.cpp:
 	extab       start:0x8001567C end:0x800156E8
 	extabindex  start:0x8002E598 end:0x8002E604
 	.text       start:0x8022C6B4 end:0x8022CE70
@@ -1880,7 +1880,7 @@ kyoshin/appgame/CSelShopWin.cpp:
 	.sdata      start:0x80665178 end:0x80665180
 	.sdata2     start:0x8066AEC0 end:0x8066AED0
 
-kyoshin/appgame/CExchangeWin.cpp:
+kyoshin/CExchangeWin.cpp:
 	extab       start:0x800156E8 end:0x8001575C
 	extabindex  start:0x8002E604 end:0x8002E67C
 	.text       start:0x8022CE70 end:0x8022D56C
@@ -1889,7 +1889,7 @@ kyoshin/appgame/CExchangeWin.cpp:
 	.sdata      start:0x80665180 end:0x80665188
 	.sdata2     start:0x8066AED0 end:0x8066AEE0
 
-kyoshin/appgame/CPresentWin.cpp:
+kyoshin/CPresentWin.cpp:
 	extab       start:0x8001575C end:0x800157D4
 	extabindex  start:0x8002E67C end:0x8002E730
 	.text       start:0x8022D56C end:0x8022E888
@@ -1898,7 +1898,7 @@ kyoshin/appgame/CPresentWin.cpp:
 	.sdata      start:0x80665188 end:0x80665190
 	.sdata2     start:0x8066AEE0 end:0x8066AEF0
 
-kyoshin/appgame/makecrystal/CMCCrystalSupport.cpp:
+kyoshin/makecrystal/CMCCrystalSupport.cpp:
 	extab       start:0x800157D4 end:0x800158A8
 	extabindex  start:0x8002E730 end:0x8002E7B4
 	.text       start:0x8022E888 end:0x8022F408
@@ -1907,7 +1907,7 @@ kyoshin/appgame/makecrystal/CMCCrystalSupport.cpp:
 	.sdata      start:0x80665190 end:0x80665198
 	.sdata2     start:0x8066AEF0 end:0x8066AEF8
 
-kyoshin/appgame/menu/CMenuArtsSet.cpp:
+kyoshin/menu/CMenuArtsSet.cpp:
 	extab       start:0x800158A8 end:0x80015D20
 	extabindex  start:0x8002E7B4 end:0x8002EBA4
 	.text       start:0x8022F408 end:0x80235708
@@ -1917,7 +1917,7 @@ kyoshin/appgame/menu/CMenuArtsSet.cpp:
 	.sbss       start:0x80667030 end:0x80667038
 	.sdata2     start:0x8066AEF8 end:0x8066AF40
 
-kyoshin/appgame/CArtsInfo.cpp:
+kyoshin/CArtsInfo.cpp:
 	extab       start:0x80015D20 end:0x80015FE4
 	extabindex  start:0x8002EBA4 end:0x8002EF58
 	.text       start:0x80235708 end:0x8023BCF0
@@ -1928,7 +1928,7 @@ kyoshin/appgame/CArtsInfo.cpp:
 	.sbss       start:0x80667038 end:0x80667058
 	.sdata2     start:0x8066AF40 end:0x8066AF90
 
-kyoshin/appgame/cf/CfNandManager.cpp:
+kyoshin/cf/CfNandManager.cpp:
 	extab       start:0x80015FE4 end:0x80016138
 	extabindex  start:0x8002EF58 end:0x8002F0C0
 	.text       start:0x8023BCF0 end:0x80240614
@@ -1940,7 +1940,7 @@ kyoshin/appgame/cf/CfNandManager.cpp:
 	.sbss       start:0x80667058 end:0x80667078
 	.sdata2     start:0x8066AF90 end:0x8066AFC0
 
-kyoshin/appgame/code_802405F4.cpp:
+kyoshin/code_802405F4.cpp:
 	extab       start:0x80016138 end:0x80016290
 	extabindex  start:0x8002F0C0 end:0x8002F150
 	.text       start:0x80240614 end:0x8024221C
@@ -1948,7 +1948,7 @@ kyoshin/appgame/code_802405F4.cpp:
 	.sbss       start:0x80667078 end:0x80667088
 	.sdata2     start:0x8066AFC0 end:0x8066AFE0
 
-kyoshin/appgame/menu/CMenuMapSelect.cpp:
+kyoshin/menu/CMenuMapSelect.cpp:
 	extab       start:0x80016290 end:0x80016320
 	extabindex  start:0x8002F150 end:0x8002F180
 	.text       start:0x8024221C end:0x802430AC
@@ -1957,7 +1957,7 @@ kyoshin/appgame/menu/CMenuMapSelect.cpp:
 	.sdata      start:0x806651D0 end:0x806651D8
 	.sdata2     start:0x8066AFE0 end:0x8066AFF0
 
-kyoshin/appgame/CMapSel.cpp:
+kyoshin/CMapSel.cpp:
 	extab       start:0x80016320 end:0x80016474
 	extabindex  start:0x8002F180 end:0x8002F2A0
 	.text       start:0x802430AC end:0x802442E0
@@ -1966,7 +1966,7 @@ kyoshin/appgame/CMapSel.cpp:
 	.sdata      start:0x806651D8 end:0x806651E0
 	.sdata2     start:0x8066AFF0 end:0x8066B008
 
-kyoshin/appgame/CFade.cpp:
+kyoshin/CFade.cpp:
 	extab       start:0x80016474 end:0x800164D8
 	extabindex  start:0x8002F2A0 end:0x8002F300
 	.text       start:0x802442E0 end:0x80244724
@@ -1975,7 +1975,7 @@ kyoshin/appgame/CFade.cpp:
 	.sdata      start:0x806651E0 end:0x806651E8
 	.sdata2     start:0x8066B008 end:0x8066B018
 
-kyoshin/appgame/CFloorMap.cpp:
+kyoshin/CFloorMap.cpp:
 	extab       start:0x800164D8 end:0x80016A70
 	extabindex  start:0x8002F300 end:0x8002F618
 	.text       start:0x80244724 end:0x80250D24
@@ -1986,7 +1986,7 @@ kyoshin/appgame/CFloorMap.cpp:
 	.sbss       start:0x80667088 end:0x806670B0
 	.sdata2     start:0x8066B018 end:0x8066B070
 
-kyoshin/appgame/menu/CMenuMapSelectSC.cpp:
+kyoshin/menu/CMenuMapSelectSC.cpp:
 	extab       start:0x80016A70 end:0x80016B9C
 	extabindex  start:0x8002F618 end:0x8002F6B4
 	.text       start:0x80250D24 end:0x80251DF8
@@ -1996,7 +1996,7 @@ kyoshin/appgame/menu/CMenuMapSelectSC.cpp:
 	.sbss       start:0x806670B0 end:0x806670B8
 	.sdata2     start:0x8066B070 end:0x8066B080
 
-kyoshin/appgame/menu/CMenuPause.cpp:
+kyoshin/menu/CMenuPause.cpp:
 	extab       start:0x80016B9C end:0x80016C4C
 	extabindex  start:0x8002F6B4 end:0x8002F708
 	.text       start:0x80251DF8 end:0x80252640
@@ -2006,7 +2006,7 @@ kyoshin/appgame/menu/CMenuPause.cpp:
 	.sbss       start:0x806670B8 end:0x806670C0
 	.sdata2     start:0x8066B080 end:0x8066B090
 
-kyoshin/appgame/menu/CMenuCollepedia.cpp:
+kyoshin/menu/CMenuCollepedia.cpp:
 	extab       start:0x80016C4C end:0x80016D78
 	extabindex  start:0x8002F708 end:0x8002F7A4
 	.text       start:0x80252640 end:0x80253198
@@ -2016,7 +2016,7 @@ kyoshin/appgame/menu/CMenuCollepedia.cpp:
 	.sbss       start:0x806670C0 end:0x806670C8
 	.sdata2     start:0x8066B090 end:0x8066B0A0
 
-kyoshin/appgame/CCollepedia.cpp:
+kyoshin/CCollepedia.cpp:
 	extab       start:0x80016D78 end:0x80017130
 	extabindex  start:0x8002F7A4 end:0x8002FA44
 	.text       start:0x80253198 end:0x80256968
@@ -2025,7 +2025,7 @@ kyoshin/appgame/CCollepedia.cpp:
 	.sbss       start:0x806670C8 end:0x806670D0
 	.sdata2     start:0x8066B0A0 end:0x8066B0D8
 
-kyoshin/appgame/menu/CMenuKizunagram.cpp:
+kyoshin/menu/CMenuKizunagram.cpp:
 	extab       start:0x80017130 end:0x8001733C
 	extabindex  start:0x8002FA44 end:0x8002FB1C
 	.text       start:0x80256968 end:0x80257A8C
@@ -2034,7 +2034,7 @@ kyoshin/appgame/menu/CMenuKizunagram.cpp:
 	.sdata      start:0x80665238 end:0x80665240
 	.sbss       start:0x806670D0 end:0x806670D8
 
-kyoshin/appgame/CKizunagram.cpp:
+kyoshin/CKizunagram.cpp:
 	extab       start:0x8001733C end:0x800175E0
 	extabindex  start:0x8002FB1C end:0x8002FDEC
 	.text       start:0x80257A8C end:0x8025D470
@@ -2045,7 +2045,7 @@ kyoshin/appgame/CKizunagram.cpp:
 	.sbss       start:0x806670D8 end:0x80667150
 	.sdata2     start:0x8066B0D8 end:0x8066B128
 
-kyoshin/appgame/CPcKizunagram.cpp:
+kyoshin/CPcKizunagram.cpp:
 	extab       start:0x800175E0 end:0x80017738
 	extabindex  start:0x8002FDEC end:0x8002FF9C
 	.text       start:0x8025D470 end:0x8025FB10
@@ -2054,7 +2054,7 @@ kyoshin/appgame/CPcKizunagram.cpp:
 	.sdata      start:0x80665268 end:0x80665278
 	.sdata2     start:0x8066B128 end:0x8066B168
 
-kyoshin/appgame/code_8025FB10.cpp:
+kyoshin/code_8025FB10.cpp:
 	extab       start:0x80017738 end:0x800177E8
 	extabindex  start:0x8002FF9C end:0x80030038
 	.text       start:0x8025FB10 end:0x80263158
@@ -2063,7 +2063,7 @@ kyoshin/appgame/code_8025FB10.cpp:
 	.sbss       start:0x80667150 end:0x80667168
 	.sdata2     start:0x8066B168 end:0x8066B1A0
 
-kyoshin/appgame/menu/CMenuPassiveSkill.cpp:
+kyoshin/menu/CMenuPassiveSkill.cpp:
 	extab       start:0x800177E8 end:0x8001791C
 	extabindex  start:0x80030038 end:0x800300E0
 	.text       start:0x80263158 end:0x80263EBC
@@ -2073,7 +2073,7 @@ kyoshin/appgame/menu/CMenuPassiveSkill.cpp:
 	.sbss       start:0x80667168 end:0x80667170
 	.sdata2     start:0x8066B1A0 end:0x8066B1B0
 
-kyoshin/appgame/CPassiveSkill.cpp:
+kyoshin/CPassiveSkill.cpp:
 	extab       start:0x8001791C end:0x80017D0C
 	extabindex  start:0x800300E0 end:0x800305C0
 	.text       start:0x80263EBC end:0x8026E170
@@ -2083,7 +2083,7 @@ kyoshin/appgame/CPassiveSkill.cpp:
 	.sbss       start:0x80667170 end:0x80667188
 	.sdata2     start:0x8066B1B0 end:0x8066B1F0
 
-kyoshin/appgame/cf/CfGimmickEne.cpp:
+kyoshin/cf/CfGimmickEne.cpp:
 	extab       start:0x80017D0C end:0x80017D9C
 	extabindex  start:0x800305C0 end:0x8003065C
 	.text       start:0x8026E170 end:0x8026F37C
@@ -2092,7 +2092,7 @@ kyoshin/appgame/cf/CfGimmickEne.cpp:
 	.sdata      start:0x806652A8 end:0x806652B8
 	.sdata2     start:0x8066B1F0 end:0x8066B238
 
-kyoshin/appgame/menu/CMenuBattleEnd.cpp:
+kyoshin/menu/CMenuBattleEnd.cpp:
 	extab       start:0x80017D9C end:0x80017E5C
 	extabindex  start:0x8003065C end:0x800306C8
 	.text       start:0x8026F37C end:0x8026FCA8
@@ -2102,7 +2102,7 @@ kyoshin/appgame/menu/CMenuBattleEnd.cpp:
 	.sbss       start:0x80667188 end:0x80667190
 	.sdata2     start:0x8066B238 end:0x8066B240
 
-kyoshin/appgame/menu/CMenuPlayAward.cpp:
+kyoshin/menu/CMenuPlayAward.cpp:
 	extab       start:0x80017E5C end:0x80018134
 	extabindex  start:0x800306C8 end:0x800308A8
 	.text       start:0x8026FCA8 end:0x80271DD4
@@ -2112,7 +2112,7 @@ kyoshin/appgame/menu/CMenuPlayAward.cpp:
 	.sbss       start:0x80667190 end:0x806671A0
 	.sdata2     start:0x8066B240 end:0x8066B270
 
-kyoshin/appgame/menu/CMenuKizunaTalkList.cpp:
+kyoshin/menu/CMenuKizunaTalkList.cpp:
 	extab       start:0x80018134 end:0x80018250
 	extabindex  start:0x800308A8 end:0x8003092C
 	.text       start:0x80271DD4 end:0x802726F4
@@ -2121,7 +2121,7 @@ kyoshin/appgame/menu/CMenuKizunaTalkList.cpp:
 	.sdata      start:0x806652D0 end:0x806652D8
 	.sbss       start:0x806671A0 end:0x806671A8
 
-kyoshin/appgame/CKizunaTalkList.cpp:
+kyoshin/CKizunaTalkList.cpp:
 	extab       start:0x80018250 end:0x8001840C
 	extabindex  start:0x8003092C end:0x80030A88
 	.text       start:0x802726F4 end:0x802744D4
@@ -2132,7 +2132,7 @@ kyoshin/appgame/CKizunaTalkList.cpp:
 	.sbss       start:0x806671A8 end:0x806671D0
 	.sdata2     start:0x8066B270 end:0x8066B280
 
-kyoshin/appgame/CSysWinBuff.cpp:
+kyoshin/CSysWinBuff.cpp:
 	extab       start:0x8001840C end:0x800184C0
 	extabindex  start:0x80030A88 end:0x80030ADC
 	.text       start:0x802744D4 end:0x80274B28
@@ -2141,22 +2141,22 @@ kyoshin/appgame/CSysWinBuff.cpp:
 	.sdata      start:0x806652E0 end:0x806652E8
 	.sbss       start:0x806671D0 end:0x806671D8
 
-kyoshin/appgame/cf/ICamControlRemote.cpp:
+kyoshin/cf/ICamControlRemote.cpp:
 	extab       start:0x800184C0 end:0x80018508
 	extabindex  start:0x80030ADC end:0x80030B48
 	.text       start:0x80274B28 end:0x80274DD8
 
-kyoshin/appgame/cf/ICamControlGc.cpp:
+kyoshin/cf/ICamControlGc.cpp:
 	extab       start:0x80018508 end:0x80018528
 	extabindex  start:0x80030B48 end:0x80030B78
 	.text       start:0x80274DD8 end:0x80274EA8
 
-kyoshin/appgame/cf/ICamControlClassic.cpp:
+kyoshin/cf/ICamControlClassic.cpp:
 	extab       start:0x80018528 end:0x80018570
 	extabindex  start:0x80030B78 end:0x80030BE4
 	.text       start:0x80274EA8 end:0x8027513C
 
-kyoshin/appgame/code_8027513C.cpp:
+kyoshin/code_8027513C.cpp:
 	extab       start:0x80018570 end:0x800185E0
 	extabindex  start:0x80030BE4 end:0x80030C8C
 	.text       start:0x8027513C end:0x802759C8
@@ -2166,7 +2166,7 @@ kyoshin/appgame/code_8027513C.cpp:
 	.sbss       start:0x806671D8 end:0x806671F0
 	.sdata2     start:0x8066B280 end:0x8066B2A8
 
-kyoshin/appgame/menu/CMenuLvUp.cpp:
+kyoshin/menu/CMenuLvUp.cpp:
 	extab       start:0x800185E0 end:0x800186B0
 	extabindex  start:0x80030C8C end:0x80030D10
 	.text       start:0x802759C8 end:0x80276C30
@@ -2176,7 +2176,7 @@ kyoshin/appgame/menu/CMenuLvUp.cpp:
 	.sbss       start:0x806671F0 end:0x806671F8
 	.sdata2     start:0x8066B2A8 end:0x8066B2C0
 
-kyoshin/appgame/cf/chain/CChain.cpp:
+kyoshin/cf/chain/CChain.cpp:
 	extab       start:0x800186B0 end:0x8001881C
 	extabindex  start:0x80030D10 end:0x80030E84
 	.text       start:0x80276C30 end:0x8027AA50
@@ -2185,7 +2185,7 @@ kyoshin/appgame/cf/chain/CChain.cpp:
 	.sdata      start:0x80665318 end:0x80665358
 	.sdata2     start:0x8066B2C0 end:0x8066B310
 
-kyoshin/appgame/cf/chain/CChainActorList.cpp:
+kyoshin/cf/chain/CChainActorList.cpp:
 	extab       start:0x8001881C end:0x80018A14
 	extabindex  start:0x80030E84 end:0x80031040
 	.text       start:0x8027AA50 end:0x8027CDD4
@@ -2194,19 +2194,19 @@ kyoshin/appgame/cf/chain/CChainActorList.cpp:
 	.sdata      start:0x80665358 end:0x80665388
 	.sdata2     start:0x8066B310 end:0x8066B330
 
-kyoshin/appgame/cf/chain/CChainTime.cpp:
+kyoshin/cf/chain/CChainTime.cpp:
 	extab       start:0x80018A14 end:0x80018A34
 	extabindex  start:0x80031040 end:0x80031070
 	.text       start:0x8027CDD4 end:0x8027D0E8
 	.sdata2     start:0x8066B330 end:0x8066B338
 
-kyoshin/appgame/cf/chain/CChainTimer.cpp:
+kyoshin/cf/chain/CChainTimer.cpp:
 	extab       start:0x80018A34 end:0x80018ACC
 	extabindex  start:0x80031070 end:0x800310F4
 	.text       start:0x8027D0E8 end:0x8027E4B0
 	.sdata2     start:0x8066B338 end:0x8066B378
 
-kyoshin/appgame/CSysWinScenarioLog.cpp:
+kyoshin/CSysWinScenarioLog.cpp:
 	extab       start:0x80018ACC end:0x80018C50
 	extabindex  start:0x800310F4 end:0x80031268
 	.text       start:0x8027E4B0 end:0x80281308
@@ -2216,7 +2216,7 @@ kyoshin/appgame/CSysWinScenarioLog.cpp:
 	.sbss       start:0x806671F8 end:0x80667210
 	.sdata2     start:0x8066B378 end:0x8066B390
 
-kyoshin/appgame/cf/chain/CChainActorEne.cpp:
+kyoshin/cf/chain/CChainActorEne.cpp:
 	extab       start:0x80018C50 end:0x80018C98
 	extabindex  start:0x80031268 end:0x800312D4
 	.text       start:0x80281308 end:0x80281924
@@ -2224,7 +2224,7 @@ kyoshin/appgame/cf/chain/CChainActorEne.cpp:
 	.data       start:0x8053BC10 end:0x8053BC98
 	.sdata      start:0x80665390 end:0x80665398
 
-kyoshin/appgame/cf/chain/CChainActorPc.cpp:
+kyoshin/cf/chain/CChainActorPc.cpp:
 	extab       start:0x80018C98 end:0x80018D18
 	extabindex  start:0x800312D4 end:0x80031370
 	.text       start:0x80281924 end:0x802824B4
@@ -2233,7 +2233,7 @@ kyoshin/appgame/cf/chain/CChainActorPc.cpp:
 	.sdata      start:0x80665398 end:0x806653A0
 	.sdata2     start:0x8066B390 end:0x8066B3A8
 
-kyoshin/appgame/CEquipItemBox.cpp:
+kyoshin/CEquipItemBox.cpp:
 	extab       start:0x80018D18 end:0x800192F8
 	extabindex  start:0x80031370 end:0x80031850
 	.text       start:0x802824B4 end:0x8028DCAC
@@ -2244,7 +2244,7 @@ kyoshin/appgame/CEquipItemBox.cpp:
 	.sbss       start:0x80667210 end:0x806672D8
 	.sdata2     start:0x8066B3A8 end:0x8066B410
 
-kyoshin/appgame/menu/CMenuSave.cpp:
+kyoshin/menu/CMenuSave.cpp:
 	extab       start:0x800192F8 end:0x80019428
 	extabindex  start:0x80031850 end:0x800318D4
 	.text       start:0x8028DCAC end:0x8028E7C8
@@ -2253,7 +2253,7 @@ kyoshin/appgame/menu/CMenuSave.cpp:
 	.sdata      start:0x806653B8 end:0x806653C0
 	.sbss       start:0x806672D8 end:0x806672E0
 
-kyoshin/appgame/CSaveLoad.cpp:
+kyoshin/CSaveLoad.cpp:
 	extab       start:0x80019428 end:0x80019828
 	extabindex  start:0x800318D4 end:0x80031BE0
 	.text       start:0x8028E7C8 end:0x80293140
@@ -2265,7 +2265,7 @@ kyoshin/appgame/CSaveLoad.cpp:
 	.sbss       start:0x806672E0 end:0x806672F0
 	.sdata2     start:0x8066B410 end:0x8066B428
 
-kyoshin/appgame/menu/CMenuPTChangeNotice.cpp:
+kyoshin/menu/CMenuPTChangeNotice.cpp:
 	extab       start:0x80019828 end:0x80019930
 	extabindex  start:0x80031BE0 end:0x80031C64
 	.text       start:0x80293140 end:0x80293D90
@@ -2275,7 +2275,7 @@ kyoshin/appgame/menu/CMenuPTChangeNotice.cpp:
 	.sbss       start:0x806672F0 end:0x806672F8
 	.sdata2     start:0x8066B428 end:0x8066B440
 
-kyoshin/appgame/cf/chain/CChainCombo.cpp:
+kyoshin/cf/chain/CChainCombo.cpp:
 	extab       start:0x80019930 end:0x80019950
 	extabindex  start:0x80031C64 end:0x80031C94
 	.text       start:0x80293D90 end:0x80293FB8
@@ -2284,7 +2284,7 @@ kyoshin/appgame/cf/chain/CChainCombo.cpp:
 	.sdata      start:0x80665400 end:0x80665408
 	.sdata2     start:0x8066B440 end:0x8066B448
 
-kyoshin/appgame/CSysWinSave.cpp:
+kyoshin/CSysWinSave.cpp:
 	extab       start:0x80019950 end:0x80019A74
 	extabindex  start:0x80031C94 end:0x80031CE8
 	.text       start:0x80293FB8 end:0x80294874
@@ -2294,7 +2294,7 @@ kyoshin/appgame/CSysWinSave.cpp:
 	.sbss       start:0x806672F8 end:0x80667308
 	.sdata2     start:0x8066B448 end:0x8066B458
 
-kyoshin/appgame/realtimeevt/CREvtMovie.cpp:
+kyoshin/realtimeevt/CREvtMovie.cpp:
 	extab       start:0x80019A74 end:0x80019AB8
 	extabindex  start:0x80031CE8 end:0x80031D30
 	.text       start:0x80294874 end:0x80294CB4
@@ -2302,7 +2302,7 @@ kyoshin/appgame/realtimeevt/CREvtMovie.cpp:
 	.data       start:0x8053C258 end:0x8053C290
 	.sdata      start:0x80665410 end:0x80665418
 
-kyoshin/appgame/CTaskGamePic.cpp:
+kyoshin/CTaskGamePic.cpp:
 	extab       start:0x80019AB8 end:0x80019B50
 	extabindex  start:0x80031D30 end:0x80031DB4
 	.text       start:0x80294CB4 end:0x80295564
@@ -2311,7 +2311,7 @@ kyoshin/appgame/CTaskGamePic.cpp:
 	.sdata      start:0x80665418 end:0x80665428
 	.sdata2     start:0x8066B458 end:0x8066B470
 
-kyoshin/appgame/CTaskGameEvt.cpp:
+kyoshin/CTaskGameEvt.cpp:
 	extab       start:0x80019B50 end:0x80019BA8
 	extabindex  start:0x80031DB4 end:0x80031E08
 	.text       start:0x80295564 end:0x80295888
@@ -2319,7 +2319,7 @@ kyoshin/appgame/CTaskGameEvt.cpp:
 	.data       start:0x8053C3B8 end:0x8053C4E0
 	.sdata      start:0x80665428 end:0x80665438
 
-kyoshin/appgame/cf/CHelpManager.cpp:
+kyoshin/cf/CHelpManager.cpp:
 	extab       start:0x80019BA8 end:0x80019C08
 	extabindex  start:0x80031E08 end:0x80031E98
 	.text       start:0x80295888 end:0x80296A04
@@ -2330,14 +2330,14 @@ kyoshin/appgame/cf/CHelpManager.cpp:
 	.sdata      start:0x80665438 end:0x80665538
 	.sdata2     start:0x8066B470 end:0x8066B478
 
-kyoshin/appgame/code_80296898.cpp:
+kyoshin/code_80296898.cpp:
 	extab       start:0x80019C08 end:0x80019C20
 	extabindex  start:0x80031E98 end:0x80031EBC
 	.text       start:0x80296A04 end:0x80296B44
 	.ctors      start:0x804F59D0 end:0x804F59D4
 	.bss        start:0x8057A9C8 end:0x8057AA08
 
-kyoshin/appgame/makecrystal/CMCGetItemBox.cpp:
+kyoshin/makecrystal/CMCGetItemBox.cpp:
 	extab       start:0x80019C20 end:0x8001A020
 	extabindex  start:0x80031EBC end:0x80032084
 	.text       start:0x80296B44 end:0x8029A0B8
@@ -2347,7 +2347,7 @@ kyoshin/appgame/makecrystal/CMCGetItemBox.cpp:
 	.sbss       start:0x80667308 end:0x80667318
 	.sdata2     start:0x8066B478 end:0x8066B4B0
 
-kyoshin/appgame/menu/CMenuTutorial.cpp:
+kyoshin/menu/CMenuTutorial.cpp:
 	extab       start:0x8001A020 end:0x8001A110
 	extabindex  start:0x80032084 end:0x80032108
 	.text       start:0x8029A0B8 end:0x8029A934
@@ -2356,7 +2356,7 @@ kyoshin/appgame/menu/CMenuTutorial.cpp:
 	.sdata      start:0x80665540 end:0x80665548
 	.sbss       start:0x80667318 end:0x80667320
 
-kyoshin/appgame/CTutorial.cpp:
+kyoshin/CTutorial.cpp:
 	extab       start:0x8001A110 end:0x8001A1EC
 	extabindex  start:0x80032108 end:0x800321C8
 	.text       start:0x8029A934 end:0x8029B4FC
@@ -2366,7 +2366,7 @@ kyoshin/appgame/CTutorial.cpp:
 	.sbss       start:0x80667320 end:0x80667328
 	.sdata2     start:0x8066B4B0 end:0x8066B4B8
 
-kyoshin/appgame/menu/CMenuOption.cpp:
+kyoshin/menu/CMenuOption.cpp:
 	extab       start:0x8001A1EC end:0x8001A308
 	extabindex  start:0x800321C8 end:0x8003224C
 	.text       start:0x8029B4FC end:0x8029BEDC
@@ -2375,7 +2375,7 @@ kyoshin/appgame/menu/CMenuOption.cpp:
 	.sdata      start:0x80665550 end:0x80665558
 	.sbss       start:0x80667328 end:0x80667330
 
-kyoshin/appgame/COption.cpp:
+kyoshin/COption.cpp:
 	extab       start:0x8001A308 end:0x8001A5AC
 	extabindex  start:0x8003224C end:0x8003242C
 	.text       start:0x8029BEDC end:0x8029E7E4
@@ -2386,7 +2386,7 @@ kyoshin/appgame/COption.cpp:
 	.sdata      start:0x80665558 end:0x80665568
 	.sdata2     start:0x8066B4B8 end:0x8066B4D8
 
-kyoshin/appgame/menu/CMenuSkipTimer.cpp:
+kyoshin/menu/CMenuSkipTimer.cpp:
 	extab       start:0x8001A5AC end:0x8001A6C8
 	extabindex  start:0x8003242C end:0x800324B0
 	.text       start:0x8029E7E4 end:0x8029F0A8
@@ -2395,7 +2395,7 @@ kyoshin/appgame/menu/CMenuSkipTimer.cpp:
 	.sdata      start:0x80665568 end:0x80665570
 	.sbss       start:0x80667330 end:0x80667338
 
-kyoshin/appgame/CSkipTimer.cpp:
+kyoshin/CSkipTimer.cpp:
 	extab       start:0x8001A6C8 end:0x8001A868
 	extabindex  start:0x800324B0 end:0x80032648
 	.text       start:0x8029F0A8 end:0x802A07F4
@@ -2406,7 +2406,7 @@ kyoshin/appgame/CSkipTimer.cpp:
 	.sbss       start:0x80667338 end:0x80667340
 	.sdata2     start:0x8066B4D8 end:0x8066B4F8
 
-kyoshin/appgame/cf/chain/CChainEffect.cpp:
+kyoshin/cf/chain/CChainEffect.cpp:
 	extab       start:0x8001A868 end:0x8001A880
 	extabindex  start:0x80032648 end:0x8003266C
 	.text       start:0x802A07F4 end:0x802A0AFC
@@ -2415,7 +2415,7 @@ kyoshin/appgame/cf/chain/CChainEffect.cpp:
 	.sdata      start:0x80665588 end:0x80665590
 	.sdata2     start:0x8066B4F8 end:0x8066B500
 
-kyoshin/appgame/cf/voice/CCharVoice.cpp:
+kyoshin/cf/voice/CCharVoice.cpp:
 	extab       start:0x8001A880 end:0x8001A8B8
 	extabindex  start:0x8003266C end:0x800326C0
 	.text       start:0x802A0AFC end:0x802A13BC
@@ -2424,7 +2424,7 @@ kyoshin/appgame/cf/voice/CCharVoice.cpp:
 	.sdata      start:0x80665590 end:0x806655A0
 	.sdata2     start:0x8066B500 end:0x8066B510
 
-kyoshin/appgame/cf/voice/CCharVoiceMan.cpp:
+kyoshin/cf/voice/CCharVoiceMan.cpp:
 	extab       start:0x8001A8B8 end:0x8001AA90
 	extabindex  start:0x800326C0 end:0x80032948
 	.text       start:0x802A13BC end:0x802A3A80
@@ -2434,7 +2434,7 @@ kyoshin/appgame/cf/voice/CCharVoiceMan.cpp:
 	.sbss       start:0x80667340 end:0x80667348
 	.sdata2     start:0x8066B510 end:0x8066B530
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD.cpp:
 	extab       start:0x8001AA90 end:0x8001AAF8
 	extabindex  start:0x80032948 end:0x800329E4
 	.text       start:0x802A3A80 end:0x802A4870
@@ -2443,7 +2443,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.cpp:
 	.sdata      start:0x806655A8 end:0x806655C0
 	.sdata2     start:0x8066B530 end:0x8066B538
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp:
 	extab       start:0x8001AAF8 end:0x8001AB44
 	extabindex  start:0x800329E4 end:0x80032A20
 	.text       start:0x802A4870 end:0x802A4E48
@@ -2451,7 +2451,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp:
 	.data       start:0x8053D0E8 end:0x8053D170
 	.sdata      start:0x806655C0 end:0x806655D8
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BUF.cpp:
 	extab       start:0x8001AB44 end:0x8001AB90
 	extabindex  start:0x80032A20 end:0x80032A5C
 	.text       start:0x802A4E48 end:0x802A5830
@@ -2459,7 +2459,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.cpp:
 	.data       start:0x8053D170 end:0x8053D1C0
 	.sdata      start:0x806655D8 end:0x806655E0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp:
 	extab       start:0x8001AB90 end:0x8001ABE4
 	extabindex  start:0x80032A5C end:0x80032AA4
 	.text       start:0x802A5830 end:0x802A5B88
@@ -2467,7 +2467,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp:
 	.data       start:0x8053D1C0 end:0x8053D1F8
 	.sdata      start:0x806655E0 end:0x806655E8
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_DOWN.cpp:
 	extab       start:0x8001ABE4 end:0x8001AC30
 	extabindex  start:0x80032AA4 end:0x80032AE0
 	.text       start:0x802A5B88 end:0x802A5ED4
@@ -2475,7 +2475,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.cpp:
 	.data       start:0x8053D1F8 end:0x8053D248
 	.sdata      start:0x806655E8 end:0x806655F0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_EHP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_EHP.cpp:
 	extab       start:0x8001AC30 end:0x8001AC9C
 	extabindex  start:0x80032AE0 end:0x80032B4C
 	.text       start:0x802A5ED4 end:0x802A6AA8
@@ -2484,7 +2484,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_EHP.cpp:
 	.sdata      start:0x806655F0 end:0x806655F8
 	.sdata2     start:0x8066B538 end:0x8066B548
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_FAINT.cpp:
 	extab       start:0x8001AC9C end:0x8001ACF0
 	extabindex  start:0x80032B4C end:0x80032B94
 	.text       start:0x802A6AA8 end:0x802A6E84
@@ -2492,7 +2492,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.cpp:
 	.data       start:0x8053D2E8 end:0x8053D338
 	.sdata      start:0x806655F8 end:0x80665600
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_HAGE.cpp:
 	extab       start:0x8001ACF0 end:0x8001AD3C
 	extabindex  start:0x80032B94 end:0x80032BD0
 	.text       start:0x802A6E84 end:0x802A7254
@@ -2500,7 +2500,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.cpp:
 	.data       start:0x8053D338 end:0x8053D388
 	.sdata      start:0x80665600 end:0x80665608
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_HP.cpp:
 	extab       start:0x8001AD3C end:0x8001ADE8
 	extabindex  start:0x80032BD0 end:0x80032C9C
 	.text       start:0x802A7254 end:0x802A8174
@@ -2509,7 +2509,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.cpp:
 	.sdata      start:0x80665608 end:0x80665610
 	.sdata2     start:0x8066B548 end:0x8066B558
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp:
 	extab       start:0x8001ADE8 end:0x8001AE3C
 	extabindex  start:0x80032C9C end:0x80032CE4
 	.text       start:0x802A8174 end:0x802A86CC
@@ -2517,7 +2517,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp:
 	.data       start:0x8053D3D8 end:0x8053D428
 	.sdata      start:0x80665610 end:0x80665620
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp:
 	extab       start:0x8001AE3C end:0x8001AE98
 	extabindex  start:0x80032CE4 end:0x80032D38
 	.text       start:0x802A86CC end:0x802A8C04
@@ -2525,7 +2525,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp:
 	.data       start:0x8053D428 end:0x8053D478
 	.sdata      start:0x80665620 end:0x80665628
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp:
 	extab       start:0x8001AE98 end:0x8001AEDC
 	extabindex  start:0x80032D38 end:0x80032D68
 	.text       start:0x802A8C04 end:0x802A8DE8
@@ -2533,7 +2533,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp:
 	.data       start:0x8053D478 end:0x8053D4B0
 	.sdata      start:0x80665628 end:0x80665630
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp:
 	extab       start:0x8001AEDC end:0x8001AF28
 	extabindex  start:0x80032D68 end:0x80032DA4
 	.text       start:0x802A8DE8 end:0x802A92D8
@@ -2541,7 +2541,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp:
 	.data       start:0x8053D4B0 end:0x8053D500
 	.sdata      start:0x80665630 end:0x80665638
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp:
 	extab       start:0x8001AF28 end:0x8001AF74
 	extabindex  start:0x80032DA4 end:0x80032DE0
 	.text       start:0x802A92D8 end:0x802A96C0
@@ -2549,7 +2549,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp:
 	.data       start:0x8053D500 end:0x8053D540
 	.sdata      start:0x80665638 end:0x80665650
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp:
 	extab       start:0x8001AF74 end:0x8001AFC0
 	extabindex  start:0x80032DE0 end:0x80032E1C
 	.text       start:0x802A96C0 end:0x802A9B8C
@@ -2557,7 +2557,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp:
 	.data       start:0x8053D540 end:0x8053D590
 	.sdata      start:0x80665650 end:0x80665668
 
-kyoshin/appgame/menu/CMenuBattleChain.cpp:
+kyoshin/menu/CMenuBattleChain.cpp:
 	extab       start:0x8001AFC0 end:0x8001B0C8
 	extabindex  start:0x80032E1C end:0x80032EF4
 	.text       start:0x802A9B8C end:0x802AB5F0
@@ -2568,7 +2568,7 @@ kyoshin/appgame/menu/CMenuBattleChain.cpp:
 	.sbss       start:0x80667348 end:0x806674D0
 	.sdata2     start:0x8066B558 end:0x8066B560
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp:
 	extab       start:0x8001B0C8 end:0x8001B10C
 	extabindex  start:0x80032EF4 end:0x80032F24
 	.text       start:0x802AB5F0 end:0x802ABB40
@@ -2577,7 +2577,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp:
 	.sdata      start:0x806656D0 end:0x806656D8
 	.sdata2     start:0x8066B560 end:0x8066B670
 
-kyoshin/appgame/cf/CfGimmickSaveOff.cpp:
+kyoshin/cf/CfGimmickSaveOff.cpp:
 	extab       start:0x8001B10C end:0x8001B138
 	extabindex  start:0x80032F24 end:0x80032F48
 	.text       start:0x802ABB40 end:0x802ABDB0
@@ -2585,7 +2585,7 @@ kyoshin/appgame/cf/CfGimmickSaveOff.cpp:
 	.data       start:0x8053D970 end:0x8053D9A8
 	.sdata      start:0x806656D8 end:0x806656E0
 
-kyoshin/appgame/menu/CMenuTutorialList.cpp:
+kyoshin/menu/CMenuTutorialList.cpp:
 	extab       start:0x8001B138 end:0x8001B2C0
 	extabindex  start:0x80032F48 end:0x80032FFC
 	.text       start:0x802ABDB0 end:0x802ACBDC
@@ -2595,7 +2595,7 @@ kyoshin/appgame/menu/CMenuTutorialList.cpp:
 	.sbss       start:0x806674D0 end:0x806674D8
 	.sdata2     start:0x8066B670 end:0x8066B680
 
-kyoshin/appgame/CTutorialList.cpp:
+kyoshin/CTutorialList.cpp:
 	extab       start:0x8001B2C0 end:0x8001B4D8
 	extabindex  start:0x80032FFC end:0x8003317C
 	.text       start:0x802ACBDC end:0x802AE43C
@@ -2605,7 +2605,7 @@ kyoshin/appgame/CTutorialList.cpp:
 	.sbss       start:0x806674D8 end:0x806674E0
 	.sdata2     start:0x8066B680 end:0x8066B698
 
-kyoshin/appgame/CLoad.cpp:
+kyoshin/CLoad.cpp:
 	extab       start:0x8001B4D8 end:0x8001B54C
 	extabindex  start:0x8003317C end:0x800331F4
 	.text       start:0x802AE43C end:0x802AEA88
@@ -2614,7 +2614,7 @@ kyoshin/appgame/CLoad.cpp:
 	.sdata      start:0x806656F0 end:0x806656F8
 	.sdata2     start:0x8066B698 end:0x8066B6A8
 
-kyoshin/appgame/CNandData.cpp:
+kyoshin/CNandData.cpp:
 	extab       start:0x8001B54C end:0x8001B570
 	extabindex  start:0x800331F4 end:0x8003320C
 	.text       start:0x802AEA88 end:0x802AEB74
@@ -2624,19 +2624,19 @@ kyoshin/appgame/CNandData.cpp:
 	.bss        start:0x8057AA48 end:0x8057AD80
 	.sdata      start:0x806656F8 end:0x80665708
 
-kyoshin/appgame/ErrMesData.cpp:
+kyoshin/ErrMesData.cpp:
 	.text       start:0x802AEB74 end:0x802AEBC4
 	.rodata     start:0x8050C458 end:0x8050C880
 	.sdata      start:0x80665708 end:0x80665730
 
-kyoshin/appgame/plugin/pluginHelp.cpp:
+kyoshin/plugin/pluginHelp.cpp:
 	extab       start:0x8001B570 end:0x8001B588
 	extabindex  start:0x8003320C end:0x80033230
 	.text       start:0x802AEBC4 end:0x802AED0C
 	.rodata     start:0x8050C880 end:0x8050C8B0
 	.data       start:0x8053DBB0 end:0x8053DBD0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp:
 	extab       start:0x8001B588 end:0x8001B62C
 	extabindex  start:0x80033230 end:0x800332F0
 	.text       start:0x802AED0C end:0x802AFA80
@@ -2645,7 +2645,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp:
 	.sdata      start:0x80665730 end:0x80665738
 	.sdata2     start:0x8066B6A8 end:0x8066B6C0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp:
 	extab       start:0x8001B62C end:0x8001B690
 	extabindex  start:0x800332F0 end:0x80033350
 	.text       start:0x802AFA80 end:0x802B03D0
@@ -2653,7 +2653,7 @@ kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp:
 	.data       start:0x8053E1C0 end:0x8053E420
 	.sdata      start:0x80665738 end:0x80665750
 
-kyoshin/appgame/menu/CMenuGCItem.cpp:
+kyoshin/menu/CMenuGCItem.cpp:
 	extab       start:0x8001B690 end:0x8001B78C
 	extabindex  start:0x80033350 end:0x800333A4
 	.text       start:0x802B03D0 end:0x802B0F18
@@ -2663,7 +2663,7 @@ kyoshin/appgame/menu/CMenuGCItem.cpp:
 	.sbss       start:0x806674E0 end:0x806674E8
 	.sdata2     start:0x8066B6C0 end:0x8066B6C8
 
-kyoshin/appgame/menu/CMenuGameClear.cpp:
+kyoshin/menu/CMenuGameClear.cpp:
 	extab       start:0x8001B78C end:0x8001B8B4
 	extabindex  start:0x800333A4 end:0x80033404
 	.text       start:0x802B0F18 end:0x802B2634
@@ -2672,7 +2672,7 @@ kyoshin/appgame/menu/CMenuGameClear.cpp:
 	.sdata      start:0x80665758 end:0x80665760
 	.sbss       start:0x806674E8 end:0x806674F0
 
-kyoshin/appgame/cf/CfHikariItemManager.cpp:
+kyoshin/cf/CfHikariItemManager.cpp:
 	extab       start:0x8001B8B4 end:0x8001B954
 	extabindex  start:0x80033404 end:0x800334B8
 	.text       start:0x802B2634 end:0x802B48A0
@@ -2684,7 +2684,7 @@ kyoshin/appgame/cf/CfHikariItemManager.cpp:
 	.sbss       start:0x806674F0 end:0x80667508
 	.sdata2     start:0x8066B6C8 end:0x8066B7B8
 
-kyoshin/appgame/CUIErrMesWin.cpp:
+kyoshin/CUIErrMesWin.cpp:
 	extab       start:0x8001B954 end:0x8001BAD8
 	extabindex  start:0x800334B8 end:0x80033608
 	.text       start:0x802B48A0 end:0x802B5DEC
@@ -2694,7 +2694,7 @@ kyoshin/appgame/CUIErrMesWin.cpp:
 	.sbss       start:0x80667508 end:0x80667510
 	.sdata2     start:0x8066B7B8 end:0x8066B7D0
 
-kyoshin/appgame/menu/CMenuTitle.cpp:
+kyoshin/menu/CMenuTitle.cpp:
 	extab       start:0x8001BAD8 end:0x8001BB54
 	extabindex  start:0x80033608 end:0x80033680
 	.text       start:0x802B5DEC end:0x802B632C
@@ -2704,7 +2704,7 @@ kyoshin/appgame/menu/CMenuTitle.cpp:
 	.sbss       start:0x80667510 end:0x80667518
 	.sdata2     start:0x8066B7D0 end:0x8066B7E0
 
-kyoshin/appgame/CTitle.cpp:
+kyoshin/CTitle.cpp:
 	extab       start:0x8001BB54 end:0x8001BD48
 	extabindex  start:0x80033680 end:0x800338B4
 	.text       start:0x802B632C end:0x802B7BD4
@@ -2714,7 +2714,7 @@ kyoshin/appgame/CTitle.cpp:
 	.sbss       start:0x80667518 end:0x80667520
 	.sdata2     start:0x8066B7E0 end:0x8066B800
 
-kyoshin/appgame/help/CHelp.cpp:
+kyoshin/help/CHelp.cpp:
 	extab       start:0x8001BD48 end:0x8001BD58
 	extabindex  start:0x800338B4 end:0x800338CC
 	.text       start:0x802B7BD4 end:0x802B7D00
@@ -2722,111 +2722,111 @@ kyoshin/appgame/help/CHelp.cpp:
 	.data       start:0x8053EA90 end:0x8053EED8
 	.sdata      start:0x806657A0 end:0x80665840
 
-kyoshin/appgame/help/CHelp_ArtsAttack.cpp:
+kyoshin/help/CHelp_ArtsAttack.cpp:
 	extab       start:0x8001BD58 end:0x8001BD60
 	extabindex  start:0x800338CC end:0x800338D8
 	.text       start:0x802B7D00 end:0x802B7D9C
 
-kyoshin/appgame/help/CHelp_ArtsSet.cpp:
+kyoshin/help/CHelp_ArtsSet.cpp:
 	extab       start:0x8001BD60 end:0x8001BD68
 	extabindex  start:0x800338D8 end:0x800338E4
 	.text       start:0x802B7D9C end:0x802B7DEC
 
-kyoshin/appgame/help/CHelp_CkKizuna.cpp:
+kyoshin/help/CHelp_CkKizuna.cpp:
 	extab       start:0x8001BD68 end:0x8001BD70
 	extabindex  start:0x800338E4 end:0x800338F0
 	.text       start:0x802B7DEC end:0x802B7E34
 
-kyoshin/appgame/help/CHelp_CloseItemMenu.cpp:
+kyoshin/help/CHelp_CloseItemMenu.cpp:
 	extab       start:0x8001BD70 end:0x8001BD78
 	extabindex  start:0x800338F0 end:0x800338FC
 	.text       start:0x802B7E34 end:0x802B7E7C
 
-kyoshin/appgame/help/CHelp_CloseSysMenu.cpp:
+kyoshin/help/CHelp_CloseSysMenu.cpp:
 	extab       start:0x8001BD78 end:0x8001BD80
 	extabindex  start:0x800338FC end:0x80033908
 	.text       start:0x802B7E7C end:0x802B7EC4
 
-kyoshin/appgame/help/CHelp_EndEvent.cpp:
+kyoshin/help/CHelp_EndEvent.cpp:
 	extab       start:0x8001BD80 end:0x8001BD88
 	extabindex  start:0x80033908 end:0x80033914
 	.text       start:0x802B7EC4 end:0x802B7F54
 
-kyoshin/appgame/help/CHelp_EnemyCount.cpp:
+kyoshin/help/CHelp_EnemyCount.cpp:
 	extab       start:0x8001BD88 end:0x8001BD90
 	extabindex  start:0x80033914 end:0x80033920
 	.text       start:0x802B7F54 end:0x802B8028
 
-kyoshin/appgame/help/CHelp_EnemyEnable.cpp:
+kyoshin/help/CHelp_EnemyEnable.cpp:
 	extab       start:0x8001BD90 end:0x8001BD98
 	extabindex  start:0x80033920 end:0x8003392C
 	.text       start:0x802B8028 end:0x802B80A4
 
-kyoshin/appgame/help/CHelp_EtherMake.cpp:
+kyoshin/help/CHelp_EtherMake.cpp:
 	extab       start:0x8001BD98 end:0x8001BDA0
 	extabindex  start:0x8003392C end:0x80033938
 	.text       start:0x802B80A4 end:0x802B80F0
 
-kyoshin/appgame/help/CHelp_Exchange.cpp:
+kyoshin/help/CHelp_Exchange.cpp:
 	.text       start:0x802B80F0 end:0x802B80F4
 
-kyoshin/appgame/help/CHelp_GameOver.cpp:
+kyoshin/help/CHelp_GameOver.cpp:
 	extab       start:0x8001BDA0 end:0x8001BDA8
 	extabindex  start:0x80033938 end:0x80033944
 	.text       start:0x802B80F4 end:0x802B8180
 
-kyoshin/appgame/help/CHelp_ItemCole.cpp:
+kyoshin/help/CHelp_ItemCole.cpp:
 	.text       start:0x802B8180 end:0x802B818C
 
-kyoshin/appgame/help/CHelp_Kizuna.cpp:
+kyoshin/help/CHelp_Kizuna.cpp:
 	.text       start:0x802B818C end:0x802B8198
 
-kyoshin/appgame/help/CHelp_LandMark.cpp:
+kyoshin/help/CHelp_LandMark.cpp:
 	extab       start:0x8001BDA8 end:0x8001BDF0
 	extabindex  start:0x80033944 end:0x80033974
 	.text       start:0x802B8198 end:0x802B8398
 
-kyoshin/appgame/help/CHelp_LearnArts.cpp:
+kyoshin/help/CHelp_LearnArts.cpp:
 	extab       start:0x8001BDF0 end:0x8001BDF8
 	extabindex  start:0x80033974 end:0x80033980
 	.text       start:0x802B8398 end:0x802B84EC
 
-kyoshin/appgame/help/CHelp_ClosePartyMenu.cpp:
+kyoshin/help/CHelp_ClosePartyMenu.cpp:
 	extab       start:0x8001BDF8 end:0x8001BE08
 	extabindex  start:0x80033980 end:0x80033998
 	.text       start:0x802B84EC end:0x802B859C
 
-kyoshin/appgame/help/CHelp_OpenPartyMenu.cpp:
+kyoshin/help/CHelp_OpenPartyMenu.cpp:
 	.text       start:0x802B859C end:0x802B85A4
 
-kyoshin/appgame/help/CHelp_Pg.cpp:
+kyoshin/help/CHelp_Pg.cpp:
 	extab       start:0x8001BE08 end:0x8001BE10
 	extabindex  start:0x80033998 end:0x800339A4
 	.text       start:0x802B85A4 end:0x802B8604
 	.sdata2     start:0x8066B800 end:0x8066B808
 
-kyoshin/appgame/help/CHelp_CloseQuestMenu.cpp:
+kyoshin/help/CHelp_CloseQuestMenu.cpp:
 	extab       start:0x8001BE10 end:0x8001BE18
 	extabindex  start:0x800339A4 end:0x800339B0
 	.text       start:0x802B8604 end:0x802B864C
 
-kyoshin/appgame/help/CHelp_ShopBuy.cpp:
+kyoshin/help/CHelp_ShopBuy.cpp:
 	.text       start:0x802B864C end:0x802B8650
 
-kyoshin/appgame/help/CHelp_ShopSel.cpp:
+kyoshin/help/CHelp_ShopSel.cpp:
 	.text       start:0x802B8650 end:0x802B8654
 
-kyoshin/appgame/help/CHelp_Sp.cpp:
+kyoshin/help/CHelp_Sp.cpp:
 	extab       start:0x8001BE18 end:0x8001BE20
 	extabindex  start:0x800339B0 end:0x800339BC
 	.text       start:0x802B8654 end:0x802B86BC
 
-kyoshin/appgame/help/CHelp_Talk.cpp:
+kyoshin/help/CHelp_Talk.cpp:
 	extab       start:0x8001BE20 end:0x8001BE30
 	extabindex  start:0x800339BC end:0x800339D4
 	.text       start:0x802B86BC end:0x802B88C8
 
-kyoshin/appgame/help/CHelp_Target.cpp:
+kyoshin/help/CHelp_Target.cpp:
 	extab       start:0x8001BE30 end:0x8001BE38
 	extabindex  start:0x800339D4 end:0x800339E0
 	.text       start:0x802B88C8 end:0x802B8A3C
@@ -2834,7 +2834,7 @@ kyoshin/appgame/help/CHelp_Target.cpp:
 	.data       start:0x8053EED8 end:0x8053EF00
 	.sdata      start:0x80665840 end:0x80665848
 
-kyoshin/appgame/code_802B8A3C.cpp:
+kyoshin/code_802B8A3C.cpp:
 	extab       start:0x8001BE38 end:0x8001BE84
 	extabindex  start:0x800339E0 end:0x80033A1C
 	.text       start:0x802B8A3C end:0x802B8F70
@@ -2842,7 +2842,7 @@ kyoshin/appgame/code_802B8A3C.cpp:
 	.data       start:0x8053EF00 end:0x8053EF98
 	.sdata      start:0x80665848 end:0x80665850
 
-kyoshin/appgame/plugin/pluginVoice.cpp:
+kyoshin/plugin/pluginVoice.cpp:
 	extab       start:0x8001BE84 end:0x8001BE8C
 	extabindex  start:0x80033A1C end:0x80033A28
 	.text       start:0x802B8F70 end:0x802B9064
@@ -2850,13 +2850,13 @@ kyoshin/appgame/plugin/pluginVoice.cpp:
 	.data       start:0x8053EF98 end:0x8053EFA8
 	.sdata2     start:0x8066B808 end:0x8066B818
 
-kyoshin/appgame/code_802B9064.cpp:
+kyoshin/code_802B9064.cpp:
 	extab       start:0x8001BE8C end:0x8001BE94
 	extabindex  start:0x80033A28 end:0x80033A34
 	.text       start:0x802B9064 end:0x802B91E8
 	.sdata2     start:0x8066B818 end:0x8066B820
 
-kyoshin/appgame/CBattery.cpp:
+kyoshin/CBattery.cpp:
 	extab       start:0x8001BE94 end:0x8001BEE8
 	extabindex  start:0x80033A34 end:0x80033A7C
 	.text       start:0x802B91E8 end:0x802B95B8

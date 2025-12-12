@@ -13,7 +13,7 @@ Sections:
 	.sdata2     type:rodata align:8
 	.sbss2      type:bss align:32
 
-kyoshin/appgame/CGame.cpp:
+kyoshin/CGame.cpp:
 	extab       start:0x800066E0 end:0x800067C4
 	extabindex  start:0x800211C0 end:0x800212A4
 	.text       start:0x800395A0 end:0x8003A2A8
@@ -25,7 +25,7 @@ kyoshin/appgame/CGame.cpp:
 	.sbss       start:0x80663D00 end:0x80663D10
 	.sdata2     start:0x80665AA0 end:0x80665AB8
 
-kyoshin/appgame/main.cpp:
+kyoshin/main.cpp:
 	extab       start:0x800067C4 end:0x800067D4
 	extabindex  start:0x800212A4 end:0x800212BC
 	.text       start:0x8003A2A8 end:0x8003A414
@@ -45,83 +45,83 @@ PowerPC_EABI_Support/src/Runtime/New.cp:
 	.rodata     start:0x805139D8 end:0x805139E8
 	.sdata      start:0x80662F30 end:0x80662F38
 
-kyoshin/appgame/plugin/pluginDeb.cpp:
+kyoshin/plugin/pluginDeb.cpp:
 	extab       start:0x800067D4 end:0x800067E4
 	extabindex  start:0x800212BC end:0x800212D4
 	.text       start:0x8003A414 end:0x8003A498
 
-kyoshin/appgame/plugin/pluginWait.cpp:
+kyoshin/plugin/pluginWait.cpp:
 	extab       start:0x800067E4 end:0x800067EC
 	extabindex  start:0x800212D4 end:0x800212E0
 	.text       start:0x8003A498 end:0x8003A58C
 
-kyoshin/appgame/plugin/ocBuiltin.cpp:
+kyoshin/plugin/ocBuiltin.cpp:
 	extab       start:0x800067EC end:0x80006804
 	extabindex  start:0x800212E0 end:0x80021304
 	.text       start:0x8003A58C end:0x8003A6F0
 
-kyoshin/appgame/plugin/ocThread.cpp:
+kyoshin/plugin/ocThread.cpp:
 	extab       start:0x80006804 end:0x8000683C
 	extabindex  start:0x80021304 end:0x80021358
 	.text       start:0x8003A6F0 end:0x8003A91C
 	.ctors      start:0x804F9FC8 end:0x804F9FCC
 
-kyoshin/appgame/plugin/ocMsg.cpp:
+kyoshin/plugin/ocMsg.cpp:
 	extab       start:0x8000683C end:0x800068B4
 	extabindex  start:0x80021358 end:0x8002140C
 	.text       start:0x8003A91C end:0x8003AE14
 
-kyoshin/appgame/plugin/ocBdat.cpp:
+kyoshin/plugin/ocBdat.cpp:
 	extab       start:0x800068B4 end:0x80006944
 	extabindex  start:0x8002140C end:0x800214E4
 	.text       start:0x8003AE14 end:0x8003C18C
 
-kyoshin/appgame/plugin/ocUnit.cpp:
+kyoshin/plugin/ocUnit.cpp:
 	extab       start:0x80006944 end:0x80006BEC
 	extabindex  start:0x800214E4 end:0x800218E0
 	.text       start:0x8003C18C end:0x800406C0
 
-kyoshin/appgame/CTaskGame.cpp:
+kyoshin/CTaskGame.cpp:
 	extab       start:0x80006BEC end:0x80006E78
 	extabindex  start:0x800218E0 end:0x80021C1C
 	.text       start:0x800406C0 end:0x80044704
 
-kyoshin/appgame/cf/CTaskGameCf.cpp:
+kyoshin/cf/CTaskGameCf.cpp:
 	extab       start:0x80006E78 end:0x80006ED8
 	extabindex  start:0x80021C1C end:0x80021CAC
 	.text       start:0x80044704 end:0x80045058
 
-kyoshin/appgame/CTaskGameEff.cpp:
+kyoshin/CTaskGameEff.cpp:
 	extab       start:0x80006ED8 end:0x80006FA8
 	extabindex  start:0x80021CAC end:0x80021D90
 	.text       start:0x80045058 end:0x80045B00
 
-kyoshin/appgame/plugin/ocCfp.cpp:
+kyoshin/plugin/ocCfp.cpp:
 	extab       start:0x80006FA8 end:0x80006FE8
 	extabindex  start:0x80021D90 end:0x80021DF0
 	.text       start:0x80045B00 end:0x80045DB4
 
-kyoshin/appgame/plugin/pluginMain.cpp:
+kyoshin/plugin/pluginMain.cpp:
 	extab       start:0x80006FE8 end:0x80006FF0
 	extabindex  start:0x80021DF0 end:0x80021DFC
 	.text       start:0x80045DB4 end:0x80045E24
 
-kyoshin/appgame/plugin/pluginUi.cpp:
+kyoshin/plugin/pluginUi.cpp:
 	extab       start:0x80006FF0 end:0x80007130
 	extabindex  start:0x80021DFC end:0x80021FC4
 	.text       start:0x80045E24 end:0x80046EC8
 
-kyoshin/appgame/plugin/pluginEve.cpp:
+kyoshin/plugin/pluginEve.cpp:
 	extab       start:0x80007130 end:0x800071C0
 	extabindex  start:0x80021FC4 end:0x8002209C
 	.text       start:0x80046EC8 end:0x8004785C
 
-kyoshin/appgame/plugin/pluginCfs.cpp:
+kyoshin/plugin/pluginCfs.cpp:
 	extab       start:0x800071C0 end:0x800073C8
 	extabindex  start:0x8002209C end:0x800223A8
 	.text       start:0x8004785C end:0x8004B664
 
-kyoshin/appgame/plugin/pluginMath.cpp:
+kyoshin/plugin/pluginMath.cpp:
 	extab       start:0x800073C8 end:0x800073D0
 	extabindex  start:0x800223A8 end:0x800223B4
 	.text       start:0x8004B664 end:0x8004B700
@@ -137,237 +137,237 @@ kyoshin/action/CActParamData.cpp:
 	extabindex  start:0x80022708 end:0x800228B8
 	.text       start:0x80054044 end:0x80058A7C
 
-kyoshin/appgame/cf/CMcaFile.cpp:
+kyoshin/cf/CMcaFile.cpp:
 	extab       start:0x8000773C end:0x8000774C
 	extabindex  start:0x800228B8 end:0x800228D0
 	.text       start:0x80058A7C end:0x80058BE4
 
-kyoshin/appgame/cf/CTaskEnvironment.cpp:
+kyoshin/cf/CTaskEnvironment.cpp:
 	extab       start:0x8000774C end:0x800077CC
 	extabindex  start:0x800228D0 end:0x80022990
 	.text       start:0x80058BE4 end:0x8005A520
 	.ctors      start:0x804F9FD0 end:0x804F9FD4
 
-kyoshin/appgame/CTimeLightGrp.cpp:
+kyoshin/CTimeLightGrp.cpp:
 	extab       start:0x800077CC end:0x80007824
 	extabindex  start:0x80022990 end:0x800229E4
 	.text       start:0x8005A520 end:0x8005AA64
 
-kyoshin/appgame/cf/CActParamAnimGame.cpp:
+kyoshin/cf/CActParamAnimGame.cpp:
 	extab       start:0x80007824 end:0x80007924
 	extabindex  start:0x800229E4 end:0x80022B28
 	.text       start:0x8005AA64 end:0x800609B8
 
-kyoshin/appgame/plugin/pluginCam.cpp:
+kyoshin/plugin/pluginCam.cpp:
 	extab       start:0x80007924 end:0x800079C4
 	extabindex  start:0x80022B28 end:0x80022C18
 	.text       start:0x800609B8 end:0x80061BF4
 
-kyoshin/appgame/cf/CTaskGameEffAfter.cpp:
+kyoshin/cf/CTaskGameEffAfter.cpp:
 	extab       start:0x800079C4 end:0x800079EC
 	extabindex  start:0x80022C18 end:0x80022C54
 	.text       start:0x80061BF4 end:0x80061DE0
 
-kyoshin/appgame/plugin/pluginPad.cpp:
+kyoshin/plugin/pluginPad.cpp:
 	extab       start:0x800079EC end:0x800079FC
 	extabindex  start:0x80022C54 end:0x80022C6C
 	.text       start:0x80061DE0 end:0x80061F70
 
-kyoshin/appgame/cf/CfRes.cpp:
+kyoshin/cf/CfRes.cpp:
 	extab       start:0x800079FC end:0x80007D48
 	extabindex  start:0x80022C6C end:0x800230E0
 	.text       start:0x80061F70 end:0x800668A8
 
-kyoshin/appgame/cf/IResInfo.cpp:
+kyoshin/cf/IResInfo.cpp:
 	extab       start:0x80007D48 end:0x80007E8C
 	extabindex  start:0x800230E0 end:0x800232A8
 	.text       start:0x800668A8 end:0x80069430
 
-kyoshin/appgame/cf/CfScript.cpp:
+kyoshin/cf/CfScript.cpp:
 	extab       start:0x80007E8C end:0x80007F88
 	extabindex  start:0x800232A8 end:0x800233F8
 	.text       start:0x80069430 end:0x8006A124
 	.ctors      start:0x804F9FD4 end:0x804F9FD8
 
-kyoshin/appgame/cf/CfTaskMain.cpp:
+kyoshin/cf/CfTaskMain.cpp:
 	extab       start:0x80007F88 end:0x80007FC4
 	extabindex  start:0x800233F8 end:0x80023434
 	.text       start:0x8006A124 end:0x8006A360
 
-kyoshin/appgame/cf/CfTFile.cpp:
+kyoshin/cf/CfTFile.cpp:
 	extab       start:0x80007FC4 end:0x8000806C
 	extabindex  start:0x80023434 end:0x80023530
 	.text       start:0x8006A360 end:0x8006B284
 	.ctors      start:0x804F9FD8 end:0x804F9FDC
 
-kyoshin/appgame/cf/CfCamEvent.cpp:
+kyoshin/cf/CfCamEvent.cpp:
 	extab       start:0x8000806C end:0x800080E8
 	extabindex  start:0x80023530 end:0x800235CC
 	.text       start:0x8006B284 end:0x8006BE44
 
-kyoshin/appgame/cf/CfCamDirectionIntf.cpp:
+kyoshin/cf/CfCamDirectionIntf.cpp:
 	extab       start:0x800080E8 end:0x800080F8
 	extabindex  start:0x800235CC end:0x800235E4
 	.text       start:0x8006BE44 end:0x8006BF60
 
-kyoshin/appgame/cf/CfCamLookatIntf.cpp:
+kyoshin/cf/CfCamLookatIntf.cpp:
 	extab       start:0x800080F8 end:0x80008100
 	extabindex  start:0x800235E4 end:0x800235F0
 	.text       start:0x8006BF60 end:0x8006C02C
 
-kyoshin/appgame/cf/CfCamTargetIntf.cpp:
+kyoshin/cf/CfCamTargetIntf.cpp:
 	extab       start:0x80008100 end:0x80008108
 	extabindex  start:0x800235F0 end:0x800235FC
 	.text       start:0x8006C02C end:0x8006C0F8
 
-kyoshin/appgame/cf/CfCam.cpp:
+kyoshin/cf/CfCam.cpp:
 	extab       start:0x80008108 end:0x800083CC
 	extabindex  start:0x800235FC end:0x80023A04
 	.text       start:0x8006C0F8 end:0x800758E8
 	.ctors      start:0x804F9FDC end:0x804F9FE0
 
-kyoshin/appgame/cf/CfCamEvent_1.cpp:
+kyoshin/cf/CfCamEvent_1.cpp:
 	extab       start:0x800083CC end:0x8000847C
 	extabindex  start:0x80023A04 end:0x80023B0C
 	.text       start:0x800758E8 end:0x8007CA94
 	.ctors      start:0x804F9FE0 end:0x804F9FE4
 
-kyoshin/appgame/code_8007C0F8.cpp:
+kyoshin/code_8007C0F8.cpp:
 	extab       start:0x8000847C end:0x80008B0C
 	extabindex  start:0x80023B0C end:0x800242D4
 	.text       start:0x8007CA94 end:0x80087F80
 	.ctors      start:0x804F9FE4 end:0x804F9FE8
 
-kyoshin/appgame/cf/CtrlEnemy.cpp:
+kyoshin/cf/CtrlEnemy.cpp:
 	extab       start:0x80008B0C end:0x80008BB4
 	extabindex  start:0x800242D4 end:0x8002434C
 	.text       start:0x80087F80 end:0x800892DC
 
-kyoshin/appgame/cf/CtrlMoveBase.cpp:
+kyoshin/cf/CtrlMoveBase.cpp:
 	extab       start:0x80008BB4 end:0x80008C1C
 	extabindex  start:0x8002434C end:0x800243E8
 	.text       start:0x800892DC end:0x8008AADC
 	.ctors      start:0x804F9FE8 end:0x804F9FEC
 
-kyoshin/appgame/cf/CtrlMoveEne.cpp:
+kyoshin/cf/CtrlMoveEne.cpp:
 	extab       start:0x80008C1C end:0x80008D24
 	extabindex  start:0x800243E8 end:0x80024574
 	.text       start:0x8008AADC end:0x80094070
 
-kyoshin/appgame/cf/CtrlNpc.cpp:
+kyoshin/cf/CtrlNpc.cpp:
 	extab       start:0x80008D24 end:0x80008E04
 	extabindex  start:0x80024574 end:0x80024688
 	.text       start:0x80094070 end:0x80097274
 
-kyoshin/appgame/cf/CtrlPc.cpp:
+kyoshin/cf/CtrlPc.cpp:
 	extab       start:0x80008E04 end:0x80008F00
 	extabindex  start:0x80024688 end:0x8002476C
 	.text       start:0x80097274 end:0x800995BC
 
-kyoshin/appgame/cf/CtrlRemote.cpp:
+kyoshin/cf/CtrlRemote.cpp:
 	extab       start:0x80008F00 end:0x8000901C
 	extabindex  start:0x8002476C end:0x80024898
 	.text       start:0x800995BC end:0x8009DFDC
 
-kyoshin/appgame/cf/CtrlObjectParam.cpp:
+kyoshin/cf/CtrlObjectParam.cpp:
 	extab       start:0x8000901C end:0x80009184
 	extabindex  start:0x80024898 end:0x80024AB4
 	.text       start:0x8009DFDC end:0x800A43EC
 
-kyoshin/appgame/code_800A3B24.cpp:
+kyoshin/code_800A3B24.cpp:
 	extab       start:0x80009184 end:0x800093A4
 	extabindex  start:0x80024AB4 end:0x80024DB4
 	.text       start:0x800A43EC end:0x800AA8D4
 	.ctors      start:0x804F9FEC end:0x804F9FF0
 
-kyoshin/appgame/code_800AA008.cpp:
+kyoshin/code_800AA008.cpp:
 	extab       start:0x800093A4 end:0x800093C4
 	extabindex  start:0x80024DB4 end:0x80024DE4
 	.text       start:0x800AA8D4 end:0x800AB4A0
 	.ctors      start:0x804F9FF0 end:0x804F9FF4
 
-kyoshin/appgame/cf/CfCollCircleImpl.cpp:
+kyoshin/cf/CfCollCircleImpl.cpp:
 	extab       start:0x800093C4 end:0x800093E4
 	extabindex  start:0x80024DE4 end:0x80024DFC
 	.text       start:0x800AB4A0 end:0x800AB5F4
 
-kyoshin/appgame/cf/CfCollSphereImpl.cpp:
+kyoshin/cf/CfCollSphereImpl.cpp:
 	extab       start:0x800093E4 end:0x800093F4
 	extabindex  start:0x80024DFC end:0x80024E14
 	.text       start:0x800AB5F4 end:0x800AB6F0
 
-kyoshin/appgame/cf/CfCollAABBImpl.cpp:
+kyoshin/cf/CfCollAABBImpl.cpp:
 	extab       start:0x800093F4 end:0x8000940C
 	extabindex  start:0x80024E14 end:0x80024E20
 	.text       start:0x800AB6F0 end:0x800AB8DC
 
-kyoshin/appgame/cf/CfCollCylinderImpl.cpp:
+kyoshin/cf/CfCollCylinderImpl.cpp:
 	extab       start:0x8000940C end:0x8000941C
 	extabindex  start:0x80024E20 end:0x80024E38
 	.text       start:0x800AB8DC end:0x800ABBB0
 
-kyoshin/appgame/cf/CfCollCapsuleImpl.cpp:
+kyoshin/cf/CfCollCapsuleImpl.cpp:
 	extab       start:0x8000941C end:0x80009424
 	extabindex  start:0x80024E38 end:0x80024E44
 	.text       start:0x800ABBB0 end:0x800ABC9C
 
-kyoshin/appgame/cf/object/CfObjectColl.cpp:
+kyoshin/cf/object/CfObjectColl.cpp:
 	extab       start:0x80009424 end:0x800094E0
 	extabindex  start:0x80024E44 end:0x80024F40
 	.text       start:0x800ABC9C end:0x800ACEF8
 
-kyoshin/appgame/cf/object/CfObjectEff.cpp:
+kyoshin/cf/object/CfObjectEff.cpp:
 	extab       start:0x800094E0 end:0x800095E4
 	extabindex  start:0x80024F40 end:0x80025048
 	.text       start:0x800ACEF8 end:0x800AE154
 
-kyoshin/appgame/cf/object/CfObjectEne.cpp:
+kyoshin/cf/object/CfObjectEne.cpp:
 	extab       start:0x800095E4 end:0x800096AC
 	extabindex  start:0x80025048 end:0x80025138
 	.text       start:0x800AE154 end:0x800B0F70
 
-kyoshin/appgame/code_800B06A4.cpp:
+kyoshin/code_800B06A4.cpp:
 	extab       start:0x800096AC end:0x80009B44
 	extabindex  start:0x80025138 end:0x800257A4
 	.text       start:0x800B0F70 end:0x800BA38C
 	.ctors      start:0x804F9FF4 end:0x804F9FF8
 
-kyoshin/appgame/cf/object/CfObjectMap.cpp:
+kyoshin/cf/object/CfObjectMap.cpp:
 	extab       start:0x80009B44 end:0x80009BC8
 	extabindex  start:0x800257A4 end:0x8002581C
 	.text       start:0x800BA38C end:0x800BB108
 
-kyoshin/appgame/cf/object/CfObjectModel.cpp:
+kyoshin/cf/object/CfObjectModel.cpp:
 	extab       start:0x80009BC8 end:0x80009CEC
 	extabindex  start:0x8002581C end:0x800259B4
 	.text       start:0x800BB108 end:0x800BC56C
 
-kyoshin/appgame/cf/object/CfObjectMove.cpp:
+kyoshin/cf/object/CfObjectMove.cpp:
 	extab       start:0x80009CEC end:0x80009F20
 	extabindex  start:0x800259B4 end:0x80025C18
 	.text       start:0x800BC56C end:0x800BFD48
 
-kyoshin/appgame/cf/object/CfObjectNpc.cpp:
+kyoshin/cf/object/CfObjectNpc.cpp:
 	extab       start:0x80009F20 end:0x80009F80
 	extabindex  start:0x80025C18 end:0x80025C6C
 	.text       start:0x800BFD48 end:0x800C03D4
 
-kyoshin/appgame/cf/object/CfObjectObj.cpp:
+kyoshin/cf/object/CfObjectObj.cpp:
 	extab       start:0x80009F80 end:0x80009FD8
 	extabindex  start:0x80025C6C end:0x80025CB4
 	.text       start:0x800C03D4 end:0x800C06D8
 
-kyoshin/appgame/cf/object/CfObjectPc.cpp:
+kyoshin/cf/object/CfObjectPc.cpp:
 	extab       start:0x80009FD8 end:0x8000A0C0
 	extabindex  start:0x80025CB4 end:0x80025DD4
 	.text       start:0x800C06D8 end:0x800C1CBC
 
-kyoshin/appgame/cf/object/CfObjectPoint.cpp:
+kyoshin/cf/object/CfObjectPoint.cpp:
 	extab       start:0x8000A0C0 end:0x8000A114
 	extabindex  start:0x80025DD4 end:0x80025E34
 	.text       start:0x800C1CBC end:0x800C2224
 
-kyoshin/appgame/cf/code_800C17DC.cpp:
+kyoshin/cf/code_800C17DC.cpp:
 	extab       start:0x8000A114 end:0x8000A14C
 	extabindex  start:0x80025E34 end:0x80025E88
 	.text       start:0x800C2224 end:0x800C298C
@@ -403,1291 +403,1291 @@ kyoshin/cfsys/CfObjectImplEne.cpp:
 	extabindex  start:0x800261E8 end:0x80026254
 	.text       start:0x800D0AB4 end:0x800D1BC4
 
-kyoshin/appgame/cf/CtrlAct.cpp:
+kyoshin/cf/CtrlAct.cpp:
 	extab       start:0x8000A564 end:0x8000A664
 	extabindex  start:0x80026254 end:0x80026380
 	.text       start:0x800D1BC4 end:0x800D84EC
 	.ctors      start:0x804F9FFC end:0x804FA000
 
-kyoshin/appgame/cf/CBattleManager.cpp:
+kyoshin/cf/CBattleManager.cpp:
 	extab       start:0x8000A664 end:0x8000AC20
 	extabindex  start:0x80026380 end:0x80026668
 	.text       start:0x800D84EC end:0x800F4D94
 
-kyoshin/appgame/cf/code_800F42AC.cpp:
+kyoshin/cf/code_800F42AC.cpp:
 	extab       start:0x8000AC20 end:0x8000AC48
 	extabindex  start:0x80026668 end:0x800266A4
 	.text       start:0x800F4D94 end:0x800F52B0
 
-kyoshin/appgame/cf/CfObjectEnumList.cpp:
+kyoshin/cf/CfObjectEnumList.cpp:
 	extab       start:0x8000AC48 end:0x8000AD54
 	extabindex  start:0x800266A4 end:0x80026818
 	.text       start:0x800F52B0 end:0x800FE25C
 
-kyoshin/appgame/cf/CfObjectSelectorObj.cpp:
+kyoshin/cf/CfObjectSelectorObj.cpp:
 	extab       start:0x8000AD54 end:0x8000ADD0
 	extabindex  start:0x80026818 end:0x80026878
 	.text       start:0x800FE25C end:0x800FF518
 	.ctors      start:0x804FA000 end:0x804FA004
 
-kyoshin/appgame/CMainMenu.cpp:
+kyoshin/CMainMenu.cpp:
 	extab       start:0x8000ADD0 end:0x8000AF7C
 	extabindex  start:0x80026878 end:0x80026998
 	.text       start:0x800FF518 end:0x80102B08
 
-kyoshin/appgame/menu/CMenuArtsSelect.cpp:
+kyoshin/menu/CMenuArtsSelect.cpp:
 	extab       start:0x8000AF7C end:0x8000B114
 	extabindex  start:0x80026998 end:0x80026B0C
 	.text       start:0x80102B08 end:0x80109740
 
-kyoshin/appgame/menu/CMenuBattleDamage.cpp:
+kyoshin/menu/CMenuBattleDamage.cpp:
 	extab       start:0x8000B114 end:0x8000B20C
 	extabindex  start:0x80026B0C end:0x80026BCC
 	.text       start:0x80109740 end:0x8010B880
 
-kyoshin/appgame/menu/CMenuBattlePlayerState.cpp:
+kyoshin/menu/CMenuBattlePlayerState.cpp:
 	extab       start:0x8000B20C end:0x8000B398
 	extabindex  start:0x80026BCC end:0x80026C74
 	.text       start:0x8010B880 end:0x8010F540
 	.ctors      start:0x804FA004 end:0x804FA008
 
-kyoshin/appgame/menu/CMenuEnemyState.cpp:
+kyoshin/menu/CMenuEnemyState.cpp:
 	extab       start:0x8000B398 end:0x8000B528
 	extabindex  start:0x80026C74 end:0x80026D94
 	.text       start:0x8010F540 end:0x801140BC
 	.ctors      start:0x804FA008 end:0x804FA00C
 
-kyoshin/appgame/menu/CMenuFade.cpp:
+kyoshin/menu/CMenuFade.cpp:
 	extab       start:0x8000B528 end:0x8000B5D8
 	extabindex  start:0x80026D94 end:0x80026DE8
 	.text       start:0x801140BC end:0x8011492C
 
-kyoshin/appgame/menu/CMenuKeyAssign.cpp:
+kyoshin/menu/CMenuKeyAssign.cpp:
 	extab       start:0x8000B5D8 end:0x8000B6A8
 	extabindex  start:0x80026DE8 end:0x80026E6C
 	.text       start:0x8011492C end:0x80116AAC
 
-kyoshin/appgame/CMiniMap.cpp:
+kyoshin/CMiniMap.cpp:
 	extab       start:0x8000B6A8 end:0x8000B938
 	extabindex  start:0x80026E6C end:0x80026F98
 	.text       start:0x80116AAC end:0x8011CF28
 	.ctors      start:0x804FA00C end:0x804FA010
 
-kyoshin/appgame/menu/CMenuQuestLog.cpp:
+kyoshin/menu/CMenuQuestLog.cpp:
 	extab       start:0x8000B938 end:0x8000BAF4
 	extabindex  start:0x80026F98 end:0x8002707C
 	.text       start:0x8011CF28 end:0x8011DE14
 
-kyoshin/appgame/menu/CMenuSymbolMark.cpp:
+kyoshin/menu/CMenuSymbolMark.cpp:
 	extab       start:0x8000BAF4 end:0x8000BC78
 	extabindex  start:0x8002707C end:0x800271A8
 	.text       start:0x8011DE14 end:0x80122C40
 
-kyoshin/appgame/CQuestWindow.cpp:
+kyoshin/CQuestWindow.cpp:
 	extab       start:0x8000BC78 end:0x8000BE1C
 	extabindex  start:0x800271A8 end:0x80027298
 	.text       start:0x80122C40 end:0x801250C8
 
-kyoshin/appgame/CSystemWindow.cpp:
+kyoshin/CSystemWindow.cpp:
 	extab       start:0x8000BE1C end:0x8000BEBC
 	extabindex  start:0x80027298 end:0x800272EC
 	.text       start:0x801250C8 end:0x8012565C
 
-kyoshin/appgame/CSysWinSelect.cpp:
+kyoshin/CSysWinSelect.cpp:
 	extab       start:0x8000BEBC end:0x8000BFA0
 	extabindex  start:0x800272EC end:0x80027358
 	.text       start:0x8012565C end:0x80125DEC
 
-kyoshin/appgame/CTagProcessor.cpp:
+kyoshin/CTagProcessor.cpp:
 	extab       start:0x8000BFA0 end:0x8000C284
 	extabindex  start:0x80027358 end:0x80027730
 	.text       start:0x80125DEC end:0x8012C710
 	.ctors      start:0x804FA010 end:0x804FA014
 
-kyoshin/appgame/CTalkWindow.cpp:
+kyoshin/CTalkWindow.cpp:
 	extab       start:0x8000C284 end:0x8000C354
 	extabindex  start:0x80027730 end:0x800277B4
 	.text       start:0x8012C710 end:0x8012EA60
 	.ctors      start:0x804FA014 end:0x804FA018
 
-kyoshin/appgame/CUIBattleManager.cpp:
+kyoshin/CUIBattleManager.cpp:
 	extab       start:0x8000C354 end:0x8000C460
 	extabindex  start:0x800277B4 end:0x800278D4
 	.text       start:0x8012EA60 end:0x80130A48
 
-kyoshin/appgame/CUICfManager.cpp:
+kyoshin/CUICfManager.cpp:
 	extab       start:0x8000C460 end:0x8000C7E0
 	extabindex  start:0x800278D4 end:0x80027BD4
 	.text       start:0x80130A48 end:0x80136AB0
 
-kyoshin/appgame/code_80135FDC.cpp:
+kyoshin/code_80135FDC.cpp:
 	extab       start:0x8000C7E0 end:0x8000CBC0
 	extabindex  start:0x80027BD4 end:0x80028024
 	.text       start:0x80136AB0 end:0x8013CA58
 
-kyoshin/appgame/CUIWindowManager.cpp:
+kyoshin/CUIWindowManager.cpp:
 	extab       start:0x8000CBC0 end:0x8000CDF4
 	extabindex  start:0x80028024 end:0x800282DC
 	.text       start:0x8013CA58 end:0x80141E90
 	.ctors      start:0x804FA018 end:0x804FA01C
 
-kyoshin/appgame/cf/CfBdat.cpp:
+kyoshin/cf/CfBdat.cpp:
 	extab       start:0x8000CDF4 end:0x8000CE84
 	extabindex  start:0x800282DC end:0x800283B4
 	.text       start:0x80141E90 end:0x80142F60
 	.ctors      start:0x804FA01C end:0x804FA020
 
-kyoshin/appgame/menu/CMenuUpdate.cpp:
+kyoshin/menu/CMenuUpdate.cpp:
 	extab       start:0x8000CE84 end:0x8000CF84
 	extabindex  start:0x800283B4 end:0x80028480
 	.text       start:0x80142F60 end:0x80144FAC
 
-kyoshin/appgame/menu/CMenuLandTelop.cpp:
+kyoshin/menu/CMenuLandTelop.cpp:
 	extab       start:0x8000CF84 end:0x8000D054
 	extabindex  start:0x80028480 end:0x80028504
 	.text       start:0x80144FAC end:0x80146520
 
-kyoshin/appgame/cf/object/CBattleState.cpp:
+kyoshin/cf/object/CBattleState.cpp:
 	extab       start:0x8000D054 end:0x8000D0BC
 	extabindex  start:0x80028504 end:0x800285A0
 	.text       start:0x80146520 end:0x8014A184
 
-kyoshin/appgame/menu/CMenuGetItem.cpp:
+kyoshin/menu/CMenuGetItem.cpp:
 	extab       start:0x8000D0BC end:0x8000D204
 	extabindex  start:0x800285A0 end:0x80028654
 	.text       start:0x8014A184 end:0x8014B270
 
-kyoshin/appgame/cf/object/CAIAction.cpp:
+kyoshin/cf/object/CAIAction.cpp:
 	extab       start:0x8000D204 end:0x8000D39C
 	extabindex  start:0x80028654 end:0x80028708
 	.text       start:0x8014B270 end:0x80154630
 
-kyoshin/appgame/cf/CArtsSet.cpp:
+kyoshin/cf/CArtsSet.cpp:
 	extab       start:0x8000D39C end:0x8000D3B4
 	extabindex  start:0x80028708 end:0x8002872C
 	.text       start:0x80154630 end:0x80154944
 
-kyoshin/appgame/cf/CArtsParam.cpp:
+kyoshin/cf/CArtsParam.cpp:
 	extab       start:0x8000D3B4 end:0x8000D41C
 	extabindex  start:0x8002872C end:0x80028798
 	.text       start:0x80154944 end:0x8015612C
 	.ctors      start:0x804FA020 end:0x804FA024
 
-kyoshin/appgame/cf/CItem.cpp:
+kyoshin/cf/CItem.cpp:
 	extab       start:0x8000D41C end:0x8000D684
 	extabindex  start:0x80028798 end:0x80028B34
 	.text       start:0x8015612C end:0x8015CAEC
 	.ctors      start:0x804FA024 end:0x804FA028
 
-kyoshin/appgame/cf/CCharEffect.cpp:
+kyoshin/cf/CCharEffect.cpp:
 	extab       start:0x8000D684 end:0x8000D6EC
 	extabindex  start:0x80028B34 end:0x80028BD0
 	.text       start:0x8015CAEC end:0x8015DD8C
 
-kyoshin/appgame/cf/CCharEffectEne.cpp:
+kyoshin/cf/CCharEffectEne.cpp:
 	extab       start:0x8000D6EC end:0x8000D71C
 	extabindex  start:0x80028BD0 end:0x80028C18
 	.text       start:0x8015DD8C end:0x8015E188
 
-kyoshin/appgame/CCol6System.cpp:
+kyoshin/CCol6System.cpp:
 	extab       start:0x8000D71C end:0x8000DB08
 	extabindex  start:0x80028C18 end:0x80028E04
 	.text       start:0x8015E188 end:0x80165088
 
-kyoshin/appgame/CCol6Invite.cpp:
+kyoshin/CCol6Invite.cpp:
 	extab       start:0x8000DB08 end:0x8000DB18
 	extabindex  start:0x80028E04 end:0x80028E1C
 	.text       start:0x80165088 end:0x801652B8
 
-kyoshin/appgame/cf/CTaskREvent.cpp:
+kyoshin/cf/CTaskREvent.cpp:
 	extab       start:0x8000DB18 end:0x8000DD78
 	extabindex  start:0x80028E1C end:0x80028F78
 	.text       start:0x801652B8 end:0x801678C0
 
-kyoshin/appgame/cf/CInfoCf.cpp:
+kyoshin/cf/CInfoCf.cpp:
 	extab       start:0x8000DD78 end:0x8000DE54
 	extabindex  start:0x80028F78 end:0x80029008
 	.text       start:0x801678C0 end:0x80168AAC
 
-kyoshin/appgame/menu/CMenuItem.cpp:
+kyoshin/menu/CMenuItem.cpp:
 	extab       start:0x8000DE54 end:0x8000DEAC
 	extabindex  start:0x80029008 end:0x80029020
 	.text       start:0x80168AAC end:0x80168DFC
 
-kyoshin/appgame/realtimeevt/CREvtMem.cpp:
+kyoshin/realtimeevt/CREvtMem.cpp:
 	extab       start:0x8000DEAC end:0x8000DECC
 	extabindex  start:0x80029020 end:0x80029050
 	.text       start:0x80168DFC end:0x80169238
 
-kyoshin/appgame/cf/CTaskREvtSequence.cpp:
+kyoshin/cf/CTaskREvtSequence.cpp:
 	extab       start:0x8000DECC end:0x8000E0C0
 	extabindex  start:0x80029050 end:0x80029248
 	.text       start:0x80169238 end:0x8016DB4C
 
-kyoshin/appgame/cf/CfResObjImpl.cpp:
+kyoshin/cf/CfResObjImpl.cpp:
 	extab       start:0x8000E0C0 end:0x8000E0F0
 	extabindex  start:0x80029248 end:0x80029290
 	.text       start:0x8016DB4C end:0x8016E11C
 
-kyoshin/appgame/cf/CfResReloadImpl.cpp:
+kyoshin/cf/CfResReloadImpl.cpp:
 	extab       start:0x8000E0F0 end:0x8000E1D0
 	extabindex  start:0x80029290 end:0x800293E0
 	.text       start:0x8016E11C end:0x80170104
 	.ctors      start:0x804FA028 end:0x804FA02C
 
-kyoshin/appgame/cf/CfMapEffectManager.cpp:
+kyoshin/cf/CfMapEffectManager.cpp:
 	extab       start:0x8000E1D0 end:0x8000E23C
 	extabindex  start:0x800293E0 end:0x80029464
 	.text       start:0x80170104 end:0x80171264
 
-kyoshin/appgame/cf/object/CfObjectActor.cpp:
+kyoshin/cf/object/CfObjectActor.cpp:
 	extab       start:0x8000E23C end:0x8000E2D4
 	extabindex  start:0x80029464 end:0x8002950C
 	.text       start:0x80171264 end:0x801739E0
 
-kyoshin/appgame/realtimeevt/CREvtModel.cpp:
+kyoshin/realtimeevt/CREvtModel.cpp:
 	extab       start:0x8000E2D4 end:0x8000E370
 	extabindex  start:0x8002950C end:0x80029590
 	.text       start:0x801739E0 end:0x801745B0
 
-kyoshin/appgame/cf/CfMapItemManager.cpp:
+kyoshin/cf/CfMapItemManager.cpp:
 	extab       start:0x8000E370 end:0x8000E400
 	extabindex  start:0x80029590 end:0x80029668
 	.text       start:0x801745B0 end:0x80176660
 
-kyoshin/appgame/cf/object/CActorParam.cpp:
+kyoshin/cf/object/CActorParam.cpp:
 	extab       start:0x8000E400 end:0x8000E5C0
 	extabindex  start:0x80029668 end:0x80029824
 	.text       start:0x80176660 end:0x80180190
 
-kyoshin/appgame/menu/CMenuZeal.cpp:
+kyoshin/menu/CMenuZeal.cpp:
 	extab       start:0x8000E5C0 end:0x8000E680
 	extabindex  start:0x80029824 end:0x80029890
 	.text       start:0x80180190 end:0x80181374
 
-kyoshin/appgame/realtimeevt/CREvtCamera.cpp:
+kyoshin/realtimeevt/CREvtCamera.cpp:
 	extab       start:0x8000E680 end:0x8000E6E8
 	extabindex  start:0x80029890 end:0x800298F0
 	.text       start:0x80181374 end:0x80181DB4
 
-kyoshin/appgame/realtimeevt/CREvtModelMap.cpp:
+kyoshin/realtimeevt/CREvtModelMap.cpp:
 	extab       start:0x8000E6E8 end:0x8000E7D4
 	extabindex  start:0x800298F0 end:0x80029974
 	.text       start:0x80181DB4 end:0x80182E64
 
-kyoshin/appgame/realtimeevt/CREvtModelObj.cpp:
+kyoshin/realtimeevt/CREvtModelObj.cpp:
 	extab       start:0x8000E7D4 end:0x8000E8B4
 	extabindex  start:0x80029974 end:0x80029A10
 	.text       start:0x80182E64 end:0x80184B40
 
-kyoshin/appgame/realtimeevt/CREvtModelPc.cpp:
+kyoshin/realtimeevt/CREvtModelPc.cpp:
 	extab       start:0x8000E8B4 end:0x8000E968
 	extabindex  start:0x80029A10 end:0x80029AA0
 	.text       start:0x80184B40 end:0x80185F54
 
-kyoshin/appgame/realtimeevt/CREvtEffect.cpp:
+kyoshin/realtimeevt/CREvtEffect.cpp:
 	extab       start:0x8000E968 end:0x8000EA04
 	extabindex  start:0x80029AA0 end:0x80029B0C
 	.text       start:0x80185F54 end:0x80186B18
 
-kyoshin/appgame/realtimeevt/CREvtObj.cpp:
+kyoshin/realtimeevt/CREvtObj.cpp:
 	extab       start:0x8000EA04 end:0x8000EA14
 	extabindex  start:0x80029B0C end:0x80029B24
 	.text       start:0x80186B18 end:0x80186BE8
 
-kyoshin/appgame/plugin/pluginTime.cpp:
+kyoshin/plugin/pluginTime.cpp:
 	extab       start:0x8000EA14 end:0x8000EA24
 	extabindex  start:0x80029B24 end:0x80029B3C
 	.text       start:0x80186BE8 end:0x80186C90
 
-kyoshin/appgame/plugin/pluginBtl.cpp:
+kyoshin/plugin/pluginBtl.cpp:
 	extab       start:0x8000EA24 end:0x8000EAE4
 	extabindex  start:0x80029B3C end:0x80029C14
 	.text       start:0x80186C90 end:0x80187748
 
-kyoshin/appgame/code_801862C0.cpp:
+kyoshin/code_801862C0.cpp:
 	extab       start:0x8000EAE4 end:0x8000EB2C
 	extabindex  start:0x80029C14 end:0x80029C80
 	.text       start:0x80187748 end:0x80188388
 
-kyoshin/appgame/menu/CMenuPTGauge.cpp:
+kyoshin/menu/CMenuPTGauge.cpp:
 	extab       start:0x8000EB2C end:0x8000EC1C
 	extabindex  start:0x80029C80 end:0x80029D34
 	.text       start:0x80188388 end:0x801894C8
 
-kyoshin/appgame/menu/code_80187F14.cpp:
+kyoshin/menu/code_80187F14.cpp:
 	extab       start:0x8000EC1C end:0x8000ECCC
 	extabindex  start:0x80029D34 end:0x80029E3C
 	.text       start:0x801894C8 end:0x8018B39C
 	.ctors      start:0x804FA02C end:0x804FA030
 
-kyoshin/appgame/menu/CMenuSelectShop.cpp:
+kyoshin/menu/CMenuSelectShop.cpp:
 	extab       start:0x8000ECCC end:0x8000EE10
 	extabindex  start:0x80029E3C end:0x80029EC0
 	.text       start:0x8018B39C end:0x8018BBDC
 
-kyoshin/appgame/menu/CMenuShopSell.cpp:
+kyoshin/menu/CMenuShopSell.cpp:
 	extab       start:0x8000EE10 end:0x8000EF2C
 	extabindex  start:0x80029EC0 end:0x80029F44
 	.text       start:0x8018BBDC end:0x8018CC6C
 
-kyoshin/appgame/menu/CMenuShopBuy.cpp:
+kyoshin/menu/CMenuShopBuy.cpp:
 	extab       start:0x8000EF2C end:0x8000F048
 	extabindex  start:0x80029F44 end:0x80029FC8
 	.text       start:0x8018CC6C end:0x8018DBB0
 
-kyoshin/appgame/menu/code_8018C5FC.cpp:
+kyoshin/menu/code_8018C5FC.cpp:
 	extab       start:0x8000F048 end:0x8000F060
 	extabindex  start:0x80029FC8 end:0x80029FEC
 	.text       start:0x8018DBB0 end:0x8018DF78
 
-kyoshin/appgame/cf/CfResPcImpl.cpp:
+kyoshin/cf/CfResPcImpl.cpp:
 	extab       start:0x8000F060 end:0x8000F1A4
 	extabindex  start:0x80029FEC end:0x8002A190
 	.text       start:0x8018DF78 end:0x80190F20
 
-kyoshin/appgame/cf/code_8018F8D8.cpp:
+kyoshin/cf/code_8018F8D8.cpp:
 	extab       start:0x8000F1A4 end:0x8000F33C
 	extabindex  start:0x8002A190 end:0x8002A328
 	.text       start:0x80190F20 end:0x801941D4
 
-kyoshin/appgame/menu/CMenuPTState.cpp:
+kyoshin/menu/CMenuPTState.cpp:
 	extab       start:0x8000F33C end:0x8000F3A0
 	extabindex  start:0x8002A328 end:0x8002A34C
 	.text       start:0x801941D4 end:0x80194504
 
-kyoshin/appgame/cf/CPartsChange.cpp:
+kyoshin/cf/CPartsChange.cpp:
 	extab       start:0x8000F3A0 end:0x8000F564
 	extabindex  start:0x8002A34C end:0x8002A5D4
 	.text       start:0x80194504 end:0x8019AAE0
 
-kyoshin/appgame/cf/CtrlMovePC.cpp:
+kyoshin/cf/CtrlMovePC.cpp:
 	extab       start:0x8000F564 end:0x8000F5F4
 	extabindex  start:0x8002A5D4 end:0x8002A6AC
 	.text       start:0x8019AAE0 end:0x801A0DAC
 
-kyoshin/appgame/cf/CtrlMoveNpc.cpp:
+kyoshin/cf/CtrlMoveNpc.cpp:
 	extab       start:0x8000F5F4 end:0x8000F624
 	extabindex  start:0x8002A6AC end:0x8002A6F4
 	.text       start:0x801A0DAC end:0x801A156C
 
-kyoshin/appgame/menu/CMenuBattleMode.cpp:
+kyoshin/menu/CMenuBattleMode.cpp:
 	extab       start:0x8000F624 end:0x8000F6CC
 	extabindex  start:0x8002A6F4 end:0x8002A73C
 	.text       start:0x801A156C end:0x801A1BC0
 
-kyoshin/appgame/COccCulling.cpp:
+kyoshin/COccCulling.cpp:
 	extab       start:0x8000F6CC end:0x8000F748
 	extabindex  start:0x8002A73C end:0x8002A7A8
 	.text       start:0x801A1BC0 end:0x801A2F80
 	.ctors      start:0x804FA030 end:0x804FA034
 
-kyoshin/appgame/CSimpleEveTalkWin.cpp:
+kyoshin/CSimpleEveTalkWin.cpp:
 	extab       start:0x8000F748 end:0x8000F828
 	extabindex  start:0x8002A7A8 end:0x8002A814
 	.text       start:0x801A2F80 end:0x801A40EC
 
-kyoshin/appgame/cf/CTaskCulling.cpp:
+kyoshin/cf/CTaskCulling.cpp:
 	extab       start:0x8000F828 end:0x8000F8FC
 	extabindex  start:0x8002A814 end:0x8002A88C
 	.text       start:0x801A40EC end:0x801A47F8
 	.ctors      start:0x804FA034 end:0x804FA038
 
-kyoshin/appgame/cf/CVision.cpp:
+kyoshin/cf/CVision.cpp:
 	extab       start:0x8000F8FC end:0x8000FB44
 	extabindex  start:0x8002A88C end:0x8002AA18
 	.text       start:0x801A47F8 end:0x801AAA6C
 
-kyoshin/appgame/code_801A929C.cpp:
+kyoshin/code_801A929C.cpp:
 	extab       start:0x8000FB44 end:0x8000FB8C
 	extabindex  start:0x8002AA18 end:0x8002AA84
 	.text       start:0x801AAA6C end:0x801AC454
 
-kyoshin/appgame/plugin/pluginSnd.cpp:
+kyoshin/plugin/pluginSnd.cpp:
 	extab       start:0x8000FB8C end:0x8000FC1C
 	extabindex  start:0x8002AA84 end:0x8002AB5C
 	.text       start:0x801AC454 end:0x801AD518
 
-kyoshin/appgame/plugin/pluginGame.cpp:
+kyoshin/plugin/pluginGame.cpp:
 	.text       start:0x801AD518 end:0x801AD534
 
-kyoshin/appgame/menu/CMenuVision.cpp:
+kyoshin/menu/CMenuVision.cpp:
 	extab       start:0x8000FC1C end:0x8000FCF4
 	extabindex  start:0x8002AB5C end:0x8002ABEC
 	.text       start:0x801AD534 end:0x801B1550
 	.ctors      start:0x804FA038 end:0x804FA03C
 
-kyoshin/appgame/menu/CMenuBattleCommu.cpp:
+kyoshin/menu/CMenuBattleCommu.cpp:
 	extab       start:0x8000FCF4 end:0x8000FDBC
 	extabindex  start:0x8002ABEC end:0x8002AC64
 	.text       start:0x801B1550 end:0x801B3194
 
-kyoshin/appgame/cf/CPcEffect07.cpp:
+kyoshin/cf/CPcEffect07.cpp:
 	extab       start:0x8000FDBC end:0x8000FDF4
 	extabindex  start:0x8002AC64 end:0x8002ACB8
 	.text       start:0x801B3194 end:0x801B3E28
 
-kyoshin/appgame/menu/CMenuGetItemMulti.cpp:
+kyoshin/menu/CMenuGetItemMulti.cpp:
 	extab       start:0x8000FDF4 end:0x80010044
 	extabindex  start:0x8002ACB8 end:0x8002ADFC
 	.text       start:0x801B3E28 end:0x801BBA44
 	.ctors      start:0x804FA03C end:0x804FA040
 
-kyoshin/appgame/cf/CSuddenCommu.cpp:
+kyoshin/cf/CSuddenCommu.cpp:
 	extab       start:0x80010044 end:0x80010170
 	extabindex  start:0x8002ADFC end:0x8002AF40
 	.text       start:0x801BBA44 end:0x801BE330
 	.ctors      start:0x804FA040 end:0x804FA044
 
-kyoshin/appgame/menu/CMenuKizunaTalk.cpp:
+kyoshin/menu/CMenuKizunaTalk.cpp:
 	extab       start:0x80010170 end:0x800102CC
 	extabindex  start:0x8002AF40 end:0x8002AFE8
 	.text       start:0x801BE330 end:0x801BF69C
 
-kyoshin/appgame/menu/CMenuItemExchange.cpp:
+kyoshin/menu/CMenuItemExchange.cpp:
 	extab       start:0x800102CC end:0x8001047C
 	extabindex  start:0x8002AFE8 end:0x8002B0D8
 	.text       start:0x801BF69C end:0x801C1064
 
-kyoshin/appgame/cf/CfSoundMan.cpp:
+kyoshin/cf/CfSoundMan.cpp:
 	extab       start:0x8001047C end:0x800106BC
 	extabindex  start:0x8002B0D8 end:0x8002B2C4
 	.text       start:0x801C1064 end:0x801C3260
 	.ctors      start:0x804FA044 end:0x804FA048
 
-kyoshin/appgame/cf/CfPadTask.cpp:
+kyoshin/cf/CfPadTask.cpp:
 	extab       start:0x800106BC end:0x800107B8
 	extabindex  start:0x8002B2C4 end:0x8002B36C
 	.text       start:0x801C3260 end:0x801C45D8
 
-kyoshin/appgame/cf/code_801C2C14.cpp:
+kyoshin/cf/code_801C2C14.cpp:
 	extab       start:0x800107B8 end:0x80010914
 	extabindex  start:0x8002B36C end:0x8002B3E4
 	.text       start:0x801C45D8 end:0x801C4F6C
 
-kyoshin/appgame/realtimeevt/CREvtLight.cpp:
+kyoshin/realtimeevt/CREvtLight.cpp:
 	extab       start:0x80010914 end:0x80010950
 	extabindex  start:0x8002B3E4 end:0x8002B420
 	.text       start:0x801C4F6C end:0x801C5338
 
-kyoshin/appgame/CBgTex.cpp:
+kyoshin/CBgTex.cpp:
 	extab       start:0x80010950 end:0x800109AC
 	extabindex  start:0x8002B420 end:0x8002B468
 	.text       start:0x801C5338 end:0x801C5894
 
-kyoshin/appgame/CTitleAHelp.cpp:
+kyoshin/CTitleAHelp.cpp:
 	extab       start:0x800109AC end:0x80010A40
 	extabindex  start:0x8002B468 end:0x8002B510
 	.text       start:0x801C5894 end:0x801C6538
 	.ctors      start:0x804FA048 end:0x804FA04C
 
-kyoshin/appgame/CItemBoxGrid.cpp:
+kyoshin/CItemBoxGrid.cpp:
 	extab       start:0x80010A40 end:0x8001158C
 	extabindex  start:0x8002B510 end:0x8002BAA4
 	.text       start:0x801C6538 end:0x801D3A0C
 	.ctors      start:0x804FA04C end:0x804FA050
 
-kyoshin/appgame/CCur.cpp:
+kyoshin/CCur.cpp:
 	extab       start:0x8001158C end:0x800116CC
 	extabindex  start:0x8002BAA4 end:0x8002BC84
 	.text       start:0x801D3A0C end:0x801D49CC
 
-kyoshin/appgame/CSortMenu.cpp:
+kyoshin/CSortMenu.cpp:
 	extab       start:0x800116CC end:0x800117A0
 	extabindex  start:0x8002BC84 end:0x8002BD50
 	.text       start:0x801D49CC end:0x801D56C0
 
-kyoshin/appgame/CItemBoxInfo.cpp:
+kyoshin/CItemBoxInfo.cpp:
 	extab       start:0x800117A0 end:0x80011B78
 	extabindex  start:0x8002BD50 end:0x8002C1A0
 	.text       start:0x801D56C0 end:0x801EC9BC
 	.ctors      start:0x804FA050 end:0x804FA054
 
-kyoshin/appgame/CNumSelect.cpp:
+kyoshin/CNumSelect.cpp:
 	extab       start:0x80011B78 end:0x80011C1C
 	extabindex  start:0x8002C1A0 end:0x8002C260
 	.text       start:0x801EC9BC end:0x801ED6D0
 
-kyoshin/appgame/CItemBoxLine.cpp:
+kyoshin/CItemBoxLine.cpp:
 	extab       start:0x80011C1C end:0x80012294
 	extabindex  start:0x8002C260 end:0x8002C56C
 	.text       start:0x801ED6D0 end:0x801F50CC
 	.ctors      start:0x804FA054 end:0x804FA058
 
-kyoshin/appgame/CScrollBar.cpp:
+kyoshin/CScrollBar.cpp:
 	extab       start:0x80012294 end:0x80012308
 	extabindex  start:0x8002C56C end:0x8002C5E4
 	.text       start:0x801F50CC end:0x801F589C
 
-kyoshin/appgame/code_801F3BE0.cpp:
+kyoshin/code_801F3BE0.cpp:
 	extab       start:0x80012308 end:0x800123A8
 	extabindex  start:0x8002C5E4 end:0x8002C6D4
 	.text       start:0x801F589C end:0x801F6C24
 
-kyoshin/appgame/cf/CfGimmickObject.cpp:
+kyoshin/cf/CfGimmickObject.cpp:
 	extab       start:0x800123A8 end:0x80012498
 	extabindex  start:0x8002C6D4 end:0x8002C800
 	.text       start:0x801F6C24 end:0x801FA970
 
-kyoshin/appgame/cf/object/CfObjectTbox.cpp:
+kyoshin/cf/object/CfObjectTbox.cpp:
 	extab       start:0x80012498 end:0x800124D8
 	extabindex  start:0x8002C800 end:0x8002C824
 	.text       start:0x801FA970 end:0x801FAAF0
 
-kyoshin/appgame/cf/CfResTboxImpl.cpp:
+kyoshin/cf/CfResTboxImpl.cpp:
 	extab       start:0x800124D8 end:0x80012500
 	extabindex  start:0x8002C824 end:0x8002C860
 	.text       start:0x801FAAF0 end:0x801FAF94
 
-kyoshin/appgame/CPartyStateWin.cpp:
+kyoshin/CPartyStateWin.cpp:
 	extab       start:0x80012500 end:0x80012798
 	extabindex  start:0x8002C860 end:0x8002CA04
 	.text       start:0x801FAF94 end:0x801FDA84
 
-kyoshin/appgame/CModelDisp.cpp:
+kyoshin/CModelDisp.cpp:
 	extab       start:0x80012798 end:0x80012884
 	extabindex  start:0x8002CA04 end:0x8002CAB8
 	.text       start:0x801FDA84 end:0x801FEB2C
 
-kyoshin/appgame/CPartyState.cpp:
+kyoshin/CPartyState.cpp:
 	extab       start:0x80012884 end:0x800129A0
 	extabindex  start:0x8002CAB8 end:0x8002CBF0
 	.text       start:0x801FEB2C end:0x802005E4
 
-kyoshin/appgame/plugin/pluginUnit.cpp:
+kyoshin/plugin/pluginUnit.cpp:
 	extab       start:0x800129A0 end:0x80012A00
 	extabindex  start:0x8002CBF0 end:0x8002CC80
 	.text       start:0x802005E4 end:0x80201254
 
-kyoshin/appgame/menu/parts/CModelDispEquip.cpp:
+kyoshin/menu/parts/CModelDispEquip.cpp:
 	extab       start:0x80012A00 end:0x80012B74
 	extabindex  start:0x8002CC80 end:0x8002CDF4
 	.text       start:0x80201254 end:0x8020377C
 	.ctors      start:0x804FA058 end:0x804FA05C
 
-kyoshin/appgame/CEquipChange.cpp:
+kyoshin/CEquipChange.cpp:
 	extab       start:0x80012B74 end:0x80012EB0
 	extabindex  start:0x8002CDF4 end:0x8002CFD4
 	.text       start:0x8020377C end:0x8020785C
 	.ctors      start:0x804FA05C end:0x804FA060
 
-kyoshin/appgame/cf/CfMapMineManager.cpp:
+kyoshin/cf/CfMapMineManager.cpp:
 	extab       start:0x80012EB0 end:0x80012F60
 	extabindex  start:0x8002CFD4 end:0x8002D0AC
 	.text       start:0x8020785C end:0x80209D20
 
-kyoshin/appgame/CItemBoxGridSubMenu.cpp:
+kyoshin/CItemBoxGridSubMenu.cpp:
 	extab       start:0x80012F60 end:0x80012FA0
 	extabindex  start:0x8002D0AC end:0x8002D10C
 	.text       start:0x80209D20 end:0x8020A6C0
 
-kyoshin/appgame/cf/CfGimmick.cpp:
+kyoshin/cf/CfGimmick.cpp:
 	extab       start:0x80012FA0 end:0x800130C8
 	extabindex  start:0x8002D10C end:0x8002D2C8
 	.text       start:0x8020A6C0 end:0x8020C9D8
 	.ctors      start:0x804FA060 end:0x804FA064
 
-kyoshin/appgame/cf/CfGimmickElv.cpp:
+kyoshin/cf/CfGimmickElv.cpp:
 	extab       start:0x800130C8 end:0x80013150
 	extabindex  start:0x8002D2C8 end:0x8002D358
 	.text       start:0x8020C9D8 end:0x8020E18C
 
-kyoshin/appgame/cf/CfGimmickLock.cpp:
+kyoshin/cf/CfGimmickLock.cpp:
 	extab       start:0x80013150 end:0x8001322C
 	extabindex  start:0x8002D358 end:0x8002D3B8
 	.text       start:0x8020E18C end:0x8020F1F8
 
-kyoshin/appgame/cf/CfGimmickWarp.cpp:
+kyoshin/cf/CfGimmickWarp.cpp:
 	extab       start:0x8001322C end:0x800132C4
 	extabindex  start:0x8002D3B8 end:0x8002D460
 	.text       start:0x8020F1F8 end:0x80210D60
 
-kyoshin/appgame/cf/CfGimmickJump.cpp:
+kyoshin/cf/CfGimmickJump.cpp:
 	extab       start:0x800132C4 end:0x80013334
 	extabindex  start:0x8002D460 end:0x8002D4CC
 	.text       start:0x80210D60 end:0x802120BC
 
-kyoshin/appgame/cf/CfGimmickItem.cpp:
+kyoshin/cf/CfGimmickItem.cpp:
 	extab       start:0x80013334 end:0x8001339C
 	extabindex  start:0x8002D4CC end:0x8002D52C
 	.text       start:0x802120BC end:0x80212A78
 
-kyoshin/appgame/makecrystal/CMenuMakeCrystal.cpp:
+kyoshin/makecrystal/CMenuMakeCrystal.cpp:
 	extab       start:0x8001339C end:0x80013488
 	extabindex  start:0x8002D52C end:0x8002D5B0
 	.text       start:0x80212A78 end:0x8021435C
 
-kyoshin/appgame/makecrystal/CMakeCrystalWin.cpp:
+kyoshin/makecrystal/CMakeCrystalWin.cpp:
 	extab       start:0x80013488 end:0x8001360C
 	extabindex  start:0x8002D5B0 end:0x8002D694
 	.text       start:0x8021435C end:0x802152E0
 
-kyoshin/appgame/makecrystal/code_80213488.cpp:
+kyoshin/makecrystal/code_80213488.cpp:
 	extab       start:0x8001360C end:0x80013634
 	extabindex  start:0x8002D694 end:0x8002D6D0
 	.text       start:0x802152E0 end:0x80215710
 
-kyoshin/appgame/makecrystal/CMCCrystalBox.cpp:
+kyoshin/makecrystal/CMCCrystalBox.cpp:
 	extab       start:0x80013634 end:0x80013EAC
 	extabindex  start:0x8002D6D0 end:0x8002DA30
 	.text       start:0x80215710 end:0x8021C48C
 
-kyoshin/appgame/makecrystal/CMCCrystalInfo.cpp:
+kyoshin/makecrystal/CMCCrystalInfo.cpp:
 	extab       start:0x80013EAC end:0x80013FD0
 	extabindex  start:0x8002DA30 end:0x8002DB5C
 	.text       start:0x8021C48C end:0x8021DAC8
 	.ctors      start:0x804FA064 end:0x804FA068
 
-kyoshin/appgame/makecrystal/CModelDispMakeCrystal.cpp:
+kyoshin/makecrystal/CModelDispMakeCrystal.cpp:
 	extab       start:0x80013FD0 end:0x80014E88
 	extabindex  start:0x8002DB5C end:0x8002DEA4
 	.text       start:0x8021DAC8 end:0x80223CAC
 	.ctors      start:0x804FA068 end:0x804FA06C
 
-kyoshin/appgame/makecrystal/CMCCylinderGauge.cpp:
+kyoshin/makecrystal/CMCCylinderGauge.cpp:
 	extab       start:0x80014E88 end:0x80014F00
 	extabindex  start:0x8002DEA4 end:0x8002DF58
 	.text       start:0x80223CAC end:0x80224580
 
-kyoshin/appgame/makecrystal/CMCCrystalList.cpp:
+kyoshin/makecrystal/CMCCrystalList.cpp:
 	extab       start:0x80014F00 end:0x8001502C
 	extabindex  start:0x8002DF58 end:0x8002E090
 	.text       start:0x80224580 end:0x80225B80
 
-kyoshin/appgame/makecrystal/CMCEffStart.cpp:
+kyoshin/makecrystal/CMCEffStart.cpp:
 	extab       start:0x8001502C end:0x800152AC
 	extabindex  start:0x8002E090 end:0x8002E450
 	.text       start:0x80225B80 end:0x802280F8
 
-kyoshin/appgame/menu/CMenuQstCnt.cpp:
+kyoshin/menu/CMenuQstCnt.cpp:
 	extab       start:0x800152AC end:0x800153A4
 	extabindex  start:0x8002E450 end:0x8002E510
 	.text       start:0x802280F8 end:0x80229584
 
-kyoshin/appgame/CQstLogList.cpp:
+kyoshin/CQstLogList.cpp:
 	extab       start:0x800153A4 end:0x800155AC
 	extabindex  start:0x8002E510 end:0x8002E66C
 	.text       start:0x80229584 end:0x8022B228
 	.ctors      start:0x804FA06C end:0x804FA070
 
-kyoshin/appgame/CQstLogInfo.cpp:
+kyoshin/CQstLogInfo.cpp:
 	extab       start:0x800155AC end:0x80015680
 	extabindex  start:0x8002E66C end:0x8002E774
 	.text       start:0x8022B228 end:0x8022D450
 
-kyoshin/appgame/CSysWin.cpp:
+kyoshin/CSysWin.cpp:
 	extab       start:0x80015680 end:0x8001571C
 	extabindex  start:0x8002E774 end:0x8002E828
 	.text       start:0x8022D450 end:0x8022E5AC
 
-kyoshin/appgame/CSelShopWin.cpp:
+kyoshin/CSelShopWin.cpp:
 	extab       start:0x8001571C end:0x80015788
 	extabindex  start:0x8002E828 end:0x8002E894
 	.text       start:0x8022E5AC end:0x8022ED68
 
-kyoshin/appgame/CExchangeWin.cpp:
+kyoshin/CExchangeWin.cpp:
 	extab       start:0x80015788 end:0x800157FC
 	extabindex  start:0x8002E894 end:0x8002E90C
 	.text       start:0x8022ED68 end:0x8022F464
 
-kyoshin/appgame/CPresentWin.cpp:
+kyoshin/CPresentWin.cpp:
 	extab       start:0x800157FC end:0x80015874
 	extabindex  start:0x8002E90C end:0x8002E9C0
 	.text       start:0x8022F464 end:0x80230780
 
-kyoshin/appgame/makecrystal/CMCCrystalSupport.cpp:
+kyoshin/makecrystal/CMCCrystalSupport.cpp:
 	extab       start:0x80015874 end:0x80015948
 	extabindex  start:0x8002E9C0 end:0x8002EA44
 	.text       start:0x80230780 end:0x80231300
 
-kyoshin/appgame/menu/CMenuArtsSet.cpp:
+kyoshin/menu/CMenuArtsSet.cpp:
 	extab       start:0x80015948 end:0x80015DC0
 	extabindex  start:0x8002EA44 end:0x8002EE34
 	.text       start:0x80231300 end:0x80237600
 
-kyoshin/appgame/CArtsInfo.cpp:
+kyoshin/CArtsInfo.cpp:
 	extab       start:0x80015DC0 end:0x8001608C
 	extabindex  start:0x8002EE34 end:0x8002F1F4
 	.text       start:0x80237600 end:0x8023DE1C
 	.ctors      start:0x804FA070 end:0x804FA074
 
-kyoshin/appgame/cf/CfNandManager.cpp:
+kyoshin/cf/CfNandManager.cpp:
 	extab       start:0x8001608C end:0x800161E0
 	extabindex  start:0x8002F1F4 end:0x8002F35C
 	.text       start:0x8023DE1C end:0x802427CC
 	.ctors      start:0x804FA074 end:0x804FA078
 
-kyoshin/appgame/code_802405F4.cpp:
+kyoshin/code_802405F4.cpp:
 	extab       start:0x800161E0 end:0x80016338
 	extabindex  start:0x8002F35C end:0x8002F3EC
 	.text       start:0x802427CC end:0x802443D4
 
-kyoshin/appgame/menu/CMenuMapSelect.cpp:
+kyoshin/menu/CMenuMapSelect.cpp:
 	extab       start:0x80016338 end:0x800163C8
 	extabindex  start:0x8002F3EC end:0x8002F41C
 	.text       start:0x802443D4 end:0x80245264
 
-kyoshin/appgame/CMapSel.cpp:
+kyoshin/CMapSel.cpp:
 	extab       start:0x800163C8 end:0x8001651C
 	extabindex  start:0x8002F41C end:0x8002F53C
 	.text       start:0x80245264 end:0x80246498
 
-kyoshin/appgame/CFade.cpp:
+kyoshin/CFade.cpp:
 	extab       start:0x8001651C end:0x80016580
 	extabindex  start:0x8002F53C end:0x8002F59C
 	.text       start:0x80246498 end:0x802468DC
 
-kyoshin/appgame/CFloorMap.cpp:
+kyoshin/CFloorMap.cpp:
 	extab       start:0x80016580 end:0x80016B18
 	extabindex  start:0x8002F59C end:0x8002F8B4
 	.text       start:0x802468DC end:0x80252F5C
 	.ctors      start:0x804FA078 end:0x804FA07C
 
-kyoshin/appgame/menu/CMenuMapSelectSC.cpp:
+kyoshin/menu/CMenuMapSelectSC.cpp:
 	extab       start:0x80016B18 end:0x80016C44
 	extabindex  start:0x8002F8B4 end:0x8002F950
 	.text       start:0x80252F5C end:0x80254030
 
-kyoshin/appgame/menu/CMenuPause.cpp:
+kyoshin/menu/CMenuPause.cpp:
 	extab       start:0x80016C44 end:0x80016CF4
 	extabindex  start:0x8002F950 end:0x8002F9A4
 	.text       start:0x80254030 end:0x8025487C
 
-kyoshin/appgame/menu/CMenuCollepedia.cpp:
+kyoshin/menu/CMenuCollepedia.cpp:
 	extab       start:0x80016CF4 end:0x80016E20
 	extabindex  start:0x8002F9A4 end:0x8002FA40
 	.text       start:0x8025487C end:0x802553D4
 
-kyoshin/appgame/CCollepedia.cpp:
+kyoshin/CCollepedia.cpp:
 	extab       start:0x80016E20 end:0x800171D8
 	extabindex  start:0x8002FA40 end:0x8002FCE0
 	.text       start:0x802553D4 end:0x80258BA4
 
-kyoshin/appgame/menu/CMenuKizunagram.cpp:
+kyoshin/menu/CMenuKizunagram.cpp:
 	extab       start:0x800171D8 end:0x800173E4
 	extabindex  start:0x8002FCE0 end:0x8002FDB8
 	.text       start:0x80258BA4 end:0x80259CC8
 
-kyoshin/appgame/CKizunagram.cpp:
+kyoshin/CKizunagram.cpp:
 	extab       start:0x800173E4 end:0x80017688
 	extabindex  start:0x8002FDB8 end:0x80030088
 	.text       start:0x80259CC8 end:0x8025F5BC
 	.ctors      start:0x804FA07C end:0x804FA080
 
-kyoshin/appgame/CPcKizunagram.cpp:
+kyoshin/CPcKizunagram.cpp:
 	extab       start:0x80017688 end:0x800177E0
 	extabindex  start:0x80030088 end:0x80030238
 	.text       start:0x8025F5BC end:0x80261C5C
 
-kyoshin/appgame/code_8025FB10.cpp:
+kyoshin/code_8025FB10.cpp:
 	extab       start:0x800177E0 end:0x80017890
 	extabindex  start:0x80030238 end:0x800302D4
 	.text       start:0x80261C5C end:0x802655C8
 
-kyoshin/appgame/menu/CMenuPassiveSkill.cpp:
+kyoshin/menu/CMenuPassiveSkill.cpp:
 	extab       start:0x80017890 end:0x800179C4
 	extabindex  start:0x800302D4 end:0x8003037C
 	.text       start:0x802655C8 end:0x8026632C
 
-kyoshin/appgame/CPassiveSkill.cpp:
+kyoshin/CPassiveSkill.cpp:
 	extab       start:0x800179C4 end:0x80017DB4
 	extabindex  start:0x8003037C end:0x8003085C
 	.text       start:0x8026632C end:0x802705F4
 
-kyoshin/appgame/cf/CfGimmickEne.cpp:
+kyoshin/cf/CfGimmickEne.cpp:
 	extab       start:0x80017DB4 end:0x80017E44
 	extabindex  start:0x8003085C end:0x800308F8
 	.text       start:0x802705F4 end:0x80271800
 
-kyoshin/appgame/menu/CMenuBattleEnd.cpp:
+kyoshin/menu/CMenuBattleEnd.cpp:
 	extab       start:0x80017E44 end:0x80017F04
 	extabindex  start:0x800308F8 end:0x80030964
 	.text       start:0x80271800 end:0x8027212C
 
-kyoshin/appgame/menu/CMenuPlayAward.cpp:
+kyoshin/menu/CMenuPlayAward.cpp:
 	extab       start:0x80017F04 end:0x800181DC
 	extabindex  start:0x80030964 end:0x80030B44
 	.text       start:0x8027212C end:0x80274258
 
-kyoshin/appgame/menu/CMenuKizunaTalkList.cpp:
+kyoshin/menu/CMenuKizunaTalkList.cpp:
 	extab       start:0x800181DC end:0x800182F8
 	extabindex  start:0x80030B44 end:0x80030BC8
 	.text       start:0x80274258 end:0x80274B78
 
-kyoshin/appgame/CKizunaTalkList.cpp:
+kyoshin/CKizunaTalkList.cpp:
 	extab       start:0x800182F8 end:0x800184B4
 	extabindex  start:0x80030BC8 end:0x80030D24
 	.text       start:0x80274B78 end:0x80276958
 	.ctors      start:0x804FA080 end:0x804FA084
 
-kyoshin/appgame/CSysWinBuff.cpp:
+kyoshin/CSysWinBuff.cpp:
 	extab       start:0x800184B4 end:0x80018568
 	extabindex  start:0x80030D24 end:0x80030D78
 	.text       start:0x80276958 end:0x80276FAC
 
-kyoshin/appgame/cf/ICamControlRemote.cpp:
+kyoshin/cf/ICamControlRemote.cpp:
 	extab       start:0x80018568 end:0x800185B0
 	extabindex  start:0x80030D78 end:0x80030DE4
 	.text       start:0x80276FAC end:0x8027725C
 
-kyoshin/appgame/cf/ICamControlGc.cpp:
+kyoshin/cf/ICamControlGc.cpp:
 	extab       start:0x800185B0 end:0x800185D0
 	extabindex  start:0x80030DE4 end:0x80030E14
 	.text       start:0x8027725C end:0x8027732C
 
-kyoshin/appgame/cf/ICamControlClassic.cpp:
+kyoshin/cf/ICamControlClassic.cpp:
 	extab       start:0x800185D0 end:0x80018618
 	extabindex  start:0x80030E14 end:0x80030E80
 	.text       start:0x8027732C end:0x802775C0
 
-kyoshin/appgame/code_8027513C.cpp:
+kyoshin/code_8027513C.cpp:
 	extab       start:0x80018618 end:0x80018688
 	extabindex  start:0x80030E80 end:0x80030F28
 	.text       start:0x802775C0 end:0x80277E4C
 
-kyoshin/appgame/menu/CMenuLvUp.cpp:
+kyoshin/menu/CMenuLvUp.cpp:
 	extab       start:0x80018688 end:0x80018758
 	extabindex  start:0x80030F28 end:0x80030FAC
 	.text       start:0x80277E4C end:0x802790B4
 
-kyoshin/appgame/cf/chain/CChain.cpp:
+kyoshin/cf/chain/CChain.cpp:
 	extab       start:0x80018758 end:0x800188C4
 	extabindex  start:0x80030FAC end:0x80031120
 	.text       start:0x802790B4 end:0x8027CED4
 
-kyoshin/appgame/cf/chain/CChainActorList.cpp:
+kyoshin/cf/chain/CChainActorList.cpp:
 	extab       start:0x800188C4 end:0x80018ABC
 	extabindex  start:0x80031120 end:0x800312DC
 	.text       start:0x8027CED4 end:0x8027F258
 
-kyoshin/appgame/cf/chain/CChainTime.cpp:
+kyoshin/cf/chain/CChainTime.cpp:
 	extab       start:0x80018ABC end:0x80018ADC
 	extabindex  start:0x800312DC end:0x8003130C
 	.text       start:0x8027F258 end:0x8027F56C
 
-kyoshin/appgame/cf/chain/CChainTimer.cpp:
+kyoshin/cf/chain/CChainTimer.cpp:
 	extab       start:0x80018ADC end:0x80018B74
 	extabindex  start:0x8003130C end:0x80031390
 	.text       start:0x8027F56C end:0x80280934
 
-kyoshin/appgame/CSysWinScenarioLog.cpp:
+kyoshin/CSysWinScenarioLog.cpp:
 	extab       start:0x80018B74 end:0x80018CF8
 	extabindex  start:0x80031390 end:0x80031504
 	.text       start:0x80280934 end:0x8028378C
 
-kyoshin/appgame/cf/chain/CChainActorEne.cpp:
+kyoshin/cf/chain/CChainActorEne.cpp:
 	extab       start:0x80018CF8 end:0x80018D40
 	extabindex  start:0x80031504 end:0x80031570
 	.text       start:0x8028378C end:0x80283DA8
 
-kyoshin/appgame/cf/chain/CChainActorPc.cpp:
+kyoshin/cf/chain/CChainActorPc.cpp:
 	extab       start:0x80018D40 end:0x80018DC0
 	extabindex  start:0x80031570 end:0x8003160C
 	.text       start:0x80283DA8 end:0x80284938
 
-kyoshin/appgame/CEquipItemBox.cpp:
+kyoshin/CEquipItemBox.cpp:
 	extab       start:0x80018DC0 end:0x800193A0
 	extabindex  start:0x8003160C end:0x80031AEC
 	.text       start:0x80284938 end:0x80290128
 	.ctors      start:0x804FA084 end:0x804FA088
 
-kyoshin/appgame/menu/CMenuSave.cpp:
+kyoshin/menu/CMenuSave.cpp:
 	extab       start:0x800193A0 end:0x800194D0
 	extabindex  start:0x80031AEC end:0x80031B70
 	.text       start:0x80290128 end:0x80290C44
 
-kyoshin/appgame/CSaveLoad.cpp:
+kyoshin/CSaveLoad.cpp:
 	extab       start:0x800194D0 end:0x800198D0
 	extabindex  start:0x80031B70 end:0x80031E7C
 	.text       start:0x80290C44 end:0x8029573C
 	.ctors      start:0x804FA088 end:0x804FA08C
 
-kyoshin/appgame/menu/CMenuPTChangeNotice.cpp:
+kyoshin/menu/CMenuPTChangeNotice.cpp:
 	extab       start:0x800198D0 end:0x800199D8
 	extabindex  start:0x80031E7C end:0x80031F00
 	.text       start:0x8029573C end:0x8029638C
 
-kyoshin/appgame/cf/chain/CChainCombo.cpp:
+kyoshin/cf/chain/CChainCombo.cpp:
 	extab       start:0x800199D8 end:0x800199F8
 	extabindex  start:0x80031F00 end:0x80031F30
 	.text       start:0x8029638C end:0x802965B4
 
-kyoshin/appgame/CSysWinSave.cpp:
+kyoshin/CSysWinSave.cpp:
 	extab       start:0x800199F8 end:0x80019B1C
 	extabindex  start:0x80031F30 end:0x80031F84
 	.text       start:0x802965B4 end:0x80296E70
 
-kyoshin/appgame/realtimeevt/CREvtMovie.cpp:
+kyoshin/realtimeevt/CREvtMovie.cpp:
 	extab       start:0x80019B1C end:0x80019B60
 	extabindex  start:0x80031F84 end:0x80031FCC
 	.text       start:0x80296E70 end:0x802972B0
 
-kyoshin/appgame/CTaskGamePic.cpp:
+kyoshin/CTaskGamePic.cpp:
 	extab       start:0x80019B60 end:0x80019BF8
 	extabindex  start:0x80031FCC end:0x80032050
 	.text       start:0x802972B0 end:0x80297B60
 
-kyoshin/appgame/CTaskGameEvt.cpp:
+kyoshin/CTaskGameEvt.cpp:
 	extab       start:0x80019BF8 end:0x80019C50
 	extabindex  start:0x80032050 end:0x800320A4
 	.text       start:0x80297B60 end:0x80297E84
 
-kyoshin/appgame/cf/CHelpManager.cpp:
+kyoshin/cf/CHelpManager.cpp:
 	extab       start:0x80019C50 end:0x80019CB0
 	extabindex  start:0x800320A4 end:0x80032134
 	.text       start:0x80297E84 end:0x80299000
 	.ctors      start:0x804FA08C end:0x804FA090
 
-kyoshin/appgame/code_80296898.cpp:
+kyoshin/code_80296898.cpp:
 	extab       start:0x80019CB0 end:0x80019CC8
 	extabindex  start:0x80032134 end:0x80032158
 	.text       start:0x80299000 end:0x8029917C
 	.ctors      start:0x804FA090 end:0x804FA094
 
-kyoshin/appgame/makecrystal/CMCGetItemBox.cpp:
+kyoshin/makecrystal/CMCGetItemBox.cpp:
 	extab       start:0x80019CC8 end:0x8001A0C8
 	extabindex  start:0x80032158 end:0x80032320
 	.text       start:0x8029917C end:0x8029C780
 
-kyoshin/appgame/menu/CMenuTutorial.cpp:
+kyoshin/menu/CMenuTutorial.cpp:
 	extab       start:0x8001A0C8 end:0x8001A1B8
 	extabindex  start:0x80032320 end:0x800323A4
 	.text       start:0x8029C780 end:0x8029CFFC
 
-kyoshin/appgame/CTutorial.cpp:
+kyoshin/CTutorial.cpp:
 	extab       start:0x8001A1B8 end:0x8001A294
 	extabindex  start:0x800323A4 end:0x80032464
 	.text       start:0x8029CFFC end:0x8029DBC4
 
-kyoshin/appgame/menu/CMenuOption.cpp:
+kyoshin/menu/CMenuOption.cpp:
 	extab       start:0x8001A294 end:0x8001A3B0
 	extabindex  start:0x80032464 end:0x800324E8
 	.text       start:0x8029DBC4 end:0x8029E5B4
 
-kyoshin/appgame/COption.cpp:
+kyoshin/COption.cpp:
 	extab       start:0x8001A3B0 end:0x8001A654
 	extabindex  start:0x800324E8 end:0x800326C8
 	.text       start:0x8029E5B4 end:0x802A1040
 	.ctors      start:0x804FA094 end:0x804FA098
 
-kyoshin/appgame/menu/CMenuSkipTimer.cpp:
+kyoshin/menu/CMenuSkipTimer.cpp:
 	extab       start:0x8001A654 end:0x8001A770
 	extabindex  start:0x800326C8 end:0x8003274C
 	.text       start:0x802A1040 end:0x802A1904
 
-kyoshin/appgame/CSkipTimer.cpp:
+kyoshin/CSkipTimer.cpp:
 	extab       start:0x8001A770 end:0x8001A910
 	extabindex  start:0x8003274C end:0x800328E4
 	.text       start:0x802A1904 end:0x802A2F28
 	.ctors      start:0x804FA098 end:0x804FA09C
 
-kyoshin/appgame/cf/chain/CChainEffect.cpp:
+kyoshin/cf/chain/CChainEffect.cpp:
 	extab       start:0x8001A910 end:0x8001A928
 	extabindex  start:0x800328E4 end:0x80032908
 	.text       start:0x802A2F28 end:0x802A3230
 
-kyoshin/appgame/cf/voice/CCharVoice.cpp:
+kyoshin/cf/voice/CCharVoice.cpp:
 	extab       start:0x8001A928 end:0x8001A960
 	extabindex  start:0x80032908 end:0x8003295C
 	.text       start:0x802A3230 end:0x802A3AF0
 
-kyoshin/appgame/cf/voice/CCharVoiceMan.cpp:
+kyoshin/cf/voice/CCharVoiceMan.cpp:
 	extab       start:0x8001A960 end:0x8001AB38
 	extabindex  start:0x8003295C end:0x80032BE4
 	.text       start:0x802A3AF0 end:0x802A61B4
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD.cpp:
 	extab       start:0x8001AB38 end:0x8001ABA0
 	extabindex  start:0x80032BE4 end:0x80032C80
 	.text       start:0x802A61B4 end:0x802A6FA4
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_END.cpp:
 	extab       start:0x8001ABA0 end:0x8001ABEC
 	extabindex  start:0x80032C80 end:0x80032CBC
 	.text       start:0x802A6FA4 end:0x802A757C
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BUF.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BUF.cpp:
 	extab       start:0x8001ABEC end:0x8001AC38
 	extabindex  start:0x80032CBC end:0x80032CF8
 	.text       start:0x802A757C end:0x802A7F64
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_CHAIN.cpp:
 	extab       start:0x8001AC38 end:0x8001AC8C
 	extabindex  start:0x80032CF8 end:0x80032D40
 	.text       start:0x802A7F64 end:0x802A82BC
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_DOWN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_DOWN.cpp:
 	extab       start:0x8001AC8C end:0x8001ACD8
 	extabindex  start:0x80032D40 end:0x80032D7C
 	.text       start:0x802A82BC end:0x802A8608
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_EHP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_EHP.cpp:
 	extab       start:0x8001ACD8 end:0x8001AD44
 	extabindex  start:0x80032D7C end:0x80032DE8
 	.text       start:0x802A8608 end:0x802A91DC
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_FAINT.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_FAINT.cpp:
 	extab       start:0x8001AD44 end:0x8001AD98
 	extabindex  start:0x80032DE8 end:0x80032E30
 	.text       start:0x802A91DC end:0x802A95B8
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HAGE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_HAGE.cpp:
 	extab       start:0x8001AD98 end:0x8001ADE4
 	extabindex  start:0x80032E30 end:0x80032E6C
 	.text       start:0x802A95B8 end:0x802A9988
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_HP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_HP.cpp:
 	extab       start:0x8001ADE4 end:0x8001AE90
 	extabindex  start:0x80032E6C end:0x80032F38
 	.text       start:0x802A9988 end:0x802AA8A8
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_PARTY_GAGE.cpp:
 	extab       start:0x8001AE90 end:0x8001AEE4
 	extabindex  start:0x80032F38 end:0x80032F80
 	.text       start:0x802AA8A8 end:0x802AAE00
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_REVIVE.cpp:
 	extab       start:0x8001AEE4 end:0x8001AF40
 	extabindex  start:0x80032F80 end:0x80032FD4
 	.text       start:0x802AAE00 end:0x802AB338
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_SUDDEN.cpp:
 	extab       start:0x8001AF40 end:0x8001AF84
 	extabindex  start:0x80032FD4 end:0x80033004
 	.text       start:0x802AB338 end:0x802AB51C
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_TENSION_UP.cpp:
 	extab       start:0x8001AF84 end:0x8001AFD0
 	extabindex  start:0x80033004 end:0x80033040
 	.text       start:0x802AB51C end:0x802ABA10
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_VISION_BREAK.cpp:
 	extab       start:0x8001AFD0 end:0x8001B01C
 	extabindex  start:0x80033040 end:0x8003307C
 	.text       start:0x802ABA10 end:0x802ABDF8
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_VISION_TELL.cpp:
 	extab       start:0x8001B01C end:0x8001B068
 	extabindex  start:0x8003307C end:0x800330B8
 	.text       start:0x802ABDF8 end:0x802AC2C4
 
-kyoshin/appgame/menu/CMenuBattleChain.cpp:
+kyoshin/menu/CMenuBattleChain.cpp:
 	extab       start:0x8001B068 end:0x8001B170
 	extabindex  start:0x800330B8 end:0x80033190
 	.text       start:0x802AC2C4 end:0x802ADD28
 	.ctors      start:0x804FA09C end:0x804FA0A0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_END_SP.cpp:
 	extab       start:0x8001B170 end:0x8001B1B4
 	extabindex  start:0x80033190 end:0x800331C0
 	.text       start:0x802ADD28 end:0x802AE278
 
-kyoshin/appgame/cf/CfGimmickSaveOff.cpp:
+kyoshin/cf/CfGimmickSaveOff.cpp:
 	extab       start:0x8001B1B4 end:0x8001B1E0
 	extabindex  start:0x800331C0 end:0x800331E4
 	.text       start:0x802AE278 end:0x802AE4E8
 
-kyoshin/appgame/menu/CMenuTutorialList.cpp:
+kyoshin/menu/CMenuTutorialList.cpp:
 	extab       start:0x8001B1E0 end:0x8001B368
 	extabindex  start:0x800331E4 end:0x80033298
 	.text       start:0x802AE4E8 end:0x802AF314
 
-kyoshin/appgame/CTutorialList.cpp:
+kyoshin/CTutorialList.cpp:
 	extab       start:0x8001B368 end:0x8001B580
 	extabindex  start:0x80033298 end:0x80033418
 	.text       start:0x802AF314 end:0x802B0B74
 
-kyoshin/appgame/CLoad.cpp:
+kyoshin/CLoad.cpp:
 	extab       start:0x8001B580 end:0x8001B5F4
 	extabindex  start:0x80033418 end:0x80033490
 	.text       start:0x802B0B74 end:0x802B11C0
 
-kyoshin/appgame/CNandData.cpp:
+kyoshin/CNandData.cpp:
 	extab       start:0x8001B5F4 end:0x8001B60C
 	extabindex  start:0x80033490 end:0x800334B4
 	.text       start:0x802B11C0 end:0x802B12DC
 	.ctors      start:0x804FA0A0 end:0x804FA0A4
 
-kyoshin/appgame/CErrMes.cpp:
+kyoshin/CErrMes.cpp:
 	extab       start:0x8001B60C end:0x8001B61C
 	extabindex  start:0x800334B4 end:0x800334CC
 	.text       start:0x802B12DC end:0x802B1634
 
-kyoshin/appgame/plugin/pluginHelp.cpp:
+kyoshin/plugin/pluginHelp.cpp:
 	extab       start:0x8001B61C end:0x8001B634
 	extabindex  start:0x800334CC end:0x800334F0
 	.text       start:0x802B1634 end:0x802B177C
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.cpp:
 	extab       start:0x8001B634 end:0x8001B6D8
 	extabindex  start:0x800334F0 end:0x800335B0
 	.text       start:0x802B177C end:0x802B24F0
 
-kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp:
+kyoshin/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.cpp:
 	extab       start:0x8001B6D8 end:0x8001B73C
 	extabindex  start:0x800335B0 end:0x80033610
 	.text       start:0x802B24F0 end:0x802B2E40
 
-kyoshin/appgame/menu/CMenuGCItem.cpp:
+kyoshin/menu/CMenuGCItem.cpp:
 	extab       start:0x8001B73C end:0x8001B838
 	extabindex  start:0x80033610 end:0x80033664
 	.text       start:0x802B2E40 end:0x802B3988
 
-kyoshin/appgame/menu/CMenuGameClear.cpp:
+kyoshin/menu/CMenuGameClear.cpp:
 	extab       start:0x8001B838 end:0x8001B960
 	extabindex  start:0x80033664 end:0x800336C4
 	.text       start:0x802B3988 end:0x802B50A4
 
-kyoshin/appgame/cf/CfHikariItemManager.cpp:
+kyoshin/cf/CfHikariItemManager.cpp:
 	extab       start:0x8001B960 end:0x8001BA00
 	extabindex  start:0x800336C4 end:0x80033778
 	.text       start:0x802B50A4 end:0x802B7310
 	.ctors      start:0x804FA0A4 end:0x804FA0A8
 
-kyoshin/appgame/CUIErrMesWin.cpp:
+kyoshin/CUIErrMesWin.cpp:
 	extab       start:0x8001BA00 end:0x8001BB84
 	extabindex  start:0x80033778 end:0x800338C8
 	.text       start:0x802B7310 end:0x802B885C
 
-kyoshin/appgame/menu/CMenuTitle.cpp:
+kyoshin/menu/CMenuTitle.cpp:
 	extab       start:0x8001BB84 end:0x8001BC00
 	extabindex  start:0x800338C8 end:0x80033940
 	.text       start:0x802B885C end:0x802B8D9C
 
-kyoshin/appgame/CTitle.cpp:
+kyoshin/CTitle.cpp:
 	extab       start:0x8001BC00 end:0x8001BDF4
 	extabindex  start:0x80033940 end:0x80033B74
 	.text       start:0x802B8D9C end:0x802BA644
 
-kyoshin/appgame/help/CHelp.cpp:
+kyoshin/help/CHelp.cpp:
 	extab       start:0x8001BDF4 end:0x8001BE04
 	extabindex  start:0x80033B74 end:0x80033B8C
 	.text       start:0x802BA644 end:0x802BA770
 
-kyoshin/appgame/help/CHelp_ArtsAttack.cpp:
+kyoshin/help/CHelp_ArtsAttack.cpp:
 	extab       start:0x8001BE04 end:0x8001BE0C
 	extabindex  start:0x80033B8C end:0x80033B98
 	.text       start:0x802BA770 end:0x802BA80C
 
-kyoshin/appgame/help/CHelp_ArtsSet.cpp:
+kyoshin/help/CHelp_ArtsSet.cpp:
 	extab       start:0x8001BE0C end:0x8001BE14
 	extabindex  start:0x80033B98 end:0x80033BA4
 	.text       start:0x802BA80C end:0x802BA85C
 
-kyoshin/appgame/help/CHelp_CkKizuna.cpp:
+kyoshin/help/CHelp_CkKizuna.cpp:
 	extab       start:0x8001BE14 end:0x8001BE1C
 	extabindex  start:0x80033BA4 end:0x80033BB0
 	.text       start:0x802BA85C end:0x802BA8A4
 
-kyoshin/appgame/help/CHelp_CloseItemMenu.cpp:
+kyoshin/help/CHelp_CloseItemMenu.cpp:
 	extab       start:0x8001BE1C end:0x8001BE24
 	extabindex  start:0x80033BB0 end:0x80033BBC
 	.text       start:0x802BA8A4 end:0x802BA8EC
 
-kyoshin/appgame/help/CHelp_CloseSysMenu.cpp:
+kyoshin/help/CHelp_CloseSysMenu.cpp:
 	extab       start:0x8001BE24 end:0x8001BE2C
 	extabindex  start:0x80033BBC end:0x80033BC8
 	.text       start:0x802BA8EC end:0x802BA934
 
-kyoshin/appgame/help/CHelp_EndEvent.cpp:
+kyoshin/help/CHelp_EndEvent.cpp:
 	extab       start:0x8001BE2C end:0x8001BE34
 	extabindex  start:0x80033BC8 end:0x80033BD4
 	.text       start:0x802BA934 end:0x802BA9C4
 
-kyoshin/appgame/help/CHelp_EnemyCount.cpp:
+kyoshin/help/CHelp_EnemyCount.cpp:
 	extab       start:0x8001BE34 end:0x8001BE3C
 	extabindex  start:0x80033BD4 end:0x80033BE0
 	.text       start:0x802BA9C4 end:0x802BAA98
 
-kyoshin/appgame/help/CHelp_EnemyEnable.cpp:
+kyoshin/help/CHelp_EnemyEnable.cpp:
 	extab       start:0x8001BE3C end:0x8001BE44
 	extabindex  start:0x80033BE0 end:0x80033BEC
 	.text       start:0x802BAA98 end:0x802BAB14
 
-kyoshin/appgame/help/CHelp_EtherMake.cpp:
+kyoshin/help/CHelp_EtherMake.cpp:
 	extab       start:0x8001BE44 end:0x8001BE4C
 	extabindex  start:0x80033BEC end:0x80033BF8
 	.text       start:0x802BAB14 end:0x802BAB60
 
-kyoshin/appgame/help/CHelp_Exchange.cpp:
+kyoshin/help/CHelp_Exchange.cpp:
 	.text       start:0x802BAB60 end:0x802BAB64
 
-kyoshin/appgame/help/CHelp_GameOver.cpp:
+kyoshin/help/CHelp_GameOver.cpp:
 	extab       start:0x8001BE4C end:0x8001BE54
 	extabindex  start:0x80033BF8 end:0x80033C04
 	.text       start:0x802BAB64 end:0x802BABF0
 
-kyoshin/appgame/help/CHelp_ItemCole.cpp:
+kyoshin/help/CHelp_ItemCole.cpp:
 	.text       start:0x802BABF0 end:0x802BABFC
 
-kyoshin/appgame/help/CHelp_Kizuna.cpp:
+kyoshin/help/CHelp_Kizuna.cpp:
 	.text       start:0x802BABFC end:0x802BAC08
 
-kyoshin/appgame/help/CHelp_LandMark.cpp:
+kyoshin/help/CHelp_LandMark.cpp:
 	extab       start:0x8001BE54 end:0x8001BE9C
 	extabindex  start:0x80033C04 end:0x80033C34
 	.text       start:0x802BAC08 end:0x802BAE08
 
-kyoshin/appgame/help/CHelp_LearnArts.cpp:
+kyoshin/help/CHelp_LearnArts.cpp:
 	extab       start:0x8001BE9C end:0x8001BEA4
 	extabindex  start:0x80033C34 end:0x80033C40
 	.text       start:0x802BAE08 end:0x802BAF5C
 
-kyoshin/appgame/help/CHelp_ClosePartyMenu.cpp:
+kyoshin/help/CHelp_ClosePartyMenu.cpp:
 	extab       start:0x8001BEA4 end:0x8001BEB4
 	extabindex  start:0x80033C40 end:0x80033C58
 	.text       start:0x802BAF5C end:0x802BB00C
 
-kyoshin/appgame/help/CHelp_OpenPartyMenu.cpp:
+kyoshin/help/CHelp_OpenPartyMenu.cpp:
 	.text       start:0x802BB00C end:0x802BB014
 
-kyoshin/appgame/help/CHelp_Pg.cpp:
+kyoshin/help/CHelp_Pg.cpp:
 	extab       start:0x8001BEB4 end:0x8001BEBC
 	extabindex  start:0x80033C58 end:0x80033C64
 	.text       start:0x802BB014 end:0x802BB074
 
-kyoshin/appgame/help/CHelp_CloseQuestMenu.cpp:
+kyoshin/help/CHelp_CloseQuestMenu.cpp:
 	extab       start:0x8001BEBC end:0x8001BEC4
 	extabindex  start:0x80033C64 end:0x80033C70
 	.text       start:0x802BB074 end:0x802BB0BC
 
-kyoshin/appgame/help/CHelp_ShopBuy.cpp:
+kyoshin/help/CHelp_ShopBuy.cpp:
 	.text       start:0x802BB0BC end:0x802BB0C0
 
-kyoshin/appgame/help/CHelp_ShopSel.cpp:
+kyoshin/help/CHelp_ShopSel.cpp:
 	.text       start:0x802BB0C0 end:0x802BB0C4
 
-kyoshin/appgame/help/CHelp_Sp.cpp:
+kyoshin/help/CHelp_Sp.cpp:
 	extab       start:0x8001BEC4 end:0x8001BECC
 	extabindex  start:0x80033C70 end:0x80033C7C
 	.text       start:0x802BB0C4 end:0x802BB12C
 
-kyoshin/appgame/help/CHelp_Talk.cpp:
+kyoshin/help/CHelp_Talk.cpp:
 	extab       start:0x8001BECC end:0x8001BEDC
 	extabindex  start:0x80033C7C end:0x80033C94
 	.text       start:0x802BB12C end:0x802BB338
 
-kyoshin/appgame/help/CHelp_Target.cpp:
+kyoshin/help/CHelp_Target.cpp:
 	extab       start:0x8001BEDC end:0x8001BEE4
 	extabindex  start:0x80033C94 end:0x80033CA0
 	.text       start:0x802BB338 end:0x802BB4AC
 
-kyoshin/appgame/code_802B8A3C.cpp:
+kyoshin/code_802B8A3C.cpp:
 	extab       start:0x8001BEE4 end:0x8001BF30
 	extabindex  start:0x80033CA0 end:0x80033CDC
 	.text       start:0x802BB4AC end:0x802BB9E0
 
-kyoshin/appgame/plugin/pluginVoice.cpp:
+kyoshin/plugin/pluginVoice.cpp:
 	extab       start:0x8001BF30 end:0x8001BF38
 	extabindex  start:0x80033CDC end:0x80033CE8
 	.text       start:0x802BB9E0 end:0x802BBAD4
 
-kyoshin/appgame/code_802B9064.cpp:
+kyoshin/code_802B9064.cpp:
 	extab       start:0x8001BF38 end:0x8001BF40
 	extabindex  start:0x80033CE8 end:0x80033CF4
 	.text       start:0x802BBAD4 end:0x802BBC58
 
-kyoshin/appgame/CBattery.cpp:
+kyoshin/CBattery.cpp:
 	extab       start:0x8001BF40 end:0x8001BF94
 	extabindex  start:0x80033CF4 end:0x80033D3C
 	.text       start:0x802BBC58 end:0x802BC028
