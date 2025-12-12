@@ -126,7 +126,7 @@ namespace mtl {
 
         static void* allocate_head(ALLOC_HANDLE handle, u32 size, int align);
         static void* allocate_tail(ALLOC_HANDLE handle, u32 size, int align);
-        static  bool deallocate(void* p);
+        static bool deallocate(void* p);
 
         static MemRegion* getRegion(ALLOC_HANDLE handle);
         static u32 getRegionSize(ALLOC_HANDLE handle);
@@ -149,6 +149,8 @@ namespace mtl {
 
         static void* allocate_ex(u32 size, ALLOC_HANDLE handle, int align);
         static void* allocate_array_ex(u32 size, ALLOC_HANDLE handle, int align);
+
+        //static void log(int);
 
     private:
         static const char* scRegionNameMEM1;

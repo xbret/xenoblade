@@ -31,13 +31,13 @@ bool MemManager::lbl_80667E54 = false;
 bool MemManager::lbl_80665E38 = true;
 bool MemManager::lbl_80665E39 = true;
 
-//Whether optimal memory allocation is enabled
-bool MemManager::sIsOptimalAlloc = false;
-
 //Maximum size of the root MEM1 region
 u32 MemRegion::sMaxSizeMEM1 = OS_MEM_MB_TO_B(6);
 //Maximum size of the root MEM2 region (unused)
 u32 MemRegion::sMaxSizeMEM2 = 0;
+
+//Whether optimal memory allocation is enabled
+bool MemManager::sIsOptimalAlloc = false;
 
 MemRegion::MemRegion() :
     mHead(nullptr),
@@ -376,6 +376,7 @@ Optionally a buffer can be passed in to specify where the allocation
 should reside.
 */
 void* MemRegion::allocate(void* buffer, u32 size, int align) {
+    void* resultBuf;
     MemBlock* it = mHead;
 
     //The region is empty
@@ -388,7 +389,7 @@ void* MemRegion::allocate(void* buffer, u32 size, int align) {
         size = (size + 4) - (size % 4);
     }
 
-    void* resultBuf = nullptr;
+    resultBuf = nullptr;
 
     /* "Optimal" allocation tries to find the best fit,
     or the block that will waste the least amount of memory.
