@@ -22,7 +22,6 @@ extern void func_80442DA8();
 extern CView* createWorkThreadView(CWorkThread* thread1, const char* const string, CWorkThread* thread2,
 int r6);
 extern bool func_8045DE00();
-extern void func_80043298(CView* view, CWorkThread* thread, int r5);
 extern CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);
 
 CGame* CGame::spInstance;
@@ -147,12 +146,11 @@ void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
 }
 
 bool CGame::wkStandbyLogin(){
+    //Wait for the static files to be loaded?
     if(!CLibStaticData::func_8045FB08()) return false;
 
-    CWorkThread* thread1 = func_80455AA0();
-
     //Create the CView instance for CGame
-
+    CWorkThread* thread1 = func_80455AA0();
     mView = createWorkThreadView(this, scViewName, thread1, 0);
     CView* view = mView;
     const char* nameTemp = scViewName;
@@ -178,9 +176,10 @@ bool CGame::wkStandbyLogin(){
     there's only one instance of CGame though, this seems pointless :p */
     func_800395F4(CDeviceSC::isWideAspectRatio());
     CDeviceGX::updateVerticalFilter(VFILTER_NONE);
-    CTaskManager::Reset();
 
-    func_80043298(mView, this, 1);
+    //Reset the task manager, and create CTaskGame
+    CTaskManager::Reset();
+    CTaskGame::create(mView, this, 1);
 
     //Standard WPAD/VI initialization
     WPADSetAutoSleepTime(5);

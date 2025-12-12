@@ -432,7 +432,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/plugin/ocMsg.cpp"),
             Object(NonMatching, "kyoshin/plugin/ocBdat.cpp"),
             Object(NonMatching, "kyoshin/plugin/ocUnit.cpp"),
-            Object(NonMatching, "kyoshin/CTaskGame.cpp"),
+            Object(NonMatching, "kyoshin/CTaskGame.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "kyoshin/cf/CTaskGameCf.cpp"),
             Object(NonMatching, "kyoshin/CTaskGameEff.cpp"),
             Object(NonMatching, "kyoshin/plugin/ocCfp.cpp"),

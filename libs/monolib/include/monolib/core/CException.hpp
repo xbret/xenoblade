@@ -5,8 +5,8 @@
 
 class IGameException {
 public:
-    virtual void func08() = 0;
-    virtual bool func0C(u32 r4) = 0;
+    virtual ~IGameException(){}
+    virtual bool IGameException_UnkVirtualFunc1(u32 r4) = 0;
 };
 
 class CException : public CWorkThread {
