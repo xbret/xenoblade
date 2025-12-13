@@ -42,7 +42,7 @@ void CDeviceFileJobReadDvd::wkUpdate(){
     if(mHandle != nullptr && mHandle->unkInline2()){
         if(mHandle->func_80451E48() != nullptr){
             func_804399A4(mHandle->func_80451E48(), getFilename(), &mHandle->unk160,
-            mHandle->unkInline1(), mHandle->getUnk3C(), false);
+            mHandle->unkInline1(), mHandle->getLength(), false);
         }
 
         mHandle->call(CBM_1);

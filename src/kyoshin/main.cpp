@@ -111,20 +111,20 @@ void OnHbmstopFileUnloaded(void* pData, u32 length){
 
 //List of files contained in the static.arc archive
 static StaticArcFileData sStaticArcFiles[10] = {
-    {"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
-    {"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
-    {"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
-    {"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
+    {"SHA","dvddata/etc/shadow.sha",HANDLE_MEM2,nullptr,nullptr},
+    {"CAM","dvddata/etc/cam.chr",HANDLE_MEM2,nullptr,nullptr},
+    {"EFF","dvddata/etc/eff.chr",HANDLE_MEM2,nullptr,nullptr},
+    {"ARROW","dvddata/etc/arrow.mdo",HANDLE_MEM2,nullptr,nullptr},
 #if defined(VERSION_JP)
-    {"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","dvddata/common/jp/bdat.bin",1,&OnBdatFileLoaded,&OnBdatFileUnloaded},
+    {"43","dvddata/menu/Mode43.arc",HANDLE_MEM2,nullptr,nullptr},
+    {"BDAT","dvddata/common/jp/bdat.bin",HANDLE_MEM2,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #else //EU/US
-    {"43","dvddata/menu/jp/Mode43.arc",1,nullptr,nullptr},
-    {"BDAT","common/jp/bdat_common.bin",1,&OnBdatFileLoaded,&OnBdatFileUnloaded},
+    {"43","dvddata/menu/jp/Mode43.arc",HANDLE_MEM2,nullptr,nullptr},
+    {"BDAT","common/jp/bdat_common.bin",HANDLE_MEM2,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #endif
-    {"AIDAT","dvddata/etc/ai.bin",1,&OnAidatFileLoaded,&OnAidatFileUnloaded},
-    {"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
-    {"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&OnHbmstopFileLoaded,&OnHbmstopFileUnloaded}
+    {"AIDAT","dvddata/etc/ai.bin",HANDLE_MEM2,&OnAidatFileLoaded,&OnAidatFileUnloaded},
+    {"HIKARI","dvddata/etc/hikari.brres",HANDLE_MEM2,nullptr,nullptr},
+    {"HBMSTOP","dvddata/etc/hbmstop.tpl",HANDLE_MEM2,&OnHbmstopFileLoaded,&OnHbmstopFileUnloaded}
 };
 
 //VM initialization callback functions.

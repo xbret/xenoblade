@@ -1,6 +1,7 @@
 #pragma once
 
 #include <types.h>
+#include "monolib/util/MemManager.hpp"
 
 template <typename T>
 struct _reslist_node{
@@ -188,8 +189,8 @@ public:
         return *begin();
     }
 
-    inline void initList(int heapIndex, int capacity) {
-        mList = new (heapIndex) _reslist_node<T>[capacity];
+    inline void initList(mtl::ALLOC_HANDLE handle, int capacity) {
+        mList = new (handle) _reslist_node<T>[capacity];
 
         for(int i = 0; i < capacity; i++){
             mList[i].mNext = nullptr;

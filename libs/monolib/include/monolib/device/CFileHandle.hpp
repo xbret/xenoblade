@@ -19,7 +19,7 @@ struct CFileHandle {
     int unk10;
     u32 unk14;
     u8 unk18[0x3C - 0x18];
-    u32 unk3C;
+    u32 mLength; //0x3C
     u8 unk40[0x5C - 0x40];
     ml::FixStr<32> mName; //0x5C
     u8 unk80[0x160 - 0x80];
@@ -36,11 +36,11 @@ struct CFileHandle {
     }
 
     inline bool unkInline2() const {
-        return unk10 != 0 && unk10 == unk3C;
+        return unk10 != 0 && unk10 == mLength;
     }
 
-    inline u32 getUnk3C() const {
-        return unk3C;
+    inline u32 getLength() const {
+        return mLength;
     }
 
 };
