@@ -19,7 +19,7 @@ unk208(0) {
     s64 time = getTimeNow();
     unk1F0 = time;
     unk1C8 |= 1;
-    unk1CC.initList(mAllocHandle, 16);
+    unk1CC.reserve(mAllocHandle, 16);
 }
 
 CDeviceClock::~CDeviceClock(){

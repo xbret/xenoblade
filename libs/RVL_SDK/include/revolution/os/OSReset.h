@@ -34,6 +34,7 @@ BOOL __OSCallShutdownFunctions(u32 pass, u32 event);
 void __OSShutdownDevices(u32 event);
 void __OSGetDiscState(u8* out);
 void OSShutdownSystem(void);
+void OSRestart(u32 resetCode);
 void OSReturnToMenu(void);
 u32 OSGetResetCode(void);
 void OSResetSystem(BOOL reset, u32 resetCode, BOOL forceMenu);

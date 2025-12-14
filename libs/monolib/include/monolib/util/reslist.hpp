@@ -149,6 +149,7 @@ public:
         }
     }
 
+    //TODO: this function needs a try catch block somewhere
     void push_back(const T& item){
         _reslist_node<T>* head = mStartNodePtr;
 
@@ -189,7 +190,7 @@ public:
         return *begin();
     }
 
-    inline void initList(mtl::ALLOC_HANDLE handle, int capacity) {
+    inline void reserve(mtl::ALLOC_HANDLE handle, int capacity) {
         mList = new (handle) _reslist_node<T>[capacity];
 
         for(int i = 0; i < capacity; i++){

@@ -5,6 +5,7 @@
 class CWorkSystem : public CWorkThread{
 public:
     static CWorkSystem* getInstance();
+    static CWorkSystem* create();
 };
 
 void func_80444874(void(*func)());

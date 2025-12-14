@@ -7,4 +7,5 @@ public:
     static CLib* getInstance();
 
     static bool isInitialized();
+    static CLib* create();
 };

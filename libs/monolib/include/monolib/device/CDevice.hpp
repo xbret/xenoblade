@@ -61,7 +61,7 @@ private:
     static CDevice* spInstance;
 };
 
-namespace{
+namespace {
     //size: 0x1c8
     class CDeviceException : public CWorkThread {
     public:

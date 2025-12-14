@@ -114,7 +114,7 @@ unk2BC(1.0f/30.0f) {
     memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
     spInstance->unk4 |= 0x1;
     spInstance->unk4 |= 0x10;
-    mCallbackList.initList(mAllocHandle, 16);
+    mCallbackList.reserve(mAllocHandle, 16);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
     func_804EE194(ptr);

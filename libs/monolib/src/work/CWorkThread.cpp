@@ -16,7 +16,7 @@ CWorkThread::CWorkThread(const char* pName, CWorkThread* pParent, int capacity)
     mWorkID = CWorkThreadSystem::allocWID(this);
 
     if(capacity > 0){
-        mChildren.initList(mAllocHandle, capacity);
+        mChildren.reserve(mAllocHandle, capacity);
     }
 
     if(pParent != nullptr && pParent->CWorkThread_inline2()){
@@ -62,14 +62,14 @@ CWorkThread::~CWorkThread(){
 void CWorkThread::wkReplaceHasChild(int capacity){
     if(capacity > 0){
         mChildren.destroyList();
-        mChildren.initList(mAllocHandle, capacity);
+        mChildren.reserve(mAllocHandle, capacity);
     }
 }
 
 void CWorkThread::wkEntryChild(CWorkThread* pChild, bool dontNotify){
     if(dontNotify){
         mChildren.push_back(pChild);
-    } else{
+    }else{
         mChildren.push_back(pChild);
         pChild->mParent = this;
     }
