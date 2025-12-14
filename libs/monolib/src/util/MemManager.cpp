@@ -42,7 +42,7 @@ u32 MemRegion::sMaxSizeMEM2 = 0;
 bool MemManager::sIsOptimalAlloc = false;
 
 //Thanks monolithsoft very cool
-inline MemRegion::MemRegion() try :
+DECOMP_INLINE MemRegion::MemRegion() try :
     mHead(nullptr),
     mTail(nullptr),
     mOldest(nullptr),
@@ -60,7 +60,7 @@ MemRegion::~MemRegion() {
     //Must deallocate if this region is not the MEM1/MEM2 region
     if (mHandle != MemManager::getHandleMEM1()
         && mHandle != MemManager::getHandleMEM2()) {
-        MemManager::deallocate(mStartAddress);
+        MemManager::deallocateImpl(mStartAddress);
     }
 
     //Invalidate handles if this region is the MEM1/MEM2 region
@@ -741,11 +741,7 @@ void* MemManager::allocate_tail(ALLOC_HANDLE handle, u32 size, int align) {
     return region->allocate(buffer, size, align);
 }
 
-/*
-Attempts to deallocate an allocation of memory.
-Returns whether the operation was successful.
-*/
-bool MemManager::deallocate(void* p) {
+DECOMP_INLINE bool MemManager::deallocateImpl(void* p) {
     if (p == nullptr) {
         return true;
     }
@@ -793,6 +789,15 @@ bool MemManager::deallocate(void* p) {
     }
 
     return true;
+}
+
+/*
+Attempts to deallocate an allocation of memory.
+Returns whether the operation was successful.
+*/
+bool MemManager::deallocate(void* p) {
+    //TODO: is there a way to get mwcc to inline deallocate normally instead of this?
+    return deallocateImpl(p);
 }
 
 /*
@@ -1045,11 +1050,11 @@ void* operator new(size_t size) {
 }
 
 void operator delete(void* p) {
-    (void)mtl::MemManager::deallocate(p);
+    (void)mtl::MemManager::deallocateImpl(p);
 }
 
 void operator delete[](void* p) {
-    (void)mtl::MemManager::deallocate(p);
+    (void)mtl::MemManager::deallocateImpl(p);
 }
 
 #pragma ecplusplus off

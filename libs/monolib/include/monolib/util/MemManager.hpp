@@ -72,7 +72,6 @@ namespace mtl {
         void* allocate(void* buffer, u32 size, int align);
 
         MemBlock* reallocate(MemBlock* block);
-        MemBlock* coalesce(MemBlock* block);
         MemBlock* coalesceRecursive(MemBlock* block);
 
         MemBlock* getTailBuffer(u32 size, int align, void** buffer);
@@ -128,6 +127,7 @@ namespace mtl {
         static void* allocate_head(ALLOC_HANDLE handle, u32 size, int align);
         static void* allocate_tail(ALLOC_HANDLE handle, u32 size, int align);
         static bool deallocate(void* p);
+        static bool deallocateImpl(void* p);
 
         static MemRegion* getRegion(ALLOC_HANDLE handle);
         static u32 getRegionSize(ALLOC_HANDLE handle);
