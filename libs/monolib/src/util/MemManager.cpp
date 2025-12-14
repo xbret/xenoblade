@@ -22,8 +22,10 @@ ALLOC_HANDLE MemManager::sHandleMEM1 = INVALID_HANDLE;
 //Handle to the root MEM2 region
 ALLOC_HANDLE MemManager::sHandleMEM2 = INVALID_HANDLE;
 
-//Buffer for memory region structures
-u8 MemManager::sRegionBuffer[MAX_ALLOC_REGION * sizeof(MemRegion)];
+/* Array for memory region structures. Entries are stored as raw bytes to defer
+construction until the initialize function. A bit of a strange decision. */
+RawArray<MemRegion, MAX_ALLOC_REGION> MemManager::sRegionArray;
+
 //Unique ID for the next created region
 u32 MemManager::sRegionUniqueId = 0;
 
@@ -39,7 +41,8 @@ u32 MemRegion::sMaxSizeMEM2 = 0;
 //Whether optimal memory allocation is enabled
 bool MemManager::sIsOptimalAlloc = false;
 
-MemRegion::MemRegion() :
+//Thanks monolithsoft very cool
+inline MemRegion::MemRegion() try :
     mHead(nullptr),
     mTail(nullptr),
     mOldest(nullptr),
@@ -51,6 +54,7 @@ MemRegion::MemRegion() :
     mFreeBytes(0),
     mHandle(INVALID_HANDLE),
     unk6C(0) {}
+    catch(...) {}
 
 MemRegion::~MemRegion() {
     //Must deallocate if this region is not the MEM1/MEM2 region
@@ -459,15 +463,12 @@ void* MemRegion::allocate(void* buffer, u32 size, int align) {
 Initializes the memory region structures,
 and creates the main program regions in MEM1 and MEM2.
 */
+#pragma global_optimizer off //:)
 void MemManager::initialize() {
     sRegionUniqueId = 0;
     lbl_80665E39 = true;
-
-    for (int i = 0; i < MAX_ALLOC_REGION; i++) {
-        ALLOC_HANDLE handle = static_cast<ALLOC_HANDLE>(i);
-        MemRegion* region = getRegion(handle);
-        new (region) MemRegion();
-    }
+    //Initialize the memory region array entries
+    sRegionArray.initialize();
 
     //Why assume that it starts from 0x80000000?
     void* mem1RegionLo = OSGetMEM1ArenaLo();
@@ -499,6 +500,7 @@ void MemManager::initialize() {
     sHandleMEM2 = create(OSGetMEM2ArenaLo(),
         (u8*)MEM2_REGION_END - (u8*)OSGetMEM2ArenaLo(), scRegionNameMEM2);
 }
+#pragma global_optimizer reset
 
 /*
 Destroys all active memory regions.
@@ -797,8 +799,7 @@ bool MemManager::deallocate(void* p) {
 Gets a pointer to the memory region indicated by 'handle'.
 */
 MemRegion* MemManager::getRegion(ALLOC_HANDLE handle) {
-    return reinterpret_cast<MemRegion*>(
-        sRegionBuffer + ALLOC_HANDLE_REGION(handle) * sizeof(MemRegion));
+    return sRegionArray[ALLOC_HANDLE_REGION(handle)];
 }
 
 /*

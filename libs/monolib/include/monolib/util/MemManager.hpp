@@ -3,6 +3,7 @@
 #include "decomp.h"
 #include <types.h>
 #include "monolib/util/FixStr.hpp"
+#include "monolib/util/RawArray.hpp"
 #include <cstring>
 #include <cstddef>
 
@@ -150,7 +151,9 @@ namespace mtl {
         static void* allocate_ex(u32 size, ALLOC_HANDLE handle, int align);
         static void* allocate_array_ex(u32 size, ALLOC_HANDLE handle, int align);
 
-        //static void log(int);
+        /* Commented out log function, which would have printed debug messages. It seems like
+        monolithsoft had log functions for many classes in addition to this one. */
+        //static void log(int something);
 
     private:
         static const char* scRegionNameMEM1;
@@ -159,7 +162,7 @@ namespace mtl {
         static ALLOC_HANDLE sHandleMEM1;
         static ALLOC_HANDLE sHandleMEM2;
 
-        static u8 sRegionBuffer[MAX_ALLOC_REGION * sizeof(MemRegion)];
+        static RawArray<MemRegion, MAX_ALLOC_REGION> sRegionArray;
         static u32 sRegionUniqueId;
 
         static bool lbl_80667E54;

@@ -3,7 +3,7 @@
 #include <types.h>
 #include "monolib/util/MemManager.hpp"
 
-template<typename T>
+template <typename T>
 class resvector {
 public:
     resvector() : mArray(nullptr), mCount(0) {
