@@ -61,6 +61,7 @@ GXRenderModeObj* renderModes[] = {
     &GXMpal480ProgSoft
 };
 
+//Each entry is related to the above render modes somehow
 static CPnt16 lbl_8065A6B8[] = {
     CPnt16(0,8),
     CPnt16(0,0),
@@ -85,6 +86,7 @@ bool CDeviceVI::lbl_80667F2C;
 CDeviceVI::CDeviceVI(const char* pName, CWorkThread* pWorkThread) :
 CDeviceBase(pName, pWorkThread, 8),
 UnkClass_80447FDC(),
+mViFlags(0),
 mTvFormat(0),
 unk1F4(9),
 mScanMode(0),
@@ -106,14 +108,13 @@ unk2B5(1),
 unk2B8(30),
 unk2BC(1.0f/30.0f) {
     spInstance = this;
-    unk2A0 = 0;
-    unk2A2 = 0;
+    unk2A0 = CPnt16(0,0);
     mXfbBuffersPtr = (u8*)mtl::MemManager::allocate_array_ex(getXfbBuffersSize(),
      lbl_80667F2C ? mtl::MemManager::getHandleStatic() : CDevice::func_8044D058(), 32);
 
-    memcpy(&unk200, &GXNtsc480Int, sizeof(GXRenderModeObj));
-    spInstance->unk4 |= 0x1;
-    spInstance->unk4 |= 0x10;
+    std::memcpy(&mRenderMode1, &GXNtsc480Int, sizeof(GXRenderModeObj));
+    setFlag0(true);
+    setFlag4(true);
     mCallbackList.reserve(mAllocHandle, 16);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
@@ -136,37 +137,40 @@ CDeviceVI* CDeviceVI::getInstance(){
     return spInstance;
 }
 
-void CDeviceVI::func_804482B0(u32 r3){
-    CDeviceVI* vi = spInstance;
-    if(r3 != 0) vi->unk4 |= 0x10;
-    else vi->unk4 &= ~0x10;
+void CDeviceVI::setFlag4(bool state){
+    spInstance->setFlag(VI_FLAG_4, state);
+}
+
+bool CDeviceVI::checkFlag4(){
+    return spInstance->checkFlag(VI_FLAG_4);
+}
+
+bool CDeviceVI::checkFlag2(){
+    return spInstance->checkFlag(VI_FLAG_2);
 }
 
 bool CDeviceVI::func_804482DC(){
-    bool result = spInstance->isRunning();
-    return result == false || (spInstance->unk4 & 0x4) != 0 ? false : true;
+    return spInstance->isRunning() && !checkFlag2();
 }
 
-void CDeviceVI::func_804483A0(u32 r3){
-    CDeviceVI* vi = spInstance;
-    if(r3 != 0) vi->unk4 |= 0x1;
-    else vi->unk4 &= ~0x1;
+void CDeviceVI::setFlag0(bool state){
+    spInstance->setFlag(VI_FLAG_0, state);
 }
 
-u32 CDeviceVI::func_804483CC(){
-    return spInstance->unk4 & 0x1;
+bool CDeviceVI::checkFlag0(){
+    return spInstance->checkFlag(VI_FLAG_0);
 }
 
 void CDeviceVI::func_804483DC(u32 r3){
     if(spInstance != nullptr){
         u32 val = r3;
-        if(val >= 0x1E) val = 0x1D;
+        if(val >= 30) val = 29;
         spInstance->unk1F4 = val;
     }
 }
 
 GXRenderModeObj* CDeviceVI::getRenderModeObj(){
-    return &spInstance->unk200;
+    return &spInstance->mRenderMode1;
 }
 
 u32 CDeviceVI::func_80448408(){
@@ -185,12 +189,12 @@ u32 CDeviceVI::func_8044842C(){
     return spInstance->unk2A8;
 }
 
-bool CDeviceVI::addCallback(CDeviceVICb* entry){
+bool CDeviceVI::entryCb(CDeviceVICb* entry){
     spInstance->mCallbackList.push_back(entry);
     return true;
 }
 
-bool CDeviceVI::removeCallback(CDeviceVICb* entry){
+bool CDeviceVI::removeCb(CDeviceVICb* entry){
     spInstance->mCallbackList.remove(entry);
     return true;
 }
@@ -223,17 +227,124 @@ float CDeviceVI::getWidthScale(){
     return scale;
 }
 
+//TODO: replace raw values with constant variables/defines
+inline void CDeviceVI::setupRenderMode2(u32 viWidth){
+    u16 width = 640;
+    u32 height = 456;
+
+    //Why not just get the instance variable once???
+    spInstance->mRenderMode2.fbWidth = width;
+    spInstance->mRenderMode2.efbHeight = height;
+    spInstance->mRenderMode2.xfbHeight = height;
+    spInstance->mRenderMode2.viHeight = height;
+
+    if(viWidth == 0){
+        viWidth = isWideAspectRatio() ? 686 : 670;
+    }else{
+        //???
+        spInstance->mRenderMode2.viWidth = viWidth;
+    }
+
+    spInstance->mRenderMode2.viWidth = viWidth;
+            
+    u16 xOffset = (720 - spInstance->mRenderMode2.viWidth)/2;
+    spInstance->mRenderMode2.viXOrigin = xOffset;
+    u16 yOffset = (480 - spInstance->mRenderMode2.xfbHeight)/2;
+    spInstance->mRenderMode2.viYOrigin = yOffset;
+}
+
+bool CDeviceVI::func_8044857C(u32 renderModeIndex, u32 viWidth){
+    if(renderModeIndex != 0){
+        //Get the converted tv format/scan mode from the index value
+        u32 scanMode = renderModeIndex & 0xF;
+        u32 tvFormat = (renderModeIndex >> 4) & 0xF;
+
+        //Has to be be like this to match for some reason :/
+        CDeviceVI* instance = spInstance;
+
+        //Return if either the scan mode/tv format values are invalid
+        if(scanMode >= NUM_SCAN_MODE){
+            return false;
+        }
+        
+        if(tvFormat >= NUM_TV_FORMAT){
+            return false;
+        }
+
+        //If the tv format is EURGB60, change it to PAL if the scan mode isn't progressive.
+        //Why is this done?
+        if(tvFormat == TV_FORMAT_EURGB60 && instance->mScanMode != VI_SCANMODE_PROG){
+            tvFormat = TV_FORMAT_PAL;
+        }
+
+        u32 newIndex = tvFormat + (scanMode * 4);
+        GXRenderModeObj* renderMode = renderModes[newIndex];
+
+        //Check for the two empty render mode slots
+        if(renderMode == nullptr){
+            return false;
+        }
+
+        std::memcpy(&spInstance->mRenderMode2, renderMode, sizeof(GXRenderModeObj));
+
+        setupRenderMode2(viWidth);
+
+        spInstance->unk2A0 = lbl_8065A6B8[newIndex];
+        spInstance->setFlag(VI_FLAG_3, true);
+    }
+
+    return true;
+}
+
 void CDeviceVI::wkUpdate(){
     VISetGamma(gammaLevels[unk1F4]);
 
-    if(unk4 & 8){
+    if(checkFlag(VI_FLAG_3)){
         VISetBlack(VI_TRUE);
     }else{
-        VISetBlack(unk4 & 1);
+        VISetBlack(checkFlag(VI_FLAG_0));
     }
 
     VIFlush();
     func_804486E4();
+}
+
+//Calls the specified callback for all entries in the callback list.
+void CDeviceVI::runViCallback(CDeviceVICb::VICallback callback){
+    if(!unkInline1()){
+        for(reslist<CDeviceVICb*>::iterator it = spInstance->mCallbackList.begin(); it != spInstance->mCallbackList.end(); it++){
+            CDeviceVICb* viCb = *it;
+            switch(callback){
+                case CDeviceVICb::VI_CALLBACK_2:
+                    viCb->CDeviceVICb_UnkVirtualFunc2();
+                    break;
+                case CDeviceVICb::VI_CALLBACK_3:
+                    viCb->CDeviceVICb_UnkVirtualFunc3();
+                    break;
+                case CDeviceVICb::VI_CALLBACK_4:
+                    viCb->CDeviceVICb_UnkVirtualFunc4();
+                    break;
+            }
+        }
+    }
+}
+
+void CDeviceVI::func_80448878(){
+    if(!spInstance->isRunning() || spInstance->isThreadFlag0() || CDeviceGX::getInstance() == nullptr){
+        return;
+    }
+
+    runViCallback(CDeviceVICb::VI_CALLBACK_4);
+
+    if(spInstance->unk2B0 != 0){
+        spInstance->unk2A8 = spInstance->unk2B0;
+        spInstance->unk2B0 = 0;
+        spInstance->unk2B8 = isTvFormatPal() ? 50/spInstance->unk2A8 : 60/spInstance->unk2A8;
+        spInstance->unk2BC = 1.0f/spInstance->unk2B8;
+    }
+
+    CDeviceGX::func_80455560();
+
 }
 
 void CDeviceVI::func_80448A44(){
@@ -245,45 +356,90 @@ void CDeviceVI::func_80448A44(){
     }
 }
 
+bool CDeviceVI::unkInline1(){
+    if(spInstance == nullptr) return false;
+    return (spInstance->mViFlags >> VI_FLAG_31) & 1;
+}
+
+void CDeviceVI::unkInline2(u32 index){
+    CDeviceGX::func_8045565C(spInstance->mFrameBufferPtrArray[index]);
+}
+
+
 void CDeviceVI::func_80448A84(){
-    CDeviceVI* vi = spInstance;
+    if(!spInstance->isRunning() || spInstance->isThreadFlag0() || CDeviceGX::getInstance() == nullptr){
+        return;
+    }
 
-    u32 r0 = vi->mFlags & THREAD_FLAG_EXCEPTION;
-    if(r0 != 0){
-        r0 = 1;
+    runViCallback(CDeviceVICb::VI_CALLBACK_2);
+
+    CDeviceClock::func_8044DFF4();
+
+    if(CDeviceGX::devicesInitialized()){
+        spInstance->unkInline2(spInstance->unk298);
     }else{
-        int r0_1 = vi->mMsgQueue.size();
-        int r6 = 0;
-        if(r0_1 > 0){
-
-        }
-
-        r6 = -1;
-
-        lbl_78:
-        r0 = r6 < 0;
+        spInstance->unkInline2(spInstance->unk294);
     }
 
-    u32 r0_2 = 0;
-    if(r0 == 0){
-        int r4 = vi->mState;
-        u32 r3 = 1;
-        if(r4 != 2 && r4 != 3){
-            r3 = 0;
-        }
-        if(r3 != 0){
-            r0_2 = 1;
+    runViCallback(CDeviceVICb::VI_CALLBACK_3);
+
+    if(!checkFlag4()){
+        while(VIGetRetraceCount() - spInstance->unk2A4 < spInstance->unk2A8 - 1){
         }
     }
 
-    if(r0_2 != 0){
+    VISetNextFrameBuffer(spInstance->mFrameBufferPtrArray[spInstance->unk294]);
 
+    //TODO: this feel like it should be an inline, but the instance accesses don't let it work :p
+    spInstance->unk298 = spInstance->unk294;
+
+    if(++spInstance->unk294 >= spInstance->unk284){
+        spInstance->unk294 = 0;
     }
+
+    VIFlush();
+
+    if(!checkFlag4()){
+        VIWaitForRetrace();
+    }
+
+    //Also feels like an inline
+    spInstance->unk2AC = VIGetRetraceCount() - spInstance->unk2A4;
+    spInstance->unk2A4 = VIGetRetraceCount();
 
 }
 
 u32 CDeviceVI::func_80448D10(){
     return 1;
+}
+
+/* Utility functions to convert the tv format/scan mode to the right values for the render
+    mode table index. */
+
+u32 CDeviceVI::getTvFormatIndex() const {
+    TVFormat result = TV_FORMAT_NTSC;
+    if(mTvFormat == VI_TVFORMAT_PAL) result = TV_FORMAT_PAL;
+    else if(mTvFormat == VI_TVFORMAT_MPAL) result = TV_FORMAT_MPAL;
+    else if(mTvFormat == VI_TVFORMAT_EURGB60) result = TV_FORMAT_EURGB60;
+    return (u32)result;
+}
+
+u32 CDeviceVI::getScanModeIndex() const {
+    /* There isn't a check for progressive soft, so the index for interlaced will be returned in that case.
+    Is this intentional? */
+    u32 result = (u32)SCAN_MODE_INT << 4;
+    if(mScanMode == VI_SCANMODE_DS) result = (u32)SCAN_MODE_DS << 4;
+    else if(mScanMode == VI_SCANMODE_PROG) result = (u32)SCAN_MODE_PROG << 4;
+    return result;
+}
+
+/* Calcuates the render mode table index from the tv format and scan mode values.
+Bits 0-3: tv format, bits 4-7: scan mode */
+u32 CDeviceVI::calculateRenderModeIndex() const {
+    u32 tvFormatIndex = getTvFormatIndex();
+    u32 scanModeIndex = getScanModeIndex();
+
+    return tvFormatIndex | scanModeIndex;
 }
 
 bool CDeviceVI::wkStandbyLogin(){
@@ -294,8 +450,7 @@ bool CDeviceVI::wkStandbyLogin(){
         mDimmingCount = VIGetDimmingCount();
         mScanMode = VIGetScanMode();
         mTvFormat = VIGetTvFormat();
-        u32 val = convertTvFormat() | convertScanMode();
-        func_8044857C(val, 0);
+        func_8044857C(calculateRenderModeIndex(), 0);
         func_804486E4();
         VIEnableDimming(VI_ENABLE);
         VISetTrapFilter(VI_FALSE);
@@ -327,5 +482,5 @@ bool CDeviceVI::func_80448E80(){
 }
 
 void CDeviceVI::UnkClass_80447FDC_UnkVirtualFunc1(){
-    unk4 |= 0x80000000;
+    setFlag(VI_FLAG_31, true);
 }

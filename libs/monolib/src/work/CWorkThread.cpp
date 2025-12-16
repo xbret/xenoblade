@@ -147,7 +147,7 @@ bool CWorkThread::wkStandbyInit(){
 }
 
 bool CWorkThread::wkStandbyRun(){
-    if(mFlags & THREAD_FLAG_0){
+    if(isThreadFlag0()){
         mState = THREAD_STATE_RUN;
         wkTimeoutInit();
     }
@@ -245,7 +245,7 @@ void CWorkThread::wkStandby(){
             }
 
             case THREAD_STATE_INIT:{
-                if(mFlags & THREAD_FLAG_0){
+                if(isThreadFlag0()){
                     mState = THREAD_STATE_LOGIN;
                     wkTimeoutInit();
                 } else if(!wkStandbyLogin()){

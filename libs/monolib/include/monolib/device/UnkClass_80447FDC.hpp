@@ -5,8 +5,8 @@
 //min size: 0x4
 class UnkClass_80447FDC {
 public:
+
     UnkClass_80447FDC(){
-        unk4 = 0;
     }
     virtual ~UnkClass_80447FDC(){
     }
@@ -14,7 +14,6 @@ public:
     virtual void UnkClass_80447FDC_UnkVirtualFunc1() = 0;
 
     //0x0: vtable
-    u32 unk4; //may not belong here
 };
 
 extern void func_804EE194(UNKTYPE* r3);

@@ -51,7 +51,7 @@ void CDeviceFileJobReadDvd::wkUpdate(){
 }
 
 bool CDeviceFileJobReadDvd::wkStandbyLogin(){
-    if(mFlags & THREAD_FLAG_0){
+    if(isThreadFlag0()){
         return CWorkThread::wkStandbyLogin();
     }else if(wkIsCurrent()){
         if(mHandle->func_80451DA4(true)){

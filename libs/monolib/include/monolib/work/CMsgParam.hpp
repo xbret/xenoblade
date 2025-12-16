@@ -20,7 +20,8 @@ struct CMsgParamEntry{
     u8 unk8[0x24 - 0x8];
 };
 
-template <int N> class CMsgParam{
+template <int N>
+class CMsgParam{
 public:
     CMsgParam(u32 r4){
         mCapacity = N;
@@ -73,10 +74,10 @@ public:
 private:
     //0x0: vtable
     CMsgParamEntry mEntries[N]; //0x4
-    CMsgParamEntry* mArrayPtr;
-    u32 mFront;
-    u32 mSize;
-    u32 mCapacity;
-    u32 field6;
-    u32 field7;
+    CMsgParamEntry* mArrayPtr; //N*0x24 + 0x4
+    u32 mFront; //N*0x24 + 0x8
+    u32 mSize; //N*0x24 + 0xC
+    u32 mCapacity; //N*0x24 + 0x10
+    u32 field6; //N*0x24 + 0x14
+    u32 field7; //N*0x24 + 0x18
 };

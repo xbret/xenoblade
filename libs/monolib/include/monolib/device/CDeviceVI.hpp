@@ -1,11 +1,11 @@
 #pragma once
 
 #include <types.h>
-#include "revolution/vi/vitypes.h"
 #include "monolib/device/CDeviceBase.hpp"
 #include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/util.hpp"
+#include "monolib/math.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 
@@ -15,23 +15,27 @@ public:
     CDeviceVI(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceVI();
     static CDeviceVI* getInstance();
-    static void func_804482B0(u32 r3);
+
+    static void setFlag4(bool state);
+    static bool checkFlag4();
+    static bool checkFlag2();
     static bool func_804482DC();
-    static void func_804483A0(u32 r3);
-    static u32 func_804483CC();
+    static void setFlag0(bool state);
+    static bool checkFlag0();
+
     static void func_804483DC(u32 r3);
     static GXRenderModeObj* getRenderModeObj();
     static u32 func_80448408();
     static float func_80448414();
     static u32 func_80448420();
     static u32 func_8044842C();
-    static bool addCallback(CDeviceVICb* entry);
-    static bool removeCallback(CDeviceVICb* entry);
+    static bool entryCb(CDeviceVICb* entry);
+    static bool removeCb(CDeviceVICb* entry);
     static bool isWideAspectRatio();
     static bool isTvFormatPal();
     static u32 getXfbBuffersSize();
     static float getWidthScale();
-    static void func_8044857C(u32 r3, u32 r4);
+    static bool func_8044857C(u32 r3, u32 r4);
     void func_804486E4();
     virtual void wkUpdate();
     static void func_80448878();
@@ -45,21 +49,29 @@ public:
     void func_80448E88();
     virtual void UnkClass_80447FDC_UnkVirtualFunc1();
 
-    //TODO: these should use enums
+    static void runCallbackFunction2();
+    static void runCallbackFunction3();
+    static bool unkInline1();
+    static void unkInline2(u32 index);
+    static void runViCallback(CDeviceVICb::VICallback callback);
+    static void runFunc3Callback();
+    static void runFunc4Callback();
+    static void setupRenderMode2(u32 viWidth);
 
-    inline u32 convertTvFormat() {
-        u32 result = 0;
-        if(mTvFormat == VI_TVFORMAT_PAL) result = 1;
-        else if(mTvFormat == VI_TVFORMAT_MPAL) result = 3;
-        else if(mTvFormat == VI_TVFORMAT_EURGB60) result = 2;
-        return result;
+    static inline CDeviceVI* create(const char* pName, CWorkThread* pWorkThread){
+        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pWorkThread);
+        CWorkUtil::entryWork(device, pWorkThread, 0);
+        device->unk1C4 |= 1;
+        return device;
     }
 
-    inline u32 convertScanMode() {
-        u32 result = 16;
-        if(mScanMode == VI_SCANMODE_DS) result = 0;
-        else if(mScanMode == VI_SCANMODE_PROG) result = 32;
-        return result;
+    void setFlag(u32 flag, bool state){
+        if(state != false) mViFlags |= (1 << flag);
+        else mViFlags &= ~(1 << flag);
+    }
+
+    bool checkFlag(u32 flag) const {
+        return mViFlags & (1 << flag);
     }
 
     static inline u16 getEfbHeight(){
@@ -70,36 +82,28 @@ public:
         return getRenderModeObj()->fbWidth;
     }
 
-    static inline CDeviceVI* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, 0);
-        device->unk1C4 |= 1;
-        return device;
-    }
-
     //0x0: vtable
-    //0x0-1c8: CDeviceBase
-    //0x1c8-1d0: UnkClass_80447FDC
+    //0x0-1C8: CDeviceBase
+    //0x1C8-1CC: UnkClass_80447FDC
+    u32 mViFlags; //0x1CC
     reslist<CDeviceVICb*> mCallbackList; //0x1D0
     u32 mTvFormat; //0x1F0
     u32 unk1F4;
     u32 mScanMode; //0x1F8
     u32 mDimmingCount; //0x1FC
-    GXRenderModeObj unk200;
-    GXRenderModeObj unk23C;
+    GXRenderModeObj mRenderMode1; //0x200
+    GXRenderModeObj mRenderMode2; //0x23C
     u16 unk278;
     u16 unk27A;
     u16 unk27C;
     u16 unk27E;
     u8* mXfbBuffersPtr; //0x280
     u32 unk284;
-    u32 unk288;
-    u8 unk28C[0x8]; //padding?
+    void* mFrameBufferPtrArray[3]; //0x288
     u32 unk294;
     u32 unk298;
     u32 unk29C;
-    u16 unk2A0;
-    u16 unk2A2;
+    ml::CPnt16 unk2A0;
     u32 unk2A4;
     u32 unk2A8;
     u32 unk2AC;
@@ -111,6 +115,36 @@ public:
     float unk2BC;
 
 private:
+    enum Flags{
+        VI_FLAG_0 = 0,
+        VI_FLAG_1 = 1,
+        VI_FLAG_2 = 2,
+        VI_FLAG_3 = 3,
+        VI_FLAG_4 = 4,
+        VI_FLAG_31 = 31
+    };
+
+    //Custom tv format/scan mode enums for the render mode table
+    enum TVFormat {
+        TV_FORMAT_NTSC,
+        TV_FORMAT_PAL,
+        TV_FORMAT_EURGB60,
+        TV_FORMAT_MPAL,
+        NUM_TV_FORMAT = 4
+    };
+
+    enum ScanMode {
+        SCAN_MODE_DS,
+        SCAN_MODE_INT,
+        SCAN_MODE_PROG,
+        SCAN_MODE_PROGSOFT,
+        NUM_SCAN_MODE = 4
+    };
+
+    u32 getTvFormatIndex() const;
+    u32 getScanModeIndex() const;
+    u32 calculateRenderModeIndex() const;
+
     static const u16 drawSyncToken = 0xBEEF;
     
     //XFB defines

@@ -136,6 +136,10 @@ public:
     bool CWorkThread_inline2() const{
         return (mFlags & THREAD_FLAG_5) ? true : mMsgQueue.find(EVT_3) >= 0;
     }
+    
+    bool isThreadFlag0() const {
+        return mFlags & THREAD_FLAG_0;
+    }
 
     //0x0: vtable
     ml::FixStr<64> mName;            //0x4

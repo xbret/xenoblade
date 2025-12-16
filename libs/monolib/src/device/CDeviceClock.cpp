@@ -16,8 +16,7 @@ unk200(0),
 unk208(0) {
     spInstance = this;
     memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
-    s64 time = getTimeNow();
-    unk1F0 = time;
+    unk1F0 = getTimeNow();
     unk1C8 |= 1;
     unk1CC.reserve(mAllocHandle, 16);
 }

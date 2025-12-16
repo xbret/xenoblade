@@ -94,7 +94,7 @@ void CGame::wkUpdate(){
         unk1F8 = 0;
     }
 
-    if((mFlags & THREAD_FLAG_0) && CTaskGame::getInstance() != nullptr){
+    if(isThreadFlag0() && CTaskGame::getInstance() != nullptr){
         (void)CTaskGame::getInstance(); //What are we doing
         if(CTaskGame::func_800426F0() == false){
             CTaskGame::getInstance()->func_80042720();
@@ -252,7 +252,7 @@ void CGame::GameMain(){
 /* Creates a new error entry using the given error message and callback class. This is used specifically
 for the error messages related to controller related issues (e.g. controller disconnect). */
 void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
-    if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !(spInstance->mFlags & THREAD_FLAG_0)){
+    if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !spInstance->isThreadFlag0()){
         CException* exception = static_cast<CException*>(func_80457CA4(spInstance, message, 5));
         if(exception != nullptr){
             exception->mException = (IGameException*)r4;
@@ -269,7 +269,7 @@ In the case of controller errors, the class containing the error handler functio
 which inherits from the type used for the error handler classes (seems to be IGameException,
 but unfortunately the RTTI doesn't specify the name.) */
 bool CGame::wkStandbyExceptionRetry(u32 wid){
-    if(mFlags & THREAD_FLAG_0) return true;
+    if(isThreadFlag0()) return true;
     if(func_8045DE00()) return false;
 
     //Get the work thread for the given id

@@ -1,9 +1,9 @@
 #include "monolib/device.hpp"
 
 CDeviceVICb::CDeviceVICb(){
-    CDeviceVI::addCallback(this);
+    CDeviceVI::entryCb(this);
 }
 
 CDeviceVICb::~CDeviceVICb(){
-    CDeviceVI::removeCallback(this);
+    CDeviceVI::removeCb(this);
 }

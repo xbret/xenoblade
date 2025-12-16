@@ -152,7 +152,7 @@ void CWorkRoot::run(){
     //Set pre retrace callback
     VISetPreRetraceCallback(preRetraceCallback);
 
-    //Run the main update function until it returns false
+    //Run the main update function
     while(CWorkRoot::update() != false){
     }
 

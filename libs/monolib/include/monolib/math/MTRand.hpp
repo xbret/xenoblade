@@ -128,8 +128,6 @@ protected:
     inline u32 magic(u32 u) { return loBit(u) ? 0x9908b0dfUL : 0x0UL; }
     inline u32 twist(u32 m, u32 s0, u32 s1) {
         const u32 y = mixBits(s0, s1);
-        /* BUG?: Based on the standard implementation this should be magic(y),
-        but this might've been an intentional change */
         const u32 mask = magic(s1);
         return m ^ (mask ^ (y >> 1));
     }
