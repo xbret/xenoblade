@@ -6,14 +6,14 @@
 class CDeviceVICb {
 public:
     enum VICallback {
-        VI_CALLBACK_2,
-        VI_CALLBACK_3,
-        VI_CALLBACK_4
+        VI_CALLBACK_BEFORE_DRAW_DONE,
+        VI_CALLBACK_AFTER_DRAW_DONE,
+        VI_CALLBACK_BEGIN_FRAME
     };
 
     CDeviceVICb();
     virtual ~CDeviceVICb();
-    virtual void CDeviceVICb_UnkVirtualFunc2(){}
-    virtual void CDeviceVICb_UnkVirtualFunc3(){}
-    virtual void CDeviceVICb_UnkVirtualFunc4(){}
+    virtual void viBeforeDrawDone(){}
+    virtual void viAfterDrawDone(){}
+    virtual void viBeginFrame(){}
 };

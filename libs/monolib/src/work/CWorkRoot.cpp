@@ -49,7 +49,7 @@ namespace {
     CWorkRootThread* CWorkRootThread::spInstance;
 }
 
-//Exit mode value that determines what to do when exit is called.
+//Exit mode value that determines what to do when exit is called
 CWorkRoot::ExitMode CWorkRoot::sExitMode;
 static u8 lbl_8065A0E8[0x10];
 static u8 lbl_8065A0F8[0x300];
@@ -96,7 +96,7 @@ bool CWorkRoot::update(){
     }
 
     if(CDeviceVI::getInstance() != nullptr){
-        CDeviceVI::func_80448878();
+        CDeviceVI::beginFrame();
     }
 
     CWorkRoot::func_8044406C();
@@ -104,14 +104,14 @@ bool CWorkRoot::update(){
     updateWork(CWorkRootThread::spInstance, false);
 
     if(CDeviceVI::getInstance() != nullptr){
-        CDeviceVI::func_80448A84();
+        CDeviceVI::endFrame();
     }
 
     return func_80439AD4(CWorkRootThread::spInstance) ? false : true;
 }
 
 void CWorkRoot::exit(){
-    //Check the current exit mode to determine how to handle the program stopping.
+    //Check the current exit mode to determine how to handle the program stopping
     if(sExitMode == EXIT_WII_MENU){
         //Exit to Wii menu
         OSReport("exit wii menu\n");
@@ -168,6 +168,7 @@ void CWorkRoot::run(){
 }
 
 void CWorkRoot::preRetraceCallback(u32 retraceCount){
-    //This function does nothing. Might've been stubbed?
-    CDeviceVI::func_80448D10();
+    /* This function is stubbed, so there's no way of knowing if the parameter got passed in
+    or not :< */
+    CDeviceVI::onPreRetrace();
 }

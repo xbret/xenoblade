@@ -44,6 +44,9 @@ extern GXRenderModeObj GXEurgb60Hz480Int;
 extern GXRenderModeObj GXEurgb60Hz480Prog;
 extern GXRenderModeObj GXEurgb60Hz480ProgSoft;
 
+void GXAdjustForOverscan(GXRenderModeObj* rmin, GXRenderModeObj* rmout,
+                         u16 hor, u16 ver);
+
 void GXSetDispCopySrc(u16 x, u16 y, u16 w, u16 h);
 void GXSetTexCopySrc(u16 x, u16 y, u16 w, u16 h);
 

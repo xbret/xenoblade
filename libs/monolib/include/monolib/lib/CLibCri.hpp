@@ -21,5 +21,6 @@ public:
     //0x0: vtable
     //0x0-1c4: CWorkThread
     //0x1c4-1c8: CDeviceVICb
-    //0x1c8-1d0: UnkClass_80447FDC
+    //0x1c8-1cc: UnkClass_80447FDC
+    u32 unk1D0;
 };

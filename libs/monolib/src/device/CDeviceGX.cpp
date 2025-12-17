@@ -25,7 +25,7 @@ unk274(1),
 mFilter(VFILTER_NONE){
     spInstance = this;
     cacheInstance = &unk27C;
-    mGxHeap = (u8*)mtl::MemManager::allocate_array_ex(gxHeapSize, CDevice::func_8044D058(), 32);
+    mGxHeap = new (CDevice::getDevSys1Handle(), 32) u8[gxHeapSize];
     mGxHeapEndAddr = (void*)((u32)mGxHeap + gxHeapSize);
     cacheInstance->unk50C = 0;
     updateVerticalFilter(VFILTER_NONE);
@@ -59,10 +59,10 @@ bool CDeviceGX::devicesInitialized(){
 }
 
 void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
+    //Default to filter 0
     spInstance->mFilter = filter;
     
-    //This doesn't seem to actually be used by the game, and is
-    //just a leftover.
+    //The game only ever calls this function with VFILTER_0, so these other filters go unused.
     if(spInstance->mFilter == VFILTER_1){
         spInstance->mVFilter[0] = 0;
         spInstance->mVFilter[1] = 3;
@@ -93,7 +93,7 @@ void CDeviceGX::updateVerticalFilter(EVerticalFilter filter){
     }
 }
 
-void CDeviceGX::CDeviceVICb_UnkVirtualFunc3(){
+void CDeviceGX::viAfterDrawDone(){
     GXFifoObj fifoTemp;
     void* readPtr;
     void* writePtr;
@@ -115,13 +115,13 @@ void CDeviceGX::CDeviceVICb_UnkVirtualFunc3(){
     unk264 = ((float)temp2/(float)gxHeapSize) * 2.0f;
 }
 
-void CDeviceGX::CDeviceVICb_UnkVirtualFunc4(){
+void CDeviceGX::viBeginFrame(){
     if(spInstance->mDevicesInitialized != true){
         cacheInstance->func_8044BE38();
     }
 }
 
-void CDeviceGX::func_80455560(){
+void CDeviceGX::drawFrame(){
     if(spInstance->mDevicesInitialized == true){
         GXFlush();
 
@@ -151,13 +151,33 @@ void CDeviceGX::func_80455560(){
     }
 }
 
-void CDeviceGX::func_8045565C(void* r3){
+
+//Copies the EFB to the destination external framebuffer.
+inline void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
+    CDeviceGX* gx = spInstance;
+    GXBool vf = gx->mFilter != VFILTER_NONE;
+    GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
+    GXBool aa = CDeviceVI::getRenderModeObj()->aa;
+    u8* vfilter = gx->mVFilter;
+    GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
+    GXCopyDisp(pDestFrameBuffer, spInstance->unk274);
+}
+
+inline void CDeviceGX::anotherInline(){
+    func_804476E8(someString);
+    float temp = CDeviceVI::getVisPerFrame();
+    float temp2 = func_804477E8(someString);
+    lbl_80667F70 = temp2/temp;
+}
+
+
+void CDeviceGX::copyEfb(void* pDestFrameBuffer){
     if(spInstance->mDevicesInitialized == true){
         GXSetDrawSync(token2);
-        someInline(r3);
+        copyEfbToXfb(pDestFrameBuffer);
         while(GXReadDrawSync() != token2){}
     }else{
-        someInline(r3);
+        copyEfbToXfb(pDestFrameBuffer);
         GXDrawDone();
         anotherInline();
     }
@@ -166,7 +186,7 @@ void CDeviceGX::func_8045565C(void* r3){
 void CDeviceGX::func_8045579C(){
 }
 
-int CDeviceGX::func_804557A0(){
+int CDeviceGX::getHeapSize(){
     return spInstance->gxHeapSize;
 }
 

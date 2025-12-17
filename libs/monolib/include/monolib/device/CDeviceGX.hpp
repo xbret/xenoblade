@@ -25,12 +25,12 @@ public:
     static bool devicesInitialized();
     static CDeviceGX* getInstance();
     static void updateVerticalFilter(EVerticalFilter filter);
-    virtual void CDeviceVICb_UnkVirtualFunc3();
-    virtual void CDeviceVICb_UnkVirtualFunc4();
-    static void func_80455560();
-    static void func_8045565C(void* r3);
+    virtual void viAfterDrawDone();
+    virtual void viBeginFrame();
+    static void drawFrame();
+    static void copyEfb(void* pDestFrameBuffer);
     static void func_8045579C();
-    static int func_804557A0();
+    static int getHeapSize();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
     static void drawSyncCallback(u16 token);
@@ -47,22 +47,8 @@ public:
         unk260 = f;
     }
 
-    static inline void someInline(void* r3){
-        CDeviceGX* gx = spInstance;
-        GXBool vf = gx->mFilter != VFILTER_NONE;
-        GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
-        GXBool aa = CDeviceVI::getRenderModeObj()->aa;
-        u8* vfilter = gx->mVFilter;
-        GXSetCopyFilter(aa, rmode->sample_pattern, vf, vfilter);
-        GXCopyDisp(r3, spInstance->unk274);
-    }
-
-    static inline void anotherInline(){
-        func_804476E8(someString);
-        float temp = CDeviceVI::func_8044842C();
-        float temp2 = func_804477E8(someString);
-        lbl_80667F70 = temp2/temp;
-    }
+    static void copyEfbToXfb(void* pDestFrameBuffer);
+    static void anotherInline();
 
     static inline CDeviceGX* create(const char* pName, CWorkThread* pWorkThread){
         CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pWorkThread);
@@ -93,11 +79,11 @@ public:
     EVerticalFilter mFilter; //0x278
     CGXCache unk27C;
 
-private:
     //Graphics callback tokens
     static const u16 token1 = 0xB00B;
     static const u16 token2 = 0xBEEF;
 
+private:
     static const u32 REGION_SIZE = 0x180000;
 
     static CDeviceGX* spInstance;

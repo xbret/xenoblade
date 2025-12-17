@@ -14,8 +14,8 @@ public:
 
     virtual ~CDevice();
     static CDevice* getInstance();
-    static int func_8044D058();
-    static int func_8044D060();
+    static int getDevSys1Handle();
+    static int getDevSys2Handle();
     static u32 func_8044D068();
     static u32 func_8044D248();
     static bool func_8044D438();
@@ -51,12 +51,14 @@ public:
     u32 unk1C4;
 
 private:
+    static const int DEVSYS2_REGION_SIZE = 0x1A0000;
+
     static const char* devSys1String;
     static const char* devSys2String;
     static ml::FixStr<64> lbl_8065A6F8;
     static ml::FixStr<64> lbl_8065A73C;
-    static mtl::ALLOC_HANDLE lbl_80665FA0;
-    static mtl::ALLOC_HANDLE lbl_80665FA4;
+    static mtl::ALLOC_HANDLE sDeviceRegion1Handle;
+    static mtl::ALLOC_HANDLE sDeviceRegion2Handle;
 
     static CDevice* spInstance;
 };

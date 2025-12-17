@@ -199,6 +199,6 @@ inline void* operator new[](size_t size, mtl::ALLOC_HANDLE handle) {
 Allocates aligned array memory from the specified region.
 Specify negative alignment to perform a tail allocation.
 */
-inline void* operator new[](size_t size, int align, mtl::ALLOC_HANDLE handle) {
+inline void* operator new[](size_t size, mtl::ALLOC_HANDLE handle, int align) {
     return mtl::MemManager::allocate_array_ex(size, handle, align);
 }

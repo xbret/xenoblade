@@ -73,7 +73,7 @@ void CTaskManager::Draw() {
 }
 
 void CTaskManager::Reset() {
-    CDeviceVI::func_80448A44();
+    CDeviceVI::waitForDrawDone();
     CProcessMan::Reset();
 
     Start();

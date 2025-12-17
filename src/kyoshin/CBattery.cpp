@@ -38,7 +38,7 @@ void CBattery::func_802B9334(void* r4){
 }
 
 void CBattery::func_802B9364(){
-    CDeviceVI::func_80448A44();
+    CDeviceVI::waitForDrawDone();
     func_801390E0(&mFileHandle);
     unk20 = false;
     if(mLayout != nullptr){
