@@ -1,10 +1,10 @@
 #include "monolib/device.hpp"
 #include "monolib/lib.hpp"
 #include "monolib/work.hpp"
+#include "monolib/util.hpp"
 #include "monolib/math.hpp"
 #include <revolution/VI.h>
 #include <revolution/GX.h>
-#include <string.h>
 
 using namespace ml;
 
@@ -118,12 +118,12 @@ mSecPerFrame(1.0f/TARGET_FRAMERATE) {
     mCallbackList.reserve(mAllocHandle, 16);
 
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
-    func_804EE194(ptr);
+    CErrorWii::entrySomething(ptr);
 }
 
 CDeviceVI::~CDeviceVI(){
     UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
-    func_804EE1B0(ptr);
+    CErrorWii::removeSomething(ptr);
 
     if(mXfbBuffersPtr != nullptr){
         delete[](mXfbBuffersPtr);
@@ -389,7 +389,7 @@ void CDeviceVI::beginFrame(){
     //Call the frame begin callback
     cb(CDeviceVICb::VI_CALLBACK_BEGIN_FRAME);
 
-    //Update the fps values if a new VIs/frame value is set. This doesn't get used in the final version.
+    //Update the fps values if a new VIs/frame value is set. This doesn't get used in release.
     if(spInstance->mNewVisPerFrame != 0){
         spInstance->mVisPerFrame = spInstance->mNewVisPerFrame;
         spInstance->mNewVisPerFrame = 0;
@@ -514,7 +514,7 @@ bool CDeviceVI::wkStandbyLogin(){
 
         VIEnableDimming(VI_ENABLE);
         VISetTrapFilter(VI_FALSE);
-        
+
         return CWorkThread::wkStandbyLogin();
     }
 

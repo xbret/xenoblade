@@ -15,6 +15,3 @@ public:
 
     //0x0: vtable
 };
-
-extern void func_804EE194(UNKTYPE* r3);
-extern void func_804EE1B0(UNKTYPE* r3);

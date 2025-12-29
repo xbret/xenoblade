@@ -36,7 +36,8 @@ namespace ml{
         return nullptr;
     }
 
-    //Copies the file name w/o the extension from the given path to the given fixed string.
+    /* Gets the file name w/o the extension from the given path, and copies it to the
+    given fixed string. */
     void CPathUtil::getNoPathExtName(FixStr<64>& outStr, const char* pPath){
         FixStr<64> temp;
 
@@ -44,18 +45,15 @@ namespace ml{
 
         if (pFilename == nullptr) {
             outStr = temp;
-            return;
-        }
+        }else{
+            temp = pFilename;
+            int length = temp.rfind(".", -1);
 
-        temp = pFilename;
-
-        int length = temp.find(".", -1);
-
-        if ((u32)length + 1 <= 1) {
-            outStr = temp;
-        } else {
-            outStr.clear();
-            temp.copy(outStr, length);
+            if ((u32)length + 1 <= 1) {
+                outStr = temp;
+            } else {
+                temp.copy(outStr, length);
+            }
         }
     }
 

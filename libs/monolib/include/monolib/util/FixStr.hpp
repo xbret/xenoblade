@@ -91,7 +91,9 @@ namespace ml{
         //Sets the given string to the first characters of this string, up to the specified length.
         //TODO: This might just be substr, but when the start index is 0?
         void copy(FixStr<N>& str, int length){
-            if (mLength == 0) {
+            str.clear();
+            
+            if (mLength != 0) {
                 //Copy entire string if length is -1
                 if (length == -1) length = mLength;
                 std::strncpy(str.mString, mString, length);
@@ -117,11 +119,11 @@ namespace ml{
 
         }
 
-        int rfind(const char* str, int pos) const {
+        int find(const char* str, int pos) const {
 
         }
 
-        int find(const char* str, int pos) const {
+        int rfind(const char* str, int pos) const {
             if (mLength == 0) {
                 //Return -1 if the string is empty
                 return -1;

@@ -69,10 +69,10 @@ void CPackItem::update(){
         unk4 = tempString.c_str();
         mPkbFilename = unk84;
 
-        int length = mPkbFilename.find(".", -1);
+        int length = mPkbFilename.rfind(".", -1);
 
         if((u32)length + 1 > 1){
-            ml::FixStr<32> tempString1; //0x8
+            ml::FixStr<32> tempString1 = ml::FixStr<32>(false); //0x8
             mPkbFilename.copy(tempString1, length);
             mPkbFilename = tempString1;
         }

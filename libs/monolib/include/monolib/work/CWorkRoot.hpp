@@ -16,6 +16,9 @@ public:
     static void initialize();
     static void destroy();
 
+    inline static void initializeComponents();
+    inline static void destroyComponents();
+
     static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNotify);
     static bool isThreadRunning(CWorkThread* pThread);
     static void standbyWork(CWorkThread* pThread, bool arg1);
@@ -23,7 +26,7 @@ public:
     static void updateWork(CWorkThread* pThread, bool arg1);
     static void func_8044406C();
 
-    static bool update();
+    static bool runSingle();
     static void exit();
     static void run();
     static void preRetraceCallback(u32 retraceCount);

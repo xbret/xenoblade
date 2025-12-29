@@ -7186,15 +7186,20 @@ monolib/src/scn/CMdlDynamics.cpp:
 	.sdata      start:0x806665C8 end:0x806665E8
 	.sdata2     start:0x8066DB60 end:0x8066DBA8
 
-monolib/src/core/code_804EE0F4.cpp:
-	extab       start:0x80020EB4 end:0x80020F2C
-	extabindex  start:0x80039008 end:0x800390BC
-	.text       start:0x804EE0F4 end:0x804F0258
-	.ctors      start:0x804F5AE8 end:0x804F5AEC
+monolib/src/util/CErrorWii.cpp:
+	extab       start:0x80020EB4 end:0x80020EEC
+	extabindex  start:0x80039008 end:0x8003905C
+	.text       start:0x804EE0F4 end:0x804EE558
 	.rodata     start:0x80528168 end:0x80528190
+	.sbss       start:0x80668338 end:0x80668340
+
+monolib/src/core/code_804EE558.cpp:
+	extab       start:0x80020EEC end:0x80020F2C
+	extabindex  start:0x8003905C end:0x800390BC
+	.text       start:0x804EE558 end:0x804F0258
+	.ctors      start:0x804F5AE8 end:0x804F5AEC
 	.data       start:0x80573A90 end:0x80573B70
 	.bss        start:0x80664050 end:0x806640C8
-	.sbss       start:0x80668338 end:0x80668340
 	.sdata2     start:0x8066DBA8 end:0x8066DBE8
 
 monolib/src/core/code_804F0258.cpp:

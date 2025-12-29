@@ -6,8 +6,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-extern void SetOSErrorHandlers1();
-extern void SetOSErrorHandlers2();
 //Possibly member of CWorkThread?
 extern bool func_80439AD4(CWorkThread* pThread);
 
@@ -90,7 +88,7 @@ void CWorkRoot::standbyWork(CWorkThread* pThread, bool arg1){
 
 }
 
-bool CWorkRoot::update(){
+bool CWorkRoot::runSingle(){
     if(CDeviceClock::getInstance() != nullptr){
         CDeviceClock::func_8044DF8C();
     }
@@ -131,11 +129,9 @@ void CWorkRoot::exit(){
     }
 }
 
-//Main function
-void CWorkRoot::run(){
-    //Initialize components
+inline void CWorkRoot::initializeComponents(){
     mtl::MemManager::initialize();
-    SetOSErrorHandlers1();
+    CErrorWii::initialize();
     CDevice::createRegions();
     CWorkThreadSystem::initialize();
     CWorkRoot::initialize();
@@ -143,25 +139,35 @@ void CWorkRoot::run(){
     CDevice::create();
     CLib::create();
     CWorkSystem::create();
+}
+
+inline void CWorkRoot::destroyComponents(){
+    CWorkRoot::destroy();
+    CWorkThreadSystem::destroy();
+    CDevice::deleteRegions();
+    CErrorWii::destroy();
+    mtl::MemManager::finalize();
+}
+
+//Main function
+void CWorkRoot::run(){
+    //Initialize components
+    initializeComponents();
     
     //Wait for all devices to be initialized?
     do {
-        CWorkRoot::func_8044406C();
+        func_8044406C();
     } while(CDevice::getInstance() == nullptr || CDevice::func_8044D248());
 
     //Set pre retrace callback
     VISetPreRetraceCallback(preRetraceCallback);
 
     //Run the main update function
-    while(CWorkRoot::update() != false){
+    while(runSingle() != false){
     }
 
     //Cleanup components
-    CWorkRoot::destroy();
-    CWorkThreadSystem::destroy();
-    CDevice::deleteRegions();
-    SetOSErrorHandlers2();
-    mtl::MemManager::finalize();
+    destroyComponents();
 
     //Stop the program
     exit();

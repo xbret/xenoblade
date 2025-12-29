@@ -5057,7 +5057,7 @@ monolib/src/scn/CMdlDynamics.cpp:
 	extabindex  start:0x800391FC end:0x8003934C
 	.text       start:0x804ED8E8 end:0x804F25B0
 
-monolib/src/core/code_804EE0F4.cpp:
+monolib/src/util/CErrorWii.cpp:
 	extab       start:0x80021030 end:0x800210B0
 	extabindex  start:0x8003934C end:0x8003940C
 	.text       start:0x804F25B0 end:0x804F47B4
