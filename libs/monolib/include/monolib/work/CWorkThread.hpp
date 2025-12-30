@@ -121,24 +121,40 @@ public:
     CWorkThread* wkGetChild(){
         return mChildren.front();
     }
-    CWorkThread* wkGetChild() const{
+    CWorkThread* wkGetChild() const {
         return mChildren.front();
     }
 
-    bool isRunning() const{
+    bool isRunning() const {
         return (!isException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
     }
 
-    bool isException() const{
-        return (mFlags & THREAD_FLAG_EXCEPTION) ? true : mMsgQueue.find(EVT_EXCEPTION) >= 0;
+    bool isException() const {
+        return checkFlag(THREAD_FLAG_EXCEPTION) ? true : mMsgQueue.find(EVT_EXCEPTION) >= 0;
     }
 
-    bool CWorkThread_inline2() const{
-        return (mFlags & THREAD_FLAG_5) ? true : mMsgQueue.find(EVT_3) >= 0;
+    DECOMP_DONT_INLINE bool CWorkThread_inline2() const {
+        return checkFlag(THREAD_FLAG_5) ? true : mMsgQueue.find(EVT_3) >= 0;
     }
     
     bool isThreadFlag0() const {
-        return mFlags & THREAD_FLAG_0;
+        return checkFlag(THREAD_FLAG_0);
+    }
+
+    bool isThreadFlag7And6() const {
+        return checkFlag(THREAD_FLAG_7) && checkFlag(THREAD_FLAG_6);
+    }
+
+    bool isThreadFlag9AndNot8() const {
+        return checkFlag(THREAD_FLAG_9) && !checkFlag(THREAD_FLAG_8);
+    }
+
+    bool isThreadFlag10() const {
+        return checkFlag(THREAD_FLAG_10);
+    }
+
+    bool checkFlag(ThreadFlags flag) const {
+        return mFlags & flag;
     }
 
     //0x0: vtable

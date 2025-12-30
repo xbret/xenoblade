@@ -1,3 +1,4 @@
+#include "monolib/core.hpp"
 #include "monolib/work.hpp"
 #include "monolib/math.hpp"
 #include "monolib/util.hpp"
@@ -8,6 +9,9 @@
 
 //Possibly member of CWorkThread?
 extern bool func_80439AD4(CWorkThread* pThread);
+extern bool func_804421E4();
+extern void func_804430C4();
+extern void func_80454E6C();
 
 namespace {
     class CWorkRootThread : public CWorkThread {
@@ -49,8 +53,9 @@ namespace {
 
 //Exit mode value that determines what to do when exit is called
 CWorkRoot::ExitMode CWorkRoot::sExitMode;
-static u8 lbl_8065A0E8[0x10];
-static u8 lbl_8065A0F8[0x300];
+CException* CWorkRoot::lbl_80667EF0;
+//Unused in release
+CErrorWii CWorkRoot::sErrorWii;
 
 void CWorkRoot::initialize(){
     sExitMode = EXIT_PROG_END;
@@ -80,12 +85,111 @@ void CWorkRoot::entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNo
     }
 }
 
-bool CWorkRoot::isThreadRunning(CWorkThread* pThread){
+//Forces isRunning inline to emit here
+bool CWorkRoot::dummy1(CWorkThread* pThread){
     return pThread->isRunning();
 }
 
 void CWorkRoot::standbyWork(CWorkThread* pThread, bool arg1){
+    reslist<CWorkThread*>* children = &pThread->mChildren;
+    
+    //Something is sus here
+    if(!(arg1 ^ pThread->CWorkThread_inline2())){
+        pThread->wkStandby();
 
+        //Recursively call standbyWork on this thread's children
+        for(reslist<CWorkThread*>::iterator it = children->begin(); it != children->end(); it++){
+            CWorkThread* childThread = *it;
+            standbyWork(childThread, arg1);
+        }
+    }
+
+    //Remove all child threads in the shutdown state until the first one that isn't
+    do{
+        bool foundShutdownThread = false;
+        
+        for(reslist<CWorkThread*>::iterator it = children->begin(); it != children->end(); it++){
+            CWorkThread* childThread = *it;
+            if(childThread->mState == CWorkThread::THREAD_STATE_SHUTDOWN){
+                pThread->wkRemoveChild(childThread);
+                if(childThread != nullptr){
+                    delete childThread;
+                    childThread = nullptr;
+                }
+
+                foundShutdownThread = true;
+                break;
+            }
+        }
+
+        //If a thread not in the shutdown state was found, return
+        if(!foundShutdownThread) break;
+    }while(true);
+}
+
+void CWorkRoot::updateWork(CWorkThread* pThread, bool arg1){
+    if(!(arg1 ^ pThread->CWorkThread_inline2())){
+        if(pThread->isRunning()){
+            bool r4 = !(pThread->isThreadFlag7And6() || pThread->isThreadFlag9AndNot8() || pThread->isThreadFlag10());
+
+            if(r4 || pThread->isThreadFlag0()){
+                pThread->wkUpdate();
+            }
+        }
+
+        reslist<CWorkThread*>* children = &pThread->mChildren;
+
+        //Recursively call updateWork on this thread's children
+        for(reslist<CWorkThread*>::iterator it = children->begin(); it != children->end(); it++){
+            CWorkThread* childThread = *it;
+            updateWork(childThread, arg1);
+        }
+    }
+}
+
+void CWorkRoot::func_8044406C(){
+    CWorkRootThread* thread = CWorkRootThread::getInstance();
+    //Clear both thread lists
+    while(thread->mThreadList1.size() > 0){
+        //TODO: can these be changed to use front?
+        CWorkThread* list2Front;
+        CWorkThread* list1Front = *thread->mThreadList1.begin();
+        list2Front = *thread->mThreadList2.begin();
+
+        thread->mThreadList1.pop_front();
+        thread->mThreadList2.pop_front();
+
+        if(list1Front->isRunning() && list2Front->isRunning()){
+            list1Front->mParent->wkRemoveChild(list1Front);
+            list2Front->mParent = list1Front;
+        }
+    }
+
+    thread->mThreadList1.clear();
+    thread->mThreadList2.clear();
+    standbyWork(CWorkRootThread::getInstance(), false);
+}
+
+void CWorkRoot::func_80444154(){
+    if(CDeviceGX::getInstance() != nullptr){
+        CDeviceGX::func_8045579C();
+    }
+
+    if(!CWorkSystem::func_804444DC()){
+        if(func_804421E4()){
+            func_804430C4();
+        }
+
+        if(lbl_80667EF0 != nullptr){
+            lbl_80667EF0->wkRender();
+        }
+    }
+
+    func_80454E6C();
+}
+
+bool CWorkRoot::unkInline1(){
+    return func_80439AD4(CWorkRootThread::spInstance) ? false : true;
 }
 
 bool CWorkRoot::runSingle(){
@@ -100,12 +204,13 @@ bool CWorkRoot::runSingle(){
     CWorkRoot::func_8044406C();
     //Update all threads, starting from the root thread
     updateWork(CWorkRootThread::spInstance, false);
+    func_80444154();
 
     if(CDeviceVI::getInstance() != nullptr){
         CDeviceVI::endFrame();
     }
 
-    return func_80439AD4(CWorkRootThread::spInstance) ? false : true;
+    return unkInline1() ? false : true;
 }
 
 void CWorkRoot::exit(){
@@ -175,6 +280,15 @@ void CWorkRoot::run(){
 
 void CWorkRoot::preRetraceCallback(u32 retraceCount){
     /* This function is stubbed, so there's no way of knowing if the parameter got passed in
-    or not :< */
+    or not */
     CDeviceVI::onPreRetrace();
+}
+
+void CWorkRoot::func_8044436C(CException* pException){
+    //Why not just = pException??
+    lbl_80667EF0 = pException != nullptr ? pException : nullptr;
+}
+
+CException* CWorkRoot::func_80444384(){
+    return lbl_80667EF0;
 }

@@ -124,6 +124,68 @@ public:
     virtual ~reslist(){
     }
 
+    iterator begin() const {
+        return iterator(mStartNodePtr->mNext);
+    }
+    iterator end() const {
+        return iterator(mStartNodePtr);
+    }
+
+    T& front() {
+        return *begin();
+    }
+    T& back() {
+        return *begin();
+    }
+
+    const T& front() const {
+        return *begin();
+    }
+    const T& back() const {
+        return *begin();
+    }
+
+    inline int size() const {
+        int length = 0;
+        for(iterator it = begin(); it != end(); it++){
+            length++;
+        }
+        return length;
+    }
+
+    inline bool empty() const {
+        return mStartNodePtr->mNext == mStartNodePtr;
+    }
+
+    inline void reserve(mtl::ALLOC_HANDLE handle, int capacity) {
+        mList = new (handle) _reslist_node<T>[capacity];
+
+        for(int i = 0; i < capacity; i++){
+            mList[i].mNext = nullptr;
+        }
+
+        mCapacity = capacity;
+    }
+
+    //TODO: this function needs a try catch block somewhere
+    void push_back(const T& item){
+        _reslist_node<T>* head = mStartNodePtr;
+
+        //Go through the list until we find an empty slot
+        u32 i = 0;
+        for(; i < mCapacity; i++){
+            if(mList[i].mNext == nullptr) break;
+        }
+    
+        _reslist_node<T>* pSlot = &mList[i];
+        new (&pSlot->mItem) T(item);
+
+        pSlot->mNext = head;
+        pSlot->mPrev = head->mPrev;
+        head->mPrev->mNext = pSlot;
+        head->mPrev = pSlot;
+    }
+
     void remove(const T& item){
         _reslist_node<T>* curr;
         _reslist_node<T>* next;
@@ -149,55 +211,13 @@ public:
         }
     }
 
-    //TODO: this function needs a try catch block somewhere
-    void push_back(const T& item){
-        _reslist_node<T>* head = mStartNodePtr;
-
-        //Go through the list until we find an empty slot
-        u32 i = 0;
-        for(; i < mCapacity; i++){
-            if(mList[i].mNext == nullptr) break;
-        }
-    
-        _reslist_node<T>* pSlot = &mList[i];
-        new (&pSlot->mItem) T(item);
-
-        pSlot->mNext = head;
-        pSlot->mPrev = head->mPrev;
-        head->mPrev->mNext = pSlot;
-        head->mPrev = pSlot;
-    }
-
-
-    iterator begin() const {
-        return iterator(mStartNodePtr->mNext);
-    }
-    iterator end() const {
-        return iterator(mStartNodePtr);
-    }
-
-    T& front() {
-        return *begin();
-    }
-    T& back() {
-        return *begin();
-    }
-
-    const T& front() const {
-        return *begin();
-    }
-    const T& back() const {
-        return *begin();
-    }
-
-    inline void reserve(mtl::ALLOC_HANDLE handle, int capacity) {
-        mList = new (handle) _reslist_node<T>[capacity];
-
-        for(int i = 0; i < capacity; i++){
-            mList[i].mNext = nullptr;
-        }
-
-        mCapacity = capacity;
+    void pop_front(){
+        _reslist_node<T>* frontNode = mStartNodePtr->mNext;
+        _reslist_node<T>* nextNode = frontNode->mNext;
+        _reslist_node<T>* prevNode = frontNode->mPrev;
+        prevNode->mNext = nextNode;
+        nextNode->mPrev = prevNode;
+        frontNode->mNext = nullptr;
     }
 
     inline void destroyList(){
@@ -207,9 +227,5 @@ public:
             mList = nullptr;
         }
         mCapacity = 0;
-    }
-
-    inline bool empty() const {
-        return mStartNodePtr->mNext == mStartNodePtr;
     }
 };

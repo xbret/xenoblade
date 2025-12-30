@@ -4,6 +4,7 @@
 
 //Core
 class CView;
+class CException;
 
 //Device
 class CFileHandle;

@@ -264,7 +264,7 @@ namespace cf{
     }
 
     const char* CfBdat::func_801421C4(u16 index){
-
+        return nullptr;
     }
 
     u32 CfBdat::func_801422A8(u32 param1){

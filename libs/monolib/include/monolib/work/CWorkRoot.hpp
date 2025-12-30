@@ -2,6 +2,7 @@
 
 #include <types.h>
 #include "monolib/monolib_types.hpp"
+#include "monolib/util/CErrorWii.hpp"
 
 /*
 Main game framework class. It handles setting up/cleaning up most of the framework
@@ -16,20 +17,19 @@ public:
     static void initialize();
     static void destroy();
 
-    inline static void initializeComponents();
-    inline static void destroyComponents();
-
     static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNotify);
-    static bool isThreadRunning(CWorkThread* pThread);
     static void standbyWork(CWorkThread* pThread, bool arg1);
-    static bool func_80443F30();
     static void updateWork(CWorkThread* pThread, bool arg1);
     static void func_8044406C();
+    static void func_80444154();
 
     static bool runSingle();
     static void exit();
     static void run();
     static void preRetraceCallback(u32 retraceCount);
+
+    static void func_8044436C(CException* pException);
+    static CException* func_80444384();
 
 private:
     enum ExitMode {
@@ -39,5 +39,12 @@ private:
         EXIT_SHUTDOWN
     };
 
+    static bool dummy1(CWorkThread* pThread);
+    static inline bool unkInline1();
+    static inline void initializeComponents();
+    static inline void destroyComponents();
+
     static ExitMode sExitMode;
+    static CException* lbl_80667EF0;
+    static CErrorWii sErrorWii;
 };
