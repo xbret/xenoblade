@@ -1,16 +1,16 @@
 #pragma once
 
 #include "monolib/device/CDeviceVICb.hpp"
-#include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/work/CWorkUtil.hpp"
 #include "monolib/work/CWorkThread.hpp"
+#include "monolib/util/CErrorWii.hpp"
 
 //size: 0x1d0
-class CLibCri : public CWorkThread, public CDeviceVICb, public UnkClass_80447FDC {
+class CLibCri : public CWorkThread, public CDeviceVICb, public IErrorWii {
 public:
     CLibCri(const char* pName, CWorkThread* pWorkThread);
     static CLibCri* getInstance();
-    virtual void UnkClass_80447FDC_UnkVirtualFunc1();
+    virtual void errorWiiCB();
 
     static inline CLibCri* create(const char* pName, CWorkThread* pWorkThread){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pWorkThread);

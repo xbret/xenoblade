@@ -7,4 +7,6 @@ public:
     CViewRoot(const char* pName, CWorkThread* pParent);
 
     static CViewRoot* create(CWorkThread* pParent);
+    static CViewRoot* getInstance();
+    static void func_804430C4();
 };

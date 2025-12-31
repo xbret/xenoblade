@@ -30,7 +30,7 @@ public:
     static void registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param);
     virtual bool wkStandbyExceptionRetry(u32 r4);
     virtual void OnPauseTrigger(bool paused);
-    static void func_80039D08();
+    static void onExit();
 
     static inline CGame* create(const char* pName, CWorkThread* pWorkThread, u32 r5){
         CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(pName, pWorkThread);

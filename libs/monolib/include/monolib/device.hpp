@@ -11,5 +11,4 @@
 #include "monolib/device/CDeviceSC.hpp"
 #include "monolib/device/CDeviceVI.hpp"
 #include "monolib/device/code_80450B14.hpp"
-#include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/UnkClass_804561AC.hpp"

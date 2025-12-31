@@ -1,3 +1,6 @@
 #pragma once
 
-extern void func_80057CDC();
+class CActParamData {
+public:
+    static void func_80057CDC();
+};

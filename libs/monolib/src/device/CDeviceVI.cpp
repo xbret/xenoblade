@@ -85,7 +85,7 @@ CPnt16 CDeviceVI::lbl_8065A6B8[] = {
 bool CDeviceVI::sUseStaticHandle;
 
 CDeviceVI::CDeviceVI(const char* pName, CWorkThread* pWorkThread) : CDeviceBase(pName, pWorkThread, 8),
-UnkClass_80447FDC(),
+IErrorWii(),
 mViFlags(0),
 mTvFormat(VI_TVFORMAT_NTSC),
 mGammaLevel(VI_GM_0_9),
@@ -117,13 +117,11 @@ mSecPerFrame(1.0f/TARGET_FRAMERATE) {
     setFlag4(true);
     mCallbackList.reserve(mAllocHandle, 16);
 
-    UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
-    CErrorWii::entrySomething(ptr);
+    CErrorWii::addCallback(this);
 }
 
 CDeviceVI::~CDeviceVI(){
-    UNKTYPE* ptr = static_cast<UnkClass_80447FDC*>(this);
-    CErrorWii::removeSomething(ptr);
+    CErrorWii::removeCallback(this);
 
     if(mXfbBuffersPtr != nullptr){
         delete[](mXfbBuffersPtr);
@@ -542,6 +540,7 @@ bool CDeviceVI::usingStaticHandle(){
     return sUseStaticHandle;
 }
 
-void CDeviceVI::UnkClass_80447FDC_UnkVirtualFunc1(){
+//Unused in release
+void CDeviceVI::errorWiiCB(){
     setFlag(VI_FLAG_31, true);
 }

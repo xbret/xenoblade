@@ -145,15 +145,16 @@ public:
         return *begin();
     }
 
-    inline int size() const {
-        int length = 0;
+    u32 size() const {
+        u32 length = 0;
+        
         for(iterator it = begin(); it != end(); it++){
             length++;
         }
         return length;
     }
 
-    inline bool empty() const {
+    bool empty() const {
         return mStartNodePtr->mNext == mStartNodePtr;
     }
 
@@ -220,7 +221,7 @@ public:
         frontNode->mNext = nullptr;
     }
 
-    inline void destroyList(){
+    void destroyList(){
         clear();
         if (unk1C == 0 && mList != nullptr) {
             delete[](this->mList);

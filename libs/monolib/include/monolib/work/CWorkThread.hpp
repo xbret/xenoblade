@@ -158,6 +158,10 @@ public:
         return mFlags & flag;
     }
 
+    bool hasSingleChild() const {
+        return mChildren.size() == 1;
+    }
+
     //0x0: vtable
     ml::FixStr<64> mName;            //0x4
     ThreadState mState;              //0x48

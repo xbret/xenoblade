@@ -7,8 +7,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-extern bool func_804421E4();
-extern void func_804430C4();
 extern void func_80454E6C();
 
 namespace {
@@ -51,7 +49,7 @@ namespace {
 
 //Exit mode value that determines what to do when exit is called
 CWorkRoot::ExitMode CWorkRoot::sExitMode;
-CException* CWorkRoot::lbl_80667EF0;
+CException* CWorkRoot::sException;
 //Unused in release
 CErrorWii CWorkRoot::sErrorWii;
 
@@ -175,13 +173,13 @@ void CWorkRoot::func_80444154(){
         CDeviceGX::func_8045579C();
     }
 
-    if(!CWorkSystem::func_804444DC()){
-        if(func_804421E4()){
-            func_804430C4();
+    if(!CWorkSystem::isOff()){
+        if(CViewRoot::getInstance() != nullptr){
+            CViewRoot::func_804430C4();
         }
 
-        if(lbl_80667EF0 != nullptr){
-            lbl_80667EF0->wkRender();
+        if(sException != nullptr){
+            sException->wkRender();
         }
     }
 
@@ -286,9 +284,9 @@ void CWorkRoot::preRetraceCallback(u32 retraceCount){
 
 void CWorkRoot::func_8044436C(CException* pException){
     //Why not just = pException??
-    lbl_80667EF0 = pException != nullptr ? pException : nullptr;
+    sException = pException != nullptr ? pException : nullptr;
 }
 
 CException* CWorkRoot::func_80444384(){
-    return lbl_80667EF0;
+    return sException;
 }

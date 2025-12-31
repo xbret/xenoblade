@@ -163,7 +163,7 @@ int main(){
     CLibVM::setCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
     CWorkSystemPack::SaveStaticArcFilenameStringPtr(&scStaticArcStr);
     CWorkSystemPack::SavePkhFilenamesArrayPtr(sPkhFilenames);
-    func_80057CDC();
+    CActParamData::func_80057CDC();
     CLibHbm_8045D5C8(1);
     CWorkRoot::run(); //Start up CWorkRoot, which later starts CGame
 }

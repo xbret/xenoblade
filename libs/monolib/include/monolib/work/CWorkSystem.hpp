@@ -1,7 +1,7 @@
 #pragma once
 
 #include "monolib/work/CWorkThread.hpp"
-#include "monolib/util/PtrSingleton.hpp"
+#include "monolib/util.hpp"
 
 class CWorkSystem : public CWorkThread {
 public:
@@ -9,12 +9,14 @@ public:
 
 public:
     CWorkSystem(const char *pName, CWorkThread *pParent);
-    ~CWorkSystem();
+    virtual ~CWorkSystem();
 
     static CWorkSystem* getInstance();
-    static bool func_804444DC();
-    static u32 func_80444514();
-    static void func_80444520(bool value);
+    static bool isOff();
+    static mtl::ALLOC_HANDLE getMem();
+    static bool isPowerOff();
+    static bool isReset();
+    static void setSaveLoadInvalidReset(bool state);
 
     virtual void wkUpdate();
     virtual bool wkStandbyLogin();
@@ -26,15 +28,15 @@ public:
     static void setExitFunc(ExitFunc func);
     static void callExitFunc();
 
+private:
     //0x0: vtable
     //0x0-1c4: CWorkThread
-    u32 unk1C4;
-    u8 unk1C8;
-    u8 unk1C9;
-    u8 unk1CA;
+    mtl::ALLOC_HANDLE mMemHandle; //0x1C4
+    bool mPowerOff; //0x1C8
+    bool mReset; //0x1C9
+    bool mSaveLoadInvalidReset; //0x1CA
     u8 unk1CB[0x1D0 - 0x1CB];
 
-private:
     static CWorkSystem* spInstance;
     static ExitFunc sExitFunc;
 };

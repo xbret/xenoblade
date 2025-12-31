@@ -4,7 +4,6 @@
 
 extern void func_80459A80();
 extern void func_8044F964();
-extern u32 func_80444970();
 extern void func_804469D0();
 extern void func_80496998();
 extern void func_80496994();
@@ -16,10 +15,10 @@ CWorkSystem::ExitFunc CWorkSystem::sExitFunc;
 CWorkSystem* CWorkSystem::spInstance;
 
 CWorkSystem::CWorkSystem(const char *pName, CWorkThread *pParent) : CWorkThread(pName, pParent, 32),
-unk1C4(-1),
-unk1C8(0),
-unk1C9(0),
-unk1CA(0) {
+mMemHandle(mtl::INVALID_HANDLE),
+mPowerOff(false),
+mReset(false),
+mSaveLoadInvalidReset(false) {
     spInstance = this;
     mType = THREAD_CWORKSYSTEM;
 }
@@ -32,32 +31,40 @@ CWorkSystem* CWorkSystem::getInstance(){
     return spInstance;
 }
 
-bool CWorkSystem::func_804444DC(){
-    CWorkSystem* instance = spInstance;
-    if(instance == nullptr) return false;
-    return instance->unk1C8 != false || instance->unk1C9 != false;
+bool CWorkSystem::isOff(){
+    if(spInstance == nullptr) return false;
+    return isPowerOff() || isReset();
 }
 
-u32 CWorkSystem::func_80444514(){
-    return spInstance->unk1C4;
+mtl::ALLOC_HANDLE CWorkSystem::getMem(){
+    return spInstance->mMemHandle;
 }
 
-void CWorkSystem::func_80444520(bool value){
+bool CWorkSystem::isPowerOff() {
+    return spInstance->mPowerOff;
+}
+
+bool CWorkSystem::isReset() {
+    return spInstance->mReset;
+}
+
+
+void CWorkSystem::setSaveLoadInvalidReset(bool state){
     CWorkSystem* instance = spInstance;
     if(instance != nullptr){
-        instance->unk1CA = value;
+        instance->mSaveLoadInvalidReset = state;
     }
 }
 
 void CWorkSystem::wkUpdate(){
-    if(unk1CA == false){
-        if(unk1C8 == false && CErrorWii::powerCallbackCalled()){
-            unk1C8 = true;
+    if(mSaveLoadInvalidReset == false){
+        if(mPowerOff == false && CErrorWii::isPowerCallbackCalled()){
+            mPowerOff = true;
             shutdownGame();
         }
     
-        if(unk1C9 == false && CErrorWii::func_804EE48C()){
-            unk1C9 = true;
+        if(mReset == false && CErrorWii::isResetCallbackCalled()){
+            mReset = true;
             resetGame();
         }
     }
@@ -67,7 +74,7 @@ bool CWorkSystem::wkStandbyLogin(){
     if(!CDeviceFile::func_8044E514()) return false;
 
     CREATE_WORKTHREAD(CWorkSystemMem, this);
-    unk1C4 = func_80444970();
+    mMemHandle = CWorkSystemMem::getHandle();
     CREATE_WORKTHREAD(CWorkSystemCache, this);
     CREATE_WORKTHREAD(CWorkSystemPack, this);
     CScriptCode::create(this);
@@ -102,7 +109,7 @@ bool CWorkSystem::wkStandbyLogout(){
         UNKTYPE* r3 = func_804BC9EC();
         func_804BCC1C(r3); //probably class function
 
-        unk1C4 = -1;
+        mMemHandle = mtl::INVALID_HANDLE;
 
         //Call base
         return CWorkThread::wkStandbyLogout();

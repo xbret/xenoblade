@@ -23,24 +23,24 @@ CErrorWii::~CErrorWii(){
     spInstance = nullptr;
 }
 
-void CErrorWii::entrySomething(UNKTYPE* pValue){
-    spInstance->unk0.push_back(pValue);
+void CErrorWii::addCallback(IErrorWii* pError){
+    spInstance->mCallbackList.push_back(pError);
 }
 
 //This feels like it should be an inline from fixed_vector (probably erase), but it uses spInstance multiple times...
-void CErrorWii::removeSomething(UNKTYPE* pValue){
+void CErrorWii::removeCallback(IErrorWii* pError){
     int index = 0;
 
     //Search the list for a matching entry
-    for(int i = 0; i < spInstance->unk0.size(); i++){
-        if(spInstance->unk0[i] == pValue){
+    for(int i = 0; i < spInstance->mCallbackList.size(); i++){
+        if(spInstance->mCallbackList[i] == pError){
             //Shift all elements that come after left by 1 to remove the entry
-            while(index < (int)spInstance->unk0.mCount - 1){
-                UNKTYPE** pEntry = &spInstance->unk0[index++];
-                pEntry[0] = pEntry[1];
+            while(index < (int)spInstance->mCallbackList.mCount - 1){
+                IErrorWii** entry = &spInstance->mCallbackList[index++];
+                entry[0] = entry[1];
             }
 
-            spInstance->unk0.mCount--;
+            spInstance->mCallbackList.mCount--;
             return;
         }
 
@@ -126,7 +126,7 @@ void CErrorWii::powerCallback(){
     sPowerCallbackCalled = true;
 }
 
-bool CErrorWii::powerCallbackCalled(){
+bool CErrorWii::isPowerCallbackCalled(){
     return sPowerCallbackCalled;
 }
 
@@ -135,7 +135,7 @@ void CErrorWii::resetCallback(){
     sResetCallbackCalled = true;
 }
 
-bool CErrorWii::func_804EE48C(){
+bool CErrorWii::isResetCallbackCalled(){
     return sResetCallbackCalled;
 }
 

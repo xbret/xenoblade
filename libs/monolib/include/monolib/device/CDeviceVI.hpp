@@ -2,7 +2,6 @@
 
 #include <types.h>
 #include "monolib/device/CDeviceBase.hpp"
-#include "monolib/device/UnkClass_80447FDC.hpp"
 #include "monolib/device/CDeviceVICb.hpp"
 #include "monolib/util.hpp"
 #include "monolib/math.hpp"
@@ -10,7 +9,7 @@
 #include <revolution/VI.h>
 
 //size: 0x2c0
-class CDeviceVI : public CDeviceBase, public UnkClass_80447FDC {
+class CDeviceVI : public CDeviceBase, public IErrorWii {
 public:
     CDeviceVI(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceVI();
@@ -47,7 +46,7 @@ public:
     static void setUseStaticHandle(bool state);
     static bool usingStaticHandle();
     void func_80448E88();
-    virtual void UnkClass_80447FDC_UnkVirtualFunc1();
+    virtual void errorWiiCB();
 
     static bool unkInline1();
     static void copyEfb(u32 index);

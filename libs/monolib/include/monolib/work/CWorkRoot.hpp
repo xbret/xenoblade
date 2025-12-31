@@ -2,7 +2,7 @@
 
 #include <types.h>
 #include "monolib/monolib_types.hpp"
-#include "monolib/util/CErrorWii.hpp"
+#include "monolib/util.hpp"
 
 /*
 Main game framework class. It handles setting up/cleaning up most of the framework
@@ -45,6 +45,6 @@ private:
     static inline void destroyComponents();
 
     static ExitMode sExitMode;
-    static CException* lbl_80667EF0;
+    static CException* sException;
     static CErrorWii sErrorWii;
 };

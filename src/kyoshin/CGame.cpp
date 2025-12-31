@@ -44,7 +44,7 @@ unk224(1.0f),
 unk228(0) {
     spInstance = this;
     CLibHbm_8045D5C8(1);
-    CWorkSystem::setExitFunc(&func_80039D08);
+    CWorkSystem::setExitFunc(&onExit);
     this->wkSetEvent(EVT_4);
 }
 
@@ -335,7 +335,7 @@ void CGame::OnPauseTrigger(bool paused){
     }
 }
 
-void CGame::func_80039D08(){
+void CGame::onExit(){
     if(spInstance != nullptr){
         if(func_8007E1B4() != 0){
             func_801BF93C();

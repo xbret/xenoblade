@@ -5,13 +5,20 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
+class IErrorWii {
+public:
+    IErrorWii(){}
+    virtual ~IErrorWii(){}
+    virtual void errorWiiCB() = 0;
+};
+
 class CErrorWii {
 public:
     CErrorWii();
     ~CErrorWii();
 
-    static void entrySomething(UNKTYPE* r3);
-    static void removeSomething(UNKTYPE* r3);
+    static void addCallback(IErrorWii* pError);
+    static void removeCallback(IErrorWii* pError);
 
     static void initialize();
     static void destroy();
@@ -20,15 +27,16 @@ public:
     static void postExceptionCallback();
 
     static void powerCallback();
-    static bool powerCallbackCalled();
+    static bool isPowerCallbackCalled();
     static void resetCallback();
-    static bool func_804EE48C();
+    static bool isResetCallbackCalled();
 
 private:
     static void setErrorHandler(u16 error);
     static void resetErrorHandler(u16 error);
 
-    mtl::fixed_vector<void*, 8> unk0;
+    //Unused in release
+    mtl::fixed_vector<IErrorWii*, 8> mCallbackList; //0x0
     u8 unk24[4]; //part of previous class?
     OSContext mContext; //0x28
     u16 unk2F0;
