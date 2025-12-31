@@ -7,8 +7,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-//Possibly member of CWorkThread?
-extern bool func_80439AD4(CWorkThread* pThread);
 extern bool func_804421E4();
 extern void func_804430C4();
 extern void func_80454E6C();
@@ -104,13 +102,15 @@ void CWorkRoot::standbyWork(CWorkThread* pThread, bool arg1){
         }
     }
 
-    //Remove all child threads in the shutdown state until the first one that isn't
+    //Remove all child threads in the shutdown state
     do{
         bool foundShutdownThread = false;
         
         for(reslist<CWorkThread*>::iterator it = children->begin(); it != children->end(); it++){
             CWorkThread* childThread = *it;
             if(childThread->mState == CWorkThread::THREAD_STATE_SHUTDOWN){
+                /* Instead of returning here and going through the list again, why not just keep the
+                next entry in the list for after the current entry gets removed to continue from? */
                 pThread->wkRemoveChild(childThread);
                 if(childThread != nullptr){
                     delete childThread;

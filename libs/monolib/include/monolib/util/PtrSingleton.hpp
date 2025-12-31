@@ -8,27 +8,21 @@ template <typename T>
 class PtrSingleton{
 public:
     PtrSingleton(){
-        sInstance = this;
+        spInstance = static_cast<T*>(this);
     }
 
     ~PtrSingleton(){
-        sInstance = nullptr;
-    }
-
-    static T* getPtr(){
-        return sInstance;
+        spInstance = nullptr;
     }
 
     static T* getInstance(){
-        static T sInstance;
-        return &sInstance;
+        return spInstance;
     }
 
-
-    //static ? get(){}
-
 protected:
-    static T* sInstance;
+    static T* spInstance;
 };
+
+template <typename T> T* PtrSingleton<T>::spInstance;
 
 }

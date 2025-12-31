@@ -10,11 +10,7 @@ class CWorkFlowSetup : public CWorkThread{
 public:
     static CWorkFlowSetup* getInstance();
 
-    static CWorkFlowSetup* create(const char* pName, CWorkThread* pParent){
-        CWorkFlowSetup* pFlow = new (CWorkThreadSystem::getWorkMem()) CWorkFlowSetup(pName, pParent);
-        CWorkUtil::entryWork(pFlow, pParent, 0);
-        return pFlow;
-    }
+    DECL_WORKTHREAD_CREATE(CWorkFlowSetup);
 
     virtual bool wkStandbyLogin();  //0x94
     virtual bool wkStandbyLogout(); //0x98

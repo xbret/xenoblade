@@ -5,8 +5,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-extern void func_8044487C();
-
 class CErrorWii {
 public:
     CErrorWii();
@@ -41,24 +39,3 @@ private:
     static bool sPowerCallbackCalled;
     static bool sResetCallbackCalled;
 };
-
-//TODO: find a better place to put this (also gets used in CLibHbmControl and CWorkSystem)
-static inline void resetGame(){
-    func_8044487C();
-
-    //Set the screen to black
-    VISetBlack(VI_TRUE);
-    VIFlush();
-
-    //Wait for 6 frames for whatever reason
-    VIWaitForRetrace();
-    VIWaitForRetrace();
-    VIWaitForRetrace();
-    VIWaitForRetrace();
-    VIWaitForRetrace();
-    VIWaitForRetrace();
-
-    //Restart
-    OSReport("exit wii reset\n");
-    OSRestart(0);
-}

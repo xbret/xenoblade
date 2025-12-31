@@ -9,11 +9,7 @@ public:
     CDeviceFont(const char* pName, CWorkThread* pWorkThread);
     static CDeviceFont* getInstance();
 
-    static inline CDeviceFont* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceFont* device = new (CWorkThreadSystem::getWorkMem()) CDeviceFont(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, 0);
-        return device;
-    }
+    DECL_WORKTHREAD_CREATE(CDeviceFont);
 
     //0x0: vtable
     //0x0-1c8: CDeviceBase

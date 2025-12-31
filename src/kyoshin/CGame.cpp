@@ -44,12 +44,12 @@ unk224(1.0f),
 unk228(0) {
     spInstance = this;
     CLibHbm_8045D5C8(1);
-    func_80444874(&func_80039D08);
+    CWorkSystem::setExitFunc(&func_80039D08);
     this->wkSetEvent(EVT_4);
 }
 
 CGame::~CGame(){
-    func_80444874(nullptr);
+    CWorkSystem::setExitFunc(nullptr);
     CLibHbm_8045D5C8(0);
     spInstance = nullptr;
 }

@@ -1,4 +1,5 @@
 #include "monolib/util.hpp"
+#include "monolib/work.hpp"
 #include <revolution/BASE.h>
 #include <revolution/OS.h>
 #include <revolution/VI.h>

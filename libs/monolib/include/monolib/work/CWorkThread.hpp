@@ -5,6 +5,7 @@
 #include "monolib/work/CMsgParam.hpp"
 #include "monolib/work/IWorkEvent.hpp"
 #include "monolib/work/CWorkThreadSystem.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include "monolib/util.hpp"
 
 //size: 0x1C4
@@ -175,3 +176,16 @@ private:
     bool wkStandbyRun();
     bool wkStandbyShutdown();
 };
+
+//Utility macros b/c i don't wanna type this out every time
+//TODO: improve these macros
+
+#define DECL_WORKTHREAD_CREATE(class)                                            \
+    static class* create(const char* pName, CWorkThread* pParent){               \
+        WORK_ID id = CWorkThreadSystem::getWorkMem();                            \
+        class* threadClass = new (id) class(pName, pParent);                     \
+        CWorkUtil::entryWork(threadClass, pParent, false);                       \
+        return threadClass;                                                      \
+    }                                                                            \
+
+#define CREATE_WORKTHREAD(class, parent) class::create(#class, parent);
