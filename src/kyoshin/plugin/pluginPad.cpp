@@ -32,7 +32,7 @@ int pad_get(_sVMThread* pThread) {
         retval.val = CDeviceRemotePad_80447580()[2];
         break;
     default:
-        func_804A1004(pThread);
+        vmPluginExceptionThrow(pThread);
         return 0;
     }
 

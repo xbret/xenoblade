@@ -4847,10 +4847,13 @@ monolib/src/scn/CScnItemCamera.cpp:
 	.text       start:0x804A2A20 end:0x804A3E08
 	.ctors      start:0x804FA164 end:0x804FA168
 
-monolib/src/vm/yvm.cpp:
+monolib/src/vm/yvm.c:
 	extab       start:0x8001F9B4 end:0x8001FB34
 	extabindex  start:0x800375A0 end:0x800377E0
-	.text       start:0x804A3E08 end:0x804AADBC
+	.text       start:0x804A3E08 end:0x804AADAC
+
+monolib/src/vm/yvm_debug.c:
+	.text       start:0x804AADAC end:0x804AADBC
 
 monolib/src/coli/code_804A6C60.cpp:
 	extab       start:0x8001FB34 end:0x8001FDB4
@@ -5058,9 +5061,14 @@ monolib/src/scn/CMdlDynamics.cpp:
 	.text       start:0x804ED8E8 end:0x804F25B0
 
 monolib/src/util/CErrorWii.cpp:
-	extab       start:0x80021030 end:0x800210B0
-	extabindex  start:0x8003934C end:0x8003940C
-	.text       start:0x804F25B0 end:0x804F47B4
+	extab       start:0x80021030 end:0x80021070
+	extabindex  start:0x8003934C end:0x800393AC
+	.text       start:0x804F25B0 end:0x804F2AB4
+
+monolib/src/core/code_804EE558.cpp:
+	extab       start:0x80021070 end:0x800210B0
+	extabindex  start:0x800393AC end:0x8003940C
+	.text       start:0x804F2AB4 end:0x804F47B4
 	.ctors      start:0x804FA1AC end:0x804FA1B0
 
 monolib/src/core/code_804F0258.cpp:

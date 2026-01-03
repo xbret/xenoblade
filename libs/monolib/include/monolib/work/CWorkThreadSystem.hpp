@@ -26,7 +26,7 @@ public:
     static mtl::ALLOC_HANDLE getWorkMem();
 
 private:
-    static const u32 REGION_SIZE = 0x6FFE0;
+    static const u32 REGION_SIZE = 0x70000 - sizeof(mtl::MemBlock);
 
     //Highest allowed work ID
     static const WORK_ID MAX_WORK_ID = 2048;

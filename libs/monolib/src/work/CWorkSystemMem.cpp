@@ -5,7 +5,7 @@ CWorkSystemMem* CWorkSystemMem::spInstance;
 CWorkSystemMem::CWorkSystemMem(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, 1),
 mHandle(mtl::INVALID_HANDLE){
     spInstance = this;
-    mHandle = mtl::MemManager::create(mtl::MemManager::getHandleMEM2(), WORKSYSTEM_REGION_SIZE, mName.c_str());
+    mHandle = mtl::MemManager::create(mtl::MemManager::getHandleMEM2(), REGION_SIZE, mName.c_str());
 }
 
 CWorkSystemMem::~CWorkSystemMem(){

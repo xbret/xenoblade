@@ -20,7 +20,7 @@ private:
     //0x0-1c4: CWorkThread
     mtl::ALLOC_HANDLE mHandle; //0x1C4
 
-    static const u32 WORKSYSTEM_REGION_SIZE = 0xFE0;
+    static const u32 REGION_SIZE = 0x1000 - sizeof(mtl::MemBlock);
 
     static CWorkSystemMem* spInstance;
 };

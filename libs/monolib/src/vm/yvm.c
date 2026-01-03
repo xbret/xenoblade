@@ -1,22 +1,9 @@
 #include "monolib/vm/yvm.h"
 #include <string.h>
+#include <stdbool.h>
 
-
-inline int readInt(u8* array, int offset){
-    return *(int*)(array + offset);
-}
-inline u32 readUInt(u8* array, int offset){
-    return *(u32*)(array + offset);
-}
-inline void writeInt(u8* array, int offset, int val){
-    *(int*)(array + offset) = val;
-}
-inline void writeUInt(u8* array, int offset, u32 val){
-    *(u32*)(array + offset) = val;
-}
-
-
-SBOpcode sbScriptOpcodes[96] = {
+//Opcode data
+static VMCOpcode vmcOpcodes[96] = {
     {"NOP", 0, 0},
     {"CONST_0", 0, 1},
     {"CONST_1", 0, 1},
@@ -115,7 +102,7 @@ SBOpcode sbScriptOpcodes[96] = {
     {"BP", 0, 0}
 };
 
-const char* sbScriptTypes[11] = {
+static const char* vmTypeNames[11] = {
     "nil",
     "true",
     "false",
@@ -129,7 +116,160 @@ const char* sbScriptTypes[11] = {
     "sys"
 };
 
-u8 vmMemory[0x4928];
+typedef int (*OpcodeFunc)(VMThread* pThread, u8 opcodeIndex);
+
+void encodeScramble(u8* data);
+//If only C didn't force all of this to be forward declared :p
+//TODO: these are all probably static judging from xcx symbols
+int vmc_nop(VMThread* pThread, u8 opcodeIndex);
+int vmc_const(VMThread* pThread, u8 opcodeIndex);
+int vmc_const_i(VMThread* pThread, u8 opcodeIndex);
+int vmc_pool_int(VMThread* pThread, u8 opcodeIndex);
+int vmc_pool_fixed(VMThread* pThread, u8 opcodeIndex);
+int vmc_pool_string(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld(VMThread* pThread, u8 opcodeIndex);
+int vmc_st(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_arg(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_arg(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_arg_omit(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_const(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_const(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_arg_const(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_arg_const(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_static(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_static(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_ar(VMThread* pThread, u8 opcodeIndex);
+int vmc_st_ar(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_nil(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_true(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_false(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_func(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_plugin(VMThread* pThread, u8 opcodeIndex);
+int vmc_ld_func_far(VMThread* pThread, u8 opcodeIndex);
+int vmc_minus(VMThread* pThread, u8 opcodeIndex);
+int vmc_not(VMThread* pThread, u8 opcodeIndex);
+int vmc_l_not(VMThread* pThread, u8 opcodeIndex);
+int vmc_calc(VMThread* pThread, u8 opcodeIndex);
+int vmc_jmp(VMThread* pThread, u8 opcodeIndex);
+int vmc_jpf(VMThread* pThread, u8 opcodeIndex);
+int vmc_call(VMThread* pThread, u8 opcodeIndex);
+int vmc_call_ind(VMThread* pThread, u8 opcodeIndex);
+int vmc_ret(VMThread* pThread, u8 opcodeIndex);
+int vmc_next(VMThread* pThread, u8 opcodeIndex);
+int vmc_plugin(VMThread* pThread, u8 opcodeIndex);
+int vmc_call_far(VMThread* pThread, u8 opcodeIndex);
+int vmc_get_oc(VMThread* pThread, u8 opcodeIndex);
+int vmc_getter(VMThread* pThread, u8 opcodeIndex);
+int vmc_setter(VMThread* pThread, u8 opcodeIndex);
+int vmc_send(VMThread* pThread, u8 opcodeIndex);
+int vmc_typeof(VMThread* pThread, u8 opcodeIndex);
+int vmc_sizeof(VMThread* pThread, u8 opcodeIndex);
+int vmc_switch(VMThread* pThread, u8 opcodeIndex);
+int vmc_inc(VMThread* pThread, u8 opcodeIndex);
+int vmc_dec(VMThread* pThread, u8 opcodeIndex);
+int vmc_exit(VMThread* pThread, u8 opcodeIndex);
+int vmc_bp(VMThread* pThread, u8 opcodeIndex);
+
+static OpcodeFunc vmcOpcodeFuncs[] = {
+    vmc_nop,
+    vmc_const,
+    vmc_const,
+    vmc_const,
+    vmc_const,
+    vmc_const,
+    vmc_const_i,
+    vmc_const_i,
+    vmc_pool_int,
+    vmc_pool_int,
+    vmc_pool_fixed,
+    vmc_pool_fixed,
+    vmc_pool_string,
+    vmc_pool_string,
+    vmc_ld,
+    vmc_st,
+    vmc_ld_arg,
+    vmc_st_arg,
+    vmc_st_arg_omit,
+    vmc_ld_const,
+    vmc_ld_const,
+    vmc_ld_const,
+    vmc_ld_const,
+    vmc_st_const,
+    vmc_st_const,
+    vmc_st_const,
+    vmc_st_const,
+    vmc_ld_arg_const,
+    vmc_ld_arg_const,
+    vmc_ld_arg_const,
+    vmc_ld_arg_const,
+    vmc_st_arg_const,
+    vmc_st_arg_const,
+    vmc_st_arg_const,
+    vmc_st_arg_const,
+    vmc_ld_static,
+    vmc_ld_static,
+    vmc_st_static,
+    vmc_st_static,
+    vmc_ld_ar,
+    vmc_st_ar,
+    vmc_ld_nil,
+    vmc_ld_true,
+    vmc_ld_false,
+    vmc_ld_func,
+    vmc_ld_func,
+    vmc_ld_plugin,
+    vmc_ld_plugin,
+    vmc_ld_func_far,
+    vmc_ld_func_far,
+    vmc_minus,
+    vmc_not,
+    vmc_l_not,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_calc,
+    vmc_jmp,
+    vmc_jpf,
+    vmc_call,
+    vmc_call,
+    vmc_call_ind,
+    vmc_ret,
+    vmc_next,
+    vmc_plugin,
+    vmc_plugin,
+    vmc_call_far,
+    vmc_call_far,
+    vmc_get_oc,
+    vmc_get_oc,
+    vmc_getter,
+    vmc_getter,
+    vmc_setter,
+    vmc_setter,
+    vmc_send,
+    vmc_send,
+    vmc_typeof,
+    vmc_sizeof,
+    vmc_switch,
+    vmc_inc,
+    vmc_dec,
+    vmc_exit,
+    vmc_bp
+};
+
+static u8 vmMemory[0x4928];
 
 
 void vmInit(){
@@ -138,38 +278,33 @@ void vmInit(){
 }
 
 //Checks to see if the header of the sb file is valid (should be "SB  ")
-static inline BOOL vmSbChk(u8* data){
-    if(data != NULL && data[0] == 'S' && data[1] == 'B' && data[2] == ' ' && data[3] == ' ' && 1 < data[4]){
-        return TRUE;
-    }else{
+inline BOOL vmSbChk(const char* data){
+    if(data == NULL) return FALSE;
+
+    if(data[0] != 'S' || data[1] != 'B' || data[2] != ' ' || data[3] != ' '){
         return FALSE;
     }
+
+    return data[4] < 2;
 }
 
-static inline int vmPackageSearch(){
-    /*
-    ppbVar11 = (byte **)&vmMemory;
-        iVar14 = 0;
-        iVar22 = 8;
-        do {
-            if (*ppbVar11 == data) {
-                puVar2 = &vmMemory + iVar14 * 8;
-                return puVar2;
-            }
-            ppbVar11 = ppbVar11 + 2;
-            iVar14 = iVar14 + 1;
-            iVar22 = iVar22 + -1;
-        } while (iVar22 != 0);
-       return 0;
-    */
+inline void* vmPackageSearch(u8* pData){
+    u8** tempPtr = (u8 **)&vmMemory;
+
+    for(u32 i = 0; i < 8; i++){
+        if(tempPtr[i*2] == pData){
+            return &vmMemory + i * 8;
+        }
+    }
+
+    return NULL;
 }
 
-static inline BOOL vmPackageRegist(u8* data){
-    /*
-    puVar2 = vmPackageSearch();
+inline BOOL vmPackageRegist(u8* data){
+    u8* puVar2 = vmPackageSearch(data);
         if (puVar2 == NULL) {
-            ppbVar11 = (byte **)&vmMemory;
-            iVar14 = 8;
+            u8** ppbVar11 = (u8 **)&vmMemory;
+            int iVar14 = 8;
             do {
                 if (*ppbVar11 == NULL) {
                     *ppbVar11 = data;
@@ -183,27 +318,22 @@ static inline BOOL vmPackageRegist(u8* data){
         else {
             return true;
         }
-    */
 }
 
+/*
 void vmDataGet(){
 }
+*/
 
-void vmCodePut(){
-}
-
-void vmStackDump(){
-}
-
-
-short vmSysAtrPoolGet(u8* data, int param_2){
+inline short vmSysAtrPoolGet(u8* data, int param_2){
     /*
     piVar12 = *(int **)(data + 0x34);
     uVar3 = (uint)*(ushort *)((int)piVar12 + piVar12[2] * param_2 + *piVar12);
     */
+    return 0;
 }
 
-int vmIdPoolGet(u8* data, int param_2){
+inline int vmIdPoolGet(u8* data, int param_2){
     /*
     piVar12 = *(int **)(data + 0xc);
     iVar23 = *piVar12;
@@ -215,56 +345,13 @@ int vmIdPoolGet(u8* data, int param_2){
         uVar3 = *(uint *)((int)piVar12 + iVar22 + iVar23);
     }
     */
+    return 0;
 }
 
-int vmSysAtrSearch(u8* data, int param_2){
+inline int vmSysAtrSearch(u8* data, int param_2){
     int uVar3 = vmSysAtrPoolGet(data, param_2);
     if (uVar3 == -1) return 0;
     else return vmIdPoolGet(data, uVar3);
-}
-
-void vmPackageDump(){
-}
-
-void vmThreadDump(){
-}
-
-void vmHalt(){
-}
-
-
-//Rotate each group of 32 bits by 2 to the right?
- //weird stuff
-//aaaaaaaa bbbbbbbb cccccccc dddddddd -> ddaaaaaa aabbbbbb bbcccccc ccdddddd
-//func_804A1630
-void encodeScrambleSub(u8* array, int arg1) {
-    if(arg1 >= 0){
-    // these changes are definitely not right, will rework later
-        for(int i = (arg1 + 3) >> 2; i > 0; --i){
-            u8 byte0 = array[0];
-            u8 byte1 = array[1];
-            u8 byte2 = array[2];
-            u8 byte3 = array[3];
-        
-            array[0] = (byte0 >> 2) | ((byte3 & 3) << 6);
-            array[1] = (byte1 >> 2) | ((byte0 & 3) << 6);
-            array[2] = (byte2 >> 2) | ((byte1 & 3) << 6);
-            array[3] = (byte3 >> 2) | ((byte2 & 3) << 6);
-            array += 4;
-        }
-    }
-}
-
-void encodeScramble(u8* data){
-    /*
-    pbVar8 = (byte *)((int)piVar12 + piVar12[1] * piVar12[2] + *piVar12);
-    uVar3 = (int)(data + iVar14) - (int)pbVar8;
-    encodeScramble(pbVar8,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
-    piVar12 = *(int **)(data + 0x18);
-    iVar14 = (int)piVar12 + piVar12[1] * piVar12[2] + *piVar12;
-    uVar3 = *(int *)(data + 0x1c) - iVar14;
-    encodeScramble(iVar14,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
-    */
 }
 
 int vmPluginSearch(int param_1, int param2){
@@ -293,6 +380,7 @@ int vmPluginSearch(int param_1, int param2){
     } while (iVar22 < 0x30);
     return -1;
     */
+    return 0;
 }
 
 int vmOCSearch(){
@@ -308,19 +396,29 @@ int vmOCSearch(){
     } while (iVar22 < 0x30);
     return -1;
     */
+    return 0;
 }
 
-void vmFuncFarSearch(){
+void vmPropertySearch(){
+}
+
+void vmSelectorSearch(){
+}
+
+
+int vmFuncFarSearch(int r3, int r4){
+    return 0;
 }
 
 void vmStringPoolGet(){
 }
 
-void vmPackageSearchIdx(){
+int vmPackageSearchIdx(){
+    return 0;
 }
 
 
-void vmInitDataLink(u8* data, int pcVar15){
+void vmInitDataLink(u8* data, const char* pcVar15){
     /*
     cVar1 = *pcVar15;
     if (cVar1 == '\x05') {
@@ -397,132 +495,113 @@ int vmLocalPoolGet(u8* data, int param_2){
         uVar4 = *(uint *)((int)piVar12 + iVar14 + iVar22);
     }
     */
+    return 0;
 }
 
-BOOL vmLink(u8* data){
-    /*
-        char cVar1;
-    bool_t uVar2;
-    undefined *puVar2;
-    uint uVar3;
-    short uVar6;
-    uint uVar4;
-    uint uVar5;
-    undefined2 uVar7;
-    bool bVar10;
-    byte *pbVar8;
-    int iVar9;
-    byte **ppbVar11;
-    int *piVar12;
-    int iVar13;
-    int iVar14;
-    char *pcVar15;
-    uint uVar16;
-    undefined2 *puVar17;
-    int *piVar18;
-    char **ppcVar19;
-    char **ppcVar20;
-    ushort *puVar21;
-    int iVar22;
-    int iVar23;
-
-    uVar2 = vmSbChk(data);
-
-    if (uVar2 == 0) {
-        bVar10 = false;
+BOOL vmLink(u8* pData){
+    //Check that the header bytes are correct
+    if (!vmSbChk((char*)pData)) {
+        //If not, this isn't a valid SB file
+        return FALSE;
     }
-    else {
-        bVar10 = vmPackageRegist(data);
-        if (bVar10) {
-            if ((data[7] & 1) == 0) {
-                iVar14 = *(int *)(data + 0x10);
-                piVar12 = (int *)(data + *(int *)(data + 0xc));
-                data[7] = data[7] | 1;
-                *(byte **)(data + 8) = data + *(int *)(data + 8);
-                *(int **)(data + 0xc) = piVar12;
-                *(byte **)(data + 0x10) = data + iVar14;
-                *(byte **)(data + 0x14) = data + *(int *)(data + 0x14);
-                *(byte **)(data + 0x18) = data + *(int *)(data + 0x18);
-                *(byte **)(data + 0x1c) = data + *(int *)(data + 0x1c);
-                *(byte **)(data + 0x20) = data + *(int *)(data + 0x20);
-                *(byte **)(data + 0x24) = data + *(int *)(data + 0x24);
-                *(byte **)(data + 0x28) = data + *(int *)(data + 0x28);
-                *(byte **)(data + 0x2c) = data + *(int *)(data + 0x2c);
-                *(byte **)(data + 0x30) = data + *(int *)(data + 0x30);
-                *(byte **)(data + 0x34) = data + *(int *)(data + 0x34);
-                *(byte **)(data + 0x38) = data + *(int *)(data + 0x38);
-                *(byte **)(data + 0x3c) = data + *(int *)(data + 0x3c);
-                if ((data[6] & 2) != 0) {
-                    encodeScramble(data);
-                }
-                puVar21 = (ushort *)((int)*(int **)(data + 0x20) + **(int **)(data + 0x20));
-                for (iVar14 = 0; iVar14 < *(int *)(*(int *)(data + 0x20) + 4); iVar14 = iVar14 + 1)
-                {
-                    uVar3 = vmIdPoolGet(data, puVar21[0]);
-                    uVar4 = vmIdPoolGet(data, puVar21[1]);
-                    uVar16 = vmPluginSearch(uVar3, uVar4);
 
-                    if (uVar16 == -1) {
-                        return false;
-                    }
-                    *puVar21 = (ushort)(uVar16 >> 0x10);
-                    puVar21[1] = (ushort)uVar16;
-                    puVar21 = puVar21 + 2;
+    if (vmPackageRegist(pData)) {
+        if ((pData[7] & 1) == 0) {
+            pData[7] |= 1;
+            SBHeader* header = (SBHeader*)pData;
+
+            //Convert all the offset values in the header to pointers
+            header->unk8 += (u32)pData;
+            header->unkC += (u32)pData;
+            header->unk10 += (u32)pData;
+            header->unk14 += (u32)pData;
+            header->unk18 += (u32)pData;
+            header->unk1C += (u32)pData;
+            header->unk20 += (u32)pData;
+            header->unk24 += (u32)pData;
+            header->unk28 += (u32)pData;
+            header->unk2C += (u32)pData;
+            header->unk30 += (u32)pData;
+            header->unk34 += (u32)pData;
+            header->unk38 += (u32)pData;
+            header->unk3C += (u32)pData;
+
+            if ((pData[6] & 2) != 0) {
+                encodeScramble(pData);
+            }
+
+            u16* puVar21 = (u16 *)((int)*(int **)(pData + 0x20) + **(int **)(pData + 0x20));
+            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x20) + 4); iVar14 = iVar14 + 1)
+            {
+                int uVar3 = vmIdPoolGet(pData, puVar21[0]);
+                int uVar4 = vmIdPoolGet(pData, puVar21[1]);
+                int uVar16 = vmPluginSearch(uVar3, uVar4);
+
+                if (uVar16 == -1) {
+                    return false;
                 }
-                puVar21 = (ushort *)((int)*(int **)(data + 0x24) + **(int **)(data + 0x24));
-                for (iVar14 = 0; iVar14 < *(int *)(*(int *)(data + 0x24) + 4); iVar14 = iVar14 + 1)
-                {
-                    vmIdPoolGet(data, puVar21[0]);
-                    iVar22 = vmOCSearch();
-                    if (iVar22 == -1) {
-                        return false;
-                    }
-                    *puVar21 = (ushort)iVar22;
-                    puVar21 = puVar21 + 1;
+                *puVar21 = (u16)(uVar16 >> 0x10);
+                puVar21[1] = (u16)uVar16;
+                puVar21 = puVar21 + 2;
+            }
+
+            puVar21 = (u16 *)((int)*(int **)(pData + 0x24) + **(int **)(pData + 0x24));
+            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x24) + 4); iVar14 = iVar14 + 1)
+            {
+                vmIdPoolGet(pData, puVar21[0]);
+                int iVar22 = vmOCSearch();
+                if (iVar22 == -1) {
+                    return false;
                 }
-                puVar21 = (ushort *)((int)*(int **)(data + 0x28) + **(int **)(data + 0x28));
-                for (iVar14 = 0; iVar14 < *(int *)(*(int *)(data + 0x28) + 4); iVar14 = iVar14 + 1)
-                {
-                    uVar3 = vmIdPoolGet(data, puVar21[0]);
-                    uVar4 = vmIdPoolGet(data, puVar21[1]);
-                    iVar22 = vmFuncFarSearch((int)piVar12 + uVar3 + iVar23, (int)piVar12 + uVar4 + iVar13);
-                    if (iVar22 == -1) {
-                        return false;
-                    }
-                    *puVar21 = (ushort)((uint)iVar22 >> 0x10);
-                    puVar21[1] = (ushort)iVar22;
-                    puVar21 = puVar21 + 2;
+                *puVar21 = (u16)iVar22;
+                puVar21 = puVar21 + 1;
+            }
+
+            puVar21 = (u16 *)((int)*(int **)(pData + 0x28) + **(int **)(pData + 0x28));
+            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x28) + 4); iVar14 = iVar14 + 1)
+            {
+                int uVar3 = vmIdPoolGet(pData, puVar21[0]);
+                int uVar4 = vmIdPoolGet(pData, puVar21[1]);
+                int iVar23 = 0; //fake
+                int iVar13 = 0; //fake
+                int iVar22 = vmFuncFarSearch((int)header->unkC + uVar3 + iVar23, (int)header->unkC + uVar4 + iVar13);
+                if (iVar22 == -1) {
+                    return false;
                 }
-                pcVar15 = (char *)((int)*(int **)(data + 0x2c) + **(int **)(data + 0x2c));
-                for (uVar3 = 0; uVar3 < *(uint *)(*(int *)(data + 0x2c) + 4); uVar3 = uVar3 + 1) {
-                    vmInitDataLink(data, pcVar15);
+                *puVar21 = (u16)((uint)iVar22 >> 0x10);
+                puVar21[1] = (u16)iVar22;
+                puVar21 = puVar21 + 2;
+            }
+
+            char* pcVar15 = (char *)((int)*(int **)(pData + 0x2c) + **(int **)(pData + 0x2c));
+            for (int uVar3 = 0; uVar3 < *(uint *)(*(int *)(pData + 0x2c) + 4); uVar3 = uVar3 + 1) {
+                vmInitDataLink(pData, pcVar15);
+                pcVar15 = pcVar15 + 8;
+            }
+
+            int* piVar12;
+
+            for (int uVar3 = 0; piVar12 = *(int **)(pData + 0x30), uVar3 < (uint)piVar12[1]; uVar3 = uVar3 + 1) {
+                int uVar4 = vmLocalPoolGet(pData, uVar3);
+                int iVar22 = 0; //fake
+                pcVar15 = (char *)((int)piVar12 + *(int *)((int)piVar12 + uVar4 + iVar22) + uVar4 + iVar22);
+                for (int uVar16 = 0; uVar16 < *(uint *)((int)piVar12 + uVar4 + iVar22 + 4);
+                    uVar16 = uVar16 + 1) {
+                    vmInitDataLink(pData, pcVar15);
                     pcVar15 = pcVar15 + 8;
                 }
-                for (uVar3 = 0; piVar12 = *(int **)(data + 0x30), uVar3 < (uint)piVar12[1]; uVar3 = uVar3 + 1) {
-                    uVar4 = vmLocalPoolGet(data, uVar3);
-                    pcVar15 = (char *)((int)piVar12 + *(int *)((int)piVar12 + uVar4 + iVar22) + uVar4 + iVar22);
-                    for (uVar16 = 0; uVar16 < *(uint *)((int)piVar12 + uVar4 + iVar22 + 4);
-                        uVar16 = uVar16 + 1) {
-                        vmInitDataLink(data, pcVar15);
-                        pcVar15 = pcVar15 + 8;
-                    }
-                }
-                
-                iVar14 = vmSysAtrSearch(data, 1);
-                puVar2 = vmPackageSearch(data);
-                *(int *)(puVar2 + 4) = iVar14;
-                bVar10 = true;
             }
-            else {
-                bVar10 = true;
-            }
+            
+            int iVar14 = vmSysAtrSearch(pData, 1);
+            u8* puVar2 = vmPackageSearch(pData);
+            *(int *)(puVar2 + 4) = iVar14;
+            return true;
         }
-        else {
-            bVar10 = false;
-        }
+
+        return true;
     }
-    return bVar10;
-    */
+
+    return false;
 }
 
 void vmUnlink(){
@@ -567,49 +646,43 @@ void vmExec(){
 void vmPluginModuleSearch(){
 }
 
-void vmPluginRegist(){
+BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs){
+    return FALSE;
 }
 
 void vmArgCntGet(){
 }
 
-void vmArgPtrGet(){
+void* vmArgPtrGet(VMThread* pThread, int r4){
+    return NULL;
 }
 
-void vmArgOmitChk(){
+int vmArgOmitChk(VMThread* pThread, int r4){
+    return 0;
 }
 
-void vmExceptionProc(){
+BOOL vmArgBoolGet(int r3, void* r4){
+    return FALSE;
 }
 
-void vmExceptionThrow(){
+int vmArgIntGet(int r3, void* r4){
+    return 0;
 }
 
-void vmPluginExceptionThrow(){
+int vmArgFixedGet(int r3, void* r4){
+    return 0;
 }
 
-void vmOCExceptionThrow(){
+char* vmArgStringGet(int r3, void* r4){
+    return NULL;
 }
 
-void vmArgErr(){
+void* vmArgFunctionGet(VMThread* pthread, int r4){
+    return NULL;
 }
 
-void vmArgBoolGet(){
-}
-
-void vmArgIntGet(){
-}
-
-void vmArgFixedGet(){
-}
-
-void vmArgStringGet(){
-}
-
-void vmArgFunctionGet(){
-}
-
-void vmArgArrayGet(){
+void* vmArgArrayGet(VMThread* pThread, int r4){
+    return NULL;
 }
 
 void vmArrayGet(){
@@ -618,32 +691,45 @@ void vmArrayGet(){
 void vmArraySet(){
 }
 
-void vmArgOCGet(){
+void* vmArgOCGet(VMThread* pThread, int r4){
+    return NULL;
 }
 
 
-void getArray(){
+static void getArray(){
 }
 
-void setArray(){
+static void setArray(){
 }
 
 void vmPush(){
 }
 
-void vmRetValSet(){
+void vmRetValSet(VMThread* pThread, RetVal* pRetval){
+    RetVal* r3 = &pThread->unk3C[pRetval->val++];
+    r3->type = pRetval->type;
+    r3->unk1 = pRetval->unk1;
+    r3->unk2_U32 = pRetval->unk2_U32;
+    r3->unk6 = pRetval->unk6;
 }
 
-void vmWaitModeSet(){
+void vmWaitModeSet(VMThread* pThread){
+    pThread->unk4C = 1;
 }
 
-void vmWkIdxGet(){
+int vmWkIdxGet(VMThread* pThread){
+    return pThread->waitMode;
 }
 
-void vmWkIdxSet(){
+void vmWkIdxSet(VMThread* pThread, int r4){
+    pThread->waitMode = r4;
 }
 
-void vmWkGet(){
+int* vmWkGet(VMThread* pThread, int r4){
+    return &pThread->wkIdx + r4;
+}
+
+void vmPluginExceptionThrow(VMThread* pThread){
 }
 
 void vmBuiltinOCRegist(){
@@ -652,7 +738,11 @@ void vmBuiltinOCRegist(){
 void vmOCRegist(){
 }
 
-void vmOCPropertyGet(){
+void vmOCExceptionThrow(VMThread* pThread){
+}
+
+void* vmOCPropertyGet(VMThread* pThread){
+    return &pThread->unk3C[pThread->unk4 - 1];
 }
 
 void vmThreadNumGet(){
@@ -668,12 +758,6 @@ void vmThreadIsFinish(){
 }
 
 void vmThreadGetOC(){
-}
-
-void vmStackNextGet(){
-}
-
-void vmc_call_entry(){
 }
 
 void vmThreadStart(){
@@ -706,12 +790,6 @@ void splitFixed(){
 void vmArrayLocalChk(){
 }
 
-void vmPropertySearch(){
-}
-
-void vmSelectorSearch(){
-}
-
 void vmIntPoolGet(){
 }
 
@@ -721,6 +799,56 @@ void vmFixedPoolGet(){
 void vmStackPrevGet(){
 }
 
+RetVal* vmStackNextGet(VMThread* pThread){
+    return &pThread->unk3C[pThread->unk4++];
+}
+
+
+#define rotrMask(n) ((1 << n) - 1)
+#define rotrBytes(a, b, n) (a >> n) | ((b & rotrMask(n)) << (8 - n))
+
+#pragma push
+#pragma optimize_for_size on
+void encodeScrambleSub(u8* pData, int length) {
+    //Rotate each group of 32 bits by 2 to the right
+    //aaaaaaaa bbbbbbbb cccccccc dddddddd -> ddaaaaaa aabbbbbb bbcccccc ccdddddd
+    for(int i = 0; i < length; i += 4){
+        u8 byte0 = pData[0];
+        u8 byte1 = pData[1];
+        u8 byte2 = pData[2];
+        u8 byte3 = pData[3];
+        
+        pData[0] = rotrBytes(byte0, byte3, 2);
+        pData[1] = rotrBytes(byte1, byte0, 2);
+        pData[2] = rotrBytes(byte2, byte1, 2);
+        pData[3] = rotrBytes(byte3, byte2, 2);
+        pData += 4;
+    }
+}
+#pragma pop
+
+void encodeScramble(u8* data){
+    /*
+    pbVar8 = (byte *)((int)piVar12 + piVar12[1] * piVar12[2] + *piVar12);
+    uVar3 = (int)(data + iVar14) - (int)pbVar8;
+    encodeScramble(pbVar8,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
+    piVar12 = *(int **)(data + 0x18);
+    iVar14 = (int)piVar12 + piVar12[1] * piVar12[2] + *piVar12;
+    uVar3 = *(int *)(data + 0x1c) - iVar14;
+    encodeScramble(iVar14,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
+    */
+}
+
+/*
+void vmExceptionProc(){
+}
+*/
+
+void vmExceptionThrow(){
+}
+
+
+/*
 void vmDebCont(){
 }
 
@@ -804,163 +932,259 @@ void vmDebInit(){
 
 void vmDebExec(){
 }
+*/
 
+//Opcode functions
 
-void vmc_nop(){
+int vmc_nop(VMThread* pThread, u8 opcodeIndex){
+    pThread->unk0 += vmcOpcodes[opcodeIndex].paramSize + 1;
+    return 0;
 }
 
-void vmc_const(){
+int vmc_const(VMThread* pThread, u8 opcodeIndex){
+    RetVal* r7 = vmStackNextGet(pThread);
+    r7->type = VM_TYPE_INT;
+    r7->val = opcodeIndex - 1;
+    pThread->unk0 += vmcOpcodes[opcodeIndex].paramSize + 1;
+    return 0;
 }
 
-void vmc_const_i(){
+int vmc_const_i(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_pool_int(){
+int vmc_pool_int(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_pool_fixed(){
+int vmc_pool_fixed(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_pool_string(){
+int vmc_pool_string(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld(){
+int vmc_ld(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st(){
+int vmc_st(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_arg(){
+int vmc_ld_arg(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_arg(){
+int vmc_st_arg(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_arg_omit(){
+int vmc_st_arg_omit(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_const(){
+int vmc_ld_const(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_const(){
+int vmc_st_const(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_arg_const(){
+int vmc_ld_arg_const(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_arg_const(){
+int vmc_st_arg_const(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_static(){
+int vmc_ld_static(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_static(){
+int vmc_st_static(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_ar(){
+int vmc_ld_ar(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_st_ar(){
+int vmc_st_ar(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_nil(){
+int vmc_ld_nil(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_true(){
+int vmc_ld_true(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_false(){
+int vmc_ld_false(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_func(){
+int vmc_ld_func(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_plugin(){
+int vmc_ld_plugin(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ld_func_far(){
+int vmc_ld_func_far(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_minus(){
+int vmc_minus(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_not(){
+int vmc_not(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_l_not(){
+int vmc_l_not(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_op_nil(){
+int vmc_op_nil(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_op_fixed(){
+int vmc_op_fixed(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_calc(){
+int vmc_calc(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_jmp(){
+int vmc_jmp(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_jpf(){
+int vmc_jpf(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_call(){
+int vmc_call(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_call_far_entry(){
+void vmc_call_entry(){
 }
 
-void vmc_plugin_sub(){
+int vmc_call_far_entry(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_plugin_entry(){
+int vmc_plugin_sub(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_call_ind(){
+int vmc_plugin_entry(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_ret(){
+int vmc_call_ind(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_next(){
+int vmc_ret(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_plugin(){
+int vmc_next(VMThread* pThread, u8 opcodeIndex){
+    pThread->unk0 += vmcOpcodes[opcodeIndex].paramSize + 1;
+    return VMC_RESULT_2;
 }
 
-void vmc_call_far(){
+int vmc_plugin(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_get_oc(){
+int vmc_call_far(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_getter(){
+int vmc_get_oc(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_setter(){
+int vmc_getter(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_send(){
+int vmc_setter(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_typeof(){
+int vmc_send(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_sizeof(){
+int vmc_typeof(VMThread* pThread, u8 opcodeIndex){
+    int r6 = pThread->unk4 - 1;
+    RetVal* retVal = &pThread->unk3C[r6];
+    const char* typeName = vmTypeNames[retVal->type];
+
+    retVal->type = VM_TYPE_STRING;
+    retVal->unk2_U16 = strlen(typeName);
+    retVal->val = (int)typeName; //TODO: remove this cast
+    pThread->unk0 += vmcOpcodes[opcodeIndex].paramSize + 1;
+    return VMC_RESULT_0;
 }
 
-void vmc_switch(){
+int vmc_sizeof(VMThread* pThread, u8 opcodeIndex){
+    int r6 = pThread->unk4 - 1;
+    RetVal* retVal = &pThread->unk3C[r6];
+
+    int size;
+    if(retVal->type != VM_TYPE_ARRAY) size = 1;
+    else size = retVal->unk2_U16;
+
+    retVal->type = VM_TYPE_INT;
+    retVal->val = size;
+    pThread->unk0 += vmcOpcodes[opcodeIndex].paramSize + 1;
+    return VMC_RESULT_0;
 }
 
-void vmc_inc(){
+int vmc_switch(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_dec(){
+int vmc_inc(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_bp(){
+int vmc_dec(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_0;
 }
 
-void vmc_exit(){
+int vmc_exit(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_3;
+}
+
+int vmc_bp(VMThread* pThread, u8 opcodeIndex){
+    return VMC_RESULT_1;
+}
+
+void vmHalt(){
+    VMMemory* memory = (VMMemory*)vmMemory;
+    VMMemory_Unk40Struct* r31 = memory->unk40;
+    u8* r0 = r31->unk34;
+
+    vmCodePut(r31, r0[r31->unk0]);
+    vmStackDump(r31);
+    vmPackageDump();
+    vmThreadDump();
+}
+
+void vmArgErr(){
 }
