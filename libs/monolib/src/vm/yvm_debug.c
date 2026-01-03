@@ -2,10 +2,10 @@
 
 //All stubbed for release
 
-void vmCodePut(u32 r3, u8 r4){
+void vmCodePut(VMMemory_Unk40Struct* r3, u8 r4){
 }
 
-void vmStackDump(u32 r3){
+void vmStackDump(VMMemory_Unk40Struct* r3){
 }
 
 void vmPackageDump(){
