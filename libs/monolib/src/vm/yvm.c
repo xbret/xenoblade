@@ -1,4 +1,5 @@
 #include "monolib/vm/yvm.h"
+#include "monolib/vm/yvm_debug.h"
 #include <string.h>
 #include <stdbool.h>
 
@@ -269,12 +270,11 @@ static OpcodeFunc vmcOpcodeFuncs[] = {
     vmc_bp
 };
 
-static u8 vmMemory[0x4928];
-
+static VMState vmState ALIGN(32);
 
 void vmInit(){
-    //Clear the VM memory
-    memset(vmMemory, 0, 0x490c);
+    //Clear the vm state struct
+    memset(&vmState, 0, sizeof(VMState));
 }
 
 //Checks to see if the header of the sb file is valid (should be "SB  ")
@@ -288,22 +288,29 @@ inline BOOL vmSbChk(const char* data){
     return data[4] < 2;
 }
 
+
 inline void* vmPackageSearch(u8* pData){
-    u8** tempPtr = (u8 **)&vmMemory;
+    u8** tempPtr = (u8 **)&vmState;
 
     for(u32 i = 0; i < 8; i++){
         if(tempPtr[i*2] == pData){
-            return &vmMemory + i * 8;
+            return &vmState + i * 8;
         }
     }
 
     return NULL;
 }
 
+
+inline int vmPackageSearchIdx(){
+    return 0;
+}
+
+
 inline BOOL vmPackageRegist(u8* data){
     u8* puVar2 = vmPackageSearch(data);
         if (puVar2 == NULL) {
-            u8** ppbVar11 = (u8 **)&vmMemory;
+            u8** ppbVar11 = (u8 **)&vmState;
             int iVar14 = 8;
             do {
                 if (*ppbVar11 == NULL) {
@@ -320,105 +327,7 @@ inline BOOL vmPackageRegist(u8* data){
         }
 }
 
-/*
-void vmDataGet(){
-}
-*/
-
-inline short vmSysAtrPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0x34);
-    uVar3 = (uint)*(ushort *)((int)piVar12 + piVar12[2] * param_2 + *piVar12);
-    */
-    return 0;
-}
-
-inline int vmIdPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0xc);
-    iVar23 = *piVar12;
-    iVar22 = piVar12[2] * (uint)*puVar21;
-    if (piVar12[2] == 2) {
-        uVar3 = (uint)*(ushort *)((int)piVar12 + iVar22 + iVar23);
-    }
-    else {
-        uVar3 = *(uint *)((int)piVar12 + iVar22 + iVar23);
-    }
-    */
-    return 0;
-}
-
-inline int vmSysAtrSearch(u8* data, int param_2){
-    int uVar3 = vmSysAtrPoolGet(data, param_2);
-    if (uVar3 == -1) return 0;
-    else return vmIdPoolGet(data, uVar3);
-}
-
-int vmPluginSearch(int param_1, int param2){
-    /*
-    puVar2 = &vmMemory;
-    iVar22 = 0;
-    do {
-        if ((*(char **)(puVar2 + 0x4688) != NULL) &&
-           (iVar9 = strcmp(*(char **)(puVar2 + 0x4688),
-                           (char *)((int)piVar12 + uVar3 + iVar23)), iVar9 == 0)) {
-            uVar16 = 0;
-            ppcVar19 = *(char ***)(puVar2 + 0x468c);
-            ppcVar20 = ppcVar19;
-            for (; *ppcVar19 != NULL; ppcVar19 = ppcVar19 + 2) {
-                iVar9 = strcmp(*ppcVar20,(char *)((int)piVar12 + uVar4 + iVar13));
-                if (iVar9 == 0) {
-                    uVar16 = iVar22 << 0x10 | uVar16;
-                    return uVar16;
-                }
-                ppcVar20 = ppcVar20 + 2;
-                uVar16 = uVar16 + 1;
-            }
-        }
-        iVar22 = iVar22 + 1;
-        puVar2 = puVar2 + 8;
-    } while (iVar22 < 0x30);
-    return -1;
-    */
-    return 0;
-}
-
-int vmOCSearch(){
-    /*
-    puVar2 = &vmMemory;
-    iVar22 = 0;
-    do {
-        if ((*(char ***)(puVar2 + 0x4808) != NULL) && (iVar13 = strcmp(**(char ***)(puVar2 + 0x4808), (char *)((int)piVar12 + uVar3 + iVar23)), iVar13 == 0)){
-            return iVar22;
-        }
-        iVar22 = iVar22 + 1;
-        puVar2 = puVar2 + 4;
-    } while (iVar22 < 0x30);
-    return -1;
-    */
-    return 0;
-}
-
-void vmPropertySearch(){
-}
-
-void vmSelectorSearch(){
-}
-
-
-int vmFuncFarSearch(int r3, int r4){
-    return 0;
-}
-
-void vmStringPoolGet(){
-}
-
-int vmPackageSearchIdx(){
-    return 0;
-}
-
-
-void vmInitDataLink(u8* data, const char* pcVar15){
+inline void vmInitDataLink(u8* data, const char* pcVar15){
     /*
     cVar1 = *pcVar15;
     if (cVar1 == '\x05') {
@@ -442,7 +351,7 @@ void vmInitDataLink(u8* data, const char* pcVar15){
     }
     else if (cVar1 == '\a') {
         if (*(short *)(pcVar15 + 2) == 0) {
-            if (_vmMemory == data) {
+            if (_work == data) {
                 uVar6 = 0;
             }
             else if (_DAT_8065af40 == data) {
@@ -481,21 +390,6 @@ void vmInitDataLink(u8* data, const char* pcVar15){
         }
     }
     */
-}
-
-int vmLocalPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0x30);
-    iVar22 = *piVar12;
-    iVar14 = piVar12[2] * uVar3;
-    if (piVar12[2] == 2) {
-        uVar4 = (uint)*(ushort *)((int)piVar12 + iVar14 + iVar22);
-    }
-    else {
-        uVar4 = *(uint *)((int)piVar12 + iVar14 + iVar22);
-    }
-    */
-    return 0;
 }
 
 BOOL vmLink(u8* pData){
@@ -607,29 +501,23 @@ BOOL vmLink(u8* pData){
 void vmUnlink(){
 }
 
-void vmFunctionPoolGet(){
-}
-
 void vmThreadCreate(){
 }
 
 void vmStart(){
 }
 
-void vmDebModeGet(){
-}
+/*
 
 void vmSchedule(){
 }
 
-void vmDebBpCodeGet(){
-}
-
-void vmDebModeSet(){
-}
-
 void vmCodeExec(){
 }
+
+void vmDebModeGet(){}
+void vmDebBpCodeGet(){}
+void vmDebModeSet(){}
 
 void vmThreadSearch(){
 }
@@ -639,19 +527,24 @@ void vmThreadRemove(){
 
 void vmThreadExec(){
 }
+*/
 
 void vmExec(){
 }
 
+/*
 void vmPluginModuleSearch(){
 }
+*/
 
 BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs){
     return FALSE;
 }
 
+/*
 void vmArgCntGet(){
 }
+*/
 
 void* vmArgPtrGet(VMThread* pThread, int r4){
     return NULL;
@@ -688,22 +581,19 @@ void* vmArgArrayGet(VMThread* pThread, int r4){
 void vmArrayGet(){
 }
 
+/*
 void vmArraySet(){
 }
+*/
 
 void* vmArgOCGet(VMThread* pThread, int r4){
     return NULL;
 }
 
-
-static void getArray(){
-}
-
-static void setArray(){
-}
-
+/*
 void vmPush(){
 }
+*/
 
 void vmRetValSet(VMThread* pThread, RetVal* pRetval){
     RetVal* r3 = &pThread->unk3C[pRetval->val++];
@@ -745,17 +635,21 @@ void* vmOCPropertyGet(VMThread* pThread){
     return &pThread->unk3C[pThread->unk4 - 1];
 }
 
+/*
 void vmThreadNumGet(){
 }
+*/
 
 void vmThreadSleepAll(){
 }
 
+/*
 void vmThreadWakeupAll(){
 }
 
 void vmThreadIsFinish(){
 }
+*/
 
 void vmThreadGetOC(){
 }
@@ -775,6 +669,7 @@ void vmThreadSleep(){
 void vmThreadWakeup(){
 }
 
+/*
 void vmUsrAtrPoolGet(){
 }
 
@@ -789,12 +684,7 @@ void splitFixed(){
 
 void vmArrayLocalChk(){
 }
-
-void vmIntPoolGet(){
-}
-
-void vmFixedPoolGet(){
-}
+*/
 
 void vmStackPrevGet(){
 }
@@ -803,6 +693,8 @@ RetVal* vmStackNextGet(VMThread* pThread){
     return &pThread->unk3C[pThread->unk4++];
 }
 
+void vmDataGet(){
+}
 
 #define rotrMask(n) ((1 << n) - 1)
 #define rotrBytes(a, b, n) (a >> n) | ((b & rotrMask(n)) << (8 - n))
@@ -848,89 +740,121 @@ void vmExceptionThrow(){
 }
 
 
+inline short vmSysAtrPoolGet(u8* data, int param_2){
+    /*
+    piVar12 = *(int **)(data + 0x34);
+    uVar3 = (uint)*(ushort *)((int)piVar12 + piVar12[2] * param_2 + *piVar12);
+    */
+    return 0;
+}
+
+inline int vmIdPoolGet(u8* data, int param_2){
+    /*
+    piVar12 = *(int **)(data + 0xc);
+    iVar23 = *piVar12;
+    iVar22 = piVar12[2] * (uint)*puVar21;
+    if (piVar12[2] == 2) {
+        uVar3 = (uint)*(ushort *)((int)piVar12 + iVar22 + iVar23);
+    }
+    else {
+        uVar3 = *(uint *)((int)piVar12 + iVar22 + iVar23);
+    }
+    */
+    return 0;
+}
+
+inline void vmIntPoolGet(){
+}
+
+inline void vmFixedPoolGet(){
+}
+
+inline void vmStringPoolGet(){
+}
+
+
+inline int vmLocalPoolGet(u8* data, int param_2){
+    /*
+    piVar12 = *(int **)(data + 0x30);
+    iVar22 = *piVar12;
+    iVar14 = piVar12[2] * uVar3;
+    if (piVar12[2] == 2) {
+        uVar4 = (uint)*(ushort *)((int)piVar12 + iVar14 + iVar22);
+    }
+    else {
+        uVar4 = *(uint *)((int)piVar12 + iVar14 + iVar22);
+    }
+    */
+    return 0;
+}
+
+inline void vmFunctionPoolGet(){
+}
+
+int vmSysAtrSearch(u8* data, int param_2){
+    int uVar3 = vmSysAtrPoolGet(data, param_2);
+    if (uVar3 == -1) return 0;
+    else return vmIdPoolGet(data, uVar3);
+}
+
+int vmPluginSearch(int param_1, int param2){
+    /*
+    puVar2 = &work;
+    iVar22 = 0;
+    do {
+        if ((*(char **)(puVar2 + 0x4688) != NULL) &&
+           (iVar9 = strcmp(*(char **)(puVar2 + 0x4688),
+                           (char *)((int)piVar12 + uVar3 + iVar23)), iVar9 == 0)) {
+            uVar16 = 0;
+            ppcVar19 = *(char ***)(puVar2 + 0x468c);
+            ppcVar20 = ppcVar19;
+            for (; *ppcVar19 != NULL; ppcVar19 = ppcVar19 + 2) {
+                iVar9 = strcmp(*ppcVar20,(char *)((int)piVar12 + uVar4 + iVar13));
+                if (iVar9 == 0) {
+                    uVar16 = iVar22 << 0x10 | uVar16;
+                    return uVar16;
+                }
+                ppcVar20 = ppcVar20 + 2;
+                uVar16 = uVar16 + 1;
+            }
+        }
+        iVar22 = iVar22 + 1;
+        puVar2 = puVar2 + 8;
+    } while (iVar22 < 0x30);
+    return -1;
+    */
+    return 0;
+}
+
+int vmOCSearch(){
+    /*
+    puVar2 = &work;
+    iVar22 = 0;
+    do {
+        if ((*(char ***)(puVar2 + 0x4808) != NULL) && (iVar13 = strcmp(**(char ***)(puVar2 + 0x4808), (char *)((int)piVar12 + uVar3 + iVar23)), iVar13 == 0)){
+            return iVar22;
+        }
+        iVar22 = iVar22 + 1;
+        puVar2 = puVar2 + 4;
+    } while (iVar22 < 0x30);
+    return -1;
+    */
+    return 0;
+}
+
+void vmPropertySearch(){
+}
+
+void vmSelectorSearch(){
+}
+
+
+int vmFuncFarSearch(int r3, int r4){
+    return 0;
+}
+
 /*
-void vmDebCont(){
-}
-
-void vmDebStepIn(){
-}
-
-void vmDebClrBp(){
-}
-
-void vmDebSetBp(){
-}
-
-void vmDebSetBpTop(){
-}
-
-void vmDebCurrentThreadGet(){
-}
-
-void vmDebCurrentSbGet(){
-}
-
-void vmDebCurrentFuncIdxGet(){
-}
-
-void vmDebCurrentLocalsGet(){
-}
-
-void vmDebCurrentParamsGet(){
-}
-
-void vmDebStaticItemGet(){
-}
-
-void vmDebStaticNumGet(){
-}
-
-void vmDebStaticNameGet(){
-}
-
-void vmDebStaticOffsGet(){
-}
-
-void vmDebStaticPtrGet(){
-}
-
-void vmDebLocalItemGet(){
-}
-
-void vmDebLocalNameGet(){
-}
-
-void vmDebLocalOffsGet(){
-}
-
-void vmDebLocalPtrGet(){
-}
-
-void vmDebParamItemGet(){
-}
-
-void vmDebParamNameGet(){
-}
-
-void vmDebParamOffsGet(){
-}
-
-void vmDebParamPtrGet(){
-}
-
-void vmDebFileNoGet(){
-}
-
-void vmDebLinePtrGet(){
-}
-
-void vmDebMemDump(){
-}
-
-void vmDebInit(){
-}
-
-void vmDebExec(){
+void vmDataGet(){
 }
 */
 
@@ -1009,8 +933,14 @@ int vmc_st_static(VMThread* pThread, u8 opcodeIndex){
     return VMC_RESULT_0;
 }
 
+static void getArray(){
+}
+
 int vmc_ld_ar(VMThread* pThread, u8 opcodeIndex){
     return VMC_RESULT_0;
+}
+
+static void setArray(){
 }
 
 int vmc_st_ar(VMThread* pThread, u8 opcodeIndex){
@@ -1176,8 +1106,8 @@ int vmc_bp(VMThread* pThread, u8 opcodeIndex){
 }
 
 void vmHalt(){
-    VMMemory* memory = (VMMemory*)vmMemory;
-    VMMemory_Unk40Struct* r31 = memory->unk40;
+    VMState* work = &vmState;
+    VMState_Unk40Struct* r31 = work->unk40;
     u8* r0 = r31->unk34;
 
     vmCodePut(r31, r0[r31->unk0]);
