@@ -6,9 +6,15 @@
 extern "C" {
 #endif
 
+#define MAX_PACKAGES 8 //Max number of packages (scripts) at once
+#define MAX_PLUGINS 48
+#define MAX_OCS 48
+
+#define VMC_MAX 96 //Max number of opcodes
+
 //Wtf is going on here ;-;
 #pragma pack(push, 1)
-typedef struct _sRetVal{
+typedef struct RetVal{
     u8 type; //0x0
     u8 unk1;
     union{
@@ -25,13 +31,20 @@ typedef struct _sRetVal{
 } RetVal;
 #pragma pack(pop)
 
+#pragma pack(push, 1)
 typedef struct _sVMThread{
     int unk0;
     int unk4;
     int unk8;
     int unkC;
     int unk10;
-    u8 unk14[0x3C - 0x14];
+    u8 unk14;
+    u8 unk15;
+    u32 unk16;
+    u16 unk1A;
+    u8 unk1C[0x34 - 0x1C];
+    u8* unk34;
+    u32 unk38;
     RetVal* unk3C;
     u8 unk40[0x4C - 0x40];
     u32 unk4C;
@@ -39,31 +52,25 @@ typedef struct _sVMThread{
     int wkIdx; //0x54
     u8 unk58[0x60 - 0x58];
 } VMThread;
+#pragma pack (pop)
 
-typedef struct _sVMState_Unk40Struct{
-    u32 unk0;
-    u8 unk4[0x34 - 0x4];
-    u8* unk34;
-} VMState_Unk40Struct;
-
-typedef struct _sVMState{
-    u32 unk0;
+typedef struct VMPackage{
+    u32 scriptDataPtr; //0x0
     u32 unk4;
-    u32 unk8;
-    u32 unkC;
-    u32 unk10;
-    u32 unk14;
-    u32 unk18;
-    u32 unk1C;
-    u32 unk20;
-    u32 unk24;
-    u32 unk28;
-    u32 unk2C;
-    u32 unk30;
-    u32 unk34;
-    u32 unk38;
-    u32 unk3C;
-    VMState_Unk40Struct* unk40;
+} VMPackage;
+
+typedef struct VMPlugin{
+    char* unk0;
+    char* unk4;
+} VMPlugin;
+
+typedef struct VMOC{
+    char** unk0;
+} VMOC;
+
+typedef struct VMState{
+    VMPackage packages[MAX_PACKAGES];
+    VMThread* unk40;
     u32 unk44;
     u32 unk48;
     u32 unk4C;
@@ -76,24 +83,21 @@ typedef struct _sVMState{
     u8 unk68[0x88 - 0x68];
     VMThread threads[8]; //0x88
     u8 unk388[0x4688 - 0x388]; //unused debug related section?
-    u32 unk4688;
-    u32 unk468C;
-    u8 unk4690[0x4808 - 0x4690];
-    u32 unk4808;
-    u8 unk480C[0x48C8 - 0x480C];
+    VMPlugin plugins[MAX_PLUGINS]; //0x4688
+    VMOC ocs[MAX_OCS]; //0x4808
     u32 unk48C8;
     u8 unk48CC[0x490C - 0x48CC];
 } VMState;
 
 
-typedef enum _VMCResult{
+typedef enum VMCResult{
     VMC_RESULT_0,
     VMC_RESULT_1,
     VMC_RESULT_2,
     VMC_RESULT_3
 } VMCResult;
 
-typedef enum _VMCOpcodeType{
+typedef enum VMCOpcodeType{
     VMC_OP_NOP,
     VMC_OP_CONST_0,
     VMC_OP_CONST_1,
@@ -189,7 +193,7 @@ typedef enum _VMCOpcodeType{
     VMC_OP_INC,
     VMC_OP_DEC,
     VMC_OP_EXIT,
-    VMC_OP_BP //Breakpoint?
+    VMC_OP_BP //Breakpoint
 } VMCOpcodeType;
 
 typedef struct _sVMCOpcode{
@@ -209,7 +213,9 @@ typedef enum _VMTypes {
     VM_TYPE_FUNCTION,
     VM_TYPE_PLUGIN,
     VM_TYPE_OC,
-    VM_TYPE_SYS
+    VM_TYPE_SYS,
+
+    VM_MAX_TYPE = 11
 } VMTypes;
 
 #ifdef __cplusplus

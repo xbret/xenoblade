@@ -7,30 +7,9 @@
 extern "C" {
 #endif
 
-#define VMC_MAX
-
-typedef struct _sSBHeader{
-    char magic[4]; //0x0
-    u32 unk4;
-    u8* unk8;
-    u8* unkC;
-    u8* unk10;
-    u8* unk14;
-    u8* unk18;
-    u8* unk1C;
-    u8* unk20;
-    u8* unk24;
-    u8* unk28;
-    u8* unk2C;
-    u8* unk30;
-    u8* unk34;
-    u8* unk38;
-    u8* unk3C;
-} SBHeader;
-
 typedef int(*PluginFunc)(VMThread* pThread);
 
-typedef struct _sPluginFuncData{
+typedef struct PluginFuncData{
     const char* name;
     PluginFunc func;
 } PluginFuncData;
@@ -53,17 +32,20 @@ int vmWkIdxGet(VMThread* pThread);
 void vmWkIdxSet(VMThread* pThread, int r4);
 int* vmWkGet(VMThread* pThread, int r4);
 void vmPluginExceptionThrow(VMThread* pThread);
+void vmOCExceptionThrow(VMThread* pThread);
+void vmExceptionProc(VMThread* pThread);
+void vmExceptionThrow(VMThread* pThread, int r4);
 
-short vmSysAtrPoolGet(u8* data, int param_2);
+int vmSysAtrPoolGet(u8* data, int param_2);
 int vmIdPoolGet(u8* data, int param_2);
 void vmIntPoolGet();
 void vmFixedPoolGet();
-void vmStringPoolGet();
+int vmStringPoolGet(u8* data, int param2);
 int vmLocalPoolGet(u8* data, int param_2);
-void vmFunctionPoolGet();
+int vmFunctionPoolGet();
 int vmSysAtrSearch(u8* data, int param_2);
-int vmPluginSearch(int param_1, int param2);
-int vmOCSearch();
+int vmPluginSearch(int param1, int param2);
+int vmOCSearch(char* name);
 void vmPropertySearch();
 void vmSelectorSearch();
 int vmFuncFarSearch(int r3, int r4);

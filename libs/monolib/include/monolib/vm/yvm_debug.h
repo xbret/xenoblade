@@ -7,8 +7,11 @@
 extern "C" {
 #endif
 
-void vmCodePut(VMState_Unk40Struct* r3, u8 r4);
-void vmStackDump(VMState_Unk40Struct* r3);
+__declspec(noreturn) void vmHalt();
+void vmArgErr();
+
+void vmCodePut(VMThread* r3, u8 r4);
+void vmStackDump(VMThread* r3);
 void vmPackageDump();
 void vmThreadDump();
 

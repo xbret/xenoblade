@@ -1,10 +1,11 @@
 #include "monolib/vm/yvm.h"
 #include "monolib/vm/yvm_debug.h"
+#include "monolib/vm/sb_types.h"
 #include <string.h>
 #include <stdbool.h>
 
 //Opcode data
-static VMCOpcode vmcOpcodes[96] = {
+static VMCOpcode vmcOpcodes[VMC_MAX] = {
     {"NOP", 0, 0},
     {"CONST_0", 0, 1},
     {"CONST_1", 0, 1},
@@ -103,7 +104,7 @@ static VMCOpcode vmcOpcodes[96] = {
     {"BP", 0, 0}
 };
 
-static const char* vmTypeNames[11] = {
+static const char* vmTypeNames[VM_MAX_TYPE] = {
     "nil",
     "true",
     "false",
@@ -171,7 +172,7 @@ int vmc_dec(VMThread* pThread, u8 opcodeIndex);
 int vmc_exit(VMThread* pThread, u8 opcodeIndex);
 int vmc_bp(VMThread* pThread, u8 opcodeIndex);
 
-static OpcodeFunc vmcOpcodeFuncs[] = {
+static OpcodeFunc vmcOpcodeFuncs[VMC_MAX] = {
     vmc_nop,
     vmc_const,
     vmc_const,
@@ -277,225 +278,239 @@ void vmInit(){
     memset(&vmState, 0, sizeof(VMState));
 }
 
-//Checks to see if the header of the sb file is valid (should be "SB  ")
-inline BOOL vmSbChk(const char* data){
-    if(data == NULL) return FALSE;
+//Checks to see if the header of the sb file is valid
+inline BOOL vmSbChk(const SBHeader* pHeader){
+    if(pHeader == NULL) return FALSE;
 
-    if(data[0] != 'S' || data[1] != 'B' || data[2] != ' ' || data[3] != ' '){
+    //Check the magic value
+    const char* magic = pHeader->magic;
+    if(magic[0] != 'S' || magic[1] != 'B' || magic[2] != ' ' || magic[3] != ' '){
         return FALSE;
     }
 
-    return data[4] < 2;
+    //Check the version
+    return pHeader->version >= SB_MIN_VERSION;
 }
 
-
+//Finds the package entry that matches the given script data pointer
 inline void* vmPackageSearch(u8* pData){
-    u8** tempPtr = (u8 **)&vmState;
+    VMPackage* curPackage = vmState.packages;
 
-    for(u32 i = 0; i < 8; i++){
-        if(tempPtr[i*2] == pData){
-            return &vmState + i * 8;
+    for(int i = 0; i < MAX_PACKAGES; i++){
+        //If the current slot has a matching script data pointer, we found a match
+        if(curPackage->scriptDataPtr == (u32)pData){
+            return &vmState.packages[i];
         }
+        curPackage++;
     }
 
     return NULL;
 }
 
 
-inline int vmPackageSearchIdx(){
-    return 0;
+inline int vmPackageSearchIdx(u8* data){
+    for(int i = 0; i < MAX_PACKAGES; i++){
+        if(vmState.packages[i].scriptDataPtr == (u32)data){
+            return i;
+        }
+    }
+
+    return -1;
 }
 
-
+//Registers the given script data as a new package in the list of packages
 inline BOOL vmPackageRegist(u8* data){
-    u8* puVar2 = vmPackageSearch(data);
-        if (puVar2 == NULL) {
-            u8** ppbVar11 = (u8 **)&vmState;
-            int iVar14 = 8;
-            do {
-                if (*ppbVar11 == NULL) {
-                    *ppbVar11 = data;
-                    return true;
-                }
-                ppbVar11 = ppbVar11 + 2;
-                iVar14 = iVar14 + -1;
-            } while (iVar14 != 0);
-            return false;
+    //Check if the package has already been registered
+    if (vmPackageSearch(data) != NULL) {
+        return TRUE;
+    }
+
+    //If not found, look for an empty slot to register the package in
+    VMPackage* curPackage = vmState.packages;
+    for(int i = 0; i < MAX_PACKAGES; i++){
+        //If the current slot is empty (script data pointer is null), use it to register this script
+        if (curPackage->scriptDataPtr == NULL) {
+            curPackage->scriptDataPtr = (u32)data;
+            return TRUE;
         }
-        else {
-            return true;
-        }
+        curPackage++;
+    }
+
+    //No available slot was found
+    return FALSE;
 }
 
-inline void vmInitDataLink(u8* data, const char* pcVar15){
-    /*
-    cVar1 = *pcVar15;
-    if (cVar1 == '\x05') {
-        piVar12 = *(int **)(data + 0x18);
-        iVar22 = *piVar12;
-        iVar14 = piVar12[2] * *(int *)(pcVar15 + 4);
-        if (piVar12[2] == 2) {
-            uVar4 = (uint)*(ushort *)((int)piVar12 + iVar14 + iVar22);
+static inline void* getSectionDataPointer(SBSectionHeader* header){
+    return (void*)((u32)header + header->offset);
+}
+
+typedef struct UnkStruct1 {
+    s8 type; //0x0
+    u8 unk1; //padding?
+    u16 unk2;
+    u32 unk4;
+} UnkStruct1;
+
+inline void vmInitDataLink(u8* data, UnkStruct1* pEntry){
+    s8 cVar1 = pEntry->type;
+    SBHeader* header = (SBHeader*)data;
+
+    switch(cVar1){
+        case 5:
+            pEntry->unk4 = vmStringPoolGet(data, pEntry->unk4);
+            break;
+        case 11: {
+            SBSectionHeader* sectionHeader = header->pluginImportsOfs.sectionHeaderPtr;
+            void* sectionData = getSectionDataPointer(sectionHeader);
+            PluginImportEntry* pluginImport = &((PluginImportEntry*)sectionData)[pEntry->unk4];
+            pEntry->unk2 = pluginImport->unk0;
+            pEntry->unk4 = pluginImport->unk2;
+            break;
         }
-        else {
-            uVar4 = *(uint *)((int)piVar12 + iVar14 + iVar22);
-        }
-        *(uint *)(pcVar15 + 4) = (int)piVar12 + uVar4 + iVar22;
-    }
-    else if (cVar1 == '\b') {
-        puVar17 = (undefined2 *)
-                  ((int)*(int **)(data + 0x20) +
-                  *(int *)(pcVar15 + 4) * 4 + **(int **)(data + 0x20));
-        *(undefined2 *)(pcVar15 + 2) = *puVar17;
-        *(uint *)(pcVar15 + 4) = (uint)(ushort)puVar17[1];
-    }
-    else if (cVar1 == '\a') {
-        if (*(short *)(pcVar15 + 2) == 0) {
-            if (_work == data) {
-                uVar6 = 0;
-            }
-            else if (_DAT_8065af40 == data) {
-                uVar6 = 1;
-            }
-            else if (_DAT_8065af48 == data) {
-                uVar6 = 2;
-            }
-            else if (_DAT_8065af50 == data) {
-                uVar6 = 3;
-            }
-            else if (_DAT_8065af58 == data) {
-                uVar6 = 4;
-            }
-            else if (_DAT_8065af60 == data) {
-                uVar6 = 5;
-            }
-            else if (_DAT_8065af68 == data) {
-                uVar6 = 6;
-            }
-            else if (_DAT_8065af70 == data) {
-                uVar6 = 7;
+        case 10:
+            if (pEntry->unk2 == 0) {
+                pEntry->unk2 = vmPackageSearchIdx(data);
+                pEntry->unk4 = pEntry->unk4; //???
             }
             else {
-                uVar6 = -1;
+                SBSectionHeader* sectionHeader = header->pluginImportsOfs.sectionHeaderPtr;
+                void* sectionData = getSectionDataPointer(sectionHeader);
+                FunctionImportEntry* funcImport = &((FunctionImportEntry*)sectionData)[pEntry->unk4];
+                pEntry->unk2 = funcImport->unk0;
+                pEntry->unk4 = funcImport->unk2;
             }
-            *(short *)(pcVar15 + 2) = uVar6;
-            *(int *)(pcVar15 + 4) = *(int *)(pcVar15 + 4);
-        }
-        else {
-            puVar17 = (undefined2 *)
-                      ((int)*(int **)(data + 0x28) +
-                      *(int *)(pcVar15 + 4) * 4 + **(int **)(data + 0x28));
-            *(undefined2 *)(pcVar15 + 2) = *puVar17;
-            *(uint *)(pcVar15 + 4) = (uint)(ushort)puVar17[1];
-        }
+            break;
     }
-    */
 }
 
+//Tries to load the given script file, and returns true/false depending on if loading was successful.
 BOOL vmLink(u8* pData){
-    //Check that the header bytes are correct
-    if (!vmSbChk((char*)pData)) {
+    SBHeader* header = (SBHeader*)pData;
+
+    //Check that the header is valid
+    if (!vmSbChk(header)) {
         //If not, this isn't a valid SB file
         return FALSE;
     }
 
-    if (vmPackageRegist(pData)) {
-        if ((pData[7] & 1) == 0) {
-            pData[7] |= 1;
-            SBHeader* header = (SBHeader*)pData;
-
-            //Convert all the offset values in the header to pointers
-            header->unk8 += (u32)pData;
-            header->unkC += (u32)pData;
-            header->unk10 += (u32)pData;
-            header->unk14 += (u32)pData;
-            header->unk18 += (u32)pData;
-            header->unk1C += (u32)pData;
-            header->unk20 += (u32)pData;
-            header->unk24 += (u32)pData;
-            header->unk28 += (u32)pData;
-            header->unk2C += (u32)pData;
-            header->unk30 += (u32)pData;
-            header->unk34 += (u32)pData;
-            header->unk38 += (u32)pData;
-            header->unk3C += (u32)pData;
-
-            if ((pData[6] & 2) != 0) {
-                encodeScramble(pData);
-            }
-
-            u16* puVar21 = (u16 *)((int)*(int **)(pData + 0x20) + **(int **)(pData + 0x20));
-            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x20) + 4); iVar14 = iVar14 + 1)
-            {
-                int uVar3 = vmIdPoolGet(pData, puVar21[0]);
-                int uVar4 = vmIdPoolGet(pData, puVar21[1]);
-                int uVar16 = vmPluginSearch(uVar3, uVar4);
-
-                if (uVar16 == -1) {
-                    return false;
-                }
-                *puVar21 = (u16)(uVar16 >> 0x10);
-                puVar21[1] = (u16)uVar16;
-                puVar21 = puVar21 + 2;
-            }
-
-            puVar21 = (u16 *)((int)*(int **)(pData + 0x24) + **(int **)(pData + 0x24));
-            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x24) + 4); iVar14 = iVar14 + 1)
-            {
-                vmIdPoolGet(pData, puVar21[0]);
-                int iVar22 = vmOCSearch();
-                if (iVar22 == -1) {
-                    return false;
-                }
-                *puVar21 = (u16)iVar22;
-                puVar21 = puVar21 + 1;
-            }
-
-            puVar21 = (u16 *)((int)*(int **)(pData + 0x28) + **(int **)(pData + 0x28));
-            for (int iVar14 = 0; iVar14 < *(int *)(*(int *)(pData + 0x28) + 4); iVar14 = iVar14 + 1)
-            {
-                int uVar3 = vmIdPoolGet(pData, puVar21[0]);
-                int uVar4 = vmIdPoolGet(pData, puVar21[1]);
-                int iVar23 = 0; //fake
-                int iVar13 = 0; //fake
-                int iVar22 = vmFuncFarSearch((int)header->unkC + uVar3 + iVar23, (int)header->unkC + uVar4 + iVar13);
-                if (iVar22 == -1) {
-                    return false;
-                }
-                *puVar21 = (u16)((uint)iVar22 >> 0x10);
-                puVar21[1] = (u16)iVar22;
-                puVar21 = puVar21 + 2;
-            }
-
-            char* pcVar15 = (char *)((int)*(int **)(pData + 0x2c) + **(int **)(pData + 0x2c));
-            for (int uVar3 = 0; uVar3 < *(uint *)(*(int *)(pData + 0x2c) + 4); uVar3 = uVar3 + 1) {
-                vmInitDataLink(pData, pcVar15);
-                pcVar15 = pcVar15 + 8;
-            }
-
-            int* piVar12;
-
-            for (int uVar3 = 0; piVar12 = *(int **)(pData + 0x30), uVar3 < (uint)piVar12[1]; uVar3 = uVar3 + 1) {
-                int uVar4 = vmLocalPoolGet(pData, uVar3);
-                int iVar22 = 0; //fake
-                pcVar15 = (char *)((int)piVar12 + *(int *)((int)piVar12 + uVar4 + iVar22) + uVar4 + iVar22);
-                for (int uVar16 = 0; uVar16 < *(uint *)((int)piVar12 + uVar4 + iVar22 + 4);
-                    uVar16 = uVar16 + 1) {
-                    vmInitDataLink(pData, pcVar15);
-                    pcVar15 = pcVar15 + 8;
-                }
-            }
-            
-            int iVar14 = vmSysAtrSearch(pData, 1);
-            u8* puVar2 = vmPackageSearch(pData);
-            *(int *)(puVar2 + 4) = iVar14;
-            return true;
-        }
-
-        return true;
+    //Try to register this script as a new package
+    if (!vmPackageRegist(pData)) {
+        return FALSE;
     }
 
-    return false;
+    //Check if the file has already been loaded
+    if (header->vmFlags & SB_FLAG_LOADED) {
+        return TRUE;
+    }
+
+    //If not, mark that this file has been loaded by setting the corresponding flag
+    header->vmFlags |= SB_FLAG_LOADED;
+
+    //TODO: maybe they used an array for all the section offsets? It would make this code cleaner
+
+    //Convert all the offset values in the header to pointers to make accessing section data easier
+    header->codeOfs.offset += (u32)pData;
+    header->idPoolOfs.offset += (u32)pData;
+    header->intPoolOfs.offset += (u32)pData;
+    header->fixedPoolOfs.offset += (u32)pData;
+    header->stringPoolOfs.offset += (u32)pData;
+    header->functionPoolOfs.offset += (u32)pData;
+    header->pluginImportsOfs.offset += (u32)pData;
+    header->ocImportsOfs.offset += (u32)pData;
+    header->functionImportsOfs.offset += (u32)pData;
+    header->staticVarsOfs.offset += (u32)pData;
+    header->localPoolOfs.offset += (u32)pData;
+    header->sysAttrPoolOfs.offset += (u32)pData;
+    header->userAttrPoolOfs.offset += (u32)pData;
+    header->debugSymbolsOfs.offset += (u32)pData;
+
+    //Decrypt the script data if encrypted
+    if (header->flags & SB_FLAG_ENCRYPTED) {
+        encodeScramble(pData);
+    }
+
+    //Load plugin imports
+    SBSectionHeader* pluginImportsHeader = header->pluginImportsOfs.sectionHeaderPtr;
+    PluginImportEntry* pluginImportPtr = (PluginImportEntry*)getSectionDataPointer(pluginImportsHeader);
+
+    for (int i = 0; i < pluginImportsHeader->entries; i++){
+        //Search for the plugin entry
+        int id1 = vmIdPoolGet(pData, pluginImportPtr->unk0);
+        int id2 = vmIdPoolGet(pData, pluginImportPtr->unk2);
+        int index = vmPluginSearch(id1, id2);
+
+        if (index == -1) {
+            return FALSE;
+        }
+
+        pluginImportPtr->unk0 = index >> 16;
+        pluginImportPtr->unk2 = index & 0xFFFF;
+        pluginImportPtr++;
+    }
+
+    //Load OC imports
+    SBSectionHeader* ocImportsHeader = header->ocImportsOfs.sectionHeaderPtr;
+    OCImportEntry* ocImportEntryPtr = (OCImportEntry*)getSectionDataPointer(ocImportsHeader);
+
+    for (int i = 0; i < ocImportsHeader->entries; i++){
+        //Search for the OC entry
+        int id = vmIdPoolGet(pData, ocImportEntryPtr->unk0);
+        int index = vmOCSearch((char*)id);
+
+        if (index == -1) {
+            return FALSE;
+        }
+
+        ocImportEntryPtr->unk0 = (u16)index;
+        ocImportEntryPtr++;
+    }
+
+    //Load function imports
+    SBSectionHeader* funcImportsHeader = header->functionImportsOfs.sectionHeaderPtr;
+    FunctionImportEntry* funcImportEntryPtr = (FunctionImportEntry*)getSectionDataPointer(funcImportsHeader);
+
+    for (int i = 0; i < funcImportsHeader->entries; i++){
+        //Search for the function entry
+        int id1 = vmIdPoolGet(pData, funcImportEntryPtr->unk0);
+        int id2 = vmIdPoolGet(pData, funcImportEntryPtr->unk2);
+        int index = vmFuncFarSearch(id1, id2);
+
+        if (index == -1) {
+            return FALSE;
+        }
+
+        funcImportEntryPtr->unk0 = index >> 16;
+        funcImportEntryPtr->unk2 = index & 0xFFFF;
+        funcImportEntryPtr++;
+    }
+
+    //Load static var data
+    SBSectionHeader* staticVarsHeader = header->staticVarsOfs.sectionHeaderPtr;
+    StaticVarsEntry* staticVarEntryPtr = (StaticVarsEntry*)getSectionDataPointer(staticVarsHeader);
+
+    for (int i = 0; i < staticVarsHeader->entries; i++) {
+        vmInitDataLink(pData,(void*)staticVarEntryPtr);
+        staticVarEntryPtr++;
+    }
+
+    //Load local pool data
+    SBSectionHeader* localPoolHeader = header->localPoolOfs.sectionHeaderPtr;
+
+    for (int i = 0; i < localPoolHeader->entries; i++) {
+        int* uVar4 = (int*)vmLocalPoolGet(pData, i);
+        UnkStruct1* tempPtr = (UnkStruct1*)(uVar4 + *uVar4);
+
+        for (int j = 0; j < uVar4[1]; j++) {
+            vmInitDataLink(pData, tempPtr);
+            tempPtr++;
+        }
+    }
+
+    int iVar14 = vmSysAtrSearch(pData, 1);
+    u8* puVar2 = vmPackageSearch(pData);
+    *(int *)(puVar2 + 4) = iVar14;
+
+    return TRUE;
 }
 
 void vmUnlink(){
@@ -620,6 +635,9 @@ int* vmWkGet(VMThread* pThread, int r4){
 }
 
 void vmPluginExceptionThrow(VMThread* pThread){
+    pThread->unkC = 1;
+    pThread->unk10 = pThread->unk0;
+    vmExceptionProc(pThread);
 }
 
 void vmBuiltinOCRegist(){
@@ -629,6 +647,15 @@ void vmOCRegist(){
 }
 
 void vmOCExceptionThrow(VMThread* pThread){
+    RetVal* retVal = &pThread->unk3C[pThread->unk4];
+    pThread->unk14 = retVal->type;
+    pThread->unk15 = retVal->unk1;
+    pThread->unk16 = retVal->unk2_U32;
+    pThread->unk1A = retVal->unk6;
+    pThread->unkC = 2;
+    pThread->unk10 = pThread->unk0;
+
+    vmExceptionProc(pThread);
 }
 
 void* vmOCPropertyGet(VMThread* pThread){
@@ -693,15 +720,13 @@ RetVal* vmStackNextGet(VMThread* pThread){
     return &pThread->unk3C[pThread->unk4++];
 }
 
-void vmDataGet(){
-}
-
 #define rotrMask(n) ((1 << n) - 1)
 #define rotrBytes(a, b, n) (a >> n) | ((b & rotrMask(n)) << (8 - n))
 
+//I have no idea how to match this
 #pragma push
 #pragma optimize_for_size on
-void encodeScrambleSub(u8* pData, int length) {
+DECOMP_DONT_INLINE void encodeScrambleSub(u8* pData, int length) {
     //Rotate each group of 32 bits by 2 to the right
     //aaaaaaaa bbbbbbbb cccccccc dddddddd -> ddaaaaaa aabbbbbb bbcccccc ccdddddd
     for(int i = 0; i < length; i += 4){
@@ -719,48 +744,80 @@ void encodeScrambleSub(u8* pData, int length) {
 }
 #pragma pop
 
-void encodeScramble(u8* data){
-    /*
-    pbVar8 = (byte *)((int)piVar12 + piVar12[1] * piVar12[2] + *piVar12);
-    uVar3 = (int)(data + iVar14) - (int)pbVar8;
-    encodeScramble(pbVar8,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
-    piVar12 = *(int **)(data + 0x18);
-    iVar14 = (int)piVar12 + piVar12[1] * piVar12[2] + *piVar12;
-    uVar3 = *(int *)(data + 0x1c) - iVar14;
-    encodeScramble(iVar14,(((int)uVar3 >> 2) + (uint)((int)uVar3 < 0 && (uVar3 & 3) != 0)) * 4);
-    */
+void encodeScramble(u8* pData){
+    SBHeader* header = (SBHeader*)pData;
+
+    //Descramble ID section
+    SBSectionHeader* sectionHeader = header->idPoolOfs.sectionHeaderPtr;
+    u32 idSectionAddr = (u32)sectionHeader + sectionHeader->offset + (sectionHeader->entries * sectionHeader->length);
+    int idSectionSize = header->intPoolOfs.offset - idSectionAddr;
+    encodeScrambleSub((u8*)idSectionAddr, (idSectionSize/4)*4);
+
+    //Descramble string section
+    sectionHeader = header->stringPoolOfs.sectionHeaderPtr;
+    u32 strSectionAddr = (u32)sectionHeader + sectionHeader->offset + (sectionHeader->entries * sectionHeader->length);
+    int strSectionSize = header->functionPoolOfs.offset - strSectionAddr;
+    encodeScrambleSub((u8*)strSectionAddr, (strSectionSize/4)*4);
 }
 
-/*
-void vmExceptionProc(){
-}
-*/
+inline u32 vmDataGet(VMThread* pThread, int startIndex, int length){
+    //param2 -> r4, param3 -> r6
+    int i = 1;
+    int index = startIndex;
+    u32 result = pThread->unk34[index];
 
-void vmExceptionThrow(){
-}
+    while(i < length){
+        result <<= 8;
+        result |= pThread->unk34[++index];
+        i++;
+    }
 
-
-inline short vmSysAtrPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0x34);
-    uVar3 = (uint)*(ushort *)((int)piVar12 + piVar12[2] * param_2 + *piVar12);
-    */
-    return 0;
+    return result;
 }
 
-inline int vmIdPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0xc);
-    iVar23 = *piVar12;
-    iVar22 = piVar12[2] * (uint)*puVar21;
-    if (piVar12[2] == 2) {
-        uVar3 = (uint)*(ushort *)((int)piVar12 + iVar22 + iVar23);
+void vmExceptionProc(VMThread* pThread){
+    int temp1 = pThread->unk10;
+    vmDataGet(pThread, temp1 + 1, vmcOpcodes[pThread->unk34[pThread->unk10]].paramSize);
+    pThread->unk0 = pThread->unk10;
+    vmHalt();
+}
+
+void vmExceptionThrow(VMThread* pThread, int r4){
+    pThread->unkC = r4;
+    pThread->unk10 = pThread->unk0;
+    vmExceptionProc(pThread);
+}
+
+
+inline int vmSysAtrPoolGet(u8* data, int no){
+    SBHeader* header = (SBHeader*)data;
+    SBSectionHeader* sectionHeader = header->sysAttrPoolOfs.sectionHeaderPtr;
+    u32 temp1 = sectionHeader->offset;
+    u32 temp2 = sectionHeader->length * no;
+
+    void* entryPtr = (void*)((int)sectionHeader + temp2 + temp1);
+
+    u16 uVar3 = *(u16 *)entryPtr;
+    return uVar3;
+}
+
+inline int vmIdPoolGet(u8* data, int no){
+    SBHeader* header = (SBHeader*)data;
+    SBSectionHeader* idPoolSectionHeader = header->idPoolOfs.sectionHeaderPtr;
+    u32 iVar23 = idPoolSectionHeader->offset;
+    u32 iVar22 = idPoolSectionHeader->length * no;
+    u32 result;
+
+    void* idEntryPtr = (void*)((u32)idPoolSectionHeader + iVar22 + iVar23);
+
+    if (idPoolSectionHeader->length == 2) {
+        result = *(u16*)idEntryPtr;
     }
     else {
-        uVar3 = *(uint *)((int)piVar12 + iVar22 + iVar23);
+        result = *(u32*)idEntryPtr;
     }
-    */
-    return 0;
+
+    return result;
 }
 
 inline void vmIntPoolGet(){
@@ -769,26 +826,46 @@ inline void vmIntPoolGet(){
 inline void vmFixedPoolGet(){
 }
 
-inline void vmStringPoolGet(){
-}
+inline int vmStringPoolGet(u8* data, int no){
+    SBHeader* header = (SBHeader*)data;
+    SBSectionHeader* stringPoolHeader = header->stringPoolOfs.sectionHeaderPtr;
+    u32 iVar22 = stringPoolHeader->offset;
+    u32 iVar14 = stringPoolHeader->length * no;
+    u32 result;
 
+    void* stringPoolEntryPtr = (void*)((u32)stringPoolHeader + iVar14 + iVar22);
 
-inline int vmLocalPoolGet(u8* data, int param_2){
-    /*
-    piVar12 = *(int **)(data + 0x30);
-    iVar22 = *piVar12;
-    iVar14 = piVar12[2] * uVar3;
-    if (piVar12[2] == 2) {
-        uVar4 = (uint)*(ushort *)((int)piVar12 + iVar14 + iVar22);
+    if (stringPoolHeader->length == 2) {
+        result = *(u16*)stringPoolEntryPtr;
     }
     else {
-        uVar4 = *(uint *)((int)piVar12 + iVar14 + iVar22);
+        result = *(u32*)stringPoolEntryPtr;
     }
-    */
-    return 0;
+
+    return result;
 }
 
-inline void vmFunctionPoolGet(){
+
+inline int vmLocalPoolGet(u8* data, int no){
+    SBHeader* header = (SBHeader*)data;
+    SBSectionHeader* stringPoolHeader = header->localPoolOfs.sectionHeaderPtr;
+    u32 iVar22 = stringPoolHeader->offset;
+    u32 iVar14 = stringPoolHeader->length * no;
+    u32 result;
+
+    void* stringPoolEntryPtr = (void*)((u32)stringPoolHeader + iVar14 + iVar22);
+
+    if (stringPoolHeader->length == 2) {
+        result = *(u16*)stringPoolEntryPtr;
+    }
+    else {
+        result = *(u32*)stringPoolEntryPtr;
+    }
+
+    return result;
+}
+
+inline int vmFunctionPoolGet(){
 }
 
 int vmSysAtrSearch(u8* data, int param_2){
@@ -797,49 +874,41 @@ int vmSysAtrSearch(u8* data, int param_2){
     else return vmIdPoolGet(data, uVar3);
 }
 
-int vmPluginSearch(int param_1, int param2){
-    /*
-    puVar2 = &work;
-    iVar22 = 0;
-    do {
-        if ((*(char **)(puVar2 + 0x4688) != NULL) &&
-           (iVar9 = strcmp(*(char **)(puVar2 + 0x4688),
-                           (char *)((int)piVar12 + uVar3 + iVar23)), iVar9 == 0)) {
-            uVar16 = 0;
-            ppcVar19 = *(char ***)(puVar2 + 0x468c);
-            ppcVar20 = ppcVar19;
-            for (; *ppcVar19 != NULL; ppcVar19 = ppcVar19 + 2) {
-                iVar9 = strcmp(*ppcVar20,(char *)((int)piVar12 + uVar4 + iVar13));
-                if (iVar9 == 0) {
-                    uVar16 = iVar22 << 0x10 | uVar16;
-                    return uVar16;
+inline int vmPluginSearch(int param1, int param2){
+    VMState* state = &vmState;
+
+    for(int i = 0; i < MAX_PLUGINS; i++){
+        if (state->plugins[i].unk0 != NULL && strcmp(state->plugins[i].unk0, (char*)param1) == 0) {
+            int j = 0;
+            char** ppcVar19 = (char**)state->plugins[i].unk4;
+            char** ppcVar20 = ppcVar19;
+
+            while(*ppcVar19 != NULL) {
+                if (strcmp(*ppcVar20,(char*)param2) == 0) {
+                    return (i << 16) | j;
                 }
-                ppcVar20 = ppcVar20 + 2;
-                uVar16 = uVar16 + 1;
+
+                ppcVar20 += 2;
+                ppcVar19 += 2;
+                j++;
             }
         }
-        iVar22 = iVar22 + 1;
-        puVar2 = puVar2 + 8;
-    } while (iVar22 < 0x30);
+    }
+
     return -1;
-    */
-    return 0;
 }
 
-int vmOCSearch(){
-    /*
-    puVar2 = &work;
-    iVar22 = 0;
-    do {
-        if ((*(char ***)(puVar2 + 0x4808) != NULL) && (iVar13 = strcmp(**(char ***)(puVar2 + 0x4808), (char *)((int)piVar12 + uVar3 + iVar23)), iVar13 == 0)){
-            return iVar22;
+inline int vmOCSearch(char* name){
+    VMState* state = &vmState;
+
+    for(int i = 0; i < MAX_OCS; i++) {
+        char** temp = state->ocs[i].unk0;
+        if (temp != NULL && strcmp(*temp, name) == 0){
+            return i;
         }
-        iVar22 = iVar22 + 1;
-        puVar2 = puVar2 + 4;
-    } while (iVar22 < 0x30);
+    }
+
     return -1;
-    */
-    return 0;
 }
 
 void vmPropertySearch(){
@@ -848,15 +917,9 @@ void vmPropertySearch(){
 void vmSelectorSearch(){
 }
 
-
 int vmFuncFarSearch(int r3, int r4){
-    return 0;
+    return r3 + r4;
 }
-
-/*
-void vmDataGet(){
-}
-*/
 
 //Opcode functions
 
@@ -1103,18 +1166,4 @@ int vmc_exit(VMThread* pThread, u8 opcodeIndex){
 
 int vmc_bp(VMThread* pThread, u8 opcodeIndex){
     return VMC_RESULT_1;
-}
-
-void vmHalt(){
-    VMState* work = &vmState;
-    VMState_Unk40Struct* r31 = work->unk40;
-    u8* r0 = r31->unk34;
-
-    vmCodePut(r31, r0[r31->unk0]);
-    vmStackDump(r31);
-    vmPackageDump();
-    vmThreadDump();
-}
-
-void vmArgErr(){
 }
