@@ -60,7 +60,7 @@ And the header file, fdlibm.h, might look like this, including the sqrt function
 #define _FDLIBM_H
 
 #ifdef __cplusplus
-extern  "C" {
+extern "C" {
 #endif // ifdef __cplusplus
 
 double sqrt(double);

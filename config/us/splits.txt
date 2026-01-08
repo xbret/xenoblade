@@ -4848,13 +4848,11 @@ monolib/src/scn/CScnItemCamera.cpp:
 	.ctors      start:0x804FA164 end:0x804FA168
 
 monolib/src/vm/yvm.c:
-	extab       start:0x8001F9B4 end:0x8001FB24
-	extabindex  start:0x800375A0 end:0x800377C8
+	extab       start:0x8001F9B4 end:0x8001FB34
+	extabindex  start:0x800375A0 end:0x800377E0
 	.text       start:0x804A3E08 end:0x804AACF4
 
 monolib/src/vm/yvm_debug.c:
-	extab       start:0x8001FB24 end:0x8001FB34
-	extabindex  start:0x800377C8 end:0x800377E0
 	.text       start:0x804AACF4 end:0x804AADBC
 
 monolib/src/coli/code_804A6C60.cpp:

@@ -4,9 +4,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-//Uncomment to make OSPanic not suck
-//#define FIX_OSPANIC
-
 CErrorWii* CErrorWii::spInstance;
 bool CErrorWii::sPowerCallbackCalled;
 bool CErrorWii::sResetCallbackCalled;
@@ -158,7 +155,7 @@ void OSPanic(const char *file, int line, const char *msg, ...){
     sprintf(&buffer[length], " in \"%s\" on line %d.\n", file, line);
 
     //Does absolutely nothing with the error message, and doesn't halt...
-#if defined(FIX_OSPANIC)
+#if defined(BUGFIX)
     OSReport(buffer);
 
     OSReport("\nAddress:      Back Chain    LR Save\n");

@@ -17,14 +17,14 @@ enum SBFlags{
 };
 
 typedef struct SBSectionHeader{
-    int offset;  //0x0
+    int entriesOffset;  //0x0
     int entries; //0x4
-    int length;  //0x8
+    int offsetSize;  //0x8
 } SBSectionHeader;
 
 typedef union SBSectionOffset{
     u32 offset;
-    SBSectionHeader* sectionHeaderPtr;
+    SBSectionHeader* ptr;
 } SBSectionOffset;
 
 typedef struct SBHeader{
@@ -35,20 +35,20 @@ typedef struct SBHeader{
     /* Reserved by the VM as a place to store various flags during runtime. Only the first bit
     (for the loaded flag) gets used, however. */
     u8 vmFlags;                         //0x7
-    SBSectionOffset codeOfs;            //0x8
-    SBSectionOffset idPoolOfs;          //0xC
-    SBSectionOffset intPoolOfs;         //0x10
-    SBSectionOffset fixedPoolOfs;       //0x14
-    SBSectionOffset stringPoolOfs;      //0x18
-    SBSectionOffset functionPoolOfs;    //0x1C
-    SBSectionOffset pluginImportsOfs;   //0x20
-    SBSectionOffset ocImportsOfs;       //0x24
-    SBSectionOffset functionImportsOfs; //0x28
-    SBSectionOffset staticVarsOfs;      //0x2C
-    SBSectionOffset localPoolOfs;       //0x30
-    SBSectionOffset sysAttrPoolOfs;     //0x34
-    SBSectionOffset userAttrPoolOfs;    //0x38
-    SBSectionOffset debugSymbolsOfs;    //0x3C
+    SBSectionHeader* codeOfs;            //0x8
+    SBSectionHeader* idPoolOfs;          //0xC
+    SBSectionHeader* intPoolOfs;         //0x10
+    SBSectionHeader* fixedPoolOfs;       //0x14
+    SBSectionHeader* stringPoolOfs;      //0x18
+    SBSectionHeader* functionPoolOfs;    //0x1C
+    SBSectionHeader* pluginImportsOfs;   //0x20
+    SBSectionHeader* ocImportsOfs;       //0x24
+    SBSectionHeader* functionImportsOfs; //0x28
+    SBSectionHeader* staticVarsOfs;      //0x2C
+    SBSectionHeader* localPoolOfs;       //0x30
+    SBSectionHeader* sysAttrPoolOfs;     //0x34
+    SBSectionHeader* userAttrPoolOfs;    //0x38
+    SBSectionHeader* debugSymbolsOfs;    //0x3C
 } SBHeader;
 
 //Section specific structs
@@ -76,13 +76,15 @@ typedef struct FunctionImportEntry{
 //Static vars
 
 typedef struct StaticVarsEntry{
-    u8 unk0[8];
+    u32 unk0;
+    u32 unk4;
 } StaticVarsEntry;
 
 //Local pool
 
 typedef struct LocalPoolEntry{
-    u8 unk0[8];
+    u32 unk0;
+    u32 unk4;
 } LocalPoolEntry;
 
 #ifdef __cplusplus

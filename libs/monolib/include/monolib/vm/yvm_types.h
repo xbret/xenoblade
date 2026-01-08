@@ -6,6 +6,7 @@
 extern "C" {
 #endif
 
+
 #define MAX_PACKAGES 8 //Max number of packages (scripts) at once
 #define MAX_PLUGINS 48
 #define MAX_OCS 48
@@ -33,8 +34,8 @@ typedef struct RetVal{
 
 #pragma pack(push, 1)
 typedef struct _sVMThread{
-    int unk0;
-    int unk4;
+    int pc;
+    int sp;
     int unk8;
     int unkC;
     int unk10;
@@ -47,21 +48,26 @@ typedef struct _sVMThread{
     u32 unk38;
     RetVal* unk3C;
     u8 unk40[0x4C - 0x40];
-    u32 unk4C;
-    BOOL waitMode; //0x50
-    int wkIdx; //0x54
+    BOOL waitMode; //0x4C
+    u32 wkIdx; //0x50
+    u32 unk54;
     u8 unk58[0x60 - 0x58];
 } VMThread;
 #pragma pack (pop)
 
 typedef struct VMPackage{
-    u32 scriptDataPtr; //0x0
+    void* scriptDataPtr; //0x0
     u32 unk4;
 } VMPackage;
 
+typedef struct VMPlugin_UnkStruct1{
+    char* unk0;
+    u32 unk4;
+}VMPlugin_UnkStruct1;
+
 typedef struct VMPlugin{
     char* unk0;
-    char* unk4;
+    VMPlugin_UnkStruct1* unk4;
 } VMPlugin;
 
 typedef struct VMOC{
@@ -217,6 +223,21 @@ typedef enum _VMTypes {
 
     VM_MAX_TYPE = 11
 } VMTypes;
+
+typedef struct VMArg{
+    u8 type;
+    u8 unk1;
+    u16 unk2;
+    union {
+        void* pointerVal;
+        u32 uintVal;
+        int intVal;   
+    } value;
+}VMArg;
+
+//Q20.12 fixed point macros (20 integer bits, 12 fraction bits)
+#define FIXED_TO_INT(x) x >> 12
+#define INT_TO_FIXED(x) x << 12
 
 #ifdef __cplusplus
 }
