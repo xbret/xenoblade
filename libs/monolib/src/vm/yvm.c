@@ -1,69 +1,15 @@
 #include "monolib/vm/yvm.h"
 #include "monolib/vm/yvm_debug.h"
+#include "monolib/vm/yvm_opcode_data.h"
 #include <string.h>
 #include <stdbool.h>
 #include <revolution/OS.h>
-
-
-typedef int (*OpcodeFunc)(VMThread* pThread, u8 code);
-
-void encodeScramble(u8* data);
-//If only C didn't force all of this to be forward declared :p
-//TODO: these are all probably static judging from xcx symbols
-int vmc_nop(VMThread* pThread, u8 code);
-int vmc_const(VMThread* pThread, u8 code);
-int vmc_const_i(VMThread* pThread, u8 code);
-int vmc_pool_int(VMThread* pThread, u8 code);
-int vmc_pool_fixed(VMThread* pThread, u8 code);
-int vmc_pool_string(VMThread* pThread, u8 code);
-int vmc_ld(VMThread* pThread, u8 code);
-int vmc_st(VMThread* pThread, u8 code);
-int vmc_ld_arg(VMThread* pThread, u8 code);
-int vmc_st_arg(VMThread* pThread, u8 code);
-int vmc_st_arg_omit(VMThread* pThread, u8 code);
-int vmc_ld_const(VMThread* pThread, u8 code);
-int vmc_st_const(VMThread* pThread, u8 code);
-int vmc_ld_arg_const(VMThread* pThread, u8 code);
-int vmc_st_arg_const(VMThread* pThread, u8 code);
-int vmc_ld_static(VMThread* pThread, u8 code);
-int vmc_st_static(VMThread* pThread, u8 code);
-int vmc_ld_ar(VMThread* pThread, u8 code);
-int vmc_st_ar(VMThread* pThread, u8 code);
-int vmc_ld_nil(VMThread* pThread, u8 code);
-int vmc_ld_true(VMThread* pThread, u8 code);
-int vmc_ld_false(VMThread* pThread, u8 code);
-int vmc_ld_func(VMThread* pThread, u8 code);
-int vmc_ld_plugin(VMThread* pThread, u8 code);
-int vmc_ld_func_far(VMThread* pThread, u8 code);
-int vmc_minus(VMThread* pThread, u8 code);
-int vmc_not(VMThread* pThread, u8 code);
-int vmc_l_not(VMThread* pThread, u8 code);
-int vmc_calc(VMThread* pThread, u8 code);
-int vmc_jmp(VMThread* pThread, u8 code);
-int vmc_jpf(VMThread* pThread, u8 code);
-int vmc_call(VMThread* pThread, u8 code);
-int vmc_call_ind(VMThread* pThread, u8 code);
-int vmc_ret(VMThread* pThread, u8 code);
-int vmc_next(VMThread* pThread, u8 code);
-int vmc_plugin(VMThread* pThread, u8 code);
-int vmc_call_far(VMThread* pThread, u8 code);
-int vmc_get_oc(VMThread* pThread, u8 code);
-int vmc_getter(VMThread* pThread, u8 code);
-int vmc_setter(VMThread* pThread, u8 code);
-int vmc_send(VMThread* pThread, u8 code);
-int vmc_typeof(VMThread* pThread, u8 code);
-int vmc_sizeof(VMThread* pThread, u8 code);
-int vmc_switch(VMThread* pThread, u8 code);
-int vmc_inc(VMThread* pThread, u8 code);
-int vmc_dec(VMThread* pThread, u8 code);
-int vmc_exit(VMThread* pThread, u8 code);
-int vmc_bp(VMThread* pThread, u8 code);
 
 void encodeScramble(u8* data);
 
 
 //Opcode data
-static VMCOpcode vmcOpcodes[VMC_MAX] = {
+VMCOpcode vmcOpcodes[VMC_MAX] = {
     {"NOP", 0, 0},
     {"CONST_0", 0, 1},
     {"CONST_1", 0, 1},
@@ -162,7 +108,8 @@ static VMCOpcode vmcOpcodes[VMC_MAX] = {
     {"BP", 0, 0}
 };
 
-static const char* vmTypeNames[VM_MAX_TYPE] = {
+//VM type names
+const char* vmTypeNames[VM_MAX_TYPE] = {
     "nil",
     "true",
     "false",
@@ -174,105 +121,6 @@ static const char* vmTypeNames[VM_MAX_TYPE] = {
     "plugin",
     "OC",
     "sys"
-};
-
-static OpcodeFunc vmcOpcodeFuncs[VMC_MAX] = {
-    vmc_nop,
-    vmc_const,
-    vmc_const,
-    vmc_const,
-    vmc_const,
-    vmc_const,
-    vmc_const_i,
-    vmc_const_i,
-    vmc_pool_int,
-    vmc_pool_int,
-    vmc_pool_fixed,
-    vmc_pool_fixed,
-    vmc_pool_string,
-    vmc_pool_string,
-    vmc_ld,
-    vmc_st,
-    vmc_ld_arg,
-    vmc_st_arg,
-    vmc_st_arg_omit,
-    vmc_ld_const,
-    vmc_ld_const,
-    vmc_ld_const,
-    vmc_ld_const,
-    vmc_st_const,
-    vmc_st_const,
-    vmc_st_const,
-    vmc_st_const,
-    vmc_ld_arg_const,
-    vmc_ld_arg_const,
-    vmc_ld_arg_const,
-    vmc_ld_arg_const,
-    vmc_st_arg_const,
-    vmc_st_arg_const,
-    vmc_st_arg_const,
-    vmc_st_arg_const,
-    vmc_ld_static,
-    vmc_ld_static,
-    vmc_st_static,
-    vmc_st_static,
-    vmc_ld_ar,
-    vmc_st_ar,
-    vmc_ld_nil,
-    vmc_ld_true,
-    vmc_ld_false,
-    vmc_ld_func,
-    vmc_ld_func,
-    vmc_ld_plugin,
-    vmc_ld_plugin,
-    vmc_ld_func_far,
-    vmc_ld_func_far,
-    vmc_minus,
-    vmc_not,
-    vmc_l_not,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_calc,
-    vmc_jmp,
-    vmc_jpf,
-    vmc_call,
-    vmc_call,
-    vmc_call_ind,
-    vmc_ret,
-    vmc_next,
-    vmc_plugin,
-    vmc_plugin,
-    vmc_call_far,
-    vmc_call_far,
-    vmc_get_oc,
-    vmc_get_oc,
-    vmc_getter,
-    vmc_getter,
-    vmc_setter,
-    vmc_setter,
-    vmc_send,
-    vmc_send,
-    vmc_typeof,
-    vmc_sizeof,
-    vmc_switch,
-    vmc_inc,
-    vmc_dec,
-    vmc_exit,
-    vmc_bp
 };
 
 VMState vmState;
@@ -526,25 +374,97 @@ void vmStart(u8* pData){
     vmThreadCreate(header, header->codeOfs->entries);
 }
 
-/*
+/* Updates the thread pointer list to have pointers to currently active threads, while maintaining
+the order from the main thread list. */
+inline void vmSchedule(){
+    int total = 0;
 
-void vmSchedule(){
+    //Search for non empty thread slots, and save pointers to each in the pointer list in order
+    for(int i = 0; i < MAX_THREADS; i++){
+        if (vmState.threads[i].scriptData != NULL) {
+            vmState.unk48[total++] = &vmState.threads[i];
+        }
+    }
+
+    //Set all remaining entries to null
+    for(int i = total; i < MAX_THREADS; i++){
+        vmState.unk48[i] = NULL;
+    }
+
 }
 
-void vmCodeExec(){
+//Executes a single instruction on the given thread.
+inline int vmCodeExec(VMThread* pThread){
+    //Set as active thread?
+    vmState.unk40 = pThread;
+
+    int pc = pThread->pc;
+    u8 code = pThread->codeSection[pc];
+    //Call the corresponding opcode handler function
+    OpcodeFunc func = vmcOpcodeFuncs[pThread->codeSection[pc]];
+    int result = func(pThread, code);
+
+    if (result == VMC_RESULT_1) {
+        pThread->unk48 = 1;
+        pThread->pc = pc;
+    }else {
+        pThread->unk48 = 0;
+        vmWkIdxSet(pThread, 0);
+    }
+
+    if (pThread->scriptData == NULL) {
+      result = VMC_RESULT_3;
+    }
+
+    return result;
 }
 
-void vmThreadSearch(){
+VMThread* vmThreadSearch(u32 r3){
+    for(int i = 0; i < MAX_THREADS; i++){
+        if (vmState.threads[i].scriptData != NULL && r3 == vmState.threads[i].unk44) {
+            return &vmState.threads[i];
+        }
+    }
+
+    return NULL;
 }
 
-void vmThreadRemove(){
+void vmThreadRemove(u32 index){
+    VMThread* threadToRemove = vmThreadSearch(index);
+
+    if (threadToRemove != NULL) {
+        threadToRemove->scriptData = NULL;
+    }
 }
 
-void vmThreadExec(){
+inline void vmThreadExec(VMThread* pThread){
+    int result = 0;
+
+    do{
+        result = vmCodeExec(pThread);
+    }while(result == VMC_RESULT_0);
+
+    if(result == VMC_RESULT_3) vmThreadRemove(pThread->unk44);
 }
-*/
+
+inline bool someInline(VMThread* pThread){
+    return (pThread->unk48 & 0x80000000) == 0;
+}
 
 void vmExec(){
+    //Update the thread pointer list
+    vmSchedule();
+
+    vmState.unk40 = NULL;
+
+    //Update all active threads
+    for(int i = 0; i < MAX_THREADS; i++){
+        VMThread* thread = vmState.unk48[i];
+
+        if (thread != NULL && thread->scriptData != NULL && someInline(thread)) {
+            vmThreadExec(thread);
+        }
+    }
 }
 
 inline BOOL vmPluginModuleSearch(const char* name){
@@ -689,10 +609,8 @@ void* vmArrayGet(UNKTYPE* r3, UNKTYPE* r4, UNKTYPE* r5){
     return array;
 }
 
-/*
 void vmArraySet(){
 }
-*/
 
 void* vmArgOCGet(u32 index, VMArg* pArg){
     int type = pArg->type;
@@ -733,7 +651,7 @@ u32* vmWkGet(VMThread* pThread, u32 r4){
 }
 
 void vmPluginExceptionThrow(VMThread* pThread){
-    vmExceptionThrow(pThread, 1);
+    vmExceptionThrow(pThread, VM_EXCEPTION_1);
 }
 
 void vmBuiltinOCRegist(){
@@ -742,17 +660,17 @@ void vmBuiltinOCRegist(){
 void vmOCRegist(){
 }
 
-inline void saveArg(VMThread* pThread, VMArg* pArg){
-    pThread->unk14.type = pArg->type;
-    pThread->unk14.unk1 = pArg->unk1;
-    pThread->unk14.unk2_U32 = pArg->unk2_U32;
-    pThread->unk14.unk6 = pArg->unk6;
+inline void saveArg(VMThread* pThread, VMArg* pArg, int index){
+    pThread->unk14[index].type = pArg->type;
+    pThread->unk14[index].unk1 = pArg->unk1;
+    pThread->unk14[index].unk2_U32 = pArg->unk2_U32;
+    pThread->unk14[index].unk6 = pArg->unk6;
 }
 
 void vmOCExceptionThrow(VMThread* pThread){
     VMArg* arg = &pThread->unk3C[pThread->sp];
-    saveArg(pThread, arg);
-    vmExceptionThrow(pThread, 2);
+    saveArg(pThread, arg, 0);
+    vmExceptionThrow(pThread, VM_EXCEPTION_2);
 }
 
 void* vmOCPropertyGet(VMThread* pThread){
@@ -811,13 +729,7 @@ void vmArrayLocalChk(){
 */
 
 VMArg* vmStackPrevGet(VMThread* pThread){
-    VMArg* result = NULL;
-
-    if(pThread->sp > 0){
-        result = &pThread->unk3C[pThread->sp--];
-    }
-
-    return result;
+    return &pThread->unk3C[--pThread->sp];
 }
 
 VMArg* vmStackNextGet(VMThread* pThread){
@@ -864,7 +776,7 @@ void encodeScramble(u8* pData){
     encodeScrambleSub((u8*)strSectionAddr, (strSectionSize/4)*4);
 }
 
-inline u32 vmDataGet(VMThread* pThread, int startIndex, int length){
+u32 vmDataGet(VMThread* pThread, int startIndex, int length){
     //BUG: This code assumes the length is at least 1. Why??
     int i = 1;
     int index = startIndex;
@@ -888,8 +800,8 @@ void vmExceptionProc(VMThread* pThread){
 }
 #pragma dont_inline reset
 
-inline void vmExceptionThrow(VMThread* pThread, u32 r4){
-    pThread->unkC = r4;
+inline void vmExceptionThrow(VMThread* pThread, u32 exception){
+    pThread->exception = exception;
     pThread->unk10 = pThread->pc;
     vmExceptionProc(pThread);
 }
@@ -941,8 +853,8 @@ inline void* vmFunctionPoolGet(SBHeader* data, u32 param2){
     return NULL;
 }
 
-u32 vmSysAtrSearch(SBHeader* data, u32 param_2){
-    u16 uVar3 = vmSysAtrPoolGet(data, param_2);
+u32 vmSysAtrSearch(SBHeader* data, u32 no){
+    u16 uVar3 = vmSysAtrPoolGet(data, no);
     if (uVar3 == 0xFFFF) return NULL;
     else return (u32)vmIdPoolGet(data, uVar3);
 }
@@ -1016,13 +928,13 @@ u32 vmFuncFarSearch(const char* pPackageName, const char* pFuncName){
 
 VMThread* vmThreadCreate(SBHeader* param1, u32 param2){
     //Search for an empty slot
-    for(int i = 0; i < 16; i++){
+    for(int i = 0; i < MAX_THREADS; i++){
         if(vmState.threads[i].scriptData == NULL){
             //Initialize the thread slot
             VMThread* thread = &vmState.threads[i];
 
-            for(int j = 0; j < 16; j++) {
-                if (vmState.unk48[j] == 0) {
+            for(int j = 0; j < MAX_THREADS; j++) {
+                if (vmState.unk48[j] == NULL) {
                     vmState.unk48[j] = thread;
                     break;
                 }
@@ -1031,7 +943,7 @@ VMThread* vmThreadCreate(SBHeader* param1, u32 param2){
             thread->pc = ((FunctionPoolEntry*)getSectionEntriesPtr(param1->functionPoolOfs))[param2].unkC;
             thread->sp = 0;
             thread->unk8 = 0;
-            thread->unkC = 0;
+            thread->exception = VM_EXCEPTION_NONE;
             thread->unk10 = 0;
         
             int uVar2 = vmPackageSearchIdx(param1);
@@ -1213,19 +1125,14 @@ int vmc_minus(VMThread* pThread, u8 code){
     return VMC_RESULT_0;
 }
 
-inline void exception6(VMThread* pThread, VMArg* pArg){
-    saveArg(pThread, pArg);
-    vmExceptionThrow(pThread, 6);
-}
-
 int vmc_not(VMThread* pThread, u8 code){
     VMArg* arg = &pThread->unk3C[pThread->sp - 1];
 
     if((int)arg->type == VM_TYPE_INT){
         arg->value.intVal = ~arg->value.intVal;
     }else{
-        saveArg(pThread, arg);
-        vmExceptionThrow(pThread, 6);
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_6);
         return VMC_RESULT_0;
     }
 
@@ -1244,8 +1151,8 @@ int vmc_l_not(VMThread* pThread, u8 code){
             arg->type = VM_TYPE_TRUE;
             break;
         default:
-            saveArg(pThread, arg);
-            vmExceptionThrow(pThread, 6);
+            saveArg(pThread, arg, 0);
+            vmExceptionThrow(pThread, VM_EXCEPTION_6);
             return VMC_RESULT_0;
     }
 
@@ -1253,17 +1160,300 @@ int vmc_l_not(VMThread* pThread, u8 code){
     return VMC_RESULT_0;
 }
 
-int vmc_op_nil(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+inline BOOL vmc_op_nil(int code, VMArg* pArg1, VMArg* pArg2, VMArg* pResult){
+    int type1 = pArg1->type;
+    int type2 = pArg2->type;
+    BOOL result = FALSE;
+
+    switch(code){
+        case VMC_OP_EQ:
+            if(type1 == type2) result = TRUE;
+            break;
+        case VMC_OP_NE:
+            if(type1 != type2) result = TRUE;
+            break;
+        default:
+            return FALSE;
+    }
+
+    //if(!result) pResult->type = VM_TYPE_FALSE;
+    //else pResult->type = VM_TYPE_TRUE;
+    //TODO: please say i dont have to do this, if i do i'll be angy
+    pResult->type = !result + VM_TYPE_TRUE;
+
+    return TRUE;
 }
 
-int vmc_op_fixed(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+BOOL vmc_op_bool(int code, VMArg* pArg1, VMArg* pArg2, VMArg* pResult){
+    int type1 = pArg1->type;
+    int type2 = pArg2->type;
+    BOOL result = FALSE;
+
+    switch(code){
+        case VMC_OP_EQ:
+            if(type1 == type2) result = TRUE;
+            break;
+        case VMC_OP_NE:
+            if(type1 != type2) result = TRUE;
+            break;
+        case VMC_OP_L_OR:
+            if(type1 == VM_TYPE_TRUE || type2 == VM_TYPE_TRUE) result = TRUE;
+            break;
+        case VMC_OP_L_AND:
+            if(type1 == VM_TYPE_TRUE && type2 == VM_TYPE_TRUE) result = TRUE;
+            break;
+        default:
+            return FALSE;
+    }
+
+    if(!result) pResult->type = VM_TYPE_FALSE;
+    else pResult->type = VM_TYPE_TRUE;
+
+    return TRUE;
+}
+
+BOOL vmc_op_int(int code, VMArg* pArg1, VMArg* pArg2, VMArg* pResult){
+    int arg1 = pArg1->value.intVal;
+    int arg2 = pArg2->value.intVal;
+
+    if(code < VMC_OP_EQ){
+        //Arithmetic operations
+        int result;
+        
+        switch((int)code){
+            case VMC_OP_ADD:
+                result = arg1 + arg2;
+                break;
+            case VMC_OP_SUB:
+                result = arg1 - arg2;
+                break;
+            case VMC_OP_MUL:
+                result = arg1*arg2;
+                break;
+            case VMC_OP_DIV:
+                //Check for division by zero
+                if(arg2 == 0) return FALSE;
+                result = arg1/arg2;
+                break;
+            case VMC_OP_MOD:
+                if(arg2 == 0) return FALSE;
+                result = arg1 % arg2;
+                break;
+            case VMC_OP_OR:
+                result = arg1 | arg2;
+                break;
+            case VMC_OP_AND:
+                result = arg1 & arg2;
+                break;
+            case VMC_OP_R_SHIFT:
+                result = arg1 >> arg2;
+                break;
+            case VMC_OP_L_SHIFT:
+                result = arg1 << arg2;
+                break;
+            default:
+                return FALSE;
+        }
+
+        pResult->type = VM_TYPE_INT;
+        pResult->value.intVal = result;
+    }else{
+        //Logic operations
+        BOOL result = FALSE;
+
+        switch((int)code){
+            case VMC_OP_EQ:
+                if(arg1 == arg2) result = TRUE;
+                break;
+            case VMC_OP_NE:
+                if(arg1 != arg2) result = TRUE;
+                break;
+            case VMC_OP_GT:
+                if(arg1 > arg2) result = TRUE;
+                break;
+            case VMC_OP_LT:
+                if(arg1 < arg2) result = TRUE;
+                break;
+            case VMC_OP_GE:
+                if(arg1 >= arg2) result = TRUE;
+                break;
+            case VMC_OP_LE:
+                if(arg1 <= arg2) result = TRUE;
+                break;
+            default:
+                return FALSE;
+        }
+
+        if(!result) pResult->type = VM_TYPE_FALSE;
+        else pResult->type = VM_TYPE_TRUE;
+    }
+
+    return TRUE;
+}
+
+BOOL vmc_op_fixed(int code, VMArg* pArg1, VMArg* pArg2, VMArg* pResult){
+    int arg1 = pArg1->value.intVal;
+    int arg2 = pArg2->value.intVal;
+
+    if(code < VMC_OP_EQ){
+        //Arithmetic operations
+        int result;
+        
+        switch((int)code){
+            case VMC_OP_ADD:
+                result = arg1 + arg2;
+                break;
+            case VMC_OP_SUB:
+                result = arg1 - arg2;
+                break;
+            case VMC_OP_MUL:
+                result = arg1*arg2;
+                result = FIXED_TO_INT(result);
+                break;
+            case VMC_OP_DIV:
+                //Check for division by zero
+                if(arg2 == 0) return FALSE;
+                result = INT_TO_FIXED(arg1)/arg2;
+                break;
+            default:
+                return FALSE;
+        }
+
+        pResult->type = VM_TYPE_FIXED;
+        pResult->value.intVal = result;
+    }else{
+        //Logic operations
+        BOOL result = FALSE;
+
+        switch((int)code){
+            case VMC_OP_EQ:
+                if(arg1 == arg2) result = TRUE;
+                break;
+            case VMC_OP_NE:
+                if(arg1 != arg2) result = TRUE;
+                //BUG: Someone forgot to add break here! (thankfully still works anyway since arg1 > arg2 can't be true if arg1 == arg2)
+            #if defined(BUGFIX)
+                break;
+            #endif
+            case VMC_OP_GT:
+                if(arg1 > arg2) result = TRUE;
+                break;
+            case VMC_OP_LT:
+                if(arg1 < arg2) result = TRUE;
+                break;
+            case VMC_OP_GE:
+                if(arg1 >= arg2) result = TRUE;
+                break;
+            case VMC_OP_LE:
+                if(arg1 <= arg2) result = TRUE;
+                break;
+            default:
+                return FALSE;
+        }
+
+        if(!result) pResult->type = VM_TYPE_FALSE;
+        else pResult->type = VM_TYPE_TRUE;
+    }
+
+    return TRUE;
+}
+
+inline BOOL vmc_op_string(int code, VMArg* pArg1, VMArg* pArg2, VMArg* pResult){
+    const char* arg1 = pArg1->value.pointerVal;
+    const char* arg2 = pArg2->value.pointerVal;
+    BOOL result = FALSE;
+
+    switch(code){
+        case VMC_OP_EQ:
+            if(strcmp(arg1, arg2) == 0) result = TRUE;
+            break;
+        case VMC_OP_NE:
+            if(strcmp(arg1, arg2) != 0) result = TRUE;
+            break;
+        default:
+            return FALSE;
+    }
+
+    //if(!result) pResult->type = VM_TYPE_FALSE;
+    //else pResult->type = VM_TYPE_TRUE;
+    //TODO: please say i dont have to do this, if i do i'll be angy
+    pResult->type = !result + VM_TYPE_TRUE;
+
+    return TRUE;
 }
 
 int vmc_calc(VMThread* pThread, u8 code){
+    VMArg* arg1 = vmStackPrevGet(pThread);
+    VMArg* arg2 = vmStackPrevGet(pThread);
+    int arg1Type = arg1->type;
+    int arg2Type = arg2->type;
+
+    VMArg result;
+    BOOL success = FALSE;
+
+    //Determine what operation to do based on the argument types
+    switch(arg1Type){
+        case VM_TYPE_TRUE:
+        case VM_TYPE_FALSE:
+            if(arg2Type == VM_TYPE_TRUE || arg2Type == VM_TYPE_FALSE){
+              success = vmc_op_bool(code,arg1,arg2,&result);
+            }
+            break;
+        case VM_TYPE_INT:
+            if(arg2Type == VM_TYPE_INT){
+                success = vmc_op_int(code,arg1,arg2,&result);
+            }else if(arg2Type == VM_TYPE_FIXED){
+                int newVal = INT_TO_FIXED(arg1->value.intVal);
+                arg1->type = VM_TYPE_FIXED;
+                arg1->value.intVal = newVal;
+                success = vmc_op_fixed(code,arg1,arg2,&result);
+            }else if(arg2Type == VM_TYPE_NIL){
+                success = vmc_op_nil(code, arg1, arg2, &result);
+            }
+            break;
+        case VM_TYPE_FIXED:
+          if (arg2Type == VM_TYPE_FIXED) {
+            success = vmc_op_fixed(code,arg1,arg2,&result);
+          }else if(arg2Type == VM_TYPE_INT){
+            int newVal = INT_TO_FIXED(arg2->value.intVal);
+            arg2->type = VM_TYPE_FIXED;
+            arg2->value.intVal = newVal;
+            success = vmc_op_fixed(code,arg1, arg2,&result);
+          }else if(arg2Type == VM_TYPE_NIL){
+            success = vmc_op_nil(code, arg1, arg2, &result);
+          }
+          break;
+        case VM_TYPE_STRING:
+          if(arg2Type == VM_TYPE_STRING){
+            success = vmc_op_string(code, arg1, arg2, &result);
+          }else if(arg2Type == VM_TYPE_NIL){
+            success = vmc_op_nil(code, arg1, arg2, &result);
+          }
+        break;
+        default:
+            if(arg1Type == VM_TYPE_NIL || arg2Type == VM_TYPE_NIL){
+                success = vmc_op_nil(code, arg1, arg2, &result);
+            }
+            break;
+    }
+
+    //If an error happened, throw an exception
+    if (success == FALSE) {
+        if((code == VMC_OP_DIV || code == VMC_OP_MOD)
+        && ((arg2Type == VM_TYPE_INT && arg2->value.intVal == 0) || (arg2Type == VM_TYPE_FIXED && arg2->value.intVal == 0))){
+            //Division by zero
+            vmExceptionThrow(pThread, VM_EXCEPTION_DIV_BY_ZERO);
+        }else{
+            //Invalid argument
+            saveArg(pThread, arg1, 0);
+            saveArg(pThread, arg2, 1);
+            vmExceptionThrow(pThread, VM_EXCEPTION_7);
+        }
+
+        return FALSE;
+    }
+
+    vmPush(pThread, &result);
     vmc_inc_pc(pThread, code);
     return VMC_RESULT_0;
 }
@@ -1397,8 +1587,8 @@ int vmc_inc(VMThread* pThread, u8 code){
     if((int)arg->type == VM_TYPE_INT){
         arg->value.intVal++;
     }else{
-        saveArg(pThread, arg);
-        vmExceptionThrow(pThread, 6);
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_6);
         return VMC_RESULT_0;
     }
 
@@ -1412,8 +1602,8 @@ int vmc_dec(VMThread* pThread, u8 code){
     if((int)arg->type == VM_TYPE_INT){
         arg->value.intVal--;
     }else{
-        saveArg(pThread, arg);
-        vmExceptionThrow(pThread, 6);
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_6);
         return VMC_RESULT_0;
     }
 
@@ -1431,28 +1621,31 @@ int vmc_bp(VMThread* pThread, u8 code){
 
 //Necessary to prevent inlining
 #pragma dont_inline on
+/* This function is meant to print various information on the current state of the VM,
+then halt. However, all of this is stubbed for release, so this function does nothing. */
 void vmHalt(){
     VMThread* thread = vmState.unk40;
 
+    //Print instruction at current address
     vmCodePut(thread, thread->codeSection[thread->pc]);
+    /* Do something with stack/package/thread info (print/dump to file?). Not even XCX has anything
+    for these functions, so there's sadly no way of knowing what they might've done... */
     vmStackDump(thread);
     vmPackageDump();
     vmThreadDump();
 
-    /* BUG: There would've likely been some code here to halt somehow, but
-    it was removed for release. As is, the VM will ignore requests to halt
-    and keep running. In XC3D and XCX, it does properly halt: XC3D calls
-    nn::dbg::Panic (possibly through a custom panic function that got
-    inlined), while XC3D just has a while(true) loop. */
+    /* BUG: As explained above, whatever code that would've handled halting was removed.
+    In XC3D and XCX, it does properly halt: XC3D calls nn::dbg::Panic (possibly through a
+    custom panic function that got inlined), while XC3D just has a while(true) loop. Given
+    how similar XCX's yvm code is, it's likely they did that here too. */
 
 #if defined(BUGFIX)
-    OSReport("VM error occured, halting");
-
     //Loop forever
     while(true){}
 #endif
 }
 
+//Error function called when an invalid argument is found
 void vmArgErr(){
     VMThread* thread = vmState.unk40;
     u8 r3 = thread->codeSection[thread->pc];
@@ -1470,3 +1663,107 @@ void vmArgErr(){
     vmExceptionProc(thread);
 }
 #pragma dont_inline off
+
+/* TODO: this is placed here b/c the opcode functions are static and having a bunch
+of forward declarations isn't ideal, but having all of this down here also isn't the best. Maybe
+there's a better solution? */
+
+//Opcode handler function table
+OpcodeFunc vmcOpcodeFuncs[VMC_MAX] = {
+    vmc_nop, //NOP
+    vmc_const, //CONST_0
+    vmc_const, //CONST_1
+    vmc_const, //CONST_2
+    vmc_const, //CONST_3
+    vmc_const, //CONST_4
+    vmc_const_i, //CONST_I
+    vmc_const_i, //CONST_I_W
+    vmc_pool_int, //POOL_INT
+    vmc_pool_int, //POOL_INT_W
+    vmc_pool_fixed, //POOL_FIXED
+    vmc_pool_fixed, //POOL_FIXED_W
+    vmc_pool_string, //POOL_STR
+    vmc_pool_string, //POOL_STR_W
+    vmc_ld, //LD
+    vmc_st, //ST
+    vmc_ld_arg, //LD_ARG
+    vmc_st_arg, //ST_ARG
+    vmc_st_arg_omit, //ST_ARG_OMIT
+    vmc_ld_const, //LD_0
+    vmc_ld_const, //LD_1
+    vmc_ld_const, //LD_2
+    vmc_ld_const, //LD_3
+    vmc_st_const, //ST_0
+    vmc_st_const, //ST_1
+    vmc_st_const, //ST_2
+    vmc_st_const, //ST_3
+    vmc_ld_arg_const, //LD_ARG_0
+    vmc_ld_arg_const, //LD_ARG_1
+    vmc_ld_arg_const, //LD_ARG_2
+    vmc_ld_arg_const, //LD_ARG_3
+    vmc_st_arg_const, //ST_ARG_0
+    vmc_st_arg_const, //ST_ARG_1
+    vmc_st_arg_const, //ST_ARG_2
+    vmc_st_arg_const, //ST_ARG_3
+    vmc_ld_static, //LD_STATIC
+    vmc_ld_static, //LD_STATIC_W
+    vmc_st_static, //ST_STATIC
+    vmc_st_static, //ST_STATIC_W
+    vmc_ld_ar, //LD_AR
+    vmc_st_ar, //ST_AR
+    vmc_ld_nil, //LD_NIL
+    vmc_ld_true, //LD_TRUE
+    vmc_ld_false, //LD_FALSE
+    vmc_ld_func, //LD_FUNC
+    vmc_ld_func, //LD_FUNC_W
+    vmc_ld_plugin, //LD_PLUGIN
+    vmc_ld_plugin, //LD_PLUGIN_W
+    vmc_ld_func_far, //LD_FUNC_FAR
+    vmc_ld_func_far, //LD_FUNC_FAR_W
+    vmc_minus, //MINUS
+    vmc_not, //NOT
+    vmc_l_not, //L_NOT
+    vmc_calc, //ADD
+    vmc_calc, //SUB
+    vmc_calc, //MUL
+    vmc_calc, //DIV
+    vmc_calc, //MOD
+    vmc_calc, //OR
+    vmc_calc, //AND
+    vmc_calc, //R_SHIFT
+    vmc_calc, //L_SHIFT
+    vmc_calc, //EQ
+    vmc_calc, //NE
+    vmc_calc, //GT
+    vmc_calc, //LT
+    vmc_calc, //GE
+    vmc_calc, //LE
+    vmc_calc, //L_OR
+    vmc_calc, //L_AND
+    vmc_jmp, //JMP
+    vmc_jpf, //JPF
+    vmc_call, //CALL
+    vmc_call, //CALL_W
+    vmc_call_ind, //CALL_IND
+    vmc_ret, //RET
+    vmc_next, //NEXT
+    vmc_plugin, //PLUGIN
+    vmc_plugin, //PLUGIN_W
+    vmc_call_far, //CALL_FAR
+    vmc_call_far, //CALL_FAR_W
+    vmc_get_oc, //GET_OC
+    vmc_get_oc, //GET_OC_W
+    vmc_getter, //GETTER
+    vmc_getter, //GETTER_W
+    vmc_setter, //SETTER
+    vmc_setter, //SETTER_W
+    vmc_send, //SEND
+    vmc_send, //SEND_W
+    vmc_typeof, //TYPEOF
+    vmc_sizeof, //SIZEOF
+    vmc_switch, //SWITCH
+    vmc_inc, //INC
+    vmc_dec, //DEC
+    vmc_exit, //EXIT
+    vmc_bp //BP
+};

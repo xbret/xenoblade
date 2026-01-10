@@ -15,7 +15,6 @@ typedef struct PluginFuncData{
     PluginFunc func;
 } PluginFuncData;
 
-
 void vmInit();
 BOOL vmLink(u8* pData);
 BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs);
@@ -31,16 +30,18 @@ const char* vmArgStringGet(u32 r3, VMArg* r4);
 u32 vmArgFunctionGet(u32 r3, VMArg* r4);
 void* vmArgArrayGet(u32 r3, VMArg* r4);
 void* vmArgOCGet(u32 r3, VMArg* r4);
+u32 vmDataGet(VMThread* pThread, int startIndex, int length);
 
 void vmRetValSet(VMThread* pThread, VMArg* pArg);
 void vmWaitModeSet(VMThread* pThread);
 u32 vmWkIdxGet(VMThread* pThread);
 void vmWkIdxSet(VMThread* pThread, u32 r4);
 u32* vmWkGet(VMThread* pThread, u32 r4);
+
 void vmPluginExceptionThrow(VMThread* pThread);
 void vmOCExceptionThrow(VMThread* pThread);
 void vmExceptionProc(VMThread* pThread);
-void vmExceptionThrow(VMThread* pThread, u32 r4);
+void vmExceptionThrow(VMThread* pThread, u32 exception);
 
 u16 vmSysAtrPoolGet(SBHeader* data, u32 no);
 void* vmIdPoolGet(SBHeader* data, u32 no);
@@ -50,18 +51,15 @@ void* vmStringPoolGet(SBHeader* data, u32 no);
 void* vmLocalPoolGet(SBHeader* data, u32 no);
 void* vmFunctionPoolGet(SBHeader* data, u32 no);
 
-u32 vmSysAtrSearch(SBHeader* data, u32 param_2);
+u32 vmSysAtrSearch(SBHeader* data, u32 no);
 u32 vmPluginSearch(const char* param1, const char* param2);
 u32 vmOCSearch(const char* name);
 void vmPropertySearch();
 void vmSelectorSearch();
 u32 vmFuncFarSearch(const char* pPackageName, const char* pFuncName);
 
-
 void vmArgErr();
 void vmHalt();
-
-extern VMState vmState;
 
 #ifdef __cplusplus
 }

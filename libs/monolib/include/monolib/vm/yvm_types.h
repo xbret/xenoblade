@@ -42,10 +42,9 @@ typedef struct _sVMThread{
     int pc;
     int sp;
     int unk8;
-    int unkC;
+    int exception;
     int unk10;
-    VMArg unk14;
-    u8 unk1C[0x24 - 0x1C];
+    VMArg unk14[2];
     s16 unk24;
     u8 unk26[2];
     u32 unk28;
@@ -57,7 +56,7 @@ typedef struct _sVMThread{
     VMArg* unk3C;
     u32 unk40;
     u32 unk44;
-    u32 unk48;
+    int unk48;
     BOOL waitMode; //0x4C
     u32 wkIdx; //0x50
     u32 unk54;
@@ -94,7 +93,7 @@ typedef struct VMState{
     VMPlugin plugins[MAX_PLUGINS]; //0x4688
     VMOC ocs[MAX_OCS]; //0x4808
     u32 unk48C8;
-    u8 unk48CC[0x490C - 0x48CC];
+    u8 unk48CC[0x490C - 0x48CC]; //unused?
 } VMState;
 
 
@@ -204,12 +203,6 @@ typedef enum VMCOpcodeType{
     VMC_OP_BP //Breakpoint
 } VMCOpcodeType;
 
-typedef struct _sVMCOpcode{
-    const char* name; //0x0
-    s16 paramSize; //0x4
-    s16 unk6; //0x6
-} VMCOpcode;
-
 typedef enum _VMTypes {
     VM_TYPE_NIL,
     VM_TYPE_TRUE,
@@ -226,9 +219,27 @@ typedef enum _VMTypes {
     VM_MAX_TYPE = 11
 } VMTypes;
 
+typedef enum VMException {
+    VM_EXCEPTION_NONE,
+    VM_EXCEPTION_1,
+    VM_EXCEPTION_2,
+    VM_EXCEPTION_DIV_BY_ZERO,
+    VM_EXCEPTION_4,
+    VM_EXCEPTION_5,
+    VM_EXCEPTION_6,
+    VM_EXCEPTION_7,
+    VM_EXCEPTION_8,
+    VM_EXCEPTION_9,
+    VM_EXCEPTION_10,
+    VM_EXCEPTION_11,
+    VM_EXCEPTION_12,
+    VM_EXCEPTION_13,
+    VM_EXCEPTION_14
+} VMException;
+
 //Q20.12 fixed point macros (20 integer bits, 12 fraction bits)
-#define FIXED_TO_INT(x) x >> 12
-#define INT_TO_FIXED(x) x << 12
+#define FIXED_TO_INT(x) ((x) >> 12)
+#define INT_TO_FIXED(x) ((x) << 12)
 
 #ifdef __cplusplus
 }
