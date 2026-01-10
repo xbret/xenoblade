@@ -1,35 +1,40 @@
 #pragma once
 
 #include <types.h>
+#include "monolib/vm/sb_types.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
 #define MAX_PACKAGES 8 //Max number of packages (scripts) at once
 #define MAX_PLUGINS 48
 #define MAX_OCS 48
+#define MAX_THREADS 16
+#define STACK_SIZE 0x400
 
 #define VMC_MAX 96 //Max number of opcodes
 
 //Wtf is going on here ;-;
 #pragma pack(push, 1)
-typedef struct RetVal{
+typedef struct VMArg{
     u8 type; //0x0
     u8 unk1;
     union{
-        u8 bytes[6];
         struct{
             u16 unk2_U16;
-            int val; //0x4
+            union {
+                void* pointerVal;
+                u32 uintVal;
+                int intVal;   
+            } value; //0x4
         };
         struct{
             u32 unk2_U32;
             u16 unk6;
         };
     };
-} RetVal;
+} VMArg;
 #pragma pack(pop)
 
 #pragma pack(push, 1)
@@ -39,15 +44,20 @@ typedef struct _sVMThread{
     int unk8;
     int unkC;
     int unk10;
-    u8 unk14;
-    u8 unk15;
-    u32 unk16;
-    u16 unk1A;
-    u8 unk1C[0x34 - 0x1C];
-    u8* unk34;
-    u32 unk38;
-    RetVal* unk3C;
-    u8 unk40[0x4C - 0x40];
+    VMArg unk14;
+    u8 unk1C[0x24 - 0x1C];
+    s16 unk24;
+    u8 unk26[2];
+    u32 unk28;
+    s16 unk2C;
+    u8 unk2E[2];
+    SBHeader* scriptData; //0x30
+    u8* codeSection; //0x34
+    u8* staticVarsSection; //0x38
+    VMArg* unk3C;
+    u32 unk40;
+    u32 unk44;
+    u32 unk48;
     BOOL waitMode; //0x4C
     u32 wkIdx; //0x50
     u32 unk54;
@@ -56,7 +66,7 @@ typedef struct _sVMThread{
 #pragma pack (pop)
 
 typedef struct VMPackage{
-    void* scriptDataPtr; //0x0
+    SBHeader* scriptDataPtr; //0x0
     u32 unk4;
 } VMPackage;
 
@@ -78,17 +88,9 @@ typedef struct VMState{
     VMPackage packages[MAX_PACKAGES];
     VMThread* unk40;
     u32 unk44;
-    u32 unk48;
-    u32 unk4C;
-    u32 unk50;
-    u32 unk54;
-    u32 unk58;
-    u32 unk5C;
-    u32 unk60;
-    u32 unk64;
-    u8 unk68[0x88 - 0x68];
-    VMThread threads[8]; //0x88
-    u8 unk388[0x4688 - 0x388]; //unused debug related section?
+    VMThread* unk48[MAX_THREADS];
+    VMThread threads[MAX_THREADS]; //0x88
+    u8 stack[MAX_THREADS][STACK_SIZE]; //0x688
     VMPlugin plugins[MAX_PLUGINS]; //0x4688
     VMOC ocs[MAX_OCS]; //0x4808
     u32 unk48C8;
@@ -223,17 +225,6 @@ typedef enum _VMTypes {
 
     VM_MAX_TYPE = 11
 } VMTypes;
-
-typedef struct VMArg{
-    u8 type;
-    u8 unk1;
-    u16 unk2;
-    union {
-        void* pointerVal;
-        u32 uintVal;
-        int intVal;   
-    } value;
-}VMArg;
 
 //Q20.12 fixed point macros (20 integer bits, 12 fraction bits)
 #define FIXED_TO_INT(x) x >> 12

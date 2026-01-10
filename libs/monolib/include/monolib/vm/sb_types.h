@@ -53,6 +53,15 @@ typedef struct SBHeader{
 
 //Section specific structs
 
+//Function pool
+
+typedef struct FunctionPoolEntry{
+    u16 unk0;
+    u8 unk2[0xC - 0x2];
+    u32 unkC;
+    u8 unk10[0x14 - 0x10];
+} FunctionPoolEntry;
+
 //Plugin imports
 
 typedef struct PluginImportEntry{

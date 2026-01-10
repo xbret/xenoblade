@@ -10,9 +10,9 @@ static PluginFuncData sPluginPadFuncs[] = {
 
 int pad_get(VMThread* pThread) {
     int var_r3;
-    RetVal retval;
+    VMArg arg;
 
-    if (vmArgOmitChk(pThread, 1) != 0) {
+    if (vmArgOmitChk(pThread, 1)) {
         var_r3 = 1;
     } else {
         var_r3 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
@@ -20,23 +20,23 @@ int pad_get(VMThread* pThread) {
 
     switch (var_r3) {
     case 0:
-        retval.type = VM_TYPE_INT;
-        retval.val = CDeviceRemotePad_80447580()[0];
+        arg.type = VM_TYPE_INT;
+        arg.value.intVal = CDeviceRemotePad_80447580()[0];
         break;
     case 1:
-        retval.type = VM_TYPE_INT;
-        retval.val = CDeviceRemotePad_80447580()[1];
+        arg.type = VM_TYPE_INT;
+        arg.value.intVal = CDeviceRemotePad_80447580()[1];
         break;
     case 2:
-        retval.type = VM_TYPE_INT;
-        retval.val = CDeviceRemotePad_80447580()[2];
+        arg.type = VM_TYPE_INT;
+        arg.value.intVal = CDeviceRemotePad_80447580()[2];
         break;
     default:
         vmPluginExceptionThrow(pThread);
         return 0;
     }
 
-    vmRetValSet(pThread, &retval);
+    vmRetValSet(pThread, &arg);
     return 1;
 }
 
