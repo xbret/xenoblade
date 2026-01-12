@@ -11,39 +11,34 @@ extern "C" {
 #define MAX_PLUGINS 48
 #define MAX_OCS 48
 #define MAX_THREADS 16
-#define STACK_SIZE 0x400
+#define MAX_STACK_ENTRIES 128
 
 #define VMC_MAX 96 //Max number of opcodes
 
-//Wtf is going on here ;-;
 #pragma pack(push, 1)
 typedef struct VMArg{
     u8 type; //0x0
     u8 unk1;
-    union{
-        struct{
-            u16 unk2_U16;
-            union {
-                void* pointerVal;
-                u32 uintVal;
-                int intVal;   
-            } value; //0x4
-        };
-        struct{
-            u32 unk2_U32;
-            u16 unk6;
-        };
-    };
+    u16 unk2;
+    union {
+        void* pointerVal;
+        u32 uintVal;
+        int intVal;   
+    } value; //0x4
 } VMArg;
 #pragma pack(pop)
 
+typedef struct VMReg{
+    int pc; //0x0
+    int sp; //0x4
+    int unk8; //0x8
+    int exception; //0xC
+    int unk10; //0x10
+} VMReg;
+
 #pragma pack(push, 1)
 typedef struct _sVMThread{
-    int pc;
-    int sp;
-    int unk8;
-    int exception;
-    int unk10;
+    VMReg reg; //0x0
     VMArg unk14[2];
     s16 unk24;
     u8 unk26[2];
@@ -51,9 +46,9 @@ typedef struct _sVMThread{
     s16 unk2C;
     u8 unk2E[2];
     SBHeader* scriptData; //0x30
-    u8* codeSection; //0x34
-    u8* staticVarsSection; //0x38
-    VMArg* unk3C;
+    u8* codeData; //0x34
+    StaticVarsEntry* staticVarsEntries; //0x38
+    VMArg* stack; //0x3C
     u32 unk40;
     u32 unk44;
     int unk48;
@@ -64,23 +59,51 @@ typedef struct _sVMThread{
 } VMThread;
 #pragma pack (pop)
 
+typedef int(*PluginFunc)(VMThread* pThread);
+typedef int(*OCFunc)(VMThread* pThread, void* r4, int r5);
+
+typedef struct PluginFuncData{
+    const char* name; //0x0
+    PluginFunc func; //0x4
+} PluginFuncData;
+
+typedef struct OCProperty{
+    const char* name; //0x0
+    void* func1; //0x4
+    void* func2; //0x8
+    int nameLength; //0xC
+} OCProperty;
+
+typedef struct OCSelector{
+    const char* name; //0x0
+    void* func1; //0x4
+    int nameLength; //0x8
+} OCSelector;
+
+typedef struct OCData{
+    const char* name; //0x0
+    void* ctor; //0x4
+    OCProperty* properties; //0x8
+    OCSelector* selectors; //0xC
+} OCData;
+
+typedef struct UnkStruct_Selector{
+    u8 unk0[0xC];
+    UNKTYPE** unkC;
+} UnkStruct_Selector;
+
 typedef struct VMPackage{
     SBHeader* scriptDataPtr; //0x0
     u32 unk4;
 } VMPackage;
 
-typedef struct VMPlugin_UnkStruct1{
-    char* unk0;
-    u32 unk4;
-}VMPlugin_UnkStruct1;
-
 typedef struct VMPlugin{
     char* unk0;
-    VMPlugin_UnkStruct1* unk4;
+    PluginFuncData* unk4;
 } VMPlugin;
 
 typedef struct VMOC{
-    char** unk0;
+    OCData* unk0;
 } VMOC;
 
 typedef struct VMState{
@@ -89,10 +112,10 @@ typedef struct VMState{
     u32 unk44;
     VMThread* unk48[MAX_THREADS];
     VMThread threads[MAX_THREADS]; //0x88
-    u8 stack[MAX_THREADS][STACK_SIZE]; //0x688
+    VMArg threadStacks[MAX_THREADS][MAX_STACK_ENTRIES]; //0x688
     VMPlugin plugins[MAX_PLUGINS]; //0x4688
     VMOC ocs[MAX_OCS]; //0x4808
-    u32 unk48C8;
+    OCData* builtinOC; //0x48C8
     u8 unk48CC[0x490C - 0x48CC]; //unused?
 } VMState;
 
@@ -236,10 +259,6 @@ typedef enum VMException {
     VM_EXCEPTION_13,
     VM_EXCEPTION_14
 } VMException;
-
-//Q20.12 fixed point macros (20 integer bits, 12 fraction bits)
-#define FIXED_TO_INT(x) ((x) >> 12)
-#define INT_TO_FIXED(x) ((x) << 12)
 
 #ifdef __cplusplus
 }
