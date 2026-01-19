@@ -22,11 +22,6 @@ typedef struct SBSectionHeader{
     int offsetSize;  //0x8
 } SBSectionHeader;
 
-typedef union SBSectionOffset{
-    u32 offset;
-    SBSectionHeader* ptr;
-} SBSectionOffset;
-
 typedef struct SBHeader{
     char magic[4];                      //0x0
     u8 version;                         //0x4
@@ -46,8 +41,8 @@ typedef struct SBHeader{
     SBSectionHeader* functionImportsOfs; //0x28
     SBSectionHeader* staticVarsOfs;      //0x2C
     SBSectionHeader* localPoolOfs;       //0x30
-    SBSectionHeader* sysAttrPoolOfs;     //0x34
-    SBSectionHeader* userAttrPoolOfs;    //0x38
+    SBSectionHeader* sysAtrPoolOfs;      //0x34
+    SBSectionHeader* usrAtrPoolOfs;      //0x38
     SBSectionHeader* debugSymbolsOfs;    //0x3C
 } SBHeader;
 

@@ -28,9 +28,12 @@ copy with lwz/stw
 The volatile also is probably fake */
 static inline void copyArg(VMArg* lhs, volatile VMArg* rhs){
     lhs->type = rhs->type;
-    lhs->unk1 = rhs->unk1;
+    *(u8*)((u32)lhs + 1) = *(u8*)((u32)rhs + 1);
     *(u32*)&lhs->unk2 = *(u32*)&rhs->unk2;
     *(u16*)((u32)lhs + 6) = *(u16*)((u32)rhs + 6);
+
+    //Doesn't work :<
+    //*lhs = *rhs;
 }
 
 static inline void saveArg(VMThread* pThread, VMArg* pArg, int index){

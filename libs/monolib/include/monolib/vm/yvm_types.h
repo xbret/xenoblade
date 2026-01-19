@@ -15,10 +15,8 @@ extern "C" {
 
 #define VMC_MAX 96 //Max number of opcodes
 
-#pragma pack(push, 1)
 typedef struct VMArg{
     u8 type; //0x0
-    u8 unk1;
     u16 unk2;
     union {
         void* pointerVal;
@@ -26,7 +24,6 @@ typedef struct VMArg{
         int intVal;   
     } value; //0x4
 } VMArg;
-#pragma pack(pop)
 
 typedef struct VMReg{
     int pc; //0x0
@@ -36,7 +33,6 @@ typedef struct VMReg{
     int unk10; //0x10
 } VMReg;
 
-#pragma pack(push, 1)
 typedef struct _sVMThread{
     VMReg reg; //0x0
     VMArg unk14[2];
@@ -57,7 +53,6 @@ typedef struct _sVMThread{
     u32 unk54;
     u8 unk58[0x60 - 0x58];
 } VMThread;
-#pragma pack (pop)
 
 typedef int(*PluginFunc)(VMThread* pThread);
 typedef int(*OCFunc)(VMThread* pThread, void* r4, int r5);
@@ -118,7 +113,6 @@ typedef struct VMState{
     OCData* builtinOC; //0x48C8
     u8 unk48CC[0x490C - 0x48CC]; //unused?
 } VMState;
-
 
 typedef enum VMCResult{
     VMC_RESULT_0,

@@ -20,7 +20,7 @@ BOOL vmThreadIsAlive(u32 r3);
 BOOL vmThreadSleep(u32 r3);
 void vmThreadSleepAll(u8* pScriptData);
 
-VMArg* vmArgPtrGet(VMThread* pThread, u32 r4);
+VMArg* vmArgPtrGet(VMThread* pThread, int r4);
 BOOL vmArgOmitChk(VMThread* pThread, int r4);
 BOOL vmArgBoolGet(u32 r3, VMArg* r4);
 int vmArgIntGet(u32 r3, VMArg* r4);
@@ -42,13 +42,14 @@ void vmOCExceptionThrow(VMThread* pThread);
 void vmExceptionProc(VMThread* pThread);
 void vmExceptionThrow(VMThread* pThread, u32 exception);
 
-u16 vmSysAtrPoolGet(SBHeader* data, u32 no);
-void* vmIdPoolGet(SBHeader* data, u32 no);
-void* vmIntPoolGet(SBHeader* data, u32 no);
-void* vmFixedPoolGet(SBHeader* data, u32 no);
+const char* vmIdPoolGet(SBHeader* data, u32 no);
+int vmIntPoolGet(SBHeader* data, u32 no);
+int vmFixedPoolGet(SBHeader* data, u32 no);
 void* vmStringPoolGet(SBHeader* data, u32 no);
 void* vmLocalPoolGet(SBHeader* data, u32 no);
 void* vmFunctionPoolGet(SBHeader* data, u32 no);
+u16* vmSysAtrPoolGet(SBHeader* data, u32 no);
+u16* vmUsrAtrPoolGet(SBHeader* data, u32 no);
 
 u32 vmSysAtrSearch(SBHeader* data, u32 no);
 u32 vmPluginSearch(const char* param1, const char* param2);
@@ -58,7 +59,7 @@ u32 vmSelectorSearch(OCData* pOC, const char* pName);
 u32 vmFuncFarSearch(const char* pPackageName, const char* pFuncName);
 
 void encodeScramble(u8* data);
-void vmc_call_entry(VMThread* pThread, u32 r4, s16 r5, u32 r6);
+int vmc_call_entry(VMThread* pThread, u32 r4, s16 r5, u32 r6);
 
 void vmArgErr();
 void vmHalt();
