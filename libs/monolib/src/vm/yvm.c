@@ -373,8 +373,8 @@ inline void vmSchedule(){
 
 //Executes a single instruction on the given thread.
 inline int vmCodeExec(VMThread* pThread){
-    //Set as active thread?
-    vmState.unk40 = pThread;
+    //Set this thread as the active thread
+    vmState.activeThread = pThread;
 
     int pc = pThread->reg.pc;
     u8 code = pThread->codeData[pc];
@@ -397,9 +397,10 @@ inline int vmCodeExec(VMThread* pThread){
     return result;
 }
 
-VMThread* vmThreadSearch(u32 r3){
+//Finds a thread based on its ID.
+VMThread* vmThreadSearch(u32 id){
     for(int i = 0; i < MAX_THREADS; i++){
-        if (vmState.threads[i].scriptData != NULL && r3 == vmState.threads[i].unk44) {
+        if (vmState.threads[i].scriptData != NULL && id == vmState.threads[i].id) {
             return &vmState.threads[i];
         }
     }
@@ -407,8 +408,9 @@ VMThread* vmThreadSearch(u32 r3){
     return NULL;
 }
 
-void vmThreadRemove(u32 index){
-    VMThread* threadToRemove = vmThreadSearch(index);
+//Removes a thread based on its ID.
+void vmThreadRemove(u32 id){
+    VMThread* threadToRemove = vmThreadSearch(id);
 
     if (threadToRemove != NULL) {
         threadToRemove->scriptData = NULL;
@@ -422,7 +424,7 @@ inline void vmThreadExec(VMThread* pThread){
         result = vmCodeExec(pThread);
     }while(result == VMC_RESULT_0);
 
-    if(result == VMC_RESULT_3) vmThreadRemove(pThread->unk44);
+    if(result == VMC_RESULT_3) vmThreadRemove(pThread->id); //Search for the thread we already have... :)
 }
 
 inline bool someInline(VMThread* pThread){
@@ -433,7 +435,8 @@ void vmExec(){
     //Update the thread pointer list
     vmSchedule();
 
-    vmState.unk40 = NULL;
+    //Clear the active thread pointer
+    vmState.activeThread = NULL;
 
     //Update all active threads using the updated pointer list
     for(int i = 0; i < MAX_THREADS; i++){
@@ -481,7 +484,7 @@ inline u8 vmArgCntGet(VMThread* pThread){
 }
 
 //Not official
-inline void vmArgCntSet(VMThread* pThread, u8 value){
+inline void vmArgCntSet(VMThread* pThread, u32 value){
     ((u32*)&pThread->stack[pThread->reg.sp])[-1] = value; //???
 }
 
@@ -632,7 +635,7 @@ u32* vmWkGet(VMThread* pThread, u32 r4){
 }
 
 void vmPluginExceptionThrow(VMThread* pThread){
-    vmExceptionThrow(pThread, VM_EXCEPTION_1);
+    vmExceptionThrow(pThread, VM_EXCEPTION_PLUGIN);
 }
 
 void vmBuiltinOCRegist(OCData* pOC){
@@ -679,7 +682,7 @@ BOOL vmOCRegist(OCData* pOC){
 void vmOCExceptionThrow(VMThread* pThread){
     VMArg* arg = &pThread->stack[pThread->reg.sp];
     saveArg(pThread, arg, 0);
-    vmExceptionThrow(pThread, VM_EXCEPTION_2);
+    vmExceptionThrow(pThread, VM_EXCEPTION_OC);
 }
 
 void* vmOCPropertyGet(VMThread* pThread){
@@ -713,7 +716,7 @@ BOOL vmThreadIsFinish(){
 }
 */
 
-BOOL vmThreadGetOC(VMThread* pThread, int r4, UNKTYPE* r5){
+BOOL vmThreadGetOC(VMThread* pThread, int r4, u32* outId){
 #pragma unused(pThread)
 
     int packageIndex = r4 >> 16;
@@ -722,7 +725,7 @@ BOOL vmThreadGetOC(VMThread* pThread, int r4, UNKTYPE* r5){
     VMThread* thread = vmThreadCreate(vmState.packages[packageIndex].scriptDataPtr, otherIndex);
     if(thread != NULL){
         setThreadSleepFlag(thread, TRUE);
-        *(u32*)r5 = thread->unk44;
+        *outId = thread->id;
         return TRUE;
     }
 
@@ -876,14 +879,14 @@ inline void* poolEntryGet(volatile SBSectionHeader* sectionHeader, u32 no){
 
 inline void* poolEntryOfsGet(SBSectionHeader* sectionHeader, u32 no){
     u8* entriesPtr = (u8*)sectionHeader + sectionHeader->entriesOffset;
-    u32 entryOffset = sectionHeader->offsetSize * no;
-    return entriesPtr + entryOffset;
+    u32* uintPtr = (u32*)entriesPtr;
+    return &uintPtr[no];
 }
 
 inline u32 poolEntryGetU32(SBSectionHeader* sectionHeader, u32 no){
     u8* entriesPtr = (u8*)sectionHeader + sectionHeader->entriesOffset;
-    u32 entryOffset = sectionHeader->offsetSize * no;
-    return *(u32*)(entriesPtr + entryOffset);
+    u32* uintPtr = (u32*)entriesPtr;
+    return uintPtr[no];
 }
 
 inline const char* vmIdPoolGet(SBHeader* data, u32 no){
@@ -1056,7 +1059,7 @@ VMThread* vmThreadCreate(SBHeader* param1, u32 param2){
             thread->staticVarsEntries = getSectionEntriesPtr(param1->staticVarsOfs);
             thread->stack = vmState.threadStacks[i];
             thread->unk40 = 0x80; //0xC8
-            thread->unk44 = vmState.unk44++; //0xCC
+            thread->id = vmState.nextThreadId++;
             thread->unk48 = 0; //0xD0
             thread->waitMode = FALSE; //0xD4
             thread->wkIdx = 0; //0xD8
@@ -1071,71 +1074,69 @@ VMThread* vmThreadCreate(SBHeader* param1, u32 param2){
     return NULL;
 }
 
-//Opcode functions
+inline int getOpcodeParam(VMThread* pThread, u8 code){
+    int pc = pThread->reg.pc;
+    return vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
+}
 
-inline void vmc_inc_pc(VMThread* pThread, u8 code){
+inline void incrementPc(VMThread* pThread, u8 code){
     //Increment PC by the number of bytes for the parameter plus 1 for the opcode byte
     pThread->reg.pc += vmcOpcodes[code].paramSize + 1;
 }
 
+
+//Opcode functions
+
 int vmc_nop(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return 0;
+    incrementPc(pThread, code);
+    return VMC_RESULT_0;
 }
 
 int vmc_const(VMThread* pThread, u8 code){
     VMArg* r7 = vmStackNextGet(pThread);
     r7->type = VM_TYPE_INT;
-    r7->value.uintVal = code - 1;
-    vmc_inc_pc(pThread, code);
-    return 0;
+    int index = code - VMC_OP_CONST_0;
+    r7->value.intVal = index;
+    incrementPc(pThread, code);
+    return VMC_RESULT_0;
 }
 
 int vmc_const_i(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
-
+    int val = getOpcodeParam(pThread, code);
     VMArg* arg = vmStackNextGet(pThread);
-    arg->value.uintVal = val;
+    arg->value.intVal = val;
     arg->type = VM_TYPE_INT;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_pool_int(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 no = vmDataGet(pThread, pc + 1, size);
+    int no = getOpcodeParam(pThread, code);
     int val = vmIntPoolGet((SBHeader*)pThread->scriptData, no);
 
     VMArg* arg = vmStackNextGet(pThread);
     arg->value.intVal = val;
     arg->type = VM_TYPE_INT;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_pool_fixed(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 no = vmDataGet(pThread, pc + 1, size);
+    int no = getOpcodeParam(pThread, code);
     int val = vmFixedPoolGet((SBHeader*)pThread->scriptData, no);
 
     VMArg* arg = vmStackNextGet(pThread);
     arg->value.intVal = val;
     arg->type = VM_TYPE_FIXED;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_pool_string(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 no = vmDataGet(pThread, pc + 1, size);
+    int no = getOpcodeParam(pThread, code);
     const char* val = vmStringPoolGet((SBHeader*)pThread->scriptData, no);
 
     VMArg* arg = vmStackNextGet(pThread);
@@ -1143,71 +1144,62 @@ int vmc_pool_string(VMThread* pThread, u8 code){
     arg->unk2 = strlen(val);
     arg->type = VM_TYPE_INT;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
+    int val = getOpcodeParam(pThread, code);
     vmPush(pThread, &pThread->stack[pThread->reg.unk8 + val]);
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_st(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
+    int val = getOpcodeParam(pThread, code);
     copyArg(&pThread->stack[pThread->reg.unk8 + val], vmStackPrevGet(pThread));
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_arg(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
+    int val = getOpcodeParam(pThread, code);
     vmPush(pThread, &pThread->stack[pThread->reg.unk8 - (val + 4)]);
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_st_arg(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
+    int val = getOpcodeParam(pThread, code);
     copyArg(&pThread->stack[pThread->reg.unk8 - (val + 4)], vmStackPrevGet(pThread));
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_st_arg_omit(VMThread* pThread, u8 code){
-    int size = vmcOpcodes[code].paramSize;
-    int pc = pThread->reg.pc;
-    u32 val = vmDataGet(pThread, pc + 1, size);
-
-    int temp = -(val + 4);
-    VMArg* puVar4 = &pThread->stack[pThread->reg.unk8 + temp];
-    VMArg* puVar2 = vmStackPrevGet(pThread);
+    int val = getOpcodeParam(pThread, code);
+    int temp = val + 4;
+    temp = -temp;
+    int index = pThread->reg.unk8 + temp;
+    VMArg* arg1 = &pThread->stack[index];
+    VMArg* arg2 = vmStackPrevGet(pThread);
     
-    if(puVar4->type == VM_TYPE_NIL){
-        copyArg(puVar4, puVar2);
+    if(arg1->type == VM_TYPE_NIL){
+        copyArg(arg1, arg2);
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_const(VMThread* pThread, u8 code){
     int offset = code - VMC_OP_LD_0;
     vmPush(pThread, &pThread->stack[pThread->reg.unk8 + offset]);
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1215,7 +1207,7 @@ int vmc_st_const(VMThread* pThread, u8 code){
     int offset = code - VMC_OP_ST_0;
     copyArg(&pThread->stack[pThread->reg.unk8 + offset], vmStackPrevGet(pThread));
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1224,7 +1216,7 @@ int vmc_ld_arg_const(VMThread* pThread, u8 code){
     offset = -offset; //Won't match unless it's like this for some dumb reason
     vmPush(pThread, &pThread->stack[pThread->reg.unk8 + offset]);
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1233,33 +1225,30 @@ int vmc_st_arg_const(VMThread* pThread, u8 code){
     offset = -offset; //Won't match unless it's like this for some dumb reason
     copyArg(&pThread->stack[pThread->reg.unk8 + offset], vmStackPrevGet(pThread));
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_static(VMThread* pThread, u8 code){
-    int pc = pThread->reg.pc;
-    int iVar1 = vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
+    int iVar1 = getOpcodeParam(pThread, code);
     vmPush(pThread, (VMArg*)&pThread->staticVarsEntries[iVar1]);
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_st_static(VMThread* pThread, u8 code){
-    int pc = pThread->reg.pc;
-    int iVar1 = vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
+    int iVar1 = getOpcodeParam(pThread, code);
     copyArg(&pThread->stack[pThread->reg.unk8 + iVar1], vmStackPrevGet(pThread));
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 static BOOL getArray(VMThread* pThread, VMArg* r4, int r5, void** pArray){
-
     if(r4->type != VM_TYPE_ARRAY){
         saveArg(pThread, r4, 0);
-        vmExceptionThrow(pThread, 4);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_ARRAY);
         return FALSE;
     }
 
@@ -1267,7 +1256,7 @@ static BOOL getArray(VMThread* pThread, VMArg* r4, int r5, void** pArray){
         saveArg(pThread, r4, 0);
         pThread->unk14[1].type = VM_TYPE_INT;
         pThread->unk14[1].value.intVal = r5;
-        vmExceptionThrow(pThread, 5);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INDEX_OOB);
         return FALSE;
     }
 
@@ -1293,14 +1282,14 @@ int vmc_ld_ar(VMThread* pThread, u8 code){
     }
 
     vmPush(pThread, arg);
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 static BOOL setArray(VMThread* pThread, VMArg* r4, int r5, VMArg* value){
     if(r4->type != VM_TYPE_ARRAY){
         saveArg(pThread, r4, 0);
-        vmExceptionThrow(pThread, 4);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_ARRAY);
         return FALSE;
     }
 
@@ -1308,7 +1297,7 @@ static BOOL setArray(VMThread* pThread, VMArg* r4, int r5, VMArg* value){
         saveArg(pThread, r4, 0);
         pThread->unk14[1].type = VM_TYPE_INT;
         pThread->unk14[1].value.intVal = r5;
-        vmExceptionThrow(pThread, 5);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INDEX_OOB);
         return FALSE;
     }
 
@@ -1322,7 +1311,7 @@ static BOOL setArray(VMThread* pThread, VMArg* r4, int r5, VMArg* value){
             saveArg(pThread, r4, 0);
             pThread->unk14[1].type = VM_TYPE_INT;
             pThread->unk14[1].value.intVal = r5;
-            vmExceptionThrow(pThread, 5);
+            vmExceptionThrow(pThread, VM_EXCEPTION_INDEX_OOB);
             return FALSE;
         }
 
@@ -1334,7 +1323,7 @@ static BOOL setArray(VMThread* pThread, VMArg* r4, int r5, VMArg* value){
             saveArg(pThread, r4, 0);
             pThread->unk14[1].type = VM_TYPE_INT;
             pThread->unk14[1].value.intVal = r5;
-            vmExceptionThrow(pThread, 5);
+            vmExceptionThrow(pThread, VM_EXCEPTION_INDEX_OOB);
             return FALSE;
         }
 
@@ -1353,68 +1342,68 @@ int vmc_st_ar(VMThread* pThread, u8 code){
         return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_nil(VMThread* pThread, u8 code){
     int sp = pThread->reg.sp++;
     pThread->stack[sp].type = VM_TYPE_NIL;
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_true(VMThread* pThread, u8 code){
     int sp = pThread->reg.sp++;
     pThread->stack[sp].type = VM_TYPE_TRUE;
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_false(VMThread* pThread, u8 code){
     int sp = pThread->reg.sp++;
     pThread->stack[sp].type = VM_TYPE_FALSE;
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_func(VMThread* pThread, u8 code){
-    int uVar2 = vmDataGet(pThread,pThread->reg.pc + 1, vmcOpcodes[code].paramSize);
+    int param = getOpcodeParam(pThread, code);
     VMArg* puVar3 = vmStackNextGet(pThread);
     puVar3->type = VM_TYPE_FUNCTION;
     s16 sVar1 = pThread->unk2C;
-    puVar3->value.intVal = uVar2;
+    puVar3->value.intVal = param;
     puVar3->unk2 = sVar1;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_plugin(VMThread* pThread, u8 code){
     SBHeader* header = (SBHeader*)pThread->scriptData;
     SBSectionHeader* pluginImports = header->pluginImportsOfs;
-    int uVar2 = vmDataGet(pThread,pThread->reg.pc + 1, vmcOpcodes[code].paramSize);
+    int val = getOpcodeParam(pThread, code);
     VMArg* puVar3 = vmStackNextGet(pThread);
     puVar3->type = VM_TYPE_PLUGIN;
-    PluginImportEntry* entry = poolEntryOfsGet(pluginImports, uVar2);
+    PluginImportEntry* entry = poolEntryOfsGet(pluginImports, val);
     puVar3->unk2 = entry->unk0;
     puVar3->value.intVal = entry->unk2;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_ld_func_far(VMThread* pThread, u8 code){
     SBHeader* header = (SBHeader*)pThread->scriptData;
     SBSectionHeader* funcImports = header->functionImportsOfs;
-    int uVar2 = vmDataGet(pThread,pThread->reg.pc + 1, vmcOpcodes[code].paramSize);
+    int uVar2 = getOpcodeParam(pThread, code);
     VMArg* puVar3 = vmStackNextGet(pThread);
     puVar3->type = VM_TYPE_FUNCTION;
     FunctionImportEntry* entry = poolEntryOfsGet(funcImports, uVar2);
     puVar3->unk2 = entry->unk0;
     puVar3->value.intVal = entry->unk2;
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1432,11 +1421,11 @@ int vmc_minus(VMThread* pThread, u8 code){
             break;
         default:
             saveArg(pThread, arg, 0);
-            vmExceptionThrow(pThread, 6);
+            vmExceptionThrow(pThread, VM_EXCEPTION_MATH_INVALID_ARG);
             return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1447,11 +1436,11 @@ int vmc_not(VMThread* pThread, u8 code){
         arg->value.intVal = ~arg->value.intVal;
     }else{
         saveArg(pThread, arg, 0);
-        vmExceptionThrow(pThread, VM_EXCEPTION_6);
+        vmExceptionThrow(pThread, VM_EXCEPTION_MATH_INVALID_ARG);
         return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1467,11 +1456,11 @@ int vmc_l_not(VMThread* pThread, u8 code){
             break;
         default:
             saveArg(pThread, arg, 0);
-            vmExceptionThrow(pThread, VM_EXCEPTION_6);
+            vmExceptionThrow(pThread, VM_EXCEPTION_MATH_INVALID_ARG);
             return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1762,20 +1751,22 @@ int vmc_calc(VMThread* pThread, u8 code){
             //Invalid argument
             saveArg(pThread, arg1, 0);
             saveArg(pThread, arg2, 1);
-            vmExceptionThrow(pThread, VM_EXCEPTION_7);
+            vmExceptionThrow(pThread, VM_EXCEPTION_CALC_INVALID_ARG);
         }
 
         return FALSE;
     }
 
     vmPush(pThread, &result);
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_jmp(VMThread* pThread, u8 code){
+    //int newPc = getOpcodeParam(pThread, code);
+
     int pc = pThread->reg.pc;
-    u32 newPc = vmDataGet(pThread,pc + 1, vmcOpcodes[code].paramSize);
+    int newPc = vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
     
     //Sign extend to 32 bits if negative
     if ((newPc & 0x8000) != 0) {
@@ -1787,6 +1778,26 @@ int vmc_jmp(VMThread* pThread, u8 code){
 }
 
 int vmc_jpf(VMThread* pThread, u8 code){
+    VMArg* arg = vmStackPrevGet(pThread);
+
+    if(arg->type == VM_TYPE_FALSE){
+        int pc = pThread->reg.pc;
+        int newPC = vmDataGet(pThread, pc + 1,(int)vmcOpcodes[code].paramSize);
+
+        //Sign extend to 32 bits
+        //TODO: probably a macro/inline
+        if((newPC & 0x8000) != 0){
+            newPC |= 0xFFFF0000;
+        }
+        pThread->reg.pc += newPC;
+    }else if (arg->type == VM_TYPE_TRUE){
+        incrementPc(pThread, code);
+    }else{
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_JPF_INVALID_ARG);
+        return VMC_RESULT_0;
+    }
+
     return VMC_RESULT_0;
 }
 
@@ -1797,26 +1808,136 @@ int vmc_call(VMThread* pThread, u8 code){
 }
 
 int vmc_call_entry(VMThread* pThread, u32 r4, s16 r5, u32 r6){
-    return VMC_RESULT_0;
+    FunctionPoolEntry* poolEntry = vmFunctionPoolGet(pThread->scriptData, r4);
+    int uVar11 = vmArgCntGet(pThread);
 
+    if (poolEntry->unk4 > ((uVar11 >> 8) & 0xFF)) {
+        vmExceptionThrow(pThread, VM_EXCEPTION_8);
+        return VMC_RESULT_0;
+    }
+
+    int iVar10 = poolEntry->unk2 - (uVar11 & 0xFF);
+
+    if(iVar10 > 0){
+        int iVar12 = 0;
+        int puVar8 = 0;
+
+        if (poolEntry->unk2 != -1) {
+            do {
+                puVar8 -= (iVar12 + 1);
+                if (iVar12 < (uVar11 & 0xFF) + 1) {
+                  VMArg* pVVar9 = &pThread->stack[puVar8 + iVar10];
+                  int iVar13 = 2;
+                  VMArg* pVVar7 = &pThread->stack[puVar8];
+                  copyArg(pVVar9, pVVar7);
+                }else{
+                  pThread->stack[puVar8 + iVar10].type = 0;
+                }
+
+                puVar8 = pThread->reg.sp;
+                if(poolEntry->unk2 + 1 <= iVar12 + 1) break;
+                iVar12++;
+            }while(true);
+        }
+
+        pThread->reg.sp = puVar8 + iVar10;
+        ((u32*)&pThread->stack[puVar8 + iVar10])[-1]  = (poolEntry->unk2 & 0xFF) | (uVar11 & 0xFF00);
+    }
+
+    VMArg* puVar4 = vmStackNextGet(pThread);
+    puVar4->type = VM_TYPE_SYS;
+    puVar4->unk2 = 0;
+    puVar4->value.intVal = pThread->reg.unk8;
+
+    VMArg* uVar14 = vmStackNextGet(pThread);
+    uVar14->type = VM_TYPE_SYS;
+    uVar14->unk2 = r5;
+    uVar14->value.intVal = r6;
+
+    pThread->reg.unk8 = pThread->reg.sp;
+    pThread->reg.pc = uVar14[1].value.intVal; //is this right?
+    u16 uVar11_1 = *(u16*)(&uVar14[1].type); //???
+
+    if (uVar11_1 != 0xFFFF) {
+        LocalPoolEntry* piVar5 = vmLocalPoolGet(pThread->scriptData,uVar11_1);
+        memcpy(&pThread->stack[pThread->reg.unk8], getRelativePtr(piVar5),piVar5->unk4 * sizeof(VMArg));
+        pThread->reg.sp += piVar5->unk4;
+
+        for(int i = 0; i < piVar5->unk4; i++){
+            VMArg* pVVar7 = &pThread->stack[pThread->reg.unk8 + iVar10];
+            if (pVVar7->type == VM_TYPE_ARRAY) {
+                pVVar7->value.uintVal = (pVVar7->value.uintVal + pThread->reg.unk8) - 0x80000000;
+            }
+        }
+    }
+
+    return VMC_RESULT_0;
 }
 
-int vmc_call_far_entry(VMThread* pThread, u8 code){
-    return VMC_RESULT_0;
+int vmc_call_far_entry(VMThread* pThread, u16 param2, u16 param3, int param4){
+    s16 sVar1 = pThread->unk2C;
+    pThread->unk2C = param2;
+    pThread->scriptData = vmState.packages[param2].scriptDataPtr;
+    pThread->codeData = getRelativePtr(pThread->scriptData->codeOfs);
+    pThread->staticVarsEntries = getRelativePtr(pThread->scriptData->staticVarsOfs);
+    return vmc_call_entry(pThread, param3, sVar1, param4);
 }
 
-int vmc_plugin_sub(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+inline int vmc_plugin_sub(VMThread* pThread, u8 code, int param3, int param4){
+    //pThread = r23, param3 = r27, param4 = r3
+    if(pThread->reg.exception != 0){
+        return VMC_RESULT_0;
+    }
+
+    if(pThread->waitMode == FALSE){
+        if(param4 > 1 || ((param3 >> 8) & 0xFF) > param4){
+            vmExceptionThrow(pThread, VM_EXCEPTION_8);
+            return VMC_RESULT_0;
+        }
+
+        int r3 = pThread->reg.sp - 1;
+        pThread->reg.sp -= param4 + (param3 & 0xFF) + 1;
+
+        if(((param3 >> 8) & 0xFF) != 0){
+            vmPush(pThread, &pThread->stack[r3]);
+        }
+
+        pThread->reg.pc += vmcOpcodes[code].paramSize + 1;
+
+        return VMC_RESULT_0;
+
+    }
+
+    return VMC_RESULT_1;
 }
 
-int vmc_plugin_entry(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+int vmc_plugin_entry(VMThread* pThread, u8 code, u16 param3, u16 param4){
+    int uVar2 = vmArgCntGet(pThread);
+
+    pThread->waitMode = FALSE;
+
+    VMPlugin* plugin = &vmState.plugins[param3];
+    int result = plugin->unk4[param4].func(pThread);
+    return vmc_plugin_sub(pThread, code, uVar2, result); //needs checking
 }
 
 int vmc_call_ind(VMThread* pThread, u8 code){
-    return VMC_RESULT_0;
+    VMArg* arg = vmStackPrevGet(pThread);
+
+    if(arg->type == VM_TYPE_FUNCTION){
+        if(pThread->unk2C != arg->unk2){
+            return vmc_call_far_entry(pThread, arg->unk2, arg->value.intVal, 0);
+        }
+        return vmc_call_entry(pThread,arg->value.intVal,pThread->unk2C,pThread->reg.pc + 1);
+    }
+
+    if(arg->type != VM_TYPE_PLUGIN){
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread,VM_EXCEPTION_CALLIND_INVALID_ARG);
+        return VMC_RESULT_0;
+    }
+
+    return vmc_plugin_entry(pThread, code, 0, 0); //needs checking
 }
 
 int vmc_ret(VMThread* pThread, u8 code){
@@ -1847,37 +1968,150 @@ int vmc_ret(VMThread* pThread, u8 code){
 }
 
 int vmc_next(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_2;
 }
 
 int vmc_plugin(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+    SBSectionHeader* pSVar3 = pThread->scriptData->pluginImportsOfs;
+    PluginImportEntry* entryPtr = getRelativePtr(pThread->scriptData->pluginImportsOfs);
+    int pc = pThread->reg.pc;
+    int index = vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
+    return vmc_plugin_entry(pThread, code, entryPtr[index].unk0, entryPtr[index].unk2);
 }
 
 int vmc_call_far(VMThread* pThread, u8 code){
-    return VMC_RESULT_0;
+    SBSectionHeader* pSVar4 = pThread->scriptData->functionImportsOfs;
+    int pc = pThread->reg.pc;
+    FunctionImportEntry* funcImport = getRelativePtr(pSVar4);
+    int iVar1 = vmDataGet(pThread,pc + 1,vmcOpcodes[code].paramSize);
+    int address = pThread->reg.pc + vmcOpcodes[code].paramSize + 1;
+    return vmc_call_far_entry(pThread, funcImport[iVar1].unk0, funcImport[iVar1].unk2, address);
 }
 
 int vmc_get_oc(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+    int pc = pThread->reg.pc;
+    int no = vmDataGet(pThread,pc + 1, vmcOpcodes[code].paramSize);
+    SBSectionHeader* ocImports = pThread->scriptData->ocImportsOfs;
+    int uVar4 = vmArgCntGet(pThread);
+
+    pThread->waitMode = FALSE;
+
+    OCImportEntry* entryPtr = poolEntryOfsGet(ocImports, no);
+    u16 ocIndex = entryPtr->unk0;
+    OCCtorFunc func = vmState.ocs[ocIndex].unk0->ctor;
+    int result = func(pThread, 0, ocIndex);
+
+    return vmc_plugin_sub(pThread, code, uVar4, result);
 }
 
 int vmc_getter(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
+    int pc = pThread->reg.pc;
+    int no = vmDataGet(pThread, pc + 1,(int)vmcOpcodes[code].paramSize);
+
+    VMArg* pVVar5 = vmStackPrevGet(pThread);
+
+    if (pVVar5->type != VM_TYPE_OC) {
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_OC);
+        return VMC_RESULT_0;
+    }
+
+    OCData* ocData = vmState.ocs[pVVar5->unk2].unk0;
+    const char* name = vmIdPoolGet(pThread->scriptData, no);
+    int propertyIndex = vmPropertySearch(ocData, name);
+
+    if (propertyIndex < 0) {
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_PROPERTY);
+        return VMC_RESULT_0;
+    }
+
+    OCGetSetFunc func = ocData->properties[propertyIndex].getFunc;
+
+    if(func != NULL){
+        func(pThread, pVVar5->value.intVal, ocData);
+    }else{
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread,VM_EXCEPTION_INVALID_GETSET_FUNC);
+        return VMC_RESULT_0;
+    }
+
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_setter(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
+    int pc = pThread->reg.pc;
+    int no = vmDataGet(pThread, pc + 1,(int)vmcOpcodes[code].paramSize);
+
+    VMArg* pVVar5 = vmStackPrevGet(pThread);
+
+    if (pVVar5->type != VM_TYPE_OC) {
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_OC);
+        return VMC_RESULT_0;
+    }
+
+    OCData* ocData = vmState.ocs[pVVar5->unk2].unk0;
+    const char* name = vmIdPoolGet(pThread->scriptData, no);
+    int propertyIndex = vmPropertySearch(ocData, name);
+
+    if (propertyIndex < 0) {
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_INVALID_PROPERTY);
+        return VMC_RESULT_0;
+    }
+
+    OCGetSetFunc func = ocData->properties[propertyIndex].setFunc;
+
+    if(func != NULL){
+        func(pThread, pVVar5->value.intVal, ocData);
+    }else{
+        saveArg(pThread, pVVar5, 0);
+        vmExceptionThrow(pThread,VM_EXCEPTION_INVALID_GETSET_FUNC);
+        return VMC_RESULT_0;
+    }
+
+    pThread->reg.sp--;
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_send(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
-    return VMC_RESULT_0;
+    int pc = pThread->reg.pc;
+    int no = vmDataGet(pThread, pc + 1, vmcOpcodes[code].paramSize);
+    VMArg* arg = vmStackPrevGet(pThread);
+
+    if (arg->type != VM_TYPE_OC) {
+      saveArg(pThread, arg, 0);
+      vmExceptionThrow(pThread,VM_EXCEPTION_INVALID_OC);
+      return VMC_RESULT_0;
+    }
+
+    int uVar10 = pThread->stack[pThread->reg.sp - 1].value.intVal;
+    OCData* iVar7 = vmState.ocs[arg->unk2].unk0;
+    const char* funcName = vmIdPoolGet(pThread->scriptData, no);
+    int selectorId = vmSelectorSearch(iVar7,funcName);
+    OCData* pvVar3 = vmState.builtinOC;
+    int result = VMC_RESULT_0;
+
+    if (selectorId < 0) {
+      if (vmState.builtinOC == NULL || vmSelectorSearch(vmState.builtinOC, funcName) < 0) {
+        saveArg(pThread, arg, 0);
+        vmExceptionThrow(pThread, VM_EXCEPTION_SEND_ERROR);
+        return VMC_RESULT_0;
+      }
+    }
+
+    OCSelectorFunc func = pvVar3->selectors->func;
+    pThread->waitMode = FALSE;
+    int uVar6 = func(pThread,arg->value.intVal);
+    result = vmc_plugin_sub(pThread, code, uVar10, uVar6);
+
+    if(result == VMC_RESULT_1) pThread->reg.sp++;
+
+    return result;
 }
 
 int vmc_typeof(VMThread* pThread, u8 code){
@@ -1887,7 +2121,7 @@ int vmc_typeof(VMThread* pThread, u8 code){
     arg->type = VM_TYPE_STRING;
     arg->unk2 = strlen(typeName);
     arg->value.pointerVal = (void*)typeName;
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1900,12 +2134,40 @@ int vmc_sizeof(VMThread* pThread, u8 code){
 
     arg->type = VM_TYPE_INT;
     arg->value.intVal = size;
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
 int vmc_switch(VMThread* pThread, u8 code){
-    vmc_inc_pc(pThread, code);
+    int pc = pThread->reg.pc;
+    int param = vmDataGet(pThread,pc + 1,vmcOpcodes[code].paramSize);
+    VMArg* arg = vmStackPrevGet(pThread);
+    int caseNum = arg->value.intVal;
+    int paramsOffset = pThread->reg.pc + 6;
+    int i = 0;
+    int endIndex = param;
+
+    //Do a binary search to quickly find the right case
+    while(i < endIndex){
+        int midIndex = (i + endIndex)/2;
+        int offset = paramsOffset + (midIndex * 8);
+        int midCaseNum = vmDataGet(pThread,offset,4);
+
+        if(caseNum > midCaseNum){
+            //Keep right half
+            i = midIndex + 1;
+        }else if(caseNum < midCaseNum){
+            //Keep left half
+            endIndex = i;
+        }else{
+            //The case was found, jump to it
+            pThread->reg.pc += vmDataGet(pThread,offset + 4,4);
+            return VMC_RESULT_0;
+        }
+    }
+
+    //No case was found
+    pThread->reg.pc += vmDataGet(pThread,paramsOffset - 4,4);
     return VMC_RESULT_0;
 }
 
@@ -1916,11 +2178,11 @@ int vmc_inc(VMThread* pThread, u8 code){
         arg->value.intVal++;
     }else{
         saveArg(pThread, arg, 0);
-        vmExceptionThrow(pThread, VM_EXCEPTION_6);
+        vmExceptionThrow(pThread, VM_EXCEPTION_MATH_INVALID_ARG);
         return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1931,11 +2193,11 @@ int vmc_dec(VMThread* pThread, u8 code){
         arg->value.intVal--;
     }else{
         saveArg(pThread, arg, 0);
-        vmExceptionThrow(pThread, VM_EXCEPTION_6);
+        vmExceptionThrow(pThread, VM_EXCEPTION_MATH_INVALID_ARG);
         return VMC_RESULT_0;
     }
 
-    vmc_inc_pc(pThread, code);
+    incrementPc(pThread, code);
     return VMC_RESULT_0;
 }
 
@@ -1952,7 +2214,8 @@ int vmc_bp(VMThread* pThread, u8 code){
 /* This function is meant to print various information on the current state of the VM,
 then halt. However, all of this is stubbed for release, so this function does nothing. */
 void vmHalt(){
-    VMThread* thread = vmState.unk40;
+    //Get the currently running thread
+    VMThread* thread = vmState.activeThread;
 
     //Print instruction at current address
     vmCodePut(thread, thread->codeData[thread->reg.pc]);
@@ -1975,7 +2238,8 @@ void vmHalt(){
 
 //Error function called when an invalid argument is found
 void vmArgErr(){
-    VMThread* thread = vmState.unk40;
+    //Get the currently running thread
+    VMThread* thread = vmState.activeThread;
     u8 r3 = thread->codeData[thread->reg.pc];
 
     switch(r3){

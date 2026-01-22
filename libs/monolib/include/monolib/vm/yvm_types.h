@@ -7,10 +7,13 @@
 extern "C" {
 #endif
 
+//Misc constants
+
 #define MAX_PACKAGES 8 //Max number of packages (scripts) at once
 #define MAX_PLUGINS 48
 #define MAX_OCS 48
 #define MAX_THREADS 16
+#define MAX_BREAKPOINTS 4
 #define MAX_STACK_ENTRIES 128
 
 #define VMC_MAX 96 //Max number of opcodes
@@ -46,7 +49,7 @@ typedef struct _sVMThread{
     StaticVarsEntry* staticVarsEntries; //0x38
     VMArg* stack; //0x3C
     u32 unk40;
-    u32 unk44;
+    u32 id; //0x44
     int unk48;
     BOOL waitMode; //0x4C
     u32 wkIdx; //0x50
@@ -54,8 +57,13 @@ typedef struct _sVMThread{
     u8 unk58[0x60 - 0x58];
 } VMThread;
 
-typedef int(*PluginFunc)(VMThread* pThread);
-typedef int(*OCFunc)(VMThread* pThread, void* r4, int r5);
+//Forward declaration
+struct OCData;
+
+typedef int (*PluginFunc)(VMThread* pThread);
+typedef int (*OCCtorFunc)(VMThread* pThread, void* r4, int r5);
+typedef int (*OCSelectorFunc)(VMThread* pThread, int r4);
+typedef void (*OCGetSetFunc)(VMThread* pThread, int r4, struct OCData* data);
 
 typedef struct PluginFuncData{
     const char* name; //0x0
@@ -64,20 +72,20 @@ typedef struct PluginFuncData{
 
 typedef struct OCProperty{
     const char* name; //0x0
-    void* func1; //0x4
-    void* func2; //0x8
+    OCGetSetFunc getFunc; //0x4
+    OCGetSetFunc setFunc; //0x8
     int nameLength; //0xC
 } OCProperty;
 
 typedef struct OCSelector{
     const char* name; //0x0
-    void* func1; //0x4
+    OCSelectorFunc func; //0x4
     int nameLength; //0x8
 } OCSelector;
 
 typedef struct OCData{
     const char* name; //0x0
-    void* ctor; //0x4
+    OCCtorFunc ctor; //0x4
     OCProperty* properties; //0x8
     OCSelector* selectors; //0xC
 } OCData;
@@ -101,18 +109,27 @@ typedef struct VMOC{
     OCData* unk0;
 } VMOC;
 
+typedef struct VMBreakpoint{
+    u8 unk0[0xC];
+} VMBreakpoint;
+
 typedef struct VMState{
-    VMPackage packages[MAX_PACKAGES];
-    VMThread* unk40;
-    u32 unk44;
-    VMThread* unk48[MAX_THREADS];
+    VMPackage packages[MAX_PACKAGES]; //0x0
+    VMThread* activeThread; //0x40
+    u32 nextThreadId; //0x44
+    VMThread* unk48[MAX_THREADS]; //0x48
     VMThread threads[MAX_THREADS]; //0x88
     VMArg threadStacks[MAX_THREADS][MAX_STACK_ENTRIES]; //0x688
     VMPlugin plugins[MAX_PLUGINS]; //0x4688
     VMOC ocs[MAX_OCS]; //0x4808
     OCData* builtinOC; //0x48C8
-    u8 unk48CC[0x490C - 0x48CC]; //unused?
+    //Unused debug data (based on info from XCX)
+    BOOL debMode; //0x48CC
+    u8 unk48D0[0xC];
+    VMBreakpoint bps[MAX_BREAKPOINTS]; //0x48DC
 } VMState;
+
+//Enums
 
 typedef enum VMCResult{
     VMC_RESULT_0,
@@ -238,20 +255,20 @@ typedef enum _VMTypes {
 
 typedef enum VMException {
     VM_EXCEPTION_NONE,
-    VM_EXCEPTION_1,
-    VM_EXCEPTION_2,
+    VM_EXCEPTION_PLUGIN,
+    VM_EXCEPTION_OC,
     VM_EXCEPTION_DIV_BY_ZERO,
-    VM_EXCEPTION_4,
-    VM_EXCEPTION_5,
-    VM_EXCEPTION_6,
-    VM_EXCEPTION_7,
+    VM_EXCEPTION_INVALID_ARRAY,
+    VM_EXCEPTION_INDEX_OOB,
+    VM_EXCEPTION_MATH_INVALID_ARG,
+    VM_EXCEPTION_CALC_INVALID_ARG,
     VM_EXCEPTION_8,
-    VM_EXCEPTION_9,
-    VM_EXCEPTION_10,
-    VM_EXCEPTION_11,
-    VM_EXCEPTION_12,
-    VM_EXCEPTION_13,
-    VM_EXCEPTION_14
+    VM_EXCEPTION_JPF_INVALID_ARG,
+    VM_EXCEPTION_CALLIND_INVALID_ARG,
+    VM_EXCEPTION_INVALID_OC,
+    VM_EXCEPTION_SEND_ERROR,
+    VM_EXCEPTION_INVALID_PROPERTY,
+    VM_EXCEPTION_INVALID_GETSET_FUNC
 } VMException;
 
 #ifdef __cplusplus

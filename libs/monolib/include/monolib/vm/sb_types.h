@@ -52,7 +52,9 @@ typedef struct SBHeader{
 
 typedef struct FunctionPoolEntry{
     u16 unk0;
-    u8 unk2[0xC - 0x2];
+    s16 unk2;
+    u16 unk4;
+    u8 unk8[0xC - 0x8];
     u32 unkC;
     u8 unk10[0x14 - 0x10];
 } FunctionPoolEntry;
