@@ -17,7 +17,7 @@ public:
     static void initialize();
     static void destroy();
 
-    static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNotify);
+    static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool prepend);
     static void standbyWork(CWorkThread* pThread, bool arg1);
     static void updateWork(CWorkThread* pThread, bool arg1);
     static void func_8044406C();

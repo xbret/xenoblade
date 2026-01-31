@@ -18,7 +18,7 @@ public:
 
     static inline CDeviceSC* create(const char* pName, CWorkThread* pWorkThread){
         CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, 0);
+        CWorkUtil::entryWork(device, pWorkThread, false);
         device->unk1C4 |= 1;
         return device;
     }

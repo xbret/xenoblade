@@ -21,7 +21,7 @@ namespace {
 
         static void create(const char* pName, CWorkThread* pThread){
             CWorkRootThread* thread = new (CWorkThreadSystem::getWorkMem()) CWorkRootThread(pName, pThread);
-            CWorkUtil::entryWork(thread, nullptr, 0);
+            CWorkUtil::entryWork(thread, nullptr, false);
             spInstance = thread;
         }
 
@@ -73,11 +73,11 @@ void CWorkRoot::destroy(){
 
 /* Adds a thread as a child to another thread. If the parent thread is null, it is instead added
 as a child to the root thread as long as it isn't null. */
-void CWorkRoot::entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNotify){
+void CWorkRoot::entryWork(CWorkThread* pChild, CWorkThread* pParent, bool prepend){
     if(pParent != nullptr){
-        pParent->wkEntryChild(pChild, dontNotify);
+        pParent->wkEntryChild(pChild, prepend);
     }else if(CWorkRootThread::spInstance != nullptr){
-        CWorkRootThread::spInstance->wkEntryChild(pChild, dontNotify);
+        CWorkRootThread::spInstance->wkEntryChild(pChild, prepend);
     }
 }
 

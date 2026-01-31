@@ -3,11 +3,36 @@
 #include <types.h>
 #include "monolib/util/MemManager.hpp"
 
+/* TODO: This breaks ctors/dtors, but it looks alot nicer than the method below. Maybe there's a way to get
+this to work */
+template <typename T>
+struct _reslist_node_item {
+    _reslist_node_item(){}
+    _reslist_node_item(const T& value) try :
+    item(value) {} catch(...){}
+    T item;
+};
+
 template <typename T>
 struct _reslist_node{
+    void setItem(const T& value){
+        //This doesn't work
+        //new (&mItem) _reslist_node_item<T>(value);
+        //Possibly fake?
+        T* ptr = &mItem;
+        if(ptr != nullptr) {
+            try{
+                *ptr = value;
+            }catch(...){
+                throw;
+            }
+        }
+    }
+
     _reslist_node<T>* mNext; //0x0
     _reslist_node<T>* mPrev; //0x4
     T mItem; //0x8
+
 };
 
 template <typename T>
@@ -38,6 +63,23 @@ public:
         r4->mNext = nullptr;
     }
 
+    int findFirstEmptySlotIndex(){
+        int i = 0;
+        
+        //Go through the list until we find an empty slot
+        while(i < mCapacity){
+            if(mList[i].mNext == nullptr) break;
+
+            //BUG: There's no handling for if no empty slot is found. As is,
+            //the last element index will get returned if that happens.
+            //if(i == mCapacity - 1) return -1;
+
+            i++;
+        }
+
+        return i;
+    }
+
     //func_8049CAF4
     void clear(){
         _reslist_node<T>* r5 = mStartNodePtr->mNext;
@@ -58,11 +100,12 @@ public:
     _reslist_node<T>* mStartNodePtr; //0x4
     _reslist_node<T> mStartNode; //0x8
     _reslist_node<T>* mList; //0x14
-    u32 mCapacity; //0x18
+    int mCapacity; //0x18
     u8 unk1C; //0x1C
     u8 unk1D[3];
 };
 
+//Unofficial name
 template <typename T, typename Ref, typename Ptr>
 class _reslist_iterator {
 public:
@@ -168,23 +211,29 @@ public:
         mCapacity = capacity;
     }
 
-    //TODO: this function needs a try catch block somewhere
+     void push_front(const T& item){
+        _reslist_node<T>* startNode = mStartNodePtr->mNext;
+        int i = findFirstEmptySlotIndex();
+
+        _reslist_node<T>* temp = &mList[i];
+        temp->setItem(item);
+        temp->mNext = startNode;
+        temp->mPrev = startNode->mPrev;
+        startNode->mPrev->mNext = temp;
+        startNode->mPrev = temp;
+    }
+
     void push_back(const T& item){
-        _reslist_node<T>* head = mStartNodePtr;
+        _reslist_node<T>* startNode = mStartNodePtr;
+        int i = findFirstEmptySlotIndex();
 
-        //Go through the list until we find an empty slot
-        u32 i = 0;
-        for(; i < mCapacity; i++){
-            if(mList[i].mNext == nullptr) break;
-        }
-    
-        _reslist_node<T>* pSlot = &mList[i];
-        new (&pSlot->mItem) T(item);
+        _reslist_node<T>* temp = &mList[i];
 
-        pSlot->mNext = head;
-        pSlot->mPrev = head->mPrev;
-        head->mPrev->mNext = pSlot;
-        head->mPrev = pSlot;
+        temp->setItem(item);
+        temp->mNext = startNode;
+        temp->mPrev = startNode->mPrev;
+        startNode->mPrev->mNext = temp;
+        startNode->mPrev = temp;
     }
 
     void remove(const T& item){

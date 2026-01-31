@@ -28,7 +28,7 @@ public:
 
     static inline CDeviceClock* create(const char* pName, CWorkThread* pWorkThread){
         CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, 0);
+        CWorkUtil::entryWork(device, pWorkThread, false);
         device->unk1C4 |= 1;
         return device;
     }

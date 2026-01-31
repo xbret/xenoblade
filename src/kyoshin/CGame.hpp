@@ -34,7 +34,7 @@ public:
 
     static inline CGame* create(const char* pName, CWorkThread* pWorkThread, u32 r5){
         CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(pName, pWorkThread);
-        CWorkUtil::entryWork(game, pWorkThread, 0);
+        CWorkUtil::entryWork(game, pWorkThread, false);
         game->unk1E4 = r5;
         return game;
     }
@@ -81,7 +81,7 @@ namespace {
         static inline CGameRestart* create(const char* pName, CWorkThread* pWorkThread){
             CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pWorkThread, 8);
             
-            CWorkUtil::entryWork(gameRestart, pWorkThread, 0);
+            CWorkUtil::entryWork(gameRestart, pWorkThread, false);
             gameRestart->unk1E4 = func_80455AA0()->mWorkID;
             spInstance = gameRestart;
             return gameRestart;

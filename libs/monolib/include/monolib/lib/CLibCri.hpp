@@ -14,7 +14,7 @@ public:
 
     static inline CLibCri* create(const char* pName, CWorkThread* pWorkThread){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pWorkThread);
-        CWorkUtil::entryWork(lib, pWorkThread, 0);
+        CWorkUtil::entryWork(lib, pWorkThread, false);
         return lib;
     }
 

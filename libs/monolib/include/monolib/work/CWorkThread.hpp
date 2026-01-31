@@ -103,7 +103,7 @@ public:
     }
 
     void wkReplaceHasChild(int capacity);
-    void wkEntryChild(CWorkThread* pChild, bool dontNotify);
+    void wkEntryChild(CWorkThread* pChild, bool prepend);
     void wkRemoveChild(CWorkThread* pChild);
 
     void wkSetEvent(EVT evt);

@@ -27,9 +27,9 @@ void CWorkUtil::dispTree(const CWorkThread* pThread, int indent){
     }
 }
 
-void CWorkUtil::entryWork(CWorkThread* pChild, CWorkThread* pParent, bool dontNotify){
+void CWorkUtil::entryWork(CWorkThread* pChild, CWorkThread* pParent, bool prepend){
     if(pChild != nullptr){
-        CWorkRoot::entryWork(pChild, pParent, dontNotify);
+        CWorkRoot::entryWork(pChild, pParent, prepend);
 
         if(pParent != nullptr && pParent->isThreadFlag0()){
             pChild->wkSetEvent(CWorkThread::EVT_NONE);

@@ -57,7 +57,7 @@ public:
 
     static inline CDeviceVI* create(const char* pName, CWorkThread* pWorkThread){
         CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, 0);
+        CWorkUtil::entryWork(device, pWorkThread, false);
         device->unk1C4 |= 1;
         return device;
     }

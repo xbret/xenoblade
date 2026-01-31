@@ -13,7 +13,7 @@ public:
     virtual ~CDeviceBase(){}
 
     inline void CDeviceBase_inline1(CWorkThread* pWorkThread){
-        CWorkUtil::entryWork(this, pWorkThread, 0);
+        CWorkUtil::entryWork(this, pWorkThread, false);
         unk1C4 |= 1;
     }
 

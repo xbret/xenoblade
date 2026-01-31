@@ -6,6 +6,8 @@
 #include <stdbool.h>
 #include <revolution/OS.h>
 
+//TODO: this entire file still needs major cleanup
+
 //Opcode data
 VMCOpcode vmcOpcodes[VMC_MAX] = {
     {"NOP", 0, 0},
@@ -711,10 +713,16 @@ void vmThreadWakeupAll(u8* pScriptData){
     }
 }
 
-/*
-BOOL vmThreadIsFinish(){
+//unused
+BOOL vmThreadIsFinish(u8* pScriptData){
+    for(int i = 0; i < MAX_THREADS; i++){
+        if(vmState.threads[i].scriptData == (SBHeader*)pScriptData){
+            return FALSE;
+        }
+    }
+
+    return TRUE;
 }
-*/
 
 BOOL vmThreadGetOC(VMThread* pThread, int r4, u32* outId){
 #pragma unused(pThread)
@@ -918,6 +926,7 @@ inline u16* vmSysAtrPoolGet(SBHeader* data, u32 no){
     return poolEntryOfsGet(data->sysAtrPoolOfs, no);
 }
 
+//unused
 inline u16* vmUsrAtrPoolGet(SBHeader* data, u32 no){
     return poolEntryOfsGet(data->usrAtrPoolOfs, no);
 }

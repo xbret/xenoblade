@@ -66,13 +66,16 @@ void CWorkThread::wkReplaceHasChild(int capacity){
     }
 }
 
-void CWorkThread::wkEntryChild(CWorkThread* pChild, bool dontNotify){
-    if(dontNotify){
-        mChildren.push_back(pChild);
+void CWorkThread::wkEntryChild(CWorkThread* pChild, bool prepend){
+    if(prepend){
+        //Add the new child at the start
+        mChildren.push_front(pChild);
     }else{
+        //Add the new child at the end
         mChildren.push_back(pChild);
-        pChild->mParent = this;
     }
+
+    pChild->mParent = this;
 }
 
 void CWorkThread::wkRemoveChild(CWorkThread* pChild){

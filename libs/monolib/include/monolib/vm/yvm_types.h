@@ -90,11 +90,6 @@ typedef struct OCData{
     OCSelector* selectors; //0xC
 } OCData;
 
-typedef struct UnkStruct_Selector{
-    u8 unk0[0xC];
-    UNKTYPE** unkC;
-} UnkStruct_Selector;
-
 typedef struct VMPackage{
     SBHeader* scriptDataPtr; //0x0
     u32 unk4;
