@@ -7,12 +7,6 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
-#ifdef __MWERKS__
-#define fabs(x) __fabs(x)
-#else
-#define fabs(x)
-#endif
-
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_double.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 
@@ -46,7 +40,7 @@ int __fpclassifyd(double);
 #define isnormal(x) (fpclassify(x) == FP_NORMAL)
 
 inline long double fabsl(long double x) {
-    return fabs((double)x);
+    return __fabs((double)x);
 }
 
 double __ieee754_acos(double);

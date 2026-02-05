@@ -1820,7 +1820,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/effect/code_804DB938.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkSystemPack.cpp"),
             Object(NonMatching, "monolib/src/core/CPackItem.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
-            Object(NonMatching, "monolib/src/core/CArcItem.cpp"),
+            Object(NonMatching, "monolib/src/core/CArcItem.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "monolib/src/core/code_804DEDA8.cpp"),
             Object(NonMatching, "monolib/src/core/CSchedule.cpp"),
             Object(NonMatching, "monolib/src/core/code_804E36DC.cpp"),

@@ -5,12 +5,12 @@
 #include "monolib/util.hpp"
 
 struct PackHeader {
-    u32 unk0;
-    u32 unk4;
+    u32 unk0; //always 00FE1200
+    u32 unk4; //always 00000002
     u32 mFileHashTableOffset; //0x8
     u32 mPkhFilesize; //0xC
     u32 mFiles; //0x10
-    u8 unk14[0x20];
+    char mFilename[32]; //0x14
     u32 mHashValTableLength; //0x34
     u8 mHashValTable[0x40]; //0x38
     //might be a struct?
@@ -18,7 +18,7 @@ struct PackHeader {
 };
 
 //size: 0x88
-class CPackItem : IWorkEvent {
+class CPackItem : public IWorkEvent {
 public:
     CPackItem(const char* name, UNKWORD r5);
     virtual ~CPackItem();

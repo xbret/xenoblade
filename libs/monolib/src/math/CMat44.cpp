@@ -1,7 +1,6 @@
 #include "monolib/math.hpp"
 
 namespace ml{
-    //TODO: see if it's possible to have these use arrays instead
     CMat44 CMat44::zero = CMat44(
     0,0,0,0,
     0,0,0,0,

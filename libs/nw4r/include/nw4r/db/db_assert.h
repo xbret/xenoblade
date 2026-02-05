@@ -18,6 +18,10 @@ namespace nw4r
             if(!(exp))                \
             nw4r::db::Panic(__FILE__, __LINE__, __VA_ARGS__)
 
+        #define NW4R_DB_ASSERT_WARN(exp, ...) \
+            if(!(exp))                \
+            nw4r::db::Warning(__FILE__, __LINE__, __VA_ARGS__)
+
         /* DECL_WEAK */ void VPanic(const char* file, int line, const char* fmt, std::va_list vlist, bool halt);
         /* DECL_WEAK */ void Panic(const char* file, int line, const char* fmt, ...);
         /* DECL_WEAK */ void VWarning(const char* file, int line, const char* fmt, std::va_list vlist);

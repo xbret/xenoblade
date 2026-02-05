@@ -103,10 +103,7 @@ CLibStaticData::CItem::~CItem(){
         mData = nullptr;
     }
 
-    if(mData != nullptr){
-        mtl::MemManager::deallocate(mData);
-        mData = nullptr;
-    }
+    DELETE_OBJ(mData);
 }
 
 bool CLibStaticData::CItem::OnFileEvent(CEventFile* pEventFile){

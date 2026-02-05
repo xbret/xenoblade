@@ -61,15 +61,8 @@ WORK_ID CWorkThreadSystem::allocWID(CWorkThread* thread){
 }
 
 void CWorkThreadSystem::destroy(){
-    if(sAllocFlags != nullptr){
-        delete[] sAllocFlags;
-        sAllocFlags = nullptr;
-    }
-
-    if(sWorkThreads != nullptr){
-        mtl::MemManager::deallocate(sWorkThreads);
-        sWorkThreads = nullptr;
-    }
+    DELETE_ARRAY(sAllocFlags);
+    DELETE_OBJ(sWorkThreads);
 
     mtl::MemManager::erase(sAllocHandle);
     sAllocHandle = mtl::INVALID_HANDLE;

@@ -1,17 +1,10 @@
 #pragma once
 
+#include "monolib/math/CVec3.hpp"
 #include <revolution/MTX.h>
 
 namespace ml {
     struct CMat34{
-        union {
-            float m[3][4];
-            Mtx mtx;
-        };
-
-        static CMat34 zero;
-        static CMat34 identity;
-
         CMat34(){}
 
         CMat34(float m00, float m01, float m02, float m03, float m10, float m11, float m12, float m13,
@@ -33,5 +26,18 @@ namespace ml {
         inline void setIdentity(){
             PSMTXIdentity(mtx);
         }
+
+        void getRotAxis(CVec3& vec, float* outAngle) const;
+        bool getRotXYZ(CVec3& vec) const;
+        bool getRotZXY(CVec3& vec) const;
+        bool getRotZYX(CVec3& vec) const;
+
+        union {
+            float m[3][4];
+            Mtx mtx;
+        };
+
+        static CMat34 zero;
+        static CMat34 identity;
     };
 } //namespace ml

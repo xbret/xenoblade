@@ -5,23 +5,24 @@
 #include <criware/cri_adxf.h>
 #include <cstring>
 
-CPackItem::CPackItem(const char* name, int r5) : unk4(), mPkbFilename() {
-    mFileHandle = nullptr;
-    mPackHeader = nullptr;
-    unk54 = name;
-    unk84 = name;
-    mFileHashTable = nullptr;
-    unk5C = nullptr;
-    unk60 = nullptr;
-    mAdxPartitionId = r5;
-    mAhxAdxDataPtr = nullptr;
-    mLoadState = LOAD_STATE_NOT_LOADED;
-    unk78 = 0;
-    unk79 = 0;
-    mIsAhxAdxFile = false;
-    unk7C = 0;
-    unk80 = 0;
-
+CPackItem::CPackItem(const char* name, int r5) :
+unk4(),
+mPkbFilename(),
+mFileHandle(nullptr),
+mPackHeader(nullptr),
+unk54(name),
+unk84(name),
+mFileHashTable(nullptr),
+unk5C(nullptr),
+unk60(nullptr),
+mAdxPartitionId(r5),
+mAhxAdxDataPtr(nullptr),
+mLoadState(LOAD_STATE_NOT_LOADED),
+unk78(0),
+unk79(0),
+mIsAhxAdxFile(false),
+unk7C(0),
+unk80(0) {
     //Check if the file is a adx/ahx pack file from the filename
     if(std::strstr(name, "adx") != nullptr || std::strstr(name, "ahx") != nullptr){
         mIsAhxAdxFile = true;
@@ -37,15 +38,8 @@ CPackItem::~CPackItem(){
         mPackHeader = nullptr;
     }
 
-    if(mPackHeader != nullptr){
-        mtl::MemManager::deallocate((void*)mPackHeader);
-        mPackHeader = nullptr;
-    }
-
-    if(mAhxAdxDataPtr != nullptr){
-        mtl::MemManager::deallocate((void*)mAhxAdxDataPtr);
-        mAhxAdxDataPtr = nullptr;
-    }
+    DELETE_OBJ(mPackHeader);
+    DELETE_OBJ(mAhxAdxDataPtr);
 }
 
 void CPackItem::update(){
@@ -65,18 +59,9 @@ void CPackItem::update(){
         ml::FixStr<64> tempString = ml::FixStr<64>(false); //0x2C
 
         ml::CPathUtil::getNoPathExtName(tempString, unk84);
-
         unk4 = tempString.c_str();
         mPkbFilename = unk84;
-
-        int length = mPkbFilename.rfind(".", -1);
-
-        if((u32)length + 1 > 1){
-            ml::FixStr<32> tempString1 = ml::FixStr<32>(false); //0x8
-            mPkbFilename.copy(tempString1, length);
-            mPkbFilename = tempString1;
-        }
-
+        ml::CPathUtil::unkInline1(mPkbFilename);
         mPkbFilename += ".pkb";
         mLoadState = LOAD_STATE_OPENED_PKH_FILE;
     }else if(mLoadState == LOAD_STATE_OPENED_PKH_FILE){
@@ -89,7 +74,7 @@ void CPackItem::update(){
 
         if(mIsAhxAdxFile){
             if(CWorkSystemPack::func_804DDFBC((u32)this) == false) return;
-            u32 r4 = ((mPackHeader->mFiles + 1)*2 + 0x11a) & ~3; //TODO: figure out the corresponding Criware struct here.
+            u32 r4 = ROUND_DOWN((mPackHeader->mFiles + 1)*2 + 0x11a, 4); //TODO: figure out the corresponding Criware struct here.
             mAhxAdxDataPtr = mtl::MemManager::allocate_head(mtl::MemManager::getHandleMEM2(), r4, 4);
             ADXF_LoadPartitionNw(mAdxPartitionId, mPkbFilename.c_str(), nullptr, mAhxAdxDataPtr);
             mLoadState = LOAD_STATE_LOADING_AHX_ADX_FILE;

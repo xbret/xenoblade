@@ -184,9 +184,7 @@ namespace cf{
 
         if(lbl_80666A70 != nullptr){
             CBdat::func_8003AA8C(3);
-            if(lbl_80666A70 != nullptr){
-                mtl::MemManager::deallocate(lbl_80666A70);
-            }
+            DELETE_OBJ(lbl_80666A70);
         }
 
         lbl_80666A70 = nullptr;

@@ -29,7 +29,7 @@ struct CFileHandle {
     bool func_80451DA4(bool r4);
     UNKTYPE* func_80451E48();
 
-    inline void* unkInline1(){
+    inline void* getData(){
         void* r31 = mData;
         mData = nullptr;
         return r31;

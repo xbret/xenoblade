@@ -202,3 +202,22 @@ Specify negative alignment to perform a tail allocation.
 inline void* operator new[](size_t size, mtl::ALLOC_HANDLE handle, int align) {
     return mtl::MemManager::allocate_array_ex(size, handle, align);
 }
+
+//Utility macros
+
+#define DELETE_OBJ(p)                   \
+    {                                   \
+    if (p != nullptr){                  \
+        mtl::MemManager::deallocate(p); \
+        p = nullptr;                    \
+    }                                   \
+    }                                   \
+
+
+#define DELETE_ARRAY(p)                   \
+    {                                     \
+    if (p != nullptr){                    \
+        delete[] p;                       \
+        p = nullptr;                      \
+    }                                     \
+    }                                     \

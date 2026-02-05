@@ -2,15 +2,6 @@
 
 namespace ml {
     struct CVec4{
-        /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
-        which is more efficient than lfs/stfd. */
-        struct{
-            float x;
-            float y;
-            float z;
-            float w;
-        };
-
         static CVec4 zero;
         static CVec4 unitX;
         static CVec4 unitY;
@@ -23,5 +14,15 @@ namespace ml {
             this->z = z;
             this->w = w;
         }
+
+        /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
+        which is more efficient than lfs/stfd. */
+        struct{
+            float x;
+            float y;
+            float z;
+            float w;
+        };
+
     };
 } //namespace ml

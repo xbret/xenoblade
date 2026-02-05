@@ -94,8 +94,7 @@ bool CBattery::OnFileEvent(CEventFile* pEventFile){
         //Add the class to the layout heap
         CLibLayout_addLayoutHeapEntry(&unk4, CWorkThreadSystem::getWorkMem(), 0xC00, "CBattery", 0);
         Class_8045F858 sp8 = Class_8045F858(&unk4);
-        void* data = mFileHandle->mData;
-        mFileHandle->mData = nullptr;
+        void* data = mFileHandle->getData();
         mtl::MemManager::func_80434A4C(0);
         mAccessor = CLibLayout_getArcResourceAccessorInstance();
         mAccessor->Attach(data, "arc");

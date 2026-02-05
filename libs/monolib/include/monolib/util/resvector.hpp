@@ -10,9 +10,8 @@ public:
     }
     ~resvector(){   
         mCount = mHandle;
-        if(mHandle != mtl::INVALID_HANDLE && mArray != nullptr){
-            mtl::MemManager::deallocate(mArray);
-            mArray = nullptr;
+        if(mHandle != mtl::INVALID_HANDLE){
+            DELETE_OBJ(mArray);
         }
 
         mArray = nullptr;

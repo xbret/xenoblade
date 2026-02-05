@@ -6,5 +6,5 @@
 class CEventFile {
 public:
     BOOL unk0;
-    CFileHandle* mFileHandle;
+    CFileHandle* mFileHandle; //0x4
 };

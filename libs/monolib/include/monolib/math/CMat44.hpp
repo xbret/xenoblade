@@ -4,14 +4,6 @@
 
 namespace ml {
     struct CMat44{
-        union {
-            float m[4][4];
-            Mtx44 mtx;
-        };
-    
-        static CMat44 zero;
-        static CMat44 identity;
-
         CMat44(){}
 
         CMat44(float m00, float m01, float m02, float m03, float m10, float m11, float m12, float m13,
@@ -33,5 +25,13 @@ namespace ml {
             m[3][2] = m32;
             m[3][3] = m33;
         }
+
+        union {
+            float m[4][4];
+            Mtx44 mtx;
+        };
+    
+        static CMat44 zero;
+        static CMat44 identity;
     };
 } //namespace ml

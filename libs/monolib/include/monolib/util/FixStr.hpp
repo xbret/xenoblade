@@ -93,14 +93,14 @@ namespace ml{
         void copy(FixStr<N>& str, int length){
             str.clear();
             
-            if (mLength != 0) {
-                //Copy entire string if length is -1
-                if (length == -1) length = mLength;
-                std::strncpy(str.mString, mString, length);
-                //Stop the string after the copied characters, and recalculate the length
-                str.mString[length] = 0;
-                str.mLength = std::strlen(str.mString);
-            }
+            if (size() == 0) return;
+
+            //Copy entire string if length is -1
+            if (length == -1) length = mLength;
+            std::strncpy(str.mString, mString, length);
+            //Stop the string after the copied characters, and recalculate the length
+            str.mString[length] = 0;
+            str.mLength = std::strlen(str.mString);
         }
 
         //const char* substr(int start, int end){}
@@ -131,7 +131,9 @@ namespace ml{
             
             int strLength = std::strlen(str);
 
-            for (char* p = (char*)mString + pos + strLength; p != mString + pos; p--) {
+            char* string = (char*)(mString + pos);
+
+            for (char* p = string + mLength; p != string; p--) {
                 if (!std::strncmp(p, str, strLength)) {
                     return (int)(p - mString);
                 }

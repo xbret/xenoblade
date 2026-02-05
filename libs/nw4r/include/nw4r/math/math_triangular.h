@@ -98,10 +98,8 @@ inline void SinCosRad(f32* pSin, f32* pCos, f32 rad) {
  inline f32 AsinRad(f32 x){
     bool inRange = x <= 1.0f && x >= -1.0f;
 
-    if(!inRange){
-    #line 228
-        NW4R_WARNING("AsinRad: Input is out of the domain.");
-    }
+#line 228
+    NW4R_DB_ASSERT_WARN(inRange, "AsinRad: Input is out of the domain.");
 
     return std::asin(x);
 }
@@ -115,10 +113,8 @@ inline void SinCosRad(f32* pSin, f32* pCos, f32 rad) {
  inline f32 AcosRad(f32 x){
     bool inRange = x <= 1.0f && x >= -1.0f;
 
-    if(!inRange){
-    #line 239
-        NW4R_WARNING("AcosRad: Input is out of the domain.");
-    }
+#line 239
+    NW4R_DB_ASSERT_WARN(inRange, "AcosRad: Input is out of the domain.");
 
     return std::acos(x);
 }
