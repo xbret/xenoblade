@@ -5,6 +5,7 @@
 #include <revolution/MTX.h>
 
 namespace ml {
+    //Possibly inherits from nw4r VEC3?
     struct CVec3 {
         static CVec3 zero;
         static CVec3 unitX;
@@ -16,6 +17,23 @@ namespace ml {
 
         CVec3(float x, float y, float z){
             set(x, y, z);
+        }
+
+        //Conversion functions for converting to the SDK/NW4R vector types.
+        operator Vec*(){
+            return reinterpret_cast<Vec*>(this);
+        }
+
+        operator const Vec*() const {
+            return reinterpret_cast<const Vec*>(this);
+        }
+
+        operator nw4r::math::VEC3*(){
+            return reinterpret_cast<nw4r::math::VEC3*>(this);
+        }
+
+        operator const nw4r::math::VEC3*() const {
+            return reinterpret_cast<const nw4r::math::VEC3*>(this);
         }
 
         void set(float x, float y, float z){
@@ -45,7 +63,7 @@ namespace ml {
                 if(x*x + y*y + z*z == 0.0f){
                     setZero();
                 }else {
-                    PSVECNormalize(&vec,&vec);
+                    PSVECNormalize(*this,*this);
                 }
             }else{
                 set(0,0,1);
@@ -62,23 +80,24 @@ namespace ml {
         }
 
         bool isZero() const {
+            //TODO: this can't be it, right???
             bool result = false;
-            if(math::abs(x) <= epsilon && math::abs(y) <= epsilon && math::abs(z) <= epsilon) result = true;
+            bool temp = false;
+            if(math::abs(x) <= epsilon && math::abs(y) <= epsilon){
+                temp = true;
+            }
+            if(temp && math::abs(z) <= epsilon) result = true;
             return result;
         }
 
         bool isErr() const;
 
-        union {
-            /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
-            which is more efficient than lfs/stfd. */
-            struct{
-                float x;
-                float y;
-                float z;
-            };
-
-            Vec vec;
+        /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
+        which is more efficient than lfs/stfd. */
+        struct{
+            float x;
+            float y;
+            float z;
         };
 
     };

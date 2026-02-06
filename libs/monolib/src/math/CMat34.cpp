@@ -1,5 +1,7 @@
 #include "monolib/math.hpp"
 
+DECOMP_FORCELITERAL(CMat34_cpp, 0.0f);
+
 namespace ml{
     CMat34 CMat34::zero = CMat34(
     0,0,0,0,
@@ -28,25 +30,25 @@ namespace ml{
                     if (m[0][0] >= m[2][2]) {
                         float fVar1 = math::sqrt(m[0][0] - m[1][1] - m[2][2] + 1.0f);
                         vec.x = fVar1 * 0.5f;
-                        vec.y = (0.5f / (fVar1 * 0.5f)) * m[0][1];
-                        vec.z = (0.5f / (fVar1 * 0.5f)) * m[0][2];
+                        vec.y = (0.5f / vec.x) * m[0][1];
+                        vec.z = (0.5f / vec.x) * m[0][2];
                     }else{
                         float fVar1 = math::sqrt(m[2][2] - m[0][0] - m[1][1] + 1.0f);
                         vec.z = fVar1 * 0.5f;
-                        vec.x = (0.5f / (fVar1 * 0.5f)) * m[0][2];
-                        vec.y = (0.5f / (fVar1 * 0.5f)) * m[1][2];
+                        vec.x = (0.5f / vec.z) * m[0][2];
+                        vec.y = (0.5f / vec.z) * m[1][2];
                     }
                 }else{
                     if(m[1][1] >= m[2][2]){
                         float fVar1 = math::sqrt(m[1][1] - m[0][0] - m[2][2] + 1.0f);
                         vec.y = fVar1 * 0.5f;
-                        vec.x = (0.5f / (fVar1 * 0.5f)) * m[0][1];
-                        vec.z = (0.5f / (fVar1 * 0.5f)) * m[1][2];
+                        vec.x = (0.5f / vec.y) * m[0][1];
+                        vec.z = (0.5f / vec.y) * m[1][2];
                     }else{
                         float fVar1 = math::sqrt(m[2][2] - m[0][0] - m[1][1] + 1.0f);
                         vec.z = fVar1 * 0.5f;
-                        vec.x = (0.5f / (fVar1 * 0.5f)) * m[0][2];
-                        vec.y = (0.5f / (fVar1 * 0.5f)) * m[1][2];
+                        vec.x = (0.5f / vec.z) * m[0][2];
+                        vec.y = (0.5f / vec.z) * m[1][2];
                     }
                 }
             }
