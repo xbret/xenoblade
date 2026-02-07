@@ -19,6 +19,10 @@ namespace ml {
             set(x, y, z);
         }
 
+        CVec3(const CVec3& vec){
+            set(vec.x, vec.y, vec.z);
+        }
+
         //Conversion functions for converting to the SDK/NW4R vector types.
         operator Vec*(){
             return reinterpret_cast<Vec*>(this);
@@ -42,6 +46,12 @@ namespace ml {
             this->z = z;
         }
 
+        void set(CVec3& vec){
+            x = vec.x;
+            y = vec.y;
+            z = vec.z;
+        }
+
         void setZero(){
             *this = zero;
         }
@@ -54,19 +64,20 @@ namespace ml {
             return (x != vec.x || y != vec.y || z != vec.z);
         }
 
-        float dot(const CVec3& vec) const {
-            return x*vec.x + y*vec.y + z*vec.z;
-        }
-
         void normalize(){
             if(!isZero()) {
-                if(x*x + y*y + z*z == 0.0f){
-                    setZero();
-                }else {
-                    PSVECNormalize(*this,*this);
-                }
+                normalizeSub();
             }else{
                 set(0,0,1);
+            }
+        }
+
+        //Unofficial
+        void normalizeSub(){
+            if(x*x + y*y + z*z == 0.0f){
+                setZero();
+            }else {
+                PSVECNormalize(*this,*this);
             }
         }
 
@@ -91,6 +102,36 @@ namespace ml {
         }
 
         bool isErr() const;
+
+        //TODO: properly figure out these asm inlines
+
+        static float dot(const CVec3& lhs, const CVec3& rhs) {
+            return nw4r::math::VEC3Dot(lhs, rhs);
+        }
+
+        static void add(CVec3& outVec, const CVec3& lhs, const CVec3& rhs){
+            CVec3 temp;
+            nw4r::math::VEC3Add(temp, lhs, rhs);
+            outVec.set(temp);
+        }
+
+        static void sub(CVec3& outVec, const CVec3& lhs, const CVec3& rhs){
+            CVec3 temp;
+            nw4r::math::VEC3Sub(temp, lhs, rhs);
+            outVec.set(temp);
+        }
+
+        static void scale(CVec3& outVec, const CVec3& vec, float scale){
+            CVec3 temp;
+            nw4r::math::VEC3Scale(temp, vec, scale);
+            outVec.set(temp);
+        }
+
+        static void cross(CVec3& outVec, const CVec3& lhs, const CVec3& rhs){
+            CVec3 temp;
+            nw4r::math::VEC3Cross(temp, lhs, rhs);
+            outVec.set(temp);
+        }
 
         /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
         which is more efficient than lfs/stfd. */

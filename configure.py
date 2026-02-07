@@ -1684,6 +1684,7 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/math/CCol4.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/CMat34.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/CMat44.cpp"),
+            Object(NonMatching, "monolib/src/math/CPlane.cpp"),
             Object(NonMatching, "monolib/src/math/CQuat.cpp"),
             Object(MatchingFor("jp"), "monolib/src/work/CWorkThreadSystem.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkThread.cpp"),

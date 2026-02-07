@@ -5917,13 +5917,19 @@ monolib/src/math/CMat44.cpp:
 	.bss        start:0x80659FE8 end:0x8065A068
 	.sdata2     start:0x8066CA58 end:0x8066CA60
 
+monolib/src/math/CPlane.cpp:
+	extab       start:0x8001C0D0 end:0x8001C0E0
+	extabindex  start:0x80033D04 end:0x80033D1C
+	.text       start:0x80436F20 end:0x80437148
+	.sdata2     start:0x8066CA60 end:0x8066CA68
+
 monolib/src/math/CQuat.cpp:
-	extab       start:0x8001C0D0 end:0x8001C0F0
-	extabindex  start:0x80033D04 end:0x80033D34
-	.text       start:0x80436F20 end:0x8043738C
+	extab       start:0x8001C0E0 end:0x8001C0F0
+	extabindex  start:0x80033D1C end:0x80033D34
+	.text       start:0x80437148 end:0x8043738C
 	.ctors      start:0x804F5A60 end:0x804F5A64
 	.bss        start:0x8065A068 end:0x8065A088
-	.sdata2     start:0x8066CA60 end:0x8066CA78
+	.sdata2     start:0x8066CA68 end:0x8066CA78
 
 monolib/src/work/CWorkThreadSystem.cpp:
 	extab       start:0x8001C0F0 end:0x8001C100

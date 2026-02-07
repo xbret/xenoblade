@@ -4305,10 +4305,15 @@ monolib/src/math/CMat44.cpp:
 	.text       start:0x8043981C end:0x804398B8
 	.ctors      start:0x804FA11C end:0x804FA120
 
+monolib/src/math/CPlane.cpp:
+	extab       start:0x8001C17C end:0x8001C18C
+	extabindex  start:0x80033FC4 end:0x80033FDC
+	.text       start:0x804398B8 end:0x80439AE0
+
 monolib/src/math/CQuat.cpp:
-	extab       start:0x8001C17C end:0x8001C19C
-	extabindex  start:0x80033FC4 end:0x80033FF4
-	.text       start:0x804398B8 end:0x80439D24
+	extab       start:0x8001C18C end:0x8001C19C
+	extabindex  start:0x80033FDC end:0x80033FF4
+	.text       start:0x80439AE0 end:0x80439D24
 	.ctors      start:0x804FA120 end:0x804FA124
 
 monolib/src/work/CWorkThreadSystem.cpp:

@@ -102,6 +102,7 @@ namespace ml {
             }
         }
 
+        static void slerp(CQuat& outQuat, const CQuat& a, const CQuat& b, float t);
         void setRotZXY(const CVec3* angle);
         void getRotZXY(CVec3* result) const;
 
@@ -117,4 +118,5 @@ namespace ml {
         static CQuat identity;
 
     };
-} //namespace ml
+
+} // namespace ml
