@@ -26,6 +26,22 @@ namespace ml{
             *this = str;
         }
 
+        FixStr(const FixStr<N>& str, int pos, int length){
+            copy(str, pos, length);
+        }
+
+        void copy(const FixStr<N>& str, int pos, int length){
+            clear();
+            if (str.empty()) return;
+
+            //Copy entire string if length is -1
+            if (length == npos) length = str.size();
+            std::strncpy(mString, str.mString + pos, length);
+            //Stop the string after the copied characters, and recalculate the length
+            mString[length] = 0;
+            mLength = std::strlen(mString);
+        }
+
         void clear(){
             mString[0] = 0;
             mLength = 0;
@@ -78,6 +94,10 @@ namespace ml{
         int size() const {
             return mLength;
         }
+
+        bool empty() const {
+            return size() == 0;
+        }
         
         void format(const char* format, ...){
             //Why hardcode the buffer size to 256??
@@ -90,20 +110,11 @@ namespace ml{
 
         //Sets the given string to the first characters of this string, up to the specified length.
         //TODO: This might just be substr, but when the start index is 0?
-        void copy(FixStr<N>& str, int length){
-            str.clear();
-            
-            if (size() == 0) return;
-
-            //Copy entire string if length is -1
-            if (length == -1) length = mLength;
-            std::strncpy(str.mString, mString, length);
-            //Stop the string after the copied characters, and recalculate the length
-            str.mString[length] = 0;
-            str.mLength = std::strlen(str.mString);
+        const char* substr(int pos = 0, int length = npos) const {
+            FixStr<N> str = FixStr(*this, pos, length);
+            return str.c_str();
         }
 
-        //const char* substr(int start, int end){}
         //void erase(int, int){}
         //void erase(const char*){}
         //append_int(const int&){}
@@ -123,24 +134,26 @@ namespace ml{
 
         }
 
-        int rfind(const char* str, int pos) const {
-            if (mLength == 0) {
+        int rfind(const char* str, int pos = npos) const {
+            int length = mLength;
+            
+            if (length == 0) {
                 //Return -1 if the string is empty
-                return -1;
+                return npos;
             }
             
             int strLength = std::strlen(str);
 
-            char* string = (char*)(mString + pos);
+            char* string = (char*)mString + pos;
 
-            for (char* p = string + mLength; p != string; p--) {
+            for (char* p = string + length; p != string; p--) {
                 if (!std::strncmp(p, str, strLength)) {
                     return (int)(p - mString);
                 }
             }
 
             //Reached start of string without finding the string, return -1
-            return -1;
+            return npos;
         }
 
         int find_last_of(char c, int pos) const {
@@ -150,6 +163,9 @@ namespace ml{
     private:
         char mString[N];
         int mLength;
+
+    public:
+        static const int npos = -1;
     };
 
 }

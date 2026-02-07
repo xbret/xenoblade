@@ -61,7 +61,7 @@ void CPackItem::update(){
         ml::CPathUtil::getNoPathExtName(tempString, unk84);
         unk4 = tempString.c_str();
         mPkbFilename = unk84;
-        ml::CPathUtil::unkInline1(mPkbFilename);
+        ml::CPathUtil::removeExt(mPkbFilename);
         mPkbFilename += ".pkb";
         mLoadState = LOAD_STATE_OPENED_PKH_FILE;
     }else if(mLoadState == LOAD_STATE_OPENED_PKH_FILE){

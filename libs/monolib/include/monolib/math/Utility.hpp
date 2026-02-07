@@ -17,6 +17,12 @@ namespace ml{
         return nw4r::math::FSqrt(x);
     }
 
+    inline float clamp(float x, float min, float max) {
+        if (x < min) x = min;
+        else if(x > max) x = max;
+        return x;
+    }
+
     inline float sin(float x){
         return nw4r::math::SinRad(x);
     }
@@ -25,15 +31,18 @@ namespace ml{
         return nw4r::math::CosRad(x);
     }
 
+    inline void sincos(float x, float& sinX, float& cosX){
+        sinX = sin(x);
+        cosX = cos(x);
+    }
+
     inline float asin(float x){
-        if (x < -1.0f) x = -1.0f;
-        else if(x > 1.0f) x = 1.0f;
+        x = clamp(x, -1.0f, 1.0f);
         return nw4r::math::AsinRad(x);
     }
 
     inline float acos(float x){
-        if (x < -1.0f) x = -1.0f;
-        else if(x > 1.0f) x = 1.0f;
+        x = clamp(x, -1.0f, 1.0f);
         return nw4r::math::AcosRad(x);
     }
 
@@ -47,12 +56,6 @@ namespace ml{
 
     inline float atan2Rad(float y, float x){
         return nw4r::math::Atan2Rad(y, x);
-    }
-
-    inline float clamp(float x, float min, float max) {
-        if (x >= max) x = max;
-        else if (x <= min) x = min;
-        return x;
     }
 
     inline float dot(const float* vec){

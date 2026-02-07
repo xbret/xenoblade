@@ -52,7 +52,7 @@ namespace ml{
             if ((u32)length + 1 <= 1) {
                 outStr = temp;
             } else {
-                temp.copy(outStr, length);
+                outStr.copy(temp, 0, length);
             }
         }
     }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "monolib/math/CVec3.hpp"
+#include "monolib/math/CQuat.hpp"
 #include <revolution/MTX.h>
 
 namespace ml {
@@ -23,8 +24,32 @@ namespace ml {
             m[2][3] = m23;
         }
 
-        inline void setIdentity(){
+        void setUnit(){
             PSMTXIdentity(mtx);
+        }
+
+        void getRotQuat(CQuat& quat) const{
+            CQuat temp;
+            C_QUATMtx(temp, mtx);
+            quat = temp;
+        }
+
+        void setRotQuat(const CQuat& quat){
+            PSMTXQuat(mtx, quat);
+        }
+
+        void invert(CMat34* outMat){
+            PSMTXInverse(mtx, outMat->mtx);
+        }
+
+        CVec3 getTranslation(){
+            return CVec3(m[0][3], m[1][3], m[2][3]);
+        }
+
+        void replaceTranslation(const CVec3& vec){
+            m[0][3] = vec.x;
+            m[1][3] = vec.y;
+            m[2][3] = vec.z;
         }
 
         void getRotAxis(CVec3& vec, float* outAngle) const;

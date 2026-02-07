@@ -3,27 +3,28 @@
 #include "monolib/math/CVec3.hpp"
 #include "monolib/math/MathConstants.hpp"
 #include "monolib/math/Utility.hpp"
+#include <revolution/MTX.h>
 
 namespace ml {
     struct CQuat{
-        struct{
-        float x;
-        float y;
-        float z;
-        float w;
-        };
-
-        static CQuat zero;
-        static CQuat identity;
-
         CQuat(){}
 
         CQuat(float x, float y, float z, float w){
             set(x,y,z,w);
         }
 
-        void func_8043715C(CVec3& vec);
-        void func_80437310(CVec3& vec);
+        operator Quaternion*(){
+            return reinterpret_cast<Quaternion*>(this);
+        }
+
+        operator const Quaternion*() const{
+            return reinterpret_cast<const Quaternion*>(this);
+        }
+
+        CQuat& operator*=(const CQuat& other){
+            PSQUATMultiply(*this, other, *this);
+            return *this;
+        }
 
         inline void set(float x, float y, float z, float w){
             this->x = x;
@@ -37,16 +38,16 @@ namespace ml {
         }
   
         //Sets the quaternion from the given euler angle, following the 3-2-1 conversion.
-        inline void setRotXYZ(CVec3& angle){
-            float x = angle.x * 0.5f;
-            float y = angle.y * 0.5f;
-            float z = angle.z * 0.5f;
-            float sinX = math::sin(x * (128.0f/PI));
-            float cosX = math::cos(x * (128.0f/PI));
-            float sinY = math::sin(y * (128.0f/PI));
-            float cosY = math::cos(y * (128.0f/PI));
-            float sinZ = math::sin(z * (128.0f/PI));
-            float cosZ = math::cos(z * (128.0f/PI));
+        inline void setRotXYZ(const CVec3* angle){
+            float x = angle->x * 0.5f;
+            float y = angle->y * 0.5f;
+            float z = angle->z * 0.5f;
+            float sinX = math::sin(x);
+            float cosX = math::cos(x);
+            float sinY = math::sin(y);
+            float cosY = math::cos(y);
+            float sinZ = math::sin(z);
+            float cosZ = math::cos(z);
 
             this->x = cosZ*(sinX*cosY) - sinZ*(cosX*sinY);
             this->y = cosZ*(cosX*sinY) + sinZ*(sinX*cosY);
@@ -55,34 +56,65 @@ namespace ml {
         }
 
         //Converts this quaternion to euler angles, storing the result in the given vector.
-        inline void getRotXYZ(CVec3& result){
+        inline void getRotXYZ(CVec3* result) const {
+            //So many variables :p
             float twoX = x + x;
             float twoY = y + y;
             float twoZ = z + z;
-        
-            float dVar19 = -((x * twoZ) - (w * twoY));
-            dVar19 = math::clamp(dVar19, -1.0f, 1.0f); //Unnecessary, asin function already does clamping
-            float angle = math::asin(dVar19);
-        
-            float dVar16 = x * twoX;
-            float dVar22 = x * twoY;
-            dVar19 = z * twoZ;
-            result.y = angle;
-            float dVar21 = w * twoZ;
+
+            float twoXZ = x * twoZ;
+            float twoYW = w * twoY;
+
+            //NOTE: Unnecessary clamp
+            float input = -(twoXZ - twoYW);
+            if(input >= 1) input = 1;
+            else if(input <= -1) input = -1;
+            //y = asin(-(2xz - 2yw))
+            float angle = math::asin(input);
+            result->y = angle;
+
+            float twoX2 = x * twoX;
+            float twoXY = x * twoY;
+            float twoZ2 = z * twoZ;
+            float twoZW = w * twoZ;
                     
             if (angle < halfpi) {
                 if (angle > -halfpi) {
-                    twoY *= y;
-                    result.x = DEG2RAD(math::atan2((y * twoZ) + (w * twoX), 1.0f - (dVar16 + twoY)));
-                    result.z = DEG2RAD(math::atan2((dVar22 + dVar21),1.0f - (twoY + dVar19)));
+                    //-pi/2 < angle < pi/2
+                    float twoY2 = y * twoY;
+                    float twoYZ = y * twoZ;
+                    float twoXW = w * twoX;
+                    //x = atan2(2yz + 2xw, 1 - (2x^2 + 2y^2))
+                    result->x = math::atan2Rad(twoYZ + twoXW, 1.0f - (twoX2 + twoY2));
+                    //z = atan2(2xy + 2zw, 1 - (2y^2 + 2z^2))
+                    result->z = math::atan2Rad(twoXY + twoZW, 1.0f - (twoY2 + twoZ2));
                 }else{
-                    result.x = -DEG2RAD(math::atan2((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
-                    result.z = 0.0f;
+                    //angle > pi/2
+                    //x = -atan2(2xy - 2zw, 1 - (2x^2 + 2z^2))
+                    result->x = -math::atan2Rad(twoXY - twoZW, 1.0f - (twoX2 + twoZ2));
+                    result->z = 0;
                 }
             }else{
-                result.x = DEG2RAD(math::atan2((dVar22 - dVar21),1.0f - (dVar16 + dVar19)));
-                result.z = 0.0f;
+                //angle < -pi/2
+                //x = atan2(2xy - 2zw, 1 - (2x^2 + 2z^2))
+                result->x = math::atan2Rad(twoXY - twoZW, 1.0f - (twoX2 + twoZ2));
+                result->z = 0;
             }
         }
+
+        void setRotZXY(const CVec3* angle);
+        void getRotZXY(CVec3* result) const;
+
+
+        struct{
+        float x;
+        float y;
+        float z;
+        float w;
+        };
+
+        static CQuat zero;
+        static CQuat identity;
+
     };
 } //namespace ml

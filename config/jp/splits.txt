@@ -5817,10 +5817,16 @@ nw4r/src/ut/ut_TextWriterBase.cpp:
 	.sdata2     start:0x8066C960 end:0x8066C978
 
 monolib/src/math/CAttrTransform.cpp:
-	extab       start:0x8001BF80 end:0x8001BF98
-	extabindex  start:0x80033B0C end:0x80033B30
-	.text       start:0x80432678 end:0x80433300
-	.sdata2     start:0x8066C978 end:0x8066C9A8
+	extab       start:0x8001BF80 end:0x8001BF90
+	extabindex  start:0x80033B0C end:0x80033B24
+	.text       start:0x80432678 end:0x80433080
+	.sdata2     start:0x8066C978 end:0x8066C990
+
+monolib/src/math/CCamUtil.cpp:
+	extab       start:0x8001BF90 end:0x8001BF98
+	extabindex  start:0x80033B24 end:0x80033B30
+	.text       start:0x80433080 end:0x80433300
+	.sdata2     start:0x8066C990 end:0x8066C9A8
 
 monolib/src/util/MemManager.cpp:
 	extab       start:0x8001BF98 end:0x8001C020

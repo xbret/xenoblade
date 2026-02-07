@@ -150,13 +150,13 @@ namespace ml{
             }else{ 
                 //y < -pi/2
                 vec.z = -math::atan2Rad(-m[1][0], m[2][0]);
-                vec.x = 0.0f;
+                vec.x = 0;
                 return 0;
             }
         }else{
             //y > pi/2
             vec.z = math::atan2Rad(m[1][0], -m[2][0]);
-            vec.x = 0.0f;
+            vec.x = 0;
             return 0;
         }
     }

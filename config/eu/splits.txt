@@ -4232,9 +4232,14 @@ nw4r/src/ut/ut_TextWriterBase.cpp:
 	.ctors      start:0x804FA100 end:0x804FA104
 
 monolib/src/math/CAttrTransform.cpp:
-	extab       start:0x8001C02C end:0x8001C044
-	extabindex  start:0x80033DCC end:0x80033DF0
-	.text       start:0x80435010 end:0x80435C98
+	extab       start:0x8001C02C end:0x8001C03C
+	extabindex  start:0x80033DCC end:0x80033DE4
+	.text       start:0x80435010 end:0x80435A18
+
+monolib/src/math/CCamUtil.cpp:
+	extab       start:0x8001C03C end:0x8001C044
+	extabindex  start:0x80033DE4 end:0x80033DF0
+	.text       start:0x80435A18 end:0x80435C98
 
 monolib/src/util/MemManager.cpp:
 	extab       start:0x8001C044 end:0x8001C0CC

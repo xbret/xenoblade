@@ -1669,6 +1669,7 @@ config.libs = [
         "progress_category": "monolib",
         "objects": [
             Object(NonMatching, "monolib/src/math/CAttrTransform.cpp"),
+            Object(NonMatching, "monolib/src/math/CCamUtil.cpp"),
             Object(NonMatching, "monolib/src/util/MemManager.cpp"),
             Object(NonMatching, "monolib/src/util/CPathUtil.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/MTRand.cpp"),
