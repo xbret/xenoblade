@@ -46,7 +46,7 @@ namespace ml {
             this->z = z;
         }
 
-        void set(CVec3& vec){
+        void set(const CVec3& vec){
             x = vec.x;
             y = vec.y;
             z = vec.z;
@@ -55,13 +55,55 @@ namespace ml {
         void setZero(){
             *this = zero;
         }
-
-        bool operator==(CVec3& vec){
-            return (x == vec.x && y == vec.y && z == vec.z);
+        
+        CVec3 operator-() const {
+            return CVec3(-x, -y, -z);
         }
 
-        bool operator!=(CVec3& vec){
-            return (x != vec.x || y != vec.y || z != vec.z);
+        CVec3 operator+(const CVec3& rhs) const {
+            CVec3 out;
+            //add(out, *this, rhs);
+            nw4r::math::VEC3Add(out, *this, rhs);
+            return out;
+        }
+        CVec3 operator-(const CVec3& rhs) const {
+            CVec3 out;
+            sub(out, *this, rhs);
+            //nw4r::math::VEC3Sub(out, *this, rhs);
+            return out;
+        }
+        CVec3 operator*(float x) const {
+            CVec3 out;
+            scale(out, *this, x);
+            return out;
+        }
+        CVec3 operator/(float x) const {
+            float r = 1/x;
+            return *this * r;
+        }
+
+        CVec3& operator+=(const CVec3& rhs) {
+            add(*this, *this, rhs);
+            return *this;
+        }
+        CVec3& operator-=(const CVec3& rhs) {
+            sub(*this, *this, rhs);
+            return *this;
+        }
+        CVec3& operator*=(float x) {
+            scale(*this, *this, x);
+            return *this;
+        }
+        CVec3& operator/=(float x) {
+            return *this *= (1/x);
+        }
+
+        bool operator==(const CVec3& vec) const {
+            return x == vec.x && y == vec.y && z == vec.z;
+        }
+
+        bool operator!=(const CVec3& vec) const {
+            return x != vec.x || y != vec.y || z != vec.z;
         }
 
         void normalize(){
@@ -108,7 +150,7 @@ namespace ml {
         static float dot(const CVec3& lhs, const CVec3& rhs) {
             return nw4r::math::VEC3Dot(lhs, rhs);
         }
-
+        
         static void add(CVec3& outVec, const CVec3& lhs, const CVec3& rhs){
             CVec3 temp;
             nw4r::math::VEC3Add(temp, lhs, rhs);
@@ -132,7 +174,7 @@ namespace ml {
             nw4r::math::VEC3Cross(temp, lhs, rhs);
             outVec.set(temp);
         }
-
+        
         /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
         which is more efficient than lfs/stfd. */
         struct{
@@ -142,4 +184,5 @@ namespace ml {
         };
 
     };
+
 } //namespace ml

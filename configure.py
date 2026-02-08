@@ -1676,7 +1676,7 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/math/CRect16.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/CVec3.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/CVec4.cpp"),
-            Object(MatchingFor("jp"), "monolib/src/math/FastCast.cpp"),
+            Object(MatchingFor("jp"), "monolib/src/math/Main.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/MathConstants.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/Random.cpp"),
             Object(MatchingFor("jp"), "monolib/src/math/FloatUtils.cpp"),

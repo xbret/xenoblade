@@ -5874,7 +5874,7 @@ monolib/src/math/CVec4.cpp:
 monolib/src/math/MathConstants.cpp:
 	.sdata2     start:0x8066C9F8 end:0x8066CA20
 
-monolib/src/math/FastCast.cpp:
+monolib/src/math/Main.cpp:
 	.text       start:0x80435E70 end:0x80435EA4
 
 monolib/src/math/Random.cpp:

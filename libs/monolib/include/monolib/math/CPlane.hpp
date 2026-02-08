@@ -4,15 +4,19 @@
 
 namespace ml {
     struct CPlane {
-        void set(const CVec3& r4, const CVec3& r5, const CVec3& r6);
-        void getCross(const CPlane& r4, const CVec3& r5, const CVec3& r6);
-
-        void normalize(){
-            vec.normalizeSub();
+        CPlane(const CVec3& pos, const CVec3& p1, const CVec3& p2){
+            set(pos, p1, p2);
         }
 
-        CVec3 vec; //0x0
-        float unkC;
+        CPlane* set(const CVec3& pos, const CVec3& p1, const CVec3& p2);
+        static void getCross(CVec3& outVec, const CPlane& plane, const CVec3& rayOrigin, const CVec3& rayDir);
+
+        void normalize(){
+            mNormal.normalizeSub();
+        }
+
+        CVec3 mNormal; //0x0
+        float mDist; //0x4
     };
 
 } // namespace ml

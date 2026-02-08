@@ -2,26 +2,31 @@
 
 namespace ml {
 
-    void CPlane::set(const CVec3& r4, const CVec3& r5, const CVec3& r6){
-        CVec3 vec1;
-        CVec3::sub(vec1, r5, r4);
-        CVec3 vec2;
-        CVec3::sub(vec2, r6, r4);
-        CVec3 vec3;
-        CVec3::cross(vec3, vec1, vec2);
-        vec = vec3;
+    CPlane* CPlane::set(const CVec3& pos, const CVec3& p1, const CVec3& p2){
+        CVec3 temp1;
+        CVec3 temp2;
+        CVec3 cross;
+        CVec3::sub(temp1, p1, pos);
+        CVec3::sub(temp2, p2, pos);
+        CVec3::cross(cross, temp1, temp2);
+        mNormal = cross;
         normalize();
-        unkC = -CVec3::dot(vec, r4);
+        mDist = -CVec3::dot(pos,mNormal);
+        return this;
     }
 
-    //TODO: not sure if the first parameter is CPlane or something else
-    void CPlane::getCross(const CPlane& r4, const CVec3& r5, const CVec3& r6){
-        float f2 = CVec3::dot(r4.vec, r5);
-        float f1 = CVec3::dot(r4.vec, r6);
-        float scale = (-(r4.unkC + f2))/f1;
-        CVec3 r1_20;
-        CVec3::scale(r1_20, r6, scale);
-        CVec3::add(vec, r5, r1_20);
+    void CPlane::getCross(CVec3& outVec, const CPlane& plane, const CVec3& rayOrigin, const CVec3& rayDir){
+        /* BUG: No check is done to see if the first dot product is near or less than 0 (the ray won't intersect).
+        In that specific case, the function will return a nonsense value. Additionally, the regular formula for the
+        top value has - dist instead. Maybe the distance value is flipped, and this is intentional? */
+        
+        //Calculate the time t at which the ray will intersect the plane
+        float val1 = CVec3::dot(plane.mNormal, rayOrigin) + plane.mDist;
+        float val2 = CVec3::dot(plane.mNormal, rayDir);
+        float t = -val1/val2;
+        
+        //Calculate the intersection point
+        outVec.set(rayOrigin + rayDir*t);
     }
 
 }

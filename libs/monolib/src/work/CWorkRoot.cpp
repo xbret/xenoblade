@@ -55,8 +55,8 @@ CErrorWii CWorkRoot::sErrorWii;
 
 void CWorkRoot::initialize(){
     sExitMode = EXIT_PROG_END;
-    //Initialize GQR registers
-    ml::initFastCast();
+    //Initialize the math library
+    ml::math::initialize();
     //Initialize VI
     VIInit();
     //Create root thread

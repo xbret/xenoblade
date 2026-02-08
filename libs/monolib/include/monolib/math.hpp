@@ -13,7 +13,7 @@
 #include "monolib/math/CRect16.hpp"
 #include "monolib/math/CVec3.hpp"
 #include "monolib/math/CVec4.hpp"
-#include "monolib/math/FastCast.hpp"
+#include "monolib/math/Main.hpp"
 #include "monolib/math/FloatUtils.hpp"
 #include "monolib/math/MathConstants.hpp"
 #include "monolib/math/MTRand.hpp"
