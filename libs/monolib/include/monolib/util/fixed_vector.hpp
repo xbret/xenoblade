@@ -35,4 +35,4 @@ namespace mtl {
         T mArray[N];
         int mCount;
     };
-} // namespace mtl
+} //namespace mtl

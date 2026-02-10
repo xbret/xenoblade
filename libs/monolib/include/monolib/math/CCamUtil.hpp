@@ -6,4 +6,4 @@ namespace ml {
     struct CCamUtil {
         void getXYZ2ZXY(CVec3& outVec, const CVec3& vec);
     };
-} // namespace ml
+} //namespace ml

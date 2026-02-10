@@ -62,5 +62,5 @@ namespace ml{
         return vec[0]*vec[0] + vec[1]*vec[1] + vec[2]*vec[2];
     }
 
-    } // namespace math
-} // namespace ml
+    } //namespace math
+} //namespace ml

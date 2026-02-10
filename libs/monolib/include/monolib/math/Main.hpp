@@ -3,5 +3,5 @@
 namespace ml{
     namespace math{
         void initialize();
-    } // namespace math
+    } //namespace math
 } //namespace ml

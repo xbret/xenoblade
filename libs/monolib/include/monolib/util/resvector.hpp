@@ -13,6 +13,22 @@ public:
     ~resvector(){   
         destroy();
     }
+    
+    T* begin() const {
+        return &mArray[0];
+    }
+
+    T* end() const {
+        return &mArray[mCount];
+    }
+
+    u32 size() const {
+        return mCount;
+    }
+
+    T operator[](int index){
+        return mArray[index];
+    }
 
     void reserve(mtl::ALLOC_HANDLE handle, u32 size){
         mHandle = handle;
@@ -21,7 +37,10 @@ public:
         mSize = size;
     }
 
-    //push_back
+    void push_back(T item){
+        //NOTE: no bounds check
+        mArray[mCount++] = item;
+    }
 
     void destroy(){
         mCount = 0;
@@ -44,22 +63,6 @@ public:
 
     void resetCount(){
         mCount = 0;
-    }
-
-    T* begin() const {
-        return &mArray[0];
-    }
-
-    T* end() const {
-        return &mArray[mCount];
-    }
-
-    u32 size() const {
-        return mCount;
-    }
-
-    T operator[](int index){
-        return mArray[index];
     }
 
 private:

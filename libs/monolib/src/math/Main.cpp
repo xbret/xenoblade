@@ -8,5 +8,5 @@ namespace ml{
             OSInitFastCast();
         }
 
-    } // namespace math
+    } //namespace math
 } //namespace ml

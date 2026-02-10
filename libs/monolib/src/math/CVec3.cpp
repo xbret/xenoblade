@@ -9,7 +9,7 @@ namespace ml{
 
     //Checks whether any values in the vector are invalid.
     bool CVec3::isErr() const {
-        return isErrFloat(x) || isErrFloat(y) || isErrFloat(z);
+        return math::isErrFloat(x) || math::isErrFloat(y) || math::isErrFloat(z);
     }
 
 } //namespace ml

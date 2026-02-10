@@ -7,4 +7,4 @@ namespace ml {
         mat.setRotXYZ(vec);
         mat.getRotZXY(outVec);
     }
-} // namespace ml
+} //namespace ml
