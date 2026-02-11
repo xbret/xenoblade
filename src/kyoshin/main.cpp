@@ -5,7 +5,7 @@
 #include "kyoshin/ErrMesData.hpp"
 #include "kyoshin/action/CActParamData.hpp"
 #include "monolib/nand/CNand.hpp"
-#include "monolib/vm/yvm.h"
+#include "monolib/vm/yvm2.h"
 #include "monolib/effect/Unknown1.hpp"
 #include "monolib/core.hpp"
 #include "monolib/lib.hpp"

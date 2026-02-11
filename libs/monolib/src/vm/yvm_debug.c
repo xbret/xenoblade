@@ -1,6 +1,6 @@
 #include "monolib/vm/yvm_debug.h"
 #include "monolib/vm/yvm_opcode_data.h"
-#include "monolib/vm/yvm.h"
+#include "monolib/vm/yvm2.h"
 #include <stdio.h>
 
 //All stubbed for release

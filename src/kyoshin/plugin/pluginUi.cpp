@@ -1,5 +1,5 @@
 #include "monolib/util.hpp"
-#include "monolib/vm/yvm.h"
+#include "monolib/vm/yvm2.h"
 
 using namespace ml;
 

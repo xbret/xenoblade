@@ -1,4 +1,4 @@
-#include "monolib/vm/yvm.h"
+#include "monolib/vm/yvm2.h"
 #include "monolib/vm/yvm_debug.h"
 #include "monolib/vm/yvm_util.h"
 #include "monolib/vm/yvm_opcode_data.h"

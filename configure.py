@@ -1792,7 +1792,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/scn/CScnIdMan.cpp"),
             Object(NonMatching, "monolib/src/scn/CScnItemAnim.cpp"),
             Object(NonMatching, "monolib/src/scn/CScnItemCamera.cpp"),
-            Object(NonMatching, "monolib/src/vm/yvm.c", extra_cflags=["-lang=c99"]),
+            Object(NonMatching, "monolib/src/vm/yvm2.c", extra_cflags=["-lang=c99"]),
             Object(Matching, "monolib/src/vm/yvm_debug.c", extra_cflags=["-lang=c99"]),
             Object(NonMatching, "monolib/src/coli/code_804A6C60.cpp"),
             Object(NonMatching, "monolib/src/coli/CColiProc.cpp"),
