@@ -122,7 +122,7 @@ namespace ml {
                 PSVECNormalize(*this,*this);
             }
         }
-
+        
         //Unofficial
         float magnitude() const {
             return x*x + y*y + z*z;

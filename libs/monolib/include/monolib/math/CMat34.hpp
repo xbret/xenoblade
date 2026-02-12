@@ -41,12 +41,35 @@ namespace ml {
             return reinterpret_cast<const nw4r::math::MTX34*>(this);
         }
 
+        CMat34 operator*(CMat34& rhs) const {
+            CMat34 mat;
+            mul(mat, *this, rhs);
+            return mat;
+        }
+
+        void mul(CVec3& outVec, const CVec3& vec) const {
+            PSMTXMultVec(mtx, vec, outVec);
+        }
+
+
         static void mul(CMat34& outMat, const CMat34& mat1, const CMat34& mat2){
             PSMTXConcat(mat2.mtx, mat1.mtx, outMat.mtx);
         }
 
         void setUnit(){
             PSMTXIdentity(mtx);
+        }
+
+        void setScale(float x, float y, float z){
+            set(
+                x, 0, 0, 0,
+                0, y, 0, 0,
+                0, 0, z, 0
+            );
+        }
+
+        void setScale(const CVec3& scale){
+            setScale(scale.x, scale.y, scale.z);
         }
 
         void setRotX(float x){
@@ -110,10 +133,14 @@ namespace ml {
             PSMTXQuat(mtx, quat);
         }
 
-        void setRotZXY(const CVec3& vec){
-            setRotZ(vec.z);
-            addRotX(vec.x);
-            addRotY(vec.y);
+        void setRotXYZ(const CVec3& angle){
+            nw4r::math::MTX34RotXYZRad(*this, angle.x, angle.y, angle.z);
+        }
+
+        void setRotZXY(const CVec3& angle){
+            setRotZ(angle.z);
+            addRotX(angle.x);
+            addRotY(angle.y);
         }
 
         void invert(CMat34* outMat){
@@ -123,6 +150,13 @@ namespace ml {
         CVec3 getTranslation(){
             return CVec3(m[0][3], m[1][3], m[2][3]);
         }
+
+        void addTranslation(const CVec3& vec){
+            m[0][3] += vec.x;
+            m[1][3] += vec.y;
+            m[2][3] += vec.z;
+        }
+
 
         void replaceTranslation(const CVec3& vec){
             m[0][3] = vec.x;

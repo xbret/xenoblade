@@ -6,43 +6,54 @@
 
 
 //Some type of view frustum?
-struct COccCulling_UnkStruct1 {
-    void init(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, UNKWORD r7){
-        unk0 = r4;
-        unkC = r5;
+struct CCullFrustum {
+    enum Flags{
+        FLAG_0 = 1 << 0,
+        FLAG_1 = 1 << 1,
+        FLAGS_01 = (FLAG_0 | FLAG_1) 
+    };
 
-        ml::CVec3 r1_8 = ml::CVec3(r6.x, r6.y, 1);
-
-        unk18 = r1_8;
-        unk120 = true;
-        unkC0 = 1;
-        unkC4 = 1;
-        unkC8 = 1;
-        unkCC = 1;
+    void init(const ml::CVec3& pos, const ml::CVec3& rot, const ml::CVec3& scale, u32 flags){
+        mPos = pos;
+        mRot = rot;
+        mScale = ml::CVec3(scale.x, scale.y, 1);
+        mInFirstList = true;
+        unkC0[0] = 1;
+        unkC0[1] = 1;
+        unkC0[2] = 1;
+        unkC0[3] = 1;
         unk12C = 1;
-        unk130 = r7;
+        mFlags = flags;
     }
 
-    ml::CVec3 unk0;
-    ml::CVec3 unkC;
-    ml::CVec3 unk18;
-    u8 unk24[0xC0 - 0x24];
-    //Maybe another CPlane or CQuat?
-    float unkC0;
-    float unkC4;
-    float unkC8;
-    float unkCC;
-    ml::CPlane unkD0;
-    ml::CPlane unkE0;
-    ml::CPlane unkF0;
-    ml::CPlane unk100;
-    ml::CPlane unk110;
-    bool unk120;
-    u8 unk121[0x12C - 0x121];
+    ml::CVec3 mPos; //0x0
+    ml::CVec3 mRot; //0xC
+    ml::CVec3 mScale; //0x18
+    ml::CVec3 unk24;
+    ml::CMat34 mMat; //0x30
+    ml::CMat34 mMatInv; //0x60
+    ml::CVec3 unk90[4]; //0x90
+    float unkC0[4];
+    ml::CPlane mPlane0; //0xD0
+    ml::CPlane mPlane1; //0xE0
+    ml::CPlane mPlane2; //0xF0
+    ml::CPlane mPlane3; //0x100
+    ml::CPlane mPlane4; //0x110
+    bool mInFirstList; //0x120
+    float unk124;
+    float unk128;
     u32 unk12C;
-    u32 unk130;
+    u32 mFlags; //0x130
 };
 
+struct COccCulling_UnkStruct2{
+    u8 unk0[0xCC];
+    ml::CMat34 unkCC;
+    u8 unkFC[0x10];
+    ml::CVec3 unk10C;
+    u8 unk118[0x258 - 0x118];
+    ml::CPlane unk248[6];
+};
 
 class COccCulling {
 public:
@@ -50,17 +61,17 @@ public:
     virtual ~COccCulling();
     void func_801A06F8(u32 r4, int size);
     DECOMP_DONT_INLINE void func_801A0794();
-    int func_801A0850(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, UNKWORD r7);
-    void func_801A097C(COccCulling_UnkStruct1* r4);
+    int addFrustum(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, u32 flags);
+    void setFrustum(CCullFrustum* r4);
     u8 func_801A0F04(u32 r4);
-    void func_801A1188(COccCulling_UnkStruct1* r4);
-    bool func_801A1444(const ml::CVec3& vec) const;
+    void func_801A1188(CCullFrustum* r4);
+    bool func_801A1444(const ml::CVec3& vec, float distance);
     bool func_801A1550(const ml::CVec3& rayStartPos, const ml::CVec3& rayEndPos, UNKWORD r6) const;
 
     //0x0: vtable
-    resvector<COccCulling_UnkStruct1*> unk4;
-    resvector<COccCulling_UnkStruct1*> unk14;
-    u32 unk24;
+    resvector<CCullFrustum*> mFrustumList1; //0x4
+    resvector<CCullFrustum*> mFrustumList2; //0x14
+    COccCulling_UnkStruct2* unk24;
     mtl::ALLOC_HANDLE unk28;
     u8 unk2C;
     u8 unk2D;

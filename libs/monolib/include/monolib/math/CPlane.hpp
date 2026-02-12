@@ -17,21 +17,41 @@ namespace ml {
             mNormal.normalizeSub();
         }
 
-        float getPointDistance(const CVec3& vec) const {
-            return CVec3::dot(vec, mNormal) + mDist;
+        CVec3 convertRayToNormal(const CVec3& rayStartPos, const CVec3& rayEndPos) const {
+            CVec3 normal = rayEndPos - rayStartPos;
+            normal.normalizeSub();
+            return normal;
         }
 
-        //Gets the side of the plane the point is on. (TODO: since the distance is flipped, true should be
-        //the positive side, and false should be the negative side?)
-        bool getSide(const CVec3& vec) const {
+        //Sets this plane from the given ray start/end position.
+        void set(const CVec3& rayStartPos, const CVec3& rayEndPos){
+            mNormal = convertRayToNormal(rayStartPos, rayEndPos);
+            mDist = -CVec3::dot(rayStartPos, mNormal);
+        }
+
+        float getPointDistance(const CVec3& pos) const {
+            return CVec3::dot(pos, mNormal) + mDist;
+        }
+        
+        bool isWithinDistance(const CVec3& vec, float distance) const {
+            if(getPointDistance(vec) < distance) return true;
+            else return false;
+        }
+
+        bool isOnNegativeSide(const CVec3& vec) const {
             if(getPointDistance(vec) < 0) return true;
             else return false;
         }
 
-        //Determines if both points are on the same side of the plane.
-        bool isSameSide(const CVec3& vec1, const CVec3& vec2) const {
-            float f1 = getPointDistance(vec1);
+        bool isOnPositiveSide(const CVec3& vec) const {
+            if(getPointDistance(vec) >= 0) return true;
+            else return false;
+        }
+
+        //Determines if the points are on different sides of the plane.
+        bool isDifferentSide(const CVec3& vec1, const CVec3& vec2) const {
             float f0 = getPointDistance(vec2);
+            float f1 = getPointDistance(vec1);
             
             bool r3 = f1 >= 0;
             bool r0 = f0 >= 0;
