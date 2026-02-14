@@ -109,7 +109,7 @@ public:
 template <typename T, typename Ref, typename Ptr>
 class _reslist_iterator {
 public:
-    _reslist_iterator() : mNode(NULL){}
+    _reslist_iterator() : mNode(nullptr){}
     explicit _reslist_iterator(_reslist_node<T>* node) : mNode(node){}
 
     _reslist_iterator& operator++(){
@@ -130,7 +130,6 @@ public:
     }
 
     _reslist_iterator operator--(int){
-
         _reslist_iterator temp = *this;
         mNode = mNode->mPrev;
         return temp;

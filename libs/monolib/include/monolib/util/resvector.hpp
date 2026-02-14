@@ -14,19 +14,31 @@ public:
         destroy();
     }
     
-    T* begin() const {
+    T* begin(){
         return &mArray[0];
     }
 
-    T* end() const {
+    T* end(){
         return &mArray[mCount];
+    }
+
+    const T* begin() const{
+        return begin();
+    }
+
+    const T* end() const{
+        return end();
     }
 
     u32 size() const {
         return mCount;
     }
 
-    T operator[](int index){
+    T& operator[](int index){
+        return mArray[index];
+    }
+
+    const T& operator[](int index) const {
         return mArray[index];
     }
 

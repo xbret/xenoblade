@@ -6,7 +6,7 @@
 
 
 //Some type of view frustum?
-struct CCullFrustum {
+struct CCullFrustum{
     enum Flags{
         FLAG_0 = 1 << 0,
         FLAG_1 = 1 << 1,
@@ -29,19 +29,20 @@ struct CCullFrustum {
     ml::CVec3 mPos; //0x0
     ml::CVec3 mRot; //0xC
     ml::CVec3 mScale; //0x18
-    ml::CVec3 unk24;
+    //unsure
+    ml::CVec3 mDir; //0x24
     ml::CMat34 mMat; //0x30
     ml::CMat34 mMatInv; //0x60
     ml::CVec3 unk90[4]; //0x90
-    float unkC0[4];
+    float unkC0[4]; //unused?
     ml::CPlane mPlane0; //0xD0
     ml::CPlane mPlane1; //0xE0
     ml::CPlane mPlane2; //0xF0
     ml::CPlane mPlane3; //0x100
     ml::CPlane mPlane4; //0x110
     bool mInFirstList; //0x120
-    float unk124;
-    float unk128;
+    float unk124; //Near plane value?
+    float unk128; //Far plane value?
     u32 unk12C;
     u32 mFlags; //0x130
 };
@@ -55,7 +56,7 @@ struct COccCulling_UnkStruct2{
     ml::CPlane unk248[6];
 };
 
-class COccCulling {
+class COccCulling{
 public:
     COccCulling();
     virtual ~COccCulling();
@@ -63,10 +64,10 @@ public:
     DECOMP_DONT_INLINE void func_801A0794();
     int addFrustum(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, u32 flags);
     void setFrustum(CCullFrustum* r4);
-    u8 func_801A0F04(u32 r4);
+    u8 func_801A0F04(COccCulling_UnkStruct2* r4);
     void func_801A1188(CCullFrustum* r4);
     bool func_801A1444(const ml::CVec3& vec, float distance);
-    bool func_801A1550(const ml::CVec3& rayStartPos, const ml::CVec3& rayEndPos, UNKWORD r6) const;
+    bool func_801A1550(const ml::CVec3& rayStartPos, const ml::CVec3& rayEndPos, UNKWORD r6);
 
     //0x0: vtable
     resvector<CCullFrustum*> mFrustumList1; //0x4
@@ -78,5 +79,5 @@ public:
     u8 unk2E;
 
 private:
-    static ml::CVec3 lbl_80578FE8[];
+    static ml::CVec3 sPlaneCoords[];
 };

@@ -2,7 +2,7 @@
 
 using namespace ml;
 
-CVec3 COccCulling::lbl_80578FE8[] = {
+CVec3 COccCulling::sPlaneCoords[] = {
     CVec3(-0.5f, 0, 0),
     CVec3(0.5f, 0, 0),
     CVec3(0.5f, 1, 0),
@@ -74,15 +74,15 @@ void COccCulling::setFrustum(CCullFrustum* pFrustum){
     pFrustum->mMat.addTranslation(pFrustum->mPos);
     pFrustum->mMat.invert(&pFrustum->mMatInv);
 
-    pFrustum->unk24.set(0, 0, 1);
-    nw4r::math::VEC3TransformNormal(pFrustum->unk24, pFrustum->mMat, pFrustum->unk24);
-    pFrustum->unk24.normalizeSub();
+    pFrustum->mDir.set(0, 0, 1);
+    nw4r::math::VEC3TransformNormal(pFrustum->mDir, pFrustum->mMat, pFrustum->mDir);
+    pFrustum->mDir.normalizeSub();
 
     pFrustum->unk124 = 0;
     pFrustum->unk128 = 0;
 
-    for(int i = 0; i < ARRAY_SIZE(lbl_80578FE8); i++){
-        pFrustum->mMat.mul(pFrustum->unk90[i], lbl_80578FE8[i]);
+    for(int i = 0; i < ARRAY_SIZE(sPlaneCoords); i++){
+        pFrustum->mMat.mul(pFrustum->unk90[i], sPlaneCoords[i]);
 
         float magnitude = nw4r::math::VEC3LenSq(pFrustum->mPos - pFrustum->unk90[i]);
 
@@ -103,17 +103,73 @@ void COccCulling::setFrustum(CCullFrustum* pFrustum){
     pFrustum->mPlane4.set(pFrustum->unk90[3], pFrustum->unk90[0]);
 }
 
-u8 COccCulling::func_801A0F04(u32 r4){
-    return 0;
+u8 COccCulling::func_801A0F04(COccCulling_UnkStruct2* r4){
+    unk24 = r4;
+
+    for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){
+        CCullFrustum* frustum = *it;
+        COccCulling::func_801A1188(frustum);
+    }
+
+    if(mFrustumList1.size() > 1){
+        /* Move all entries that shouldn't be in the first list to the start, and also sort them by their unk124 value,
+        from lowest to highest. */
+        bool swappedEntry;
+
+        do{
+            swappedEntry = false;
+
+            for(int i = 0; i < mFrustumList1.size() - 1; i++){
+                //What are we doing
+                if((mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList)
+                || (!mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList && mFrustumList1[i]->unk124 > mFrustumList1[i + 1]->unk124)){
+                    swappedEntry = true;
+                    //Swap the entries
+                    CCullFrustum* temp = mFrustumList1[i + 1];
+                    mFrustumList1[i + 1] = mFrustumList1[i];
+                    mFrustumList1[i] = temp;
+                }
+            }
+        }while(swappedEntry);
+
+        for(int i = mFrustumList1.size() - 1; i > 0; i--){
+            CCullFrustum* frustum = mFrustumList1[i]; //r8
+
+            if(!frustum->mInFirstList){
+                unk2C = true;
+
+                for(int j = i - 1; j >= 0; j--){
+                    CCullFrustum* frustum2 = mFrustumList1[j];
+                    //TODO: this seems like an inline?
+                    if(!frustum2->mPlane1.isWithinDistance(frustum->mPos, frustum->unk128) && !frustum2->mPlane2.isWithinDistance(frustum->mPos, frustum->unk128)
+                    && !frustum2->mPlane3.isWithinDistance(frustum->mPos, frustum->unk128) && !frustum2->mPlane4.isWithinDistance(frustum->mPos, frustum->unk128)
+                    && !frustum2->mPlane0.isWithinDistance(frustum->mPos, frustum->unk128)){
+                        frustum->mInFirstList = true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    //Check if there are any entries which shouldn't be in the first list, and set unk2C accordingly
+    unk2C = false;
+
+    for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){
+        CCullFrustum* frustum = *it;
+        if(!frustum->mInFirstList){
+            unk2C = true;
+            break;
+        }
+    }
+
+    return unk2C;
 }
 
 void COccCulling::func_801A1188(CCullFrustum* pFrustum){
     pFrustum->mInFirstList = true;
 
     if(!(pFrustum->mFlags & CCullFrustum::FLAGS_01)){
-        //r0 = 5
-        //r6 = 16
-
         for(int i = 0; i < 5; i++){
             COccCulling_UnkStruct2* r0 = unk24;
             CPlane* plane = &r0->unk248[i + 1];
@@ -137,7 +193,7 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
     CVec3 r1_20;
     unk24->unkCC.mul(r1_20, pFrustum->mPos);
     pFrustum->unk124 = -r1_20.z;
-    float dot = CVec3::dot(pFrustum->unk24, unk24->unk10C - pFrustum->mPos);
+    float dot = CVec3::dot(pFrustum->mDir, unk24->unk10C - pFrustum->mPos);
 
     if(dot < 0){
         pFrustum->mPlane0.set(pFrustum->unk90[0], pFrustum->unk90[1], pFrustum->unk90[2]);
@@ -154,9 +210,9 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
     }
 }
 
-bool COccCulling::func_801A1444(const CVec3& intersectPoint, float distance) {
+bool COccCulling::func_801A1444(const CVec3& intersectPoint, float distance){
     CCullFrustum* frustum;
-
+    
     for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){
         frustum = *it;
 
@@ -172,7 +228,7 @@ bool COccCulling::func_801A1444(const CVec3& intersectPoint, float distance) {
     return false;
 }
 
-bool COccCulling::func_801A1550(const CVec3& rayStartPos, const CVec3& rayEndPos, UNKWORD r6) const {
+bool COccCulling::func_801A1550(const CVec3& rayStartPos, const CVec3& rayEndPos, UNKWORD r6){
     CVec3 rayDir = rayEndPos - rayStartPos;
     
     //Looks like the normalize inline but isn't?

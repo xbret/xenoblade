@@ -269,6 +269,7 @@ bool CDeviceVI::initBaseRenderModeStruct(u32 renderModeIndex, u32 viWidth){
 
         //Make sure the render mode is valid
         if(renderMode == nullptr){
+            //XC3D debug message: Panic("CDeviceVI: render index %d doesn\'t exist", newIndex)
             return false;
         }
 

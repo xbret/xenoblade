@@ -1,5 +1,6 @@
 #pragma once
 
+#include "monolib/util/BoolUtils.hpp"
 #include "monolib/util/CChildListNode.hpp"
 #include "monolib/util/CDoubleListNode.hpp"
 #include "monolib/util/CErrorWii.hpp"
