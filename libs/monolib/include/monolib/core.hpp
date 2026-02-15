@@ -7,4 +7,5 @@
 #include "monolib/core/CScriptCode.hpp"
 #include "monolib/core/CTaskManager.hpp"
 #include "monolib/core/CView.hpp"
+#include "monolib/core/CViewFrame.hpp"
 #include "monolib/core/CViewRoot.hpp"

@@ -41,15 +41,15 @@ public:
     _reslist_base(){
         mList = nullptr;
         mCapacity = 0;
-        unk1C = 0;
+        unk1C = false;
         mStartNodePtr = &mStartNode;
         mStartNodePtr->mNext = &mStartNode;
         mStartNodePtr->mPrev = mStartNode.mNext;
     }
 
     virtual ~_reslist_base(){
-        clear();
-        if (unk1C == 0 && mList != nullptr) {
+        clearList();
+        if (unk1C == false && mList != nullptr) {
             delete[](this->mList);
             mList = nullptr;
         }
@@ -81,12 +81,11 @@ public:
     }
 
     //func_8049CAF4
-    void clear(){
+    void clearList(){
         _reslist_node<T>* r5 = mStartNodePtr->mNext;
-        _reslist_node<T>* r4;
         
         while (r5 != mStartNodePtr) {
-            r4 = r5;
+            _reslist_node<T>* r4 = r5;
             r5 = r5->mNext;
             func_8049CB6C(&r4->mItem);
             func_8049CB70(r4);
@@ -101,8 +100,7 @@ public:
     _reslist_node<T> mStartNode; //0x8
     _reslist_node<T>* mList; //0x14
     int mCapacity; //0x18
-    u8 unk1C; //0x1C
-    u8 unk1D[3];
+    bool unk1C; //0x1C
 };
 
 //Unofficial name
@@ -269,9 +267,13 @@ public:
         frontNode->mNext = nullptr;
     }
 
+    void clear(){
+        clearList();
+    }
+
     void destroyList(){
-        clear();
-        if (unk1C == 0 && mList != nullptr) {
+        clearList();
+        if (unk1C == false && mList != nullptr) {
             delete[](this->mList);
             mList = nullptr;
         }

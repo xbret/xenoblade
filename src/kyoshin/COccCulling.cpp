@@ -69,7 +69,7 @@ void COccCulling::setFrustum(CCullFrustum* pFrustum){
     pFrustum->mMat.setScale(CVec3(xScale, yScale, 1));
     rotMat.setRotXYZ(pFrustum->mRot);
 
-    CMat34::mul(rotMat, pFrustum->mMat, pFrustum->mMat);
+    CMat34::mul(pFrustum->mMat, pFrustum->mMat, rotMat);
 
     pFrustum->mMat.addTranslation(pFrustum->mPos);
     pFrustum->mMat.invert(&pFrustum->mMatInv);
@@ -170,9 +170,9 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
     pFrustum->mInFirstList = true;
 
     if(!(pFrustum->mFlags & CCullFrustum::FLAGS_01)){
-        for(int i = 0; i < 5; i++){
+        for(int i = 1; i < 6; i++){
             COccCulling_UnkStruct2* r0 = unk24;
-            CPlane* plane = &r0->unk248[i + 1];
+            CPlane* plane = &r0->unk248[i];
 
             bool b = true;
 

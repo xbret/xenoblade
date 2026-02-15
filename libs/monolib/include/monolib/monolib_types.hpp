@@ -16,4 +16,5 @@ class CChildListNode;
 //Work
 class CEventFile;
 class CProcess;
+class CProc;
 class CWorkThread;

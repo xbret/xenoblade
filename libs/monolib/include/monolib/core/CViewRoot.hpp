@@ -1,5 +1,6 @@
 #pragma once
 
+#include "monolib/monolib_types.hpp"
 #include "monolib/work/CWorkThread.hpp"
 
 class CViewRoot : public CWorkThread {
@@ -8,5 +9,7 @@ public:
 
     static CViewRoot* create(CWorkThread* pParent);
     static CViewRoot* getInstance();
+    static void destroyProc(CProc* pProc);
     static void func_804430C4();
+    static CView* getView(u32 r3);
 };

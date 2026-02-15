@@ -4368,14 +4368,14 @@ monolib/src/core/CView.cpp:
 	.ctors      start:0x804FA124 end:0x804FA128
 
 monolib/src/core/CViewFrame.cpp:
-	extab       start:0x8001C68C end:0x8001C76C
-	extabindex  start:0x800344B0 end:0x80034594
-	.text       start:0x8044255C end:0x80445A5C
+	extab       start:0x8001C68C end:0x8001C6E4
+	extabindex  start:0x800344B0 end:0x8003451C
+	.text       start:0x8044255C end:0x80444A68
 
 monolib/src/core/CViewRoot.cpp:
-	extab       start:0x8001C76C end:0x8001C7D0
-	extabindex  start:0x80034594 end:0x800345C4
-	.text       start:0x80445A5C end:0x804460B0
+	extab       start:0x8001C6E4 end:0x8001C7D0
+	extabindex  start:0x8003451C end:0x800345C4
+	.text       start:0x80444A68 end:0x804460B0
 
 monolib/src/work/CWorkControl.cpp:
 	extab       start:0x8001C7D0 end:0x8001C808

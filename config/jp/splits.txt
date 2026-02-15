@@ -6020,22 +6020,22 @@ monolib/src/core/CView.cpp:
 	.sdata2     start:0x8066CAD0 end:0x8066CAE8
 
 monolib/src/core/CViewFrame.cpp:
-	extab       start:0x8001C5E0 end:0x8001C6C0
-	extabindex  start:0x800341F0 end:0x800342D4
-	.text       start:0x8043FBC4 end:0x804430C4
+	extab       start:0x8001C5E0 end:0x8001C638
+	extabindex  start:0x800341F0 end:0x8003425C
+	.text       start:0x8043FBC4 end:0x804420D0
 	.rodata     start:0x80525F68 end:0x80525F78
 	.data       start:0x8056EF78 end:0x8056EF88
 	.sdata      start:0x80665EC8 end:0x80665ED0
-	.sbss       start:0x80667EB0 end:0x80667EB8
 	.sdata2     start:0x8066CAE8 end:0x8066CB20
 
 monolib/src/core/CViewRoot.cpp:
-	extab       start:0x8001C6C0 end:0x8001C724
-	extabindex  start:0x800342D4 end:0x80034304
-	.text       start:0x804430C4 end:0x80443718
+	extab       start:0x8001C638 end:0x8001C724
+	extabindex  start:0x8003425C end:0x80034304
+	.text       start:0x804420D0 end:0x80443718
 	.rodata     start:0x80525F78 end:0x80525F90
 	.data       start:0x8056EF88 end:0x8056F040
 	.sdata      start:0x80665ED0 end:0x80665ED8
+	.sbss       start:0x80667EB0 end:0x80667EB8
 
 monolib/src/work/CWorkControl.cpp:
 	extab       start:0x8001C724 end:0x8001C75C

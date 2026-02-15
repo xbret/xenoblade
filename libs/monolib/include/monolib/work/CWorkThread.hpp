@@ -43,6 +43,7 @@ public:
         THREAD_CDESKTOP = 24,
         THREAD_CEXCEPTION = 25,
         THREAD_CLIBHBMCONTROL = 45,
+        THREAD_47 = 47,
         THREAD_CVIEW = 48,
         THREAD_CRSRCDATA = 56,
         THREAD_CSCRIPTCODE = 59,

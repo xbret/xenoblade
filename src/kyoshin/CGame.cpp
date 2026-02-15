@@ -187,7 +187,7 @@ bool CGame::wkStandbyLogin(){
     VISetTimeToDimming(1);
 
     //Fetch the 4:3 mode brlyt file
-    if(CLibStaticData::getStaticFileData("43", &handle, false)){
+    if(CLibStaticData::getStaticFileData("43", &handle, nullptr)){
         sArcResourceAccessor = CLibLayout_getArcResourceAccessorInstance();
         sArcResourceAccessor->Attach(handle.data, "arc");
         func_80136E84(&lbl_80666604, sArcResourceAccessor, "4_3mode.brlyt");
