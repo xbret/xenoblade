@@ -186,11 +186,18 @@ public:
     }
 
     u32 size() const {
-        u32 length = 0;
+        _reslist_node<T>* curNode;
+        _reslist_node<T>* endNode;
         
-        for(iterator it = begin(); it != end(); it++){
+        u32 length = 0;
+        endNode = mStartNodePtr;
+        curNode = mStartNodePtr->mNext;
+
+        while(curNode != endNode){
             length++;
+            curNode = curNode->mNext;
         }
+        
         return length;
     }
 

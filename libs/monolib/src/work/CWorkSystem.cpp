@@ -71,7 +71,7 @@ void CWorkSystem::wkUpdate(){
 }
 
 bool CWorkSystem::wkStandbyLogin(){
-    if(!CDeviceFile::func_8044E514()) return false;
+    if(!CDeviceFile::isInitialized()) return false;
 
     CREATE_WORKTHREAD(CWorkSystemMem, this);
     mMemHandle = CWorkSystemMem::getHandle();

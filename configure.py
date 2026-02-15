@@ -1706,7 +1706,7 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/work/CWorkFlowWiiPowerOff.cpp"),
             Object(NonMatching, "monolib/src/work/CWorkRoot.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(MatchingFor("jp"), "monolib/src/work/CWorkSystem.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
-            Object(NonMatching, "monolib/src/work/CWorkSystemMem.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
+            Object(MatchingFor("jp"), "monolib/src/work/CWorkSystemMem.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "monolib/src/work/CProcess.cpp"),
             Object(MatchingFor("jp"), "monolib/src/util/CDoubleListNode.cpp"),
             Object(MatchingFor("jp"), "monolib/src/util/CChildListNode.cpp"),
