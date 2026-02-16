@@ -6,6 +6,7 @@
 #include "monolib/lib.hpp"
 #include "monolib/core.hpp"
 #include "monolib/device.hpp"
+#include "monolib/work.hpp"
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 #include <revolution/WPAD.h>
@@ -18,11 +19,7 @@ extern float func_801C0014();
 extern void func_801BFFAC(float f1, float f2);
 extern void func_801644BC(u32 r3);
 extern void func_80044FBC(u32 r3);
-extern void func_80442DA8();
-extern CView* createWorkThreadView(CWorkThread* thread1, const char* const string, CWorkThread* thread2,
-int r6);
 extern bool func_8045DE00();
-extern CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);
 
 CGame* CGame::spInstance;
 static FixStr<64> lbl_80573C80;
@@ -120,7 +117,7 @@ void CGame::wkRender(){
             nw4r::lyt::DrawInfo drawInfo;
             func_80137250(&drawInfo);
             func_80137038(lbl_80666604, &drawInfo, 0, 1);
-            func_80442DA8();
+            CViewRoot::func_80442DA8();
         }
     }
 
@@ -132,17 +129,17 @@ void CGame::wkRender(){
 void CGame::func_800395F4(bool wide){
     if(spInstance != nullptr && spInstance->mView != nullptr){
         if(!wide){
-            func_80039694(spInstance->mView, 0, 56,
+            setViewRect(spInstance->mView, 0, 56,
             CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
         }else{
-            func_80039694(spInstance->mView, 0, 0,
+            setViewRect(spInstance->mView, 0, 0,
             CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
         }
     }
 }
 
-void CGame::func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height){
-    view->func_8043CB7C(ml::CRect16(x, y, width, height));
+void CGame::setViewRect(CView* view, s16 x, s16 y, s16 width, s16 height){
+    view->setRect(ml::CRect16(x, y, width, height));
 }
 
 bool CGame::wkStandbyLogin(){
@@ -150,8 +147,8 @@ bool CGame::wkStandbyLogin(){
     if(!CLibStaticData::func_8045FB08()) return false;
 
     //Create the CView instance for CGame
-    CWorkThread* thread1 = func_80455AA0();
-    mView = createWorkThreadView(this, scViewName, thread1, 0);
+    CView* desktopView = CDesktop::getView();
+    mView = pssCreateView(scViewName, desktopView, 0);
     CView* view = mView;
     const char* nameTemp = scViewName;
 
@@ -162,10 +159,10 @@ bool CGame::wkStandbyLogin(){
 
     //Almost equivalent to func_800395F4
     if(CDeviceSC::isWideAspectRatio()){
-        func_80039694(mView, 0, 0,
+        setViewRect(mView, 0, 0,
         CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
     }else{
-        func_80039694(mView, 0, 56,
+        setViewRect(mView, 0, 56,
         CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
     }
 
@@ -245,7 +242,7 @@ void CGame::GameMain(){
         spInstance->func_804391A8();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
-        create("CGame", CDesktop::getInstance(), func_80455AA0()->mWorkID);
+        create("CGame", CDesktop::getInstance(), CDesktop::getView()->mWorkID);
     }
 }
 

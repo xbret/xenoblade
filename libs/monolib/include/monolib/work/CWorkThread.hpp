@@ -14,8 +14,14 @@ public:
     /* Enum used to keep track of the type of this work thread, which is useful when
      casting from a generic instance of CWorkThread. Most classes inheriting from
      CWorkThread have a unique value reserved, but not all do. If a custom value
-     isn't set, derived classes will default to the value for CWorkThread. */
+     isn't set, derived classes will default to the value for CWorkThread.
+     
+     Special type ranges:
+     23-47: CProc inheriting classes
+     48-52: CView inheriting classes
+    */
     enum ThreadType{
+        //Work classes
         THREAD_CWORKTHREAD = 0,
         THREAD_CWORKCONTROL = 1,
         THREAD_CWORKSYSTEM = 2,
@@ -27,6 +33,7 @@ public:
         THREAD_08 = 8,
         THREAD_09 = 9,
         THREAD_CDEVICE = 10,
+        //CLib classes
         THREAD_CLIB = 11,
         THREAD_CLIBG3D = 12,
         THREAD_CLIBHBM = 13,
@@ -37,16 +44,21 @@ public:
         THREAD_CLIBVM = 18,
         THREAD_CLIBSTATICDATA = 19,
         THREAD_20 = 20,
+        //Root classes
         THREAD_CPROCROOT = 21,
         THREAD_CVIEWROOT = 22,
+        //CProc inheriting classes
         THREAD_CPROC = 23,
         THREAD_CDESKTOP = 24,
         THREAD_CEXCEPTION = 25,
         THREAD_CLIBHBMCONTROL = 45,
-        THREAD_47 = 47,
+        THREAD_CPROC_MAX = 47,
+        //CView inheriting classes
         THREAD_CVIEW = 48,
+        THREAD_CVIEW_MAX = 52,
         THREAD_CRSRCDATA = 56,
         THREAD_CSCRIPTCODE = 59,
+        //Misc device classes
         THREAD_CDEVICEFONTLAYER = 63,
         THREAD_CDEVICEFONTLOADER = 64,
         THREAD_CDEVICEFILEJOB = 65,
@@ -128,7 +140,7 @@ public:
     }
 
     bool isRunning() const {
-        return (!isException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN));
+        return !isException() && (mState == THREAD_STATE_LOGIN || mState == THREAD_STATE_RUN);
     }
 
     bool isException() const {

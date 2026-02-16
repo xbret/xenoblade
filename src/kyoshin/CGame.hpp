@@ -23,7 +23,7 @@ public:
     virtual void wkUpdate();
     virtual void wkRender();
     static void func_800395F4(bool r3);
-    static void func_80039694(CView* view, s16 x, s16 y, s16 width, s16 height);
+    static void setViewRect(CView* view, s16 x, s16 y, s16 width, s16 height);
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
     static void GameMain();
@@ -82,7 +82,7 @@ namespace {
             CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pWorkThread, 8);
             
             CWorkUtil::entryWork(gameRestart, pWorkThread, false);
-            gameRestart->unk1E4 = func_80455AA0()->mWorkID;
+            gameRestart->unk1E4 = CDesktop::getView()->mWorkID;
             spInstance = gameRestart;
             return gameRestart;
         }

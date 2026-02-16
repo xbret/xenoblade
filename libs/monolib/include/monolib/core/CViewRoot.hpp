@@ -10,6 +10,7 @@ public:
     static CViewRoot* create(CWorkThread* pParent);
     static CViewRoot* getInstance();
     static void destroyProc(CProc* pProc);
+    static void func_80442DA8();
     static void func_804430C4();
-    static CView* getView(u32 r3);
+    static CView* getView(WORK_ID id);
 };

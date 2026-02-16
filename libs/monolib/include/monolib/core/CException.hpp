@@ -17,3 +17,5 @@ public:
     IGameException* mException; //0x200
     u32 unk204;
 };
+
+CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);

@@ -266,9 +266,13 @@ public:
     }
 
     void pop_front(){
-        _reslist_node<T>* frontNode = mStartNodePtr->mNext;
-        _reslist_node<T>* nextNode = frontNode->mNext;
-        _reslist_node<T>* prevNode = frontNode->mPrev;
+        _reslist_node<T>* prevNode;
+        _reslist_node<T>* nextNode;
+        _reslist_node<T>* frontNode;
+
+        frontNode = mStartNodePtr->mNext;
+        nextNode = frontNode->mNext;
+        prevNode = frontNode->mPrev;
         prevNode->mNext = nextNode;
         nextNode->mPrev = prevNode;
         frontNode->mNext = nullptr;

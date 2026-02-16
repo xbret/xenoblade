@@ -10,6 +10,12 @@ class CException;
 class CFileHandle;
 class CDeviceFileJob;
 
+//Math
+namespace ml {
+    struct CPnt16;
+    struct CRect16;
+} //namespace ml
+
 //Util
 class CChildListNode;
 

@@ -18,9 +18,7 @@ public:
 
     static CDesktop* getInstance();
     static void entryTable(DESKTOP_ICON_DEF*, u32);
+    static CView* getView();
 };
 
 typedef CDesktop::DESKTOP_ICON_DEF DesktopIcon;
-
-//Not sure if this is CView. It at least inherits from CWorkThread
-extern CWorkThread* func_80455AA0();
