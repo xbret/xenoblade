@@ -1,6 +1,7 @@
 #pragma once
 
 #include <types.h>
+#include "monolib/math.hpp"
 
 //size: 0x5C
 class CViewFrame {
@@ -10,3 +11,6 @@ public:
     s16 unk56;
     u8 unk58[0x4];
 };
+
+
+extern void func_8043FC68(ml::CRect16& rect, CViewFrame* r4);

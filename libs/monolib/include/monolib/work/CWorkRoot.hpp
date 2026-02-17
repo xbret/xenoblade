@@ -20,15 +20,15 @@ public:
     static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool prepend);
     static void standbyWork(CWorkThread* pThread, bool arg1);
     static void updateWork(CWorkThread* pThread, bool arg1);
-    static void func_8044406C();
-    static void func_80444154();
+    static void standbyWork();
+    static void renderWork();
 
     static bool runSingle();
     static void exit();
     static void run();
     static void preRetraceCallback(u32 retraceCount);
 
-    static void func_8044436C(CException* pException);
+    static void setException(CException* pException);
     static CException* func_80444384();
 
 private:
@@ -40,7 +40,7 @@ private:
     };
 
     static bool dummy1(CWorkThread* pThread);
-    static inline bool unkInline1();
+    static inline bool isShutdownAll();
     static inline void initializeComponents();
     static inline void destroyComponents();
 

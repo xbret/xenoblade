@@ -29,7 +29,7 @@ public:
     virtual void viBeginFrame();
     static void drawFrame();
     static void copyEfb(void* pDestFrameBuffer);
-    static void func_8045579C();
+    static void onRenderWork();
     static int getHeapSize();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();

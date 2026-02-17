@@ -2,6 +2,8 @@
 
 #include <types.h>
 #include "monolib/util/MemManager.hpp"
+#include "monolib/work/CWorkThreadSystem.hpp"
+#include <algorithm>
 
 /* TODO: This breaks ctors/dtors, but it looks alot nicer than the method below. Maybe there's a way to get
 this to work */
@@ -103,9 +105,13 @@ public:
     bool unk1C; //0x1C
 };
 
+template <typename T>
+class reslist;
+
 //Unofficial name
 template <typename T, typename Ref, typename Ptr>
 class _reslist_iterator {
+    friend class reslist<T>;
 public:
     _reslist_iterator() : mNode(nullptr){}
     explicit _reslist_iterator(_reslist_node<T>* node) : mNode(node){}
@@ -215,7 +221,11 @@ public:
         mCapacity = capacity;
     }
 
-     void push_front(const T& item){
+    iterator find(const T& item){
+        return std::find(begin(), end(), item);
+    }
+
+    void push_front(const T& item){
         _reslist_node<T>* startNode = mStartNodePtr->mNext;
         int i = findFirstEmptySlotIndex();
 
@@ -276,6 +286,18 @@ public:
         prevNode->mNext = nextNode;
         nextNode->mPrev = prevNode;
         frontNode->mNext = nullptr;
+    }
+
+    void erase(iterator& it){
+        _reslist_node<T>* r5;
+        _reslist_node<T>* r4;
+        _reslist_node<T>* node = it.mNode;
+        
+        r4 = node->mPrev;
+        r5 = node->mNext;
+        r4->mNext = r5;
+        r5->mPrev = r4;
+        node->mNext = nullptr;
     }
 
     void clear(){

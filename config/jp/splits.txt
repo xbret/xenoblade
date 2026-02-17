@@ -5963,14 +5963,20 @@ monolib/src/work/CProc.cpp:
 	.sdata2     start:0x8066CA78 end:0x8066CA88
 
 monolib/src/work/CProcRoot.cpp:
-	extab       start:0x8001C230 end:0x8001C278
-	extabindex  start:0x80033E84 end:0x80033EF0
-	.text       start:0x8043974C end:0x80439CB4
+	extab       start:0x8001C230 end:0x8001C248
+	extabindex  start:0x80033E84 end:0x80033EA8
+	.text       start:0x8043974C end:0x80439914
 	.rodata     start:0x80525E20 end:0x80525E40
 	.data       start:0x8056EB20 end:0x8056EBD8
-	.bss        start:0x8065A088 end:0x8065A0C8
 	.sdata      start:0x80665E70 end:0x80665E78
-	.sbss       start:0x80667E80 end:0x80667E90
+	.sbss       start:0x80667E80 end:0x80667E88
+
+monolib/src/core/CRsrc.cpp:
+	extab       start:0x8001C248 end:0x8001C278
+	extabindex  start:0x80033EA8 end:0x80033EF0
+	.text       start:0x80439914 end:0x80439CB4
+	.bss        start:0x8065A088 end:0x8065A0C8
+	.sbss       start:0x80667E88 end:0x80667E90
 
 monolib/src/core/CRsrcData.cpp:
 	extab       start:0x8001C278 end:0x8001C2CC

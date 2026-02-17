@@ -20,13 +20,35 @@ public:
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
 
-    static CProc* convertToProc(CWorkThread* pThread);
-    static CView* convertToView(CWorkThread* pThread);
-    void func_804391A8();
+    CView* pssGetView(WORK_ID id) const;
+    static CProc* pssGetRoot(CProc* pProc);
+    void pssSetFocus();
+    bool func_80439258(WORK_ID id);
     inline ml::CRect16& pssMakeClientRect(ml::CRect16& rect) const;
     void pssDetachView();
     void pssAttachView(CView* pView);
     CView* pssCreateView(const char* pName, CWorkThread* pThread2, int r6);
+
+    CWorkThread* pssGetParent() const {
+        return mParent;
+    }
+
+    //Tries to cast the given thread to CProc.
+    static CProc* convertToProc(CWorkThread* pThread) {
+        if(pThread == nullptr){
+            return nullptr;
+        }
+
+        int type = pThread->mType;
+
+        //Check if the thread's type is in the CProc range
+        if(THREAD_CPROC > type || type >= THREAD_CPROC_MAX) return nullptr;
+        return static_cast<CProc*>(pThread);
+    }
+
+    WORK_ID getFirstViewID() const {
+        return mViewIDList.front();
+    }
 
     //0x0: vtable
     //0x0-1c4: CWorkThread

@@ -1,6 +1,6 @@
 #include "monolib/device.hpp"
+#include "monolib/core.hpp"
 
-extern bool func_804399A4(UNKTYPE* r3, const char* r4, UNKTYPE* r5, void* r6, u32 r7, bool r8);
 extern bool func_8044E768();
 extern void func_8044FC38();
 extern void func_80450DA4();
@@ -40,8 +40,8 @@ bool CDeviceFileJobReadDvd::cancel(CFileHandle* pHandle){
 
 void CDeviceFileJobReadDvd::wkUpdate(){
     if(mHandle != nullptr && mHandle->unkInline2()){
-        if(mHandle->func_80451E48() != nullptr){
-            func_804399A4(mHandle->func_80451E48(), getFilename(), &mHandle->unk160,
+        if(mHandle->getRsrc() != nullptr){
+            CRsrc::entry(mHandle->getRsrc(), getFilename(), &mHandle->unk160,
             mHandle->getData(), mHandle->getLength(), false);
         }
 
@@ -54,7 +54,7 @@ bool CDeviceFileJobReadDvd::wkStandbyLogin(){
     if(isThreadFlag0()){
         return CWorkThread::wkStandbyLogin();
     }else if(wkIsCurrent()){
-        if(mHandle->func_80451DA4(true)){
+        if(mHandle->checkExistRsrc(CBM_1)){
             CDeviceFile::removeFileJob(this);
         }
 

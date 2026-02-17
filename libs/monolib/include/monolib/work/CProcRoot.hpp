@@ -7,7 +7,8 @@ public:
     CProcRoot(const char* pName, CWorkThread* pParent);
 
     static CProcRoot* create(CWorkThread* pParent);
+    static CProcRoot* getInstance();
 };
 
 //Possibly member of CWorkThread?
-extern bool func_80439AD4(CWorkThread* pThread);
+extern bool hasChild(CWorkThread* pThread);

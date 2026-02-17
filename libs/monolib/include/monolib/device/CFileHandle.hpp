@@ -26,8 +26,8 @@ struct CFileHandle {
     u32 unk160;
 
     void call(CBM cbm);
-    bool func_80451DA4(bool r4);
-    UNKTYPE* func_80451E48();
+    bool checkExistRsrc(CBM cbm);
+    UNKTYPE* getRsrc();
 
     inline void* getData(){
         void* r31 = mData;

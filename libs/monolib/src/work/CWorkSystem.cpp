@@ -98,13 +98,13 @@ bool CWorkSystem::wkStandbyLogin(){
 
 bool CWorkSystem::wkStandbyLogout(){
     //"Failed to log out"
-    wkCheckTimeout(30000, !func_80439AD4(this), "ログアウトに失敗しました");
+    wkCheckTimeout(30000, !hasChild(this), "ログアウトに失敗しました");
 
     if(CScriptCode::getInstance() != nullptr){
         func_80496998();
     }
 
-    if(!func_80439AD4(this)){
+    if(!hasChild(this)){
         CTaskManager::Release();
         UNKTYPE* r3 = func_804BC9EC();
         func_804BCC1C(r3); //probably class function

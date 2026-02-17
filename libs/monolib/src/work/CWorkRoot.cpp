@@ -30,7 +30,7 @@ namespace {
         }
 
         virtual bool wkStandbyLogout(){
-            if(func_80439AD4(this)) return false;
+            if(hasChild(this)) return false;
             return CWorkThread::wkStandbyLogout(); //Call base
         }
 
@@ -145,7 +145,7 @@ void CWorkRoot::updateWork(CWorkThread* pThread, bool arg1){
     }
 }
 
-void CWorkRoot::func_8044406C(){
+void CWorkRoot::standbyWork(){
     CWorkRootThread* thread = CWorkRootThread::getInstance();
     //Clear both thread lists
     while(thread->mThreadList1.size() > 0){
@@ -168,14 +168,14 @@ void CWorkRoot::func_8044406C(){
     standbyWork(CWorkRootThread::getInstance(), false);
 }
 
-void CWorkRoot::func_80444154(){
+void CWorkRoot::renderWork(){
     if(CDeviceGX::getInstance() != nullptr){
-        CDeviceGX::func_8045579C();
+        CDeviceGX::onRenderWork();
     }
 
     if(!CWorkSystem::isOff()){
         if(CViewRoot::getInstance() != nullptr){
-            CViewRoot::func_804430C4();
+            CViewRoot::renderView();
         }
 
         if(sException != nullptr){
@@ -186,8 +186,8 @@ void CWorkRoot::func_80444154(){
     func_80454E6C();
 }
 
-bool CWorkRoot::unkInline1(){
-    return func_80439AD4(CWorkRootThread::spInstance) ? false : true;
+bool CWorkRoot::isShutdownAll(){
+    return hasChild(CWorkRootThread::spInstance) ? false : true;
 }
 
 bool CWorkRoot::runSingle(){
@@ -199,16 +199,16 @@ bool CWorkRoot::runSingle(){
         CDeviceVI::beginFrame();
     }
 
-    CWorkRoot::func_8044406C();
+    standbyWork();
     //Update all threads, starting from the root thread
     updateWork(CWorkRootThread::spInstance, false);
-    func_80444154();
+    renderWork();
 
     if(CDeviceVI::getInstance() != nullptr){
         CDeviceVI::endFrame();
     }
 
-    return unkInline1() ? false : true;
+    return isShutdownAll() ? false : true;
 }
 
 void CWorkRoot::exit(){
@@ -259,7 +259,7 @@ void CWorkRoot::run(){
     
     //Wait for all devices to be initialized?
     do {
-        func_8044406C();
+        standbyWork();
     } while(CDevice::getInstance() == nullptr || CDevice::func_8044D248());
 
     //Set pre retrace callback
@@ -282,7 +282,7 @@ void CWorkRoot::preRetraceCallback(u32 retraceCount){
     CDeviceVI::onPreRetrace();
 }
 
-void CWorkRoot::func_8044436C(CException* pException){
+void CWorkRoot::setException(CException* pException){
     //Why not just = pException??
     sException = pException != nullptr ? pException : nullptr;
 }

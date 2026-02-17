@@ -183,7 +183,9 @@ void CDeviceGX::copyEfb(void* pDestFrameBuffer){
     }
 }
 
-void CDeviceGX::func_8045579C(){
+/* Stubbed for release. This gets called every frame before view rendering happens, so it might've handled
+drawing debug overlay stuff. */
+void CDeviceGX::onRenderWork(){
 }
 
 int CDeviceGX::getHeapSize(){

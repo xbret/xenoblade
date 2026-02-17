@@ -4337,9 +4337,14 @@ monolib/src/work/CProc.cpp:
 	.text       start:0x8043B5C8 end:0x8043C0E4
 
 monolib/src/work/CProcRoot.cpp:
-	extab       start:0x8001C2DC end:0x8001C324
-	extabindex  start:0x80034144 end:0x800341B0
-	.text       start:0x8043C0E4 end:0x8043C64C
+	extab       start:0x8001C2DC end:0x8001C2F4
+	extabindex  start:0x80034144 end:0x80034168
+	.text       start:0x8043C0E4 end:0x8043C2AC
+
+monolib/src/core/CRsrc.cpp:
+	extab       start:0x8001C2F4 end:0x8001C324
+	extabindex  start:0x80034168 end:0x800341B0
+	.text       start:0x8043C2AC end:0x8043C64C
 
 monolib/src/core/CRsrcData.cpp:
 	extab       start:0x8001C324 end:0x8001C378

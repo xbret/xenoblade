@@ -19,7 +19,6 @@ extern float func_801C0014();
 extern void func_801BFFAC(float f1, float f2);
 extern void func_801644BC(u32 r3);
 extern void func_80044FBC(u32 r3);
-extern bool func_8045DE00();
 
 CGame* CGame::spInstance;
 static FixStr<64> lbl_80573C80;
@@ -239,7 +238,7 @@ static void dummy(){
 
 void CGame::GameMain(){
     if(spInstance != nullptr){
-        spInstance->func_804391A8();
+        spInstance->pssSetFocus();
     }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
         create("CGame", CDesktop::getInstance(), CDesktop::getView()->mWorkID);
@@ -271,17 +270,7 @@ bool CGame::wkStandbyExceptionRetry(u32 wid){
 
     //Get the work thread for the given id
     CWorkThread* workThread = CWorkThread::getWorkThread(wid);
-    CException* exception;
-    
-    //Check that the thread is valid, and has the right type id. If not, set the pointer to null.
-    if(workThread == nullptr){
-        exception = nullptr;
-    }else if(workThread->mType != THREAD_CEXCEPTION){
-        exception = nullptr;
-    }else{
-        //The type matches, so casting should be safe
-        exception = static_cast<CException*>(workThread);
-    }
+    CException* exception = CException::convertToException(workThread);
 
     //Invalid work thread, return
     if(exception == nullptr) return true;

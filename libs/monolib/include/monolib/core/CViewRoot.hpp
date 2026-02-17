@@ -11,6 +11,6 @@ public:
     static CViewRoot* getInstance();
     static void destroyProc(CProc* pProc);
     static void func_80442DA8();
-    static void func_804430C4();
+    static void renderView();
     static CView* getView(WORK_ID id);
 };

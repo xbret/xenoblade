@@ -44,8 +44,34 @@ public:
     virtual void func_8043EAD0();
     virtual void func_8043EAC8();
 
-    void setRect(const ml::CRect16& rect16);
+    void setRect(const ml::CRect16& rect);
     void attachRenderWork(CWorkThread* pThread);
+    void setDisp(bool r4, bool r5);
+    void setCurrent();
+
+    //Tries to cast the given thread to CView.
+    static CView* convertToView(CWorkThread* pThread) {
+        if(pThread == nullptr){
+            return nullptr;
+        }
+
+        int type = pThread->mType;
+
+        //Check if the thread's type is in the CView range
+        if(THREAD_CVIEW > type || type >= THREAD_CVIEW_MAX) return nullptr;
+        return static_cast<CView*>(pThread);
+    }
+
+    
+    void getRect(ml::CRect16& rect){
+        ml::CRect16 tempRect;
+        func_8043FC68(tempRect, &unk1DC);
+
+        rect.mPos.x = tempRect.mPos.x + unk1DC.unk54;
+        rect.mPos.y = tempRect.mPos.y + unk1DC.unk56;
+        rect.mSize.x = unk1C8.unk0;
+        rect.mSize.y = unk1C8.unk2;
+    }
 
     //0x0: vtable 1
     //0x4-1C4: CWorkThread

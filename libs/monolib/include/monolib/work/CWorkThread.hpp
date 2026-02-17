@@ -55,7 +55,7 @@ public:
         THREAD_CPROC_MAX = 47,
         //CView inheriting classes
         THREAD_CVIEW = 48,
-        THREAD_CVIEW_MAX = 52,
+        THREAD_CVIEW_MAX = 53,
         THREAD_CRSRCDATA = 56,
         THREAD_CSCRIPTCODE = 59,
         //Misc device classes

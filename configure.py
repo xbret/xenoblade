@@ -1691,6 +1691,7 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/work/CWorkUtil.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "monolib/src/work/CProc.cpp"),
             Object(NonMatching, "monolib/src/work/CProcRoot.cpp"),
+            Object(NonMatching, "monolib/src/core/CRsrc.cpp"),
             Object(NonMatching, "monolib/src/core/CRsrcData.cpp"),
             Object(NonMatching, "monolib/src/core/CScriptCode.cpp"),
             Object(NonMatching, "monolib/src/core/CToken.cpp"),
