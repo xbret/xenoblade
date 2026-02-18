@@ -23,10 +23,10 @@ public:
     CView* pssGetView(WORK_ID id) const;
     static CProc* pssGetRoot(CProc* pProc);
     void pssSetFocus();
-    bool func_80439258(WORK_ID id);
-    inline ml::CRect16& pssMakeClientRect(ml::CRect16& rect) const;
+    bool pssDetachView(WORK_ID id);
     void pssDetachView();
     void pssAttachView(CView* pView);
+    DECOMP_INLINE ml::CRect16& pssMakeClientRect(ml::CRect16& rect) const;
     CView* pssCreateView(const char* pName, CWorkThread* pThread2, int r6);
 
     CWorkThread* pssGetParent() const {

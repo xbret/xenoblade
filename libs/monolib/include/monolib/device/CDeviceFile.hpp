@@ -14,6 +14,7 @@ public:
     DECL_WORKTHREAD_CREATE(CDeviceFile);
 
     static bool isInitialized();
+    static bool func_8044E768();
 
     static CFileHandle* readFile(mtl::ALLOC_HANDLE allocHandle, const char* pPath, IWorkEvent* pWorkEvent,
     int r6, int r7);

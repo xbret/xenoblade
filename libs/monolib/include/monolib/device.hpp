@@ -3,6 +3,8 @@
 #include "monolib/device/CDevice.hpp"
 #include "monolib/device/CDeviceClock.hpp"
 #include "monolib/device/CDeviceFile.hpp"
+#include "monolib/device/CDeviceFileCri.hpp"
+#include "monolib/device/CDeviceFileDvd.hpp"
 #include "monolib/device/CDeviceFileJob.hpp"
 #include "monolib/device/CDeviceFileJobReadDvd.hpp"
 #include "monolib/device/CDeviceFont.hpp"

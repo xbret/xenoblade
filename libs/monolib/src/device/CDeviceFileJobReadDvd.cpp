@@ -1,9 +1,7 @@
 #include "monolib/device.hpp"
 #include "monolib/core.hpp"
 
-extern bool func_8044E768();
 extern void func_8044FC38();
-extern void func_80450DA4();
 
 CDeviceFileJobReadDvd::CDeviceFileJobReadDvd(const char* pName, CWorkThread* pParent):
 CDeviceFileJob(pName, pParent){
@@ -16,10 +14,10 @@ CDeviceFileJobReadDvd::~CDeviceFileJobReadDvd(){}
 inline void CDeviceFileJobReadDvd::unkInline(){
     if(!wkIsCurrent()){
         CDeviceFile::removeFileJob(this);
-    }else if(func_8044E768()){
+    }else if(CDeviceFile::func_8044E768()){
         func_8044FC38();
     }else{
-        func_80450DA4();
+        CDeviceFileDvd::cancelCurrent();
     }
 }
 

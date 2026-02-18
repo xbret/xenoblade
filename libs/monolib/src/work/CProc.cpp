@@ -61,7 +61,7 @@ void CProc::pssSetFocus(){
     }
 }
 
-bool CProc::func_80439258(WORK_ID id){
+bool CProc::pssDetachView(WORK_ID id){
     reslist<WORK_ID>::iterator it = mViewIDList.find(id);
 
     if(it != mViewIDList.end()){
@@ -72,6 +72,24 @@ bool CProc::func_80439258(WORK_ID id){
     }
 
     return false;
+}
+
+void CProc::pssDetachView(){
+    for(reslist<u32>::iterator it = mViewIDList.begin(); it != mViewIDList.end(); it++){
+        u32 value = *it;
+        CView* view = CViewRoot::getView(value);
+        view->detachRenderWork(this);
+    }
+
+    mViewIDList.clear();
+}
+
+void CProc::pssAttachView(CView* pView){
+    pView->attachRenderWork(this);
+
+    //Add the new view's id to the list
+    WORK_ID viewID = pView->mWorkID;
+    mViewIDList.push_back(viewID);
 }
 
 //TODO: According to XCX's symbol, this shouldn't have a parameter, but XC1 and XCX's code suggest otherwise
@@ -118,24 +136,6 @@ ml::CRect16& CProc::pssMakeClientRect(ml::CRect16& rect) const {
 
         return rect;
     }
-}
-
-void CProc::pssDetachView(){
-    for(reslist<u32>::iterator it = mViewIDList.begin(); it != mViewIDList.end(); it++){
-        u32 value = *it;
-        CView* view = CViewRoot::getView(value);
-        view->detachRenderWork(this);
-    }
-
-    mViewIDList.clear();
-}
-
-void CProc::pssAttachView(CView* pView){
-    pView->attachRenderWork(this);
-
-    //Add the new view's id to the list
-    WORK_ID viewID = pView->mWorkID;
-    mViewIDList.push_back(viewID);
 }
 
 CView* CProc::pssCreateView(const char* pName, CWorkThread* pThread, int param3){
