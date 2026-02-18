@@ -250,11 +250,11 @@ bool CDeviceVI::initBaseRenderModeStruct(u32 renderModeIndex, u32 viWidth){
         CDeviceVI* instance = spInstance;
 
         //Return if either the scan mode/tv format values are invalid
-        if(scanMode >= NUM_SCAN_MODE){
+        if(scanMode >= MAX_SCAN_MODE){
             return false;
         }
         
-        if(tvFormat >= NUM_TV_FORMAT){
+        if(tvFormat >= MAX_TV_FORMAT){
             return false;
         }
 
@@ -276,9 +276,9 @@ bool CDeviceVI::initBaseRenderModeStruct(u32 renderModeIndex, u32 viWidth){
         //Copy the render mode struct
         std::memcpy(&spInstance->mBaseRenderMode, renderMode, sizeof(GXRenderModeObj));
 
-        //TODO: replace raw values with constant variables/defines
-        u16 width = XFB_WIDTH;
-        u32 height = 456;
+
+        u16 width = SCREEN_WIDTH;
+        u32 height = SCREEN_HEIGHT;
 
         //Why not just get the instance variable once???
         spInstance->mBaseRenderMode.fbWidth = width;
@@ -287,7 +287,8 @@ bool CDeviceVI::initBaseRenderModeStruct(u32 renderModeIndex, u32 viWidth){
         spInstance->mBaseRenderMode.viHeight = height;
 
         if(viWidth == 0){
-            viWidth = isWideAspectRatio() ? 686 : 670;
+            //If no custom VI width is specified, determine the VI width based on the aspect ratio
+            viWidth = isWideAspectRatio() ? VI_WIDTH_16_9 : VI_WIDTH_4_3;
         }else{
             //???
             spInstance->mBaseRenderMode.viWidth = viWidth;
@@ -295,9 +296,10 @@ bool CDeviceVI::initBaseRenderModeStruct(u32 renderModeIndex, u32 viWidth){
 
         spInstance->mBaseRenderMode.viWidth = viWidth;
 
-        u16 xOffset = (720 - spInstance->mBaseRenderMode.viWidth)/2;
+        //Calculate the VI x/y offset to make the final image be centered
+        u16 xOffset = (VI_MAX_WIDTH - spInstance->mBaseRenderMode.viWidth)/2;
         spInstance->mBaseRenderMode.viXOrigin = xOffset;
-        u16 yOffset = (480 - spInstance->mBaseRenderMode.xfbHeight)/2;
+        u16 yOffset = (VI_MAX_HEIGHT - spInstance->mBaseRenderMode.xfbHeight)/2;
         spInstance->mBaseRenderMode.viYOrigin = yOffset;
 
         spInstance->unk2A0 = lbl_8065A6B8[newIndex];
@@ -423,7 +425,7 @@ void CDeviceVI::endFrame(){
     //Nothing overrides this, so this does nothing
     cb(CDeviceVICb::VI_CALLBACK_BEFORE_DRAW_DONE);
 
-    CDeviceClock::func_8044DFF4();
+    CDeviceClock::onEndFrame();
 
     //Copy the EFB to the current nonactive framebuffer, and wait until drawing is done
     if(CDeviceGX::devicesInitialized()){
@@ -480,7 +482,7 @@ u32 CDeviceVI::getTvFormatIndex() const {
 }
 
 u32 CDeviceVI::getScanModeIndex() const {
-    /* There isn't a check for progressive soft, so the index for interlaced will be returned in that case.
+    /* NOTE: There isn't a check for progressive soft, so the index for interlaced will be returned in that case.
     Is this intentional? */
     u32 mode = mScanMode;
     u32 result = (u32)SCAN_MODE_INT << 4;
@@ -499,7 +501,7 @@ u32 CDeviceVI::calculateRenderModeIndex() const {
 }
 
 bool CDeviceVI::wkStandbyLogin(){
-    if(CDeviceSC::func_80447C60() != false){
+    if(CDeviceSC::isInitialized()){
         //Initialize VI
         VIInit();
 
@@ -523,6 +525,7 @@ bool CDeviceVI::wkStandbyLogin(){
 bool CDeviceVI::wkStandbyLogout(){
     VISetBlack(VI_TRUE);
     VIFlush();
+
     if(mChildren.empty()){
         if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){

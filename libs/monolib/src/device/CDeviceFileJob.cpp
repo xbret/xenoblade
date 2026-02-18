@@ -10,6 +10,6 @@ unk210(0){
     mType = THREAD_CDEVICEFILEJOB;
 }
 
-bool CDeviceFileJob::isRequestFile(const char* pFilename){
+bool CDeviceFileJob::cancel(const char* pFilename){
     return false;
 }

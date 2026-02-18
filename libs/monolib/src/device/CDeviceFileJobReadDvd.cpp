@@ -11,7 +11,7 @@ CDeviceFileJob(pName, pParent){
 
 CDeviceFileJobReadDvd::~CDeviceFileJobReadDvd(){}
 
-inline void CDeviceFileJobReadDvd::unkInline(){
+void CDeviceFileJobReadDvd::cancelCurrent(){
     if(!wkIsCurrent()){
         CDeviceFile::removeFileJob(this);
     }else if(CDeviceFile::func_8044E768()){
@@ -21,18 +21,18 @@ inline void CDeviceFileJobReadDvd::unkInline(){
     }
 }
 
-bool CDeviceFileJobReadDvd::isRequestFile(const char* pFilename){
+bool CDeviceFileJobReadDvd::cancel(const char* pFilename){
     if(mHandle == nullptr) return false;
     //If the filename doesn't match the one in the handle, return early
     if(mHandle->mName != pFilename) return false;
 
-    unkInline();
+    cancelCurrent();
     return true;
 }
 
 bool CDeviceFileJobReadDvd::cancel(CFileHandle* pHandle){
     if(mHandle == nullptr || mHandle != pHandle) return false;
-    unkInline();
+    cancelCurrent();
     return true;
 }
 
@@ -72,7 +72,7 @@ bool CDeviceFileJobReadDvd::wkStandbyLogout(){
     return CWorkThread::wkStandbyLogout(); //Call base
 }
 
-void CDeviceFileJobReadDvd::func_80452254(){
+void CDeviceFileJobReadDvd::callCBM3(){
     if(mHandle != nullptr){
         mHandle->call(CBM_3);
     }

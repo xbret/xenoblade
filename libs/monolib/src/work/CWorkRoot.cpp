@@ -7,8 +7,6 @@
 #include <revolution/OS.h>
 #include <revolution/VI.h>
 
-extern void func_80454E6C();
-
 namespace {
     class CWorkRootThread : public CWorkThread {
     public:
@@ -191,8 +189,9 @@ bool CWorkRoot::isShutdownAll(){
 }
 
 bool CWorkRoot::runSingle(){
+    //Trigger the start frame event in CDeviceClock
     if(CDeviceClock::getInstance() != nullptr){
-        CDeviceClock::func_8044DF8C();
+        CDeviceClock::onStartFrame();
     }
 
     if(CDeviceVI::getInstance() != nullptr){
@@ -287,6 +286,6 @@ void CWorkRoot::setException(CException* pException){
     sException = pException != nullptr ? pException : nullptr;
 }
 
-CException* CWorkRoot::func_80444384(){
+CException* CWorkRoot::getException(){
     return sException;
 }

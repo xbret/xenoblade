@@ -29,7 +29,7 @@ public:
     static void preRetraceCallback(u32 retraceCount);
 
     static void setException(CException* pException);
-    static CException* func_80444384();
+    static CException* getException();
 
 private:
     enum ExitMode {

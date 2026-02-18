@@ -100,7 +100,7 @@ void CWorkThread::wkSetEventChild(EVT evt){
 
 bool CWorkThread::wkCheckTimeout(u32 arg0, bool arg1, const char* pMessage){
     CDeviceClock* pDevClock = CDeviceClock::getInstance();
-    if(pDevClock == nullptr || (!pDevClock->func_8044DEE0() && !arg1)){
+    if(pDevClock == nullptr || (!pDevClock->isInitialized() && !arg1)){
         return false;
     }
 

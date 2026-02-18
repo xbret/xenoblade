@@ -14,7 +14,7 @@ public:
     static bool isWideAspectRatio();
     static bool isSoundModeMono();
     static u8 getLanguage();
-    static bool func_80447C60();
+    static bool isInitialized();
 
     static inline CDeviceSC* create(const char* pName, CWorkThread* pWorkThread){
         CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(pName, pWorkThread);

@@ -11,11 +11,15 @@ public:
 
     virtual ~CDeviceFileJob(){}
     virtual bool CDeviceFileJob_UnkVirtualFunc1(){ return false; }
-    virtual bool isRequestFile(const char* pFilename);
+    virtual bool cancel(const char* pFilename);
     virtual bool cancel(CFileHandle* pHandle){ return false; }
 
     inline const char* getFilename(){
         return mHandle->mName.c_str();
+    }
+
+    inline void call(CBM cbm){
+        mHandle->call(cbm);
     }
 
     //0x0: vtable

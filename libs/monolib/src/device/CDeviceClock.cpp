@@ -11,14 +11,14 @@ CDeviceClock::CDeviceClock(const char* pName, CWorkThread* pWorkThread) :
 CDeviceBase(pName,pWorkThread,0),
 unk1C8(0),
 unk1F0(0),
-unk1F8(0),
-unk200(0),
-unk208(0) {
+mUpdateTime(0),
+mFrameStartTime(0),
+mFrameDuration(0) {
     spInstance = this;
     memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
     unk1F0 = getTimeNow();
     unk1C8 |= 1;
-    unk1CC.reserve(mAllocHandle, 16);
+    mFrameList.reserve(mAllocHandle, 16);
 }
 
 CDeviceClock::~CDeviceClock(){
@@ -29,7 +29,7 @@ CDeviceClock* CDeviceClock::getInstance(){
     return spInstance;
 }
 
-bool CDeviceClock::func_8044DEE0(){
+bool CDeviceClock::isInitialized(){
     return spInstance->isRunning();
 }
 
@@ -37,27 +37,29 @@ s64 CDeviceClock::getTimeNow(){
     return OSGetTime();
 }
 
-void CDeviceClock::func_8044DF8C(){
+void CDeviceClock::onStartFrame(){
     s64 time = getTimeNow();
-    spInstance->unk200 = time;
+    spInstance->mFrameStartTime = time;
 
-    for(reslist<IDeviceClockFrame*>::iterator it = spInstance->unk1CC.begin(); it != spInstance->unk1CC.end(); it++){
-        (*it)->IDeviceClockFrame_UnkVirtualFunc2();
+    //Trigger the event function for each class in the list
+    for(reslist<IDeviceClockFrame*>::iterator it = spInstance->mFrameList.begin(); it != spInstance->mFrameList.end(); it++){
+        (*it)->onStartFrame();
     }
 }
 
-void CDeviceClock::func_8044DFF4(){
+void CDeviceClock::onEndFrame(){
     s64 time = getTimeNow();
-    spInstance->unk208 = time - spInstance->unk200;
+    spInstance->mFrameDuration = time - spInstance->mFrameStartTime;
     
-    for(reslist<IDeviceClockFrame*>::iterator it = spInstance->unk1CC.begin(); it != spInstance->unk1CC.end(); it++){
-        (*it)->IDeviceClockFrame_UnkVirtualFunc3();
+    //Trigger the event function for each class in the list
+    for(reslist<IDeviceClockFrame*>::iterator it = spInstance->mFrameList.begin(); it != spInstance->mFrameList.end(); it++){
+        (*it)->onEndFrame();
     }
 }
 
 void CDeviceClock::wkUpdate(){
-    unk1F8 = getTimeNow();
-    OSTicksToCalendarTime(unk1F8, &mCalendar);
+    mUpdateTime = getTimeNow();
+    OSTicksToCalendarTime(mUpdateTime, &mCalendar);
 }
 
 bool CDeviceClock::wkStandbyLogin(){

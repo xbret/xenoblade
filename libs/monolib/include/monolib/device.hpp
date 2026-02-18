@@ -8,6 +8,7 @@
 #include "monolib/device/CDeviceFileJob.hpp"
 #include "monolib/device/CDeviceFileJobReadDvd.hpp"
 #include "monolib/device/CDeviceFont.hpp"
+#include "monolib/device/CDeviceFontLayer.hpp"
 #include "monolib/device/CDeviceGX.hpp"
 #include "monolib/device/CDeviceRemotePad.hpp"
 #include "monolib/device/CDeviceSC.hpp"

@@ -119,7 +119,7 @@ private:
         TV_FORMAT_PAL,
         TV_FORMAT_EURGB60,
         TV_FORMAT_MPAL,
-        NUM_TV_FORMAT = 4
+        MAX_TV_FORMAT = 4
     };
 
     enum ScanMode {
@@ -127,7 +127,7 @@ private:
         SCAN_MODE_INT,
         SCAN_MODE_PROG,
         SCAN_MODE_PROGSOFT,
-        NUM_SCAN_MODE = 4
+        MAX_SCAN_MODE = 4
     };
 
     u32 getTvFormatIndex() const;
@@ -142,6 +142,17 @@ private:
     bool checkFlag(u32 flag) const {
         return mViFlags & (1 << flag);
     }
+
+    //General screen dimensions
+    static const int SCREEN_WIDTH = 640;
+    static const int SCREEN_HEIGHT = 456;
+
+    //VI max output dimensions
+    static const int VI_MAX_WIDTH = 720;
+    static const int VI_MAX_HEIGHT = 480;
+    //VI width
+    static const int VI_WIDTH_4_3 = 670;
+    static const int VI_WIDTH_16_9 = 686;
 
     //XFB dimensions
     //JP: 640x480, US: 640x456, PAL: 640x542

@@ -46,7 +46,7 @@ CDeviceGX* CDeviceGX::getInstance(){
     return spInstance;
 }
 
-bool CDeviceGX::checkIfRunning(){
+bool CDeviceGX::isInitialized(){
     return spInstance->isRunning();
 }
 

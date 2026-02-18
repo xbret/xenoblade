@@ -3,13 +3,14 @@
 
 CDeviceSC* CDeviceSC::spInstance;
 
-CDeviceSC::CDeviceSC(const char* pName, CWorkThread* pWorkThread) : CDeviceBase(pName, pWorkThread, 8) {
-    mAspectRatio = 0;
-    mEuRgb60Mode = 0;
-    mLanguage = 0;
-    mProgMode = 0;
-    mSoundMode = 1;
-    unk1CD = 0;
+CDeviceSC::CDeviceSC(const char* pName, CWorkThread* pWorkThread) :
+CDeviceBase(pName, pWorkThread, 8),
+mAspectRatio(SC_ASPECT_STD),
+mEuRgb60Mode(SC_EURGB_50_HZ),
+mLanguage(SC_LANG_JP),
+mProgMode(SC_INTERLACED),
+mSoundMode(SC_SND_STEREO),
+unk1CD(0){
     spInstance = this;
     SCInit();
 }
@@ -34,13 +35,13 @@ u8 CDeviceSC::getLanguage(){
     return spInstance->mLanguage;
 }
 
-bool CDeviceSC::func_80447C60(){
+bool CDeviceSC::isInitialized(){
     return spInstance->isRunning();
 }
 
 bool CDeviceSC::wkStandbyLogin(){
     if(SCCheckStatus() == SC_STATUS_OK){
-        u32 r3 = CDeviceClock::func_8044DEE0();
+        u32 r3 = CDeviceClock::isInitialized();
         if(r3 != 0){
             //Update SC values
             mAspectRatio = SCGetAspectRatio();

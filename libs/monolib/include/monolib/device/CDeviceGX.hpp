@@ -20,7 +20,7 @@ class CDeviceGX : public CDeviceBase, public CDeviceVICb {
 public:
     CDeviceGX(const char* pName, CWorkThread* pWorkThread);
     virtual ~CDeviceGX();
-    static bool checkIfRunning();
+    static bool isInitialized();
     static void setDevicesInitializedFlag(bool state);
     static bool devicesInitialized();
     static CDeviceGX* getInstance();
