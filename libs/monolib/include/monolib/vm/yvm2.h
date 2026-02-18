@@ -39,7 +39,7 @@ u32* vmWkGet(VMThread* pThread, u32 r4);
 
 void vmPluginExceptionThrow(VMThread* pThread);
 void vmOCExceptionThrow(VMThread* pThread);
-void vmExceptionProc(VMThread* pThread);
+DECOMP_DONT_INLINE void vmExceptionProc(VMThread* pThread);
 void vmExceptionThrow(VMThread* pThread, u32 exception);
 
 const char* vmIdPoolGet(SBHeader* data, u32 no);

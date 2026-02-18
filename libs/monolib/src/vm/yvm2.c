@@ -858,14 +858,12 @@ u32 vmDataGet(VMThread* pThread, int startIndex, int length){
 
 //TODO: how can this be set to not be inlined while letting it inline functions? DECOMP_DONT_INLINE doesn't
 //work sadly...
-#pragma dont_inline on
 void vmExceptionProc(VMThread* pThread){
     int temp1 = pThread->reg.unk10;
     vmDataGet(pThread, temp1 + 1, vmcOpcodes[pThread->codeData[pThread->reg.unk10]].paramSize);
     pThread->reg.pc = pThread->reg.unk10;
     vmHalt();
 }
-#pragma dont_inline off
 
 inline void vmExceptionThrow(VMThread* pThread, u32 exception){
     pThread->reg.exception = exception;
