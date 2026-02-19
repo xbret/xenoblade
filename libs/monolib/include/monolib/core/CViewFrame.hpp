@@ -13,4 +13,4 @@ public:
 };
 
 
-extern void func_8043FC68(ml::CRect16& rect, CViewFrame* r4);
+extern void getFrame2ViewOffset(ml::CRect16& rect, CViewFrame* r4);

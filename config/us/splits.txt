@@ -4331,12 +4331,12 @@ monolib/src/work/CWorkUtil.cpp:
 	extabindex  start:0x800340C0 end:0x800340D8
 	.text       start:0x8043B488 end:0x8043B5C8
 
-monolib/src/work/CProc.cpp:
+monolib/src/core/CProc.cpp:
 	extab       start:0x8001C260 end:0x8001C2DC
 	extabindex  start:0x800340D8 end:0x80034144
 	.text       start:0x8043B5C8 end:0x8043C0E4
 
-monolib/src/work/CProcRoot.cpp:
+monolib/src/core/CProcRoot.cpp:
 	extab       start:0x8001C2DC end:0x8001C2F4
 	extabindex  start:0x80034144 end:0x80034168
 	.text       start:0x8043C0E4 end:0x8043C2AC
@@ -4357,9 +4357,14 @@ monolib/src/core/CScriptCode.cpp:
 	.text       start:0x8043CA78 end:0x8043D31C
 
 monolib/src/core/CToken.cpp:
-	extab       start:0x8001C3EC end:0x8001C42C
-	extabindex  start:0x80034264 end:0x800342C4
-	.text       start:0x8043D31C end:0x8043E61C
+	extab       start:0x8001C3EC end:0x8001C404
+	extabindex  start:0x80034264 end:0x80034288
+	.text       start:0x8043D31C end:0x8043DF30
+
+monolib/src/core/CSplitFrame.cpp:
+	extab       start:0x8001C404 end:0x8001C42C
+	extabindex  start:0x80034288 end:0x800342C4
+	.text       start:0x8043DF30 end:0x8043E61C
 
 monolib/src/core/CTaskManager.cpp:
 	extab       start:0x8001C42C end:0x8001C46C
@@ -4369,18 +4374,18 @@ monolib/src/core/CTaskManager.cpp:
 monolib/src/core/CView.cpp:
 	extab       start:0x8001C46C end:0x8001C68C
 	extabindex  start:0x80034324 end:0x800344B0
-	.text       start:0x8043EC5C end:0x8044255C
+	.text       start:0x8043EC5C end:0x80442564
 	.ctors      start:0x804FA124 end:0x804FA128
 
 monolib/src/core/CViewFrame.cpp:
-	extab       start:0x8001C68C end:0x8001C6E4
-	extabindex  start:0x800344B0 end:0x8003451C
-	.text       start:0x8044255C end:0x80444A68
+	extab       start:0x8001C68C end:0x8001C6DC
+	extabindex  start:0x800344B0 end:0x80034510
+	.text       start:0x80442564 end:0x80444A1C
 
 monolib/src/core/CViewRoot.cpp:
-	extab       start:0x8001C6E4 end:0x8001C7D0
-	extabindex  start:0x8003451C end:0x800345C4
-	.text       start:0x80444A68 end:0x804460B0
+	extab       start:0x8001C6DC end:0x8001C7D0
+	extabindex  start:0x80034510 end:0x800345C4
+	.text       start:0x80444A1C end:0x804460B0
 
 monolib/src/work/CWorkControl.cpp:
 	extab       start:0x8001C7D0 end:0x8001C808

@@ -2,7 +2,7 @@
 
 #include <types.h>
 #include "monolib/monolib_types.hpp"
-#include "monolib/work.hpp"
+#include "monolib/core/CProc.hpp"
 
 class CDesktop : public CProc {
 public:
@@ -15,6 +15,7 @@ public:
     };
 
     CDesktop(const char* pName, CWorkThread* pWorkThread);
+    virtual ~CDesktop();
 
     DECL_WORKTHREAD_CREATE(CDesktop);
 
@@ -25,6 +26,9 @@ public:
     //0x0-1EC: CProc
     //0x0: vtable
     u8 unk1EC[0x200 - 0x1EC];
+
+private:
+    static CDesktop* spInstance;
 };
 
 typedef CDesktop::DESKTOP_ICON_DEF DesktopIcon;

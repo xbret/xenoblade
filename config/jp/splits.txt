@@ -5953,7 +5953,7 @@ monolib/src/work/CWorkUtil.cpp:
 	.text       start:0x80438AF0 end:0x80438C30
 	.rodata     start:0x80525DD8 end:0x80525DE0
 
-monolib/src/work/CProc.cpp:
+monolib/src/core/CProc.cpp:
 	extab       start:0x8001C1B4 end:0x8001C230
 	extabindex  start:0x80033E18 end:0x80033E84
 	.text       start:0x80438C30 end:0x8043974C
@@ -5962,7 +5962,7 @@ monolib/src/work/CProc.cpp:
 	.sdata      start:0x80665E60 end:0x80665E70
 	.sdata2     start:0x8066CA78 end:0x8066CA88
 
-monolib/src/work/CProcRoot.cpp:
+monolib/src/core/CProcRoot.cpp:
 	extab       start:0x8001C230 end:0x8001C248
 	extabindex  start:0x80033E84 end:0x80033EA8
 	.text       start:0x8043974C end:0x80439914
@@ -5996,13 +5996,18 @@ monolib/src/core/CScriptCode.cpp:
 	.sbss       start:0x80667E90 end:0x80667E98
 
 monolib/src/core/CToken.cpp:
-	extab       start:0x8001C340 end:0x8001C380
-	extabindex  start:0x80033FA4 end:0x80034004
-	.text       start:0x8043A984 end:0x8043BC84
+	extab       start:0x8001C340 end:0x8001C358
+	extabindex  start:0x80033FA4 end:0x80033FC8
+	.text       start:0x8043A984 end:0x8043B598
 	.rodata     start:0x80525E70 end:0x80525EA0
 	.data       start:0x8056ED48 end:0x8056EDB0
 	.sdata      start:0x80665E88 end:0x80665E90
 	.sdata2     start:0x8066CA88 end:0x8066CAD0
+
+monolib/src/core/CSplitFrame.cpp:
+	extab       start:0x8001C358 end:0x8001C380
+	extabindex  start:0x80033FC8 end:0x80034004
+	.text       start:0x8043B598 end:0x8043BC84
 
 monolib/src/core/CTaskManager.cpp:
 	extab       start:0x8001C380 end:0x8001C3C0
@@ -6016,7 +6021,7 @@ monolib/src/core/CTaskManager.cpp:
 monolib/src/core/CView.cpp:
 	extab       start:0x8001C3C0 end:0x8001C5E0
 	extabindex  start:0x80034064 end:0x800341F0
-	.text       start:0x8043C2C4 end:0x8043FBC4
+	.text       start:0x8043C2C4 end:0x8043FBCC
 	.ctors      start:0x804F5A64 end:0x804F5A68
 	.rodata     start:0x80525EF8 end:0x80525F68
 	.data       start:0x8056EE38 end:0x8056EF78
@@ -6026,18 +6031,18 @@ monolib/src/core/CView.cpp:
 	.sdata2     start:0x8066CAD0 end:0x8066CAE8
 
 monolib/src/core/CViewFrame.cpp:
-	extab       start:0x8001C5E0 end:0x8001C638
-	extabindex  start:0x800341F0 end:0x8003425C
-	.text       start:0x8043FBC4 end:0x804420D0
+	extab       start:0x8001C5E0 end:0x8001C630
+	extabindex  start:0x800341F0 end:0x80034250
+	.text       start:0x8043FBCC end:0x80442084
 	.rodata     start:0x80525F68 end:0x80525F78
 	.data       start:0x8056EF78 end:0x8056EF88
 	.sdata      start:0x80665EC8 end:0x80665ED0
 	.sdata2     start:0x8066CAE8 end:0x8066CB20
 
 monolib/src/core/CViewRoot.cpp:
-	extab       start:0x8001C638 end:0x8001C724
-	extabindex  start:0x8003425C end:0x80034304
-	.text       start:0x804420D0 end:0x80443718
+	extab       start:0x8001C630 end:0x8001C724
+	extabindex  start:0x80034250 end:0x80034304
+	.text       start:0x80442084 end:0x80443718
 	.rodata     start:0x80525F78 end:0x80525F90
 	.data       start:0x8056EF88 end:0x8056F040
 	.sdata      start:0x80665ED0 end:0x80665ED8

@@ -4,6 +4,8 @@
 #include "monolib/core/CDesktop.hpp"
 #include "monolib/core/CException.hpp"
 #include "monolib/core/CPackItem.hpp"
+#include "monolib/core/CProc.hpp"
+#include "monolib/core/CProcRoot.hpp"
 #include "monolib/core/CRsrc.hpp"
 #include "monolib/core/CScriptCode.hpp"
 #include "monolib/core/CTaskManager.hpp"

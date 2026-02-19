@@ -33,16 +33,15 @@ public:
     
     DECL_WORKTHREAD_CREATE(CView);
 
-    virtual void func_8043FBC4();
-    virtual void func_8043FB68();
+    virtual void CView_UnkVirtualFunc1();
     virtual void detachRenderWork(CWorkThread* pThread);
-    virtual void func_8043D9E8();
-    virtual void func_8043DD20();
-    virtual void func_8043FB60();
-    virtual void func_8043FB58();
-    virtual void func_8043C9B8();
-    virtual void func_8043EAD0();
-    virtual void func_8043EAC8();
+    virtual void CView_UnkVirtualFunc3();
+    virtual void CView_UnkVirtualFunc4();
+    virtual void CView_UnkVirtualFunc5();
+    virtual void CView_UnkVirtualFunc6();
+    virtual void CView_UnkVirtualFunc7();
+    virtual void CView_UnkVirtualFunc8();
+    virtual void CView_UnkVirtualFunc9();
 
     void setRect(const ml::CRect16& rect);
     void attachRenderWork(CWorkThread* pThread);
@@ -65,7 +64,7 @@ public:
     
     void getRect(ml::CRect16& rect){
         ml::CRect16 tempRect;
-        func_8043FC68(tempRect, &unk1DC);
+        getFrame2ViewOffset(tempRect, &unk1DC);
 
         rect.mPos.x = tempRect.mPos.x + unk1DC.unk54;
         rect.mPos.y = tempRect.mPos.y + unk1DC.unk56;
