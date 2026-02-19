@@ -158,7 +158,7 @@ int main(){
     mtl::MemRegion::initialize();
     CDeviceVI::setUseStaticHandle(false);
     CDeviceGX::initialize();
-    CDesktop::entryTable(&sGameMainIcon, 1); //Pass the start function struct to CDesktop to have it be run later
+    CDesktop::entryTable(&sGameMainIcon, true); //Pass the start function struct to CDesktop to have it be run later
     CLibStaticData::saveStaticFileArray(sStaticArcFiles);
     CLibVM::setCallbacks(&vmInitPluginRegistCallback, &vmInitCallback);
     CWorkSystemPack::SaveStaticArcFilenameStringPtr(&scStaticArcStr);

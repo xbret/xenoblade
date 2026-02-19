@@ -43,6 +43,8 @@ public:
     virtual void CView_UnkVirtualFunc8();
     virtual void CView_UnkVirtualFunc9();
 
+    static void setDefaultFrameColor(const ml::CCol4& color);
+    static CView* getCurrentView();
     void setRect(const ml::CRect16& rect);
     void attachRenderWork(CWorkThread* pThread);
     void setDisp(bool r4, bool r5);

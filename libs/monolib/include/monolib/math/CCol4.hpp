@@ -3,6 +3,18 @@
 namespace ml {
     
     struct CCol4{
+        CCol4(){}
+        CCol4(float r, float g, float b, float a){
+            set(r,g,b,a);
+        }
+
+        void set(float r, float g, float b, float a){
+            this->r = r;
+            this->g = g;
+            this->b = b;
+            this->a = a;
+        }
+
         float r;
         float g;
         float b;
@@ -21,12 +33,6 @@ namespace ml {
         static CCol4 orange;
         static CCol4 zero;
 
-        CCol4(float r, float g, float b, float a){
-            this->r = r;
-            this->g = g;
-            this->b = b;
-            this->a = a;
-        }
     };
 
 } //namespace ml

@@ -13,5 +13,6 @@ public:
     static void destroyProc(CProc* pProc);
     static void func_80442DA8();
     static void renderView();
+    static CView* getFullScreenView();
     static CView* getView(WORK_ID id);
 };
