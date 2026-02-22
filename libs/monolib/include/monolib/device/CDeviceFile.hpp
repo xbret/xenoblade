@@ -8,7 +8,7 @@
 //size: 0x1f0
 class CDeviceFile : public CDeviceBase {
 public:
-    CDeviceFile(const char* pName, CWorkThread* pWorkThread);
+    CDeviceFile(const char* pName, CWorkThread* pParent);
     static CDeviceFile* getInstance();
 
     DECL_WORKTHREAD_CREATE(CDeviceFile);

@@ -7,7 +7,7 @@
 //size: 0x1c8
 class CDevice : public CWorkThread {
 public:
-    CDevice(const char* pName, CWorkThread* pWorkThread) : CWorkThread(pName, pWorkThread, 0x20) {
+    CDevice(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD) {
         spInstance = this;
         mType = THREAD_CDEVICE;
     }
@@ -48,6 +48,7 @@ public:
 
 private:
     static const int DEVSYS2_REGION_SIZE = 0x1A0000;
+    static const int MAX_CHILD = 32;
 
     static const char* devSys1String;
     static const char* devSys2String;
@@ -63,7 +64,7 @@ namespace {
     //size: 0x1c8
     class CDeviceException : public CWorkThread {
     public:
-        CDeviceException(const char* pName, CWorkThread* pWorkThread) : CWorkThread(pName, pWorkThread, 0x40) {
+        CDeviceException(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD) {
             spInstance = this;
         }
         virtual ~CDeviceException();
@@ -76,7 +77,9 @@ namespace {
         //0x0-1c4: CWorkThread
         u32 unk1C4;
 
-    protected:
+    private:
+        static const int MAX_CHILD = 64;
+
         static CDeviceException* spInstance;
     };
 }

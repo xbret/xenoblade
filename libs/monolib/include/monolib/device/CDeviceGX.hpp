@@ -18,7 +18,7 @@ enum EVerticalFilter {
 //size: 0x798
 class CDeviceGX : public CDeviceBase, public CDeviceVICb {
 public:
-    CDeviceGX(const char* pName, CWorkThread* pWorkThread);
+    CDeviceGX(const char* pName, CWorkThread* pParent);
     virtual ~CDeviceGX();
     static bool isInitialized();
     static void setDevicesInitializedFlag(bool state);
@@ -50,9 +50,9 @@ public:
     static void copyEfbToXfb(void* pDestFrameBuffer);
     static void anotherInline();
 
-    static inline CDeviceGX* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, false);
+    static inline CDeviceGX* create(const char* pName, CWorkThread* pParent){
+        CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pParent);
+        CWorkUtil::entryWork(device, pParent, false);
         device->unk1C4 |= 1;
         return device;
     }

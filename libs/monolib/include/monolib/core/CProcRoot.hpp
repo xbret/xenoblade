@@ -18,6 +18,8 @@ public:
     u8 unk1C4[4];
 
 private:
+    static const int MAX_CHILD = 32;
+
     static CProcRoot* spInstance;
 };
 

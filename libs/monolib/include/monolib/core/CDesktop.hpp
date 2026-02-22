@@ -23,7 +23,7 @@ public:
         u32 unkC;
     };
 
-    CDesktop(const char* pName, CWorkThread* pWorkThread);
+    CDesktop(const char* pName, CWorkThread* pParent);
     virtual ~CDesktop();
     virtual void wkUpdate();
     virtual void wkRender();
@@ -47,6 +47,8 @@ public:
     CView* mView; //0x1FC
 
 private:
+    static const int MAX_CHILD = 128;
+
     static CDesktop* spInstance;
     static DESKTOP_ICON_DEF* spIcon;
     static bool sIconInitialized;
@@ -59,7 +61,7 @@ namespace {
     public:
         friend class CDesktop;
 
-        CDesktopBackGround(const char* pName, CWorkThread* pParent) : CProc(pName, pParent, 8) {
+        CDesktopBackGround(const char* pName, CWorkThread* pParent) : CProc(pName, pParent, MAX_CHILD) {
             spInstance = this;
         }
         virtual ~CDesktopBackGround();
@@ -73,6 +75,8 @@ namespace {
     private:
         u32 unk1EC;
 
+        static const int MAX_CHILD = 8;
+
         static CDesktopBackGround* spInstance;
     };
 
@@ -80,7 +84,7 @@ namespace {
     public:
         friend class CDesktop;
 
-        CDesktopException(const char* pName, CWorkThread* pParent) : CProc(pName, pParent, 64) {
+        CDesktopException(const char* pName, CWorkThread* pParent) : CProc(pName, pParent, MAX_CHILD) {
             spInstance = this;
         }
         virtual ~CDesktopException();
@@ -93,6 +97,8 @@ namespace {
 
     private:
         u32 unk1EC;
+
+        static const int MAX_CHILD = 64;
 
         static CDesktopException* spInstance;
     };

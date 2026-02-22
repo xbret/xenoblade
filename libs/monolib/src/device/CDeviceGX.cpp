@@ -12,8 +12,8 @@ CGXCache* CDeviceGX::cacheInstance;
 int CDeviceGX::gxHeapSize = 0x200000; //2 MB
 const char* CDeviceGX::someString = "GPCost";
 
-CDeviceGX::CDeviceGX(const char* pName, CWorkThread* pWorkThread) :
-CDeviceBase(pName, pWorkThread, 0),
+CDeviceGX::CDeviceGX(const char* pName, CWorkThread* pParent) :
+CDeviceBase(pName, pParent, 0),
 CDeviceVICb(),
 mDevicesInitialized(false),
 mGxHeap(nullptr),
@@ -34,10 +34,7 @@ mFilter(VFILTER_NONE){
 }
 
 CDeviceGX::~CDeviceGX(){
-    if(mGxHeap != nullptr){
-        delete[](mGxHeap);
-        mGxHeap = nullptr;
-    }
+    DELETE_ARRAY(mGxHeap);
 
     spInstance = nullptr;
 }

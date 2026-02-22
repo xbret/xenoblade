@@ -6,7 +6,7 @@
 //size: 0x1D0
 class CDeviceSC : public CDeviceBase {
 public:
-    CDeviceSC(const char* pName, CWorkThread* pWorkThread);
+    CDeviceSC(const char* pName, CWorkThread* pParent);
     virtual ~CDeviceSC();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
@@ -16,9 +16,9 @@ public:
     static u8 getLanguage();
     static bool isInitialized();
 
-    static inline CDeviceSC* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, false);
+    static inline CDeviceSC* create(const char* pName, CWorkThread* pParent){
+        CDeviceSC* device = new (CWorkThreadSystem::getWorkMem()) CDeviceSC(pName, pParent);
+        CWorkUtil::entryWork(device, pParent, false);
         device->unk1C4 |= 1;
         return device;
     }
@@ -32,6 +32,9 @@ public:
     u8 mSoundMode; //0x1cc
     u8 unk1CD;
     u8 unk1CE[2];
+
+private:
+    static const int MAX_CHILD = 8;
 
     static CDeviceSC* spInstance;
 };

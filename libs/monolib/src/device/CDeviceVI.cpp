@@ -84,7 +84,7 @@ CPnt16 CDeviceVI::lbl_8065A6B8[] = {
 
 bool CDeviceVI::sUseStaticHandle;
 
-CDeviceVI::CDeviceVI(const char* pName, CWorkThread* pWorkThread) : CDeviceBase(pName, pWorkThread, 8),
+CDeviceVI::CDeviceVI(const char* pName, CWorkThread* pParent) : CDeviceBase(pName, pParent, MAX_CHILD),
 IErrorWii(),
 mViFlags(0),
 mTvFormat(VI_TVFORMAT_NTSC),
@@ -123,10 +123,7 @@ mSecPerFrame(1.0f/TARGET_FRAMERATE) {
 CDeviceVI::~CDeviceVI(){
     CErrorWii::removeCallback(this);
 
-    if(mXfbBuffersPtr != nullptr){
-        delete[](mXfbBuffersPtr);
-        mXfbBuffersPtr = nullptr;
-    }
+    DELETE_ARRAY(mXfbBuffersPtr);
 
     spInstance = nullptr;
 }

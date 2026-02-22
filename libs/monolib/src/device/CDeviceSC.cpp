@@ -3,8 +3,8 @@
 
 CDeviceSC* CDeviceSC::spInstance;
 
-CDeviceSC::CDeviceSC(const char* pName, CWorkThread* pWorkThread) :
-CDeviceBase(pName, pWorkThread, 8),
+CDeviceSC::CDeviceSC(const char* pName, CWorkThread* pParent) :
+CDeviceBase(pName, pParent, MAX_CHILD),
 mAspectRatio(SC_ASPECT_STD),
 mEuRgb60Mode(SC_EURGB_50_HZ),
 mLanguage(SC_LANG_JP),
@@ -41,8 +41,7 @@ bool CDeviceSC::isInitialized(){
 
 bool CDeviceSC::wkStandbyLogin(){
     if(SCCheckStatus() == SC_STATUS_OK){
-        u32 r3 = CDeviceClock::isInitialized();
-        if(r3 != 0){
+        if(CDeviceClock::isInitialized()){
             //Update SC values
             mAspectRatio = SCGetAspectRatio();
             mEuRgb60Mode = SCGetEuRgb60Mode();

@@ -2,9 +2,9 @@
 #include "monolib/core.hpp"
 #include "monolib/util.hpp"
 
-CProc::CProc(const char* pName, CWorkThread* pWorkThread, s16 capacity) :
-CWorkThread(pName, pWorkThread, capacity),
-unk1E4(-1){
+CProc::CProc(const char* pName, CWorkThread* pParent, s16 capacity) :
+CWorkThread(pName, pParent, capacity),
+unk1E4(mtl::INVALID_HANDLE){
     unk1E8 = 2;
     mType = THREAD_CPROC;
     mViewIDList.reserve(mAllocHandle, 16);

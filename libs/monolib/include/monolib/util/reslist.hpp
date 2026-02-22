@@ -51,10 +51,8 @@ public:
 
     virtual ~_reslist_base(){
         clearList();
-        if (unk1C == false && mList != nullptr) {
-            delete[](this->mList);
-            mList = nullptr;
-        }
+
+        if (unk1C == false) DELETE_ARRAY(mList);
     }
 
     void func_8049CB6C(T* item){

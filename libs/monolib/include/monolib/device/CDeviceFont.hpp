@@ -6,7 +6,7 @@
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {
 public:
-    CDeviceFont(const char* pName, CWorkThread* pWorkThread);
+    CDeviceFont(const char* pName, CWorkThread* pParent);
     static CDeviceFont* getInstance();
 
     DECL_WORKTHREAD_CREATE(CDeviceFont);

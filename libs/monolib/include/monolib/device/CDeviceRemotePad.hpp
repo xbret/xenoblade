@@ -6,7 +6,7 @@
 //size: 0x1f0
 class CDeviceRemotePad : public CDeviceBase {
 public:
-    CDeviceRemotePad(const char* pName, CWorkThread* pWorkThread);
+    CDeviceRemotePad(const char* pName, CWorkThread* pParent);
     static CDeviceRemotePad* getInstance();
 
     DECL_WORKTHREAD_CREATE(CDeviceRemotePad);

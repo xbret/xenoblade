@@ -27,8 +27,8 @@ nw4r::lyt::ArcResourceAccessor* CGame::sArcResourceAccessor;
 const char* CGame::scViewName = "巨神"; //"Bionis"
 CGameRestart* CGameRestart::spInstance;
 
-CGame::CGame(const char* pName, CWorkThread* pWorkThread) :
-CProc(pName, pWorkThread, 8),
+CGame::CGame(const char* pName, CWorkThread* pParent) :
+CProc(pName, pParent, MAX_CHILD),
 mView(nullptr),
 mShutdownState(SHUTDOWN_STATE_0),
 unk1F4(-1),
@@ -64,7 +64,7 @@ void CGame::func_80039364(){
         CGameRestart* gameRestart = CGameRestart::create("CGameRestart", CDesktop::getInstance());
 
         if(gameRestart != nullptr){
-            gameRestart->unk1EC = spInstance->mWorkID;
+            gameRestart->mHandle = spInstance->mWorkID;
             spInstance->wkSetEvent(EVT_NONE);
         }
     }

@@ -4,7 +4,7 @@
 
 CProcRoot* CProcRoot::spInstance;
 
-CProcRoot::CProcRoot(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, 32) {
+CProcRoot::CProcRoot(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD) {
     spInstance = this;
     mType = THREAD_CPROCROOT;
 }

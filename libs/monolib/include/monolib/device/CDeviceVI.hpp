@@ -11,7 +11,7 @@
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public IErrorWii {
 public:
-    CDeviceVI(const char* pName, CWorkThread* pWorkThread);
+    CDeviceVI(const char* pName, CWorkThread* pParent);
     virtual ~CDeviceVI();
     static CDeviceVI* getInstance();
 
@@ -55,9 +55,9 @@ public:
     static void setupRenderMode2(GXRenderModeObj* pRenderMode, u32 viWidth);
     void unkInline3(u32 index, u32 val);
 
-    static inline CDeviceVI* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, false);
+    static inline CDeviceVI* create(const char* pName, CWorkThread* pParent){
+        CDeviceVI* device = new (CWorkThreadSystem::getWorkMem()) CDeviceVI(pName, pParent);
+        CWorkUtil::entryWork(device, pParent, false);
         device->unk1C4 |= 1;
         return device;
     }
@@ -172,6 +172,8 @@ private:
     //2 VIs (vertical interrupts) per frame -> 30fps
     static const int VI_PER_FRAME = 2;
     static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
+
+    static const int MAX_CHILD = 8;
 
     static CDeviceVI* spInstance;
     static const VIGamma gammaLevels[];

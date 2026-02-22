@@ -9,7 +9,7 @@ CDesktopBackGround* CDesktopBackGround::spInstance;
 CDesktopException* CDesktopException::spInstance;
 
 CDesktop::CDesktop(const char* pName, CWorkThread* pParent) :
-CProc(pName, pParent, 128),
+CProc(pName, pParent, MAX_CHILD),
 mView(nullptr) {
     spInstance = this;
     mType = THREAD_CDESKTOP;

@@ -14,7 +14,7 @@ public:
         SHUTDOWN_STATE_2
     };
 
-    CGame(const char* pName, CWorkThread* pWorkThread);
+    CGame(const char* pName, CWorkThread* pParent);
     virtual ~CGame();
     static CGame* getInstance();
     static bool func_8003933C();
@@ -32,10 +32,10 @@ public:
     virtual void OnPauseTrigger(bool paused);
     static void onExit();
 
-    static inline CGame* create(const char* pName, CWorkThread* pWorkThread, u32 r5){
-        CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(pName, pWorkThread);
-        CWorkUtil::entryWork(game, pWorkThread, false);
-        game->unk1E4 = r5;
+    static inline CGame* create(const char* pName, CWorkThread* pParent, u32 capacity){
+        CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(pName, pParent);
+        CWorkUtil::entryWork(game, pParent, false);
+        game->unk1E4 = capacity;
         return game;
     }
 
@@ -53,7 +53,9 @@ public:
     int unk228;
     u32 unk22C;
 
-protected:
+private:
+    static const int MAX_CHILD = 8;
+
     static CGame* spInstance;
     static nw4r::lyt::Layout* lbl_80666604;
     static nw4r::lyt::ArcResourceAccessor* sArcResourceAccessor;
@@ -65,12 +67,12 @@ namespace {
     public:
         friend class CGame;
 
-        CGameRestart(const char* pName, CWorkThread* pWorkThread, int r6) :
-        CProc(pName, pWorkThread, r6),
-        unk1EC(-1) {}
+        CGameRestart(const char* pName, CWorkThread* pParent, int capacity) :
+        CProc(pName, pParent, capacity),
+        mHandle(mtl::INVALID_HANDLE) {}
         virtual ~CGameRestart(){}
         virtual void wkUpdate(){
-            CWorkThread* r3 = CWorkThread::getWorkThread(unk1EC);
+            CWorkThread* r3 = CWorkThread::getWorkThread(mHandle);
             if(r3 == nullptr){
                 CGame::GameMain();
                 wkSetEvent(EVT_NONE);
@@ -78,18 +80,22 @@ namespace {
             }
         }
 
-        static inline CGameRestart* create(const char* pName, CWorkThread* pWorkThread){
-            CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pWorkThread, 8);
+        static inline CGameRestart* create(const char* pName, CWorkThread* pParent){
+            CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pParent, MAX_CHILD);
             
-            CWorkUtil::entryWork(gameRestart, pWorkThread, false);
+            CWorkUtil::entryWork(gameRestart, pParent, false);
             gameRestart->unk1E4 = CDesktop::getView()->mWorkID;
             spInstance = gameRestart;
             return gameRestart;
         }
 
-        int unk1EC;
+        //0x0: vtable
+        //0x0-1ec: CProc
+        mtl::ALLOC_HANDLE mHandle; //0x1EC
     
-    protected:
+    private:
+        static const int MAX_CHILD = 8;
+
         static CGameRestart* spInstance;
     };
 }

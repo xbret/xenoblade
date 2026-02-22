@@ -16,7 +16,7 @@ public:
 //size: 0x238
 class CDeviceClock : public CDeviceBase {
 public:
-    CDeviceClock(const char* pName, CWorkThread* pWorkThread);
+    CDeviceClock(const char* pName, CWorkThread* pParent);
     virtual ~CDeviceClock();
     virtual void wkUpdate();
     virtual bool wkStandbyLogin();
@@ -27,9 +27,9 @@ public:
     static void onStartFrame();
     static void onEndFrame();
 
-    static inline CDeviceClock* create(const char* pName, CWorkThread* pWorkThread){
-        CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(pName, pWorkThread);
-        CWorkUtil::entryWork(device, pWorkThread, false);
+    static inline CDeviceClock* create(const char* pName, CWorkThread* pParent){
+        CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(pName, pParent);
+        CWorkUtil::entryWork(device, pParent, false);
         device->unk1C4 |= 1;
         return device;
     }

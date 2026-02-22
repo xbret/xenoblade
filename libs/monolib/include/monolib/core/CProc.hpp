@@ -15,7 +15,7 @@ struct CProc_UnkStruct1 {
 //size: 0x1ec
 class CProc : public CWorkThread {
 public:
-    CProc(const char* pName, CWorkThread* pWorkThread, s16 capacity);
+    CProc(const char* pName, CWorkThread* pParent, s16 capacity);
     virtual ~CProc();
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();

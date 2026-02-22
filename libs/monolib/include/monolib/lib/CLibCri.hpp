@@ -8,13 +8,13 @@
 //size: 0x1d0
 class CLibCri : public CWorkThread, public CDeviceVICb, public IErrorWii {
 public:
-    CLibCri(const char* pName, CWorkThread* pWorkThread);
+    CLibCri(const char* pName, CWorkThread* pParent);
     static CLibCri* getInstance();
     virtual void errorWiiCB();
 
-    static inline CLibCri* create(const char* pName, CWorkThread* pWorkThread){
-        CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pWorkThread);
-        CWorkUtil::entryWork(lib, pWorkThread, false);
+    static inline CLibCri* create(const char* pName, CWorkThread* pParent){
+        CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pParent);
+        CWorkUtil::entryWork(lib, pParent, false);
         return lib;
     }
 
