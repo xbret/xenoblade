@@ -7,3 +7,50 @@ splits: config/jp/splits.txt
 mw_comment_version: 15 # Wii Linker 1.1
 symbols_known: true # Very fast analysis
 fill_gaps: false # Alignments known
+
+#Fix undetected relocations (all due to weird stack shenanigans)
+add_relocations:
+
+#CUIWindowManager
+- source: .text:0x8013F7DC
+  type: ha
+  target: lbl_804FC240
+  addend: 0
+  
+- source: .text:0x8013F800
+  type: l
+  target: lbl_804FC240
+  addend: 0
+
+#CUIWindowManager
+- source: .text:0x80140E20
+  type: ha
+  target: lbl_804FC1D0
+  addend: 0
+  
+- source: .text:0x80140E40
+  type: l
+  target: lbl_804FC1D0
+  addend: 0
+  
+#CLibVM
+- source: .text:0x80460FC4
+  type: hi
+  target: lbl_80526B70
+  addend: 0
+  
+- source: .text:0x80460FFC
+  type: l
+  target: lbl_80526B70
+  addend: 0
+
+#CMdlDynamics
+- source: .text:0x804ED6C0
+  type: ha
+  target: zero__Q22ml5CVec3
+  addend: 0
+  
+- source: .text:0x804ED6E8
+  type: l
+  target: zero__Q22ml5CVec3
+  addend: 0 

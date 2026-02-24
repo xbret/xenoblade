@@ -1,9 +1,57 @@
-object_base: orig/us
+object_base: orig/eu
 object: sys/main.dol
-hash: 214b15173fa3bad23a067476d58d3933ad7037b7
-symbols: config/us/symbols.txt
-splits: config/us/splits.txt
+hash: 10d34dbf901e5d6547718176303a6073ee80dda2
+symbols: config/eu/symbols.txt
+splits: config/eu/splits.txt
 
 mw_comment_version: 15
 symbols_known: true
 fill_gaps: true
+
+
+#Fix undetected relocations (all due to weird stack shenanigans)
+add_relocations:
+
+#CUIWindowManager
+- source: .text:0x801401E0
+  type: ha
+  target: lbl_804FC240
+  addend: 0
+  
+- source: .text:0x80140204
+  type: l
+  target: lbl_804FC240
+  addend: 0
+
+#CUIWindowManager
+- source: .text:0x80141824
+  type: ha
+  target: lbl_804FC1D0
+  addend: 0
+  
+- source: .text:0x80141844
+  type: l
+  target: lbl_804FC1D0
+  addend: 0
+  
+#CLibVM
+- source: .text:0x80464F94
+  type: hi
+  target: lbl_80526B70
+  addend: 0
+  
+- source: .text:0x80464FCC
+  type: l
+  target: lbl_80526B70
+  addend: 0
+
+#CMdlDynamics
+- source: .text:0x804F1B7C
+  type: ha
+  target: zero__Q22ml5CVec3
+  addend: 0
+  
+- source: .text:0x804F1BA4
+  type: l
+  target: zero__Q22ml5CVec3
+  addend: 0 
