@@ -1,8 +1,8 @@
-object_base: orig/eu
+object_base: orig/us
 object: sys/main.dol
-hash: 10d34dbf901e5d6547718176303a6073ee80dda2
-symbols: config/eu/symbols.txt
-splits: config/eu/splits.txt
+hash: 214b15173fa3bad23a067476d58d3933ad7037b7
+symbols: config/us/symbols.txt
+splits: config/us/splits.txt
 
 mw_comment_version: 15
 symbols_known: true
