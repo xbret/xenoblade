@@ -2,7 +2,7 @@ Sections:
 	.init       type:code align:4
 	extab       type:rodata align:32
 	extabindex  type:rodata align:16
-	.text       type:code align:4
+	.text       type:code align:32
 	.ctors      type:rodata align:32
 	.dtors      type:rodata align:16
 	.rodata     type:rodata align:32

@@ -65,7 +65,7 @@ mData(nullptr),
 mLength(0),
 unk14(false) {
     //Determine the handle to use for opening the file
-    //This is likely an inline
+    //TODO: This is likely an inline
     ALLOC_HANDLE handle = MemManager::getHandleMEM2();
     MemHandleType unk8 = arcFileData->mHandleType;
     if(unk8 == HANDLE_MEM1){

@@ -143,6 +143,8 @@ at the end (or some other way of stopping any more code from running). As a resu
 any calls to OSPanic will effectively do nothing, and the game will continue to run instead of
 properly halting. It shouldn't ever get called though, so it's fine, right? :) */
 void OSPanic(const char *file, int line, const char *msg, ...){
+    u32 depth;
+    u32* sp;
     va_list list;
     int length;
     char buffer[4096];
