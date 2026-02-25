@@ -11,6 +11,7 @@
 #include "monolib/math/CPnt16.hpp"
 #include "monolib/math/CQuat.hpp"
 #include "monolib/math/CRect16.hpp"
+#include "monolib/math/CVec2.hpp"
 #include "monolib/math/CVec3.hpp"
 #include "monolib/math/CVec4.hpp"
 #include "monolib/math/Main.hpp"
