@@ -103,7 +103,7 @@ void COccCulling::setFrustum(CCullFrustum* pFrustum){
     pFrustum->mPlane4.set(pFrustum->unk90[3], pFrustum->unk90[0]);
 }
 
-u8 COccCulling::func_801A0F04(COccCulling_UnkStruct2* r4){
+bool COccCulling::func_801A0F04(COccCulling_UnkStruct2* r4){
     unk24 = r4;
 
     for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){

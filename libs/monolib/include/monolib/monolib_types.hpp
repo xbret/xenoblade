@@ -16,6 +16,11 @@ namespace ml {
     struct CRect16;
 } //namespace ml
 
+//Scene
+class CScn;
+class CScnNw4r;
+class IScnRender;
+
 //Util
 class CChildListNode;
 

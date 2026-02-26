@@ -4,7 +4,7 @@
 #include "monolib/work.hpp"
 #include "monolib/util.hpp"
 #include "monolib/core.hpp"
-#include "kyoshin/IScnRender.hpp"
+#include "monolib/scn.hpp"
 
 class ITitleMenu{
 public:
@@ -70,7 +70,7 @@ public:
     u32 unk68;
     CWorkThread* unk6C;
     CView* unk70;
-    u32 unk74;
+    CScnNw4r* unk74;
     u32 unk78;
     u32 unk7C;
     u16 unk80;

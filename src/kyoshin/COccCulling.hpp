@@ -64,7 +64,7 @@ public:
     DECOMP_DONT_INLINE void func_801A0794();
     int addFrustum(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, u32 flags);
     void setFrustum(CCullFrustum* r4);
-    u8 func_801A0F04(COccCulling_UnkStruct2* r4);
+    bool func_801A0F04(COccCulling_UnkStruct2* r4);
     void func_801A1188(CCullFrustum* r4);
     bool func_801A1444(const ml::CVec3& vec, float distance);
     bool func_801A1550(const ml::CVec3& rayStartPos, const ml::CVec3& rayEndPos, UNKWORD r6);
