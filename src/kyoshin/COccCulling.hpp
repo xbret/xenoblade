@@ -47,15 +47,6 @@ struct CCullFrustum{
     u32 mFlags; //0x130
 };
 
-struct COccCulling_UnkStruct2{
-    u8 unk0[0xCC];
-    ml::CMat34 unkCC;
-    u8 unkFC[0x10];
-    ml::CVec3 unk10C;
-    u8 unk118[0x258 - 0x118];
-    ml::CPlane unk248[6];
-};
-
 class COccCulling{
 public:
     COccCulling();
@@ -64,7 +55,7 @@ public:
     DECOMP_DONT_INLINE void func_801A0794();
     int addFrustum(const ml::CVec3& r4, const ml::CVec3& r5, const ml::CVec3& r6, u32 flags);
     void setFrustum(CCullFrustum* r4);
-    bool func_801A0F04(COccCulling_UnkStruct2* r4);
+    bool func_801A0F04(ml::CFrustum* r4);
     void func_801A1188(CCullFrustum* r4);
     bool func_801A1444(const ml::CVec3& vec, float distance);
     bool func_801A1550(const ml::CVec3& rayStartPos, const ml::CVec3& rayEndPos, UNKWORD r6);
@@ -72,9 +63,9 @@ public:
     //0x0: vtable
     resvector<CCullFrustum*> mFrustumList1; //0x4
     resvector<CCullFrustum*> mFrustumList2; //0x14
-    COccCulling_UnkStruct2* unk24;
+    ml::CFrustum* unk24;
     mtl::ALLOC_HANDLE unk28;
-    u8 unk2C;
+    bool unk2C;
     u8 unk2D;
     u8 unk2E;
 

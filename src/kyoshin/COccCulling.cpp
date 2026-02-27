@@ -14,7 +14,7 @@ mFrustumList1(mtl::INVALID_HANDLE),
 mFrustumList2(mtl::INVALID_HANDLE),
 unk24(nullptr),
 unk28(mtl::INVALID_HANDLE),
-unk2C(0),
+unk2C(false),
 unk2D(0),
 unk2E(0){
 }
@@ -103,7 +103,7 @@ void COccCulling::setFrustum(CCullFrustum* pFrustum){
     pFrustum->mPlane4.set(pFrustum->unk90[3], pFrustum->unk90[0]);
 }
 
-bool COccCulling::func_801A0F04(COccCulling_UnkStruct2* r4){
+bool COccCulling::func_801A0F04(CFrustum* r4){
     unk24 = r4;
 
     for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){
@@ -171,7 +171,7 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
 
     if(!(pFrustum->mFlags & CCullFrustum::FLAGS_01)){
         for(int i = 1; i < 6; i++){
-            COccCulling_UnkStruct2* r0 = unk24;
+            CFrustum* r0 = unk24;
             CPlane* plane = &r0->unk248[i];
 
             bool b = true;

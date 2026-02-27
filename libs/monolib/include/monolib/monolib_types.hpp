@@ -14,12 +14,16 @@ class CDeviceFileJob;
 namespace ml {
     struct CPnt16;
     struct CRect16;
+    struct CVec3;
+    struct CMat34;
+    struct CFrustum;
 } //namespace ml
 
 //Scene
 class CScn;
 class CScnNw4r;
 class IScnRender;
+class ICulling;
 
 //Util
 class CChildListNode;

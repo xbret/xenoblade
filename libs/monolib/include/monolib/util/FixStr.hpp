@@ -160,6 +160,16 @@ namespace ml{
 
         }
 
+        //TODO: this might be a CPathUtil inline?
+        void unkInline1(const char* str){
+            int index = rfind(str, -1);
+
+            if(index != -1 && index + 1 < mLength){
+                mString[index + 1] = 0;
+                mLength = index;
+            }
+        }
+
     private:
         char mString[N];
         int mLength;

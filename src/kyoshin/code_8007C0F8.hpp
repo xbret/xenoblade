@@ -6,4 +6,6 @@ extern "C"{
 void func_80086DC0(int, int);
 }
 
+UNKTYPE* func_80083298();
+
 extern u32 lbl_80666728;

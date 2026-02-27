@@ -4,6 +4,7 @@
 #include "monolib/math/CCamUtil.hpp"
 #include "monolib/math/CCol3.hpp"
 #include "monolib/math/CCol4.hpp"
+#include "monolib/math/CFrustum.hpp"
 #include "monolib/math/CMat33.hpp"
 #include "monolib/math/CMat34.hpp"
 #include "monolib/math/CMat44.hpp"
