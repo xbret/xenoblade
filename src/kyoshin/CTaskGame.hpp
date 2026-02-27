@@ -59,7 +59,7 @@ public:
     virtual void IErrMesWinSel__UnkVirtualFunc1();
     virtual bool IGameException_UnkVirtualFunc1(u32 r4);
 
-    //0x0: vtable
+    //0x0: vtable (CTTask)
     //0x4-3C: CProcess
     //0x3C-54: CTTask
     //0x54: vtable 2 (IWorkEvent)

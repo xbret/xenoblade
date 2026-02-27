@@ -68,7 +68,7 @@ namespace cf{
     void CTaskCulling::Move(){}
     void CTaskCulling::Draw(){}
 
-    void CTaskCulling::IScnRender_UnkVirtualFunc1(){}
+    void CTaskCulling::cbRenderBefore(){}
 
     CTaskCulling* CTaskCulling::create(CProcess* pParent, UNKTYPE* r4){
         CTaskCulling* taskCulling = new (CWorkThreadSystem::getWorkMem()) CTaskCulling(r4);

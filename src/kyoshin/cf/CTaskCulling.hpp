@@ -30,7 +30,7 @@ namespace cf{
         virtual void Move();
         virtual void Draw();
 
-        virtual void IScnRender_UnkVirtualFunc1();
+        virtual void cbRenderBefore();
         virtual bool ICulling_UnkVirtualFunc1(COccCulling_UnkStruct2* r4);
         virtual bool ICulling_UnkVirtualFunc2(const ml::CVec3& r4, float r5);
         virtual bool ICulling_UnkVirtualFunc3(const ml::CVec3& r4, const ml::CVec3& r5, int r6);
@@ -41,8 +41,9 @@ namespace cf{
         static void func_801A2CAC();
 
 
-        //0x0: vtable 1 (CTTask)
-        //0x0-54: CTTask
+        //0x0: vtable (CTTask)
+        //0x4-3C: CProcess
+        //0x3C-54: CTTask
         //0x54: vtable 2 (IWorkEvent)
         //0x58: vtable 3 (IScnRender)
         //0x5C: vtable 4 (ICulling)

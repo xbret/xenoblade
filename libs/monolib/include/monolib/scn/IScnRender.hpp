@@ -3,5 +3,5 @@
 class IScnRender {
 public:
     virtual ~IScnRender(){}
-    virtual void IScnRender_UnkVirtualFunc1();
+    virtual void cbRenderBefore();
 };
