@@ -23,7 +23,7 @@ void CBattery::func_802B92A4(){
     this, 0, 0);
     //likely member functions of the class
     CDeviceFile::func_8044F154(mFileHandle, 3);
-    CDeviceFile::func_8044F414(mFileHandle);
+    CDeviceFile::setHandleFlag2(mFileHandle);
 }
 
 void CBattery::func_802B92FC(){

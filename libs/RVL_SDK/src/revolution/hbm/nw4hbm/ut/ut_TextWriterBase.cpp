@@ -1,4 +1,4 @@
-#include <revolution/HBM/nw4hbm/ut.h>
+#include <nw4hbm/ut.h>
 
 namespace nw4hbm {
 namespace ut {
@@ -402,6 +402,11 @@ f32 TextWriterBase<T>::AdjustCursor(f32* pX, f32* pY, const T* pStr, int len) {
     }
 
     return textWidth;
+}
+
+template <typename T>
+int TextWriterBase<T>::GetTabWidth() const {
+    return mTabWidth;
 }
 
 template <typename T>

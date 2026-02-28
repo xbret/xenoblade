@@ -6411,7 +6411,7 @@ monolib/src/lib/CLibHbm.cpp:
 	.data       start:0x805709F0 end:0x80570AA8
 	.bss        start:0x8065A848 end:0x8065A868
 	.sdata      start:0x806660E0 end:0x806660F0
-	.sbss       start:0x80667FD0 end:0x80667FE8
+	.sbss       start:0x80667FD0 end:0x80667FE0
 	.sdata2     start:0x8066CCF0 end:0x8066CD30
 
 monolib/src/lib/CLibHbmControl.cpp:
@@ -6421,6 +6421,7 @@ monolib/src/lib/CLibHbmControl.cpp:
 	.rodata     start:0x80526A98 end:0x80526AD8
 	.data       start:0x80570AA8 end:0x80570B98
 	.sdata      start:0x806660F0 end:0x806660F8
+	.sbss       start:0x80667FE0 end:0x80667FE8
 	.sdata2     start:0x8066CD30 end:0x8066CD70
 
 monolib/src/lib/CLibLayout.cpp:

@@ -1,4 +1,4 @@
-#include <revolution/HBM/nw4hbm/ut.h>
+#include <nw4hbm/ut.h>
 
 namespace nw4hbm {
 namespace ut {

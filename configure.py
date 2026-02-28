@@ -331,6 +331,7 @@ cflags_hbm = [
     "-sdata2 0",
     "-RTTI on",
     "-i libs/RVL_SDK/include/",
+    "-i libs/RVL_SDK/src/revolution/hbm/include/",
     f"-DHBM_VERSION={sdk_hbm_version}",
 ]
 

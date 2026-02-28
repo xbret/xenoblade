@@ -1,4 +1,4 @@
-#include <revolution/HBM/nw4hbm/math.h>
+#include <nw4hbm/math.h>
 
 namespace nw4hbm {
 namespace math {

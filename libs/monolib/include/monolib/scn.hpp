@@ -4,4 +4,6 @@
 #include "monolib/scn/ICulling.hpp"
 #include "monolib/scn/CScn.hpp"
 #include "monolib/scn/CScnNw4r.hpp"
+#include "monolib/scn/CScnRootNw4r.hpp"
+#include "monolib/scn/CScnTexWorkMan.hpp"
 #include "monolib/scn/IScnRender.hpp"

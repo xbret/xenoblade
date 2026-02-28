@@ -39,14 +39,14 @@ mTaskManUpdateCount(1),
 unk224(1.0f),
 unk228(0) {
     spInstance = this;
-    CLibHbm_8045D5C8(1);
+    CLibHbm::func_8045D5C8(1);
     CWorkSystem::setExitFunc(&onExit);
     this->wkSetEvent(EVT_4);
 }
 
 CGame::~CGame(){
     CWorkSystem::setExitFunc(nullptr);
-    CLibHbm_8045D5C8(0);
+    CLibHbm::func_8045D5C8(0);
     spInstance = nullptr;
 }
 
@@ -266,7 +266,7 @@ which inherits from the type used for the error handler classes (seems to be IGa
 but unfortunately the RTTI doesn't specify the name.) */
 bool CGame::wkStandbyExceptionRetry(u32 wid){
     if(isThreadFlag0()) return true;
-    if(func_8045DE00()) return false;
+    if(CLibHbm::func_8045DE00()) return false;
 
     //Get the work thread for the given id
     CWorkThread* workThread = CWorkThread::getWorkThread(wid);

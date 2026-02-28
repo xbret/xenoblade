@@ -1,4 +1,4 @@
-#include <revolution/HBM/nw4hbm/lyt.h>
+#include <nw4hbm/lyt.h>
 
 #include <revolution/ARC.h>
 

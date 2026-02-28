@@ -1,7 +1,7 @@
 #pragma ipa file
 
-#include <revolution/HBM/nw4hbm/lyt.h>
-#include <revolution/HBM/nw4hbm/ut.h>
+#include <nw4hbm/lyt.h>
+#include <nw4hbm/ut.h>
 
 #include <cstring>
 

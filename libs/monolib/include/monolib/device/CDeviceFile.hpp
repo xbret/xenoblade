@@ -20,11 +20,12 @@ public:
     int r6, int r7);
     static CFileHandle* readCommonArchiveFile(mtl::ALLOC_HANDLE allocHandle, const char* pPath, IWorkEvent* pWorkEvent,
     int r6, int r7);
+    static int getFileSize(const char* pPath);
 
     static void removeFileJob(CDeviceFileJob* pJob);
     static void cancel(CFileHandle* pFileHandle);
     static void func_8044F154(CFileHandle* pFileHandle, int);
-    static void func_8044F414(CFileHandle* pFileHandle);
+    static void setHandleFlag2(CFileHandle* pFileHandle);
     
     //0x0: vtable
     //0x0-1c8: CDeviceBase

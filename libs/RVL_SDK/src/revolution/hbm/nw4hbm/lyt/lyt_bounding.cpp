@@ -1,4 +1,4 @@
-#include <revolution/HBM/nw4hbm/lyt.h>
+#include <nw4hbm/lyt.h>
 
 namespace nw4hbm {
 namespace lyt {

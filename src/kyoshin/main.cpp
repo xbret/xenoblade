@@ -102,11 +102,11 @@ void OnAidatFileUnloaded(void* pData, u32 length){
 }
 
 void OnHbmstopFileLoaded(void* pData, u32 length){
-    func_8045D480(pData);
+    CLibHbm::loadTplImage(pData);
 }
 
 void OnHbmstopFileUnloaded(void* pData, u32 length){
-    func_8045D4FC();
+    CLibHbm::removeTplImage();
 }
 
 //List of files contained in the static.arc archive
@@ -164,6 +164,6 @@ int main(){
     CWorkSystemPack::SaveStaticArcFilenameStringPtr(&scStaticArcStr);
     CWorkSystemPack::SavePkhFilenamesArrayPtr(sPkhFilenames);
     CActParamData::func_80057CDC();
-    CLibHbm_8045D5C8(1);
+    CLibHbm::func_8045D5C8(1);
     CWorkRoot::run(); //Start up CWorkRoot, which later starts CGame
 }
