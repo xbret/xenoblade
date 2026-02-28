@@ -1,30 +1,28 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
-#include <nw4hbm/ut.h>
+#include <revolution/HBM/nw4hbm/ut.h>
 
 namespace nw4hbm {
 namespace ut {
 
-bool IsValidBinaryFile(const BinaryFileHeader* header, u32 magic, u16 version,
-                       u16 numBlocks) {
-    if (header->magic != magic) {
+bool IsValidBinaryFile(const BinaryFileHeader* pHeader, u32 signature,
+                       u16 version, u16 minBlocks) {
+    if (pHeader->signature != signature) {
         return false;
     }
 
-    if (header->byteOrder != NW4R_BYTEORDER_BIG) {
+    if (pHeader->byteOrder != NW4R_BYTEORDER_NATIVE) {
         return false;
     }
 
-    if (header->version != version) {
+    if (pHeader->version != version) {
         return false;
     }
 
-    if (header->fileSize <
-        sizeof(BinaryFileHeader) + (numBlocks * sizeof(BinaryBlockHeader))) {
+    if (pHeader->fileSize <
+        sizeof(BinaryFileHeader) + (minBlocks * sizeof(BinaryBlockHeader))) {
         return false;
     }
 
-    if (header->numBlocks < numBlocks) {
+    if (pHeader->dataBlocks < minBlocks) {
         return false;
     }
 
@@ -32,12 +30,12 @@ bool IsValidBinaryFile(const BinaryFileHeader* header, u32 magic, u16 version,
 }
 
 //unused
-bool IsReverseEndianBinaryFile(const BinaryFileHeader* fileHeader) {
+bool IsReverseEndianBinaryFile(const BinaryFileHeader* pHeader) {
     return false;
 }
 
 //unused
-BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* fileHeader, BinaryBlockHeader* blockHeader) {
+BinaryBlockHeader* GetNextBinaryBlockHeader(BinaryFileHeader* pHeader, BinaryBlockHeader* pBlockHeader) {
     return nullptr;
 }
 

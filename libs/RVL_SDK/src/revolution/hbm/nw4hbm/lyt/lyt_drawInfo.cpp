@@ -1,19 +1,17 @@
-#include <nw4hbm/lyt/lyt_drawInfo.h>
-#include <string.h>
+#include <revolution/HBM/nw4hbm/lyt.h>
+#include <revolution/HBM/nw4hbm/ut.h>
 
-namespace nw4hbm
-{
-    namespace lyt
-    {
-        DrawInfo::DrawInfo() : mViewMtx(), mViewRect(), mScale(1.0f, 1.0f), mGlobalAlpha(1.0f)
-        {
-            memset(&mFlags, 0, sizeof(mFlags));
-            math::MTX34Identity(&mViewMtx);
-        }
+#include <cstring>
 
-        DrawInfo::~DrawInfo()
-        {
-            
-        }
-    }
+namespace nw4hbm {
+namespace lyt {
+
+DrawInfo::DrawInfo() : mLocationAdjustScale(1.0f, 1.0f), mGlobalAlpha(1.0f) {
+    std::memset(&mFlag, 0, sizeof(mFlag));
+    math::MTX34Identity(&mViewMtx);
 }
+
+DrawInfo::~DrawInfo() {}
+
+} // namespace lyt
+} // namespace nw4hbm

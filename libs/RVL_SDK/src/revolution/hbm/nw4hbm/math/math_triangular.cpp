@@ -1,6 +1,4 @@
-#pragma ipa file // TODO: REMOVE AFTER REFACTOR
-
-#include <nw4hbm/math.h>
+#include <revolution/HBM/nw4hbm/math.h>
 
 namespace nw4hbm {
 namespace math {

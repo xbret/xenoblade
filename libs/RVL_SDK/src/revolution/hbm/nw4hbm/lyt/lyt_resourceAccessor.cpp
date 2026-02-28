@@ -1,22 +1,83 @@
-#include <nw4hbm/lyt/lyt_resourceAccessor.h>
+#include <revolution/HBM/nw4hbm/lyt.h>
+#include <revolution/HBM/nw4hbm/ut.h>
 
-namespace nw4hbm
-{
-    namespace lyt
-    {
-        ResourceAccessor::~ResourceAccessor()
-        {
+#include <cstring>
 
-        }
+namespace nw4hbm {
+namespace lyt {
 
-        ResourceAccessor::ResourceAccessor()
-        {
+/******************************************************************************
+ *
+ * Group
+ *
+ ******************************************************************************/
+Group::Group(const res::Group* pRes, Pane* pRootPane) {
+    Init();
 
-        }
+    std::strncpy(mName, pRes->name, NW4R_LYT_RES_NAME_LEN);
+    mName[NW4R_LYT_RES_NAME_LEN] = '\0';
 
-        ut::Font * ResourceAccessor::GetFont(const char *name)
-        {
-            return NULL;
+    const char* pNameBase =
+        detail::ConvertOffsToPtr<char>(pRes, sizeof(res::Group));
+
+    for (int i = 0; i < pRes->paneNum; i++) {
+        Pane* pResult = pRootPane->FindPaneByName(
+            pNameBase + i * NW4R_LYT_RES_NAME_LEN, true);
+
+        if (pResult != NULL) {
+            AppendPane(pResult);
         }
     }
 }
+
+void Group::Init() {
+    mbUserAllocated = false;
+}
+
+Group::~Group() {
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mPaneLinkList, {
+        mPaneLinkList.Erase(it);
+        Layout::DeleteObj(&*it);
+    })
+}
+
+void Group::AppendPane(Pane* pPane) {
+    detail::PaneLink* pLink = Layout::NewObj<detail::PaneLink>();
+
+    if (pLink != NULL) {
+        pLink->mTarget = pPane;
+        mPaneLinkList.PushBack(pLink);
+    }
+}
+
+/******************************************************************************
+ *
+ * GroupContainer
+ *
+ ******************************************************************************/
+GroupContainer::~GroupContainer() {
+    NW4R_UT_LINKLIST_FOREACH_SAFE (it, mGroupList, {
+        mGroupList.Erase(it);
+        
+        if (!it->IsUserAllocated()) {
+            Layout::DeleteObj(&*it);
+        }
+    })
+}
+
+void GroupContainer::AppendGroup(Group* pGroup) {
+    mGroupList.PushBack(pGroup);
+}
+
+Group* GroupContainer::FindGroupByName(const char* pName) {
+    NW4R_UT_LINKLIST_FOREACH (it, mGroupList, {
+        if (detail::EqualsResName(it->GetName(), pName)) {
+            return &*it;
+        }
+    })
+
+    return NULL;
+}
+
+} // namespace lyt
+} // namespace nw4hbm

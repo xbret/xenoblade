@@ -1,22 +1,25 @@
-#include <nw4hbm/ut.h>
+#include <revolution/HBM/nw4hbm/ut.h>
 
 namespace {
 
-static void SetupGXCommon() {
+void SetupGXCommon() {
     static const nw4hbm::ut::Color fog = 0;
 
     GXSetFog(GX_FOG_NONE, fog, 0.0f, 0.0f, 0.0f, 0.0f);
     GXSetTevSwapModeTable(GX_TEV_SWAP0, GX_CH_RED, GX_CH_GREEN, GX_CH_BLUE,
                           GX_CH_ALPHA);
     GXSetZTexture(GX_ZT_DISABLE, GX_TF_Z8, 0);
+
     GXSetNumChans(1);
     GXSetChanCtrl(GX_COLOR0A0, FALSE, GX_SRC_REG, GX_SRC_VTX, GX_LIGHT_NULL,
                   GX_DF_NONE, GX_AF_NONE);
     GXSetChanCtrl(GX_COLOR1A1, FALSE, GX_SRC_REG, GX_SRC_REG, GX_LIGHT_NULL,
                   GX_DF_NONE, GX_AF_NONE);
+
     GXSetNumTexGens(1);
     GXSetTexCoordGen2(GX_TEXCOORD0, GX_TG_MTX2x4, GX_TG_TEX0, GX_IDENTITY,
                       FALSE, GX_PTIDENTITY);
+
     GXSetNumIndStages(0);
     GXSetBlendMode(GX_BM_BLEND, GX_BL_SRCALPHA, GX_BL_INVSRCALPHA, GX_LO_SET);
 }
@@ -34,7 +37,7 @@ CharWriter::CharWriter()
     mLoadingTexture.Reset();
     ResetColorMapping();
     SetGradationMode(GRADMODE_NONE);
-    SetTextColor(Color(0xFFFFFFFF));
+    SetTextColor(Color::WHITE);
     SetScale(1.0f, 1.0f);
     SetCursor(0.0f, 0.0f, 0.0f);
     EnableLinearFilter(true, true);
@@ -42,9 +45,8 @@ CharWriter::CharWriter()
 
 CharWriter::~CharWriter() {}
 
-//unused
-void CharWriter::SetFont(const Font& font) {
-    mFont = &font;
+void CharWriter::SetFont(const Font& rFont) {
+        mFont = &rFont;
 }
 
 const Font* CharWriter::GetFont() const {
@@ -54,26 +56,37 @@ const Font* CharWriter::GetFont() const {
 void CharWriter::SetupGX() {
     ResetTextureCache();
 
-    if (mColorMapping.min != 0x00000000 || mColorMapping.max != 0xFFFFFFFF) {
+    if (mColorMapping.min != DEFAULT_COLOR_MAPPING_MIN ||
+        mColorMapping.max != DEFAULT_COLOR_MAPPING_MAX) {
         SetupGXWithColorMapping(mColorMapping.min, mColorMapping.max);
-    } else if (mFont != NULL) {
+        return;
+    }
+
+    if (mFont != NULL) {
         switch (mFont->GetTextureFormat()) {
         case GX_TF_I4:
-        case GX_TF_I8:
+        case GX_TF_I8: {
             SetupGXForI();
             break;
+        }
+
         case GX_TF_IA4:
-        case GX_TF_IA8:
+        case GX_TF_IA8: {
             SetupGXDefault();
             break;
+        }
+
         case GX_TF_RGB565:
         case GX_TF_RGB5A3:
-        case GX_TF_RGBA8:
+        case GX_TF_RGBA8: {
             SetupGXForRGBA();
             break;
-        default:
+        }
+
+        default: {
             SetupGXDefault();
             break;
+        }
         }
     } else {
         SetupGXDefault();
@@ -85,46 +98,8 @@ void CharWriter::SetColorMapping(Color min, Color max) {
     mColorMapping.max = max;
 }
 
-//unused
-Color CharWriter::GetColorMappingMin() const {
-    return mColorMapping.min;
-}
-
-//unused
-Color CharWriter::GetColorMappingMax() const {
-    return mColorMapping.max;
-}
-
-void CharWriter::ResetColorMapping() {
-    SetColorMapping(Color(0x00000000), Color(0xFFFFFFFF));
-}
-
-void CharWriter::ResetTextureCache() {
-    mLoadingTexture.Reset();
-}
-
-//unused
-void CharWriter::SetAlpha(u8 alpha) {
-    mAlpha = alpha;
-}
-
-//unused
-u8 CharWriter::GetAlpha() const {
-    return mAlpha;
-}
-
 void CharWriter::SetGradationMode(GradationMode mode) {
-    mTextColor.gradMode = mode;
-    UpdateVertexColor();
-}
-
-//unused
-CharWriter::GradationMode CharWriter::GetGradationMode() const {
-    return mTextColor.gradMode;
-}
-
-void CharWriter::SetTextColor(Color color) {
-    mTextColor.start = color;
+    mTextColor.gradationMode = mode;
     UpdateVertexColor();
 }
 
@@ -134,36 +109,9 @@ void CharWriter::SetTextColor(Color start, Color end) {
     UpdateVertexColor();
 }
 
-//unused
-Color CharWriter::GetTextColor() const {
-    return NULL;
-}
-
-//unused
-Color CharWriter::GetGradationStartColor() const {
-    return NULL;
-}
-
-//unused
-Color CharWriter::GetGradationEndColor() const {
-    return NULL;
-}
-
-void CharWriter::SetScale(f32 hScale, f32 vScale) {
-    mScale.x = hScale;
-    mScale.y = vScale;
-}
-
-//unused
-void CharWriter::SetScale(f32 hvScale) {
-    mScale.x = hvScale;
-    mScale.y = hvScale;
-}
-
 f32 CharWriter::GetScaleH() const {
     return mScale.x;
 }
-
 f32 CharWriter::GetScaleV() const {
     return mScale.y;
 }
@@ -172,18 +120,31 @@ void CharWriter::SetFontSize(f32 width, f32 height) {
     SetScale(width / mFont->GetWidth(), height / mFont->GetHeight());
 }
 
-//unused
-void CharWriter::SetFontSize(f32 height) {
+void CharWriter::SetFontSize(f32 height){
 }
 
-f32 CharWriter::GetFontWidth() const { return mScale.x * mFont->GetWidth(); }
+f32 CharWriter::GetFontWidth() const {
+    return mScale.x * mFont->GetWidth();
+}
 
-f32 CharWriter::GetFontHeight() const { return mScale.y * mFont->GetHeight(); }
+f32 CharWriter::GetFontHeight() const {
+    return mScale.y * mFont->GetHeight();
+}
 
-f32 CharWriter::GetFontAscent() const { return mScale.y * mFont->GetAscent(); }
+f32 CharWriter::GetFontAscent() const {
+    return mScale.y * mFont->GetAscent();
+}
 
 f32 CharWriter::GetFontDescent() const {
     return mScale.y * mFont->GetDescent();
+}
+
+bool CharWriter::IsWidthFixed() const {
+    return mIsWidthFixed;
+}
+
+f32 CharWriter::GetFixedWidth() const {
+    return mFixedWidth;
 }
 
 void CharWriter::EnableLinearFilter(bool atSmall, bool atLarge) {
@@ -191,49 +152,20 @@ void CharWriter::EnableLinearFilter(bool atSmall, bool atLarge) {
     mFilter.atLarge = atLarge ? GX_LINEAR : GX_NEAR;
 }
 
-//unused
-bool CharWriter::IsLinearFilterEnableAtSmall() const {
-    return false;
-}
-
-//unused
-bool CharWriter::IsLinearFilterEnableAtLarge() const {
-    return false;
-}
-
-bool CharWriter::IsWidthFixed() const {
-    return mIsWidthFixed;
-}
-
-//unused
-void CharWriter::EnableFixedWidth(bool enable) {
-    mIsWidthFixed = enable;
-}
-
-f32 CharWriter::GetFixedWidth() const {
-    return mFixedWidth;
-}
-
-//unused
-void CharWriter::SetFixedWidth(f32 width) {
-    mFixedWidth = width;
-}
-
-f32 CharWriter::Print(u16 code) {
-    Glyph glyph;
-    mFont->GetGlyph(&glyph, code);
-
-    CharWidths& widths = glyph.widths;
+f32 CharWriter::Print(u16 ch) {
     f32 width;
     f32 left;
 
+    Glyph glyph;
+    mFont->GetGlyph(&glyph, ch);
+
     if (mIsWidthFixed) {
-        f32 margin = (mFixedWidth - widths.charWidth * mScale.x) / 2;
+        f32 margin = (mFixedWidth - glyph.widths.charWidth * mScale.x) / 2;
         width = mFixedWidth;
-        left = margin + (widths.leftSpacing * mScale.x);
+        left = margin + glyph.widths.left * mScale.x;
     } else {
-        width = widths.charWidth * mScale.x;
-        left = widths.leftSpacing * mScale.x;
+        width = glyph.widths.charWidth * mScale.x;
+        left = glyph.widths.left * mScale.x;
     }
 
     PrintGlyph(mCursorPos.x + left, mCursorPos.y, mCursorPos.z, glyph);
@@ -242,33 +174,9 @@ f32 CharWriter::Print(u16 code) {
     return width;
 }
 
-//unused
-void CharWriter::DrawGlyph(const Glyph& glyph) {
-}
-
-void CharWriter::SetCursor(f32 x, f32 y)  {
+void CharWriter::SetCursor(f32 x, f32 y) {
     mCursorPos.x = x;
     mCursorPos.y = y;
-}
-
-//unused
-void CharWriter::SetCursor(f32 x, f32 y, f32 z) {
-    mCursorPos.x = x;
-    mCursorPos.y = y;
-    mCursorPos.z = z;
-}
-
-//unused
-void CharWriter::MoveCursor(f32 dx, f32 dy) {
-    mCursorPos.x += dx;
-    mCursorPos.y += dy;
-}
-
-//unused
-void CharWriter::MoveCursor(f32 dx, f32 dy, f32 dz) {
-    mCursorPos.x += dx;
-    mCursorPos.y += dy;
-    mCursorPos.z += dz;
 }
 
 void CharWriter::SetCursorX(f32 x) {
@@ -279,22 +187,12 @@ void CharWriter::SetCursorY(f32 y) {
     mCursorPos.y = y;
 }
 
-//unused
-void CharWriter::SetCursorZ(f32 z) {
-    mCursorPos.z = z;
-}
-
 void CharWriter::MoveCursorX(f32 dx) {
     mCursorPos.x += dx;
 }
 
 void CharWriter::MoveCursorY(f32 dy) {
     mCursorPos.y += dy;
-}
-
-//unused
-void CharWriter::MoveCursorZ(f32 dz) {
-    mCursorPos.z += dz;
 }
 
 f32 CharWriter::GetCursorX() const {
@@ -306,80 +204,78 @@ f32 CharWriter::GetCursorY() const {
 }
 
 //unused
-f32 CharWriter::GetCursorZ() const {
-    return mCursorPos.z;
+void CharWriter::DrawGlyph(const Glyph& glyph) {
 }
 
-void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& glyph) {
-    f32 x2 = x + (glyph.widths.glyphWidth * mScale.x);
-    f32 y2 = y + (glyph.height * mScale.y);
+void CharWriter::PrintGlyph(f32 x, f32 y, f32 z, const Glyph& rGlyph) {
+    f32 x2 = x + rGlyph.widths.glyphWidth * mScale.x;
+    f32 y2 = y + rGlyph.height * mScale.y;
 
-    u32 posLeft = glyph.cellX;
-    u16 texLeft = 0x8000 * posLeft / glyph.texWidth;
+    u16 texLeft = rGlyph.cellX * 0x8000U / rGlyph.texWidth;
+    u16 texTop = rGlyph.cellY * 0x8000U / rGlyph.texHeight;
 
-    u32 posTop = glyph.cellY;
-    u16 texTop = 0x8000 * posTop / glyph.texHeight;
+    u16 texRight =
+        (rGlyph.cellX + rGlyph.widths.glyphWidth) * 0x8000U / rGlyph.texWidth;
 
-    u32 posRight = posLeft + glyph.widths.glyphWidth;
-    u16 texRight = 0x8000 * posRight / glyph.texWidth;
+    u16 texBottom = (rGlyph.cellY + rGlyph.height) * 0x8000U / rGlyph.texHeight;
 
-    u32 posBottom = posTop + glyph.height;
-    u16 texBottom = 0x8000 * posBottom / glyph.texHeight;
-
-    LoadTexture(glyph, GX_TEXMAP0);
+    LoadTexture(rGlyph, GX_TEXMAP0);
 
     GXBegin(GX_QUADS, GX_VTXFMT0, 4);
     {
         GXPosition3f32(x, y, z);
-        GXColor1u32(mVertexColor.tl);
+        GXColor1u32(mVertexColor.lu);
         GXTexCoord2s16(texLeft, texTop);
 
         GXPosition3f32(x2, y, z);
-        GXColor1u32(mVertexColor.tr);
+        GXColor1u32(mVertexColor.ru);
         GXTexCoord2s16(texRight, texTop);
 
         GXPosition3f32(x2, y2, z);
-        GXColor1u32(mVertexColor.br);
+        GXColor1u32(mVertexColor.rd);
         GXTexCoord2s16(texRight, texBottom);
 
         GXPosition3f32(x, y2, z);
-        GXColor1u32(mVertexColor.bl);
+        GXColor1u32(mVertexColor.ld);
         GXTexCoord2s16(texLeft, texBottom);
     }
     GXEnd();
 }
 
-void CharWriter::LoadTexture(const Glyph& glyph, GXTexMapID slot) {
-    LoadingTexture loadInfo;
+void CharWriter::LoadTexture(const Glyph& rGlyph, GXTexMapID slot) {
+    LoadingTexture loadingTexture;
 
-    loadInfo.slot = slot;
-    loadInfo.texture = glyph.texture;
-    loadInfo.filter = mFilter;
+    loadingTexture.slot = slot;
+    loadingTexture.texture = rGlyph.pTexture;
+    loadingTexture.filter = mFilter;
 
-    if (loadInfo != mLoadingTexture) {
-        GXTexObj tobj;
-        GXInitTexObj(&tobj, glyph.texture, glyph.texWidth, glyph.texHeight,
-                     glyph.format, GX_CLAMP, GX_CLAMP, FALSE);
-        GXInitTexObjLOD(&tobj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
+    if (loadingTexture != mLoadingTexture) {
+        GXTexObj texObj;
+        GXInitTexObj(&texObj, rGlyph.pTexture, rGlyph.texWidth,
+                     rGlyph.texHeight, rGlyph.texFormat, GX_CLAMP, GX_CLAMP,
+                     FALSE);
+
+        GXInitTexObjLOD(&texObj, mFilter.atSmall, mFilter.atLarge, 0.0f, 0.0f,
                         0.0f, FALSE, FALSE, GX_ANISO_1);
-        GXLoadTexObj(&tobj, slot);
 
-        mLoadingTexture = loadInfo;
+        GXLoadTexObj(&texObj, slot);
+
+        mLoadingTexture = loadingTexture;
     }
 }
 
 void CharWriter::UpdateVertexColor() {
     // clang-format off
-    mVertexColor.tl = mTextColor.start;
-    mVertexColor.tr = mTextColor.gradMode != GRADMODE_H    ? mTextColor.start : mTextColor.end;
-    mVertexColor.bl = mTextColor.gradMode != GRADMODE_V    ? mTextColor.start : mTextColor.end;
-    mVertexColor.br = mTextColor.gradMode == GRADMODE_NONE ? mTextColor.start : mTextColor.end;
+    mVertexColor.lu = mTextColor.start;
+    mVertexColor.ru = mTextColor.gradationMode != GRADMODE_H    ? mTextColor.start : mTextColor.end;
+    mVertexColor.ld = mTextColor.gradationMode != GRADMODE_V    ? mTextColor.start : mTextColor.end;
+    mVertexColor.rd = mTextColor.gradationMode == GRADMODE_NONE ? mTextColor.start : mTextColor.end;
     // clang-format on
 
-    mVertexColor.tl.a = (mVertexColor.tl.a * mAlpha) / 255,
-    mVertexColor.tr.a = (mVertexColor.tr.a * mAlpha) / 255;
-    mVertexColor.bl.a = (mVertexColor.bl.a * mAlpha) / 255;
-    mVertexColor.br.a = (mVertexColor.br.a * mAlpha) / 255;
+    mVertexColor.lu.a = (mVertexColor.lu.a * mAlpha) / 255,
+    mVertexColor.ru.a = (mVertexColor.ru.a * mAlpha) / 255;
+    mVertexColor.ld.a = (mVertexColor.ld.a * mAlpha) / 255;
+    mVertexColor.rd.a = (mVertexColor.rd.a * mAlpha) / 255;
 }
 
 void CharWriter::SetupVertexFormat() {
@@ -397,6 +293,7 @@ void CharWriter::SetupGXDefault() {
     SetupGXCommon();
 
     GXSetNumTevStages(1);
+
     GXSetTevDirect(GX_TEVSTAGE0);
     GXSetTevSwapMode(GX_TEVSTAGE0, GX_TEV_SWAP0, GX_TEV_SWAP0);
     GXSetTevOrder(GX_TEVSTAGE0, GX_TEXCOORD0, GX_TEXMAP0, GX_COLOR0A0);
@@ -409,6 +306,7 @@ void CharWriter::SetupGXWithColorMapping(Color min, Color max) {
     SetupGXCommon();
 
     GXSetNumTevStages(2);
+
     GXSetTevDirect(GX_TEVSTAGE0);
     GXSetTevDirect(GX_TEVSTAGE1);
 
@@ -421,16 +319,19 @@ void CharWriter::SetupGXWithColorMapping(Color min, Color max) {
 
     GXSetTevColorIn(GX_TEVSTAGE0, GX_CC_C0, GX_CC_C1, GX_CC_TEXC, GX_CC_ZERO);
     GXSetTevAlphaIn(GX_TEVSTAGE0, GX_CA_A0, GX_CA_A1, GX_CA_TEXA, GX_CA_ZERO);
+
     GXSetTevColorOp(GX_TEVSTAGE0, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
                     GX_TEVPREV);
     GXSetTevAlphaOp(GX_TEVSTAGE0, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
                     GX_TEVPREV);
 
     GXSetTevOrder(GX_TEVSTAGE1, GX_TEXCOORD_NULL, GX_TEXMAP_NULL, GX_COLOR0A0);
+
     GXSetTevColorIn(GX_TEVSTAGE1, GX_CC_ZERO, GX_CC_CPREV, GX_CC_RASC,
                     GX_CC_ZERO);
     GXSetTevAlphaIn(GX_TEVSTAGE1, GX_CA_ZERO, GX_CA_APREV, GX_CA_RASA,
                     GX_CA_ZERO);
+
     GXSetTevColorOp(GX_TEVSTAGE1, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
                     GX_TEVPREV);
     GXSetTevAlphaOp(GX_TEVSTAGE1, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
@@ -443,13 +344,16 @@ void CharWriter::SetupGXForI() {
     SetupGXCommon();
 
     GXSetNumTevStages(1);
+
     GXSetTevDirect(GX_TEVSTAGE0);
     GXSetTevSwapMode(GX_TEVSTAGE0, GX_TEV_SWAP0, GX_TEV_SWAP0);
     GXSetTevOrder(GX_TEVSTAGE0, GX_TEXCOORD0, GX_TEXMAP0, GX_COLOR0A0);
+
     GXSetTevColorIn(GX_TEVSTAGE0, GX_CC_ZERO, GX_CC_ZERO, GX_CC_ZERO,
                     GX_CC_RASC);
     GXSetTevAlphaIn(GX_TEVSTAGE0, GX_CA_ZERO, GX_CA_TEXA, GX_CA_RASA,
                     GX_CA_ZERO);
+
     GXSetTevColorOp(GX_TEVSTAGE0, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
                     GX_TEVPREV);
     GXSetTevAlphaOp(GX_TEVSTAGE0, GX_TEV_ADD, GX_TB_ZERO, GX_CS_SCALE_1, TRUE,
@@ -458,7 +362,8 @@ void CharWriter::SetupGXForI() {
     SetupVertexFormat();
 }
 
-void CharWriter::SetupGXForRGBA() { SetupGXDefault(); }
-
+void CharWriter::SetupGXForRGBA() {
+    SetupGXDefault();
+}
 } // namespace ut
 } // namespace nw4hbm
