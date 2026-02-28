@@ -249,6 +249,7 @@ private:
     char* mpLayoutName;                                        // at 0xA8
     char* mpAnmName;                                           // at 0xAC
     HBMSelectBtnNum mSelectBtnNum;                             // at 0xB0
+    u8 unkB4[8];
     wchar_t* mpText[7][6];                                     // at 0xBC
     WPADInfo mWpadInfo[WPAD_MAX_CONTROLLERS];                  // at 0x15C
     WPADSyncDeviceCallback mSimpleSyncCallback;                // at 0x1BC

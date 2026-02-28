@@ -213,6 +213,7 @@ void GXSetCoPlanar(GXBool coplanar) {
 
     GX_BP_LOAD_REG(reg);
     GX_BP_LOAD_REG(gxdt->genMode);
+    gxdt->lastWriteWasXF = FALSE;
 }
 
 void __GXSetGenMode(void) {

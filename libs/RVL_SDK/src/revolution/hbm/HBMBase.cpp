@@ -531,7 +531,7 @@ void HomeButton::set_text() {
                 mpText[j][k] = &message[i + 1];
                 j++;
 
-                if (j == 7) {
+                if (j == 10) {
                     j = 0;
                     k++;
                 }

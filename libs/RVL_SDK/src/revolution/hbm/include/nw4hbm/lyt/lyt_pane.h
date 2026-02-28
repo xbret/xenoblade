@@ -286,6 +286,7 @@ protected:
     u8 mAlpha;        // at 0xB8
     u8 mGlbAlpha;     // at 0xB9
     u8 mBasePosition; // at 0xBA
+    u8 unkBB[0xCF - 0xBB];
     u8 mFlag;         // at 0xBB
 
     char mName[NW4R_LYT_RES_NAME_LEN + 1];          // at 0xBC

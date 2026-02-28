@@ -910,12 +910,12 @@ config.libs = [
         "ax",
         [
             Object(Matching, "RVL_SDK/src/revolution/ax/AX.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXAlloc.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXAux.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXCL.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXOut.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXSPB.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/ax/AXVPB.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXAlloc.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXAux.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXCL.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXOut.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXSPB.c"),
+            Object(Matching, "RVL_SDK/src/revolution/ax/AXVPB.c"),
             Object(Matching, "RVL_SDK/src/revolution/ax/AXProf.c"),
             Object(Matching, "RVL_SDK/src/revolution/ax/AXComp.c"),
             Object(Matching, "RVL_SDK/src/revolution/ax/DSPCode.c"),
@@ -924,7 +924,7 @@ config.libs = [
     DolphinLib(
         "axfx",
         [
-            Object(NonMatching, "RVL_SDK/src/revolution/axfx/AXFXReverbHi.c"),
+            Object(Matching, "RVL_SDK/src/revolution/axfx/AXFXReverbHi.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/axfx/AXFXReverbHiExp.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/axfx/AXFXDelayExp.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/axfx/AXFXDelayExpDpl2.c"),
@@ -1090,9 +1090,9 @@ config.libs = [
         [
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXInit.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXFifo.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/gx/GXAttr.c"),
+            Object(Matching, "RVL_SDK/src/revolution/gx/GXAttr.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXMisc.c"),
-            Object(NonMatching, "RVL_SDK/src/revolution/gx/GXGeometry.c"),
+            Object(Matching, "RVL_SDK/src/revolution/gx/GXGeometry.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXFrameBuf.c"),
             Object(Matching, "RVL_SDK/src/revolution/gx/GXLight.c"),
             Object(NonMatching, "RVL_SDK/src/revolution/gx/GXTexture.c"),
@@ -1293,7 +1293,7 @@ config.libs = [
     DolphinLib(
         "wenc",
         [
-            Object(NonMatching, "RVL_SDK/src/revolution/wenc/wenc.c"),
+            Object(Matching, "RVL_SDK/src/revolution/wenc/wenc.c", mw_version = "GC/3.0a5.2", extra_cflags=["-func_align 4"]),
         ],
     ),
     DolphinLib(

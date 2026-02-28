@@ -2149,7 +2149,6 @@ RVL_SDK/src/revolution/ax/AXCL.c:
 RVL_SDK/src/revolution/ax/AXOut.c:
 	.text       start:0x802D63C0 end:0x802D6C70 align:16
 	.bss        start:0x8057D4C0 end:0x8057E2C0
-	.sdata      start:0x80662F90 end:0x80662F98
 	.sbss       start:0x80664DA8 end:0x80664DE8
 
 RVL_SDK/src/revolution/ax/AXSPB.c:
@@ -2169,6 +2168,7 @@ RVL_SDK/src/revolution/ax/AXComp.c:
 
 RVL_SDK/src/revolution/ax/DSPCode.c:
 	.data       start:0x8053DA00 end:0x8053FA00
+	.sdata      start:0x80662F90 end:0x80662F98
 
 RVL_SDK/src/revolution/ax/AXProf.c:
 	.text       start:0x802D8020 end:0x802D8060 align:16

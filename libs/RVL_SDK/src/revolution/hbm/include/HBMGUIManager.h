@@ -175,20 +175,21 @@ public:
     virtual ~Manager();  // at 0x1C
 
     virtual void addComponent(Component* pComponent);              // at 0x20
-    virtual Component* getComponent(u32 id);                       // at 0x24
-    virtual bool update(int, const KPADStatus*, f32, f32, void*) { // at 0x28
+    virtual void delComponent(Component* pComponent);              // at 0x24
+    virtual Component* getComponent(u32 id);                       // at 0x28
+    virtual bool update(int, const KPADStatus*, f32, f32, void*) { // at 0x2C
         return false;
     }
     virtual bool update(int i, f32 x, f32 y, u32 trig, u32 hold, u32 release,
-                        void* pData);                      // at 0x2C
-    virtual void onEvent(u32 id, u32 event, void* pData) { // at 0x30
+                        void* pData);                      // at 0x30
+    virtual void onEvent(u32 id, u32 event, void* pData) { // at 0x34
         if (mpEventHandler != NULL) {
             mpEventHandler->onEvent(id, event, pData);
         }
     }
 
-    virtual void setAllComponentTriggerTarget(bool target);     // at 0x34
-    virtual void setEventHandler(EventHandler* pEventHandler) { // at 0x38
+    virtual void setAllComponentTriggerTarget(bool target);     // at 0x38
+    virtual void setEventHandler(EventHandler* pEventHandler) { // at 0x3C
         mpEventHandler = pEventHandler;
 
         if (mpEventHandler != NULL) {
@@ -230,18 +231,20 @@ public:
 
     virtual ~PaneManager(); // at 0x1C
 
-    virtual void createLayoutScene(const nw4hbm::lyt::Layout& rLayout); // at 0x3C
+    virtual void createLayoutScene(const nw4hbm::lyt::Layout& rLayout); // at 0x40
+    virtual void addLayoutScene(const nw4hbm::lyt::Layout& rLayout); // at 0x44
+    virtual void delLayoutScene(const nw4hbm::lyt::Layout& rLayout); // at 0x48
     virtual PaneComponent*
-    getPaneComponentByPane(nw4hbm::lyt::Pane* pPane);    // at 0x40
-    virtual const nw4hbm::lyt::DrawInfo* getDrawInfo() { // at 0x44
+    getPaneComponentByPane(nw4hbm::lyt::Pane* pPane);    // at 0x4C
+    virtual const nw4hbm::lyt::DrawInfo* getDrawInfo() { // at 0x50
         return mpDrawInfo;
     }
-    virtual void setDrawInfo(const nw4hbm::lyt::DrawInfo* pDrawInfo) { // at 0x48
+    virtual void setDrawInfo(const nw4hbm::lyt::DrawInfo* pDrawInfo) { // at 0x54
         mpDrawInfo = pDrawInfo;
     }
     virtual void
-    setAllBoundingBoxComponentTriggerTarget(bool target);          // at 0x4C
-    virtual void walkInChildren(nw4hbm::lyt::PaneList& rPaneList); // at 0x50
+    setAllBoundingBoxComponentTriggerTarget(bool target);          // at 0x58
+    virtual void walkInChildren(nw4hbm::lyt::PaneList& rPaneList); // at 0x5C
 
 private:
     static u32 suIDCounter;
