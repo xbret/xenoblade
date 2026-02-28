@@ -3,8 +3,8 @@
 #include <types.h>
 #include "monolib/monolib_types.hpp"
 #include "monolib/core/CProc.hpp"
-#include "monolib/core/CProcRoot.hpp"
 #include "monolib/core/CView.hpp"
+#include "monolib/work/CWorkUtil.hpp"
 #include "monolib/math.hpp"
 
 //Forward declarations

@@ -55,56 +55,56 @@ namespace mtl {
         }
     };
 
-    /*
-    Region or section of the memory heap.
-    */
-    class MemRegion {
-        friend class MemManager;
-
-    public:
-        MemRegion();
-        ~MemRegion();
-
-        static void setRegionMaxSize(u32 maxMEM1, u32 maxMEM2);
-        static u32 getMEM1MaxSize();
-        static u32 getMEM2MaxSize();
-
-        void* allocate(void* buffer, u32 size, int align);
-
-        MemBlock* reallocate(MemBlock* block);
-        MemBlock* coalesceRecursive(MemBlock* block);
-
-        MemBlock* getTailBuffer(u32 size, int align, void** buffer);
-
-        static inline void initialize(){
-            setRegionMaxSize(MEM1_MAX_SIZE, MEM2_MAX_SIZE);
-        }
-
-    private:
-        void* allocateImpl(MemBlock* block, void* buffer, u32 size, int align);
-
-        MemBlock* mHead; //0x0
-        MemBlock* mTail; //0x4
-        MemBlock* mOldest; //0x8
-        MemBlock* mYoungest; //0xC
-        void* mStartAddress; //0x10
-        void* mEndAddress; //0x14
-        u32 mNumAlloc; //0x18
-        u32 mSize; //0x1C
-        u32 mFreeBytes; //0x20
-        ml::FixStr<64> mName; //0x24
-        ALLOC_HANDLE mHandle; //0x68
-        u8 unk6C;
-
-        static u32 sMaxSizeMEM1;
-        static u32 sMaxSizeMEM2;
-
-        static const int MEM1_MAX_SIZE = 0x680000;
-        static const int MEM2_MAX_SIZE = 0;
-    };
-
     class MemManager {
     public:
+        /*
+        Region or section of the memory heap.
+        */
+        class MemRegion {
+            friend class MemManager;
+
+        public:
+            MemRegion();
+            ~MemRegion();
+
+            static void setRegionMaxSize(u32 maxMEM1, u32 maxMEM2);
+            static u32 getMEM1MaxSize();
+            static u32 getMEM2MaxSize();
+
+            void* allocate(void* buffer, u32 size, int align);
+
+            MemBlock* reallocate(MemBlock* block);
+            MemBlock* coalesceRecursive(MemBlock* block);
+
+            MemBlock* getTailBuffer(u32 size, int align, void** buffer);
+
+            static inline void initialize(){
+                setRegionMaxSize(MEM1_MAX_SIZE, MEM2_MAX_SIZE);
+            }
+
+        private:
+            void* allocateImpl(MemBlock* block, void* buffer, u32 size, int align);
+
+            MemBlock* mHead; //0x0
+            MemBlock* mTail; //0x4
+            MemBlock* mOldest; //0x8
+            MemBlock* mYoungest; //0xC
+            void* mStartAddress; //0x10
+            void* mEndAddress; //0x14
+            u32 mNumAlloc; //0x18
+            u32 mSize; //0x1C
+            u32 mFreeBytes; //0x20
+            ml::FixStr<64> mName; //0x24
+            ALLOC_HANDLE mHandle; //0x68
+            u8 unk6C;
+
+            static u32 sMaxSizeMEM1;
+            static u32 sMaxSizeMEM2;
+
+            static const int MEM1_MAX_SIZE = 0x680000;
+            static const int MEM2_MAX_SIZE = 0;
+        };
+
         static void initialize();
         static void finalize();
 

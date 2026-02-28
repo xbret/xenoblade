@@ -11,3 +11,6 @@ public:
     static void dispTree(const CWorkThread* pThread, int indent = 0);
     static void entryWork(CWorkThread* pChild, CWorkThread* pParent, bool prepend);
 };
+
+//Possibly member of CWorkThread?
+extern bool hasChild(CWorkThread* pThread);

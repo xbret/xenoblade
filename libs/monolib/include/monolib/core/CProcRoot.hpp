@@ -22,6 +22,3 @@ private:
 
     static CProcRoot* spInstance;
 };
-
-//Possibly member of CWorkThread?
-extern bool hasChild(CWorkThread* pThread);

@@ -1737,7 +1737,7 @@ config.libs = [
             Object(NonMatching, "monolib/src/core/CDesktop.cpp", extra_cflags=["-O4,s", "-func_align 4"]),
             Object(NonMatching, "monolib/src/core/code_80456134.cpp"),
             Object(NonMatching, "monolib/src/core/CException.cpp"),
-            Object(NonMatching, "monolib/src/lib/CLib.cpp"),
+            Object(MatchingFor("jp"), "monolib/src/lib/CLib.cpp"),
             Object(NonMatching, "monolib/src/lib/CLibCri.cpp"),
             Object(NonMatching, "monolib/src/lib/CLibCriMoviePlay.cpp"),
             Object(NonMatching, "monolib/src/lib/CLibCriStreamingPlay.cpp"),

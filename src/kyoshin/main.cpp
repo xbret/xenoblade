@@ -155,7 +155,7 @@ int main(){
 #endif
     copyErrorMessages();
     lbl_80666438 = 0;
-    mtl::MemRegion::initialize();
+    mtl::MemManager::MemRegion::initialize();
     CDeviceVI::setUseStaticHandle(false);
     CDeviceGX::initialize();
     CDesktop::entryTable(&sGameMainIcon, true); //Pass the start function struct to CDesktop to have it be run later

@@ -6347,7 +6347,7 @@ monolib/src/core/CException.cpp:
 	extab       start:0x8001D3C0 end:0x8001D478
 	extabindex  start:0x80035048 end:0x800350CC
 	.text       start:0x80457B9C end:0x80459390
-	.rodata     start:0x80526888 end:0x805268F8
+	.rodata     start:0x80526888 end:0x805268A8
 	.data       start:0x80570528 end:0x805705E8
 	.bss        start:0x8065A808 end:0x8065A848
 	.sdata      start:0x806660A8 end:0x806660B0
@@ -6355,18 +6355,19 @@ monolib/src/core/CException.cpp:
 	.sdata2     start:0x8066CC40 end:0x8066CC88
 
 monolib/src/lib/CLib.cpp:
-	extab       start:0x8001D478 end:0x8001D4A8
-	extabindex  start:0x800350CC end:0x80035114
-	.text       start:0x80459390 end:0x80459864
+	extab       start:0x8001D478 end:0x8001D4A0
+	extabindex  start:0x800350CC end:0x80035108
+	.text       start:0x80459390 end:0x80459830
+	.rodata     start:0x805268A8 end:0x805268F8
 	.data       start:0x805705E8 end:0x805706A0
 	.sdata      start:0x806660B0 end:0x806660B8
 	.sbss       start:0x80667FA8 end:0x80667FB0
 	.sdata2     start:0x8066CC88 end:0x8066CC90
 
 monolib/src/lib/CLibCri.cpp:
-	extab       start:0x8001D4A8 end:0x8001D564
-	extabindex  start:0x80035114 end:0x80035150
-	.text       start:0x80459864 end:0x80459C98
+	extab       start:0x8001D4A0 end:0x8001D564
+	extabindex  start:0x80035108 end:0x80035150
+	.text       start:0x80459830 end:0x80459C98
 	.rodata     start:0x805268F8 end:0x80526928
 	.data       start:0x805706A0 end:0x80570790
 	.sdata      start:0x806660B8 end:0x806660C0
@@ -6403,9 +6404,9 @@ monolib/src/lib/CLibG3d.cpp:
 	.sdata2     start:0x8066CCE8 end:0x8066CCF0
 
 monolib/src/lib/CLibHbm.cpp:
-	extab       start:0x8001D700 end:0x8001D788
-	extabindex  start:0x800352E8 end:0x8003539C
-	.text       start:0x8045D354 end:0x8045E558
+	extab       start:0x8001D700 end:0x8001D780
+	extabindex  start:0x800352E8 end:0x80035390
+	.text       start:0x8045D354 end:0x8045E4C8
 	.rodata     start:0x80526A38 end:0x80526A98
 	.data       start:0x805709F0 end:0x80570AA8
 	.bss        start:0x8065A848 end:0x8065A868
@@ -6414,9 +6415,9 @@ monolib/src/lib/CLibHbm.cpp:
 	.sdata2     start:0x8066CCF0 end:0x8066CD30
 
 monolib/src/lib/CLibHbmControl.cpp:
-	extab       start:0x8001D788 end:0x8001D7C0
-	extabindex  start:0x8003539C end:0x800353D8
-	.text       start:0x8045E558 end:0x8045EF84
+	extab       start:0x8001D780 end:0x8001D7C0
+	extabindex  start:0x80035390 end:0x800353D8
+	.text       start:0x8045E4C8 end:0x8045EF84
 	.rodata     start:0x80526A98 end:0x80526AD8
 	.data       start:0x80570AA8 end:0x80570B98
 	.sdata      start:0x806660F0 end:0x806660F8

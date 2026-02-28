@@ -24,7 +24,7 @@ ALLOC_HANDLE MemManager::sHandleMEM2 = INVALID_HANDLE;
 
 /* Array for memory region structures. Entries are stored as raw bytes to defer
 construction until the initialize function. A bit of a strange decision. */
-RawArray<MemRegion, MAX_ALLOC_REGION> MemManager::sRegionArray;
+RawArray<MemManager::MemRegion, MAX_ALLOC_REGION> MemManager::sRegionArray;
 
 //Unique ID for the next created region
 u32 MemManager::sRegionUniqueId = 0;
@@ -34,15 +34,15 @@ bool MemManager::lbl_80665E38 = true;
 bool MemManager::lbl_80665E39 = true;
 
 //Maximum size of the root MEM1 region
-u32 MemRegion::sMaxSizeMEM1 = OS_MEM_MB_TO_B(6);
+u32 MemManager::MemRegion::sMaxSizeMEM1 = OS_MEM_MB_TO_B(6);
 //Maximum size of the root MEM2 region (unused)
-u32 MemRegion::sMaxSizeMEM2 = 0;
+u32 MemManager::MemRegion::sMaxSizeMEM2 = 0;
 
 //Whether optimal memory allocation is enabled
 bool MemManager::sIsOptimalAlloc = false;
 
 //Thanks monolithsoft very cool
-DECOMP_INLINE MemRegion::MemRegion() try :
+DECOMP_INLINE MemManager::MemRegion::MemRegion() try :
     mHead(nullptr),
     mTail(nullptr),
     mOldest(nullptr),
@@ -56,7 +56,7 @@ DECOMP_INLINE MemRegion::MemRegion() try :
     unk6C(0) {}
     catch(...) {}
 
-MemRegion::~MemRegion() {
+MemManager::MemRegion::~MemRegion() {
     //Must deallocate if this region is not the MEM1/MEM2 region
     if (mHandle != MemManager::getHandleMEM1()
         && mHandle != MemManager::getHandleMEM2()) {
@@ -87,7 +87,7 @@ MemRegion::~MemRegion() {
 /*
 Configures the maximum size of the root memory regions.
 */
-void MemRegion::setRegionMaxSize(u32 maxMEM1, u32 maxMEM2) {
+void MemManager::MemRegion::setRegionMaxSize(u32 maxMEM1, u32 maxMEM2) {
     sMaxSizeMEM1 = maxMEM1;
     sMaxSizeMEM2 = maxMEM2;
 }
@@ -95,14 +95,14 @@ void MemRegion::setRegionMaxSize(u32 maxMEM1, u32 maxMEM2) {
 /*
 Gets the maximum root MEM1 memory region size, in bytes.
 */
-u32 MemRegion::getMEM1MaxSize() {
+u32 MemManager::MemRegion::getMEM1MaxSize() {
     return sMaxSizeMEM1;
 }
 
 /*
 Gets the maximum root MEM2 memory region size, in bytes.
 */
-u32 MemRegion::getMEM2MaxSize() {
+u32 MemManager::MemRegion::getMEM2MaxSize() {
     return sMaxSizeMEM2;
 }
 
@@ -113,7 +113,7 @@ of the specified size and alignment.
 Optionally a buffer can be passed in to specify where the allocation
 should reside.
 */
-void* MemRegion::allocateImpl(MemBlock* block, void* buffer, u32 size, int align) {
+void* MemManager::MemRegion::allocateImpl(MemBlock* block, void* buffer, u32 size, int align) {
     /* Validate the buffer before doing anything.
     If the user didn't specify a buffer, we try to use the block. */
     if (buffer != nullptr) {
@@ -289,7 +289,7 @@ void* MemRegion::allocateImpl(MemBlock* block, void* buffer, u32 size, int align
 Repositions a memory block inside of its region.
 If the block contains an aligned "sub-block" (see 'aligned'), it is collapsed.
 */
-MemBlock* MemRegion::reallocate(MemBlock* block) {
+MemBlock* MemManager::MemRegion::reallocate(MemBlock* block) {
     MemBlock* workBlock = block;
     MemBlock* alignedBlock = workBlock->aligned;
 
@@ -343,7 +343,7 @@ MemBlock* MemRegion::reallocate(MemBlock* block) {
 /*
 Recursively coalesces a memory block, until it cannot be merged further.
 */
-MemBlock* MemRegion::coalesceRecursive(MemBlock* block) {
+MemBlock* MemManager::MemRegion::coalesceRecursive(MemBlock* block) {
     MemBlock* prev = block->prev;
 
     if (block->prev != nullptr) {
@@ -379,7 +379,7 @@ Attempts to allocate memory of the specified size and alignment.
 Optionally a buffer can be passed in to specify where the allocation
 should reside.
 */
-void* MemRegion::allocate(void* buffer, u32 size, int align) {
+void* MemManager::MemRegion::allocate(void* buffer, u32 size, int align) {
     void* resultBuf;
     MemBlock* it = mHead;
 
@@ -803,7 +803,7 @@ bool MemManager::deallocate(void* p) {
 /*
 Gets a pointer to the memory region indicated by 'handle'.
 */
-MemRegion* MemManager::getRegion(ALLOC_HANDLE handle) {
+MemManager::MemRegion* MemManager::getRegion(ALLOC_HANDLE handle) {
     return sRegionArray[ALLOC_HANDLE_REGION(handle)];
 }
 

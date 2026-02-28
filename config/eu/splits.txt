@@ -4579,14 +4579,14 @@ monolib/src/core/CException.cpp:
 	.text       start:0x8045BC8C end:0x8045D3A0
 
 monolib/src/lib/CLib.cpp:
-	extab       start:0x8001D5C4 end:0x8001D5F4
-	extabindex  start:0x800353C8 end:0x80035410
-	.text       start:0x8045D3A0 end:0x8045D874
+	extab       start:0x8001D5C4 end:0x8001D5EC
+	extabindex  start:0x800353C8 end:0x80035404
+	.text       start:0x8045D3A0 end:0x8045D840
 
 monolib/src/lib/CLibCri.cpp:
-	extab       start:0x8001D5F4 end:0x8001D6B0
-	extabindex  start:0x80035410 end:0x8003544C
-	.text       start:0x8045D874 end:0x8045DCB0
+	extab       start:0x8001D5EC end:0x8001D6B0
+	extabindex  start:0x80035404 end:0x8003544C
+	.text       start:0x8045D840 end:0x8045DCB0
 
 monolib/src/lib/CLibCriMoviePlay.cpp:
 	extab       start:0x8001D6B0 end:0x8001D760
@@ -4604,14 +4604,14 @@ monolib/src/lib/CLibG3d.cpp:
 	.text       start:0x80461194 end:0x80461398
 
 monolib/src/lib/CLibHbm.cpp:
-	extab       start:0x8001D84C end:0x8001D8D4
-	extabindex  start:0x800355E4 end:0x80035698
-	.text       start:0x80461398 end:0x804625B0
+	extab       start:0x8001D84C end:0x8001D8CC
+	extabindex  start:0x800355E4 end:0x8003568C
+	.text       start:0x80461398 end:0x80462520
 
 monolib/src/lib/CLibHbmControl.cpp:
-	extab       start:0x8001D8D4 end:0x8001D90C
-	extabindex  start:0x80035698 end:0x800356D4
-	.text       start:0x804625B0 end:0x80462F54
+	extab       start:0x8001D8CC end:0x8001D90C
+	extabindex  start:0x8003568C end:0x800356D4
+	.text       start:0x80462520 end:0x80462F54
 
 monolib/src/lib/CLibLayout.cpp:
 	extab       start:0x8001D90C end:0x8001D9E8

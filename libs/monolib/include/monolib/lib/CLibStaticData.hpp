@@ -56,8 +56,10 @@ public:
     CLibStaticData(const char* pName, CWorkThread* pParent);
     virtual ~CLibStaticData();
 
+    DECL_WORKTHREAD_CREATE(CLibStaticData);
+
     static CLibStaticData* getInstance();
-    static bool func_8045FB08();
+    static bool isInitialized();
     static void saveStaticFileArray(StaticArcFileData*);
     static bool getStaticFileData(const char* pName, StaticDataHandle* pHandle, u32* r5);
 

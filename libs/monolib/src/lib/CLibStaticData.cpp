@@ -25,7 +25,7 @@ CLibStaticData* CLibStaticData::getInstance(){
     return spInstance;
 }
 
-bool CLibStaticData::func_8045FB08(){
+bool CLibStaticData::isInitialized(){
     return spInstance->isRunning();
 }
 

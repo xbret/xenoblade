@@ -142,8 +142,8 @@ void CGame::setViewRect(CView* view, s16 x, s16 y, s16 width, s16 height){
 }
 
 bool CGame::wkStandbyLogin(){
-    //Wait for the static files to be loaded?
-    if(!CLibStaticData::func_8045FB08()) return false;
+    //Wait for the static files to be loaded
+    if(!CLibStaticData::isInitialized()) return false;
 
     //Create the CView instance for CGame
     CView* desktopView = CDesktop::getView();
