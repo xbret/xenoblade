@@ -123,19 +123,15 @@ public:
     virtual void UnbindAnimationSelf(AnimTransform* pAnimTrans); // at 0x50
 
     virtual AnimationLink*
-    FindAnimationLinkSelf(AnimTransform* pAnimTrans); // at 0x54
-    virtual AnimationLink*
-    FindAnimationLinkSelf(const AnimResource& rResource); // at 0x58
+    FindAnimationLink(AnimTransform* pAnimTrans); // at 0x54
     
     virtual void
-    SetAnimationEnable(AnimTransform* pAnimTrans, bool enable, bool recursive); // at 0x5C
-    virtual void
-    SetAnimationEnable(const AnimResource& rResource, bool enable, bool recursive); // at 0x60
+    SetAnimationEnable(AnimTransform* pAnimTrans, bool enable, bool recursive); // at 0x58
     
-    virtual u8 GetMaterialNum() const; // at 0x64
-    virtual Material* GetMaterial() const;       // at 0x68
-    virtual Material* GetMaterial(u32 index) const;  // at 0x6C
-    virtual void LoadMtx(const DrawInfo& rInfo); // at 0x70
+    virtual u8 GetMaterialNum() const; // at 0x5C
+    virtual Material* GetMaterial() const;       // at 0x60
+    virtual Material* GetMaterial(u32 index) const;  // at 0x64
+    virtual void LoadMtx(const DrawInfo& rInfo); // at 0x68
 
     void AppendChild(Pane* pChild);
     void PrependChild(Pane* pChild);

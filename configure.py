@@ -1111,8 +1111,8 @@ config.libs = [
         "cflags": cflags_hbm,
         "progress_category": "sdk",
         "objects": [
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMFrameController.cpp"),
-            Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMAnmController.cpp"),
+            Object(Matching, "RVL_SDK/src/revolution/hbm/HBMFrameController.cpp"),
+            Object(Matching, "RVL_SDK/src/revolution/hbm/HBMAnmController.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMGUIManager.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMController.cpp"),
             Object(NonMatching, "RVL_SDK/src/revolution/hbm/HBMRemoteSpk.cpp"),
