@@ -4439,15 +4439,20 @@ monolib/src/util/CChildListNode.cpp:
 	extabindex  start:0x8003484C end:0x80034864
 	.text       start:0x80449078 end:0x80449104
 
-monolib/src/device/CDeviceRemotePad.cpp:
-	extab       start:0x8001CA60 end:0x8001CAC8
-	extabindex  start:0x80034864 end:0x80034900
-	.text       start:0x80449104 end:0x8044A2AC
+monolib/src/core/CPadManager.cpp:
+	extab       start:0x8001CA60 end:0x8001CAA8
+	extabindex  start:0x80034864 end:0x800348D0
+	.text       start:0x80449104 end:0x80449F44
 
-monolib/src/device/CDeviceBase.cpp:
-	extab       start:0x8001CAC8 end:0x8001CAE8
-	extabindex  start:0x80034900 end:0x80034930
-	.text       start:0x8044A2AC end:0x8044A4FC
+monolib/src/core/UnkClass_80447598.cpp:
+	extab       start:0x8001CAA8 end:0x8001CAC0
+	extabindex  start:0x800348D0 end:0x800348F4
+	.text       start:0x80449F44 end:0x8044A23C
+
+monolib/src/device/CDeviceRemotePad.cpp:
+	extab       start:0x8001CAC0 end:0x8001CAE8
+	extabindex  start:0x800348F4 end:0x80034930
+	.text       start:0x8044A23C end:0x8044A4FC
 
 monolib/src/device/CDeviceSC.cpp:
 	extab       start:0x8001CAE8 end:0x8001CB24

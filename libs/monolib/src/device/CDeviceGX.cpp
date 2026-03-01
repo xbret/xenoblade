@@ -144,7 +144,7 @@ void CDeviceGX::drawFrame(){
             something.func_80456DAC(sp10);
         }
     }else{
-        func_804475E4(someString);
+        UnkClass_80447598::func_804475E4(someString);
     }
 }
 
@@ -161,9 +161,9 @@ inline void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
 }
 
 inline void CDeviceGX::anotherInline(){
-    func_804476E8(someString);
+    UnkClass_80447598::func_804476E8(someString);
     float temp = CDeviceVI::getVisPerFrame();
-    float temp2 = func_804477E8(someString);
+    float temp2 = UnkClass_80447598::func_804477E8(someString);
     lbl_80667F70 = temp2/temp;
 }
 
@@ -240,7 +240,7 @@ bool CDeviceGX::wkStandbyLogout(){
 
 void CDeviceGX::drawSyncCallback(u16 token){
     if(token == token1){
-        func_804475E4(someString);
+        UnkClass_80447598::func_804475E4(someString);
     }else if(token == token2){
         anotherInline();
     }

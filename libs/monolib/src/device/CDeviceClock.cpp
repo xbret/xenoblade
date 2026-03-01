@@ -63,7 +63,7 @@ void CDeviceClock::wkUpdate(){
 }
 
 bool CDeviceClock::wkStandbyLogin(){
-    func_80447598();
+    UnkClass_80447598::func_80447598();
     return CWorkThread::wkStandbyLogin(); //Call base
 }
 

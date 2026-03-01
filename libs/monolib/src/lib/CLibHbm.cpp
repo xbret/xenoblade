@@ -7,7 +7,7 @@
 #include <cstring>
 
 CLibHbm* CLibHbm::spInstance;
-u32 CLibHbm::lbl_806660E0 = -1;
+int CLibHbm::lbl_806660E0 = -1;
 bool CLibHbm::lbl_80667FD4;
 TPLPalette* CLibHbm::spTplData;
 bool CLibHbm::lbl_80667FDC;
@@ -165,6 +165,14 @@ void CLibHbm::loadHbmArcFile(){
 
 bool CLibHbm::isInitialized(){
     return spInstance->isRunning();
+}
+
+void CLibHbm::wkUpdate(){
+    if(CDesktop::getInstance() != nullptr){
+        if(lbl_806660E0 >= 0){
+            
+        }
+    }
 }
 
 float CLibHbm::getFrameDeltaFactor(){

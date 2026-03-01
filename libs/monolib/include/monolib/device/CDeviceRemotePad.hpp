@@ -16,9 +16,16 @@ public:
     u8 unk1C8[0x1F0 - 0x1C8];
 };
 
-int* CDeviceRemotePad_80447580();
-void func_80447598();
+class CPadManager {
+public:
+    static void func_804469D0();
+    static int* func_80447580();
+};
 
-void func_804475E4(const char* str);
-void func_804476E8(const char* str);
-float func_804477E8(const char* str);
+class UnkClass_80447598 {
+public:
+    static void func_80447598();
+    static void func_804475E4(const char* str);
+    static void func_804476E8(const char* str);
+    static float func_804477E8(const char* str);
+};

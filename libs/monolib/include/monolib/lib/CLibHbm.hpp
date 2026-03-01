@@ -85,6 +85,6 @@ private:
     static TPLPalette* spTplData;
     static bool lbl_80667FDC;
     static bool lbl_80667FDD;
-    static u32 lbl_806660E0;
+    static int lbl_806660E0;
     static GXTexObj sTplTexObj;
 };

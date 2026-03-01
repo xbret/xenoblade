@@ -4,7 +4,6 @@
 
 extern void func_80459A80();
 extern void func_8044F964();
-extern void func_804469D0();
 extern void func_80496998();
 extern void func_80496994();
 extern UNKTYPE* func_804BC9EC();
@@ -131,6 +130,6 @@ void CWorkSystem::callExitFunc(){
         sExitFunc();
         func_80459A80();
         func_8044F964();
-        func_804469D0();
+        CPadManager::func_804469D0();
     }
 }
