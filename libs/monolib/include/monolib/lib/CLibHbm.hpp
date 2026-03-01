@@ -40,8 +40,8 @@ public:
     static void removeCallback(IHBMCallback* r3);
     static void func_8045D5C8(bool r3);
     void destroy();
-    static bool func_8045D6AC();
-    static bool func_8045D6C4();
+    static bool isHbmMemPointerValid();
+    static bool checkFlag6();
     static void loadHbmArcFile();
     static void initHbm();
     static void deleteHbm();
@@ -54,28 +54,30 @@ public:
 
     //0x0: vtable
     //0x0-1c4: CWorkThread
-    u32 unk1C4;
-    u32 unk1C8;
-    void* unk1CC;
-    void* unk1D0;
-    void* unk1D4;
-    void* unk1D8;
-    void* unk1DC;
-    UNKTYPE* unk1E0;
-    UNKTYPE* unk1E4;
-    UNKTYPE* unk1E8;
-    HBMDataInfo unk1EC;
-    u16 unk22C;
+    mtl::ALLOC_HANDLE mHandle; //0x1C4
+    int unk1C8; //0x1C8
+    void* mpLayoutBuf; //0x1CC
+    void* mpSpkSeBuf; //0x1D0
+    void* mpHbmSeBuf; //0x1D4
+    void* mpMsgBuf; //0x1D8
+    void* mpConfigBuf; //0x1DC
+    UNKTYPE* mpHbmMem; //0x1E0
+    UNKTYPE* mpHbmSndMem; //0x1E4
+    UNKTYPE* unk1E8; //0x1E8
+    HBMDataInfo unk1EC; //0x1EC
+    u16 mFlags; //0x22C
     CFileHandle* mpHbmArcFileHandle; //0x230
-    u32 unk234;
-    mtl::fixed_vector<IHBMCallback*, 8> unk238;
-    float unk25C;
-    u32 unk260;
-    bool unk264;
-    bool unk265;
+    u32 mConfigBufSize; //0x234
+    mtl::fixed_vector<IHBMCallback*, 8> unk238; //0x238
+    float unk25C; //0x25C
+    u32 unk260; //0x260
+    bool unk264; //0x264
+    bool unk265; //0x265
 
 private:
     static const int MAX_CHILD = 1;
+    static const int HBM_MEM_SIZE = 0x80000;
+    static const int HBM_SND_MEM_SIZE = 100096;
 
     static CLibHbm* spInstance;
 

@@ -1,7 +1,9 @@
 #include "monolib/lib/CLibHbm.hpp"
 #include "monolib/lib/CLibHbmControl.hpp"
+#include "monolib/core.hpp"
 #include "monolib/device.hpp"
 #include "monolib/scn.hpp"
+#include <revolution/ARC.h>
 #include <cstring>
 
 CLibHbm* CLibHbm::spInstance;
@@ -13,19 +15,19 @@ bool CLibHbm::lbl_80667FDD;
 GXTexObj CLibHbm::sTplTexObj;
 
 CLibHbm::CLibHbm(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD),
-unk1C4(mtl::INVALID_HANDLE),
+mHandle(mtl::INVALID_HANDLE),
 unk1C8(0),
-unk1CC(0),
-unk1D0(0),
-unk1D4(0),
-unk1D8(0),
-unk1DC(0),
-unk1E0(0),
-unk1E4(0),
-unk1E8(0),
-unk22C(0),
-mpHbmArcFileHandle(0),
-unk234(0),
+mpLayoutBuf(nullptr),
+mpSpkSeBuf(nullptr),
+mpHbmSeBuf(nullptr),
+mpMsgBuf(nullptr),
+mpConfigBuf(nullptr),
+mpHbmMem(nullptr),
+mpHbmSndMem(nullptr),
+unk1E8(nullptr),
+mFlags(0),
+mpHbmArcFileHandle(nullptr),
+mConfigBufSize(0),
 unk238(),
 unk25C(0),
 unk260(-1),
@@ -114,47 +116,47 @@ void CLibHbm::destroy(){
         mpHbmArcFileHandle = nullptr;
     }
 
-    DELETE_OBJ(unk1E4);
+    DELETE_OBJ(mpHbmSndMem);
     DELETE_OBJ(unk1E8);
-    unk1D0 = 0;
-    unk1D8 = 0;
-    unk1DC = 0;
-    unk1CC = 0;
-    unk1D4 = 0;
-    DELETE_OBJ(unk1E0);
+    mpSpkSeBuf = 0;
+    mpMsgBuf = 0;
+    mpConfigBuf = 0;
+    mpLayoutBuf = 0;
+    mpHbmSeBuf = 0;
+    DELETE_OBJ(mpHbmMem);
 
-    unk1C4 = mtl::INVALID_HANDLE;
+    mHandle = mtl::INVALID_HANDLE;
 
-    if(unk22C & 0x20){
+    if(mFlags & 0x20){
         func_804900A0(0);
-        unk22C &= ~0x20;
+        mFlags &= ~0x20;
     }
 
-    unk22C &= ~0xC0;
+    mFlags &= ~0xC0;
 }
 
-bool CLibHbm::func_8045D6AC(){
-    return spInstance->unk1E0 != nullptr;
+bool CLibHbm::isHbmMemPointerValid(){
+    return spInstance->mpHbmMem != nullptr;
 }
 
-bool CLibHbm::func_8045D6C4(){
-    return (spInstance->unk22C >> 6) & 1;
+bool CLibHbm::checkFlag6(){
+    return (spInstance->mFlags >> 6) & 1;
 }
 
 void CLibHbm::loadHbmArcFile(){
-    spInstance->unk22C &= ~0x40;
+    spInstance->mFlags &= ~0x40;
 
     CDeviceVI::waitForDrawDone();
     func_804900A0(1);
-    spInstance->unk22C |= 0x20;
-    spInstance->unk1C4 = func_80490098();
+    spInstance->mFlags |= 0x20;
+    spInstance->mHandle = func_80490098();
 
-    if(spInstance->unk1C4 == mtl::INVALID_HANDLE){
-        spInstance->unk1C4 = mtl::MemManager::getHandleMEM2();
+    if(spInstance->mHandle == mtl::INVALID_HANDLE){
+        spInstance->mHandle = mtl::MemManager::getHandleMEM2();
     }
 
     if(CDeviceFile::getFileSize("hbm.arc") > 0){
-        CFileHandle* handle = CDeviceFile::readFile(spInstance->unk1C4, "hbm.arc",
+        CFileHandle* handle = CDeviceFile::readFile(spInstance->mHandle, "hbm.arc",
         spInstance, 0, 0);
         spInstance->mpHbmArcFileHandle = handle;
         CDeviceFile::func_8044F154(spInstance->mpHbmArcFileHandle, 0);
@@ -166,17 +168,17 @@ bool CLibHbm::isInitialized(){
 }
 
 float CLibHbm::getFrameDeltaFactor(){
-    return CDeviceVI::isTvFormatPal() ? 1.2f : 1;
+    return CDeviceVI::isTvFormatPal() ? 60.0f/50.0f : 1;
 }
 
 void CLibHbm::initHbmInfoStruct(){
     std::memset(&spInstance->unk1EC, 0, sizeof(HBMDataInfo));
     spInstance->unk1EC.region = CDeviceSC::getLanguage();
-    spInstance->unk1EC.layoutBuf = spInstance->unk1CC;
-    spInstance->unk1EC.spkSeBuf = spInstance->unk1D0;
-    spInstance->unk1EC.msgBuf = spInstance->unk1D8;
-    spInstance->unk1EC.configBuf = spInstance->unk1DC;
-    spInstance->unk1EC.configBufSize = spInstance->unk234;
+    spInstance->unk1EC.layoutBuf = spInstance->mpLayoutBuf;
+    spInstance->unk1EC.spkSeBuf = spInstance->mpSpkSeBuf;
+    spInstance->unk1EC.msgBuf = spInstance->mpMsgBuf;
+    spInstance->unk1EC.configBuf = spInstance->mpConfigBuf;
+    spInstance->unk1EC.configBufSize = spInstance->mConfigBufSize;
 
     spInstance->unk1EC.sound_callback = nullptr;
     spInstance->unk1EC.backFlag = false;
@@ -188,8 +190,8 @@ void CLibHbm::initHbmInfoStruct(){
     //float f31 = CDeviceVI::isTvFormatPal() ? 1.2f : 1;
     spInstance->unk1EC.frameDelta = CDeviceVI::getVisPerFrame() * getFrameDeltaFactor();
 
-    spInstance->unk1EC.mem = spInstance->unk1E0;
-    spInstance->unk1EC.memSize = 0x80000;
+    spInstance->unk1EC.mem = spInstance->mpHbmMem;
+    spInstance->unk1EC.memSize = HBM_MEM_SIZE;
     spInstance->unk1EC.pAllocator = nullptr;
     spInstance->unk1EC.messageFlag = false;
 }
@@ -199,11 +201,11 @@ void CLibHbm::initHbm(){
     initHbmInfoStruct();
 
     HBMCreate(&spInstance->unk1EC);
-    HBMCreateSound(spInstance->unk1D4, spInstance->unk1E4, 0x18700);
+    HBMCreateSound(spInstance->mpHbmSeBuf, spInstance->mpHbmSndMem, HBM_SND_MEM_SIZE);
     HBMInit();
     HBMSetAdjustFlag(true);
 
-    spInstance->unk22C |= 0x80;
+    spInstance->mFlags |= 0x80;
 
     //TODO: probably fakematch
     for(u32 i = 0; (int)i < spInstance->unk238.size(); i++){
@@ -212,7 +214,7 @@ void CLibHbm::initHbm(){
 }
 
 void CLibHbm::deleteHbm(){
-    if(spInstance->unk22C & 0x80){
+    if(spInstance->mFlags & 0x80){
         HBMDeleteSound();
         HBMDelete();
     }
@@ -232,6 +234,78 @@ bool CLibHbm::isHbmControlInitialized(){
 bool CLibHbm::func_8045DE00(){
     return CLibHbmControl::func_8045E530();
 }
+
+bool CLibHbm::wkStandbyLogin(){
+    if(CDeviceGX::isInitialized()){
+        unk1C8++;
+        if(unk1C8 <= 1) return false;
+        return CWorkThread::wkStandbyLogin();
+    }
+
+    return false;
+}
+
+bool CLibHbm::wkStandbyLogout(){
+    if(mChildren.empty() && CProcRoot::getInstance() == nullptr){
+        CLibHbm::destroy();
+        return CWorkThread::wkStandbyLogin();
+    }
+
+    return false;
+}
+
+bool CLibHbm::OnFileEvent(CEventFile* pFile){
+    if(mpHbmArcFileHandle == pFile->mFileHandle){
+        if(pFile->unk0 == true){
+            void* data = pFile->getFileDataPtr();
+            unk1E8 = data;
+            ARCHandle arcHandle;
+            ARCFileInfo fileInfo;
+
+            if(ARCInitHandle(unk1E8, &arcHandle)){
+                if(ARCOpen(&arcHandle, "hbm/homeBtn.arc", &fileInfo)){
+                    mpLayoutBuf = ARCGetStartAddrInMem(&fileInfo);
+                }
+
+                if(ARCOpen(&arcHandle, "hbm/SpeakerSe.arc", &fileInfo)){
+                    mpSpkSeBuf = ARCGetStartAddrInMem(&fileInfo);
+                }
+
+                if(ARCOpen(&arcHandle, "hbm/HomeButtonSe.arc", &fileInfo)){
+                    mpHbmSeBuf = ARCGetStartAddrInMem(&fileInfo);
+                }
+
+                if(ARCOpen(&arcHandle, "hbm/home.csv", &fileInfo)){
+                    mpMsgBuf = ARCGetStartAddrInMem(&fileInfo);
+                }
+
+                if(ARCOpen(&arcHandle, "hbm/hbm/config.txt", &fileInfo)){
+                    mpConfigBuf = ARCGetStartAddrInMem(&fileInfo);
+                    mConfigBufSize = ARCGetLength(&fileInfo);
+                }
+            }
+        }else{
+            mFlags |= 0x40;
+
+            if(CLibHbmControl::getInstance() != nullptr){
+                if(!CLibHbmControl::getInstance()->checkFlag(THREAD_FLAG_0)){
+                    CLibHbmControl::getInstance()->wkSetEvent(EVT_NONE);
+                }
+            }
+        }
+
+        mpHbmArcFileHandle = nullptr;
+    } else return false;
+
+    if(mpHbmMem == nullptr && mpLayoutBuf != nullptr && mpSpkSeBuf != nullptr && mpHbmSeBuf != nullptr && mpMsgBuf != nullptr
+    && mpConfigBuf != nullptr){
+        mpHbmMem = mtl::MemManager::allocate_head(mHandle, HBM_MEM_SIZE, 32);
+        mpHbmSndMem = mtl::MemManager::allocate_head(mHandle, HBM_SND_MEM_SIZE, 32);
+    }
+
+    return true;
+}
+
 
 void CLibHbm::func_8045E0CC(){
 }
