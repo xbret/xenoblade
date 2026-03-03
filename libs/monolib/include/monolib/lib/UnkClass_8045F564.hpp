@@ -11,6 +11,11 @@ public:
 
     UnkClass_8045F564();
     ~UnkClass_8045F564();
+
+    
+    void createRegion(int, int, const char*, int);
+    void func_8045F778();
+    void func_8045F810();
 };
 
 class Class_8045F858{

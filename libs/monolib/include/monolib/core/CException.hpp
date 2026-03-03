@@ -12,6 +12,7 @@ public:
 class CException : public CWorkThread {
 public:
     bool func_80457C8C();
+    static CException* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);
 
     static CException* convertToException(CWorkThread* pThread){
          CException* exception;
@@ -33,5 +34,3 @@ public:
     IGameException* mException; //0x200
     u32 unk204;
 };
-
-CWorkThread* func_80457CA4(CWorkThread* r3, const wchar_t* message, u32 r5);

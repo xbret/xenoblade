@@ -181,7 +181,7 @@ void CWorkRoot::renderWork(){
         }
     }
 
-    func_80454E6C();
+    CDeviceFontLayer::func_80454E6C();
 }
 
 bool CWorkRoot::isShutdownAll(){

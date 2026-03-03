@@ -7,3 +7,4 @@
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/lib/CLibStaticData.hpp"
 #include "monolib/lib/CLibVM.hpp"
+#include "monolib/lib/UnkClass_8045F564.hpp"

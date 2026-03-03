@@ -1,3 +1,4 @@
+#include "monolib/core/UnkClass_804561AC.hpp"
 #include "monolib/device.hpp"
 #include "monolib/lib.hpp"
 #include "monolib/math.hpp"

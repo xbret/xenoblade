@@ -11,6 +11,7 @@ public:
     CLibCri(const char* pName, CWorkThread* pParent);
     static CLibCri* getInstance();
     virtual void errorWiiCB();
+    static void func_80459A80();
 
     static inline CLibCri* create(const char* pName, CWorkThread* pParent){
         CLibCri* lib = new (CWorkThreadSystem::getWorkMem()) CLibCri(pName, pParent);

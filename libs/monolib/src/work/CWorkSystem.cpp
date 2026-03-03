@@ -1,9 +1,8 @@
 #include "monolib/core.hpp"
 #include "monolib/device.hpp"
+#include "monolib/lib.hpp"
 #include "monolib/work.hpp"
 
-extern void func_80459A80();
-extern void func_8044F964();
 extern void func_80496998();
 extern void func_80496994();
 extern UNKTYPE* func_804BC9EC();
@@ -128,8 +127,8 @@ void CWorkSystem::setExitFunc(ExitFunc func){
 void CWorkSystem::callExitFunc(){
     if(sExitFunc != nullptr){
         sExitFunc();
-        func_80459A80();
-        func_8044F964();
+        CLibCri::func_80459A80();
+        CDeviceFileCri::func_8044F964();
         CPadManager::func_804469D0();
     }
 }

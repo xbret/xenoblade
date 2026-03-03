@@ -5,8 +5,6 @@
 
 using namespace ml;
 
-extern int func_80454E78();
-
 CDevice* CDevice::spInstance;
 CDeviceException* CDeviceException::spInstance;
 const char* CDevice::devSys1String = "DeviceSystem1";
@@ -94,7 +92,7 @@ CDevice* CDevice::create(){
 
 void CDevice::createRegions(){
     //TODO: what is the extra 0x80?
-    int deviceRegion1Size = CDeviceGX::getHeapSize() + func_80454E78() + 0x80;
+    int deviceRegion1Size = CDeviceGX::getHeapSize() + CDeviceFontLayer::func_80454E78() + 0x80;
     deviceRegion1Size += CDeviceVI::usingStaticHandle() ? 0 : CDeviceVI::getXfbBuffersSize();
     sDeviceRegion1Handle = mtl::MemManager::create(mtl::MemManager::getHandleMEM1(), deviceRegion1Size, devSys1String);
     sDeviceRegion2Handle = mtl::MemManager::create(mtl::MemManager::getHandleMEM2(), DEVSYS2_REGION_SIZE, devSys2String);

@@ -4354,12 +4354,15 @@ monolib/src/core/CRsrcData.cpp:
 monolib/src/core/CScriptCode.cpp:
 	extab       start:0x8001C378 end:0x8001C3EC
 	extabindex  start:0x80034210 end:0x80034264
-	.text       start:0x8043CA78 end:0x8043D31C
+	.text       start:0x8043CA78 end:0x8043D270
 
 monolib/src/core/CToken.cpp:
 	extab       start:0x8001C3EC end:0x8001C404
 	extabindex  start:0x80034264 end:0x80034288
-	.text       start:0x8043D31C end:0x8043DF30
+	.text       start:0x8043D270 end:0x8043DF0C
+
+monolib/src/work/CEvent1.cpp:
+	.text       start:0x8043DF0C end:0x8043DF30
 
 monolib/src/core/CSplitFrame.cpp:
 	extab       start:0x8001C404 end:0x8001C42C
@@ -4514,13 +4517,7 @@ monolib/src/device/CDeviceFile.cpp:
 monolib/src/device/CDeviceFileCri.cpp:
 	extab       start:0x8001CEF4 end:0x8001CFD0
 	extabindex  start:0x80034DA4 end:0x80034E70
-	.text       start:0x80452260 end:0x80453828
-
-monolib/src/device/code_80450B14.cpp:
-	.text       start:0x80453828 end:0x80453840
-
-monolib/src/device/code_80450B2C.cpp:
-	.text       start:0x80453840 end:0x80453868
+	.text       start:0x80452260 end:0x80453868
 	.ctors      start:0x804FA13C end:0x804FA140
 
 monolib/src/device/CDeviceFileDvd.cpp:
@@ -4573,15 +4570,20 @@ monolib/src/core/CDesktop.cpp:
 	extabindex  start:0x8003520C end:0x800352A8
 	.text       start:0x80459ABC end:0x8045A224
 
-monolib/src/core/code_80456134.cpp:
+monolib/src/core/UnkClass_804561AC.cpp:
 	extab       start:0x8001D49C end:0x8001D4FC
 	extabindex  start:0x800352A8 end:0x80035338
 	.text       start:0x8045A224 end:0x8045BC8C
 
 monolib/src/core/CException.cpp:
-	extab       start:0x8001D4FC end:0x8001D5C4
-	extabindex  start:0x80035338 end:0x800353C8
-	.text       start:0x8045BC8C end:0x8045D3A0
+	extab       start:0x8001D4FC end:0x8001D5BC
+	extabindex  start:0x80035338 end:0x800353BC
+	.text       start:0x8045BC8C end:0x8045D280
+
+monolib/src/core/UnkClass_8043C59C.cpp:
+	extab       start:0x8001D5BC end:0x8001D5C4
+	extabindex  start:0x800353BC end:0x800353C8
+	.text       start:0x8045D280 end:0x8045D3A0
 
 monolib/src/lib/CLib.cpp:
 	extab       start:0x8001D5C4 end:0x8001D5EC
@@ -4619,9 +4621,19 @@ monolib/src/lib/CLibHbmControl.cpp:
 	.text       start:0x80462520 end:0x80462F54
 
 monolib/src/lib/CLibLayout.cpp:
-	extab       start:0x8001D90C end:0x8001D9E8
-	extabindex  start:0x800356D4 end:0x80035794
-	.text       start:0x80462F54 end:0x80463900
+	extab       start:0x8001D90C end:0x8001D9B8
+	extabindex  start:0x800356D4 end:0x8003574C
+	.text       start:0x80462F54 end:0x80463534
+
+monolib/src/lib/UnkClass_8045F564.cpp:
+	extab       start:0x8001D9B8 end:0x8001D9D8
+	extabindex  start:0x8003574C end:0x8003577C
+	.text       start:0x80463534 end:0x80463828
+
+monolib/src/lib/Class_8045F858.cpp:
+	extab       start:0x8001D9D8 end:0x8001D9E8
+	extabindex  start:0x8003577C end:0x80035794
+	.text       start:0x80463828 end:0x80463900
 
 monolib/src/lib/CLibStaticData.cpp:
 	extab       start:0x8001D9E8 end:0x8001DA8C

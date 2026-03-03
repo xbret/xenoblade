@@ -1,8 +1,8 @@
 #include "kyoshin/CBattery.hpp"
 #include "kyoshin/code_80135FDC.hpp"
 #include "monolib/device.hpp"
+#include "monolib/lib.hpp"
 
-extern void CLibLayout_addLayoutHeapEntry(UnkClass_8045F564*, int, int, const char*, int);
 extern void func_801390E0(CFileHandle**);
 
 CBattery::CBattery(u8 batteryLevel) : unk4(){
@@ -47,7 +47,7 @@ void CBattery::func_802B9364(){
     }
     func_80139124(mAccessor);
     mAccessor = nullptr;
-    func_8045F778(&unk4);
+    unk4.func_8045F778();
 }
 
 void CBattery::setBatteryLevel(u8 level){
@@ -91,17 +91,18 @@ bool CBattery::OnFileEvent(CEventFile* pEventFile){
             return true;
         }
 
-        //Add the class to the layout heap
-        CLibLayout_addLayoutHeapEntry(&unk4, CWorkThreadSystem::getWorkMem(), 0xC00, "CBattery", 0);
+        //Create a region for layout related stuff
+        unk4.createRegion(CWorkThreadSystem::getWorkMem(), 0xC00, "CBattery", 0);
+        //TODO: is this unused?
         Class_8045F858 sp8 = Class_8045F858(&unk4);
         void* data = mFileHandle->getData();
         mtl::MemManager::func_80434A4C(0);
-        mAccessor = CLibLayout_getArcResourceAccessorInstance();
+        mAccessor = CLibLayout::createArcResourceAccessor();
         mAccessor->Attach(data, "arc");
         func_80136E84(&mLayout, mAccessor, "mf00_btry.brlyt"); //Open the layout file
         func_802B94B0();
         mFileHandle = nullptr;
-        func_8045F810(&unk4);
+        unk4.func_8045F810();
         return true;
     }else return false;
 }

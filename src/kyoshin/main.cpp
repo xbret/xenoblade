@@ -140,9 +140,9 @@ void vmInitCallback(){
 
 static void copyErrorMessages(){
     //Copy the error message string pointers
-    func_80450B14(getNoDiscErrorMessage());
-    func_80450B1C(getDiscUnreadableErrorMessage());
-    func_80450B24(getReadingDiscErrorMessage());
+    CDeviceFileCri::func_80450B14(getNoDiscErrorMessage());
+    CDeviceFileCri::func_80450B1C(getDiscUnreadableErrorMessage());
+    CDeviceFileCri::func_80450B24(getReadingDiscErrorMessage());
     func_804DAA90(getMemoryDamagedErrorMessage());
     func_804DAA98(getMemoryReadWriteFailErrorMessage());
     func_804DAAA0(getErrorDuringMemoryReadWriteErrorMessage());

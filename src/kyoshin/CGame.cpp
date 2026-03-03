@@ -184,7 +184,7 @@ bool CGame::wkStandbyLogin(){
 
     //Fetch the 4:3 mode brlyt file
     if(CLibStaticData::getStaticFileData("43", &handle, nullptr)){
-        sArcResourceAccessor = CLibLayout_getArcResourceAccessorInstance();
+        sArcResourceAccessor = CLibLayout::createArcResourceAccessor();
         sArcResourceAccessor->Attach(handle.data, "arc");
         func_80136E84(&lbl_80666604, sArcResourceAccessor, "4_3mode.brlyt");
     }
@@ -249,7 +249,7 @@ void CGame::GameMain(){
 for the error messages related to controller related issues (e.g. controller disconnect). */
 void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
     if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !spInstance->isThreadFlag0()){
-        CException* exception = static_cast<CException*>(func_80457CA4(spInstance, message, 5));
+        CException* exception = CException::func_80457CA4(spInstance, message, 5);
         if(exception != nullptr){
             exception->mException = (IGameException*)r4;
             exception->unk204 = param;
