@@ -4650,7 +4650,7 @@ monolib/src/lod/CTaskLOD.cpp:
 	extabindex  start:0x800358A8 end:0x80035968
 	.text       start:0x804668D4 end:0x8046773C
 
-monolib/src/lod/code_8046376C.cpp:
+monolib/src/lod/UnkClass_8046368C.cpp:
 	extab       start:0x8001DBB8 end:0x8001DC08
 	extabindex  start:0x80035968 end:0x800359E0
 	.text       start:0x8046773C end:0x8046859C
@@ -4715,7 +4715,7 @@ monolib/src/mpfsys/code_8047CA88.cpp:
 	.text       start:0x80480A58 end:0x8048127C
 	.ctors      start:0x804FA154 end:0x804FA158
 
-monolib/src/mpfsys/code_8047D2AC.cpp:
+monolib/src/scn/code_8047D2AC.cpp:
 	extab       start:0x8001E27C end:0x8001E35C
 	extabindex  start:0x80036340 end:0x80036490
 	.text       start:0x8048127C end:0x80485E3C
