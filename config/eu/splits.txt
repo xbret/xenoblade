@@ -4641,25 +4641,45 @@ monolib/src/lib/CLibStaticData.cpp:
 	.text       start:0x80463900 end:0x804640B0
 
 monolib/src/lib/CLibVM.cpp:
-	extab       start:0x8001DA8C end:0x8001DB10
-	extabindex  start:0x80035800 end:0x800358A8
-	.text       start:0x804640B0 end:0x804668D4
+	extab       start:0x8001DA8C end:0x8001DAAC
+	extabindex  start:0x80035800 end:0x80035830
+	.text       start:0x804640B0 end:0x804642D8
+
+monolib/src/lib/UnkClass_80460308.cpp:
+	extab       start:0x8001DAAC end:0x8001DABC
+	extabindex  start:0x80035830 end:0x80035848
+	.text       start:0x804642D8 end:0x80464C04
+
+monolib/src/lib/UnkClass_80460C34.cpp:
+	extab       start:0x8001DABC end:0x8001DAE4
+	extabindex  start:0x80035848 end:0x80035884
+	.text       start:0x80464C04 end:0x804667A8
 
 monolib/src/lod/CTaskLOD.cpp:
-	extab       start:0x8001DB10 end:0x8001DBB8
-	extabindex  start:0x800358A8 end:0x80035968
-	.text       start:0x804668D4 end:0x8046773C
+	extab       start:0x8001DAE4 end:0x8001DB90
+	extabindex  start:0x80035884 end:0x8003592C
+	.text       start:0x804667A8 end:0x80467090
 
-monolib/src/lod/code_8046376C.cpp:
+monolib/src/lod/UnkClass_804630C0.cpp:
+	extab       start:0x8001DB90 end:0x8001DBB8
+	extabindex  start:0x8003592C end:0x80035968
+	.text       start:0x80467090 end:0x8046773C
+
+monolib/src/lod/UnkClass_8046368C.cpp:
 	extab       start:0x8001DBB8 end:0x8001DC08
 	extabindex  start:0x80035968 end:0x800359E0
 	.text       start:0x8046773C end:0x8046859C
 	.ctors      start:0x804FA140 end:0x804FA144
 
 monolib/src/lod/code_804645CC.cpp:
-	extab       start:0x8001DC08 end:0x8001DDC0
-	extabindex  start:0x800359E0 end:0x80035C74
-	.text       start:0x8046859C end:0x8046C404
+	extab       start:0x8001DC08 end:0x8001DC60
+	extabindex  start:0x800359E0 end:0x80035A64
+	.text       start:0x8046859C end:0x8046A318
+
+monolib/src/lod/UnkClass_80466348.cpp:
+	extab       start:0x8001DC60 end:0x8001DDC0
+	extabindex  start:0x80035A64 end:0x80035C74
+	.text       start:0x8046A318 end:0x8046C404
 	.ctors      start:0x804FA144 end:0x804FA148
 
 monolib/src/lod/code_80468434.cpp:
@@ -4674,9 +4694,14 @@ monolib/src/lod/code_8046A530.cpp:
 	.text       start:0x8046E500 end:0x80470FB0
 
 monolib/src/lod/LODMemMan.cpp:
-	extab       start:0x8001DE78 end:0x8001E0F4
-	extabindex  start:0x80035D88 end:0x800360F4
-	.text       start:0x80470FB0 end:0x80478F50
+	extab       start:0x8001DE78 end:0x8001E01C
+	extabindex  start:0x80035D88 end:0x80035FB0
+	.text       start:0x80470FB0 end:0x80475E98
+
+monolib/src/mpfsys/UnkClass_80471EC8.cpp:
+	extab       start:0x8001E01C end:0x8001E0F4
+	extabindex  start:0x80035FB0 end:0x800360F4
+	.text       start:0x80475E98 end:0x80478F50
 	.ctors      start:0x804FA14C end:0x804FA150
 
 monolib/src/mpfsys/MPFDrawDisplayList.cpp:
@@ -4710,15 +4735,25 @@ monolib/src/mpfsys/code_8047BB54.cpp:
 	.ctors      start:0x804FA150 end:0x804FA154
 
 monolib/src/mpfsys/code_8047CA88.cpp:
-	extab       start:0x8001E22C end:0x8001E27C
-	extabindex  start:0x800362C8 end:0x80036340
-	.text       start:0x80480A58 end:0x8048127C
+	extab       start:0x8001E22C end:0x8001E23C
+	extabindex  start:0x800362C8 end:0x800362E0
+	.text       start:0x80480A58 end:0x80480CDC
+
+monolib/src/scn/UnkClass_8047CD0C.cpp:
+	extab       start:0x8001E23C end:0x8001E27C
+	extabindex  start:0x800362E0 end:0x80036340
+	.text       start:0x80480CDC end:0x8048127C
 	.ctors      start:0x804FA154 end:0x804FA158
 
-monolib/src/mpfsys/code_8047D2AC.cpp:
-	extab       start:0x8001E27C end:0x8001E35C
-	extabindex  start:0x80036340 end:0x80036490
-	.text       start:0x8048127C end:0x80485E3C
+monolib/src/scn/code_8047D2AC.cpp:
+	extab       start:0x8001E27C end:0x8001E2B4
+	extabindex  start:0x80036340 end:0x80036394
+	.text       start:0x8048127C end:0x804820E0
+
+monolib/src/scn/UnkClass_8047E110.cpp:
+	extab       start:0x8001E2B4 end:0x8001E35C
+	extabindex  start:0x80036394 end:0x80036490
+	.text       start:0x804820E0 end:0x80485E3C
 	.ctors      start:0x804FA158 end:0x804FA15C
 
 monolib/src/scn/CScnItemCameraNw4r.cpp:
