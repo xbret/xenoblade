@@ -263,6 +263,34 @@ typedef struct WPADCLStatus {
     u8 clTriggerR; // at 0x35
 } WPADCLStatus;
 
+typedef struct WPADTRStatus {
+    u16 button;                          // at 0x0
+    s16 accX;                            // at 0x2
+    s16 accY;                            // at 0x4
+    s16 accZ;                            // at 0x6
+    DPDObject obj[WPAD_MAX_DPD_OBJECTS]; // at 0x8
+    u8 dev;                              // at 0x28
+    s8 err;                              // at 0x29
+
+    u16 trButton; // at 0x2A
+    u8 brake;     // at 0x2C
+    u8 mascon;    // at 0x2D
+} WPADTRStatus;
+
+typedef struct WPADBLStatus {
+    u16 button;                          // at 0x0
+    s16 accX;                            // at 0x2
+    s16 accY;                            // at 0x4
+    s16 accZ;                            // at 0x6
+    DPDObject obj[WPAD_MAX_DPD_OBJECTS]; // at 0x8
+    u8 dev;                              // at 0x28
+    s8 err;                              // at 0x29
+
+    u16 press[4]; // at 0x2A
+    s8 temp;      // at 0x32
+    u8 battery;   // at 0x33
+} WPADBLStatus;
+
 typedef struct WPADAccGravityUnit {
     s16 x; // at 0x0
     s16 y; // at 0x2

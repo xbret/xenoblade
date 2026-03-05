@@ -4,6 +4,7 @@
 #include "monolib/core/CDesktop.hpp"
 #include "monolib/core/CException.hpp"
 #include "monolib/core/CPackItem.hpp"
+#include "monolib/core/CPadManager.hpp"
 #include "monolib/core/CProc.hpp"
 #include "monolib/core/CProcRoot.hpp"
 #include "monolib/core/CRsrc.hpp"
@@ -13,3 +14,4 @@
 #include "monolib/core/CViewFrame.hpp"
 #include "monolib/core/CViewRoot.hpp"
 #include "monolib/core/UnkClass_804561AC.hpp"
+#include "monolib/core/UnkClass_80447598.hpp"

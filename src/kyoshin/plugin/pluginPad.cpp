@@ -1,5 +1,5 @@
 #include "kyoshin/plugin/pluginPad.hpp"
-#include "monolib/device.hpp"
+#include "monolib/core.hpp"
 #include "kyoshin/code_8007C0F8.hpp"
 
 static PluginFuncData sPluginPadFuncs[] = {

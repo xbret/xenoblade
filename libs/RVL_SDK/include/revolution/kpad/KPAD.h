@@ -3,11 +3,34 @@
 #include <types.h>
 
 #include <revolution/MTX.h>
+#include <revolution/WPAD.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #define KPAD_MAX_SAMPLES 16
+
+typedef enum
+{
+	KPAD_ERR_OK	= 0,
+} KPADResult;
+
+typedef enum {
+	KPAD_CHAN0 = WPAD_CHAN0,
+	KPAD_CHAN1 = WPAD_CHAN1,
+	KPAD_CHAN2 = WPAD_CHAN2,
+	KPAD_CHAN3 = WPAD_CHAN3,
+
+	KPAD_MAX_CONTROLLERS = WPAD_MAX_CONTROLLERS,
+
+	KPAD_CHAN_INVALID = WPAD_CHAN_INVALID
+} KPADChannel;
+
+typedef WPADCallback KPADCallback;
+
+typedef WPADSamplingCallback KPADSamplingCallback;
+typedef WPADConnectCallback KPADConnectCallback;
+typedef WPADExtensionCallback KPADExtensionCallback;
 
 typedef union KPADEXStatus {
     struct {
@@ -52,6 +75,21 @@ typedef struct KPADStatus {
     KPADEXStatus ex_status; // at 0x60
 } KPADStatus;
 
+typedef struct KPADUnifiedWpadStatus {
+    union {
+        WPADStatus core;
+        WPADFSStatus fs;
+        WPADCLStatus cl;
+        WPADTRStatus tr;
+        WPADBLStatus bl;
+    } u; // at 0x0
+    unsigned char fmt; // at 0x36
+    unsigned char padding; // at 0x37
+} KPADUnifiedWpadStatus;
+
+KPADConnectCallback* KPADSetConnectCallback(KPADChannel chan,
+                                            KPADConnectCallback cb);
+
 void KPADSetBtnRepeat(s32 chan, f32, f32);
 
 void KPADSetPosParam(s32 chan, f32 playRadius, f32 sensitivity);
@@ -60,8 +98,15 @@ void KPADSetDistParam(s32 chan, f32 playRadius, f32 sensitivity);
 void KPADSetAccParam(s32 chan, f32 playRadius, f32 sensitivity);
 
 s32 KPADRead(s32 chan, KPADStatus* pSamples, s32 numSamples);
+s32 KPADReadEx(KPADChannel chan, KPADStatus* status, s32 count,
+               KPADResult* result);
 
-void KPADInit(void);
+void KPADEnableAimingMode(KPADChannel chan);
+
+void KPADInit();
+void KPADInitEx(KPADUnifiedWpadStatus* uwStatus, u32 length);
+
+void KPADReset();
 
 #ifdef __cplusplus
 }

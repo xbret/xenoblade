@@ -129,6 +129,6 @@ void CWorkSystem::callExitFunc(){
         sExitFunc();
         CLibCri::func_80459A80();
         CDeviceFileCri::func_8044F964();
-        CPadManager::func_804469D0();
+        CPadManager::destroy();
     }
 }
