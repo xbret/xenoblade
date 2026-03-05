@@ -6149,7 +6149,6 @@ monolib/src/core/UnkClass_80447598.cpp:
 	extab       start:0x8001C9FC end:0x8001CA14
 	extabindex  start:0x80034610 end:0x80034634
 	.text       start:0x80447598 end:0x80447890
-	.data       start:0x8056F438 end:0x8056F4F8
 	.bss        start:0x8065A438 end:0x8065A6B8
 	.sdata2     start:0x8066CB48 end:0x8066CB60
 
@@ -6158,7 +6157,7 @@ monolib/src/device/CDeviceRemotePad.cpp:
 	extabindex  start:0x80034634 end:0x80034670
 	.text       start:0x80447890 end:0x80447B50
 	.rodata     start:0x80526278 end:0x80526298
-	.data       start:0x8056F4F8 end:0x8056F5B0
+	.data       start:0x8056F438 end:0x8056F5B0
 	.sdata      start:0x80665F10 end:0x80665F20
 	.sbss       start:0x80667F18 end:0x80667F20
 

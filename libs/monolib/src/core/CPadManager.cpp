@@ -522,11 +522,11 @@ void CPadManager::update(){
 
 CPad* CPadManager::getPadData(s32 type, s32 channel){
     switch(type){
-        case 1:
+        case PAD_CHANNEL_GC:
         //Gamecube controllers
         if(channel < MAX_GC_CONTROLLERS) return &spPadData->mPads[channel + MAX_WII_CONTROLLERS];
         break;
-        case 0:
+        case PAD_CHANNEL_WII:
         //Wii controllers
         if(channel < MAX_WII_CONTROLLERS) return &spPadData->mPads[channel];
         break;

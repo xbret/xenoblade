@@ -1715,7 +1715,7 @@ config.libs = [
             Object(MatchingFor("jp"), "monolib/src/util/CChildListNode.cpp"),
             Object(NonMatching, "monolib/src/core/CPadManager.cpp"),
             Object(NonMatching, "monolib/src/core/UnkClass_80447598.cpp"),
-            Object(NonMatching, "monolib/src/device/CDeviceRemotePad.cpp"),
+            Object(MatchingFor("jp"), "monolib/src/device/CDeviceRemotePad.cpp"),
             Object(MatchingFor("jp"), "monolib/src/device/CDeviceSC.cpp"),
             Object(NonMatching, "monolib/src/device/CDeviceVI.cpp"),
 			Object(MatchingFor("jp"), "monolib/src/device/CDeviceVICb.cpp"),

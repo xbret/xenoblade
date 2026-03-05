@@ -39,6 +39,11 @@ enum PadType{
     PAD_TYPE_7
 };
 
+enum PadChannelType{
+    PAD_CHANNEL_WII,
+    PAD_CHANNEL_GC
+};
+
 struct PadButtonMask{
     u32 unk0;
     u32 unk4;
@@ -176,7 +181,7 @@ public:
     static void updatePadInputs();
     static DECOMP_DONT_INLINE void updateFirstControllers();
     static void update();
-    static CPad* getPadData(s32 r3, s32 r4);
+    static CPad* getPadData(s32 type, s32 channel);
     static CPad* getDefaultPad();
     static CPad* getMainWiiPad();
     static CPad* getMainGCPad();
