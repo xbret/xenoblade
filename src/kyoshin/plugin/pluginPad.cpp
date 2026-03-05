@@ -21,15 +21,15 @@ int pad_get(VMThread* pThread) {
     switch (var_r3) {
     case 0:
         arg.type = VM_TYPE_INT;
-        arg.value.intVal = CPadManager::func_80447580()[0];
+        arg.value.uintVal = CPadManager::getMainWiiPad()->unk0;
         break;
     case 1:
         arg.type = VM_TYPE_INT;
-        arg.value.intVal = CPadManager::func_80447580()[1];
+        arg.value.uintVal = CPadManager::getMainWiiPad()->unk4;
         break;
     case 2:
         arg.type = VM_TYPE_INT;
-        arg.value.intVal = CPadManager::func_80447580()[2];
+        arg.value.uintVal = CPadManager::getMainWiiPad()->unk8;
         break;
     default:
         vmPluginExceptionThrow(pThread);
