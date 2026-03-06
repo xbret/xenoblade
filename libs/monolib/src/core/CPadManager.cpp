@@ -3,6 +3,105 @@
 
 CPadData* CPadManager::spPadData;
 
+CWpadStatus* CPadManager::getWpadStatus(int index){
+    return &spPadData->mWpadStatuses[index];
+}
+
+void* CPadManager::wpadAllocFunc(u32 size){
+    //If CPadManager's handle isn't null, use it for allocations. Otherwise, just use the MEM2 handle.
+    mtl::ALLOC_HANDLE handle = mtl::MemManager::getHandleMEM2();
+    if(spPadData != nullptr) handle = spPadData->mAllocHandle;
+    return mtl::MemManager::allocate_head(handle, size, 4);
+}
+
+int CPadManager::wpadDeallocFunc(void* pData){
+    if(pData != nullptr){
+        mtl::MemManager::deallocate(pData);
+    }
+    return 1;
+}
+
+PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
+    CPadData* padData = static_cast<CPadData*>(mtl::MemManager::allocate_head(handle, sizeof(CPadData), 32));
+    spPadData = padData;
+
+    spPadData->unk5118 = 0;
+    spPadData->mAllocHandle = handle;
+
+    WPADRegisterAllocator(wpadAllocFunc, wpadDeallocFunc);
+    KPADInitEx(&spPadData->mWpadStatus, 128);
+    
+    std::memset(&spPadData->mPads, 0, sizeof(spPadData->mPads));
+    std::memset(&spPadData->mDummyPad, 0, sizeof(CPad));
+    
+    spPadData->mMainWiiPad = &spPadData->mDummyPad;
+    spPadData->mMainGCPad = &spPadData->mDummyPad;
+
+    spPadData->mConfig.turboHoldTimerThreshold = TURBO_HOLD_TIMER_THRESHOLD;
+    spPadData->mConfig.turboInputFrames = TURBO_INPUT_FRAMES;
+    spPadData->mConfig.longHoldTimerThreshold = LONG_HOLD_TIMER_THRESHOLD;
+    spPadData->mConfig.shortPressMaxFrames = SHORT_PRESS_MAX_FRAMES;
+    spPadData->mConfig.mLStickDeadzone = PAD_STICK_DEADZONE;
+    spPadData->mConfig.mRStickDeadzone = PAD_STICK_DEADZONE;
+    spPadData->mConfig.unk0 = nullptr;
+
+    spPadData->unk511C = nullptr;
+
+    //Reset the connected flag for all controllers
+    for(int i = 0; i < TOTAL_CONTROLLERS; i++){
+        spPadData->mPads[i].mConnected = false;
+    }
+
+
+    spPadData->mConfig.unk1C = 0b11;
+
+    //Wait until the status isn't 3
+    while(WPADGetStatus() != WPAD_LIB_STATUS_3){}
+
+    //Setup controller ports
+
+    //Wii controllers
+    for(s32 i = 0; i < MAX_CONTROLLERS; i++){
+        KPADChannel channel = (KPADChannel)i; //Required for matching
+        KPADEnableAimingMode(channel);
+        KPADSetConnectCallback(channel, kpadConnectCallback);
+        spPadData->mPads[channel].mChannel = channel;
+    }
+
+    //GC controllers
+    for(int i = 0; i < MAX_CONTROLLERS; i++){
+        spPadData->mPads[MAX_CONTROLLERS + i].mChannel = i;
+    }
+
+    KPADReset();
+
+    //Why can't this just be called normally??
+    return update;
+}
+
+void CPadManager::destroy(){
+    DELETE_OBJ(spPadData);
+    
+    //Reset the callbacks for each Wii controller port
+    for(int i = 0; i < MAX_CONTROLLERS; i++){
+        KPADSetConnectCallback(i, nullptr);
+        WPADSetExtensionCallback(i, nullptr);
+    }
+}
+
+void CPadManager::updateLongHoldTimerThreshold(u32 r3){
+    spPadData->mConfig.longHoldTimerThreshold = r3;
+}
+
+void CPadManager::setRightStickDeadzoneDefault(){
+    spPadData->mConfig.mRStickDeadzone = PAD_STICK_DEADZONE;
+}
+
+void CPadManager::setRightStickDeadzone(float value){
+    spPadData->mConfig.mRStickDeadzone = value;
+}
+
+
 void CPad::setExtensionCB(s32 chan, s32 result){
     //TODO: can this be matched better?
     if(result != KPAD_ERR_OK){
@@ -22,17 +121,17 @@ void CPad::setExtensionCB(s32 chan, s32 result){
 void CPad::setWiiPadType(s32 dev){
     switch(dev){
         case WPAD_DEV_CORE:
-        mPadType = PAD_TYPE_WIIMOTE;
+        mPadType = PAD_TYPE_CORE;
         break;
         case WPAD_DEV_FREESTYLE:
-        mPadType = PAD_TYPE_NUNCHUCK;
+        mPadType = PAD_TYPE_FS;
         break;
         case WPAD_DEV_CLASSIC:
         mPadType = PAD_TYPE_CLASSIC;
         break;
         case WPAD_DEV_FUTURE:
         //Unknown device, default to Wiimote
-        mPadType = PAD_TYPE_WIIMOTE;
+        mPadType = PAD_TYPE_CORE;
         break;
     }
 }
@@ -47,32 +146,67 @@ void CPad::checkExtension(s32 chan){
     }
 }
 
+void CPadManager::kpadConnectCallback(s32 chan, s32 result){
+    if(spPadData == nullptr) return;
+
+    if(spPadData->mConfig.unk1C & 1){
+        CPad* r31 = getPadData(0, chan);
+        r31->setExtensionCB(chan, result);
+
+        Unk511CFunc func = spPadData->unk511C;
+        if(func != nullptr){
+            func(chan, result);
+        }
+    }
+}
+
+void CPadManager::wpadExtensionCallback(s32 chan, s32 dev){
+    if(spPadData == nullptr) return;
+
+    if(spPadData->mConfig.unk1C & 1){
+        CPad* r31 = getPadData(0, chan);
+        r31->setWiiPadType(dev);
+    }
+}
+
+void CPadManager::updatePadExtensions(){
+    if(spPadData->mConfig.unk1C & 1){
+        for(int i = 0; i < MAX_CONTROLLERS; i++){
+            KPADChannel channel = (KPADChannel)i; //Required for matching
+            WPADSetExtensionCallback(channel, wpadExtensionCallback);
+            CPad* r31 = getPadData(0, channel);
+            r31->checkExtension(channel);
+        }
+    }
+}
+
+
 void CPad::setJoystickValues(CWpadStatus* pPadStatus){
     //Update joystick/trigger values
     switch((u32)mPadType){
-        case PAD_TYPE_NUNCHUCK:
+        case PAD_TYPE_FS:
         case PAD_TYPE_6:
             //Nunchuck
-            mLeftStickXRaw = pPadStatus->ex_status.fs.stick.x;
-            mLeftStickYRaw = pPadStatus->ex_status.fs.stick.y;
-            mLeftStickX = PAD_STICK_AXIS_SCALE * mLeftStickXRaw;
-            mLeftStickY = PAD_STICK_AXIS_SCALE * mLeftStickYRaw;
+            mLStickXRaw = pPadStatus->ex_status.fs.stick.x;
+            mLStickYRaw = pPadStatus->ex_status.fs.stick.y;
+            mLStickX = PAD_STICK_AXIS_SCALE * mLStickXRaw;
+            mLStickY = PAD_STICK_AXIS_SCALE * mLStickYRaw;
             break;
         case PAD_TYPE_CLASSIC:
         case PAD_TYPE_7:
             //Classic controller
-            mLeftStickXRaw = pPadStatus->ex_status.cl.lstick.x;
-            mLeftStickYRaw = pPadStatus->ex_status.cl.lstick.y;
-            mRightStickXRaw = pPadStatus->ex_status.cl.rstick.x;
-            mRightStickYRaw = pPadStatus->ex_status.cl.rstick.y;
+            mLStickXRaw = pPadStatus->ex_status.cl.lstick.x;
+            mLStickYRaw = pPadStatus->ex_status.cl.lstick.y;
+            mRStickXRaw = pPadStatus->ex_status.cl.rstick.x;
+            mRStickYRaw = pPadStatus->ex_status.cl.rstick.y;
 
             mLeftTriggerByte = pPadStatus->ex_status.cl.ltrigger;
             mRightTriggerByte = pPadStatus->ex_status.cl.rtrigger;
 
-            mLeftStickX = PAD_STICK_AXIS_SCALE * mLeftStickXRaw;
-            mLeftStickY = PAD_STICK_AXIS_SCALE * mLeftStickYRaw;
-            mRightStickX = PAD_STICK_AXIS_SCALE * mRightStickXRaw;
-            mRightStickY = PAD_STICK_AXIS_SCALE * mRightStickYRaw;
+            mLStickX = PAD_STICK_AXIS_SCALE * mLStickXRaw;
+            mLStickY = PAD_STICK_AXIS_SCALE * mLStickYRaw;
+            mRStickX = PAD_STICK_AXIS_SCALE * mRStickXRaw;
+            mRStickY = PAD_STICK_AXIS_SCALE * mRStickYRaw;
 
             mLeftTriggerFloat = mLeftTriggerByte/PAD_TRIGGER_SCALE;
             mRightTriggerFloat = mRightTriggerByte/PAD_TRIGGER_SCALE;
@@ -85,7 +219,7 @@ void CPad::setJoystickValues(CWpadStatus* pPadStatus){
 void CPad::setAcceleration(CWpadStatus* pPadStatus){
     //Update acceleration values
     switch(mPadType){
-        case PAD_TYPE_WIIMOTE ... PAD_TYPE_7:
+        case PAD_TYPE_CORE ... PAD_TYPE_7:
             //Wii controllers
             mAcc.x = pPadStatus->acc.x;
             mAcc.y = pPadStatus->acc.y;
@@ -99,7 +233,7 @@ void CPad::setAcceleration(CWpadStatus* pPadStatus){
 
     //Update nunchuck acceleration values
     switch((u32)mPadType){
-        case PAD_TYPE_NUNCHUCK:
+        case PAD_TYPE_FS:
         case PAD_TYPE_6:
             mNunchuckAcc.x = pPadStatus->ex_status.fs.acc.x;
             mNunchuckAcc.y = pPadStatus->ex_status.fs.acc.y;
@@ -114,7 +248,7 @@ void CPad::setAcceleration(CWpadStatus* pPadStatus){
 
 void CPad::setMiscValues(CWpadStatus* pPadStatus){
     switch(mPadType){
-        case PAD_TYPE_WIIMOTE ... PAD_TYPE_7:
+        case PAD_TYPE_CORE ... PAD_TYPE_7:
             //Wii controllers
             mDpdValidFg = pPadStatus->dpd_valid_fg;
             if(mDpdValidFg > 0){
@@ -147,28 +281,28 @@ void CPad::setMiscValues(CWpadStatus* pPadStatus){
     }
 }
 
-u32 CPad::calculateFlagValue(CWpadStatus* pPadStatus, const PadButtonMask* pClassicMaskValues, const PadButtonMask* pWiimoteMaskValues){
+u32 CPad::calculateFlagValue(CWpadStatus* pPadStatus, const PadButtonMapping* pClassicMap, const PadButtonMapping* pWiimoteMap){
     u32 flagValue = 0;
 
     switch(mPadType){
         case PAD_TYPE_CLASSIC:
         case PAD_TYPE_7:{
-            for(int i = 0; pClassicMaskValues[i].unk0 != 0; i++){
-                if(pPadStatus->ex_status.cl.hold & pClassicMaskValues[i].unk0){
-                    flagValue |= pClassicMaskValues[i].unk4;
+            for(int i = 0; pClassicMap[i].wpadValue != 0; i++){
+                if(pPadStatus->ex_status.cl.hold & pClassicMap[i].wpadValue){
+                    flagValue |= pClassicMap[i].customValue;
                 }
             }
 
-            if(pPadStatus->hold & WPAD_BUTTON_CL_RIGHT) flagValue |= 0x100;
+            if(pPadStatus->hold & WPAD_BUTTON_CL_RIGHT) flagValue |= PAD_INPUT_HOME;
             break;
         }
-        case PAD_TYPE_WIIMOTE:
-        case PAD_TYPE_NUNCHUCK:
+        case PAD_TYPE_CORE:
+        case PAD_TYPE_FS:
         case PAD_TYPE_5:
         case PAD_TYPE_6:{
-            for(int i = 0; pWiimoteMaskValues[i].unk0 != 0; i++){
-                if(pPadStatus->hold & pWiimoteMaskValues[i].unk0){
-                    flagValue |= pWiimoteMaskValues[i].unk4;
+            for(int i = 0; pWiimoteMap[i].wpadValue != 0; i++){
+                if(pPadStatus->hold & pWiimoteMap[i].wpadValue){
+                    flagValue |= pWiimoteMap[i].customValue;
                 }
             }
             break;
@@ -180,244 +314,120 @@ u32 CPad::calculateFlagValue(CWpadStatus* pPadStatus, const PadButtonMask* pClas
     return flagValue;
 }
 
-CWpadStatus* CPadManager::getWpadStatus(int index){
-    return &spPadData->mWpadStatusArray[index];
-}
+void CPad::updateFlagValues(u32 buttonFlags){
+    //Set digital joystick direction inputs using the deadzone for each stick
+    if(mLStickXRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_LEFT;
+    if(mLStickXRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_RIGHT;
+    if(mLStickYRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_DOWN;
+    if(mLStickYRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_UP;
+    if(mRStickXRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_LEFT;
+    if(mRStickXRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_RIGHT;
+    if(mRStickYRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_DOWN;
+    if(mRStickYRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_UP;
 
-void* CPadManager::wpadAllocFunc(u32 size){
-    //If CPadManager's handle isn't null, use it for allocations. Otherwise, just use the MEM2 handle.
-    mtl::ALLOC_HANDLE handle = mtl::MemManager::getHandleMEM2();
-    if(spPadData != nullptr) handle = spPadData->mAllocHandle;
-    return mtl::MemManager::allocate_head(handle, size, 4);
-}
+    //Update the button flag values
+    mLongHoldButtonFlags = 0;
+    u32 changedButtonMask = mHeldButtonFlags ^ buttonFlags;
+    u32 pressedButtons = buttonFlags & changedButtonMask;
+    mPressedButtonFlags = pressedButtons;
+    mReleasedButtonFlags = changedButtonMask & ~buttonFlags;
+    mTurboPressButtonFlags = pressedButtons;
+    mHeldButtonFlags = buttonFlags;
+    mShortPressButtonFlags = 0;
 
-int CPadManager::wpadDeallocFunc(void* pData){
-    if(pData != nullptr){
-        mtl::MemManager::deallocate(pData);
-    }
-    return 1;
-}
+    //Update the button hold timers, and all the additional button flag values
+    u32 bit = PAD_INPUT_LEFT;
 
-PadUpdateCallback CPadManager::initialize(mtl::ALLOC_HANDLE handle){
-    CPadData* padData = static_cast<CPadData*>(mtl::MemManager::allocate_head(handle, sizeof(CPadData), 32));
-    spPadData = padData;
-
-    spPadData->unk5118 = 0;
-    spPadData->mAllocHandle = handle;
-
-    WPADRegisterAllocator(wpadAllocFunc, wpadDeallocFunc);
-    KPADInitEx(&spPadData->mWpadStatus, 128);
-    
-    std::memset(&spPadData->mPads, 0, sizeof(spPadData->mPads));
-    std::memset(&spPadData->mDefaultPad, 0, sizeof(CPad));
-    
-    spPadData->mMainWiiPad = &spPadData->mDefaultPad;
-    spPadData->mMainGCPad = &spPadData->mDefaultPad;
-
-    spPadData->unk4.unk4 = 10;
-    spPadData->unk4.unk8 = 3;
-    spPadData->unk4.unkC = 20;
-    spPadData->unk4.unk10 = 5;
-    spPadData->unk4.mLeftStickDeadzone = PAD_STICK_DEADZONE;
-    spPadData->unk4.mRightStickDeadzone = PAD_STICK_DEADZONE;
-    spPadData->unk4.unk0 = nullptr;
-
-    spPadData->unk511C = nullptr;
-
-    //Reset the connected flag for all controllers
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
-        spPadData->mPads[i].mConnected = false;
-    }
-
-    spPadData->unk4.unk1C = 0b11;
-
-    //Wait until the status isn't 3
-    while(WPADGetStatus() != WPAD_LIB_STATUS_3){}
-
-    //Setup controller ports
-
-    //Wii controllers
-    for(s32 i = 0; i < MAX_WII_CONTROLLERS; i++){
-        KPADChannel channel = (KPADChannel)i; //Required for matching
-        KPADEnableAimingMode(channel);
-        KPADSetConnectCallback(channel, kpadConnectCallback);
-        spPadData->mPads[channel].mChannel = channel;
-    }
-
-    //GC controllers
-    for(int i = 0; i < MAX_GC_CONTROLLERS; i++){
-        spPadData->mPads[i + 4].mChannel = i;
-    }
-
-    KPADReset();
-
-    //Why can't this just be called normally??
-    return update;
-}
-
-void CPadManager::destroy(){
-    DELETE_OBJ(spPadData);
-    
-    //Reset the callbacks for each Wii controller port
-    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
-        KPADSetConnectCallback(i, nullptr);
-        WPADSetExtensionCallback(i, nullptr);
-    }
-}
-
-void CPadManager::func_80446A34(u32 r3){
-    spPadData->unk4.unkC = r3;
-}
-
-void CPadManager::setRightStickDeadzoneDefault(){
-    spPadData->unk4.mRightStickDeadzone = PAD_STICK_DEADZONE;
-}
-
-void CPadManager::setRightStickDeadzone(float value){
-    spPadData->unk4.mRightStickDeadzone = value;
-}
-
-void CPadManager::kpadConnectCallback(s32 chan, s32 result){
-    if(spPadData == nullptr) return;
-
-    if(spPadData->unk4.unk1C & 1){
-        CPad* r31 = getPadData(0, chan);
-        r31->setExtensionCB(chan, result);
-
-        Unk511CFunc func = spPadData->unk511C;
-        if(func != nullptr){
-            func(chan, result);
-        }
-    }
-}
-
-void CPadManager::wpadExtensionCallback(s32 chan, s32 dev){
-    if(spPadData == nullptr) return;
-
-    if(spPadData->unk4.unk1C & 1){
-        CPad* r31 = getPadData(0, chan);
-        r31->setWiiPadType(dev);
-    }
-}
-
-void CPadManager::updatePadExtensions(){
-    if(spPadData->unk4.unk1C & 1){
-        for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
-            KPADChannel channel = (KPADChannel)i; //Required for matching
-            WPADSetExtensionCallback(channel, wpadExtensionCallback);
-            CPad* r31 = getPadData(0, channel);
-            r31->checkExtension(channel);
-        }
-    }
-}
-
-void CPadManager::func_80446CC8(CPad* r3, u32 r4){
-    //Check joystick inputs
-    if(r3->mLeftStickXRaw <= -spPadData->unk4.mLeftStickDeadzone) r4 |= 0x2000;
-    if(r3->mLeftStickXRaw > spPadData->unk4.mLeftStickDeadzone) r4 |= 0x4000;
-    if(r3->mLeftStickYRaw <= -spPadData->unk4.mLeftStickDeadzone) r4 |= 0x10000;
-    if(r3->mLeftStickYRaw > spPadData->unk4.mLeftStickDeadzone) r4 |= 0x8000;
-    if(r3->mRightStickXRaw <= -spPadData->unk4.mRightStickDeadzone) r4 |= 0x20000;
-    if(r3->mRightStickXRaw > spPadData->unk4.mRightStickDeadzone) r4 |= 0x40000;
-    if(r3->mRightStickYRaw <= -spPadData->unk4.mRightStickDeadzone) r4 |= 0x100000;
-    if(r3->mRightStickYRaw > spPadData->unk4.mRightStickDeadzone) r4 |= 0x80000;
-
-    r3->unk14 = 0;
-    u32 r6 = r3->unk0 ^ r4;
-    u32 r9 = r4 & r6;
-    r3->unk4 = r9;
-    u32 r8 = r6 & ~r4;
-    r3->unkC = r8;
-    r3->unk8 = r9;
-    r3->unk0 = r4;
-    r3->unk10 = 0;
-
-    u32 r5 = 1;
-
-    for(int i = 0; i < 32; i++){
-        if(r4 & r5){
-            if(r3->unk4 & r5){
-                r3->unk18[i] = 0;
-                r3->unk38[i] = 0;
+    for(int i = 0; i < MAX_PAD_INPUT_FLAGS; i++){
+        if(buttonFlags & bit){
+            if(mPressedButtonFlags & bit){
+                mButtonHoldTimersTurbo[i] = 0;
+                mButtonHoldTimers[i] = 0;
             }
 
-            r3->unk18[i]++;
+            mButtonHoldTimersTurbo[i]++;
 
-            if(r3->unk38[i] <= spPadData->unk4.unkC){
-                r3->unk38[i]++;
+            //BUG?: This should maybe be < instead? This makes the limit 1 more than the max
+            if(mButtonHoldTimers[i] <= CPadManager::spPadData->mConfig.longHoldTimerThreshold){
+                mButtonHoldTimers[i]++;
             }
 
-            if(r3->unk18[i] >= spPadData->unk4.unk4 + spPadData->unk4.unk8){
-                r3->unk8 |= r5;
-                r3->unk18[i] -= spPadData->unk4.unk8;
+            //Enable the bit in the turbo press flagset on every nth frame as long as the timer has passed the threshold
+            if(mButtonHoldTimersTurbo[i] >= CPadManager::spPadData->mConfig.turboHoldTimerThreshold +
+            CPadManager::spPadData->mConfig.turboInputFrames){
+                mTurboPressButtonFlags |= bit;
+                mButtonHoldTimersTurbo[i] -= CPadManager::spPadData->mConfig.turboInputFrames;
             }
 
-            if(r3->unk38[i] >= spPadData->unk4.unkC){
-                r3->unk14 |= r5;
+            if(mButtonHoldTimers[i] >= CPadManager::spPadData->mConfig.longHoldTimerThreshold){
+                mLongHoldButtonFlags |= bit;
             }
-        }else if(r3->unkC & r5){
-            u8 r7_1 = r3->unk38[i];
-            if(spPadData->unk4.unk10 >= r7_1){
-                r3->unk10 |= r5;
+        }else if(mReleasedButtonFlags & bit){
+            if(CPadManager::spPadData->mConfig.shortPressMaxFrames >= mButtonHoldTimers[i]){
+                mShortPressButtonFlags |= bit;
             }
         }
 
-        r5 <<= 1;
+        //Go to the next bit
+        bit <<= 1;
     }
 
-    CPadData_UnkStruct2* r30 = spPadData->unk4.unk0;
+    CPadData_UnkStruct2* r30 = CPadManager::spPadData->mConfig.unk0;
 
     while(r30 != nullptr){
-        CPadData_UnkStruct3* r12 = r30->unk24;
-        WeirdCPadCallbackFunc func = r12->unk8;
-        func(r30, r3);
+        r30->UnkVirtualFunc1(this);
         r30 = r30->mNext;
     }
 }
 
 void CPadManager::updatePadInputs(){
-    const PadButtonMask sWiimoteMaskValues[] = {
-        {0x00000001, 0x00000001},
-        {0x00000002, 0x00000002},
-        {0x00000008, 0x00000004},
-        {0x00000004, 0x00000008},
-        {0x00000800, 0x00000010},
-        {0x00000400, 0x00000020},
-        {0x00000200, 0x00000040},
-        {0x00000100, 0x00000080},
-        {0x00008000, 0x00000100},
-        {0x00000010, 0x00000200},
-        {0x00001000, 0x00000400},
-        {0x00002000, 0x00001000},
-        {0x00004000, 0x00000800},
-        {0x00000000, 0x00000000}
+    /*
+    WPAD button values -> custom button values conversion tables for
+    Wiimote + Nunchuck and Classic Controller
+    The entry with all zeroes acts as a terminator
+    */
+    const PadButtonMapping sWiimoteMaskValues[NUM_BUTTONS_WIIMOTE_NUNCHUCK] = {
+        {WPAD_BUTTON_LEFT, PAD_INPUT_LEFT},
+        {WPAD_BUTTON_RIGHT, PAD_INPUT_RIGHT},
+        {WPAD_BUTTON_UP, PAD_INPUT_UP},
+        {WPAD_BUTTON_DOWN, PAD_INPUT_DOWN},
+        {WPAD_BUTTON_A, PAD_INPUT_CORE_A},
+        {WPAD_BUTTON_B, PAD_INPUT_CORE_B},
+        {WPAD_BUTTON_1, PAD_INPUT_1},
+        {WPAD_BUTTON_2, PAD_INPUT_2},
+        {WPAD_BUTTON_HOME, PAD_INPUT_HOME},
+        {WPAD_BUTTON_PLUS, PAD_INPUT_PLUS},
+        {WPAD_BUTTON_MINUS, PAD_INPUT_MINUS},
+        {WPAD_BUTTON_FS_Z, PAD_INPUT_FS_Z},
+        {WPAD_BUTTON_FS_C, PAD_INPUT_FS_C},
+        {0, 0}
     };
 
-    const PadButtonMask sClassicMaskValues[] = {
-        {0x00000002, 0x00000001},
-        {0x00008000, 0x00000002},
-        {0x00000001, 0x00000004},
-        {0x00004000, 0x00000008},
-        {0x00000800, 0x00000100},
-        {0x00000400, 0x00000200},
-        {0x00001000, 0x00000400},
-        {0x00000010, 0x00200000},
-        {0x00000040, 0x00400000},
-        {0x00000008, 0x00800000},
-        {0x00000020, 0x01000000},
-        {0x00002000, 0x02000000},
-        {0x00000200, 0x04000000},
-        {0x00000080, 0x08000000},
-        {0x00000004, 0x10000000},
-        {0x00000000, 0x00000000}
+    const PadButtonMapping sClassicMaskValues[NUM_BUTTONS_CLASSIC] = {
+        {WPAD_BUTTON_CL_LEFT, PAD_INPUT_LEFT},
+        {WPAD_BUTTON_CL_RIGHT, PAD_INPUT_RIGHT},
+        {WPAD_BUTTON_CL_UP, PAD_INPUT_UP},
+        {WPAD_BUTTON_CL_DOWN, PAD_INPUT_DOWN},
+        {WPAD_BUTTON_CL_HOME, PAD_INPUT_HOME},
+        {WPAD_BUTTON_CL_PLUS, PAD_INPUT_PLUS},
+        {WPAD_BUTTON_CL_MINUS, PAD_INPUT_MINUS},
+        {WPAD_BUTTON_CL_A, PAD_INPUT_CLASSIC_A},
+        {WPAD_BUTTON_CL_B, PAD_INPUT_CLASSIC_B},
+        {WPAD_BUTTON_CL_X, PAD_INPUT_CLASSIC_X},
+        {WPAD_BUTTON_CL_Y, PAD_INPUT_CLASSIC_Y},
+        {WPAD_BUTTON_CL_L, PAD_INPUT_CLASSIC_L},
+        {WPAD_BUTTON_CL_R, PAD_INPUT_CLASSIC_R},
+        {WPAD_BUTTON_CL_ZL, PAD_INPUT_CLASSIC_ZL},
+        {WPAD_BUTTON_CL_ZR, PAD_INPUT_CLASSIC_ZR},
+        {0, 0}
     };
 
     KPADResult result;
 
-    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
+    for(int i = 0; i < MAX_CONTROLLERS; i++){
         KPADChannel channel = (KPADChannel)i;
 
-        KPADReadEx(channel, &spPadData->mWpadStatusArray[i], 16, &result);
+        KPADReadEx(channel, &spPadData->mWpadStatuses[i], 16, &result);
 
         CPad* pad = getPadData(0, channel);
 
@@ -428,21 +438,21 @@ void CPadManager::updatePadInputs(){
             s8 error = padStatus->wpad_err;
 
             if(error == -7){
-                pad->mPadType = PAD_TYPE_WIIMOTE;
+                pad->mPadType = PAD_TYPE_CORE;
                 padStatus->hold &= ~(WPAD_BUTTON_FS_Z | WPAD_BUTTON_FS_C);
-                pad->mLeftStickYRaw = 0;
-                pad->mLeftStickXRaw = 0;
-                pad->mLeftStickX = 0;
+                pad->mLStickYRaw = 0;
+                pad->mLStickXRaw = 0;
+                pad->mLStickX = 0;
             }else if(error != 0){
-                pad->unk0 = 0;
-                pad->unk4 = 0;
-                pad->unkC = 0;
+                pad->mHeldButtonFlags = 0;
+                pad->mPressedButtonFlags = 0;
+                pad->mReleasedButtonFlags = 0;
                 continue;
             }
 
-            u32 r4 = pad->calculateFlagValue(padStatus, sClassicMaskValues, sWiimoteMaskValues);
+            u32 buttonFlags = pad->calculateFlagValue(padStatus, sClassicMaskValues, sWiimoteMaskValues);
             pad->setJoystickValues(padStatus);
-            func_80446CC8(pad, r4);
+            pad->updateFlagValues(buttonFlags);
             pad->setAcceleration(padStatus);
             pad->setMiscValues(padStatus);
         }
@@ -452,15 +462,14 @@ void CPadManager::updatePadInputs(){
 
 void CPad::updateMotor(){
     if(mMotorTimer > 0){
-        //NOTE: this assumes 30fps
-        mMotorTimer -= 1.0/30.0;
+        mMotorTimer -= MS_PER_FRAME;
 
         //If the motor timer reached zero, turn off the motor
         if(mMotorTimer <= 0){
             mMotorTimer = 0;
 
             switch(mPadType){
-                case PAD_TYPE_WIIMOTE ... PAD_TYPE_7:
+                case PAD_TYPE_CORE ... PAD_TYPE_7:
                     WPADControlMotor(mChannel, WPAD_MOTOR_STOP);
                     break;
                 case PAD_TYPE_GC:
@@ -474,40 +483,29 @@ void CPad::updateMotor(){
     }
 }
 
-/* Searches for the Wii controller in the earliest port, and sets the current Wii controller data pointer
-to its entry if found. If not, it gets set to the default entry instead. */
-void CPadManager::updateMainWiiController(){
-    spPadData->mMainWiiPad = &spPadData->mDefaultPad;
+/* Updates the pointers for the current main Wii/GC controllers. This typically will set each
+to the entry corresponding to the controllers in the earliest ports, but will instead be
+set to the dummy entry if no controller is connected. */
+void CPadManager::updateMainControllers(){
+    spPadData->mMainWiiPad = &spPadData->mDummyPad;
     
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
+    for(int i = 0; i < TOTAL_CONTROLLERS; i++){
         //A connected controller was found, update the pointer
         if(spPadData->mPads[i].mConnected){
             spPadData->mMainWiiPad = &spPadData->mPads[i];
-            return;
+            break;
         }
     }
-}
+    
+    spPadData->mMainGCPad = &spPadData->mDummyPad;
 
-/* Searches for the GC controller in the earliest port, and sets the current GC controller data pointer
-to its entry if found. If not, it gets set to the default entry instead. */
-void CPadManager::updateMainGCController(){
-    spPadData->mMainGCPad = &spPadData->mDefaultPad;
-
-    for(int i = 4; i < MAX_CONTROLLERS; i++){
+    for(int i = 4; i < TOTAL_CONTROLLERS; i++){
         //A connected controller was found, update the pointer
         if(spPadData->mPads[i].mConnected){
             spPadData->mMainGCPad = &spPadData->mPads[i];
-            return;
+            break;
         }
     }
-}
-
-/* Updates the pointers for the current main Wii/GC controllers. This typically will set each
-to the entry corresponding to the controllers in the earliest ports, but will instead be
-set to the default entry if no controller is connected. */
-void CPadManager::updateFirstControllers(){
-    updateMainWiiController();
-    updateMainGCController();
 }
 
 void CPadManager::update(){
@@ -517,26 +515,26 @@ void CPadManager::update(){
     spPadData->mMainWiiPad->updateMotor();
 
     //Update the first controller pointers
-    updateFirstControllers();
+    updateMainControllers();
 }
 
 CPad* CPadManager::getPadData(s32 type, s32 channel){
     switch(type){
-        case PAD_CHANNEL_GC:
+        case PAD_SYSTEM_GC:
         //Gamecube controllers
-        if(channel < MAX_GC_CONTROLLERS) return &spPadData->mPads[channel + MAX_WII_CONTROLLERS];
+        if(channel < MAX_CONTROLLERS) return &spPadData->mPads[MAX_CONTROLLERS + channel];
         break;
-        case PAD_CHANNEL_WII:
+        case PAD_SYSTEM_WII:
         //Wii controllers
-        if(channel < MAX_WII_CONTROLLERS) return &spPadData->mPads[channel];
+        if(channel < MAX_CONTROLLERS) return &spPadData->mPads[channel];
         break;
     }
 
-    return &spPadData->mDefaultPad;
+    return &spPadData->mDummyPad;
 }
 
 CPad* CPadManager::getDefaultPad(){
-    return &spPadData->mDefaultPad;
+    return &spPadData->mDummyPad;
 }
 
 //Returns the controller data for the current main Wii controller (controller in earliest port).

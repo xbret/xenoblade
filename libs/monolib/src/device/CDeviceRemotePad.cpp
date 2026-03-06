@@ -6,11 +6,11 @@ CDeviceRemotePad* CDeviceRemotePad::spInstance;
 
 CDeviceRemotePad::CDeviceRemotePad(const char* pName, CWorkThread* pParent) :
 CDeviceBase(pName, pParent, MAX_CHILD),
-unk1C8(0){
+mPadUpdateFunc(nullptr){
     spInstance = this;
 
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
-        unk1CC[i] = nullptr;
+    for(int i = 0; i < TOTAL_CONTROLLERS; i++){
+        mpPads[i] = nullptr;
     }
 }
 
@@ -22,44 +22,42 @@ CDeviceRemotePad* CDeviceRemotePad::getInstance(){
     return spInstance;
 }
 
-bool CDeviceRemotePad::func_804479C4(u32 index){
-    return spInstance->unk1CC[index]->mConnected;
+bool CDeviceRemotePad::isConnected(u32 index){
+    return spInstance->mpPads[index]->mConnected;
 }
 
-u32 CDeviceRemotePad::func_804479DC(u32 index){
-    return spInstance->unk1CC[index]->unk0;
+u32 CDeviceRemotePad::getHeldButtonFlags(u32 index){
+    return spInstance->mpPads[index]->mHeldButtonFlags;
 }
 
-u32 CDeviceRemotePad::func_804479F4(u32 index){
-    return spInstance->unk1CC[index]->unk4;
+u32 CDeviceRemotePad::getPressedButtonFlags(u32 index){
+    return spInstance->mpPads[index]->mPressedButtonFlags;
 }
 
-CPad* CDeviceRemotePad::getGCPad(){
+CPad* CDeviceRemotePad::getMainGCPad(){
     return CPadManager::getMainGCPad();
 }
 
 //0-3: Wii controllers, 4-7: GC controllers
 CPad* CDeviceRemotePad::getPadData(u32 index){
-    return CPadManager::getPadData(index >= MAX_WII_CONTROLLERS ? PAD_CHANNEL_GC : PAD_CHANNEL_WII, index % 4);
+    return CPadManager::getPadData(index >= MAX_CONTROLLERS ? PAD_SYSTEM_GC : PAD_SYSTEM_WII, index % MAX_CONTROLLERS);
 }
 
-CWpadStatus* CDeviceRemotePad::func_80447A30(u32 r3){
-    return CPadManager::getWpadStatus(r3);
+CWpadStatus* CDeviceRemotePad::getWpadStatus(u32 index){
+    return CPadManager::getWpadStatus(index);
 }
 
 void CDeviceRemotePad::wkUpdate(){
-    unk1C8();
+    mPadUpdateFunc();
 }
 
 bool CDeviceRemotePad::wkStandbyLogin(){
-    u32 r3 = CDevice::func_8044D248();
-
-    if(r3 != 0){
-        PadUpdateCallback cb = CPadManager::initialize(mtl::MemManager::getHandleMEM2());
-        unk1C8 = cb;
+    if(CDevice::func_8044D248() != 0){
+        PadUpdateFunc func = CPadManager::initialize(mtl::MemManager::getHandleMEM2());
+        mPadUpdateFunc = func;
 
         for(u32 i = 0; i < MAX_CONTROLLERS; i++){
-            unk1CC[i] = getPadData(i);
+            mpPads[i] = getPadData(i);
         }
 
         return CWorkThread::wkStandbyLogin();
@@ -71,7 +69,7 @@ bool CDeviceRemotePad::wkStandbyLogin(){
 bool CDeviceRemotePad::wkStandbyLogout(){
     if(mChildren.empty() && CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
         CPadManager::destroy();
-        unk1C8 = nullptr;
+        mPadUpdateFunc = nullptr;
         return CWorkThread::wkStandbyLogout();
     }
 

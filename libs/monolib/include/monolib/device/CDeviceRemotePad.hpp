@@ -17,17 +17,17 @@ public:
     virtual bool wkStandbyLogin();
     virtual bool wkStandbyLogout();
 
-    static bool func_804479C4(u32 index);
-    static u32 func_804479DC(u32 index);
-    static u32 func_804479F4(u32 index);
-    static CPad* getGCPad();
+    static bool isConnected(u32 index);
+    static u32 getHeldButtonFlags(u32 index);
+    static u32 getPressedButtonFlags(u32 index);
+    static CPad* getMainGCPad();
     static CPad* getPadData(u32 index);
-    static CWpadStatus* func_80447A30(u32 index);
+    static CWpadStatus* getWpadStatus(u32 index);
 
     //0x0: vtable
     //0x0-1c8: CDeviceBase
-    PadUpdateCallback unk1C8;
-    CPad* unk1CC[8];
+    PadUpdateFunc mPadUpdateFunc;
+    CPad* mpPads[8];
     u32 unk1EC;
 
 private:

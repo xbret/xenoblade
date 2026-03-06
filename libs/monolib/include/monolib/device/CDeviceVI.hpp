@@ -8,6 +8,13 @@
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 
+static const int NTSC_VPS = 60;
+static const int PAL_VPS = 50;
+//2 VIs (vertical interrupts) per frame -> 30fps
+static const int VI_PER_FRAME = 2;
+static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
+static const double MS_PER_FRAME = 1.0/TARGET_FRAMERATE;
+
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public IErrorWii {
 public:
@@ -166,12 +173,6 @@ private:
     #endif
 
     static const int NUM_XFB_BUFFERS = 2; //double buffered
-
-    static const int NTSC_VPS = 60;
-    static const int PAL_VPS = 50;
-    //2 VIs (vertical interrupts) per frame -> 30fps
-    static const int VI_PER_FRAME = 2;
-    static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
 
     static const int MAX_CHILD = 8;
 
