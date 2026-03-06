@@ -15,21 +15,12 @@ struct CPadData_UnkStruct2;
 
 typedef void (*PadUpdateFunc)();
 typedef void (*Unk511CFunc)(s32 chan, s32 result);
-typedef void (*WeirdCPadCallbackFunc)(CPadData_UnkStruct2* r3, CPad* pPad);
 
-//Constants
-#define PAD_STICK_AXIS_SCALE 56.0f
-#define PAD_STICK_DEADZONE 0.15f
-#define PAD_TRIGGER_SCALE 150.0f
-#define PAD_WIIMOTE_X_POS_SCALE 320
-#define PAD_WIIMOTE_Y_POS_SCALE 210
+const float PAD_STICK_DEADZONE = 0.15f;
 
-const int MAX_CONTROLLERS = 4;
-const int TOTAL_CONTROLLERS = MAX_CONTROLLERS*2;
-
-//Total number of buttons for different control styles
-const int NUM_BUTTONS_WIIMOTE_NUNCHUCK = 14;
-const int NUM_BUTTONS_CLASSIC = 16;
+const int MAX_WII_CONTROLLERS = WPAD_MAX_CONTROLLERS;
+const int MAX_GC_CONTROLLERS = PAD_CHANMAX;
+const int TOTAL_CONTROLLERS = MAX_WII_CONTROLLERS + MAX_GC_CONTROLLERS;
 
 enum PadType{
     PAD_TYPE_NONE,
@@ -86,11 +77,11 @@ struct PadButtonMapping {
     u32 customValue;
 };
 
+//unused?
 struct CPadData_UnkStruct2{
     CPadData_UnkStruct2* mNext;
     u8 unk4[0x20];
 
-    //unused?
     virtual void UnkVirtualFunc1(CPad* pPad);
 };
 
@@ -179,7 +170,7 @@ struct CPad{
     float mNunchuckAccValue; //0xE0
     float mNunchuckAccSpeed; //0xE4
 
-    PadType mPadType; //0xE8
+    u32 mPadType; //0xE8
     s8 mWpadErr; //0xEC
     bool mConnected; //0xED
     u8 unkEE[0xF0 - 0xEE]; //padding?
@@ -194,12 +185,12 @@ struct CPadData {
     CPad mPads[TOTAL_CONTROLLERS]; //0x24
     CPad mDummyPad; //0x7E4
     //TODO: this might just be the first connected Wii or GC controller
-    CPad* mMainWiiPad; //0x8DC
+    CPad* mMainPad; //0x8DC
     CPad* mMainGCPad; //0x8E0
     u32 unk8E4; //0x8E4
-    CWpadStatus mWpadStatuses[MAX_CONTROLLERS]; //0x8E8
+    CWpadStatus mWpadStatuses[MAX_WII_CONTROLLERS]; //0x8E8
     //unused
-    PADStatus mPadStatuses[MAX_CONTROLLERS]; //0x34E8
+    PADStatus mPadStatuses[MAX_GC_CONTROLLERS]; //0x34E8
     KPADUnifiedWpadStatus mWpadStatus; //0x3518
     u8 unk3550[0x5118 - 0x3550];
     u32 unk5118;
@@ -225,12 +216,12 @@ public:
     static DECOMP_DONT_INLINE void updateMainControllers();
     static void update();
     static CPad* getPadData(s32 type, s32 channel);
-    static CPad* getDefaultPad();
-    static CPad* getMainWiiPad();
+    static CPad* getDummyPad();
+    static CPad* getMainPad();
     static CPad* getMainGCPad();
 
-    static PadType convertWiiDevType(s32 dev){
-       switch((u32)dev){
+    static PadType convertWiiDevType(u32 dev){
+       switch(dev){
            case WPAD_DEV_CORE:
            return PAD_TYPE_CORE;
            case WPAD_DEV_FREESTYLE:
@@ -238,6 +229,7 @@ public:
            case WPAD_DEV_CLASSIC:
            return PAD_TYPE_CLASSIC;
            case WPAD_DEV_FUTURE:
+           //Unknown type, default to wiimote
            return PAD_TYPE_CORE;
            default:
            return PAD_TYPE_NONE;
@@ -246,10 +238,4 @@ public:
 
 private:
     static CPadData* spPadData;
-
-    //This feels kind of gross, but it's better than hardcoded values I guess
-    static const int TURBO_HOLD_TIMER_THRESHOLD = (int)(TARGET_FRAMERATE/3.0f);
-    static const int TURBO_INPUT_FRAMES = (int)(TARGET_FRAMERATE * 0.1f);
-    static const int LONG_HOLD_TIMER_THRESHOLD = (int)(TARGET_FRAMERATE * (2.0f/3.0f));
-    static const int SHORT_PRESS_MAX_FRAMES = (int)(TARGET_FRAMERATE/6.0f); 
 };

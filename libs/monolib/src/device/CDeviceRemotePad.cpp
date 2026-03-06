@@ -40,7 +40,8 @@ CPad* CDeviceRemotePad::getMainGCPad(){
 
 //0-3: Wii controllers, 4-7: GC controllers
 CPad* CDeviceRemotePad::getPadData(u32 index){
-    return CPadManager::getPadData(index >= MAX_CONTROLLERS ? PAD_SYSTEM_GC : PAD_SYSTEM_WII, index % MAX_CONTROLLERS);
+    return CPadManager::getPadData(index >= MAX_WII_CONTROLLERS ? PAD_SYSTEM_GC : PAD_SYSTEM_WII,
+    index % MAX_WII_CONTROLLERS);
 }
 
 CWpadStatus* CDeviceRemotePad::getWpadStatus(u32 index){
@@ -56,7 +57,7 @@ bool CDeviceRemotePad::wkStandbyLogin(){
         PadUpdateFunc func = CPadManager::initialize(mtl::MemManager::getHandleMEM2());
         mPadUpdateFunc = func;
 
-        for(u32 i = 0; i < MAX_CONTROLLERS; i++){
+        for(u32 i = 0; i < TOTAL_CONTROLLERS; i++){
             mpPads[i] = getPadData(i);
         }
 

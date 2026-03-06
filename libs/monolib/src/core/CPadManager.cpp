@@ -1,6 +1,22 @@
 #include "monolib/core/CPadManager.hpp"
 #include <cstring>
 
+//Constants
+const float PAD_STICK_AXIS_SCALE = 56.0f;
+const float PAD_TRIGGER_SCALE = 150.0f;
+const int PAD_WIIMOTE_X_POS_SCALE = 320;
+const int PAD_WIIMOTE_Y_POS_SCALE = 210;
+
+//This is kind of ugly but better than hardcoded values I guess
+#define TURBO_HOLD_TIMER_THRESHOLD (int)(TARGET_FRAMERATE/3.0f)
+#define TURBO_INPUT_FRAMES (int)(TARGET_FRAMERATE * 0.1f)
+#define LONG_HOLD_TIMER_THRESHOLD (int)(TARGET_FRAMERATE * (2.0f/3.0f))
+#define SHORT_PRESS_MAX_FRAMES (int)(TARGET_FRAMERATE/6.0f)
+
+//Total number of buttons for different control styles
+const int NUM_BUTTONS_WIIMOTE_NUNCHUCK = 14;
+const int NUM_BUTTONS_CLASSIC = 16;
+
 CPadData* CPadManager::spPadData;
 
 CWpadStatus* CPadManager::getWpadStatus(int index){
@@ -34,7 +50,7 @@ PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
     std::memset(&spPadData->mPads, 0, sizeof(spPadData->mPads));
     std::memset(&spPadData->mDummyPad, 0, sizeof(CPad));
     
-    spPadData->mMainWiiPad = &spPadData->mDummyPad;
+    spPadData->mMainPad = &spPadData->mDummyPad;
     spPadData->mMainGCPad = &spPadData->mDummyPad;
 
     spPadData->mConfig.turboHoldTimerThreshold = TURBO_HOLD_TIMER_THRESHOLD;
@@ -61,7 +77,7 @@ PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
     //Setup controller ports
 
     //Wii controllers
-    for(s32 i = 0; i < MAX_CONTROLLERS; i++){
+    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
         KPADChannel channel = (KPADChannel)i; //Required for matching
         KPADEnableAimingMode(channel);
         KPADSetConnectCallback(channel, kpadConnectCallback);
@@ -69,8 +85,8 @@ PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
     }
 
     //GC controllers
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
-        spPadData->mPads[MAX_CONTROLLERS + i].mChannel = i;
+    for(int i = 0; i < MAX_GC_CONTROLLERS; i++){
+        spPadData->mPads[MAX_WII_CONTROLLERS + i].mChannel = i;
     }
 
     KPADReset();
@@ -83,7 +99,7 @@ void CPadManager::destroy(){
     DELETE_OBJ(spPadData);
     
     //Reset the callbacks for each Wii controller port
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
+    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
         KPADSetConnectCallback(i, nullptr);
         WPADSetExtensionCallback(i, nullptr);
     }
@@ -171,7 +187,7 @@ void CPadManager::wpadExtensionCallback(s32 chan, s32 dev){
 
 void CPadManager::updatePadExtensions(){
     if(spPadData->mConfig.unk1C & 1){
-        for(int i = 0; i < MAX_CONTROLLERS; i++){
+        for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
             KPADChannel channel = (KPADChannel)i; //Required for matching
             WPADSetExtensionCallback(channel, wpadExtensionCallback);
             CPad* r31 = getPadData(0, channel);
@@ -424,7 +440,7 @@ void CPadManager::updatePadInputs(){
 
     KPADResult result;
 
-    for(int i = 0; i < MAX_CONTROLLERS; i++){
+    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
         KPADChannel channel = (KPADChannel)i;
 
         KPADReadEx(channel, &spPadData->mWpadStatuses[i], 16, &result);
@@ -483,22 +499,24 @@ void CPad::updateMotor(){
     }
 }
 
-/* Updates the pointers for the current main Wii/GC controllers. This typically will set each
+/* Updates the pointers for the current main controllers. This typically will set each
 to the entry corresponding to the controllers in the earliest ports, but will instead be
 set to the dummy entry if no controller is connected. */
 void CPadManager::updateMainControllers(){
-    spPadData->mMainWiiPad = &spPadData->mDummyPad;
+    spPadData->mMainPad = &spPadData->mDummyPad;
     
+    //Find the first connected controller, starting with Wii controller ports first
     for(int i = 0; i < TOTAL_CONTROLLERS; i++){
         //A connected controller was found, update the pointer
         if(spPadData->mPads[i].mConnected){
-            spPadData->mMainWiiPad = &spPadData->mPads[i];
+            spPadData->mMainPad = &spPadData->mPads[i];
             break;
         }
     }
     
     spPadData->mMainGCPad = &spPadData->mDummyPad;
 
+    //Find the first connected GC controller
     for(int i = 4; i < TOTAL_CONTROLLERS; i++){
         //A connected controller was found, update the pointer
         if(spPadData->mPads[i].mConnected){
@@ -512,7 +530,7 @@ void CPadManager::update(){
     updatePadExtensions();
     updatePadInputs();
 
-    spPadData->mMainWiiPad->updateMotor();
+    spPadData->mMainPad->updateMotor();
 
     //Update the first controller pointers
     updateMainControllers();
@@ -522,24 +540,24 @@ CPad* CPadManager::getPadData(s32 type, s32 channel){
     switch(type){
         case PAD_SYSTEM_GC:
         //Gamecube controllers
-        if(channel < MAX_CONTROLLERS) return &spPadData->mPads[MAX_CONTROLLERS + channel];
+        if(channel < MAX_GC_CONTROLLERS) return &spPadData->mPads[MAX_WII_CONTROLLERS + channel];
         break;
         case PAD_SYSTEM_WII:
         //Wii controllers
-        if(channel < MAX_CONTROLLERS) return &spPadData->mPads[channel];
+        if(channel < MAX_WII_CONTROLLERS) return &spPadData->mPads[channel];
         break;
     }
 
     return &spPadData->mDummyPad;
 }
 
-CPad* CPadManager::getDefaultPad(){
+CPad* CPadManager::getDummyPad(){
     return &spPadData->mDummyPad;
 }
 
-//Returns the controller data for the current main Wii controller (controller in earliest port).
-CPad* CPadManager::getMainWiiPad(){
-    return spPadData->mMainWiiPad;
+//Returns the controller data for the current main controller (controller in earliest port, Wii ports have priority).
+CPad* CPadManager::getMainPad(){
+    return spPadData->mMainPad;
 }
 
 //Returns the controller data for the current main GC controller (controller in earliest port).

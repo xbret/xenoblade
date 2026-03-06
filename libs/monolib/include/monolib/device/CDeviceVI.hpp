@@ -8,6 +8,8 @@
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 
+/* These values shouldn't be accessed directly, but some code does anyway so
+they're here instead of inside CDeviceVI. */
 static const int NTSC_VPS = 60;
 static const int PAL_VPS = 50;
 //2 VIs (vertical interrupts) per frame -> 30fps
@@ -110,6 +112,10 @@ public:
     u32 mTargetFramerate; //0x2B8
     float mSecPerFrame; //0x2BC
 
+    //General screen dimensions
+    static const int SCREEN_WIDTH = 640;
+    static const int SCREEN_HEIGHT = 456;
+
 private:
     enum Flags{
         VI_FLAG_0 = 0,
@@ -149,10 +155,6 @@ private:
     bool checkFlag(u32 flag) const {
         return mViFlags & (1 << flag);
     }
-
-    //General screen dimensions
-    static const int SCREEN_WIDTH = 640;
-    static const int SCREEN_HEIGHT = 456;
 
     //VI max output dimensions
     static const int VI_MAX_WIDTH = 720;

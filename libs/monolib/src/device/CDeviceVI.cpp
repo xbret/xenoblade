@@ -106,7 +106,7 @@ unk2AC(0),
 mNewVisPerFrame(0),
 unk2B5(1),
 mTargetFramerate(TARGET_FRAMERATE),
-mSecPerFrame(1.0f/TARGET_FRAMERATE) {
+mSecPerFrame(MS_PER_FRAME) {
     spInstance = this;
     unk2A0.set(0,0);
     mtl::ALLOC_HANDLE handle = sUseStaticHandle ? mtl::MemManager::getHandleStatic() : CDevice::getDevSys1Handle();

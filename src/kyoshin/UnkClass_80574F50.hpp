@@ -31,4 +31,6 @@ public:
     u32 unkAC;
     u32 unkB0;
     u32 unkB4;
+
+    static u32 lbl_80666728;
 };

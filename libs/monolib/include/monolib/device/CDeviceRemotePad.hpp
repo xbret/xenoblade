@@ -26,8 +26,8 @@ public:
 
     //0x0: vtable
     //0x0-1c8: CDeviceBase
-    PadUpdateFunc mPadUpdateFunc;
-    CPad* mpPads[8];
+    PadUpdateFunc mPadUpdateFunc; //0x1C8
+    CPad* mpPads[8]; //0x1CC
     u32 unk1EC;
 
 private:
