@@ -5,13 +5,37 @@
 
 using namespace ml;
 
+namespace {
+    //size: 0x1c8
+    class CDeviceException : public CWorkThread {
+    public:
+        CDeviceException(const char* pName, CWorkThread* pParent) : CWorkThread(pName, pParent, MAX_CHILD) {
+            spInstance = this;
+        }
+        virtual ~CDeviceException();
+        virtual bool wkStandbyLogout();
+        static CDeviceException* getInstance();
+
+        DECL_WORKTHREAD_CREATE(CDeviceException);
+
+        //0x0: vtable
+        //0x0-1c4: CWorkThread
+        u32 unk1C4;
+
+    private:
+        static const int MAX_CHILD = 64;
+
+        static CDeviceException* spInstance;
+    };
+}
+
 CDevice* CDevice::spInstance;
 CDeviceException* CDeviceException::spInstance;
 const char* CDevice::devSys1String = "DeviceSystem1";
 const char* CDevice::devSys2String = "DeviceSystem2";
 //Unused strings for region names?
-FixStr<64> CDevice::lbl_8065A6F8;
-FixStr<64> CDevice::lbl_8065A73C;
+FixStr<64> CDevice::spNotRunningDeviceName;
+FixStr<64> CDevice::spColdStartNotRunningDeviceName;
 //Handles for the DeviceSystem1/DeviceSystem2 regions, which live in MEM1/MEM2 respectively
 mtl::ALLOC_HANDLE CDevice::sDeviceRegion1Handle = mtl::INVALID_HANDLE;
 mtl::ALLOC_HANDLE CDevice::sDeviceRegion2Handle = mtl::INVALID_HANDLE;
@@ -32,8 +56,65 @@ int CDevice::getDevSys2Handle(){
     return sDeviceRegion2Handle;
 }
 
-bool CDevice::func_8044D438(){
-    return spInstance->inline1();
+bool CDevice::isAllReady(){
+    if(!spInstance->isRunning()) return false;
+
+    bool result = true;
+
+    for(reslist<CWorkThread*>::iterator it = spInstance->mChildren.begin(); it != spInstance->mChildren.end(); it++){
+        CWorkThread* thread = *it;
+
+        bool running = thread->isRunning();
+
+        //If a device that isn't running is found, save its name
+        if(!running){
+            const char* name = thread->mName.c_str();
+            spNotRunningDeviceName = name;
+        }
+
+        result &= running;
+    }
+
+    return result;
+}
+
+bool CDevice::isColdStartReady(){
+    if(!spInstance->isRunning()) return false;
+
+    bool result = true;
+
+    for(reslist<CWorkThread*>::iterator it = spInstance->mChildren.begin(); it != spInstance->mChildren.end(); it++){
+        //BUG: no check that cast is valid
+        CDeviceBase* device = static_cast<CDeviceBase*>(*it);
+
+        if(device->CDeviceBase_inline2()){
+            bool running = device->isRunning();
+
+            if(!running){
+                const char* name = device->mName.c_str();
+                spColdStartNotRunningDeviceName = name;
+            }
+
+            result &= running;
+
+        }
+
+    }
+
+    return result;
+}
+
+bool CDevice::isInitialized(){
+    if(!spInstance->isRunning()) return false;
+        
+    bool result = true;
+
+    for(reslist<CWorkThread*>::iterator it = spInstance->mChildren.begin(); it != spInstance->mChildren.end(); it++){
+        CDeviceBase* deviceBase = static_cast<CDeviceBase*>(*it);
+        if(!(deviceBase->mFlags & CDeviceBase::FLAG_CREATED)) result = false;
+    }
+
+    return result;
 }
 
 void CDevice::initDevices(){

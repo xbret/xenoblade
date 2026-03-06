@@ -259,7 +259,7 @@ void CWorkRoot::run(){
     //Wait for all devices to be initialized?
     do {
         standbyWork();
-    } while(CDevice::getInstance() == nullptr || CDevice::func_8044D248());
+    } while(CDevice::getInstance() == nullptr || CDevice::isColdStartReady());
 
     //Set pre retrace callback
     VISetPreRetraceCallback(preRetraceCallback);

@@ -524,7 +524,7 @@ bool CDeviceVI::wkStandbyLogout(){
     VIFlush();
 
     if(mChildren.empty()){
-        if(CDeviceGX::getInstance() == nullptr && CDevice::func_8044D438() &&
+        if(CDeviceGX::getInstance() == nullptr && CDevice::isInitialized() &&
         CWorkSystem::getInstance() == nullptr && CLib::getInstance() == nullptr){
             return CWorkThread::wkStandbyLogout();
         }

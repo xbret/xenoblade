@@ -41,7 +41,7 @@ void CLib::createLibs(){
 }
 
 bool CLib::wkStandbyLogin(){
-    if(CDevice::func_8044D068() != 0){
+    if(CDevice::isAllReady()){
         createLibs();
 
         return CWorkThread::wkStandbyLogin();

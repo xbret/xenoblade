@@ -217,7 +217,7 @@ void CLibHbm::initHbm(){
 
     //TODO: probably fakematch
     for(u32 i = 0; (int)i < spInstance->unk238.size(); i++){
-        spInstance->unk238[i]->IHBMCallback_UnkInline2();
+        spInstance->unk238[i]->IHBMCallback_UnkInline1();
     }
 }
 
@@ -231,7 +231,7 @@ void CLibHbm::deleteHbm(){
 
     //TODO: probably fakematch
     for(u32 i = 0; (int)i < spInstance->unk238.size(); i++){
-        spInstance->unk238[i]->IHBMCallback_UnkInline3();
+        spInstance->unk238[i]->IHBMCallback_UnkInline2();
     }
 }
 

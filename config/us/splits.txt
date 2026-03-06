@@ -850,15 +850,15 @@ kyoshin/menu/CMenuItemExchange.cpp:
 	.text       start:0x801BF69C end:0x801C1064
 
 kyoshin/cf/CfSoundMan.cpp:
-	extab       start:0x8001047C end:0x800106BC
-	extabindex  start:0x8002B0D8 end:0x8002B2C4
-	.text       start:0x801C1064 end:0x801C3260
+	extab       start:0x8001047C end:0x800106E0
+	extabindex  start:0x8002B0D8 end:0x8002B2DC
+	.text       start:0x801C1064 end:0x801C331C
 	.ctors      start:0x804FA044 end:0x804FA048
 
 kyoshin/cf/CfPadTask.cpp:
-	extab       start:0x800106BC end:0x800107B8
-	extabindex  start:0x8002B2C4 end:0x8002B36C
-	.text       start:0x801C3260 end:0x801C45D8
+	extab       start:0x800106E0 end:0x800107B8
+	extabindex  start:0x8002B2DC end:0x8002B36C
+	.text       start:0x801C331C end:0x801C45D8
 
 kyoshin/cf/code_801C2C14.cpp:
 	extab       start:0x800107B8 end:0x80010914

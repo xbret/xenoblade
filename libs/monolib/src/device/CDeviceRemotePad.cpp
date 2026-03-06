@@ -53,7 +53,7 @@ void CDeviceRemotePad::wkUpdate(){
 }
 
 bool CDeviceRemotePad::wkStandbyLogin(){
-    if(CDevice::func_8044D248() != 0){
+    if(CDevice::isColdStartReady()){
         PadUpdateFunc func = CPadManager::initialize(mtl::MemManager::getHandleMEM2());
         mPadUpdateFunc = func;
 

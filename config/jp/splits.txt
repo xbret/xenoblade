@@ -1455,9 +1455,9 @@ kyoshin/menu/CMenuItemExchange.cpp:
 	.sdata2     start:0x8066A738 end:0x8066A748
 
 kyoshin/cf/CfSoundMan.cpp:
-	extab       start:0x800103E4 end:0x8001061C
-	extabindex  start:0x8002AE54 end:0x8002B034
-	.text       start:0x801BF76C end:0x801C189C
+	extab       start:0x800103E4 end:0x80010640
+	extabindex  start:0x8002AE54 end:0x8002B04C
+	.text       start:0x801BF76C end:0x801C1958
 	.ctors      start:0x804F5984 end:0x804F5988
 	.data       start:0x805373E8 end:0x80537448
 	.bss        start:0x80579110 end:0x80579D30
@@ -1466,9 +1466,9 @@ kyoshin/cf/CfSoundMan.cpp:
 	.sdata2     start:0x8066A748 end:0x8066A768
 
 kyoshin/cf/CfPadTask.cpp:
-	extab       start:0x8001061C end:0x80010718
-	extabindex  start:0x8002B034 end:0x8002B0DC
-	.text       start:0x801C189C end:0x801C2C14
+	extab       start:0x80010640 end:0x80010718
+	extabindex  start:0x8002B04C end:0x8002B0DC
+	.text       start:0x801C1958 end:0x801C2C14
 	.rodata     start:0x80500B50 end:0x80500B78
 	.data       start:0x80537448 end:0x80537500
 	.bss        start:0x80579D30 end:0x80579D48

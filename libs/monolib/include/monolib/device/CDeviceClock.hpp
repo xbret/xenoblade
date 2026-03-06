@@ -30,7 +30,7 @@ public:
     static inline CDeviceClock* create(const char* pName, CWorkThread* pParent){
         CDeviceClock* device = new (CWorkThreadSystem::getWorkMem()) CDeviceClock(pName, pParent);
         CWorkUtil::entryWork(device, pParent, false);
-        device->unk1C4 |= 1;
+        device->mFlags |= FLAG_CREATED;
         return device;
     }
 

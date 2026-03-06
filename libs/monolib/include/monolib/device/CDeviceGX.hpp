@@ -53,7 +53,7 @@ public:
     static inline CDeviceGX* create(const char* pName, CWorkThread* pParent){
         CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pParent);
         CWorkUtil::entryWork(device, pParent, false);
-        device->unk1C4 |= 1;
+        device->mFlags |= FLAG_CREATED;
         return device;
     }
 

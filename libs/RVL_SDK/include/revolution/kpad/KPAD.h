@@ -99,6 +99,8 @@ void KPADSetAccParam(s32 chan, f32 playRadius, f32 sensitivity);
 s32 KPADRead(s32 chan, KPADStatus* pSamples, s32 numSamples);
 s32 KPADReadEx(s32 chan, KPADStatus* status, s32 count, KPADResult* result);
 
+void KPADEnableDPD();
+void KPADDisableDPD();
 void KPADEnableAimingMode(s32 chan);
 
 void KPADInit();

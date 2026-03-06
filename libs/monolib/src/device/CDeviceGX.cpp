@@ -231,7 +231,7 @@ bool CDeviceGX::wkStandbyLogout(){
         GXSetDrawSyncCallback(nullptr);
     }
 
-    if(mChildren.empty() && CDevice::func_8044D438() && CWorkSystem::getInstance() == nullptr
+    if(mChildren.empty() && CDevice::isInitialized() && CWorkSystem::getInstance() == nullptr
     && CLib::getInstance() == nullptr){
         return CWorkThread::wkStandbyLogout();
     }
