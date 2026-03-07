@@ -6145,7 +6145,7 @@ monolib/src/core/CPadManager.cpp:
 	.sbss       start:0x80667F10 end:0x80667F18
 	.sdata2     start:0x8066CB20 end:0x8066CB48
 
-monolib/src/core/UnkClass_80447598.cpp:
+monolib/src/util/CStopwatchUtil.cpp:
 	extab       start:0x8001C9FC end:0x8001CA14
 	extabindex  start:0x80034610 end:0x80034634
 	.text       start:0x80447598 end:0x80447890

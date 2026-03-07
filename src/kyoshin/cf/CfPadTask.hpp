@@ -18,8 +18,8 @@ namespace cf {
         virtual void Term();
         
         virtual bool IGameException_UnkVirtualFunc1(u32 r4);
-        virtual void IHBMCallback_UnkInline1();
-        virtual void IHBMCallback_UnkInline2();
+        virtual void onInitHbm();
+        virtual void onDeleteHbm();
 
         static CfPadTask* create(CProcess* pParent);
 

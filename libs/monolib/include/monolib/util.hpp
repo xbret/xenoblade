@@ -5,6 +5,7 @@
 #include "monolib/util/CDoubleListNode.hpp"
 #include "monolib/util/CErrorWii.hpp"
 #include "monolib/util/CPathUtil.hpp"
+#include "monolib/util/CStopwatchUtil.hpp"
 #include "monolib/util/fixed_vector.hpp"
 #include "monolib/util/FixStr.hpp"
 #include "monolib/util/MemManager.hpp"

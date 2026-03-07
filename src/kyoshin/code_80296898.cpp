@@ -1,5 +1,5 @@
 #include "kyoshin/code_80296898.hpp"
-#include <string.h>
+#include <cstring>
 
 static Class_80296898 lbl_8057A9C8;
 
@@ -9,7 +9,7 @@ Class_80296898* func_80296A04(Class_80296898* obj) {
 }
 
 void Class_80296898::init() {
-    memset(unk0, 0, 64);
+    std::memset(unk0, 0, 64);
     
     int r4 = 0, r3 = 3, r7 = 1, r5 = 0xA, r6 = 2, r0 = 5;
     
@@ -43,7 +43,7 @@ Class_80296898* Class_80296898::getInstance(void) {
 }
 
 void func_80296AE8(u8* src) {
-    memcpy(lbl_8057A9C8.unk0, src, 0x40);
+    std::memcpy(lbl_8057A9C8.unk0, src, 0x40);
     
     if (lbl_8057A9C8.unk0[15] == 0) {
         lbl_8057A9C8.unk0[15] = 0xA;

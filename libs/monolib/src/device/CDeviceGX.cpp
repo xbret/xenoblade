@@ -3,6 +3,7 @@
 #include "monolib/math.hpp"
 #include "monolib/work.hpp"
 #include "monolib/core.hpp"
+#include "monolib/util.hpp"
 
 using namespace ml;
 
@@ -145,13 +146,13 @@ void CDeviceGX::drawFrame(){
             something.func_80456DAC(sp10);
         }
     }else{
-        UnkClass_80447598::func_804475E4(someString);
+        CStopwatchUtil::entry(someString);
     }
 }
 
 
 //Copies the EFB to the destination external framebuffer.
-inline void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
+void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
     CDeviceGX* gx = spInstance;
     GXBool vf = gx->mFilter != VFILTER_NONE;
     GXRenderModeObj* rmode = CDeviceVI::getRenderModeObj();
@@ -161,10 +162,10 @@ inline void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
     GXCopyDisp(pDestFrameBuffer, spInstance->unk274);
 }
 
-inline void CDeviceGX::anotherInline(){
-    UnkClass_80447598::func_804476E8(someString);
+void CDeviceGX::calculateCost(){
+    CStopwatchUtil::updateElapsedTime(someString);
     float temp = CDeviceVI::getVisPerFrame();
-    float temp2 = UnkClass_80447598::func_804477E8(someString);
+    float temp2 = CStopwatchUtil::getElapsedTime(someString);
     lbl_80667F70 = temp2/temp;
 }
 
@@ -177,7 +178,7 @@ void CDeviceGX::copyEfb(void* pDestFrameBuffer){
     }else{
         copyEfbToXfb(pDestFrameBuffer);
         GXDrawDone();
-        anotherInline();
+        calculateCost();
     }
 }
 
@@ -241,9 +242,9 @@ bool CDeviceGX::wkStandbyLogout(){
 
 void CDeviceGX::drawSyncCallback(u16 token){
     if(token == token1){
-        UnkClass_80447598::func_804475E4(someString);
+        CStopwatchUtil::entry(someString);
     }else if(token == token2){
-        anotherInline();
+        calculateCost();
     }
 }
 

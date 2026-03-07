@@ -1,6 +1,7 @@
 #include "kyoshin/cf/CfPadTask.hpp"
 #include "kyoshin/code_8007C0F8.hpp"
 #include <revolution/KPAD.h>
+#include <revolution/PAD.h>
 
 namespace cf{
 
@@ -34,13 +35,13 @@ namespace cf{
         return lbl_80666D34;
     }
 
-    void CfPadTask::IHBMCallback_UnkInline1(){
+    void CfPadTask::onInitHbm(){
         if(func_80087208() != -1){
             KPADEnableDPD();
         }
     }
 
-    void CfPadTask::IHBMCallback_UnkInline2(){
+    void CfPadTask::onDeleteHbm(){
         if(func_80087208() != -1){
             KPADDisableDPD();
         }

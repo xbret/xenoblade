@@ -11,8 +11,8 @@
 class IHBMCallback {
 public:
     virtual ~IHBMCallback(){}
-    virtual void IHBMCallback_UnkInline1() = 0;
-    virtual void IHBMCallback_UnkInline2() = 0;
+    virtual void onInitHbm() = 0;
+    virtual void onDeleteHbm() = 0;
 };
 
 //size: 0x268

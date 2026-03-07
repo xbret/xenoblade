@@ -2,7 +2,7 @@
 #include "monolib/lib.hpp"
 #include "monolib/work.hpp"
 #include "monolib/core.hpp"
-#include <string.h>
+#include <cstring>
 
 CDeviceClock* CDeviceClock::spInstance;
 
@@ -16,7 +16,7 @@ mUpdateTime(0),
 mFrameStartTime(0),
 mFrameDuration(0) {
     spInstance = this;
-    memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
+    std::memset((void*)&mCalendar, 0, sizeof(OSCalendarTime));
     unk1F0 = getTimeNow();
     unk1C8 |= 1;
     mFrameList.reserve(mAllocHandle, 16);
@@ -64,7 +64,7 @@ void CDeviceClock::wkUpdate(){
 }
 
 bool CDeviceClock::wkStandbyLogin(){
-    UnkClass_80447598::func_80447598();
+    CStopwatchUtil::initialize();
     return CWorkThread::wkStandbyLogin(); //Call base
 }
 

@@ -14,4 +14,3 @@
 #include "monolib/core/CViewFrame.hpp"
 #include "monolib/core/CViewRoot.hpp"
 #include "monolib/core/UnkClass_804561AC.hpp"
-#include "monolib/core/UnkClass_80447598.hpp"

@@ -47,8 +47,8 @@ public:
         unk260 = f;
     }
 
-    static void copyEfbToXfb(void* pDestFrameBuffer);
-    static void anotherInline();
+    static inline void copyEfbToXfb(void* pDestFrameBuffer);
+    static inline void calculateCost();
 
     static inline CDeviceGX* create(const char* pName, CWorkThread* pParent){
         CDeviceGX* device = new (CWorkThreadSystem::getWorkMem()) CDeviceGX(pName, pParent);
