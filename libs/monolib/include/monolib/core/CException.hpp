@@ -6,7 +6,7 @@
 class IGameException {
 public:
     virtual ~IGameException(){}
-    virtual bool IGameException_UnkVirtualFunc1(u32 r4) = 0;
+    virtual bool gameExceptionCB(u32 r4) = 0;
 };
 
 class CException : public CWorkThread {

@@ -45,14 +45,14 @@ int pad_enable(VMThread* pThread) {
     int temp_r31 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
     BOOL temp_r3 = vmArgBoolGet(3, vmArgPtrGet(pThread, 2));
     
-    if (!(UnkClass_80574F50::lbl_80666728 & 0x01000000)) {
+    if (!(UnkClass_80574F50::sUnkFlags & 0x01000000)) {
         BOOL temp_r31_2 = temp_r3 == 0;
         func_80086DC0(temp_r31, !temp_r31_2);
-        u32 var_r3 = UnkClass_80574F50::lbl_80666728 & ~0x20000;
+        u32 var_r3 = UnkClass_80574F50::sUnkFlags & ~0x20000;
         if (temp_r31_2 != 0) {
-            var_r3 = UnkClass_80574F50::lbl_80666728 | 0x20000;
+            var_r3 = UnkClass_80574F50::sUnkFlags | 0x20000;
         }
-        UnkClass_80574F50::lbl_80666728 = var_r3;
+        UnkClass_80574F50::sUnkFlags = var_r3;
     }
     return 0;
 }

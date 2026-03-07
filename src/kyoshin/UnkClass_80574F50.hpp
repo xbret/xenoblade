@@ -8,6 +8,15 @@ class UnkClass_80574F50{
 public:
     static UnkClass_80574F50* getInstance();
 
+    static bool checkUnkFlag(int bit){
+        return sUnkFlags & (1 << bit);
+    }
+
+    static void setUnkFlag(int bit, bool state){
+        if(state == true) sUnkFlags |= (1 << bit);
+        else sUnkFlags &= ~(1 << bit);
+    }
+
     u32 unk0;
     u32 unk4;
     u32 unk8;
@@ -32,5 +41,5 @@ public:
     u32 unkB0;
     u32 unkB4;
 
-    static u32 lbl_80666728;
+    static u32 sUnkFlags;
 };

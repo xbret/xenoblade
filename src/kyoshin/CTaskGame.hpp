@@ -57,7 +57,7 @@ public:
     virtual void Term();
     virtual void ITitleMenu__UnkVirtualFunc1();
     virtual void IErrMesWinSel__UnkVirtualFunc1();
-    virtual bool IGameException_UnkVirtualFunc1(u32 r4);
+    virtual bool gameExceptionCB(u32 r4);
 
     //0x0: vtable (CTTask)
     //0x4-3C: CProcess
