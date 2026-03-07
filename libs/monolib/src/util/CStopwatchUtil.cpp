@@ -1,4 +1,5 @@
 #include "monolib/core.hpp"
+#include "monolib/device.hpp"
 #include <revolution/OS.h>
 #include <cstring>
 
@@ -47,24 +48,30 @@ void CStopwatchUtil::entry(const char* pStr){
     }
 }
 
-//Updates the elapsed time for the stopwatch entry matching the given name.
-void CStopwatchUtil::updateElapsedTime(const char* pStr){
+/* Updates the total cost time for the stopwatch entry matching the given name.
+Note: This function expects that the stopwatch is created at the start of the frame,
+then for this function to be run at the end. */
+void CStopwatchUtil::updateCostTime(const char* pStr){
     StopwatchEntry* entry = findEntry(pStr);
 
     if(entry != nullptr){
         int ticks = OS_TICKS_DELTA(OSGetTime(), entry->mTime);
-        //Why is it limited to 1 second?
+        /* Why is it limited to 1 second? Also a bit strange they don't just directly convert
+        down to seconds. Maybe they used to store microseconds somewhere? */
         u32 elapsedUsec = OS_TICKS_TO_USEC(ticks) % 1000000;
-        entry->unk20 = elapsedUsec/(1000000.0f/60.0f);
+        /* Divide by 1000000 to get seconds, and multiply by the system framerate to get
+        the approximate total time needed for one second. */
+        entry->mCostTime = elapsedUsec/(1000000.0f/CDeviceVI::NTSC_VPS);
     }
 }
 
-/* Gets the elapsed time for the stopwatch entry matching the given name,
+/* Gets the cost time for the stopwatch entry matching the given name,
 and also removes it from the list. */
-float CStopwatchUtil::getElapsedTime(const char* pStr){
+float CStopwatchUtil::getCostTime(const char* pStr){
     StopwatchEntry* entry = findEntry(pStr);
 
     if(entry == nullptr) return 0;
+    //Disable this entry, and return the cost time
     entry->mFlags = 0;
-    return entry->unk20;
+    return entry->mCostTime;
 }

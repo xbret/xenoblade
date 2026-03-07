@@ -8,15 +8,6 @@
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 
-/* These values shouldn't be accessed directly, but some code does anyway so
-they're here instead of inside CDeviceVI. */
-static const int NTSC_VPS = 60;
-static const int PAL_VPS = 50;
-//2 VIs (vertical interrupts) per frame -> 30fps
-static const int VI_PER_FRAME = 2;
-static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
-static const double MS_PER_FRAME = 1.0/TARGET_FRAMERATE;
-
 //size: 0x2c0
 class CDeviceVI : public CDeviceBase, public IErrorWii {
 public:
@@ -116,6 +107,13 @@ public:
     static const int SCREEN_WIDTH = 640;
     static const int SCREEN_HEIGHT = 456;
 
+    static const int NTSC_VPS = 60;
+    static const int PAL_VPS = 50;
+    //2 VIs (vertical interrupts) per frame -> 30fps
+    static const int VI_PER_FRAME = 2;
+
+    static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
+
 private:
     enum Flags{
         VI_FLAG_0 = 0,
@@ -184,3 +182,6 @@ private:
     static ml::CPnt16 lbl_8065A6B8[];
     static bool sUseStaticHandle;
 };
+
+//Utility defines
+static const double MS_PER_FRAME = 1.0/CDeviceVI::TARGET_FRAMERATE;

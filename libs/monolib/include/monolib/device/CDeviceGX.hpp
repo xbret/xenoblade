@@ -90,6 +90,6 @@ private:
     static CGXCache* cacheInstance;
     static GXPixelFmt pixelFormat;
     static int gxHeapSize;
-    static float lbl_80667F70;
+    static float sCostTime;
     static const char* someString;
 };

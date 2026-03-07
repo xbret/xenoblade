@@ -197,6 +197,7 @@ struct CPadData {
     Unk511CFunc unk511C;
 };
 
+//Unofficial name
 class CPadManager {
     friend class CPad;
 public:

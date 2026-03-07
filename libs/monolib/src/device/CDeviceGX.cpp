@@ -7,7 +7,7 @@
 
 using namespace ml;
 
-float CDeviceGX::lbl_80667F70;
+float CDeviceGX::sCostTime;
 GXPixelFmt CDeviceGX::pixelFormat;
 CDeviceGX* CDeviceGX::spInstance;
 CGXCache* CDeviceGX::cacheInstance;
@@ -163,10 +163,11 @@ void CDeviceGX::copyEfbToXfb(void* pDestFrameBuffer){
 }
 
 void CDeviceGX::calculateCost(){
-    CStopwatchUtil::updateElapsedTime(someString);
-    float temp = CDeviceVI::getVisPerFrame();
-    float temp2 = CStopwatchUtil::getElapsedTime(someString);
-    lbl_80667F70 = temp2/temp;
+    CStopwatchUtil::updateCostTime(someString);
+    float visPerFrame = CDeviceVI::getVisPerFrame();
+    float costTime = CStopwatchUtil::getCostTime(someString);
+    //Correct the cost time to match the target framerate
+    sCostTime = costTime/visPerFrame;
 }
 
 
