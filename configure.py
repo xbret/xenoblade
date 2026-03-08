@@ -461,7 +461,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/cf/CfCamTargetIntf.cpp"),
             Object(NonMatching, "kyoshin/cf/CfCam.cpp"),
             Object(NonMatching, "kyoshin/cf/CfCamEvent_1.cpp"),
-            Object(NonMatching, "kyoshin/code_8007C0F8.cpp"),
+            Object(NonMatching, "kyoshin/cf/CfGameManager.cpp"),
             Object(NonMatching, "kyoshin/cf/CtrlEnemy.cpp"),
             Object(NonMatching, "kyoshin/cf/CtrlMoveBase.cpp"),
             Object(NonMatching, "kyoshin/cf/CtrlMoveEne.cpp"),

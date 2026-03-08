@@ -1,6 +1,5 @@
 #include "kyoshin/cf/CTaskCulling.hpp"
-#include "kyoshin/cf/UnkClass_8007DAE0.hpp"
-#include "kyoshin/code_8007C0F8.hpp"
+#include "kyoshin/cf/CfGameManager.hpp"
 #include "kyoshin/code_800AA008.hpp"
 #include <cstring>
 
@@ -75,7 +74,7 @@ namespace cf{
 
         func_801A2C94();
 
-        UNKTYPE* r3 = func_80083298();
+        UNKTYPE* r3 = cf::CfGameManager::func_80083298();
         u32 r4, r5, r6, r7;
 
         func_800AA318(*(UNKTYPE**)((u32)r3 + 0x70), &r4, &r5, &r6, &r7);
@@ -109,11 +108,11 @@ namespace cf{
     }
 
     void CTaskCulling::Init(){
-        UnkClass_8007DAE0::spScene->addRenderCB(this, 1, 0);
+        cf::CfGameManager::spScene->addRenderCB(this, 1, 0);
         mOccCulling.func_801A06F8(mtl::MemManager::getHandleMEM2(), 0x8000);
     }
     void CTaskCulling::Term(){
-        CScnNw4r* scene = UnkClass_8007DAE0::spScene;
+        CScnNw4r* scene = cf::CfGameManager::spScene;
         if(scene != nullptr){
             scene->removeRenderCB(this);
         }

@@ -232,7 +232,7 @@ kyoshin/cf/CfCamEvent_1.cpp:
 	.text       start:0x800758E8 end:0x8007CA94
 	.ctors      start:0x804F9FE0 end:0x804F9FE4
 
-kyoshin/code_8007C0F8.cpp:
+kyoshin/cf/CfGameManager.cpp:
 	extab       start:0x8000847C end:0x80008B0C
 	extabindex  start:0x80023B0C end:0x800242D4
 	.text       start:0x8007CA94 end:0x80087F80

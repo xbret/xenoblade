@@ -1,19 +1,17 @@
 #include "kyoshin/help/CHelp_Target.hpp"
-#include "kyoshin/UnkClass_80574F50.hpp"
+#include "kyoshin/cf/CfGameManager.hpp"
 #include "kyoshin/cf/object/CfObjectPc.hpp"
 
-extern cf::CfObjectMove* func_80082D54(int playerIndex);
 extern cf::CfObjectPc* func_800BFC68(cf::CfObjectMove* objMove);
-extern UNKWORD func_800829B8();
 extern UNKWORD func_8006EF04(UNKWORD r3);
 
 namespace cf{
     bool CHelp_Target::CHelp_UnkVirtualFunc3(){
-        CfObjectMove* objMove = func_80082D54(0);
+        CfObjectMove* objMove = cf::CfGameManager::func_80082D54(0);
         CfObjectPc* objPc = func_800BFC68(objMove);
-        if(func_800829B8() != 0) return false;
+        if(cf::CfGameManager::func_800829B8() != 0) return false;
         
-        UnkClass_80574F50* unused = UnkClass_80574F50::getInstance(); //sure, just don't use it
+        CfGameManager* unused = CfGameManager::getInstance(); //sure, just don't use it
         
         if(func_8006EF04(0x4000000) != 0) return false;
         if(objPc == nullptr) return false;

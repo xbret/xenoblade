@@ -1,7 +1,6 @@
 #include "kyoshin/plugin/pluginPad.hpp"
 #include "monolib/core.hpp"
-#include "kyoshin/UnkClass_80574F50.hpp"
-#include "kyoshin/code_8007C0F8.hpp"
+#include "kyoshin/cf/CfGameManager.hpp"
 
 static PluginFuncData sPluginPadFuncs[] = {
     {"get", pad_get},
@@ -42,17 +41,20 @@ int pad_get(VMThread* pThread) {
 }
 
 int pad_enable(VMThread* pThread) {
-    int temp_r31 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
-    BOOL temp_r3 = vmArgBoolGet(3, vmArgPtrGet(pThread, 2));
+    int padIndex = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
+    BOOL enable = vmArgBoolGet(3, vmArgPtrGet(pThread, 2));
     
-    if (!(UnkClass_80574F50::sUnkFlags & 0x01000000)) {
-        BOOL temp_r31_2 = temp_r3 == 0;
-        func_80086DC0(temp_r31, !temp_r31_2);
-        u32 var_r3 = UnkClass_80574F50::sUnkFlags & ~0x20000;
-        if (temp_r31_2 != 0) {
-            var_r3 = UnkClass_80574F50::sUnkFlags | 0x20000;
+    if (!(cf::CfGameManager::checkUnkFlag(24))) {
+        //You can just use the original variable...?
+        bool dontEnable = enable == false;
+        cf::CfGameManager::enablePad(padIndex, !dontEnable);
+
+        //TODO: Probably an inline?
+        u32 newFlags = cf::CfGameManager::sUnkFlags & ~(1 << 17);
+        if (dontEnable) {
+            newFlags = cf::CfGameManager::sUnkFlags | (1 << 17);
         }
-        UnkClass_80574F50::sUnkFlags = var_r3;
+        cf::CfGameManager::sUnkFlags = newFlags;
     }
     return 0;
 }

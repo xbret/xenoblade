@@ -1,6 +1,5 @@
 #include "kyoshin/cf/CfPadTask.hpp"
-#include "kyoshin/code_8007C0F8.hpp"
-#include "kyoshin/UnkClass_80574F50.hpp"
+#include "kyoshin/cf/CfGameManager.hpp"
 #include "monolib/math.hpp"
 #include <revolution/KPAD.h>
 #include <revolution/PAD.h>
@@ -67,17 +66,17 @@ namespace cf{
         }
     }
 
-    void CfPadTask::func_801C1C04(CfPadTask_UnkStruct1* r4, CfPadTask_UnkStruct1* r5){
+    void CfPadTask::func_801C1C04(CfPadData* r4, CfPadData* r5){
         u32 flags = r4->unkF8;
         r4->unkFC = r4->unkF8;
-        r4->unkF8 = r5->unk0.unk0;
-        r4->unk0 = r5->unk0;
+        r4->unkF8 = r5->mPad.mHeldButtonFlags;
+        r4->mPad = r5->mPad;
 
-        if(ml::math::abs(r4->unk0.unk60) < 0.5f){
+        if(ml::math::abs(r4->mPad.mLStickXRaw) < 0.5f){
             r4->unkF8 &= ~0x6000;
         }
 
-        if(ml::math::abs(r4->unk0.unk64) < 0.5f){
+        if(ml::math::abs(r4->mPad.mLStickYRaw) < 0.5f){
             r4->unkF8 &= ~0x18000;
         }
 
@@ -120,13 +119,13 @@ namespace cf{
             if((lbl_80666D31 >= 30 && lbl_80666D30 != 0) || lbl_80666D32 != 0){
                 if(lbl_80666D32 != 0) return 1;
 
-                if(UnkClass_80574F50::checkUnkFlag(28)){
+                if(CfGameManager::checkUnkFlag(28)){
                     if(lbl_80666D30 == 1) return 2;
                     else if(lbl_80666D30 == 2) return 3;
                     else if(lbl_80666D30 == 3) return 4;
                 }
             }
-        }else if(lbl_80666D31 >= 30 && UnkClass_80574F50::checkUnkFlag(28)){
+        }else if(lbl_80666D31 >= 30 && CfGameManager::checkUnkFlag(28)){
             if(lbl_80666D30 == 3) return 4;
         }
         
@@ -134,13 +133,13 @@ namespace cf{
     }
 
     void CfPadTask::onInitHbm(){
-        if(func_80087208() != -1){
+        if(cf::CfGameManager::func_80087208() != -1){
             KPADEnableDPD();
         }
     }
 
     void CfPadTask::onDeleteHbm(){
-        if(func_80087208() != -1){
+        if(cf::CfGameManager::func_80087208() != -1){
             KPADDisableDPD();
         }
     }

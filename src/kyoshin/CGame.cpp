@@ -1,6 +1,7 @@
 #include "kyoshin/CGame.hpp"
 #include "kyoshin/cf/CTaskREvent.hpp"
 #include "kyoshin/cf/CBattleManager.hpp"
+#include "kyoshin/cf/CfGameManager.hpp"
 #include "kyoshin/CTaskGame.hpp"
 #include "kyoshin/code_80135FDC.hpp"
 #include "monolib/lib.hpp"
@@ -13,7 +14,6 @@
 
 using namespace ml;
 
-extern u32 func_8007E1B4();
 extern void func_801BF93C();
 extern float func_801C0014();
 extern void func_801BFFAC(float f1, float f2);
@@ -286,7 +286,7 @@ bool CGame::wkStandbyExceptionRetry(u32 wid){
 }
 
 void CGame::OnPauseTrigger(bool paused){
-    if(func_8007E1B4() != 0){
+    if(cf::CfGameManager::func_8007E1B4()){
         if(paused){
             if(unk228 == 0){
                 unk224 = func_801C0014();
@@ -323,7 +323,7 @@ void CGame::OnPauseTrigger(bool paused){
 
 void CGame::onExit(){
     if(spInstance != nullptr){
-        if(func_8007E1B4() != 0){
+        if(cf::CfGameManager::func_8007E1B4()){
             func_801BF93C();
         }
     }

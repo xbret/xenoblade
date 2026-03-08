@@ -350,15 +350,15 @@ kyoshin/cf/CfCamEvent_1.cpp:
 	.sbss       start:0x806666F0 end:0x806666F8
 	.sdata2     start:0x80668CA0 end:0x80668D20
 
-kyoshin/code_8007C0F8.cpp:
+kyoshin/cf/CfGameManager.cpp:
 	extab       start:0x8000841C end:0x80008AAC
 	extabindex  start:0x800238DC end:0x800240A4
 	.text       start:0x8007C0F8 end:0x800875A8
 	.ctors      start:0x804F5924 end:0x804F5928
-	.rodata     start:0x804F7020 end:0x804F7060
-	.data       start:0x8052AE18 end:0x8052AEF8
+	.rodata     start:0x804F7020 end:0x804F71C8
+	.data       start:0x8052AE18 end:0x8052AF08
 	.bss        start:0x805744D8 end:0x80575008
-	.sdata      start:0x806644B8 end:0x806644D8
+	.sdata      start:0x806644B8 end:0x806644F0
 	.sbss       start:0x806666F8 end:0x80666780
 	.sdata2     start:0x80668D20 end:0x80668DF8
 
@@ -366,9 +366,9 @@ kyoshin/cf/CtrlEnemy.cpp:
 	extab       start:0x80008AAC end:0x80008B54
 	extabindex  start:0x800240A4 end:0x8002411C
 	.text       start:0x800875A8 end:0x80088904
-	.rodata     start:0x804F7060 end:0x804F7200
-	.data       start:0x8052AEF8 end:0x8052AFD8
-	.sdata      start:0x806644D8 end:0x80664510
+	.rodata     start:0x804F71C8 end:0x804F7200
+	.data       start:0x8052AF08 end:0x8052AFD8
+	.sdata      start:0x806644F0 end:0x80664510
 	.sdata2     start:0x80668DF8 end:0x80668E20
 
 kyoshin/cf/CtrlMoveBase.cpp:
