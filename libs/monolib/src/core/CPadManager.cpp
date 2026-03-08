@@ -309,7 +309,7 @@ u32 CPad::calculateFlagValue(CWpadStatus* pPadStatus, const PadButtonMapping* pC
                 }
             }
 
-            if(pPadStatus->hold & WPAD_BUTTON_CL_RIGHT) flagValue |= PAD_INPUT_HOME;
+            if(pPadStatus->hold & WPAD_BUTTON_CL_RIGHT) flagValue |= PAD_INPUT_FLAG_HOME;
             break;
         }
         case PAD_TYPE_CORE:
@@ -332,14 +332,14 @@ u32 CPad::calculateFlagValue(CWpadStatus* pPadStatus, const PadButtonMapping* pC
 
 void CPad::updateFlagValues(u32 buttonFlags){
     //Set digital joystick direction inputs using the deadzone for each stick
-    if(mLStickXRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_LEFT;
-    if(mLStickXRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_RIGHT;
-    if(mLStickYRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_DOWN;
-    if(mLStickYRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_LSTICK_UP;
-    if(mRStickXRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_LEFT;
-    if(mRStickXRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_RIGHT;
-    if(mRStickYRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_DOWN;
-    if(mRStickYRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_RSTICK_UP;
+    if(mLStickXRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_LSTICK_LEFT;
+    if(mLStickXRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_LSTICK_RIGHT;
+    if(mLStickYRaw <= -CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_LSTICK_DOWN;
+    if(mLStickYRaw > CPadManager::spPadData->mConfig.mLStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_LSTICK_UP;
+    if(mRStickXRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_RSTICK_LEFT;
+    if(mRStickXRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_RSTICK_RIGHT;
+    if(mRStickYRaw <= -CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_RSTICK_DOWN;
+    if(mRStickYRaw > CPadManager::spPadData->mConfig.mRStickDeadzone) buttonFlags |= PAD_INPUT_FLAG_RSTICK_UP;
 
     //Update the button flag values
     mLongHoldButtonFlags = 0;
@@ -352,7 +352,7 @@ void CPad::updateFlagValues(u32 buttonFlags){
     mShortPressButtonFlags = 0;
 
     //Update the button hold timers, and all the additional button flag values
-    u32 bit = PAD_INPUT_LEFT;
+    u32 bit = PAD_INPUT_FLAG_LEFT;
 
     for(int i = 0; i < MAX_PAD_INPUT_FLAGS; i++){
         if(buttonFlags & bit){
@@ -403,38 +403,38 @@ void CPadManager::updatePadInputs(){
     The entry with all zeroes acts as a terminator
     */
     const PadButtonMapping sWiimoteMaskValues[NUM_BUTTONS_WIIMOTE_NUNCHUCK] = {
-        {WPAD_BUTTON_LEFT, PAD_INPUT_LEFT},
-        {WPAD_BUTTON_RIGHT, PAD_INPUT_RIGHT},
-        {WPAD_BUTTON_UP, PAD_INPUT_UP},
-        {WPAD_BUTTON_DOWN, PAD_INPUT_DOWN},
-        {WPAD_BUTTON_A, PAD_INPUT_CORE_A},
-        {WPAD_BUTTON_B, PAD_INPUT_CORE_B},
-        {WPAD_BUTTON_1, PAD_INPUT_1},
-        {WPAD_BUTTON_2, PAD_INPUT_2},
-        {WPAD_BUTTON_HOME, PAD_INPUT_HOME},
-        {WPAD_BUTTON_PLUS, PAD_INPUT_PLUS},
-        {WPAD_BUTTON_MINUS, PAD_INPUT_MINUS},
-        {WPAD_BUTTON_FS_Z, PAD_INPUT_FS_Z},
-        {WPAD_BUTTON_FS_C, PAD_INPUT_FS_C},
+        {WPAD_BUTTON_LEFT, PAD_INPUT_FLAG_LEFT},
+        {WPAD_BUTTON_RIGHT, PAD_INPUT_FLAG_RIGHT},
+        {WPAD_BUTTON_UP, PAD_INPUT_FLAG_UP},
+        {WPAD_BUTTON_DOWN, PAD_INPUT_FLAG_DOWN},
+        {WPAD_BUTTON_A, PAD_INPUT_FLAG_CORE_A},
+        {WPAD_BUTTON_B, PAD_INPUT_FLAG_CORE_B},
+        {WPAD_BUTTON_1, PAD_INPUT_FLAG_1},
+        {WPAD_BUTTON_2, PAD_INPUT_FLAG_2},
+        {WPAD_BUTTON_HOME, PAD_INPUT_FLAG_HOME},
+        {WPAD_BUTTON_PLUS, PAD_INPUT_FLAG_PLUS},
+        {WPAD_BUTTON_MINUS, PAD_INPUT_FLAG_MINUS},
+        {WPAD_BUTTON_FS_Z, PAD_INPUT_FLAG_FS_Z},
+        {WPAD_BUTTON_FS_C, PAD_INPUT_FLAG_FS_C},
         {0, 0}
     };
 
     const PadButtonMapping sClassicMaskValues[NUM_BUTTONS_CLASSIC] = {
-        {WPAD_BUTTON_CL_LEFT, PAD_INPUT_LEFT},
-        {WPAD_BUTTON_CL_RIGHT, PAD_INPUT_RIGHT},
-        {WPAD_BUTTON_CL_UP, PAD_INPUT_UP},
-        {WPAD_BUTTON_CL_DOWN, PAD_INPUT_DOWN},
-        {WPAD_BUTTON_CL_HOME, PAD_INPUT_HOME},
-        {WPAD_BUTTON_CL_PLUS, PAD_INPUT_PLUS},
-        {WPAD_BUTTON_CL_MINUS, PAD_INPUT_MINUS},
-        {WPAD_BUTTON_CL_A, PAD_INPUT_CLASSIC_A},
-        {WPAD_BUTTON_CL_B, PAD_INPUT_CLASSIC_B},
-        {WPAD_BUTTON_CL_X, PAD_INPUT_CLASSIC_X},
-        {WPAD_BUTTON_CL_Y, PAD_INPUT_CLASSIC_Y},
-        {WPAD_BUTTON_CL_L, PAD_INPUT_CLASSIC_L},
-        {WPAD_BUTTON_CL_R, PAD_INPUT_CLASSIC_R},
-        {WPAD_BUTTON_CL_ZL, PAD_INPUT_CLASSIC_ZL},
-        {WPAD_BUTTON_CL_ZR, PAD_INPUT_CLASSIC_ZR},
+        {WPAD_BUTTON_CL_LEFT, PAD_INPUT_FLAG_LEFT},
+        {WPAD_BUTTON_CL_RIGHT, PAD_INPUT_FLAG_RIGHT},
+        {WPAD_BUTTON_CL_UP, PAD_INPUT_FLAG_UP},
+        {WPAD_BUTTON_CL_DOWN, PAD_INPUT_FLAG_DOWN},
+        {WPAD_BUTTON_CL_HOME, PAD_INPUT_FLAG_HOME},
+        {WPAD_BUTTON_CL_PLUS, PAD_INPUT_FLAG_PLUS},
+        {WPAD_BUTTON_CL_MINUS, PAD_INPUT_FLAG_MINUS},
+        {WPAD_BUTTON_CL_A, PAD_INPUT_FLAG_CLASSIC_A},
+        {WPAD_BUTTON_CL_B, PAD_INPUT_FLAG_CLASSIC_B},
+        {WPAD_BUTTON_CL_X, PAD_INPUT_FLAG_CLASSIC_X},
+        {WPAD_BUTTON_CL_Y, PAD_INPUT_FLAG_CLASSIC_Y},
+        {WPAD_BUTTON_CL_L, PAD_INPUT_FLAG_CLASSIC_L},
+        {WPAD_BUTTON_CL_R, PAD_INPUT_FLAG_CLASSIC_R},
+        {WPAD_BUTTON_CL_ZL, PAD_INPUT_FLAG_CLASSIC_ZL},
+        {WPAD_BUTTON_CL_ZR, PAD_INPUT_FLAG_CLASSIC_ZR},
         {0, 0}
     };
 
