@@ -4,6 +4,9 @@
 #include "kyoshin/cf/object/CfObjectMove.hpp"
 #include "monolib/scn.hpp"
 
+/* TODO: it's possible this file contains multiple separate classes, either just all being put in here,
+or due to being in separate files, but compiled together in one file (unity compilation). For now,
+to make things simpler, everything exists in a single class. */
 namespace cf {
 
     //min size: 0xb8
