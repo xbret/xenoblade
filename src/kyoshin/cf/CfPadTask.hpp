@@ -9,8 +9,6 @@
 
 namespace cf {
 
-    /* Not sure, but it seems like this class inherits IGameException
-    (it inherits some interface related to exception handling) */
     class CfPadTask : public CTTask<CfPadTask>, public IGameException, public IHBMCallback {
     public:
         CfPadTask();

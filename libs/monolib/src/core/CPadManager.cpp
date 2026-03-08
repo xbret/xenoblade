@@ -237,11 +237,11 @@ void CPad::setAcceleration(CWpadStatus* pPadStatus){
     switch(mPadType){
         case PAD_TYPE_CORE ... PAD_TYPE_7:
             //Wii controllers
-            mAcc.x = pPadStatus->acc.x;
-            mAcc.y = pPadStatus->acc.y;
-            mAcc.z = pPadStatus->acc.z;
-            mAccValue = pPadStatus->acc_value;
-            mAccSpeed = pPadStatus->acc_speed;
+            mWiimoteAccelData.mAcc.x = pPadStatus->acc.x;
+            mWiimoteAccelData.mAcc.y = pPadStatus->acc.y;
+            mWiimoteAccelData.mAcc.z = pPadStatus->acc.z;
+            mWiimoteAccelData.mAccValue = pPadStatus->acc_value;
+            mWiimoteAccelData.mAccSpeed = pPadStatus->acc_speed;
             break;
         default:
             break;
@@ -251,11 +251,11 @@ void CPad::setAcceleration(CWpadStatus* pPadStatus){
     switch((u32)mPadType){
         case PAD_TYPE_FS:
         case PAD_TYPE_6:
-            mNunchuckAcc.x = pPadStatus->ex_status.fs.acc.x;
-            mNunchuckAcc.y = pPadStatus->ex_status.fs.acc.y;
-            mNunchuckAcc.z = pPadStatus->ex_status.fs.acc.z;
-            mNunchuckAccValue = pPadStatus->ex_status.fs.acc_value;
-            mNunchuckAccSpeed = pPadStatus->ex_status.fs.acc_speed;
+            mNunchuckAccelData.mAcc.x = pPadStatus->ex_status.fs.acc.x;
+            mNunchuckAccelData.mAcc.y = pPadStatus->ex_status.fs.acc.y;
+            mNunchuckAccelData.mAcc.z = pPadStatus->ex_status.fs.acc.z;
+            mNunchuckAccelData.mAccValue = pPadStatus->ex_status.fs.acc_value;
+            mNunchuckAccelData.mAccSpeed = pPadStatus->ex_status.fs.acc_speed;
             break;
         default:
             break;
@@ -266,30 +266,30 @@ void CPad::setMiscValues(CWpadStatus* pPadStatus){
     switch(mPadType){
         case PAD_TYPE_CORE ... PAD_TYPE_7:
             //Wii controllers
-            mDpdValidFg = pPadStatus->dpd_valid_fg;
-            if(mDpdValidFg > 0){
-                mPos.x = pPadStatus->pos.x * PAD_WIIMOTE_X_POS_SCALE;
-                mPos.y = pPadStatus->pos.y * PAD_WIIMOTE_Y_POS_SCALE;
-                mPos.z = 0;
+            mWpadData.mDpdValidFg = pPadStatus->dpd_valid_fg;
+            if(mWpadData.mDpdValidFg > 0){
+                mWpadData.mPos.x = pPadStatus->pos.x * PAD_WIIMOTE_X_POS_SCALE;
+                mWpadData.mPos.y = pPadStatus->pos.y * PAD_WIIMOTE_Y_POS_SCALE;
+                mWpadData.mPos.z = 0;
 
-                mVec.x = pPadStatus->vec.x;
-                mVec.y = pPadStatus->vec.y;
-                mVec.z = 0;
+                mWpadData.mVec.x = pPadStatus->vec.x;
+                mWpadData.mVec.y = pPadStatus->vec.y;
+                mWpadData.mVec.z = 0;
 
-                mSpeed = pPadStatus->speed;
+                mWpadData.mSpeed = pPadStatus->speed;
 
-                mHorizon.x = pPadStatus->horizon.x;
-                mHorizon.y = pPadStatus->horizon.y;
-                mHorizon.z = 0;
+                mWpadData.mHorizon.x = pPadStatus->horizon.x;
+                mWpadData.mHorizon.y = pPadStatus->horizon.y;
+                mWpadData.mHorizon.z = 0;
 
-                mHoriVec.x = pPadStatus->hori_vec.x;
-                mHoriVec.y = pPadStatus->hori_vec.y;
-                mHoriVec.z = 0;
+                mWpadData.mHoriVec.x = pPadStatus->hori_vec.x;
+                mWpadData.mHoriVec.y = pPadStatus->hori_vec.y;
+                mWpadData.mHoriVec.z = 0;
 
-                mHoriSpeed = pPadStatus->hori_speed;
-                mDist = pPadStatus->dist;
-                mDistVec = pPadStatus->dist_vec;
-                mDistSpeed = pPadStatus->dist_speed;
+                mWpadData.mHoriSpeed = pPadStatus->hori_speed;
+                mWpadData.mDist = pPadStatus->dist;
+                mWpadData.mDistVec = pPadStatus->dist_vec;
+                mWpadData.mDistSpeed = pPadStatus->dist_speed;
             }
             break;
         default:

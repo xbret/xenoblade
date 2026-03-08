@@ -91,9 +91,28 @@ namespace cf{
 
         if(r4->unkF8 & 0xF){
             if(r3 != 0){
+                r4->unkF8 &= ~0x1E000;
+            }
+        }else{
+            if(r6 != 0){
+                r4->unkF8 &= ~0x1E000;
+            }else{
                 r4->unkF8 &= ~0xF;
             }
         }
+
+        u32 r6_1 = r4->unkF8;
+        u32 r3_1 = 16;
+        u32 r7_1 = 1;
+        u32 r8_1 = 0;
+        flags ^= r6_1;
+        u32 r5_1 = 0;
+        flags = r6_1 & flags;
+        r4->unk100 = flags;
+        u32 unk104 = flags;
+
+
+
     }
 
     void CfPadTask::Move(){

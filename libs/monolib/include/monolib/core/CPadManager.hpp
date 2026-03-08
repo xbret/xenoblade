@@ -145,6 +145,27 @@ struct CWpadStatus : public KPADStatus {
 (Wiimote only, Wiimote + Nunchuck, Wiimote + Classic Controller). It was also used for
 Gamecube controllers, but the functionality was mostly removed in the release build. */
 struct CPad{
+    //Wiimote inputs
+    struct CWpadData{
+        ml::CVec3 mPos; //0x78
+        ml::CVec3 mVec; //0x84
+        float mSpeed; //0x90
+        ml::CVec3 mHorizon; //0x94
+        ml::CVec3 mHoriVec; //0xA0
+        float mHoriSpeed; //0xAC
+        float mDist; //0xB0
+        float mDistVec; //0xB4
+        float mDistSpeed; //0xB8
+
+        s8 mDpdValidFg; //0xBC
+    };
+
+    struct CAccelData{
+        ml::CVec3 mAcc; //0x0
+        float mAccValue; //0xC
+        float mAccSpeed; //0x10
+    };
+
     void setExtensionCB(s32 chan, s32 result);
     void setWiiPadType(s32 dev);
     void checkExtension(s32 chan);
@@ -174,7 +195,6 @@ struct CPad{
     u8 mRStickY; //0x5B
     u8 mLeftTriggerByte; //0x5C
     u8 mRightTriggerByte; //0x5D
-    u8 unk5E[2]; //padding?
 
     float mLStickXRaw; //0x60
     float mLStickYRaw; //0x64
@@ -183,32 +203,13 @@ struct CPad{
     float mLeftTriggerFloat; //0x70
     float mRightTriggerFloat; //0x74
 
-    //Wiimote inputs
-    ml::CVec3 mPos; //0x78
-    ml::CVec3 mVec; //0x84
-    float mSpeed; //0x90
-    ml::CVec3 mHorizon; //0x94
-    ml::CVec3 mHoriVec; //0xA0
-    float mHoriSpeed; //0xAC
-    float mDist; //0xB0
-    float mDistVec; //0xB4
-    float mDistSpeed; //0xB8
-
-    s8 mDpdValidFg; //0xBC
-    u8 unkBD[3]; //padding?
-
-    //Acceleration values
-    ml::CVec3 mAcc; //0xC0
-    float mAccValue; //0xCC
-    float mAccSpeed; //0xD0
-    ml::CVec3 mNunchuckAcc; //0xD4
-    float mNunchuckAccValue; //0xE0
-    float mNunchuckAccSpeed; //0xE4
+    CWpadData mWpadData; //0x78
+    CAccelData mWiimoteAccelData; //0xC0
+    CAccelData mNunchuckAccelData; //0xD4
 
     u32 mPadType; //0xE8
     s8 mWpadErr; //0xEC
     bool mConnected; //0xED
-    u8 unkEE[0xF0 - 0xEE]; //padding?
     u32 mChannel; //0xF0
     float mMotorTimer; //0xF4
 };
