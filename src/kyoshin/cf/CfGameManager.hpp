@@ -2,7 +2,9 @@
 
 #include <types.h>
 #include "kyoshin/cf/object/CfObjectMove.hpp"
+#include "kyoshin/cf/CfPadData.hpp"
 #include "monolib/scn.hpp"
+#include "monolib/core.hpp"
 
 /* TODO: it's possible this file contains multiple separate classes, either just all being put in here,
 or due to being in separate files, but compiled together in one file (unity compilation). For now,
@@ -21,6 +23,12 @@ namespace cf {
         static u32 func_80087208();
         static UNKTYPE* func_80083298();
         static cf::CfObjectMove* func_80082D54(int playerIndex);
+        static u32 func_80086F44();
+        static int getCurrentPadChannel();
+        static void setCurrentPadPtr(const CPad* pPad, u32 r4);
+        static void setPad(int r3, CPad* pPad, u32 r5);
+        static CfPadData* getCfPadData();
+        static CPad* getCurrentPad();
 
 
         static bool checkUnkFlag(int bit){

@@ -52,6 +52,7 @@ public:
     static bool func_800426F0();
     void func_80042710();
     void func_80042720();
+    static bool func_8004368C();
     static CTaskGame* create(CView* pView, CWorkThread* pThread, int r5);
 
     virtual void Term();

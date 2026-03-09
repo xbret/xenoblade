@@ -25,33 +25,43 @@ namespace cf {
         static CfPadTask* create(CProcess* pParent);
 
         bool update();
-        int func_801C2A18(bool r4);
+        int checkForControllerError(bool r4);
 
-        static void func_801C1AD0();
+        static void func_801C1AD0(CPad* pPad, u32 r5, u32 r6);
         static void func_801C1B94(float f1);
         static bool func_801C1BC0();
         static void func_801C1BD8(float f1);
-        void func_801C1C04(CfPadData* r4, CfPadData* r5);
+        void updateCfPadData(CfPadData* r4, const CPad* r5);
         static u32 getWiimoteBattery();
-        static void wpadGetInfoCallback(int chan, int result);
+        static void wpadGetInfoCallback(s32 chan, s32 result);
 
         //0x0: vtable 1 (CTTask)
         //0x0-54: CTTask
         //0x54: vtable 2 (IGameException)
         //0x58: vtable 3 (IHBMCallback)
-        u32 unk5C;
-        u32 unk60;
-        u32 unk64;
+        int mErrorFrameCount; //0x5C
+        int mNoErrorFrameCount; //0x60
+        int mFrameCounter; //0x64
 
     private:
+        enum ControllerError{
+            ERROR_NONE,
+            ERROR_WIIMOTE_DISCONNECTED,
+            ERROR_NUNCHUCK_DISCONNECTED,
+            ERROR_CLASSIC_CONTROLLER_DISCONNECTED,
+            ERROR_NO_EXTENSION
+        };
+
+        static const int MAX_ERROR_FRAMES = 9;
+
         static u8 lbl_80666D30;
         static u8 lbl_80666D31;
-        static u8 lbl_80666D32;
+        static bool sMainPadIsGCController;
         static u8 lbl_80666D33;
 
         static u32 sWiimoteBattery;
         static u32 lbl_80666D3C;
-        static u32 lbl_80666D40;
+        static int lbl_80666D40;
         static float float_80666D44;
         static float float_80666D48;
 

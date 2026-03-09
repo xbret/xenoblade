@@ -247,23 +247,19 @@ void CGame::GameMain(){
 
 /* Creates a new error entry using the given error message and callback class. This is used specifically
 for the error messages related to controller related issues (e.g. controller disconnect). */
-void CGame::registerControllerErrorEntry(const wchar_t* message, UNKTYPE* r4, u32 param){
+void CGame::registerControllerErrorEntry(const wchar_t* message, IGameException* r4, u32 param){
     if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !spInstance->isThreadFlag0()){
         CException* exception = CException::func_80457CA4(spInstance, message, 5);
         if(exception != nullptr){
-            exception->mException = (IGameException*)r4;
+            exception->mException = r4;
             exception->unk204 = param;
         }
     }
 }
 
-/* This function gets triggered when a certain exception occurs (including controller related
-errors like a controller disconnect). If the work thread's type matches the one for CException,
-the corresponding function in the error handler class instance is called to handle the exception.
-
-In the case of controller errors, the class containing the error handler function is CfPadTask,
-which inherits from the type used for the error handler classes (seems to be IGameException,
-but unfortunately the RTTI doesn't specify the name.) */
+/* This function gets triggered when a controller exception occurs from CfPadTask. If the work thread's type
+matches the one for CException, the corresponding function in the error handler class instance is called to
+handle the exception. */
 bool CGame::wkStandbyExceptionRetry(u32 wid){
     if(isThreadFlag0()) return true;
     if(CLibHbm::func_8045DE00()) return false;

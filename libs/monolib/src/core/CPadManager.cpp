@@ -7,12 +7,6 @@ const float PAD_TRIGGER_SCALE = 150.0f;
 const int PAD_WIIMOTE_X_POS_SCALE = 320;
 const int PAD_WIIMOTE_Y_POS_SCALE = 210;
 
-//This is kind of ugly but better than hardcoded values I guess
-#define TURBO_HOLD_TIMER_THRESHOLD (int)(CDeviceVI::TARGET_FRAMERATE/3.0f)
-#define TURBO_INPUT_FRAMES (int)(CDeviceVI::TARGET_FRAMERATE * 0.1f)
-#define LONG_HOLD_TIMER_THRESHOLD (int)(CDeviceVI::TARGET_FRAMERATE * (2.0f/3.0f))
-#define SHORT_PRESS_MAX_FRAMES (int)(CDeviceVI::TARGET_FRAMERATE/6.0f)
-
 //Total number of buttons for different control styles
 const int NUM_BUTTONS_WIIMOTE_NUNCHUCK = 14;
 const int NUM_BUTTONS_CLASSIC = 16;

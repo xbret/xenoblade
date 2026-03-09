@@ -22,6 +22,12 @@ const int MAX_WII_CONTROLLERS = WPAD_MAX_CONTROLLERS;
 const int MAX_GC_CONTROLLERS = PAD_CHANMAX;
 const int TOTAL_CONTROLLERS = MAX_WII_CONTROLLERS + MAX_GC_CONTROLLERS;
 
+//This is kind of ugly but better than hardcoded values I guess
+#define TURBO_HOLD_TIMER_THRESHOLD (int)(CDeviceVI::TARGET_FRAMERATE/3.0f)
+#define TURBO_INPUT_FRAMES (int)(CDeviceVI::TARGET_FRAMERATE * 0.1f)
+#define LONG_HOLD_TIMER_THRESHOLD (int)(CDeviceVI::TARGET_FRAMERATE * (2.0f/3.0f))
+#define SHORT_PRESS_MAX_FRAMES (int)(CDeviceVI::TARGET_FRAMERATE/6.0f)
+
 enum PadType{
     PAD_TYPE_NONE,
     PAD_TYPE_GC, //Gamecube controller
@@ -103,6 +109,9 @@ enum PadInputFlags{
     PAD_INPUT_FLAG_CLASSIC_R = (1 << PAD_INPUT_CLASSIC_R),
     PAD_INPUT_FLAG_CLASSIC_ZL = (1 << PAD_INPUT_CLASSIC_ZL),
     PAD_INPUT_FLAG_CLASSIC_ZR = (1 << PAD_INPUT_CLASSIC_ZR),
+
+    PAD_INPUT_FLAG_DPAD = PAD_INPUT_FLAG_LEFT | PAD_INPUT_FLAG_RIGHT | PAD_INPUT_FLAG_UP | PAD_INPUT_FLAG_DOWN,
+    PAD_INPUT_FLAG_LSTICK = PAD_INPUT_FLAG_LSTICK_LEFT | PAD_INPUT_FLAG_LSTICK_RIGHT | PAD_INPUT_FLAG_LSTICK_UP | PAD_INPUT_FLAG_LSTICK_DOWN,
 
     MAX_PAD_INPUT_FLAGS = MAX_PAD_INPUT
 };
@@ -220,7 +229,6 @@ struct CPadData {
     //The first 4 are for Wii controllers, the last 4 are probably for GC controllers
     CPad mPads[TOTAL_CONTROLLERS]; //0x24
     CPad mDummyPad; //0x7E4
-    //TODO: this might just be the first connected Wii or GC controller
     CPad* mMainPad; //0x8DC
     CPad* mMainGCPad; //0x8E0
     u32 unk8E4; //0x8E4
