@@ -71,7 +71,7 @@ PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
     //Setup controller ports
 
     //Wii controllers
-    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
+    for(int i = 0; i < WPAD_MAX_CONTROLLERS; i++){
         KPADChannel channel = (KPADChannel)i; //Required for matching
         KPADEnableAimingMode(channel);
         KPADSetConnectCallback(channel, kpadConnectCallback);
@@ -79,8 +79,8 @@ PadUpdateFunc CPadManager::initialize(mtl::ALLOC_HANDLE handle){
     }
 
     //GC controllers
-    for(int i = 0; i < MAX_GC_CONTROLLERS; i++){
-        spPadData->mPads[MAX_WII_CONTROLLERS + i].mChannel = i;
+    for(int i = 0; i < PAD_CHANMAX; i++){
+        spPadData->mPads[WPAD_MAX_CONTROLLERS + i].mChannel = i;
     }
 
     KPADReset();
@@ -93,7 +93,7 @@ void CPadManager::destroy(){
     DELETE_OBJ(spPadData);
     
     //Reset the callbacks for each Wii controller port
-    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
+    for(int i = 0; i < WPAD_MAX_CONTROLLERS; i++){
         KPADSetConnectCallback(i, nullptr);
         WPADSetExtensionCallback(i, nullptr);
     }
@@ -181,7 +181,7 @@ void CPadManager::wpadExtensionCallback(s32 chan, s32 dev){
 
 void CPadManager::updatePadExtensions(){
     if(spPadData->mConfig.unk1C & 1){
-        for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
+        for(int i = 0; i < WPAD_MAX_CONTROLLERS; i++){
             KPADChannel channel = (KPADChannel)i; //Required for matching
             WPADSetExtensionCallback(channel, wpadExtensionCallback);
             CPad* r31 = getPadData(0, channel);
@@ -434,7 +434,7 @@ void CPadManager::updatePadInputs(){
 
     KPADResult result;
 
-    for(int i = 0; i < MAX_WII_CONTROLLERS; i++){
+    for(int i = 0; i < WPAD_MAX_CONTROLLERS; i++){
         KPADChannel channel = (KPADChannel)i;
 
         KPADReadEx(channel, &spPadData->mWpadStatuses[i], 16, &result);
@@ -534,11 +534,11 @@ CPad* CPadManager::getPadData(s32 type, s32 channel){
     switch(type){
         case PAD_SYSTEM_GC:
         //Gamecube controllers
-        if(channel < MAX_GC_CONTROLLERS) return &spPadData->mPads[MAX_WII_CONTROLLERS + channel];
+        if(channel < PAD_CHANMAX) return &spPadData->mPads[WPAD_MAX_CONTROLLERS + channel];
         break;
         case PAD_SYSTEM_WII:
         //Wii controllers
-        if(channel < MAX_WII_CONTROLLERS) return &spPadData->mPads[channel];
+        if(channel < WPAD_MAX_CONTROLLERS) return &spPadData->mPads[channel];
         break;
     }
 

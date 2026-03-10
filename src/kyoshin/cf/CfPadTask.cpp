@@ -12,7 +12,7 @@
 #include <cstring>
 
 namespace cf{
-    u8 CfPadTask::lbl_80666D30;
+    u8 CfPadTask::sMainPadExtension;
     u8 CfPadTask::lbl_80666D31;
     bool CfPadTask::sMainPadIsGCController;
     u8 CfPadTask::lbl_80666D33;
@@ -20,7 +20,7 @@ namespace cf{
     u32 CfPadTask::sWiimoteBattery;
     CfPadTask* CfPadTask::spInstance;
     u32 CfPadTask::lbl_80666D3C;
-    int CfPadTask::lbl_80666D40;
+    u32 CfPadTask::sMainPadType;
     float CfPadTask::float_80666D44;
     float CfPadTask::float_80666D48;
     WPADInfo CfPadTask::sWpadInfo;
@@ -34,7 +34,7 @@ namespace cf{
 
     CfPadTask::~CfPadTask(){
         lbl_80666D3C = 0;
-        lbl_80666D40 = 0;
+        sMainPadType = 0;
         CLibHbm::removeCallback(this);
     }
 
@@ -49,8 +49,24 @@ namespace cf{
         spInstance = nullptr;
     }
 
-    void CfPadTask::func_801C1AD0(CPad* pPad, u32 r5, u32 r6){
+    void CfPadTask::copyInputFlag(CPad* pPad, u32 r5, u32 r6){
+        if(pPad->mPressedButtonFlags & r5) pPad->mPressedButtonFlags |= r6;
+        else pPad->mPressedButtonFlags &= ~r6;
 
+        if(pPad->mTurboPressButtonFlags & r5) pPad->mTurboPressButtonFlags |= r6;
+        else pPad->mTurboPressButtonFlags &= ~r6;
+
+        if(pPad->mReleasedButtonFlags & r5) pPad->mReleasedButtonFlags |= r6;
+        else pPad->mReleasedButtonFlags &= ~r6;
+
+        if(pPad->mHeldButtonFlags & r5) pPad->mHeldButtonFlags |= r6;
+        else pPad->mHeldButtonFlags &= ~r6;
+
+        if(pPad->mLongHoldButtonFlags & r5) pPad->mLongHoldButtonFlags |= r6;
+        else pPad->mLongHoldButtonFlags &= ~r6;
+
+        if(pPad->mShortPressButtonFlags & r5) pPad->mShortPressButtonFlags |= r6;
+        else pPad->mShortPressButtonFlags &= ~r6;
     }
 
     void CfPadTask::func_801C1B94(float f1){
@@ -156,15 +172,19 @@ namespace cf{
     }
 
     bool CfPadTask::update(){
+        bool r22 = 0;
+        u32 systemType = PAD_SYSTEM_WII;
         u32 r20 = CfGameManager::func_80086F44();
-        u32 r19 = CfGameManager::getCurrentPadChannel();
+        u32 mainPadChannel = CfGameManager::getCurrentPadChannel();
         CDeviceRemotePad* remotePad = CDeviceRemotePad::getInstance();
         CPad* mainPad = CPadManager::getMainPad();
-        CPad* r18 = nullptr;
 
         if(mainPad->mPadType == PAD_TYPE_GC){
             sMainPadIsGCController = true;
+            mainPad = nullptr;
         }
+
+        sMainPadChannel = mainPadChannel;
 
         if(float_80666D44 > 0){
             r20 = 0;
@@ -174,18 +194,22 @@ namespace cf{
             }
         }
 
-        float_80666D48--;
-        r20 &= 0xFF9FF300;
-        if(float_80666D48 <= 0){
-            float_80666D48 = 0;
+        if(float_80666D48 > 0){
+            r20 &= ~(PAD_INPUT_FLAG_CORE_A | PAD_INPUT_FLAG_CORE_B | PAD_INPUT_FLAG_1 | PAD_INPUT_FLAG_2 | PAD_INPUT_FLAG_PLUS
+            | PAD_INPUT_FLAG_MINUS | PAD_INPUT_FLAG_CLASSIC_A | PAD_INPUT_FLAG_CLASSIC_B);
+            float_80666D48--;
+            if(float_80666D48 <= 0){
+                float_80666D48 = 0;
+            }
         }
 
-        if(r19 != -1){
-            r18 = CDeviceRemotePad::getPadData(r19);
-            if(r18 != nullptr){ //0x16C
+        if(mainPadChannel != -1){
+            mainPad = CDeviceRemotePad::getPadData(mainPadChannel);
+            //BUG: lbl_80666D33 is not properly initialized beforehand
+            if(mainPad != nullptr){ //0x16C
                 lbl_80666D33++;
-                if(!(lbl_80666D33 & 0x1F)){
-                    for(u32 i = 1; i < MAX_WII_CONTROLLERS; i++){
+                if(lbl_80666D33 % 32u == 0){
+                    for(u32 i = 1; i < WPAD_MAX_CONTROLLERS; i++){
                         CPad* pad = CDeviceRemotePad::getPadData(i);
                         if(pad != nullptr && pad->mConnected){
                             WPADDisconnect(i);
@@ -194,108 +218,150 @@ namespace cf{
                 }
 
                 if(lbl_80666D33 == 0){
-                    WPADGetInfoAsync(r18->mChannel, &sWpadInfo, &wpadGetInfoCallback);
+                    WPADGetInfoAsync(mainPad->mChannel, &sWpadInfo, &wpadGetInfoCallback);
                 }
                 
-                CLibHbm::func_8045D45C(r19);
+                CLibHbm::func_8045D45C(mainPadChannel);
             }
         }
 
         CfGameManager::setCurrentPadPtr(nullptr, -1);
 
-        switch(lbl_80666D40){
-            case 0:
-            case 2:
-                if(r18 != nullptr && r18->mConnected){
-                    if(r18->mPadType == PAD_TYPE_FS){
-                        lbl_80666D40 = PAD_TYPE_FS;
+        switch(sMainPadType){
+            case PAD_TYPE_NONE:
+            case PAD_TYPE_CORE:
+                if(mainPad != nullptr && mainPad->mConnected){
+                    if(mainPad->mPadType == PAD_TYPE_FS){
+                        sMainPadType = PAD_TYPE_FS;
                         CPadManager::setRightStickDeadzoneDefault();
-                    }else if(r18->mPadType == PAD_TYPE_CLASSIC){
-                        lbl_80666D40 = PAD_TYPE_CLASSIC;
+                    }else if(mainPad->mPadType == PAD_TYPE_CLASSIC){
+                        sMainPadType = PAD_TYPE_CLASSIC;
                         CPadManager::setRightStickDeadzone(0.3f);
-                    }else if(r18->mPadType == PAD_TYPE_CORE){
-                        lbl_80666D40 = PAD_TYPE_CORE;
+                    }else if(mainPad->mPadType == PAD_TYPE_CORE){
+                        sMainPadType = PAD_TYPE_CORE;
                         CPadManager::setRightStickDeadzoneDefault();
                     }
                 }
                 break;
         }
 
-        bool flag24 = CfGameManager::checkUnkFlag(24) != false;
-        if(flag24 && r18 != nullptr){
-            if(lbl_80666D40 <= PAD_TYPE_CLASSIC){
-                if(r18->mConnected && r18->mPadType <= PAD_TYPE_CLASSIC){
-                    if(r18->mPadType == PAD_TYPE_CLASSIC){
-                        lbl_80666D40 = PAD_TYPE_CLASSIC;
+        bool flag24 = CfGameManager::checkUnkFlag(24);
+        if(flag24 && mainPad != nullptr && (sMainPadType >= PAD_TYPE_CORE && sMainPadType <= PAD_TYPE_CLASSIC)){
+                if(mainPad->mConnected && (mainPad->mPadType >= PAD_TYPE_CORE && mainPad->mPadType <= PAD_TYPE_CLASSIC)){
+                    sMainPadType = mainPad->mPadType;
+                    if(sMainPadType == PAD_TYPE_CLASSIC){
                         CPadManager::setRightStickDeadzone(0.3f);
                     }else{
                         CPadManager::setRightStickDeadzoneDefault();
                     }
                 }
-            }
 
-            if(r18->mPadType <= PAD_TYPE_CLASSIC){
-                lbl_80666D3C = r18->mPadType;
+            if(mainPad->mPadType >= PAD_TYPE_FS && mainPad->mPadType <= PAD_TYPE_CLASSIC){
+                lbl_80666D3C = mainPad->mPadType;
             }else{
                 lbl_80666D3C = PAD_TYPE_NONE;
             }
-        }else if(flag24 && lbl_80666D40 <= PAD_TYPE_CLASSIC && lbl_80666D3C == PAD_TYPE_NONE){
-            lbl_80666D3C = lbl_80666D40;
+        }else if(!flag24 && (sMainPadType >= PAD_TYPE_FS && sMainPadType <= PAD_TYPE_CLASSIC) && lbl_80666D3C == PAD_TYPE_NONE){
+            lbl_80666D3C = sMainPadType;
         }
 
-        u32 r24 = r20 & 0x6000;
-        u32 r23 = r20 & 0x18000;
-    
-        //r17 = 0, r16 (i) = 0, r27 = 0, r28 = 2, r29 = 1, r26 = 9, r30 = 3, f29 = 0, f30 = 0.3, f31 = 0.7
-
         bool r17 = false;
-        u32 r21 = 0;
-        bool r22 = 0;
 
-        for(int i = 0; i < 8; i++){
-            if(i - 1 <= 2) continue;
-            if(r19 != -1 && i <= 3 && r19 != i) continue;
+        for(u32 i = 0; i < TOTAL_CONTROLLERS; i++){
+            //Exclude Wii controllers in ports 2-4
+            if(i >= MAX_WII_CONTROLLERS && i < WPAD_MAX_CONTROLLERS) continue;
+            //Skip over the channel for the current main controller
+            if(mainPadChannel != -1 && isWpadChannel(i) && mainPadChannel != i) continue;
 
-            CPad r1_8;
+            CPad newPad;
             CPad* pad = CDeviceRemotePad::getPadData(i);
-
             if(pad == nullptr) continue;
-            r1_8 = *pad;
-
-            u32 r4 = 0;
+            newPad = *pad;
             u32 padType = pad->mPadType;
-            if(padType == lbl_80666D40 || lbl_80666D40 == 2 || (padType == 2 && CfGameManager::checkUnkFlag(28))){
-                r4 = 1;
+            u32 result = 0;
+
+            if(padType == sMainPadType || sMainPadType == PAD_TYPE_CORE || (padType == PAD_TYPE_CORE && CfGameManager::checkUnkFlag(28))){
+                result = 1;
             }
 
-            if(r1_8.mConnected){
-                r4 = 0;
+            if(newPad.mConnected){
+                result = 0;
             }
 
-            if(i <= 3 && r1_8.mConnected && padType != 0){
-                r21 = 1;
+            if(isWpadChannel(i) && newPad.mConnected && padType != PAD_TYPE_NONE){
+                systemType = PAD_SYSTEM_GC;
                 sMainPadIsGCController = true;
             }
             
-            if(r4 != 0){
+            if(result != 0){
                 r17 = true;
-                if(padType == 4){
-                    func_801C1AD0(&r1_8, 32, 16);
-                    func_801C1AD0(&r1_8, 64, 32);
+                //Map the Wii A/B buttons to the classic controller A/B buttons
+                if(padType == PAD_TYPE_CLASSIC){
+                    copyInputFlag(&newPad, PAD_INPUT_FLAG_CLASSIC_A, PAD_INPUT_FLAG_CORE_A);
+                    copyInputFlag(&newPad, PAD_INPUT_FLAG_CLASSIC_B, PAD_INPUT_FLAG_CORE_B);
                 }
 
                 //0x554
 
-                r22 = 1;
+                newPad.mPressedButtonFlags &= r20;
+                newPad.mTurboPressButtonFlags &= r20;
+                newPad.mReleasedButtonFlags &= r20;
+                newPad.mHeldButtonFlags &= r20;
+                newPad.mLongHoldButtonFlags &= r20;
+                newPad.mShortPressButtonFlags &= r20;
+
+                if((r20 & (PAD_INPUT_FLAG_LSTICK_LEFT | PAD_INPUT_FLAG_LSTICK_RIGHT)) == 0){
+                    newPad.mLStickX = 0;
+                    newPad.mLStickXRaw = 0;
+                    newPad.mLeftTriggerFloat = 0;
+                    newPad.mRightTriggerFloat = 0;
+                }
+
+                if((r20 & (PAD_INPUT_FLAG_LSTICK_UP | PAD_INPUT_FLAG_LSTICK_DOWN)) == 0){
+                    newPad.mLStickY = 0;
+                    newPad.mLStickYRaw = 0;
+                }
+
+                if(newPad.mPadType == PAD_TYPE_CLASSIC){
+                    if(!(newPad.mHeldButtonFlags & 0x60000)){
+                        newPad.mRStickXRaw = 0;
+                    }else{
+                        if(newPad.mRStickXRaw >= 0){
+                            newPad.mRStickXRaw = (newPad.mRStickXRaw - 0.3f)/0.7f;
+                        }else{
+                            newPad.mRStickXRaw = -(ml::math::abs(newPad.mRStickXRaw) - 0.3f)/0.7f;
+                        }
+                    }
+
+                    //0x620
+
+                    if(!(newPad.mHeldButtonFlags & 0x180000)){
+                        newPad.mRStickYRaw = 0;
+                    }else{
+                        if(newPad.mRStickYRaw >= 0){
+                            newPad.mRStickYRaw = (newPad.mRStickYRaw - 0.3f)/0.7f;
+                        }else{
+                            newPad.mRStickYRaw = -(ml::math::abs(newPad.mRStickYRaw) - 0.3f)/0.7f;
+                        }
+                    }
+                }
+
+                //0x670
+
+                if(mainPad != nullptr && mainPad == pad && isWpadChannel(i)){
+                    CfGameManager::setCurrentPadPtr(CfGameManager::getPad(i), 0);
+                    r22 = 1;
+                    if(newPad.mPadType == PAD_TYPE_CLASSIC) sMainPadExtension = PAD_EXT_CLASSIC_CONTROLLER;
+                    if(newPad.mPadType == PAD_TYPE_FS) sMainPadExtension = PAD_EXT_NUNCHUCK;
+                    if(newPad.mPadType == PAD_TYPE_CORE) sMainPadExtension = PAD_EXT_NONE;
+                }
+            }else{
+                if(CDeviceRemotePad::getPadData(i) != CDeviceRemotePad::getMainGCPad()){
+                    std::memset(&newPad, 0, sizeof(CPad));
+                }
             }
 
-            //0x6c8
-
-            if(CDeviceRemotePad::getPadData(i) != CDeviceRemotePad::getMainGCPad()){
-                std::memset(&r1_8, 0, sizeof(CPad));
-            }
-
-            CfGameManager::setPad(i, &r1_8, r21);
+            CfGameManager::setPad(i, &newPad, systemType);
         }
 
         if(r17){
@@ -304,7 +370,8 @@ namespace cf{
             std::memset(CfGameManager::getCfPadData(), 0, sizeof(CfPadData));
         }
 
-        if(r21 == 0){
+        //BUG: lbl_80666D31 is not properly initialized beforehand
+        if(systemType == PAD_SYSTEM_WII){
             if(lbl_80666D31 != 0){
                 sMainPadIsGCController = true;
             }
@@ -314,11 +381,10 @@ namespace cf{
             if(lbl_80666D31 < 30){
                 lbl_80666D31++;
                 if((u8)lbl_80666D31 == 30){
-                    KPADDisableDPD(r19);
+                    KPADDisableDPD(mainPadChannel);
                 }
             }
         }
-
 
         return r22;
     }
@@ -344,17 +410,17 @@ namespace cf{
 
     int CfPadTask::checkForControllerError(bool r4){
         if(!r4){
-            if((lbl_80666D31 >= 30 && lbl_80666D30 != 0) || sMainPadIsGCController){
+            if((lbl_80666D31 >= 30 && sMainPadExtension != PAD_EXT_INVALID) || sMainPadIsGCController){
                 if(sMainPadIsGCController) return ERROR_WIIMOTE_DISCONNECTED;
 
                 if(CfGameManager::checkUnkFlag(28)){
-                    if(lbl_80666D30 == 1) return ERROR_NUNCHUCK_DISCONNECTED;
-                    else if(lbl_80666D30 == 2) return ERROR_CLASSIC_CONTROLLER_DISCONNECTED;
-                    else if(lbl_80666D30 == 3) return ERROR_NO_EXTENSION;
+                    if(sMainPadExtension == PAD_EXT_NUNCHUCK) return ERROR_NUNCHUCK_DISCONNECTED;
+                    else if(sMainPadExtension == PAD_EXT_CLASSIC_CONTROLLER) return ERROR_CLASSIC_CONTROLLER_DISCONNECTED;
+                    else if(sMainPadExtension == PAD_EXT_NONE) return ERROR_NO_EXTENSION;
                 }
             }
         }else if(lbl_80666D31 >= 30 && CfGameManager::checkUnkFlag(28)){
-            if(lbl_80666D30 == 3) return 4;
+            if(sMainPadExtension == PAD_EXT_NONE) return ERROR_NO_EXTENSION;
         }
         
         return ERROR_NONE;

@@ -18,9 +18,8 @@ typedef void (*Unk511CFunc)(s32 chan, s32 result);
 
 const float PAD_STICK_DEADZONE = 0.15f;
 
-const int MAX_WII_CONTROLLERS = WPAD_MAX_CONTROLLERS;
-const int MAX_GC_CONTROLLERS = PAD_CHANMAX;
-const int TOTAL_CONTROLLERS = MAX_WII_CONTROLLERS + MAX_GC_CONTROLLERS;
+const int MAX_WII_CONTROLLERS = 1;
+const int TOTAL_CONTROLLERS = WPAD_MAX_CONTROLLERS + PAD_CHANMAX;
 
 //This is kind of ugly but better than hardcoded values I guess
 #define TURBO_HOLD_TIMER_THRESHOLD (int)(CDeviceVI::TARGET_FRAMERATE/3.0f)
@@ -232,9 +231,9 @@ struct CPadData {
     CPad* mMainPad; //0x8DC
     CPad* mMainGCPad; //0x8E0
     u32 unk8E4; //0x8E4
-    CWpadStatus mWpadStatuses[MAX_WII_CONTROLLERS]; //0x8E8
+    CWpadStatus mWpadStatuses[WPAD_MAX_CONTROLLERS]; //0x8E8
     //unused
-    PADStatus mPadStatuses[MAX_GC_CONTROLLERS]; //0x34E8
+    PADStatus mPadStatuses[PAD_CHANMAX]; //0x34E8
     KPADUnifiedWpadStatus mWpadStatus; //0x3518
     u8 unk3550[0x5118 - 0x3550];
     u32 unk5118;

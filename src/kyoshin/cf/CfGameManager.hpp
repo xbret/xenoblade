@@ -26,6 +26,7 @@ namespace cf {
         static u32 func_80086F44();
         static int getCurrentPadChannel();
         static void setCurrentPadPtr(const CPad* pPad, u32 r4);
+        static CPad* getPad(int r3);
         static void setPad(int r3, CPad* pPad, u32 r5);
         static CfPadData* getCfPadData();
         static CPad* getCurrentPad();

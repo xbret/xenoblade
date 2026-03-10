@@ -27,13 +27,17 @@ namespace cf {
         bool update();
         int checkForControllerError(bool r4);
 
-        static void func_801C1AD0(CPad* pPad, u32 r5, u32 r6);
+        void copyInputFlag(CPad* pPad, u32 r5, u32 r6);
         static void func_801C1B94(float f1);
         static bool func_801C1BC0();
         static void func_801C1BD8(float f1);
         void updateCfPadData(CfPadData* r4, const CPad* r5);
         static u32 getWiimoteBattery();
         static void wpadGetInfoCallback(s32 chan, s32 result);
+
+        bool isWpadChannel(u32 channel) const {
+            return channel <= WPAD_MAX_CONTROLLERS - 1;
+        }
 
         //0x0: vtable 1 (CTTask)
         //0x0-54: CTTask
@@ -52,18 +56,27 @@ namespace cf {
             ERROR_NO_EXTENSION
         };
 
+        enum PadExtension{
+            PAD_EXT_INVALID,
+            PAD_EXT_NUNCHUCK,
+            PAD_EXT_CLASSIC_CONTROLLER,
+            PAD_EXT_NONE
+        };
+
         static const int MAX_ERROR_FRAMES = 9;
 
-        static u8 lbl_80666D30;
+        static u8 sMainPadExtension;
         static u8 lbl_80666D31;
         static bool sMainPadIsGCController;
         static u8 lbl_80666D33;
 
         static u32 sWiimoteBattery;
         static u32 lbl_80666D3C;
-        static int lbl_80666D40;
+        static u32 sMainPadType;
         static float float_80666D44;
         static float float_80666D48;
+
+        static u32 sMainPadChannel;
 
         static WPADInfo sWpadInfo;
 

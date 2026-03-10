@@ -40,8 +40,8 @@ CPad* CDeviceRemotePad::getMainGCPad(){
 
 //0-3: Wii controllers, 4-7: GC controllers
 CPad* CDeviceRemotePad::getPadData(u32 index){
-    return CPadManager::getPadData(index >= MAX_WII_CONTROLLERS ? PAD_SYSTEM_GC : PAD_SYSTEM_WII,
-    index % MAX_WII_CONTROLLERS);
+    return CPadManager::getPadData(index >= WPAD_MAX_CONTROLLERS ? PAD_SYSTEM_GC : PAD_SYSTEM_WII,
+    index % WPAD_MAX_CONTROLLERS);
 }
 
 CWpadStatus* CDeviceRemotePad::getWpadStatus(u32 index){
