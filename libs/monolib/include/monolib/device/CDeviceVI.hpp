@@ -185,3 +185,5 @@ private:
 
 //Utility defines
 static const double MS_PER_FRAME = 1.0/CDeviceVI::TARGET_FRAMERATE;
+
+#define SECONDS_TO_FRAMES(n) (CDeviceVI::TARGET_FRAMERATE * n)

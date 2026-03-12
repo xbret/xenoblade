@@ -68,10 +68,19 @@ public:
 
     //0x0: vtable
     //0x0-1C4: CWorkThread
-    u32 unk1C4;
+    int mState; //0x1C4
     resvector<CItem*> mItems; //0x1C8
 
 private:
+    enum State{
+        STATE_0,
+        STATE_1,
+        STATE_2
+    };
+
+    static const int MAX_ITEMS = 16;
+    static const int MAX_CHILD = 0;
+
     static CLibStaticData* spInstance;
     static StaticArcFileData* sStaticArcFileListPtr;
 };

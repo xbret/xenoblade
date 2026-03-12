@@ -17,14 +17,13 @@ namespace cf {
     public:
         static CfGameManager* getInstance();
 
-        static void enablePad(int, bool);
+        static void enablePadFlags(u32 enableFlags, bool enable);
         static bool func_8007E1B4();
         static UNKWORD func_800829B8();
-        static u32 func_80087208();
+        static u32 getCurrentPadChannel();
         static UNKTYPE* func_80083298();
         static cf::CfObjectMove* func_80082D54(int playerIndex);
-        static u32 func_80086F44();
-        static int getCurrentPadChannel();
+        static u32 getEnabledInputFlags();
         static void setCurrentPadPtr(const CPad* pPad, u32 r4);
         static CPad* getPad(int r3);
         static void setPad(int r3, CPad* pPad, u32 r5);

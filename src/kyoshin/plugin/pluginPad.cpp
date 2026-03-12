@@ -41,13 +41,13 @@ int pad_get(VMThread* pThread) {
 }
 
 int pad_enable(VMThread* pThread) {
-    int padIndex = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
+    u32 enableFlags = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
     BOOL enable = vmArgBoolGet(3, vmArgPtrGet(pThread, 2));
     
     if (!(cf::CfGameManager::checkUnkFlag(24))) {
         //You can just use the original variable...?
         bool dontEnable = enable == false;
-        cf::CfGameManager::enablePad(padIndex, !dontEnable);
+        cf::CfGameManager::enablePadFlags(enableFlags, !dontEnable);
 
         //TODO: Probably an inline?
         u32 newFlags = cf::CfGameManager::sUnkFlags & ~(1 << 17);

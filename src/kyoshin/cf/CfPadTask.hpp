@@ -66,15 +66,15 @@ namespace cf {
         static const int MAX_ERROR_FRAMES = 9;
 
         static u8 sMainPadExtension;
-        static u8 lbl_80666D31;
+        static u8 sDpadDisableTimer;
         static bool sMainPadIsGCController;
-        static u8 lbl_80666D33;
+        static u8 sWpadDisconnectTimer;
 
         static u32 sWiimoteBattery;
         static u32 lbl_80666D3C;
         static u32 sMainPadType;
-        static float float_80666D44;
-        static float float_80666D48;
+        static float sInputDisableTimer;
+        static float sButtonDisableTimer;
 
         static u32 sMainPadChannel;
 

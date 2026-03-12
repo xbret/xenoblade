@@ -1,6 +1,7 @@
 #include "monolib/lib.hpp"
 #include "monolib/work.hpp"
 #include "monolib/device.hpp"
+#include "monolib/core.hpp"
 #include <cstring>
 
 using namespace mtl;
@@ -9,12 +10,12 @@ CLibStaticData* CLibStaticData::spInstance;
 StaticArcFileData* CLibStaticData::sStaticArcFileListPtr;
 
 CLibStaticData::CLibStaticData(const char* pName, CWorkThread* pParent) :
-CWorkThread(pName, pParent, 0),
-unk1C4(0),
+CWorkThread(pName, pParent, MAX_CHILD),
+mState(STATE_0),
 mItems(){
     spInstance = this;
     mType = THREAD_CLIBSTATICDATA;
-    mItems.reserve(mAllocHandle, 16);
+    mItems.reserve(mAllocHandle, MAX_ITEMS);
 }
 
 CLibStaticData::~CLibStaticData(){
@@ -46,13 +47,75 @@ bool CLibStaticData::getStaticFileData(const char* pName, StaticDataHandle* pHan
         CItem* item = *it;
         if(std::strcmp(item->mFileData->mName, pName) == 0){
             pHandle->data = item->mData;
+
             if(r5 != nullptr){
                 *r5 = (*it)->mLength;
             }
-            CFileHandle* fileHandle = (*it)->mFileHandle;
-            if(fileHandle == nullptr) return true;
-            else return false;
+
+            bool result = false;
+
+            if(pHandle != nullptr){
+                CFileHandle* fileHandle = (*it)->mFileHandle;
+                if(fileHandle == nullptr) result = true;
+            }
+
+            return result;
         }
+    }
+
+    return false;
+}
+
+bool CLibStaticData::wkStandbyLogin(){
+    if(isThreadFlag0()) return CWorkThread::wkStandbyLogin();
+    if(!CWorkSystemPack::func_804DE08C()) return false;
+
+    switch(mState){
+        case STATE_0:
+            if(!CDeviceGX::isInitialized()){
+                return false;
+            }
+
+            //If the static arc file list is valid, create an entry for each file
+            if(sStaticArcFileListPtr != nullptr){
+                StaticArcFileData* staticArcFileData = sStaticArcFileListPtr;
+                
+                for(StaticArcFileData* it = sStaticArcFileListPtr; it->mName != nullptr; it++){
+                    CItem* item = new (CWorkThreadSystem::getWorkMem()) CItem(it);
+                    mItems.push_back(item);
+                }
+            }
+
+            mState++;
+            //Fallthrough
+        case STATE_1:
+            //Check whether each file has been loaded. If one hasn't been loaded yet, exit early
+            for(CItem** it = mItems.begin(); it != mItems.end(); it++){
+                CItem* item = *it;
+                if(item->mData == nullptr) return false;
+            }
+
+            mState++;
+            //Fallthrough
+        default:
+            return CWorkThread::wkStandbyLogin();
+    }
+
+    return true;
+}
+
+bool CLibStaticData::wkStandbyLogout(){
+    if(mChildren.empty() && CProcRoot::getInstance() == nullptr){
+        for(CItem** it = mItems.begin(); it != mItems.end(); it++){
+            if(*it != nullptr){
+                delete *it;
+                *it = nullptr;
+            }
+        }
+
+        mItems.destroy();
+
+        return CWorkThread::wkStandbyLogout();
     }
 
     return false;
@@ -110,9 +173,7 @@ bool CLibStaticData::CItem::OnFileEvent(CEventFile* pEventFile){
     if(pEventFile->unk0 == true){
         CFileHandle* fileHandle = pEventFile->mFileHandle;
         if(pEventFile->mFileHandle == mFileHandle){
-            void* data = fileHandle->mData;
-            fileHandle->mData = nullptr;
-            mData = data;
+            mData = mFileHandle->getData();
             mLength = mFileHandle->getLength();
             mFileHandle = nullptr;
 
