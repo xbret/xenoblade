@@ -1,6 +1,7 @@
 #pragma once
 
 #include <types.h>
+#include "monolib/monolib_types.hpp"
 #include "monolib/work/CMsgParam.hpp"
 
 //size: 0x4
@@ -15,7 +16,7 @@ public:
     CGXCache();
     virtual ~CGXCache();
     void func_8044B294(u32 r4);
-    u32 func_8044B5B4();
+    ml::CCol4* func_8044B5B4();
     bool func_8044BE38();
     void func_8044BFC0();
 

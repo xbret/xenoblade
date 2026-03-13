@@ -4570,7 +4570,7 @@ monolib/src/core/CDesktop.cpp:
 	extabindex  start:0x8003520C end:0x800352A8
 	.text       start:0x80459ABC end:0x8045A224
 
-monolib/src/core/UnkClass_804561AC.cpp:
+monolib/src/core/CDrawGX.cpp:
 	extab       start:0x8001D49C end:0x8001D4FC
 	extabindex  start:0x800352A8 end:0x80035338
 	.text       start:0x8045A224 end:0x8045BC8C

@@ -112,6 +112,13 @@ public:
     //2 VIs (vertical interrupts) per frame -> 30fps
     static const int VI_PER_FRAME = 2;
 
+    //VI max output dimensions
+    static const int VI_MAX_WIDTH = 720;
+    static const int VI_MAX_HEIGHT = 480;
+    //VI width
+    static const int VI_WIDTH_4_3 = 670;
+    static const int VI_WIDTH_16_9 = 686;
+
     static const int TARGET_FRAMERATE = NTSC_VPS/VI_PER_FRAME;
 
 private:
@@ -154,13 +161,6 @@ private:
         return mViFlags & (1 << flag);
     }
 
-    //VI max output dimensions
-    static const int VI_MAX_WIDTH = 720;
-    static const int VI_MAX_HEIGHT = 480;
-    //VI width
-    static const int VI_WIDTH_4_3 = 670;
-    static const int VI_WIDTH_16_9 = 686;
-
     //XFB dimensions
     //JP: 640x480, US: 640x456, PAL: 640x542
     static const int XFB_WIDTH = 640;
@@ -183,7 +183,9 @@ private:
     static bool sUseStaticHandle;
 };
 
-//Utility defines
+/* Utility defines since some code just directly uses hardcoded constants for
+framerate stuff */
+//TODO: idk where else to put these but ideally smth better than this maybe
 static const double MS_PER_FRAME = 1.0/CDeviceVI::TARGET_FRAMERATE;
 
 #define SECONDS_TO_FRAMES(n) (CDeviceVI::TARGET_FRAMERATE * n)

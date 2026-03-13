@@ -24,6 +24,16 @@ public:
     static CPad* getPadData(u32 index);
     static CWpadStatus* getWpadStatus(u32 index);
 
+    static int getFirstConnectedWpadPort(){
+        for(int i = 0; i < WPAD_MAX_CONTROLLERS; i++){
+            if(isConnected(i)){
+                return i;
+            }
+        }
+
+        return WPAD_CHAN_INVALID;
+    }
+
     //0x0: vtable
     //0x0-1c8: CDeviceBase
     PadUpdateFunc mPadUpdateFunc; //0x1C8

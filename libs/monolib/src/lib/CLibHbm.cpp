@@ -6,10 +6,14 @@
 #include <revolution/ARC.h>
 #include <cstring>
 
+//I don't wanna type these several times
+#define HOME_BUTTON_PRESSED(channel) (CDeviceRemotePad::getPressedButtonFlags(channel) & PAD_INPUT_FLAG_HOME)
+#define HOME_BUTTON_HELD(channel) (CDeviceRemotePad::getHeldButtonFlags(channel) & PAD_INPUT_FLAG_HOME)
+
 CLibHbm* CLibHbm::spInstance;
-int CLibHbm::lbl_806660E0 = -1;
+int CLibHbm::sCurWpadChannel = WPAD_CHAN_INVALID;
 bool CLibHbm::lbl_80667FD4;
-TPLPalette* CLibHbm::spTplData;
+TPLPalette* CLibHbm::spHbmstopTplData;
 bool CLibHbm::lbl_80667FDC;
 bool CLibHbm::lbl_80667FDD;
 GXTexObj CLibHbm::sTplTexObj;
@@ -30,7 +34,7 @@ mpHbmArcFileHandle(nullptr),
 mConfigBufSize(0),
 unk238(),
 unk25C(0),
-unk260(-1),
+mState(STATE_NEG1),
 unk264(0),
 unk265(0){
     spInstance = this;
@@ -45,8 +49,8 @@ CLibHbm* CLibHbm::getInstance(){
     return spInstance;
 }
 
-void CLibHbm::func_8045D45C(u32 r3){
-    if(r3 + 1 <= 4) lbl_806660E0 = r3;
+void CLibHbm::setCurrentWpadChannel(int channel){
+    if(channel >= WPAD_CHAN_INVALID && channel < WPAD_MAX_CONTROLLERS) sCurWpadChannel = channel;
 }
 
 void CLibHbm::func_8045D470(bool r3){
@@ -58,13 +62,13 @@ bool CLibHbm::func_8045D478(){
 }
 
 void CLibHbm::loadTplImage(void* pTplData){
-    if(spTplData == nullptr){
+    if(spHbmstopTplData == nullptr){
         TPLPalette* tpl = (TPLPalette*)pTplData;
-        spTplData = tpl;
+        spHbmstopTplData = tpl;
 
         if(tpl != nullptr){
             TPLBind(tpl);
-            TPLGetGXTexObjFromPalette(spTplData, &sTplTexObj, 0);
+            TPLGetGXTexObjFromPalette(spHbmstopTplData, &sTplTexObj, 0);
             GXInitTexObjLOD(&sTplTexObj, GX_LINEAR, GX_LINEAR, 0, 0, 0,
             GX_FALSE, GX_FALSE, GX_ANISO_1);
         }
@@ -73,7 +77,7 @@ void CLibHbm::loadTplImage(void* pTplData){
 
 void CLibHbm::removeTplImage(){
     CDeviceVI::waitForDrawDone();
-    spTplData = nullptr;
+    spHbmstopTplData = nullptr;
 }
 
 void CLibHbm::addCallback(IHBMCallback* r3){
@@ -169,15 +173,65 @@ bool CLibHbm::isInitialized(){
 
 void CLibHbm::wkUpdate(){
     if(CDesktop::getInstance() != nullptr){
-        if(lbl_806660E0 >= 0){
-            
+        int channel = sCurWpadChannel >= 0 ? sCurWpadChannel : CDeviceRemotePad::getFirstConnectedWpadPort();
+
+        if(CLibHbmControl::getInstance() != nullptr){
+            if(CLibHbmControl::func_8045E530()) return;
+
+            if(CDeviceFileCri::getInstance()->isException()){
+                if(!CLibHbmControl::getInstance()->isThreadFlag0() && mState < STATE_0 && !unk264){
+                    if(mState == STATE_NEG1){
+                        setState(STATE_0);
+                    }
+                    unk264 = true;
+                }
+
+                if(channel >= 0 && !lbl_80667FD4 && HOME_BUTTON_PRESSED(channel) && !CDeviceVI::checkFlag0()
+                && mState == STATE_NEG1){
+                    mState = STATE_0;
+
+                    if(spHbmstopTplData == nullptr){
+                        mState = STATE_NEG1;
+                    }
+                }
+            }else{
+                if(unk264){
+                    CLibHbmControl::getInstance()->wkSetEvent(EVT_NONE);
+                }
+
+                unk264 = false;
+
+                if(!lbl_80667FDD){
+                    mState = STATE_3;
+                    if(spHbmstopTplData == nullptr){
+                        mState = STATE_NEG1;
+                    }
+                }
+            }
+        }else{
+            if(unk265 && channel >= 0 && !HOME_BUTTON_HELD(channel)){
+                unk265 = false;
+            }
+
+            if(!unk265 && channel >= 0 && !lbl_80667FD4){
+                if((HOME_BUTTON_PRESSED(channel) || HOME_BUTTON_HELD(channel)) && !CDeviceVI::checkFlag0()){
+                    if(HOME_BUTTON_HELD(channel)){
+                        unk265 = true;
+                    }
+
+                    if(CDeviceFileCri::getInstance()->isException() || lbl_80667FDD){
+                        if(mState == STATE_NEG1){
+                            setState(STATE_0);
+                        }
+                    }else{
+                        CLibHbmControl::create();
+                    }
+                }
+            }
         }
     }
 }
 
-float CLibHbm::getFrameDeltaFactor(){
-    return CDeviceVI::isTvFormatPal() ? 60.0f/50.0f : 1;
-}
 
 void CLibHbm::initHbmInfoStruct(){
     std::memset(&spInstance->unk1EC, 0, sizeof(HBMDataInfo));
@@ -194,9 +248,7 @@ void CLibHbm::initHbmInfoStruct(){
 
     spInstance->unk1EC.adjust.x = CDeviceVI::isWideAspectRatio() ? 1.3684211f : 1;
     spInstance->unk1EC.adjust.y = 1;
-
-    //float f31 = CDeviceVI::isTvFormatPal() ? 1.2f : 1;
-    spInstance->unk1EC.frameDelta = CDeviceVI::getVisPerFrame() * getFrameDeltaFactor();
+    spInstance->unk1EC.frameDelta = CDeviceVI::getVisPerFrame() * (CDeviceVI::isTvFormatPal() ? 60.0f/50.0f : 1);
 
     spInstance->unk1EC.mem = spInstance->mpHbmMem;
     spInstance->unk1EC.memSize = HBM_MEM_SIZE;
@@ -256,7 +308,7 @@ bool CLibHbm::wkStandbyLogin(){
 bool CLibHbm::wkStandbyLogout(){
     if(mChildren.empty() && CProcRoot::getInstance() == nullptr){
         CLibHbm::destroy();
-        return CWorkThread::wkStandbyLogin();
+        return CWorkThread::wkStandbyLogout();
     }
 
     return false;
@@ -287,7 +339,7 @@ bool CLibHbm::OnFileEvent(CEventFile* pFile){
                     mpMsgBuf = ARCGetStartAddrInMem(&fileInfo);
                 }
 
-                if(ARCOpen(&arcHandle, "hbm/hbm/config.txt", &fileInfo)){
+                if(ARCOpen(&arcHandle, "hbm/config.txt", &fileInfo)){
                     mpConfigBuf = ARCGetStartAddrInMem(&fileInfo);
                     mConfigBufSize = ARCGetLength(&fileInfo);
                 }
@@ -315,5 +367,86 @@ bool CLibHbm::OnFileEvent(CEventFile* pFile){
 }
 
 
-void CLibHbm::func_8045E0CC(){
+void CLibHbm::renderHbmstopIcon(){
+    if(spInstance == nullptr) return;
+
+    if(spInstance->mState < STATE_0) return;
+
+    switch(spInstance->mState){
+        case STATE_0:
+            spInstance->unk25C = 0;
+            spInstance->mState++;
+            //Fallthrough
+        case STATE_1:
+            spInstance->unk25C += CDeviceVI::getSecPerFrame();
+            if(spInstance->unk25C >= 0.25f){
+                spInstance->unk25C = 0.25f;
+                spInstance->mState++;
+            }
+            break;
+        case STATE_2:
+            spInstance->unk25C += CDeviceVI::getSecPerFrame();
+            if(spInstance->unk25C >= 1.25f){
+                spInstance->unk25C = 0.25f;
+                spInstance->setState(3);
+            }
+            break;
+        case STATE_3:
+            spInstance->unk25C -= CDeviceVI::getSecPerFrame();
+            if(spInstance->unk25C <= 0){
+                spInstance->unk25C = 0;
+                spInstance->mState = -1;
+                return;
+            }
+            break;
+        default:
+            break;
+    }
+
+    CDeviceGX::getCacheInstance()->func_8044BE38();
+    //Cast to a custom struct for easier use
+    ml::CTPLData* tplData = reinterpret_cast<ml::CTPLData*>(spHbmstopTplData); //r31
+    CDrawGX draw;
+    draw.func_80456570(0);
+    draw.func_8045657C(0);
+
+    float smth = spInstance->unk25C * 4;
+
+    if(smth > 1){
+        smth = 1;
+    }
+
+    ml::CCol4 r1_8 = ml::CCol4(1, 1, 1, smth);
+    draw.setColor(&r1_8);
+    draw.unk0 |= 0x10;
+    draw.setTex(&sTplTexObj, tplData->imageHeader.width, tplData->imageHeader.height);
+
+    draw.begin(6, 4);
+
+    float scale;
+
+    if (CDeviceVI::isWideAspectRatio()) {
+        scale = (tplData->imageHeader.width/CDeviceVI::getWidthScale() * CDeviceVI::VI_WIDTH_16_9) / CDeviceVI::SCREEN_WIDTH;
+    }else{
+        scale = (tplData->imageHeader.width * CDeviceVI::VI_WIDTH_16_9) / CDeviceVI::SCREEN_WIDTH;
+    }
+
+    int iVar6 = scale;
+
+    //Send the four points for where to draw the image
+    //TODO: this should be an inline/macro
+
+    draw.setPoint((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
+((CDeviceVI::getRenderModeObj()->efbHeight - tplData->imageHeader.height) - 220)/2, 0, 0);
+    draw.setPoint((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
+    ((CDeviceVI::getRenderModeObj()->efbHeight - tplData->imageHeader.height) - 220)/2, tplData->imageHeader.width,0);
+    draw.setPoint((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
+    ((tplData->imageHeader.height + CDeviceVI::getRenderModeObj()->efbHeight) - 220)/2, 0, tplData->imageHeader.height);
+    draw.setPoint((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
+    (((tplData->imageHeader.height + CDeviceVI::getRenderModeObj()->efbHeight) - 220)/2), tplData->imageHeader.width,tplData->imageHeader.height);
+
+    draw.end();
+
+    CDeviceGX::getCacheInstance()->func_8044BE38();
+    CViewRoot::func_80442DA8();
 }

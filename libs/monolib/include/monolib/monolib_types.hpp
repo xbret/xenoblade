@@ -15,6 +15,9 @@ namespace ml {
     struct CPnt16;
     struct CRect16;
     struct CVec3;
+    struct CVec4;
+    struct CCol3;
+    struct CCol4;
     struct CMat34;
     struct CFrustum;
 } //namespace ml

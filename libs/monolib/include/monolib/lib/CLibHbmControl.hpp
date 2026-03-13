@@ -10,9 +10,9 @@ public:
 
     DECL_WORKTHREAD_CREATE(CLibHbmControl);
 
+    static void create();
     static bool isInitialized();
     static CLibHbmControl* getInstance();
-
     static bool func_8045E530();
 
 private:

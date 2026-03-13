@@ -11,6 +11,16 @@ struct UnkStruct_8044F65C {
 
 class CDeviceFileCri : public CWorkThread, public UnkStruct_8044F65C {
 public:
+    CDeviceFileCri(const char* pName, CWorkThread* pParent);
+    ~CDeviceFileCri();
+    static CDeviceFileCri* getInstance();
+
+    DECL_WORKTHREAD_CREATE(CDeviceFileCri);
+
+    virtual void UnkStruct_8044F65C_UnkVirtualFunc1();
+    virtual void UnkStruct_8044F65C_UnkVirtualFunc2();
+    virtual void UnkStruct_8044F65C_UnkVirtualFunc3();
+
     static void func_8044F964();
     static void func_8044FC38();
 

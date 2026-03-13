@@ -31,7 +31,7 @@ public:
     virtual bool wkStandbyLogout();
     virtual bool OnFileEvent(CEventFile* pFile);
 
-    static void func_8045D45C(u32 r3);
+    static void setCurrentWpadChannel(int channel);
     static void func_8045D470(bool r3);
     static bool func_8045D478();
     static void loadTplImage(void* pTplData);
@@ -47,10 +47,15 @@ public:
     static void deleteHbm();
     static bool isHbmControlInitialized();
     static bool func_8045DE00();
-    static void func_8045E0CC();
+    static void renderHbmstopIcon();
+    static inline void initHbmInfoStruct();
 
-    static float getFrameDeltaFactor();
-    static  inline void initHbmInfoStruct();
+    void setState(int state){
+        mState = state;
+        if(spHbmstopTplData == nullptr){
+            mState = STATE_NEG1;
+        }
+    }
 
     //0x0: vtable
     //0x0-1c4: CWorkThread
@@ -70,11 +75,19 @@ public:
     u32 mConfigBufSize; //0x234
     mtl::fixed_vector<IHBMCallback*, 8> unk238; //0x238
     float unk25C; //0x25C
-    u32 unk260; //0x260
+    int mState; //0x260
     bool unk264; //0x264
     bool unk265; //0x265
 
 private:
+    enum State{
+        STATE_NEG1 = -1,
+        STATE_0,
+        STATE_1,
+        STATE_2,
+        STATE_3
+    };
+
     static const int MAX_CHILD = 1;
     static const int HBM_MEM_SIZE = 0x80000;
     static const int HBM_SND_MEM_SIZE = 100096;
@@ -82,9 +95,9 @@ private:
     static CLibHbm* spInstance;
 
     static bool lbl_80667FD4;
-    static TPLPalette* spTplData;
+    static TPLPalette* spHbmstopTplData;
     static bool lbl_80667FDC;
     static bool lbl_80667FDD;
-    static int lbl_806660E0;
+    static int sCurWpadChannel;
     static GXTexObj sTplTexObj;
 };

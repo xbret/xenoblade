@@ -45,7 +45,7 @@ namespace cf{
     }
 
     void CfPadTask::Term(){
-        CLibHbm::func_8045D45C(WPAD_CHAN_INVALID);
+        CLibHbm::setCurrentWpadChannel(WPAD_CHAN_INVALID);
         spInstance = nullptr;
     }
 
@@ -221,7 +221,7 @@ namespace cf{
                     WPADGetInfoAsync(mainPad->mChannel, &sWpadInfo, &wpadGetInfoCallback);
                 }
                 
-                CLibHbm::func_8045D45C(mainPadChannel);
+                CLibHbm::setCurrentWpadChannel(mainPadChannel);
             }
         }
 

@@ -2,6 +2,7 @@
 
 #include "monolib/core/CArcItem.hpp"
 #include "monolib/core/CDesktop.hpp"
+#include "monolib/core/CDrawGX.hpp"
 #include "monolib/core/CException.hpp"
 #include "monolib/core/CPackItem.hpp"
 #include "monolib/core/CPadManager.hpp"
@@ -13,4 +14,3 @@
 #include "monolib/core/CView.hpp"
 #include "monolib/core/CViewFrame.hpp"
 #include "monolib/core/CViewRoot.hpp"
-#include "monolib/core/UnkClass_804561AC.hpp"

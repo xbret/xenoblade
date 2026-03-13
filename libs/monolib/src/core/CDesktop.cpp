@@ -57,7 +57,7 @@ void CDesktop::wkRender(){
 }
 
 void CDesktop::wkRenderAfter(){
-    CLibHbm::func_8045E0CC();
+    CLibHbm::renderHbmstopIcon();
 }
 
 bool CDesktop::wkStandbyLogin(){
