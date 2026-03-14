@@ -416,12 +416,11 @@ void CLibHbm::renderHbmstopIcon(){
         smth = 1;
     }
 
-    ml::CCol4 r1_8 = ml::CCol4(1, 1, 1, smth);
-    draw.setCol(r1_8);
-    draw.unk0 |= 0x10;
+    draw.setCol(ml::CCol4(1, 1, 1, smth));
+    draw.setFlag4();
     draw.setTex(&sTplTexObj, tplData->imageHeader.width, tplData->imageHeader.height);
 
-    draw.begin(6, 4);
+    draw.begin(PRIM_6, 4);
 
     float scale;
 
@@ -436,13 +435,13 @@ void CLibHbm::renderHbmstopIcon(){
     //Send the four points for where to draw the image
     //TODO: this should be an inline/macro
 
-    draw.addPoint((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
+    draw.add((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
 ((CDeviceVI::getRenderModeObj()->efbHeight - tplData->imageHeader.height) - 220)/2, 0, 0);
-    draw.addPoint((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
+    draw.add((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
     ((CDeviceVI::getRenderModeObj()->efbHeight - tplData->imageHeader.height) - 220)/2, tplData->imageHeader.width,0);
-    draw.addPoint((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
+    draw.add((CDeviceVI::getRenderModeObj()->fbWidth - iVar6) / 2,
     ((tplData->imageHeader.height + CDeviceVI::getRenderModeObj()->efbHeight) - 220)/2, 0, tplData->imageHeader.height);
-    draw.addPoint((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
+    draw.add((iVar6 + CDeviceVI::getRenderModeObj()->fbWidth) / 2,
     (((tplData->imageHeader.height + CDeviceVI::getRenderModeObj()->efbHeight) - 220)/2), tplData->imageHeader.width,tplData->imageHeader.height);
 
     draw.end();

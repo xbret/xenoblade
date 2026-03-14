@@ -142,8 +142,8 @@ void CDeviceGX::drawFrame(){
             something.setCol(*cacheInstance->func_8044B5B4());
             s16 efbHeight = CDeviceVI::getRenderModeObj()->efbHeight;
             s16 fbWidth = CDeviceVI::getRenderModeObj()->fbWidth;
-            CRect16 sp10 = CRect16(0,0,fbWidth,efbHeight);
-            something.func_80456DAC(sp10);
+            CRect16 rect = CRect16(0,0,fbWidth,efbHeight);
+            something.renderRect(rect);
         }
     }else{
         CStopwatchUtil::entry(someString);

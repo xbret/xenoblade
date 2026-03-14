@@ -41,6 +41,17 @@ namespace ml {
             return reinterpret_cast<const nw4r::math::MTX34*>(this);
         }
 
+        //TODO: can this be included without interfering with the above operators?
+        /*
+        operator Mtx*(){
+            return &m;
+        }
+
+        operator const Mtx*() const {
+            return &m;
+        }
+        */
+
         CMat34 operator*(CMat34& rhs) const {
             CMat34 mat;
             mul(mat, *this, rhs);

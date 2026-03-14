@@ -24,8 +24,8 @@ public:
     void func_8044BFC0();
     void func_8044A94C(int r4, int r5);
     void func_8044AA7C(int r4, int r5);
-    void func_8044ACDC(UNKTYPE* r4, int r5);
-    void func_8044AE8C(UNKTYPE* r4, int r5);
+    void func_8044ACDC(const ml::CCol4& r4, int r5);
+    void func_8044AE8C(const ml::CCol4& r4, int r5);
     void func_8044B03C(int r4);
     void func_8044B168(int r4);
     void func_8044A6C8(int r4, int r5);

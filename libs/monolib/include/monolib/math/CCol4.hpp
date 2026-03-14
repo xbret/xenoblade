@@ -1,6 +1,9 @@
 #pragma once
 
+#include <types.h>
 
+
+#define COLOR_TO_U32(r, g, b, a) (((u8)(255 * r) << 24) | ((u8)(255 * g) << 16) | ((u8)(255 * b) << 8) | (u8)(255 * a))
 
 namespace ml {
     
@@ -28,6 +31,12 @@ namespace ml {
             else if(a < min) a = min;
         }
 
+        u32 toU32() const {
+            return COLOR_TO_U32(r, g, b, a);
+        }
+
+        /* Nesting the variables in a nameless makes mwcc use lwz/stw for struct copies,
+        which is more efficient than lfs/stfd. */
         struct{
             float r;
             float g;
