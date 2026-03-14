@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 namespace ml {
     
     struct CCol4{
@@ -15,10 +17,23 @@ namespace ml {
             this->a = a;
         }
 
-        float r;
-        float g;
-        float b;
-        float a;
+        void clamp(float min, float max){
+            if(r > max) r = max;
+            else if(r < min) r = min;
+            if(g > max) g = max;
+            else if(g < min) g = min;
+            if(b > max) b = max;
+            else if(b < min) b = min;
+            if(a > max) a = max;
+            else if(a < min) a = min;
+        }
+
+        struct{
+            float r;
+            float g;
+            float b;
+            float a;
+        };
 
         static CCol4 white;
         static CCol4 gray;

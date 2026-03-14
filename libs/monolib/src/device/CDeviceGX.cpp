@@ -139,7 +139,7 @@ void CDeviceGX::drawFrame(){
 
         if(spInstance->unk274 == 0){
             CDrawGX something;
-            something.setColor(cacheInstance->func_8044B5B4());
+            something.setCol(*cacheInstance->func_8044B5B4());
             s16 efbHeight = CDeviceVI::getRenderModeObj()->efbHeight;
             s16 fbWidth = CDeviceVI::getRenderModeObj()->fbWidth;
             CRect16 sp10 = CRect16(0,0,fbWidth,efbHeight);

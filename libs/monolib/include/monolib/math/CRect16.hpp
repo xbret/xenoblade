@@ -32,8 +32,8 @@ namespace ml {
     
         bool isInside(const CPnt16& point) const;
 
-        CPnt16 mPos;
-        CPnt16 mSize;
+        CPnt16 mPos; //0x0
+        CPnt16 mSize; //0x4
 
         static CRect16 zero;
     };
