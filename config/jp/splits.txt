@@ -430,15 +430,22 @@ kyoshin/cf/CtrlObjectParam.cpp:
 	.sdata2     start:0x80668FF8 end:0x80669058
 
 kyoshin/code_800A3B24.cpp:
-	extab       start:0x80009124 end:0x80009344
-	extabindex  start:0x80024884 end:0x80024B84
-	.text       start:0x800A3B24 end:0x800AA008
+	extab       start:0x80009124 end:0x800091FC
+	extabindex  start:0x80024884 end:0x80024998
+	.text       start:0x800A3B24 end:0x800A75FC
+	.bss        start:0x80576298 end:0x805762C0
+	.sbss       start:0x80666790 end:0x80666798
+	.sdata2     start:0x80669058 end:0x806690B0
+
+kyoshin/code_800A75FC.cpp:
+	extab       start:0x800091FC end:0x80009344
+	extabindex  start:0x80024998 end:0x80024B84
+	.text       start:0x800A75FC end:0x800AA008
 	.ctors      start:0x804F592C end:0x804F5930
 	.rodata     start:0x804F77D0 end:0x804F77E8
 	.data       start:0x8052BA70 end:0x8052BB80
-	.bss        start:0x80576298 end:0x80576478
-	.sbss       start:0x80666790 end:0x806667A0
-	.sdata2     start:0x80669058 end:0x806690B0
+	.bss        start:0x805762C0 end:0x80576478
+	.sbss       start:0x80666798 end:0x806667A0
 
 kyoshin/code_800AA008.cpp:
 	extab       start:0x80009344 end:0x80009364

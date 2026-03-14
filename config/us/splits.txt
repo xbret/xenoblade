@@ -275,9 +275,14 @@ kyoshin/cf/CtrlObjectParam.cpp:
 	.text       start:0x8009DFDC end:0x800A43EC
 
 kyoshin/code_800A3B24.cpp:
-	extab       start:0x80009184 end:0x800093A4
-	extabindex  start:0x80024AB4 end:0x80024DB4
-	.text       start:0x800A43EC end:0x800AA8D4
+	extab       start:0x80009184 end:0x8000925C
+	extabindex  start:0x80024AB4 end:0x80024BC8
+	.text       start:0x800A43EC end:0x800A7EC4
+
+kyoshin/code_800A75FC.cpp:
+	extab       start:0x8000925C end:0x800093A4
+	extabindex  start:0x80024BC8 end:0x80024DB4
+	.text       start:0x800A7EC4 end:0x800AA8D4
 	.ctors      start:0x804F9FEC end:0x804F9FF0
 
 kyoshin/code_800AA008.cpp:

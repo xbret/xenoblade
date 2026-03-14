@@ -343,3 +343,65 @@ void CDrawGX::renderRect(const ml::CRect16& r4){
 
     end();
 }
+
+void CDrawGX::renderCube(const ml::CVec3& r4, const ml::CVec3& r5){
+    //Sides
+    begin(PRIM_6, 10);
+
+    add(r4);
+    add(ml::CVec3(r5.x, r4.y, r4.z));
+    add(ml::CVec3(r4.x, r5.y, r4.z));
+    add(ml::CVec3(r5.x, r5.y, r4.z));
+    add(ml::CVec3(r4.x, r5.y, r5.z));
+    add(ml::CVec3(r5.x, r5.y, r5.z));
+    add(ml::CVec3(r4.x, r4.y, r5.z));
+    add(ml::CVec3(r5.x, r4.y, r5.z));
+    add(r4);
+    add(ml::CVec3(r5.x, r4.y, r4.z));
+
+    end();
+
+    begin(PRIM_6, 4);
+
+    add(r4);
+    add(ml::CVec3(r4.x, r5.y, r4.z));
+    add(ml::CVec3(r4.x, r4.y, r5.z));
+    add(ml::CVec3(r4.x, r5.y, r5.z));
+
+    end();
+
+    begin(PRIM_6, 4);
+
+    add(ml::CVec3(r5.x, r5.y, r4.z));
+    add(ml::CVec3(r5.x, r4.y, r4.z));
+    add(ml::CVec3(r5.x, r5.y, r5.z));
+    add(ml::CVec3(r5.x, r4.y, r5.z));
+
+    end();
+}
+
+void CDrawGX::renderCircle(const ml::CVec3& pos, int verts, float r){
+    if(checkFlag(FLAG_3)){
+        //3D circle on XZ plane
+        begin(PRIM_7, verts + 2);
+
+        add(pos);
+
+        for(int i = verts; i >= 0; i--){
+            add(ml::CVec3(pos.x + r * ml::math::sin(i*(ml::tau/verts)), pos.y, pos.z + r * ml::math::cos(i*(ml::tau/verts))));
+        }
+
+        end();
+    }else{
+        //2D circle
+        begin(PRIM_7, verts + 2);
+
+        add(pos);
+
+        for(int i = verts; i >= 0; i--){
+            add(ml::CVec3(pos.x + r * ml::math::sin(i*(ml::tau/verts)), pos.y + r * ml::math::cos(i*(ml::tau/verts)), 0));
+        }
+
+        end();
+    }
+}
