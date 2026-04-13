@@ -13,7 +13,7 @@ Each process can implement specific behavior
 for its initialization/termination,
 and for the update ("Move") and render ("Draw") game events.
 */
-class CProcess : public CChildListNode {
+class CProcess : public CChildListNode{
     friend class CProcessMan;
 
 public:
@@ -30,7 +30,7 @@ public:
     void Regist(CProcess* parent, bool insertTop);
     void Remove();
 
-    void SetRemove() {
+    void SetRemove(){
         mIsRemove = true;    
     }
 
