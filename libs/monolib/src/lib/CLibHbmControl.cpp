@@ -100,10 +100,10 @@ CLibHbmControl* CLibHbmControl::create(){
 }
 
 bool CLibHbmControl::wkStandbyLogin(){
-
+    return CProc::wkStandbyLogin();
 }
 
 
 bool CLibHbmControl::wkStandbyLogout(){
-
+    return CProc::wkStandbyLogout();
 }

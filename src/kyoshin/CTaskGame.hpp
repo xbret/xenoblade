@@ -1,10 +1,11 @@
 #pragma once
 
 #include <types.h>
-#include "monolib/work.hpp"
-#include "monolib/util.hpp"
+
 #include "monolib/core.hpp"
 #include "monolib/scn.hpp"
+#include "monolib/util.hpp"
+#include "monolib/work.hpp"
 
 class ITitleMenu{
 public:
@@ -38,14 +39,18 @@ struct UnkClass_8004041C{
     u32 unk18;
 };
 
-class CTaskGame : public CTTask<CTaskGame>, public IWorkEvent, public IScnRender,
-public IGameException, public ITitleMenu, public IErrMesWinSel {
+class CTaskGame : public CTTask<CTaskGame>,
+                  public IWorkEvent,
+                  public IScnRender,
+                  public IGameException,
+                  public ITitleMenu,
+                  public IErrMesWinSel {
 public:
     CTaskGame(CView* pView, CWorkThread* pThread, int r6);
     virtual ~CTaskGame();
 
     static CTaskGame* getInstance();
-    static u8 func_800404F0();
+    static u32 func_800404F0();
     virtual void Init();
 
     void func_80040A3C(u16 r4, u16 r5, const char* r6, s16 r7);
@@ -59,6 +64,10 @@ public:
     virtual void ITitleMenu__UnkVirtualFunc1();
     virtual void IErrMesWinSel__UnkVirtualFunc1();
     virtual bool gameExceptionCB(u32 r4);
+
+    CScnNw4r* getScene() const {
+        return unk74;
+    }
 
     //0x0: vtable (CTTask)
     //0x4-3C: CProcess

@@ -22,7 +22,7 @@ public:
     CDoubleListNode* GetNext() const { return mNext; }
     void SetPrev(CDoubleListNode* prev) { mPrev = prev; }
     void SetNext(CDoubleListNode* next) { mNext = next; }
-};
+}; // size = 0x10
 
 /*
 Doubly-linked, circular list

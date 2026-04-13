@@ -2,14 +2,16 @@
 
 #include <types.h>
 
-class Class_80296898 {
-    public:
-    u8 unk0[64];
-    
-    Class_80296898() {
+class Class_80296898{
+public:
+    u8 unk00[0x0F - 0x00];
+    u8 unk_0F;
+    u8 unk10[0x40 - 0x10];
+
+    Class_80296898(){
         init();
     }
-    
+
     void init();
     static Class_80296898* getInstance();
 };

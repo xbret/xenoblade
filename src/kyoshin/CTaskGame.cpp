@@ -59,7 +59,7 @@ CTaskGame* CTaskGame::getInstance(){
     return spInstance;
 }
 
-u8 CTaskGame::func_800404F0(){
+u32 CTaskGame::func_800404F0(){
     CTaskGame* taskGame = spInstance;
 
     if(taskGame == nullptr){

@@ -11,7 +11,6 @@ CProcess api.
 
 Derived classes must inherit using CRTP to allow binding the move/draw functions.
 */
-//size: 0x54
 template <typename TDerived>
 class CTTask : public CProcess {
 public:
@@ -38,4 +37,4 @@ protected:
     //0x14-3C: CProcess
     MoveFunc mMoveFunc; //0x3C
     DrawFunc mDrawFunc; //0x48
-};
+}; // size: 0x54
