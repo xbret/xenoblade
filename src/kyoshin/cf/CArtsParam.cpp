@@ -1,6 +1,6 @@
 #include "kyoshin/cf/CArtsSet.hpp"
 
-namespace cf{
+namespace cf {
     CArtsParam lbl_80577580;
 
     CAttackParam::CAttackParam(){
@@ -31,4 +31,4 @@ namespace cf{
         }
         return unk2A;
     }
-} //namespace cf
+}

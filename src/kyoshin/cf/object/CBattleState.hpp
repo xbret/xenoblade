@@ -2,8 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class CBattleState{
+namespace cf {
+    class CBattleState {
     public:
         virtual void CBattleState_UnkVirtualFunc1();  //0x8
         virtual void CBattleState_UnkVirtualFunc2();  //0xC
@@ -43,4 +43,4 @@ namespace cf{
 
         u8 unkC[0x15DC - 0xC];
     };
-} //namespace cf
+}

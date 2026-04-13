@@ -6,14 +6,24 @@ CVS_THREAD::CVS_THREAD(){
     func_802A35A0(unk0); //Sets unk0 to something
 }
 
-void func_802A3ACC(){}
+void func_802A3ACC(){
 
-void CVS_THREAD::func_802A3B50(){}
+}
 
-void CVS_THREAD::func_802A3BEC(){}
+void CVS_THREAD::func_802A3B50(){
 
-void func_802A3C44(){}
+}
 
-void func_802A3D54(){}
+void CVS_THREAD::func_802A3BEC(){
 
-void func_802A3E28(){}
+}
+
+void func_802A3C44(){
+
+}
+
+void func_802A3D54(){
+}
+
+void func_802A3E28(){
+}

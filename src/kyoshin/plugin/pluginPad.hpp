@@ -2,7 +2,7 @@
 
 #include "monolib/vm/yvm2.h"
 
-enum ButtonFlagsType {
+enum ButtonFlagsType{
     BUTTON_FLAGS_HELD,
     BUTTON_FLAGS_PRESSED,
     BUTTON_FLAGS_TURBO

@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/IObjectInfo.hpp"
 
 namespace cf{
     //size: 0x30?
-    class CSuddenCommu : public IObjectInfo{
+    class CSuddenCommu : public IObjectInfo {
     public:
         CSuddenCommu();
         virtual ~CSuddenCommu(){}
@@ -19,4 +18,4 @@ namespace cf{
         u32 unk28;
         float unk2C;
     };
-} //namespace cf
+}

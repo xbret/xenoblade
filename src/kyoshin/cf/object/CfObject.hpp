@@ -1,15 +1,14 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/CObjectParam.hpp"
 
-namespace cf{
+namespace cf {
     //min size: 0x70
-    class CfObject : public CObjectParam{
+    class CfObject : public CObjectParam {
     public:
         //vtable 1 (CfObject)
-        virtual ~CfObject();                          //0x54
+        virtual ~CfObject();                      //0x54
         virtual void CfObject_UnkVirtualFunc2() = 0;  //0x58
         virtual void CfObject_UnkVirtualFunc3();      //0x5C
         virtual void CfObject_UnkVirtualFunc4() = 0;  //0x60
@@ -86,10 +85,11 @@ namespace cf{
         //not sure if belongs here? (can be in any class from CObjectState to CfObjectMove)
         void func_800BE898(int, u32, float, float);
 
+
         //0x0: vtable
         //0x0-38: CObjectParam
         u8 unk38_3[0x64 - 0x38];
         u32 unk64;
         u8 unk68[0x70 - 0x68];
     };
-} //namespace cf
+}

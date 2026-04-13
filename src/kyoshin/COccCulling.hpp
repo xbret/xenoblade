@@ -1,16 +1,16 @@
 #pragma once
 
 #include "types.h"
-
-#include "monolib/math.hpp"
 #include "monolib/util.hpp"
+#include "monolib/math.hpp"
+
 
 //Some type of view frustum?
 struct CCullFrustum{
-    enum Flags {
+    enum Flags{
         FLAG_0 = 1 << 0,
         FLAG_1 = 1 << 1,
-        FLAGS_01 = (FLAG_0 | FLAG_1)
+        FLAGS_01 = (FLAG_0 | FLAG_1) 
     };
 
     void init(const ml::CVec3& pos, const ml::CVec3& rot, const ml::CVec3& scale, u32 flags){
@@ -26,23 +26,23 @@ struct CCullFrustum{
         mFlags = flags;
     }
 
-    ml::CVec3 mPos;   //0x0
-    ml::CVec3 mRot;   //0xC
+    ml::CVec3 mPos; //0x0
+    ml::CVec3 mRot; //0xC
     ml::CVec3 mScale; //0x18
     //unsure
-    ml::CVec3 mDir;     //0x24
-    ml::CMat34 mMat;    //0x30
+    ml::CVec3 mDir; //0x24
+    ml::CMat34 mMat; //0x30
     ml::CMat34 mMatInv; //0x60
     ml::CVec3 unk90[4]; //0x90
-    float unkC0[4];     //unused?
+    float unkC0[4]; //unused?
     ml::CPlane mPlane0; //0xD0
     ml::CPlane mPlane1; //0xE0
     ml::CPlane mPlane2; //0xF0
     ml::CPlane mPlane3; //0x100
     ml::CPlane mPlane4; //0x110
-    bool mInFirstList;  //0x120
-    float unk124;       //Near plane value?
-    float unk128;       //Far plane value?
+    bool mInFirstList; //0x120
+    float unk124; //Near plane value?
+    float unk128; //Far plane value?
     u32 unk12C;
     u32 mFlags; //0x130
 };

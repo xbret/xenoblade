@@ -1,14 +1,12 @@
 #pragma once
 
 #include <types.h>
-
-#include "monolib/core.hpp"
 #include "monolib/util.hpp"
+#include "monolib/core.hpp"
 #include "monolib/work.hpp"
-
 #include <nw4r/lyt.h>
 
-class CGame : public CProc{
+class CGame : public CProc {
 public:
     enum ShutdownState {
         SHUTDOWN_STATE_0,
@@ -35,7 +33,7 @@ public:
     static void onExit();
 
     static inline CGame* create(const char* pName, CWorkThread* pParent, u32 capacity){
-        CGame* game = new(CWorkThreadSystem::getWorkMem()) CGame(pName, pParent);
+        CGame* game = new (CWorkThreadSystem::getWorkMem()) CGame(pName, pParent);
         CWorkUtil::entryWork(game, pParent, false);
         game->unk1E4 = capacity;
         return game;
@@ -43,7 +41,7 @@ public:
 
     //0x0: vtable
     //0x0-1ec: CProc
-    CView* mView;                 //0x1EC
+    CView* mView; //0x1EC
     ShutdownState mShutdownState; //0x1F0
     s16 unk1F4;
     s16 unk1F6;
@@ -64,12 +62,14 @@ private:
     static const char* scViewName;
 };
 
-namespace{
-    cclass CGameRestart : public CProc{    public:
+namespace {
+    class CGameRestart : public CProc {
+    public:
         friend class CGame;
 
-        CGameRestart(const char* pName, CWorkThread* pParent, int capacity)
-            : CProc(pName, pParent, capacity), mHandle(mtl::INVALID_HANDLE){}
+        CGameRestart(const char* pName, CWorkThread* pParent, int capacity) :
+        CProc(pName, pParent, capacity),
+        mHandle(mtl::INVALID_HANDLE) {}
         virtual ~CGameRestart(){}
         virtual void wkUpdate(){
             CWorkThread* r3 = CWorkThread::getWorkThread(mHandle);
@@ -81,8 +81,8 @@ namespace{
         }
 
         static inline CGameRestart* create(const char* pName, CWorkThread* pParent){
-            CGameRestart* gameRestart = new(CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pParent, MAX_CHILD);
-
+            CGameRestart* gameRestart = new (CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pParent, MAX_CHILD);
+            
             CWorkUtil::entryWork(gameRestart, pParent, false);
             gameRestart->unk1E4 = CDesktop::getView()->mWorkID;
             spInstance = gameRestart;
@@ -92,10 +92,10 @@ namespace{
         //0x0: vtable
         //0x0-1ec: CProc
         mtl::ALLOC_HANDLE mHandle; //0x1EC
-
+    
     private:
         static const int MAX_CHILD = 8;
 
         static CGameRestart* spInstance;
     };
-} //namespace
+}

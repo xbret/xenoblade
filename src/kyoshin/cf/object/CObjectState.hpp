@@ -2,9 +2,9 @@
 
 #include <types.h>
 
-namespace cf{
+namespace cf {
     //min size: 0x10
-    class CObjectState{
+    class CObjectState {
     public:
         virtual void CObjectState_UnkVirtualFunc1();  //0x8
         virtual void CObjectState_UnkVirtualFunc2();  //0xC
@@ -23,4 +23,4 @@ namespace cf{
         //0x0: vtable
         u8 unk4_3[0xC];
     };
-} //namespace cf
+}

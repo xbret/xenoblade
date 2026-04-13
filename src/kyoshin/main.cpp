@@ -1,17 +1,17 @@
+#include "kyoshin/cf/object/CAIAction.hpp"
+#include "kyoshin/plugin/pluginMain.hpp"
+#include "kyoshin/plugin/ocBdat.hpp"
 #include "kyoshin/CGame.hpp"
 #include "kyoshin/ErrMesData.hpp"
 #include "kyoshin/action/CActParamData.hpp"
-#include "kyoshin/cf/object/CAIAction.hpp"
-#include "kyoshin/plugin/ocBdat.hpp"
-#include "kyoshin/plugin/pluginMain.hpp"
-#include "monolib/core.hpp"
-#include "monolib/device.hpp"
-#include "monolib/effect/Unknown1.hpp"
-#include "monolib/lib.hpp"
 #include "monolib/nand/CNand.hpp"
-#include "monolib/util.hpp"
 #include "monolib/vm/yvm2.h"
+#include "monolib/effect/Unknown1.hpp"
+#include "monolib/core.hpp"
+#include "monolib/lib.hpp"
+#include "monolib/device.hpp"
 #include "monolib/work.hpp"
+#include "monolib/util.hpp"
 
 static DesktopIcon sGameMainIcon = {
 #if defined(VERSION_JP)
@@ -19,13 +19,14 @@ static DesktopIcon sGameMainIcon = {
 #else //EU/US
     "GAME_MAIN",
 #endif
-    &CGame::GameMain};
+    &CGame::GameMain
+};
 
 static const char* const scStaticArcStr =
 #if defined(VERSION_JP)
-    "static.arc";
+"static.arc";
 #else //EU/US
-    "lang/jp/static.arc";
+"lang/jp/static.arc";
 #endif
 
 static const char* const sPkhFilenames[13] = {
@@ -69,17 +70,25 @@ static const char* const sLanguageFolderPaths[8] = {
     "/it/",
 };
 
-const char* const sLanguageFolderPaths2[8] = {"\\jp\\", "\\en\\", "\\en\\", "\\de\\", "\\fr\\", "\\sp\\", "\\it\\"};
+const char* const sLanguageFolderPaths2[8] = {
+    "\\jp\\",
+    "\\en\\",
+    "\\en\\",
+    "\\de\\",
+    "\\fr\\",
+    "\\sp\\",
+    "\\it\\"
+};
 #endif
 
 //Static file callback functions.
 
-void OnBdatFileLoaded(void* pData, u32 length){
+void OnBdatFileLoaded(void* pData, u32 length) {
     CBdat::func_8003AA50();
     CBdat::func_8003AA78(0, pData);
 }
 
-void OnBdatFileUnloaded(void* pData, u32 length){
+void OnBdatFileUnloaded(void* pData, u32 length) {
     CBdat::func_8003AA8C(0);
     CBdat::func_8003AA50();
 }
@@ -101,20 +110,22 @@ void OnHbmstopFileUnloaded(void* pData, u32 length){
 }
 
 //List of files contained in the static.arc archive
-static StaticArcFileData sStaticArcFiles[10] = {{"SHA", "dvddata/etc/shadow.sha", HANDLE_MEM2, nullptr, nullptr},
-    {"CAM", "dvddata/etc/cam.chr", HANDLE_MEM2, nullptr, nullptr},
-    {"EFF", "dvddata/etc/eff.chr", HANDLE_MEM2, nullptr, nullptr},
-    {"ARROW", "dvddata/etc/arrow.mdo", HANDLE_MEM2, nullptr, nullptr},
+static StaticArcFileData sStaticArcFiles[10] = {
+    {"SHA","dvddata/etc/shadow.sha",HANDLE_MEM2,nullptr,nullptr},
+    {"CAM","dvddata/etc/cam.chr",HANDLE_MEM2,nullptr,nullptr},
+    {"EFF","dvddata/etc/eff.chr",HANDLE_MEM2,nullptr,nullptr},
+    {"ARROW","dvddata/etc/arrow.mdo",HANDLE_MEM2,nullptr,nullptr},
 #if defined(VERSION_JP)
-    {"43", "dvddata/menu/Mode43.arc", HANDLE_MEM2, nullptr, nullptr},
-    {"BDAT", "dvddata/common/jp/bdat.bin", HANDLE_MEM2, &OnBdatFileLoaded, &OnBdatFileUnloaded},
+    {"43","dvddata/menu/Mode43.arc",HANDLE_MEM2,nullptr,nullptr},
+    {"BDAT","dvddata/common/jp/bdat.bin",HANDLE_MEM2,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #else //EU/US
-    {"43", "dvddata/menu/jp/Mode43.arc", HANDLE_MEM2, nullptr, nullptr},
-    {"BDAT", "common/jp/bdat_common.bin", HANDLE_MEM2, &OnBdatFileLoaded, &OnBdatFileUnloaded},
+    {"43","dvddata/menu/jp/Mode43.arc",HANDLE_MEM2,nullptr,nullptr},
+    {"BDAT","common/jp/bdat_common.bin",HANDLE_MEM2,&OnBdatFileLoaded,&OnBdatFileUnloaded},
 #endif
-    {"AIDAT", "dvddata/etc/ai.bin", HANDLE_MEM2, &OnAidatFileLoaded, &OnAidatFileUnloaded},
-    {"HIKARI", "dvddata/etc/hikari.brres", HANDLE_MEM2, nullptr, nullptr},
-    {"HBMSTOP", "dvddata/etc/hbmstop.tpl", HANDLE_MEM2, &OnHbmstopFileLoaded, &OnHbmstopFileUnloaded}};
+    {"AIDAT","dvddata/etc/ai.bin",HANDLE_MEM2,&OnAidatFileLoaded,&OnAidatFileUnloaded},
+    {"HIKARI","dvddata/etc/hikari.brres",HANDLE_MEM2,nullptr,nullptr},
+    {"HBMSTOP","dvddata/etc/hbmstop.tpl",HANDLE_MEM2,&OnHbmstopFileLoaded,&OnHbmstopFileUnloaded}
+};
 
 //VM initialization callback functions.
 

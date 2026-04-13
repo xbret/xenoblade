@@ -1,17 +1,16 @@
 #pragma once
 
 #include <types.h>
-
-#include "kyoshin/COccCulling.hpp"
+#include "monolib/work.hpp"
 #include "monolib/math.hpp"
 #include "monolib/scn.hpp"
 #include "monolib/util.hpp"
-#include "monolib/work.hpp"
+#include "kyoshin/COccCulling.hpp"
 
 namespace cf{
 
     //size: 0x124
-    class CTaskCulling : public CTTask<CTaskCulling>, public IWorkEvent, public IScnRender, public ICulling{
+    class CTaskCulling : public CTTask<CTaskCulling>, public IWorkEvent, public IScnRender, public ICulling {
     public:
         CTaskCulling(CScn* pScene);
         virtual ~CTaskCulling();
@@ -34,6 +33,7 @@ namespace cf{
         static void func_801A2C94();
         static void func_801A2CAC();
 
+
         //0x0: vtable (CTTask)
         //0x4-3C: CProcess
         //0x3C-54: CTTask
@@ -41,7 +41,7 @@ namespace cf{
         //0x58: vtable 3 (IScnRender)
         //0x5C: vtable 4 (ICulling)
         COccCulling mOccCulling; //0x60
-        CScn* mpScene;           //0x90
+        CScn* mpScene; //0x90
         UNKTYPE* unk94;
         ml::FixStr<64> unk98;
         ml::FixStr<64> unkDC;

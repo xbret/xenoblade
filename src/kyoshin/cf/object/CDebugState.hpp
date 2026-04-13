@@ -2,6 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class CDebugState{};
-} //namespace cf
+namespace cf {
+    class CDebugState {
+
+    };
+}

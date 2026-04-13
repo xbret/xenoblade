@@ -4,7 +4,8 @@
 #include "monolib/scn.hpp"
 #include "monolib/work.hpp"
 
-class CMenuFade : public IUICf, public IWorkEvent, public IScnRender{
+class CMenuFade : public IUICf, public IWorkEvent, public IScnRender {
 public:
     CMenuFade();
+
 };

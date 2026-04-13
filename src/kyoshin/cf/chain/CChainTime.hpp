@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/chain/CChainEffect.hpp"
 
-namespace cf{
+namespace cf {
     //size: 0x18
-    class CChainTime{
+    class CChainTime {
     public:
         u8 unk0[8];
         CChainEffect mChainEffect; //0x8
@@ -16,7 +15,7 @@ namespace cf{
         virtual ~CChainTime(){
             func_8027CE30();
         }
-
+        
         void func_8027CE30();
     };
-} //namespace cf
+}

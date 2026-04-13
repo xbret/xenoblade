@@ -2,8 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class CActorState{
+namespace cf {
+    class CActorState {
     public:
         virtual void CActorState_UnkVirtualFunc1(); //0x8
 
@@ -13,4 +13,4 @@ namespace cf{
 
         UNKTYPE* unk4;
     };
-} //namespace cf
+}

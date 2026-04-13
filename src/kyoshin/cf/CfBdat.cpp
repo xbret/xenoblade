@@ -1,5 +1,4 @@
 #include "kyoshin/cf/CfBdat.hpp"
-
 #include "kyoshin/plugin/ocBdat.hpp"
 #include "monolib/util.hpp"
 
@@ -82,11 +81,23 @@ namespace cf{
     CfBdat CfBdat::lbl_80666A80;
     void* CfBdat::lbl_80666A84;
 
+    
     void* CfBdat::lbl_80577510[28];
 
-    const char* CfBdat::lbl_80531EC0[] = {"", "EXwp_L", "EXwp_R", "EXwp_S", "EXwp_S", "EXwp_H", "EXwp_HL", "EXwp_HR", "EXwp_HR"};
+    const char* CfBdat::lbl_80531EC0[] = {
+        "",
+        "EXwp_L",
+        "EXwp_R",
+        "EXwp_S",
+        "EXwp_S",
+        "EXwp_H",
+        "EXwp_HL",
+        "EXwp_HR",
+        "EXwp_HR"
+    };
 
-    CfBdat::~CfBdat(){}
+    CfBdat::~CfBdat(){
+    }
 
     void CfBdat::func_801414CC(){
         CBdat::func_8003AA34();
@@ -120,17 +131,18 @@ namespace cf{
         spItmArmListFileData = CBdat::getFP("ITM_armlist");
         spItmWaistListFileData = CBdat::getFP("ITM_waistlist");
         spItmLeggListFileData = CBdat::getFP("ITM_legglist");
-
+        
         lbl_80666A74 = nullptr;
         lbl_80666A78 = nullptr;
         lbl_80666A7C = 0;
         lbl_8066698C = nullptr;
-
+        
         spBtlPsvSkillFileData = CBdat::getFP("BTL_PSVskill");
         spBtlPsvLinkFileData = CBdat::getFP("BTL_PSVlink");
         spBtlPssListFileData = CBdat::getFP("BTL_PSSlist");
 
-        const char* temp[ARRAY_SIZE(lbl_80577510)] = {"JNL_quest0000",
+        const char* temp[ARRAY_SIZE(lbl_80577510)] = {
+            "JNL_quest0000",
             "JNL_quest0101",
             "JNL_quest0201",
             "JNL_quest0301",
@@ -156,7 +168,8 @@ namespace cf{
             "JNL_quest2101",
             "JNL_quest2201",
             "JNL_quest2301",
-            "JNL_quest2401"};
+            "JNL_quest2401"
+        };
 
         for(int i = 0; i < (int)ARRAY_SIZE(lbl_80577510); i++){
             lbl_80577510[i] = CBdat::getFP(temp[i]);
@@ -203,9 +216,9 @@ namespace cf{
         spCurDropSprListFileData = nullptr;
     }
 
-//This feels a bit janky, but if it works it works :p
-#define GET_MAP_BDAT_PTR(dest, name)                                                                                                       \
-    string.format(STR(name) "%02d%02d", mapId, areaId);                                                                                    \
+    //This feels a bit janky, but if it works it works :p
+    #define GET_MAP_BDAT_PTR(dest, name) \
+    string.format(STR(name)"%02d%02d", mapId, areaId); \
     dest = CBdat::getFP(string.c_str());
 
     void CfBdat::loadMapBdatFileDataPointers(int mapId, int areaId){
@@ -240,7 +253,7 @@ namespace cf{
 
         if(pName != nullptr){
             fileDataPtr = CBdat::getFP(pName);
-        } else {
+        }else{
             fileDataPtr = nullptr;
         }
 
@@ -285,7 +298,7 @@ namespace cf{
                 spMnuEveStartFileData = CBdat::getFP("MNU_eve_start");
                 spMnuEveTableFileData = CBdat::getFP("MNU_eve_table");
             }
-
+            
             lbl_80666A6C = nullptr;
             result = true;
         }
@@ -293,4 +306,4 @@ namespace cf{
         return result;
     }
 
-} //namespace cf
+}

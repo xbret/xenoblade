@@ -2,6 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class IBattleEvent{};
-} //namespace cf
+namespace cf {
+    class IBattleEvent {
+
+    };
+}

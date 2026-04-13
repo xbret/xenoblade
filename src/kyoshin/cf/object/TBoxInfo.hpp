@@ -2,6 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class TBoxInfo{};
-} //namespace cf
+namespace cf {
+    class TBoxInfo {
+
+    };
+}

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "kyoshin/plugin/pluginDeb.hpp"
 #include "kyoshin/plugin/pluginGame.hpp"
+#include "kyoshin/plugin/pluginDeb.hpp"
+#include "kyoshin/plugin/pluginWait.hpp"
 #include "kyoshin/plugin/pluginMath.hpp"
 #include "kyoshin/plugin/pluginPad.hpp"
 #include "kyoshin/plugin/pluginVoice.hpp"
-#include "kyoshin/plugin/pluginWait.hpp"
 
-extern "C" {
+extern "C"{
 void pluginBtlRegist();
 void pluginUnitRegist();
 void pluginUiRegist();

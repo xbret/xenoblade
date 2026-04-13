@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/CfObjectModel.hpp"
 
-namespace cf{
+namespace cf {
     //min size: 0x715
-    class CfObjectMove : public CfObjectModel{
+    class CfObjectMove : public CfObjectModel {
     public:
         CfObjectMove();
         //vtable 1 (CfObject)
@@ -41,4 +40,4 @@ namespace cf{
         u8 unkBE_3[0x657];
         u8 unk715[3]; //might not belong here
     };
-} //namespace cf
+}

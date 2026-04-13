@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/IFactoryEvent.hpp"
 
 namespace cf{
 
-    class CCharVoiceMan : public IFactoryEvent{
+    class CCharVoiceMan : public IFactoryEvent {
     public:
         CCharVoiceMan();
         virtual ~CCharVoiceMan();
@@ -36,4 +35,4 @@ namespace cf{
         u32 unk230;
     };
 
-} //namespace cf
+}

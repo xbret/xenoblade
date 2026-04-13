@@ -2,10 +2,10 @@
 
 #include <types.h>
 
-namespace cf{
+namespace cf {
 
     //size: 0xB1C?
-    class CAIAction{
+    class CAIAction {
     public:
         CAIAction();
         virtual void CAIAction_UnkVirtualFunc1(); //0x8
@@ -14,7 +14,7 @@ namespace cf{
         //0x0: vtable
         u8 unk4[0xB18]; //temporary
     };
-} //namespace cf
+}
 
 extern void func_8014A86C(void*);
 extern void func_8014A8F8();

@@ -1,15 +1,13 @@
 #include "kyoshin/CGame.hpp"
-
-#include "kyoshin/CTaskGame.hpp"
-#include "kyoshin/cf/CBattleManager.hpp"
 #include "kyoshin/cf/CTaskREvent.hpp"
+#include "kyoshin/cf/CBattleManager.hpp"
 #include "kyoshin/cf/CfGameManager.hpp"
+#include "kyoshin/CTaskGame.hpp"
 #include "kyoshin/code_80135FDC.hpp"
+#include "monolib/lib.hpp"
 #include "monolib/core.hpp"
 #include "monolib/device.hpp"
-#include "monolib/lib.hpp"
 #include "monolib/work.hpp"
-
 #include <revolution/GX.h>
 #include <revolution/VI.h>
 #include <revolution/WPAD.h>
@@ -29,17 +27,17 @@ nw4r::lyt::ArcResourceAccessor* CGame::sArcResourceAccessor;
 const char* CGame::scViewName = "巨神"; //"Bionis"
 CGameRestart* CGameRestart::spInstance;
 
-CGame::CGame(const char* pName, CWorkThread* pParent)
-    : CProc(pName, pParent, MAX_CHILD),
-      mView(nullptr),
-      mShutdownState(SHUTDOWN_STATE_0),
-      unk1F4(-1),
-      unk1F6(-1),
-      unk1F8(0),
-      unk1FC(),
-      mTaskManUpdateCount(1),
-      unk224(1.0f),
-      unk228(0){
+CGame::CGame(const char* pName, CWorkThread* pParent) :
+CProc(pName, pParent, MAX_CHILD),
+mView(nullptr),
+mShutdownState(SHUTDOWN_STATE_0),
+unk1F4(-1),
+unk1F6(-1),
+unk1F8(0),
+unk1FC(),
+mTaskManUpdateCount(1),
+unk224(1.0f),
+unk228(0) {
     spInstance = this;
     CLibHbm::func_8045D5C8(1);
     CWorkSystem::setExitFunc(&onExit);
@@ -82,7 +80,7 @@ void CGame::wkUpdate(){
     if((s16)unk1F4 >= 0 && CTaskGame::getInstance() != nullptr){
         if(unk1FC.size() == 0){
             CTaskGame::getInstance()->func_80040A3C(unk1F4, unk1F6, nullptr, unk1F8);
-        } else {
+        }else{
             CTaskGame::getInstance()->func_80040A3C(unk1F4, unk1F6, unk1FC.c_str(), unk1F8);
         }
 
@@ -130,9 +128,11 @@ void CGame::wkRender(){
 void CGame::func_800395F4(bool wide){
     if(spInstance != nullptr && spInstance->mView != nullptr){
         if(!wide){
-            setViewRect(spInstance->mView, 0, 56, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
-        } else {
-            setViewRect(spInstance->mView, 0, 0, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
+            setViewRect(spInstance->mView, 0, 56,
+            CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
+        }else{
+            setViewRect(spInstance->mView, 0, 0,
+            CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
         }
     }
 }
@@ -158,13 +158,15 @@ bool CGame::wkStandbyLogin(){
 
     //Almost equivalent to func_800395F4
     if(CDeviceSC::isWideAspectRatio()){
-        setViewRect(mView, 0, 0, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
-    } else {
-        setViewRect(mView, 0, 56, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
+        setViewRect(mView, 0, 0,
+        CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
+    }else{
+        setViewRect(mView, 0, 56,
+        CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
     }
 
     StaticDataHandle handle;
-    mView->unk444 = CVec4(0, 0, 0, 1);
+    mView->unk444 = CVec4(0,0,0,1);
 
     /* This function does the same thing as above, but for the static instance of CGame. Since
     there's only one instance of CGame though, this seems pointless :p */
@@ -206,7 +208,7 @@ bool CGame::wkStandbyLogout(){
     if(mChildren.empty()){
         //Reset the task manager
         CTaskManager::Reset();
-
+        
         //Delete the ArcResourceAccessor/Layout instances
         /*TODO: having a macro for this/adding the null stuff to the delete
         function might be a good idea for later */
@@ -230,14 +232,14 @@ bool CGame::wkStandbyLogout(){
 //Dummy function to force the ArcResourceAccessor dtor to generate here
 static void dummy(){
     nw4r::lyt::ArcResourceAccessor* accessor = new nw4r::lyt::ArcResourceAccessor();
-    accessor->Attach(0, 0);
+    accessor->Attach(0,0);
     delete accessor;
 }
 
 void CGame::GameMain(){
     if(spInstance != nullptr){
         spInstance->pssSetFocus();
-    } else {
+    }else{
         //TODO: can this inline be rewritten to only take the first two arguments?
         create("CGame", CDesktop::getInstance(), CDesktop::getView()->mWorkID);
     }
@@ -273,7 +275,7 @@ bool CGame::wkStandbyExceptionRetry(u32 wid){
 
     //Call the error handler function
     if(exception->mException == nullptr) return true;
-    else {
+    else{
         IGameException* gameException = exception->mException;
         return gameException->gameExceptionCB(exception->unk204);
     }
@@ -284,7 +286,7 @@ void CGame::OnPauseTrigger(bool paused){
         if(paused){
             if(unk228 == 0){
                 unk224 = func_801C0014();
-                func_801BFFAC(0, 0);
+                func_801BFFAC(0,0);
                 func_801644BC(1);
 
                 if(cf::CBattleManager::getInstance() != nullptr){
@@ -296,9 +298,9 @@ void CGame::OnPauseTrigger(bool paused){
             }
 
             unk228++;
-        } else {
+        }else{
             if(unk228 <= 1){
-                func_801BFFAC(unk224, 0);
+                func_801BFFAC(unk224,0);
                 func_801644BC(0);
 
                 if(cf::CBattleManager::getInstance() != nullptr){

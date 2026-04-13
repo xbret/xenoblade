@@ -13,7 +13,8 @@ public:
     virtual void ITitleMenu__UnkVirtualFunc1() = 0;
 };
 
-cclass IErrMesWinSel{public:
+class IErrMesWinSel{
+public:
     virtual ~IErrMesWinSel(){}
     virtual void IErrMesWinSel__UnkVirtualFunc1() = 0;
 };

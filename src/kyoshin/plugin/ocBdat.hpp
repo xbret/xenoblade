@@ -3,7 +3,7 @@
 #include <types.h>
 
 //Utility class for handling bdat files.
-class CBdat{
+class CBdat {
 public:
     static void func_8003AA34();
     static void func_8003AA50();

@@ -1,6 +1,6 @@
 #include "kyoshin/cf/CArtsSet.hpp"
 
-namespace cf{
+namespace cf {
     _sArtsSet::_sArtsSet(){
         _sArtsSet_UnkVirtualFunc1();
     }
@@ -12,4 +12,4 @@ namespace cf{
             mArtsParams[i].CArtsParam_UnkVirtualFunc1();
         }
     }
-} //namespace cf
+}

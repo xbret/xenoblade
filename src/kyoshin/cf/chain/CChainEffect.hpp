@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/IObjectInfo.hpp"
 
-namespace cf{
+namespace cf {
     //size: 0xC
-    class CChainEffect : public IObjectInfo{
+    class CChainEffect : public IObjectInfo {
     public:
         CChainEffect();
         virtual ~CChainEffect(){}
@@ -17,4 +16,4 @@ namespace cf{
         u32 unk4;
         u32 unk8;
     };
-} //namespace cf
+}

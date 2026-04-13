@@ -1,16 +1,26 @@
 #include "kyoshin/cf/CBattleManager.hpp"
-
 #include "kyoshin/UnkClass_805764CC.hpp"
-#include "kyoshin/cf/CfSoundMan.hpp"
-#include "kyoshin/cf/object/CfObjectEne.hpp"
 #include "kyoshin/cf/object/CfObjectPc.hpp"
+#include "kyoshin/cf/object/CfObjectEne.hpp"
+#include "kyoshin/cf/CfSoundMan.hpp"
 #include "monolib/work.hpp"
 
 extern UNKTYPE* func_8009EC9C(u16 r3);
 extern void func_8009D7E4(UNKTYPE* r3, u32 r4);
 
 namespace cf{
-    u32 CBattleManager::lbl_804F8228[] = {0, 0x1AD, 0x1AA, 0x1B0, 0x1B6, 0x1BA, 0x1B5, 0x1B7, 0x1B8, 0x1B9};
+    u32 CBattleManager::lbl_804F8228[] = {
+        0,
+        0x1AD,
+        0x1AA,
+        0x1B0,
+        0x1B6,
+        0x1BA,
+        0x1B5,
+        0x1B7,
+        0x1B8,
+        0x1B9
+    };
 
     //Plays attack sound effects when a player character hits an enemy?
     void func_800D7A04(CfObjectPc* pObjectPc, CfObjectEne* pObjectEne){
@@ -20,60 +30,64 @@ namespace cf{
         if(flags & CActorParam_UnkStruct1::FLAG_BIT_1){
             CfSoundMan::func_801BFC38(0, 0x192, 0, 0, 0.6f);
             CfSoundMan::func_801BFC38(0, 0x191, 0, 0, 0.6f);
-        } else if(flags & 0x2000){
+        }else if(flags & 0x2000){
             CfSoundMan::func_801BFC38(0, 0x1C5, 0, 0, 0.6f);
-        } else {
+        }else{
             CActorParam_UnkStruct2* r30 = r3->unk50;
 
             if(r30 != nullptr){
                 if(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_24){
-                    if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 || pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
+                    if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                    pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                         if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                             CfSoundMan::func_801BFC38(0, 0x1B4, 0, 0, 0.6f);
                             return;
                         }
-                    } else if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
+                    }else if(!(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                         CfSoundMan::func_801BFC38(0, 0x1B5, 0, 0, 0.6f);
                         return;
                     }
-                } else if((r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_25) && !(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
+                }else if((r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_25)
+                && !(r30->unk78 & CActorParam_UnkStruct1::FLAG_BIT_9)){
                     CfSoundMan::func_801BFC38(0, 0x1B5, 0, 0, 0.6f);
                     return;
                 }
-
+                
                 if((s32)r30->unk40 == 1){
                     if(flags & CActorParam_UnkStruct1::FLAG_BIT_8){
                         CfSoundMan::func_801BFC38(0, 0x1AF, 0, 0, 0.6f);
-                    } else {
+                    }else{
                         //likely an inline
                         if(pObjectEne != nullptr && pObjectEne->unk64 & 0x2){
                             UNKTYPE* r3_1 = func_8009EC9C(pObjectEne->unk8C_3);
                             func_8009D7E4((UNKTYPE*)((u32)r3_1 + 0x1C), 1);
                         }
 
-                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 || pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
+                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                        pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                             CfSoundMan::func_801BFC38(0, 0x1AE, 0, 0, 0.6f);
-                        } else {
+                        }else{
                             CfSoundMan::func_801BFC38(0, 0x1AD, 0, 0, 0.6f);
                         }
                     }
-                } else if((s32)r30->unk40 == 2){
+                }else if((s32)r30->unk40 == 2){
                     if(flags & CActorParam_UnkStruct1::FLAG_BIT_8){
                         CfSoundMan::func_801BFC38(0, 0x1AC, 0, 0, 0.6f);
-                    } else {
+                    }else{
                         //likely an inline
                         if(pObjectEne != nullptr && pObjectEne->unk64 & 0x2){
                             UNKTYPE* r3_1 = func_8009EC9C(pObjectEne->unk8C_3);
                             func_8009D7E4((UNKTYPE*)((u32)r3_1 + 0x1C), 1);
                         }
 
-                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 || pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
+                        if(pObjectEne->CActorParam_UnkVirtualFunc19() == 1 ||
+                        pObjectEne->CActorParam_UnkVirtualFunc19() == 2){
                             CfSoundMan::func_801BFC38(0, 0x1AB, 0, 0, 0.6f);
-                        } else {
+                        }else{
                             CfSoundMan::func_801BFC38(0, 0x1AA, 0, 0, 0.6f);
                         }
                     }
-                } else {
+                }else{
                     u32 r4 = CBattleManager::lbl_804F8228[r30->unk40];
                     CfSoundMan::func_801BFC38(0, r4, 0, 0, 0.6f);
                 }
@@ -81,7 +95,7 @@ namespace cf{
         }
     }
 
-    CBattleManager::CBattleManager() : unk84(0){
+    CBattleManager::CBattleManager() : unk84(0) {
         mtl::ALLOC_HANDLE heapIndex = CWorkThreadSystem::getWorkMem();
         mActorList1.reserve(heapIndex, 64);
         mActorList2.reserve(heapIndex, 8);
@@ -102,7 +116,7 @@ namespace cf{
     }
 
     void CBattleManager::func_800D9190(){
-        spInstance = new(mtl::MemManager::getHandleMEM2()) CBattleManager();
+        spInstance = new (mtl::MemManager::getHandleMEM2()) CBattleManager();
     }
 
     void CBattleManager::func_800D91D0(){
@@ -131,6 +145,7 @@ namespace cf{
         func_80085220(2, 0);
     }
 
-    void CBattleManager::FactoryEvent2(){}
+    void CBattleManager::FactoryEvent2(){
+    }
 
-} //namespace cf
+}

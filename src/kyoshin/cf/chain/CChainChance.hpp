@@ -2,8 +2,8 @@
 
 #include <types.h>
 
-namespace cf{
-    class CChainChance{
+namespace cf {
+    class CChainChance {
     public:
         u16 unk0;
         u8 unk2[2];
@@ -15,4 +15,4 @@ namespace cf{
 
         u8 unk14[4];
     };
-} //namespace cf
+}

@@ -9,7 +9,7 @@ namespace cf{
         func_80294834(&c);
         func_802AA338();
     }
-
+    
     void CChainCombo::func1(){
         w = 0;
         a = 0;
@@ -17,4 +17,4 @@ namespace cf{
         func_80294834(&c);
         func_802AA338();
     }
-} //namespace cf
+}

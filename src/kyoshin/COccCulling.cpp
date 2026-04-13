@@ -2,16 +2,22 @@
 
 using namespace ml;
 
-CVec3 COccCulling::sPlaneCoords[] = {CVec3(-0.5f, 0, 0), CVec3(0.5f, 0, 0), CVec3(0.5f, 1, 0), CVec3(-0.5f, 1, 0)};
+CVec3 COccCulling::sPlaneCoords[] = {
+    CVec3(-0.5f, 0, 0),
+    CVec3(0.5f, 0, 0),
+    CVec3(0.5f, 1, 0),
+    CVec3(-0.5f, 1, 0)
+};
 
-COccCulling::COccCulling()
-    : mFrustumList1(mtl::INVALID_HANDLE),
-      mFrustumList2(mtl::INVALID_HANDLE),
-      unk24(nullptr),
-      unk28(mtl::INVALID_HANDLE),
-      unk2C(false),
-      unk2D(0),
-      unk2E(0){}
+COccCulling::COccCulling() : 
+mFrustumList1(mtl::INVALID_HANDLE),
+mFrustumList2(mtl::INVALID_HANDLE),
+unk24(nullptr),
+unk28(mtl::INVALID_HANDLE),
+unk2C(false),
+unk2D(0),
+unk2E(0){
+}
 
 COccCulling::~COccCulling(){
     func_801A0794();
@@ -49,7 +55,7 @@ int COccCulling::addFrustum(const CVec3& pos, const CVec3& rot, const CVec3& sca
         frustum->mInFirstList = false;
         mFrustumList2.push_back(frustum);
         return mFrustumList2.size() + 255;
-    } else {
+    }else{
         //Push to the first list
         mFrustumList1.push_back(frustum);
         return mFrustumList1.size() - 1;
@@ -110,14 +116,13 @@ bool COccCulling::func_801A0F04(CFrustum* r4){
         from lowest to highest. */
         bool swappedEntry;
 
-        do {
+        do{
             swappedEntry = false;
 
             for(int i = 0; i < mFrustumList1.size() - 1; i++){
                 //What are we doing
-                if((mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList) ||
-                    (!mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList &&
-                        mFrustumList1[i]->unk124 > mFrustumList1[i + 1]->unk124)){
+                if((mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList)
+                || (!mFrustumList1[i]->mInFirstList && !mFrustumList1[i + 1]->mInFirstList && mFrustumList1[i]->unk124 > mFrustumList1[i + 1]->unk124)){
                     swappedEntry = true;
                     //Swap the entries
                     CCullFrustum* temp = mFrustumList1[i + 1];
@@ -125,7 +130,7 @@ bool COccCulling::func_801A0F04(CFrustum* r4){
                     mFrustumList1[i] = temp;
                 }
             }
-        } while(swappedEntry);
+        }while(swappedEntry);
 
         for(int i = mFrustumList1.size() - 1; i > 0; i--){
             CCullFrustum* frustum = mFrustumList1[i]; //r8
@@ -136,11 +141,9 @@ bool COccCulling::func_801A0F04(CFrustum* r4){
                 for(int j = i - 1; j >= 0; j--){
                     CCullFrustum* frustum2 = mFrustumList1[j];
                     //TODO: this seems like an inline?
-                    if(!frustum2->mPlane1.isWithinDistance(frustum->mPos, frustum->unk128) &&
-                        !frustum2->mPlane2.isWithinDistance(frustum->mPos, frustum->unk128) &&
-                        !frustum2->mPlane3.isWithinDistance(frustum->mPos, frustum->unk128) &&
-                        !frustum2->mPlane4.isWithinDistance(frustum->mPos, frustum->unk128) &&
-                        !frustum2->mPlane0.isWithinDistance(frustum->mPos, frustum->unk128)){
+                    if(!frustum2->mPlane1.isWithinDistance(frustum->mPos, frustum->unk128) && !frustum2->mPlane2.isWithinDistance(frustum->mPos, frustum->unk128)
+                    && !frustum2->mPlane3.isWithinDistance(frustum->mPos, frustum->unk128) && !frustum2->mPlane4.isWithinDistance(frustum->mPos, frustum->unk128)
+                    && !frustum2->mPlane0.isWithinDistance(frustum->mPos, frustum->unk128)){
                         frustum->mInFirstList = true;
                         break;
                     }
@@ -181,6 +184,7 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
             }
 
             if(b) return;
+
         }
     }
 
@@ -197,7 +201,7 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
         pFrustum->mPlane2.set(unk24->unk10C, pFrustum->unk90[1], pFrustum->unk90[2]);
         pFrustum->mPlane3.set(unk24->unk10C, pFrustum->unk90[2], pFrustum->unk90[3]);
         pFrustum->mPlane4.set(unk24->unk10C, pFrustum->unk90[3], pFrustum->unk90[0]);
-    } else {
+    }else{
         pFrustum->mPlane0.set(pFrustum->unk90[2], pFrustum->unk90[1], pFrustum->unk90[0]);
         pFrustum->mPlane1.set(unk24->unk10C, pFrustum->unk90[1], pFrustum->unk90[0]);
         pFrustum->mPlane2.set(unk24->unk10C, pFrustum->unk90[2], pFrustum->unk90[1]);
@@ -208,15 +212,15 @@ void COccCulling::func_801A1188(CCullFrustum* pFrustum){
 
 bool COccCulling::func_801A1444(const CVec3& intersectPoint, float distance){
     CCullFrustum* frustum;
-
+    
     for(CCullFrustum** it = mFrustumList1.begin(); it != mFrustumList1.end(); it++){
         frustum = *it;
 
         if(frustum->mInFirstList) continue;
 
-        if(!frustum->mPlane1.isWithinDistance(intersectPoint, distance) && !frustum->mPlane2.isWithinDistance(intersectPoint, distance) &&
-            !frustum->mPlane3.isWithinDistance(intersectPoint, distance) && !frustum->mPlane4.isWithinDistance(intersectPoint, distance) &&
-            !frustum->mPlane0.isWithinDistance(intersectPoint, distance)){
+        if(!frustum->mPlane1.isWithinDistance(intersectPoint, distance) && !frustum->mPlane2.isWithinDistance(intersectPoint, distance)
+        && !frustum->mPlane3.isWithinDistance(intersectPoint, distance) && !frustum->mPlane4.isWithinDistance(intersectPoint, distance)
+        && !frustum->mPlane0.isWithinDistance(intersectPoint, distance)){
             return true;
         }
     }
@@ -226,11 +230,11 @@ bool COccCulling::func_801A1444(const CVec3& intersectPoint, float distance){
 
 bool COccCulling::func_801A1550(const CVec3& rayStartPos, const CVec3& rayEndPos, UNKWORD r6){
     CVec3 rayDir = rayEndPos - rayStartPos;
-
+    
     //Looks like the normalize inline but isn't?
     if(rayDir.isZero()) return false;
     rayDir.normalizeSub();
-
+    
     //Iterate through all entries of the second list
     for(CCullFrustum** it = mFrustumList2.begin(); it != mFrustumList2.end(); it++){
         CCullFrustum* frustum = *it;
@@ -245,15 +249,15 @@ bool COccCulling::func_801A1550(const CVec3& rayStartPos, const CVec3& rayEndPos
                 intersectPoint = r1_14;
 
                 //If the point is in front of all four other planes of the current entry, return true?
-                if(frustum->mPlane1.isOnNegativeSide(intersectPoint) || frustum->mPlane2.isOnNegativeSide(intersectPoint) ||
-                    frustum->mPlane3.isOnNegativeSide(intersectPoint) || frustum->mPlane4.isOnNegativeSide(intersectPoint)){
+                if(frustum->mPlane1.isOnNegativeSide(intersectPoint) || frustum->mPlane2.isOnNegativeSide(intersectPoint)
+                || frustum->mPlane3.isOnNegativeSide(intersectPoint) || frustum->mPlane4.isOnNegativeSide(intersectPoint)){
                     continue;
                 }
 
                 return true;
-            }
+            }      
         }
     }
-
+    
     return false;
 }

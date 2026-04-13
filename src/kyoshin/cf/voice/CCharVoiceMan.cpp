@@ -1,5 +1,4 @@
 #include "kyoshin/cf/voice/CCharVoiceMan.hpp"
-
 #include "kyoshin/UnkClass_805764CC.hpp"
 
 namespace cf{
@@ -28,4 +27,4 @@ namespace cf{
         UnkClass_805764CC* classPtr = UnkClass_805764CC::func_800B07E8();
         classPtr->func_800B88E0(this);
     }
-} //namespace cf
+}

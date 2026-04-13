@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/CObjectState.hpp"
 
-namespace cf{
+namespace cf {
     //min size: 0x38
-    class CObjectParam : public CObjectState{
+    class CObjectParam : public CObjectState {
     public:
         virtual void CObjectParam_UnkVirtualFunc1(); //0x3C
         virtual void CObjectParam_UnkVirtualFunc2(); //0x40
@@ -19,4 +18,4 @@ namespace cf{
         //0x0-10: CObjectState
         u8 unk10_3[0x28];
     };
-} //namespace cf
+}

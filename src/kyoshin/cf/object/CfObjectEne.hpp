@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/CfObjectActor.hpp"
 
-namespace cf{
+namespace cf {
     //size: 0x45CC
-    class CfObjectEne : public CfObjectActor{
+    class CfObjectEne : public CfObjectActor {
     public:
         virtual ~CfObjectEne();
         virtual void func_800ADB2C();
@@ -18,4 +17,4 @@ namespace cf{
         //0x0-45BC: CfObjectActor
         u8 unk45BC[0x10];
     };
-} //namespace cf
+}

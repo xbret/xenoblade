@@ -1,12 +1,11 @@
 #pragma once
 
 #include <types.h>
-
 #include <cstring>
 
-namespace cf{
+namespace cf {
     //size: 0x68
-    class CChainTemp{
+    class CChainTemp {
     public:
         u8 unk0[0x60];
         bool unk60; //0x60
@@ -19,4 +18,4 @@ namespace cf{
         virtual ~CChainTemp(){}
         virtual void CChainTemp_UnkVirtualFunc1(); //0
     };
-} //namespace cf
+}

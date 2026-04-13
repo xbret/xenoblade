@@ -1,6 +1,5 @@
-#include "kyoshin/plugin/pluginMain.hpp"
-
 #include "kyoshin/plugin/plugins.hpp"
+#include "kyoshin/plugin/pluginMain.hpp"
 
 //Register all the plugins (SB script helper function modules) into the VM.
 void pluginRegist(){

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "monolib/device.hpp"
 #include "monolib/work.hpp"
+#include "monolib/device.hpp"
 
 namespace cf{
 
-    class CfBdat : IWorkEvent{
+    class CfBdat : IWorkEvent {
     public:
         CfBdat(){}
         virtual ~CfBdat();

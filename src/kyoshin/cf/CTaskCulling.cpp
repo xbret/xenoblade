@@ -1,20 +1,23 @@
 #include "kyoshin/cf/CTaskCulling.hpp"
-
 #include "kyoshin/cf/CfGameManager.hpp"
 #include "kyoshin/code_800AA008.hpp"
-
 #include <cstring>
 
 namespace cf{
     CTaskCulling* CTaskCulling::spInstance;
 
     //unused
-    ml::CVec3 CTaskCulling::lbl_80579018_0 = ml::CVec3(5, 30, 50);
-    ml::CVec3 CTaskCulling::lbl_80579018_C = ml::CVec3(5, 30, 50);
-    ml::CVec3 CTaskCulling::lbl_80579018_18 = ml::CVec3(5, 30, 0);
-    ml::CVec4 CTaskCulling::lbl_80579018_28 = ml::CVec4(0, 1, 0, 0.2f);
+    ml::CVec3 CTaskCulling::lbl_80579018_0 = ml::CVec3(5,30,50);
+    ml::CVec3 CTaskCulling::lbl_80579018_C = ml::CVec3(5,30,50);
+    ml::CVec3 CTaskCulling::lbl_80579018_18 = ml::CVec3(5,30,0);
+    ml::CVec4 CTaskCulling::lbl_80579018_28 = ml::CVec4(0,1,0,0.2f);
 
-    CTaskCulling::CTaskCulling(CScn* pScene) : mpScene(pScene), unk94(nullptr), unk98(), unkDC(), unk120(0){
+    CTaskCulling::CTaskCulling(CScn* pScene):
+    mpScene(pScene),
+    unk94(nullptr),
+    unk98(),
+    unkDC(),
+    unk120(0){
         spInstance = this;
         pScene->unkB4 = this;
         unk94 = mtl::MemManager::allocate_head(mtl::MemManager::getHandleMEM2(), 0x1000, 4);
@@ -26,11 +29,11 @@ namespace cf{
 
     void CTaskCulling::func_801A2BD0(u32 r3){
         CTaskCulling* instance = spInstance;
-
+        
         if(instance != nullptr){
             if(r3 != 0){
                 instance->unk120 |= 8;
-            } else {
+            }else{
                 instance->unk120 &= ~8;
             }
         }
@@ -126,7 +129,7 @@ namespace cf{
     void CTaskCulling::cbRenderBefore(){}
 
     CTaskCulling* CTaskCulling::create(CProcess* pParent, CScn* pScene){
-        CTaskCulling* taskCulling = new(CWorkThreadSystem::getWorkMem()) CTaskCulling(pScene);
+        CTaskCulling* taskCulling = new (CWorkThreadSystem::getWorkMem()) CTaskCulling(pScene);
         taskCulling->Regist(pParent, false);
         return taskCulling;
     }

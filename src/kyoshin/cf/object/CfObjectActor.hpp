@@ -1,18 +1,17 @@
 #pragma once
 
 #include <types.h>
-
+#include "kyoshin/cf/object/CfObjectMove.hpp"
 #include "kyoshin/cf/object/CAIAction.hpp"
 #include "kyoshin/cf/object/CActorParam.hpp"
-#include "kyoshin/cf/object/CfObjectMove.hpp"
 
-namespace cf{
+namespace cf {
     //min size: 0x45BC
-    class CfObjectActor : public CActorParam, public CAIAction, public CfObjectMove{
+    class CfObjectActor : public CActorParam, public CAIAction, public CfObjectMove {
     public:
         CfObjectActor();
         //vtable 4 (CfObjectActor)
-        virtual ~CfObjectActor();                      //0x5A0
+        virtual ~CfObjectActor();                  //0x5A0
         virtual void CfObjectActor_UnkVirtualFunc2();  //0x5A4
         virtual void CfObjectActor_UnkVirtualFunc3();  //0x5A8
         virtual void CfObjectActor_UnkVirtualFunc4();  //0x5AC
@@ -34,4 +33,4 @@ namespace cf{
         //0x3e9c-45b4: CfObjectMove
         u8 unk45B4[0x8];
     };
-} //namespace cf
+}

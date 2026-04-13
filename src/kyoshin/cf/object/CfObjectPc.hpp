@@ -1,16 +1,15 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/object/CfObjectActor.hpp"
 
 extern UNKTYPE* func_800B708C(BOOL r3);
 extern UNKTYPE* func_800AD860(UNKTYPE* r3);
 extern UNKTYPE* func_800C1228(UNKTYPE* r3);
 
-namespace cf{
+namespace cf {
     //size: 0x45C0
-    class CfObjectPc : public CfObjectActor{
+    class CfObjectPc : public CfObjectActor {
     public:
         virtual ~CfObjectPc();
         virtual void func_800BFF20(); //0x5D4
@@ -44,4 +43,4 @@ namespace cf{
         //0x0-45BC: CfObjectActor
         u8 unk45BC[0x4];
     };
-} //namespace cf
+}

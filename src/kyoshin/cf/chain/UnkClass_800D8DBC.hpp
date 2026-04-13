@@ -1,16 +1,15 @@
 #pragma once
 
 #include <types.h>
-
 #include "kyoshin/cf/chain/CChainTemp.hpp"
 #include "kyoshin/cf/chain/CChainTime.hpp"
 #include "kyoshin/cf/chain/CChainTimer.hpp"
 #include "kyoshin/cf/object/CfObjectActor.hpp"
 #include "kyoshin/cf/util/Flusher.hpp"
 
-namespace cf{
+namespace cf {
     //size: 0xA4
-    class UnkClass_800D8DBC{
+    class UnkClass_800D8DBC {
     public:
         UnkClass_800D8DBC();
         ~UnkClass_800D8DBC(){}
@@ -22,8 +21,8 @@ namespace cf{
         u32 unk8;
         u32 unkC;
         Flusher<CfObjectActor> mObjectActorFlusher; //0x10
-        CChainTemp mChainTemp;                      //0x1C
-        CChainTime mChainTime;                      //0x84
-        CChainTimer mChainTimer;                    //0x9C
+        CChainTemp mChainTemp; //0x1C
+        CChainTime mChainTime; //0x84
+        CChainTimer mChainTimer; //0x9C
     };
-} //namespace cf
+}

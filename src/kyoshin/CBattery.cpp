@@ -1,5 +1,4 @@
 #include "kyoshin/CBattery.hpp"
-
 #include "kyoshin/code_80135FDC.hpp"
 #include "monolib/device.hpp"
 #include "monolib/lib.hpp"
@@ -16,10 +15,12 @@ CBattery::CBattery(u8 batteryLevel) : unk4(){
     mBatteryLevel = batteryLevel;
 }
 
-CBattery::~CBattery(){}
+CBattery::~CBattery(){
+}
 
 void CBattery::func_802B92A4(){
-    mFileHandle = CDeviceFile::readFile(CWorkThreadSystem::getWorkMem(), "/menu/Battery.arc", this, 0, 0);
+    mFileHandle = CDeviceFile::readFile(CWorkThreadSystem::getWorkMem(), "/menu/Battery.arc",
+    this, 0, 0);
     //likely member functions of the class
     CDeviceFile::func_8044F154(mFileHandle, 3);
     CDeviceFile::setHandleFlag2(mFileHandle);
@@ -103,5 +104,5 @@ bool CBattery::OnFileEvent(CEventFile* pEventFile){
         mFileHandle = nullptr;
         unk4.func_8045F810();
         return true;
-    } else return false;
+    }else return false;
 }

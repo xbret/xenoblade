@@ -2,13 +2,13 @@
 
 #include <types.h>
 
-namespace cf{
+namespace cf {
     //size: 0xEC
-    class CChainMember{
+    class CChainMember {
     public:
         u8 unk0[0xE8];
         //0xE8: vtable
 
         virtual ~CChainMember(){}
     };
-} //namespace cf
+}

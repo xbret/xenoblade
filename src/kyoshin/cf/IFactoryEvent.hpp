@@ -13,4 +13,4 @@ namespace cf{
         virtual void FactoryEvent4(){}
     };
 
-} //namespace cf
+}
