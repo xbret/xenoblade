@@ -2,10 +2,10 @@
 
 #include <types.h>
 
-namespace cf {
+namespace cf{
 
     //size: 0xB1C?
-    class CAIAction {
+    class CAIAction{
     public:
         CAIAction();
         virtual void CAIAction_UnkVirtualFunc1(); //0x8

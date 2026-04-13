@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CObjectState.hpp"
 
-namespace cf {
+namespace cf{
     //min size: 0x38
-    class CObjectParam : public CObjectState {
+    class CObjectParam : public CObjectState{
     public:
         virtual void CObjectParam_UnkVirtualFunc1(); //0x3C
         virtual void CObjectParam_UnkVirtualFunc2(); //0x40

@@ -6,7 +6,7 @@
 class CProcess;
 class CScnNw4r;
 
-class CUIWindowManager : public CTTask<CUIWindowManager>, public cf::IFlagEvent {
+class CUIWindowManager : public CTTask<CUIWindowManager>, public cf::IFlagEvent{
 public:
     static CUIWindowManager* getInstance();
     static CUIWindowManager* create(CProcess* pParent, CScnNw4r* pScene, mtl::ALLOC_HANDLE mHandle);

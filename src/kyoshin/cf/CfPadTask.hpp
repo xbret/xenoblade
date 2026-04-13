@@ -9,9 +9,9 @@
 
 #include <revolution/WPAD.h>
 
-namespace cf {
+namespace cf{
 
-    class CfPadTask : public CTTask<CfPadTask>, public IGameException, public IHBMCallback {
+    class CfPadTask : public CTTask<CfPadTask>, public IGameException, public IHBMCallback{
     public:
         CfPadTask();
         virtual ~CfPadTask();

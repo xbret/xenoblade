@@ -7,8 +7,8 @@
 
 class CTaskGame;
 
-namespace cf {
-    class CTaskGameCf : public CTTask<CTaskGameCf> {
+namespace cf{
+    class CTaskGameCf : public CTTask<CTaskGameCf>{
         static CTaskGameCf* spInstance;
 
     public:
@@ -22,12 +22,12 @@ namespace cf {
         virtual void Term() override;
         virtual void Draw() override;
 
-        bool chkUnk54(u32 bit) {
+        bool chkUnk54(u32 bit){
             return unk_54 & (1 << bit);
         }
 
-        void setUnk54(u32 bit, bool state) {
-            if(state) {
+        void setUnk54(u32 bit, bool state){
+            if(state){
                 unk_54 |= (1 << bit);
             } else {
                 unk_54 &= ~(1 << bit);

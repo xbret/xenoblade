@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CfObject.hpp"
 
-namespace cf {
+namespace cf{
     //min size: 0xbe
-    class CfObjectModel : public CfObject {
+    class CfObjectModel : public CfObject{
     public:
         //vtable 1 (CfObject)
         virtual ~CfObjectModel();

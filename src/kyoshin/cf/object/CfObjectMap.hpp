@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CfObjectModel.hpp"
 
-namespace cf {
+namespace cf{
     //size: 0x2F50
-    class CfObjectMap : public CfObjectModel {
+    class CfObjectMap : public CfObjectModel{
     public:
         //0x0: vtable
         //0x0-BE: CfObjectModel

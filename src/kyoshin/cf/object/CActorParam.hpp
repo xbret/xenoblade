@@ -9,10 +9,10 @@
 
 #include <cstring>
 
-namespace cf {
+namespace cf{
 
     //size: 0x7C
-    struct CActorParam_UnkStruct2 {
+    struct CActorParam_UnkStruct2{
         u8 unk0[0x40];
         u16 unk40;
         u8 unk42[0x78 - 0x42];
@@ -20,16 +20,14 @@ namespace cf {
     };
 
     //might be fake?
-    struct CActorParam_UnkStruct6 {
-        CActorParam_UnkStruct6() {
+    sstruct CActorParam_UnkStruct6{        CActorParam_UnkStruct6(){
             unk0 = 0;
         }
 
         u8 unk0;
     };
 
-    struct CActorParam_Bitflags {
-        CActorParam_Bitflags() {
+    ststruct CActorParam_Bitflags{       CActorParam_Bitflags(){
             flags = 0;
         }
 
@@ -37,12 +35,11 @@ namespace cf {
     };
 
     //size: 0xBC
-    struct CActorParam_UnkStruct1 {
-        CActorParam_UnkStruct1() {
+    strstruct CActorParam_UnkStruct1{      CActorParam_UnkStruct1(){
             init();
         }
 
-        void init() {
+        void init(){
             unk0 = 0;
             unk4 = 0;
             unk48 = 0;
@@ -125,8 +122,7 @@ namespace cf {
     };
 
     //size: 0x52
-    struct CActorParam_UnkStruct4 {
-        CActorParam_UnkStruct4() {
+    strustruct CActorParam_UnkStruct4{     CActorParam_UnkStruct4(){
             std::memset(this, 0, sizeof(*this)); //wtf??
         }
 
@@ -136,8 +132,7 @@ namespace cf {
 
     //TODO: related to above struct?
     //size: 0x78
-    struct CActorParam_UnkStruct3 {
-        CActorParam_UnkStruct3() {
+    strucstruct CActorParam_UnkStruct3{    CActorParam_UnkStruct3(){
             unk74 = 0;
 
             std::memset(this, 0, sizeof(*this)); //wtf??
@@ -162,12 +157,11 @@ namespace cf {
     };
 
     //size: 0x18
-    struct CActorParam_UnkStruct5 {
-        CActorParam_UnkStruct5() {
+    structstruct CActorParam_UnkStruct5{   CActorParam_UnkStruct5(){
             std::memset(this, 0, sizeof(*this)); //wtf??
         }
 
-        void init() {
+        void init(){
             unk14 = 0;
             unk4 = 0;
             unk0 = 0;
@@ -185,7 +179,7 @@ namespace cf {
     };
 
     //size: 0x3384
-    class CActorParam : public CActorState, public CBattleState, public CDebugState {
+    class CActorParam : public CActorState, public CBattleState, public CDebugState{
     public:
         CActorParam(UNKTYPE* r4, UNKTYPE* r5);
 #pragma region vtable

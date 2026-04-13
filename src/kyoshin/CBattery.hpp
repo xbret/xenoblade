@@ -10,7 +10,7 @@
 #include <nw4r/lyt/lyt_layout.h>
 #include <nw4r/lyt/lyt_pane.h>
 
-class CBattery : public IWorkEvent {
+class CBattery : public IWorkEvent{
 public:
     CBattery(u8 batteryLevel);
     virtual ~CBattery();

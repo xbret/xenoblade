@@ -10,10 +10,10 @@
 /* TODO: it's possible this file contains multiple separate classes, either just all being put in here,
 or due to being in separate files, but compiled together in one file (unity compilation). For now,
 to make things simpler, everything exists in a single class. */
-namespace cf {
+namespace cf{
 
     //unofficial name
-    class CfGameManager {
+    class CfGameManager{
     public:
         static CfGameManager* getInstance();
         static CfGameManager* init(CScnNw4r* spSene, CView* pView, bool arg3);
@@ -35,11 +35,11 @@ namespace cf {
         static CfPadData* getCfPadData();
         static CPad* getCurrentPad();
 
-        static bool checkUnkFlag(int bit) {
+        static bool checkUnkFlag(int bit){
             return sUnkFlags & (1 << bit);
         }
 
-        static void setUnkFlag(int bit, bool state) {
+        static void setUnkFlag(int bit, bool state){
             if(state == true) sUnkFlags |= (1 << bit);
             else sUnkFlags &= ~(1 << bit);
         }

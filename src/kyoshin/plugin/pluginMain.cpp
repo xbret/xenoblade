@@ -3,7 +3,7 @@
 #include "kyoshin/plugin/plugins.hpp"
 
 //Register all the plugins (SB script helper function modules) into the VM.
-void pluginRegist() {
+void pluginRegist(){
     pluginGameRegist();
     pluginDebRegist();
     pluginBtlRegist();

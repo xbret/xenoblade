@@ -2,9 +2,9 @@
 
 #include <types.h>
 
-namespace cf {
+namespace cf{
     //min size: 0xC
-    class CHelp {
+    class CHelp{
     public:
         virtual void CHelp_UnkVirtualFunc1();
         virtual void CHelp_UnkVirtualFunc2();

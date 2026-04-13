@@ -43,7 +43,7 @@ CTaskGame::CTaskGame(CView* pView, CWorkThread* pThread, int r6)
       unk130(0),
       unk170(0),
       unk188(0),
-      unk18C(0, -1, 2, 0, 0, 0, 1) {
+      unk18C(0, -1, 2, 0, 0, 0, 1){
     spInstance = this;
     CTaskGame_cLoadInstance = nullptr;
     lbl_80666624 = 0;
@@ -51,25 +51,25 @@ CTaskGame::CTaskGame(CView* pView, CWorkThread* pThread, int r6)
     lbl_80666634 = 0;
 }
 
-CTaskGame::~CTaskGame() {}
+CTaskGame::~CTaskGame(){}
 
-CTaskGame* CTaskGame::getInstance() {
+CTaskGame* CTaskGame::getInstance(){
     return spInstance;
 }
 
-u32 CTaskGame::func_800404F0() {
+u32 CTaskGame::func_800404F0(){
     CTaskGame* taskGame = spInstance;
 
-    if(taskGame == nullptr) {
+    if(taskGame == nullptr){
         return 0;
     }
 
     return (taskGame->unk68 >> 13) & 1;
 }
 
-void CTaskGame::Init() {}
+void CTaskGame::Init(){}
 
-CTaskGame* CTaskGame::create(CView* pView, CWorkThread* pThread, int r5) {
+CTaskGame* CTaskGame::create(CView* pView, CWorkThread* pThread, int r5){
     mtl::ALLOC_HANDLE handle = CWorkThreadSystem::getWorkMem();
     CTaskGame* taskGame = new(handle) CTaskGame(pView, pThread, r5);
     //Register CTaskGame under the root game process

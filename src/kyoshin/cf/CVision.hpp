@@ -4,17 +4,16 @@
 
 #include "kyoshin/cf/object/IObjectInfo.hpp"
 
-namespace cf {
-    class UnkClass_801A36D0 {
+namespace cf{
+    class UnkClass_801A36D0{
     public:
-        ~UnkClass_801A36D0() {}
+        ~UnkClass_801A36D0(){}
 
         u8 unk0[0x4818];
     };
 
-    class UnkClass_801A3728 {
-    public:
-        ~UnkClass_801A3728() {}
+    cclass UnkClass_801A3728{    public:
+        ~UnkClass_801A3728(){}
 
         u8 unk0[0x70];
         u16 unk70;
@@ -23,8 +22,7 @@ namespace cf {
     };
 
     //size: 0x2623C
-    class CVision : public IObjectInfo {
-    public:
+    clclass CVision : public IObjectInfo{   public:
         CVision();
         virtual ~CVision();
         virtual void IObjectInfo_UnkVirtualFunc1();

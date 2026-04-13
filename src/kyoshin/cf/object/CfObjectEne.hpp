@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CfObjectActor.hpp"
 
-namespace cf {
+namespace cf{
     //size: 0x45CC
-    class CfObjectEne : public CfObjectActor {
+    class CfObjectEne : public CfObjectActor{
     public:
         virtual ~CfObjectEne();
         virtual void func_800ADB2C();

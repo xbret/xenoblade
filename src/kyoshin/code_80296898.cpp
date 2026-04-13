@@ -4,12 +4,12 @@
 
 static Class_80296898 lbl_8057A9C8;
 
-Class_80296898* func_80296A04(Class_80296898* obj) {
+Class_80296898* func_80296A04(Class_80296898* obj){
     obj->init();
     return obj;
 }
 
-void Class_80296898::init() {
+void Class_80296898::init(){
     std::memset(unk00, 0, 64);
 
     int r4 = 0, r3 = 3, r7 = 1, r5 = 0xA, r6 = 2, r0 = 5;
@@ -39,14 +39,14 @@ void Class_80296898::init() {
     unk10[0x2A] = r0;
 }
 
-Class_80296898* Class_80296898::getInstance(void) {
+Class_80296898* Class_80296898::getInstance(void){
     return &lbl_8057A9C8;
 }
 
-void func_80296AE8(u8* src) {
+void func_80296AE8(u8* src){
     std::memcpy(lbl_8057A9C8.unk00, src, 0x40);
 
-    if(lbl_8057A9C8.unk_0F == 0) {
+    if(lbl_8057A9C8.unk_0F == 0){
         lbl_8057A9C8.unk_0F = 0xA;
     }
 }

@@ -4,12 +4,12 @@
 
 #include "kyoshin/cf/object/IObjectInfo.hpp"
 
-namespace cf {
+namespace cf{
     //size: 0xC
-    class CChainEffect : public IObjectInfo {
+    class CChainEffect : public IObjectInfo{
     public:
         CChainEffect();
-        virtual ~CChainEffect() {}
+        virtual ~CChainEffect(){}
         virtual void IObjectInfo_UnkVirtualFunc1();
 
         //0x0: vtable

@@ -1,8 +1,8 @@
 #pragma once
 
-namespace cf {
+namespace cf{
 
-    class IFlagEvent {
+    class IFlagEvent{
     public:
         virtual ~IFlagEvent();
 

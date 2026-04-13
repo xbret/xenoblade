@@ -6,9 +6,9 @@
 #include "kyoshin/cf/object/CActorParam.hpp"
 #include "kyoshin/cf/object/CfObjectMove.hpp"
 
-namespace cf {
+namespace cf{
     //min size: 0x45BC
-    class CfObjectActor : public CActorParam, public CAIAction, public CfObjectMove {
+    class CfObjectActor : public CActorParam, public CAIAction, public CfObjectMove{
     public:
         CfObjectActor();
         //vtable 4 (CfObjectActor)

@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CObjectParam.hpp"
 
-namespace cf {
+namespace cf{
     //min size: 0x70
-    class CfObject : public CObjectParam {
+    class CfObject : public CObjectParam{
     public:
         //vtable 1 (CfObject)
         virtual ~CfObject();                          //0x54

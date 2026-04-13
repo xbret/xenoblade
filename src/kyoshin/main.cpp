@@ -74,29 +74,29 @@ const char* const sLanguageFolderPaths2[8] = {"\\jp\\", "\\en\\", "\\en\\", "\\d
 
 //Static file callback functions.
 
-void OnBdatFileLoaded(void* pData, u32 length) {
+void OnBdatFileLoaded(void* pData, u32 length){
     CBdat::func_8003AA50();
     CBdat::func_8003AA78(0, pData);
 }
 
-void OnBdatFileUnloaded(void* pData, u32 length) {
+void OnBdatFileUnloaded(void* pData, u32 length){
     CBdat::func_8003AA8C(0);
     CBdat::func_8003AA50();
 }
 
-void OnAidatFileLoaded(void* pData, u32 length) {
+void OnAidatFileLoaded(void* pData, u32 length){
     func_8014A86C(pData);
 }
 
-void OnAidatFileUnloaded(void* pData, u32 length) {
+void OnAidatFileUnloaded(void* pData, u32 length){
     func_8014A8F8();
 }
 
-void OnHbmstopFileLoaded(void* pData, u32 length) {
+void OnHbmstopFileLoaded(void* pData, u32 length){
     CLibHbm::loadTplImage(pData);
 }
 
-void OnHbmstopFileUnloaded(void* pData, u32 length) {
+void OnHbmstopFileUnloaded(void* pData, u32 length){
     CLibHbm::removeTplImage();
 }
 
@@ -118,16 +118,16 @@ static StaticArcFileData sStaticArcFiles[10] = {{"SHA", "dvddata/etc/shadow.sha"
 
 //VM initialization callback functions.
 
-void vmInitPluginRegistCallback() {
+void vmInitPluginRegistCallback(){
     vmInit();
     pluginRegist();
 }
 
-void vmInitCallback() {
+void vmInitCallback(){
     vmInit();
 }
 
-static void copyErrorMessages() {
+static void copyErrorMessages(){
     //Copy the error message string pointers
     CDeviceFileCri::func_80450B14(getNoDiscErrorMessage());
     CDeviceFileCri::func_80450B1C(getDiscUnreadableErrorMessage());
@@ -138,9 +138,9 @@ static void copyErrorMessages() {
 }
 
 #ifdef __MWERKS__
-void main() {
+void main(){
 #else
-int main() {
+int main(){
 #endif
     copyErrorMessages();
     lbl_80666438 = 0;

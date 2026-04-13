@@ -2,7 +2,7 @@
 
 #include <types.h>
 
-class CVS_THREAD {
+class CVS_THREAD{
 public:
     u32* unk0;
     u32 unk4;

@@ -1,6 +1,6 @@
 #pragma once
 
-class CActParamData {
+class CActParamData{
 public:
     static void func_80057CDC();
 };

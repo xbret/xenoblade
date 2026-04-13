@@ -6,8 +6,8 @@
 extern cf::CfObjectPc* func_800BFC68(cf::CfObjectMove* objMove);
 extern UNKWORD func_8006EF04(UNKWORD r3);
 
-namespace cf {
-    bool CHelp_Target::CHelp_UnkVirtualFunc3() {
+namespace cf{
+    bool CHelp_Target::CHelp_UnkVirtualFunc3(){
         CfObjectMove* objMove = cf::CfGameManager::func_80082D54(0);
         CfObjectPc* objPc = func_800BFC68(objMove);
         if(cf::CfGameManager::func_800829B8() != 0) return false;
@@ -21,7 +21,7 @@ namespace cf {
         UNKTYPE* smthElse;
         UNKTYPE* smthElse1;
 
-        switch(unkC) {
+        switch(unkC){
             case 1:
                 if(objPc->unkInline1() == nullptr) return false;
                 break;

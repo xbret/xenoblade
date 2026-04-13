@@ -8,7 +8,7 @@
 
 #include <nw4r/lyt.h>
 
-class CGame : public CProc {
+class CGame : public CProc{
 public:
     enum ShutdownState {
         SHUTDOWN_STATE_0,
@@ -34,7 +34,7 @@ public:
     virtual void OnPauseTrigger(bool paused);
     static void onExit();
 
-    static inline CGame* create(const char* pName, CWorkThread* pParent, u32 capacity) {
+    static inline CGame* create(const char* pName, CWorkThread* pParent, u32 capacity){
         CGame* game = new(CWorkThreadSystem::getWorkMem()) CGame(pName, pParent);
         CWorkUtil::entryWork(game, pParent, false);
         game->unk1E4 = capacity;
@@ -64,24 +64,23 @@ private:
     static const char* scViewName;
 };
 
-namespace {
-    class CGameRestart : public CProc {
-    public:
+namespace{
+    cclass CGameRestart : public CProc{    public:
         friend class CGame;
 
         CGameRestart(const char* pName, CWorkThread* pParent, int capacity)
-            : CProc(pName, pParent, capacity), mHandle(mtl::INVALID_HANDLE) {}
-        virtual ~CGameRestart() {}
-        virtual void wkUpdate() {
+            : CProc(pName, pParent, capacity), mHandle(mtl::INVALID_HANDLE){}
+        virtual ~CGameRestart(){}
+        virtual void wkUpdate(){
             CWorkThread* r3 = CWorkThread::getWorkThread(mHandle);
-            if(r3 == nullptr) {
+            if(r3 == nullptr){
                 CGame::GameMain();
                 wkSetEvent(EVT_NONE);
                 spInstance = nullptr;
             }
         }
 
-        static inline CGameRestart* create(const char* pName, CWorkThread* pParent) {
+        static inline CGameRestart* create(const char* pName, CWorkThread* pParent){
             CGameRestart* gameRestart = new(CWorkThreadSystem::getWorkMem()) CGameRestart(pName, pParent, MAX_CHILD);
 
             CWorkUtil::entryWork(gameRestart, pParent, false);

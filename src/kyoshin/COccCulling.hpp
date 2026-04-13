@@ -6,14 +6,14 @@
 #include "monolib/util.hpp"
 
 //Some type of view frustum?
-struct CCullFrustum {
+struct CCullFrustum{
     enum Flags {
         FLAG_0 = 1 << 0,
         FLAG_1 = 1 << 1,
         FLAGS_01 = (FLAG_0 | FLAG_1)
     };
 
-    void init(const ml::CVec3& pos, const ml::CVec3& rot, const ml::CVec3& scale, u32 flags) {
+    void init(const ml::CVec3& pos, const ml::CVec3& rot, const ml::CVec3& scale, u32 flags){
         mPos = pos;
         mRot = rot;
         mScale = ml::CVec3(scale.x, scale.y, 1);
@@ -47,7 +47,7 @@ struct CCullFrustum {
     u32 mFlags; //0x130
 };
 
-class COccCulling {
+class COccCulling{
 public:
     COccCulling();
     virtual ~COccCulling();

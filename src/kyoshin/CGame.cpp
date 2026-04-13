@@ -39,48 +39,48 @@ CGame::CGame(const char* pName, CWorkThread* pParent)
       unk1FC(),
       mTaskManUpdateCount(1),
       unk224(1.0f),
-      unk228(0) {
+      unk228(0){
     spInstance = this;
     CLibHbm::func_8045D5C8(1);
     CWorkSystem::setExitFunc(&onExit);
     this->wkSetEvent(EVT_4);
 }
 
-CGame::~CGame() {
+CGame::~CGame(){
     CWorkSystem::setExitFunc(nullptr);
     CLibHbm::func_8045D5C8(0);
     spInstance = nullptr;
 }
 
-CGame* CGame::getInstance() {
+CGame* CGame::getInstance(){
     return CGame::spInstance;
 }
 
-bool CGame::func_8003933C() {
+bool CGame::func_8003933C(){
     return func_80164910() == 0;
 }
 
-void CGame::func_80039364() {
+void CGame::func_80039364(){
     if(spInstance == nullptr) GameMain();
-    else if(CGameRestart::spInstance == nullptr) {
+    else if(CGameRestart::spInstance == nullptr){
         CGameRestart* gameRestart = CGameRestart::create("CGameRestart", CDesktop::getInstance());
 
-        if(gameRestart != nullptr) {
+        if(gameRestart != nullptr){
             gameRestart->mHandle = spInstance->mWorkID;
             spInstance->wkSetEvent(EVT_NONE);
         }
     }
 }
 
-void CGame::setTaskManagerUpdateCount(u32 count) {
-    if(spInstance != nullptr) {
+void CGame::setTaskManagerUpdateCount(u32 count){
+    if(spInstance != nullptr){
         spInstance->mTaskManUpdateCount = count;
     }
 }
 
-void CGame::wkUpdate() {
-    if((s16)unk1F4 >= 0 && CTaskGame::getInstance() != nullptr) {
-        if(unk1FC.size() == 0) {
+void CGame::wkUpdate(){
+    if((s16)unk1F4 >= 0 && CTaskGame::getInstance() != nullptr){
+        if(unk1FC.size() == 0){
             CTaskGame::getInstance()->func_80040A3C(unk1F4, unk1F6, nullptr, unk1F8);
         } else {
             CTaskGame::getInstance()->func_80040A3C(unk1F4, unk1F6, unk1FC.c_str(), unk1F8);
@@ -92,27 +92,27 @@ void CGame::wkUpdate() {
         unk1F8 = 0;
     }
 
-    if(isNoEvent() && CTaskGame::getInstance() != nullptr) {
+    if(isNoEvent() && CTaskGame::getInstance() != nullptr){
         (void)CTaskGame::getInstance(); //What are we doing
-        if(CTaskGame::func_800426F0() == false) {
+        if(CTaskGame::func_800426F0() == false){
             CTaskGame::getInstance()->func_80042720();
         }
     }
 
     //Update the task manager for the set amount of times
-    for(u32 i = 0; i < mTaskManUpdateCount; i++) {
+    for(u32 i = 0; i < mTaskManUpdateCount; i++){
         CTaskManager::Move();
     }
 }
 
 //Main render update function?
-void CGame::wkRender() {
-    if(lbl_80666604 != nullptr) {
+void CGame::wkRender(){
+    if(lbl_80666604 != nullptr){
         lbl_80666604->Animate(0);
     }
 
-    if(lbl_80666604 != nullptr) {
-        if(!CDeviceSC::isWideAspectRatio()) {
+    if(lbl_80666604 != nullptr){
+        if(!CDeviceSC::isWideAspectRatio()){
             CDeviceGX::getCacheInstance()->func_8044BE38();
             GXSetZMode(GX_FALSE, GX_NEVER, GX_FALSE);
             nw4r::lyt::DrawInfo drawInfo;
@@ -127,9 +127,9 @@ void CGame::wkRender() {
 }
 
 //TODO: the inner statements should maybe be inlines?
-void CGame::func_800395F4(bool wide) {
-    if(spInstance != nullptr && spInstance->mView != nullptr) {
-        if(!wide) {
+void CGame::func_800395F4(bool wide){
+    if(spInstance != nullptr && spInstance->mView != nullptr){
+        if(!wide){
             setViewRect(spInstance->mView, 0, 56, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
         } else {
             setViewRect(spInstance->mView, 0, 0, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
@@ -137,11 +137,11 @@ void CGame::func_800395F4(bool wide) {
     }
 }
 
-void CGame::setViewRect(CView* view, s16 x, s16 y, s16 width, s16 height) {
+void CGame::setViewRect(CView* view, s16 x, s16 y, s16 width, s16 height){
     view->setRect(ml::CRect16(x, y, width, height));
 }
 
-bool CGame::wkStandbyLogin() {
+bool CGame::wkStandbyLogin(){
     //Wait for the static files to be loaded
     if(!CLibStaticData::isInitialized()) return false;
 
@@ -152,12 +152,12 @@ bool CGame::wkStandbyLogin() {
     const char* nameTemp = scViewName;
 
     view->unk400 = nameTemp;
-    if(view->mName.size() == 0) {
+    if(view->mName.size() == 0){
         view->mName = nameTemp;
     }
 
     //Almost equivalent to func_800395F4
-    if(CDeviceSC::isWideAspectRatio()) {
+    if(CDeviceSC::isWideAspectRatio()){
         setViewRect(mView, 0, 0, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight);
     } else {
         setViewRect(mView, 0, 56, CDeviceVI::getRenderModeObj()->fbWidth, CDeviceVI::getRenderModeObj()->efbHeight - 114);
@@ -181,7 +181,7 @@ bool CGame::wkStandbyLogin() {
     VISetTimeToDimming(1);
 
     //Fetch the 4:3 mode brlyt file
-    if(CLibStaticData::getStaticFileData("43", &handle, nullptr)) {
+    if(CLibStaticData::getStaticFileData("43", &handle, nullptr)){
         sArcResourceAccessor = CLibLayout::createArcResourceAccessor();
         sArcResourceAccessor->Attach(handle.data, "arc");
         func_80136E84(&lbl_80666604, sArcResourceAccessor, "4_3mode.brlyt");
@@ -191,31 +191,31 @@ bool CGame::wkStandbyLogin() {
     return CProc::wkStandbyLogin();
 }
 
-bool CGame::wkStandbyLogout() {
-    if(mShutdownState == SHUTDOWN_STATE_0) {
+bool CGame::wkStandbyLogout(){
+    if(mShutdownState == SHUTDOWN_STATE_0){
         CTaskGame::getInstance()->func_80042710();
         mShutdownState = SHUTDOWN_STATE_1;
     }
 
-    if(mShutdownState == SHUTDOWN_STATE_1) {
+    if(mShutdownState == SHUTDOWN_STATE_1){
         if(!(CTaskGame::getInstance()->unk68 & 0x10)) return false;
         mShutdownState = SHUTDOWN_STATE_2;
     }
 
     //Only continue with shutdown if all child threads are stopped
-    if(mChildren.empty()) {
+    if(mChildren.empty()){
         //Reset the task manager
         CTaskManager::Reset();
 
         //Delete the ArcResourceAccessor/Layout instances
         /*TODO: having a macro for this/adding the null stuff to the delete
         function might be a good idea for later */
-        if(sArcResourceAccessor != nullptr) {
+        if(sArcResourceAccessor != nullptr){
             delete sArcResourceAccessor;
             sArcResourceAccessor = nullptr;
         }
 
-        if(lbl_80666604 != nullptr) {
+        if(lbl_80666604 != nullptr){
             delete lbl_80666604;
             lbl_80666604 = nullptr;
         }
@@ -228,14 +228,14 @@ bool CGame::wkStandbyLogout() {
 }
 
 //Dummy function to force the ArcResourceAccessor dtor to generate here
-static void dummy() {
+static void dummy(){
     nw4r::lyt::ArcResourceAccessor* accessor = new nw4r::lyt::ArcResourceAccessor();
     accessor->Attach(0, 0);
     delete accessor;
 }
 
-void CGame::GameMain() {
-    if(spInstance != nullptr) {
+void CGame::GameMain(){
+    if(spInstance != nullptr){
         spInstance->pssSetFocus();
     } else {
         //TODO: can this inline be rewritten to only take the first two arguments?
@@ -245,10 +245,10 @@ void CGame::GameMain() {
 
 /* Creates a new error entry using the given error message and callback class. This is used specifically
 for the error messages related to controller related issues (e.g. controller disconnect). */
-void CGame::registerControllerErrorEntry(const wchar_t* message, IGameException* r4, u32 param) {
-    if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !spInstance->isNoEvent()) {
+void CGame::registerControllerErrorEntry(const wchar_t* message, IGameException* r4, u32 param){
+    if(spInstance != nullptr && CTaskGame::func_800426F0() == nullptr && !spInstance->isNoEvent()){
         CException* exception = CException::func_80457CA4(spInstance, message, 5);
-        if(exception != nullptr) {
+        if(exception != nullptr){
             exception->mException = r4;
             exception->unk204 = param;
         }
@@ -258,7 +258,7 @@ void CGame::registerControllerErrorEntry(const wchar_t* message, IGameException*
 /* This function gets triggered when a controller exception occurs from CfPadTask. If the work thread's type
 matches the one for CException, the corresponding function in the error handler class instance is called to
 handle the exception. */
-bool CGame::wkStandbyExceptionRetry(u32 wid) {
+bool CGame::wkStandbyExceptionRetry(u32 wid){
     if(isNoEvent()) return true;
     if(CLibHbm::func_8045DE00()) return false;
 
@@ -279,15 +279,15 @@ bool CGame::wkStandbyExceptionRetry(u32 wid) {
     }
 }
 
-void CGame::OnPauseTrigger(bool paused) {
-    if(cf::CfGameManager::func_8007E1B4()) {
-        if(paused) {
-            if(unk228 == 0) {
+void CGame::OnPauseTrigger(bool paused){
+    if(cf::CfGameManager::func_8007E1B4()){
+        if(paused){
+            if(unk228 == 0){
                 unk224 = func_801C0014();
                 func_801BFFAC(0, 0);
                 func_801644BC(1);
 
-                if(cf::CBattleManager::getInstance() != nullptr) {
+                if(cf::CBattleManager::getInstance() != nullptr){
                     cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
                     battleManager->mVision.func_801A929C(1);
                 }
@@ -297,11 +297,11 @@ void CGame::OnPauseTrigger(bool paused) {
 
             unk228++;
         } else {
-            if(unk228 <= 1) {
+            if(unk228 <= 1){
                 func_801BFFAC(unk224, 0);
                 func_801644BC(0);
 
-                if(cf::CBattleManager::getInstance() != nullptr) {
+                if(cf::CBattleManager::getInstance() != nullptr){
                     cf::CBattleManager* battleManager = cf::CBattleManager::getInstance();
                     battleManager->mVision.func_801A929C(0);
                 }
@@ -315,9 +315,9 @@ void CGame::OnPauseTrigger(bool paused) {
     }
 }
 
-void CGame::onExit() {
-    if(spInstance != nullptr) {
-        if(cf::CfGameManager::func_8007E1B4()) {
+void CGame::onExit(){
+    if(spInstance != nullptr){
+        if(cf::CfGameManager::func_8007E1B4()){
             func_801BF93C();
         }
     }

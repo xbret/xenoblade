@@ -55,42 +55,42 @@ static const wchar_t* scErrorDuringMemoryReadWriteErrorMessage =
     L"Wii本体保存メモリの書き込み/読み出し中にエラーが発生しました。&"
     L"くわしくはWii本体の取扱説明書をお読みください。";
 
-const wchar_t* getNoDiscErrorMessage() {
+const wchar_t* getNoDiscErrorMessage(){
     return scNoDiscErrorMessage;
 }
 
-const wchar_t* getDiscUnreadableErrorMessage() {
+const wchar_t* getDiscUnreadableErrorMessage(){
     return scDiscUnreadableErrorMessage;
 }
 
-const wchar_t* getReadingDiscErrorMessage() {
+const wchar_t* getReadingDiscErrorMessage(){
     return scReadingDiscErrorMessage;
 }
 
-const wchar_t* getWiiRemoteDisconnectedErrorMessage() {
+const wchar_t* getWiiRemoteDisconnectedErrorMessage(){
     return scWiiRemoteDisconnectedErrorMessage;
 }
 
-const wchar_t* getNunchuckDisconnectedErrorMessage() {
+const wchar_t* getNunchuckDisconnectedErrorMessage(){
     return scNunchuckDisconnectedErrorMessage;
 }
 
-const wchar_t* getClassicControllerDisconnectedErrorMessage() {
+const wchar_t* getClassicControllerDisconnectedErrorMessage(){
     return scClassicControllerDisconnectedErrorMessage;
 }
 
-const wchar_t* getNoExtensionErrorMessage() {
+const wchar_t* getNoExtensionErrorMessage(){
     return scNoExtensionErrorMessage;
 }
 
-const wchar_t* getMemoryDamagedErrorMessage() {
+const wchar_t* getMemoryDamagedErrorMessage(){
     return scMemoryDamagedErrorMessage;
 }
 
-const wchar_t* getMemoryReadWriteFailErrorMessage() {
+const wchar_t* getMemoryReadWriteFailErrorMessage(){
     return scMemoryReadWriteFailErrorMessage;
 }
 
-const wchar_t* getErrorDuringMemoryReadWriteErrorMessage() {
+const wchar_t* getErrorDuringMemoryReadWriteErrorMessage(){
     return scErrorDuringMemoryReadWriteErrorMessage;
 }

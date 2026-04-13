@@ -2,7 +2,7 @@
 
 #include "monolib/work.hpp"
 
-class CTaskEnvironment : public CTTask<CTaskEnvironment> {
+class CTaskEnvironment : public CTTask<CTaskEnvironment>{
 public:
     static CTaskEnvironment* getInstance();
     static CTaskEnvironment* create(CProcess* pParent, CScnNw4r* pScene);

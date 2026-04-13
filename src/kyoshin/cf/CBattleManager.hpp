@@ -13,36 +13,34 @@
 
 #include <cstring>
 
-namespace cf {
-    class UnkClass_8018C5FC {
+namespace cf{
+    class UnkClass_8018C5FC{
     public:
         UnkClass_8018C5FC();
 
         u8 unk0[8];
     };
 
-    class UnkClass_80192BF4 {
-    public:
+    cclass UnkClass_80192BF4{    public:
         UnkClass_80192BF4();
         void __ct__80192C10();
 
         u8 unk0[0xC];
     };
 
-    struct CBattleManager_Struct1 {
-        CBattleManager_Struct1() {
+    struct CBattleManager_Struct1{
+        CBattleManager_Struct1(){
             std::memset(unk0, 0, sizeof(unk0));
         }
 
         u8 unk0[8];
     };
 
-    struct CBattleManager_Struct2 {
-        CBattleManager_Struct2() {
+    sstruct CBattleManager_Struct2{        CBattleManager_Struct2(){
             clear();
         }
 
-        void clear() {
+        void clear(){
             std::memset(unk0, 0, sizeof(unk0));
         }
 
@@ -50,8 +48,7 @@ namespace cf {
     };
 
     //size: 0x283D8
-    class CBattleManager : public IFactoryEvent {
-    public:
+    clclass CBattleManager : public IFactoryEvent{   public:
         CBattleManager();
         virtual ~CBattleManager();                  //0x8
         virtual void FactoryEvent2();               //0x10

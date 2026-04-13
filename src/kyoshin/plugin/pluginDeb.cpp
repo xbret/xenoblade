@@ -4,21 +4,21 @@ static PluginFuncData sPluginDebFuncs[] = {
     {"put", deb_put}, {"performanceStart", deb_performanceStart}, {"performanceEnd", deb_performanceEnd}, {NULL, NULL}};
 
 //This was probably used to print debug messages, but is stubbed in the release version.
-int deb_put(VMThread* pThread) {
+int deb_put(VMThread* pThread){
     return 0;
 }
 
 //These two functions would've printed out performance info?
-int deb_performanceStart(VMThread* pThread) {
+int deb_performanceStart(VMThread* pThread){
     vmArgStringGet(2, vmArgPtrGet(pThread, 1));
     return 0;
 }
 
-int deb_performanceEnd(VMThread* pThread) {
+int deb_performanceEnd(VMThread* pThread){
     vmArgStringGet(2, vmArgPtrGet(pThread, 1));
     return 0;
 }
 
-void pluginDebRegist() {
+void pluginDebRegist(){
     vmPluginRegist("deb", sPluginDebFuncs);
 }

@@ -4,13 +4,13 @@
 
 #include "monolib/core.hpp"
 
-namespace cf {
+namespace cf{
     //Separate deadzone value specifically for CfPadData
     static const float CFPAD_STICK_DEADZONE = 0.5f;
 
     //TODO: unsure if it inherits CPad or not
     //max size: 0x128
-    struct CfPadData {
+    struct CfPadData{
         CPad mPad; //0x0
         //Is having a separate set of flags *really* necessary, Monolithsoft?
         u32 mHeldButtonFlags;                           //0xF8

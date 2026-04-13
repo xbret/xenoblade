@@ -6,7 +6,7 @@
 class CProcess;
 class CScnNw4r;
 
-class CUIBattleManager : public CTTask<CUIBattleManager>, public IWorkEvent {
+class CUIBattleManager : public CTTask<CUIBattleManager>, public IWorkEvent{
 public:
     static CUIBattleManager* create(CProcess* pParent, CScnNw4r* pScene, mtl::ALLOC_HANDLE mHandle);
 

@@ -2,11 +2,11 @@
 
 #include "monolib/nand/CNBanner.hpp"
 
-class CNandData {
+class CNandData{
 public:
     CNBanner mNandBanner;
 
-    CNandData() : mNandBanner() {
+    CNandData() : mNandBanner(){
         mNandBanner.func_804F52F8(scNandTitleText);
         mNandBanner.func_804F5304(scNandDescriptionText);
         mNandBanner.func_804F5310(scNandBannerFilename);
@@ -14,7 +14,7 @@ public:
         mNandBanner.unkC &= ~0x10;
     }
 
-    ~CNandData() {}
+    ~CNandData(){}
 
 private:
     static const char* scNandTitleText;

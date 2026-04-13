@@ -9,8 +9,8 @@ u32 func_80164910();
 class CScnNw4r;
 class CView;
 
-namespace cf {
-    class CTaskREvent : public CTTask<CTaskREvent> {
+namespace cf{
+    class CTaskREvent : public CTTask<CTaskREvent>{
     public:
         static CTaskREvent* getInstance();
         static CTaskREvent* create(CProcess* pParent, CScnNw4r* pScene, CView* pView);

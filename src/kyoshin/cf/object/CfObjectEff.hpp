@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/object/CfObject.hpp"
 
-namespace cf {
+namespace cf{
     //size: 0xC0
-    class CfObjectEff : public CfObject {
+    class CfObjectEff : public CfObject{
     public:
         //0x0: vtable
         //0x0-70: CfObject

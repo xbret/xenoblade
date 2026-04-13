@@ -3,8 +3,8 @@
 #include "monolib/scn.hpp"
 #include "monolib/work.hpp"
 
-namespace cf {
-    class CfNandManager : public CTTask<CfNandManager>, public IWorkEvent, public IScnRender {
+namespace cf{
+    class CfNandManager : public CTTask<CfNandManager>, public IWorkEvent, public IScnRender{
     public:
         static u32 func_8024005C();
 

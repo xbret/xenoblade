@@ -2,11 +2,11 @@
 
 static PluginFuncData sPluginWaitFuncs[] = {{"frame", wait_frame}, {NULL, NULL}};
 
-int wait_frame(VMThread* pThread) {
+int wait_frame(VMThread* pThread){
     int temp_r30 = vmArgIntGet(2, vmArgPtrGet(pThread, 1));
     int wkIdx = vmWkIdxGet(pThread);
 
-    if(wkIdx == 0) {
+    if(wkIdx == 0){
         u32* temp_r3 = vmWkGet(pThread, 0);
         *temp_r3 = temp_r30 << 0xC;
         vmWkIdxSet(pThread, wkIdx + 1); //why not just set it to 1???
@@ -15,13 +15,13 @@ int wait_frame(VMThread* pThread) {
         u32* temp_r3 = vmWkGet(pThread, 0);
         int temp_r0 = *temp_r3 - 0x1000;
         *temp_r3 = temp_r0;
-        if(temp_r0 > 0) {
+        if(temp_r0 > 0){
             vmWaitModeSet(pThread);
         }
     }
     return 0;
 }
 
-void pluginWaitRegist() {
+void pluginWaitRegist(){
     vmPluginRegist("wait", sPluginWaitFuncs);
 }

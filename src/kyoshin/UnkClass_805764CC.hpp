@@ -7,7 +7,7 @@
 #include "kyoshin/cf/object/TBoxInfo.hpp"
 #include "monolib/util.hpp"
 
-class UnkClass_800B0AD8 {
+class UnkClass_800B0AD8{
 public:
     u8 unk0[0xAF8];
     UnkClass_800B0AD8* unkAF8;
@@ -15,7 +15,7 @@ public:
     u32 unkB00;
     u32 unkB04;
 
-    UnkClass_800B0AD8() {
+    UnkClass_800B0AD8(){
         unkB04 = 0x2BE;
         unkAF8 = this;
         unkB00 = 0;
@@ -23,8 +23,7 @@ public:
     }
 };
 
-class UnkClass_805764CC {
-public:
+cclass UnkClass_805764CC{public:
     static UnkClass_805764CC* func_800B07E8();
     void func_800B8804(cf::IFactoryEvent*);
     void func_800B88E0(cf::IFactoryEvent*);

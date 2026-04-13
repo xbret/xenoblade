@@ -8,10 +8,10 @@
 #include "monolib/util.hpp"
 #include "monolib/work.hpp"
 
-namespace cf {
+namespace cf{
 
     //size: 0x124
-    class CTaskCulling : public CTTask<CTaskCulling>, public IWorkEvent, public IScnRender, public ICulling {
+    class CTaskCulling : public CTTask<CTaskCulling>, public IWorkEvent, public IScnRender, public ICulling{
     public:
         CTaskCulling(CScn* pScene);
         virtual ~CTaskCulling();

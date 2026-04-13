@@ -4,14 +4,13 @@
 
 #include "monolib/math.hpp"
 
-namespace cf {
+namespace cf{
 
-    class CfCam {};
+    class CfCam{};
 
-    class CfCamFollow : CfCam {};
+    cclass CfCamFollow : CfCam{;
 
-    class CfCamEvent : CfCamFollow {
-    public:
+    clclass CfCamEvent : CfCamFollow{   public:
         u8 unk0[0x28];
         ml::CVec3 unk28;
         u8 unk34[0x264 - 0x34];
@@ -20,16 +19,14 @@ namespace cf {
         ml::CVec3 unk274;
     };
 
-    class CfCamIntf {
-    public:
+    claclass CfCamIntf{  public:
         virtual void update() = 0;
         virtual void setPos() = 0;
         virtual void setDir() = 0;
         virtual void setLookat() = 0;
     };
 
-    class CfCamLookatIntf : CfCamIntf {
-    public:
+    clasclass CfCamLookatIntf : CfCamIntf{ public:
         virtual void update(CfCamEvent*);
         virtual void setPos(CfCamEvent*, ml::CVec3 const&);
         virtual void setDir(CfCamEvent*, ml::CVec3 const&);

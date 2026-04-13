@@ -1,8 +1,8 @@
 #pragma once
 
-namespace cf {
+namespace cf{
 
-    class CfObjectSelectorObj {
+    class CfObjectSelectorObj{
     public:
         static CfObjectSelectorObj* spInstance;
         virtual ~CfObjectSelectorObj();

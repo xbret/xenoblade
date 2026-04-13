@@ -2,10 +2,10 @@
 
 #include <types.h>
 
-namespace cf {
-    class IObjectInfo {
+namespace cf{
+    class IObjectInfo{
     public:
-        virtual ~IObjectInfo() {}
+        virtual ~IObjectInfo(){}
         virtual void IObjectInfo_UnkVirtualFunc1() = 0; //not sure if this exists
     };
 } //namespace cf

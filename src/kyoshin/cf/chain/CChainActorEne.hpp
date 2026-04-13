@@ -4,6 +4,6 @@
 
 #include "kyoshin/cf/chain/CChainActor.hpp"
 
-namespace cf {
-    class CChainActorEne : public CChainActor {};
+namespace cf{
+    class CChainActorEne : public CChainActor{};
 } //namespace cf

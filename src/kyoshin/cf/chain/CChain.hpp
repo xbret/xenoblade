@@ -9,12 +9,12 @@
 #include "kyoshin/cf/chain/CChainTime.hpp"
 #include "kyoshin/cf/chain/CChainTimer.hpp"
 
-namespace cf {
+namespace cf{
     //size: 0x1F0C?
-    class CChain {
+    class CChain{
     public:
         CChain();
-        ~CChain() {}
+        ~CChain(){}
         void func_8027728C();
 
         u8 unk0[0x18];

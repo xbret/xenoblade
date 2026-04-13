@@ -7,20 +7,19 @@
 #include "monolib/util.hpp"
 #include "monolib/work.hpp"
 
-class ITitleMenu {
+class ITitleMenu{
 public:
-    virtual ~ITitleMenu() {}
+    virtual ~ITitleMenu(){}
     virtual void ITitleMenu__UnkVirtualFunc1() = 0;
 };
 
-class IErrMesWinSel {
-public:
-    virtual ~IErrMesWinSel() {}
+cclass IErrMesWinSel{public:
+    virtual ~IErrMesWinSel(){}
     virtual void IErrMesWinSel__UnkVirtualFunc1() = 0;
 };
 
-struct UnkClass_8004041C {
-    UnkClass_8004041C(u8 r4, int r5, u32 r6, u8 r7, u32 r8, u32 r9, float f1) {
+struct UnkClass_8004041C{
+    UnkClass_8004041C(u8 r4, int r5, u32 r6, u8 r7, u32 r8, u32 r9, float f1){
         unk0 = r4;
         unk4 = f1;
         unk8 = r5;

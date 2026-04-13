@@ -2,8 +2,8 @@
 
 #include "monolib/math.hpp"
 
-namespace cf {
-    CActorParam::CActorParam(UNKTYPE* r4, UNKTYPE* r5) : CActorState(r4), unk15DC(r4), unk15E0(r5), unk1648(0), unk164A(0), unk164C(0) {
+namespace cf{
+    CActorParam::CActorParam(UNKTYPE* r4, UNKTYPE* r5) : CActorState(r4), unk15DC(r4), unk15E0(r5), unk1648(0), unk164A(0), unk164C(0){
         *(u32*)((u32)unk3298.unk8 + 4) = 0;
         std::memset(unk335C, 0, sizeof(unk335C));
         *(u32*)((u32)unk3298.unk8 + 8) = 0;
@@ -60,7 +60,7 @@ namespace cf {
         unk3354 = 0;
         unk337C = 0;
 
-        for(int i = 0; i < ARRAY_SIZE(unk1928); i++) {
+        for(int i = 0; i < ARRAY_SIZE(unk1928); i++){
             unk1928[i].init();
         }
     }

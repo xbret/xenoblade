@@ -1,7 +1,7 @@
 #include "kyoshin/cf/chain/CChainCombo.hpp"
 
-namespace cf {
-    CChainCombo::CChainCombo() {
+namespace cf{
+    CChainCombo::CChainCombo(){
         func_80294824(&c);
         w = 0;
         a = 0;
@@ -10,7 +10,7 @@ namespace cf {
         func_802AA338();
     }
 
-    void CChainCombo::func1() {
+    void CChainCombo::func1(){
         w = 0;
         a = 0;
         b = false;

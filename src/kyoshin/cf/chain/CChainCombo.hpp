@@ -6,7 +6,7 @@ void func_80294824(void*);
 void func_80294834(void*);
 void func_802AA338();
 
-namespace cf {
+namespace cf{
 
     /*
     int lbl_8053C140[3] = {
@@ -15,7 +15,7 @@ namespace cf {
     */
 
     //size: 0x18
-    class CChainCombo {
+    class CChainCombo{
     public:
         int w;   //0x0
         int a;   //0x4
@@ -24,7 +24,7 @@ namespace cf {
         int d;   //0x10
         //0x14: vtable
 
-        virtual ~CChainCombo() {};
+        virtual ~CChainCombo(){};
 
         CChainCombo();
         void func1();

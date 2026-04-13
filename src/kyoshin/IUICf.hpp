@@ -2,6 +2,6 @@
 
 #include "monolib/work.hpp"
 
-class IUICf : public CTTask<IUICf> {
+class IUICf : public CTTask<IUICf>{
 public:
 };

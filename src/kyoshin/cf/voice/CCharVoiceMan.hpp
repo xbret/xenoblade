@@ -4,9 +4,9 @@
 
 #include "kyoshin/cf/IFactoryEvent.hpp"
 
-namespace cf {
+namespace cf{
 
-    class CCharVoiceMan : public IFactoryEvent {
+    class CCharVoiceMan : public IFactoryEvent{
     public:
         CCharVoiceMan();
         virtual ~CCharVoiceMan();

@@ -4,9 +4,9 @@
 #include "monolib/work/CTTask.hpp"
 #include "monolib/work/IWorkEvent.hpp"
 
-class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent {
+class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent{
 public:
-    static CUICfManager* getInstance() {
+    static CUICfManager* getInstance(){
         return spInstance;
     }
     static CUICfManager* create(CProcess* pParent, CScnNw4r* pScene, mtl::ALLOC_HANDLE mHandle);
