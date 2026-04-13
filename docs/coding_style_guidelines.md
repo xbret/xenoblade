@@ -13,6 +13,7 @@ Note that the project has a [format file](../.clang-format), so for a more concr
 5. [Struct/Class Members](#structclass-members)
 6. [Includes/Headers](#includesheaders)
 7. [Formatting](#formatting)
+8. [Common Macros](#common-macros)
 
 ## Data Types
 
@@ -51,12 +52,18 @@ It's important to note that `int` and `s32` aren't the same, and shouldn't be us
 
 Generally, brackets should be like this:
 ```cpp
+void Thing(){
+}
+
 if(something){
 	//something
 }else{
 	//something else
 }
+```
 
+If using a single line if statement:
+```cpp
 if(isTrue) print("True");
 else print("False");
 ```
@@ -90,6 +97,12 @@ namespace One {
 		//:>
 	} // namespace Two
 } // namespace One
+```
+
+Pointers/references should be formatted like this:
+```cpp
+void AnExample(u32* a, Result& b){
+}
 ```
 
 ## Naming
@@ -210,6 +223,26 @@ class Shop {
 This works since the compiler doesn't need to know the details of the class, just the type that the variable points to. This is useful as it limits
 the amount of headers that not just headers, but regular code files need to include.
 
+### Include Order/Formatting
+Includes in code files should generally follow this order/format:
+
+```cpp
+#include <types.h>          //1) Base include folder h files
+#include "file.h"           //2-a) Matching h file for this file
+#include "other.h"          //2-b) Other h files in the same group/library
+#include "otherlib/file.h"  //3) h files from other (non Wii SDK) library
+#include <revolution/lib.h> //4) Wii SDK h files
+#include <cmath>            //5) C standard library files
+```
+
+The order for non SDK library files should be in this order:
+```
+1)monolib
+2)NW4R
+3)Criware
+```
+
+Spaces between groups are fine, but not necessary.
 
 ## Formatting
 
@@ -217,3 +250,7 @@ Here are the general rules for formatting:
 
 - 4 spaces for tabs
 - 120 characters maximum per line
+
+## Common Macros
+
+There are several utility macros defined in the files inside the base include folder. These include ones specific for helping with decompilation, which are located in [decomp.h](../include/decomp.h), and general use ones, which are located in [macros.h](../include/macros.h). The decompilation macros include  ``DECOMP_DONT_INLINE``, which is a wrapper around the ``never_inline`` attribute, and ``DECOMP_FORCEACTIVE``, which can be used to force certain data to be kept. The general use macros include ones such as ``ALIGN`` for data alignment. In general, it's preferable to use these for consistency/cleaner code.
