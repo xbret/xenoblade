@@ -52,15 +52,15 @@ namespace cf{
         void func_8004499C();
 
         //0x0-0x54: CTTask
-        /* 0x54 */ u32 unk_54;
-        /* 0x58 */ CTaskGame* pTaskGame;
-        /* 0x5C */ u16 unk_5C;
-        /* 0x5E */ u16 unk_5E;
-        /* 0x60 */ u16 unk_60;
-        /* 0x62 */ u16 unk_62;
-        /* 0x64 */ ml::FixStr<32> unk_64;
-        /* 0x88 */ u16 unk_88;
-        /* 0x8C */ s32 unk_8C;
+        u32 unk_54; // 0x54
+        CTaskGame* pTaskGame; // 0x58
+        u16 unk_5C; // 0x5C
+        u16 unk_5E; // 0x5E
+        u16 unk_60; // 0x60
+        u16 unk_62; // 0x62
+        ml::FixStr<32> unk_64; // 0x64
+        u16 unk_88; // 0x88
+        s32 unk_8C; // 0x8C
     }; //size = 0x90
 
 } //namespace cf

@@ -1,10 +1,6 @@
 #pragma once
 
-#include "monolib/work/CTTask.hpp"
-#include "monolib/work/IWorkEvent.hpp"
-
-class CProcess;
-class CScnNw4r;
+#include "monolib/work.hpp"
 
 class CUIBattleManager : public CTTask<CUIBattleManager>, public IWorkEvent{
 public:
@@ -15,5 +11,5 @@ public:
 private:
     //0x00-0x54 CTTask
     //0x54-0x58 IWorkEvent
-    /* 0x58 */ char unk58[0xF0 - 0x58];
+    char unk58[0xF0 - 0x58]; //0x58
 }; //size = 0xF0

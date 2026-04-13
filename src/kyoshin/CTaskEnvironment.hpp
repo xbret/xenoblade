@@ -2,6 +2,9 @@
 
 #include "monolib/work.hpp"
 
+class CProcess;
+class CScnNw4r;
+
 class CTaskEnvironment : public CTTask<CTaskEnvironment>{
 public:
     static CTaskEnvironment* getInstance();
@@ -9,7 +12,7 @@ public:
 
 private:
     //0x00-0x54 CTTask
-    /* 0x54 */ char unk54[0xEC - 0x54];
+    char unk54[0xEC - 0x54]; //0x54
 
     static CTaskEnvironment* spInstance;
 }; //size = 0xEC

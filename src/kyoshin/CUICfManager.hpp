@@ -1,8 +1,7 @@
 #pragma once
 
 #include "kyoshin/cf/IFlagEvent.hpp"
-#include "monolib/work/CTTask.hpp"
-#include "monolib/work/IWorkEvent.hpp"
+#include "monolib/work.hpp"
 
 class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent{
 public:
@@ -16,7 +15,7 @@ private:
     //0x000-0x054 CTTask
     //0x054-0x058 IWorkEvent
     //0x058-0x05C cf::IFlagEvent
-    /* 0x05C */ char unk05C[0xC94 - 0x05C];
+    char unk05C[0xC94 - 0x05C]; //0x05C
 
     static CUICfManager* spInstance;
 }; //size = 0xC94

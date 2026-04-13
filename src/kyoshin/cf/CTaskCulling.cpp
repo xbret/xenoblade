@@ -1,6 +1,7 @@
 #include "kyoshin/cf/CTaskCulling.hpp"
 #include "kyoshin/cf/CfGameManager.hpp"
 #include "kyoshin/code_800AA008.hpp"
+#include "monolib/scn.hpp"
 #include <cstring>
 
 namespace cf{

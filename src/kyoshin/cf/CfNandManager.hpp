@@ -10,8 +10,8 @@ namespace cf{
 
     private:
         //0x000-0x054 CTTask
-        // 0x054-0x058 IWorkEvent
-        // 0x058-0x05C IScnRender
-        /* 0x05C */ char unk05C[0x194 - 0x05C];
+        //0x054-0x058 IWorkEvent
+        //0x058-0x05C IScnRender
+        char unk05C[0x194 - 0x05C]; //0x05C
     }; //size = 0x194
 } //namespace cf

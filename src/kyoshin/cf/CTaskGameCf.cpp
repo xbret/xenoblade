@@ -1,7 +1,6 @@
 #pragma once
 
 #include "kyoshin/cf/CTaskGameCf.hpp"
-
 #include "kyoshin/CTaskEnvironment.hpp"
 #include "kyoshin/CTaskGame.hpp"
 #include "kyoshin/CUIBattleManager.hpp"

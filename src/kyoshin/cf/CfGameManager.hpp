@@ -2,15 +2,16 @@
 
 #include <types.h>
 
-#include "kyoshin/cf/CfPadData.hpp"
-#include "kyoshin/cf/object/CfObjectMove.hpp"
-#include "monolib/core.hpp"
-#include "monolib/scn.hpp"
+class CPad;
+class CScnNw4r;
+class CView;
 
 /* TODO: it's possible this file contains multiple separate classes, either just all being put in here,
 or due to being in separate files, but compiled together in one file (unity compilation). For now,
 to make things simpler, everything exists in a single class. */
 namespace cf{
+    class CfPadData;
+    class CfObjectMove;
 
     //unofficial name
     class CfGameManager{
@@ -27,7 +28,7 @@ namespace cf{
         static UNKWORD func_800829B8();
         static u32 getCurrentPadChannel();
         static UNKTYPE* func_80083298();
-        static cf::CfObjectMove* func_80082D54(int playerIndex);
+        static CfObjectMove* func_80082D54(int playerIndex);
         static u32 getEnabledInputFlags();
         static void setCurrentPadPtr(const CPad* pPad, u32 r4);
         static CPad* getPad(int r3);
@@ -60,7 +61,7 @@ namespace cf{
         //between CObjectParam - CfObjectMove
         //likely player character object array, seems to always store pointers
         //to CfObjectPc objects except pointing at the 4th vtable
-        cf::CfObjectMove* unk94[3];
+        CfObjectMove* unk94[3];
         u32 unkA0;
         u32 unkA4;
         u32 unkA8;

@@ -3,17 +3,16 @@
 namespace cf{
 
     class CfObjectSelectorObj{
-    public:
-        static CfObjectSelectorObj* spInstance;
+    public:        
         virtual ~CfObjectSelectorObj();
 
         static void create();
-
         static void destroy();
 
     private:
-        /* 0x0000 */ char unk0000[0xC188 - 0x0000];
-
+        static CfObjectSelectorObj* spInstance;
+        
+        char unk0000[0xC188 - 0x0000]; //0x0000
     }; //size = 0xC188
 
 } //namespace cf
