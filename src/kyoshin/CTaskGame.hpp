@@ -20,15 +20,7 @@ public:
 };
 
 struct UnkClass_8004041C{
-    UnkClass_8004041C(u8 r4, int r5, u32 r6, u8 r7, u32 r8, u32 r9, float f1){
-        unk0 = r4;
-        unk4 = f1;
-        unk8 = r5;
-        unkC = r6;
-        unk10 = r7;
-        unk14 = r8;
-        unk18 = r9;
-    }
+    void func_8004041C(u8 r4, float f1, int r5, u32 r6, u8 r7, u32 r8, u32 r9);
 
     u8 unk0;
     float unk4;
