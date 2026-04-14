@@ -19,6 +19,8 @@ public:
 };
 
 struct UnkClass_8004041C{
+    void func_8004041C(u8 r4, float f1, int r5, u32 r6, u8 r7, u32 r8, u32 r9);
+
     u8 unk0;
     float unk4;
     int unk8;

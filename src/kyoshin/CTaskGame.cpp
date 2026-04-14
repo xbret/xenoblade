@@ -5,18 +5,14 @@ u32 lbl_80666624;
 u32 lbl_80666630;
 u32 lbl_80666634;
 
-__attribute__((noinline))
-void func_8004041C(
-    UnkClass_8004041C* self,
-    u8 r4, float f1, int r5, u32 r6, u8 r7, u32 r8, u32 r9)
-{
-    self->unk0  = r4;
-    self->unk4  = f1;
-    self->unk8  = r5;
-    self->unkC  = r6;
-    self->unk10 = r7;
-    self->unk14 = r8;
-    self->unk18 = r9;
+void UnkClass_8004041C::func_8004041C(u8 r4, float f1, int r5, u32 r6, u8 r7, u32 r8, u32 r9) {
+    this->unk0  = r4;
+    this->unk4  = f1;
+    this->unk8  = r5;
+    this->unkC  = r6;
+    this->unk10 = r7;
+    this->unk14 = r8;
+    this->unk18 = r9;
 }
 
 CTaskGame::CTaskGame(CView* pView, CWorkThread* pThread, int r6) :
@@ -57,7 +53,7 @@ CTaskGame::CTaskGame(CView* pView, CWorkThread* pThread, int r6) :
     unk130(0),
     unk170(0),
     unk188(0) {
-    func_8004041C(&unk18C, 0, -1, 2, 0, 0, 0, 1);
+    unk18C.func_8004041C(0, -1, 2, 0, 0, 0, 1);
     spInstance = this;
     CTaskGame_cLoadInstance = nullptr;
     lbl_80666624 = 0;
