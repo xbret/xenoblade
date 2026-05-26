@@ -3295,14 +3295,20 @@ criware_data.s:
 	.data       start:0x80560028 end:0x80568F38
 	.bss        start:0x805DFDA8 end:0x8061A4D8
 
-nw4r_data.s:
-	.rodata     start:0x8051D4A0 end:0x80522410
-	.data       start:0x80568F38 end:0x8056B0E0
+nw4r_dataa.s:
+	.rodata     start:0x8051D4A0 end:0x8051D530
+	.data       start:0x80568F38 end:0x80569180
 	.bss        start:0x8061A4D8 end:0x80653EE0
-	.sdata      start:0x80663450 end:0x80663500
+	.sdata      start:0x80663450 end:0x80663458
 	.sbss       start:0x80665438 end:0x80665570
-	.sdata2     start:0x80669A68 end:0x8066A178
+	.sdata2     start:0x80669A68 end:0x80669B48
 	.sbss2      start:0x8066B550 end:0x8066B558
+
+nw4r_datab.s:
+	.rodata     start:0x8051D560 end:0x80522410
+	.data       start:0x80569210 end:0x8056B0E0
+	.sdata      start:0x80663460 end:0x80663500
+	.sdata2     start:0x80669B58 end:0x8066A178
 
 monolibdata1.s:
 	.rodata     start:0x80522410 end:0x80522990
@@ -3843,6 +3849,10 @@ nw4r/src/g3d/g3d_anmvis.cpp:
 
 nw4r/src/g3d/g3d_anmclr.cpp:
 	.text       start:0x803E3F4C end:0x803E4CD0
+	.rodata     start:0x8051D530 end:0x8051D560
+	.data       start:0x80569180 end:0x80569210
+	.sdata      start:0x80663458 end:0x80663460
+	.sdata2     start:0x80669B48 end:0x80669B58
 
 nw4r/src/g3d/g3d_anmtexpat.cpp:
 	.text       start:0x803E4CD0 end:0x803E56FC
