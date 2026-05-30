@@ -113,3 +113,8 @@ Download the latest release from [encounter/objdiff](https://github.com/encounte
 Select an object from the left sidebar to begin diffing. Changes to the project will rebuild automatically: changes to source files, headers, `configure.py`, `splits.txt` or `symbols.txt`.
 
 ![](assets/objdiff.png)
+
+Contributions
+=============
+
+All contributions are welcome and very much appreciated. However, **no LLM assisted contributions will be accepted**. Additionally, make sure your code follows the [style guidelines](./docs/coding_style_guidelines.md).
