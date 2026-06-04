@@ -1,9 +1,10 @@
 #include "kyoshin/makecrystal/CMCCrystalInfo.hpp"
 
+#include "kyoshin/cf/CfBdat.hpp"
 #include "kyoshin/code_80135FDC.hpp"
+#include "monolib/device/CDeviceFile.hpp"
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/work/IWorkEvent.hpp"
-#include "stddef.h"
 
 #include "nw4r/lyt/lyt_pane.h"
 
@@ -143,7 +144,7 @@ void CMCCrystalInfo::func_8021A9A8(u32 arg1, void* arg2) {
     if(pVoid != nullptr && *(u32*)pVoid != 0) {
         bool isValid = false;
         //Todo, simplify when arg2 type is found
-        u8 unkU8 = (*(u32*)pVoid >> 16) & 0xF;
+        u8 unkU8 = *(u32*)pVoid >> 16 & 0xF;
         if(unkU8 == 9) {
             if((u16)(((u8*)pVoid)[0x07] & 3) == 2) {
                 isValid = true;
@@ -454,7 +455,7 @@ bool CMCCrystalInfo::OnFileEvent(CEventFile* pEventFile) {
         func_801D1E0C(nullptr, nullptr);
         func_801397AC(rootPane, 1);
         func_801D1E0C(nullptr, nullptr);
-        
+
         func_8021B500();
         mFileHandle24 = nullptr;
 
