@@ -132,14 +132,14 @@ void CMCCrystalInfo::func_8021A9A8(u32 arg1, void* arg2) {
     } else {
         pVoid = nullptr;
     }
-    u32 unknownUl1;
+    u32 ul1;
     if(pVoid != nullptr) {
         //Todo, simplify when arg2 type is found
-        unknownUl1 = *(u32*)pVoid >> 20;
+        ul1 = *(u32*)pVoid >> 20;
     } else {
-        unknownUl1 = arg1;
+        ul1 = arg1;
     }
-    u32 unknownUl2 = func_801392E4((u16)unknownUl1);
+    u32 unknownUl2 = func_801392E4((u16)ul1);
     if(pVoid != nullptr && *(u32*)pVoid != 0) {
         bool isValid = false;
         //Todo, simplify when arg2 type is found
@@ -154,13 +154,15 @@ void CMCCrystalInfo::func_8021A9A8(u32 arg1, void* arg2) {
             if(unkU8 == 9 && (u16)(((u8*)pVoid)[0x07] & 3) == 3) {
                 isValid = true;
             }
+            if(!isValid) {
+                goto end;
+            }
         }
-        if(isValid) {
-            unknownUl2 = 9;
-        }
+        unknownUl2 = 9;
     }
+end:
     if((s32)(u16)unknownUl2 == 9) {
-        func_8021B2E0((u16)unknownUl1, arg2);
+        func_8021B2E0((u16)ul1, arg2);
     } else {
         func_8021B42C();
     }
@@ -351,15 +353,12 @@ void CMCCrystalInfo::func_8021B42C() {
     }
 }
 
-//todo issue with branching
 void CMCCrystalInfo::func_8021B500() {
-    if(mLayout == nullptr) {
+    if(mLayout == nullptr || mArcResourceAccessor30 == nullptr) {
         return;
     }
-    if(mArcResourceAccessor30 != nullptr) {
-        unk50 = 1;
-        unk48 = 1;
-    }
+    unk50 = 1;
+    unk48 = 1;
 }
 
 void CMCCrystalInfo::func_8021B52C() {
