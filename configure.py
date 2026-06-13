@@ -618,7 +618,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/makecrystal/CMakeCrystalWin.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/code_80213488.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/CMCCrystalBox.cpp"),
-            Object(NonMatching, "kyoshin/makecrystal/CMCCrystalInfo.cpp"),
+            Object(NonMatching, "kyoshin/makecrystal/CMCCrystalInfo.cpp", extra_cflags=["-O4,s"]),
             Object(NonMatching, "kyoshin/makecrystal/CModelDispMakeCrystal.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/CMCCylinderGauge.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/CMCCrystalList.cpp"),
