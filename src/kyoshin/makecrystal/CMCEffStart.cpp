@@ -2,8 +2,11 @@
 
 #include "kyoshin/code_80135FDC.hpp"
 
+#include "nw4r/lyt/lyt_pane.h"
+
 extern u32 func_80137444(nw4r::lyt::AnimTransform*, float);
 extern void func_80138078(u32);
+extern void* func_801355BC();
 
 CMCEffStart::CMCEffStart(nw4r::lyt::ArcResourceAccessor* arcResourceAccessor)
     : unk4(0), unk5(1), mArcResourceAccessor(arcResourceAccessor), mLayout(nullptr), mAnimTrans(nullptr), unk14(0) {}
@@ -128,4 +131,94 @@ void CMCEffUpGreen::func_80224274() {
 void CMCEffUpGreen::func_80224304() {
     func_80223F24();
     func_80138078(0x8c); //140 Dec
+}
+/******************************************************************************
+ *
+ * CMCEffUpPrm
+ *
+ ******************************************************************************/
+//todo
+CMCEffUpPrm::CMCEffUpPrm(nw4r::lyt::ArcResourceAccessor* arg) {
+    unk4 = 1;
+    mArcResourceAccessor = arg;
+
+    for(u16 i = 0; i < 8; i++) {
+        unkStruct[i].layout = nullptr;
+        unkStruct[i].animTrans = nullptr;
+        unkStruct[i].unk8 = 0;
+    }
+    unk6c = 0;
+}
+
+CMCEffUpPrm::~CMCEffUpPrm() {}
+
+//todo some tweaks needed
+void CMCEffUpPrm::func_802243B4() {
+    for(u16 i = 0; i < 8; ++i) {
+        func_80136E84(&unkStruct[i].layout, mArcResourceAccessor, "mf10_cry02_prt03");
+        func_80136F08(unkStruct[i].layout, &unkStruct[i].animTrans, mArcResourceAccessor, "mf10_cry02_prt03_in");
+        nw4r::lyt::Pane* rootPane = unkStruct[i].layout->GetRootPane();
+        void* pVoid = func_801355BC();
+        func_8013676C(rootPane, pVoid);
+        unkStruct[i].layout->SetAnimationEnable(unkStruct[i].animTrans, true);
+        unkStruct[i].layout->Animate(0);
+    }
+    unk6c = 1;
+}
+
+void CMCEffUpPrm::func_8022447C() {
+    if(unk6c == 0) {
+        return;
+    }
+    for(u8 i = 0; i < 8; ++i) {
+        if((s8)unkStruct[i].unk8 == 1 && func_80137444(unkStruct[i].animTrans, 1.0f) != 0) {
+            unkStruct[i].unk8 = 0;
+        }
+        unkStruct[i].layout->Animate(0);
+    }
+}
+
+void CMCEffUpPrm::func_80224514(nw4r::lyt::DrawInfo* drawInfo) {
+    if(unk6c == 0) {
+        return;
+    }
+    for(u16 i = 0; i < 8; ++i) {
+        func_80137038(unkStruct[(u8)i].layout, drawInfo, 0, 1);
+    }
+}
+
+void CMCEffUpPrm::func_8022457C() {
+    unk6c = 0;
+    for(u8 i = 0; i < 8; i++) {
+        UnkStruct* unk_struct = &unkStruct[i];
+        if(unk_struct->layout != nullptr) {
+            delete unk_struct->layout;
+            unk_struct->layout = nullptr;
+        }
+    }
+}
+
+void CMCEffUpPrm::func_802245F0(u32 arg) {
+    for(u8 i = 0; i < 8; ++i) {
+        unkStruct[i].unk8 = 0;
+        unkStruct[i].animTrans->SetFrame(0.0f);
+        unkStruct[i].layout->Animate(0);
+        if(i < arg) {
+            unkStruct[i].unk8 = 1;
+        }
+    }
+}
+
+void CMCEffUpPrm::func_80224690(u32 arg1, nw4r::math::VEC3 arg2) {
+    if(arg1 >= 8) {
+        return;
+    }
+    unkStruct[arg1].layout->GetRootPane()->SetTranslate(arg2);
+}
+
+void CMCEffUpPrm::func_802246C4(u32 arg1, u8 arg2) {
+    if(arg1 >= 8) {
+        return;
+    }
+    func_80136910(unkStruct[arg1].layout, "txt_bns", arg2);
 }

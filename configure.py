@@ -622,7 +622,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/makecrystal/CModelDispMakeCrystal.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/CMCCylinderGauge.cpp"),
             Object(NonMatching, "kyoshin/makecrystal/CMCCrystalList.cpp"),
-            Object(NonMatching, "kyoshin/makecrystal/CMCEffStart.cpp"),
+            Object(NonMatching, "kyoshin/makecrystal/CMCEffStart.cpp", extra_cflags=["-O4,s"]),
             Object(NonMatching, "kyoshin/menu/CMenuQstCnt.cpp"),
             Object(NonMatching, "kyoshin/CQstLogList.cpp"),
             Object(NonMatching, "kyoshin/CQstLogInfo.cpp"),

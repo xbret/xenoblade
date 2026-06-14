@@ -67,3 +67,31 @@ public:
     void func_80224274();
     void func_80224304();
 };
+/******************************************************************************
+ *
+ * CMCEffUpPrm
+ *
+ ******************************************************************************/
+struct UnkStruct {
+    nw4r::lyt::Layout* layout;           //0x0
+    nw4r::lyt::AnimTransform* animTrans; //0x4
+    u8 unk8;
+};
+
+class CMCEffUpPrm {
+public:
+    CMCEffUpPrm(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffUpPrm();
+    void func_802243B4();
+    void func_8022447C();
+    void func_80224514(nw4r::lyt::DrawInfo*);
+    void func_8022457C();
+    void func_802245F0(u32);
+    void func_80224690(u32, nw4r::math::VEC3);
+    void func_802246C4(u32, u8);
+
+    u8 unk4;
+    nw4r::lyt::ArcResourceAccessor* mArcResourceAccessor; //0x8
+    UnkStruct unkStruct[8];                               //0xc
+    u8 unk6c;
+};
