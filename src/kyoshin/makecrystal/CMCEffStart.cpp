@@ -14,9 +14,9 @@ CMCEffStart::CMCEffStart(nw4r::lyt::ArcResourceAccessor* arcResourceAccessor)
 CMCEffStart::~CMCEffStart() {}
 
 void CMCEffStart::func_80223DB0() {
-    char* string = "mf10_cry06_start";
+    char* string = "mf10_cry06_start.brlyt";
     func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10";
+    char* string2 = "mf10_cry06_start_in.brlan";
     func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
@@ -73,9 +73,9 @@ CMCEffUpRed::CMCEffUpRed(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) :
 CMCEffUpRed::~CMCEffUpRed() {}
 
 void CMCEffUpRed::func_8022400C() {
-    char* string = "mf10_cry02_prt00";
+    char* string = "mf10_cry02_prt00.brlyt";
     func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt00_in";
+    char* string2 = "mf10_cry02_prt00_in.brlan";
     func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
@@ -96,9 +96,9 @@ CMCEffUpBlue::CMCEffUpBlue(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor)
 CMCEffUpBlue::~CMCEffUpBlue() {}
 
 void CMCEffUpBlue::func_80224140() {
-    char* string = "mf10_cry02_prt01";
+    char* string = "mf10_cry02_prt01.brlyt";
     func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt01_in";
+    char* string2 = "mf10_cry02_prt01_in.brlan";
     func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
@@ -119,9 +119,9 @@ CMCEffUpGreen::CMCEffUpGreen(nw4r::lyt::ArcResourceAccessor* pArcResourceAccesso
 CMCEffUpGreen::~CMCEffUpGreen() {}
 
 void CMCEffUpGreen::func_80224274() {
-    char* string = "mf10_cry02_prt02";
+    char* string = "mf10_cry02_prt02.brlyt";
     func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt02_in";
+    char* string2 = "mf10_cry02_prt02_in.brlan";
     func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
@@ -155,8 +155,8 @@ CMCEffUpPrm::~CMCEffUpPrm() {}
 //todo some tweaks needed
 void CMCEffUpPrm::func_802243B4() {
     for(u16 i = 0; i < 8; ++i) {
-        func_80136E84(&unkStruct[i].layout, mArcResourceAccessor, "mf10_cry02_prt03");
-        func_80136F08(unkStruct[i].layout, &unkStruct[i].animTrans, mArcResourceAccessor, "mf10_cry02_prt03_in");
+        func_80136E84(&unkStruct[i].layout, mArcResourceAccessor, "mf10_cry02_prt03.brlyt");
+        func_80136F08(unkStruct[i].layout, &unkStruct[i].animTrans, mArcResourceAccessor, "mf10_cry02_prt03_in.brlan");
         nw4r::lyt::Pane* rootPane = unkStruct[i].layout->GetRootPane();
         void* pVoid = func_801355BC();
         func_8013676C(rootPane, pVoid);
@@ -221,4 +221,111 @@ void CMCEffUpPrm::func_802246C4(u32 arg1, u8 arg2) {
         return;
     }
     func_80136910(unkStruct[arg1].layout, "txt_bns", arg2);
+}
+/******************************************************************************
+ *
+ * CMCEffSuccess
+ *
+ ******************************************************************************/
+CMCEffSuccess::CMCEffSuccess(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor)
+    : unk4(0),
+      unk5(1),
+      mArcResourceAccessor(pArcResourceAccessor),
+      mLayout(nullptr),
+      mAnimTrans10(nullptr),
+      mAnimTrans14(nullptr),
+      unk18(0) {}
+
+CMCEffSuccess::~CMCEffSuccess() {}
+
+void CMCEffSuccess::func_80224760() {
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry06_comp.brlyt");
+    func_80136F08(mLayout, &mAnimTrans10, mArcResourceAccessor, "mf10_cry06_comp_in.brlan");
+    func_80136F08(mLayout, &mAnimTrans14, mArcResourceAccessor, "mf10_cry06_comp_out.brlan");
+    func_80224A30();
+    mLayout->Animate(0);
+    unk18 = 1;
+}
+
+void CMCEffSuccess::func_802247F0() {
+    if(!unk18) {
+        return;
+    }
+    switch(unk4) {
+        case 1:
+            func_80224998();
+            break;
+        case 3:
+            func_802249E4();
+            break;
+        default:
+    }
+    mLayout->Animate(0);
+}
+
+void CMCEffSuccess::func_80224860(nw4r::lyt::DrawInfo* drawInfo) {
+    if(!unk18) {
+        return;
+    }
+    func_80137038(mLayout, drawInfo, 0, 1);
+}
+
+void CMCEffSuccess::func_80224880() {
+    unk18 = 0;
+    if(mLayout != nullptr) {
+        delete mLayout;
+        mLayout = nullptr;
+    }
+}
+
+u8 CMCEffSuccess::func_802248E0() {
+    return unk5;
+}
+
+void CMCEffSuccess::func_802248E8() {
+    if(unk4 != nullptr) {
+        return;
+    }
+    unk4 = 1;
+    func_80224A30();
+    mAnimTrans10->SetFrame(0.0f);
+    unk5 = 0;
+    func_80138078(0x91);
+}
+
+void CMCEffSuccess::func_80224944() {
+    if(unk4 == 2) {
+        unk4 = 3;
+        func_80224AB8();
+        mAnimTrans14->SetFrame(0.0f);
+        unk5 = 0;
+    }
+}
+
+void CMCEffSuccess::func_80224998() {
+    if(func_80137444(mAnimTrans10, 1.0f) != 0) {
+        unk4 = 2;
+        unk5 = 1;
+    }
+}
+
+void CMCEffSuccess::func_802249E4() {
+    if(func_80137444(mAnimTrans14, 1.0f) != 0) {
+        unk4 = 0;
+        unk5 = 1;
+    }
+}
+
+void CMCEffSuccess::func_80224A30() {
+    mLayout->UnbindAllAnimation();
+    mLayout->BindAnimation(mAnimTrans10);
+    mLayout->SetAnimationEnable(mAnimTrans10, true);
+    mLayout->Animate(0);
+}
+
+void CMCEffSuccess::func_80224AB8() {
+    mLayout->UnbindAllAnimation();
+    mLayout->BindAnimation(mAnimTrans14);
+    mLayout->SetAnimationEnable(mAnimTrans14, true);
+    mLayout->Animate(0);
 }

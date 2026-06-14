@@ -95,3 +95,32 @@ public:
     UnkStruct unkStruct[8];                               //0xc
     u8 unk6c;
 };
+/******************************************************************************
+ *
+ * CMCEffSuccess
+ *
+ ******************************************************************************/
+class CMCEffSuccess {
+public:
+    CMCEffSuccess(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffSuccess();
+    void func_80224760();
+    void func_802247F0();
+    void func_80224860(nw4r::lyt::DrawInfo*);
+    void func_80224880();
+    u8 func_802248E0();
+    void func_802248E8();
+    void func_80224944();
+    void func_80224998();
+    void func_802249E4();
+    void func_80224A30();
+    void func_80224AB8();
+
+    u8 unk4;
+    u8 unk5;
+    nw4r::lyt::ArcResourceAccessor* mArcResourceAccessor; //0x8
+    nw4r::lyt::Layout* mLayout;                           //0xc
+    nw4r::lyt::AnimTransform* mAnimTrans10;
+    nw4r::lyt::AnimTransform* mAnimTrans14;
+    u8 unk18;
+};
