@@ -124,3 +124,14 @@ public:
     nw4r::lyt::AnimTransform* mAnimTrans14;
     u8 unk18;
 };
+/******************************************************************************
+ *
+ * CMCEffFailure
+ *
+ ******************************************************************************/
+class CMCEffFailure : CMCEffStart {
+public:
+    CMCEffFailure(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffFailure();
+    void func_80224BBC();
+};

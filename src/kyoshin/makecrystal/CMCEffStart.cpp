@@ -329,3 +329,21 @@ void CMCEffSuccess::func_80224AB8() {
     mLayout->SetAnimationEnable(mAnimTrans14, true);
     mLayout->Animate(0);
 }
+/******************************************************************************
+ *
+ * CMCEffFailure
+ *
+ ******************************************************************************/
+CMCEffFailure::CMCEffFailure(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) : CMCEffStart(pArcResourceAccessor) {}
+
+CMCEffFailure::~CMCEffFailure() {}
+
+void CMCEffFailure::func_80224BBC() {
+    char* string = "mf10_cry06_fail.brlyt";
+    func_80136E84(&mLayout, mArcResourceAccessor, string);
+    char* string2 = "mf10_cry06_fail_in.brlan";
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    mLayout->SetAnimationEnable(mAnimTrans, true);
+    mLayout->Animate(false);
+    unk14 = 1;
+}
