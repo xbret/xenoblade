@@ -21,8 +21,8 @@ public:
     void func_80223E9C(nw4r::lyt::DrawInfo*);
     void func_80223EBC();
     u8 func_80223F1C();
-    DECOMP_DONT_INLINE void func_80223F24();
-    DECOMP_DONT_INLINE void func_80223F44();
+    void func_80223F24();
+    void func_80223F44();
 
     u8 unk4;
     u8 unk5;
