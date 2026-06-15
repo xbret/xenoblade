@@ -10,6 +10,7 @@ extern u32 func_80137444(nw4r::lyt::AnimTransform*, float);
 extern void func_80138078(u32);
 extern void* func_801355BC();
 extern void func_80124270(nw4r::lyt::Pane*, u32);
+extern u32 func_801355A0();
 
 CMCEffStart::CMCEffStart(nw4r::lyt::ArcResourceAccessor* arcResourceAccessor)
     : unk4(0), unk5(1), mArcResourceAccessor(arcResourceAccessor), mLayout(nullptr), mAnimTrans(nullptr), unk14(0) {}
@@ -678,4 +679,141 @@ void CMCEffDivide::func_80225C48() {
 void CMCEffDivide::func_80225CD8() {
     func_80223F24();
     func_80138078(0x8d);
+}
+/******************************************************************************
+ *
+ * CMCEffCylinder
+ *
+ ******************************************************************************/
+CMCEffCylinder::CMCEffCylinder(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor)
+    : unk4(0),
+      unk5(1),
+      mArcResourceAccessor(pArcResourceAccessor),
+      mLayout(nullptr),
+      mAnimTrans10(nullptr),
+      mAnimTrans14(nullptr),
+      mAnimTrans18(nullptr),
+      unk1c(0) {}
+
+CMCEffCylinder::~CMCEffCylinder() {}
+
+void CMCEffCylinder::func_80225D78() {
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry06_chn.brlyt");
+    func_80136F08(mLayout, &mAnimTrans10, mArcResourceAccessor, "mf10_cry06_chn_in.brlan");
+    func_80136F08(mLayout, &mAnimTrans14, mArcResourceAccessor, "mf10_cry06_chn_change.brlan");
+    func_80136F08(mLayout, &mAnimTrans18, mArcResourceAccessor, "mf10_cry06_chn_out.brlan");
+    u32 ul = func_801355A0();
+    if(ul) {
+        func_801368C0(mLayout, "txt_num", ul);
+    }
+    func_80226120();
+    unk1c = 1;
+}
+
+void CMCEffCylinder::func_80225E20() {
+    if(unk1c == 0) return;
+    switch(unk4) {
+        case 1:
+            func_8022603C();
+            break;
+        case 3:
+            func_80226088();
+            break;
+        case 4:
+            func_802260D4();
+            break;
+        default:
+            break;
+    }
+    mLayout->Animate(0);
+}
+
+void CMCEffCylinder::func_80225EA0(nw4r::lyt::DrawInfo* drawInfo) {
+    if(unk1c == 0) return;
+    func_80137038(mLayout, drawInfo, 0, 1);
+}
+
+void CMCEffCylinder::func_80225EC0() {
+    unk1c = 0;
+    if(mLayout != nullptr) {
+        delete mLayout;
+        mLayout = nullptr;
+    }
+}
+
+u8 CMCEffCylinder::func_80225F20() {
+    return unk5;
+}
+
+void CMCEffCylinder::func_80225F28() {
+    if(unk4 == 0) {
+        unk4 = 1;
+        func_80226120();
+        mAnimTrans10->SetFrame(0.0f);
+        unk5 = 0;
+    }
+}
+
+void CMCEffCylinder::func_80225F7C() {
+    if(unk4 == 2) {
+        unk4 = 3;
+        func_80226230();
+        mAnimTrans18->SetFrame(0.0f);
+        unk5 = 0;
+    }
+}
+
+void CMCEffCylinder::func_80225FD0() {
+    if(unk4 == 2) {
+        unk4 = 4;
+        func_802261A8();
+        mAnimTrans14->SetFrame(0.0f);
+        unk5 = 0;
+    }
+}
+
+void CMCEffCylinder::func_80226024(u8 arg) {
+    func_80136910(mLayout, "txt_num", arg);
+}
+
+void CMCEffCylinder::func_8022603C() {
+    if(func_80137444(mAnimTrans10, 1.0f)) {
+        unk4 = 2;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCylinder::func_80226088() {
+    if(func_80137444(mAnimTrans18, 1.0f)) {
+        unk4 = 0;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCylinder::func_802260D4() {
+    if(func_80137444(mAnimTrans14, 1.0f)) {
+        unk4 = 2;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCylinder::func_80226120() {
+    mLayout->UnbindAllAnimation();
+    mLayout->BindAnimation(mAnimTrans10);
+    mLayout->SetAnimationEnable(mAnimTrans10, true);
+    mLayout->Animate(0);
+}
+
+void CMCEffCylinder::func_802261A8() {
+    mLayout->UnbindAllAnimation();
+    mLayout->BindAnimation(mAnimTrans14);
+    mLayout->SetAnimationEnable(mAnimTrans14, true);
+    mLayout->Animate(0);
+}
+
+void CMCEffCylinder::func_80226230() {
+    mLayout->UnbindAllAnimation();
+    mLayout->BindAnimation(mAnimTrans18);
+    mLayout->SetAnimationEnable(mAnimTrans18, true);
+    mLayout->Animate(0);
 }

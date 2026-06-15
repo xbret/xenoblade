@@ -209,3 +209,37 @@ public:
     void func_80225C48();
     void func_80225CD8();
 };
+/******************************************************************************
+ *
+ * CMCEffCylinder
+ *
+ ******************************************************************************/
+class CMCEffCylinder {
+public:
+    CMCEffCylinder(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffCylinder();
+    void func_80225D78();
+    void func_80225E20();
+    void func_80225EA0(nw4r::lyt::DrawInfo*);
+    void func_80225EC0();
+    u8 func_80225F20();
+    void func_80225F28();
+    void func_80225F7C();
+    void func_80225FD0();
+    void func_80226024(u8);
+    void func_8022603C();
+    void func_80226088();
+    void func_802260D4();
+    void func_80226120();
+    void func_802261A8();
+    void func_80226230();
+
+    u8 unk4;
+    u8 unk5;
+    nw4r::lyt::ArcResourceAccessor* mArcResourceAccessor; //0x8
+    nw4r::lyt::Layout* mLayout;                           //0xc
+    nw4r::lyt::AnimTransform* mAnimTrans10;
+    nw4r::lyt::AnimTransform* mAnimTrans14;
+    nw4r::lyt::AnimTransform* mAnimTrans18;
+    u8 unk1c;
+};
