@@ -1,12 +1,15 @@
 #include "kyoshin/makecrystal/CMCEffStart.hpp"
 
+#include "kyoshin/cf/CfBdat.hpp"
 #include "kyoshin/code_80135FDC.hpp"
+#include "monolib/device/CDeviceFont.hpp"
 
 #include "nw4r/lyt/lyt_pane.h"
 
 extern u32 func_80137444(nw4r::lyt::AnimTransform*, float);
 extern void func_80138078(u32);
 extern void* func_801355BC();
+extern void func_80124270(nw4r::lyt::Pane*, u32);
 
 CMCEffStart::CMCEffStart(nw4r::lyt::ArcResourceAccessor* arcResourceAccessor)
     : unk4(0), unk5(1), mArcResourceAccessor(arcResourceAccessor), mLayout(nullptr), mAnimTrans(nullptr), unk14(0) {}
@@ -346,4 +349,291 @@ void CMCEffFailure::func_80224BBC() {
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
+}
+/******************************************************************************
+ *
+ * CMCEffCrystal
+ *
+ ******************************************************************************/
+CMCEffCrystal::CMCEffCrystal(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor)
+    : unk4(0),
+      unk5(1),
+      mArcResourceAccessor(pArcResourceAccessor),
+      mLayoutC(nullptr),
+      mAnimTrans10(nullptr),
+      mAnimTrans14(nullptr),
+      mLayout18(nullptr),
+      mAnimTrans1c(nullptr),
+      mAnimTrans20(nullptr),
+      mAnimTrans24(nullptr),
+      mAnimTrans28(nullptr),
+      mLayout2c(nullptr),
+      mAnimTrans30(nullptr),
+      unk34(0),
+      unk36(0),
+      unk38(0) {}
+
+CMCEffCrystal::~CMCEffCrystal() {}
+
+void CMCEffCrystal::func_80224CE4() {
+    func_80136E84(&mLayoutC, mArcResourceAccessor, "mf10_cry02_trc.brlyt");
+    func_80136F08(mLayoutC, &mAnimTrans10, mArcResourceAccessor, "mf10_cry02_trc_in.brlan");
+    func_80136F08(mLayoutC, &mAnimTrans14, mArcResourceAccessor, "mf10_cry02_trc_out.brlan");
+    func_80136E84(&mLayout18, mArcResourceAccessor, "mf10_cry03_crys.brlyt");
+    func_80136F08(mLayout18, &mAnimTrans1c, mArcResourceAccessor, "mf10_cry03_crys_in.brlan");
+    func_80136F08(mLayout18, &mAnimTrans20, mArcResourceAccessor, "mf10_cry03_crys_change.brlan");
+    func_80136F08(mLayout18, &mAnimTrans24, mArcResourceAccessor, "mf10_cry03_crys_spl.brlan");
+    func_80136F08(mLayout18, &mAnimTrans28, mArcResourceAccessor, "mf10_cry03_crys_out.brlan");
+    void* pVoid = CDeviceFont::func_80452C10(1, mLayout18);
+    //something related to CDeviceFont
+    //func_8013676C()
+    func_80136E84(&mLayout2c, mArcResourceAccessor, "mf10_cry04_lst.brlyt");
+    func_80136F08(mLayout2c, &mAnimTrans30, mArcResourceAccessor, "mf10_cry04_lst_roop.brlan");
+    func_802256E0();
+    func_802257F0();
+    func_80225A10();
+    unk34 = 1;
+}
+
+void CMCEffCrystal::func_80224E1C() {
+    if(unk34 == 0) return;
+    switch(unk4) {
+        case 1:
+            func_802254C4();
+            break;
+        case 2:
+            func_802251C4();
+            break;
+        case 4:
+            func_80225560();
+            break;
+        case 5:
+            func_802255CC();
+            break;
+        case 6:
+            func_80225694();
+            break;
+        default:
+            break;
+    }
+    func_80137444(mAnimTrans30, 1.0f);
+    mLayoutC->Animate(0);
+    mLayout18->Animate(0);
+    mLayout2c->Animate(0);
+}
+
+void CMCEffCrystal::func_80224EF8(nw4r::lyt::DrawInfo* drawInfo) {
+    if(unk34 == 0) return;
+    func_80137038(mLayoutC, drawInfo, 0, 1);
+    func_80137038(mLayout18, drawInfo, 0, 1);
+    if(unk4 != 2 && unk4 != 3) {
+        if(unk4 != 5) {
+            return;
+        }
+        func_80137038(mLayout2c, drawInfo, 0, 1);
+    }
+}
+
+void CMCEffCrystal::func_80224F84() {
+    unk34 = 0;
+    if(mLayoutC != nullptr) {
+        delete mLayoutC;
+        mLayoutC = nullptr;
+    }
+    if(mLayout18 != nullptr) {
+        delete mLayout18;
+        mLayout18 = nullptr;
+    }
+    if(mLayout2c != nullptr) {
+        delete mLayout2c;
+        mLayout2c = nullptr;
+    }
+}
+
+u8 CMCEffCrystal::func_8022503C() {
+    return unk5;
+}
+
+void CMCEffCrystal::func_80225044() {
+    if(unk4 == 0) {
+        unk4 = 1;
+        func_802256E0();
+        mAnimTrans10->SetFrame(0.0f);
+        func_802257F0();
+        mAnimTrans1c->SetFrame(0.0f);
+        unk5 = 0;
+        func_80124270(mLayout2c->GetRootPane(), 1);
+    }
+}
+
+void CMCEffCrystal::func_802250BC() {
+    if(unk4 == 3) {
+        unk4 = 4;
+        func_80225768();
+        mAnimTrans14->SetFrame(0.0f);
+        func_80225988();
+        if(mLayout2c->GetRootPane()->GetFlag() & 0x1) {
+            mAnimTrans28->SetFrame(0.0f);
+        } else {
+            mAnimTrans28->SetFrame(mAnimTrans28->GetFrameSize() - 1);
+        }
+        unk5 = 0;
+    }
+}
+
+void CMCEffCrystal::func_80225170() {
+    if(unk4 == 3) {
+        unk4 = 5;
+        func_80225878();
+        mAnimTrans20->SetFrame(0.0f);
+        unk5 = 0;
+    }
+}
+
+void CMCEffCrystal::func_802251C4() {
+    if(unk4 == 3) {
+        unk4 = 6;
+        func_80225900();
+        mAnimTrans24->SetFrame(0.0f);
+        unk5 = 0;
+        func_80124270(mLayout2c->GetRootPane(), 0);
+    }
+}
+
+void CMCEffCrystal::func_80225228(u32 arg1) {
+    func_80124270(mLayoutC->GetRootPane()->FindPaneByName("nul_trc01", true), arg1);
+}
+
+void CMCEffCrystal::func_80225280(u16 arg1, u8 arg2) {
+    unk36 = arg1;
+    unk38 = arg2;
+    char* name = func_8013639C(cf::CfBdat::spBtlSkillListFileData, "name", arg1);
+    char* itemName = func_80136190("MNU_item", "name", 0x1e - (arg2 - 1));
+    char buffer[0x20];
+    sprintf(buffer, "%s%s", name, itemName);
+    func_80136A1C(mLayout18, "txt_listname01", buffer, 0);
+    void* resource = nullptr;
+    u8 result = func_801361E8(cf::CfBdat::spBtlSkillListFileData, "atr_type", arg1);
+    switch(result) {
+        case 0:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf00_com00_dmy.tpl", 0);
+            break;
+        case 4:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys01.tpl", 0);
+            break;
+        case 5:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys02.tpl", 0);
+            break;
+        case 6:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys03.tpl", 0);
+            break;
+        case 7:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys04.tpl", 0);
+            break;
+        case 8:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys05.tpl", 0);
+            break;
+        case 9:
+            resource = mArcResourceAccessor->GetResource(mArcResourceAccessor->RES_TYPE_TEXTURE, "mf10_cry00_crys06.tpl", 0);
+            break;
+        default:
+            break;
+    }
+    if(resource != nullptr) {
+        func_80137E7C(mLayout18, "pic_crs", resource);
+        func_80137E7C(mLayout18, "pic_crs01", resource);
+    }
+}
+
+void CMCEffCrystal::func_802254C4() {
+    func_80137444(mAnimTrans1c, 1.0f);
+    if(func_80137444(mAnimTrans10, 1.0f) != 0) {
+        unk4 = 2;
+    }
+}
+
+void CMCEffCrystal::func_80225514() {
+    if(func_80137444(mAnimTrans1c, 1.0f) != 0) {
+        unk4 = 3;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCrystal::func_80225560() {
+    u32 unk1 = func_80137444(mAnimTrans14, 1.0f);
+    u32 unk2 = func_80137444(mAnimTrans28, 1.0f);
+    if(unk1 != 0 && unk2 != 0) {
+        unk4 = 0;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCrystal::func_802255CC() {
+    if(func_80137444(mAnimTrans20, 1.0f)) {
+        unk4 = 3;
+        unk5 = 1;
+    }
+    if(mAnimTrans20->GetFrame() >= 5.0f) {
+        char* name = func_8013639C(cf::CfBdat::spBtlSkillListFileData, "name", unk36);
+        char* itemName = func_80136190("MNU_item", "name", 0x1e - unk38);
+        char buffer[0x2c];
+        sprintf(buffer, "%s%s", name, itemName);
+        func_80136A1C(mLayout18, "txt_listname01", buffer, 0);
+    }
+}
+
+void CMCEffCrystal::func_80225694() {
+    if(func_80137444(mAnimTrans24, 1.0f)) {
+        unk4 = 3;
+        unk5 = 1;
+    }
+}
+
+void CMCEffCrystal::func_802256E0() {
+    mLayoutC->UnbindAllAnimation();
+    mLayoutC->BindAnimation(mAnimTrans10);
+    mLayoutC->SetAnimationEnable(mAnimTrans10, true);
+    mLayoutC->Animate(0);
+}
+
+void CMCEffCrystal::func_80225768() {
+    mLayoutC->UnbindAllAnimation();
+    mLayoutC->BindAnimation(mAnimTrans14);
+    mLayoutC->SetAnimationEnable(mAnimTrans14, true);
+    mLayoutC->Animate(0);
+}
+
+void CMCEffCrystal::func_802257F0() {
+    mLayout18->UnbindAllAnimation();
+    mLayout18->BindAnimation(mAnimTrans1c);
+    mLayout18->SetAnimationEnable(mAnimTrans1c, true);
+    mLayout18->Animate(0);
+}
+
+void CMCEffCrystal::func_80225878() {
+    mLayout18->UnbindAllAnimation();
+    mLayout18->BindAnimation(mAnimTrans20);
+    mLayout18->SetAnimationEnable(mAnimTrans20, true);
+    mLayout18->Animate(0);
+}
+
+void CMCEffCrystal::func_80225900() {
+    mLayout18->UnbindAllAnimation();
+    mLayout18->BindAnimation(mAnimTrans24);
+    mLayout18->SetAnimationEnable(mAnimTrans24, true);
+    mLayout18->Animate(0);
+}
+
+void CMCEffCrystal::func_80225988() {
+    mLayout18->UnbindAllAnimation();
+    mLayout18->BindAnimation(mAnimTrans28);
+    mLayout18->SetAnimationEnable(mAnimTrans28, true);
+    mLayout18->Animate(0);
+}
+
+void CMCEffCrystal::func_80225A10() {
+    mLayout2c->UnbindAllAnimation();
+    mLayout2c->BindAnimation(mAnimTrans30);
+    mLayout2c->SetAnimationEnable(mAnimTrans30, true);
+    mLayout2c->Animate(0);
 }

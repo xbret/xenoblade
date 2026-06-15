@@ -135,3 +135,53 @@ public:
     virtual ~CMCEffFailure();
     void func_80224BBC();
 };
+/******************************************************************************
+ *
+ * CMCEffCrystal
+ *
+ ******************************************************************************/
+class CMCEffCrystal {
+public:
+    CMCEffCrystal(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffCrystal();
+    void func_80224CE4();
+    void func_80224E1C();
+    void func_80224EF8(nw4r::lyt::DrawInfo*);
+    void func_80224F84();
+    u8 func_8022503C();
+    void func_80225044();
+    void func_802250BC();
+    void func_80225170();
+    void func_802251C4();
+    void func_80225228(u32);
+    void func_80225280(u16, u8);
+    void func_802254C4();
+    void func_80225514();
+    void func_80225560();
+    void func_802255CC();
+    void func_80225694();
+    void func_802256E0();
+    void func_80225768();
+    void func_802257F0();
+    void func_80225878();
+    void func_80225900();
+    void func_80225988();
+    void func_80225A10();
+
+    u8 unk4;
+    u8 unk5;
+    nw4r::lyt::ArcResourceAccessor* mArcResourceAccessor; //0x8
+    nw4r::lyt::Layout* mLayoutC;
+    nw4r::lyt::AnimTransform* mAnimTrans10;
+    nw4r::lyt::AnimTransform* mAnimTrans14;
+    nw4r::lyt::Layout* mLayout18;
+    nw4r::lyt::AnimTransform* mAnimTrans1c;
+    nw4r::lyt::AnimTransform* mAnimTrans20;
+    nw4r::lyt::AnimTransform* mAnimTrans24;
+    nw4r::lyt::AnimTransform* mAnimTrans28;
+    nw4r::lyt::Layout* mLayout2c;
+    nw4r::lyt::AnimTransform* mAnimTrans30;
+    u8 unk34;
+    u16 unk36;
+    u8 unk38;
+};
