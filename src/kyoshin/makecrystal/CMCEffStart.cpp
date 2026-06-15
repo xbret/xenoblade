@@ -637,3 +637,45 @@ void CMCEffCrystal::func_80225A10() {
     mLayout2c->SetAnimationEnable(mAnimTrans30, true);
     mLayout2c->Animate(0);
 }
+/******************************************************************************
+ *
+ * CMCEffUpRank
+ *
+ ******************************************************************************/
+CMCEffUpRank::CMCEffUpRank(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) : CMCEffStart(pArcResourceAccessor) {}
+
+CMCEffUpRank::~CMCEffUpRank() {}
+
+void CMCEffUpRank::func_80225B14() {
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry05_rank.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry05_rank_in.brlan");
+    mLayout->SetAnimationEnable(mAnimTrans, true);
+    mLayout->Animate(0);
+    unk14 = 1;
+}
+
+void CMCEffUpRank::func_80225BA4() {
+    func_80223F24();
+    func_80138078(0x8d);
+}
+/******************************************************************************
+ *
+ * CMCEffDivide
+ *
+ ******************************************************************************/
+CMCEffDivide::CMCEffDivide(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) : CMCEffStart(pArcResourceAccessor) {}
+
+CMCEffDivide::~CMCEffDivide() {}
+
+void CMCEffDivide::func_80225C48() {
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry05_spl.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry05_spl_in.brlan");
+    mLayout->SetAnimationEnable(mAnimTrans, true);
+    mLayout->Animate(0);
+    unk14 = 1;
+}
+
+void CMCEffDivide::func_80225CD8() {
+    func_80223F24();
+    func_80138078(0x8d);
+}

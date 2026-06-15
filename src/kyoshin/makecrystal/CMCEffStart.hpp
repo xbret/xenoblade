@@ -185,3 +185,27 @@ public:
     u16 unk36;
     u8 unk38;
 };
+/******************************************************************************
+ *
+ * CMCEffUpRank
+ *
+ ******************************************************************************/
+class CMCEffUpRank : CMCEffStart {
+public:
+    CMCEffUpRank(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffUpRank();
+    void func_80225B14();
+    void func_80225BA4();
+};
+/******************************************************************************
+ *
+ * CMCEffDivide
+ *
+ ******************************************************************************/
+class CMCEffDivide : CMCEffStart {
+public:
+    CMCEffDivide(nw4r::lyt::ArcResourceAccessor*);
+    virtual ~CMCEffDivide();
+    void func_80225C48();
+    void func_80225CD8();
+};
