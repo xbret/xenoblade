@@ -253,10 +253,6 @@ public:
         detail::SetBit(&mFlag, BIT_LOCATION_ADJUST, adjust);
     }
 
-    const u8 GetFlag() const {
-        return mFlag;
-    }
-
     const char* GetName() const {
         return mName;
     }

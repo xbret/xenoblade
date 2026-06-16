@@ -463,7 +463,7 @@ void CMCEffCrystal::func_802250BC() {
         func_80225768();
         mAnimTrans14->SetFrame(0.0f);
         func_80225988();
-        if(mLayout2c->GetRootPane()->GetFlag() & 0x1) {
+        if(mLayout2c->GetRootPane()->IsVisible()) {
             mAnimTrans28->SetFrame(0.0f);
         } else {
             mAnimTrans28->SetFrame(mAnimTrans28->GetFrameSize() - 1);
