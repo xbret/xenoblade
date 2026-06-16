@@ -8,7 +8,7 @@
 
 extern u32 func_80137444(nw4r::lyt::AnimTransform*, float);
 extern void func_80138078(u32);
-extern void* func_801355BC();
+extern u32 func_801355BC();
 extern void func_80124270(nw4r::lyt::Pane*, u32);
 extern u32 func_801355A0();
 
@@ -18,10 +18,8 @@ CMCEffStart::CMCEffStart(nw4r::lyt::ArcResourceAccessor* arcResourceAccessor)
 CMCEffStart::~CMCEffStart() {}
 
 void CMCEffStart::func_80223DB0() {
-    char* string = "mf10_cry06_start.brlyt";
-    func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry06_start_in.brlan";
-    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry06_start.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry06_start_in.brlan");
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
@@ -77,10 +75,8 @@ CMCEffUpRed::CMCEffUpRed(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) :
 CMCEffUpRed::~CMCEffUpRed() {}
 
 void CMCEffUpRed::func_8022400C() {
-    char* string = "mf10_cry02_prt00.brlyt";
-    func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt00_in.brlan";
-    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry02_prt00.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry02_prt00_in.brlan");
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
@@ -100,10 +96,8 @@ CMCEffUpBlue::CMCEffUpBlue(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor)
 CMCEffUpBlue::~CMCEffUpBlue() {}
 
 void CMCEffUpBlue::func_80224140() {
-    char* string = "mf10_cry02_prt01.brlyt";
-    func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt01_in.brlan";
-    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry02_prt01.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry02_prt01_in.brlan");
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
@@ -123,10 +117,8 @@ CMCEffUpGreen::CMCEffUpGreen(nw4r::lyt::ArcResourceAccessor* pArcResourceAccesso
 CMCEffUpGreen::~CMCEffUpGreen() {}
 
 void CMCEffUpGreen::func_80224274() {
-    char* string = "mf10_cry02_prt02.brlyt";
-    func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry02_prt02_in.brlan";
-    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry02_prt02.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry02_prt02_in.brlan");
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
@@ -141,31 +133,28 @@ void CMCEffUpGreen::func_80224304() {
  * CMCEffUpPrm
  *
  ******************************************************************************/
-//todo
-CMCEffUpPrm::CMCEffUpPrm(nw4r::lyt::ArcResourceAccessor* arg) {
-    unk4 = 1;
-    mArcResourceAccessor = arg;
-
-    for(u16 i = 0; i < 8; i++) {
-        unkStruct[i].layout = nullptr;
-        unkStruct[i].animTrans = nullptr;
-        unkStruct[i].unk8 = 0;
-    }
+CMCEffUpPrm::CMCEffUpPrm(nw4r::lyt::ArcResourceAccessor* pArcResourceAccessor) : unk4(1), mArcResourceAccessor(pArcResourceAccessor) {
+    UnkStruct* i = (UnkStruct*)((u8*)this + 0xc);
+    do {
+        i->layout = nullptr;
+        i->animTrans = nullptr;
+        i->unk8 = 0;
+        i += 1;
+    } while(i < (UnkStruct*)((u8*)this + 0x6c));
     unk6c = 0;
 }
 
 CMCEffUpPrm::~CMCEffUpPrm() {}
 
-//todo some tweaks needed
 void CMCEffUpPrm::func_802243B4() {
-    for(u16 i = 0; i < 8; ++i) {
-        func_80136E84(&unkStruct[i].layout, mArcResourceAccessor, "mf10_cry02_prt03.brlyt");
-        func_80136F08(unkStruct[i].layout, &unkStruct[i].animTrans, mArcResourceAccessor, "mf10_cry02_prt03_in.brlan");
-        nw4r::lyt::Pane* rootPane = unkStruct[i].layout->GetRootPane();
-        void* pVoid = func_801355BC();
-        func_8013676C(rootPane, pVoid);
-        unkStruct[i].layout->SetAnimationEnable(unkStruct[i].animTrans, true);
-        unkStruct[i].layout->Animate(0);
+    for(u8 i = 0; i < 8; ++i) {
+        UnkStruct* unkStructure = &unkStruct[i];
+        func_80136E84(&unkStructure->layout, mArcResourceAccessor, "mf10_cry02_prt03.brlyt");
+        func_80136F08(unkStructure->layout, &unkStructure->animTrans, mArcResourceAccessor, "mf10_cry02_prt03_in.brlan");
+        nw4r::lyt::Pane* rootPane = unkStructure->layout->GetRootPane();
+        func_8013676C(rootPane, func_801355BC());
+        unkStructure->layout->SetAnimationEnable(unkStructure->animTrans, true);
+        unkStructure->layout->Animate(0);
     }
     unk6c = 1;
 }
@@ -343,10 +332,8 @@ CMCEffFailure::CMCEffFailure(nw4r::lyt::ArcResourceAccessor* pArcResourceAccesso
 CMCEffFailure::~CMCEffFailure() {}
 
 void CMCEffFailure::func_80224BBC() {
-    char* string = "mf10_cry06_fail.brlyt";
-    func_80136E84(&mLayout, mArcResourceAccessor, string);
-    char* string2 = "mf10_cry06_fail_in.brlan";
-    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, string2);
+    func_80136E84(&mLayout, mArcResourceAccessor, "mf10_cry06_fail.brlyt");
+    func_80136F08(mLayout, &mAnimTrans, mArcResourceAccessor, "mf10_cry06_fail_in.brlan");
     mLayout->SetAnimationEnable(mAnimTrans, true);
     mLayout->Animate(false);
     unk14 = 1;
@@ -385,9 +372,12 @@ void CMCEffCrystal::func_80224CE4() {
     func_80136F08(mLayout18, &mAnimTrans20, mArcResourceAccessor, "mf10_cry03_crys_change.brlan");
     func_80136F08(mLayout18, &mAnimTrans24, mArcResourceAccessor, "mf10_cry03_crys_spl.brlan");
     func_80136F08(mLayout18, &mAnimTrans28, mArcResourceAccessor, "mf10_cry03_crys_out.brlan");
-    void* pVoid = CDeviceFont::func_80452C10(1, mLayout18);
-    //something related to CDeviceFont
-    //func_8013676C()
+
+    nw4r::lyt::Pane* rootPane = mLayout18->GetRootPane();
+    void* something = CDeviceFont::func_80452C10(1, mLayout18);
+    //TODO It would help to have CDeviceFont return type and not void*
+    u32 result = 0; //something -> someCall at 0x24
+    func_8013676C(rootPane, result);
     func_80136E84(&mLayout2c, mArcResourceAccessor, "mf10_cry04_lst.brlyt");
     func_80136F08(mLayout2c, &mAnimTrans30, mArcResourceAccessor, "mf10_cry04_lst_roop.brlan");
     func_802256E0();
@@ -403,7 +393,7 @@ void CMCEffCrystal::func_80224E1C() {
             func_802254C4();
             break;
         case 2:
-            func_802251C4();
+            func_80225514();
             break;
         case 4:
             func_80225560();
@@ -431,8 +421,8 @@ void CMCEffCrystal::func_80224EF8(nw4r::lyt::DrawInfo* drawInfo) {
         if(unk4 != 5) {
             return;
         }
-        func_80137038(mLayout2c, drawInfo, 0, 1);
     }
+    func_80137038(mLayout2c, drawInfo, 0, 1);
 }
 
 void CMCEffCrystal::func_80224F84() {
@@ -577,7 +567,7 @@ void CMCEffCrystal::func_802255CC() {
     if(mAnimTrans20->GetFrame() >= 5.0f) {
         char* name = func_8013639C(cf::CfBdat::spBtlSkillListFileData, "name", unk36);
         char* itemName = func_80136190("MNU_item", "name", 0x1e - unk38);
-        char buffer[0x2c];
+        char buffer[0x20];
         sprintf(buffer, "%s%s", name, itemName);
         func_80136A1C(mLayout18, "txt_listname01", buffer, 0);
     }

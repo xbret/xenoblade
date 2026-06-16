@@ -1,13 +1,19 @@
 #pragma once
 
 #include <types.h>
+
 #include "monolib/device/CDeviceBase.hpp"
+
+#include <nw4r/lyt/lyt_layout.h>
 
 //size: 0x1f0
 class CDeviceFont : public CDeviceBase {
 public:
     CDeviceFont(const char* pName, CWorkThread* pParent);
     static CDeviceFont* getInstance();
+
+    //todo clean CMCEffCrystal::func_80224CE4 when true return type is found
+    static void* func_80452C10(u32, nw4r::lyt::Layout*);
 
     DECL_WORKTHREAD_CREATE(CDeviceFont);
 
