@@ -1,5 +1,7 @@
 #pragma once
 
+#include "monolib/device/CFileHandle.hpp"
+
 #include <nw4r/lyt/lyt_arcResourceAccessor.h>
 #include <nw4r/lyt/lyt_drawInfo.h>
 #include <nw4r/lyt/lyt_layout.h>
@@ -15,5 +17,7 @@ void func_80136E84(nw4r::lyt::Layout**, nw4r::lyt::ArcResourceAccessor*, const c
 void func_80136F08(nw4r::lyt::Layout*, nw4r::lyt::AnimTransform**, nw4r::lyt::ArcResourceAccessor*, char*);
 void func_80137038(nw4r::lyt::Layout* pLayout, nw4r::lyt::DrawInfo* pDrawInfo, int r5, int r6);
 void func_80137250(nw4r::lyt::DrawInfo* pDrawInfo);
+u8 func_801372B4(u32);
 void func_80137E7C(nw4r::lyt::Layout*, char*, void*);
+void func_801390E0(CFileHandle**);
 void func_80139124(nw4r::lyt::ArcResourceAccessor*);

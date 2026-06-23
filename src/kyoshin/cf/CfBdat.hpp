@@ -89,7 +89,7 @@ namespace cf{
 
         static CFileHandle* lbl_80666A6C;
         static void* lbl_80666A70;
-        static void* lbl_80666A74;
+        static u32 lbl_80666A74;
         static void* lbl_80666A78;
         static float lbl_80666A7C;
         static CfBdat lbl_80666A80;

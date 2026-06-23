@@ -25,6 +25,7 @@ public:
     static void removeFileJob(CDeviceFileJob* pJob);
     static void cancel(CFileHandle* pFileHandle);
     static void func_8044F154(CFileHandle* pFileHandle, int);
+    static void setHandleFlag1(CFileHandle* pFileHandle);
     static void setHandleFlag2(CFileHandle* pFileHandle);
     
     //0x0: vtable

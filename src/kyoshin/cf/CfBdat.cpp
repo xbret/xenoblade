@@ -75,7 +75,7 @@ namespace cf{
 
     CFileHandle* CfBdat::lbl_80666A6C;
     void* CfBdat::lbl_80666A70;
-    void* CfBdat::lbl_80666A74;
+    u32 CfBdat::lbl_80666A74;
     void* CfBdat::lbl_80666A78;
     float CfBdat::lbl_80666A7C;
     CfBdat CfBdat::lbl_80666A80;
@@ -131,8 +131,8 @@ namespace cf{
         spItmArmListFileData = CBdat::getFP("ITM_armlist");
         spItmWaistListFileData = CBdat::getFP("ITM_waistlist");
         spItmLeggListFileData = CBdat::getFP("ITM_legglist");
-        
-        lbl_80666A74 = nullptr;
+
+        lbl_80666A74 = 0;
         lbl_80666A78 = nullptr;
         lbl_80666A7C = 0;
         lbl_8066698C = nullptr;
