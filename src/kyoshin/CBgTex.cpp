@@ -5,7 +5,7 @@
 #include "monolib/lib/CLibLayout.hpp"
 #include "monolib/util/MemManager.hpp"
 
-#include "nw4r/lyt.h"
+#include <nw4r/lyt.h>
 
 extern void func_80124270(nw4r::lyt::Pane*, u32);
 

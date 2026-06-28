@@ -5,7 +5,7 @@
 #include "monolib/lib/UnkClass_8045F564.hpp"
 #include "monolib/work/IWorkEvent.hpp"
 
-#include "nw4r/lyt.h"
+#include <nw4r/lyt.h>
 
 class CBgTex : IWorkEvent {
 public:
