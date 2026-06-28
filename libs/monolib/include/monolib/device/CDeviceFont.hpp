@@ -12,7 +12,9 @@ public:
     CDeviceFont(const char* pName, CWorkThread* pParent);
     static CDeviceFont* getInstance();
 
-    //todo clean CMCEffCrystal::func_80224CE4 when true return type is found
+    //todo: when true return type is found clean :
+    // CMCEffCrystal::func_80224CE4
+    // CTitleAHelp::OnFileEvent
     static void* func_80452C10(u32, nw4r::lyt::Layout*);
 
     DECL_WORKTHREAD_CREATE(CDeviceFont);

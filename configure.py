@@ -588,7 +588,7 @@ config.libs = [
             Object(NonMatching, "kyoshin/cf/code_801C2C14.cpp"),
             Object(NonMatching, "kyoshin/realtimeevt/CREvtLight.cpp"),
             Object(NonMatching, "kyoshin/CBgTex.cpp"),
-            Object(NonMatching, "kyoshin/CTitleAHelp.cpp"),
+            Object(NonMatching, "kyoshin/CTitleAHelp.cpp", extra_cflags=["-O4,s"]),
             Object(NonMatching, "kyoshin/CItemBoxGrid.cpp"),
             Object(NonMatching, "kyoshin/CCur.cpp"),
             Object(NonMatching, "kyoshin/CSortMenu.cpp"),

@@ -30,6 +30,7 @@ namespace cf{
         static UNKTYPE* func_80083298();
         static CfObjectMove* func_80082D54(int playerIndex);
         static u32 getEnabledInputFlags();
+        static bool func_80086F9C(s16);
         static void setCurrentPadPtr(const CPad* pPad, u32 r4);
         static CPad* getPad(int r3);
         static void setPad(int r3, CPad* pPad, u32 r5);
