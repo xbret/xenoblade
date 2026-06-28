@@ -3,12 +3,15 @@
 #include "kyoshin/cf/IFlagEvent.hpp"
 #include "monolib/work.hpp"
 
-class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent{
+#include <nw4r/lyt.h>
+
+class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent {
 public:
-    static CUICfManager* getInstance(){
+    static CUICfManager* getInstance() {
         return spInstance;
     }
     static CUICfManager* create(CProcess* pParent, CScnNw4r* pScene, mtl::ALLOC_HANDLE mHandle);
+    static nw4r::lyt::ArcResourceAccessor* func_801355F4();
     static int func_80135FDC();
 
 private:

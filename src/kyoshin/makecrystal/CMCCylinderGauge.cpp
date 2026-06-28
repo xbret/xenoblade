@@ -3,11 +3,7 @@
 #include "kyoshin/code_80135FDC.hpp"
 #include "monolib/math/MTRand.hpp"
 
-extern void func_80136F08(nw4r::lyt::Layout*, nw4r::lyt::AnimTransform**, nw4r::lyt::ArcResourceAccessor*, char*);
 extern u32 func_801355A0();
-extern void func_801368C0(nw4r::lyt::Layout*, char*, u32);
-extern void func_80136910(nw4r::lyt::Layout*, char*, u8);
-extern u32 func_80137444(nw4r::lyt::AnimTransform*, float);
 extern void func_80138078(u32);
 extern void func_8013B428(u32);
 
