@@ -3,7 +3,7 @@
 #include "kyoshin/cf/IFlagEvent.hpp"
 #include "monolib/work.hpp"
 
-#include "nw4r/lyt/lyt_arcResourceAccessor.h"
+#include <nw4r/lyt.h>
 
 class CUICfManager : public CTTask<CUICfManager>, public IWorkEvent, public cf::IFlagEvent {
 public:

@@ -3,9 +3,7 @@
 #include "monolib/work/IWorkEvent.hpp"
 #include "revolution/gx/GXTypes.h"
 
-#include <nw4r/lyt/lyt_arcResourceAccessor.h>
-#include <nw4r/lyt/lyt_drawInfo.h>
-#include <nw4r/lyt/lyt_layout.h>
+#include <nw4r/lyt.h>
 
 u16 func_8013606C(char*, char*, u16);
 char* func_80136190(char*, char*, u32);

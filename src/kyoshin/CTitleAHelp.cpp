@@ -10,9 +10,8 @@
 #include "monolib/work/CEventFile.hpp"
 #include "revolution/gx/GXTypes.h"
 
-#include "nw4r/lyt/lyt_pane.h"
-#include "nw4r/lyt/lyt_textBox.h"
-#include "nw4r/ut/ut_Font.h"
+#include <nw4r/lyt.h>
+#include <nw4r/ut.h>
 
 extern void func_80124270(nw4r::lyt::Pane*, u32);
 extern void func_80127BD8(nw4r::math::VEC3*, nw4r::math::VEC3*);

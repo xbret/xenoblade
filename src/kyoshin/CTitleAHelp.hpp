@@ -6,8 +6,7 @@
 #include "monolib/work/IWorkEvent.hpp"
 #include "revolution/gx/GXTypes.h"
 
-#include "nw4r/lyt/lyt_arcResourceAccessor.h"
-#include <nw4r/lyt/lyt_layout.h>
+#include <nw4r/lyt.h>
 
 class CTitleAHelp : public IWorkEvent {
 public:
